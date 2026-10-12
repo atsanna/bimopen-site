@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title data-i18n="rp.meta.title">Roadmap di BIMopen — Stato e prossimi passi</title>
-<meta name="description" data-i18n-attr="content:rp.meta.desc" content="La roadmap completa di BIMopen: cosa funziona oggi, i 57 passi pianificati per priorità e quanta parte delle funzionalità principali di Revit Architecture è già coperta.">
+<meta name="description" data-i18n-attr="content:rp.meta.desc" content="La roadmap completa di BIMopen: cosa funziona oggi, i 64 passi pianificati per priorità e quanta parte delle funzionalità principali di Revit Architecture è già coperta.">
 <link rel="canonical" href="https://bimopen.it/roadmap.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="BIMopen">
 <meta property="og:locale" content="it_IT">
 <meta property="og:title" content="Roadmap di BIMopen — Stato e prossimi passi">
-<meta property="og:description" content="La roadmap completa di BIMopen: cosa funziona oggi, i 57 passi pianificati per priorità e quanta parte delle funzionalità principali di Revit Architecture è già coperta.">
+<meta property="og:description" content="La roadmap completa di BIMopen: cosa funziona oggi, i 64 passi pianificati per priorità e quanta parte delle funzionalità principali di Revit Architecture è già coperta.">
 <meta property="og:url" content="https://bimopen.it/roadmap.html">
 <meta property="og:image" content="https://bimopen.it/assets/og-bimopen.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -208,7 +208,7 @@
   .phase-head h3 { margin: 0; font-size: 22px; letter-spacing: -.01em; }
   .phase-head p { margin: 0; color: var(--muted); font-size: 15px; }
   .phase-head .count { margin-inline-start: auto; color: var(--muted); font-size: 14px; font-variant-numeric: tabular-nums; direction: ltr; }
-  .p0 .prio { background: #2e9d5b; } .p1 .prio { background: var(--blue); } .p2 .prio { background: #7a5bd6; } .p3 .prio { background: var(--terra); }
+  .pr .prio { background: #c0392b; } .p0 .prio { background: #2e9d5b; } .p1 .prio { background: var(--blue); } .p2 .prio { background: #7a5bd6; } .p3 .prio { background: var(--terra); }
   .steps { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
   .step { display: grid; grid-template-columns: auto 1fr auto; gap: 14px; align-items: start; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; min-width: 0; }
   section.alt .step { background: var(--paper); }
@@ -290,7 +290,7 @@
       <p class="lead" data-i18n="rp.lead">BIMopen segue le funzionalità principali di Revit Architecture, comando per comando. Abbiamo confrontato il programma con Revit opzione per opzione: da qui vengono i passi, in ordine di priorità, e le percentuali di copertura.</p>
       <ul class="stats">
         <li><b>29</b><span data-i18n="rp.stat.avail">funzioni disponibili</span></li>
-        <li><b>57</b><span data-i18n="rp.stat.steps">passi pianificati</span></li>
+        <li><b>64</b><span data-i18n="rp.stat.steps">passi pianificati</span></li>
         <li><b>20 %</b><span data-i18n="rp.stat.cov">delle funzionalità coperte</span></li>
         <li><b>6</b><span data-i18n="rp.stat.lang">lingue, arabo compreso</span></li>
       </ul>
@@ -315,8 +315,20 @@
   <section id="passi" aria-labelledby="passi-t">
     <div class="wrap">
       <span class="eyebrow" data-i18n="rp.steps.kicker">Prossimi passi</span>
-      <h2 id="passi-t" data-i18n="rp.steps.h2">57 passi, in ordine di priorità</h2>
+      <h2 id="passi-t" data-i18n="rp.steps.h2">64 passi, in ordine di priorità</h2>
       <p class="sub" data-i18n="rp.steps.p">Ogni passo è un blocco completo: comandi, interfaccia come in Revit, prove, sito e sei lingue. L'ordine segue priorità e dipendenze.</p>
+    <div class="phase pr">
+      <div class="phase-head"><span class="prio">R</span><div><h3 data-i18n="rp.pr.h3">Riallineamento con Revit</h3><p data-i18n="rp.pr.p">Prima delle nuove funzioni, ogni funzione già fatta viene confrontata voce per voce con Revit, corretta e provata dall'interfaccia.</p></div><span class="count">0/7</span></div>
+      <ol class="steps">
+      <li class="step wip"><span class="n">R1</span><div><h4 data-i18n="rr1.t">Interfaccia e navigazione</h4><p data-i18n="rr1.d">Barra multifunzione, proprietà, browser, finestre affiancate in ordine d'uso, zoom e rotazione, menu contestuali in ogni vista.</p></div><span class="pill" data-i18n="st.wip">In corso</span></li>
+      <li class="step todo"><span class="n">R2</span><div><h4 data-i18n="rr2.t">Selezione e modifica</h4><p data-i18n="rr2.d">TAB e catene, trascinamento in ogni vista con gli elementi collegati, Sposta, Copia, Ruota, Specchio, Serie, Allinea.</p></div><span class="pill" data-i18n="st.todo">Da fare</span></li>
+      <li class="step todo"><span class="n">R3</span><div><h4 data-i18n="rr3.t">Muri, porte e finestre</h4><p data-i18n="rr3.d">Giunti puliti, strati, associazione a tetti e solai, simboli completi di porte e finestre.</p></div><span class="pill" data-i18n="st.todo">Da fare</span></li>
+      <li class="step todo"><span class="n">R4</span><div><h4 data-i18n="rr4.t">Solai, tetti, scale e facciate</h4><p data-i18n="rr4.d">Modalità schizzo, pendenze, scale, ringhiere, facciate continue e componenti come in Revit.</p></div><span class="pill" data-i18n="st.todo">Da fare</span></li>
+      <li class="step todo"><span class="n">R5</span><div><h4 data-i18n="rr5.t">Viste e grafica</h4><p data-i18n="rr5.d">Piante, sezioni, 3D, stili di visualizzazione, visibilità e grafica, filtri, modelli di vista, materiali.</p></div><span class="pill" data-i18n="st.todo">Da fare</span></li>
+      <li class="step todo"><span class="n">R6</span><div><h4 data-i18n="rr6.t">Annotazioni e 2D</h4><p data-i18n="rr6.d">Quote e vincoli, testi, etichette, locali, aree, legende e dettagli 2D.</p></div><span class="pill" data-i18n="st.todo">Da fare</span></li>
+      <li class="step wip"><span class="n">R7</span><div><h4 data-i18n="rr7.t">Documentazione e file</h4><p data-i18n="rr7.d">Tavole, abachi come viste collegate al modello, stampa, unità, apertura e salvataggio, IFC e .rvt.</p></div><span class="pill" data-i18n="st.wip">In corso</span></li>
+      </ol>
+    </div>
     <div class="phase p0">
       <div class="phase-head"><span class="prio">B</span><div><h3 data-i18n="rp.p0.h3">Fondamenta e piattaforme</h3><p data-i18n="rp.p0.p">Qualità, file, rendering e tutti i sistemi: la base su cui crescono gli altri passi.</p></div><span class="count">0/11</span></div>
       <ol class="steps">
@@ -448,7 +460,7 @@
 </footer>
 
 <button class="to-top" id="to-top" type="button" aria-label="Torna all'inizio" data-i18n-attr="aria-label:ui.top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
-<script src="lingua.js?v=38a0f89e"></script>
+<script src="lingua.js?v=29ea33d7"></script>
 <script>
   // tema: quello di sistema finché non si sceglie; poi chiaro o scuro, ricordato in questo browser
   (function () {

@@ -113,6 +113,11 @@
   .btn-lg { padding: 16px 28px; font-size: 18px; border-radius: 12px; box-shadow: var(--shadow); }
   .rm-cta { margin-top: 28px; }
   [dir="rtl"] .btn .arrow { transform: scaleX(-1); }
+  .ui-shot { margin: 28px 0 0; }
+  .ui-shot a { display: block; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); box-shadow: var(--shadow); background: var(--card); }
+  .ui-shot img { width: 100%; height: auto; }
+  .ui-shot figcaption { margin-top: 10px; color: var(--muted); font-size: 15px; }
+  .ui-pair { margin-top: 4px; }
   .btn-ghost { border-color: var(--line); color: var(--ink); background: var(--card); }
   .bar .btn { padding: 8px 14px; }
 
@@ -259,7 +264,7 @@
         <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
         <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
       </button>
-      <a class="btn btn-primary" href="app/" data-app="fda26976" data-i18n="cta.prova">Provalo nel browser</a>
+      <a class="btn btn-primary" href="app/" data-app="322b6c56" data-i18n="cta.prova">Provalo nel browser</a>
     </div>
   </div>
 </header>
@@ -272,7 +277,7 @@
         <h1 id="titolo" data-i18n="hero.h1">Disegni l'edificio,<br><em>il progetto si scrive da sé.</em></h1>
         <p class="lead" data-i18n="hero.lead">BIMopen è un software BIM libero. Modelli muri, porte, finestre e solai una volta sola: piante, vista 3D, abachi e file IFC nascono dallo stesso modello e restano sempre allineati.</p>
         <div class="cta">
-          <a class="btn btn-primary" href="app/" data-app="fda26976">
+          <a class="btn btn-primary" href="app/" data-app="322b6c56">
             <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11L13 8z" fill="currentColor"/></svg>
             <span data-i18n="cta.prova">Provalo nel browser</span>
           </a>
@@ -290,6 +295,22 @@
         <div class="shot splan"><img src="assets/pianta.webp?v=6b04d10c" alt="" width="1600" height="1329" loading="lazy"></div>
         <span class="tag t3d" data-i18n="hero.tag3d">Vista 3D</span>
         <span class="tag tplan" data-i18n="hero.tagpianta">Pianta piano terra</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="interfaccia" aria-labelledby="interfaccia-t">
+    <div class="wrap">
+      <span class="eyebrow" data-i18n="ui.kicker">L'interfaccia</span>
+      <h2 id="interfaccia-t" data-i18n="ui.h2">Familiare a chi conosce Revit</h2>
+      <p class="sub" data-i18n="ui.p">Barra multifunzione con schede e gruppi, palette Proprietà con il selettore del tipo, Browser di progetto, barra delle opzioni e barra di stato. Le immagini mostrano l'interfaccia nella lingua che hai scelto.</p>
+      <figure class="ui-shot ui-main"><a href="assets/ui/it/interface.webp?v=785c92db" data-ui-link><img src="assets/ui/it/interface.webp?v=785c92db" data-ui alt="L'interfaccia di BIMopen con la casa di esempio in 3D, la palette Proprietà e il Browser di progetto" data-i18n-attr="alt:ui.alt1" width="1400" height="820" loading="lazy"></a>
+        <figcaption data-i18n="ui.c1">La casa di esempio in 3D, con Proprietà e Browser di progetto a sinistra.</figcaption></figure>
+      <div class="grid2 ui-pair">
+        <figure class="ui-shot"><a href="assets/ui/it/wall-tool.webp?v=03e8e960" data-ui-link><img src="assets/ui/it/wall-tool.webp?v=03e8e960" data-ui alt="Lo strumento Muro in pianta, con la barra delle opzioni e la quota temporanea" data-i18n-attr="alt:ui.alt2" width="1400" height="820" loading="lazy"></a>
+          <figcaption data-i18n="ui.c2">Lo strumento Muro: barra delle opzioni, linea di ubicazione, concatena e quote temporanee.</figcaption></figure>
+        <figure class="ui-shot"><a href="assets/ui/it/sheet.webp?v=8eeab3ec" data-ui-link><img src="assets/ui/it/sheet.webp?v=8eeab3ec" data-ui alt="Una tavola con due piante posizionate e il cartiglio" data-i18n-attr="alt:ui.alt3" width="1400" height="820" loading="lazy"></a>
+          <figcaption data-i18n="ui.c3">Le tavole: viste in scala con il cartiglio, pronte per il PDF.</figcaption></figure>
       </div>
     </div>
   </section>
@@ -460,7 +481,7 @@ $ bimopen-cli mcp</pre>
         <article class="card">
           <h3 data-i18n="dl1.h3">Nel browser</h3>
           <p data-i18n="dl1.p">Nessuna installazione: serve un browser recente (Chrome, Edge, Firefox o Safari) con WebGPU o WebGL2. BIMopen si apre nella lingua scelta su questo sito, e i file restano sul tuo computer.</p>
-          <p style="margin-top:16px"><a class="btn btn-primary" href="app/" data-app="fda26976" data-i18n="dl1.btn">Apri BIMopen</a></p>
+          <p style="margin-top:16px"><a class="btn btn-primary" href="app/" data-app="322b6c56" data-i18n="dl1.btn">Apri BIMopen</a></p>
         </article>
         <article class="card">
           <h3 data-i18n="dl2.h3">Per il computer</h3>
@@ -494,7 +515,7 @@ $ bimopen-cli mcp</pre>
       <h2 id="final-t" data-i18n="fin.h2">Il tuo prossimo progetto, in BIM aperto.</h2>
       <p class="sub" style="margin-inline:auto" data-i18n="fin.p">Apri la casa di esempio, sposta un muro e guarda pianta, 3D e computo aggiornarsi insieme.</p>
       <div class="cta">
-        <a class="btn btn-primary" href="app/" data-app="fda26976" data-i18n="cta.prova">Provalo nel browser</a>
+        <a class="btn btn-primary" href="app/" data-app="322b6c56" data-i18n="cta.prova">Provalo nel browser</a>
         <a class="btn btn-ghost" href="#scarica" data-i18n="fin.altre">Altre opzioni</a>
       </div>
     </div>
@@ -512,7 +533,17 @@ $ bimopen-cli mcp</pre>
 </footer>
 
 <button class="to-top" id="to-top" type="button" aria-label="Torna all'inizio" data-i18n-attr="aria-label:ui.top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
-<script src="lingua.js?v=bd28584a"></script>
+<script>
+  // the screenshots of the interface follow the language chosen on the site
+  document.addEventListener('lingua', function (e) {
+    var l = e.detail;
+    document.querySelectorAll('img[data-ui], a[data-ui-link]').forEach(function (x) {
+      var a = x.tagName === 'A' ? 'href' : 'src';
+      x.setAttribute(a, x.getAttribute(a).replace(/assets\/ui\/[a-z]{2}\//, 'assets/ui/' + l + '/'));
+    });
+  });
+</script>
+<script src="lingua.js?v=08c8b07d"></script>
 <script>
   // tema: quello di sistema finché non si sceglie; poi chiaro o scuro, ricordato in questo browser
   (function () {

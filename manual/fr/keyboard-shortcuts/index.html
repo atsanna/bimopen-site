@@ -472,11 +472,23 @@ avec <span class="keys"><kbd class="key-enter">Enter</kbd></span>, comme toute c
 </tr>
 <tr>
 <td><span class="keys"><kbd class="key-shift">Shift</kbd></span></td>
-<td>Pendant le dessin, maintient les segments horizontaux ou verticaux (ou les libère, lorsque <strong>Ortho</strong> est activé) ; avec le bouton gauche, effectue un panoramique de la vue</td>
+<td>Pendant le dessin, maintient les segments horizontaux ou verticaux (ou les libère, lorsque <strong>Ortho</strong> est activé) ; avec un clic ou une fenêtre, retire des éléments de la sélection ; pendant un glisser, libère un mur joint ou garde le déplacement horizontal ou vertical</td>
 </tr>
 <tr>
 <td><span class="keys"><kbd class="key-control">Ctrl</kbd></span> + clic</td>
-<td>Ajoute un élément à la sélection, ou l'en retire</td>
+<td>Ajoute un élément à la sélection ; maintenue au début d'un glisser, place une copie</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-tab">Tab</kbd></span> / <span class="keys"><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-tab">Tab</kbd></span></td>
+<td>Met en évidence l'élément suivant (précédent) sous le curseur, ou une chaîne de murs et de lignes joints</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-arrow-left">Left</kbd></span></td>
+<td>Sélectionne de nouveau ce qui était sélectionné auparavant</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-arrow-left">Left</kbd></span> <span class="keys"><kbd class="key-arrow-right">Right</kbd></span> <span class="keys"><kbd class="key-arrow-up">Up</kbd></span> <span class="keys"><kbd class="key-arrow-down">Down</kbd></span></td>
+<td>Déplacent la sélection d'un petit pas ; avec <span class="keys"><kbd class="key-shift">Shift</kbd></span>, de dix pas</td>
 </tr>
 </tbody>
 </table>
@@ -503,22 +515,17 @@ termine aussi l'esquisse lorsqu'elle comporte suffisamment de points.</p>
 <tr>
 <td>Bouton central, glisser</td>
 <td>Panoramique</td>
-<td>Panoramique</td>
-</tr>
-<tr>
-<td><span class="keys"><kbd class="key-shift">Shift</kbd></span> + bouton gauche, glisser</td>
-<td>Panoramique</td>
-<td>Panoramique</td>
+<td>Panoramique ; avec <span class="keys"><kbd class="key-shift">Shift</kbd></span>, orbite</td>
 </tr>
 <tr>
 <td>Bouton gauche, glisser</td>
 <td>Fenêtre de sélection (de gauche à droite : à l'intérieur ; de droite à gauche : en contact), ou déplace les éléments sélectionnés</td>
-<td>Orbite</td>
+<td>De même</td>
 </tr>
 <tr>
 <td>Bouton droit</td>
 <td>Menu contextuel ; avec un outil actif, annule l'étape</td>
-<td>Orbite (glisser)</td>
+<td>De même ; en glissant, orbite</td>
 </tr>
 <tr>
 <td>Double-clic</td>
@@ -666,6 +673,11 @@ exécute la commande immédiatement (voir <a href="../command-line-and-mcp/">Lig
 <tr>
 <td><code>MM</code></td>
 <td><code>mirror</code></td>
+<td>Symétrie - Choisir l'axe</td>
+</tr>
+<tr>
+<td><code>DM</code></td>
+<td><code>mirror</code></td>
 <td>Symétrie - Dessiner l'axe</td>
 </tr>
 <tr>
@@ -692,6 +704,31 @@ exécute la commande immédiatement (voir <a href="../command-line-and-mcp/">Lig
 <td><code>SL</code></td>
 <td><code>split</code></td>
 <td>Scinder l'élément</td>
+</tr>
+<tr>
+<td><code>SG</code></td>
+<td><code>split</code></td>
+<td>Scinder avec espace</td>
+</tr>
+<tr>
+<td><code>RE</code></td>
+<td><code>resize</code></td>
+<td>Échelle</td>
+</tr>
+<tr>
+<td><code>PN</code></td>
+<td><code>pin</code></td>
+<td>Verrouille la sélection</td>
+</tr>
+<tr>
+<td><code>UP</code></td>
+<td><code>unpin</code></td>
+<td>Déverrouille la sélection</td>
+</tr>
+<tr>
+<td><code>SA</code></td>
+<td><code>selectinstances</code></td>
+<td>Sélectionne toutes les occurrences des types de la sélection visibles dans la vue</td>
 </tr>
 <tr>
 <td><code>DEL</code></td>

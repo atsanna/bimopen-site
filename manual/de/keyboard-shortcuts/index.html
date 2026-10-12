@@ -472,11 +472,23 @@
 </tr>
 <tr>
 <td><span class="keys"><kbd class="key-shift">Shift</kbd></span></td>
-<td>Hält beim Zeichnen die Segmente waagerecht oder senkrecht (oder gibt sie frei, wenn <strong>Orthogonal</strong> eingeschaltet ist); verschiebt mit der linken Taste die Ansicht</td>
+<td>Hält beim Zeichnen die Segmente waagerecht oder senkrecht (oder gibt sie frei, wenn <strong>Orthogonal</strong> eingeschaltet ist); mit einem Klick oder einem Fenster nimmt sie Elemente aus der Auswahl; beim Ziehen gibt sie eine verbundene Wand frei oder hält die Verschiebung waagerecht oder senkrecht</td>
 </tr>
 <tr>
 <td><span class="keys"><kbd class="key-control">Ctrl</kbd></span> + Klick</td>
-<td>Fügt ein Element der Auswahl hinzu oder entfernt es</td>
+<td>Fügt ein Element der Auswahl hinzu; zu Beginn eines Ziehens gehalten, setzt sie eine Kopie</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-tab">Tab</kbd></span> / <span class="keys"><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-tab">Tab</kbd></span></td>
+<td>Hebt das nächste (vorherige) Element unter dem Cursor hervor, oder eine Kette verbundener Wände und Linien</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-arrow-left">Left</kbd></span></td>
+<td>Wählt erneut aus, was vorher ausgewählt war</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-arrow-left">Left</kbd></span> <span class="keys"><kbd class="key-arrow-right">Right</kbd></span> <span class="keys"><kbd class="key-arrow-up">Up</kbd></span> <span class="keys"><kbd class="key-arrow-down">Down</kbd></span></td>
+<td>Verschieben die Auswahl um einen kleinen Schritt; mit <span class="keys"><kbd class="key-shift">Shift</kbd></span> um zehn</td>
 </tr>
 </tbody>
 </table>
@@ -503,22 +515,17 @@ die Skizze auch, wenn sie genügend Punkte hat.</p>
 <tr>
 <td>Mittlere Taste, ziehen</td>
 <td>Verschieben</td>
-<td>Verschieben</td>
-</tr>
-<tr>
-<td><span class="keys"><kbd class="key-shift">Shift</kbd></span> + linke Taste, ziehen</td>
-<td>Verschieben</td>
-<td>Verschieben</td>
+<td>Verschieben; mit <span class="keys"><kbd class="key-shift">Shift</kbd></span> Orbit</td>
 </tr>
 <tr>
 <td>Linke Taste, ziehen</td>
 <td>Auswahlfenster (von links nach rechts: innen liegend; von rechts nach links: berührend) oder verschiebt die ausgewählten Elemente</td>
-<td>Orbit</td>
+<td>Ebenso</td>
 </tr>
 <tr>
 <td>Rechte Taste</td>
 <td>Kontextmenü; bei aktivem Werkzeug bricht sie den Schritt ab</td>
-<td>Orbit (ziehen)</td>
+<td>Ebenso; beim Ziehen Orbit</td>
 </tr>
 <tr>
 <td>Doppelklick</td>
@@ -666,6 +673,11 @@ sofort aus (siehe <a href="../command-line-and-mcp/">Befehlszeile und MCP</a>).<
 <tr>
 <td><code>MM</code></td>
 <td><code>mirror</code></td>
+<td>Spiegeln - Achse wählen</td>
+</tr>
+<tr>
+<td><code>DM</code></td>
+<td><code>mirror</code></td>
 <td>Spiegeln - Achse zeichnen</td>
 </tr>
 <tr>
@@ -692,6 +704,31 @@ sofort aus (siehe <a href="../command-line-and-mcp/">Befehlszeile und MCP</a>).<
 <td><code>SL</code></td>
 <td><code>split</code></td>
 <td>Element teilen</td>
+</tr>
+<tr>
+<td><code>SG</code></td>
+<td><code>split</code></td>
+<td>Teilen mit Lücke</td>
+</tr>
+<tr>
+<td><code>RE</code></td>
+<td><code>resize</code></td>
+<td>Skalieren</td>
+</tr>
+<tr>
+<td><code>PN</code></td>
+<td><code>pin</code></td>
+<td>Fixiert die Auswahl</td>
+</tr>
+<tr>
+<td><code>UP</code></td>
+<td><code>unpin</code></td>
+<td>Löst die Auswahl</td>
+</tr>
+<tr>
+<td><code>SA</code></td>
+<td><code>selectinstances</code></td>
+<td>Wählt alle in der Ansicht sichtbaren Exemplare der Typen der Auswahl</td>
 </tr>
 <tr>
 <td><code>DEL</code></td>

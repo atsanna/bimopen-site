@@ -856,7 +856,7 @@ puedes escribir para iniciarlo.</p>
 </tr>
 <tr>
 <td><strong>Referencia</strong></td>
-<td><strong>Nivel</strong>: un nivel nuevo por encima del último; <strong>Rejilla</strong> <code>GR</code></td>
+<td><strong>Nivel</strong>: se dibuja en un alzado o una sección, dos clics a la altura del nuevo nivel (desde una planta abre un alzado); <strong>Rejilla</strong> <code>GR</code></td>
 </tr>
 </tbody>
 </table>
@@ -972,7 +972,7 @@ usando.</p>
 </tr>
 <tr>
 <td><strong>Modificar</strong></td>
-<td>Doce herramientas pequeñas en dos filas: <strong>Alinear</strong> <code>AL</code>, <strong>Desfase</strong> <code>OF</code>, <strong>Simetría - Designar eje</strong>, <strong>Simetría - Dibujar eje</strong> <code>MM</code>, <strong>Dividir elemento</strong> <code>SL</code>, <strong>Recortar/Alargar a esquina</strong> <code>TR</code>; <strong>Mover</strong> <code>MV</code>, <strong>Copiar</strong> <code>CO</code>, <strong>Girar</strong> <code>RO</code>, <strong>Matriz</strong> <code>AR</code>, <strong>Todo</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-a">A</kbd></span>), <strong>Eliminar</strong> (<span class="keys"><kbd class="key-delete">Del</kbd></span>)</td>
+<td>Diecisiete herramientas pequeñas en tres filas: <strong>Alinear</strong> <code>AL</code>, <strong>Desfase</strong> <code>OF</code>, <strong>Simetría - Designar eje</strong> <code>MM</code>, <strong>Simetría - Dibujar eje</strong> <code>DM</code>, <strong>Dividir elemento</strong> <code>SL</code>, <strong>Dividir con separación</strong> <code>SG</code>; <strong>Mover</strong> <code>MV</code>, <strong>Copiar</strong> <code>CO</code>, <strong>Girar</strong> <code>RO</code>, <strong>Recortar/Alargar a esquina</strong> <code>TR</code>, <strong>Recortar/Alargar un elemento</strong>, <strong>Recortar/Alargar varios elementos</strong>; <strong>Matriz</strong> <code>AR</code>, <strong>Escala</strong> <code>RE</code>, <strong>Fijar</strong> <code>PN</code>, <strong>Liberar</strong> <code>UP</code>, <strong>Eliminar</strong> (<span class="keys"><kbd class="key-delete">Del</kbd></span>)</td>
 </tr>
 </tbody>
 </table>
@@ -987,6 +987,10 @@ modificación</a> describe las herramientas de Modificar.</p>
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>Algo seleccionado</td>
+<td><strong>Selección</strong>: <strong>Filtro</strong> (véase <a href="../selection-and-modify/#filter">Selección y modificación</a>)</td>
+</tr>
 <tr>
 <td>Puertas o ventanas seleccionadas</td>
 <td><strong>Hueco</strong>: <strong>Voltear sentido</strong>, <strong>Voltear bisagra</strong></td>
@@ -1295,8 +1299,8 @@ región ajustada</strong> (lo mismo que <span class="keys"><kbd class="key-home"
 <td>Encuadra</td>
 </tr>
 <tr>
-<td><span class="keys"><kbd class="key-shift">Shift</kbd></span> + arrastrar con el botón izquierdo</td>
-<td>Encuadra, mientras no hay ninguna herramienta activa</td>
+<td>Arrastrar con el botón izquierdo</td>
+<td>Una ventana de selección, o mueve los elementos seleccionados (<a href="../selection-and-modify/">Selección y modificación</a>)</td>
 </tr>
 <tr>
 <td><span class="keys"><kbd class="key-home">Home</kbd></span></td>
@@ -1313,12 +1317,16 @@ región ajustada</strong> (lo mismo que <span class="keys"><kbd class="key-home"
 </thead>
 <tbody>
 <tr>
-<td>Arrastrar con el botón izquierdo (o derecho)</td>
+<td>Arrastrar con el botón derecho, o <span class="keys"><kbd class="key-shift">Shift</kbd></span> + botón central</td>
 <td>Orbita alrededor del modelo</td>
 </tr>
 <tr>
-<td>Arrastrar con el botón central, o <span class="keys"><kbd class="key-shift">Shift</kbd></span> + botón izquierdo</td>
+<td>Arrastrar con el botón central</td>
 <td>Encuadra</td>
+</tr>
+<tr>
+<td>Arrastrar con el botón izquierdo</td>
+<td>Una ventana de selección, o mueve los elementos seleccionados</td>
 </tr>
 <tr>
 <td>Rueda del ratón</td>
@@ -1338,6 +1346,8 @@ cursor está sobre un elemento que no está seleccionado, primero se selecciona 
 menú tiene:</p>
 <ul>
 <li><strong>Cancelar</strong>: borra la selección;</li>
+<li><strong>Seleccionar todos los ejemplares ▸ Visibles en la vista</strong> o <strong>▸ En todo el proyecto</strong>: los
+  elementos del mismo tipo; <strong>Seleccionar anterior</strong>: la selección hecha antes;</li>
 <li><strong>Ocultar en vista ▸ Elementos</strong> o <strong>▸ Categoría</strong>: oculta los elementos seleccionados, o sus
   categorías completas, en esta vista;</li>
 <li><strong>Modificar gráficos en vista ▸ Por categoría…</strong>: abre <strong>Visibilidad/Gráficos</strong> con las
@@ -1363,18 +1373,21 @@ comandos.</p>
   línea de comandos);</li>
 <li>sin herramienta, la categoría y el tipo del elemento bajo el cursor, como <strong>Muros : Muro
   exterior - Bloque cerámico 300 + SATE</strong>;</li>
-<li>en los demás casos, un recordatorio del ratón: <strong>Clic: seleccionar · Ctrl: añadir · Rueda: zoom
-  · Central: encuadre</strong> en plantas, <strong>Arrastrar: órbita · Mayús/central: encuadre · Rueda: zoom</strong>
-  en 3D.</li>
+<li>mientras arrastra, la longitud del desplazamiento, como <strong>Mover: 1500</strong>;</li>
+<li>en los demás casos, un recordatorio del ratón: <strong>Clic: seleccionar · Ctrl: añadir · Mayús:
+  quitar · Rueda: zoom · Central: encuadre</strong> en plantas, <strong>Clic: seleccionar · Botón derecho:
+  órbita · Central: encuadre · Rueda: zoom</strong> en 3D.</li>
 </ul>
-<p>A la derecha, un embudo y el número de elementos seleccionados; en una planta, también las
-coordenadas del cursor en metros.</p>
+<p>A la derecha, el número de elementos seleccionados y un embudo: haga clic en el número para abrir
+<strong>Filtro</strong>. Luego <strong>Seleccionar y arrastrar</strong>, que permite arrastrar elementos sin seleccionarlos
+antes; en una planta, también las coordenadas del cursor en metros.</p>
 <h2 id="selecting-in-short">La selección, en resumen</h2>
-<p>El <a href="../selection-and-modify/">capítulo sobre selección y modificación</a> describirá la selección en
+<p>El <a href="../selection-and-modify/">capítulo sobre selección y modificación</a> describe la selección en
 detalle. Lo esencial:</p>
 <ul>
 <li>haz clic en un elemento para seleccionarlo; haz clic en un punto vacío para borrar la selección;</li>
-<li><span class="keys"><kbd class="key-control">Ctrl</kbd></span> + clic añade un elemento a la selección, o lo quita si ya está seleccionado;</li>
+<li><span class="keys"><kbd class="key-control">Ctrl</kbd></span> + clic añade un elemento a la selección, <span class="keys"><kbd class="key-shift">Shift</kbd></span> + clic lo quita; <span class="keys"><kbd class="key-tab">Tab</kbd></span> resalta el
+  elemento siguiente bajo el cursor, o una cadena de muros unidos;</li>
 <li>arrastra de izquierda a derecha para seleccionar lo que está por completo dentro del
   rectángulo, y de derecha a izquierda para seleccionar lo que toca;</li>
 <li>arrastra un elemento seleccionado para moverlo;</li>

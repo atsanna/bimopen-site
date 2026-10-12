@@ -472,11 +472,23 @@
 </tr>
 <tr>
 <td><span class="keys"><kbd class="key-shift">Shift</kbd></span></td>
-<td>Durante il disegno, mantiene i segmenti orizzontali o verticali (o li libera, quando <strong>Orto</strong> è attivo); con il pulsante sinistro, sposta la vista</td>
+<td>Durante il disegno, mantiene i segmenti orizzontali o verticali (o li libera, quando <strong>Orto</strong> è attivo); con un clic o una finestra, toglie elementi dalla selezione; trascinando, libera un muro unito o mantiene lo spostamento orizzontale o verticale</td>
 </tr>
 <tr>
 <td><span class="keys"><kbd class="key-control">Ctrl</kbd></span> + clic</td>
-<td>Aggiunge un elemento alla selezione, o lo rimuove</td>
+<td>Aggiunge un elemento alla selezione; tenuto all'inizio di un trascinamento, colloca una copia</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-tab">Tab</kbd></span> / <span class="keys"><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-tab">Tab</kbd></span></td>
+<td>Evidenzia l'elemento successivo (precedente) sotto il cursore, o una catena di muri e linee uniti</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-arrow-left">Left</kbd></span></td>
+<td>Seleziona di nuovo ciò che era selezionato prima</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-arrow-left">Left</kbd></span> <span class="keys"><kbd class="key-arrow-right">Right</kbd></span> <span class="keys"><kbd class="key-arrow-up">Up</kbd></span> <span class="keys"><kbd class="key-arrow-down">Down</kbd></span></td>
+<td>Spostano la selezione di un piccolo passo; con <span class="keys"><kbd class="key-shift">Shift</kbd></span>, dieci passi</td>
 </tr>
 </tbody>
 </table>
@@ -504,22 +516,17 @@ annulla.</p>
 <tr>
 <td>Pulsante centrale, trascinamento</td>
 <td>Spostamento della vista</td>
-<td>Spostamento della vista</td>
-</tr>
-<tr>
-<td><span class="keys"><kbd class="key-shift">Shift</kbd></span> + pulsante sinistro, trascinamento</td>
-<td>Spostamento della vista</td>
-<td>Spostamento della vista</td>
+<td>Spostamento della vista; con <span class="keys"><kbd class="key-shift">Shift</kbd></span>, orbita</td>
 </tr>
 <tr>
 <td>Pulsante sinistro, trascinamento</td>
 <td>Finestra di selezione (da sinistra a destra: interni; da destra a sinistra: intersecati), oppure sposta gli elementi selezionati</td>
-<td>Orbita</td>
+<td>Lo stesso</td>
 </tr>
 <tr>
 <td>Pulsante destro</td>
 <td>Menu contestuale; con uno strumento attivo, annulla il passaggio</td>
-<td>Orbita (trascinamento)</td>
+<td>Lo stesso; trascinando, orbita</td>
 </tr>
 <tr>
 <td>Doppio clic</td>
@@ -667,6 +674,11 @@ comando (vedi <a href="../command-line-and-mcp/">Riga di comando e MCP</a>).</p>
 <tr>
 <td><code>MM</code></td>
 <td><code>mirror</code></td>
+<td>Copia speculare - Seleziona asse</td>
+</tr>
+<tr>
+<td><code>DM</code></td>
+<td><code>mirror</code></td>
 <td>Copia speculare - Disegna asse</td>
 </tr>
 <tr>
@@ -693,6 +705,31 @@ comando (vedi <a href="../command-line-and-mcp/">Riga di comando e MCP</a>).</p>
 <td><code>SL</code></td>
 <td><code>split</code></td>
 <td>Dividi elemento</td>
+</tr>
+<tr>
+<td><code>SG</code></td>
+<td><code>split</code></td>
+<td>Dividi con spazio</td>
+</tr>
+<tr>
+<td><code>RE</code></td>
+<td><code>resize</code></td>
+<td>Scala</td>
+</tr>
+<tr>
+<td><code>PN</code></td>
+<td><code>pin</code></td>
+<td>Blocca la selezione</td>
+</tr>
+<tr>
+<td><code>UP</code></td>
+<td><code>unpin</code></td>
+<td>Sblocca la selezione</td>
+</tr>
+<tr>
+<td><code>SA</code></td>
+<td><code>selectinstances</code></td>
+<td>Seleziona tutte le istanze dei tipi della selezione visibili nella vista</td>
 </tr>
 <tr>
 <td><code>DEL</code></td>

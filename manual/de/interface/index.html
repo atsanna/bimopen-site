@@ -858,7 +858,7 @@ diese tut, und in Klammern das Kürzel, das Sie eingeben können, um sie zu star
 </tr>
 <tr>
 <td><strong>Bezug</strong></td>
-<td><strong>Ebene</strong>: eine neue Ebene über der letzten; <strong>Raster</strong> <code>GR</code></td>
+<td><strong>Ebene</strong>: in einer Ansicht oder einem Schnitt gezeichnet, zwei Klicks auf der Höhe der neuen Ebene (aus einem Grundriss öffnet sie eine Ansicht); <strong>Raster</strong> <code>GR</code></td>
 </tr>
 </tbody>
 </table>
@@ -975,7 +975,7 @@ die Multifunktionsleiste zu der Registerkarte zurück, die Sie zuvor verwendet h
 </tr>
 <tr>
 <td><strong>Ändern</strong></td>
-<td>Zwölf kleine Werkzeuge in zwei Reihen: <strong>Ausrichten</strong> <code>AL</code>, <strong>Versatz</strong> <code>OF</code>, <strong>Spiegeln - Achse wählen</strong>, <strong>Spiegeln - Achse zeichnen</strong> <code>MM</code>, <strong>Element teilen</strong> <code>SL</code>, <strong>Stutzen/Dehnen für Ecke</strong> <code>TR</code>; <strong>Verschieben</strong> <code>MV</code>, <strong>Kopieren</strong> <code>CO</code>, <strong>Drehen</strong> <code>RO</code>, <strong>Reihe</strong> <code>AR</code>, <strong>Alles</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-a">A</kbd></span>), <strong>Löschen</strong> (<span class="keys"><kbd class="key-delete">Del</kbd></span>)</td>
+<td>Siebzehn kleine Werkzeuge in drei Reihen: <strong>Ausrichten</strong> <code>AL</code>, <strong>Versatz</strong> <code>OF</code>, <strong>Spiegeln - Achse wählen</strong> <code>MM</code>, <strong>Spiegeln - Achse zeichnen</strong> <code>DM</code>, <strong>Element teilen</strong> <code>SL</code>, <strong>Teilen mit Lücke</strong> <code>SG</code>; <strong>Verschieben</strong> <code>MV</code>, <strong>Kopieren</strong> <code>CO</code>, <strong>Drehen</strong> <code>RO</code>, <strong>Stutzen/Dehnen für Ecke</strong> <code>TR</code>, <strong>Einzelnes Element stutzen/dehnen</strong>, <strong>Mehrere Elemente stutzen/dehnen</strong>; <strong>Reihe</strong> <code>AR</code>, <strong>Skalieren</strong> <code>RE</code>, <strong>Fixieren</strong> <code>PN</code>, <strong>Lösen</strong> <code>UP</code>, <strong>Löschen</strong> (<span class="keys"><kbd class="key-delete">Del</kbd></span>)</td>
 </tr>
 </tbody>
 </table>
@@ -990,6 +990,10 @@ die Multifunktionsleiste zu der Registerkarte zurück, die Sie zuvor verwendet h
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>Etwas ausgewählt</td>
+<td><strong>Auswahl</strong>: <strong>Filter</strong> (siehe <a href="../selection-and-modify/#filter">Auswählen und Ändern</a>)</td>
+</tr>
 <tr>
 <td>Türen oder Fenster ausgewählt</td>
 <td><strong>Öffnung</strong>: <strong>Öffnungsrichtung umkehren</strong>, <strong>Anschlag wechseln</strong></td>
@@ -1301,8 +1305,8 @@ Grenzen</strong> (dasselbe wie <span class="keys"><kbd class="key-home">Home</kb
 <td>Verschiebt</td>
 </tr>
 <tr>
-<td><span class="keys"><kbd class="key-shift">Shift</kbd></span> + Ziehen mit der linken Taste</td>
-<td>Verschiebt, solange kein Werkzeug aktiv ist</td>
+<td>Ziehen mit der linken Taste</td>
+<td>Ein Auswahlfenster, oder verschiebt die gewählten Elemente (<a href="../selection-and-modify/">Auswählen und Ändern</a>)</td>
 </tr>
 <tr>
 <td><span class="keys"><kbd class="key-home">Home</kbd></span></td>
@@ -1319,12 +1323,16 @@ Grenzen</strong> (dasselbe wie <span class="keys"><kbd class="key-home">Home</kb
 </thead>
 <tbody>
 <tr>
-<td>Ziehen mit der linken (oder rechten) Taste</td>
+<td>Ziehen mit der rechten Taste oder <span class="keys"><kbd class="key-shift">Shift</kbd></span> + mittlere Taste</td>
 <td>Orbitiert um das Modell</td>
 </tr>
 <tr>
-<td>Ziehen mit der mittleren Taste oder <span class="keys"><kbd class="key-shift">Shift</kbd></span> + linke Taste</td>
+<td>Ziehen mit der mittleren Taste</td>
 <td>Verschiebt</td>
+</tr>
+<tr>
+<td>Ziehen mit der linken Taste</td>
+<td>Ein Auswahlfenster, oder verschiebt die gewählten Elemente</td>
 </tr>
 <tr>
 <td>Mausrad</td>
@@ -1344,6 +1352,8 @@ sich der Cursor auf einem nicht ausgewählten Element, wird dieses zuerst ausgew
 enthält:</p>
 <ul>
 <li><strong>Abbrechen</strong>: hebt die Auswahl auf;</li>
+<li><strong>Alle Exemplare auswählen ▸ In Ansicht sichtbar</strong> oder <strong>▸ Im gesamten Projekt</strong>: die Elemente
+  desselben Typs; <strong>Vorherige auswählen</strong>: die vorher getroffene Auswahl;</li>
 <li><strong>In Ansicht ausblenden ▸ Elemente</strong> oder <strong>▸ Kategorie</strong>: blendet die ausgewählten Elemente oder
   ihre ganzen Kategorien in dieser Ansicht aus;</li>
 <li><strong>Grafik in Ansicht überschreiben ▸ Nach Kategorie…</strong>: öffnet <strong>Sichtbarkeit/Grafik</strong> für die
@@ -1367,20 +1377,22 @@ Zeilen zurück. Das <a href="../command-line-and-mcp/">Kapitel zur Befehlszeile<
   Befehlszeile);</li>
 <li>ohne Werkzeug die Kategorie und den Typ des Elements unter dem Cursor, als <strong>Wände :
   Außenwand - Porosierter Ziegel 300 + WDVS</strong>;</li>
-<li>andernfalls eine Erinnerung an die Mausbedienung: <strong>Klick: auswählen · Strg: hinzufügen · Rad:
-  Zoom · Mitte: Pan</strong> in Grundrissen, <strong>Ziehen: Orbit · Shift/mittlere Taste: Verschieben ·
-  Mausrad: Zoom</strong> in 3D.</li>
+<li>während Sie ziehen, die Länge der Verschiebung, als <strong>Verschieben: 1500</strong>;</li>
+<li>andernfalls eine Erinnerung an die Mausbedienung: <strong>Klick: auswählen · Strg: hinzufügen ·
+  Umschalt: entfernen · Rad: Zoom · Mitte: Pan</strong> in Grundrissen, <strong>Klick: auswählen · Rechte Taste:
+  Orbit · Mittlere Taste: Verschieben · Mausrad: Zoom</strong> in 3D.</li>
 </ul>
-<p>Rechts ein Trichter und die Anzahl der ausgewählten Elemente; in einem Grundriss außerdem die
-Koordinaten des Cursors in Metern.</p>
+<p>Rechts die Anzahl der ausgewählten Elemente und ein Trichter: ein Klick auf die Anzahl öffnet
+<strong>Filter</strong>. Dann <strong>Auswählen und ziehen</strong>, womit sich Elemente ziehen lassen, ohne sie vorher zu
+wählen; in einem Grundriss außerdem die Koordinaten des Cursors in Metern.</p>
 <h2 id="selecting-in-short">Auswählen in Kürze</h2>
-<p>Das <a href="../selection-and-modify/">Kapitel zum Auswählen und Ändern</a> wird das Auswählen vollständig
-beschreiben. Das Wichtigste:</p>
+<p>Das <a href="../selection-and-modify/">Kapitel zum Auswählen und Ändern</a> beschreibt das Auswählen
+vollständig. Das Wichtigste:</p>
 <ul>
 <li>Klicken Sie auf ein Element, um es auszuwählen; klicken Sie auf einen leeren Punkt, um die Auswahl
   aufzuheben;</li>
-<li><span class="keys"><kbd class="key-control">Ctrl</kbd></span> + Klick fügt ein Element der Auswahl hinzu oder entfernt es, wenn es bereits ausgewählt
-  ist;</li>
+<li><span class="keys"><kbd class="key-control">Ctrl</kbd></span> + Klick fügt ein Element der Auswahl hinzu, <span class="keys"><kbd class="key-shift">Shift</kbd></span> + Klick nimmt es heraus; <span class="keys"><kbd class="key-tab">Tab</kbd></span>
+  hebt das nächste Element unter dem Cursor hervor, oder eine Kette verbundener Wände;</li>
 <li>ziehen Sie von links nach rechts, um auszuwählen, was vollständig im Rechteck liegt, von rechts
   nach links, um auszuwählen, was es berührt;</li>
 <li>ziehen Sie ein ausgewähltes Element, um es zu verschieben;</li>

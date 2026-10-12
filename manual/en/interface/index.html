@@ -851,7 +851,7 @@ shows what it does and, in brackets, the shortcut you can type to start it.</p>
 </tr>
 <tr>
 <td><strong>Datum</strong></td>
-<td><strong>Level</strong>: a new level above the last one; <strong>Grid</strong> <code>GR</code></td>
+<td><strong>Level</strong>: drawn in an elevation or a section, two clicks at the new level's height (from a plan it opens an elevation); <strong>Grid</strong> <code>GR</code></td>
 </tr>
 </tbody>
 </table>
@@ -964,7 +964,7 @@ goes back to the tab you were using.</p>
 </tr>
 <tr>
 <td><strong>Modify</strong></td>
-<td>Twelve small tools in two rows: <strong>Align</strong> <code>AL</code>, <strong>Offset</strong> <code>OF</code>, <strong>Mirror - Pick Axis</strong>, <strong>Mirror - Draw Axis</strong> <code>MM</code>, <strong>Split Element</strong> <code>SL</code>, <strong>Trim/Extend to Corner</strong> <code>TR</code>; <strong>Move</strong> <code>MV</code>, <strong>Copy</strong> <code>CO</code>, <strong>Rotate</strong> <code>RO</code>, <strong>Array</strong> <code>AR</code>, <strong>All</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-a">A</kbd></span>), <strong>Delete</strong> (<span class="keys"><kbd class="key-delete">Del</kbd></span>)</td>
+<td>Seventeen small tools in three rows: <strong>Align</strong> <code>AL</code>, <strong>Offset</strong> <code>OF</code>, <strong>Mirror - Pick Axis</strong> <code>MM</code>, <strong>Mirror - Draw Axis</strong> <code>DM</code>, <strong>Split Element</strong> <code>SL</code>, <strong>Split with Gap</strong> <code>SG</code>; <strong>Move</strong> <code>MV</code>, <strong>Copy</strong> <code>CO</code>, <strong>Rotate</strong> <code>RO</code>, <strong>Trim/Extend to Corner</strong> <code>TR</code>, <strong>Trim/Extend Single Element</strong>, <strong>Trim/Extend Multiple Elements</strong>; <strong>Array</strong> <code>AR</code>, <strong>Scale</strong> <code>RE</code>, <strong>Pin</strong> <code>PN</code>, <strong>Unpin</strong> <code>UP</code>, <strong>Delete</strong> (<span class="keys"><kbd class="key-delete">Del</kbd></span>)</td>
 </tr>
 </tbody>
 </table>
@@ -979,6 +979,10 @@ chapter</a> describes the Modify tools.</p>
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>Anything selected</td>
+<td><strong>Selection</strong>: <strong>Filter</strong> (see <a href="../selection-and-modify/#filter">Selecting and modifying</a>)</td>
+</tr>
 <tr>
 <td>Doors or windows selected</td>
 <td><strong>Opening</strong>: <strong>Flip facing</strong>, <strong>Flip hand</strong></td>
@@ -1282,8 +1286,8 @@ control bar: its views have their own scale.</p>
 <td>Pans</td>
 </tr>
 <tr>
-<td><span class="keys"><kbd class="key-shift">Shift</kbd></span> + drag with the left button</td>
-<td>Pans, while no tool is active</td>
+<td>Drag with the left button</td>
+<td>A selection window, or moves the selected elements (<a href="../selection-and-modify/">Selecting and modifying</a>)</td>
 </tr>
 <tr>
 <td><span class="keys"><kbd class="key-home">Home</kbd></span></td>
@@ -1300,12 +1304,16 @@ control bar: its views have their own scale.</p>
 </thead>
 <tbody>
 <tr>
-<td>Drag with the left (or right) button</td>
+<td>Drag with the right button, or <span class="keys"><kbd class="key-shift">Shift</kbd></span> + middle button</td>
 <td>Orbits around the model</td>
 </tr>
 <tr>
-<td>Drag with the middle button, or <span class="keys"><kbd class="key-shift">Shift</kbd></span> + left button</td>
+<td>Drag with the middle button</td>
 <td>Pans</td>
+</tr>
+<tr>
+<td>Drag with the left button</td>
+<td>A selection window, or moves the selected elements</td>
 </tr>
 <tr>
 <td>Mouse wheel</td>
@@ -1324,6 +1332,8 @@ green, Z blue. A saved 3D view remembers where you left it.</p>
 selected, the element is selected first. The menu has:</p>
 <ul>
 <li><strong>Cancel</strong>: clears the selection;</li>
+<li><strong>Select All Instances ▸ Visible in View</strong> or <strong>▸ In Entire Project</strong>: the elements of the same
+  type; <strong>Select Previous</strong>: the selection made before;</li>
 <li><strong>Hide in view ▸ Elements</strong> or <strong>▸ Category</strong>: hides the selected elements, or their whole
   categories, in this view;</li>
 <li><strong>Override graphics in view ▸ By category…</strong>: opens <strong>Visibility/Graphics</strong> on the categories of
@@ -1345,17 +1355,20 @@ command line. <span class="keys"><kbd class="key-enter">Enter</kbd></span> runs 
 <li>while a tool is active, what the tool expects (the same prompt as the command line);</li>
 <li>with no tool, the category and the type of the element under the cursor, as <strong>Walls :
   Exterior wall - Clay block 300 + ETICS</strong>;</li>
-<li>otherwise a reminder of the mouse: <strong>Click: select · Ctrl: add · Wheel: zoom · Middle: pan</strong> in
-  plans, <strong>Drag: orbit · Shift/middle: pan · Wheel: zoom</strong> in 3D.</li>
+<li>while you drag, the length of the move, as <strong>Move: 1500</strong>;</li>
+<li>otherwise a reminder of the mouse: <strong>Click: select · Ctrl: add · Shift: remove · Wheel: zoom ·
+  Middle: pan</strong> in plans, <strong>Click: select · Right: orbit · Middle: pan · Wheel: zoom</strong> in 3D.</li>
 </ul>
-<p>On the right, a funnel and the number of selected elements; in a plan, also the coordinates of
-the cursor in metres.</p>
+<p>On the right, the number of selected elements and a funnel: click the number to open <strong>Filter</strong>.
+Then <strong>Select and Drag</strong>, which lets you drag elements without selecting them first; in a plan,
+also the coordinates of the cursor in metres.</p>
 <h2 id="selecting-in-short">Selecting, in short</h2>
-<p>The <a href="../selection-and-modify/">selecting and modifying chapter</a> will describe selection in full.
-The essentials:</p>
+<p>The <a href="../selection-and-modify/">selecting and modifying chapter</a> describes selection in full. The
+essentials:</p>
 <ul>
 <li>click an element to select it; click an empty point to clear the selection;</li>
-<li><span class="keys"><kbd class="key-control">Ctrl</kbd></span> + click adds an element to the selection, or removes it if it is already selected;</li>
+<li><span class="keys"><kbd class="key-control">Ctrl</kbd></span> + click adds an element to the selection, <span class="keys"><kbd class="key-shift">Shift</kbd></span> + click takes it out; <span class="keys"><kbd class="key-tab">Tab</kbd></span>
+  highlights the next element under the cursor, or a chain of joined walls;</li>
 <li>drag from left to right to select what is entirely inside the rectangle, from right to left to
   select what it touches;</li>
 <li>drag a selected element to move it;</li>

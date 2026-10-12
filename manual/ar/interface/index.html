@@ -849,7 +849,7 @@
 </tr>
 <tr>
 <td><strong>المرجع</strong></td>
-<td><strong>المنسوب</strong>: منسوب جديد فوق آخر منسوب؛ <strong>شبكة المحاور</strong> <code>GR</code></td>
+<td><strong>المنسوب</strong>: يُرسم في واجهة أو مقطع، بنقرتين على ارتفاع المنسوب الجديد (ومن مسقط يفتح واجهة)؛ <strong>شبكة المحاور</strong> <code>GR</code></td>
 </tr>
 </tbody>
 </table>
@@ -961,7 +961,7 @@
 </tr>
 <tr>
 <td><strong>تعديل</strong></td>
-<td>اثنتا عشرة أداة صغيرة في صفين: <strong>محاذاة</strong> <code>AL</code>، <strong>إزاحة</strong> <code>OF</code>، <strong>عكس - اختيار المحور</strong>، <strong>عكس - رسم المحور</strong> <code>MM</code>، <strong>تقسيم العنصر</strong> <code>SL</code>، <strong>قص/تمديد إلى زاوية</strong> <code>TR</code>؛ <strong>نقل</strong> <code>MV</code>، <strong>نسخ</strong> <code>CO</code>، <strong>تدوير</strong> <code>RO</code>، <strong>مصفوفة</strong> <code>AR</code>، <strong>الكل</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-a">A</kbd></span>)، <strong>حذف</strong> (<span class="keys"><kbd class="key-delete">Del</kbd></span>)</td>
+<td>سبع عشرة أداة صغيرة في ثلاثة صفوف: <strong>محاذاة</strong> <code>AL</code>، <strong>إزاحة</strong> <code>OF</code>، <strong>عكس - اختيار المحور</strong> <code>MM</code>، <strong>عكس - رسم المحور</strong> <code>DM</code>، <strong>تقسيم العنصر</strong> <code>SL</code>، <strong>تقسيم مع فجوة</strong> <code>SG</code>؛ <strong>نقل</strong> <code>MV</code>، <strong>نسخ</strong> <code>CO</code>، <strong>تدوير</strong> <code>RO</code>، <strong>قص/تمديد إلى زاوية</strong> <code>TR</code>، <strong>قص/تمديد عنصر واحد</strong>، <strong>قص/تمديد عدة عناصر</strong>؛ <strong>مصفوفة</strong> <code>AR</code>، <strong>تحجيم</strong> <code>RE</code>، <strong>تثبيت</strong> <code>PN</code>، <strong>إلغاء التثبيت</strong> <code>UP</code>، <strong>حذف</strong> (<span class="keys"><kbd class="key-delete">Del</kbd></span>)</td>
 </tr>
 </tbody>
 </table>
@@ -976,6 +976,10 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>تحديد أي شيء</td>
+<td><strong>التحديد</strong>: <strong>عامل التصفية</strong> (انظر <a href="../selection-and-modify/#filter">التحديد والتعديل</a>)</td>
+</tr>
 <tr>
 <td>أبواب أو نوافذ محددة</td>
 <td><strong>فتحة</strong>: <strong>عكس اتجاه الفتح</strong>، <strong>عكس جهة المفصلات</strong></td>
@@ -1275,8 +1279,8 @@
 <td>تحريك العرض</td>
 </tr>
 <tr>
-<td><span class="keys"><kbd class="key-shift">Shift</kbd></span> + السحب بالزر الأيسر</td>
-<td>تحريك العرض، ما دامت لا توجد أداة نشطة</td>
+<td>السحب بالزر الأيسر</td>
+<td>نافذة تحديد، أو نقل العناصر المحددة (<a href="../selection-and-modify/">التحديد والتعديل</a>)</td>
 </tr>
 <tr>
 <td><span class="keys"><kbd class="key-home">Home</kbd></span></td>
@@ -1293,12 +1297,16 @@
 </thead>
 <tbody>
 <tr>
-<td>السحب بالزر الأيسر (أو الأيمن)</td>
+<td>السحب بالزر الأيمن، أو <span class="keys"><kbd class="key-shift">Shift</kbd></span> + الزر الأوسط</td>
 <td>دوران مداري حول النموذج</td>
 </tr>
 <tr>
-<td>السحب بالزر الأوسط، أو <span class="keys"><kbd class="key-shift">Shift</kbd></span> + الزر الأيسر</td>
+<td>السحب بالزر الأوسط</td>
 <td>تحريك العرض</td>
+</tr>
+<tr>
+<td>السحب بالزر الأيسر</td>
+<td>نافذة تحديد، أو نقل العناصر المحددة</td>
 </tr>
 <tr>
 <td>عجلة الفأرة</td>
@@ -1317,6 +1325,8 @@
 العنصر أولًا. وفي القائمة:</p>
 <ul>
 <li><strong>إلغاء</strong>: يمسح التحديد؛</li>
+<li><strong>تحديد كل المثيلات ▸ المرئية في العرض</strong> أو <strong>▸ في المشروع بأكمله</strong>: عناصر النوع نفسه؛
+  و<strong>تحديد السابق</strong>: التحديد الذي سبقه؛</li>
 <li><strong>إخفاء في العرض ▸ العناصر</strong> أو <strong>▸ الفئة</strong>: يخفي العناصر المحددة، أو فئاتها بالكامل، في هذا
   العرض؛</li>
 <li><strong>تجاوز الرسومات في العرض ▸ حسب الفئة…</strong>: يفتح <strong>الرؤية/الرسومات</strong> على فئات التحديد؛</li>
@@ -1336,15 +1346,18 @@
 <li>ما دامت هناك أداة نشطة، ما تنتظره الأداة (المطالبة نفسها التي في سطر الأوامر)؛</li>
 <li>دون أداة، فئة العنصر الواقع تحت المؤشر ونوعه، مثل <strong>الجدران :
   جدار خارجي - طوب طيني 300 + عزل خارجي</strong>؛</li>
-<li>وفي غير ذلك تذكيرًا بالفأرة: <strong>نقرة: تحديد · Ctrl: إضافة · العجلة: تكبير/تصغير · الزر الأوسط: تحريك</strong> في
-  المساقط، و<strong>السحب: دوران مداري · Shift/الزر الأوسط: تحريك العرض · العجلة: تكبير/تصغير</strong> في العرض ثلاثي الأبعاد.</li>
+<li>أثناء السحب، طول النقل، مثل <strong>نقل: 1500</strong>؛</li>
+<li>وفي غير ذلك تذكيرًا بالفأرة: <strong>نقرة: تحديد · Ctrl: إضافة · Shift: إزالة · العجلة: تكبير/تصغير · الزر الأوسط: تحريك</strong> في
+  المساقط، و<strong>نقرة: تحديد · الزر الأيمن: دوران مداري · الزر الأوسط: تحريك العرض · العجلة: تكبير/تصغير</strong> في العرض ثلاثي الأبعاد.</li>
 </ul>
-<p>على اليسار، قمع وعدد العناصر المحددة؛ وفي المسقط أيضًا إحداثيات المؤشر بالأمتار.</p>
+<p>على اليسار، عدد العناصر المحددة وقمع: انقر العدد لفتح <strong>عامل التصفية</strong>. ثم <strong>تحديد وسحب</strong> الذي يتيح سحب العناصر
+دون تحديدها أولًا؛ وفي المسقط أيضًا إحداثيات المؤشر بالأمتار.</p>
 <h2 id="selecting-in-short">التحديد باختصار</h2>
-<p>سيصف <a href="../selection-and-modify/">فصل التحديد والتعديل</a> التحديد بالكامل. أما الأساسيات:</p>
+<p>يصف <a href="../selection-and-modify/">فصل التحديد والتعديل</a> التحديد بالكامل. أما الأساسيات:</p>
 <ul>
 <li>انقر عنصرًا لتحديده؛ وانقر نقطة فارغة لمسح التحديد؛</li>
-<li><span class="keys"><kbd class="key-control">Ctrl</kbd></span> + نقرة يضيف عنصرًا إلى التحديد، أو يزيله إن كان محددًا من قبل؛</li>
+<li><span class="keys"><kbd class="key-control">Ctrl</kbd></span> + نقرة يضيف عنصرًا إلى التحديد، و<span class="keys"><kbd class="key-shift">Shift</kbd></span> + نقرة يخرجه منه؛ ويبرز <span class="keys"><kbd class="key-tab">Tab</kbd></span> العنصر التالي
+  تحت المؤشر، أو سلسلة من الجدران المتصلة؛</li>
 <li>اسحب من اليسار إلى اليمين لتحديد ما يقع داخل المستطيل بالكامل، ومن اليمين إلى اليسار لتحديد ما
   يلمسه؛</li>
 <li>اسحب عنصرًا محددًا لنقله؛</li>

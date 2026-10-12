@@ -472,11 +472,23 @@ cualquier comando. Los atajos escritos son los mismos en todos los idiomas.</p>
 </tr>
 <tr>
 <td><span class="keys"><kbd class="key-shift">Shift</kbd></span></td>
-<td>Al dibujar, mantiene los segmentos horizontales o verticales (o los libera, cuando <strong>Orto</strong> está activado); con el botón izquierdo, encuadra la vista</td>
+<td>Al dibujar, mantiene los segmentos horizontales o verticales (o los libera, cuando <strong>Orto</strong> está activado); con un clic o una ventana, quita elementos de la selección; al arrastrar, libera un muro unido o mantiene el desplazamiento horizontal o vertical</td>
 </tr>
 <tr>
 <td><span class="keys"><kbd class="key-control">Ctrl</kbd></span> + clic</td>
-<td>Añade un elemento a la selección, o lo quita</td>
+<td>Añade un elemento a la selección; pulsada al empezar a arrastrar, coloca una copia</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-tab">Tab</kbd></span> / <span class="keys"><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-tab">Tab</kbd></span></td>
+<td>Resalta el elemento siguiente (anterior) bajo el cursor, o una cadena de muros y líneas unidos</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-arrow-left">Left</kbd></span></td>
+<td>Vuelve a seleccionar lo que estaba seleccionado antes</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-arrow-left">Left</kbd></span> <span class="keys"><kbd class="key-arrow-right">Right</kbd></span> <span class="keys"><kbd class="key-arrow-up">Up</kbd></span> <span class="keys"><kbd class="key-arrow-down">Down</kbd></span></td>
+<td>Mueven la selección un paso pequeño; con <span class="keys"><kbd class="key-shift">Shift</kbd></span>, diez pasos</td>
 </tr>
 </tbody>
 </table>
@@ -503,22 +515,17 @@ finaliza el boceto cuando tiene suficientes puntos.</p>
 <tr>
 <td>Botón central, arrastrar</td>
 <td>Encuadre</td>
-<td>Encuadre</td>
-</tr>
-<tr>
-<td><span class="keys"><kbd class="key-shift">Shift</kbd></span> + botón izquierdo, arrastrar</td>
-<td>Encuadre</td>
-<td>Encuadre</td>
+<td>Encuadre; con <span class="keys"><kbd class="key-shift">Shift</kbd></span>, órbita</td>
 </tr>
 <tr>
 <td>Botón izquierdo, arrastrar</td>
 <td>Ventana de selección (de izquierda a derecha: dentro; de derecha a izquierda: tocando), o mueve los elementos seleccionados</td>
-<td>Órbita</td>
+<td>Lo mismo</td>
 </tr>
 <tr>
 <td>Botón derecho</td>
 <td>Menú contextual; con una herramienta activa, cancela el paso</td>
-<td>Órbita (arrastrar)</td>
+<td>Lo mismo; al arrastrar, órbita</td>
 </tr>
 <tr>
 <td>Doble clic</td>
@@ -666,6 +673,11 @@ comando de inmediato (consulta <a href="../command-line-and-mcp/">Línea de coma
 <tr>
 <td><code>MM</code></td>
 <td><code>mirror</code></td>
+<td>Simetría - Designar eje</td>
+</tr>
+<tr>
+<td><code>DM</code></td>
+<td><code>mirror</code></td>
 <td>Simetría - Dibujar eje</td>
 </tr>
 <tr>
@@ -692,6 +704,31 @@ comando de inmediato (consulta <a href="../command-line-and-mcp/">Línea de coma
 <td><code>SL</code></td>
 <td><code>split</code></td>
 <td>Dividir elemento</td>
+</tr>
+<tr>
+<td><code>SG</code></td>
+<td><code>split</code></td>
+<td>Dividir con separación</td>
+</tr>
+<tr>
+<td><code>RE</code></td>
+<td><code>resize</code></td>
+<td>Escala</td>
+</tr>
+<tr>
+<td><code>PN</code></td>
+<td><code>pin</code></td>
+<td>Fija la selección</td>
+</tr>
+<tr>
+<td><code>UP</code></td>
+<td><code>unpin</code></td>
+<td>Libera la selección</td>
+</tr>
+<tr>
+<td><code>SA</code></td>
+<td><code>selectinstances</code></td>
+<td>Selecciona todos los ejemplares de los tipos de la selección visibles en la vista</td>
 </tr>
 <tr>
 <td><code>DEL</code></td>

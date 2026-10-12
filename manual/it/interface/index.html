@@ -855,7 +855,7 @@ mostra che cosa fa e, tra parentesi, la scorciatoia che puoi digitare per avviar
 </tr>
 <tr>
 <td><strong>Riferimento</strong></td>
-<td><strong>Livello</strong>: un nuovo livello sopra l'ultimo; <strong>Griglia</strong> <code>GR</code></td>
+<td><strong>Livello</strong>: disegnato in un prospetto o in una sezione, due clic all'altezza del nuovo livello (da una pianta apre un prospetto); <strong>Griglia</strong> <code>GR</code></td>
 </tr>
 </tbody>
 </table>
@@ -969,7 +969,7 @@ usando.</p>
 </tr>
 <tr>
 <td><strong>Modifica</strong></td>
-<td>Dodici piccoli strumenti su due righe: <strong>Allinea</strong> <code>AL</code>, <strong>Offset</strong> <code>OF</code>, <strong>Copia speculare - Seleziona asse</strong>, <strong>Copia speculare - Disegna asse</strong> <code>MM</code>, <strong>Dividi elemento</strong> <code>SL</code>, <strong>Riduci/Estendi ad angolo</strong> <code>TR</code>; <strong>Sposta</strong> <code>MV</code>, <strong>Copia</strong> <code>CO</code>, <strong>Ruota</strong> <code>RO</code>, <strong>Serie</strong> <code>AR</code>, <strong>Tutto</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-a">A</kbd></span>), <strong>Elimina</strong> (<span class="keys"><kbd class="key-delete">Del</kbd></span>)</td>
+<td>Diciassette piccoli strumenti su tre righe: <strong>Allinea</strong> <code>AL</code>, <strong>Offset</strong> <code>OF</code>, <strong>Copia speculare - Seleziona asse</strong> <code>MM</code>, <strong>Copia speculare - Disegna asse</strong> <code>DM</code>, <strong>Dividi elemento</strong> <code>SL</code>, <strong>Dividi con spazio</strong> <code>SG</code>; <strong>Sposta</strong> <code>MV</code>, <strong>Copia</strong> <code>CO</code>, <strong>Ruota</strong> <code>RO</code>, <strong>Riduci/Estendi ad angolo</strong> <code>TR</code>, <strong>Riduci/Estendi elemento singolo</strong>, <strong>Riduci/Estendi più elementi</strong>; <strong>Serie</strong> <code>AR</code>, <strong>Scala</strong> <code>RE</code>, <strong>Blocca</strong> <code>PN</code>, <strong>Sblocca</strong> <code>UP</code>, <strong>Elimina</strong> (<span class="keys"><kbd class="key-delete">Del</kbd></span>)</td>
 </tr>
 </tbody>
 </table>
@@ -984,6 +984,10 @@ modifica</a> descrive gli strumenti di modifica.</p>
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>Qualcosa selezionato</td>
+<td><strong>Selezione</strong>: <strong>Filtro</strong> (vedi <a href="../selection-and-modify/#filter">Selezione e modifica</a>)</td>
+</tr>
 <tr>
 <td>Porte o finestre selezionate</td>
 <td><strong>Apertura</strong>: <strong>Ribalta verso</strong>, <strong>Ribalta cerniera</strong></td>
@@ -1293,8 +1297,8 @@ adattare</strong> (lo stesso di <span class="keys"><kbd class="key-home">Home</k
 <td>Sposta la vista</td>
 </tr>
 <tr>
-<td><span class="keys"><kbd class="key-shift">Shift</kbd></span> + trascinamento con il pulsante sinistro</td>
-<td>Sposta la vista, quando nessuno strumento è attivo</td>
+<td>Trascinamento con il pulsante sinistro</td>
+<td>Una finestra di selezione, o sposta gli elementi selezionati (<a href="../selection-and-modify/">Selezione e modifica</a>)</td>
 </tr>
 <tr>
 <td><span class="keys"><kbd class="key-home">Home</kbd></span></td>
@@ -1311,12 +1315,16 @@ adattare</strong> (lo stesso di <span class="keys"><kbd class="key-home">Home</k
 </thead>
 <tbody>
 <tr>
-<td>Trascinamento con il pulsante sinistro (o destro)</td>
+<td>Trascinamento con il pulsante destro, o <span class="keys"><kbd class="key-shift">Shift</kbd></span> + pulsante centrale</td>
 <td>Orbita intorno al modello</td>
 </tr>
 <tr>
-<td>Trascinamento con il pulsante centrale, o <span class="keys"><kbd class="key-shift">Shift</kbd></span> + pulsante sinistro</td>
+<td>Trascinamento con il pulsante centrale</td>
 <td>Sposta la vista</td>
+</tr>
+<tr>
+<td>Trascinamento con il pulsante sinistro</td>
+<td>Una finestra di selezione, o sposta gli elementi selezionati</td>
 </tr>
 <tr>
 <td>Rotella del mouse</td>
@@ -1335,6 +1343,8 @@ rosso, Y verde, Z blu. Una vista 3D salvata ricorda dove l'hai lasciata.</p>
 selezionato, l'elemento viene prima selezionato. Il menu contiene:</p>
 <ul>
 <li><strong>Annulla</strong>: annulla la selezione;</li>
+<li><strong>Seleziona tutte le istanze ▸ Visibile nella vista</strong> o <strong>▸ Nell'intero progetto</strong>: gli elementi
+  dello stesso tipo; <strong>Seleziona precedente</strong>: la selezione fatta prima;</li>
 <li><strong>Nascondi in vista ▸ Elementi</strong> o <strong>▸ Categoria</strong>: nasconde gli elementi selezionati, o le loro
   intere categorie, in questa vista;</li>
 <li><strong>Sostituisci grafica vista ▸ Per categoria…</strong>: apre <strong>Visibilità/Grafica</strong> sulle categorie
@@ -1358,19 +1368,22 @@ comando. <span class="keys"><kbd class="key-enter">Enter</kbd></span> esegue la 
   comando);</li>
 <li>senza strumento, la categoria e il tipo dell'elemento sotto il cursore, come <strong>Muri : Muro
   esterno - Laterizio 300 + cappotto</strong>;</li>
-<li>altrimenti un promemoria per il mouse: <strong>Clic: seleziona · Ctrl: aggiunge · Rotella: zoom ·
-  Centrale: panoramica</strong> nelle piante, <strong>Trascina: orbita · Shift/centrale: panoramica · Rotella:
-  zoom</strong> in 3D.</li>
+<li>mentre trascini, la lunghezza dello spostamento, come <strong>Sposta: 1500</strong>;</li>
+<li>altrimenti un promemoria per il mouse: <strong>Clic: seleziona · Ctrl: aggiunge · Maiusc: toglie ·
+  Rotella: zoom · Centrale: panoramica</strong> nelle piante, <strong>Clic: seleziona · Destro: orbita ·
+  Centrale: panoramica · Rotella: zoom</strong> in 3D.</li>
 </ul>
-<p>A destra, un imbuto e il numero di elementi selezionati; in una pianta, anche le coordinate del
-cursore in metri.</p>
+<p>A destra, il numero di elementi selezionati e un imbuto: clicca il numero per aprire <strong>Filtro</strong>.
+Poi <strong>Seleziona e trascina</strong>, che permette di trascinare gli elementi senza selezionarli prima; in
+una pianta, anche le coordinate del cursore in metri.</p>
 <h2 id="selecting-in-short">La selezione, in breve</h2>
-<p>Il <a href="../selection-and-modify/">capitolo sulla selezione e la modifica</a> descriverà la selezione per
+<p>Il <a href="../selection-and-modify/">capitolo sulla selezione e la modifica</a> descrive la selezione per
 intero. L'essenziale:</p>
 <ul>
 <li>fai clic su un elemento per selezionarlo; fai clic su un punto vuoto per annullare la
   selezione;</li>
-<li><span class="keys"><kbd class="key-control">Ctrl</kbd></span> + clic aggiunge un elemento alla selezione, o lo rimuove se è già selezionato;</li>
+<li><span class="keys"><kbd class="key-control">Ctrl</kbd></span> + clic aggiunge un elemento alla selezione, <span class="keys"><kbd class="key-shift">Shift</kbd></span> + clic lo toglie; <span class="keys"><kbd class="key-tab">Tab</kbd></span>
+  evidenzia l'elemento successivo sotto il cursore, o una catena di muri uniti;</li>
 <li>trascina da sinistra a destra per selezionare ciò che è interamente dentro il rettangolo, da
   destra a sinistra per selezionare ciò che esso tocca;</li>
 <li>trascina un elemento selezionato per spostarlo;</li>

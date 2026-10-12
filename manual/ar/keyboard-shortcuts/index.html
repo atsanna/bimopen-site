@@ -472,11 +472,23 @@
 </tr>
 <tr>
 <td><span class="keys"><kbd class="key-shift">Shift</kbd></span></td>
-<td>أثناء الرسم يُبقي المقاطع أفقية أو رأسية (أو يحررها حين يكون <strong>متعامد</strong> مفعّلًا)؛ ومع الزر الأيسر يحرّك العرض</td>
+<td>أثناء الرسم يُبقي المقاطع أفقية أو رأسية (أو يحررها حين يكون <strong>متعامد</strong> مفعّلًا)؛ ومع نقرة أو نافذة يُخرج عناصر من التحديد؛ وأثناء السحب يحرر جدارًا متصلًا أو يُبقي النقل أفقيًا أو رأسيًا</td>
 </tr>
 <tr>
 <td><span class="keys"><kbd class="key-control">Ctrl</kbd></span> + نقرة</td>
-<td>يضيف عنصرًا إلى التحديد، أو يزيله</td>
+<td>يضيف عنصرًا إلى التحديد؛ وإن ضُغط عند بدء السحب يضع نسخة</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-tab">Tab</kbd></span> / <span class="keys"><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-tab">Tab</kbd></span></td>
+<td>يبرز العنصر التالي (السابق) تحت المؤشر، أو سلسلة من الجدران والخطوط المتصلة</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-arrow-left">Left</kbd></span></td>
+<td>يعيد تحديد ما كان محددًا من قبل</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-arrow-left">Left</kbd></span> <span class="keys"><kbd class="key-arrow-right">Right</kbd></span> <span class="keys"><kbd class="key-arrow-up">Up</kbd></span> <span class="keys"><kbd class="key-arrow-down">Down</kbd></span></td>
+<td>تنقل التحديد خطوة صغيرة؛ ومع <span class="keys"><kbd class="key-shift">Shift</kbd></span> عشر خطوات</td>
 </tr>
 </tbody>
 </table>
@@ -503,22 +515,17 @@
 <tr>
 <td>الزر الأوسط، سحب</td>
 <td>تحريك العرض</td>
-<td>تحريك العرض</td>
-</tr>
-<tr>
-<td><span class="keys"><kbd class="key-shift">Shift</kbd></span> + الزر الأيسر، سحب</td>
-<td>تحريك العرض</td>
-<td>تحريك العرض</td>
+<td>تحريك العرض؛ ومع <span class="keys"><kbd class="key-shift">Shift</kbd></span> دوران مداري</td>
 </tr>
 <tr>
 <td>الزر الأيسر، سحب</td>
 <td>نافذة تحديد (من اليسار إلى اليمين: ما بداخلها؛ ومن اليمين إلى اليسار: ما تلمسه)، أو نقل العناصر المحددة</td>
-<td>دوران مداري</td>
+<td>الشيء نفسه</td>
 </tr>
 <tr>
 <td>الزر الأيمن</td>
 <td>القائمة السياقية؛ ومع أداة نشطة يلغي الخطوة</td>
-<td>دوران مداري (سحب)</td>
+<td>الشيء نفسه؛ ومع السحب دوران مداري</td>
 </tr>
 <tr>
 <td>النقر المزدوج</td>
@@ -666,6 +673,11 @@
 <tr>
 <td><code>MM</code></td>
 <td><code>mirror</code></td>
+<td>عكس - اختيار المحور</td>
+</tr>
+<tr>
+<td><code>DM</code></td>
+<td><code>mirror</code></td>
 <td>عكس - رسم المحور</td>
 </tr>
 <tr>
@@ -692,6 +704,31 @@
 <td><code>SL</code></td>
 <td><code>split</code></td>
 <td>تقسيم العنصر</td>
+</tr>
+<tr>
+<td><code>SG</code></td>
+<td><code>split</code></td>
+<td>تقسيم مع فجوة</td>
+</tr>
+<tr>
+<td><code>RE</code></td>
+<td><code>resize</code></td>
+<td>تحجيم</td>
+</tr>
+<tr>
+<td><code>PN</code></td>
+<td><code>pin</code></td>
+<td>يثبّت التحديد</td>
+</tr>
+<tr>
+<td><code>UP</code></td>
+<td><code>unpin</code></td>
+<td>يلغي تثبيت التحديد</td>
+</tr>
+<tr>
+<td><code>SA</code></td>
+<td><code>selectinstances</code></td>
+<td>يحدد كل مثيلات أنواع التحديد المرئية في العرض</td>
 </tr>
 <tr>
 <td><code>DEL</code></td>

@@ -858,7 +858,7 @@ taper pour le lancer.</p>
 </tr>
 <tr>
 <td><strong>Référence</strong></td>
-<td><strong>Niveau</strong> : un nouveau niveau au-dessus du dernier ; <strong>Quadrillage</strong> <code>GR</code></td>
+<td><strong>Niveau</strong> : dessiné dans une élévation ou une coupe, deux clics à la hauteur du nouveau niveau (depuis un plan, il ouvre une élévation) ; <strong>Quadrillage</strong> <code>GR</code></td>
 </tr>
 </tbody>
 </table>
@@ -974,7 +974,7 @@ utilisiez.</p>
 </tr>
 <tr>
 <td><strong>Modifier</strong></td>
-<td>Douze petits outils sur deux rangées : <strong>Aligner</strong> <code>AL</code>, <strong>Décaler</strong> <code>OF</code>, <strong>Symétrie - Choisir l'axe</strong>, <strong>Symétrie - Dessiner l'axe</strong> <code>MM</code>, <strong>Scinder l'élément</strong> <code>SL</code>, <strong>Ajuster/Prolonger pour former un angle</strong> <code>TR</code> ; <strong>Déplacer</strong> <code>MV</code>, <strong>Copier</strong> <code>CO</code>, <strong>Faire pivoter</strong> <code>RO</code>, <strong>Réseau</strong> <code>AR</code>, <strong>Tout</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-a">A</kbd></span>), <strong>Supprimer</strong> (<span class="keys"><kbd class="key-delete">Del</kbd></span>)</td>
+<td>Dix-sept petits outils sur trois rangées : <strong>Aligner</strong> <code>AL</code>, <strong>Décaler</strong> <code>OF</code>, <strong>Symétrie - Choisir l'axe</strong> <code>MM</code>, <strong>Symétrie - Dessiner l'axe</strong> <code>DM</code>, <strong>Scinder l'élément</strong> <code>SL</code>, <strong>Scinder avec espace</strong> <code>SG</code> ; <strong>Déplacer</strong> <code>MV</code>, <strong>Copier</strong> <code>CO</code>, <strong>Faire pivoter</strong> <code>RO</code>, <strong>Ajuster/Prolonger pour former un angle</strong> <code>TR</code>, <strong>Ajuster/Prolonger un élément</strong>, <strong>Ajuster/Prolonger plusieurs éléments</strong> ; <strong>Réseau</strong> <code>AR</code>, <strong>Échelle</strong> <code>RE</code>, <strong>Verrouiller</strong> <code>PN</code>, <strong>Déverrouiller</strong> <code>UP</code>, <strong>Supprimer</strong> (<span class="keys"><kbd class="key-delete">Del</kbd></span>)</td>
 </tr>
 </tbody>
 </table>
@@ -989,6 +989,10 @@ et la modification</a> décrit les outils de modification.</p>
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>Quelque chose de sélectionné</td>
+<td><strong>Sélection</strong> : <strong>Filtre</strong> (voir <a href="../selection-and-modify/#filter">Sélection et modification</a>)</td>
+</tr>
 <tr>
 <td>Portes ou fenêtres sélectionnées</td>
 <td><strong>Ouverture</strong> : <strong>Inverser le sens</strong>, <strong>Inverser la charnière</strong></td>
@@ -1298,8 +1302,8 @@ pas de barre de contrôle d'affichage : ses vues ont leur propre échelle.</p>
 <td>Panoramique</td>
 </tr>
 <tr>
-<td><span class="keys"><kbd class="key-shift">Shift</kbd></span> + glisser avec le bouton gauche</td>
-<td>Panoramique, lorsqu'aucun outil n'est actif</td>
+<td>Glisser avec le bouton gauche</td>
+<td>Une fenêtre de sélection, ou déplace les éléments sélectionnés (<a href="../selection-and-modify/">Sélection et modification</a>)</td>
 </tr>
 <tr>
 <td><span class="keys"><kbd class="key-home">Home</kbd></span></td>
@@ -1316,12 +1320,16 @@ pas de barre de contrôle d'affichage : ses vues ont leur propre échelle.</p>
 </thead>
 <tbody>
 <tr>
-<td>Glisser avec le bouton gauche (ou droit)</td>
+<td>Glisser avec le bouton droit, ou <span class="keys"><kbd class="key-shift">Shift</kbd></span> + bouton central</td>
 <td>Orbite autour du modèle</td>
 </tr>
 <tr>
-<td>Glisser avec le bouton central, ou <span class="keys"><kbd class="key-shift">Shift</kbd></span> + bouton gauche</td>
+<td>Glisser avec le bouton central</td>
 <td>Panoramique</td>
+</tr>
+<tr>
+<td>Glisser avec le bouton gauche</td>
+<td>Une fenêtre de sélection, ou déplace les éléments sélectionnés</td>
 </tr>
 <tr>
 <td>Molette de la souris</td>
@@ -1340,6 +1348,8 @@ Y en vert, Z en bleu. Une vue 3D enregistrée mémorise l'endroit où vous l'ave
 sur un élément non sélectionné, l'élément est d'abord sélectionné. Le menu comporte :</p>
 <ul>
 <li><strong>Annuler</strong> : efface la sélection ;</li>
+<li><strong>Sélectionner toutes les occurrences ▸ Visibles dans la vue</strong> ou <strong>▸ Dans tout le projet</strong> : les
+  éléments du même type ; <strong>Sélection précédente</strong> : la sélection faite auparavant ;</li>
 <li><strong>Masquer dans la vue ▸ Éléments</strong> ou <strong>▸ Catégorie</strong> : masque les éléments sélectionnés, ou
   leurs catégories entières, dans cette vue ;</li>
 <li><strong>Remplacer les graphismes dans la vue ▸ Par catégorie…</strong> : ouvre <strong>Visibilité/Graphismes</strong> sur
@@ -1362,19 +1372,22 @@ commande</a> décrit les commandes.</p>
 <li>lorsqu'un outil est actif, ce qu'attend l'outil (la même invite que dans la ligne de commande) ;</li>
 <li>sans outil, la catégorie et le type de l'élément sous le curseur, comme <strong>Murs : Mur extérieur -
   Brique alvéolaire 300 + ITE</strong> ;</li>
-<li>sinon, un aide-mémoire de la souris : <strong>Clic : sélectionner · Ctrl : ajouter · Molette : zoom ·
-  Milieu : panoramique</strong> dans les plans, <strong>Glisser : orbite · Maj/bouton central : panoramique ·
-  Molette : zoom</strong> en 3D.</li>
+<li>pendant un glisser, la longueur du déplacement, comme <strong>Déplacer : 1500</strong> ;</li>
+<li>sinon, un aide-mémoire de la souris : <strong>Clic : sélectionner · Ctrl : ajouter · Maj : retirer ·
+  Molette : zoom · Milieu : panoramique</strong> dans les plans, <strong>Clic : sélectionner · Bouton droit :
+  orbite · Bouton central : panoramique · Molette : zoom</strong> en 3D.</li>
 </ul>
-<p>À droite, un entonnoir et le nombre d'éléments sélectionnés ; dans un plan, également les
-coordonnées du curseur en mètres.</p>
+<p>À droite, le nombre d'éléments sélectionnés et un entonnoir : cliquez sur le nombre pour ouvrir
+<strong>Filtre</strong>. Puis <strong>Sélectionner et faire glisser</strong>, qui permet de faire glisser des éléments sans
+les sélectionner d'abord ; dans un plan, également les coordonnées du curseur en mètres.</p>
 <h2 id="selecting-in-short">La sélection, en bref</h2>
-<p>Le <a href="../selection-and-modify/">chapitre sur la sélection et la modification</a> décrira la sélection en
+<p>Le <a href="../selection-and-modify/">chapitre sur la sélection et la modification</a> décrit la sélection en
 détail. L'essentiel :</p>
 <ul>
 <li>cliquez sur un élément pour le sélectionner ; cliquez sur un point vide pour effacer la
   sélection ;</li>
-<li><span class="keys"><kbd class="key-control">Ctrl</kbd></span> + clic ajoute un élément à la sélection, ou l'en retire s'il est déjà sélectionné ;</li>
+<li><span class="keys"><kbd class="key-control">Ctrl</kbd></span> + clic ajoute un élément à la sélection, <span class="keys"><kbd class="key-shift">Shift</kbd></span> + clic l'en retire ; <span class="keys"><kbd class="key-tab">Tab</kbd></span> met en
+  évidence l'élément suivant sous le curseur, ou une chaîne de murs joints ;</li>
 <li>faites glisser de gauche à droite pour sélectionner ce qui se trouve entièrement à l'intérieur du
   rectangle, de droite à gauche pour sélectionner ce qu'il touche ;</li>
 <li>faites glisser un élément sélectionné pour le déplacer ;</li>

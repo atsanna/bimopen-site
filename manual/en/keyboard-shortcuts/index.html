@@ -472,11 +472,23 @@ command. Typed shortcuts are the same in every language.</p>
 </tr>
 <tr>
 <td><span class="keys"><kbd class="key-shift">Shift</kbd></span></td>
-<td>While drawing, keeps segments horizontal or vertical (or frees them, when <strong>Ortho</strong> is on); with the left button, pans the view</td>
+<td>While drawing, keeps segments horizontal or vertical (or frees them, when <strong>Ortho</strong> is on); with a click or a window, takes elements out of the selection; while dragging, frees a joined wall or keeps the move horizontal or vertical</td>
 </tr>
 <tr>
 <td><span class="keys"><kbd class="key-control">Ctrl</kbd></span> + click</td>
-<td>Adds an element to the selection, or removes it</td>
+<td>Adds an element to the selection; held when a drag starts, places a copy</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-tab">Tab</kbd></span> / <span class="keys"><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-tab">Tab</kbd></span></td>
+<td>Highlights the next (previous) element under the cursor, or a chain of joined walls and lines</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-arrow-left">Left</kbd></span></td>
+<td>Selects again what was selected before</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-arrow-left">Left</kbd></span> <span class="keys"><kbd class="key-arrow-right">Right</kbd></span> <span class="keys"><kbd class="key-arrow-up">Up</kbd></span> <span class="keys"><kbd class="key-arrow-down">Down</kbd></span></td>
+<td>Move the selection a small step; with <span class="keys"><kbd class="key-shift">Shift</kbd></span>, ten steps</td>
 </tr>
 </tbody>
 </table>
@@ -503,22 +515,17 @@ when it has enough points.</p>
 <tr>
 <td>Middle button, drag</td>
 <td>Pan</td>
-<td>Pan</td>
-</tr>
-<tr>
-<td><span class="keys"><kbd class="key-shift">Shift</kbd></span> + left button, drag</td>
-<td>Pan</td>
-<td>Pan</td>
+<td>Pan; with <span class="keys"><kbd class="key-shift">Shift</kbd></span>, orbit</td>
 </tr>
 <tr>
 <td>Left button, drag</td>
 <td>Selection window (left to right: inside; right to left: touching), or moves the selected elements</td>
-<td>Orbit</td>
+<td>The same</td>
 </tr>
 <tr>
 <td>Right button</td>
 <td>Context menu; with a tool active, cancels the step</td>
-<td>Orbit (drag)</td>
+<td>The same; dragging, orbit</td>
 </tr>
 <tr>
 <td>Double-click</td>
@@ -666,6 +673,11 @@ shortcut starts the tool or opens the dialog; with arguments, it runs the comman
 <tr>
 <td><code>MM</code></td>
 <td><code>mirror</code></td>
+<td>Mirror - Pick Axis</td>
+</tr>
+<tr>
+<td><code>DM</code></td>
+<td><code>mirror</code></td>
 <td>Mirror - Draw Axis</td>
 </tr>
 <tr>
@@ -692,6 +704,31 @@ shortcut starts the tool or opens the dialog; with arguments, it runs the comman
 <td><code>SL</code></td>
 <td><code>split</code></td>
 <td>Split Element</td>
+</tr>
+<tr>
+<td><code>SG</code></td>
+<td><code>split</code></td>
+<td>Split with Gap</td>
+</tr>
+<tr>
+<td><code>RE</code></td>
+<td><code>resize</code></td>
+<td>Scale</td>
+</tr>
+<tr>
+<td><code>PN</code></td>
+<td><code>pin</code></td>
+<td>Pins the selection</td>
+</tr>
+<tr>
+<td><code>UP</code></td>
+<td><code>unpin</code></td>
+<td>Unpins the selection</td>
+</tr>
+<tr>
+<td><code>SA</code></td>
+<td><code>selectinstances</code></td>
+<td>Selects all instances of the selection's types visible in the view</td>
 </tr>
 <tr>
 <td><code>DEL</code></td>

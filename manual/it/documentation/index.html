@@ -247,6 +247,66 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#schedules">
+<span class="md-ellipsis">
+      Abachi
+    </span>
+</a>
+<nav aria-label="Abachi" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creating-a-schedule">
+<span class="md-ellipsis">
+      Creare un abaco
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#schedule-properties">
+<span class="md-ellipsis">
+      Proprietà abaco
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#working-in-a-schedule-view">
+<span class="md-ellipsis">
+      Lavorare in una vista abaco
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#schedules-on-sheets">
+<span class="md-ellipsis">
+      Abachi sulle tavole
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-schedules-and-material-takeoffs">
+<span class="md-ellipsis">
+      Abachi chiave e computo dei materiali
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#project-and-shared-parameters">
+<span class="md-ellipsis">
+      Parametri di progetto e condivisi
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exporting-and-reusing-schedules">
+<span class="md-ellipsis">
+      Esportare e riusare gli abachi
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#what-this-chapter-will-cover">
 <span class="md-ellipsis">
       Che cosa tratterà questo capitolo
@@ -310,6 +370,66 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#schedules">
+<span class="md-ellipsis">
+      Abachi
+    </span>
+</a>
+<nav aria-label="Abachi" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creating-a-schedule">
+<span class="md-ellipsis">
+      Creare un abaco
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#schedule-properties">
+<span class="md-ellipsis">
+      Proprietà abaco
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#working-in-a-schedule-view">
+<span class="md-ellipsis">
+      Lavorare in una vista abaco
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#schedules-on-sheets">
+<span class="md-ellipsis">
+      Abachi sulle tavole
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-schedules-and-material-takeoffs">
+<span class="md-ellipsis">
+      Abachi chiave e computo dei materiali
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#project-and-shared-parameters">
+<span class="md-ellipsis">
+      Parametri di progetto e condivisi
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exporting-and-reusing-schedules">
+<span class="md-ellipsis">
+      Esportare e riusare gli abachi
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#what-this-chapter-will-cover">
 <span class="md-ellipsis">
       Che cosa tratterà questo capitolo
@@ -331,21 +451,111 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset"><a class="md-content__icon pdf-download-btn" download href="../pdf/bimopen-manual-it.pdf" title="Download"><i class="fa fas fa-download"></i><small> PDF</small></a>
 <h1 id="sheets-schedules-and-printing">Tavole, abachi e stampa</h1>
-<p>Questo capitolo descriverà come si documenta il progetto: tavole, abachi e disegni stampati.</p>
+<p>Questo capitolo descrive come si documenta il progetto: tavole, abachi e disegni stampati.</p>
 <div class="admonition note">
 <p class="admonition-title">In preparazione</p>
 <p>Questo capitolo viene completato con l'area R7 del riallineamento di BIMopen, <em>Documentazione e file</em>: ogni
 funzione viene confrontata con il comportamento di riferimento, corretta dove necessario e verificata
-attraverso l'interfaccia, e solo allora descritta qui. Fino ad allora, questa pagina elenca ciò che tratterà.</p>
+attraverso l'interfaccia, e solo allora descritta qui. Gli abachi sono verificati e descritti qui sotto;
+tavole e stampa seguiranno.</p>
 </div>
+<h2 id="schedules">Abachi</h2>
+<p>Un abaco è una tabella degli elementi del modello, e una vista come le altre: si apre in una
+finestra dell'area di disegno, si affianca, si sovrappone e si alterna a piante, sezioni e viste 3D,
+ed è elencato sotto <strong>Abachi/Quantità</strong> nel Browser di progetto. Segue subito ogni modifica del
+modello, e ogni modifica fatta nell'abaco cambia il modello.</p>
+<h3 id="creating-a-schedule">Creare un abaco</h3>
+<p><strong>Vista ➤ Crea ➤ Abachi ➤ Abaco/Quantità</strong> apre <strong>Nuovo abaco</strong>: si sceglie una categoria, un
+nome (quello proposto segue la categoria finché non se ne scrive uno) e <strong>Componenti di
+costruzione dell'abaco</strong> oppure <strong>Chiavi dell'abaco</strong>. <strong>OK</strong> apre <strong>Proprietà abaco</strong>; il suo
+<strong>OK</strong> crea l'abaco e ne apre la vista. <strong>Computo dei materiali</strong>, nello stesso menu, elenca i
+materiali degli strati di muri, pavimenti e tetti.</p>
+<h3 id="schedule-properties">Proprietà abaco</h3>
+<p>La finestra si riapre dalla tavolozza <strong>Proprietà</strong> dell'abaco (ogni scheda ha il suo pulsante
+<strong>Modifica…</strong>) o dal tasto destro sull'abaco nel Browser di progetto. Le sue schede:</p>
+<table>
+<thead>
+<tr>
+<th>Scheda</th>
+<th>Che cosa imposta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Campi</strong></td>
+<td>Le colonne, scelte da <strong>Campi disponibili:</strong> e messe in ordine; i campi dei locali in cui si trovano gli elementi; <strong>Aggiungi parametro…</strong> per un parametro di progetto o condiviso; <strong>Valore calcolato…</strong> per una formula (con <code>+ - * / ^</code>, <code>sqrt</code>, <code>round</code>, <code>IF</code>, <code>AND</code>, <code>OR</code>, <code>NOT</code> e unità) o una percentuale</td>
+</tr>
+<tr>
+<td><strong>Filtro</strong></td>
+<td>Fino a quattro criteri, che un elemento deve soddisfare tutti</td>
+</tr>
+<tr>
+<td><strong>Ordinamento/Raggruppamento</strong></td>
+<td>Fino a quattro livelli di ordinamento, ciascuno con <strong>Intestazione</strong>, piè di pagina e <strong>Riga vuota</strong>; i totali generali; <strong>Elenca ogni istanza</strong> (disattivato: una riga per tipo)</td>
+</tr>
+<tr>
+<td><strong>Formattazione</strong></td>
+<td>Per campo: intestazione, orientamento, allineamento, campo nascosto, <strong>Formato…</strong> (unità, arrotondamento, simbolo), totali e <strong>Formattazione condizionale…</strong> (un colore di sfondo dove un valore supera una prova)</td>
+</tr>
+<tr>
+<td><strong>Aspetto</strong></td>
+<td>Linee della griglia e bordo con i loro stili di linea, il titolo e le intestazioni delle colonne, una riga vuota, <strong>Testo intestazione</strong> e <strong>Testo corpo</strong> (dimensione, <strong>Grassetto</strong>, <strong>Corsivo</strong>); visibili quando l'abaco è su una tavola</td>
+</tr>
+</tbody>
+</table>
+<h3 id="working-in-a-schedule-view">Lavorare in una vista abaco</h3>
+<ul>
+<li>Una cella modifica l'elemento, o il suo tipo per un parametro del tipo; ogni modifica è un
+  passo di annullamento.</li>
+<li>Una riga seleziona i suoi elementi in tutte le viste. <strong>Evidenzia nel modello</strong>, nella scheda
+  <strong>Modifica | Abaco/Quantità</strong>, apre <strong>Mostra gli elementi nella vista</strong>, che porta in primo
+  piano una pianta inquadrata su di loro; <strong>Mostra</strong> passa alla vista successiva.</li>
+<li><strong>Righe ➤ Elimina</strong> elimina gli elementi delle righe selezionate, dopo averlo chiesto.</li>
+<li>Le intestazioni scelte insieme si uniscono sotto un'intestazione comune con <strong>Raggruppa</strong> e si
+  separano con <strong>Scomponi</strong>; <strong>Nascondi colonna</strong> e <strong>Scopri tutte le colonne</strong> agiscono sulla
+  colonna scelta.</li>
+</ul>
+<h3 id="schedules-on-sheets">Abachi sulle tavole</h3>
+<p>Si trascina un abaco dal Browser di progetto su una tavola. Selezionato sulla tavola, mostra i
+suoi controlli: la Z sul bordo destro di un segmento lo divide in due, la freccia al centro di un
+segmento lo sposta (lasciato sul segmento accanto, i due si uniscono), il punto in basso di un
+segmento ne sposta l'ultima riga, e i triangoli in cima alle colonne ne impostano la larghezza.
+Un doppio clic, o <strong>Modifica abaco</strong> dal tasto destro, apre la vista dell'abaco. Lo stesso abaco
+può stare su più tavole.</p>
+<h3 id="key-schedules-and-material-takeoffs">Abachi chiave e computo dei materiali</h3>
+<p>Un abaco chiave (<strong>Chiavi dell'abaco</strong> in <strong>Nuovo abaco</strong>) definisce insiemi di valori con un
+nome, una riga per chiave, aggiunte ed eliminate con <strong>Righe</strong>. Il suo <strong>Nome chiave</strong> diventa un
+parametro della categoria: scegliere una chiave per un elemento gli dà tutti i valori di quella
+riga.</p>
+<p>Un computo dei materiali elenca, per ogni elemento, i materiali dei suoi strati con la loro area e
+il loro volume; i suoi campi si ordinano, si raggruppano e si sommano come gli altri.</p>
+<h3 id="project-and-shared-parameters">Parametri di progetto e condivisi</h3>
+<p><strong>Gestisci ➤ Impostazioni ➤ Parametri di progetto</strong> aggiunge parametri agli elementi di alcune
+categorie, o ai loro tipi, con un nome, un tipo di valore e il gruppo in cui compaiono nella
+tavolozza Proprietà.</p>
+<p><strong>Gestisci ➤ Impostazioni ➤ Parametri condivisi</strong> apre <strong>Modifica parametri condivisi</strong>: il file
+di parametri condivisi in uso (<strong>Sfoglia…</strong>, <strong>Crea…</strong>), i suoi gruppi e i parametri di ogni
+gruppo. Un parametro condiviso mantiene nome e tipo, e ha un identificativo proprio, così più
+progetti aggiungono lo stesso parametro. In <strong>Proprietà parametro</strong> si sceglie <strong>Parametro
+condiviso</strong> e <strong>Seleziona…</strong> per aggiungerne uno al progetto; <strong>Esporta…</strong> riscrive nel file un
+parametro condiviso del progetto.</p>
+<h3 id="exporting-and-reusing-schedules">Esportare e riusare gli abachi</h3>
+<ul>
+<li><strong>Menu dell'applicazione ➤ Esporta ➤ Rapporti ➤ Abaco…</strong> scrive l'abaco come testo delimitato:
+  <strong>Esporta abaco</strong> imposta il delimitatore di campo, il qualificatore di testo e quali
+  intestazioni e righe di gruppo vanno nel file.</li>
+<li><strong>Crea modello dalla vista…</strong>, dal tasto destro su un abaco, crea un modello di vista con i suoi
+  campi, filtro, ordinamento, formattazione e aspetto; <strong>Applica modello vista…</strong> li dà a un altro
+  abaco.</li>
+<li><strong>Salva in un nuovo file…</strong>, dal tasto destro, scrive la configurazione dell'abaco, senza gli
+  elementi, in un file a sé. <strong>Inserisci ➤ Importa ➤ Inserisci da file ➤ Inserisci viste da
+  file…</strong> porta in questo progetto gli abachi di un altro, con i loro parametri di progetto.</li>
+</ul>
 <h2 id="what-this-chapter-will-cover">Che cosa tratterà questo capitolo</h2>
 <ul>
 <li>le tavole e i cartigli;</li>
 <li>le finestre di layout: posizionare le viste sulle tavole, la loro scala e il loro titolo;</li>
-<li>gli abachi come viste del modello: campi, filtri, ordinamento e raggruppamento, totali, modifica dei valori nell'abaco;</li>
-<li>gli abachi predefiniti e il computo dei materiali;</li>
-<li>la stampa delle tavole in PDF;</li>
-<li>l'esportazione degli abachi in CSV.</li>
+<li>la stampa delle tavole in PDF.</li>
 </ul>
 <h2 id="meanwhile">Nel frattempo</h2>
 <p><a href="../getting-started/">Primi passi</a> posiziona una pianta su una tavola passo per passo. Alla riga di comando, <code>help</code> seguito dal nome di un comando ne mostra

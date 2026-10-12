@@ -247,6 +247,66 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#schedules">
+<span class="md-ellipsis">
+      Schedules
+    </span>
+</a>
+<nav aria-label="Schedules" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creating-a-schedule">
+<span class="md-ellipsis">
+      Creating a schedule
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#schedule-properties">
+<span class="md-ellipsis">
+      Schedule Properties
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#working-in-a-schedule-view">
+<span class="md-ellipsis">
+      Working in a schedule view
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#schedules-on-sheets">
+<span class="md-ellipsis">
+      Schedules on sheets
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-schedules-and-material-takeoffs">
+<span class="md-ellipsis">
+      Key schedules and material takeoffs
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#project-and-shared-parameters">
+<span class="md-ellipsis">
+      Project and shared parameters
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exporting-and-reusing-schedules">
+<span class="md-ellipsis">
+      Exporting and reusing schedules
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#what-this-chapter-will-cover">
 <span class="md-ellipsis">
       What this chapter will cover
@@ -310,6 +370,66 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#schedules">
+<span class="md-ellipsis">
+      Schedules
+    </span>
+</a>
+<nav aria-label="Schedules" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creating-a-schedule">
+<span class="md-ellipsis">
+      Creating a schedule
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#schedule-properties">
+<span class="md-ellipsis">
+      Schedule Properties
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#working-in-a-schedule-view">
+<span class="md-ellipsis">
+      Working in a schedule view
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#schedules-on-sheets">
+<span class="md-ellipsis">
+      Schedules on sheets
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-schedules-and-material-takeoffs">
+<span class="md-ellipsis">
+      Key schedules and material takeoffs
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#project-and-shared-parameters">
+<span class="md-ellipsis">
+      Project and shared parameters
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exporting-and-reusing-schedules">
+<span class="md-ellipsis">
+      Exporting and reusing schedules
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#what-this-chapter-will-cover">
 <span class="md-ellipsis">
       What this chapter will cover
@@ -331,21 +451,106 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset"><a class="md-content__icon pdf-download-btn" download href="../pdf/bimopen-manual-en.pdf" title="Download"><i class="fa fas fa-download"></i><small> PDF</small></a>
 <h1 id="sheets-schedules-and-printing">Sheets, schedules and printing</h1>
-<p>This chapter will describe how the project is documented: sheets, schedules and printed drawings.</p>
+<p>This chapter describes how the project is documented: sheets, schedules and printed drawings.</p>
 <div class="admonition note">
 <p class="admonition-title">Being written</p>
 <p>This chapter is completed with area R7 of BIMopen's realignment, <em>Documentation and files</em>: each
 feature is compared with the reference behaviour, corrected where needed and checked through
-the interface, and only then described here. Until then, this page lists what it will cover.</p>
+the interface, and only then described here. Schedules are checked and described below; sheets
+and printing follow.</p>
 </div>
+<h2 id="schedules">Schedules</h2>
+<p>A schedule is a table of the elements of the model, and a view like the others: it opens in a
+window of the drawing area, is tiled, cascaded and switched with plans, sections and 3D views, and
+is listed under <strong>Schedules/Quantities</strong> in the Project Browser. It follows every change of the
+model at once, and every change made in it changes the model.</p>
+<h3 id="creating-a-schedule">Creating a schedule</h3>
+<p><strong>View ➤ Create ➤ Schedules ➤ Schedule/Quantities</strong> opens <strong>New Schedule</strong>: choose a category,
+a name (the default follows the category until one is typed) and <strong>Schedule building components</strong>
+or <strong>Schedule keys</strong>. <strong>OK</strong> opens <strong>Schedule Properties</strong>; its second <strong>OK</strong> creates the
+schedule and opens its view. <strong>Material Takeoff</strong> in the same menu lists the materials of the
+layers of walls, floors and roofs.</p>
+<h3 id="schedule-properties">Schedule Properties</h3>
+<p>The dialog opens again from the <strong>Properties</strong> palette of the schedule (each tab has its <strong>Edit…</strong>
+button) or from the right button on the schedule in the Project Browser. Its tabs:</p>
+<table>
+<thead>
+<tr>
+<th>Tab</th>
+<th>What it sets</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Fields</strong></td>
+<td>The columns, chosen from <strong>Available fields:</strong> and put in order; the fields of the rooms the elements are in; <strong>Add Parameter…</strong> for a project or shared parameter; <strong>Calculated Value…</strong> for a formula (with <code>+ - * / ^</code>, <code>sqrt</code>, <code>round</code>, <code>IF</code>, <code>AND</code>, <code>OR</code>, <code>NOT</code> and units) or a percentage</td>
+</tr>
+<tr>
+<td><strong>Filter</strong></td>
+<td>Up to four criteria, all of which an element must meet</td>
+</tr>
+<tr>
+<td><strong>Sorting/Grouping</strong></td>
+<td>Up to four sort levels, each with <strong>Header</strong>, footer and <strong>Blank line</strong>; the grand totals; <strong>Itemize every instance</strong> (off: one row per type)</td>
+</tr>
+<tr>
+<td><strong>Formatting</strong></td>
+<td>Per field: heading, orientation, alignment, hidden field, <strong>Format…</strong> (units, rounding, symbol), totals and <strong>Conditional Format…</strong> (a background colour where a value meets a test)</td>
+</tr>
+<tr>
+<td><strong>Appearance</strong></td>
+<td>Grid lines and outline with their line styles, the title and the column headers, a blank row, <strong>Header text</strong> and <strong>Body text</strong> (size, <strong>Bold</strong>, <strong>Italic</strong>); shown when the schedule is on a sheet</td>
+</tr>
+</tbody>
+</table>
+<h3 id="working-in-a-schedule-view">Working in a schedule view</h3>
+<ul>
+<li>A cell edits the element, or its type for a type parameter; every edit is one step of undo.</li>
+<li>A row selects its elements in every view. <strong>Highlight in model</strong> on the
+  <strong>Modify | Schedule/Quantities</strong> tab opens <strong>Show Elements in View</strong>, which brings a plan
+  forward framed on them; <strong>Show</strong> goes on to the next view.</li>
+<li><strong>Rows ➤ Delete</strong> deletes the elements of the selected rows, after asking.</li>
+<li>Headings picked together are joined under a common heading with <strong>Group</strong>, and parted with
+  <strong>Ungroup</strong>; <strong>Hide column</strong> and <strong>Unhide all columns</strong> work on the column picked.</li>
+</ul>
+<h3 id="schedules-on-sheets">Schedules on sheets</h3>
+<p>Drag a schedule from the Project Browser onto a sheet. Selected on the sheet, it shows its
+controls: the Z on the right edge of a segment splits it in two, the arrow in the middle of a
+segment moves it (dropped on the segment beside it, the two join), the dot at the bottom of a
+segment moves its last row, and the triangles at the top of the columns set their widths. A
+double click, or <strong>Edit Schedule</strong> on the right button, opens the schedule view. The same
+schedule can go on several sheets.</p>
+<h3 id="key-schedules-and-material-takeoffs">Key schedules and material takeoffs</h3>
+<p>A key schedule (<strong>Schedule keys</strong> in <strong>New Schedule</strong>) defines named sets of values, one row per
+key, added and deleted with <strong>Rows</strong>. Its <strong>Key Name</strong> becomes a parameter of the category:
+choosing a key for an element gives it all the values of that row.</p>
+<p>A material takeoff lists, for each element, the materials of its layers with their area and
+volume; its fields can be sorted, grouped and totalled like any other.</p>
+<h3 id="project-and-shared-parameters">Project and shared parameters</h3>
+<p><strong>Manage ➤ Settings ➤ Project Parameters</strong> adds parameters to the elements of some categories, or
+to their types, with a name, a type of value and the group they show in the Properties palette.</p>
+<p><strong>Manage ➤ Settings ➤ Shared Parameters</strong> opens <strong>Edit Shared Parameters</strong>: the shared parameter
+file in use (<strong>Browse…</strong>, <strong>Create…</strong>), its groups and the parameters of each group. A shared
+parameter keeps its name and type, and has an identifier of its own, so that several projects
+add the same parameter. In <strong>Parameter Properties</strong>, choose <strong>Shared parameter</strong> and <strong>Select…</strong>
+to add one to the project; <strong>Export…</strong> writes a shared parameter of the project back to the file.</p>
+<h3 id="exporting-and-reusing-schedules">Exporting and reusing schedules</h3>
+<ul>
+<li><strong>Application menu ➤ Export ➤ Reports ➤ Schedule…</strong> writes the schedule as delimited text:
+  <strong>Export Schedule</strong> sets the field delimiter, the text qualifier and which headings and group
+  rows go in the file.</li>
+<li><strong>Create view template from view…</strong> on the right button of a schedule makes a view template
+  with its fields, filter, sorting, formatting and appearance; <strong>Apply view template…</strong> gives them
+  to another schedule.</li>
+<li><strong>Save to New File…</strong> on the right button writes the schedule's setup, without the elements,
+  to a file of its own. <strong>Insert ➤ Import ➤ Insert from File ➤ Insert Views from File…</strong> brings
+  the schedules of another project into this one, with their project parameters.</li>
+</ul>
 <h2 id="what-this-chapter-will-cover">What this chapter will cover</h2>
 <ul>
 <li>sheets and title blocks;</li>
 <li>viewports: placing views on sheets, their scale and title;</li>
-<li>schedules as views of the model: fields, filters, sorting and grouping, totals, editing values in the schedule;</li>
-<li>the predefined schedules and the material takeoff;</li>
-<li>printing sheets to PDF;</li>
-<li>exporting schedules to CSV.</li>
+<li>printing sheets to PDF.</li>
 </ul>
 <h2 id="meanwhile">Meanwhile</h2>
 <p><a href="../getting-started/">Getting started</a> places a plan on a sheet step by step. At the command line, <code>help</code> followed by the name of a command shows its

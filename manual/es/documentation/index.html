@@ -247,6 +247,66 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#schedules">
+<span class="md-ellipsis">
+      Tablas de planificación
+    </span>
+</a>
+<nav aria-label="Tablas de planificación" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creating-a-schedule">
+<span class="md-ellipsis">
+      Crear una tabla de planificación
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#schedule-properties">
+<span class="md-ellipsis">
+      Propiedades de tabla
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#working-in-a-schedule-view">
+<span class="md-ellipsis">
+      Trabajar en una vista de tabla
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#schedules-on-sheets">
+<span class="md-ellipsis">
+      Tablas en los planos
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-schedules-and-material-takeoffs">
+<span class="md-ellipsis">
+      Tablas de claves y tablas de materiales
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#project-and-shared-parameters">
+<span class="md-ellipsis">
+      Parámetros de proyecto y compartidos
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exporting-and-reusing-schedules">
+<span class="md-ellipsis">
+      Exportar y reutilizar tablas
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#what-this-chapter-will-cover">
 <span class="md-ellipsis">
       Qué tratará este capítulo
@@ -310,6 +370,66 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#schedules">
+<span class="md-ellipsis">
+      Tablas de planificación
+    </span>
+</a>
+<nav aria-label="Tablas de planificación" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creating-a-schedule">
+<span class="md-ellipsis">
+      Crear una tabla de planificación
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#schedule-properties">
+<span class="md-ellipsis">
+      Propiedades de tabla
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#working-in-a-schedule-view">
+<span class="md-ellipsis">
+      Trabajar en una vista de tabla
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#schedules-on-sheets">
+<span class="md-ellipsis">
+      Tablas en los planos
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-schedules-and-material-takeoffs">
+<span class="md-ellipsis">
+      Tablas de claves y tablas de materiales
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#project-and-shared-parameters">
+<span class="md-ellipsis">
+      Parámetros de proyecto y compartidos
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exporting-and-reusing-schedules">
+<span class="md-ellipsis">
+      Exportar y reutilizar tablas
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#what-this-chapter-will-cover">
 <span class="md-ellipsis">
       Qué tratará este capítulo
@@ -331,21 +451,112 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset"><a class="md-content__icon pdf-download-btn" download href="../pdf/bimopen-manual-es.pdf" title="Download"><i class="fa fas fa-download"></i><small> PDF</small></a>
 <h1 id="sheets-schedules-and-printing">Planos, tablas de planificación e impresión</h1>
-<p>Este capítulo describirá cómo se documenta el proyecto: planos, tablas de planificación y dibujos impresos.</p>
+<p>Este capítulo describe cómo se documenta el proyecto: planos, tablas de planificación y dibujos impresos.</p>
 <div class="admonition note">
 <p class="admonition-title">En preparación</p>
 <p>Este capítulo se completa con el área R7 del realineamiento de BIMopen, <em>Documentación y archivos</em>: cada
 función se compara con el comportamiento de referencia, se corrige donde hace falta y se comprueba
-a través de la interfaz, y solo entonces se describe aquí. Hasta entonces, esta página enumera lo que tratará.</p>
+a través de la interfaz, y solo entonces se describe aquí. Las tablas de planificación están
+comprobadas y descritas a continuación; los planos y la impresión vendrán después.</p>
 </div>
+<h2 id="schedules">Tablas de planificación</h2>
+<p>Una tabla de planificación es una tabla de los elementos del modelo, y una vista como las demás: se
+abre en una ventana del área de dibujo, se coloca en mosaico, en cascada y se alterna con plantas,
+secciones y vistas 3D, y aparece bajo <strong>Tablas de planificación/Cantidades</strong> en el navegador de
+proyectos. Sigue enseguida cada cambio del modelo, y cada cambio hecho en ella cambia el modelo.</p>
+<h3 id="creating-a-schedule">Crear una tabla de planificación</h3>
+<p><strong>Vista ➤ Crear ➤ Tablas de planificación ➤ Tabla de planificación/cantidades</strong> abre <strong>Nueva tabla
+de planificación</strong>: elija una categoría, un nombre (el propuesto sigue a la categoría hasta que se
+escribe uno) y <strong>Componentes de construcción de la tabla</strong> o <strong>Claves de tabla</strong>. <strong>Aceptar</strong> abre
+<strong>Propiedades de tabla</strong>; su <strong>Aceptar</strong> crea la tabla y abre su vista. <strong>Tabla de materiales</strong>,
+en el mismo menú, enumera los materiales de las capas de muros, suelos y cubiertas.</p>
+<h3 id="schedule-properties">Propiedades de tabla</h3>
+<p>El cuadro de diálogo se vuelve a abrir desde la paleta <strong>Propiedades</strong> de la tabla (cada ficha
+tiene su botón <strong>Editar…</strong>) o con el botón derecho sobre la tabla en el navegador de proyectos.
+Sus fichas:</p>
+<table>
+<thead>
+<tr>
+<th>Ficha</th>
+<th>Qué define</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Campos</strong></td>
+<td>Las columnas, elegidas en <strong>Campos disponibles:</strong> y ordenadas; los campos de las habitaciones donde están los elementos; <strong>Añadir parámetro…</strong> para un parámetro de proyecto o compartido; <strong>Valor calculado…</strong> para una fórmula (con <code>+ - * / ^</code>, <code>sqrt</code>, <code>round</code>, <code>IF</code>, <code>AND</code>, <code>OR</code>, <code>NOT</code> y unidades) o un porcentaje</td>
+</tr>
+<tr>
+<td><strong>Filtro</strong></td>
+<td>Hasta cuatro criterios, que un elemento debe cumplir todos</td>
+</tr>
+<tr>
+<td><strong>Clasificación/Agrupación</strong></td>
+<td>Hasta cuatro niveles de ordenación, cada uno con <strong>Encabezado</strong>, pie y <strong>Línea en blanco</strong>; los totales generales; <strong>Detallar cada ejemplar</strong> (desactivado: una fila por tipo)</td>
+</tr>
+<tr>
+<td><strong>Formato</strong></td>
+<td>Por campo: encabezado, orientación, alineación, campo oculto, <strong>Formato…</strong> (unidades, redondeo, símbolo), totales y <strong>Formato condicional…</strong> (un color de fondo donde un valor cumple una prueba)</td>
+</tr>
+<tr>
+<td><strong>Aspecto</strong></td>
+<td>Líneas de rejilla y contorno con sus estilos de línea, el título y los encabezados de columna, una fila en blanco, <strong>Texto del encabezado</strong> y <strong>Texto del cuerpo</strong> (tamaño, <strong>Negrita</strong>, <strong>Cursiva</strong>); visibles cuando la tabla está en un plano</td>
+</tr>
+</tbody>
+</table>
+<h3 id="working-in-a-schedule-view">Trabajar en una vista de tabla</h3>
+<ul>
+<li>Una celda modifica el elemento, o su tipo para un parámetro de tipo; cada cambio es un paso de
+  deshacer.</li>
+<li>Una fila selecciona sus elementos en todas las vistas. <strong>Resaltar en modelo</strong>, en la ficha
+  <strong>Modificar | Tabla de planificación/cantidades</strong>, abre <strong>Mostrar elementos en vista</strong>, que trae
+  al frente una planta encuadrada en ellos; <strong>Mostrar</strong> pasa a la vista siguiente.</li>
+<li><strong>Filas ➤ Eliminar</strong> elimina los elementos de las filas seleccionadas, después de preguntar.</li>
+<li>Los encabezados elegidos juntos se unen bajo un encabezado común con <strong>Agrupar</strong> y se separan con
+  <strong>Desagrupar</strong>; <strong>Ocultar columna</strong> y <strong>Mostrar todas las columnas</strong> actúan sobre la columna
+  elegida.</li>
+</ul>
+<h3 id="schedules-on-sheets">Tablas en los planos</h3>
+<p>Arrastre una tabla desde el navegador de proyectos a un plano. Seleccionada en el plano, muestra
+sus controles: la Z en el borde derecho de un segmento lo divide en dos, la flecha en el centro de
+un segmento lo desplaza (soltado sobre el segmento vecino, los dos se unen), el punto en la parte
+inferior de un segmento desplaza su última fila, y los triángulos en lo alto de las columnas fijan
+su anchura. Un doble clic, o <strong>Editar tabla</strong> con el botón derecho, abre la vista de la tabla. La
+misma tabla puede estar en varios planos.</p>
+<h3 id="key-schedules-and-material-takeoffs">Tablas de claves y tablas de materiales</h3>
+<p>Una tabla de claves (<strong>Claves de tabla</strong> en <strong>Nueva tabla de planificación</strong>) define conjuntos de
+valores con nombre, una fila por clave, añadidas y eliminadas con <strong>Filas</strong>. Su <strong>Nombre de
+clave</strong> pasa a ser un parámetro de la categoría: elegir una clave para un elemento le da todos los
+valores de esa fila.</p>
+<p>Una tabla de materiales enumera, para cada elemento, los materiales de sus capas con su área y su
+volumen; sus campos se ordenan, se agrupan y se suman como los demás.</p>
+<h3 id="project-and-shared-parameters">Parámetros de proyecto y compartidos</h3>
+<p><strong>Gestionar ➤ Configuración ➤ Parámetros de proyecto</strong> añade parámetros a los elementos de algunas
+categorías, o a sus tipos, con un nombre, un tipo de valor y el grupo en el que aparecen en la
+paleta Propiedades.</p>
+<p><strong>Gestionar ➤ Configuración ➤ Parámetros compartidos</strong> abre <strong>Editar parámetros compartidos</strong>: el
+archivo de parámetros compartidos en uso (<strong>Examinar…</strong>, <strong>Crear…</strong>), sus grupos y los parámetros
+de cada grupo. Un parámetro compartido conserva su nombre y su tipo, y tiene un identificador
+propio, de modo que varios proyectos añaden el mismo parámetro. En <strong>Propiedades de parámetro</strong>,
+elija <strong>Parámetro compartido</strong> y <strong>Seleccionar…</strong> para añadir uno al proyecto; <strong>Exportar…</strong>
+vuelve a escribir en el archivo un parámetro compartido del proyecto.</p>
+<h3 id="exporting-and-reusing-schedules">Exportar y reutilizar tablas</h3>
+<ul>
+<li><strong>Menú de la aplicación ➤ Exportar ➤ Informes ➤ Tabla…</strong> escribe la tabla como texto delimitado:
+  <strong>Exportar tabla</strong> fija el delimitador de campo, el calificador de texto y qué encabezados y
+  filas de grupo van al archivo.</li>
+<li><strong>Crear plantilla a partir de la vista…</strong>, con el botón derecho sobre una tabla, crea una
+  plantilla de vista con sus campos, filtro, ordenación, formato y aspecto; <strong>Aplicar plantilla de
+  vista…</strong> los da a otra tabla.</li>
+<li><strong>Guardar en archivo nuevo…</strong>, con el botón derecho, escribe la configuración de la tabla, sin
+  los elementos, en un archivo propio. <strong>Insertar ➤ Importar ➤ Insertar desde archivo ➤ Insertar
+  vistas desde archivo…</strong> trae a este proyecto las tablas de otro, con sus parámetros de proyecto.</li>
+</ul>
 <h2 id="what-this-chapter-will-cover">Qué tratará este capítulo</h2>
 <ul>
 <li>planos y cajetines;</li>
 <li>ventanas gráficas: colocar vistas en los planos, su escala y su título;</li>
-<li>las tablas de planificación como vistas del modelo: campos, filtros, ordenación y agrupación, totales, edición de valores en la tabla;</li>
-<li>las tablas de planificación predefinidas y la medición de materiales;</li>
-<li>imprimir planos en PDF;</li>
-<li>exportar tablas de planificación a CSV.</li>
+<li>la impresión de planos en PDF.</li>
 </ul>
 <h2 id="meanwhile">Mientras tanto</h2>
 <p><a href="../getting-started/">Primeros pasos</a> coloca una planta en un plano paso a paso. En la línea de comandos, <code>help</code> seguido del nombre de un comando muestra su

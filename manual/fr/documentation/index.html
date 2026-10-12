@@ -247,6 +247,66 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#schedules">
+<span class="md-ellipsis">
+      Nomenclatures
+    </span>
+</a>
+<nav aria-label="Nomenclatures" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creating-a-schedule">
+<span class="md-ellipsis">
+      Créer une nomenclature
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#schedule-properties">
+<span class="md-ellipsis">
+      Propriétés de la nomenclature
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#working-in-a-schedule-view">
+<span class="md-ellipsis">
+      Travailler dans une vue de nomenclature
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#schedules-on-sheets">
+<span class="md-ellipsis">
+      Nomenclatures sur les feuilles
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-schedules-and-material-takeoffs">
+<span class="md-ellipsis">
+      Nomenclatures de clés et métrés des matériaux
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#project-and-shared-parameters">
+<span class="md-ellipsis">
+      Paramètres de projet et partagés
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exporting-and-reusing-schedules">
+<span class="md-ellipsis">
+      Exporter et réutiliser les nomenclatures
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#what-this-chapter-will-cover">
 <span class="md-ellipsis">
       Ce que couvrira ce chapitre
@@ -310,6 +370,66 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#schedules">
+<span class="md-ellipsis">
+      Nomenclatures
+    </span>
+</a>
+<nav aria-label="Nomenclatures" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creating-a-schedule">
+<span class="md-ellipsis">
+      Créer une nomenclature
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#schedule-properties">
+<span class="md-ellipsis">
+      Propriétés de la nomenclature
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#working-in-a-schedule-view">
+<span class="md-ellipsis">
+      Travailler dans une vue de nomenclature
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#schedules-on-sheets">
+<span class="md-ellipsis">
+      Nomenclatures sur les feuilles
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-schedules-and-material-takeoffs">
+<span class="md-ellipsis">
+      Nomenclatures de clés et métrés des matériaux
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#project-and-shared-parameters">
+<span class="md-ellipsis">
+      Paramètres de projet et partagés
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exporting-and-reusing-schedules">
+<span class="md-ellipsis">
+      Exporter et réutiliser les nomenclatures
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#what-this-chapter-will-cover">
 <span class="md-ellipsis">
       Ce que couvrira ce chapitre
@@ -331,21 +451,115 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset"><a class="md-content__icon pdf-download-btn" download href="../pdf/bimopen-manual-fr.pdf" title="Download"><i class="fa fas fa-download"></i><small> PDF</small></a>
 <h1 id="sheets-schedules-and-printing">Feuilles, nomenclatures et impression</h1>
-<p>Ce chapitre décrira comment le projet est documenté : feuilles, nomenclatures et dessins imprimés.</p>
+<p>Ce chapitre décrit comment le projet est documenté : feuilles, nomenclatures et dessins imprimés.</p>
 <div class="admonition note">
 <p class="admonition-title">En cours de rédaction</p>
 <p>Ce chapitre est achevé avec le domaine R7 du réalignement de BIMopen, <em>Documentation et fichiers</em> : chaque
 fonction est comparée au comportement de référence, corrigée si nécessaire et vérifiée dans
-l'interface, puis seulement décrite ici. D'ici là, cette page indique ce qu'elle couvrira.</p>
+l'interface, puis seulement décrite ici. Les nomenclatures sont vérifiées et décrites ci-dessous ;
+les feuilles et l'impression suivront.</p>
 </div>
+<h2 id="schedules">Nomenclatures</h2>
+<p>Une nomenclature est un tableau des éléments du modèle, et une vue comme les autres : elle s'ouvre
+dans une fenêtre de la zone de dessin, se juxtapose, se superpose et alterne avec les plans, les
+coupes et les vues 3D, et figure sous <strong>Nomenclatures/Quantités</strong> dans l'arborescence du projet.
+Elle suit aussitôt chaque modification du modèle, et chaque modification faite dans la
+nomenclature change le modèle.</p>
+<h3 id="creating-a-schedule">Créer une nomenclature</h3>
+<p><strong>Vue ➤ Créer ➤ Nomenclatures ➤ Nomenclature/Quantités</strong> ouvre <strong>Nouvelle nomenclature</strong> :
+choisissez une catégorie, un nom (celui proposé suit la catégorie tant qu'aucun n'est saisi) et
+<strong>Composants de construction de la nomenclature</strong> ou <strong>Clés de nomenclature</strong>. <strong>OK</strong> ouvre
+<strong>Propriétés de la nomenclature</strong> ; son <strong>OK</strong> crée la nomenclature et ouvre sa vue. <strong>Métré des
+matériaux</strong>, dans le même menu, liste les matériaux des couches des murs, des sols et des toits.</p>
+<h3 id="schedule-properties">Propriétés de la nomenclature</h3>
+<p>La boîte de dialogue se rouvre depuis la palette <strong>Propriétés</strong> de la nomenclature (chaque onglet
+a son bouton <strong>Modifier…</strong>) ou par le clic droit sur la nomenclature dans l'arborescence du
+projet. Ses onglets :</p>
+<table>
+<thead>
+<tr>
+<th>Onglet</th>
+<th>Ce qu'il définit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Champs</strong></td>
+<td>Les colonnes, choisies dans <strong>Champs disponibles :</strong> et mises en ordre ; les champs des pièces où se trouvent les éléments ; <strong>Ajouter un paramètre…</strong> pour un paramètre de projet ou partagé ; <strong>Valeur calculée…</strong> pour une formule (avec <code>+ - * / ^</code>, <code>sqrt</code>, <code>round</code>, <code>IF</code>, <code>AND</code>, <code>OR</code>, <code>NOT</code> et des unités) ou un pourcentage</td>
+</tr>
+<tr>
+<td><strong>Filtre</strong></td>
+<td>Jusqu'à quatre critères, qu'un élément doit tous remplir</td>
+</tr>
+<tr>
+<td><strong>Tri/Regroupement</strong></td>
+<td>Jusqu'à quatre niveaux de tri, chacun avec <strong>En-tête</strong>, pied de page et <strong>Ligne vide</strong> ; les totaux généraux ; <strong>Détailler chaque occurrence</strong> (désactivé : une ligne par type)</td>
+</tr>
+<tr>
+<td><strong>Mise en forme</strong></td>
+<td>Par champ : en-tête, orientation, alignement, champ masqué, <strong>Format…</strong> (unités, arrondi, symbole), totaux et <strong>Mise en forme conditionnelle…</strong> (une couleur de fond là où une valeur remplit un test)</td>
+</tr>
+<tr>
+<td><strong>Apparence</strong></td>
+<td>Lignes de quadrillage et contour avec leurs styles de ligne, le titre et les en-têtes de colonne, une ligne vide, <strong>Texte d'en-tête</strong> et <strong>Texte du corps</strong> (taille, <strong>Gras</strong>, <strong>Italique</strong>) ; visibles quand la nomenclature est sur une feuille</td>
+</tr>
+</tbody>
+</table>
+<h3 id="working-in-a-schedule-view">Travailler dans une vue de nomenclature</h3>
+<ul>
+<li>Une cellule modifie l'élément, ou son type pour un paramètre de type ; chaque modification est
+  une étape d'annulation.</li>
+<li>Une ligne sélectionne ses éléments dans toutes les vues. <strong>Mettre en surbrillance dans le
+  modèle</strong>, dans l'onglet <strong>Modifier | Nomenclature/Quantités</strong>, ouvre <strong>Afficher les éléments
+  dans la vue</strong>, qui amène au premier plan un plan cadré sur eux ; <strong>Afficher</strong> passe à la vue
+  suivante.</li>
+<li><strong>Lignes ➤ Supprimer</strong> supprime les éléments des lignes sélectionnées, après confirmation.</li>
+<li>Les en-têtes choisis ensemble sont réunis sous un en-tête commun avec <strong>Grouper</strong> et séparés
+  avec <strong>Dissocier</strong> ; <strong>Masquer la colonne</strong> et <strong>Afficher toutes les colonnes</strong> agissent sur la
+  colonne choisie.</li>
+</ul>
+<h3 id="schedules-on-sheets">Nomenclatures sur les feuilles</h3>
+<p>Faites glisser une nomenclature de l'arborescence du projet sur une feuille. Sélectionnée sur la
+feuille, elle montre ses contrôles : le Z sur le bord droit d'un segment le coupe en deux, la
+flèche au milieu d'un segment le déplace (déposé sur le segment voisin, les deux se rejoignent),
+le point en bas d'un segment déplace sa dernière ligne, et les triangles en haut des colonnes
+règlent leur largeur. Un double-clic, ou <strong>Modifier la nomenclature</strong> au clic droit, ouvre la vue
+de la nomenclature. La même nomenclature peut figurer sur plusieurs feuilles.</p>
+<h3 id="key-schedules-and-material-takeoffs">Nomenclatures de clés et métrés des matériaux</h3>
+<p>Une nomenclature de clés (<strong>Clés de nomenclature</strong> dans <strong>Nouvelle nomenclature</strong>) définit des
+ensembles de valeurs nommés, une ligne par clé, ajoutées et supprimées avec <strong>Lignes</strong>. Son <strong>Nom
+de clé</strong> devient un paramètre de la catégorie : choisir une clé pour un élément lui donne toutes
+les valeurs de cette ligne.</p>
+<p>Un métré des matériaux liste, pour chaque élément, les matériaux de ses couches avec leur surface
+et leur volume ; ses champs se trient, se regroupent et se totalisent comme les autres.</p>
+<h3 id="project-and-shared-parameters">Paramètres de projet et partagés</h3>
+<p><strong>Gérer ➤ Paramètres ➤ Paramètres du projet</strong> ajoute des paramètres aux éléments de certaines
+catégories, ou à leurs types, avec un nom, un type de valeur et le groupe où ils apparaissent dans
+la palette Propriétés.</p>
+<p><strong>Gérer ➤ Paramètres ➤ Paramètres partagés</strong> ouvre <strong>Modifier les paramètres partagés</strong> : le
+fichier de paramètres partagés utilisé (<strong>Parcourir…</strong>, <strong>Créer…</strong>), ses groupes et les paramètres
+de chaque groupe. Un paramètre partagé garde son nom et son type, et a un identifiant propre, de
+sorte que plusieurs projets ajoutent le même paramètre. Dans <strong>Propriétés du paramètre</strong>,
+choisissez <strong>Paramètre partagé</strong> et <strong>Sélectionner…</strong> pour en ajouter un au projet ;
+<strong>Exporter…</strong> réécrit dans le fichier un paramètre partagé du projet.</p>
+<h3 id="exporting-and-reusing-schedules">Exporter et réutiliser les nomenclatures</h3>
+<ul>
+<li><strong>Menu de l'application ➤ Exporter ➤ Rapports ➤ Nomenclature…</strong> écrit la nomenclature en texte
+  délimité : <strong>Exporter la nomenclature</strong> règle le délimiteur de champ, le qualificateur de texte
+  et les en-têtes et lignes de groupe du fichier.</li>
+<li><strong>Créer un gabarit à partir de la vue…</strong>, au clic droit sur une nomenclature, crée un gabarit de
+  vue avec ses champs, son filtre, son tri, sa mise en forme et son apparence ; <strong>Appliquer un
+  gabarit de vue…</strong> les donne à une autre nomenclature.</li>
+<li><strong>Enregistrer dans un nouveau fichier…</strong>, au clic droit, écrit la configuration de la
+  nomenclature, sans les éléments, dans un fichier à part. <strong>Insérer ➤ Importer ➤ Insérer à partir
+  d'un fichier ➤ Insérer des vues à partir d'un fichier…</strong> apporte dans ce projet les
+  nomenclatures d'un autre, avec leurs paramètres de projet.</li>
+</ul>
 <h2 id="what-this-chapter-will-cover">Ce que couvrira ce chapitre</h2>
 <ul>
 <li>les feuilles et les cartouches ;</li>
-<li>les fenêtres : placement des vues sur les feuilles, leur échelle et leur titre ;</li>
-<li>les nomenclatures comme vues du modèle : champs, filtres, tri et regroupement, totaux, modification des valeurs dans la nomenclature ;</li>
-<li>les nomenclatures prédéfinies et le métré des matériaux ;</li>
-<li>l'impression des feuilles en PDF ;</li>
-<li>l'exportation des nomenclatures en CSV.</li>
+<li>les fenêtres : placer des vues sur les feuilles, leur échelle et leur titre ;</li>
+<li>l'impression des feuilles en PDF.</li>
 </ul>
 <h2 id="meanwhile">En attendant</h2>
 <p><a href="../getting-started/">Prise en main</a> place un plan sur une feuille pas à pas. Dans la ligne de commande, <code>help</code> suivi du nom d'une commande affiche son

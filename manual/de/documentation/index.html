@@ -247,6 +247,66 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#schedules">
+<span class="md-ellipsis">
+      Bauteillisten
+    </span>
+</a>
+<nav aria-label="Bauteillisten" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creating-a-schedule">
+<span class="md-ellipsis">
+      Eine Bauteilliste erstellen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#schedule-properties">
+<span class="md-ellipsis">
+      Eigenschaften der Bauteilliste
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#working-in-a-schedule-view">
+<span class="md-ellipsis">
+      In einer Bauteillistenansicht arbeiten
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#schedules-on-sheets">
+<span class="md-ellipsis">
+      Bauteillisten auf Plänen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-schedules-and-material-takeoffs">
+<span class="md-ellipsis">
+      Schlüssellisten und Materiallisten
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#project-and-shared-parameters">
+<span class="md-ellipsis">
+      Projektparameter und gemeinsam genutzte Parameter
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exporting-and-reusing-schedules">
+<span class="md-ellipsis">
+      Bauteillisten exportieren und wiederverwenden
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#what-this-chapter-will-cover">
 <span class="md-ellipsis">
       Was dieses Kapitel behandeln wird
@@ -310,6 +370,66 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#schedules">
+<span class="md-ellipsis">
+      Bauteillisten
+    </span>
+</a>
+<nav aria-label="Bauteillisten" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creating-a-schedule">
+<span class="md-ellipsis">
+      Eine Bauteilliste erstellen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#schedule-properties">
+<span class="md-ellipsis">
+      Eigenschaften der Bauteilliste
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#working-in-a-schedule-view">
+<span class="md-ellipsis">
+      In einer Bauteillistenansicht arbeiten
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#schedules-on-sheets">
+<span class="md-ellipsis">
+      Bauteillisten auf Plänen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-schedules-and-material-takeoffs">
+<span class="md-ellipsis">
+      Schlüssellisten und Materiallisten
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#project-and-shared-parameters">
+<span class="md-ellipsis">
+      Projektparameter und gemeinsam genutzte Parameter
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exporting-and-reusing-schedules">
+<span class="md-ellipsis">
+      Bauteillisten exportieren und wiederverwenden
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#what-this-chapter-will-cover">
 <span class="md-ellipsis">
       Was dieses Kapitel behandeln wird
@@ -331,22 +451,117 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset"><a class="md-content__icon pdf-download-btn" download href="../pdf/bimopen-manual-de.pdf" title="Download"><i class="fa fas fa-download"></i><small> PDF</small></a>
 <h1 id="sheets-schedules-and-printing">Pläne, Bauteillisten und Drucken</h1>
-<p>Dieses Kapitel wird beschreiben, wie das Projekt dokumentiert wird: Pläne, Bauteillisten und gedruckte Zeichnungen.</p>
+<p>Dieses Kapitel beschreibt, wie das Projekt dokumentiert wird: Pläne, Bauteillisten und gedruckte Zeichnungen.</p>
 <div class="admonition note">
 <p class="admonition-title">In Arbeit</p>
 <p>Dieses Kapitel wird mit dem Bereich R7 der Neuausrichtung von BIMopen fertiggestellt, <em>Dokumentation und Dateien</em>: Jede
 Funktion wird mit dem Referenzverhalten verglichen, wo nötig korrigiert und über die
-Benutzeroberfläche geprüft und erst dann hier beschrieben. Bis dahin führt diese Seite auf,
-was sie behandeln wird.</p>
+Benutzeroberfläche geprüft und erst dann hier beschrieben. Die Bauteillisten sind geprüft und
+unten beschrieben; Pläne und Drucken folgen.</p>
 </div>
+<h2 id="schedules">Bauteillisten</h2>
+<p>Eine Bauteilliste ist eine Tabelle der Elemente des Modells und eine Ansicht wie die anderen: Sie
+öffnet sich in einem Fenster des Zeichenbereichs, wird mit Grundrissen, Schnitten und 3D-Ansichten
+nebeneinander angeordnet, überlappend angeordnet und gewechselt und steht im Projektbrowser unter
+<strong>Bauteillisten/Mengen</strong>. Sie folgt jeder Änderung des Modells sofort, und jede Änderung in ihr
+ändert das Modell.</p>
+<h3 id="creating-a-schedule">Eine Bauteilliste erstellen</h3>
+<p><strong>Ansicht ➤ Erzeugen ➤ Bauteillisten ➤ Bauteilliste/Mengen</strong> öffnet <strong>Neue Bauteilliste</strong>: Wählen
+Sie eine Kategorie, einen Namen (der vorgeschlagene folgt der Kategorie, bis einer eingegeben wird)
+und <strong>Bauteile in Liste aufnehmen</strong> oder <strong>Schlüssel der Bauteilliste</strong>. <strong>OK</strong> öffnet
+<strong>Eigenschaften der Bauteilliste</strong>; dessen <strong>OK</strong> erstellt die Bauteilliste und öffnet ihre
+Ansicht. <strong>Materialliste</strong> im selben Menü führt die Materialien der Schichten von Wänden, Böden
+und Dächern auf.</p>
+<h3 id="schedule-properties">Eigenschaften der Bauteilliste</h3>
+<p>Das Dialogfeld öffnet sich erneut über die Palette <strong>Eigenschaften</strong> der Bauteilliste (jede
+Registerkarte hat ihre Schaltfläche <strong>Bearbeiten…</strong>) oder mit der rechten Maustaste auf die
+Bauteilliste im Projektbrowser. Seine Registerkarten:</p>
+<table>
+<thead>
+<tr>
+<th>Registerkarte</th>
+<th>Was sie festlegt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Felder</strong></td>
+<td>Die Spalten, aus <strong>Verfügbare Felder:</strong> gewählt und geordnet; die Felder der Räume, in denen die Elemente liegen; <strong>Parameter hinzufügen…</strong> für einen Projektparameter oder gemeinsam genutzten Parameter; <strong>Berechneter Wert…</strong> für eine Formel (mit <code>+ - * / ^</code>, <code>sqrt</code>, <code>round</code>, <code>IF</code>, <code>AND</code>, <code>OR</code>, <code>NOT</code> und Einheiten) oder einen Prozentsatz</td>
+</tr>
+<tr>
+<td><strong>Filter</strong></td>
+<td>Bis zu vier Kriterien, die ein Element alle erfüllen muss</td>
+</tr>
+<tr>
+<td><strong>Sortieren/Gruppieren</strong></td>
+<td>Bis zu vier Sortierebenen, jede mit <strong>Kopfzeile</strong>, Fußzeile und <strong>Leerzeile</strong>; die Gesamtsummen; <strong>Jedes Exemplar einzeln aufführen</strong> (aus: eine Zeile je Typ)</td>
+</tr>
+<tr>
+<td><strong>Formatierung</strong></td>
+<td>Je Feld: Überschrift, Ausrichtung der Überschrift, Ausrichtung, ausgeblendetes Feld, <strong>Format…</strong> (Einheiten, Rundung, Symbol), Summen und <strong>Bedingte Formatierung…</strong> (eine Hintergrundfarbe, wo ein Wert eine Prüfung erfüllt)</td>
+</tr>
+<tr>
+<td><strong>Darstellung</strong></td>
+<td>Rasterlinien und Umriss mit ihren Linienstilen, der Titel und die Spaltenüberschriften, eine Leerzeile, <strong>Überschriftentext</strong> und <strong>Haupttext</strong> (Größe, <strong>Fett</strong>, <strong>Kursiv</strong>); sichtbar, wenn die Bauteilliste auf einem Plan ist</td>
+</tr>
+</tbody>
+</table>
+<h3 id="working-in-a-schedule-view">In einer Bauteillistenansicht arbeiten</h3>
+<ul>
+<li>Eine Zelle ändert das Element oder, bei einem Typparameter, seinen Typ; jede Änderung ist ein
+  Rückgängig-Schritt.</li>
+<li>Eine Zeile wählt ihre Elemente in allen Ansichten. <strong>Im Modell markieren</strong> in der Registerkarte
+  <strong>Ändern | Bauteilliste/Mengen</strong> öffnet <strong>Elemente in Ansicht anzeigen</strong>, das einen auf sie
+  ausgerichteten Grundriss nach vorne holt; <strong>Anzeigen</strong> geht zur nächsten Ansicht.</li>
+<li><strong>Zeilen ➤ Löschen</strong> löscht nach einer Rückfrage die Elemente der gewählten Zeilen.</li>
+<li>Zusammen gewählte Überschriften werden mit <strong>Gruppieren</strong> unter einer gemeinsamen Überschrift
+  vereint und mit <strong>Gruppierung aufheben</strong> getrennt; <strong>Spalte ausblenden</strong> und <strong>Alle Spalten
+  einblenden</strong> wirken auf die gewählte Spalte.</li>
+</ul>
+<h3 id="schedules-on-sheets">Bauteillisten auf Plänen</h3>
+<p>Ziehen Sie eine Bauteilliste aus dem Projektbrowser auf einen Plan. Auf dem Plan gewählt, zeigt
+sie ihre Steuerelemente: Das Z am rechten Rand eines Segments teilt es in zwei, der Pfeil in der
+Mitte eines Segments verschiebt es (auf dem Nachbarsegment abgelegt, werden beide vereint), der
+Punkt unten an einem Segment verschiebt seine letzte Zeile, und die Dreiecke oben an den Spalten
+legen ihre Breite fest. Ein Doppelklick oder <strong>Bauteilliste bearbeiten</strong> über die rechte
+Maustaste öffnet die Ansicht der Bauteilliste. Dieselbe Bauteilliste kann auf mehreren Plänen
+stehen.</p>
+<h3 id="key-schedules-and-material-takeoffs">Schlüssellisten und Materiallisten</h3>
+<p>Eine Schlüsselliste (<strong>Schlüssel der Bauteilliste</strong> in <strong>Neue Bauteilliste</strong>) legt benannte
+Wertegruppen fest, eine Zeile je Schlüssel, mit <strong>Zeilen</strong> hinzugefügt und gelöscht. Ihr
+<strong>Schlüsselname</strong> wird ein Parameter der Kategorie: Einen Schlüssel für ein Element zu wählen,
+gibt ihm alle Werte dieser Zeile.</p>
+<p>Eine Materialliste führt für jedes Element die Materialien seiner Schichten mit Fläche und Volumen
+auf; ihre Felder werden wie alle anderen sortiert, gruppiert und summiert.</p>
+<h3 id="project-and-shared-parameters">Projektparameter und gemeinsam genutzte Parameter</h3>
+<p><strong>Verwalten ➤ Einstellungen ➤ Projektparameter</strong> fügt den Elementen einiger Kategorien oder ihren
+Typen Parameter hinzu, mit einem Namen, einem Werttyp und der Gruppe, in der sie in der Palette
+Eigenschaften erscheinen.</p>
+<p><strong>Verwalten ➤ Einstellungen ➤ Gemeinsam genutzte Parameter</strong> öffnet <strong>Gemeinsam genutzte Parameter
+bearbeiten</strong>: die verwendete Datei für gemeinsam genutzte Parameter (<strong>Durchsuchen…</strong>,
+<strong>Erstellen…</strong>), ihre Gruppen und die Parameter jeder Gruppe. Ein gemeinsam genutzter Parameter
+behält Namen und Typ und hat eine eigene Kennung, sodass mehrere Projekte denselben Parameter
+hinzufügen. Wählen Sie in <strong>Parametereigenschaften</strong> <strong>Gemeinsam genutzter Parameter</strong> und
+<strong>Auswählen…</strong>, um einen dem Projekt hinzuzufügen; <strong>Exportieren…</strong> schreibt einen gemeinsam
+genutzten Parameter des Projekts zurück in die Datei.</p>
+<h3 id="exporting-and-reusing-schedules">Bauteillisten exportieren und wiederverwenden</h3>
+<ul>
+<li><strong>Anwendungsmenü ➤ Exportieren ➤ Berichte ➤ Bauteilliste…</strong> schreibt die Bauteilliste als Text
+  mit Trennzeichen: <strong>Bauteilliste exportieren</strong> legt das Feldtrennzeichen, den Textqualifizierer
+  und die Überschriften und Gruppenzeilen der Datei fest.</li>
+<li><strong>Ansichtsvorlage aus Ansicht erstellen…</strong> über die rechte Maustaste auf eine Bauteilliste
+  erstellt eine Ansichtsvorlage mit ihren Feldern, ihrem Filter, Sortieren, Formatierung und
+  Darstellung; <strong>Ansichtsvorlage anwenden…</strong> gibt sie einer anderen Bauteilliste.</li>
+<li><strong>In neuer Datei speichern…</strong> über die rechte Maustaste schreibt die Einrichtung der
+  Bauteilliste ohne die Elemente in eine eigene Datei. <strong>Einfügen ➤ Importieren ➤ Aus Datei
+  einfügen ➤ Ansichten aus Datei einfügen…</strong> holt die Bauteillisten eines anderen Projekts mit
+  ihren Projektparametern in dieses.</li>
+</ul>
 <h2 id="what-this-chapter-will-cover">Was dieses Kapitel behandeln wird</h2>
 <ul>
-<li>Pläne und Planköpfe;</li>
+<li>Pläne und Schriftfelder;</li>
 <li>Ansichtsfenster: Ansichten auf Plänen platzieren, ihr Maßstab und ihr Titel;</li>
-<li>Bauteillisten als Ansichten des Modells: Felder, Filter, Sortierung und Gruppierung, Summen, Bearbeiten von Werten in der Bauteilliste;</li>
-<li>die vordefinierten Bauteillisten und die Materialauswertung;</li>
-<li>Pläne als PDF drucken;</li>
-<li>Bauteillisten nach CSV exportieren.</li>
+<li>Pläne als PDF drucken.</li>
 </ul>
 <h2 id="meanwhile">Bis dahin</h2>
 <p><a href="../getting-started/">Erste Schritte</a> platziert Schritt für Schritt einen Grundriss auf einem Plan. In der Befehlszeile zeigt <code>help</code>, gefolgt vom Namen eines Befehls, dessen

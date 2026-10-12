@@ -110,6 +110,9 @@
   .btn { display: inline-flex; align-items: center; gap: 8px; padding: 11px 18px; border-radius: 10px; font-weight: 600; font-size: 15px; text-decoration: none; border: 1px solid transparent; transition: transform .12s; }
   .btn:hover { transform: translateY(-1px); }
   .btn-primary { background: var(--blue); color: var(--on-blue); }
+  .btn-lg { padding: 16px 28px; font-size: 18px; border-radius: 12px; box-shadow: var(--shadow); }
+  .rm-cta { margin-top: 28px; }
+  [dir="rtl"] .btn .arrow { transform: scaleX(-1); }
   .btn-ghost { border-color: var(--line); color: var(--ink); background: var(--card); }
   .bar .btn { padding: 8px 14px; }
 
@@ -444,21 +447,7 @@ $ bimopen-cli mcp</pre>
       <span class="eyebrow" data-i18n="rm.kicker">Stato del progetto</span>
       <h2 id="roadmap-t" data-i18n="rm.h2">In sviluppo, in modo trasparente</h2>
       <p class="sub" data-i18n="rm.p">BIMopen è giovane. Funziona già per modellare edifici semplici; la strada verso un uso professionale completo è pubblica.</p>
-      <div class="road">
-        <article class="card">
-          <h3><span class="dot" style="background:#2e9d5b"></span><span data-i18n="rm1.h3">Disponibile</span></h3>
-          <ul data-i18n="rm1.ul"><li>Livelli, griglie, muri, porte, finestre, solai</li><li>Locali, quote, testi ed etichette</li><li>Piante, sezioni, prospetti, 3D, abachi, computo</li><li>IFC4, import .rvt, SVG, PNG, CSV</li><li>Desktop, browser, riga di comando, MCP</li><li>Interfaccia in sei lingue, arabo compreso</li><li>Più finestre di vista: affianca, sovrapponi, replica</li><li>Scala della vista, intervallo di visualizzazione, livello di dettaglio, stili 3D</li><li>Tavole con cartiglio, stampa in PDF vettoriale</li><li>Tetti a padiglione, a due falde e piani; muri associati al tetto</li><li>Regione di taglio, nascondi e isola elementi</li><li>Sposta, copia, ruota, allinea, offset, copia speculare, serie, riduci/estendi, dividi</li><li>Componenti: arredi e sanitari, nel computo e in IFC</li><li>Visibilità/Grafica per categoria e stili oggetti</li><li>Linee di dettaglio, campiture e regioni di mascheramento</li><li>Gestione dei tipi: modifica assieme degli strati, elimina inutilizzati</li><li>Unità di misura del progetto</li><li>Filtri di vista</li><li>Modelli di vista</li><li>Sezioni segmentate con ritaglio lontano regolabile; viste di dettaglio</li><li>Quote lineari e angolari, quote temporanee, vincoli EQ e blocco</li><li>Scale a rampe con pianerottolo e ringhiere, in pianta, 3D, abachi e IFC</li><li>Piante delle aree e schemi di colore con legenda</li><li>Componenti di dettaglio, dettagli ripetuti, isolamento e viste di disegno</li><li>Facciate continue con griglie, montanti e pannelli, in pianta, 3D, abachi e IFC</li><li>Più piante per livello, viste duplicate (anche con i dettagli) e rinominate, viste 3D salvate</li><li>Muri con linea di ubicazione, altezza o profondità, concatena, offset e inversione</li><li>Materiali e retini del progetto: colore ombreggiato, motivi di superficie e di taglio, per strato e per categoria</li><li>Abachi configurabili: campi, filtri, ordinamento e raggruppamento, totali, modifica dei valori, sulle tavole</li></ul>
-        </article>
-        <article class="card">
-          <h3><span class="dot" style="background:var(--blue)"></span><span data-i18n="rm2.h3">Prossimi passi</span></h3>
-          <ul data-i18n="rm2.ul"><li>Pannello «Disegna» comune: rettangoli, poligoni, archi, offset</li><li>Selezione completa: TAB, filtro, tutte le istanze</li></ul>
-        </article>
-        <article class="card">
-          <h3><span class="dot" style="background:var(--terra)"></span><span data-i18n="rm3.h3">Più avanti</span></h3>
-          <ul data-i18n="rm3.ul"><li>Fasi: esistente, demolito, nuovo</li><li>Importa DWG e immagini come base</li><li>Materiali con grafica di taglio e di superficie</li></ul>
-        </article>
-      </div>
-      <p style="margin-top:24px"><a class="btn btn-ghost" href="roadmap.html" data-con-lingua="roadmap.html" data-i18n="rm.full">Roadmap completa</a></p>
+      <p class="rm-cta"><a class="btn btn-primary btn-lg" href="roadmap.html" data-con-lingua="roadmap.html"><span data-i18n="rm.full">Roadmap completa</span> <span aria-hidden="true" class="arrow">→</span></a></p>
     </div>
   </section>
 
@@ -522,7 +511,7 @@ $ bimopen-cli mcp</pre>
 </footer>
 
 <button class="to-top" id="to-top" type="button" aria-label="Torna all'inizio" data-i18n-attr="aria-label:ui.top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
-<script src="lingua.js?v=29ea33d7"></script>
+<script src="lingua.js?v=f8336209"></script>
 <script>
   // tema: quello di sistema finché non si sceglie; poi chiaro o scuro, ricordato in questo browser
   (function () {

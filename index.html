@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title data-i18n="meta.title">BIMopen — Modellazione BIM open source e gratuita</title>
-<meta name="description" data-i18n-attr="content:meta.desc" content="BIMopen è un software BIM open source e gratuito: muri, porte, finestre e solai in un unico modello, con piante, 3D, abachi ed export IFC4. Desktop e browser.">
+<meta name="description" data-i18n-attr="content:meta.desc" content="BIMopen è un software BIM open source e gratuito: muri, porte, finestre, solai, tetti e scale in un unico modello, con piante, sezioni, 3D, abachi, tavole in PDF ed export IFC4. Nel browser e sul computer.">
 <link rel="canonical" href="https://bimopen.it/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="BIMopen">
@@ -37,15 +37,15 @@
    "@id": "https://bimopen.it/#software",
    "name": "BIMopen",
    "url": "https://bimopen.it/",
-   "description": "Software BIM open source: muri, porte, finestre e solai in un unico modello, con piante, 3D, abachi ed export IFC4.",
+   "description": "Software BIM open source: muri, porte, finestre, solai, tetti e scale in un unico modello, con piante, sezioni, 3D, abachi, tavole in PDF ed export IFC4.",
    "applicationCategory": "DesignApplication",
    "applicationSubCategory": "Building Information Modeling",
-   "operatingSystem": "Linux, Windows, macOS, Web",
+   "operatingSystem": "Web, Linux",
    "image": "https://bimopen.it/assets/og-bimopen.jpg",
    "license": "https://opensource.org/licenses/MIT",
    "isAccessibleForFree": true,
    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
-   "featureList": ["Export IFC4", "Import Revit (.rvt) 2023-2025", "Piante, 3D, abachi e computo dei materiali", "Riga di comando e server MCP"]
+   "featureList": ["Export IFC4", "Import Revit (.rvt) 2023-2025", "Piante, sezioni, prospetti e viste 3D", "Abachi configurabili collegati al modello e computo dei materiali", "Tavole con cartiglio e stampa in PDF vettoriale", "File di progetto a database con recupero dopo un arresto e copie di backup", "Manuale utente in sei lingue", "Riga di comando e server MCP"]
   }
  ]
 }
@@ -287,7 +287,7 @@
           <li data-i18n="fact.1">Nessun account né abbonamento</li>
           <li data-i18n="fact.2">Export IFC4</li>
           <li data-i18n="fact.3">Import da Revit (.rvt)</li>
-          <li data-i18n="fact.4">Linux · Windows · macOS · Web</li>
+          <li data-i18n="fact.4">Browser e Linux · Windows e macOS in arrivo</li>
         </ul>
       </div>
       <div class="stage" role="img" aria-label="La casa di esempio di BIMopen: vista 3D a due piani e pianta del piano terra" data-i18n-attr="aria-label:hero.img">
@@ -304,12 +304,12 @@
       <span class="eyebrow" data-i18n="ui.kicker">L'interfaccia</span>
       <h2 id="interfaccia-t" data-i18n="ui.h2">Familiare a chi conosce Revit</h2>
       <p class="sub" data-i18n="ui.p">Barra multifunzione con schede e gruppi, palette Proprietà con il selettore del tipo, Browser di progetto, barra delle opzioni e barra di stato. Le immagini mostrano l'interfaccia nella lingua che hai scelto.</p>
-      <figure class="ui-shot ui-main"><a href="assets/ui/it/interface.webp?v=785c92db" data-ui-link><img src="assets/ui/it/interface.webp?v=785c92db" data-ui alt="L'interfaccia di BIMopen con la casa di esempio in 3D, la palette Proprietà e il Browser di progetto" data-i18n-attr="alt:ui.alt1" width="1400" height="820" loading="lazy"></a>
+      <figure class="ui-shot ui-main"><a href="assets/ui/it/interface.webp?v=3ad2a1ed" data-ui-link><img src="assets/ui/it/interface.webp?v=3ad2a1ed" data-ui alt="L'interfaccia di BIMopen con la casa di esempio in 3D, la palette Proprietà e il Browser di progetto" data-i18n-attr="alt:ui.alt1" width="1400" height="820" loading="lazy"></a>
         <figcaption data-i18n="ui.c1">La casa di esempio in 3D, con Proprietà e Browser di progetto a sinistra.</figcaption></figure>
       <div class="grid2 ui-pair">
-        <figure class="ui-shot"><a href="assets/ui/it/wall-tool.webp?v=03e8e960" data-ui-link><img src="assets/ui/it/wall-tool.webp?v=03e8e960" data-ui alt="Lo strumento Muro in pianta, con la barra delle opzioni e la quota temporanea" data-i18n-attr="alt:ui.alt2" width="1400" height="820" loading="lazy"></a>
+        <figure class="ui-shot"><a href="assets/ui/it/wall-tool.webp?v=1bdcd8d7" data-ui-link><img src="assets/ui/it/wall-tool.webp?v=1bdcd8d7" data-ui alt="Lo strumento Muro in pianta, con la barra delle opzioni e la quota temporanea" data-i18n-attr="alt:ui.alt2" width="1400" height="820" loading="lazy"></a>
           <figcaption data-i18n="ui.c2">Lo strumento Muro: barra delle opzioni, linea di ubicazione, concatena e quote temporanee.</figcaption></figure>
-        <figure class="ui-shot"><a href="assets/ui/it/sheet.webp?v=8eeab3ec" data-ui-link><img src="assets/ui/it/sheet.webp?v=8eeab3ec" data-ui alt="Una tavola con due piante posizionate e il cartiglio" data-i18n-attr="alt:ui.alt3" width="1400" height="820" loading="lazy"></a>
+        <figure class="ui-shot"><a href="assets/ui/it/sheet.webp?v=a939ea05" data-ui-link><img src="assets/ui/it/sheet.webp?v=a939ea05" data-ui alt="Una tavola con due piante posizionate e il cartiglio" data-i18n-attr="alt:ui.alt3" width="1400" height="820" loading="lazy"></a>
           <figcaption data-i18n="ui.c3">Le tavole: viste in scala con il cartiglio, pronte per il PDF.</figcaption></figure>
       </div>
     </div>
@@ -332,7 +332,7 @@
           <figure><img src="assets/vista-3d.webp?v=0ba0385b" alt="Vista 3D della casa di esempio con il tetto a due falde e i timpani" data-i18n-attr="alt:viste.alt2" loading="lazy" width="1575" height="1315"></figure>
           <div class="body">
             <h3 data-i18n="viste.h3b">Vista 3D</h3>
-            <p data-i18n="viste.pb">Navigazione in tempo reale accelerata dalla GPU, vetri trasparenti, selezione degli elementi con un clic.</p>
+            <p data-i18n="viste.pb">Navigazione in tempo reale accelerata dalla GPU: orbita attorno alla selezione e zoom verso il cursore, vetri trasparenti, selezione degli elementi con un clic.</p>
           </div>
         </article>
         <article class="card view">
@@ -351,7 +351,7 @@
           </figure>
           <div class="body">
             <h3 data-i18n="viste.h3c">Abachi e computo</h3>
-            <p data-i18n="viste.pc">Abachi di muri, porte, finestre e solai e computo dei materiali strato per strato, esportabili in CSV per il foglio di calcolo.</p>
+            <p data-i18n="viste.pc">Abachi configurabili di tredici categorie e computo dei materiali strato per strato. Si aprono come viste accanto a piante e 3D, modificano il modello e lo seguono, si mettono sulle tavole e si esportano in CSV.</p>
           </div>
         </article>
       </div>
@@ -408,7 +408,7 @@
           <span class="badge">IFC4</span>
           <div>
             <h3 data-i18n="fmt1.h3">Export IFC4</h3>
-            <p data-i18n="fmt1.p">Muri con i loro strati di materiale, aperture che forano i muri, porte e finestre che le riempiono, solai, tipi, proprietà e quantità. Il file si apre nei software BIM che leggono IFC.</p>
+            <p data-i18n="fmt1.p">Muri con i loro strati di materiale, aperture che forano i muri, porte e finestre che le riempiono, solai, tetti, scale, ringhiere, facciate continue, locali e arredi, con tipi, proprietà e quantità. Il file si apre nei software BIM che leggono IFC.</p>
           </div>
         </article>
         <article class="card fmt">
@@ -427,10 +427,10 @@
           </div>
         </article>
         <article class="card fmt">
-          <span class="badge">SVG · PNG · CSV</span>
+          <span class="badge">SVG · PNG · PDF · CSV</span>
           <div>
             <h3 data-i18n="fmt4.h3">Elaborati e tabelle</h3>
-            <p data-i18n="fmt4.p">Piante in SVG vettoriale alla scala scelta, immagini di piante e 3D, abachi e computi in CSV.</p>
+            <p data-i18n="fmt4.p">Piante in SVG vettoriale alla scala scelta, immagini di piante e 3D, tavole stampate in PDF vettoriale, abachi e computi in CSV.</p>
           </div>
         </article>
       </div>
@@ -504,7 +504,7 @@ $ bimopen-cli mcp</pre>
       <details><summary data-i18n="faq1.q">Quanto costa?</summary><p data-i18n="faq1.a">Niente. BIMopen è software libero: non ha licenze a pagamento, abbonamenti né account, neanche per l'uso professionale.</p></details>
       <details><summary data-i18n="faq2.q">È compatibile con Revit?</summary><p data-i18n="faq2.a">In parte. BIMopen apre i progetti Revit 2023–2025 in sola lettura e scambia i modelli tramite IFC4, che Revit e gli altri software BIM sanno importare. Non salva in formato .rvt, che è un formato chiuso.</p></details>
       <details><summary data-i18n="faq3.q">Dove finiscono i miei progetti?</summary><p data-i18n="faq3.a">Sul tuo computer. Anche nella versione per browser il modello resta nella pagina, e quando salvi viene scaricato come file. Questo sito non usa cookie né strumenti di tracciamento.</p></details>
-      <details><summary data-i18n="faq4.q">Posso usarlo per un progetto reale?</summary><p data-i18n="faq4.a">Per studi e modelli semplici sì: puoi modellare anche i tetti, impaginare le viste su tavole con cartiglio e stamparle in PDF. Mancano ancora le scale e diversi strumenti di modifica: puoi seguirne lo sviluppo nella roadmap.</p></details>
+      <details><summary data-i18n="faq4.q">Posso usarlo per un progetto reale?</summary><p data-i18n="faq4.a">Per studi e modelli semplici sì: modelli muri, solai, tetti, scale e facciate continue, impagini le viste su tavole con cartiglio e le stampi in PDF, e il file di progetto recupera il lavoro dopo un arresto. Mancano ancora controsoffitti, fasi, famiglie caricabili ed export DWG: puoi seguirne lo sviluppo nella roadmap.</p></details>
       <details><summary data-i18n="faq5.q">In che lingua è il programma?</summary><p data-i18n="faq5.a">In italiano, inglese, tedesco, francese, spagnolo e arabo, da destra a sinistra. Al primo avvio usa la lingua del sistema o del browser; si cambia dal menu 🌐 in alto. Anche questo sito è disponibile nelle stesse sei lingue.</p></details>
       <details><summary data-i18n="faq6.q">Come posso contribuire?</summary><p data-i18n="faq6.a">Provandolo e segnalando problemi e richieste, oppure contribuendo al codice in Rust. Sono utili anche le traduzioni dei termini e i modelli di prova.</p></details>
     </div>
@@ -543,7 +543,7 @@ $ bimopen-cli mcp</pre>
     });
   });
 </script>
-<script src="lingua.js?v=b3a55f7c"></script>
+<script src="lingua.js?v=ccd401bb"></script>
 <script>
   // tema: quello di sistema finché non si sceglie; poi chiaro o scuro, ricordato in questo browser
   (function () {

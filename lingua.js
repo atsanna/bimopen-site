@@ -4,7 +4,7 @@
   var D = window.BO_I18N = window.BO_I18N || {};
   var LINGUE = ['it', 'en', 'de', 'fr', 'es', 'ar'];
   // file di lingua: lingue/<lingua>.js accanto a questo script, scaricato solo alla prima richiesta
-  var VER = {"en": "d438f93f", "de": "2ee07459", "fr": "5f2e5980", "es": "f148c96a", "ar": "b33bc0c0"};
+  var VER = {"en": "9306f0f9", "de": "722bc4a2", "fr": "e4c20c0f", "es": "9b4ec93b", "ar": "d8d95db8"};
   var BASE = (document.currentScript && document.currentScript.src) || location.href;
   function carica(lang, poi) {
     if (lang === 'it' || D[lang]) return poi();
@@ -61,6 +61,10 @@
     [].forEach.call(document.querySelectorAll('a[data-con-lingua]'), function (a) {
       var h = a.getAttribute('data-con-lingua').split('#');
       a.setAttribute('href', h[0] + (lang === 'it' ? '' : '?lang=' + lang) + (h[1] ? '#' + h[1] : ''));
+    });
+    // Il manuale utente si apre nella lingua scelta: manual/<lingua>/ (le sei lingue del sito).
+    [].forEach.call(document.querySelectorAll('a[data-manuale]'), function (a) {
+      a.setAttribute('href', 'manual/' + lang + '/');
     });
     // L'applicazione si apre nella lingua scelta qui, anche in italiano.
     [].forEach.call(document.querySelectorAll('a[data-app]'), function (a) {

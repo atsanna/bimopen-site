@@ -4,7 +4,7 @@
   var D = window.BO_I18N = window.BO_I18N || {};
   var LINGUE = ['it', 'en', 'de', 'fr', 'es', 'ar'];
   // file di lingua: lingue/<lingua>.js accanto a questo script, scaricato solo alla prima richiesta
-  var VER = {"en": "c4cc717a", "de": "52c2a9eb", "fr": "fff52b02", "es": "4a063b97", "ar": "ca0b6eea"};
+  var VER = {"en": "a88b19ad", "de": "2ca2a400", "fr": "67ca041b", "es": "47fc5f7a", "ar": "13bb7364"};
   var BASE = (document.currentScript && document.currentScript.src) || location.href;
   function carica(lang, poi) {
     if (lang === 'it' || D[lang]) return poi();

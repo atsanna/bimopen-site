@@ -18,6 +18,8 @@ model, kept in step. It exports IFC4, prints vector PDFs and reads `.rvt` files.
 is available in six languages: Italian, English, German, French, Spanish and Arabic (right to
 left).
 
+Developed with [Claude Code](https://claude.com/claude-code).
+
 > **Work in progress.** BIMopen is under active development. Desktop versions (Linux, Windows,
 > macOS) and the source code are not public yet: they are coming soon.
 

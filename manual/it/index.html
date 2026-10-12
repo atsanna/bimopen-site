@@ -1,0 +1,492 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="it">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Manuale utente di BIMopen, modellazione BIM open source" name="description"/>
+<meta content="Antonio Sanna" name="author"/>
+<link href="https://atsanna.github.io/bimopen-site/manual/it/" rel="canonical"/>
+<link href="getting-started/" rel="next"/>
+<link href="assets/images/logo.svg" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.9" name="generator"/>
+<title>Manuale utente di BIMopen</title>
+<link href="assets/stylesheets/main.4af4bdda.min.css" rel="stylesheet"/>
+<link href="assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link href="assets/css/theme.css" rel="stylesheet"/>
+<link href="assets/css/theme_dark_mode.css" rel="stylesheet"/>
+<script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="bimopen" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#bimopen-user-manual">
+          Vai al contenuto
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Intestazione" class="md-header__inner md-grid">
+<a aria-label="Manuale utente di BIMopen" class="md-header__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/" title="Manuale utente di BIMopen">
+<img alt="logo" src="assets/images/logo.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Manuale utente di BIMopen
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Introduzione
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Passa al tema scuro" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="custom" data-md-color-scheme="bimopen" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Passa al tema scuro">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Passa al tema chiaro" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Passa al tema chiaro">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<div class="md-header__option">
+<div class="md-select">
+<button aria-label="Seleziona la lingua" class="md-header__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"></path></svg>
+</button>
+<div class="md-select__inner">
+<ul class="md-select__list">
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/en/" hreflang="en">
+              English
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/it/" hreflang="it">
+              Italiano
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/de/" hreflang="de">
+              Deutsch
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/fr/" hreflang="fr">
+              Français
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/es/" hreflang="es">
+              Español
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/ar/" hreflang="ar">
+              العربية
+            </a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Cerca" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Cerca" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Cerca" class="md-search__options">
+<button aria-label="Cancella" class="md-search__icon md-icon" tabindex="-1" title="Cancella" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Inizializza la ricerca
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigazione" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Manuale utente di BIMopen" class="md-nav__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/" title="Manuale utente di BIMopen">
+<img alt="logo" src="assets/images/logo.svg"/>
+</a>
+    Manuale utente di BIMopen
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Introduzione
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href=".">
+<span class="md-ellipsis">
+    Introduzione
+    
+  </span>
+</a>
+<nav aria-label="Indice" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-this-manual-is-organised">
+<span class="md-ellipsis">
+      Come è organizzato questo manuale
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conventions">
+<span class="md-ellipsis">
+      Convenzioni
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-this-manual-describes">
+<span class="md-ellipsis">
+      Che cosa descrive questo manuale
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="getting-started/">
+<span class="md-ellipsis">
+    Primi passi
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="interface/">
+<span class="md-ellipsis">
+    L'interfaccia
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="projects-and-files/">
+<span class="md-ellipsis">
+    Progetti e file
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="selection-and-modify/">
+<span class="md-ellipsis">
+    Selezione e modifica
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="walls-doors-windows/">
+<span class="md-ellipsis">
+    Muri, porte e finestre
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="floors-roofs-stairs/">
+<span class="md-ellipsis">
+    Pavimenti, tetti, scale e componenti
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="views-and-graphics/">
+<span class="md-ellipsis">
+    Viste e grafica
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="annotation/">
+<span class="md-ellipsis">
+    Annotazioni e dettagli 2D
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="documentation/">
+<span class="md-ellipsis">
+    Tavole, abachi e stampa
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="command-line-and-mcp/">
+<span class="md-ellipsis">
+    Riga di comando e MCP
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="keyboard-shortcuts/">
+<span class="md-ellipsis">
+    Scorciatoie da tastiera
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="troubleshooting/">
+<span class="md-ellipsis">
+    Risoluzione dei problemi
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://atsanna.github.io/bimopen-site/manual/it/pdf/bimopen-manual-it.pdf">
+<span class="md-ellipsis">
+    PDF
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Indice" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-this-manual-is-organised">
+<span class="md-ellipsis">
+      Come è organizzato questo manuale
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conventions">
+<span class="md-ellipsis">
+      Convenzioni
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-this-manual-describes">
+<span class="md-ellipsis">
+      Che cosa descrive questo manuale
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset"><a class="md-content__icon pdf-download-btn" download href="pdf/bimopen-manual-it.pdf" title="Download"><i class="fa fas fa-download"></i><small> PDF</small></a>
+<h1 id="bimopen-user-manual">Manuale utente di BIMopen</h1>
+<p>BIMopen è un'applicazione open source per la modellazione delle informazioni di un edificio (BIM).
+L'edificio si modella con muri, porte, finestre, pavimenti, tetti, scale e locali, e i disegni
+derivano dal modello: piante, sezioni, prospetti, viste 3D, abachi e tavole sono viste dello
+stesso modello e cambiano insieme quando lo modifichi.</p>
+<p>BIMopen funziona sul desktop (Linux, Windows, macOS) e in un browser web, e può essere comandato
+da una riga di comando e da agenti di intelligenza artificiale tramite MCP. La sua interfaccia
+parla sei lingue: italiano, inglese, tedesco, francese, spagnolo e arabo, quest'ultimo scritto da
+destra a sinistra.</p>
+<p><img alt="La finestra di BIMopen con la casa di esempio nella vista 3D" src="assets/screens/interface.png"/></p>
+<h2 id="how-this-manual-is-organised">Come è organizzato questo manuale</h2>
+<table>
+<thead>
+<tr>
+<th>Capitolo</th>
+<th>Che cosa tratta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="getting-started/">Primi passi</a></td>
+<td>Installare e avviare BIMopen, il progetto di esempio e una prima piccola casa, da un progetto vuoto fino a una tavola</td>
+</tr>
+<tr>
+<td><a href="interface/">L'interfaccia</a></td>
+<td>Il menu dell'applicazione, la barra di accesso rapido, la barra multifunzione, la barra delle opzioni, Proprietà, il Browser di progetto, l'area di disegno, la barra di stato, la riga di comando e come muoversi nelle viste</td>
+</tr>
+<tr>
+<td><a href="projects-and-files/">Progetti e file</a></td>
+<td>Aprire, salvare, esportare e importare progetti</td>
+</tr>
+<tr>
+<td><a href="selection-and-modify/">Selezione e modifica</a></td>
+<td>Selezionare gli elementi e gli strumenti di modifica</td>
+</tr>
+<tr>
+<td><a href="walls-doors-windows/">Muri, porte e finestre</a></td>
+<td>L'involucro dell'edificio e le sue aperture</td>
+</tr>
+<tr>
+<td><a href="floors-roofs-stairs/">Pavimenti, tetti, scale e componenti</a></td>
+<td>Pavimenti, tetti, scale, ringhiere, facciate continue e componenti posizionati</td>
+</tr>
+<tr>
+<td><a href="views-and-graphics/">Viste e grafica</a></td>
+<td>Piante, sezioni, prospetti, viste 3D e come vengono disegnate</td>
+</tr>
+<tr>
+<td><a href="annotation/">Annotazioni e dettagli 2D</a></td>
+<td>Quote, testi, etichette, locali, aree e dettagli 2D</td>
+</tr>
+<tr>
+<td><a href="documentation/">Tavole, abachi e stampa</a></td>
+<td>Tavole, abachi, stampa e impostazioni del progetto</td>
+</tr>
+<tr>
+<td><a href="command-line-and-mcp/">Riga di comando e MCP</a></td>
+<td>Digitare comandi, <code>bimopen-cli</code> e il server MCP per gli agenti</td>
+</tr>
+<tr>
+<td><a href="keyboard-shortcuts/">Scorciatoie da tastiera</a></td>
+<td>Ogni tasto e ogni scorciatoia digitata</td>
+</tr>
+<tr>
+<td><a href="troubleshooting/">Risoluzione dei problemi</a></td>
+<td>Che cosa fare quando qualcosa non funziona come previsto</td>
+</tr>
+</tbody>
+</table>
+<p>I capitoli da <em>Progetti e file</em> a <em>Tavole, abachi e stampa</em> vengono scritti un'area alla volta:
+ciascuno è completato quando le funzioni che descrive sono state verificate una per una
+attraverso l'interfaccia. Fino ad allora elencano ciò che conterranno.</p>
+<h2 id="conventions">Convenzioni</h2>
+<ul>
+<li>I nomi dell'interfaccia sono scritti in <strong>grassetto</strong>, come appaiono sullo schermo in italiano:
+  la scheda <strong>Inizio</strong>, il pulsante <strong>Muro</strong>, la tavolozza <strong>Proprietà</strong>.</li>
+<li>Un percorso nell'interfaccia è scritto con le frecce: <strong>Inizio ▸ Costruisci ▸ Muro</strong> indica la
+  scheda <strong>Inizio</strong> della barra multifunzione, il suo gruppo <strong>Costruisci</strong>, il suo pulsante
+  <strong>Muro</strong>.</li>
+<li>I tasti sono scritti come <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span>; una scorciatoia digitata alla tastiera, lettera per
+  lettera, è scritta in maiuscolo, come <code>WA</code>.</li>
+<li>I comandi digitati alla riga di comando, e il loro risultato, sono scritti <code>così</code>. I punti sono
+  <code>x,y</code> in metri.</li>
+<li>Note, suggerimenti e avvertenze sono messi in evidenza:</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Una nota aggiunge qualcosa che vale la pena sapere.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Un suggerimento mostra un modo più rapido o migliore.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Un'avvertenza segnala qualcosa che può far perdere lavoro o dare un risultato sbagliato.</p>
+</div>
+<h2 id="what-this-manual-describes">Che cosa descrive questo manuale</h2>
+<p>Questo manuale descrive BIMopen così com'è oggi, e solo ciò che è stato provato nel programma.
+Quando una funzione non è ancora descritta, può comunque esistere: la <a href="https://atsanna.github.io/bimopen-site/roadmap.html">roadmap</a>
+elenca ciò che è disponibile e ciò che è previsto. L'intero manuale è anche un PDF, uno per
+lingua: l'ultima voce della navigazione, <strong>PDF</strong>, lo scarica.</p>
+<p>BIMopen è software libero con licenza MIT o Apache 2.0. Autodesk e Revit sono marchi di
+Autodesk, Inc.; BIMopen è un progetto indipendente, non affiliato ad Autodesk.</p>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Torna su
+</button>
+</main>
+<footer class="md-footer">
+<nav aria-label="Piede" class="md-footer__inner md-grid">
+<a aria-label="Successivo: Primi passi" class="md-footer__link md-footer__link--next" href="getting-started/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Successivo
+              </span>
+<div class="md-ellipsis">
+                Primi passi
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Copyright © 2026 Antonio Sanna · BIMopen
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": ".", "features": ["navigation.instant", "navigation.top", "navigation.footer", "navigation.tracking", "toc.follow", "content.code.copy", "search.suggest", "search.highlight"], "search": "assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiato", "clipboard.copy": "Copia", "search.result.more.one": "1 altro in questa pagina", "search.result.more.other": "# altri in questa pagina", "search.result.none": "Nessun documento trovato", "search.result.one": "1 documento trovato", "search.result.other": "# documenti trovati", "search.result.placeholder": "Scrivi per iniziare a cercare", "search.result.term.missing": "Non presente", "select.version": "Seleziona la versione"}}</script>
+<script src="assets/javascripts/bundle.c8b220af.min.js"></script>
+</body>
+</html>

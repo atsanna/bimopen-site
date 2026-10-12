@@ -1,0 +1,91 @@
+/* The manual looks like the BIMopen website (site/index.html, :root): the same colours, the
+   system's fonts and no external resources (theme.font is false in mkdocs.yml).
+   This file: the fonts, the light palette and the shared shapes; theme_dark_mode.css: the dark
+   palette. */
+:root {
+    --md-text-font: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", "Helvetica Neue", Arial, sans-serif;
+    --md-code-font: ui-monospace, "SFMono-Regular", "Cascadia Mono", "Ubuntu Mono", Menlo, Consolas, monospace;
+}
+
+/* Light: ink #0f2742, ink-soft #3c4f66, muted #66768a, paper #f7f6f2, card #ffffff,
+   line #dfe3e8, blue #1d5fbf, blue-soft #e7effa, terra #c4553a, code #0f2742 / #e6edf5. */
+[data-md-color-scheme="bimopen"] {
+    --bo-ink: #0f2742; --bo-ink-soft: #3c4f66; --bo-muted: #66768a; --bo-paper: #f7f6f2;
+    --bo-card: #ffffff; --bo-line: #dfe3e8; --bo-blue: #1d5fbf; --bo-blue-soft: #e7effa;
+    --bo-terra: #c4553a; --bo-code-bg: #0f2742; --bo-code-ink: #e6edf5;
+}
+
+[data-md-color-scheme="bimopen"], [data-md-color-scheme="slate"] {
+    /* the header is the site's bar: paper, ink text, a thin line under it */
+    --md-primary-fg-color: var(--bo-paper);
+    --md-primary-fg-color--light: var(--bo-card);
+    --md-primary-fg-color--dark: var(--bo-line);
+    --md-primary-bg-color: var(--bo-ink);
+    --md-primary-bg-color--light: var(--bo-ink-soft);
+
+    --md-default-bg-color: var(--bo-paper);
+    --md-default-fg-color: var(--bo-ink);
+    --md-default-fg-color--light: var(--bo-ink-soft);
+    --md-default-fg-color--lighter: var(--bo-muted);
+    --md-default-fg-color--lightest: var(--bo-line);
+
+    --md-typeset-color: var(--bo-ink);
+    --md-typeset-a-color: var(--bo-blue);
+    --md-accent-fg-color: var(--bo-blue);
+    --md-accent-fg-color--transparent: var(--bo-blue-soft);
+
+    --md-code-bg-color: var(--bo-code-bg);
+    --md-code-fg-color: var(--bo-code-ink);
+    --md-code-hl-color: var(--bo-blue-soft);
+
+    --md-footer-bg-color: var(--bo-ink);
+    --md-footer-bg-color--dark: var(--bo-code-bg);
+    --md-footer-fg-color: var(--bo-paper);
+}
+
+/* The bar: sticky and translucent, as on the site. */
+.md-header {
+    background: color-mix(in srgb, var(--bo-paper) 88%, transparent);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--bo-line);
+    box-shadow: none;
+}
+.md-header__topic:first-child { font-weight: 700; letter-spacing: -.01em; }
+.md-search__form { background: var(--bo-card); border: 1px solid var(--bo-line); border-radius: 8px; }
+.md-search__input, .md-search__icon { color: var(--bo-ink); }
+.md-search__input::placeholder { color: var(--bo-muted); }
+
+/* Inline code: soft blue, as the site's chips; code blocks: the site's dark code panel. */
+.md-typeset code { border-radius: 4px; }
+.md-typeset :not(pre) > code { background: var(--bo-blue-soft); color: var(--bo-ink); }
+.md-typeset pre > code { border-radius: 14px; }
+
+/* Screenshots and tables: the site's cards. */
+.md-typeset img { border: 1px solid var(--bo-line); border-radius: 14px; }
+.md-typeset table:not([class]) { border: 1px solid var(--bo-line); border-radius: 14px; background: var(--bo-card); }
+.md-typeset table:not([class]) th { background: var(--bo-blue-soft); color: var(--bo-ink); }
+.md-typeset .admonition, .md-typeset details { border-radius: 14px; }
+.md-typeset kbd { color: var(--bo-ink); background: var(--bo-card); }
+
+/* Highlighted code on the dark panel, in both schemes: light tokens. */
+[data-md-color-scheme="bimopen"], [data-md-color-scheme="slate"] {
+    --md-code-hl-number-color: #ea8a70;
+    --md-code-hl-special-color: #ea8a70;
+    --md-code-hl-function-color: #9cc2ff;
+    --md-code-hl-constant-color: #c9b6ff;
+    --md-code-hl-keyword-color: #6ea4ff;
+    --md-code-hl-string-color: #a8d8a0;
+    --md-code-hl-name-color: var(--bo-code-ink);
+    --md-code-hl-operator-color: #bccadb;
+    --md-code-hl-punctuation-color: #bccadb;
+    --md-code-hl-comment-color: #93a3b6;
+    --md-code-hl-generic-color: #bccadb;
+    --md-code-hl-variable-color: #e6edf5;
+}
+
+/* Headings as on the site: ink, bold, slightly tight. */
+.md-typeset h1, .md-typeset h2, .md-typeset h3, .md-typeset h4 {
+    color: var(--bo-ink);
+    font-weight: 700;
+    letter-spacing: -.01em;
+}

@@ -1,0 +1,946 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="it">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Manuale utente di BIMopen, modellazione BIM open source" name="description"/>
+<meta content="Antonio Sanna" name="author"/>
+<link href="https://atsanna.github.io/bimopen-site/manual/it/keyboard-shortcuts/" rel="canonical"/>
+<link href="../command-line-and-mcp/" rel="prev"/>
+<link href="../troubleshooting/" rel="next"/>
+<link href="../assets/images/logo.svg" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.9" name="generator"/>
+<title>Scorciatoie da tastiera - Manuale utente di BIMopen</title>
+<link href="../assets/stylesheets/main.4af4bdda.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link href="../assets/css/theme.css" rel="stylesheet"/>
+<link href="../assets/css/theme_dark_mode.css" rel="stylesheet"/>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="bimopen" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#keyboard-shortcuts">
+          Vai al contenuto
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Intestazione" class="md-header__inner md-grid">
+<a aria-label="Manuale utente di BIMopen" class="md-header__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/" title="Manuale utente di BIMopen">
+<img alt="logo" src="../assets/images/logo.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Manuale utente di BIMopen
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Scorciatoie da tastiera
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Passa al tema scuro" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="custom" data-md-color-scheme="bimopen" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Passa al tema scuro">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Passa al tema chiaro" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Passa al tema chiaro">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<div class="md-header__option">
+<div class="md-select">
+<button aria-label="Seleziona la lingua" class="md-header__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"></path></svg>
+</button>
+<div class="md-select__inner">
+<ul class="md-select__list">
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/en/" hreflang="en">
+              English
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/it/" hreflang="it">
+              Italiano
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/de/" hreflang="de">
+              Deutsch
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/fr/" hreflang="fr">
+              Français
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/es/" hreflang="es">
+              Español
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/ar/" hreflang="ar">
+              العربية
+            </a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Cerca" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Cerca" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Cerca" class="md-search__options">
+<button aria-label="Cancella" class="md-search__icon md-icon" tabindex="-1" title="Cancella" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Inizializza la ricerca
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigazione" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Manuale utente di BIMopen" class="md-nav__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/" title="Manuale utente di BIMopen">
+<img alt="logo" src="../assets/images/logo.svg"/>
+</a>
+    Manuale utente di BIMopen
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
+<span class="md-ellipsis">
+    Introduzione
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../getting-started/">
+<span class="md-ellipsis">
+    Primi passi
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../interface/">
+<span class="md-ellipsis">
+    L'interfaccia
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../projects-and-files/">
+<span class="md-ellipsis">
+    Progetti e file
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../selection-and-modify/">
+<span class="md-ellipsis">
+    Selezione e modifica
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../walls-doors-windows/">
+<span class="md-ellipsis">
+    Muri, porte e finestre
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../floors-roofs-stairs/">
+<span class="md-ellipsis">
+    Pavimenti, tetti, scale e componenti
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../views-and-graphics/">
+<span class="md-ellipsis">
+    Viste e grafica
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../annotation/">
+<span class="md-ellipsis">
+    Annotazioni e dettagli 2D
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../documentation/">
+<span class="md-ellipsis">
+    Tavole, abachi e stampa
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../command-line-and-mcp/">
+<span class="md-ellipsis">
+    Riga di comando e MCP
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Scorciatoie da tastiera
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Scorciatoie da tastiera
+    
+  </span>
+</a>
+<nav aria-label="Indice" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#keys">
+<span class="md-ellipsis">
+      Tasti
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mouse">
+<span class="md-ellipsis">
+      Mouse
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#typed-shortcuts">
+<span class="md-ellipsis">
+      Scorciatoie digitate
+    </span>
+</a>
+<nav aria-label="Scorciatoie digitate" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#modelling">
+<span class="md-ellipsis">
+      Modellazione
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#modifying">
+<span class="md-ellipsis">
+      Modifica
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#annotating-and-detailing">
+<span class="md-ellipsis">
+      Annotazione e dettaglio
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#views-and-settings">
+<span class="md-ellipsis">
+      Viste e impostazioni
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../troubleshooting/">
+<span class="md-ellipsis">
+    Risoluzione dei problemi
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://atsanna.github.io/bimopen-site/manual/it/pdf/bimopen-manual-it.pdf">
+<span class="md-ellipsis">
+    PDF
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Indice" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#keys">
+<span class="md-ellipsis">
+      Tasti
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mouse">
+<span class="md-ellipsis">
+      Mouse
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#typed-shortcuts">
+<span class="md-ellipsis">
+      Scorciatoie digitate
+    </span>
+</a>
+<nav aria-label="Scorciatoie digitate" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#modelling">
+<span class="md-ellipsis">
+      Modellazione
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#modifying">
+<span class="md-ellipsis">
+      Modifica
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#annotating-and-detailing">
+<span class="md-ellipsis">
+      Annotazione e dettaglio
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#views-and-settings">
+<span class="md-ellipsis">
+      Viste e impostazioni
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset"><a class="md-content__icon pdf-download-btn" download href="../pdf/bimopen-manual-it.pdf" title="Download"><i class="fa fas fa-download"></i><small> PDF</small></a>
+<h1 id="keyboard-shortcuts">Scorciatoie da tastiera</h1>
+<p>BIMopen ha due tipi di scorciatoie: i <strong>tasti</strong>, come <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span>, che agiscono subito, e le
+<strong>scorciatoie digitate</strong>, come <code>WA</code>, che si digitano lettera per lettera e si confermano con
+<span class="keys"><kbd class="key-enter">Enter</kbd></span>, come qualsiasi comando. Le scorciatoie digitate sono le stesse in ogni lingua.</p>
+<p>Su macOS, <span class="keys"><kbd class="key-command">Cmd</kbd></span> prende il posto di <span class="keys"><kbd class="key-control">Ctrl</kbd></span>.</p>
+<h2 id="keys">Tasti</h2>
+<table>
+<thead>
+<tr>
+<th>Tasto</th>
+<th>Che cosa fa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span></td>
+<td>Annulla l'ultima modifica</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-y">Y</kbd></span> o <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-z">Z</kbd></span></td>
+<td>Ripristina la modifica appena annullata</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span></td>
+<td>Salva il progetto; un progetto mai salvato chiede un nome di file</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-p">P</kbd></span></td>
+<td>Apre <strong>Stampa</strong></td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-a">A</kbd></span></td>
+<td>Seleziona gli elementi del livello della pianta aperta, o dell'intero modello in una vista 3D</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-delete">Del</kbd></span></td>
+<td>Elimina gli elementi selezionati, e gli elementi che ospitano</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-home">Home</kbd></span></td>
+<td>Adatta l'intera vista alla sua finestra</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-f1">F1</kbd></span></td>
+<td>Apre la pagina di questo manuale sulla finestra di dialogo aperta, sul pulsante della barra multifunzione sotto il mouse o sullo strumento attivo</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-escape">Esc</kbd></span></td>
+<td>Annulla il passaggio in corso; premuto di nuovo, termina lo strumento; senza strumento, annulla la selezione</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-enter">Enter</kbd></span></td>
+<td>Esegue la riga digitata alla riga di comando; conferma un valore nella tavolozza Proprietà</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-arrow-up">Up</kbd></span> / <span class="keys"><kbd class="key-arrow-down">Down</kbd></span></td>
+<td>Alla riga di comando, le righe digitate prima</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-space">Space</kbd></span></td>
+<td>Mentre disegni muri, scambia il lato esterno e quello interno; mentre posizioni un componente o un componente di dettaglio, lo ruota</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-shift">Shift</kbd></span></td>
+<td>Durante il disegno, mantiene i segmenti orizzontali o verticali (o li libera, quando <strong>Orto</strong> è attivo); con il pulsante sinistro, sposta la vista</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd></span> + clic</td>
+<td>Aggiunge un elemento alla selezione, o lo rimuove</td>
+</tr>
+</tbody>
+</table>
+<p><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span>, <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-y">Y</kbd></span>, <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-a">A</kbd></span>, <span class="keys"><kbd class="key-delete">Del</kbd></span> e <span class="keys"><kbd class="key-home">Home</kbd></span> agiscono sul modello solo mentre non
+stai digitando in un campo: in un campo agiscono sul testo.</p>
+<p>In uno schizzo di pavimento, tetto, scala o ringhiera, <span class="keys"><kbd class="key-escape">Esc</kbd></span> (o un doppio clic) termina anche
+lo schizzo quando ha abbastanza punti.</p>
+<p>Nella finestra di dialogo <strong>Nota di testo</strong>, <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-enter">Enter</kbd></span> inserisce la nota e <span class="keys"><kbd class="key-escape">Esc</kbd></span> la
+annulla.</p>
+<h2 id="mouse">Mouse</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>In piante e sezioni</th>
+<th>Nelle viste 3D</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rotella</td>
+<td>Zoom sul cursore</td>
+<td>Zoom</td>
+</tr>
+<tr>
+<td>Pulsante centrale, trascinamento</td>
+<td>Spostamento della vista</td>
+<td>Spostamento della vista</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-shift">Shift</kbd></span> + pulsante sinistro, trascinamento</td>
+<td>Spostamento della vista</td>
+<td>Spostamento della vista</td>
+</tr>
+<tr>
+<td>Pulsante sinistro, trascinamento</td>
+<td>Finestra di selezione (da sinistra a destra: interni; da destra a sinistra: intersecati), oppure sposta gli elementi selezionati</td>
+<td>Orbita</td>
+</tr>
+<tr>
+<td>Pulsante destro</td>
+<td>Menu contestuale; con uno strumento attivo, annulla il passaggio</td>
+<td>Orbita (trascinamento)</td>
+</tr>
+<tr>
+<td>Doppio clic</td>
+<td>Termina uno schizzo</td>
+<td>–</td>
+</tr>
+</tbody>
+</table>
+<h2 id="typed-shortcuts">Scorciatoie digitate</h2>
+<p>Digita le lettere mentre nessun campo è in modifica, poi premi <span class="keys"><kbd class="key-enter">Enter</kbd></span>. Senza argomenti, una
+scorciatoia avvia lo strumento o apre la finestra di dialogo; con argomenti, esegue subito il
+comando (vedi <a href="../command-line-and-mcp/">Riga di comando e MCP</a>).</p>
+<h3 id="modelling">Modellazione</h3>
+<table>
+<thead>
+<tr>
+<th>Scorciatoia</th>
+<th>Comando</th>
+<th>Avvia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>WA</code> o <code>W</code></td>
+<td><code>wall</code></td>
+<td>Muro</td>
+</tr>
+<tr>
+<td><code>DR</code></td>
+<td><code>door</code></td>
+<td>Porta</td>
+</tr>
+<tr>
+<td><code>WN</code></td>
+<td><code>window</code></td>
+<td>Finestra</td>
+</tr>
+<tr>
+<td><code>SB</code></td>
+<td><code>floor</code></td>
+<td>Pavimento (il pulsante <strong>Pavimento</strong>)</td>
+</tr>
+<tr>
+<td><code>RF</code></td>
+<td><code>roof</code></td>
+<td>Tetto</td>
+</tr>
+<tr>
+<td><code>CM</code></td>
+<td><code>component</code></td>
+<td>Componente</td>
+</tr>
+<tr>
+<td><code>ST</code></td>
+<td><code>stair</code></td>
+<td>Scale</td>
+</tr>
+<tr>
+<td><code>RA</code></td>
+<td><code>railing</code></td>
+<td>Ringhiera</td>
+</tr>
+<tr>
+<td><code>CG</code></td>
+<td><code>curtaingrid</code></td>
+<td>Griglia facciata continua</td>
+</tr>
+<tr>
+<td><code>MU</code></td>
+<td><code>mullion</code></td>
+<td>Montante</td>
+</tr>
+<tr>
+<td><code>CP</code></td>
+<td><code>curtainpanel</code></td>
+<td>Pannello di facciata continua</td>
+</tr>
+<tr>
+<td><code>GR</code></td>
+<td><code>grid</code></td>
+<td>Griglia</td>
+</tr>
+<tr>
+<td><code>RM</code></td>
+<td><code>room</code></td>
+<td>Locale</td>
+</tr>
+<tr>
+<td><code>RS</code></td>
+<td><code>roomsep</code></td>
+<td>Separazione dei locali</td>
+</tr>
+<tr>
+<td><code>PA</code></td>
+<td><code>areaplan</code></td>
+<td>La finestra di dialogo <strong>Pianta delle aree</strong></td>
+</tr>
+<tr>
+<td><code>CA</code></td>
+<td><code>areaboundary</code></td>
+<td>Linea di contorno area</td>
+</tr>
+<tr>
+<td>–</td>
+<td><code>area</code></td>
+<td>Area</td>
+</tr>
+<tr>
+<td><code>LG</code></td>
+<td><code>legend</code></td>
+<td>Legenda riempimento colore</td>
+</tr>
+<tr>
+<td><code>SC</code></td>
+<td><code>colorscheme</code></td>
+<td>La finestra di dialogo <strong>Schemi di colore</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="modifying">Modifica</h3>
+<table>
+<thead>
+<tr>
+<th>Scorciatoia</th>
+<th>Comando</th>
+<th>Avvia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>MV</code> o <code>M</code></td>
+<td><code>move</code></td>
+<td>Sposta</td>
+</tr>
+<tr>
+<td><code>CO</code></td>
+<td><code>copy</code></td>
+<td>Copia</td>
+</tr>
+<tr>
+<td><code>RO</code></td>
+<td><code>rotate</code></td>
+<td>Ruota</td>
+</tr>
+<tr>
+<td><code>MM</code></td>
+<td><code>mirror</code></td>
+<td>Copia speculare - Disegna asse</td>
+</tr>
+<tr>
+<td><code>AR</code></td>
+<td><code>array</code></td>
+<td>Serie</td>
+</tr>
+<tr>
+<td><code>OF</code></td>
+<td><code>offset</code></td>
+<td>Offset</td>
+</tr>
+<tr>
+<td><code>AL</code></td>
+<td><code>align</code></td>
+<td>Allinea</td>
+</tr>
+<tr>
+<td><code>TR</code></td>
+<td><code>trim</code></td>
+<td>Riduci/Estendi ad angolo</td>
+</tr>
+<tr>
+<td><code>SL</code></td>
+<td><code>split</code></td>
+<td>Dividi elemento</td>
+</tr>
+<tr>
+<td><code>DEL</code></td>
+<td><code>delete</code></td>
+<td>Elimina la selezione</td>
+</tr>
+<tr>
+<td><code>U</code></td>
+<td><code>undo</code></td>
+<td>Annulla l'ultima modifica</td>
+</tr>
+</tbody>
+</table>
+<h3 id="annotating-and-detailing">Annotazione e dettaglio</h3>
+<table>
+<thead>
+<tr>
+<th>Scorciatoia</th>
+<th>Comando</th>
+<th>Avvia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>DI</code></td>
+<td><code>dim</code></td>
+<td>Quota allineata</td>
+</tr>
+<tr>
+<td><code>DL</code></td>
+<td><code>lineardim</code></td>
+<td>Quota lineare</td>
+</tr>
+<tr>
+<td><code>DA</code></td>
+<td><code>angulardim</code></td>
+<td>Quota angolare</td>
+</tr>
+<tr>
+<td><code>TX</code></td>
+<td><code>text</code></td>
+<td>Testo</td>
+</tr>
+<tr>
+<td><code>TG</code></td>
+<td><code>tag</code></td>
+<td>Etichetta le porte e le finestre del livello senza etichetta</td>
+</tr>
+<tr>
+<td>–</td>
+<td><code>detailline</code></td>
+<td>Linea di dettaglio</td>
+</tr>
+<tr>
+<td><code>RG</code></td>
+<td><code>region</code></td>
+<td>Campitura</td>
+</tr>
+<tr>
+<td>–</td>
+<td><code>mask</code></td>
+<td>Regione di mascheramento</td>
+</tr>
+<tr>
+<td><code>CD</code></td>
+<td><code>detailcomponent</code></td>
+<td>Componente di dettaglio</td>
+</tr>
+<tr>
+<td><code>RD</code></td>
+<td><code>repeatingdetail</code></td>
+<td>Dettaglio ripetuto</td>
+</tr>
+<tr>
+<td><code>IS</code></td>
+<td><code>insulation</code></td>
+<td>Isolamento</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Il suggerimento del pulsante <strong>Linea di dettaglio</strong> mostra <code>DL</code>, ma <code>DL</code> avvia la quota
+lineare, come dice il suggerimento di <strong>Lineare</strong>. Per avviare la linea di dettaglio
+digitando, usa <code>detailline</code>.</p>
+</div>
+<h3 id="views-and-settings">Viste e impostazioni</h3>
+<table>
+<thead>
+<tr>
+<th>Scorciatoia</th>
+<th>Comando</th>
+<th>Avvia o apre</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SE</code></td>
+<td><code>section</code></td>
+<td>Sezione</td>
+</tr>
+<tr>
+<td><code>EL</code></td>
+<td><code>elevation</code></td>
+<td>Prospetto</td>
+</tr>
+<tr>
+<td><code>DT</code></td>
+<td><code>callout</code></td>
+<td>Richiamo (il pulsante <strong>Dettaglio</strong>)</td>
+</tr>
+<tr>
+<td><code>DS</code></td>
+<td><code>splitsegment</code></td>
+<td>Dividi segmento di una sezione</td>
+</tr>
+<tr>
+<td><code>VD</code></td>
+<td><code>draftingview</code></td>
+<td>La finestra di dialogo <strong>Vista di disegno</strong></td>
+</tr>
+<tr>
+<td><code>PP</code></td>
+<td><code>floorplan</code></td>
+<td>La finestra di dialogo <strong>Pianta del pavimento</strong></td>
+</tr>
+<tr>
+<td><code>DV</code></td>
+<td><code>duplicateview</code></td>
+<td>Duplica la vista attiva</td>
+</tr>
+<tr>
+<td><code>VG</code> o <code>VV</code></td>
+<td><code>vg</code></td>
+<td><strong>Visibilità/Grafica</strong></td>
+</tr>
+<tr>
+<td><code>SO</code></td>
+<td><code>objectstyle</code></td>
+<td><strong>Stili oggetti</strong></td>
+</tr>
+<tr>
+<td><code>MA</code></td>
+<td><code>material</code></td>
+<td><strong>Materiali</strong></td>
+</tr>
+<tr>
+<td><code>UN</code></td>
+<td><code>units</code></td>
+<td><strong>Unità di misura</strong></td>
+</tr>
+<tr>
+<td><code>PU</code></td>
+<td><code>purge</code></td>
+<td><strong>Elimina inutilizzati</strong></td>
+</tr>
+<tr>
+<td>–</td>
+<td><code>filter</code></td>
+<td><strong>Filtri</strong></td>
+</tr>
+<tr>
+<td>–</td>
+<td><code>viewtemplate</code></td>
+<td><strong>Modelli vista</strong></td>
+</tr>
+<tr>
+<td>–</td>
+<td><code>applytemplate</code></td>
+<td>Applica un modello di vista alla vista attiva</td>
+</tr>
+<tr>
+<td>–</td>
+<td><code>linestyle</code></td>
+<td><strong>Stili di linea</strong></td>
+</tr>
+<tr>
+<td>–</td>
+<td><code>fillpattern</code></td>
+<td><strong>Retini</strong></td>
+</tr>
+<tr>
+<td>–</td>
+<td><code>saveview3d</code></td>
+<td>Salva la vista {3D} con un nome</td>
+</tr>
+<tr>
+<td>–</td>
+<td><code>renameview</code></td>
+<td>Rinomina la vista attiva</td>
+</tr>
+</tbody>
+</table>
+<p>I comandi con <strong>–</strong> non hanno una forma breve, ma il loro nome completo funziona allo stesso modo.
+<code>help</code> elenca tutti i comandi e le loro forme brevi.</p>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Torna su
+</button>
+</main>
+<footer class="md-footer">
+<nav aria-label="Piede" class="md-footer__inner md-grid">
+<a aria-label="Precedente: Riga di comando e MCP" class="md-footer__link md-footer__link--prev" href="../command-line-and-mcp/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Precedente
+              </span>
+<div class="md-ellipsis">
+                Riga di comando e MCP
+              </div>
+</div>
+</a>
+<a aria-label="Successivo: Risoluzione dei problemi" class="md-footer__link md-footer__link--next" href="../troubleshooting/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Successivo
+              </span>
+<div class="md-ellipsis">
+                Risoluzione dei problemi
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Copyright © 2026 Antonio Sanna · BIMopen
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.footer", "navigation.tracking", "toc.follow", "content.code.copy", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiato", "clipboard.copy": "Copia", "search.result.more.one": "1 altro in questa pagina", "search.result.more.other": "# altri in questa pagina", "search.result.none": "Nessun documento trovato", "search.result.one": "1 documento trovato", "search.result.other": "# documenti trovati", "search.result.placeholder": "Scrivi per iniziare a cercare", "search.result.term.missing": "Non presente", "select.version": "Seleziona la versione"}}</script>
+<script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+</body>
+</html>

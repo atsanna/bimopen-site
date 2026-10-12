@@ -1,0 +1,743 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Manuel utilisateur de BIMopen, modélisation BIM open source" name="description"/>
+<meta content="Antonio Sanna" name="author"/>
+<link href="https://atsanna.github.io/bimopen-site/manual/fr/command-line-and-mcp/" rel="canonical"/>
+<link href="../documentation/" rel="prev"/>
+<link href="../keyboard-shortcuts/" rel="next"/>
+<link href="../assets/images/logo.svg" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.9" name="generator"/>
+<title>Ligne de commande et MCP - Manuel utilisateur de BIMopen</title>
+<link href="../assets/stylesheets/main.4af4bdda.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link href="../assets/css/theme.css" rel="stylesheet"/>
+<link href="../assets/css/theme_dark_mode.css" rel="stylesheet"/>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="bimopen" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#command-line-and-mcp">
+          Aller au contenu
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="En-tête" class="md-header__inner md-grid">
+<a aria-label="Manuel utilisateur de BIMopen" class="md-header__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/?lang=fr" title="Manuel utilisateur de BIMopen">
+<img alt="logo" src="../assets/images/logo.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Manuel utilisateur de BIMopen
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Ligne de commande et MCP
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Passer au thème sombre" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="custom" data-md-color-scheme="bimopen" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Passer au thème sombre">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Passer au thème clair" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Passer au thème clair">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<div class="md-header__option">
+<div class="md-select">
+<button aria-label="Sélectionner la langue" class="md-header__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"></path></svg>
+</button>
+<div class="md-select__inner">
+<ul class="md-select__list">
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/en/" hreflang="en">
+              English
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/it/" hreflang="it">
+              Italiano
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/de/" hreflang="de">
+              Deutsch
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/fr/" hreflang="fr">
+              Français
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/es/" hreflang="es">
+              Español
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/ar/" hreflang="ar">
+              العربية
+            </a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Rechercher" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Rechercher" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Recherche" class="md-search__options">
+<button aria-label="Effacer" class="md-search__icon md-icon" tabindex="-1" title="Effacer" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Manuel utilisateur de BIMopen" class="md-nav__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/?lang=fr" title="Manuel utilisateur de BIMopen">
+<img alt="logo" src="../assets/images/logo.svg"/>
+</a>
+    Manuel utilisateur de BIMopen
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
+<span class="md-ellipsis">
+    Accueil
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../getting-started/">
+<span class="md-ellipsis">
+    Premiers pas
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../interface/">
+<span class="md-ellipsis">
+    L'interface
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../projects-and-files/">
+<span class="md-ellipsis">
+    Projets et fichiers
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../selection-and-modify/">
+<span class="md-ellipsis">
+    Sélection et modification
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../walls-doors-windows/">
+<span class="md-ellipsis">
+    Murs, portes et fenêtres
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../floors-roofs-stairs/">
+<span class="md-ellipsis">
+    Sols, toits, escaliers et composants
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../views-and-graphics/">
+<span class="md-ellipsis">
+    Vues et graphisme
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../annotation/">
+<span class="md-ellipsis">
+    Annotations et détails 2D
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../documentation/">
+<span class="md-ellipsis">
+    Feuilles, nomenclatures et impression
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Ligne de commande et MCP
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Ligne de commande et MCP
+    
+  </span>
+</a>
+<nav aria-label="Table des matières" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-command-line-in-the-window">
+<span class="md-ellipsis">
+      La ligne de commande de la fenêtre
+    </span>
+</a>
+<nav aria-label="La ligne de commande de la fenêtre" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#typed-shortcuts-start-the-tools">
+<span class="md-ellipsis">
+      Les raccourcis saisis lancent les outils
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#points-and-lengths">
+<span class="md-ellipsis">
+      Points et longueurs
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#arguments-in-json">
+<span class="md-ellipsis">
+      Arguments en JSON
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#commands-you-will-use-often">
+<span class="md-ellipsis">
+      Commandes d'usage courant
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bimopen-cli">
+<span class="md-ellipsis">
+      bimopen-cli
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mcp-bimopen-for-ai-agents">
+<span class="md-ellipsis">
+      MCP : BIMopen pour les agents d'IA
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../keyboard-shortcuts/">
+<span class="md-ellipsis">
+    Raccourcis clavier
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../troubleshooting/">
+<span class="md-ellipsis">
+    Dépannage
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://atsanna.github.io/bimopen-site/manual/fr/pdf/bimopen-manual-fr.pdf">
+<span class="md-ellipsis">
+    PDF
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table des matières" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-command-line-in-the-window">
+<span class="md-ellipsis">
+      La ligne de commande de la fenêtre
+    </span>
+</a>
+<nav aria-label="La ligne de commande de la fenêtre" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#typed-shortcuts-start-the-tools">
+<span class="md-ellipsis">
+      Les raccourcis saisis lancent les outils
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#points-and-lengths">
+<span class="md-ellipsis">
+      Points et longueurs
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#arguments-in-json">
+<span class="md-ellipsis">
+      Arguments en JSON
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#commands-you-will-use-often">
+<span class="md-ellipsis">
+      Commandes d'usage courant
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bimopen-cli">
+<span class="md-ellipsis">
+      bimopen-cli
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mcp-bimopen-for-ai-agents">
+<span class="md-ellipsis">
+      MCP : BIMopen pour les agents d'IA
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset"><a class="md-content__icon pdf-download-btn" download href="../pdf/bimopen-manual-fr.pdf" title="Download"><i class="fa fas fa-download"></i><small> PDF</small></a>
+<h1 id="command-line-and-mcp">Ligne de commande et MCP</h1>
+<p>Tout ce que vous faites dans BIMopen est une commande. Un clic sur <strong>Mur</strong> et deux points dans le
+plan exécutent la même commande <code>wall</code> que vous pouvez taper vous-même. Ce chapitre décrit la ligne
+de commande de la fenêtre, le programme <code>bimopen-cli</code>, qui exécute les mêmes commandes sans
+fenêtre, et le serveur MCP, grâce auquel un agent d'IA peut modéliser, vérifier et rendre un
+projet.</p>
+<h2 id="the-command-line-in-the-window">La ligne de commande de la fenêtre</h2>
+<p>La ligne de commande se trouve sous la zone de dessin. Sa partie supérieure est le journal ; sa
+dernière ligne est l'endroit où vous tapez.</p>
+<ul>
+<li>Vous n'avez pas besoin de cliquer dessus au préalable : tout ce que vous tapez lorsqu'aucun autre
+  champ n'est en cours de modification y va.</li>
+<li><span class="keys"><kbd class="key-enter">Enter</kbd></span> exécute la ligne. La commande est reprise dans le journal après un <code>&gt;</code>, suivie de son
+  résultat ; une erreur s'affiche en rouge et ne change rien.</li>
+<li><span class="keys"><kbd class="key-arrow-up">Up</kbd></span> et <span class="keys"><kbd class="key-arrow-down">Down</kbd></span> rappellent les lignes tapées auparavant.</li>
+<li>À gauche de la ligne, l'invite indique ce qui est attendu : <code>Command:</code> lorsqu'aucun outil n'est
+  actif, ou la demande de l'outil actif, comme <code>WALL  next point [Esc to finish]:</code>.</li>
+<li><code>help</code> répertorie toutes les commandes avec une ligne de description ; <code>help wall</code> affiche le
+  mode d'emploi de l'une d'elles. <strong>? ▸ Commandes</strong> dans la barre de titre fait la même chose que
+  <code>help</code>.</li>
+</ul>
+<h3 id="typed-shortcuts-start-the-tools">Les raccourcis saisis lancent les outils</h3>
+<p>Une commande tapée <strong>sans arguments</strong> lance l'outil interactif, comme si vous cliquiez sur son
+bouton : <code>WA</code> (ou <code>wall</code>) lance l'outil de mur, <code>DR</code> l'outil de porte, <code>VG</code> ouvre
+Visibilité/Graphismes. La même commande <strong>avec des arguments</strong> effectue le travail immédiatement,
+sans l'outil : <code>wall 0,0 5,0</code> dessine un mur de l'origine jusqu'à 5 m le long de x.</p>
+<p>Les noms des commandes, leurs formes courtes et leurs arguments sont les mêmes dans toutes les
+langues de l'interface ; la plupart acceptent aussi un nom italien, comme <code>muro</code> pour <code>wall</code>. Les
+noms de paramètres, de types et de vues suivent la langue de l'interface : en anglais, vous tapez
+<code>set Unconnected Height 2.7m</code>, en italien <code>set Altezza non connessa 2.7m</code>. Le
+<a href="../keyboard-shortcuts/">chapitre sur les raccourcis clavier</a> répertorie toutes les formes courtes.</p>
+<h3 id="points-and-lengths">Points et longueurs</h3>
+<table>
+<thead>
+<tr>
+<th>Vous tapez</th>
+<th>Signification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>3,4</code></td>
+<td>Le point x = 3 m, y = 4 m</td>
+</tr>
+<tr>
+<td><code>@2,0</code></td>
+<td>2 m le long de x et 0 le long de y à partir du point précédent</td>
+</tr>
+<tr>
+<td><code>@4&lt;90</code></td>
+<td>4 m à partir du point précédent, à 90° (angles dans le sens trigonométrique à partir de l'axe x)</td>
+</tr>
+<tr>
+<td><code>2.7m</code>, <code>270cm</code>, <code>2700mm</code></td>
+<td>Une longueur avec son unité</td>
+</tr>
+<tr>
+<td><code>2.7</code> ou <code>2,7</code></td>
+<td>Une longueur en mètres : dans la ligne de commande, un nombre sans unité est en mètres</td>
+</tr>
+</tbody>
+</table>
+<p>Par exemple, <code>wall 0,0 @6,0 @4&lt;90 0,4 c</code> dessine un rectangle de 6 × 4 m ; le <code>c</code> final le ferme.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Dans la ligne de commande, <code>set Unconnected Height 2700</code> signifie 2700 <strong>mètres</strong>. Écrivez
+l'unité : <code>2700mm</code>. Dans la palette Propriétés, en revanche, un nombre sans unité est exprimé
+dans les unités du projet, les millimètres dans un nouveau projet.</p>
+</div>
+<h3 id="arguments-in-json">Arguments en JSON</h3>
+<p>Chaque commande accepte aussi ses arguments sous forme d'objet JSON, qui donne accès à toutes ses
+options. La ligne de mode d'emploi de <code>help</code> les répertorie :</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>wall 0,0 10,0 {"height":3.2,"location":"Linea d'asse del muro"}
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>roof walls {"slope":30,"overhang":0.5}
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>sheet A102 Plans {"title_block":"A3"}
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>export doors.csv {"schedule":"doors"}
+</code></pre></div>
+<h3 id="commands-you-will-use-often">Commandes d'usage courant</h3>
+<table>
+<thead>
+<tr>
+<th>Commande</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>new</code>, <code>sample</code></td>
+<td>Un nouveau projet, le projet d'exemple</td>
+</tr>
+<tr>
+<td><code>open house.bimopen</code>, <code>save house.bimopen</code></td>
+<td>Ouvre et enregistre un projet</td>
+</tr>
+<tr>
+<td><code>undo</code>, <code>redo</code></td>
+<td>Annule et rétablit la dernière modification</td>
+</tr>
+<tr>
+<td><code>view 3d</code>, <code>view Ground Floor</code></td>
+<td>Ouvre la vue 3D par défaut, ou le plan d'un niveau</td>
+</tr>
+<tr>
+<td><code>wall</code>, <code>door</code>, <code>window</code>, <code>floor</code>, <code>roof</code></td>
+<td>Éléments du modèle : voir le mode d'emploi avec <code>help</code></td>
+</tr>
+<tr>
+<td><code>select walls</code>, <code>select all</code>, <code>deselect</code></td>
+<td>Sélectionne par catégorie, tout, rien</td>
+</tr>
+<tr>
+<td><code>set &lt;parameter&gt; &lt;value&gt;</code></td>
+<td>Définit un paramètre de la sélection, comme dans la palette Propriétés</td>
+</tr>
+<tr>
+<td><code>type &lt;type name&gt;</code></td>
+<td>Change le type de la sélection, ou du prochain élément</td>
+</tr>
+<tr>
+<td><code>move 1,0</code>, <code>copy 0,3</code>, <code>rotate 90</code></td>
+<td>Modifie la sélection</td>
+</tr>
+<tr>
+<td><code>delete</code></td>
+<td>Supprime la sélection</td>
+</tr>
+<tr>
+<td><code>list walls</code>, <code>params 102</code>, <code>info</code></td>
+<td>Répertorie les éléments, les paramètres de l'un d'eux, un résumé du projet</td>
+</tr>
+<tr>
+<td><code>schedule doors</code></td>
+<td>Affiche une nomenclature dans la ligne de commande</td>
+</tr>
+<tr>
+<td><code>export house.ifc</code></td>
+<td>Exporte en IFC, SVG, PNG ou CSV, selon l'extension du fichier</td>
+</tr>
+</tbody>
+</table>
+<p>Chaque élément possède un numéro, son identifiant, affiché entre parenthèses après sa création :
+<code>Door «Single swing door 80x210» in wall 102 (106)</code>. Les commandes l'acceptent là où elles ont
+besoin d'un élément : <code>params 106</code>, <code>delete 106</code>.</p>
+<h2 id="bimopen-cli">bimopen-cli</h2>
+<p><code>bimopen-cli</code> exécute BIMopen sans fenêtre : pour convertir des fichiers, construire un projet à
+partir d'un script, vérifier un modèle, ou servir des agents via MCP. Compilez-le avec
+<code>cargo build --release -p bimopen-cli</code>.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>bimopen-cli info &lt;file&gt;
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>bimopen-cli convert &lt;in&gt; &lt;out&gt; [--level NAME] [--view 3d] [--schedule walls|doors|windows|floors|rooms|materials]
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a>bimopen-cli run [&lt;file&gt; | --sample] [--cmd LINE]… [--script FILE] [--save FILE] [--export FILE]…
+<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a>bimopen-cli commands
+<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a>bimopen-cli mcp [&lt;file&gt; | --sample]
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Sous-commande</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>info &lt;file&gt;</code></td>
+<td>Un résumé du projet et, en JSON, ses niveaux, le nombre d'éléments et la vue active</td>
+</tr>
+<tr>
+<td><code>convert &lt;in&gt; &lt;out&gt;</code></td>
+<td>Ouvre <code>&lt;in&gt;</code> (<code>.bimopen</code> ou <code>.rvt</code>) et écrit <code>&lt;out&gt;</code> : <code>.ifc</code>, <code>.svg</code> ou <code>.png</code> d'un plan (le niveau le plus bas, ou <code>--level</code>), <code>.png</code> de la vue 3D (<code>--view 3d</code>), <code>.csv</code> d'une nomenclature (<code>--schedule</code>), ou <code>.bimopen</code></td>
+</tr>
+<tr>
+<td><code>run</code></td>
+<td>Ouvre un fichier, l'exemple ou un nouveau projet, puis exécute les options dans l'ordre : <code>--cmd</code> une ligne, <code>--script</code> un fichier de lignes (les lignes vides et celles commençant par <code>#</code> sont ignorées), <code>--save</code> et <code>--export</code> un fichier</td>
+</tr>
+<tr>
+<td><code>commands</code></td>
+<td>Toutes les commandes, avec leur description et leur mode d'emploi</td>
+</tr>
+<tr>
+<td><code>mcp</code></td>
+<td>Le serveur MCP sur l'entrée et la sortie standard</td>
+</tr>
+<tr>
+<td><code>--version</code></td>
+<td>La version</td>
+</tr>
+</tbody>
+</table>
+<p>Les messages sont dans la langue de la variable d'environnement <code>BIMOPEN_LANG</code> (<code>it</code>, <code>en</code>, <code>de</code>,
+<code>fr</code>, <code>es</code>, <code>ar</code>), ou du système (<code>LANG</code>), ou en italien. <code>bimopen-cli</code> se termine avec le code 0
+lorsque tout a fonctionné, 1 lorsqu'une commande a échoué (le message indique laquelle), et 2
+lorsque les arguments sont erronés (il affiche le mode d'emploi).</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">BIMOPEN_LANG</span><span class="o">=</span>en
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>bimopen-cli<span class="w"> </span>run<span class="w"> </span>--script<span class="w"> </span>house.txt<span class="w"> </span>--save<span class="w"> </span>house.bimopen<span class="w"> </span>--export<span class="w"> </span>house.ifc
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>bimopen-cli<span class="w"> </span>convert<span class="w"> </span>house.bimopen<span class="w"> </span>plan.svg
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>bimopen-cli<span class="w"> </span>convert<span class="w"> </span>house.bimopen<span class="w"> </span>doors.csv<span class="w"> </span>--schedule<span class="w"> </span>doors
+<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a>bimopen-cli<span class="w"> </span>convert<span class="w"> </span>house.bimopen<span class="w"> </span>first.png<span class="w"> </span>--level<span class="w"> </span><span class="s2">"First Floor"</span>
+<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a>bimopen-cli<span class="w"> </span>convert<span class="w"> </span>house.bimopen<span class="w"> </span>house-3d.png<span class="w"> </span>--view<span class="w"> </span>3d
+<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a>bimopen-cli<span class="w"> </span>convert<span class="w"> </span>project.rvt<span class="w"> </span>project.bimopen
+</code></pre></div>
+<p>Un script est un fichier texte contenant une commande par ligne, exactement comme on la tape dans
+la ligne de commande :</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a># a small house
+<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a>wall 0,0 10,0 10,6 0,6 c
+<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a>door 5,0
+<a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a>window 10,3
+<a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a>floor walls
+<a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a>roof walls
+</code></pre></div>
+<p>Les nomenclatures sont écrites en CSV avec <code>;</code> entre les colonnes, les en-têtes dans la langue des
+messages et une ligne de total à la fin.</p>
+<h2 id="mcp-bimopen-for-ai-agents">MCP : BIMopen pour les agents d'IA</h2>
+<p>Le Model Context Protocol (MCP) permet à un agent d'IA d'utiliser des programmes comme outils.
+<code>bimopen-cli mcp</code> est un serveur MCP : il communique en JSON-RPC 2.0 sur l'entrée et la sortie
+standard, un message par ligne, et garde un projet ouvert pendant toute la conversation. Sans
+fichier, il démarre à partir d'un nouveau projet ; <code>--sample</code> démarre à partir de la maison
+d'exemple.</p>
+<p>Pour l'ajouter à un agent, indiquez à l'agent la commande à lancer. Par exemple, dans Claude Code :</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>claude<span class="w"> </span>mcp<span class="w"> </span>add<span class="w"> </span>bimopen<span class="w"> </span>--<span class="w"> </span>bimopen-cli<span class="w"> </span>mcp<span class="w"> </span>--sample
+</code></pre></div>
+<p>ou, dans un client configuré en JSON :</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="p">{</span><span class="w"> </span><span class="nt">"mcpServers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"bimopen"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bimopen-cli"</span><span class="p">,</span><span class="w"> </span><span class="nt">"args"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"mcp"</span><span class="p">,</span><span class="w"> </span><span class="s2">"--sample"</span><span class="p">]</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<p>Le serveur propose sept outils :</p>
+<table>
+<thead>
+<tr>
+<th>Outil</th>
+<th>Arguments</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>command_line</code></td>
+<td><code>line</code></td>
+<td>Tape une ligne dans la ligne de commande, exactement comme le ferait une personne</td>
+</tr>
+<tr>
+<td><code>execute</code></td>
+<td><code>command</code>, <code>args</code></td>
+<td>Exécute une commande avec ses arguments en JSON</td>
+</tr>
+<tr>
+<td><code>inspect_model</code></td>
+<td>–</td>
+<td>Un résumé : niveaux, nombre d'éléments, vue active, sélection</td>
+</tr>
+<tr>
+<td><code>query_elements</code></td>
+<td><code>category</code> (facultatif)</td>
+<td>Les éléments, avec identifiant, catégorie et nom : <code>walls</code>, <code>doors</code>, <code>windows</code>, <code>floors</code>, <code>rooms</code>, <code>roomseps</code>, <code>grids</code>, <code>levels</code>, <code>types</code></td>
+</tr>
+<tr>
+<td><code>get_params</code></td>
+<td><code>id</code></td>
+<td>Tous les paramètres d'un élément</td>
+</tr>
+<tr>
+<td><code>schedule</code></td>
+<td><code>kind</code></td>
+<td>Une nomenclature : <code>walls</code>, <code>doors</code>, <code>windows</code>, <code>floors</code>, <code>rooms</code> ou <code>materials</code></td>
+</tr>
+<tr>
+<td><code>render</code></td>
+<td><code>view</code>, <code>width</code>, <code>height</code>, <code>yaw</code>, <code>pitch</code></td>
+<td>Une image PNG d'une vue : <code>3d</code>, le nom d'un niveau pour son plan, d'une coupe, d'une élévation, d'un repère ou d'une vue de dessin, ou le numéro ou le nom d'une feuille ; <code>yaw</code> et <code>pitch</code> font tourner la caméra 3D, en degrés</td>
+</tr>
+</tbody>
+</table>
+<p>Les réponses contiennent le message de la commande et, lorsqu'il y en a, ses données en JSON, comme
+les identifiants des éléments créés. Un agent peut vérifier son propre travail en demandant un
+rendu.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Demandez à l'agent de rendre le plan et la vue 3D après chaque étape : il voit ce qu'il a
+construit et se corrige.</p>
+</div>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Retour en haut de la page
+</button>
+</main>
+<footer class="md-footer">
+<nav aria-label="Pied de page" class="md-footer__inner md-grid">
+<a aria-label="Précédent: Feuilles, nomenclatures et impression" class="md-footer__link md-footer__link--prev" href="../documentation/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Précédent
+              </span>
+<div class="md-ellipsis">
+                Feuilles, nomenclatures et impression
+              </div>
+</div>
+</a>
+<a aria-label="Suivant: Raccourcis clavier" class="md-footer__link md-footer__link--next" href="../keyboard-shortcuts/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Suivant
+              </span>
+<div class="md-ellipsis">
+                Raccourcis clavier
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Copyright © 2026 Antonio Sanna · BIMopen
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.footer", "navigation.tracking", "toc.follow", "content.code.copy", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+<script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+</body>
+</html>

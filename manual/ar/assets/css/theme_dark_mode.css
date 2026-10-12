@@ -1,0 +1,9 @@
+/* The dark palette of the BIMopen website: ink #e8eef5, ink-soft #bccadb, muted #93a3b6,
+   paper #0d1724, card #142235, line #22344b, blue #6ea4ff, blue-soft #16294a, terra #ea8a70,
+   code #08111c. The variables are mapped to Material's in theme.css. */
+[data-md-color-scheme="slate"] {
+    --bo-ink: #e8eef5; --bo-ink-soft: #bccadb; --bo-muted: #93a3b6; --bo-paper: #0d1724;
+    --bo-card: #142235; --bo-line: #22344b; --bo-blue: #6ea4ff; --bo-blue-soft: #16294a;
+    --bo-terra: #ea8a70; --bo-code-bg: #08111c; --bo-code-ink: #e6edf5;
+    --md-hue: 215;
+}

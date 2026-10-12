@@ -1,0 +1,1439 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Manual de usuario de BIMopen, modelado BIM de código abierto" name="description"/>
+<meta content="Antonio Sanna" name="author"/>
+<link href="https://atsanna.github.io/bimopen-site/manual/es/interface/" rel="canonical"/>
+<link href="../getting-started/" rel="prev"/>
+<link href="../projects-and-files/" rel="next"/>
+<link href="../assets/images/logo.svg" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.9" name="generator"/>
+<title>La interfaz - Manual de usuario de BIMopen</title>
+<link href="../assets/stylesheets/main.4af4bdda.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link href="../assets/css/theme.css" rel="stylesheet"/>
+<link href="../assets/css/theme_dark_mode.css" rel="stylesheet"/>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="bimopen" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#the-interface">
+          Saltar a contenido
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Cabecera" class="md-header__inner md-grid">
+<a aria-label="Manual de usuario de BIMopen" class="md-header__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/?lang=es" title="Manual de usuario de BIMopen">
+<img alt="logo" src="../assets/images/logo.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Manual de usuario de BIMopen
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              La interfaz
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Cambiar al tema oscuro" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="custom" data-md-color-scheme="bimopen" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Cambiar al tema oscuro">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Cambiar al tema claro" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Cambiar al tema claro">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<div class="md-header__option">
+<div class="md-select">
+<button aria-label="Seleccionar idioma" class="md-header__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"></path></svg>
+</button>
+<div class="md-select__inner">
+<ul class="md-select__list">
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/en/" hreflang="en">
+              English
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/it/" hreflang="it">
+              Italiano
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/de/" hreflang="de">
+              Deutsch
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/fr/" hreflang="fr">
+              Français
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/es/" hreflang="es">
+              Español
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/ar/" hreflang="ar">
+              العربية
+            </a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Búsqueda" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Búsqueda" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Buscar" class="md-search__options">
+<button aria-label="Limpiar" class="md-search__icon md-icon" tabindex="-1" title="Limpiar" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navegación" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Manual de usuario de BIMopen" class="md-nav__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/?lang=es" title="Manual de usuario de BIMopen">
+<img alt="logo" src="../assets/images/logo.svg"/>
+</a>
+    Manual de usuario de BIMopen
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
+<span class="md-ellipsis">
+    Inicio
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../getting-started/">
+<span class="md-ellipsis">
+    Primeros pasos
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    La interfaz
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    La interfaz
+    
+  </span>
+</a>
+<nav aria-label="Tabla de contenidos" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#application-menu">
+<span class="md-ellipsis">
+      Menú de la aplicación
+    </span>
+</a>
+<nav aria-label="Menú de la aplicación" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#options">
+<span class="md-ellipsis">
+      Opciones
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quick-access-toolbar">
+<span class="md-ellipsis">
+      Barra de herramientas de acceso rápido
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ribbon">
+<span class="md-ellipsis">
+      Cinta de opciones
+    </span>
+</a>
+<nav aria-label="Cinta de opciones" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-home-tab">
+<span class="md-ellipsis">
+      La ficha Inicio
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-annotate-tab">
+<span class="md-ellipsis">
+      La ficha Anotar
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-view-tab">
+<span class="md-ellipsis">
+      La ficha Vista
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-manage-tab">
+<span class="md-ellipsis">
+      La ficha Gestionar
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-contextual-tab">
+<span class="md-ellipsis">
+      La ficha contextual
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#options-bar">
+<span class="md-ellipsis">
+      Barra de opciones
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#properties">
+<span class="md-ellipsis">
+      Propiedades
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#project-browser">
+<span class="md-ellipsis">
+      Navegador de proyectos
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#drawing-area-and-view-windows">
+<span class="md-ellipsis">
+      Área de dibujo y ventanas de vista
+    </span>
+</a>
+<nav aria-label="Área de dibujo y ventanas de vista" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#view-control-bar">
+<span class="md-ellipsis">
+      Barra de controles de vista
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#navigation-bar">
+<span class="md-ellipsis">
+      Barra de navegación
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#moving-around-in-the-views">
+<span class="md-ellipsis">
+      Desplazarse por las vistas
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-context-menu-of-a-view">
+<span class="md-ellipsis">
+      El menú contextual de una vista
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#command-line">
+<span class="md-ellipsis">
+      Línea de comandos
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#status-bar">
+<span class="md-ellipsis">
+      Barra de estado
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#selecting-in-short">
+<span class="md-ellipsis">
+      La selección, en resumen
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../projects-and-files/">
+<span class="md-ellipsis">
+    Proyectos y archivos
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../selection-and-modify/">
+<span class="md-ellipsis">
+    Selección y modificación
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../walls-doors-windows/">
+<span class="md-ellipsis">
+    Muros, puertas y ventanas
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../floors-roofs-stairs/">
+<span class="md-ellipsis">
+    Suelos, cubiertas, escaleras y componentes
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../views-and-graphics/">
+<span class="md-ellipsis">
+    Vistas y gráficos
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../annotation/">
+<span class="md-ellipsis">
+    Anotación y detalles 2D
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../documentation/">
+<span class="md-ellipsis">
+    Planos, tablas de planificación e impresión
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../command-line-and-mcp/">
+<span class="md-ellipsis">
+    Línea de comandos y MCP
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../keyboard-shortcuts/">
+<span class="md-ellipsis">
+    Atajos de teclado
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../troubleshooting/">
+<span class="md-ellipsis">
+    Solución de problemas
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://atsanna.github.io/bimopen-site/manual/es/pdf/bimopen-manual-es.pdf">
+<span class="md-ellipsis">
+    PDF
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Tabla de contenidos" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#application-menu">
+<span class="md-ellipsis">
+      Menú de la aplicación
+    </span>
+</a>
+<nav aria-label="Menú de la aplicación" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#options">
+<span class="md-ellipsis">
+      Opciones
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quick-access-toolbar">
+<span class="md-ellipsis">
+      Barra de herramientas de acceso rápido
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ribbon">
+<span class="md-ellipsis">
+      Cinta de opciones
+    </span>
+</a>
+<nav aria-label="Cinta de opciones" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-home-tab">
+<span class="md-ellipsis">
+      La ficha Inicio
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-annotate-tab">
+<span class="md-ellipsis">
+      La ficha Anotar
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-view-tab">
+<span class="md-ellipsis">
+      La ficha Vista
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-manage-tab">
+<span class="md-ellipsis">
+      La ficha Gestionar
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-contextual-tab">
+<span class="md-ellipsis">
+      La ficha contextual
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#options-bar">
+<span class="md-ellipsis">
+      Barra de opciones
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#properties">
+<span class="md-ellipsis">
+      Propiedades
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#project-browser">
+<span class="md-ellipsis">
+      Navegador de proyectos
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#drawing-area-and-view-windows">
+<span class="md-ellipsis">
+      Área de dibujo y ventanas de vista
+    </span>
+</a>
+<nav aria-label="Área de dibujo y ventanas de vista" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#view-control-bar">
+<span class="md-ellipsis">
+      Barra de controles de vista
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#navigation-bar">
+<span class="md-ellipsis">
+      Barra de navegación
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#moving-around-in-the-views">
+<span class="md-ellipsis">
+      Desplazarse por las vistas
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-context-menu-of-a-view">
+<span class="md-ellipsis">
+      El menú contextual de una vista
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#command-line">
+<span class="md-ellipsis">
+      Línea de comandos
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#status-bar">
+<span class="md-ellipsis">
+      Barra de estado
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#selecting-in-short">
+<span class="md-ellipsis">
+      La selección, en resumen
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset"><a class="md-content__icon pdf-download-btn" download href="../pdf/bimopen-manual-es.pdf" title="Download"><i class="fa fas fa-download"></i><small> PDF</small></a>
+<h1 id="the-interface">La interfaz</h1>
+<p>La ventana de BIMopen tiene las mismas partes en la versión de escritorio y en la web. De arriba
+abajo:</p>
+<ol>
+<li>la <strong>barra de título</strong>, con el menú de la aplicación, la barra de herramientas de acceso
+   rápido, el nombre del proyecto y de la vista activa, el menú de idioma y el menú de ayuda;</li>
+<li>la <strong>cinta de opciones</strong>, con sus fichas y sus grupos de herramientas;</li>
+<li>la <strong>barra de opciones</strong>, con los parámetros de la herramienta activa;</li>
+<li>a la izquierda, la paleta <strong>Propiedades</strong> encima del <strong>Navegador de proyectos</strong>;</li>
+<li>el <strong>área de dibujo</strong>, donde las vistas se abren en ventanas, cada una con su barra de
+   controles de vista;</li>
+<li>la <strong>línea de comandos</strong>, con el registro de lo que se ha hecho;</li>
+<li>la <strong>barra de estado</strong>.</li>
+</ol>
+<p><img alt="Las partes de la ventana" src="../assets/screens/interface.png"/></p>
+<p>En árabe toda la ventana se refleja: las paletas están a la derecha, la cinta de opciones y la
+barra de opciones se leen de derecha a izquierda, y la barra de navegación está en el borde
+izquierdo de las vistas.</p>
+<h2 id="application-menu">Menú de la aplicación</h2>
+<p>El botón azul <strong>B</strong> en el extremo izquierdo de la barra de título abre el menú de la aplicación:
+los comandos que actúan sobre todo el proyecto.</p>
+<p><img alt="El menú de la aplicación" src="../assets/screens/app-menu.png"/></p>
+<table>
+<thead>
+<tr>
+<th>Elemento</th>
+<th>Qué hace</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nuevo</strong></td>
+<td>Cierra el proyecto actual e inicia uno nuevo a partir de la plantilla por defecto: dos niveles con sus plantas y los tipos por defecto</td>
+</tr>
+<tr>
+<td><strong>Abrir…</strong></td>
+<td>Abre un proyecto <code>.bimopen</code>, o importa un modelo <code>.rvt</code>, elegido en un cuadro de diálogo de archivos. En el navegador, arrastra el archivo a la página</td>
+</tr>
+<tr>
+<td><strong>Proyecto de ejemplo</strong></td>
+<td>Abre la casa de ejemplo</td>
+</tr>
+<tr>
+<td><strong>Guardar</strong> <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span></td>
+<td>Guarda el proyecto en su archivo; un proyecto nunca guardado pide un nombre, como <strong>Guardar como…</strong></td>
+</tr>
+<tr>
+<td><strong>Guardar como…</strong></td>
+<td>Guarda el proyecto en un nuevo archivo <code>.bimopen</code> y sigue trabajando en ese archivo</td>
+</tr>
+<tr>
+<td><strong>Imprimir…</strong> <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-p">P</kbd></span></td>
+<td>Imprime planos en PDF</td>
+</tr>
+<tr>
+<td><strong>Exportar ▸ Exportar IFC4…</strong></td>
+<td>Escribe el modelo como archivo IFC4</td>
+</tr>
+<tr>
+<td><strong>Exportar ▸ Exportar planta SVG…</strong></td>
+<td>Escribe la planta activa como dibujo SVG</td>
+</tr>
+<tr>
+<td><strong>Exportar ▸ Exportar vista PNG…</strong></td>
+<td>Escribe la vista activa como imagen PNG</td>
+</tr>
+<tr>
+<td><strong>Documentos abiertos</strong></td>
+<td>Enumera las ventanas de vista abiertas; haz clic en una para traerla al frente</td>
+</tr>
+<tr>
+<td><strong>Opciones</strong></td>
+<td>Abre el cuadro de diálogo <strong>Opciones</strong></td>
+</tr>
+<tr>
+<td><strong>Salir</strong></td>
+<td>Cierra BIMopen (solo en el escritorio)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Nuevo</strong>, <strong>Abrir…</strong> y <strong>Proyecto de ejemplo</strong> sustituyen el proyecto actual sin preguntar:
+guárdalo antes si quieres conservarlo.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Los cambios sin guardar se pierden al elegir <strong>Nuevo</strong>, <strong>Abrir…</strong> o <strong>Proyecto de ejemplo</strong>.
+El asterisco tras el nombre del proyecto en la barra de título te indica que hay cambios sin
+guardar.</p>
+</div>
+<h3 id="options">Opciones</h3>
+<p><strong>Menú de la aplicación ▸ Opciones</strong> tiene dos grupos:</p>
+<table>
+<thead>
+<tr>
+<th>Parámetro</th>
+<th>Valores</th>
+<th>Efecto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Interfaz de usuario ▸ Idioma</strong></td>
+<td>Italiano, English, Deutsch, Français, Español, العربية</td>
+<td>El idioma de toda la interfaz, al instante</td>
+</tr>
+<tr>
+<td><strong>Interfaz de usuario ▸ Tema</strong></td>
+<td><strong>Claro</strong>, <strong>Oscuro</strong></td>
+<td>Los colores de la ventana. <strong>Oscuro</strong> también activa <strong>Invertir color de fondo</strong></td>
+</tr>
+<tr>
+<td><strong>Gráficos ▸ Invertir color de fondo</strong></td>
+<td>activado, desactivado</td>
+<td>Vistas con fondo oscuro y líneas claras</td>
+</tr>
+</tbody>
+</table>
+<p>BIMopen recuerda el idioma y el tema la próxima vez que se inicia.</p>
+<h2 id="quick-access-toolbar">Barra de herramientas de acceso rápido</h2>
+<p>Junto al menú de la aplicación, la barra de herramientas de acceso rápido mantiene los comandos
+más usados a un clic. Deja el ratón sobre un botón para leer qué hace y su atajo.</p>
+<table>
+<thead>
+<tr>
+<th>Botón</th>
+<th>Qué hace</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Abrir…</strong> (carpeta)</td>
+<td>Como en el menú de la aplicación</td>
+</tr>
+<tr>
+<td><strong>Guardar</strong> (disco)</td>
+<td>Guarda, <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span></td>
+</tr>
+<tr>
+<td><strong>Deshacer</strong> (flecha a la izquierda)</td>
+<td>Deshace el último cambio, <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span>. Atenuado cuando no hay nada que deshacer</td>
+</tr>
+<tr>
+<td><strong>Rehacer</strong> (flecha a la derecha)</td>
+<td>Rehace el cambio que se acaba de deshacer, <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-y">Y</kbd></span>. Atenuado cuando no hay nada que rehacer</td>
+</tr>
+<tr>
+<td><strong>Cota alineada</strong></td>
+<td>Inicia la herramienta de cota alineada, <code>DI</code></td>
+</tr>
+<tr>
+<td><strong>Etiquetar todo</strong></td>
+<td>Etiqueta las puertas y ventanas de la planta abierta que aún no tienen etiqueta, <code>TG</code></td>
+</tr>
+<tr>
+<td><strong>Texto</strong></td>
+<td>Inicia la herramienta de texto, <code>TX</code></td>
+</tr>
+<tr>
+<td><strong>Vista 3D</strong> (cubo)</td>
+<td>Abre la vista 3D por defecto, <strong>{3D}</strong></td>
+</tr>
+<tr>
+<td><strong>Sección</strong></td>
+<td>Inicia la herramienta de sección, <code>SE</code></td>
+</tr>
+<tr>
+<td><strong>Cerrar ocultas</strong></td>
+<td>Cierra todas las ventanas de vista excepto la activa. Atenuado cuando solo hay una abierta</td>
+</tr>
+<tr>
+<td><strong>Cambiar ventanas</strong></td>
+<td>Enumera las ventanas de vista abiertas; la activa aparece marcada</td>
+</tr>
+</tbody>
+</table>
+<p>En el centro de la barra de título, cuando la ventana es lo bastante ancha, BIMopen muestra el
+nombre del proyecto y de la vista activa, por ejemplo <strong>Casa de ejemplo — BIMopen - Planta:
+Planta baja</strong>. Un asterisco tras el nombre del proyecto significa que tiene cambios sin guardar.</p>
+<p>En el extremo derecho:</p>
+<ul>
+<li>el <strong>menú de idioma</strong>, un globo con el nombre del idioma actual: elige otro y la interfaz cambia
+  al instante;</li>
+<li>el menú <strong>?</strong>: <strong>Comandos</strong> enumera todos los comandos en la línea de comandos (como escribir
+  <code>help</code>), e <strong>Información</strong> muestra la versión, la licencia y los créditos.</li>
+</ul>
+<p><strong>? ▸ Ayuda</strong> (<span class="keys"><kbd class="key-f1">F1</kbd></span>) abre este manual, en el idioma de la interfaz, en el navegador. <span class="keys"><kbd class="key-f1">F1</kbd></span> abre
+la página de lo que estás haciendo: el cuadro de diálogo abierto, el botón de la cinta de opciones
+bajo el ratón (su información termina con <strong>Pulse F1 para obtener más información</strong>) o la
+herramienta activa.</p>
+<h2 id="ribbon">Cinta de opciones</h2>
+<p>La cinta de opciones agrupa las herramientas en fichas, y cada ficha en grupos. El nombre de un
+grupo está escrito bajo sus botones. Un botón cuyo nombre va seguido de una pequeña marca abre un
+menú. Al dejar el ratón sobre un botón se muestra qué hace y, entre paréntesis, el atajo que
+puedes escribir para iniciarlo.</p>
+<table>
+<thead>
+<tr>
+<th>Ficha</th>
+<th>Grupos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Inicio</strong></td>
+<td><strong>Seleccionar</strong>, <strong>Construir</strong>, <strong>Circulación</strong>, <strong>Habitación y área</strong>, <strong>Referencia</strong></td>
+</tr>
+<tr>
+<td><strong>Anotar</strong></td>
+<td><strong>Seleccionar</strong>, <strong>Cota</strong>, <strong>Texto</strong>, <strong>Detalle</strong>, <strong>Etiqueta</strong></td>
+</tr>
+<tr>
+<td><strong>Vista</strong></td>
+<td><strong>Crear</strong>, <strong>Gráficos</strong>, <strong>Composición de plano</strong>, <strong>Ventanas</strong></td>
+</tr>
+<tr>
+<td><strong>Gestionar</strong></td>
+<td><strong>Configuración</strong>, <strong>Consulta</strong></td>
+</tr>
+<tr>
+<td><strong>Edición</strong></td>
+<td>La ficha contextual: sus grupos dependen de la herramienta activa y de la selección</td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-home-tab">La ficha Inicio</h3>
+<table>
+<thead>
+<tr>
+<th>Grupo</th>
+<th>Botones</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Seleccionar</strong></td>
+<td><strong>Modificar</strong>: termina la herramienta activa y vuelve a la selección, <span class="keys"><kbd class="key-escape">Esc</kbd></span></td>
+</tr>
+<tr>
+<td><strong>Construir</strong></td>
+<td><strong>Muro</strong> <code>WA</code>, <strong>Puerta</strong> <code>DR</code>, <strong>Ventana</strong> <code>WN</code>, <strong>Cubierta</strong> <code>RF</code>, <strong>Pavimento</strong> <code>SB</code>, <strong>Componente</strong> <code>CM</code>, <strong>Rejilla de muro cortina</strong> <code>CG</code>, <strong>Montante</strong> <code>MU</code></td>
+</tr>
+<tr>
+<td><strong>Circulación</strong></td>
+<td><strong>Barandilla</strong> <code>RA</code>, <strong>Escaleras</strong> <code>ST</code></td>
+</tr>
+<tr>
+<td><strong>Habitación y área</strong></td>
+<td><strong>Habitación</strong> <code>RM</code>, <strong>Separación</strong> <code>RS</code>, <strong>Área ▾</strong> (<strong>Plano de áreas</strong>, <strong>Línea de contorno de área</strong>, <strong>Área</strong>), <strong>Leyenda</strong> <code>LG</code>, <strong>Configuración ▾</strong> (<strong>Cálculos de área y volumen</strong>, <strong>Esquemas de color</strong>)</td>
+</tr>
+<tr>
+<td><strong>Referencia</strong></td>
+<td><strong>Nivel</strong>: un nivel nuevo por encima del último; <strong>Rejilla</strong> <code>GR</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Línea de contorno de área</strong> y <strong>Área</strong> funcionan en un plano de áreas: hasta que se abre uno
+están atenuados, y su información de herramienta indica que primero hay que abrir un plano de
+áreas.</p>
+<h3 id="the-annotate-tab">La ficha Anotar</h3>
+<table>
+<thead>
+<tr>
+<th>Grupo</th>
+<th>Botones</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Seleccionar</strong></td>
+<td><strong>Modificar</strong></td>
+</tr>
+<tr>
+<td><strong>Cota</strong></td>
+<td><strong>Alineada</strong> <code>DI</code>, <strong>Lineal</strong> <code>DL</code>, <strong>Angular</strong> <code>DA</code></td>
+</tr>
+<tr>
+<td><strong>Texto</strong></td>
+<td><strong>Texto</strong> <code>TX</code></td>
+</tr>
+<tr>
+<td><strong>Detalle</strong></td>
+<td><strong>Línea de detalle</strong>, <strong>Región rellenada</strong>, <strong>Región de máscara</strong>, <strong>Componente de detalle</strong> <code>CD</code>, <strong>Detalle repetido</strong> <code>RD</code>, <strong>Aislamiento</strong> <code>IS</code></td>
+</tr>
+<tr>
+<td><strong>Etiqueta</strong></td>
+<td><strong>Etiquetar todo</strong> <code>TG</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-view-tab">La ficha Vista</h3>
+<p><img alt="La ficha Vista" src="../assets/screens/view-tab.png"/></p>
+<table>
+<thead>
+<tr>
+<th>Grupo</th>
+<th>Botones</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Crear</strong></td>
+<td><strong>Vista 3D ▾</strong> (<strong>Vista 3D por defecto</strong>, <strong>Guardar vista</strong>), <strong>Vistas de planta ▾</strong> (<strong>Plano de planta</strong>, <strong>Plano de áreas</strong>), <strong>Duplicar vista ▾</strong> (<strong>Duplicar</strong>, <strong>Duplicar con detalles</strong>), <strong>Sección</strong> <code>SE</code>, <strong>Alzado</strong> <code>EL</code>, <strong>Detalle</strong> <code>DT</code> (una llamada), <strong>Vista de diseño</strong> <code>VD</code>, <strong>Tablas de planificación ▾</strong> (<strong>Tabla de planificación/cantidades</strong>, <strong>Tablas de planificación predefinidas</strong>)</td>
+</tr>
+<tr>
+<td><strong>Gráficos</strong></td>
+<td><strong>Visibilidad/Gráficos</strong> <code>VG</code>, <strong>Filtros</strong>, <strong>Plantillas de vista</strong> y dos botones pequeños: <strong>Aplicar plantilla a la vista actual</strong>, <strong>Crear plantilla a partir de la vista actual</strong></td>
+</tr>
+<tr>
+<td><strong>Composición de plano</strong></td>
+<td><strong>Plano</strong>: un plano nuevo con el cajetín que elijas; <strong>Vista</strong>: coloca una vista en el plano abierto</td>
+</tr>
+<tr>
+<td><strong>Ventanas</strong></td>
+<td><strong>Cambiar ventanas</strong>, <strong>Replicar</strong>, <strong>Cascada</strong>, <strong>Mosaico</strong>, <strong>Maximizar</strong>, <strong>Cerrar ocultas</strong>, <strong>Interfaz de usuario</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Guardar vista</strong> solo funciona mientras hay una vista 3D abierta, <strong>Duplicar con detalles</strong> solo
+para vistas que no son 3D, y <strong>Composición de plano ▸ Vista</strong> solo mientras hay un plano abierto.</p>
+<h3 id="the-manage-tab">La ficha Gestionar</h3>
+<table>
+<thead>
+<tr>
+<th>Grupo</th>
+<th>Botones</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Configuración</strong></td>
+<td><strong>Materiales</strong>, <strong>Información del proyecto</strong>, <strong>Estilos de objeto</strong>, <strong>Estilos de línea</strong>, <strong>Limpiar no utilizados</strong>, <strong>Unidades del proyecto</strong> <code>UN</code>, <strong>Forzado</strong> y <strong>Parámetros adicionales</strong> (<strong>Estilos de línea</strong>, <strong>Patrones de relleno</strong>)</td>
+</tr>
+<tr>
+<td><strong>Consulta</strong></td>
+<td><strong>Comprobar</strong>: comprueba los huecos y las referencias del modelo e informa en la línea de comandos</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Forzado</strong> activa y desactiva el forzado de cursor para todo el programa: aparece resaltado
+mientras está activo.</p>
+<h3 id="the-contextual-tab">La ficha contextual</h3>
+<p>Cuando inicias una herramienta o seleccionas algo, la cinta de opciones pasa por sí sola a la
+última ficha, que toma el nombre de lo que estás haciendo: <strong>Edición | Colocar: Muro</strong> mientras
+dibujas muros, <strong>Edición | Muros</strong> con muros seleccionados, <strong>Edición | Selección múltiple</strong> con
+elementos de categorías distintas. La ficha se distingue con su propio color. Cuando la
+herramienta termina, o se borra la selección, la cinta de opciones vuelve a la ficha que estabas
+usando.</p>
+<p><img alt="Un muro seleccionado: la ficha contextual Edición | Muros y sus propiedades" src="../assets/screens/selected-wall.png"/></p>
+<p>Siempre tiene estos grupos:</p>
+<table>
+<thead>
+<tr>
+<th>Grupo</th>
+<th>Botones</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Seleccionar</strong></td>
+<td><strong>Modificar</strong></td>
+</tr>
+<tr>
+<td><strong>Propiedades</strong></td>
+<td><strong>Propiedades</strong>: muestra u oculta la paleta Propiedades; <strong>Propiedades de tipo</strong>: las propiedades del tipo de la selección, o del próximo elemento que colocará la herramienta</td>
+</tr>
+<tr>
+<td><strong>Modificar</strong></td>
+<td>Doce herramientas pequeñas en dos filas: <strong>Alinear</strong> <code>AL</code>, <strong>Desfase</strong> <code>OF</code>, <strong>Simetría - Designar eje</strong>, <strong>Simetría - Dibujar eje</strong> <code>MM</code>, <strong>Dividir elemento</strong> <code>SL</code>, <strong>Recortar/Alargar a esquina</strong> <code>TR</code>; <strong>Mover</strong> <code>MV</code>, <strong>Copiar</strong> <code>CO</code>, <strong>Girar</strong> <code>RO</code>, <strong>Matriz</strong> <code>AR</code>, <strong>Todo</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-a">A</kbd></span>), <strong>Eliminar</strong> (<span class="keys"><kbd class="key-delete">Del</kbd></span>)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Eliminar</strong> solo funciona cuando hay algo seleccionado. El <a href="../selection-and-modify/">capítulo sobre selección y
+modificación</a> describe las herramientas de Modificar.</p>
+<p>Aparecen otros grupos según lo que esté seleccionado o según la herramienta:</p>
+<table>
+<thead>
+<tr>
+<th>Cuándo</th>
+<th>Grupo y botones</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Puertas o ventanas seleccionadas</td>
+<td><strong>Hueco</strong>: <strong>Voltear sentido</strong>, <strong>Voltear bisagra</strong></td>
+</tr>
+<tr>
+<td>Muros seleccionados</td>
+<td><strong>Modificar muro</strong>: <strong>Enlazar parte superior</strong> (los muros suben hasta la cubierta que tienen encima), <strong>Desenlazar parte superior</strong></td>
+</tr>
+<tr>
+<td>Un nivel seleccionado</td>
+<td><strong>Vista</strong>: <strong>Abrir planta</strong></td>
+</tr>
+<tr>
+<td>Secciones o alzados seleccionados</td>
+<td><strong>Sección</strong>: <strong>Dividir segmento</strong> (solo secciones), <strong>Voltear</strong>, <strong>Ir a vista</strong></td>
+</tr>
+<tr>
+<td>Una llamada seleccionada</td>
+<td><strong>Detalle</strong>: <strong>Ir a vista</strong></td>
+</tr>
+<tr>
+<td>Muros cortina seleccionados</td>
+<td><strong>Muro cortina</strong>: <strong>Rejilla de muro cortina</strong>, <strong>Montante</strong>, <strong>Panel</strong></td>
+</tr>
+<tr>
+<td>Herramienta <strong>Pavimento</strong> o <strong>Cubierta</strong></td>
+<td><strong>Dibujar</strong>: <strong>Línea de contorno</strong>, <strong>Designar muros</strong></td>
+</tr>
+<tr>
+<td>Herramienta <strong>Escaleras</strong> o <strong>Barandilla</strong></td>
+<td><strong>Modo</strong>: <strong>Finalizar modo de edición</strong>; <strong>Dibujar</strong>: <strong>Tramo</strong> o <strong>Líneas</strong></td>
+</tr>
+<tr>
+<td>Herramienta <strong>Montante</strong></td>
+<td><strong>Colocación</strong>: <strong>Línea de rejilla</strong>, <strong>Segmento de línea de rejilla</strong>, <strong>Todas las líneas de rejilla</strong></td>
+</tr>
+<tr>
+<td>Una herramienta de detalle</td>
+<td>Las formas de dibujo de la herramienta</td>
+</tr>
+</tbody>
+</table>
+<h2 id="options-bar">Barra de opciones</h2>
+<p>Bajo la cinta de opciones, la barra de opciones empieza con el nombre de la ficha contextual y
+luego muestra los parámetros de la herramienta activa. Se aplican a los próximos elementos que
+coloques. Al final, mientras hay una herramienta activa, muestra el nivel en el que estás
+trabajando: <strong>Nivel: Planta baja</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Herramienta</th>
+<th>Parámetros de la barra de opciones</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Muro</strong></td>
+<td><strong>Altura</strong> o <strong>Profundidad</strong>; el nivel al que llega el muro, o <strong>Sin conexión</strong> con su valor; <strong>Línea de ubicación</strong>; <strong>Cadena</strong>; <strong>Desfase</strong>; <strong>Radio</strong> (atenuado: los muros curvos aún no están disponibles); <strong>Exterior a la izquierda</strong> o <strong>Exterior a la derecha</strong> (la barra espaciadora los intercambia)</td>
+</tr>
+<tr>
+<td><strong>Cubierta</strong></td>
+<td>La forma: <strong>A dos aguas</strong>, <strong>A cuatro aguas</strong> o <strong>Plana</strong>; <strong>Pendiente</strong>, de 5° a 60°; <strong>Voladizo</strong>, hasta 2 m</td>
+</tr>
+<tr>
+<td><strong>Escaleras</strong></td>
+<td><strong>Anchura</strong>, en milímetros; <strong>Tipo de barandilla</strong>, o <strong>Ninguno</strong></td>
+</tr>
+<tr>
+<td>Cotas</td>
+<td>Lo que el cursor designa primero en un muro: <strong>Ejes de muro</strong> o <strong>Caras de muro</strong></td>
+</tr>
+<tr>
+<td><strong>Detalle</strong> (llamada)</td>
+<td>La escala de la nueva vista de detalle</td>
+</tr>
+<tr>
+<td><strong>Línea de contorno de área</strong></td>
+<td><strong>Línea</strong> o <strong>Seleccionar líneas</strong>; con <strong>Seleccionar líneas</strong>, <strong>Aplicar reglas de área</strong> o un <strong>Desfase</strong></td>
+</tr>
+<tr>
+<td>Herramientas que dibujan líneas</td>
+<td><strong>Orto (Mayús)</strong>: solo segmentos horizontales y verticales; <strong>Forzado</strong>: forzado a extremos, puntos medios e intersecciones</td>
+</tr>
+</tbody>
+</table>
+<p>Con <strong>Orto (Mayús)</strong> desactivado, mantener pulsada <span class="keys"><kbd class="key-shift">Shift</kbd></span> mientras dibujas da la misma
+restricción; con él activado, <span class="keys"><kbd class="key-shift">Shift</kbd></span> la libera.</p>
+<h2 id="properties">Propiedades</h2>
+<p>La paleta <strong>Propiedades</strong> muestra y modifica los parámetros de aquello en lo que estás
+trabajando. De arriba abajo tiene:</p>
+<ul>
+<li>el <strong>selector de tipo</strong>: la familia en letra pequeña y el tipo debajo. Haz clic en él para
+  elegir otro tipo: los elementos seleccionados cambian de tipo o, mientras hay una herramienta
+  activa, el próximo elemento recibe ese tipo;</li>
+<li>una fila con lo que muestra la paleta, por ejemplo <strong>Muros (1)</strong> o <strong>Nuevo: Muro</strong>, y el botón
+  <strong>Editar tipo</strong>, que abre las propiedades de tipo;</li>
+<li>los parámetros, en grupos (<strong>Restricciones</strong>, <strong>Gráficos</strong>, <strong>Datos de identidad</strong>…). Haz clic
+  en el nombre de un grupo para plegarlo. Los valores en gris son de solo lectura: se calculan a
+  partir del modelo;</li>
+<li>el botón <strong>Aplicar</strong>, que confirma un valor que estás escribiendo. <span class="keys"><kbd class="key-enter">Enter</kbd></span> hace lo mismo.</li>
+</ul>
+<p>Lo que muestra la paleta depende de la situación:</p>
+<table>
+<thead>
+<tr>
+<th>Situación</th>
+<th>La paleta muestra</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nada seleccionado, ninguna herramienta</td>
+<td>Las propiedades de la vista activa (escala, nivel de detalle, estilo visual…), o de la vista en la que se ha hecho clic en el Navegador de proyectos</td>
+</tr>
+<tr>
+<td>Una herramienta activa</td>
+<td>El tipo del próximo elemento, como <strong>Nuevo: Muro</strong>, <strong>Nuevo: Puerta</strong>…</td>
+</tr>
+<tr>
+<td>Un elemento seleccionado</td>
+<td>Su tipo y sus parámetros de ejemplar</td>
+</tr>
+<tr>
+<td>Varios elementos de una categoría</td>
+<td>Su número, como <strong>Muros (3)</strong></td>
+</tr>
+<tr>
+<td>Elementos de categorías distintas</td>
+<td><strong>Selección múltiple</strong>, <strong>Comunes (5)</strong> y cuántos hay de cada categoría, como <strong>3 × Muros</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Las longitudes se escriben y se leen en las unidades del proyecto (milímetros en un proyecto
+nuevo). Puedes escribir un valor con su unidad, por ejemplo <code>2.7m</code>.</p>
+<p>Para cerrar la paleta, haz clic en <strong>×</strong> en su título; para volver a mostrarla, usa <strong>Vista ▸
+Ventanas ▸ Interfaz de usuario ▸ Propiedades</strong> o el botón <strong>Propiedades</strong> de la ficha contextual.</p>
+<h2 id="project-browser">Navegador de proyectos</h2>
+<p>El <strong>Navegador de proyectos</strong> enumera las vistas, las tablas de planificación, los planos y las
+familias del proyecto en un árbol. Su título lleva el nombre del proyecto. Haz clic en <strong>⊟</strong> o
+<strong>⊞</strong> para plegar o desplegar una rama.</p>
+<p><img alt="El menú contextual de una vista en el Navegador de proyectos" src="../assets/screens/browser-menu.png"/></p>
+<table>
+<thead>
+<tr>
+<th>Rama</th>
+<th>Qué contiene</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Vistas (todas) ▸ Planos de planta</strong></td>
+<td>Las plantas de todos los niveles, desde el más bajo, y las llamadas dibujadas en planta</td>
+</tr>
+<tr>
+<td><strong>Vistas (todas) ▸ Planos de áreas (…)</strong></td>
+<td>Los planos de áreas, una rama por esquema de áreas</td>
+</tr>
+<tr>
+<td><strong>Vistas (todas) ▸ Secciones</strong>, <strong>Alzados</strong></td>
+<td>Las secciones y los alzados</td>
+</tr>
+<tr>
+<td><strong>Vistas (todas) ▸ Vistas de detalle</strong></td>
+<td>Las llamadas dibujadas en secciones</td>
+</tr>
+<tr>
+<td><strong>Vistas (todas) ▸ Vistas 3D</strong></td>
+<td><strong>{3D}</strong>, la vista 3D por defecto, y las vistas 3D guardadas</td>
+</tr>
+<tr>
+<td><strong>Vistas (todas) ▸ Vistas de diseño</strong></td>
+<td>Las vistas de diseño</td>
+</tr>
+<tr>
+<td><strong>Tablas de planificación/Cantidades</strong></td>
+<td>Las tablas de planificación del proyecto y luego las predefinidas</td>
+</tr>
+<tr>
+<td><strong>Planos (todos)</strong></td>
+<td>Los planos, como número - nombre</td>
+</tr>
+<tr>
+<td><strong>Familias</strong></td>
+<td>Los tipos del proyecto, por categoría: muros, puertas, ventanas, suelos, cubiertas, componentes y los demás</td>
+</tr>
+</tbody>
+</table>
+<p>Las ramas de planos de áreas, secciones, alzados, vistas de detalle y vistas de diseño solo
+aparecen cuando contienen algo. La vista activa está escrita en negrita.</p>
+<p>Con una vista:</p>
+<ul>
+<li>un <strong>clic</strong> muestra sus propiedades en la paleta Propiedades, sin abrirla;</li>
+<li>un <strong>doble clic</strong> la abre;</li>
+<li>un <strong>clic con el botón derecho</strong> abre su menú: <strong>Abrir</strong>, <strong>Cerrar</strong> (cierra sus ventanas),
+  <strong>Duplicar vista ▸</strong> (<strong>Duplicar</strong>, <strong>Duplicar con detalles</strong>), <strong>Aplicar plantilla de vista…</strong>,
+  <strong>Crear plantilla a partir de la vista…</strong>, <strong>Eliminar</strong>, <strong>Cambiar nombre…</strong>, <strong>Propiedades</strong>.</li>
+</ul>
+<p>El menú de un plano tiene <strong>Aplicar plantilla de vista a todas las vistas…</strong> en lugar de los dos
+elementos de plantilla, y no tiene <strong>Duplicar vista</strong>. <strong>{3D}</strong> no se puede eliminar ni cambiar de
+nombre.</p>
+<p>Con una tabla de planificación del proyecto, un clic la selecciona, un doble clic la abre, y el
+menú del botón derecho tiene <strong>Abrir</strong>, <strong>Propiedades de tabla…</strong> y <strong>Eliminar</strong>. Una tabla de
+planificación predefinida se abre con un clic.</p>
+<p>Con un tipo, bajo <strong>Familias</strong>, un doble clic abre sus propiedades de tipo; el menú del botón
+derecho tiene <strong>Propiedades de tipo</strong>, <strong>Duplicar…</strong>, <strong>Crear ejemplar</strong> (inicia la herramienta
+que lo coloca, con ese tipo) y <strong>Eliminar</strong>.</p>
+<h2 id="drawing-area-and-view-windows">Área de dibujo y ventanas de vista</h2>
+<p>Cada vista que abres es una ventana en el área de dibujo. Una vista que se vuelve a abrir pasa al
+frente; siempre queda abierta al menos una ventana. <strong>Vista ▸ Ventanas</strong> las organiza:</p>
+<table>
+<thead>
+<tr>
+<th>Botón</th>
+<th>Qué hace</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Cambiar ventanas</strong></td>
+<td>Enumera las ventanas abiertas; la activa aparece marcada</td>
+</tr>
+<tr>
+<td><strong>Replicar</strong></td>
+<td>Abre una segunda ventana de la vista activa, con su propio zoom</td>
+</tr>
+<tr>
+<td><strong>Cascada</strong></td>
+<td>Ventanas superpuestas, cada una con su barra de título: arrastra un título para mover una ventana y sus bordes para cambiar su tamaño</td>
+</tr>
+<tr>
+<td><strong>Mosaico</strong></td>
+<td>Todas las ventanas una junto a otra, cada una con una barra de título; la activa tiene el título y el marco azules</td>
+</tr>
+<tr>
+<td><strong>Maximizar</strong></td>
+<td>La ventana activa ocupa toda el área de dibujo; las demás esperan debajo</td>
+</tr>
+<tr>
+<td><strong>Cerrar ocultas</strong></td>
+<td>Cierra todas las ventanas excepto la activa</td>
+</tr>
+<tr>
+<td><strong>Interfaz de usuario</strong></td>
+<td>Muestra u oculta el <strong>Navegador de proyectos</strong>, <strong>Propiedades</strong>, la <strong>Línea de comandos</strong>, la <strong>Barra de estado</strong> y la <strong>Barra de navegación</strong></td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Tres vistas en mosaico" src="../assets/screens/tiled-windows.png"/></p>
+<p>Haz clic en una ventana para activarla: las herramientas trabajan en la ventana activa, las demás
+solo muestran el modelo. En <strong>Mosaico</strong> y <strong>Cascada</strong>, la <strong>×</strong> de la barra de título de una
+ventana la cierra.</p>
+<h3 id="view-control-bar">Barra de controles de vista</h3>
+<p>En la parte inferior de cada planta, sección, alzado, llamada y vista de diseño:</p>
+<table>
+<thead>
+<tr>
+<th>Control</th>
+<th>Qué hace</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>La escala, por ejemplo <strong>1 : 100</strong></td>
+<td>Abre la lista de escalas; en <strong>Personalizada</strong> escribe otra, como <code>1 : 75</code>, y pulsa <span class="keys"><kbd class="key-enter">Enter</kbd></span></td>
+</tr>
+<tr>
+<td><strong>Nivel de detalle</strong></td>
+<td><strong>Bajo</strong>, <strong>Medio</strong> o <strong>Alto</strong></td>
+</tr>
+<tr>
+<td><strong>Recortar vista</strong></td>
+<td>Recorta la vista a su región de recorte, o deja de recortarla; un punto azul indica que está activo</td>
+</tr>
+<tr>
+<td><strong>Mostrar región de recorte</strong></td>
+<td>Muestra u oculta el marco de la región de recorte; un punto azul indica que está activo</td>
+</tr>
+<tr>
+<td><strong>Ocultar/Aislar temporalmente</strong></td>
+<td>Oculta o aísla elementos o categorías en esta vista hasta que lo restableces; aparece enmarcado mientras está activo</td>
+</tr>
+</tbody>
+</table>
+<p>En una vista 3D, la barra tiene el <strong>Estilo visual</strong> (<strong>Estructura alámbrica</strong>, <strong>Línea oculta</strong>,
+<strong>Sombreado</strong>, <strong>Sombreado con aristas</strong>, <strong>Colores coherentes</strong>) y <strong>Ocultar/Aislar
+temporalmente</strong>. Un plano no tiene barra de controles de vista: sus vistas tienen su propia escala.</p>
+<p><img alt="La vista 3D en Línea oculta y la planta a 1 : 50" src="../assets/screens/visual-styles.png"/></p>
+<h3 id="navigation-bar">Barra de navegación</h3>
+<p>En el borde derecho de la vista activa (el borde izquierdo en árabe), tres botones: <strong>Zoom en
+región ajustada</strong> (lo mismo que <span class="keys"><kbd class="key-home">Home</kbd></span>), <strong>Ampliar</strong> y <strong>Reducir</strong>.</p>
+<h3 id="moving-around-in-the-views">Desplazarse por las vistas</h3>
+<table>
+<thead>
+<tr>
+<th>En plantas, secciones, alzados y planos</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rueda del ratón</td>
+<td>Amplía y reduce en el cursor</td>
+</tr>
+<tr>
+<td>Arrastrar con el botón central</td>
+<td>Encuadra</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-shift">Shift</kbd></span> + arrastrar con el botón izquierdo</td>
+<td>Encuadra, mientras no hay ninguna herramienta activa</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-home">Home</kbd></span></td>
+<td>Ajusta toda la vista a la ventana</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>En vistas 3D</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Arrastrar con el botón izquierdo (o derecho)</td>
+<td>Orbita alrededor del modelo</td>
+</tr>
+<tr>
+<td>Arrastrar con el botón central, o <span class="keys"><kbd class="key-shift">Shift</kbd></span> + botón izquierdo</td>
+<td>Encuadra</td>
+</tr>
+<tr>
+<td>Rueda del ratón</td>
+<td>Amplía y reduce</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-home">Home</kbd></span></td>
+<td>Ajusta todo el modelo a la ventana</td>
+</tr>
+</tbody>
+</table>
+<p>Un pequeño trípode en la esquina inferior de la vista 3D muestra las direcciones de los ejes: X
+rojo, Y verde, Z azul. Una vista 3D guardada recuerda dónde la dejaste.</p>
+<h3 id="the-context-menu-of-a-view">El menú contextual de una vista</h3>
+<p>Haz clic con el botón derecho en una vista mientras no hay ninguna herramienta activa. Si el
+cursor está sobre un elemento que no está seleccionado, primero se selecciona el elemento. El
+menú tiene:</p>
+<ul>
+<li><strong>Cancelar</strong>: borra la selección;</li>
+<li><strong>Ocultar en vista ▸ Elementos</strong> o <strong>▸ Categoría</strong>: oculta los elementos seleccionados, o sus
+  categorías completas, en esta vista;</li>
+<li><strong>Modificar gráficos en vista ▸ Por categoría…</strong>: abre <strong>Visibilidad/Gráficos</strong> con las
+  categorías de la selección;</li>
+<li><strong>Visibilidad/Gráficos…</strong>.</li>
+</ul>
+<p>Mientras hay una herramienta activa, un clic con el botón derecho hace lo mismo que <span class="keys"><kbd class="key-escape">Esc</kbd></span>:
+cancela el paso en curso.</p>
+<h2 id="command-line">Línea de comandos</h2>
+<p>Bajo el área de dibujo, la línea de comandos muestra el registro de lo que se ha hecho, lo más
+reciente abajo: los comandos ejecutados, en gris tras un <code>&gt;</code>, sus resultados, y los errores en
+rojo. En su última fila, el indicador dice lo que espera la herramienta activa, por ejemplo
+<code>WALL  next point [Esc to
+finish]:</code>, o <code>Command:</code> cuando no hay ninguna herramienta activa.</p>
+<p>No hace falta hacer clic en ella: todo lo que escribes mientras no se está editando ningún campo
+va a la línea de comandos. <span class="keys"><kbd class="key-enter">Enter</kbd></span> ejecuta la línea; <span class="keys"><kbd class="key-arrow-up">Up</kbd></span> y <span class="keys"><kbd class="key-arrow-down">Down</kbd></span> recuperan las líneas
+escritas antes. El <a href="../command-line-and-mcp/">capítulo sobre la línea de comandos</a> describe los
+comandos.</p>
+<h2 id="status-bar">Barra de estado</h2>
+<p>A la izquierda, la barra de estado muestra:</p>
+<ul>
+<li>mientras hay una herramienta activa, lo que espera la herramienta (el mismo indicador que la
+  línea de comandos);</li>
+<li>sin herramienta, la categoría y el tipo del elemento bajo el cursor, como <strong>Muros : Muro
+  exterior - Bloque cerámico 300 + SATE</strong>;</li>
+<li>en los demás casos, un recordatorio del ratón: <strong>Clic: seleccionar · Ctrl: añadir · Rueda: zoom
+  · Central: encuadre</strong> en plantas, <strong>Arrastrar: órbita · Mayús/central: encuadre · Rueda: zoom</strong>
+  en 3D.</li>
+</ul>
+<p>A la derecha, un embudo y el número de elementos seleccionados; en una planta, también las
+coordenadas del cursor en metros.</p>
+<h2 id="selecting-in-short">La selección, en resumen</h2>
+<p>El <a href="../selection-and-modify/">capítulo sobre selección y modificación</a> describirá la selección en
+detalle. Lo esencial:</p>
+<ul>
+<li>haz clic en un elemento para seleccionarlo; haz clic en un punto vacío para borrar la selección;</li>
+<li><span class="keys"><kbd class="key-control">Ctrl</kbd></span> + clic añade un elemento a la selección, o lo quita si ya está seleccionado;</li>
+<li>arrastra de izquierda a derecha para seleccionar lo que está por completo dentro del
+  rectángulo, y de derecha a izquierda para seleccionar lo que toca;</li>
+<li>arrastra un elemento seleccionado para moverlo;</li>
+<li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-a">A</kbd></span> selecciona los elementos del nivel de la planta abierta, o de todo el modelo en una
+  vista 3D; <span class="keys"><kbd class="key-delete">Del</kbd></span> elimina la selección; <span class="keys"><kbd class="key-escape">Esc</kbd></span> la borra.</li>
+</ul>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Volver al principio
+</button>
+</main>
+<footer class="md-footer">
+<nav aria-label="Pie" class="md-footer__inner md-grid">
+<a aria-label="Anterior: Primeros pasos" class="md-footer__link md-footer__link--prev" href="../getting-started/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Anterior
+              </span>
+<div class="md-ellipsis">
+                Primeros pasos
+              </div>
+</div>
+</a>
+<a aria-label="Siguiente: Proyectos y archivos" class="md-footer__link md-footer__link--next" href="../projects-and-files/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Siguiente
+              </span>
+<div class="md-ellipsis">
+                Proyectos y archivos
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Copyright © 2026 Antonio Sanna · BIMopen
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.footer", "navigation.tracking", "toc.follow", "content.code.copy", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+<script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+</body>
+</html>

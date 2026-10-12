@@ -1,0 +1,644 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Manuel utilisateur de BIMopen, modélisation BIM open source" name="description"/>
+<meta content="Antonio Sanna" name="author"/>
+<link href="https://atsanna.github.io/bimopen-site/manual/fr/troubleshooting/" rel="canonical"/>
+<link href="../keyboard-shortcuts/" rel="prev"/>
+<link href="../assets/images/logo.svg" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.9" name="generator"/>
+<title>Dépannage - Manuel utilisateur de BIMopen</title>
+<link href="../assets/stylesheets/main.4af4bdda.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link href="../assets/css/theme.css" rel="stylesheet"/>
+<link href="../assets/css/theme_dark_mode.css" rel="stylesheet"/>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="bimopen" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#troubleshooting">
+          Aller au contenu
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="En-tête" class="md-header__inner md-grid">
+<a aria-label="Manuel utilisateur de BIMopen" class="md-header__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/?lang=fr" title="Manuel utilisateur de BIMopen">
+<img alt="logo" src="../assets/images/logo.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Manuel utilisateur de BIMopen
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Dépannage
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Passer au thème sombre" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="custom" data-md-color-scheme="bimopen" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Passer au thème sombre">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Passer au thème clair" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Passer au thème clair">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<div class="md-header__option">
+<div class="md-select">
+<button aria-label="Sélectionner la langue" class="md-header__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"></path></svg>
+</button>
+<div class="md-select__inner">
+<ul class="md-select__list">
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/en/" hreflang="en">
+              English
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/it/" hreflang="it">
+              Italiano
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/de/" hreflang="de">
+              Deutsch
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/fr/" hreflang="fr">
+              Français
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/es/" hreflang="es">
+              Español
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/ar/" hreflang="ar">
+              العربية
+            </a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Rechercher" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Rechercher" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Recherche" class="md-search__options">
+<button aria-label="Effacer" class="md-search__icon md-icon" tabindex="-1" title="Effacer" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Manuel utilisateur de BIMopen" class="md-nav__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/?lang=fr" title="Manuel utilisateur de BIMopen">
+<img alt="logo" src="../assets/images/logo.svg"/>
+</a>
+    Manuel utilisateur de BIMopen
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
+<span class="md-ellipsis">
+    Accueil
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../getting-started/">
+<span class="md-ellipsis">
+    Premiers pas
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../interface/">
+<span class="md-ellipsis">
+    L'interface
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../projects-and-files/">
+<span class="md-ellipsis">
+    Projets et fichiers
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../selection-and-modify/">
+<span class="md-ellipsis">
+    Sélection et modification
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../walls-doors-windows/">
+<span class="md-ellipsis">
+    Murs, portes et fenêtres
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../floors-roofs-stairs/">
+<span class="md-ellipsis">
+    Sols, toits, escaliers et composants
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../views-and-graphics/">
+<span class="md-ellipsis">
+    Vues et graphisme
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../annotation/">
+<span class="md-ellipsis">
+    Annotations et détails 2D
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../documentation/">
+<span class="md-ellipsis">
+    Feuilles, nomenclatures et impression
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../command-line-and-mcp/">
+<span class="md-ellipsis">
+    Ligne de commande et MCP
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../keyboard-shortcuts/">
+<span class="md-ellipsis">
+    Raccourcis clavier
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Dépannage
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Dépannage
+    
+  </span>
+</a>
+<nav aria-label="Table des matières" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#starting-bimopen">
+<span class="md-ellipsis">
+      Lancer BIMopen
+    </span>
+</a>
+<nav aria-label="Lancer BIMopen" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-web-app-shows-bimopen-non-si-e-avviato-and-an-error">
+<span class="md-ellipsis">
+      L'application web affiche « BIMopen non si è avviato » et une erreur
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-desktop-app-does-not-build-on-linux">
+<span class="md-ellipsis">
+      L'application de bureau ne se compile pas sous Linux
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-interface">
+<span class="md-ellipsis">
+      L'interface
+    </span>
+</a>
+<nav aria-label="L'interface" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-properties-palette-the-project-browser-or-the-command-line-has-disappeared">
+<span class="md-ellipsis">
+      La palette Propriétés, l'Arborescence du projet ou la ligne de commande a disparu
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-i-type-ends-up-at-the-command-line">
+<span class="md-ellipsis">
+      Ce que je tape aboutit dans la ligne de commande
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#a-button-is-greyed">
+<span class="md-ellipsis">
+      Un bouton est grisé
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dl-starts-a-dimension-instead-of-a-detail-line">
+<span class="md-ellipsis">
+      DL lance une cote au lieu d'une ligne de détail
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#modelling">
+<span class="md-ellipsis">
+      Modélisation
+    </span>
+</a>
+<nav aria-label="Modélisation" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#no-wall-at-that-point">
+<span class="md-ellipsis">
+      « aucun mur à cet endroit »
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#a-height-set-at-the-command-line-is-enormous">
+<span class="md-ellipsis">
+      Une hauteur définie dans la ligne de commande est énorme
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#files">
+<span class="md-ellipsis">
+      Fichiers
+    </span>
+</a>
+<nav aria-label="Fichiers" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#unsaved-work-is-gone-after-new-open-or-sample-project">
+<span class="md-ellipsis">
+      Le travail non enregistré a disparu après Nouveau, Ouvrir ou Projet d'exemple
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#open-in-the-browser-does-not-show-a-file-dialog">
+<span class="md-ellipsis">
+      Ouvrir… dans le navigateur n'affiche pas de boîte de dialogue de fichier
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bimopen-cli-prints-its-usage-and-stops">
+<span class="md-ellipsis">
+      bimopen-cli affiche son mode d'emploi et s'arrête
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://atsanna.github.io/bimopen-site/manual/fr/pdf/bimopen-manual-fr.pdf">
+<span class="md-ellipsis">
+    PDF
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table des matières" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#starting-bimopen">
+<span class="md-ellipsis">
+      Lancer BIMopen
+    </span>
+</a>
+<nav aria-label="Lancer BIMopen" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-web-app-shows-bimopen-non-si-e-avviato-and-an-error">
+<span class="md-ellipsis">
+      L'application web affiche « BIMopen non si è avviato » et une erreur
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-desktop-app-does-not-build-on-linux">
+<span class="md-ellipsis">
+      L'application de bureau ne se compile pas sous Linux
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-interface">
+<span class="md-ellipsis">
+      L'interface
+    </span>
+</a>
+<nav aria-label="L'interface" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-properties-palette-the-project-browser-or-the-command-line-has-disappeared">
+<span class="md-ellipsis">
+      La palette Propriétés, l'Arborescence du projet ou la ligne de commande a disparu
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-i-type-ends-up-at-the-command-line">
+<span class="md-ellipsis">
+      Ce que je tape aboutit dans la ligne de commande
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#a-button-is-greyed">
+<span class="md-ellipsis">
+      Un bouton est grisé
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dl-starts-a-dimension-instead-of-a-detail-line">
+<span class="md-ellipsis">
+      DL lance une cote au lieu d'une ligne de détail
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#modelling">
+<span class="md-ellipsis">
+      Modélisation
+    </span>
+</a>
+<nav aria-label="Modélisation" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#no-wall-at-that-point">
+<span class="md-ellipsis">
+      « aucun mur à cet endroit »
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#a-height-set-at-the-command-line-is-enormous">
+<span class="md-ellipsis">
+      Une hauteur définie dans la ligne de commande est énorme
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#files">
+<span class="md-ellipsis">
+      Fichiers
+    </span>
+</a>
+<nav aria-label="Fichiers" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#unsaved-work-is-gone-after-new-open-or-sample-project">
+<span class="md-ellipsis">
+      Le travail non enregistré a disparu après Nouveau, Ouvrir ou Projet d'exemple
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#open-in-the-browser-does-not-show-a-file-dialog">
+<span class="md-ellipsis">
+      Ouvrir… dans le navigateur n'affiche pas de boîte de dialogue de fichier
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bimopen-cli-prints-its-usage-and-stops">
+<span class="md-ellipsis">
+      bimopen-cli affiche son mode d'emploi et s'arrête
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset"><a class="md-content__icon pdf-download-btn" download href="../pdf/bimopen-manual-fr.pdf" title="Download"><i class="fa fas fa-download"></i><small> PDF</small></a>
+<h1 id="troubleshooting">Dépannage</h1>
+<p>Ce chapitre rassemble les situations qui peuvent vous surprendre, et ce qu'il faut faire. Il
+s'enrichit avec le manuel : chaque domaine du réalignement y ajoute les siennes.</p>
+<h2 id="starting-bimopen">Lancer BIMopen</h2>
+<h3 id="the-web-app-shows-bimopen-non-si-e-avviato-and-an-error">L'application web affiche « BIMopen non si è avviato » et une erreur</h3>
+<p>Le navigateur n'a pas pu fournir à BIMopen une surface graphique : le message se termine par
+<code>webgl2 not available</code> ou par une erreur WebGPU. BIMopen dans le navigateur nécessite WebGPU ou
+WebGL2.</p>
+<ul>
+<li>Activez l'accélération matérielle dans les paramètres du navigateur, puis rechargez la page.</li>
+<li>Essayez un autre navigateur, ou une version plus récente du même navigateur.</li>
+<li>Ajoutez <code>?webgl</code> à l'adresse pour utiliser WebGL2 même là où WebGPU existe mais ne fonctionne pas.</li>
+</ul>
+<h3 id="the-desktop-app-does-not-build-on-linux">L'application de bureau ne se compile pas sous Linux</h3>
+<p>L'interface nécessite les fichiers de développement de xkbcommon, Wayland et GTK 3. Sous Debian et
+Ubuntu :</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>libxkbcommon-dev<span class="w"> </span>libwayland-dev<span class="w"> </span>libgtk-3-dev
+</code></pre></div>
+<h2 id="the-interface">L'interface</h2>
+<h3 id="the-properties-palette-the-project-browser-or-the-command-line-has-disappeared">La palette Propriétés, l'Arborescence du projet ou la ligne de commande a disparu</h3>
+<p>Elles se ferment avec le <strong>×</strong> de leur titre, ou depuis <strong>Vue ▸ Fenêtres ▸ Interface utilisateur</strong>.
+Cochez-les à nouveau dans <strong>Interface utilisateur</strong>. Le bouton <strong>Propriétés</strong> de l'onglet contextuel
+affiche aussi à nouveau la palette.</p>
+<h3 id="what-i-type-ends-up-at-the-command-line">Ce que je tape aboutit dans la ligne de commande</h3>
+<p>Tout ce que vous tapez lorsqu'aucun champ n'est en cours de modification va dans la ligne de
+commande : c'est ainsi que fonctionnent les raccourcis saisis. Pour taper dans un champ de la
+palette Propriétés ou d'une boîte de dialogue, cliquez d'abord sur le champ.</p>
+<h3 id="a-button-is-greyed">Un bouton est grisé</h3>
+<p>Certains outils ne fonctionnent que dans la vue appropriée, et leur info-bulle en indique la
+raison. <strong>Ligne de limite de surface</strong> et <strong>Surface</strong> nécessitent un plan de surfaces ouvert :
+l'info-bulle indique <strong>Ouvrez d'abord un plan de surfaces</strong>. <strong>Enregistrer la vue</strong> nécessite une
+vue 3D ouverte ; <strong>Composition de la feuille ▸ Vue</strong> nécessite une feuille ouverte ; <strong>Annuler</strong> et
+<strong>Rétablir</strong> sont grisés lorsqu'il n'y a rien à annuler ou à rétablir.</p>
+<h3 id="dl-starts-a-dimension-instead-of-a-detail-line"><code>DL</code> lance une cote au lieu d'une ligne de détail</h3>
+<p><code>DL</code> est la forme courte de la cote linéaire. Pour dessiner des lignes de détail, utilisez
+<strong>Annoter ▸ Détail ▸ Ligne de détail</strong>, ou tapez <code>detailline</code>.</p>
+<h2 id="modelling">Modélisation</h2>
+<h3 id="no-wall-at-that-point">« aucun mur à cet endroit »</h3>
+<p>Une porte ou une fenêtre doit être placée dans un mur. Cliquez sur le mur lui-même, ou indiquez un
+point sur sa ligne dans la ligne de commande.</p>
+<h3 id="a-height-set-at-the-command-line-is-enormous">Une hauteur définie dans la ligne de commande est énorme</h3>
+<p>Dans la ligne de commande, un nombre sans unité est en mètres : <code>set Unconnected Height 2700</code> rend
+le mur haut de 2700 m. Annulez avec <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span> et écrivez l'unité : <code>2700mm</code> ou <code>2.7m</code>. Dans la
+palette Propriétés, un nombre sans unité est exprimé dans les unités du projet.</p>
+<h2 id="files">Fichiers</h2>
+<h3 id="unsaved-work-is-gone-after-new-open-or-sample-project">Le travail non enregistré a disparu après Nouveau, Ouvrir ou Projet d'exemple</h3>
+<p>Ces commandes remplacent le projet en cours sans demander de confirmation. Enregistrez avant de les
+utiliser : l'astérisque après le nom du projet dans la barre de titre indique qu'il y a des
+modifications non enregistrées.</p>
+<h3 id="open-in-the-browser-does-not-show-a-file-dialog">Ouvrir… dans le navigateur n'affiche pas de boîte de dialogue de fichier</h3>
+<p>Dans le navigateur, faites glisser le fichier <code>.bimopen</code> dans la page : la ligne de commande
+indique <strong>Glissez un fichier .bimopen dans la fenêtre pour l'ouvrir</strong>.</p>
+<h3 id="bimopen-cli-prints-its-usage-and-stops">bimopen-cli affiche son mode d'emploi et s'arrête</h3>
+<p>Les arguments ne sont pas ceux qu'il attend : il se termine avec le code 2 et affiche le mode
+d'emploi. Une commande qui échoue se termine avec le code 1 et un message indiquant quelle ligne a
+échoué. Voir <a href="../command-line-and-mcp/">Ligne de commande et MCP</a>.</p>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Retour en haut de la page
+</button>
+</main>
+<footer class="md-footer">
+<nav aria-label="Pied de page" class="md-footer__inner md-grid">
+<a aria-label="Précédent: Raccourcis clavier" class="md-footer__link md-footer__link--prev" href="../keyboard-shortcuts/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Précédent
+              </span>
+<div class="md-ellipsis">
+                Raccourcis clavier
+              </div>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Copyright © 2026 Antonio Sanna · BIMopen
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.footer", "navigation.tracking", "toc.follow", "content.code.copy", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+<script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+</body>
+</html>

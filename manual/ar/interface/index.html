@@ -1,0 +1,1409 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="دليل مستخدم BIMopen، نمذجة BIM مفتوحة المصدر" name="description"/>
+<meta content="Antonio Sanna" name="author"/>
+<link href="https://atsanna.github.io/bimopen-site/manual/ar/interface/" rel="canonical"/>
+<link href="../getting-started/" rel="prev"/>
+<link href="../projects-and-files/" rel="next"/>
+<link href="../assets/images/logo.svg" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.9" name="generator"/>
+<title>الواجهة - دليل مستخدم BIMopen</title>
+<link href="../assets/stylesheets/main.4af4bdda.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link href="../assets/css/theme.css" rel="stylesheet"/>
+<link href="../assets/css/theme_dark_mode.css" rel="stylesheet"/>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="bimopen" dir="rtl">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#the-interface">
+          انتقل إلى المحتوى
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="عنوان العارضة" class="md-header__inner md-grid">
+<a aria-label="دليل مستخدم BIMopen" class="md-header__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/?lang=ar" title="دليل مستخدم BIMopen">
+<img alt="logo" src="../assets/images/logo.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            دليل مستخدم BIMopen
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              الواجهة
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="التبديل إلى الوضع الداكن" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="custom" data-md-color-scheme="bimopen" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="التبديل إلى الوضع الداكن">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="التبديل إلى الوضع الفاتح" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="التبديل إلى الوضع الفاتح">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<div class="md-header__option">
+<div class="md-select">
+<button aria-label="إختر اللغة" class="md-header__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"></path></svg>
+</button>
+<div class="md-select__inner">
+<ul class="md-select__list">
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/en/" hreflang="en">
+              English
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/it/" hreflang="it">
+              Italiano
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/de/" hreflang="de">
+              Deutsch
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/fr/" hreflang="fr">
+              Français
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/es/" hreflang="es">
+              Español
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/ar/" hreflang="ar">
+              العربية
+            </a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="بحث" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="بحث" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="إبحث" class="md-search__options">
+<button aria-label="مسح كلي" class="md-search__icon md-icon" tabindex="-1" title="مسح كلي" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            بدء البحث
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="تصفح" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="دليل مستخدم BIMopen" class="md-nav__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/?lang=ar" title="دليل مستخدم BIMopen">
+<img alt="logo" src="../assets/images/logo.svg"/>
+</a>
+    دليل مستخدم BIMopen
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
+<span class="md-ellipsis">
+    الرئيسية
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../getting-started/">
+<span class="md-ellipsis">
+    البدء
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    الواجهة
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    الواجهة
+    
+  </span>
+</a>
+<nav aria-label="جدول المحتويات" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      جدول المحتويات
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#application-menu">
+<span class="md-ellipsis">
+      قائمة التطبيق
+    </span>
+</a>
+<nav aria-label="قائمة التطبيق" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#options">
+<span class="md-ellipsis">
+      خيارات
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quick-access-toolbar">
+<span class="md-ellipsis">
+      شريط أدوات الوصول السريع
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ribbon">
+<span class="md-ellipsis">
+      الشريط
+    </span>
+</a>
+<nav aria-label="الشريط" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-home-tab">
+<span class="md-ellipsis">
+      تبويب الرئيسية
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-annotate-tab">
+<span class="md-ellipsis">
+      تبويب التعليقات التوضيحية
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-view-tab">
+<span class="md-ellipsis">
+      تبويب العرض
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-manage-tab">
+<span class="md-ellipsis">
+      تبويب إدارة
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-contextual-tab">
+<span class="md-ellipsis">
+      التبويب السياقي
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#options-bar">
+<span class="md-ellipsis">
+      شريط الخيارات
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#properties">
+<span class="md-ellipsis">
+      الخصائص
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#project-browser">
+<span class="md-ellipsis">
+      متصفح المشروع
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#drawing-area-and-view-windows">
+<span class="md-ellipsis">
+      منطقة الرسم ونوافذ العروض
+    </span>
+</a>
+<nav aria-label="منطقة الرسم ونوافذ العروض" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#view-control-bar">
+<span class="md-ellipsis">
+      شريط التحكم بالعرض
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#navigation-bar">
+<span class="md-ellipsis">
+      شريط التنقل
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#moving-around-in-the-views">
+<span class="md-ellipsis">
+      التنقل في العروض
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-context-menu-of-a-view">
+<span class="md-ellipsis">
+      القائمة السياقية للعرض
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#command-line">
+<span class="md-ellipsis">
+      سطر الأوامر
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#status-bar">
+<span class="md-ellipsis">
+      شريط الحالة
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#selecting-in-short">
+<span class="md-ellipsis">
+      التحديد باختصار
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../projects-and-files/">
+<span class="md-ellipsis">
+    المشاريع والملفات
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../selection-and-modify/">
+<span class="md-ellipsis">
+    التحديد والتعديل
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../walls-doors-windows/">
+<span class="md-ellipsis">
+    الجدران والأبواب والنوافذ
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../floors-roofs-stairs/">
+<span class="md-ellipsis">
+    الأرضيات والأسقف والسلالم والمكونات
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../views-and-graphics/">
+<span class="md-ellipsis">
+    المناظر والرسومات
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../annotation/">
+<span class="md-ellipsis">
+    التعليقات التوضيحية والتفاصيل ثنائية الأبعاد
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../documentation/">
+<span class="md-ellipsis">
+    اللوحات والجداول والطباعة
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../command-line-and-mcp/">
+<span class="md-ellipsis">
+    سطر الأوامر و MCP
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../keyboard-shortcuts/">
+<span class="md-ellipsis">
+    اختصارات لوحة المفاتيح
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../troubleshooting/">
+<span class="md-ellipsis">
+    استكشاف الأخطاء وإصلاحها
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://atsanna.github.io/bimopen-site/manual/ar/pdf/bimopen-manual-ar.pdf">
+<span class="md-ellipsis">
+    PDF
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="جدول المحتويات" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      جدول المحتويات
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#application-menu">
+<span class="md-ellipsis">
+      قائمة التطبيق
+    </span>
+</a>
+<nav aria-label="قائمة التطبيق" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#options">
+<span class="md-ellipsis">
+      خيارات
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quick-access-toolbar">
+<span class="md-ellipsis">
+      شريط أدوات الوصول السريع
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ribbon">
+<span class="md-ellipsis">
+      الشريط
+    </span>
+</a>
+<nav aria-label="الشريط" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-home-tab">
+<span class="md-ellipsis">
+      تبويب الرئيسية
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-annotate-tab">
+<span class="md-ellipsis">
+      تبويب التعليقات التوضيحية
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-view-tab">
+<span class="md-ellipsis">
+      تبويب العرض
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-manage-tab">
+<span class="md-ellipsis">
+      تبويب إدارة
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-contextual-tab">
+<span class="md-ellipsis">
+      التبويب السياقي
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#options-bar">
+<span class="md-ellipsis">
+      شريط الخيارات
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#properties">
+<span class="md-ellipsis">
+      الخصائص
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#project-browser">
+<span class="md-ellipsis">
+      متصفح المشروع
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#drawing-area-and-view-windows">
+<span class="md-ellipsis">
+      منطقة الرسم ونوافذ العروض
+    </span>
+</a>
+<nav aria-label="منطقة الرسم ونوافذ العروض" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#view-control-bar">
+<span class="md-ellipsis">
+      شريط التحكم بالعرض
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#navigation-bar">
+<span class="md-ellipsis">
+      شريط التنقل
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#moving-around-in-the-views">
+<span class="md-ellipsis">
+      التنقل في العروض
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-context-menu-of-a-view">
+<span class="md-ellipsis">
+      القائمة السياقية للعرض
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#command-line">
+<span class="md-ellipsis">
+      سطر الأوامر
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#status-bar">
+<span class="md-ellipsis">
+      شريط الحالة
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#selecting-in-short">
+<span class="md-ellipsis">
+      التحديد باختصار
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset"><a class="md-content__icon pdf-download-btn" download href="../pdf/bimopen-manual-ar.pdf" title="Download"><i class="fa fas fa-download"></i><small> PDF</small></a>
+<h1 id="the-interface">الواجهة</h1>
+<p>لنافذة BIMopen الأجزاء نفسها في نسخة سطح المكتب وفي نسخة الويب. من الأعلى إلى الأسفل:</p>
+<ol>
+<li><strong>شريط العنوان</strong>، وفيه قائمة التطبيق، وشريط أدوات الوصول السريع، واسم المشروع والعرض النشط،
+   وقائمة اللغة، وقائمة المساعدة؛</li>
+<li><strong>الشريط</strong>، بتبويباته ولوحات أدواته؛</li>
+<li><strong>شريط الخيارات</strong>، بإعدادات الأداة النشطة؛</li>
+<li>على اليمين، لوحة <strong>الخصائص</strong> فوق <strong>متصفح المشروع</strong>؛</li>
+<li><strong>منطقة الرسم</strong>، حيث تُفتح العروض في نوافذ، لكل منها شريط التحكم بالعرض الخاص بها؛</li>
+<li><strong>سطر الأوامر</strong>، مع سجل ما تم تنفيذه؛</li>
+<li><strong>شريط الحالة</strong>.</li>
+</ol>
+<p><img alt="أجزاء النافذة" src="../assets/screens/interface.png"/></p>
+<p>في العربية تكون النافذة كلها معكوسة: اللوحات على اليمين، ويُقرأ الشريط وشريط الخيارات من اليمين
+إلى اليسار، ويقع شريط التنقل على الحافة اليسرى للعروض.</p>
+<h2 id="application-menu">قائمة التطبيق</h2>
+<p>يفتح الزر الأزرق <strong>B</strong> في الطرف الأيمن من شريط العنوان قائمة التطبيق: الأوامر التي تعمل على
+المشروع كله.</p>
+<p><img alt="قائمة التطبيق" src="../assets/screens/app-menu.png"/></p>
+<table>
+<thead>
+<tr>
+<th>العنصر</th>
+<th>ما يفعله</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>جديد</strong></td>
+<td>يغلق المشروع الحالي ويبدأ مشروعًا جديدًا من القالب الافتراضي: منسوبان بمسقطيهما، والأنواع الافتراضية</td>
+</tr>
+<tr>
+<td><strong>فتح…</strong></td>
+<td>يفتح مشروع <code>.bimopen</code>، أو يستورد نموذج <code>.rvt</code>، يُختار في نافذة حوار للملفات. وفي المتصفح اسحب الملف إلى الصفحة بدلًا من ذلك</td>
+</tr>
+<tr>
+<td><strong>مشروع نموذجي</strong></td>
+<td>يفتح المنزل النموذجي</td>
+</tr>
+<tr>
+<td><strong>حفظ</strong> <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span></td>
+<td>يحفظ المشروع في ملفه؛ والمشروع الذي لم يُحفظ قط يطلب اسمًا، مثل <strong>حفظ باسم…</strong></td>
+</tr>
+<tr>
+<td><strong>حفظ باسم…</strong></td>
+<td>يحفظ المشروع في ملف <code>.bimopen</code> جديد ويواصل العمل على ذلك الملف</td>
+</tr>
+<tr>
+<td><strong>طباعة…</strong> <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-p">P</kbd></span></td>
+<td>يطبع اللوحات إلى PDF</td>
+</tr>
+<tr>
+<td><strong>تصدير ▸ تصدير IFC4…</strong></td>
+<td>يكتب النموذج في ملف IFC4</td>
+</tr>
+<tr>
+<td><strong>تصدير ▸ تصدير المسقط SVG…</strong></td>
+<td>يكتب المسقط النشط كرسم SVG</td>
+</tr>
+<tr>
+<td><strong>تصدير ▸ تصدير العرض PNG…</strong></td>
+<td>يكتب العرض النشط كصورة PNG</td>
+</tr>
+<tr>
+<td><strong>المستندات المفتوحة</strong></td>
+<td>يسرد نوافذ العروض المفتوحة؛ انقر إحداها لإحضارها إلى المقدمة</td>
+</tr>
+<tr>
+<td><strong>خيارات</strong></td>
+<td>يفتح نافذة الحوار <strong>خيارات</strong></td>
+</tr>
+<tr>
+<td><strong>خروج</strong></td>
+<td>يغلق BIMopen (على سطح المكتب فقط)</td>
+</tr>
+</tbody>
+</table>
+<p>تستبدل <strong>جديد</strong> و<strong>فتح…</strong> و<strong>مشروع نموذجي</strong> المشروع الحالي دون سؤال: احفظه أولًا إن أردت
+الاحتفاظ به.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>تُفقد التعديلات غير المحفوظة عند اختيار <strong>جديد</strong> أو <strong>فتح…</strong> أو <strong>مشروع نموذجي</strong>. وتخبرك
+العلامة النجمية بعد اسم المشروع في شريط العنوان بوجود تعديلات غير محفوظة.</p>
+</div>
+<h3 id="options">خيارات</h3>
+<p>في <strong>قائمة التطبيق ▸ خيارات</strong> مجموعتان:</p>
+<table>
+<thead>
+<tr>
+<th>الإعداد</th>
+<th>القيم</th>
+<th>الأثر</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>واجهة المستخدم ▸ اللغة</strong></td>
+<td>Italiano، English، Deutsch، Français، Español، العربية</td>
+<td>لغة الواجهة كلها، فورًا</td>
+</tr>
+<tr>
+<td><strong>واجهة المستخدم ▸ السمة</strong></td>
+<td><strong>فاتح</strong>، <strong>داكن</strong></td>
+<td>ألوان النافذة. و<strong>داكن</strong> يفعّل أيضًا <strong>عكس لون الخلفية</strong></td>
+</tr>
+<tr>
+<td><strong>الرسومات ▸ عكس لون الخلفية</strong></td>
+<td>مفعّل، غير مفعّل</td>
+<td>عروض بخلفية داكنة وخطوط فاتحة</td>
+</tr>
+</tbody>
+</table>
+<p>يتذكر BIMopen اللغة والسمة في المرة التالية التي يبدأ فيها.</p>
+<h2 id="quick-access-toolbar">شريط أدوات الوصول السريع</h2>
+<p>بجانب قائمة التطبيق، يُبقي شريط أدوات الوصول السريع الأوامر الأكثر استخدامًا على بعد نقرة واحدة.
+أبقِ الفأرة على زر لتقرأ ما يفعله واختصاره.</p>
+<table>
+<thead>
+<tr>
+<th>الزر</th>
+<th>ما يفعله</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>فتح…</strong> (مجلد)</td>
+<td>كما في قائمة التطبيق</td>
+</tr>
+<tr>
+<td><strong>حفظ</strong> (قرص)</td>
+<td>يحفظ، <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span></td>
+</tr>
+<tr>
+<td><strong>تراجع</strong> (سهم إلى اليمين)</td>
+<td>يتراجع عن آخر تعديل، <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span>. يكون باهتًا حين لا يوجد ما يُتراجع عنه</td>
+</tr>
+<tr>
+<td><strong>إعادة</strong> (سهم إلى اليسار)</td>
+<td>يعيد التعديل الذي تم التراجع عنه للتو، <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-y">Y</kbd></span>. يكون باهتًا حين لا يوجد ما يُعاد</td>
+</tr>
+<tr>
+<td><strong>بُعد محاذٍ</strong></td>
+<td>يبدأ أداة البُعد المحاذي، <code>DI</code></td>
+</tr>
+<tr>
+<td><strong>وسم الكل</strong></td>
+<td>يسم أبواب ونوافذ المسقط المفتوح التي ليس لها بطاقة بعد، <code>TG</code></td>
+</tr>
+<tr>
+<td><strong>النص</strong></td>
+<td>يبدأ أداة النص، <code>TX</code></td>
+</tr>
+<tr>
+<td><strong>عرض ثلاثي الأبعاد</strong> (مكعب)</td>
+<td>يفتح العرض ثلاثي الأبعاد الافتراضي، <strong>{3D}</strong></td>
+</tr>
+<tr>
+<td><strong>مقطع</strong></td>
+<td>يبدأ أداة المقطع، <code>SE</code></td>
+</tr>
+<tr>
+<td><strong>إغلاق المخفية</strong></td>
+<td>يغلق كل نوافذ العروض ما عدا النشطة. يكون باهتًا حين تكون نافذة واحدة فقط مفتوحة</td>
+</tr>
+<tr>
+<td><strong>تبديل النوافذ</strong></td>
+<td>يسرد نوافذ العروض المفتوحة؛ وتكون النشطة مؤشَّرًا عليها</td>
+</tr>
+</tbody>
+</table>
+<p>في وسط شريط العنوان، حين تكون النافذة عريضة بما يكفي، يعرض BIMopen اسم المشروع والعرض النشط،
+مثلًا <strong>المنزل النموذجي — BIMopen - المسقط: الطابق الأرضي</strong>. وتعني العلامة النجمية بعد اسم
+المشروع أن فيه تعديلات غير محفوظة.</p>
+<p>في الطرف الأيسر:</p>
+<ul>
+<li><strong>قائمة اللغة</strong>، وهي كرة أرضية مع اسم اللغة الحالية: اختر لغة أخرى فتتغير الواجهة فورًا؛</li>
+<li>القائمة <strong>?</strong>: يسرد <strong>الأوامر</strong> كل أوامر سطر الأوامر (مثل كتابة <code>help</code>)، ويعرض <strong>معلومات</strong>
+  الإصدار والترخيص والمساهمين.</li>
+</ul>
+<p><strong>? ▸ التعليمات</strong> (<span class="keys"><kbd class="key-f1">F1</kbd></span>) تفتح هذا الدليل بلغة الواجهة في المتصفح. ويفتح <span class="keys"><kbd class="key-f1">F1</kbd></span> صفحة ما تقوم به:
+مربع الحوار المفتوح، أو زر الشريط الموجود تحت مؤشر الفأرة (ينتهي تلميحه بعبارة <strong>اضغط F1 لمزيد
+من المعلومات</strong>)، أو الأداة النشطة.</p>
+<h2 id="ribbon">الشريط</h2>
+<p>يجمع الشريط الأدوات في تبويبات، وكل تبويب في لوحات. يُكتب اسم اللوحة تحت أزرارها. والزر الذي
+تتبع اسمَه علامة صغيرة يفتح قائمة. وإبقاء الفأرة على زر يعرض ما يفعله، وبين قوسين الاختصار الذي
+يمكنك كتابته لبدئه.</p>
+<table>
+<thead>
+<tr>
+<th>التبويب</th>
+<th>اللوحات</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>الرئيسية</strong></td>
+<td><strong>تحديد</strong>، <strong>بناء</strong>، <strong>الحركة الرأسية</strong>، <strong>الغرفة والمساحة</strong>، <strong>المرجع</strong></td>
+</tr>
+<tr>
+<td><strong>التعليقات التوضيحية</strong></td>
+<td><strong>تحديد</strong>، <strong>بُعد</strong>، <strong>النص</strong>، <strong>التفاصيل</strong>، <strong>بطاقة</strong></td>
+</tr>
+<tr>
+<td><strong>العرض</strong></td>
+<td><strong>إنشاء</strong>، <strong>الرسومات</strong>، <strong>تكوين اللوحات</strong>، <strong>النوافذ</strong></td>
+</tr>
+<tr>
+<td><strong>إدارة</strong></td>
+<td><strong>الإعدادات</strong>، <strong>استعلام</strong></td>
+</tr>
+<tr>
+<td><strong>تحرير</strong></td>
+<td>التبويب السياقي: تعتمد لوحاته على الأداة النشطة وعلى التحديد</td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-home-tab">تبويب الرئيسية</h3>
+<table>
+<thead>
+<tr>
+<th>اللوحة</th>
+<th>الأزرار</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>تحديد</strong></td>
+<td><strong>تعديل</strong>: ينهي الأداة النشطة ويعود إلى التحديد، <span class="keys"><kbd class="key-escape">Esc</kbd></span></td>
+</tr>
+<tr>
+<td><strong>بناء</strong></td>
+<td><strong>جدار</strong> <code>WA</code>، <strong>باب</strong> <code>DR</code>، <strong>نافذة</strong> <code>WN</code>، <strong>سقف</strong> <code>RF</code>، <strong>بلاط أرضيات</strong> <code>SB</code>، <strong>مكوّن</strong> <code>CM</code>، <strong>شبكة الواجهة الستارية</strong> <code>CG</code>، <strong>قائم</strong> <code>MU</code></td>
+</tr>
+<tr>
+<td><strong>الحركة الرأسية</strong></td>
+<td><strong>درابزين</strong> <code>RA</code>، <strong>الأدراج</strong> <code>ST</code></td>
+</tr>
+<tr>
+<td><strong>الغرفة والمساحة</strong></td>
+<td><strong>غرفة</strong> <code>RM</code>، <strong>فصل</strong> <code>RS</code>، <strong>المساحة ▾</strong> (<strong>مخطط المساحات</strong>، <strong>خط حد المساحة</strong>، <strong>المساحة</strong>)، <strong>وسيلة الإيضاح</strong> <code>LG</code>، <strong>الإعدادات ▾</strong> (<strong>حسابات المساحة والحجم</strong>، <strong>مخططات الألوان</strong>)</td>
+</tr>
+<tr>
+<td><strong>المرجع</strong></td>
+<td><strong>المنسوب</strong>: منسوب جديد فوق آخر منسوب؛ <strong>شبكة المحاور</strong> <code>GR</code></td>
+</tr>
+</tbody>
+</table>
+<p>يكون <strong>خط حد المساحة</strong> و<strong>المساحة</strong> فعّالين في مخطط مساحات فقط: إلى أن يُفتح أحدها يكونان باهتين،
+وتطلب تلميحاتهما فتح مخطط مساحات أولًا.</p>
+<h3 id="the-annotate-tab">تبويب التعليقات التوضيحية</h3>
+<table>
+<thead>
+<tr>
+<th>اللوحة</th>
+<th>الأزرار</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>تحديد</strong></td>
+<td><strong>تعديل</strong></td>
+</tr>
+<tr>
+<td><strong>بُعد</strong></td>
+<td><strong>محاذية</strong> <code>DI</code>، <strong>خطي</strong> <code>DL</code>، <strong>زاوية</strong> <code>DA</code></td>
+</tr>
+<tr>
+<td><strong>النص</strong></td>
+<td><strong>النص</strong> <code>TX</code></td>
+</tr>
+<tr>
+<td><strong>التفاصيل</strong></td>
+<td><strong>خط تفاصيل</strong>، <strong>منطقة معبأة</strong>، <strong>منطقة إخفاء</strong>، <strong>مكوّن تفصيلي</strong> <code>CD</code>، <strong>تفصيل متكرر</strong> <code>RD</code>، <strong>عزل</strong> <code>IS</code></td>
+</tr>
+<tr>
+<td><strong>بطاقة</strong></td>
+<td><strong>وسم الكل</strong> <code>TG</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-view-tab">تبويب العرض</h3>
+<p><img alt="تبويب العرض" src="../assets/screens/view-tab.png"/></p>
+<table>
+<thead>
+<tr>
+<th>اللوحة</th>
+<th>الأزرار</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>إنشاء</strong></td>
+<td><strong>عرض ثلاثي الأبعاد ▾</strong> (<strong>العرض ثلاثي الأبعاد الافتراضي</strong>، <strong>حفظ العرض</strong>)، <strong>عروض المساقط ▾</strong> (<strong>مسقط الطابق</strong>، <strong>مخطط المساحات</strong>)، <strong>تكرار العرض ▾</strong> (<strong>تكرار</strong>، <strong>تكرار مع التفاصيل</strong>)، <strong>مقطع</strong> <code>SE</code>، <strong>واجهة</strong> <code>EL</code>، <strong>التفاصيل</strong> <code>DT</code> (عرض تفصيلي مستدعى)، <strong>عرض الرسم</strong> <code>VD</code>، <strong>الجداول ▾</strong> (<strong>جدول/كميات</strong>، <strong>جداول معرّفة مسبقًا</strong>)</td>
+</tr>
+<tr>
+<td><strong>الرسومات</strong></td>
+<td><strong>الرؤية/الرسومات</strong> <code>VG</code>، <strong>عوامل التصفية</strong>، <strong>قوالب العروض</strong>، وزران صغيران: <strong>تطبيق القالب على العرض الحالي</strong>، <strong>إنشاء قالب من العرض الحالي</strong></td>
+</tr>
+<tr>
+<td><strong>تكوين اللوحات</strong></td>
+<td><strong>لوحة</strong>: لوحة جديدة بإطار العنوان الذي تختاره؛ <strong>العرض</strong>: يضع عرضًا على اللوحة المفتوحة</td>
+</tr>
+<tr>
+<td><strong>النوافذ</strong></td>
+<td><strong>تبديل النوافذ</strong>، <strong>نسخ النافذة</strong>، <strong>تتالي</strong>، <strong>تجانب</strong>، <strong>تكبير</strong>، <strong>إغلاق المخفية</strong>، <strong>واجهة المستخدم</strong></td>
+</tr>
+</tbody>
+</table>
+<p>لا يعمل <strong>حفظ العرض</strong> إلا أثناء فتح عرض ثلاثي الأبعاد، ولا يعمل <strong>تكرار مع التفاصيل</strong> إلا للعروض
+غير ثلاثية الأبعاد، ولا يعمل <strong>تكوين اللوحات ▸ العرض</strong> إلا أثناء فتح لوحة.</p>
+<h3 id="the-manage-tab">تبويب إدارة</h3>
+<table>
+<thead>
+<tr>
+<th>اللوحة</th>
+<th>الأزرار</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>الإعدادات</strong></td>
+<td><strong>المواد</strong>، <strong>معلومات عن المشروع</strong>، <strong>أنماط الكائنات</strong>، <strong>أنماط الخطوط</strong>، <strong>حذف غير المستخدم</strong>، <strong>وحدات المشروع</strong> <code>UN</code>، <strong>الالتقاط</strong>، و<strong>إعدادات إضافية</strong> (<strong>أنماط الخطوط</strong>، <strong>نقوش التعبئة</strong>)</td>
+</tr>
+<tr>
+<td><strong>استعلام</strong></td>
+<td><strong>التحقق</strong>: يفحص فتحات النموذج ومراجعه ويعرض النتيجة في سطر الأوامر</td>
+</tr>
+</tbody>
+</table>
+<p>يشغّل <strong>الالتقاط</strong> الالتقاط ويوقفه في البرنامج كله: ويكون مميزًا ما دام مفعّلًا.</p>
+<h3 id="the-contextual-tab">التبويب السياقي</h3>
+<p>حين تبدأ أداة أو تحدد شيئًا، ينتقل الشريط من تلقاء نفسه إلى التبويب الأخير، الذي يأخذ اسم ما
+تفعله: <strong>تحرير | وضع جدار</strong> أثناء رسم الجدران، و<strong>تحرير | الجدران</strong> مع تحديد جدران، و<strong>تحرير |
+تحديد متعدد</strong> مع عناصر من فئات مختلفة. ويُميَّز التبويب بلون خاص به. وحين تنتهي الأداة، أو يُمسح
+التحديد، يعود الشريط إلى التبويب الذي كنت تستخدمه.</p>
+<p><img alt="جدار محدد: التبويب السياقي تحرير | الجدران وخصائصه" src="../assets/screens/selected-wall.png"/></p>
+<p>وفيه دائمًا هذه اللوحات:</p>
+<table>
+<thead>
+<tr>
+<th>اللوحة</th>
+<th>الأزرار</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>تحديد</strong></td>
+<td><strong>تعديل</strong></td>
+</tr>
+<tr>
+<td><strong>الخصائص</strong></td>
+<td><strong>الخصائص</strong>: يُظهر لوحة الخصائص أو يخفيها؛ <strong>خصائص النوع</strong>: خصائص نوع التحديد، أو نوع العنصر التالي الذي ستضعه الأداة</td>
+</tr>
+<tr>
+<td><strong>تعديل</strong></td>
+<td>اثنتا عشرة أداة صغيرة في صفين: <strong>محاذاة</strong> <code>AL</code>، <strong>إزاحة</strong> <code>OF</code>، <strong>عكس - اختيار المحور</strong>، <strong>عكس - رسم المحور</strong> <code>MM</code>، <strong>تقسيم العنصر</strong> <code>SL</code>، <strong>قص/تمديد إلى زاوية</strong> <code>TR</code>؛ <strong>نقل</strong> <code>MV</code>، <strong>نسخ</strong> <code>CO</code>، <strong>تدوير</strong> <code>RO</code>، <strong>مصفوفة</strong> <code>AR</code>، <strong>الكل</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-a">A</kbd></span>)، <strong>حذف</strong> (<span class="keys"><kbd class="key-delete">Del</kbd></span>)</td>
+</tr>
+</tbody>
+</table>
+<p>لا يعمل <strong>حذف</strong> إلا حين يكون هناك شيء محدد. ويصف <a href="../selection-and-modify/">فصل التحديد
+والتعديل</a> أدوات التعديل.</p>
+<p>وتظهر لوحات أخرى بحسب ما هو محدد أو بحسب الأداة:</p>
+<table>
+<thead>
+<tr>
+<th>متى</th>
+<th>اللوحة والأزرار</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>أبواب أو نوافذ محددة</td>
+<td><strong>فتحة</strong>: <strong>عكس اتجاه الفتح</strong>، <strong>عكس جهة المفصلات</strong></td>
+</tr>
+<tr>
+<td>جدران محددة</td>
+<td><strong>تعديل الجدار</strong>: <strong>ربط الأعلى</strong> (ترتفع الجدران حتى السقف الذي فوقها)، <strong>فصل الأعلى</strong></td>
+</tr>
+<tr>
+<td>منسوب محدد</td>
+<td><strong>العرض</strong>: <strong>فتح المسقط</strong></td>
+</tr>
+<tr>
+<td>مقاطع أو واجهات محددة</td>
+<td><strong>مقطع</strong>: <strong>تقسيم الجزء</strong> (للمقاطع فقط)، <strong>عكس</strong>، <strong>الانتقال إلى العرض</strong></td>
+</tr>
+<tr>
+<td>عرض تفصيلي مستدعى محدد</td>
+<td><strong>التفاصيل</strong>: <strong>الانتقال إلى العرض</strong></td>
+</tr>
+<tr>
+<td>واجهات ستارية محددة</td>
+<td><strong>واجهة ستارية</strong>: <strong>شبكة الواجهة الستارية</strong>، <strong>قائم</strong>، <strong>لوح</strong></td>
+</tr>
+<tr>
+<td>أداة <strong>بلاط أرضيات</strong> أو <strong>سقف</strong></td>
+<td><strong>رسم</strong>: <strong>خط الحدود</strong>، <strong>اختيار الجدران</strong></td>
+</tr>
+<tr>
+<td>أداة <strong>الأدراج</strong> أو <strong>درابزين</strong></td>
+<td><strong>الوضع</strong>: <strong>إنهاء وضع التحرير</strong>؛ <strong>رسم</strong>: <strong>شوط</strong> أو <strong>خطوط</strong></td>
+</tr>
+<tr>
+<td>أداة <strong>قائم</strong></td>
+<td><strong>الوضع</strong>: <strong>خط الشبكة</strong>، <strong>مقطع خط الشبكة</strong>، <strong>كل خطوط الشبكة</strong></td>
+</tr>
+<tr>
+<td>أداة تفاصيل</td>
+<td>أشكال الرسم الخاصة بالأداة</td>
+</tr>
+</tbody>
+</table>
+<h2 id="options-bar">شريط الخيارات</h2>
+<p>تحت الشريط، يبدأ شريط الخيارات باسم التبويب السياقي، ثم يعرض إعدادات الأداة النشطة. وتنطبق على
+العناصر التالية التي تضعها. وفي نهايته، ما دامت هناك أداة نشطة، يعرض المنسوب الذي تعمل عليه:
+<strong>المنسوب: الطابق الأرضي</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>الأداة</th>
+<th>الإعدادات في شريط الخيارات</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>جدار</strong></td>
+<td><strong>الارتفاع</strong> أو <strong>العمق</strong>؛ المنسوب الذي يصل إليه الجدار، أو <strong>غير متصل</strong> مع قيمته؛ <strong>خط الموضع</strong>؛ <strong>تسلسل</strong>؛ <strong>إزاحة</strong>؛ <strong>نصف القطر</strong> (باهت: الجدران المنحنية غير متاحة بعد)؛ <strong>الخارج إلى اليسار</strong> أو <strong>الخارج إلى اليمين</strong> (تبادل بينهما مفتاح المسافة)</td>
+</tr>
+<tr>
+<td><strong>سقف</strong></td>
+<td>الشكل: <strong>جملوني</strong> أو <strong>منحدر رباعي</strong> أو <strong>مستوٍ</strong>؛ <strong>الميل</strong>، من 5° إلى 60°؛ <strong>البروز</strong>، حتى 2 m</td>
+</tr>
+<tr>
+<td><strong>الأدراج</strong></td>
+<td><strong>العرض</strong>، بالمليمترات؛ <strong>نوع الدرابزين</strong>، أو <strong>بدون</strong></td>
+</tr>
+<tr>
+<td>الأبعاد</td>
+<td>ما يلتقطه المؤشر أولًا على الجدار: <strong>محاور الجدار</strong> أو <strong>أوجه الجدار</strong></td>
+</tr>
+<tr>
+<td><strong>التفاصيل</strong> (عرض تفصيلي مستدعى)</td>
+<td>مقياس العرض التفصيلي الجديد</td>
+</tr>
+<tr>
+<td><strong>خط حد المساحة</strong></td>
+<td><strong>خط</strong> أو <strong>اختيار الخطوط</strong>؛ ومع <strong>اختيار الخطوط</strong>، <strong>تطبيق قواعد المساحة</strong> أو <strong>إزاحة</strong></td>
+</tr>
+<tr>
+<td>الأدوات التي ترسم خطوطًا</td>
+<td><strong>متعامد (Shift)</strong>: مقاطع أفقية ورأسية فقط؛ <strong>الالتقاط</strong>: الالتقاط إلى نقاط النهاية ونقاط المنتصف والتقاطعات</td>
+</tr>
+</tbody>
+</table>
+<p>حين يكون <strong>متعامد (Shift)</strong> غير مفعّل، يعطي الضغط المستمر على <span class="keys"><kbd class="key-shift">Shift</kbd></span> أثناء الرسم القيد نفسه؛
+وحين يكون مفعّلًا، يحرره <span class="keys"><kbd class="key-shift">Shift</kbd></span>.</p>
+<h2 id="properties">الخصائص</h2>
+<p>تعرض لوحة <strong>الخصائص</strong> معاملات ما تعمل عليه وتغيّرها. ومن الأعلى إلى الأسفل فيها:</p>
+<ul>
+<li><strong>محدد النوع</strong>: العائلة بأحرف صغيرة والنوع تحتها. انقره لاختيار نوع آخر: تغيّر العناصر المحددة
+  نوعها، أو، ما دامت هناك أداة نشطة، يأخذ العنصر التالي ذلك النوع؛</li>
+<li>صف فيه ما تعرضه اللوحة، مثلًا <strong>الجدران (1)</strong> أو <strong>جدار جديد</strong>، وزر <strong>تحرير النوع</strong> الذي يفتح
+  خصائص النوع؛</li>
+<li>المعاملات، في مجموعات (<strong>القيود</strong>، <strong>الرسومات</strong>، <strong>بيانات التعريف</strong>…). انقر اسم مجموعة لطيّها.
+  والقيم الرمادية للقراءة فقط: فهي محسوبة من النموذج؛</li>
+<li>زر <strong>تطبيق</strong>، الذي يؤكد القيمة التي تكتبها. ويقوم <span class="keys"><kbd class="key-enter">Enter</kbd></span> بالشيء نفسه.</li>
+</ul>
+<p>يعتمد ما تعرضه اللوحة على الحالة:</p>
+<table>
+<thead>
+<tr>
+<th>الحالة</th>
+<th>تعرض اللوحة</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>لا شيء محدد، ولا أداة</td>
+<td>خصائص العرض النشط (المقياس، مستوى التفاصيل، النمط المرئي…)، أو العرض الذي نُقر في متصفح المشروع</td>
+</tr>
+<tr>
+<td>أداة نشطة</td>
+<td>نوع العنصر التالي، مثل <strong>جدار جديد</strong>، <strong>باب جديد</strong>…</td>
+</tr>
+<tr>
+<td>عنصر واحد محدد</td>
+<td>نوعه ومعاملات مثيله</td>
+</tr>
+<tr>
+<td>عدة عناصر من فئة واحدة</td>
+<td>عددها، مثل <strong>الجدران (3)</strong></td>
+</tr>
+<tr>
+<td>عناصر من فئات مختلفة</td>
+<td><strong>تحديد متعدد</strong>، <strong>مشتركة (5)</strong>، وعدد كل فئة، مثل <strong>3 × الجدران</strong></td>
+</tr>
+</tbody>
+</table>
+<p>تُكتب الأطوال وتُقرأ بوحدات المشروع (المليمترات في مشروع جديد). ويمكنك كتابة قيمة مع وحدتها،
+مثلًا <code>2.7m</code>.</p>
+<p>لإغلاق اللوحة انقر <strong>×</strong> على عنوانها؛ ولإظهارها مجددًا استخدم <strong>العرض ▸ النوافذ ▸ واجهة
+المستخدم ▸ الخصائص</strong> أو زر <strong>الخصائص</strong> في التبويب السياقي.</p>
+<h2 id="project-browser">متصفح المشروع</h2>
+<p>يسرد <strong>متصفح المشروع</strong> عروض المشروع وجداوله ولوحاته وعائلاته في شجرة. ويحمل عنوانه اسم المشروع.
+انقر <strong>⊟</strong> أو <strong>⊞</strong> لطيّ فرع أو بسطه.</p>
+<p><img alt="القائمة السياقية لعرض في متصفح المشروع" src="../assets/screens/browser-menu.png"/></p>
+<table>
+<thead>
+<tr>
+<th>الفرع</th>
+<th>ما يحتويه</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>العروض (الكل) ▸ مساقط الطوابق</strong></td>
+<td>مساقط كل المناسيب، من الأدنى، والعروض التفصيلية المستدعاة المرسومة في المساقط</td>
+</tr>
+<tr>
+<td><strong>العروض (الكل) ▸ مخططات المساحات (…)</strong></td>
+<td>مخططات المساحات، فرع لكل مخطط مساحات</td>
+</tr>
+<tr>
+<td><strong>العروض (الكل) ▸ المقاطع</strong>، <strong>الواجهات</strong></td>
+<td>المقاطع والواجهات</td>
+</tr>
+<tr>
+<td><strong>العروض (الكل) ▸ عروض تفصيلية</strong></td>
+<td>العروض التفصيلية المستدعاة المرسومة في المقاطع</td>
+</tr>
+<tr>
+<td><strong>العروض (الكل) ▸ العروض ثلاثية الأبعاد</strong></td>
+<td><strong>{3D}</strong>، العرض ثلاثي الأبعاد الافتراضي، والعروض ثلاثية الأبعاد المحفوظة</td>
+</tr>
+<tr>
+<td><strong>العروض (الكل) ▸ عروض الرسم</strong></td>
+<td>عروض الرسم</td>
+</tr>
+<tr>
+<td><strong>الجداول/الكميات</strong></td>
+<td>جداول المشروع، ثم الجداول المعرّفة مسبقًا</td>
+</tr>
+<tr>
+<td><strong>اللوحات (الكل)</strong></td>
+<td>اللوحات، بصيغة الرقم - الاسم</td>
+</tr>
+<tr>
+<td><strong>العائلات</strong></td>
+<td>أنواع المشروع، حسب الفئة: الجدران والأبواب والنوافذ والأرضيات والأسقف والمكونات وغيرها</td>
+</tr>
+</tbody>
+</table>
+<p>لا تظهر فروع مخططات المساحات والمقاطع والواجهات والعروض التفصيلية وعروض الرسم إلا حين يكون فيها
+شيء. ويُكتب العرض النشط بخط عريض.</p>
+<p>مع العرض:</p>
+<ul>
+<li><strong>النقرة</strong> تعرض خصائصه في لوحة الخصائص، دون فتحه؛</li>
+<li><strong>النقرة المزدوجة</strong> تفتحه؛</li>
+<li><strong>النقر بالزر الأيمن</strong> يفتح قائمته: <strong>فتح</strong>، <strong>إغلاق</strong> (يغلق نوافذه)، <strong>تكرار العرض ▸</strong>
+  (<strong>تكرار</strong>، <strong>تكرار مع التفاصيل</strong>)، <strong>تطبيق قالب العرض…</strong>، <strong>إنشاء قالب من
+  العرض…</strong>، <strong>حذف</strong>، <strong>إعادة تسمية…</strong>، <strong>الخصائص</strong>.</li>
+</ul>
+<p>وفي قائمة اللوحة يوجد <strong>تطبيق قالب العرض على كل العروض…</strong> بدلًا من عنصري القوالب، ولا يوجد
+<strong>تكرار العرض</strong>. ولا يمكن حذف <strong>{3D}</strong> ولا إعادة تسميته.</p>
+<p>مع جدول من جداول المشروع، تحدده النقرة، وتفتحه النقرة المزدوجة، وتحتوي قائمة الزر الأيمن على
+<strong>فتح</strong> و<strong>خصائص الجدول…</strong> و<strong>حذف</strong>. ويُفتح الجدول المعرّف مسبقًا بنقرة.</p>
+<p>ومع نوع، تحت <strong>العائلات</strong>، تفتح النقرة المزدوجة خصائص نوعه؛ وتحتوي قائمة الزر الأيمن على
+<strong>خصائص النوع</strong> و<strong>تكرار…</strong> و<strong>إنشاء مثيل</strong> (يبدأ الأداة التي تضعه، بذلك النوع) و<strong>حذف</strong>.</p>
+<h2 id="drawing-area-and-view-windows">منطقة الرسم ونوافذ العروض</h2>
+<p>كل عرض تفتحه هو نافذة في منطقة الرسم. والعرض الذي يُفتح مرة أخرى يأتي إلى المقدمة؛ وتبقى نافذة
+واحدة على الأقل مفتوحة دائمًا. ويرتبها <strong>العرض ▸ النوافذ</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>الزر</th>
+<th>ما يفعله</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>تبديل النوافذ</strong></td>
+<td>يسرد النوافذ المفتوحة؛ وتكون النشطة مؤشَّرًا عليها</td>
+</tr>
+<tr>
+<td><strong>نسخ النافذة</strong></td>
+<td>يفتح نافذة ثانية على العرض النشط، بتكبيرها الخاص</td>
+</tr>
+<tr>
+<td><strong>تتالي</strong></td>
+<td>نوافذ متراكبة، لكل منها شريط عنوانها: اسحب العنوان لتحريك النافذة، وحوافها لتغيير حجمها</td>
+</tr>
+<tr>
+<td><strong>تجانب</strong></td>
+<td>كل النوافذ جنبًا إلى جنب، لكل منها شريط عنوان؛ وللنشطة عنوان وإطار أزرقان</td>
+</tr>
+<tr>
+<td><strong>تكبير</strong></td>
+<td>تملأ النافذة النشطة منطقة الرسم؛ وتنتظر الأخرى تحتها</td>
+</tr>
+<tr>
+<td><strong>إغلاق المخفية</strong></td>
+<td>يغلق كل النوافذ ما عدا النشطة</td>
+</tr>
+<tr>
+<td><strong>واجهة المستخدم</strong></td>
+<td>يُظهر أو يخفي <strong>متصفح المشروع</strong>، و<strong>الخصائص</strong>، و<strong>سطر الأوامر</strong>، و<strong>شريط الحالة</strong>، و<strong>شريط التنقل</strong></td>
+</tr>
+</tbody>
+</table>
+<p><img alt="ثلاثة عروض متجانبة" src="../assets/screens/tiled-windows.png"/></p>
+<p>انقر في نافذة لجعلها نشطة: تعمل الأدوات في النافذة النشطة، والنوافذ الأخرى تعرض النموذج فقط. وفي
+<strong>تجانب</strong> و<strong>تتالي</strong> يغلق <strong>×</strong> على شريط عنوان النافذة تلك النافذة.</p>
+<h3 id="view-control-bar">شريط التحكم بالعرض</h3>
+<p>في أسفل كل مسقط ومقطع وواجهة وعرض تفصيلي مستدعى وعرض رسم:</p>
+<table>
+<thead>
+<tr>
+<th>عنصر التحكم</th>
+<th>ما يفعله</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>المقياس، مثلًا <strong>1 : 100</strong></td>
+<td>يفتح قائمة المقاييس؛ وتحت <strong>مخصص</strong> اكتب مقياسًا آخر، مثل <code>1 : 75</code>، واضغط <span class="keys"><kbd class="key-enter">Enter</kbd></span></td>
+</tr>
+<tr>
+<td><strong>مستوى التفاصيل</strong></td>
+<td><strong>منخفض</strong> أو <strong>متوسط</strong> أو <strong>عالٍ</strong></td>
+</tr>
+<tr>
+<td><strong>اقتصاص العرض</strong></td>
+<td>يقتص العرض إلى منطقة الاقتصاص الخاصة به، أو يوقف الاقتصاص؛ وتدل نقطة زرقاء على أنه مفعّل</td>
+</tr>
+<tr>
+<td><strong>إظهار منطقة الاقتصاص</strong></td>
+<td>يُظهر إطار منطقة الاقتصاص أو يخفيه؛ وتدل نقطة زرقاء على أنه مفعّل</td>
+</tr>
+<tr>
+<td><strong>إخفاء/عزل مؤقت</strong></td>
+<td>يخفي عناصر أو فئات أو يعزلها في هذا العرض إلى أن تعيد ضبطه؛ ويكون مؤطرًا ما دام نشطًا</td>
+</tr>
+</tbody>
+</table>
+<p>في العرض ثلاثي الأبعاد يحتوي الشريط على <strong>النمط المرئي</strong> (<strong>إطار سلكي</strong>، <strong>خط مخفي</strong>، <strong>مظلل</strong>،
+<strong>مظلل مع الحواف</strong>، <strong>ألوان متسقة</strong>) و<strong>إخفاء/عزل مؤقت</strong>. أما اللوحة فليس لها شريط تحكم بالعرض:
+فلعروضها مقاييسها الخاصة.</p>
+<p><img alt="العرض ثلاثي الأبعاد بنمط خط مخفي والمسقط بمقياس 1 : 50" src="../assets/screens/visual-styles.png"/></p>
+<h3 id="navigation-bar">شريط التنقل</h3>
+<p>على الحافة اليسرى للعرض النشط (وعلى الحافة اليمنى في اللغات الأخرى)، ثلاثة أزرار: <strong>تكبير/تصغير
+للملاءمة</strong> (مثل <span class="keys"><kbd class="key-home">Home</kbd></span>)، و<strong>تكبير</strong>، و<strong>تصغير</strong>.</p>
+<h3 id="moving-around-in-the-views">التنقل في العروض</h3>
+<table>
+<thead>
+<tr>
+<th>في المساقط والمقاطع والواجهات واللوحات</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>عجلة الفأرة</td>
+<td>تكبير وتصغير عند المؤشر</td>
+</tr>
+<tr>
+<td>السحب بالزر الأوسط</td>
+<td>تحريك العرض</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-shift">Shift</kbd></span> + السحب بالزر الأيسر</td>
+<td>تحريك العرض، ما دامت لا توجد أداة نشطة</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-home">Home</kbd></span></td>
+<td>يضع العرض كله داخل النافذة</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>في العروض ثلاثية الأبعاد</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>السحب بالزر الأيسر (أو الأيمن)</td>
+<td>دوران مداري حول النموذج</td>
+</tr>
+<tr>
+<td>السحب بالزر الأوسط، أو <span class="keys"><kbd class="key-shift">Shift</kbd></span> + الزر الأيسر</td>
+<td>تحريك العرض</td>
+</tr>
+<tr>
+<td>عجلة الفأرة</td>
+<td>تكبير وتصغير</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-home">Home</kbd></span></td>
+<td>يضع النموذج كله داخل النافذة</td>
+</tr>
+</tbody>
+</table>
+<p>يُظهر حامل ثلاثي صغير في الزاوية السفلية من العرض ثلاثي الأبعاد اتجاهات المحاور: X أحمر، وY
+أخضر، وZ أزرق. ويتذكر العرض ثلاثي الأبعاد المحفوظ الموضع الذي تركته فيه.</p>
+<h3 id="the-context-menu-of-a-view">القائمة السياقية للعرض</h3>
+<p>انقر بالزر الأيمن في عرض ما دامت لا توجد أداة نشطة. إن كان المؤشر على عنصر غير محدد، يُحدَّد
+العنصر أولًا. وفي القائمة:</p>
+<ul>
+<li><strong>إلغاء</strong>: يمسح التحديد؛</li>
+<li><strong>إخفاء في العرض ▸ العناصر</strong> أو <strong>▸ الفئة</strong>: يخفي العناصر المحددة، أو فئاتها بالكامل، في هذا
+  العرض؛</li>
+<li><strong>تجاوز الرسومات في العرض ▸ حسب الفئة…</strong>: يفتح <strong>الرؤية/الرسومات</strong> على فئات التحديد؛</li>
+<li><strong>الرؤية/الرسومات…</strong>.</li>
+</ul>
+<p>ما دامت هناك أداة نشطة، يفعل النقر بالزر الأيمن ما يفعله <span class="keys"><kbd class="key-escape">Esc</kbd></span>: يلغي الخطوة الجارية.</p>
+<h2 id="command-line">سطر الأوامر</h2>
+<p>تحت منطقة الرسم، يعرض سطر الأوامر سجل ما تم تنفيذه، والأحدث في الأسفل: الأوامر المنفذة، بالرمادي
+بعد <code>&gt;</code>، ونتائجها، والأخطاء بالأحمر. وفي صفه الأخير تقول المطالبة ما تنتظره الأداة النشطة، مثلًا
+<code>WALL  next point [Esc to finish]:</code>، أو <code>Command:</code> حين لا تكون هناك أداة نشطة.</p>
+<p>لا تحتاج إلى النقر عليه: فكل ما تكتبه ما دام لا يُحرَّر أي حقل يذهب إلى سطر الأوامر. ينفذ
+<span class="keys"><kbd class="key-enter">Enter</kbd></span> السطر؛ ويستعيد <span class="keys"><kbd class="key-arrow-up">Up</kbd></span> و<span class="keys"><kbd class="key-arrow-down">Down</kbd></span> الأسطر المكتوبة من قبل. ويصف <a href="../command-line-and-mcp/">فصل سطر
+الأوامر</a> الأوامر.</p>
+<h2 id="status-bar">شريط الحالة</h2>
+<p>على اليمين، يعرض شريط الحالة:</p>
+<ul>
+<li>ما دامت هناك أداة نشطة، ما تنتظره الأداة (المطالبة نفسها التي في سطر الأوامر)؛</li>
+<li>دون أداة، فئة العنصر الواقع تحت المؤشر ونوعه، مثل <strong>الجدران :
+  جدار خارجي - طوب طيني 300 + عزل خارجي</strong>؛</li>
+<li>وفي غير ذلك تذكيرًا بالفأرة: <strong>نقرة: تحديد · Ctrl: إضافة · العجلة: تكبير/تصغير · الزر الأوسط: تحريك</strong> في
+  المساقط، و<strong>السحب: دوران مداري · Shift/الزر الأوسط: تحريك العرض · العجلة: تكبير/تصغير</strong> في العرض ثلاثي الأبعاد.</li>
+</ul>
+<p>على اليسار، قمع وعدد العناصر المحددة؛ وفي المسقط أيضًا إحداثيات المؤشر بالأمتار.</p>
+<h2 id="selecting-in-short">التحديد باختصار</h2>
+<p>سيصف <a href="../selection-and-modify/">فصل التحديد والتعديل</a> التحديد بالكامل. أما الأساسيات:</p>
+<ul>
+<li>انقر عنصرًا لتحديده؛ وانقر نقطة فارغة لمسح التحديد؛</li>
+<li><span class="keys"><kbd class="key-control">Ctrl</kbd></span> + نقرة يضيف عنصرًا إلى التحديد، أو يزيله إن كان محددًا من قبل؛</li>
+<li>اسحب من اليسار إلى اليمين لتحديد ما يقع داخل المستطيل بالكامل، ومن اليمين إلى اليسار لتحديد ما
+  يلمسه؛</li>
+<li>اسحب عنصرًا محددًا لنقله؛</li>
+<li>يحدد <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-a">A</kbd></span> عناصر منسوب المسقط المفتوح، أو النموذج كله في العرض ثلاثي الأبعاد؛
+  ويحذف <span class="keys"><kbd class="key-delete">Del</kbd></span> التحديد؛ ويمسحه <span class="keys"><kbd class="key-escape">Esc</kbd></span>.</li>
+</ul>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  عد إلى الأعلى
+</button>
+</main>
+<footer class="md-footer">
+<nav aria-label="هامش سفلي" class="md-footer__inner md-grid">
+<a aria-label="السابقة: البدء" class="md-footer__link md-footer__link--prev" href="../getting-started/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                السابقة
+              </span>
+<div class="md-ellipsis">
+                البدء
+              </div>
+</div>
+</a>
+<a aria-label="التالية: المشاريع والملفات" class="md-footer__link md-footer__link--next" href="../projects-and-files/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                التالية
+              </span>
+<div class="md-ellipsis">
+                المشاريع والملفات
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Copyright © 2026 Antonio Sanna · BIMopen
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.footer", "navigation.tracking", "toc.follow", "content.code.copy", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u062a\u0645 \u0627\u0644\u0646\u0633\u062e \u0627\u0644\u0649 \u0627\u0644\u062d\u0627\u0641\u0638\u0629", "clipboard.copy": "\u0646\u0633\u062e \u0625\u0644\u0649 \u0627\u0644\u062d\u0627\u0641\u0638\u0629", "search.result.more.one": "\u0623\u0643\u062b\u0631 \u0645\u0646 1 \u0641\u064a \u0647\u0630\u0647 \u0627\u0644\u0635\u0641\u062d\u0629", "search.result.more.other": "\u0623\u0643\u062b\u0631 \u0645\u0646 # \u0641\u064a \u0647\u0630\u0647 \u0627\u0644\u0635\u0641\u062d\u0629", "search.result.none": "\u0644\u0627 \u062a\u0648\u062c\u062f \u0646\u062a\u0627\u0626\u062c", "search.result.one": "\u0646\u062a\u0627\u0626\u062c \u0627\u0644\u0628\u062d\u062b \u0645\u0633\u062a\u0646\u062f \u0648\u0627\u062d\u062f", "search.result.other": "\u0646\u062a\u0627\u0626\u062c \u0627\u0644\u0628\u062d\u062b # \u0645\u0633\u062a\u0646\u062f\u0627\u062a", "search.result.placeholder": "\u0627\u0643\u062a\u0628 \u0644\u0628\u062f\u0621 \u0627\u0644\u0628\u062d\u062b", "search.result.term.missing": "\u0645\u0641\u0642\u0648\u062f", "select.version": "\u0625\u062e\u062a\u0631 \u0627\u0644\u0625\u0635\u062f\u0627\u0631"}}</script>
+<script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,766 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="دليل مستخدم BIMopen، نمذجة BIM مفتوحة المصدر" name="description"/>
+<meta content="Antonio Sanna" name="author"/>
+<link href="https://atsanna.github.io/bimopen-site/manual/ar/getting-started/" rel="canonical"/>
+<link href=".." rel="prev"/>
+<link href="../interface/" rel="next"/>
+<link href="../assets/images/logo.svg" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.9" name="generator"/>
+<title>البدء - دليل مستخدم BIMopen</title>
+<link href="../assets/stylesheets/main.4af4bdda.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link href="../assets/css/theme.css" rel="stylesheet"/>
+<link href="../assets/css/theme_dark_mode.css" rel="stylesheet"/>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="bimopen" dir="rtl">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#getting-started">
+          انتقل إلى المحتوى
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="عنوان العارضة" class="md-header__inner md-grid">
+<a aria-label="دليل مستخدم BIMopen" class="md-header__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/?lang=ar" title="دليل مستخدم BIMopen">
+<img alt="logo" src="../assets/images/logo.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            دليل مستخدم BIMopen
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              البدء
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="التبديل إلى الوضع الداكن" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="custom" data-md-color-scheme="bimopen" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="التبديل إلى الوضع الداكن">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="التبديل إلى الوضع الفاتح" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="التبديل إلى الوضع الفاتح">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<div class="md-header__option">
+<div class="md-select">
+<button aria-label="إختر اللغة" class="md-header__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"></path></svg>
+</button>
+<div class="md-select__inner">
+<ul class="md-select__list">
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/en/" hreflang="en">
+              English
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/it/" hreflang="it">
+              Italiano
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/de/" hreflang="de">
+              Deutsch
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/fr/" hreflang="fr">
+              Français
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/es/" hreflang="es">
+              Español
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/ar/" hreflang="ar">
+              العربية
+            </a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="بحث" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="بحث" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="إبحث" class="md-search__options">
+<button aria-label="مسح كلي" class="md-search__icon md-icon" tabindex="-1" title="مسح كلي" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            بدء البحث
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="تصفح" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="دليل مستخدم BIMopen" class="md-nav__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/?lang=ar" title="دليل مستخدم BIMopen">
+<img alt="logo" src="../assets/images/logo.svg"/>
+</a>
+    دليل مستخدم BIMopen
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
+<span class="md-ellipsis">
+    الرئيسية
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    البدء
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    البدء
+    
+  </span>
+</a>
+<nav aria-label="جدول المحتويات" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      جدول المحتويات
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#running-bimopen-on-the-desktop">
+<span class="md-ellipsis">
+      تشغيل BIMopen على سطح المكتب
+    </span>
+</a>
+<nav aria-label="تشغيل BIMopen على سطح المكتب" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#language-and-theme">
+<span class="md-ellipsis">
+      اللغة والسمة
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#running-bimopen-in-the-browser">
+<span class="md-ellipsis">
+      تشغيل BIMopen في المتصفح
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-sample-project">
+<span class="md-ellipsis">
+      المشروع النموذجي
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#your-first-house">
+<span class="md-ellipsis">
+      منزلك الأول
+    </span>
+</a>
+<nav aria-label="منزلك الأول" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-start-a-new-project">
+<span class="md-ellipsis">
+      1. ابدأ مشروعًا جديدًا
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-open-the-ground-floor-plan">
+<span class="md-ellipsis">
+      2. افتح مسقط الطابق الأرضي
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-draw-four-walls">
+<span class="md-ellipsis">
+      3. ارسم أربعة جدران
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-add-a-door-and-a-window">
+<span class="md-ellipsis">
+      4. أضف بابًا ونافذة
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5-add-a-floor-and-a-roof">
+<span class="md-ellipsis">
+      5. أضف أرضية وسقفًا
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#6-look-at-it-in-3d">
+<span class="md-ellipsis">
+      6. شاهده بالأبعاد الثلاثة
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#7-put-the-plan-on-a-sheet">
+<span class="md-ellipsis">
+      7. ضع المسقط على لوحة
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#8-undo-redo-and-save">
+<span class="md-ellipsis">
+      8. التراجع والإعادة والحفظ
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-next">
+<span class="md-ellipsis">
+      ماذا بعد
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../interface/">
+<span class="md-ellipsis">
+    الواجهة
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../projects-and-files/">
+<span class="md-ellipsis">
+    المشاريع والملفات
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../selection-and-modify/">
+<span class="md-ellipsis">
+    التحديد والتعديل
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../walls-doors-windows/">
+<span class="md-ellipsis">
+    الجدران والأبواب والنوافذ
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../floors-roofs-stairs/">
+<span class="md-ellipsis">
+    الأرضيات والأسقف والسلالم والمكونات
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../views-and-graphics/">
+<span class="md-ellipsis">
+    المناظر والرسومات
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../annotation/">
+<span class="md-ellipsis">
+    التعليقات التوضيحية والتفاصيل ثنائية الأبعاد
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../documentation/">
+<span class="md-ellipsis">
+    اللوحات والجداول والطباعة
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../command-line-and-mcp/">
+<span class="md-ellipsis">
+    سطر الأوامر و MCP
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../keyboard-shortcuts/">
+<span class="md-ellipsis">
+    اختصارات لوحة المفاتيح
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../troubleshooting/">
+<span class="md-ellipsis">
+    استكشاف الأخطاء وإصلاحها
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://atsanna.github.io/bimopen-site/manual/ar/pdf/bimopen-manual-ar.pdf">
+<span class="md-ellipsis">
+    PDF
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="جدول المحتويات" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      جدول المحتويات
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#running-bimopen-on-the-desktop">
+<span class="md-ellipsis">
+      تشغيل BIMopen على سطح المكتب
+    </span>
+</a>
+<nav aria-label="تشغيل BIMopen على سطح المكتب" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#language-and-theme">
+<span class="md-ellipsis">
+      اللغة والسمة
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#running-bimopen-in-the-browser">
+<span class="md-ellipsis">
+      تشغيل BIMopen في المتصفح
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-sample-project">
+<span class="md-ellipsis">
+      المشروع النموذجي
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#your-first-house">
+<span class="md-ellipsis">
+      منزلك الأول
+    </span>
+</a>
+<nav aria-label="منزلك الأول" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-start-a-new-project">
+<span class="md-ellipsis">
+      1. ابدأ مشروعًا جديدًا
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-open-the-ground-floor-plan">
+<span class="md-ellipsis">
+      2. افتح مسقط الطابق الأرضي
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-draw-four-walls">
+<span class="md-ellipsis">
+      3. ارسم أربعة جدران
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-add-a-door-and-a-window">
+<span class="md-ellipsis">
+      4. أضف بابًا ونافذة
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5-add-a-floor-and-a-roof">
+<span class="md-ellipsis">
+      5. أضف أرضية وسقفًا
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#6-look-at-it-in-3d">
+<span class="md-ellipsis">
+      6. شاهده بالأبعاد الثلاثة
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#7-put-the-plan-on-a-sheet">
+<span class="md-ellipsis">
+      7. ضع المسقط على لوحة
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#8-undo-redo-and-save">
+<span class="md-ellipsis">
+      8. التراجع والإعادة والحفظ
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-next">
+<span class="md-ellipsis">
+      ماذا بعد
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset"><a class="md-content__icon pdf-download-btn" download href="../pdf/bimopen-manual-ar.pdf" title="Download"><i class="fa fas fa-download"></i><small> PDF</small></a>
+<h1 id="getting-started">البدء</h1>
+<p>يبيّن هذا الفصل كيفية تشغيل BIMopen على سطح المكتب وفي المتصفح، وما يحتويه المشروع النموذجي،
+وكيفية نمذجة أول منزل صغير: أربعة جدران وباب ونافذة وأرضية وسقف وعرض ثلاثي الأبعاد ولوحة عليها
+المسقط. يستغرق ذلك نحو عشر دقائق.</p>
+<h2 id="running-bimopen-on-the-desktop">تشغيل BIMopen على سطح المكتب</h2>
+<p>يُبنى BIMopen من شفرته المصدرية باستخدام Rust، الإصدار 1.90 أو أحدث. وعلى Linux تحتاج الواجهة
+الرسومية أيضًا إلى ملفات التطوير الخاصة بـ xkbcommon وWayland وGTK 3.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>libxkbcommon-dev<span class="w"> </span>libwayland-dev<span class="w"> </span>libgtk-3-dev<span class="w">   </span><span class="c1"># Debian, Ubuntu</span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>cargo<span class="w"> </span>run<span class="w"> </span>--release<span class="w"> </span>-p<span class="w"> </span>bimopen<span class="w"> </span>--<span class="w"> </span>--sample<span class="w">                             </span><span class="c1"># opens the sample house</span>
+</code></pre></div>
+<p>اسم البرنامج <code>bimopen</code>. وهو يقبل ملفًا لفتحه وخيارًا واحدًا:</p>
+<table>
+<thead>
+<tr>
+<th>الأمر</th>
+<th>ما يفتحه</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bimopen</code></td>
+<td>مشروعًا جديدًا فارغًا</td>
+</tr>
+<tr>
+<td><code>bimopen --sample</code></td>
+<td>المنزل النموذجي</td>
+</tr>
+<tr>
+<td><code>bimopen house.bimopen</code></td>
+<td>المشروع المحفوظ في <code>house.bimopen</code></td>
+</tr>
+</tbody>
+</table>
+<p>يمكنك أيضًا فتح مشروع بسحب ملف <code>.bimopen</code> من مدير الملفات إلى النافذة.</p>
+<h3 id="language-and-theme">اللغة والسمة</h3>
+<p>في المرة الأولى يتحدث BIMopen لغة نظام التشغيل إن كانت إحدى لغاته الست (الإيطالية والإنجليزية
+والألمانية والفرنسية والإسبانية والعربية)، وإلا فالإنجليزية. لتغييرها استخدم قائمة اللغة في
+الطرف الأيسر من شريط العنوان (الكرة الأرضية مع اسم اللغة)، أو <strong>قائمة التطبيق ▸ خيارات ▸ اللغة</strong>.
+تتغير الواجهة فورًا.</p>
+<p>وفي <strong>خيارات</strong> تختار أيضًا <strong>السمة</strong>، <strong>فاتح</strong> أو <strong>داكن</strong>، وما إذا كانت خلفية العروض معكوسة
+(<strong>عكس لون الخلفية</strong>: عروض داكنة بخطوط فاتحة). واختيار السمة الداكنة يعكس الخلفية أيضًا، ويمكنك
+إلغاء ذلك. يتذكر BIMopen اللغة والسمة للمرة التالية.</p>
+<h2 id="running-bimopen-in-the-browser">تشغيل BIMopen في المتصفح</h2>
+<p>نسخة الويب هي البرنامج نفسه مُصرَّفًا للمتصفح. افتح
+<a href="https://atsanna.github.io/bimopen-site/app/">atsanna.github.io/bimopen-site/app/</a>: يبدأ بالمنزل
+النموذجي. لا حاجة إلى تثبيت أي شيء، ويبقى المشروع في متصفحك: فهو لا يُرسَل إلى أي مكان.</p>
+<p>يقبل العنوان الخيارات التالية، ويمكن الجمع بينها بـ <code>&amp;</code>:</p>
+<table>
+<thead>
+<tr>
+<th>العنوان</th>
+<th>الأثر</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>app/?lang=de</code></td>
+<td>يفتح بالألمانية في هذه الزيارة (<code>it</code>، <code>en</code>، <code>de</code>، <code>fr</code>، <code>es</code>، <code>ar</code>)</td>
+</tr>
+<tr>
+<td><code>app/?empty</code></td>
+<td>يبدأ بمشروع جديد فارغ بدلًا من النموذج</td>
+</tr>
+<tr>
+<td><code>app/?webgl</code></td>
+<td>يرسم باستخدام WebGL2 حتى حيث يتوفر WebGPU</td>
+</tr>
+</tbody>
+</table>
+<p>يجب أن يدعم المتصفح WebGPU أو WebGL2. وفي المتصفح تعمل بعض الأمور بشكل مختلف:</p>
+<ul>
+<li>لا يستطيع <strong>فتح…</strong> عرض نافذة حوار لاختيار الملف: اسحب ملف <code>.bimopen</code> إلى الصفحة لفتحه؛</li>
+<li><strong>حفظ</strong> وعمليات التصدير تنزّل الملف باسم المشروع.</li>
+</ul>
+<p>لبناء نسخة الويب بنفسك:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>cargo<span class="w"> </span>xtask<span class="w"> </span>web<span class="w">                              </span><span class="c1"># builds dist/web</span>
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>python3<span class="w"> </span>-m<span class="w"> </span>http.server<span class="w"> </span><span class="m">8080</span><span class="w"> </span>-d<span class="w"> </span>dist/web<span class="w">      </span><span class="c1"># then open http://localhost:8080</span>
+</code></pre></div>
+<p>يحتاج <code>cargo xtask web</code> إلى الهدف <code>wasm32-unknown-unknown</code> في Rust وإلى الأمر <code>wasm-bindgen</code>
+بالإصدار المكتوب في <code>Cargo.lock</code>؛ ومع تثبيت <code>wasm-opt</code> من binaryen تصبح النتيجة أصغر حجمًا.</p>
+<h2 id="the-sample-project">المشروع النموذجي</h2>
+<p>يعرض المنزل النموذجي معظم ما يستطيع BIMopen فعله. افتحه عبر <strong>قائمة التطبيق ▸ مشروع نموذجي</strong>،
+أو بالأمر <code>bimopen --sample</code>، أو بكتابة <code>sample</code> في سطر الأوامر.</p>
+<p><img alt="قائمة التطبيق" src="../assets/screens/app-menu.png"/></p>
+<p>يحتوي على:</p>
+<ul>
+<li>منسوبين، لكل منهما مسقطه، وخمسة خطوط شبكة محاور؛</li>
+<li>خمسة عشر جدارًا من أربعة أنواع، بطبقات، متصلة عند الزوايا؛</li>
+<li>ستة أبواب واثنتي عشرة نافذة، موسومة في المساقط؛</li>
+<li>أرضيتين، وسقفًا مائلًا، ودرجًا بدرابزينه، وواجهة ستارية لواجهة محل؛</li>
+<li>أثاثًا وأدوات صحية، وثماني غرف ملونة حسب الاستخدام، مع وسيلة إيضاح؛</li>
+<li>مقطعًا، وواجهة، ومخطط مساحات، وعرضًا ثلاثي الأبعاد محفوظًا، وعرض رسم فيه تفصيل جدار؛</li>
+<li>أبعادًا، وملاحظات نصية، وجداول الجدران والأبواب والنوافذ والغرف والمواد.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>النموذج مكان جيد لتجربة أداة قبل استخدامها في مشروعك: فنموذج جديد على بعد نقرة واحدة
+دائمًا، ولا يُحفظ أي شيء تغيّره فيه ما لم تحفظه بنفسك.</p>
+</div>
+<h2 id="your-first-house">منزلك الأول</h2>
+<p>تبدأ الخطوات التالية من مشروع فارغ وتنتهي بلوحة. تسمّي كل خطوة الزر الذي يجب النقر عليه؛
+ويشرح <a href="../interface/">فصل الواجهة</a> كل جزء من النافذة.</p>
+<h3 id="1-start-a-new-project">1. ابدأ مشروعًا جديدًا</h3>
+<ol>
+<li>انقر الزر الأزرق <strong>B</strong> في الطرف الأيمن من شريط العنوان: تُفتح <strong>قائمة التطبيق</strong>.</li>
+<li>انقر <strong>جديد</strong>.</li>
+</ol>
+<p>للمشروع الجديد منسوبان، <strong>الطابق الأرضي</strong> و<strong>الطابق الأول</strong>، ومسقط لكل منهما، والعرض ثلاثي
+الأبعاد الافتراضي. لا جدران فيه بعد. أما أنواع الجدران والأبواب والنوافذ والأرضيات والأسقف فجاهزة
+للاستخدام.</p>
+<h3 id="2-open-the-ground-floor-plan">2. افتح مسقط الطابق الأرضي</h3>
+<p>في <strong>متصفح المشروع</strong>، تحت <strong>العروض (الكل) ▸ مساقط الطوابق</strong>، انقر نقرًا مزدوجًا على <strong>الطابق
+الأرضي</strong>. يُفتح المسقط في منطقة الرسم ويعرض شريط العنوان <strong>المسقط: الطابق الأرضي</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>النقرة الواحدة على عرض في متصفح المشروع تعرض خصائصه في لوحة <strong>الخصائص</strong> دون فتحه. أما النقر
+المزدوج فيفتحه.</p>
+</div>
+<h3 id="3-draw-four-walls">3. ارسم أربعة جدران</h3>
+<ol>
+<li>انقر <strong>الرئيسية ▸ بناء ▸ جدار</strong>. ينتقل الشريط إلى التبويب السياقي <strong>تحرير | وضع
+   جدار</strong>، ويعرض شريط الخيارات إعدادات الجدار، وتعرض <strong>الخصائص</strong> نوع الجدار التالي،
+   <strong>جدار خارجي - طوب طيني 300 + عزل خارجي</strong>.</li>
+<li>في شريط الخيارات، فعّل <strong>متعامد (Shift)</strong>: تبقى الجدران أفقية أو رأسية.</li>
+<li>انقر في المسقط حيث تقع الزاوية الأولى. يطلب سطر الأوامر النقطة التالية:
+   <code>WALL  next point [Esc to finish]:</code>.</li>
+<li>انقر الزوايا الثانية والثالثة والرابعة. أثناء تحريك الفأرة يظهر طول الجدار الجاري رسمه وزاويته
+   بجانبه.</li>
+<li>انقر الزاوية الأولى مرة أخرى: تتصل الجدران الأربعة عند الزوايا.</li>
+<li>اضغط <span class="keys"><kbd class="key-escape">Esc</kbd></span> لإيقاف السلسلة، ثم <span class="keys"><kbd class="key-escape">Esc</kbd></span> مرة أخرى لإنهاء الأداة.</li>
+</ol>
+<p><img alt="رسم الجدران: التبويب السياقي وشريط الخيارات والجدار الجاري رسمه" src="../assets/screens/wall-tool.png"/></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>يمكنك رسم الجدران نفسها بكتابة زواياها بالأمتار:
+<code>wall 0,0 10,0 10,6 0,6 c</code>. الحرف <code>c</code> في النهاية يغلق السلسلة. انظر
+<a href="../command-line-and-mcp/">سطر الأوامر و MCP</a>.</p>
+</div>
+<h3 id="4-add-a-door-and-a-window">4. أضف بابًا ونافذة</h3>
+<ol>
+<li>انقر <strong>الرئيسية ▸ بناء ▸ باب</strong>، ثم انقر على جدار حيث يقع الباب. يوضع الباب في الجدار، الذي
+   يُقطع حوله. ويؤكد سطر الأوامر ذلك:
+   <code>Door «Single swing door 80x210» in wall …</code>.</li>
+<li>اضغط <span class="keys"><kbd class="key-escape">Esc</kbd></span>: تنتهي الأداة ويعود الشريط إلى تبويب <strong>الرئيسية</strong>.</li>
+<li>انقر <strong>الرئيسية ▸ بناء ▸ نافذة</strong>، وانقر على جدار آخر، ثم اضغط <span class="keys"><kbd class="key-escape">Esc</kbd></span>.</li>
+</ol>
+<p>لا يمكن وضع باب أو نافذة إلا في جدار: فبعد نقرة بعيدة عن الجدران يجيب سطر الأوامر
+<code>no wall at that point</code> ولا يوضع شيء.</p>
+<h3 id="5-add-a-floor-and-a-roof">5. أضف أرضية وسقفًا</h3>
+<ol>
+<li>انقر <strong>الرئيسية ▸ بناء ▸ بلاط أرضيات</strong>. للتبويب السياقي <strong>تحرير | إنشاء حدود الأرضية</strong> لوحة
+   <strong>رسم</strong> فيها طريقتان لإنشاء الأرضية: <strong>خط الحدود</strong>، نقطة بعد نقطة، أو
+   <strong>اختيار الجدران</strong>.</li>
+<li>انقر <strong>اختيار الجدران</strong>: تُنشأ أرضية على المحيط الخارجي لجدران المنسوب، ويعطي سطر الأوامر
+   مساحتها.</li>
+<li>انقر <strong>الرئيسية ▸ بناء ▸ سقف</strong>. في شريط الخيارات اختر الشكل (<strong>جملوني</strong> أو <strong>منحدر رباعي</strong> أو
+   <strong>مستوٍ</strong>)، و<strong>الميل</strong> (30° افتراضيًا)، و<strong>البروز</strong> (500 mm افتراضيًا).</li>
+<li>انقر <strong>اختيار الجدران</strong> في لوحة <strong>رسم</strong>: يغطي السقف جدران المنسوب، مع البروز من جميع
+   الجهات.</li>
+</ol>
+<p><img alt="المسقط بالجدران والباب والنافذة والأرضية" src="../assets/screens/first-plan.png"/></p>
+<h3 id="6-look-at-it-in-3d">6. شاهده بالأبعاد الثلاثة</h3>
+<p>انقر زر <strong>عرض ثلاثي الأبعاد</strong> (المكعب) في شريط أدوات الوصول السريع. يُفتح العرض ثلاثي الأبعاد
+الافتراضي، <strong>{3D}</strong>. اسحب بزر الفأرة الأيسر للدوران المداري، واسحب بالزر الأوسط (أو بـ <span class="keys"><kbd class="key-shift">Shift</kbd></span>
+والزر الأيسر) لتحريك العرض، وأدر العجلة للتكبير والتصغير. يضع <span class="keys"><kbd class="key-home">Home</kbd></span> النموذج كله داخل العرض.</p>
+<p><img alt="المنزل الأول في العرض ثلاثي الأبعاد" src="../assets/screens/first-3d.png"/></p>
+<h3 id="7-put-the-plan-on-a-sheet">7. ضع المسقط على لوحة</h3>
+<ol>
+<li>انقر تبويب <strong>العرض</strong>، ثم <strong>تكوين اللوحات ▸ لوحة</strong>. تسرد نافذة الحوار <strong>لوحة جديدة</strong> إطارات
+   العناوين: بلا إطار، أو A0 أو A1 أو A2 أو A3، مع مقاساتها بالمليمترات.</li>
+<li>انقر <strong>موافق</strong>. تُنشأ اللوحة بالرقم الحر التالي (<strong>A101</strong> للأولى، ثم <strong>A102</strong>…) وتُفتح.</li>
+<li>انقر <strong>تكوين اللوحات ▸ العرض</strong>. تسرد نافذة الحوار <strong>العروض</strong> العروض التي لم توضع بعد على
+   لوحة.</li>
+<li>اختر <strong>المسقط: الطابق الأرضي</strong> وانقر <strong>إضافة العرض إلى اللوحة</strong>. يوضع المسقط على اللوحة
+   بمقياسه الخاص، 1 : 100، كإطار عرض، ويبقى محددًا.</li>
+</ol>
+<p><img alt="اللوحة وعليها مسقط الطابق الأرضي" src="../assets/screens/first-sheet.png"/></p>
+<h3 id="8-undo-redo-and-save">8. التراجع والإعادة والحفظ</h3>
+<ul>
+<li>يتراجع <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span> عن آخر تعديل (هنا يختفي إطار العرض)؛ ويعيده <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-y">Y</kbd></span>. وتقوم أسهم شريط
+  أدوات الوصول السريع بالشيء نفسه.</li>
+<li>يحفظ <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span> المشروع. والمشروع الذي لم يُحفظ قط يطلب اسم ملف أولًا؛ ويكون امتداد الملف
+  <code>.bimopen</code>. وفي المتصفح يُنزَّل الملف.</li>
+</ul>
+<p>يعرض شريط العنوان علامة نجمية بعد اسم المشروع ما دامت هناك تعديلات غير محفوظة:
+<strong>مشروع بلا اسم *</strong>.</p>
+<h2 id="what-next">ماذا بعد</h2>
+<ul>
+<li>يصف <a href="../interface/">فصل الواجهة</a> كل جزء من النافذة.</li>
+<li>يسرد <a href="../keyboard-shortcuts/">فصل اختصارات لوحة المفاتيح</a> المفاتيح والاختصارات المكونة من حرفين،
+  مثل <code>WA</code> للجدار.</li>
+<li>يبيّن <a href="../command-line-and-mcp/">فصل سطر الأوامر و MCP</a> كيفية كتابة الأوامر وتشغيل البرامج النصية
+  وترك وكيل ينمذج نيابة عنك.</li>
+</ul>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  عد إلى الأعلى
+</button>
+</main>
+<footer class="md-footer">
+<nav aria-label="هامش سفلي" class="md-footer__inner md-grid">
+<a aria-label="السابقة: الرئيسية" class="md-footer__link md-footer__link--prev" href="..">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                السابقة
+              </span>
+<div class="md-ellipsis">
+                الرئيسية
+              </div>
+</div>
+</a>
+<a aria-label="التالية: الواجهة" class="md-footer__link md-footer__link--next" href="../interface/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                التالية
+              </span>
+<div class="md-ellipsis">
+                الواجهة
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Copyright © 2026 Antonio Sanna · BIMopen
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.footer", "navigation.tracking", "toc.follow", "content.code.copy", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u062a\u0645 \u0627\u0644\u0646\u0633\u062e \u0627\u0644\u0649 \u0627\u0644\u062d\u0627\u0641\u0638\u0629", "clipboard.copy": "\u0646\u0633\u062e \u0625\u0644\u0649 \u0627\u0644\u062d\u0627\u0641\u0638\u0629", "search.result.more.one": "\u0623\u0643\u062b\u0631 \u0645\u0646 1 \u0641\u064a \u0647\u0630\u0647 \u0627\u0644\u0635\u0641\u062d\u0629", "search.result.more.other": "\u0623\u0643\u062b\u0631 \u0645\u0646 # \u0641\u064a \u0647\u0630\u0647 \u0627\u0644\u0635\u0641\u062d\u0629", "search.result.none": "\u0644\u0627 \u062a\u0648\u062c\u062f \u0646\u062a\u0627\u0626\u062c", "search.result.one": "\u0646\u062a\u0627\u0626\u062c \u0627\u0644\u0628\u062d\u062b \u0645\u0633\u062a\u0646\u062f \u0648\u0627\u062d\u062f", "search.result.other": "\u0646\u062a\u0627\u0626\u062c \u0627\u0644\u0628\u062d\u062b # \u0645\u0633\u062a\u0646\u062f\u0627\u062a", "search.result.placeholder": "\u0627\u0643\u062a\u0628 \u0644\u0628\u062f\u0621 \u0627\u0644\u0628\u062d\u062b", "search.result.term.missing": "\u0645\u0641\u0642\u0648\u062f", "select.version": "\u0625\u062e\u062a\u0631 \u0627\u0644\u0625\u0635\u062f\u0627\u0631"}}</script>
+<script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+</body>
+</html>

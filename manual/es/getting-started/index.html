@@ -1,0 +1,784 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Manual de usuario de BIMopen, modelado BIM de código abierto" name="description"/>
+<meta content="Antonio Sanna" name="author"/>
+<link href="https://atsanna.github.io/bimopen-site/manual/es/getting-started/" rel="canonical"/>
+<link href=".." rel="prev"/>
+<link href="../interface/" rel="next"/>
+<link href="../assets/images/logo.svg" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.9" name="generator"/>
+<title>Primeros pasos - Manual de usuario de BIMopen</title>
+<link href="../assets/stylesheets/main.4af4bdda.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link href="../assets/css/theme.css" rel="stylesheet"/>
+<link href="../assets/css/theme_dark_mode.css" rel="stylesheet"/>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="bimopen" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#getting-started">
+          Saltar a contenido
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Cabecera" class="md-header__inner md-grid">
+<a aria-label="Manual de usuario de BIMopen" class="md-header__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/?lang=es" title="Manual de usuario de BIMopen">
+<img alt="logo" src="../assets/images/logo.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Manual de usuario de BIMopen
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Primeros pasos
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Cambiar al tema oscuro" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="custom" data-md-color-scheme="bimopen" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Cambiar al tema oscuro">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Cambiar al tema claro" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Cambiar al tema claro">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<div class="md-header__option">
+<div class="md-select">
+<button aria-label="Seleccionar idioma" class="md-header__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"></path></svg>
+</button>
+<div class="md-select__inner">
+<ul class="md-select__list">
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/en/" hreflang="en">
+              English
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/it/" hreflang="it">
+              Italiano
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/de/" hreflang="de">
+              Deutsch
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/fr/" hreflang="fr">
+              Français
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/es/" hreflang="es">
+              Español
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/ar/" hreflang="ar">
+              العربية
+            </a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Búsqueda" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Búsqueda" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Buscar" class="md-search__options">
+<button aria-label="Limpiar" class="md-search__icon md-icon" tabindex="-1" title="Limpiar" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navegación" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Manual de usuario de BIMopen" class="md-nav__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/?lang=es" title="Manual de usuario de BIMopen">
+<img alt="logo" src="../assets/images/logo.svg"/>
+</a>
+    Manual de usuario de BIMopen
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
+<span class="md-ellipsis">
+    Inicio
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Primeros pasos
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Primeros pasos
+    
+  </span>
+</a>
+<nav aria-label="Tabla de contenidos" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#running-bimopen-on-the-desktop">
+<span class="md-ellipsis">
+      Ejecutar BIMopen en el escritorio
+    </span>
+</a>
+<nav aria-label="Ejecutar BIMopen en el escritorio" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#language-and-theme">
+<span class="md-ellipsis">
+      Idioma y tema
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#running-bimopen-in-the-browser">
+<span class="md-ellipsis">
+      Ejecutar BIMopen en el navegador
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-sample-project">
+<span class="md-ellipsis">
+      El proyecto de ejemplo
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#your-first-house">
+<span class="md-ellipsis">
+      Tu primera casa
+    </span>
+</a>
+<nav aria-label="Tu primera casa" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-start-a-new-project">
+<span class="md-ellipsis">
+      1. Inicia un proyecto nuevo
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-open-the-ground-floor-plan">
+<span class="md-ellipsis">
+      2. Abre la planta baja
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-draw-four-walls">
+<span class="md-ellipsis">
+      3. Dibuja cuatro muros
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-add-a-door-and-a-window">
+<span class="md-ellipsis">
+      4. Añade una puerta y una ventana
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5-add-a-floor-and-a-roof">
+<span class="md-ellipsis">
+      5. Añade un suelo y una cubierta
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#6-look-at-it-in-3d">
+<span class="md-ellipsis">
+      6. Mírala en 3D
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#7-put-the-plan-on-a-sheet">
+<span class="md-ellipsis">
+      7. Coloca la planta en un plano
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#8-undo-redo-and-save">
+<span class="md-ellipsis">
+      8. Deshaz, rehaz y guarda
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-next">
+<span class="md-ellipsis">
+      Y ahora
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../interface/">
+<span class="md-ellipsis">
+    La interfaz
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../projects-and-files/">
+<span class="md-ellipsis">
+    Proyectos y archivos
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../selection-and-modify/">
+<span class="md-ellipsis">
+    Selección y modificación
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../walls-doors-windows/">
+<span class="md-ellipsis">
+    Muros, puertas y ventanas
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../floors-roofs-stairs/">
+<span class="md-ellipsis">
+    Suelos, cubiertas, escaleras y componentes
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../views-and-graphics/">
+<span class="md-ellipsis">
+    Vistas y gráficos
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../annotation/">
+<span class="md-ellipsis">
+    Anotación y detalles 2D
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../documentation/">
+<span class="md-ellipsis">
+    Planos, tablas de planificación e impresión
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../command-line-and-mcp/">
+<span class="md-ellipsis">
+    Línea de comandos y MCP
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../keyboard-shortcuts/">
+<span class="md-ellipsis">
+    Atajos de teclado
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../troubleshooting/">
+<span class="md-ellipsis">
+    Solución de problemas
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://atsanna.github.io/bimopen-site/manual/es/pdf/bimopen-manual-es.pdf">
+<span class="md-ellipsis">
+    PDF
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Tabla de contenidos" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#running-bimopen-on-the-desktop">
+<span class="md-ellipsis">
+      Ejecutar BIMopen en el escritorio
+    </span>
+</a>
+<nav aria-label="Ejecutar BIMopen en el escritorio" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#language-and-theme">
+<span class="md-ellipsis">
+      Idioma y tema
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#running-bimopen-in-the-browser">
+<span class="md-ellipsis">
+      Ejecutar BIMopen en el navegador
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-sample-project">
+<span class="md-ellipsis">
+      El proyecto de ejemplo
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#your-first-house">
+<span class="md-ellipsis">
+      Tu primera casa
+    </span>
+</a>
+<nav aria-label="Tu primera casa" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-start-a-new-project">
+<span class="md-ellipsis">
+      1. Inicia un proyecto nuevo
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-open-the-ground-floor-plan">
+<span class="md-ellipsis">
+      2. Abre la planta baja
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-draw-four-walls">
+<span class="md-ellipsis">
+      3. Dibuja cuatro muros
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-add-a-door-and-a-window">
+<span class="md-ellipsis">
+      4. Añade una puerta y una ventana
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5-add-a-floor-and-a-roof">
+<span class="md-ellipsis">
+      5. Añade un suelo y una cubierta
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#6-look-at-it-in-3d">
+<span class="md-ellipsis">
+      6. Mírala en 3D
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#7-put-the-plan-on-a-sheet">
+<span class="md-ellipsis">
+      7. Coloca la planta en un plano
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#8-undo-redo-and-save">
+<span class="md-ellipsis">
+      8. Deshaz, rehaz y guarda
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-next">
+<span class="md-ellipsis">
+      Y ahora
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset"><a class="md-content__icon pdf-download-btn" download href="../pdf/bimopen-manual-es.pdf" title="Download"><i class="fa fas fa-download"></i><small> PDF</small></a>
+<h1 id="getting-started">Primeros pasos</h1>
+<p>Este capítulo muestra cómo iniciar BIMopen en el escritorio y en el navegador, qué contiene el
+proyecto de ejemplo y cómo modelar una primera casa pequeña: cuatro muros, una puerta, una
+ventana, un suelo, una cubierta, una vista 3D y un plano con la planta colocada. Lleva unos diez
+minutos.</p>
+<h2 id="running-bimopen-on-the-desktop">Ejecutar BIMopen en el escritorio</h2>
+<p>BIMopen se compila a partir de su código fuente con Rust, versión 1.90 o posterior. En Linux, la
+interfaz gráfica necesita además los archivos de desarrollo de xkbcommon, Wayland y GTK 3.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>libxkbcommon-dev<span class="w"> </span>libwayland-dev<span class="w"> </span>libgtk-3-dev<span class="w">   </span><span class="c1"># Debian, Ubuntu</span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>cargo<span class="w"> </span>run<span class="w"> </span>--release<span class="w"> </span>-p<span class="w"> </span>bimopen<span class="w"> </span>--<span class="w"> </span>--sample<span class="w">                             </span><span class="c1"># opens the sample house</span>
+</code></pre></div>
+<p>El programa es <code>bimopen</code>. Acepta un archivo que abrir y una opción:</p>
+<table>
+<thead>
+<tr>
+<th>Comando</th>
+<th>Qué abre</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bimopen</code></td>
+<td>Un proyecto nuevo y vacío</td>
+</tr>
+<tr>
+<td><code>bimopen --sample</code></td>
+<td>La casa de ejemplo</td>
+</tr>
+<tr>
+<td><code>bimopen house.bimopen</code></td>
+<td>El proyecto guardado en <code>house.bimopen</code></td>
+</tr>
+</tbody>
+</table>
+<p>También puedes abrir un proyecto arrastrando un archivo <code>.bimopen</code> desde el gestor de archivos a
+la ventana.</p>
+<h3 id="language-and-theme">Idioma y tema</h3>
+<p>La primera vez, BIMopen habla el idioma del sistema operativo si es uno de sus seis idiomas
+(italiano, inglés, alemán, francés, español, árabe), y en caso contrario inglés. Para cambiarlo,
+usa el menú de idioma en el extremo derecho de la barra de título (el globo con el nombre del
+idioma), o <strong>Menú de la aplicación ▸ Opciones ▸ Idioma</strong>. La interfaz cambia al instante.</p>
+<p>En <strong>Opciones</strong> también eliges el <strong>Tema</strong>, <strong>Claro</strong> u <strong>Oscuro</strong>, y si el fondo de las vistas
+se invierte (<strong>Invertir color de fondo</strong>: vistas oscuras con líneas claras). Elegir el tema oscuro
+también invierte el fondo; puedes volver a desactivarlo. BIMopen recuerda el idioma y el tema
+para la próxima vez.</p>
+<h2 id="running-bimopen-in-the-browser">Ejecutar BIMopen en el navegador</h2>
+<p>La versión web es el mismo programa, compilado para el navegador. Abre
+<a href="https://atsanna.github.io/bimopen-site/app/">atsanna.github.io/bimopen-site/app/</a>: se inicia
+con la casa de ejemplo. No hay que instalar nada, y el proyecto se queda en tu navegador: no se
+envía a ninguna parte.</p>
+<p>La dirección acepta estas opciones, que se pueden combinar con <code>&amp;</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Dirección</th>
+<th>Efecto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>app/?lang=de</code></td>
+<td>Abre en alemán durante esta visita (<code>it</code>, <code>en</code>, <code>de</code>, <code>fr</code>, <code>es</code>, <code>ar</code>)</td>
+</tr>
+<tr>
+<td><code>app/?empty</code></td>
+<td>Se inicia con un proyecto nuevo y vacío en lugar del ejemplo</td>
+</tr>
+<tr>
+<td><code>app/?webgl</code></td>
+<td>Dibuja con WebGL2 incluso donde WebGPU está disponible</td>
+</tr>
+</tbody>
+</table>
+<p>El navegador debe admitir WebGPU o WebGL2. En el navegador algunas cosas funcionan de otra manera:</p>
+<ul>
+<li><strong>Abrir…</strong> no puede mostrar un cuadro de diálogo de archivos: arrastra un archivo <code>.bimopen</code> a
+  la página para abrirlo;</li>
+<li><strong>Guardar</strong> y las exportaciones descargan el archivo, con el nombre del proyecto.</li>
+</ul>
+<p>Para compilar tú mismo la versión web:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>cargo<span class="w"> </span>xtask<span class="w"> </span>web<span class="w">                              </span><span class="c1"># builds dist/web</span>
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>python3<span class="w"> </span>-m<span class="w"> </span>http.server<span class="w"> </span><span class="m">8080</span><span class="w"> </span>-d<span class="w"> </span>dist/web<span class="w">      </span><span class="c1"># then open http://localhost:8080</span>
+</code></pre></div>
+<p><code>cargo xtask web</code> necesita el destino <code>wasm32-unknown-unknown</code> de Rust y el comando
+<code>wasm-bindgen</code> de la versión indicada en <code>Cargo.lock</code>; con <code>wasm-opt</code> de binaryen instalado, el
+resultado es más pequeño.</p>
+<h2 id="the-sample-project">El proyecto de ejemplo</h2>
+<p>La casa de ejemplo muestra la mayor parte de lo que BIMopen sabe hacer. Ábrela con <strong>Menú de la
+aplicación ▸ Proyecto de ejemplo</strong>, con <code>bimopen --sample</code>, o escribiendo <code>sample</code> en la línea de
+comandos.</p>
+<p><img alt="El menú de la aplicación" src="../assets/screens/app-menu.png"/></p>
+<p>Contiene:</p>
+<ul>
+<li>dos niveles, cada uno con su planta, y cinco líneas de rejilla;</li>
+<li>quince muros de cuatro tipos, con capas, unidos en las esquinas;</li>
+<li>seis puertas y doce ventanas, etiquetadas en las plantas;</li>
+<li>dos suelos, una cubierta inclinada, una escalera con sus barandillas y un muro cortina de
+  escaparate;</li>
+<li>mobiliario y aparatos sanitarios, ocho habitaciones coloreadas por uso, con una leyenda;</li>
+<li>una sección, un alzado, un plano de áreas, una vista 3D guardada y una vista de diseño con un
+  detalle de muro;</li>
+<li>cotas, notas de texto y las tablas de planificación de muros, puertas, ventanas, habitaciones y
+  materiales.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>El ejemplo es un buen lugar para probar una herramienta antes de usarla en tu propio
+proyecto: un ejemplo nuevo está siempre a un clic, y nada de lo que cambies en él se guarda a
+menos que lo guardes tú.</p>
+</div>
+<h2 id="your-first-house">Tu primera casa</h2>
+<p>Los pasos siguientes parten de un proyecto vacío y terminan con un plano. Cada paso indica el
+botón en el que hacer clic; el <a href="../interface/">capítulo sobre la interfaz</a> explica cada parte de la
+ventana.</p>
+<h3 id="1-start-a-new-project">1. Inicia un proyecto nuevo</h3>
+<ol>
+<li>Haz clic en el botón azul <strong>B</strong> en el extremo izquierdo de la barra de título: se abre el
+   <strong>menú de la aplicación</strong>.</li>
+<li>Haz clic en <strong>Nuevo</strong>.</li>
+</ol>
+<p>El proyecto nuevo tiene dos niveles, <strong>Planta baja</strong> y <strong>Planta primera</strong>, una planta para cada
+uno y la vista 3D por defecto. Todavía no tiene muros. Sus tipos de muro, puerta, ventana, suelo y
+cubierta están listos para usar.</p>
+<h3 id="2-open-the-ground-floor-plan">2. Abre la planta baja</h3>
+<p>En el <strong>Navegador de proyectos</strong>, bajo <strong>Vistas (todas) ▸ Planos de planta</strong>, haz doble clic en
+<strong>Planta baja</strong>. La planta se abre en el área de dibujo y la barra de título muestra
+<strong>Planta: Planta baja</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Un solo clic en una vista del Navegador de proyectos muestra sus propiedades en la paleta
+<strong>Propiedades</strong> sin abrirla. Un doble clic la abre.</p>
+</div>
+<h3 id="3-draw-four-walls">3. Dibuja cuatro muros</h3>
+<ol>
+<li>Haz clic en <strong>Inicio ▸ Construir ▸ Muro</strong>. La cinta de opciones pasa a la ficha contextual
+   <strong>Edición | Colocar: Muro</strong>, la barra de opciones muestra los parámetros del muro y
+   <strong>Propiedades</strong> muestra el tipo del próximo muro, <strong>Muro exterior - Bloque cerámico 300 + SATE</strong>.</li>
+<li>En la barra de opciones, activa <strong>Orto (Mayús)</strong>: los muros quedan horizontales o verticales.</li>
+<li>Haz clic en la planta donde va la primera esquina. La línea de comandos pide el punto
+   siguiente: <code>WALL  next point [Esc to finish]:</code>.</li>
+<li>Haz clic en la segunda, la tercera y la cuarta esquina. Mientras mueves el ratón, la longitud y
+   el ángulo del muro que se está dibujando se muestran junto a él.</li>
+<li>Vuelve a hacer clic en la primera esquina: los cuatro muros quedan unidos en las esquinas.</li>
+<li>Pulsa <span class="keys"><kbd class="key-escape">Esc</kbd></span> para detener la cadena, y <span class="keys"><kbd class="key-escape">Esc</kbd></span> otra vez para terminar la herramienta.</li>
+</ol>
+<p><img alt="Dibujo de muros: la ficha contextual, la barra de opciones y el muro que se está dibujando" src="../assets/screens/wall-tool.png"/></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Puedes dibujar los mismos muros escribiendo sus esquinas en metros:
+<code>wall 0,0 10,0 10,6 0,6 c</code>. La <code>c</code> final cierra la cadena. Consulta
+<a href="../command-line-and-mcp/">Línea de comandos y MCP</a>.</p>
+</div>
+<h3 id="4-add-a-door-and-a-window">4. Añade una puerta y una ventana</h3>
+<ol>
+<li>Haz clic en <strong>Inicio ▸ Construir ▸ Puerta</strong> y luego en un muro donde va la puerta. La puerta se
+   coloca en el muro, que se corta a su alrededor. La línea de comandos lo confirma:
+   <code>Door «Single swing door 80x210» in wall …</code>.</li>
+<li>Pulsa <span class="keys"><kbd class="key-escape">Esc</kbd></span>: la herramienta termina y la cinta de opciones vuelve a la ficha <strong>Inicio</strong>.</li>
+<li>Haz clic en <strong>Inicio ▸ Construir ▸ Ventana</strong>, haz clic en otro muro y pulsa <span class="keys"><kbd class="key-escape">Esc</kbd></span>.</li>
+</ol>
+<p>Una puerta o una ventana solo se puede colocar en un muro: tras un clic lejos de los muros, la
+línea de comandos responde <code>no wall at that point</code> y no se coloca nada.</p>
+<h3 id="5-add-a-floor-and-a-roof">5. Añade un suelo y una cubierta</h3>
+<ol>
+<li>Haz clic en <strong>Inicio ▸ Construir ▸ Pavimento</strong>. La ficha contextual <strong>Edición | Crear contorno
+   de suelo</strong> tiene un grupo <strong>Dibujar</strong> con dos formas de crear el suelo: <strong>Línea de contorno</strong>,
+   punto por punto, o <strong>Designar muros</strong>.</li>
+<li>Haz clic en <strong>Designar muros</strong>: se crea un suelo sobre el perímetro exterior de los muros del
+   nivel, y la línea de comandos indica su área.</li>
+<li>Haz clic en <strong>Inicio ▸ Construir ▸ Cubierta</strong>. En la barra de opciones elige la forma
+   (<strong>A dos aguas</strong>, <strong>A cuatro aguas</strong> o <strong>Plana</strong>), la <strong>Pendiente</strong> (30° por defecto) y el
+   <strong>Voladizo</strong> (500 mm por defecto).</li>
+<li>Haz clic en <strong>Designar muros</strong> en el grupo <strong>Dibujar</strong>: la cubierta cubre los muros del nivel,
+   con el voladizo en todo el contorno.</li>
+</ol>
+<p><img alt="La planta con los muros, la puerta, la ventana y el suelo" src="../assets/screens/first-plan.png"/></p>
+<h3 id="6-look-at-it-in-3d">6. Mírala en 3D</h3>
+<p>Haz clic en el botón <strong>Vista 3D</strong> (el cubo) de la barra de herramientas de acceso rápido. Se abre
+la vista 3D por defecto, <strong>{3D}</strong>. Arrastra con el botón izquierdo del ratón para orbitar, arrastra
+con el botón central (o con <span class="keys"><kbd class="key-shift">Shift</kbd></span> y el botón izquierdo) para encuadrar, y gira la rueda para
+hacer zoom. <span class="keys"><kbd class="key-home">Home</kbd></span> ajusta todo el modelo a la vista.</p>
+<p><img alt="La primera casa en la vista 3D" src="../assets/screens/first-3d.png"/></p>
+<h3 id="7-put-the-plan-on-a-sheet">7. Coloca la planta en un plano</h3>
+<ol>
+<li>Haz clic en la ficha <strong>Vista</strong> y luego en <strong>Composición de plano ▸ Plano</strong>. El cuadro de
+   diálogo <strong>Nuevo plano</strong> enumera los cajetines: ninguno, A0, A1, A2 o A3, con su tamaño en
+   milímetros.</li>
+<li>Haz clic en <strong>Aceptar</strong>. El plano se crea con el siguiente número libre (<strong>A101</strong> para el
+   primero, luego <strong>A102</strong>…) y se abre.</li>
+<li>Haz clic en <strong>Composición de plano ▸ Vista</strong>. El cuadro de diálogo <strong>Vistas</strong> enumera las vistas
+   que aún no están en un plano.</li>
+<li>Elige <strong>Planta: Planta baja</strong> y haz clic en <strong>Añadir vista a plano</strong>. La planta se coloca en el
+   plano a su propia escala, 1 : 100, como ventana gráfica, que queda seleccionada.</li>
+</ol>
+<p><img alt="El plano con la planta baja" src="../assets/screens/first-sheet.png"/></p>
+<h3 id="8-undo-redo-and-save">8. Deshaz, rehaz y guarda</h3>
+<ul>
+<li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span> deshace el último cambio (aquí, la ventana gráfica desaparece); <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-y">Y</kbd></span> lo rehace.
+  Las flechas de la barra de herramientas de acceso rápido hacen lo mismo.</li>
+<li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span> guarda el proyecto. Un proyecto que nunca se ha guardado pide primero un nombre de
+  archivo; el archivo tiene la extensión <code>.bimopen</code>. En el navegador, el archivo se descarga.</li>
+</ul>
+<p>La barra de título muestra un asterisco tras el nombre del proyecto mientras haya cambios sin
+guardar: <strong>Proyecto sin nombre *</strong>.</p>
+<h2 id="what-next">Y ahora</h2>
+<ul>
+<li><a href="../interface/">La interfaz</a> describe cada parte de la ventana.</li>
+<li><a href="../keyboard-shortcuts/">Atajos de teclado</a> enumera las teclas y los atajos de dos letras, como
+  <code>WA</code> para un muro.</li>
+<li><a href="../command-line-and-mcp/">Línea de comandos y MCP</a> muestra cómo escribir comandos, ejecutar
+  scripts y dejar que un agente modele por ti.</li>
+</ul>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Volver al principio
+</button>
+</main>
+<footer class="md-footer">
+<nav aria-label="Pie" class="md-footer__inner md-grid">
+<a aria-label="Anterior: Inicio" class="md-footer__link md-footer__link--prev" href="..">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Anterior
+              </span>
+<div class="md-ellipsis">
+                Inicio
+              </div>
+</div>
+</a>
+<a aria-label="Siguiente: La interfaz" class="md-footer__link md-footer__link--next" href="../interface/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Siguiente
+              </span>
+<div class="md-ellipsis">
+                La interfaz
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Copyright © 2026 Antonio Sanna · BIMopen
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.footer", "navigation.tracking", "toc.follow", "content.code.copy", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+<script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+</body>
+</html>

@@ -236,6 +236,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#editing-a-walls-profile">
+<span class="md-ellipsis">
+      Editar el perfil de un muro
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#wall-joins">
 <span class="md-ellipsis">
       Uniones de muro
@@ -436,6 +443,13 @@
 <a class="md-nav__link" href="#attaching-walls-to-roofs-and-floors">
 <span class="md-ellipsis">
       Enlazar muros a cubiertas y suelos
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#editing-a-walls-profile">
+<span class="md-ellipsis">
+      Editar el perfil de un muro
     </span>
 </a>
 </li>
@@ -663,6 +677,24 @@ cuando se quiera. Si se elimina una cubierta o un suelo con muros enlazados, est
 su altura.</p>
 <p>Las propiedades <strong>Parte superior enlazada</strong> y <strong>Base enlazada</strong> muestran el estado (solo lectura);
 mientras la parte superior está enlazada, <strong>Altura desconectada</strong> es de solo lectura.</p>
+<h2 id="editing-a-walls-profile">Editar el perfil de un muro</h2>
+<p>Un muro no tiene por qué ser un rectángulo: su contorno se dibuja en un alzado o una sección
+paralelos, con huecos, como para un hastial o un muro escalonado.</p>
+<ol>
+<li>Selecciona el muro y haz clic en <strong>Modo ▸ Editar perfil</strong> en su ficha contextual. Desde una
+   planta o una vista no paralela al muro, <strong>Ir a vista</strong> lista las secciones y alzados paralelos:
+   elige uno y haz clic en <strong>Abrir vista</strong>.</li>
+<li>El modo de boceto se abre con el contorno del muro en magenta. Cámbialo con <strong>Línea</strong> y
+   <strong>Rectángulo</strong> (ver el <a href="../floors-roofs-stairs/#sketch-mode">modo de boceto</a>): designa una línea y
+   pulsa <span class="keys"><kbd class="key-delete">Del</kbd></span>, dibuja otras nuevas; un contorno interior es un hueco.</li>
+<li>Haz clic en <strong>Finalizar modo de edición</strong> (o <strong>Cancelar modo de edición</strong> para dejar el muro
+   como estaba).</li>
+</ol>
+<p>El muro toma ese contorno en 3D, en las secciones y en planta, donde se corta solo donde el
+contorno alcanza el plano de corte; sus puertas y ventanas lo siguen cortando. Una parte superior
+enlazada a una cubierta o a un suelo lo sigue limitando. Un muro cortina mantiene los paneles y
+montantes dentro de su nuevo contorno. <strong>Modo ▸ Restablecer perfil</strong> lo vuelve rectangular;
+<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span> deshace una u otra cosa.</p>
 <h2 id="wall-joins">Uniones de muro</h2>
 <p>Los muros cuyos extremos se encuentran se unen solos, igual que un muro que termina en el costado
 de otro y dos muros que se cruzan. Con nivel de detalle <strong>Medio</strong> y <strong>Alto</strong>, cada capa se resuelve
@@ -835,7 +867,7 @@ cortina con sus placas y elementos.</p>
 </code></pre></div>
 <h2 id="not-available-yet">Aún no disponible</h2>
 <p>Muros curvos (arco, <strong>Círculo</strong>, <strong>Radio</strong>), selección de superficies, muros estructurales, muros
-apilados, barridos y telares de muro, capas compuestas verticalmente (regiones), edición de perfil,
+apilados, barridos y telares de muro, capas compuestas verticalmente (regiones),
 unión de geometría, fases y lucernarios en las cubiertas.</p>
 </article>
 </div>

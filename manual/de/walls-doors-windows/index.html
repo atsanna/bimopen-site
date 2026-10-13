@@ -236,6 +236,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#editing-a-walls-profile">
+<span class="md-ellipsis">
+      Das Profil einer Wand bearbeiten
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#wall-joins">
 <span class="md-ellipsis">
       Wandverbindungen
@@ -436,6 +443,13 @@
 <a class="md-nav__link" href="#attaching-walls-to-roofs-and-floors">
 <span class="md-ellipsis">
       Wände an Dächern und Geschossdecken fixieren
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#editing-a-walls-profile">
+<span class="md-ellipsis">
+      Das Profil einer Wand bearbeiten
     </span>
 </a>
 </li>
@@ -662,6 +676,25 @@ behalten die Höhe, die sie in diesem Moment haben, und können jederzeit wieder
 ein Dach oder eine Geschossdecke mit fixierten Wänden gelöscht, behalten auch diese ihre Höhe.</p>
 <p>Die Eigenschaften <strong>Oben fixiert</strong> und <strong>Basis fixiert</strong> zeigen den Zustand (schreibgeschützt);
 solange die Oberkante fixiert ist, ist <strong>Nicht verknüpfte Höhe</strong> schreibgeschützt.</p>
+<h2 id="editing-a-walls-profile">Das Profil einer Wand bearbeiten</h2>
+<p>Eine Wand muss kein Rechteck sein: Ihr Umriss lässt sich in einer parallelen Ansicht oder einem
+parallelen Schnitt skizzieren, mit Löchern, etwa für einen Giebel oder eine abgetreppte Wand.</p>
+<ol>
+<li>Wählen Sie die Wand und klicken Sie in ihrer kontextabhängigen Registerkarte auf <strong>Modus ▸
+   Profil bearbeiten</strong>. Aus einem Grundriss oder einer nicht parallelen Ansicht listet <strong>Gehe zu
+   Ansicht</strong> die zur Wand parallelen Schnitte und Ansichten: Wählen Sie eine und klicken Sie auf
+   <strong>Ansicht öffnen</strong>.</li>
+<li>Der Skizzenmodus öffnet sich mit dem Umriss der Wand in Magenta. Ändern Sie ihn mit <strong>Linie</strong>
+   und <strong>Rechteck</strong> (siehe <a href="../floors-roofs-stairs/#sketch-mode">Skizzenmodus</a>): Eine Linie wählen
+   und <span class="keys"><kbd class="key-delete">Del</kbd></span> drücken, neue zeichnen; eine innere Umgrenzung ist ein Loch.</li>
+<li>Klicken Sie auf <strong>Bearbeitungsmodus beenden</strong> (oder <strong>Bearbeitungsmodus abbrechen</strong>, um die
+   Wand unverändert zu lassen).</li>
+</ol>
+<p>Die Wand erhält diesen Umriss in 3D, in Schnitten und im Grundriss, wo sie nur geschnitten wird,
+wo der Umriss die Schnittebene erreicht; ihre Türen und Fenster schneiden sie weiterhin. Eine an
+ein Dach oder eine Geschossdecke fixierte Oberkante begrenzt sie weiterhin. Eine Vorhangfassade
+behält die Paneele und Pfosten innerhalb ihres neuen Umrisses. <strong>Modus ▸ Profil zurücksetzen</strong>
+macht sie wieder rechteckig; <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span> macht beides rückgängig.</p>
 <h2 id="wall-joins">Wandverbindungen</h2>
 <p>Wände, deren Enden sich treffen, verbinden sich von selbst, ebenso eine Wand, die an der Seite einer
 anderen endet, und zwei Wände, die sich kreuzen. Im Detaillierungsgrad <strong>Mittel</strong> und <strong>Fein</strong> wird
@@ -837,7 +870,7 @@ ihren Platten und Gliedern.</p>
 </code></pre></div>
 <h2 id="not-available-yet">Noch nicht verfügbar</h2>
 <p>Gekrümmte Wände (Bogen, <strong>Kreis</strong>, <strong>Radius</strong>), Flächen wählen, tragende Wände, gestapelte Wände,
-Wandprofile und Aussparungen, vertikal zusammengesetzte Schichten (Bereiche), Profil bearbeiten,
+Wandprofile und Aussparungen, vertikal zusammengesetzte Schichten (Bereiche),
 Geometrie verbinden, Phasen und Dachfenster in Dächern.</p>
 </article>
 </div>

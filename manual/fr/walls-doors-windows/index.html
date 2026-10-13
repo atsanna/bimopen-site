@@ -236,6 +236,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#editing-a-walls-profile">
+<span class="md-ellipsis">
+      Modifier le profil d'un mur
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#wall-joins">
 <span class="md-ellipsis">
       Jonctions de murs
@@ -436,6 +443,13 @@
 <a class="md-nav__link" href="#attaching-walls-to-roofs-and-floors">
 <span class="md-ellipsis">
       Attacher les murs aux toits et aux sols
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#editing-a-walls-profile">
+<span class="md-ellipsis">
+      Modifier le profil d'un mur
     </span>
 </a>
 </li>
@@ -662,6 +676,24 @@ nouveau à tout moment. Quand un toit ou un sol auquel des murs sont attachés e
 gardent aussi leur hauteur.</p>
 <p>Les propriétés <strong>Haut attaché</strong> et <strong>Base attachée</strong> montrent l'état (lecture seule) ; tant que le
 haut est attaché, <strong>Hauteur non contrainte</strong> est en lecture seule.</p>
+<h2 id="editing-a-walls-profile">Modifier le profil d'un mur</h2>
+<p>Un mur n'est pas forcément un rectangle : son contour s'esquisse dans une élévation ou une coupe
+parallèle, avec des trous, comme pour un pignon ou un mur en gradins.</p>
+<ol>
+<li>Sélectionnez le mur et cliquez sur <strong>Mode ▸ Modifier le profil</strong> dans son onglet contextuel.
+   Depuis un plan ou une vue non parallèle au mur, <strong>Atteindre la vue</strong> liste les coupes et
+   élévations parallèles : choisissez-en une et cliquez sur <strong>Ouvrir la vue</strong>.</li>
+<li>Le mode esquisse s'ouvre avec le contour du mur en magenta. Changez-le avec <strong>Ligne</strong> et
+   <strong>Rectangle</strong> (voir le <a href="../floors-roofs-stairs/#sketch-mode">mode esquisse</a>) : choisissez une
+   ligne et appuyez sur <span class="keys"><kbd class="key-delete">Del</kbd></span>, dessinez-en de nouvelles ; un contour intérieur est un trou.</li>
+<li>Cliquez sur <strong>Terminer le mode d'édition</strong> (ou <strong>Annuler le mode d'édition</strong> pour laisser le mur
+   tel qu'il était).</li>
+</ol>
+<p>Le mur prend ce contour en 3D, dans les coupes et en plan, où il n'est coupé que là où le contour
+atteint le plan de coupe ; ses portes et fenêtres le coupent toujours. Un haut attaché à un toit ou
+à un sol le limite toujours. Un mur-rideau garde les panneaux et les meneaux à l'intérieur de son
+nouveau contour. <strong>Mode ▸ Réinitialiser le profil</strong> le rend de nouveau rectangulaire ; <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span>
+annule l'un comme l'autre.</p>
 <h2 id="wall-joins">Jonctions de murs</h2>
 <p>Les murs dont les extrémités se rencontrent se joignent d'eux-mêmes, de même qu'un mur qui se
 termine sur le flanc d'un autre et deux murs qui se croisent. Aux niveaux de détail <strong>Moyen</strong> et
@@ -838,7 +870,7 @@ et ses éléments.</p>
 </code></pre></div>
 <h2 id="not-available-yet">Pas encore disponible</h2>
 <p>Murs courbes (arc, <strong>Cercle</strong>, <strong>Rayon</strong>), choix de surfaces, murs porteurs, murs empilés, profilés
-et cavités de murs, couches composées verticalement (régions), modification du profil, jonction de
+et cavités de murs, couches composées verticalement (régions), jonction de
 géométrie, phases, et lucarnes dans les toits.</p>
 </article>
 </div>

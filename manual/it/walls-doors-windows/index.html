@@ -236,6 +236,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#editing-a-walls-profile">
+<span class="md-ellipsis">
+      Modificare il profilo di un muro
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#wall-joins">
 <span class="md-ellipsis">
       Giunti dei muri
@@ -436,6 +443,13 @@
 <a class="md-nav__link" href="#attaching-walls-to-roofs-and-floors">
 <span class="md-ellipsis">
       Associare i muri a tetti e pavimenti
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#editing-a-walls-profile">
+<span class="md-ellipsis">
+      Modificare il profilo di un muro
     </span>
 </a>
 </li>
@@ -661,6 +675,24 @@ associati di nuovo quando vuoi. Se si elimina un tetto o un pavimento a cui sono
 muri, anche questi mantengono la loro altezza.</p>
 <p>Le proprietà <strong>L'altezza è associata</strong> e <strong>La base è associata</strong> mostrano lo stato (sola
 lettura); finché la parte superiore è associata, <strong>Altezza non collegata</strong> è di sola lettura.</p>
+<h2 id="editing-a-walls-profile">Modificare il profilo di un muro</h2>
+<p>Un muro non deve essere per forza un rettangolo: il suo contorno si disegna in un prospetto o in
+una sezione paralleli, con i fori, come per un timpano o un muro a gradoni.</p>
+<ol>
+<li>Seleziona il muro e fai clic su <strong>Modalità ▸ Modifica profilo</strong> nella sua scheda contestuale.
+   Da una pianta o da una vista non parallela al muro, <strong>Vai a vista</strong> elenca le sezioni e i
+   prospetti paralleli: scegline uno e fai clic su <strong>Apri vista</strong>.</li>
+<li>La modalità di disegno si apre con il contorno del muro in magenta. Cambialo con <strong>Linea</strong> e
+   <strong>Rettangolo</strong> (vedi la <a href="../floors-roofs-stairs/#sketch-mode">modalità di disegno</a>): seleziona una
+   linea e premi <span class="keys"><kbd class="key-delete">Del</kbd></span>, disegnane di nuove; un perimetro interno è un foro.</li>
+<li>Fai clic su <strong>Termina modalità di modifica</strong> (o <strong>Annulla modalità di modifica</strong> per lasciare il
+   muro com'era).</li>
+</ol>
+<p>Il muro prende quel contorno in 3D, nelle sezioni e in pianta, dove è tagliato solo dove il
+contorno raggiunge il piano di taglio; porte e finestre lo tagliano ancora. Una parte superiore
+associata a un tetto o a un pavimento lo limita ancora. Una facciata continua tiene i pannelli e i
+montanti dentro il nuovo contorno. <strong>Modalità ▸ Reimposta profilo</strong> lo rende di nuovo
+rettangolare; <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span> annulla l'una e l'altra cosa.</p>
 <h2 id="wall-joins">Giunti dei muri</h2>
 <p>I muri le cui estremità si incontrano si uniscono da soli, e così un muro che termina sul fianco di
 un altro e due muri che si incrociano. Con livello di dettaglio <strong>Medio</strong> e <strong>Alto</strong> ogni strato è
@@ -835,8 +867,8 @@ sue lastre e i suoi elementi.</p>
 </code></pre></div>
 <h2 id="not-available-yet">Non ancora disponibile</h2>
 <p>Muri curvi (<strong>Arco</strong>, <strong>Cerchio</strong>, <strong>Raggio</strong>), <strong>Seleziona superfici</strong>, muri strutturali, muri
-sovrapposti, estrusioni e scanalature, strati composti verticalmente (regioni), <strong>Modifica
-profilo</strong>, <strong>Unisci geometria</strong>, fasi, e lucernari nei tetti.</p>
+sovrapposti, estrusioni e scanalature, strati composti verticalmente (regioni), <strong>Unisci
+geometria</strong>, fasi, e lucernari nei tetti.</p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

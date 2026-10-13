@@ -805,6 +805,7 @@ hat.</p>
 <span class="keys"><kbd class="key-f1">F1</kbd></span> öffnet die Seite zu dem, was Sie gerade tun: zum geöffneten Dialog, zur Schaltfläche der
 Multifunktionsleiste unter der Maus (ihr Tooltip endet mit <strong>Drücken Sie F1, um weitere
 Informationen zu erhalten</strong>) oder zum aktiven Werkzeug.</p>
+<p>Klicken Sie mit der rechten Maustaste auf ein Werkzeug der Multifunktionsleiste und wählen Sie <strong>Zur Schnellzugriff-Werkzeugleiste hinzufügen</strong>: Das Werkzeug kommt in die Leiste und startet von dort, welche Registerkarte auch offen ist. Mit der rechten Maustaste auf das Werkzeug in der Leiste gibt es <strong>Aus der Schnellzugriff-Werkzeugleiste entfernen</strong>. Die letzte Schaltfläche der Leiste, <strong>Schnellzugriff-Werkzeugleiste anpassen</strong>, verschiebt die hinzugefügten Werkzeuge nach oben und unten und kann die ganze Leiste <strong>Unter der Multifunktionsleiste anzeigen</strong> (oder wieder darüber). Die Leiste bleibt so für die nächsten Sitzungen.</p>
 <h2 id="ribbon">Multifunktionsleiste</h2>
 <p>Die Multifunktionsleiste ordnet die Werkzeuge in Registerkarten und jede Registerkarte in Gruppen.
 Der Name einer Gruppe steht unter ihren Schaltflächen. Eine Schaltfläche, deren Name von einem
@@ -840,6 +841,7 @@ diese tut, und in Klammern das Kürzel, das Sie eingeben können, um sie zu star
 </tr>
 </tbody>
 </table>
+<p>Drücken Sie <span class="keys"><kbd class="key-alt">Alt</kbd></span> und lassen Sie die Taste los, oder drücken Sie <span class="keys"><kbd class="key-f10">F10</kbd></span>, um die Tastenhinweise zu zeigen: einen Buchstaben auf jeder Registerkarte (<strong>I</strong>, <strong>N</strong>, <strong>A</strong>, <strong>V</strong>, <strong>G</strong>, <strong>M</strong>, von der ersten bis zur kontextabhängigen) und auf den Schaltflächen der offenen Registerkarte den Kurzbefehl ihres Werkzeugs. Tippen Sie den Buchstaben einer Registerkarte, um sie zu öffnen, dann die Buchstaben einer Schaltfläche, um ihr Werkzeug zu starten; <span class="keys"><kbd class="key-escape">Esc</kbd></span> blendet die Hinweise aus. Solange sie sichtbar sind, geht das Getippte nicht in die Befehlszeile.</p>
 <h3 id="the-home-tab">Die Registerkarte Start</h3>
 <table>
 <thead>
@@ -1090,6 +1092,7 @@ auf der Sie arbeiten: <strong>Ebene: Erdgeschoss</strong>.</p>
 </table>
 <p>Ist <strong>Orthogonal (Shift)</strong> ausgeschaltet, erzielt das Gedrückthalten von <span class="keys"><kbd class="key-shift">Shift</kbd></span> beim Zeichnen
 dieselbe Einschränkung; ist es eingeschaltet, hebt <span class="keys"><kbd class="key-shift">Shift</kbd></span> sie auf.</p>
+<p>Klicken Sie mit der rechten Maustaste auf die Optionsleiste und wählen Sie <strong>Unten andocken</strong>, um sie direkt über die Statusleiste zu verschieben; <strong>Oben andocken</strong> bringt sie zurück. Die Wahl bleibt für die nächsten Sitzungen.</p>
 <h2 id="properties">Eigenschaften</h2>
 <p>Die Palette <strong>Eigenschaften</strong> zeigt und ändert die Parameter dessen, woran Sie gerade arbeiten. Von
 oben nach unten enthält sie:</p>
@@ -1210,6 +1213,9 @@ vordefinierte Bauteilliste öffnet sich mit einem Klick.</p>
 <p>Bei einem Typ unter <strong>Familien</strong> öffnet ein Doppelklick seine Typeigenschaften; das
 Rechtsklickmenü hat <strong>Typeigenschaften</strong>, <strong>Duplizieren…</strong>, <strong>Exemplar erstellen</strong> (startet das
 Werkzeug, das ihn platziert, mit diesem Typ) und <strong>Löschen</strong>.</p>
+<p>Nach einem Klick in den Projektbrowser bewegt sich die Tastatur darin: <span class="keys"><kbd class="key-arrow-up">Up</kbd></span> und <span class="keys"><kbd class="key-arrow-down">Down</kbd></span> gehen von Zeile zu Zeile (die Eigenschaften der Ansicht erscheinen in der Palette), <span class="keys"><kbd class="key-arrow-right">Right</kbd></span> öffnet einen Zweig, <span class="keys"><kbd class="key-arrow-left">Left</kbd></span> schließt ihn oder geht zum Zweig hinauf, in dem die Zeile steht, <span class="keys"><kbd class="key-enter">Enter</kbd></span> öffnet die Ansicht.</p>
+<p>Von hier kommen Ansichten auch auf Pläne. Ziehen Sie einen Grundriss, einen Schnitt, eine Ansicht, eine Zeichenansicht, eine Legende, eine gespeicherte 3D-Ansicht oder eine Bauteilliste auf den offenen Plan: Ihr Ansichtsfenster folgt dem Cursor und bleibt dort, wo Sie es loslassen. Oder lassen Sie sie auf dem Namen eines Plans im Baum los: Der Plan öffnet sich und das Ansichtsfenster folgt dem Cursor, bis Sie klicken. Beim Ziehen rollt der Baum, wenn der Cursor seinen Rand erreicht. Das Kontextmenü eines Plans hat <strong>Ansicht hinzufügen…</strong>. Eine Ansicht, die schon auf einem Plan ist, wird abgelehnt, mit dem Grund in der Befehlszeile; Legenden und Bauteillisten können auf mehreren Plänen stehen. Eine gespeicherte 3D-Ansicht erscheint auf dem Plan mit den Kanten, die ihre Kamera sieht.</p>
+<p>Das Kontextmenü eines Grundrisses, eines Schnitts oder einer Zeichenansicht hat <strong>Referenzierende Ansichten suchen</strong>: die Ansichten, die ihr Symbol zeigen, und die Pläne, auf denen sie steht; <strong>Gehe zu Ansicht</strong> öffnet die gewählte.</p>
 <h2 id="drawing-area-and-view-windows">Zeichenbereich und Ansichtsfenster</h2>
 <p>Jede geöffnete Ansicht ist ein Fenster im Zeichenbereich. Eine erneut geöffnete Ansicht kommt nach
 vorn; mindestens ein Fenster bleibt immer geöffnet. <strong>Ansicht ▸ Fenster</strong> ordnet sie an:</p>
@@ -1255,6 +1261,9 @@ vorn; mindestens ein Fenster bleibt immer geöffnet. <strong>Ansicht ▸ Fenster
 <p>Klicken Sie in ein Fenster, um es zu aktivieren: Die Werkzeuge arbeiten im aktiven Fenster, die
 anderen zeigen das Modell nur an. Bei <strong>Nebeneinander</strong> und <strong>Überlappend</strong> schließt das <strong>×</strong> in der
 Titelleiste eines Fensters dieses Fenster.</p>
+<p><strong>Nebeneinander</strong> setzt das aktive Fenster oben links und die anderen danach, vom zuletzt aktiven an; <strong>Fenster wechseln</strong> listet sie in derselben Reihenfolge. Ordnen Sie erneut an, nachdem Sie in einem anderen Fenster gearbeitet haben, kommt dieses an erste Stelle.</p>
+<p><strong>Benutzeroberfläche ▸ Tastaturkurzbefehle</strong> listet die Befehle mit ihren Kurzbefehlen. Suchen Sie einen Befehl nach Namen oder nutzen Sie <strong>Filter</strong> (<strong>Alle</strong>, <strong>Alle definierten</strong>, <strong>Alle nicht definierten</strong>, <strong>Alle reservierten</strong>); wählen Sie einen Befehl, tippen Sie die Tasten in <strong>Neue Tasten drücken</strong> und klicken Sie auf <strong>Zuweisen</strong>. Tasten, die ein anderer Befehl schon hat, werden abgelehnt, mit dem Grund; <strong>Entfernen</strong> nimmt die von Ihnen hinzugefügten Tasten weg. Ihre Kurzbefehle bleiben für die nächsten Sitzungen und starten den Befehl, wenn Sie sie tippen, wie die vorgegebenen.</p>
+<p>Ein Werkzeug wechselt nie von selbst die aktive Ansicht. In einer Ansicht gestartet, in der es nicht arbeiten kann (ein Boden oder ein Raum in einer 3D-Ansicht, eine Ebene in einem Grundriss, eine Fläche außerhalb eines Flächenplans), öffnet es <strong>Gehe zu Ansicht</strong>: die geeigneten Ansichten, der Grundriss der aktiven Ebene vorausgewählt. <strong>Ansicht öffnen</strong> öffnet die gewählte Ansicht und startet dort das Werkzeug; <strong>Abbrechen</strong> lässt alles, wie es war. <strong>Begrenzung bearbeiten</strong> eines Bodens, Dachs, einer Treppe oder eines Geländers fragt aus einem Schnitt oder einer Ansicht ebenso nach einem Grundriss seiner Ebene, und ein neuer Schnitt oder eine neue Ansicht lässt den Grundriss aktiv, in dem sie gezeichnet wurden. <strong>Verschieben</strong> und <strong>Kopieren</strong> funktionieren auch in Schnitten und Ansichten, entlang der Ansicht.</p>
 <h3 id="view-control-bar">Ansichtssteuerungsleiste</h3>
 <p>Am unteren Rand jedes Grundrisses, Schnitts, jeder Ansicht, jedes Detailausschnitts und jeder
 Zeichenansicht:</p>
@@ -1296,6 +1305,7 @@ eigenen Maßstab.</p>
 <h3 id="navigation-bar">Navigationsleiste</h3>
 <p>Am rechten Rand der aktiven Ansicht (auf Arabisch am linken Rand) drei Schaltflächen: <strong>Zoom
 Grenzen</strong> (dasselbe wie <span class="keys"><kbd class="key-home">Home</kbd></span>), <strong>Vergrößern</strong> und <strong>Verkleinern</strong>.</p>
+<p>Darunter öffnet <strong>Zoomoptionen</strong> das Zoom-Menü: <strong>Bereich vergrößern</strong> (ziehen Sie ein Rechteck auf der Ansicht; <span class="keys"><kbd class="key-escape">Esc</kbd></span> bricht ab), <strong>Verkleinern (2x)</strong>, <strong>Zoom auf Fenstergröße</strong>, <strong>Alle auf Fenstergröße zoomen</strong> (jedes offene Fenster), <strong>Zoom auf Plangröße</strong> (die Ansicht in Druckgröße) sowie <strong>Vorheriges Pan/Zoom</strong> und <strong>Nächstes Pan/Zoom</strong>, die durch die Ausschnitte dieses Fensters vor und zurück gehen. Getippt: <code>ZR</code>, <code>ZO</code>, <code>ZF</code>, <code>ZA</code>, <code>ZS</code>, <code>ZP</code>. In einer 3D-Ansicht öffnet die letzte Schaltfläche, <strong>SteeringWheels</strong>, das Navigationsrad: Ziehen Sie seinen Sektor <strong>Zoom</strong>, <strong>Orbit</strong> oder <strong>Pan</strong>; klicken Sie auf <strong>Zentrieren</strong>, damit der Modellpunkt unter seiner Mitte zum Drehpunkt der Ansicht wird, oder auf <strong>Zurückspulen</strong>, um zum vorigen Ausschnitt zurückzukehren; <strong>Rad schließen</strong> (×) schließt es.</p>
 <h3 id="moving-around-in-the-views">Navigation in den Ansichten</h3>
 <table>
 <thead>
@@ -1355,6 +1365,8 @@ Grenzen</strong> (dasselbe wie <span class="keys"><kbd class="key-home">Home</kb
 </table>
 <p>Ein kleines Achsenkreuz in der unteren Ecke der 3D-Ansicht zeigt die Richtungen der Achsen: X rot,
 Y grün, Z blau. Eine gespeicherte 3D-Ansicht merkt sich, wo Sie sie verlassen haben.</p>
+<p>In 3D zoomt das Mausrad und hält dabei den Modellpunkt unter dem Cursor fest, und der Orbit dreht sich um die Mitte der Auswahl oder, ohne Auswahl, um den Punkt, auf den die Ansicht blickt.</p>
+<p>Der <strong>ViewCube</strong> in der oberen Ecke der 3D-Ansicht dreht sich mit dem Modell. Klicken Sie auf eine Fläche (<strong>OBEN</strong>, <strong>VORNE</strong>, <strong>RECHTS</strong>…), um von dieser Seite zu blicken, auf eine Kante, um zwischen zwei Seiten zu blicken, auf eine Ecke zwischen dreien; ziehen Sie den Würfel, um zu orbitieren. Das Haus darüber, <strong>Ausgangsansicht</strong>, führt zur Ausgangsansicht zurück; die Buchstaben <strong>N</strong>, <strong>O</strong>, <strong>S</strong>, <strong>W</strong> darunter blicken aus dieser Himmelsrichtung.</p>
 <h3 id="the-context-menu-of-a-view">Das Kontextmenü einer Ansicht</h3>
 <p>Klicken Sie mit der rechten Maustaste in eine Ansicht, während kein Werkzeug aktiv ist. Befindet
 sich der Cursor auf einem nicht ausgewählten Element, wird dieses zuerst ausgewählt. Das Menü
@@ -1371,6 +1383,7 @@ enthält:</p>
 </ul>
 <p>Solange ein Werkzeug aktiv ist, bewirkt ein Rechtsklick dasselbe wie <span class="keys"><kbd class="key-escape">Esc</kbd></span>: Er bricht den
 laufenden Schritt ab.</p>
+<p>Oben im Menü startet <strong>Wiederholen [Befehl]</strong> das zuletzt benutzte Werkzeug erneut; <span class="keys"><kbd class="key-enter">Enter</kbd></span> tut dasselbe, wenn kein Werkzeug aktiv und die Befehlszeile leer ist. Das Menü ist in Grundrissen, Schnitten und 3D-Ansichten dasselbe.</p>
 <h2 id="command-line">Befehlszeile</h2>
 <p>Unter dem Zeichenbereich zeigt die Befehlszeile das Protokoll dessen, was getan wurde, das Neueste
 unten: die ausgeführten Befehle grau nach einem <code>&gt;</code>, ihre Ergebnisse und Fehler in Rot. In ihrer

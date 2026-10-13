@@ -779,7 +779,7 @@ offsets) and the type's <strong>Maximum Riser Height</strong>; changing a level 
 <li><strong>Monolithic Stairs</strong> ticked: each run is a concrete slab cut to the steps; its underside runs
   parallel to the slope, <strong>Structural Depth</strong> below the inner corners of the steps, and the
   landings are as thick: the sloping underside of a run meets the landing's underside along a
-  line, without a step;</li>
+  line, without a step; each run ends with its last tread: the landing, flush with it, or the floor above makes the last riser, so steps and slab show as one solid with no line across the risers.</li>
 <li>otherwise treads (<strong>Tread Thickness</strong>) with risers (<strong>Riser Type</strong> <strong>Straight</strong>, <strong>Riser
   Thickness</strong>) or open (<strong>None</strong>), on stringers: <strong>Right Stringer</strong> and <strong>Left Stringer</strong>
 <strong>Closed</strong> (a board the treads are housed in), <strong>Open</strong> (a board cut to the steps, the treads on
@@ -805,6 +805,11 @@ the nosings and above the landings. Where a run leaves a landing one riser highe
 <strong>Extend Rails to Meet</strong> (tangent joins only) carries the sloping rail on down to the landing,
 <strong>Add Vertical/Horizontal Segments</strong> rises upright at the first riser, <strong>No Connector</strong> leaves a
 gap.</p>
+<p>The rails are mitred at every joint, where the path turns and where the slope changes: with
+<strong>Rail Connections</strong> <strong>Weld</strong> each rail is one piece, with <strong>Trim</strong> its pieces are cut on the
+joint's vertical plane. Where two posts would stand side by side (the inner side of a U stair
+crossing the landing) there is one. <strong>Use Landing Height Adjustment</strong> with <strong>Landing Height
+Adjustment</strong> raises (or lowers) the rail over the landings by that much.</p>
 <h2 id="components">Components</h2>
 <ol>
 <li>Click <strong>Home ▸ Build ▸ Component</strong>. The type selector lists the components loaded in the

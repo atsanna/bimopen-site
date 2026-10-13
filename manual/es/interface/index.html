@@ -803,6 +803,7 @@ Planta baja</strong>. Un asterisco tras el nombre del proyecto significa que tie
 la página de lo que estás haciendo: el cuadro de diálogo abierto, el botón de la cinta de opciones
 bajo el ratón (su información termina con <strong>Pulse F1 para obtener más información</strong>) o la
 herramienta activa.</p>
+<p>Haga clic con el botón derecho en una herramienta de la cinta de opciones y elija <strong>Añadir a la barra de herramientas de acceso rápido</strong>: la herramienta entra en la barra y se inicia desde allí, sea cual sea la ficha abierta. Con el botón derecho sobre la herramienta en la barra aparece <strong>Quitar de la barra de herramientas de acceso rápido</strong>. El último botón de la barra, <strong>Personalizar barra de herramientas de acceso rápido</strong>, sube y baja las herramientas añadidas y permite <strong>Mostrar debajo de la cinta de opciones</strong> toda la barra (o de nuevo encima). La barra se conserva para las sesiones siguientes.</p>
 <h2 id="ribbon">Cinta de opciones</h2>
 <p>La cinta de opciones agrupa las herramientas en fichas, y cada ficha en grupos. El nombre de un
 grupo está escrito bajo sus botones. Un botón cuyo nombre va seguido de una pequeña marca abre un
@@ -838,6 +839,7 @@ puedes escribir para iniciarlo.</p>
 </tr>
 </tbody>
 </table>
+<p>Pulse y suelte <span class="keys"><kbd class="key-alt">Alt</kbd></span>, o pulse <span class="keys"><kbd class="key-f10">F10</kbd></span>, para mostrar las sugerencias de teclas: una letra en cada ficha (<strong>I</strong>, <strong>N</strong>, <strong>A</strong>, <strong>V</strong>, <strong>G</strong>, <strong>M</strong>, de la primera ficha a la contextual) y, en los botones de la ficha abierta, el método abreviado de su herramienta. Escriba la letra de una ficha para abrirla y luego las letras de un botón para iniciar su herramienta; <span class="keys"><kbd class="key-escape">Esc</kbd></span> oculta las sugerencias. Mientras se muestran, lo que escribe no va a la línea de comandos.</p>
 <h3 id="the-home-tab">La ficha Inicio</h3>
 <table>
 <thead>
@@ -1087,6 +1089,7 @@ trabajando: <strong>Nivel: Planta baja</strong>.</p>
 </table>
 <p>Con <strong>Orto (Mayús)</strong> desactivado, mantener pulsada <span class="keys"><kbd class="key-shift">Shift</kbd></span> mientras dibujas da la misma
 restricción; con él activado, <span class="keys"><kbd class="key-shift">Shift</kbd></span> la libera.</p>
+<p>Haga clic con el botón derecho en la barra de opciones y elija <strong>Anclar abajo</strong> para llevarla justo encima de la barra de estado; <strong>Anclar arriba</strong> la devuelve. La elección se conserva para las sesiones siguientes.</p>
 <h2 id="properties">Propiedades</h2>
 <p>La paleta <strong>Propiedades</strong> muestra y modifica los parámetros de aquello en lo que estás
 trabajando. De arriba abajo tiene:</p>
@@ -1206,6 +1209,9 @@ planificación predefinida se abre con un clic.</p>
 <p>Con un tipo, bajo <strong>Familias</strong>, un doble clic abre sus propiedades de tipo; el menú del botón
 derecho tiene <strong>Propiedades de tipo</strong>, <strong>Duplicar…</strong>, <strong>Crear ejemplar</strong> (inicia la herramienta
 que lo coloca, con ese tipo) y <strong>Eliminar</strong>.</p>
+<p>Tras un clic en el navegador de proyectos, el teclado se mueve en él: <span class="keys"><kbd class="key-arrow-up">Up</kbd></span> y <span class="keys"><kbd class="key-arrow-down">Down</kbd></span> pasan de una fila a otra (las propiedades de la vista aparecen en la paleta), <span class="keys"><kbd class="key-arrow-right">Right</kbd></span> abre una rama, <span class="keys"><kbd class="key-arrow-left">Left</kbd></span> la cierra o sube a la rama que contiene la fila, <span class="keys"><kbd class="key-enter">Enter</kbd></span> abre la vista.</p>
+<p>Desde aquí las vistas van también a los planos. Arrastre una planta, una sección, un alzado, una vista de diseño, una leyenda, una vista 3D guardada o una tabla de planificación al plano abierto: su ventana gráfica sigue al cursor y queda donde la suelta. O suéltela sobre el nombre de un plano en el árbol: el plano se abre y la ventana gráfica sigue al cursor hasta que hace clic. Mientras arrastra, el árbol se desplaza cuando el cursor se acerca a su borde. El menú contextual de un plano tiene <strong>Añadir vista…</strong>. Una vista que ya está en un plano se rechaza, con el motivo en la línea de comandos; las leyendas y las tablas pueden ir en varios planos. Una vista 3D guardada aparece en el plano con las aristas vistas desde su cámara.</p>
+<p>El menú contextual de una planta, una sección o una vista de diseño tiene <strong>Buscar vistas de referencia</strong>: las vistas que muestran su símbolo y los planos en los que está; <strong>Ir a vista</strong> abre la elegida.</p>
 <h2 id="drawing-area-and-view-windows">Área de dibujo y ventanas de vista</h2>
 <p>Cada vista que abres es una ventana en el área de dibujo. Una vista que se vuelve a abrir pasa al
 frente; siempre queda abierta al menos una ventana. <strong>Vista ▸ Ventanas</strong> las organiza:</p>
@@ -1251,6 +1257,9 @@ frente; siempre queda abierta al menos una ventana. <strong>Vista ▸ Ventanas</
 <p>Haz clic en una ventana para activarla: las herramientas trabajan en la ventana activa, las demás
 solo muestran el modelo. En <strong>Mosaico</strong> y <strong>Cascada</strong>, la <strong>×</strong> de la barra de título de una
 ventana la cierra.</p>
+<p><strong>Mosaico</strong> coloca la ventana activa arriba a la izquierda y las demás después, desde la activada más recientemente; <strong>Cambiar ventanas</strong> las lista en el mismo orden. Si vuelve a ordenarlas tras trabajar en otra ventana, esa pasa a ser la primera.</p>
+<p><strong>Interfaz de usuario ▸ Métodos abreviados de teclado</strong> lista los comandos con sus métodos abreviados. Busque un comando por su nombre o use <strong>Filtrar</strong> (<strong>Todo</strong>, <strong>Todos los definidos</strong>, <strong>Todos los no definidos</strong>, <strong>Todos los reservados</strong>); seleccione un comando, escriba las teclas en <strong>Pulse las nuevas teclas</strong> y haga clic en <strong>Asignar</strong>. Las teclas que ya tiene otro comando se rechazan, con el motivo; <strong>Eliminar</strong> quita las teclas que añadió. Sus métodos abreviados se conservan para las sesiones siguientes e inician el comando al escribirlos, como los predefinidos.</p>
+<p>Una herramienta nunca cambia por sí sola la vista activa. Iniciada en una vista en la que no puede trabajar (un suelo o una habitación en una vista 3D, un nivel en una planta, un área fuera de una planta de áreas), abre <strong>Ir a vista</strong>: las vistas adecuadas, con la planta del nivel activo ya elegida. <strong>Abrir vista</strong> abre la vista elegida e inicia allí la herramienta; <strong>Cancelar</strong> lo deja todo como estaba. <strong>Editar contorno</strong> de un suelo, una cubierta, una escalera o una barandilla, desde una sección o un alzado, pide del mismo modo una planta de su nivel, y una nueva sección o alzado deja activa la planta en la que se dibujó. <strong>Desplazar</strong> y <strong>Copiar</strong> funcionan también en secciones y alzados, a lo largo de la vista.</p>
 <h3 id="view-control-bar">Barra de controles de vista</h3>
 <p>En la parte inferior de cada planta, sección, alzado, llamada y vista de diseño:</p>
 <table>
@@ -1290,6 +1299,7 @@ temporalmente</strong>. Un plano no tiene barra de controles de vista: sus vista
 <h3 id="navigation-bar">Barra de navegación</h3>
 <p>En el borde derecho de la vista activa (el borde izquierdo en árabe), tres botones: <strong>Zoom en
 región ajustada</strong> (lo mismo que <span class="keys"><kbd class="key-home">Home</kbd></span>), <strong>Ampliar</strong> y <strong>Reducir</strong>.</p>
+<p>Debajo, <strong>Opciones de zoom</strong> abre el menú del zoom: <strong>Zoom en región</strong> (arrastre un rectángulo sobre la vista; <span class="keys"><kbd class="key-escape">Esc</kbd></span> lo anula), <strong>Alejar (2x)</strong>, <strong>Ajustar a la ventana</strong>, <strong>Ajustar todo a la ventana</strong> (todas las ventanas abiertas), <strong>Zoom a tamaño de plano</strong> (la vista al tamaño en que se imprime), y <strong>Encuadre/zoom anterior</strong> y <strong>Encuadre/zoom siguiente</strong>, que van atrás y adelante por los encuadres de esa ventana. Escritos: <code>ZR</code>, <code>ZO</code>, <code>ZF</code>, <code>ZA</code>, <code>ZS</code>, <code>ZP</code>. En una vista 3D el último botón, <strong>SteeringWheels</strong>, abre la rueda de navegación: arrastre su sector <strong>Zoom</strong>, <strong>Órbita</strong> o <strong>Encuadre</strong>; haga clic en <strong>Centrar</strong> para que el punto del modelo bajo su centro sea el pivote de la vista, o en <strong>Rebobinar</strong> para volver al encuadre anterior; <strong>Cerrar rueda</strong> (×) la cierra.</p>
 <h3 id="moving-around-in-the-views">Desplazarse por las vistas</h3>
 <table>
 <thead>
@@ -1349,6 +1359,8 @@ región ajustada</strong> (lo mismo que <span class="keys"><kbd class="key-home"
 </table>
 <p>Un pequeño trípode en la esquina inferior de la vista 3D muestra las direcciones de los ejes: X
 rojo, Y verde, Z azul. Una vista 3D guardada recuerda dónde la dejaste.</p>
+<p>En 3D la rueda del ratón hace zoom manteniendo fijo el punto del modelo bajo el cursor, y la órbita gira alrededor del centro de la selección, o alrededor del punto al que mira la vista cuando no hay nada seleccionado.</p>
+<p>El <strong>ViewCube</strong>, en la esquina superior de la vista 3D, gira con el modelo. Haga clic en una cara (<strong>SUPERIOR</strong>, <strong>FRONTAL</strong>, <strong>DERECHA</strong>…) para mirar desde ese lado, en una arista para mirar entre dos lados, en un vértice entre tres; arrastre el cubo para orbitar. La casa encima, <strong>Vista inicial</strong>, vuelve a la vista de partida; las letras <strong>N</strong>, <strong>E</strong>, <strong>S</strong>, <strong>O</strong> debajo miran desde ese punto cardinal.</p>
 <h3 id="the-context-menu-of-a-view">El menú contextual de una vista</h3>
 <p>Haz clic con el botón derecho en una vista mientras no hay ninguna herramienta activa. Si el
 cursor está sobre un elemento que no está seleccionado, primero se selecciona el elemento. El
@@ -1365,6 +1377,7 @@ menú tiene:</p>
 </ul>
 <p>Mientras hay una herramienta activa, un clic con el botón derecho hace lo mismo que <span class="keys"><kbd class="key-escape">Esc</kbd></span>:
 cancela el paso en curso.</p>
+<p>En la parte superior del menú, <strong>Repetir [comando]</strong> vuelve a iniciar la última herramienta usada; <span class="keys"><kbd class="key-enter">Enter</kbd></span> hace lo mismo cuando no hay ninguna herramienta activa y la línea de comandos está vacía. El menú es el mismo en plantas, secciones y vistas 3D.</p>
 <h2 id="command-line">Línea de comandos</h2>
 <p>Bajo el área de dibujo, la línea de comandos muestra el registro de lo que se ha hecho, lo más
 reciente abajo: los comandos ejecutados, en gris tras un <code>&gt;</code>, sus resultados, y los errores en

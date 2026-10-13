@@ -799,6 +799,7 @@ Floor</strong>. An asterisk after the project's name means that it has unsaved c
 <p><strong>? ▸ Help</strong> (<span class="keys"><kbd class="key-f1">F1</kbd></span>) opens this manual, in the language of the interface, in the browser. <span class="keys"><kbd class="key-f1">F1</kbd></span>
 opens the page of what you are doing: the open dialog, the ribbon button under the mouse (its tip
 ends with <strong>Press F1 for more information</strong>) or the active tool.</p>
+<p>Right-click a ribbon tool and choose <strong>Add to Quick Access Toolbar</strong>: the tool joins the toolbar and starts from there whatever tab is open. Right-click it in the toolbar for <strong>Remove from Quick Access Toolbar</strong>. The last button of the toolbar, <strong>Customize Quick Access Toolbar</strong>, moves the added tools up and down and can <strong>Show below the Ribbon</strong> the whole toolbar (or above it again). The toolbar is kept for the next sessions.</p>
 <h2 id="ribbon">Ribbon</h2>
 <p>The ribbon groups the tools in tabs, and each tab in panels. The name of a panel is written
 under its buttons. A button whose name is followed by a small mark opens a menu. Resting the mouse on a button
@@ -833,6 +834,7 @@ shows what it does and, in brackets, the shortcut you can type to start it.</p>
 </tr>
 </tbody>
 </table>
+<p>Press and release <span class="keys"><kbd class="key-alt">Alt</kbd></span>, or press <span class="keys"><kbd class="key-f10">F10</kbd></span>, to show the key tips: a letter on every tab (<strong>I</strong>, <strong>N</strong>, <strong>A</strong>, <strong>V</strong>, <strong>G</strong>, <strong>M</strong>, from the first tab to the contextual one) and, on the buttons of the open tab, the shortcut of their tool. Type a tab's letter to open it, then a button's letters to start its tool; <span class="keys"><kbd class="key-escape">Esc</kbd></span> hides the key tips. While they show, what you type does not go to the command line.</p>
 <h3 id="the-home-tab">The Home tab</h3>
 <table>
 <thead>
@@ -1078,6 +1080,7 @@ is active, it shows the level you are working on: <strong>Level: Ground Floor</s
 </table>
 <p>With <strong>Ortho (Shift)</strong> off, holding <span class="keys"><kbd class="key-shift">Shift</kbd></span> while drawing gives the same constraint; with it on,
 <span class="keys"><kbd class="key-shift">Shift</kbd></span> releases it.</p>
+<p>Right-click the options bar and choose <strong>Dock at Bottom</strong> to move it just above the status bar; <strong>Dock at Top</strong> brings it back. The choice is kept for the next sessions.</p>
 <h2 id="properties">Properties</h2>
 <p>The <strong>Properties</strong> palette shows and changes the parameters of what you are working on. From
 top to bottom it has:</p>
@@ -1194,6 +1197,9 @@ click.</p>
 <p>With a type, under <strong>Families</strong>, a double-click opens its type properties; the right-click menu
 has <strong>Type Properties</strong>, <strong>Duplicate…</strong>, <strong>Create Instance</strong> (starts the tool that places it,
 with that type) and <strong>Delete</strong>.</p>
+<p>After a click in the Project Browser, the keyboard moves in it: <span class="keys"><kbd class="key-arrow-up">Up</kbd></span> and <span class="keys"><kbd class="key-arrow-down">Down</kbd></span> go from row to row (the view's properties show in the palette), <span class="keys"><kbd class="key-arrow-right">Right</kbd></span> opens a branch, <span class="keys"><kbd class="key-arrow-left">Left</kbd></span> closes it or goes up to the branch the row is in, <span class="keys"><kbd class="key-enter">Enter</kbd></span> opens the view.</p>
+<p>Views go on sheets from here too. Drag a plan, section, elevation, drafting view, legend, saved 3D view or schedule onto the open sheet: its viewport follows the cursor and stays where you drop it. Or drop it on a sheet's name in the tree: the sheet opens and the viewport follows the cursor until you click. While you drag, the tree scrolls when the cursor nears its edge. The right-click menu of a sheet has <strong>Add View…</strong>. A view already on a sheet is refused, with the reason on the command line; legends and schedules can go on several sheets. A saved 3D view is drawn on the sheet with the edges seen from its camera.</p>
+<p>The right-click menu of a plan, section or drafting view has <strong>Find Referring Views</strong>: the views that show its symbol and the sheets it is on; <strong>Go to View</strong> opens the one chosen.</p>
 <h2 id="drawing-area-and-view-windows">Drawing area and view windows</h2>
 <p>Every view you open is a window in the drawing area. A view opened again comes to the front; at
 least one window always stays open. <strong>View ▸ Windows</strong> arranges them:</p>
@@ -1238,6 +1244,9 @@ least one window always stays open. <strong>View ▸ Windows</strong> arranges t
 <p><img alt="Three views tiled" src="../assets/screens/tiled-windows.png"/></p>
 <p>Click in a window to make it active: the tools work in the active window, the others only show
 the model. In <strong>Tile</strong> and <strong>Cascade</strong>, the <strong>×</strong> on a window's title bar closes it.</p>
+<p><strong>Tile</strong> puts the active window at the top left and the others after it, from the most recently active; <strong>Switch Windows</strong> lists them in the same order. Tile again after working in another window and that window comes first.</p>
+<p><strong>User Interface ▸ Keyboard Shortcuts</strong> lists the commands with their shortcuts. Search a command by name, or <strong>Filter</strong> the list (<strong>All</strong>, <strong>All Defined</strong>, <strong>All Not Defined</strong>, <strong>All Reserved</strong>); select a command, type the keys in <strong>Press new keys</strong> and click <strong>Assign</strong>. Keys that another command already has are refused, with the reason; <strong>Remove</strong> takes away the keys you added. Your shortcuts are kept for the next sessions and start the command when typed, as the built-in ones do.</p>
+<p>A tool never changes the active view by itself. Started in a view where it cannot work (a floor or a room in a 3D view, a level in a plan, an area outside an area plan), it opens <strong>Go to View</strong>: the views that suit it, with the plan of the active level chosen first. <strong>Open View</strong> opens the chosen view and starts the tool there; <strong>Cancel</strong> leaves everything as it was. <strong>Edit Boundary</strong> of a floor, roof, stair or railing, from a section or an elevation, asks the same way for a plan of its level, and a new section or elevation leaves the plan you drew it in active. <strong>Move</strong> and <strong>Copy</strong> also work in sections and elevations, along the view.</p>
 <h3 id="view-control-bar">View control bar</h3>
 <p>At the bottom of every plan, section, elevation, callout and drafting view:</p>
 <table>
@@ -1277,6 +1286,7 @@ control bar: its views have their own scale.</p>
 <h3 id="navigation-bar">Navigation bar</h3>
 <p>On the right edge of the active view (the left edge in Arabic), three buttons: <strong>Zoom to Fit</strong>
 (the same as <span class="keys"><kbd class="key-home">Home</kbd></span>), <strong>Zoom In</strong> and <strong>Zoom Out</strong>.</p>
+<p>Under them, <strong>Zoom Options</strong> opens the zoom menu: <strong>Zoom in Region</strong> (drag a rectangle on the view; <span class="keys"><kbd class="key-escape">Esc</kbd></span> gives up), <strong>Zoom Out (2x)</strong>, <strong>Zoom to Fit</strong>, <strong>Zoom All to Fit</strong> (every open window), <strong>Zoom Sheet Size</strong> (the view at the size it prints), and <strong>Previous Pan/Zoom</strong> and <strong>Next Pan/Zoom</strong>, which go back and forth through the views of that window. Typed: <code>ZR</code>, <code>ZO</code>, <code>ZF</code>, <code>ZA</code>, <code>ZS</code>, <code>ZP</code>. In a 3D view the last button, <strong>SteeringWheels</strong>, opens the navigation wheel: drag its <strong>Zoom</strong>, <strong>Orbit</strong> or <strong>Pan</strong> sector; click <strong>Center</strong> to make the model point under its centre the point the view turns about, or <strong>Rewind</strong> to go back to the previous view; <strong>Close Wheel</strong> (×) closes it.</p>
 <h3 id="moving-around-in-the-views">Moving around in the views</h3>
 <table>
 <thead>
@@ -1336,6 +1346,8 @@ control bar: its views have their own scale.</p>
 </table>
 <p>A small tripod in the lower corner of the 3D view shows the directions of the axes: X red, Y
 green, Z blue. A saved 3D view remembers where you left it.</p>
+<p>In 3D, the wheel zooms keeping the model point under the cursor in place, and the orbit turns about the centre of the selection, or about the point the view looks at when nothing is selected.</p>
+<p>The <strong>ViewCube</strong>, in the top corner of the 3D view, turns with the model. Click a face (<strong>TOP</strong>, <strong>FRONT</strong>, <strong>RIGHT</strong>…) to look from that side, an edge to look from between two sides, a corner from between three; drag the cube to orbit. The house above it, <strong>Home</strong>, goes back to the starting view; the letters <strong>N</strong>, <strong>E</strong>, <strong>S</strong>, <strong>W</strong> under it look from that point of the compass.</p>
 <h3 id="the-context-menu-of-a-view">The context menu of a view</h3>
 <p>Right-click in a view while no tool is active. If the cursor is on an element that is not
 selected, the element is selected first. The menu has:</p>
@@ -1350,6 +1362,7 @@ selected, the element is selected first. The menu has:</p>
 <li><strong>Visibility/Graphics…</strong>.</li>
 </ul>
 <p>While a tool is active, a right-click does what <span class="keys"><kbd class="key-escape">Esc</kbd></span> does: it cancels the step in progress.</p>
+<p>At the top of the menu, <strong>Repeat [command]</strong> starts the last tool you used again; <span class="keys"><kbd class="key-enter">Enter</kbd></span> does the same when no tool is active and the command line is empty. The menu is the same in plans, sections and 3D views.</p>
 <h2 id="command-line">Command line</h2>
 <p>Under the drawing area, the command line shows the log of what has been done, the most recent at
 the bottom: the commands run, in grey after a <code>&gt;</code>, their results, and errors in red. On its last

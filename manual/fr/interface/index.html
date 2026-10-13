@@ -805,6 +805,7 @@ non enregistrées.</p>
 ouvre la page de ce que vous faites : la boîte de dialogue ouverte, le bouton du ruban sous la
 souris (son info-bulle se termine par <strong>Appuyez sur F1 pour plus d'informations</strong>) ou l'outil
 actif.</p>
+<p>Cliquez avec le bouton droit sur un outil du ruban et choisissez <strong>Ajouter à la barre d'outils d'accès rapide</strong> : l'outil rejoint la barre et se lance de là, quel que soit l'onglet ouvert. Avec le bouton droit sur l'outil dans la barre, <strong>Supprimer de la barre d'outils d'accès rapide</strong>. Le dernier bouton de la barre, <strong>Personnaliser la barre d'outils d'accès rapide</strong>, déplace vers le haut et vers le bas les outils ajoutés et permet d'<strong>Afficher sous le ruban</strong> toute la barre (ou de nouveau au-dessus). La barre reste ainsi pour les sessions suivantes.</p>
 <h2 id="ribbon">Ruban</h2>
 <p>Le ruban regroupe les outils en onglets, et chaque onglet en groupes. Le nom d'un groupe est écrit
 sous ses boutons. Un bouton dont le nom est suivi d'une petite marque ouvre un menu. Placer la
@@ -840,6 +841,7 @@ taper pour le lancer.</p>
 </tr>
 </tbody>
 </table>
+<p>Appuyez sur <span class="keys"><kbd class="key-alt">Alt</kbd></span> puis relâchez-la, ou appuyez sur <span class="keys"><kbd class="key-f10">F10</kbd></span>, pour afficher les info-touches : une lettre sur chaque onglet (<strong>I</strong>, <strong>N</strong>, <strong>A</strong>, <strong>V</strong>, <strong>G</strong>, <strong>M</strong>, du premier onglet à l'onglet contextuel) et, sur les boutons de l'onglet ouvert, le raccourci de leur outil. Tapez la lettre d'un onglet pour l'ouvrir, puis les lettres d'un bouton pour lancer son outil ; <span class="keys"><kbd class="key-escape">Esc</kbd></span> masque les info-touches. Tant qu'elles sont affichées, ce que vous tapez ne va pas dans la ligne de commande.</p>
 <h3 id="the-home-tab">L'onglet Début</h3>
 <table>
 <thead>
@@ -1089,6 +1091,7 @@ extrémité, lorsqu'un outil est actif, elle affiche le niveau sur lequel vous t
 </table>
 <p>Lorsque <strong>Ortho (Maj)</strong> est désactivé, maintenir <span class="keys"><kbd class="key-shift">Shift</kbd></span> pendant le dessin donne la même
 contrainte ; lorsqu'il est activé, <span class="keys"><kbd class="key-shift">Shift</kbd></span> la libère.</p>
+<p>Cliquez avec le bouton droit sur la barre des options et choisissez <strong>Ancrer en bas</strong> pour la placer juste au-dessus de la barre d'état ; <strong>Ancrer en haut</strong> la remet en place. Le choix est conservé pour les sessions suivantes.</p>
 <h2 id="properties">Propriétés</h2>
 <p>La palette <strong>Propriétés</strong> affiche et modifie les paramètres de ce sur quoi vous travaillez. De haut
 en bas, elle comporte :</p>
@@ -1209,6 +1212,9 @@ prédéfinie s'ouvre d'un clic.</p>
 <p>Avec un type, sous <strong>Familles</strong>, un double-clic ouvre ses propriétés de type ; le menu du clic droit
 comporte <strong>Propriétés du type</strong>, <strong>Dupliquer…</strong>, <strong>Créer une instance</strong> (lance l'outil qui le
 place, avec ce type) et <strong>Supprimer</strong>.</p>
+<p>Après un clic dans l'arborescence du projet, le clavier s'y déplace : <span class="keys"><kbd class="key-arrow-up">Up</kbd></span> et <span class="keys"><kbd class="key-arrow-down">Down</kbd></span> passent d'une ligne à l'autre (les propriétés de la vue s'affichent dans la palette), <span class="keys"><kbd class="key-arrow-right">Right</kbd></span> ouvre une branche, <span class="keys"><kbd class="key-arrow-left">Left</kbd></span> la ferme ou remonte à la branche qui contient la ligne, <span class="keys"><kbd class="key-enter">Enter</kbd></span> ouvre la vue.</p>
+<p>Les vues vont aussi sur les feuilles d'ici. Faites glisser un plan, une coupe, une élévation, une vue de dessin, une légende, une vue 3D enregistrée ou une nomenclature sur la feuille ouverte : sa fenêtre suit le curseur et reste là où vous la lâchez. Ou lâchez-la sur le nom d'une feuille dans l'arbre : la feuille s'ouvre et la fenêtre suit le curseur jusqu'à votre clic. Pendant le glissement, l'arbre défile quand le curseur approche de son bord. Le menu contextuel d'une feuille propose <strong>Ajouter une vue…</strong>. Une vue déjà placée sur une feuille est refusée, avec la raison dans la ligne de commande ; légendes et nomenclatures peuvent aller sur plusieurs feuilles. Une vue 3D enregistrée apparaît sur la feuille avec les arêtes vues depuis sa caméra.</p>
+<p>Le menu contextuel d'un plan, d'une coupe ou d'une vue de dessin propose <strong>Rechercher les vues de référence</strong> : les vues qui montrent son symbole et les feuilles où elle se trouve ; <strong>Atteindre la vue</strong> ouvre celle choisie.</p>
 <h2 id="drawing-area-and-view-windows">Zone de dessin et fenêtres de vue</h2>
 <p>Chaque vue que vous ouvrez est une fenêtre dans la zone de dessin. Une vue ouverte à nouveau passe
 au premier plan ; au moins une fenêtre reste toujours ouverte. <strong>Vue ▸ Fenêtres</strong> les dispose :</p>
@@ -1254,6 +1260,9 @@ au premier plan ; au moins une fenêtre reste toujours ouverte. <strong>Vue ▸ 
 <p>Cliquez dans une fenêtre pour la rendre active : les outils travaillent dans la fenêtre active, les
 autres se contentent d'afficher le modèle. En <strong>Mosaïque</strong> et en <strong>Cascade</strong>, le <strong>×</strong> dans la
 barre de titre d'une fenêtre la ferme.</p>
+<p><strong>Mosaïque</strong> place la fenêtre active en haut à gauche et les autres ensuite, de la plus récemment active ; <strong>Changer de fenêtre</strong> les liste dans le même ordre. Si vous disposez à nouveau après avoir travaillé dans une autre fenêtre, celle-ci passe en premier.</p>
+<p><strong>Interface utilisateur ▸ Raccourcis clavier</strong> liste les commandes avec leurs raccourcis. Cherchez une commande par son nom, ou utilisez <strong>Filtrer</strong> (<strong>Tout</strong>, <strong>Tous les éléments définis</strong>, <strong>Tous les éléments non définis</strong>, <strong>Tous les éléments réservés</strong>) ; sélectionnez une commande, tapez les touches dans <strong>Appuyez sur les nouvelles touches</strong> et cliquez sur <strong>Affecter</strong>. Les touches qu'une autre commande possède déjà sont refusées, avec la raison ; <strong>Supprimer</strong> enlève les touches que vous avez ajoutées. Vos raccourcis sont conservés pour les sessions suivantes et lancent la commande quand vous les tapez, comme ceux prévus.</p>
+<p>Un outil ne change jamais la vue active de lui-même. Lancé dans une vue où il ne peut pas travailler (un sol ou une pièce dans une vue 3D, un niveau dans un plan, une surface hors d'un plan de surfaces), il ouvre <strong>Atteindre la vue</strong> : les vues adaptées, le plan du niveau actif choisi d'avance. <strong>Ouvrir la vue</strong> ouvre la vue choisie et y lance l'outil ; <strong>Annuler</strong> laisse tout tel quel. <strong>Modifier le contour</strong> d'un sol, d'un toit, d'un escalier ou d'un garde-corps, depuis une coupe ou une élévation, demande de même un plan de son niveau, et une nouvelle coupe ou élévation laisse actif le plan où elle a été dessinée. <strong>Déplacer</strong> et <strong>Copier</strong> fonctionnent aussi dans les coupes et les élévations, le long de la vue.</p>
 <h3 id="view-control-bar">Barre de contrôle d'affichage</h3>
 <p>En bas de chaque plan, coupe, élévation, repère et vue de dessin :</p>
 <table>
@@ -1293,6 +1302,7 @@ pas de barre de contrôle d'affichage : ses vues ont leur propre échelle.</p>
 <h3 id="navigation-bar">Barre de navigation</h3>
 <p>Sur le bord droit de la vue active (le bord gauche en arabe), trois boutons : <strong>Zoom tout</strong> (comme
 <span class="keys"><kbd class="key-home">Home</kbd></span>), <strong>Zoom avant</strong> et <strong>Zoom arrière</strong>.</p>
+<p>En dessous, <strong>Options de zoom</strong> ouvre le menu du zoom : <strong>Zoom sur une région</strong> (faites glisser un rectangle sur la vue ; <span class="keys"><kbd class="key-escape">Esc</kbd></span> abandonne), <strong>Zoom arrière (2x)</strong>, <strong>Zoom adapté à la fenêtre</strong>, <strong>Tout adapter à la fenêtre</strong> (chaque fenêtre ouverte), <strong>Zoom taille de la feuille</strong> (la vue à sa taille d'impression), et <strong>Panoramique/zoom précédent</strong> et <strong>Panoramique/zoom suivant</strong>, qui reculent et avancent parmi les cadrages de cette fenêtre. Tapés : <code>ZR</code>, <code>ZO</code>, <code>ZF</code>, <code>ZA</code>, <code>ZS</code>, <code>ZP</code>. Dans une vue 3D, le dernier bouton, <strong>SteeringWheels</strong>, ouvre le disque de navigation : faites glisser son secteur <strong>Zoom</strong>, <strong>Orbite</strong> ou <strong>Panoramique</strong> ; cliquez sur <strong>Centrer</strong> pour que le point du modèle sous son centre devienne le pivot de la vue, ou sur <strong>Rembobiner</strong> pour revenir au cadrage précédent ; <strong>Fermer le disque</strong> (×) le ferme.</p>
 <h3 id="moving-around-in-the-views">Se déplacer dans les vues</h3>
 <table>
 <thead>
@@ -1352,6 +1362,8 @@ pas de barre de contrôle d'affichage : ses vues ont leur propre échelle.</p>
 </table>
 <p>Un petit trièdre dans le coin inférieur de la vue 3D indique les directions des axes : X en rouge,
 Y en vert, Z en bleu. Une vue 3D enregistrée mémorise l'endroit où vous l'avez laissée.</p>
+<p>En 3D, la molette zoome en gardant fixe le point du modèle sous le curseur, et l'orbite tourne autour du centre de la sélection, ou autour du point visé par la vue quand rien n'est sélectionné.</p>
+<p>Le <strong>ViewCube</strong>, dans le coin supérieur de la vue 3D, tourne avec le modèle. Cliquez sur une face (<strong>HAUT</strong>, <strong>AVANT</strong>, <strong>DROITE</strong>…) pour regarder de ce côté, sur une arête pour regarder entre deux côtés, sur un coin entre trois ; faites glisser le cube pour orbiter. La maison au-dessus, <strong>Vue d'accueil</strong>, revient à la vue de départ ; les lettres <strong>N</strong>, <strong>E</strong>, <strong>S</strong>, <strong>O</strong> en dessous regardent depuis ce point cardinal.</p>
 <h3 id="the-context-menu-of-a-view">Le menu contextuel d'une vue</h3>
 <p>Cliquez avec le bouton droit dans une vue lorsqu'aucun outil n'est actif. Si le curseur se trouve
 sur un élément non sélectionné, l'élément est d'abord sélectionné. Le menu comporte :</p>
@@ -1366,6 +1378,7 @@ sur un élément non sélectionné, l'élément est d'abord sélectionné. Le me
 <li><strong>Visibilité/Graphismes…</strong>.</li>
 </ul>
 <p>Lorsqu'un outil est actif, un clic droit fait la même chose qu'<span class="keys"><kbd class="key-escape">Esc</kbd></span> : il annule l'étape en cours.</p>
+<p>En haut du menu, <strong>Répéter [commande]</strong> relance le dernier outil utilisé ; <span class="keys"><kbd class="key-enter">Enter</kbd></span> fait de même quand aucun outil n'est actif et que la ligne de commande est vide. Le menu est le même dans les plans, les coupes et les vues 3D.</p>
 <h2 id="command-line">Ligne de commande</h2>
 <p>Sous la zone de dessin, la ligne de commande affiche le journal de ce qui a été fait, le plus récent
 en bas : les commandes exécutées, en gris après un <code>&gt;</code>, leurs résultats, et les erreurs en rouge.

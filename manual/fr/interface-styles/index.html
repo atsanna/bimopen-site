@@ -448,7 +448,7 @@ deux styles.</p>
 <tr>
 <td><strong>Vue</strong></td>
 <td>Au centre</td>
-<td>Le sélecteur de vue et <strong>+</strong> pour une nouvelle vue. Une seule barre de vue, en bas au centre : sélectionner, les modes <strong>Panoramique</strong>, <strong>Orbite</strong> (3D) et <strong>Zoom</strong> (quand l'un est actif, le bouton gauche fait glisser la vue ; <span class="keys"><kbd class="key-escape">Esc</kbd></span> le termine), zoom adapté | le style visuel, le niveau de détail, <strong>Soleil et ombres</strong> (3D), <strong>Cadrage</strong> (cadrer la vue, afficher la zone cadrée), <strong>Visibilité</strong> (masquer et isoler temporairement, afficher les éléments masqués) | plein écran. Dans les vues 3D le ViewCube (un clic sur une face, une arête ou un coin regarde depuis là, un glissement fait orbiter, la maison revient à la vue de départ) ; sur la sélection, les flèches de déplacement (faites-en glisser une pour déplacer le long de celle-ci, le centre pour déplacer librement en plan : la distance s'affiche pendant le glissement, le relâchement déplace comme <strong>Déplacer</strong>)</td>
+<td>Le sélecteur de vue et <strong>+</strong> pour une nouvelle vue. Une seule barre de vue, en bas au centre : sélectionner, les modes <strong>Panoramique</strong>, <strong>Orbite</strong> (3D) et <strong>Zoom</strong> (quand l'un est actif, le bouton gauche fait glisser la vue ; <span class="keys"><kbd class="key-escape">Esc</kbd></span> le termine), zoom adapté, <strong>Options de zoom</strong>, <strong>SteeringWheels</strong> (3D) | le style visuel, le niveau de détail, <strong>Soleil et ombres</strong> (3D), <strong>Cadrage</strong> (cadrer la vue, afficher la zone cadrée), <strong>Masquer/Isoler temporairement</strong> (son menu, comme dans la barre de contrôle de la vue ; la vue est encadrée tant qu'il est actif) et <strong>Révéler les éléments masqués</strong> | plein écran. Dans les vues 3D le ViewCube (un clic sur une face, une arête ou un coin regarde depuis là, un glissement fait orbiter, la maison revient à la vue de départ) ; sur la sélection, les flèches de déplacement (faites-en glisser une pour déplacer le long de celle-ci, le centre pour déplacer librement en plan : la distance s'affiche pendant le glissement, le relâchement déplace comme <strong>Déplacer</strong>)</td>
 </tr>
 <tr>
 <td><strong>Panneau d'élément</strong></td>
@@ -473,7 +473,7 @@ deux styles.</p>
 quelques lettres : la liste montre les commandes, vues, feuilles, nomenclatures, éléments et
 matériaux qui correspondent. Cliquez sur un résultat, ou choisissez-le avec les flèches et
 appuyez sur <span class="keys"><kbd class="key-enter">Enter</kbd></span> : une commande démarre, une vue s'ouvre, un élément est sélectionné et
-montré, un matériau s'ouvre dans <strong>Matériaux</strong>.</p>
+montré, un matériau s'ouvre dans <strong>Matériaux</strong>. La recherche trouve chaque commande des onglets du ruban, y compris celles de l'onglet contextuel (avec une vue sélectionnée sur une feuille, « activer » trouve <strong>Activer la vue</strong>), et l'exécute comme son bouton.</p>
 <p>La zone de recherche est aussi la ligne de commande du style. Ce que l'on tape dans une vue y
 arrive, comme dans la ligne de commande du style <strong>Revit</strong>, et <span class="keys"><kbd class="key-enter">Enter</kbd></span> exécute tel quel un
 raccourci clavier (<code>WA</code>, <code>DR</code>, <code>ZF</code>…) ou une commande avec ses arguments (<code>wall 0,0 5,0</code>). La
@@ -497,7 +497,13 @@ style <strong>Revit</strong>.</p>
   fenêtre active</strong> ;</li>
 <li>le menu du sélecteur de vue organise les fenêtres des vues (<strong>Changer de fenêtre</strong>,
   <strong>Mosaïque</strong>, <strong>Cascade</strong>, <strong>Agrandir</strong>, <strong>Répliquer</strong>, <strong>Fermer masquées</strong>) ; <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-tab">Tab</kbd></span>
-  passe à la fenêtre précédente.</li>
+  passe à la fenêtre précédente ;</li>
+<li>le bouton droit sur une tuile propose <strong>Ajouter à la barre d'outils d'accès rapide</strong> : l'outil
+  apparaît dans la barre supérieure, agit depuis toute section de la barre latérale, et son bouton
+  droit propose <strong>Supprimer de la barre d'outils d'accès rapide</strong> ;</li>
+<li>les infobulles de touches fonctionnent comme sur le ruban : appuyez brièvement sur <span class="keys"><kbd class="key-alt">Alt</kbd></span> (ou
+  sur <span class="keys"><kbd class="key-f10">F10</kbd></span>), puis la lettre d'un onglet ouvre la section de la barre latérale qui le contient
+  (sa lettre s'affiche sur la barre latérale) et les lettres d'un outil le lancent.</li>
 </ul>
 <h2 id="light-and-dark">Clair et sombre</h2>
 <p><img alt="Le style BIMopen dans le thème sombre" src="../assets/screens/interface-bimopen-dark.png"/></p>

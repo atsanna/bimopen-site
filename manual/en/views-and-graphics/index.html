@@ -624,6 +624,14 @@ placed on a sheet. The view's window becomes the active one.</p>
 <li>At <strong>Coarse</strong> a cut wall is one fill; at <strong>Medium</strong> and <strong>Fine</strong> its layers show, each with its
   material.</li>
 </ul>
+<p>Sections cut the model the same way. Walls, floors and roofs that meet in the cut are drawn as
+one: a thick outline round them, a thin line only where two materials meet, none between two
+parts of the same material; walls attached to a roof stop under it. Each cut layer has its
+material's cut pattern (at <strong>Coarse</strong>, the type's <strong>Coarse Scale Fill Pattern</strong> in its <strong>Coarse
+Scale Fill Color</strong>, set on wall, floor and roof types, else one solid fill). Furniture and
+plumbing fixtures are never cut: they are seen whole. A window is cut with its frame in the thick
+cut line and its glass in thin lines; what lies beyond the cut is drawn in thinner projection
+lines.</p>
 <p><strong>Crop View</strong> clips the view to its crop region, <strong>Show Crop Region</strong> draws the region; drag its
 edges to resize it. To type its size: <strong>Properties ▸ Size Crop ▸ Edit…</strong>, then <strong>Width</strong> and
 <strong>Height</strong>; the region keeps its centre.</p>

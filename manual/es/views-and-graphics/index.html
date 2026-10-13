@@ -636,6 +636,15 @@ vista (también en las vistas 3D).</p>
 <li>En <strong>Bajo</strong>, un muro cortado es un único relleno; en <strong>Medio</strong> y <strong>Alto</strong> se ven sus capas,
   cada una con su material.</li>
 </ul>
+<p>Las secciones cortan el modelo del mismo modo. Muros, suelos y cubiertas que se encuentran en el
+corte se dibujan como uno solo: un contorno grueso alrededor, una línea fina solo donde se
+encuentran dos materiales, ninguna entre partes del mismo material; los muros enlazados a una
+cubierta se detienen bajo ella. Cada capa cortada tiene el patrón de corte de su material (en
+<strong>Bajo</strong>, el <strong>Patrón de relleno de escala baja</strong> del tipo en su <strong>Color de relleno de escala
+baja</strong>, que se definen en los tipos de muro, suelo y cubierta; si no, un único relleno sólido).
+El mobiliario y los aparatos sanitarios nunca se cortan: se ven enteros. Una ventana se corta con
+su marco en la línea gruesa de corte y su vidrio en líneas finas; lo que queda más allá del corte
+se dibuja con las líneas de proyección, más finas.</p>
 <p><strong>Recortar vista</strong> recorta la vista a su región de recorte, y <strong>Mostrar región de recorte</strong> dibuja
 la región; arrastra sus bordes para cambiar su tamaño. Para escribir su tamaño: <strong>Propiedades ▸
 Tamaño de recorte ▸ Editar…</strong>, y después <strong>Anchura</strong> y <strong>Altura</strong>; la región conserva su centro.</p>

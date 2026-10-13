@@ -448,7 +448,7 @@ los dos estilos.</p>
 <tr>
 <td><strong>Vista</strong></td>
 <td>En el centro</td>
-<td>El selector de vista y <strong>+</strong> para una vista nueva. Una sola barra de vista, abajo en el centro: seleccionar, los modos <strong>Desplazar</strong>, <strong>Órbita</strong> (3D) y <strong>Zoom</strong> (con uno activo el botón izquierdo arrastra la vista; <span class="keys"><kbd class="key-escape">Esc</kbd></span> lo termina), zoom para ajustar | el estilo visual, el nivel de detalle, <strong>Sol y sombras</strong> (3D), <strong>Recorte</strong> (recortar vista, mostrar la región de recorte), <strong>Visibilidad</strong> (ocultar y aislar temporalmente, mostrar elementos ocultos) | pantalla completa. En las vistas 3D el ViewCube (un clic en una cara, una arista o un vértice mira desde allí, arrastrar orbita, la casa vuelve a la vista inicial); sobre la selección, las flechas de desplazamiento (arrastre una para mover a lo largo de ella, el centro para mover libremente en planta: la distancia se ve mientras arrastra, al soltar se mueve como con <strong>Mover</strong>)</td>
+<td>El selector de vista y <strong>+</strong> para una vista nueva. Una sola barra de vista, abajo en el centro: seleccionar, los modos <strong>Desplazar</strong>, <strong>Órbita</strong> (3D) y <strong>Zoom</strong> (con uno activo el botón izquierdo arrastra la vista; <span class="keys"><kbd class="key-escape">Esc</kbd></span> lo termina), zoom para ajustar, <strong>Opciones de zoom</strong>, <strong>SteeringWheels</strong> (3D) | el estilo visual, el nivel de detalle, <strong>Sol y sombras</strong> (3D), <strong>Recorte</strong> (recortar vista, mostrar la región de recorte), <strong>Ocultar/Aislar temporalmente</strong> (su menú, como en la barra de controles de vista; la vista se enmarca mientras está activo) y <strong>Mostrar elementos ocultos</strong> | pantalla completa. En las vistas 3D el ViewCube (un clic en una cara, una arista o un vértice mira desde allí, arrastrar orbita, la casa vuelve a la vista inicial); sobre la selección, las flechas de desplazamiento (arrastre una para mover a lo largo de ella, el centro para mover libremente en planta: la distancia se ve mientras arrastra, al soltar se mueve como con <strong>Mover</strong>)</td>
 </tr>
 <tr>
 <td><strong>Panel del elemento</strong></td>
@@ -473,7 +473,7 @@ los dos estilos.</p>
 letras: la lista muestra los comandos, vistas, planos, tablas, elementos y materiales que
 coinciden. Haga clic en un resultado, o elíjalo con las flechas y pulse <span class="keys"><kbd class="key-enter">Enter</kbd></span>: un comando se
 inicia, una vista se abre, un elemento se selecciona y se muestra, un material se abre en
-<strong>Materiales</strong>.</p>
+<strong>Materiales</strong>. La búsqueda encuentra cada comando de las pestañas de la cinta, también los de la pestaña contextual (con una vista seleccionada en un plano, «activar» encuentra <strong>Activar vista</strong>), y lo ejecuta como su botón.</p>
 <p>El cuadro de búsqueda es también la línea de comandos del estilo. Lo que se escribe en una vista
 llega allí, como en la línea de comandos del estilo <strong>Revit</strong>, y <span class="keys"><kbd class="key-enter">Enter</kbd></span> ejecuta tal cual un
 atajo de teclado (<code>WA</code>, <code>DR</code>, <code>ZF</code>…) o un comando con sus argumentos (<code>wall 0,0 5,0</code>). La lista
@@ -496,7 +496,13 @@ selección, primero los comandos de modificación (<strong>Mover</strong>, <stro
   plano, y su menú contextual tiene las acciones del navegador y <strong>Abrir en la ventana activa</strong>;</li>
 <li>el menú del selector de vista organiza las ventanas de las vistas (<strong>Cambiar ventanas</strong>,
   <strong>Mosaico</strong>, <strong>Cascada</strong>, <strong>Maximizar</strong>, <strong>Replicar</strong>, <strong>Cerrar ocultas</strong>); <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-tab">Tab</kbd></span> pasa a
-  la ventana anterior.</li>
+  la ventana anterior;</li>
+<li>el botón derecho sobre una ficha ofrece <strong>Añadir a la barra de herramientas de acceso rápido</strong>:
+  la herramienta aparece en la barra superior, funciona desde cualquier sección de la barra
+  lateral y su botón derecho ofrece <strong>Quitar de la barra de herramientas de acceso rápido</strong>;</li>
+<li>las sugerencias de teclas funcionan como en la cinta: pulse y suelte <span class="keys"><kbd class="key-alt">Alt</kbd></span> (o pulse <span class="keys"><kbd class="key-f10">F10</kbd></span>),
+  luego la letra de una pestaña abre la sección de la barra lateral que la contiene (su letra se
+  muestra en la barra lateral) y las letras de una herramienta la inician.</li>
 </ul>
 <h2 id="light-and-dark">Claro y oscuro</h2>
 <p><img alt="El estilo BIMopen en el tema oscuro" src="../assets/screens/interface-bimopen-dark.png"/></p>

@@ -118,6 +118,13 @@
   .ui-shot img { width: 100%; height: auto; }
   .ui-shot figcaption { margin-top: 10px; color: var(--muted); font-size: 15px; }
   .ui-pair { margin-top: 4px; }
+  .lightbox { border: 0; padding: 0; background: transparent; max-width: 96vw; max-height: 94vh; overflow: visible; }
+  .lightbox::backdrop { background: rgba(8, 17, 28, .82); }
+  .lightbox img { display: block; max-width: 96vw; max-height: 90vh; width: auto; height: auto; border-radius: var(--radius); box-shadow: 0 10px 40px rgba(0,0,0,.45); }
+  .lightbox .lb-cap { color: #e8eef5; font-size: 15px; text-align: center; margin-top: 10px; }
+  .lightbox .lb-close { position: absolute; top: -14px; inset-inline-end: -14px; width: 40px; height: 40px; border-radius: 50%; border: 0; background: #fff; color: #0f2742; font-size: 26px; line-height: 40px; cursor: pointer; box-shadow: 0 2px 10px rgba(0,0,0,.35); }
+  .lightbox .lb-close:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; }
+  .ui-shot a { cursor: zoom-in; }
   .ui-h3 { margin: 48px 0 6px; font-size: clamp(20px, 2.2vw, 26px); }
   .btn-ghost { border-color: var(--line); color: var(--ink); background: var(--card); }
   .bar .btn { padding: 8px 14px; }
@@ -552,7 +559,31 @@ $ bimopen-cli mcp</pre>
     });
   });
 </script>
-<script src="lingua.js?v=f3ee1fd2"></script>
+<dialog class="lightbox" id="lightbox" aria-label="Immagine ingrandita" data-i18n-attr="aria-label:lb.label">
+  <button class="lb-close" type="button" aria-label="Chiudi" title="Chiudi" data-i18n-attr="aria-label:lb.close;title:lb.close">×</button>
+  <img alt="">
+  <p class="lb-cap"></p>
+</dialog>
+<script>
+  // the screenshots open enlarged over the page: × , Esc or a click outside close them
+  (function () {
+    var d = document.getElementById('lightbox'); if (!d || !d.showModal) return;
+    var img = d.querySelector('img'), cap = d.querySelector('.lb-cap');
+    document.querySelectorAll('.ui-shot a').forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        e.preventDefault();
+        var i = a.querySelector('img'), f = a.closest('figure'), c = f && f.querySelector('figcaption');
+        img.src = a.getAttribute('href'); img.alt = i ? i.alt : '';
+        cap.textContent = c ? c.textContent : '';
+        d.showModal();
+      });
+    });
+    d.querySelector('.lb-close').addEventListener('click', function () { d.close(); });
+    d.addEventListener('click', function (e) { if (e.target === d) d.close(); });
+    d.addEventListener('close', function () { img.removeAttribute('src'); });
+  })();
+</script>
+<script src="lingua.js?v=37ca6056"></script>
 <script>
   // tema: quello di sistema finché non si sceglie; poi chiaro o scuro, ricordato in questo browser
   (function () {

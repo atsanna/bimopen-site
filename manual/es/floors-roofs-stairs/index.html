@@ -607,6 +607,10 @@ barandilla</strong>) y contiene:</p>
 <td>Haz clic en un muro: su línea entra en el boceto (ver abajo). Pulsa <span class="keys"><kbd class="key-tab">Tab</kbd></span> sobre un muro y luego haz clic para designar toda la cadena de muros unidos por sus extremos</td>
 </tr>
 <tr>
+<td><strong>Seleccionar líneas</strong></td>
+<td>Pasa sobre un muro, una rejilla, una línea o el borde de un suelo o una cubierta: la línea bajo el cursor se resalta con su nombre (las caras del muro, el límite de cada capa, sus dos <strong>Contorno del núcleo</strong> y su eje); <span class="keys"><kbd class="key-tab">Tab</kbd></span> pasa a la siguiente. Haz clic para añadir una línea de boceto sobre ella (desplazada por <strong>Desfase</strong> hacia el cursor)</td>
+</tr>
+<tr>
 <td><strong>Flecha de pendiente</strong></td>
 <td>Haz clic en la cola y luego en la cabeza de la flecha (suelos y cubiertas)</td>
 </tr>
@@ -638,7 +642,7 @@ terminar el boceto:</p>
 <li>sus propiedades están en la paleta <strong>Propiedades</strong>: <strong>Define pendiente</strong> y <strong>Pendiente</strong>, para
   una línea de cubierta tomada de un muro su <strong>Voladizo</strong>, y su <strong>Longitud</strong>.</li>
 </ul>
-<p><span class="keys"><kbd class="key-delete">Del</kbd></span> borra las líneas seleccionadas. <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span> durante el boceto deshace el último cambio
+<p><strong>Alinear</strong> toma como referencia la línea bajo el cursor, y <span class="keys"><kbd class="key-tab">Tab</kbd></span> pasa a la siguiente, así una línea de boceto se alinea con una capa o el contorno del núcleo de un muro. Al dibujar o arrastrar un extremo, los puntos se ajustan a las esquinas de las caras, capas y contornos del núcleo de los muros, y luego sobre esas líneas. <span class="keys"><kbd class="key-delete">Del</kbd></span> borra las líneas seleccionadas. <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span> durante el boceto deshace el último cambio
 del boceto, no del modelo. Todo esto funciona en planta, en sección y en alzado (el perfil de un
 muro) y, para seleccionar, arrastrar extremos y borrar, en la vista 3D.</p>
 <h3 id="editing-the-sketch-of-an-element">Editar el boceto de un elemento</h3>
@@ -798,6 +802,7 @@ descansillos y barandillas.</p>
   cortado a los peldaños, las huellas encima) o <strong>Ninguno</strong>, y <strong>Zancas centrales</strong> bajo las
   huellas, con su <strong>Grosor de zanca</strong> y <strong>Altura de zanca</strong>.</li>
 </ul>
+<p>El descansillo se detiene detrás de la última contrahuella del tramo que llega, siguiendo su cara posterior; en una escalera monolítica empieza en la cara de la contrahuella.</p>
 <p>Una sección a través de la escalera la muestra cortada con su losa. <strong>Volumen</strong> en
 <strong>Propiedades</strong> y en la tabla de planificación de escaleras es el volumen de sus sólidos.</p>
 <h2 id="railings">Barandillas</h2>

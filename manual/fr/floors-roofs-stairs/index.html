@@ -607,6 +607,10 @@ du garde-corps</strong>) et contient :</p>
 <td>Cliquez un mur : sa ligne entre dans l'esquisse (voir plus bas). Appuyez sur <span class="keys"><kbd class="key-tab">Tab</kbd></span> sur un mur, puis cliquez, pour choisir toute la chaîne de murs joints bout à bout</td>
 </tr>
 <tr>
+<td><strong>Choisir des lignes</strong></td>
+<td>Passez sur un mur, une grille, une ligne ou le bord d'un sol ou d'un toit : la ligne sous le curseur est mise en évidence avec son nom (les faces du mur, la limite de chaque couche, ses deux <strong>Limite de l'âme</strong> et son axe) ; <span class="keys"><kbd class="key-tab">Tab</kbd></span> passe à la suivante. Cliquez pour ajouter une ligne d'esquisse dessus (décalée de <strong>Décaler</strong> vers le curseur)</td>
+</tr>
+<tr>
 <td><strong>Flèche d'inclinaison</strong></td>
 <td>Cliquez la queue, puis la tête de la flèche (sols et toits)</td>
 </tr>
@@ -639,7 +643,7 @@ terminée :</p>
 <li>ses propriétés sont dans la palette <strong>Propriétés</strong> : <strong>Définit l'inclinaison</strong> et <strong>Pente</strong>,
   pour une ligne de toit prise sur un mur son <strong>Débord</strong>, et sa <strong>Longueur</strong>.</li>
 </ul>
-<p><span class="keys"><kbd class="key-delete">Del</kbd></span> supprime les lignes sélectionnées. <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span> pendant l'esquisse annule la dernière
+<p><strong>Aligner</strong> prend comme référence la ligne sous le curseur, et <span class="keys"><kbd class="key-tab">Tab</kbd></span> passe à la suivante, de sorte qu'une ligne d'esquisse s'aligne sur une couche ou la limite de l'âme d'un mur. En dessinant ou en faisant glisser une extrémité, les points s'accrochent aux angles des faces, couches et limites de l'âme des murs, puis sur ces lignes. <span class="keys"><kbd class="key-delete">Del</kbd></span> supprime les lignes sélectionnées. <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span> pendant l'esquisse annule la dernière
 modification de l'esquisse, pas du modèle. Tout cela fonctionne en plan, en coupe et en élévation
 (le profil d'un mur) et, pour sélectionner, faire glisser les extrémités et supprimer, dans la vue
 3D.</p>
@@ -804,6 +808,7 @@ paliers et ses garde-corps.</p>
   planche découpée aux marches, les girons dessus) ou <strong>Aucun</strong>, et des <strong>Limons centraux</strong> sous
   les girons, avec leur <strong>Épaisseur du limon</strong> et <strong>Hauteur du limon</strong>.</li>
 </ul>
+<p>Le palier s'arrête derrière la dernière contremarche de la volée qui y arrive, en suivant sa face arrière ; dans un escalier monolithique il commence à la face de la contremarche.</p>
 <p>Une coupe à travers l'escalier le montre coupé avec sa dalle. <strong>Volume</strong> dans <strong>Propriétés</strong> et
 dans la nomenclature des escaliers est le volume de ses solides.</p>
 <h2 id="railings">Garde-corps</h2>

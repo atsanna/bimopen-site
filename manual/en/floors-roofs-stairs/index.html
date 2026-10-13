@@ -606,6 +606,10 @@ takes it away.</p>
 <td>Click a wall: its line is added to the sketch (see below). Press <span class="keys"><kbd class="key-tab">Tab</kbd></span> over a wall, then click, to pick the whole chain of walls joined end to end</td>
 </tr>
 <tr>
+<td><strong>Pick Lines</strong></td>
+<td>Move over a wall, a grid, a line or the edge of a floor or roof: the line under the cursor is highlighted and named (a wall's faces, each layer boundary, its two <strong>Core Boundary</strong> lines and its axis); <span class="keys"><kbd class="key-tab">Tab</kbd></span> goes to the next one there. Click to add a sketch line on it (set off by <strong>Offset</strong> towards the cursor)</td>
+</tr>
+<tr>
 <td><strong>Slope Arrow</strong></td>
 <td>Click the tail, then the head of the arrow (floors and roofs)</td>
 </tr>
@@ -634,7 +638,7 @@ them as on other lines; nothing else can be picked until the sketch is finished:
 <li>its properties are in the <strong>Properties</strong> palette: <strong>Defines Slope</strong> and <strong>Slope</strong>, for a roof
   line picked from a wall its <strong>Overhang</strong>, and its <strong>Length</strong>.</li>
 </ul>
-<p><span class="keys"><kbd class="key-delete">Del</kbd></span> deletes the selected lines. <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span> while sketching takes back the last change to the
+<p><strong>Align</strong> takes as its reference the line under the cursor, and <span class="keys"><kbd class="key-tab">Tab</kbd></span> goes to the next one there, so a sketch line can be aligned to a wall's layer or core boundary. While drawing or dragging an end, the points snap to the corners of the walls' faces, layers and core boundaries, then onto those lines. <span class="keys"><kbd class="key-delete">Del</kbd></span> deletes the selected lines. <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span> while sketching takes back the last change to the
 sketch, not to the model. All this works in plans, in sections and elevations (a wall's profile)
 and, for selecting, dragging ends and deleting, in the 3D view.</p>
 <h3 id="editing-the-sketch-of-an-element">Editing the sketch of an element</h3>
@@ -786,6 +790,7 @@ offsets) and the type's <strong>Maximum Riser Height</strong>; changing a level 
   top) or <strong>None</strong>, and <strong>Middle Stringers</strong> under the treads, with their <strong>Stringer Thickness</strong>
   and <strong>Stringer Height</strong>.</li>
 </ul>
+<p>The landing stops behind the last riser of the run that reaches it, following its back face; in a monolithic stair it starts at the riser's face.</p>
 <p>A section across the stair shows it cut with its slab. <strong>Volume</strong> in <strong>Properties</strong> and in the
 schedule of stairs is the volume of its solids.</p>
 <h2 id="railings">Railings</h2>

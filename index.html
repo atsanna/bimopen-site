@@ -118,6 +118,7 @@
   .ui-shot img { width: 100%; height: auto; }
   .ui-shot figcaption { margin-top: 10px; color: var(--muted); font-size: 15px; }
   .ui-pair { margin-top: 4px; }
+  .ui-h3 { margin: 48px 0 6px; font-size: clamp(20px, 2.2vw, 26px); }
   .btn-ghost { border-color: var(--line); color: var(--ink); background: var(--card); }
   .bar .btn { padding: 8px 14px; }
 
@@ -311,6 +312,14 @@
           <figcaption data-i18n="ui.c2">Lo strumento Muro: barra delle opzioni, linea di ubicazione, concatena e quote temporanee.</figcaption></figure>
         <figure class="ui-shot"><a href="assets/ui/it/sheet.webp?v=a939ea05" data-ui-link><img src="assets/ui/it/sheet.webp?v=a939ea05" data-ui alt="Una tavola con due piante posizionate e il cartiglio" data-i18n-attr="alt:ui.alt3" width="1400" height="820" loading="lazy"></a>
           <figcaption data-i18n="ui.c3">Le tavole: viste in scala con il cartiglio, pronte per il PDF.</figcaption></figure>
+      </div>
+      <h3 class="ui-h3" data-i18n="ui.b.h3">E c'è anche lo stile BIMopen</h3>
+      <p class="sub" data-i18n="ui.b.p">Oltre all'interfaccia in stile Revit c'è un'interfaccia tutta nostra: barra laterale, ricerca dei comandi con Ctrl+K, strumenti a schede, pannello dell'elemento e miniature delle viste, in chiaro e in scuro. Gli stessi comandi, un altro aspetto. BIMopen parte in stile Revit; lo stile BIMopen si sceglie in Opzioni ▸ Interfaccia utente.</p>
+      <div class="grid2 ui-pair">
+        <figure class="ui-shot"><a href="assets/ui/it/bimopen-3d-light.webp?v=8f507409" data-ui-link><img src="assets/ui/it/bimopen-3d-light.webp?v=8f507409" data-ui alt="Lo stile BIMopen in chiaro: barra laterale, strumenti a schede, vista 3D e pannello dell'elemento" data-i18n-attr="alt:ui.b.alt1" width="1586" height="992" loading="lazy"></a>
+          <figcaption data-i18n="ui.b.c1">Stile BIMopen, tema chiaro: la casa di esempio in 3D.</figcaption></figure>
+        <figure class="ui-shot"><a href="assets/ui/it/bimopen-plan-dark.webp?v=664b5641" data-ui-link><img src="assets/ui/it/bimopen-plan-dark.webp?v=664b5641" data-ui alt="Lo stile BIMopen in scuro: la pianta del piano terra con le proprietà della vista" data-i18n-attr="alt:ui.b.alt2" width="1586" height="992" loading="lazy"></a>
+          <figcaption data-i18n="ui.b.c2">Stile BIMopen, tema scuro: la pianta del piano terra.</figcaption></figure>
       </div>
     </div>
   </section>
@@ -543,7 +552,7 @@ $ bimopen-cli mcp</pre>
     });
   });
 </script>
-<script src="lingua.js?v=d1bcff93"></script>
+<script src="lingua.js?v=f3ee1fd2"></script>
 <script>
   // tema: quello di sistema finché non si sceglie; poi chiaro o scuro, ricordato in questo browser
   (function () {

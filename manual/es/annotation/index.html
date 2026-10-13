@@ -599,7 +599,7 @@ todas las cotas de ese tipo.</p>
 </ul>
 <p><strong>Lineal</strong> mide en horizontal o en vertical de la vista, entre puntos como los extremos de un muro: el lugar donde
 se coloca la línea decide cuál, y la <strong>barra espaciadora</strong> alterna entre las dos.</p>
-<p><strong>Angular</strong> mide el ángulo entre dos muros, rejillas o líneas que se encuentran; el último clic elige el sector.
+<p><strong>Angular</strong> mide el ángulo entre dos muros, rejillas o líneas que se encuentran; varias líneas por el mismo punto dan una cadena de ángulos, cada uno con su valor; el último clic elige el sector.
 <strong>Radial</strong> y <strong>Longitud de arco</strong> acotan un arco: haga clic en él y después donde irá la cota.</p>
 <h3 id="changing-a-dimension">Modificar una cota</h3>
 <ul>
@@ -611,12 +611,15 @@ se coloca la línea decide cuál, y la <strong>barra espaciadora</strong> altern
   opciones la quita.</li>
 <li><strong>Edición | Cotas ▸ Líneas de referencia ▸ Editar líneas de referencia</strong>: haga clic en elementos para añadir líneas
   de referencia, haga clic en una línea de referencia existente para quitarla y luego haga clic en un punto vacío
-  para terminar.</li>
+  para terminar. Cada línea de referencia de una cota seleccionada tiene un control en su centro: clic derecho en él ▸
+  <strong>Mover línea de referencia</strong> y luego haga clic en la nueva referencia; o ▸ <strong>Suprimir líneas de referencia</strong>.</li>
 <li>Seleccione un elemento que la cota mide y haga clic en un valor junto a él: escriba una nueva distancia y pulse
   Intro, y el elemento se mueve.</li>
 </ul>
 <p>El tipo define la marca (diagonal, flecha rellena o punto), las extensiones de la línea de cota y de las líneas de
-referencia, el color, el tamaño del texto, el desfase, el fondo, la negrita, la cursiva y el subrayado, las
+referencia (<strong>Control de línea de referencia</strong>: una separación respecto al elemento, o <strong>Fijo a línea de cota</strong> con su
+<strong>Longitud de línea de referencia</strong>), el <strong>Grosor de línea</strong> y el <strong>Grosor de línea de marca</strong>, el <strong>Símbolo de eje</strong> y el
+<strong>Patrón de eje</strong> de las líneas de referencia a ejes, el color, el tamaño del texto, el desfase, el fondo, la negrita, la cursiva y el subrayado, las
 unidades (<strong>Usar parámetros de proyecto</strong> o una unidad con sus decimales) y, para las cotas lineales, el <strong>Tipo de
 cadena de cotas</strong>: <strong>Continuo</strong>, <strong>Línea base</strong> (valores apilados desde la primera referencia) u <strong>Coordenada</strong>
 (valores desde la primera referencia a lo largo de una línea). <strong>Mostrar altura de hueco</strong> escribe la altura de una
@@ -629,14 +632,15 @@ familia, para definirlo antes de acotar.</p>
 distancia entre sus líneas en el papel.</p>
 <h3 id="temporary-dimensions">Cotas temporales</h3>
 <p>Seleccione un muro o una rejilla: las cotas temporales muestran la distancia a los muros o rejillas paralelos más
-próximos. Haga clic en un valor, escriba uno nuevo y pulse Intro para mover el elemento; haga clic en el símbolo de
+próximos. Una puerta o ventana muestra su distancia a lo largo de su muro hasta los muros que lo cruzan a cada lado, y un
+componente su distancia al muro más próximo en cada dirección. Haga clic en un valor, escriba uno nuevo y pulse Intro para mover el elemento; haga clic en el símbolo de
 cota situado junto a ella para hacerla permanente. Mientras se coloca una puerta o ventana, las cotas temporales
 muestran su distancia a los muros más próximos. Con varios elementos seleccionados no se muestra ninguna, y la barra
 de opciones ofrece <strong>Activar cotas</strong> para mostrarlas para todos los elementos seleccionados.</p>
 <h3 id="constraints">Restricciones</h3>
 <p>Seleccione una cota: se muestra un candado en cada segmento. Haga clic en él para bloquear el segmento: la distancia
 se mantiene entonces cuando se mueve cualquiera de los elementos, y se rechaza un movimiento que la rompería. Haga
-clic de nuevo, o clic derecho en él ▸ <strong>Activar/desactivar bloqueo</strong>, para desbloquear. Una cadena de dos segmentos o más
+clic de nuevo, o clic derecho en él ▸ <strong>Activar/desactivar bloqueo</strong>, para desbloquear; clic derecho ▸ <strong>Mostrar relacionados</strong> selecciona los dos elementos que une el bloqueo. Una cadena de dos segmentos o más
 muestra <strong>EQ</strong>: haga clic en ella y las referencias quedan equidistantes, y siguen así cuando una de ellas se mueve.
 <strong>Visualización de igualdad</strong> en las propiedades muestra los valores en lugar de <strong>EQ</strong>.</p>
 <p>Al seleccionar un elemento que mantiene una restricción, esta se muestra como líneas azules discontinuas, salvo que
@@ -653,7 +657,14 @@ elimina ambas. <strong>Alinear</strong> de Modificar con su candado cerrado tamb
 </ul>
 <p>La barra de opciones ofrece <strong>Directriz</strong> y, con directriz, <strong>Codo</strong>: sin directriz un clic coloca la cota de punto;
 con directriz, haga clic en el punto y luego en el texto; con codo, en el punto, el quiebro y el texto. Mientras
-pasa el cursor, el valor se muestra junto a él.</p>
+pasa el cursor, el valor se muestra junto a él. Para las cotas de elevación de punto ofrece además <strong>Base relativa:</strong> (para un tipo cuyo
+<strong>Origen de elevación</strong> es <strong>Relativo</strong>) y, en plantas, <strong>Mostrar elevaciones:</strong>: la elevación real, la superior, la inferior o ambas.
+Para las pendientes de punto, <strong>Representación de pendiente:</strong> dibuja una <strong>Flecha</strong> o, en secciones, un <strong>Triángulo</strong>.</p>
+<p>Una cota de punto seleccionada tiene tiradores en su punto, su codo y su texto: arrastre el punto y la cota mide lo que hay allí.
+Una cota de punto sobre un suelo o una cubierta se elimina con ellos.</p>
+<p>El tipo de cota de punto define el <strong>Indicador de elevación</strong>, el <strong>Indicador superior</strong> y el <strong>Indicador inferior</strong> (textos
+antes del valor), el <strong>Símbolo</strong>, <strong>Incluir elevación</strong> y el <strong>Indicador Norte/Sur</strong> y el <strong>Indicador Este/Oeste</strong> de las
+coordenadas, y la <strong>Longitud de directriz</strong> y la <strong>Dirección de pendiente</strong> (<strong>Abajo</strong> o <strong>Arriba</strong>) de las pendientes.</p>
 <h2 id="text">Texto</h2>
 <p><strong>Anotar ▸ Texto ▸ Texto</strong> (<code>TX</code>): haga clic donde irá la nota y escriba; Intro inicia una línea nueva. Un clic
 da una nota que no se ajusta; arrastrando se le da un ancho y las palabras se ajustan dentro. Hacer clic en otro
@@ -669,6 +680,8 @@ su tamaño impreso a cualquier escala de la vista.</p>
   <strong>Eliminar última directriz</strong>;</li>
 <li><strong>Conexión a la izquierda</strong> y <strong>Conexión a la derecha</strong> (<strong>Arriba</strong>, <strong>En el centro</strong>, <strong>Abajo</strong>): dónde se unen
   las directrices a la nota; si se eligen al colocar, se conservan para las notas siguientes.</li>
+<li><strong>Formato de párrafo</strong>: los párrafos como lista, con <strong>Viñetas</strong>, <strong>Números</strong>, <strong>Letras minúsculas</strong> o <strong>Letras mayúsculas</strong>;
+  las líneas ajustadas quedan con sangría bajo el texto.</li>
 </ul>
 <p>Cerca de la línea de la esquina de otra nota, una nota nueva encaja en ella, y una línea discontinua lo muestra.</p>
 <p>En una nota seleccionada, arrastre la cruz para mover el cuadro (las puntas de las directrices se quedan), los
@@ -703,12 +716,13 @@ una, la directriz y la orientación, para todos los elementos de la vista o solo
 elementos sin etiqueta reciben una.</p>
 <p>Con directriz, <strong>Extremo fijado</strong> la termina en el elemento; <strong>Extremo libre</strong> la termina donde se hizo clic, y una
 etiqueta seleccionada muestra un tirador para arrastrar ese extremo a cualquier sitio (<strong>Extremo de directriz</strong> en
-las propiedades alterna entre los dos). La etiqueta de una habitación o un área se alinea con las demás etiquetas de
-su clase mientras se coloca: cerca de la línea del centro de otra etiqueta, encaja en ella, y una línea discontinua
+las propiedades alterna entre los dos). Una etiqueta se alinea con las demás etiquetas de
+su clase mientras se coloca o se arrastra: cerca de la línea del centro de otra etiqueta, encaja en ella, y una línea discontinua
 lo muestra. Las etiquetas ocultas en la vista (<strong>Visibilidad/Gráficos</strong>) se activan al etiquetar, y el mensaje lo
 indica.</p>
-<p>Haga doble clic en una etiqueta para editar lo que muestra: el nombre de una habitación, la marca de una puerta, la
-marca de tipo de un muro. Una etiqueta admite otro tipo de su propia categoría desde el selector de tipos. Los
+<p>Haga doble clic en una etiqueta para editar lo que muestra: la marca de una puerta o la marca de tipo de un muro en el sitio; el número y el nombre de una habitación o un área
+juntos en <strong>Editar valores de etiqueta</strong>. Una etiqueta admite otro tipo de su propia categoría desde el selector de tipos, y <strong>Elegir nuevo anfitrión</strong> (panel <strong>Anfitrión</strong>)
+la pasa a otro elemento de la misma categoría. Los
 tipos de etiqueta de habitación eligen si muestran el número, el área y el volumen. Una etiqueta de habitación o área
 definida como <strong>Patrón</strong> conserva un ángulo: gira con <strong>Girar</strong>, y la <strong>barra espaciadora</strong> la alinea por turnos con
 cada muro cercano (<strong>Rotación</strong> en sus propiedades). Eliminar la etiqueta de una habitación deja la habitación, y el
@@ -727,6 +741,11 @@ separadores de habitación: la habitación la rellena, también alrededor de mur
 <p>Una habitación colocada en un espacio abierto se conserva con un aviso y toma su forma cuando el espacio se cierra;
 una segunda habitación en una región ya ocupada se marca como <strong>Habitación redundante</strong> y no se cuenta dos veces. También se avisa de un número que otra habitación ya tiene, de una habitación más baja que la
 altura de cálculo (1200 mm), de una base por encima de ella y de un separador de habitación dibujado sobre otro.</p>
+<p>Los muros delimitan las habitaciones de un nivel cuando se alzan a su altura de cálculo: 1200 mm mientras
+<strong>Altura de cálculo automática de habitaciones</strong> esté marcada en las propiedades del nivel, y si no su <strong>Altura de cálculo</strong>.</p>
+<p>Una sección muestra las habitaciones que corta cuando están seleccionadas o bajo el cursor (<strong>TAB</strong> alcanza una
+habitación detrás de otros elementos). Una habitación seleccionada allí tiene una flecha en su parte superior y otra en su base:
+arrástrelas para cambiar su <strong>Desfase de límite</strong> y su <strong>Desfase de base</strong>.</p>
 <p><strong>Separador de habitación</strong> dibuja líneas que dividen un espacio en habitaciones sin muros. Un muro delimita
 habitaciones mientras su propiedad <strong>Delimitación de habitación</strong> esté activada. Los suelos y cubiertas superiores
 limitan el volumen de la habitación.</p>
@@ -753,10 +772,10 @@ todos los proyectos, y <strong>Esquemas de áreas ▸ Nuevo</strong> añade más
 <p>Eliminar un área la deja en el proyecto, no colocada, sin sus etiquetas; <strong>Área:</strong> en la barra de opciones de la
 herramienta <strong>Área</strong> lista las áreas no colocadas, para volver a ponerlas con un clic.</p>
 <h2 id="colour-schemes">Esquemas de color</h2>
-<p>Un esquema de color rellena las habitaciones o áreas de una planta según un valor (nombre, número, departamento,
+<p>Un esquema de color rellena las habitaciones o áreas de una planta (y las habitaciones que corta una sección) según un valor (nombre, número, departamento,
 tipo de área) o según rangos de área. Se define en la propiedad <strong>Esquema de color</strong> de la planta; <strong>(ninguno)</strong> lo
 desactiva. <strong>Configuración ▸ Esquemas de color</strong> (<strong>Editar esquema de color</strong>) crea y duplica esquemas y edita el
-título, el parámetro, los valores con su color y visibilidad, su orden y los rangos. <strong>Ubicación de la combinación
+título, el parámetro, los valores con su color y visibilidad, su orden y los rangos. <strong>Aplicar</strong> conserva los cambios y asigna el esquema a la vista con el cuadro de diálogo abierto. <strong>Ubicación de la combinación
 de colores</strong>, una propiedad de la vista, dibuja los rellenos en el <strong>Fondo</strong> (bajo el modelo) o en el <strong>Primer
 plano</strong> (sobre el modelo, bajo las anotaciones).</p>
 <p><strong>Habitación y área ▸ Leyenda</strong> coloca la leyenda del esquema de la planta: una muestra y una etiqueta para cada
@@ -772,13 +791,14 @@ dibujan con el nivel de detalle de la leyenda, se pueden mover y acotar (los bor
 componentes; los muros, suelos y cubiertas no) y las tablas de planificación no los cuentan. Texto, líneas de
 detalle y regiones funcionan como en una vista de diseño. Una leyenda puede colocarse en varias hojas.</p>
 <p>Un tipo arrastrado desde <strong>Familias</strong> en el Navegador de proyectos hasta una leyenda se convierte en su componente de
-leyenda donde se suelta. <strong>Crear similar</strong>, en el menú contextual de un elemento seleccionado, inicia la herramienta
+leyenda donde se suelta; un tipo de <strong>Familias ▸ Símbolos</strong> coloca ese símbolo de anotación. <strong>Crear similar</strong>, en el menú contextual de un elemento seleccionado, inicia la herramienta
 que lo coloca con su tipo: para un componente de leyenda, también con su vista y su longitud de anfitrión.</p>
 <h2 id="detail-lines-and-regions">Líneas de detalle y regiones</h2>
 <p><strong>Anotar ▸ Detalle ▸ Línea de detalle</strong> (<code>DL</code>) dibuja líneas solo en la vista abierta, con el estilo de línea del
 panel <strong>Estilo de línea</strong>, con las formas del panel <strong>Dibujar</strong>; <strong>Cadena</strong> inicia cada línea donde terminó la
 anterior.</p>
-<p><strong>Región ▸ Región rellenada</strong> traza un contorno con líneas o un rectángulo; <strong>Finalizar modo de edición</strong> crea la
+<p><strong>Región ▸ Región rellenada</strong> traza un contorno con líneas, rectángulos o círculos: cada bucle se cierra al hacer clic de nuevo en su primer punto, y los
+bucles dentro de otro son huecos. <strong>Finalizar modo de edición</strong> crea la
 región con el tipo de región actual, que define su patrón de relleno, su color y su fondo (<strong>Opaco</strong> oculta lo que
 hay detrás). <strong>Región ▸ Región de máscara</strong> crea una región del color del papel que oculta lo que hay debajo. Una
 región muestra su <strong>Área</strong> y tiene <strong>Comentarios</strong>. Una región seleccionada tiene un tirador en cada vértice:
@@ -793,7 +813,8 @@ arrastre uno para cambiar su forma.</p>
   <strong>Separación</strong>, <strong>Interior</strong> y la rotación dentro del patrón. La instancia tiene el <strong>Número</strong> cuando la
   disposición es de número fijo.</li>
 <li><strong>Aislamiento</strong>: haga clic en dos puntos; <strong>Anchura</strong> y <strong>Desfase</strong> (el aislamiento corre esa distancia a la
-  izquierda de los clics) en la barra de opciones, la anchura del aislamiento y la relación de abombamiento en sus
+  izquierda de los clics) en la barra de opciones; con <strong>Seleccionar líneas</strong> marcado, un clic en una línea de detalle
+  o en un muro lo dibuja a lo largo de esa línea. La anchura del aislamiento y la relación de abombamiento en sus
   propiedades. Un aislamiento seleccionado, y un detalle repetido seleccionado, tienen un tirador en cada extremo.</li>
 </ul>
 <h2 id="draw-order">Orden de dibujo</h2>
@@ -805,6 +826,15 @@ fondo</strong> y <strong>Enviar atrás</strong>. Los elementos de detalle siempr
 en <strong>Vistas de diseño</strong>; todo lo que se dibuja en ella es 2D, sin modelo detrás. Puede ir en una sola hoja.
 <strong>Duplicar vista ▸ Duplicar con detalles</strong> copia una vista con sus elementos de detalle, texto, cotas y componentes
 de leyenda.</p>
+<p><strong>Mostrar modelo</strong> en las propiedades de una planta, una sección o una vista de detalle dibuja el modelo
+<strong>Normal</strong>, en <strong>Medio tono</strong> (atenuado bajo los detalles) o no lo dibuja (<strong>No mostrar</strong>), dejando
+los detalles y las anotaciones.</p>
+<p><strong>Vista ▸ Crear ▸ Detalle</strong> con <strong>Referencia a otra vista</strong> marcada en la barra de opciones dibuja una
+llamada que apunta a una vista de detalle o de diseño existente en lugar de crear una nueva: su cabeza
+nombra esa vista y un doble clic la abre; <strong>Vista referenciada</strong> en sus propiedades la cambia.
+En una vista de diseño la llamada es siempre de este tipo.</p>
+<p><strong>Ocultar en escalas menores que</strong> en las propiedades de una sección o una llamada oculta su símbolo en
+las vistas cuya escala es menor, por ejemplo un detalle 1 : 50 que no aparece en la planta 1 : 100.</p>
 <h2 id="at-the-command-line">En la línea de comandos</h2>
 <p>Cada herramienta tiene su comando: <code>dim</code>, <code>lineardim</code>, <code>angulardim</code>, <code>radialdim</code>, <code>arcdim</code>,
 <code>spotelevation</code>, <code>text</code>, <code>findreplace</code>, <code>tag</code>, <code>room</code>, <code>roomsep</code>, <code>areaplan</code>, <code>areaboundary</code>,

@@ -601,7 +601,8 @@ est actif ; <strong>Propriétés du type</strong> modifie le type, et avec lui c
 <p><strong>Linéaire</strong> mesure selon l'horizontale ou la verticale de la vue, entre des points tels que les
 extrémités de murs : l'endroit où vous placez la ligne décide laquelle, et la <strong>barre d'espace</strong>
 passe de l'une à l'autre.</p>
-<p><strong>Angulaire</strong> mesure l'angle entre deux murs, quadrillages ou lignes qui se rejoignent ; le dernier
+<p><strong>Angulaire</strong> mesure l'angle entre deux murs, quadrillages ou lignes qui se rejoignent ; plusieurs
+lignes par le même point font une chaîne d'angles, chacun avec sa valeur ; le dernier
 clic choisit le secteur. <strong>Radial</strong> et <strong>Longueur de l'arc</strong> cotent un arc : cliquez-le, puis
 l'endroit où va la cote.</p>
 <h3 id="changing-a-dimension">Modifier une cote</h3>
@@ -614,12 +615,16 @@ l'endroit où va la cote.</p>
   dans la barre des options la supprime.</li>
 <li><strong>Édition | Cotes ▸ Lignes d'attache ▸ Modifier les lignes d'attache</strong> : cliquez des éléments pour
   ajouter des lignes d'attache, cliquez une ligne d'attache existante pour la retirer, puis cliquez
-  dans un endroit vide pour terminer.</li>
+  dans un endroit vide pour terminer. Chaque ligne d'attache d'une cote sélectionnée a une poignée en
+  son milieu : clic droit ▸ <strong>Déplacer la ligne d'attache</strong>, puis cliquez la nouvelle référence ; ou
+  ▸ <strong>Supprimer les lignes d'attache</strong>.</li>
 <li>Sélectionnez un élément que la cote mesure et cliquez une valeur à côté de lui : tapez une nouvelle
   distance et appuyez sur Entrée, et l'élément se déplace.</li>
 </ul>
 <p>Le type fixe le repère (diagonale, flèche pleine ou point), les prolongements de la ligne de cote
-et des lignes d'attache, la couleur, la taille du texte, le décalage, le fond, le gras, l'italique
+et des lignes d'attache (<strong>Contrôle de ligne d'attache</strong> : un espace jusqu'à l'élément, ou <strong>Fixe à la
+ligne de cote</strong> avec sa <strong>Longueur de ligne d'attache</strong>), l'<strong>Épaisseur de ligne</strong> et l'<strong>Épaisseur de
+ligne de la marque</strong>, le <strong>Symbole d'axe</strong> et le <strong>Motif d'axe</strong> des lignes d'attache vers les axes, la couleur, la taille du texte, le décalage, le fond, le gras, l'italique
 et le souligné, les unités (<strong>Utiliser les paramètres du projet</strong> ou une unité avec ses décimales),
 et pour les cotes linéaires le <strong>Type de chaîne de cotes</strong> : <strong>Continue</strong>, <strong>Ligne de base</strong> (valeurs
 empilées à partir de la première référence) ou <strong>Coordonnée</strong> (valeurs à partir de la première
@@ -634,7 +639,9 @@ ou appuyez sur la <strong>barre d'espace</strong>, pour mesurer depuis l'autre e
 base</strong> dans ses propriétés fixe la distance entre ses lignes sur le papier.</p>
 <h3 id="temporary-dimensions">Cotes temporaires</h3>
 <p>Sélectionnez un mur ou un quadrillage : des cotes temporaires montrent la distance aux murs ou
-quadrillages parallèles les plus proches. Cliquez une valeur, tapez-en une nouvelle et appuyez sur
+quadrillages parallèles les plus proches. Une porte ou une fenêtre montre sa distance le long de son
+mur aux murs qui le croisent de chaque côté, et un composant sa distance au mur le plus proche dans
+chaque direction. Cliquez une valeur, tapez-en une nouvelle et appuyez sur
 Entrée pour déplacer l'élément ; cliquez le symbole de cote à côté pour la rendre permanente.
 Pendant qu'une porte ou une fenêtre est placée, des cotes temporaires montrent sa distance aux murs
 les plus proches. Avec plusieurs éléments sélectionnés, aucune n'est affichée, et la barre des
@@ -643,7 +650,8 @@ options propose <strong>Activer les cotes</strong> pour les montrer pour tous le
 <p>Sélectionnez une cote : un cadenas s'affiche sur chaque segment. Cliquez-le pour verrouiller le
 segment : la distance tient alors quand l'un ou l'autre élément se déplace, et un déplacement qui la
 romprait est refusé. Cliquez-le de nouveau, ou clic droit ▸ <strong>Activer/désactiver le verrouillage</strong>,
-pour déverrouiller. Une chaîne de deux segments ou plus affiche <strong>EQ</strong> : cliquez dessus et les
+pour déverrouiller ; clic droit ▸ <strong>Afficher les éléments associés</strong> sélectionne les deux éléments que
+le verrou lie. Une chaîne de deux segments ou plus affiche <strong>EQ</strong> : cliquez dessus et les
 références deviennent équidistantes, et le restent quand l'une d'elles se déplace. <strong>Affichage de
 l'égalité</strong> dans les propriétés montre les valeurs au lieu de <strong>EQ</strong>.</p>
 <p>Sélectionner un élément que tient une contrainte montre la contrainte en lignes bleues
@@ -662,7 +670,17 @@ fermé est aussi une contrainte.</p>
 <p>La barre des options propose <strong>Ligne de repère</strong> et, avec une ligne de repère, <strong>Épaulement</strong> : sans
 ligne de repère, un clic place la cote ; avec une ligne de repère, cliquez le point puis le texte ;
 avec un épaulement, le point, le coude et le texte. Pendant le survol, la valeur s'affiche au
-curseur.</p>
+curseur. Pour les élévations de point, elle propose aussi <strong>Base relative :</strong> (pour un type dont
+l'<strong>Origine de l'élévation</strong> est <strong>Relatif</strong>) et, dans les plans, <strong>Afficher les élévations :</strong> :
+l'élévation réelle, le haut, le bas, ou les deux. Pour les pentes de point, <strong>Représentation de la
+pente :</strong> dessine une <strong>Flèche</strong> ou, dans les coupes, un <strong>Triangle</strong>.</p>
+<p>Une cote de point sélectionnée a des poignées à son point, à son épaulement et à son texte : faites
+glisser le point et la cote mesure ce qui s'y trouve. Une cote de point sur un sol ou un toit est
+supprimée avec lui.</p>
+<p>Le type de cote de point fixe l'<strong>Indicateur d'élévation</strong>, l'<strong>Indicateur supérieur</strong> et l'<strong>Indicateur
+inférieur</strong> (textes avant la valeur), le <strong>Symbole</strong>, <strong>Inclure l'élévation</strong> et l'<strong>Indicateur
+Nord/Sud</strong> et l'<strong>Indicateur Est/Ouest</strong> des coordonnées, et la <strong>Longueur de la ligne de repère</strong> et la
+<strong>Direction de la pente</strong> (<strong>Bas</strong> ou <strong>Haut</strong>) des pentes.</p>
 <h2 id="text">Texte</h2>
 <p><strong>Annoter ▸ Texte ▸ Texte</strong> (<code>TX</code>) : cliquez où va la note et tapez ; Entrée commence une nouvelle
 ligne. Un clic donne une note qui ne revient pas à la ligne ; un glissement lui donne une largeur,
@@ -679,6 +697,9 @@ La taille du texte est celle du papier : la note garde sa taille imprimée à to
 <li><strong>Attache à gauche</strong> et <strong>Attache à droite</strong> (<strong>En haut</strong>, <strong>Au milieu</strong>, <strong>En bas</strong>) : l'endroit
   où les lignes de repère rejoignent la note ; choisies pendant le placement, elles restent pour les
   notes suivantes.</li>
+<li><strong>Format de paragraphe</strong> : les paragraphes en liste, avec des <strong>Puces</strong>, des <strong>Numéros</strong>, des
+  <strong>Lettres minuscules</strong> ou des <strong>Lettres majuscules</strong> ; les lignes qui reviennent à la ligne sont
+  en retrait sous le texte.</li>
 </ul>
 <p>Près de la ligne d'un coin d'une autre note, une nouvelle note s'y aimante, et une ligne
 discontinue le montre.</p>
@@ -719,13 +740,15 @@ ou seulement les éléments sélectionnés ; seuls les éléments sans étiquett
 <p>Avec une ligne de repère, <strong>Extrémité attachée</strong> la termine sur l'élément ; <strong>Extrémité libre</strong> la
 termine là où vous avez cliqué, et une étiquette sélectionnée montre une poignée pour faire glisser
 cette extrémité n'importe où (<strong>Extrémité de la ligne de repère</strong> dans les propriétés passe de l'une
-à l'autre). L'étiquette d'une pièce ou d'une surface s'aligne sur les autres étiquettes du même
-genre pendant le placement : près de la ligne du centre d'une autre étiquette, elle s'y aimante, et
+à l'autre). Une étiquette s'aligne sur les autres étiquettes du même
+genre pendant le placement ou le glissement : près de la ligne du centre d'une autre étiquette, elle s'y aimante, et
 une ligne discontinue le montre. Les étiquettes masquées dans la vue (<strong>Visibilité/Graphismes</strong>)
 sont activées quand vous étiquetez, et le message l'indique.</p>
-<p>Double-cliquez une étiquette pour modifier ce qu'elle montre : le nom d'une pièce, le repère d'une
-porte, le repère de type d'un mur. Une étiquette prend un autre type de sa propre catégorie dans le
-sélecteur de type. Les types d'étiquette de pièce choisissent s'ils montrent le numéro, la surface
+<p>Double-cliquez une étiquette pour modifier ce qu'elle montre : le repère d'une porte ou le repère de
+type d'un mur sur place ; le numéro et le nom d'une pièce ou d'une surface ensemble dans <strong>Modifier
+les valeurs d'étiquette</strong>. Une étiquette prend un autre type de sa propre catégorie dans le
+sélecteur de type, et <strong>Choisir un nouvel hôte</strong> (groupe <strong>Hôte</strong>) la déplace vers un autre élément de
+la même catégorie. Les types d'étiquette de pièce choisissent s'ils montrent le numéro, la surface
 et le volume. Une étiquette de pièce ou de surface réglée sur <strong>Motif</strong> garde un angle : elle
 tourne avec <strong>Faire pivoter</strong>, et la <strong>barre d'espace</strong> l'aligne tour à tour sur chaque mur proche
 (<strong>Rotation</strong> dans ses propriétés). Supprimer l'étiquette d'une pièce laisse la pièce, et le message
@@ -748,6 +771,13 @@ fois l'espace fermé ; une seconde pièce dans une région déjà occupée est m
 redondante</strong> et n'est pas comptée deux fois. Un numéro que porte déjà une autre pièce, une pièce plus basse que la
 hauteur de calcul (1200 mm) et une base au-dessus d'elle font aussi l'objet d'un avertissement, de
 même qu'un séparateur de pièce dessiné sur un autre.</p>
+<p>Les murs délimitent les pièces d'un niveau quand ils s'élèvent à sa hauteur de calcul : 1200 mm tant
+que <strong>Hauteur de calcul automatique des pièces</strong> est cochée dans les propriétés du niveau, sinon sa
+<strong>Hauteur de calcul</strong>.</p>
+<p>Une coupe montre les pièces qu'elle traverse quand elles sont sélectionnées ou sous le curseur
+(<strong>TAB</strong> atteint une pièce derrière d'autres éléments). Une pièce sélectionnée dans la coupe a une
+flèche en haut et une à sa base : faites-les glisser pour changer son <strong>Décalage limite</strong> et son
+<strong>Décalage de la base</strong>.</p>
 <p><strong>Séparateur de pièce</strong> dessine des lignes qui divisent un espace en pièces sans murs. Un mur
 délimite des pièces tant que sa propriété <strong>Délimitation de pièce</strong> est activée. Les sols et les
 toits au-dessus plafonnent le volume de la pièce.</p>
@@ -779,11 +809,11 @@ ajoute d'autres.</p>
 la barre des options de l'outil <strong>Surface</strong> liste les surfaces non placées, pour en remettre une en
 un clic.</p>
 <h2 id="colour-schemes">Schémas de couleurs</h2>
-<p>Un schéma de couleurs remplit les pièces ou les surfaces d'un plan selon une valeur (nom, numéro,
+<p>Un schéma de couleurs remplit les pièces ou les surfaces d'un plan (et les pièces qu'une coupe traverse) selon une valeur (nom, numéro,
 service, type de surface) ou selon des plages de surface. Réglez-le dans la propriété <strong>Schéma de
 couleurs</strong> du plan ; <strong>(aucun)</strong> le désactive. <strong>Paramètres ▸ Schémas de couleurs</strong> (<strong>Modifier le
 schéma de couleurs</strong>) crée et duplique des schémas et modifie le titre, le paramètre, les valeurs
-avec leur couleur et leur visibilité, leur ordre et les plages. <strong>Emplacement du jeu de couleurs</strong>,
+avec leur couleur et leur visibilité, leur ordre et les plages. <strong>Appliquer</strong> garde les changements et règle le schéma de la vue avec la boîte de dialogue ouverte. <strong>Emplacement du jeu de couleurs</strong>,
 une propriété de vue, dessine les remplissages à l'<strong>Arrière-plan</strong> (sous le modèle) ou au <strong>Premier
 plan</strong> (au-dessus du modèle, sous les annotations).</p>
 <p><strong>Pièce et surface ▸ Légende</strong> place la légende du schéma du plan : un échantillon et une étiquette
@@ -801,14 +831,15 @@ peuvent être déplacés et cotés (les bords des portes, fenêtres et composant
 toits), et ne sont pas comptés par les nomenclatures. Le texte, les lignes de détail et les régions
 fonctionnent comme dans une vue de dessin. Une légende peut être placée sur plusieurs feuilles.</p>
 <p>Un type glissé depuis <strong>Familles</strong> dans l'explorateur de projet vers une légende devient son
-composant de légende à l'endroit où on le dépose. <strong>Créer un type similaire</strong>, dans le menu
+composant de légende à l'endroit où on le dépose ; un type de <strong>Familles ▸ Symboles</strong> place ce symbole d'annotation. <strong>Créer un type similaire</strong>, dans le menu
 contextuel d'un élément sélectionné, lance l'outil qui le place avec son type : pour un composant de
 légende, avec aussi sa vue et la longueur de l'hôte.</p>
 <h2 id="detail-lines-and-regions">Lignes de détail et régions</h2>
 <p><strong>Annoter ▸ Détail ▸ Ligne de détail</strong> (<code>DL</code>) dessine des lignes dans la seule vue ouverte, avec le
 style de ligne du groupe <strong>Style de ligne</strong>, et avec les formes du groupe <strong>Dessiner</strong> ; <strong>Chaîne</strong>
 commence chaque ligne là où la précédente s'est terminée.</p>
-<p><strong>Région ▸ Région remplie</strong> esquisse une limite avec des lignes ou un rectangle ; <strong>Terminer le mode
+<p><strong>Région ▸ Région remplie</strong> esquisse une limite avec des lignes, des rectangles ou des cercles : chaque boucle se ferme quand
+vous cliquez de nouveau son premier point, et les boucles à l'intérieur d'une autre sont des trous. <strong>Terminer le mode
 d'édition</strong> crée la région dans le type de région courant, qui fixe sa trame de remplissage, sa
 couleur et son fond (<strong>Opaque</strong> cache ce qui est derrière). <strong>Région ▸ Région de masquage</strong> crée une
 région de la couleur du papier qui cache ce qui se trouve dessous. Une région montre sa <strong>Surface</strong> et a des <strong>Commentaires</strong>. Une région sélectionnée a une poignée à
@@ -824,7 +855,8 @@ chaque sommet : faites-en glisser une pour changer sa forme.</p>
   l'<strong>Espacement</strong>, <strong>Intérieur</strong> et la rotation dans le motif. L'instance a le <strong>Numéro</strong> quand la
   disposition est un nombre fixe.</li>
 <li><strong>Isolation</strong> : cliquez deux points ; <strong>Largeur</strong> et <strong>Décaler</strong> (l'isolant court à cette distance
-  à gauche des clics) dans la barre des options, la largeur de l'isolant et le rapport de boucle
+  à gauche des clics) dans la barre des options ; avec <strong>Choisir des lignes</strong> cochée, un clic sur une
+  ligne de détail ou un mur la dessine le long de cette ligne. La largeur de l'isolant et le rapport de boucle
   dans ses propriétés. Une isolation sélectionnée, comme un détail répétitif sélectionné, a une
   poignée à chaque extrémité.</li>
 </ul>
@@ -838,6 +870,16 @@ précédent.</p>
 s'ouvre et figure sous <strong>Vues de dessin</strong> ; tout ce qui y est dessiné est en 2D, sans modèle
 derrière. Elle peut être placée sur une seule feuille. <strong>Dupliquer la vue ▸ Dupliquer avec détails</strong>
 copie une vue avec ses éléments de détail, son texte, ses cotes et ses composants de légende.</p>
+<p><strong>Afficher le modèle</strong> dans les propriétés d'un plan, d'une coupe ou d'une vue de détail dessine le
+modèle <strong>Normale</strong>, <strong>Demi-teinte</strong> (grisé sous les détails) ou pas du tout (<strong>Ne pas afficher</strong>), en
+laissant les détails et les annotations.</p>
+<p><strong>Vue ▸ Créer ▸ Détail</strong> avec <strong>Référence à une autre vue</strong> cochée dans la barre des options dessine un
+repère qui pointe vers une vue de détail ou de dessin existante au lieu d'en créer une nouvelle : sa
+tête nomme cette vue et un double-clic l'ouvre ; <strong>Vue référencée</strong> dans ses propriétés la change.
+Dans une vue de dessin, le repère est toujours de ce genre.</p>
+<p><strong>Masquer aux échelles inférieures à</strong> dans les propriétés d'une coupe ou d'un repère masque son
+symbole dans les vues dont l'échelle est plus grossière, par exemple un détail au 1:50 absent du plan
+au 1:100.</p>
 <h2 id="at-the-command-line">En ligne de commande</h2>
 <p>Chaque outil a sa commande : <code>dim</code>, <code>lineardim</code>, <code>angulardim</code>, <code>radialdim</code>, <code>arcdim</code>,
 <code>spotelevation</code>, <code>text</code>, <code>findreplace</code>, <code>tag</code>, <code>room</code>, <code>roomsep</code>, <code>areaplan</code>, <code>areaboundary</code>,

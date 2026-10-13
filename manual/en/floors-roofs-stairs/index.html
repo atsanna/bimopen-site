@@ -595,7 +595,7 @@ takes it away.</p>
 <tbody>
 <tr>
 <td><strong>Line</strong></td>
-<td>Click point after point: each click ends a line and starts the next. The length and angle of the line under the cursor are shown beside it; <span class="keys"><kbd class="key-shift">Shift</kbd></span> keeps it horizontal or vertical. With <strong>Chain</strong> off on the options bar, each line is drawn on its own. Clicking the start of the chain again closes the loop</td>
+<td>Click point after point: each click ends a line and starts the next. The length and angle of the line under the cursor are shown beside it; <span class="keys"><kbd class="key-shift">Shift</kbd></span> keeps it horizontal or vertical. With <strong>Chain</strong> off on the options bar, each line is drawn on its own. Clicking the start of the chain again closes the loop Type a length and press <span class="keys"><kbd class="key-enter">Enter</kbd></span>: the line ends that far along the cursor's direction (a stair's run too).</td>
 </tr>
 <tr>
 <td><strong>Rectangle</strong></td>
@@ -618,15 +618,33 @@ floor or the roof has a hole there. When <strong>Finish Edit Mode</strong> finds
 that cross, a message says so and the sketch stays open to be fixed (<strong>Continue</strong>).</p>
 <h3 id="picking-and-changing-sketch-lines">Picking and changing sketch lines</h3>
 <p><span class="keys"><kbd class="key-escape">Esc</kbd></span> ends the chain being drawn; a second <span class="keys"><kbd class="key-escape">Esc</kbd></span> puts the drawing tool down (so does
-<strong>Modify</strong>), and the sketch lines can be clicked. The picked line is blue and its properties are
-in the <strong>Properties</strong> palette: <strong>Defines Slope</strong> and <strong>Slope</strong>, for a roof line picked from a wall
-its <strong>Overhang</strong>, and its <strong>Length</strong>. <span class="keys"><kbd class="key-delete">Del</kbd></span> deletes the picked line. <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span> while
-sketching takes back the last change to the sketch, not to the model.</p>
+<strong>Modify</strong>). While the sketch is open its lines are elements of the view, and <strong>Modify</strong> works on
+them as on other lines; nothing else can be picked until the sketch is finished:</p>
+<ul>
+<li>the line under the cursor is highlighted; a click selects it, <span class="keys"><kbd class="key-control">Ctrl</kbd></span> adds lines, <span class="keys"><kbd class="key-shift">Shift</kbd></span>
+  takes them away, a window selects several, <span class="keys"><kbd class="key-tab">Tab</kbd></span> the chain of joined lines;</li>
+<li>the ends of the selected lines drag, and the ends joined there follow; a dragged line takes the
+  lines joined to it along;</li>
+<li><strong>Move</strong>, <strong>Copy</strong>, <strong>Rotate</strong>, <strong>Mirror - Draw Axis</strong>, <strong>Array</strong>, <strong>Align</strong>, <strong>Offset</strong>,
+  <strong>Trim/Extend to Corner</strong> and <strong>Split Element</strong> work on them, and the sketch stays open;</li>
+<li>one selected line shows temporary dimensions to the nearest parallel line on each side
+  (another sketch line, the wall's original outline, a wall, a grid, a level): click the value and
+  type a distance to move the line; the symbol beside it makes a permanent dimension, kept while
+  the sketch is open;</li>
+<li>its properties are in the <strong>Properties</strong> palette: <strong>Defines Slope</strong> and <strong>Slope</strong>, for a roof
+  line picked from a wall its <strong>Overhang</strong>, and its <strong>Length</strong>.</li>
+</ul>
+<p><span class="keys"><kbd class="key-delete">Del</kbd></span> deletes the selected lines. <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span> while sketching takes back the last change to the
+sketch, not to the model. All this works in plans, in sections and elevations (a wall's profile)
+and, for selecting, dragging ends and deleting, in the 3D view.</p>
 <h3 id="editing-the-sketch-of-an-element">Editing the sketch of an element</h3>
 <p>Select a floor, a roof, a stair or a railing: the <strong>Mode</strong> panel of its contextual tab has
 <strong>Edit Boundary</strong> (floors), <strong>Edit Footprint</strong> (roofs), <strong>Edit Sketch</strong> (stairs) or <strong>Edit Path</strong>
 (railings). Sketch mode opens with the element's lines, openings, slopes and arrow; <strong>Finish Edit
 Mode</strong> changes the same element, <strong>Cancel Edit Mode</strong> leaves it unchanged.</p>
+<p>The sketch opens with <strong>Modify</strong> active: its lines can be selected and changed at once.</p>
+<p>In a plan the sketch is drawn on the level; in the 3D view it lies on the element's own plane
+(the floor's top, the roof's base) and the 3D view stays open.</p>
 <h2 id="floors">Floors</h2>
 <ol>
 <li>Click <strong>Home ▸ Build ▸ Flooring</strong>. Sketch mode starts with <strong>Pick Walls</strong>.</li>
@@ -760,7 +778,8 @@ offsets) and the type's <strong>Maximum Riser Height</strong>; changing a level 
 <ul>
 <li><strong>Monolithic Stairs</strong> ticked: each run is a concrete slab cut to the steps; its underside runs
   parallel to the slope, <strong>Structural Depth</strong> below the inner corners of the steps, and the
-  landings are as thick;</li>
+  landings are as thick: the sloping underside of a run meets the landing's underside along a
+  line, without a step;</li>
 <li>otherwise treads (<strong>Tread Thickness</strong>) with risers (<strong>Riser Type</strong> <strong>Straight</strong>, <strong>Riser
   Thickness</strong>) or open (<strong>None</strong>), on stringers: <strong>Right Stringer</strong> and <strong>Left Stringer</strong>
 <strong>Closed</strong> (a board the treads are housed in), <strong>Open</strong> (a board cut to the steps, the treads on
@@ -780,6 +799,12 @@ schedule of stairs is the volume of its solids.</p>
 </ol>
 <p><strong>Edit Path</strong> reopens the path of a railing. The railing's <strong>Type Properties</strong> has its <strong>Railing
 Height</strong> and <strong>Baluster Spacing</strong>: changing them changes every railing of that type.</p>
+<p>The railings of a stair run on over its landings as one rail, at their height above the line of
+the nosings and above the landings. Where a run leaves a landing one riser higher, the type's
+<strong>Tangent Joins</strong> (the rail goes straight on) and <strong>Angled Joins</strong> (it turns) decide the join:
+<strong>Extend Rails to Meet</strong> (tangent joins only) carries the sloping rail on down to the landing,
+<strong>Add Vertical/Horizontal Segments</strong> rises upright at the first riser, <strong>No Connector</strong> leaves a
+gap.</p>
 <h2 id="components">Components</h2>
 <ol>
 <li>Click <strong>Home ▸ Build ▸ Component</strong>. The type selector lists the components loaded in the

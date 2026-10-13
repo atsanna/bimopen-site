@@ -596,7 +596,7 @@ barandilla</strong>) y contiene:</p>
 <tbody>
 <tr>
 <td><strong>Línea</strong></td>
-<td>Haz clic punto tras punto: cada clic termina una línea y empieza la siguiente. Junto a la línea bajo el cursor aparecen su longitud y su ángulo; <span class="keys"><kbd class="key-shift">Shift</kbd></span> la mantiene horizontal o vertical. Con <strong>Cadena</strong> desactivada en la barra de opciones, cada línea se dibuja sola. Hacer clic otra vez en el inicio de la cadena cierra el contorno</td>
+<td>Haz clic punto tras punto: cada clic termina una línea y empieza la siguiente. Junto a la línea bajo el cursor aparecen su longitud y su ángulo; <span class="keys"><kbd class="key-shift">Shift</kbd></span> la mantiene horizontal o vertical. Con <strong>Cadena</strong> desactivada en la barra de opciones, cada línea se dibuja sola. Hacer clic otra vez en el inicio de la cadena cierra el contorno Escribe una longitud y pulsa <span class="keys"><kbd class="key-enter">Enter</kbd></span>: la línea termina a esa distancia en la dirección del cursor (también el tramo de una escalera).</td>
 </tr>
 <tr>
 <td><strong>Rectángulo</strong></td>
@@ -620,16 +620,36 @@ encuentra líneas que no se cierran o que se cortan, un mensaje lo indica y el b
 para corregirlo (<strong>Continuar</strong>).</p>
 <h3 id="picking-and-changing-sketch-lines">Designar y cambiar las líneas del boceto</h3>
 <p><span class="keys"><kbd class="key-escape">Esc</kbd></span> termina la cadena en curso; un segundo <span class="keys"><kbd class="key-escape">Esc</kbd></span> deja la herramienta de dibujo (como
-<strong>Modificar</strong>), y se puede hacer clic en las líneas del boceto. La línea designada es azul y sus
-propiedades están en la paleta <strong>Propiedades</strong>: <strong>Define pendiente</strong> y <strong>Pendiente</strong>, para una
-línea de cubierta tomada de un muro su <strong>Voladizo</strong>, y su <strong>Longitud</strong>. <span class="keys"><kbd class="key-delete">Del</kbd></span> borra la línea
-designada. <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span> durante el boceto deshace el último cambio del boceto, no del modelo.</p>
+<strong>Modificar</strong>). Mientras el boceto está abierto, sus líneas son elementos de la vista, y
+<strong>Modificar</strong> actúa sobre ellas como sobre las demás líneas; no se puede designar nada más hasta
+terminar el boceto:</p>
+<ul>
+<li>la línea bajo el cursor se resalta; un clic la selecciona, <span class="keys"><kbd class="key-control">Ctrl</kbd></span> añade líneas, <span class="keys"><kbd class="key-shift">Shift</kbd></span> las
+  quita, una ventana selecciona varias, <span class="keys"><kbd class="key-tab">Tab</kbd></span> la cadena de líneas unidas;</li>
+<li>los extremos de las líneas seleccionadas se arrastran, y los extremos unidos allí los siguen; una
+  línea arrastrada lleva consigo las líneas unidas a ella;</li>
+<li><strong>Mover</strong>, <strong>Copiar</strong>, <strong>Girar</strong>, <strong>Simetría - Dibujar eje</strong>, <strong>Matriz</strong>, <strong>Alinear</strong>,
+  <strong>Desfase</strong>, <strong>Recortar/Alargar a esquina</strong> y <strong>Dividir elemento</strong> actúan sobre ellas, y el
+  boceto sigue abierto;</li>
+<li>una sola línea seleccionada muestra cotas temporales hasta la línea paralela más cercana a cada
+  lado (otra línea del boceto, el contorno original del muro, un muro, una rejilla, un nivel): haz
+  clic en el valor y escribe una distancia para mover la línea; el símbolo de al lado la convierte
+  en una cota permanente, que se mantiene mientras el boceto está abierto;</li>
+<li>sus propiedades están en la paleta <strong>Propiedades</strong>: <strong>Define pendiente</strong> y <strong>Pendiente</strong>, para
+  una línea de cubierta tomada de un muro su <strong>Voladizo</strong>, y su <strong>Longitud</strong>.</li>
+</ul>
+<p><span class="keys"><kbd class="key-delete">Del</kbd></span> borra las líneas seleccionadas. <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span> durante el boceto deshace el último cambio
+del boceto, no del modelo. Todo esto funciona en planta, en sección y en alzado (el perfil de un
+muro) y, para seleccionar, arrastrar extremos y borrar, en la vista 3D.</p>
 <h3 id="editing-the-sketch-of-an-element">Editar el boceto de un elemento</h3>
 <p>Selecciona un suelo, una cubierta, una escalera o una barandilla: el grupo <strong>Modo</strong> de su ficha
 contextual tiene <strong>Editar contorno</strong> (suelos), <strong>Editar huella</strong> (cubiertas), <strong>Editar boceto</strong>
 (escaleras) o <strong>Editar camino</strong> (barandillas). El modo de boceto se abre con las líneas, las
 aberturas, las pendientes y la flecha del elemento; <strong>Finalizar modo de edición</strong> cambia el mismo
 elemento, <strong>Cancelar modo de edición</strong> lo deja sin cambios.</p>
+<p>El boceto se abre con <strong>Modificar</strong> activo: sus líneas se pueden seleccionar y cambiar enseguida.</p>
+<p>En una planta el boceto se dibuja sobre el nivel; en la vista 3D queda en el plano del elemento
+(la cara superior del suelo, la base de la cubierta) y la vista 3D sigue abierta.</p>
 <h2 id="floors">Suelos</h2>
 <ol>
 <li>Haz clic en <strong>Inicio ▸ Construir ▸ Pavimento</strong>. El modo de boceto empieza con <strong>Designar
@@ -770,7 +790,8 @@ descansillos y barandillas.</p>
 <ul>
 <li><strong>Escaleras monolíticas</strong> marcado: cada tramo es una losa de hormigón con la forma de los
   peldaños; su cara inferior es paralela a la pendiente, <strong>Espesor de losa</strong> bajo las esquinas
-  interiores de los peldaños, y los descansillos tienen el mismo espesor;</li>
+  interiores de los peldaños, y los descansillos tienen el mismo espesor: la cara inferior inclinada
+  de un tramo se encuentra con la del descansillo a lo largo de una línea, sin escalón;</li>
 <li>si no, huellas (<strong>Grosor de huella</strong>) con contrahuellas (<strong>Tipo de contrahuella</strong> <strong>Recta</strong>,
   <strong>Grosor de contrahuella</strong>) o abiertas (<strong>Ninguna</strong>), sobre zancas: <strong>Zanca derecha</strong> y <strong>Zanca
   izquierda</strong> <strong>Cerrada</strong> (un tablero en el que encajan las huellas), <strong>Abierta</strong> (un tablero
@@ -791,6 +812,13 @@ descansillos y barandillas.</p>
 <p><strong>Editar camino</strong> vuelve a abrir el camino de una barandilla. Las <strong>Propiedades de tipo</strong> de la
 barandilla tienen la <strong>Altura de barandilla</strong> y la <strong>Separación de balaustres</strong>: cambiarlas cambia
 todas las barandillas de ese tipo.</p>
+<p>Las barandillas de una escalera siguen sobre sus descansillos como un único barandal, a su altura
+sobre la línea de las narices de los peldaños y sobre los descansillos. Donde un tramo sale de un
+descansillo una contrahuella más arriba, las <strong>Uniones tangentes</strong> (el barandal sigue recto) y las
+<strong>Uniones angulares</strong> (gira) del tipo deciden la unión: <strong>Extender barandales hasta la unión</strong>
+(solo uniones tangentes) prolonga el barandal inclinado hasta el descansillo, <strong>Añadir segmentos
+verticales/horizontales</strong> sube en vertical en la primera contrahuella, <strong>Sin conector</strong> deja un
+hueco.</p>
 <h2 id="components">Componentes</h2>
 <ol>
 <li>Haz clic en <strong>Inicio ▸ Construir ▸ Componente</strong>. El selector de tipo lista los componentes

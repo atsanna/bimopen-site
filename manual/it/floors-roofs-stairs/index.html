@@ -596,7 +596,7 @@ contiene:</p>
 <tbody>
 <tr>
 <td><strong>Linea</strong></td>
-<td>Clic dopo clic: ogni clic chiude una linea e inizia la successiva. Accanto alla linea sotto il cursore compaiono lunghezza e angolo; <span class="keys"><kbd class="key-shift">Shift</kbd></span> la tiene orizzontale o verticale. Con <strong>Concatena</strong> disattivato nella barra delle opzioni, ogni linea è disegnata da sola. Un clic sull'inizio della catena chiude il perimetro</td>
+<td>Clic dopo clic: ogni clic chiude una linea e inizia la successiva. Accanto alla linea sotto il cursore compaiono lunghezza e angolo; <span class="keys"><kbd class="key-shift">Shift</kbd></span> la tiene orizzontale o verticale. Con <strong>Concatena</strong> disattivato nella barra delle opzioni, ogni linea è disegnata da sola. Un clic sull'inizio della catena chiude il perimetro Scrivi una lunghezza e premi <span class="keys"><kbd class="key-enter">Enter</kbd></span>: la linea finisce a quella distanza nella direzione del cursore (anche la rampa di una scala).</td>
 </tr>
 <tr>
 <td><strong>Rettangolo</strong></td>
@@ -620,17 +620,37 @@ linee che non si chiudono o che si intersecano, un messaggio lo dice e il disegn
 correggerlo (<strong>Continua</strong>).</p>
 <h3 id="picking-and-changing-sketch-lines">Selezionare e modificare le linee del disegno</h3>
 <p><span class="keys"><kbd class="key-escape">Esc</kbd></span> termina la catena in corso; un secondo <span class="keys"><kbd class="key-escape">Esc</kbd></span> posa lo strumento di disegno (come
-<strong>Modifica</strong>), e si può fare clic sulle linee del disegno. La linea selezionata è blu e le sue
-proprietà sono nella tavolozza <strong>Proprietà</strong>: <strong>Definisce l'inclinazione</strong> e <strong>Inclinazione</strong>,
-per una linea di tetto presa da un muro la sua <strong>Sporgenza</strong>, e la <strong>Lunghezza</strong>. <span class="keys"><kbd class="key-delete">Del</kbd></span>
-elimina la linea selezionata. <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span> durante il disegno annulla l'ultima modifica al disegno,
-non al modello.</p>
+<strong>Modifica</strong>). Finché il disegno è aperto le sue linee sono elementi della vista, e <strong>Modifica</strong>
+lavora su di esse come sulle altre linee; nient'altro si può selezionare finché il disegno non è
+terminato:</p>
+<ul>
+<li>la linea sotto il cursore si evidenzia; un clic la seleziona, <span class="keys"><kbd class="key-control">Ctrl</kbd></span> aggiunge linee,
+  <span class="keys"><kbd class="key-shift">Shift</kbd></span> le toglie, una finestra ne seleziona più d'una, <span class="keys"><kbd class="key-tab">Tab</kbd></span> la catena di linee unite;</li>
+<li>gli estremi delle linee selezionate si trascinano, e gli estremi uniti lì li seguono; una linea
+  trascinata porta con sé le linee unite a essa;</li>
+<li><strong>Sposta</strong>, <strong>Copia</strong>, <strong>Ruota</strong>, <strong>Copia speculare - Disegna asse</strong>, <strong>Serie</strong>, <strong>Allinea</strong>,
+  <strong>Offset</strong>, <strong>Riduci/Estendi ad angolo</strong> e <strong>Dividi elemento</strong> lavorano su di esse, e il disegno
+  resta aperto;</li>
+<li>una sola linea selezionata mostra le quote temporanee verso la linea parallela più vicina da
+  ogni lato (un'altra linea del disegno, il contorno originale del muro, un muro, una griglia, un
+  livello): fai clic sul valore e scrivi una distanza per spostare la linea; il simbolo accanto
+  la rende una quota permanente, che resta finché il disegno è aperto;</li>
+<li>le sue proprietà sono nella tavolozza <strong>Proprietà</strong>: <strong>Definisce l'inclinazione</strong> e
+  <strong>Inclinazione</strong>, per una linea di tetto presa da un muro la sua <strong>Sporgenza</strong>, e la
+  <strong>Lunghezza</strong>.</li>
+</ul>
+<p><span class="keys"><kbd class="key-delete">Del</kbd></span> elimina le linee selezionate. <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span> durante il disegno annulla l'ultima modifica al
+disegno, non al modello. Tutto questo funziona in pianta, in sezione e in prospetto (il profilo di
+un muro) e, per selezionare, trascinare gli estremi ed eliminare, nella vista 3D.</p>
 <h3 id="editing-the-sketch-of-an-element">Modificare il disegno di un elemento</h3>
 <p>Seleziona un pavimento, un tetto, una scala o una ringhiera: il gruppo <strong>Modalità</strong> della sua
 scheda contestuale ha <strong>Modifica contorno</strong> (pavimenti), <strong>Modifica perimetro</strong> (tetti),
 <strong>Modifica disegno</strong> (scale) o <strong>Modifica percorso</strong> (ringhiere). La modalità di disegno si apre
 con le linee, le aperture, le inclinazioni e la freccia dell'elemento; <strong>Termina modalità di
 modifica</strong> modifica lo stesso elemento, <strong>Annulla modalità di modifica</strong> lo lascia invariato.</p>
+<p>Il disegno si apre con <strong>Modifica</strong> attivo: le sue linee si possono subito selezionare e modificare.</p>
+<p>In una pianta il disegno si fa sul livello; nella vista 3D si trova sul piano dell'elemento (la
+faccia superiore del pavimento, la base del tetto) e la vista 3D resta aperta.</p>
 <h2 id="floors">Pavimenti</h2>
 <ol>
 <li>Fai clic su <strong>Inizio ▸ Costruisci ▸ Pavimento</strong>. La modalità di disegno parte con <strong>Seleziona
@@ -777,7 +797,8 @@ pianerottoli e le ringhiere.</p>
 <ul>
 <li><strong>Scale monolitiche</strong> spuntato: ogni rampa è una soletta in calcestruzzo sagomata a gradini; il
   suo intradosso è parallelo alla pendenza, <strong>Spessore soletta</strong> sotto gli spigoli interni dei
-  gradini, e i pianerottoli hanno lo stesso spessore;</li>
+  gradini, e i pianerottoli hanno lo stesso spessore: l'intradosso inclinato di una rampa incontra
+  quello del pianerottolo lungo una linea, senza gradino;</li>
 <li>altrimenti pedate (<strong>Spessore della pedata</strong>) con alzate (<strong>Tipo di alzata</strong> <strong>Diritta</strong>,
   <strong>Spessore alzata</strong>) o aperte (<strong>Nessuna</strong>), su montanti: <strong>Montante destro</strong> e <strong>Montante
   sinistro</strong> <strong>Chiuso</strong> (una tavola in cui sono incastrate le pedate), <strong>Aperto</strong> (una tavola
@@ -798,6 +819,13 @@ e nell'abaco delle scale è il volume dei suoi solidi.</p>
 <p><strong>Modifica percorso</strong> riapre il percorso di una ringhiera. Le <strong>Proprietà del tipo</strong> della
 ringhiera hanno l'<strong>Altezza ringhiera</strong> e la <strong>Spaziatura balaustre</strong>: cambiarle cambia tutte le
 ringhiere di quel tipo.</p>
+<p>Le ringhiere di una scala proseguono sui pianerottoli come un unico corrente, alla loro altezza
+sopra la linea dei bordi dei gradini e sopra i pianerottoli. Dove una rampa parte da un
+pianerottolo un'alzata più in alto, i <strong>Giunti tangenti</strong> (il corrente prosegue diritto) e i
+<strong>Giunti ad angolo</strong> (il corrente gira) del tipo decidono il giunto: <strong>Estendi correnti fino al
+giunto</strong> (solo giunti tangenti) prolunga il corrente inclinato fino al pianerottolo, <strong>Aggiungi
+segmenti verticali/orizzontali</strong> sale in verticale alla prima alzata, <strong>Nessun connettore</strong> lascia
+uno spazio vuoto.</p>
 <h2 id="components">Componenti</h2>
 <ol>
 <li>Fai clic su <strong>Inizio ▸ Costruisci ▸ Componente</strong>. Il selettore di tipo elenca i componenti

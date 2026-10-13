@@ -596,7 +596,7 @@ erstellen</strong>, <strong>Geländerpfad erstellen</strong>) und enthält:</p>
 <tbody>
 <tr>
 <td><strong>Linie</strong></td>
-<td>Punkt für Punkt klicken: Jeder Klick beendet eine Linie und beginnt die nächste. Länge und Winkel der Linie unter dem Cursor stehen daneben; <span class="keys"><kbd class="key-shift">Shift</kbd></span> hält sie waagerecht oder senkrecht. Ist <strong>Kette</strong> in der Optionsleiste aus, wird jede Linie einzeln gezeichnet. Ein Klick auf den Anfang der Kette schließt die Umgrenzung</td>
+<td>Punkt für Punkt klicken: Jeder Klick beendet eine Linie und beginnt die nächste. Länge und Winkel der Linie unter dem Cursor stehen daneben; <span class="keys"><kbd class="key-shift">Shift</kbd></span> hält sie waagerecht oder senkrecht. Ist <strong>Kette</strong> in der Optionsleiste aus, wird jede Linie einzeln gezeichnet. Ein Klick auf den Anfang der Kette schließt die Umgrenzung Eine Länge eingeben und <span class="keys"><kbd class="key-enter">Enter</kbd></span> drücken: Die Linie endet so weit in Richtung des Cursors (auch der Lauf einer Treppe).</td>
 </tr>
 <tr>
 <td><strong>Rechteck</strong></td>
@@ -620,11 +620,27 @@ Wände) um diesen Abstand.</p>
 Meldung das, und die Skizze bleibt zum Korrigieren offen (<strong>Weiter</strong>).</p>
 <h3 id="picking-and-changing-sketch-lines">Skizzenlinien auswählen und ändern</h3>
 <p><span class="keys"><kbd class="key-escape">Esc</kbd></span> beendet die laufende Kette; ein zweites <span class="keys"><kbd class="key-escape">Esc</kbd></span> legt das Zeichenwerkzeug ab (wie
-<strong>Ändern</strong>), und die Skizzenlinien können angeklickt werden. Die gewählte Linie ist blau, ihre
-Eigenschaften stehen in der Palette <strong>Eigenschaften</strong>: <strong>Definiert Neigung</strong> und <strong>Neigung</strong>, bei
-einer aus einer Wand gewählten Dachlinie ihr <strong>Überstand</strong>, und ihre <strong>Länge</strong>. <span class="keys"><kbd class="key-delete">Del</kbd></span> löscht
-die gewählte Linie. <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span> beim Skizzieren nimmt die letzte Änderung der Skizze zurück, nicht
-des Modells.</p>
+<strong>Ändern</strong>). Solange die Skizze offen ist, sind ihre Linien Elemente der Ansicht, und <strong>Ändern</strong>
+wirkt auf sie wie auf andere Linien; nichts anderes kann gewählt werden, bis die Skizze beendet
+ist:</p>
+<ul>
+<li>die Linie unter dem Cursor wird hervorgehoben; ein Klick wählt sie, <span class="keys"><kbd class="key-control">Ctrl</kbd></span> fügt Linien hinzu,
+  <span class="keys"><kbd class="key-shift">Shift</kbd></span> nimmt sie weg, ein Fenster wählt mehrere, <span class="keys"><kbd class="key-tab">Tab</kbd></span> die Kette verbundener Linien;</li>
+<li>die Enden der gewählten Linien lassen sich ziehen, und die dort verbundenen Enden folgen; eine
+  gezogene Linie nimmt die mit ihr verbundenen Linien mit;</li>
+<li><strong>Verschieben</strong>, <strong>Kopieren</strong>, <strong>Drehen</strong>, <strong>Spiegeln - Achse zeichnen</strong>, <strong>Reihe</strong>,
+  <strong>Ausrichten</strong>, <strong>Versatz</strong>, <strong>Stutzen/Dehnen für Ecke</strong> und <strong>Element teilen</strong> wirken auf sie,
+  und die Skizze bleibt offen;</li>
+<li>eine einzelne gewählte Linie zeigt temporäre Bemaßungen zur nächsten parallelen Linie auf jeder
+  Seite (eine andere Skizzenlinie, der ursprüngliche Umriss der Wand, eine Wand, ein Raster, eine
+  Ebene): auf den Wert klicken und einen Abstand eingeben verschiebt die Linie; das Symbol daneben
+  macht daraus eine dauerhafte Bemaßung, die bleibt, solange die Skizze offen ist;</li>
+<li>ihre Eigenschaften stehen in der Palette <strong>Eigenschaften</strong>: <strong>Definiert Neigung</strong> und
+  <strong>Neigung</strong>, bei einer aus einer Wand gewählten Dachlinie ihr <strong>Überstand</strong>, und ihre <strong>Länge</strong>.</li>
+</ul>
+<p><span class="keys"><kbd class="key-delete">Del</kbd></span> löscht die gewählten Linien. <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span> beim Skizzieren nimmt die letzte Änderung der
+Skizze zurück, nicht des Modells. Das alles funktioniert in Grundrissen, in Schnitten und Ansichten
+(das Profil einer Wand) und, zum Wählen, Ziehen der Enden und Löschen, in der 3D-Ansicht.</p>
 <h3 id="editing-the-sketch-of-an-element">Die Skizze eines Elements bearbeiten</h3>
 <p>Wählen Sie eine Geschossdecke, ein Dach, eine Treppe oder ein Geländer: Die Gruppe <strong>Modus</strong>
 seiner kontextabhängigen Registerkarte hat <strong>Begrenzung bearbeiten</strong> (Geschossdecken),
@@ -632,6 +648,10 @@ seiner kontextabhängigen Registerkarte hat <strong>Begrenzung bearbeiten</stron
 (Geländer). Der Skizzenmodus öffnet sich mit den Linien, Öffnungen, Neigungen und dem Pfeil des
 Elements; <strong>Bearbeitungsmodus beenden</strong> ändert dasselbe Element, <strong>Bearbeitungsmodus abbrechen</strong>
 lässt es unverändert.</p>
+<p>Die Skizze öffnet mit aktivem <strong>Ändern</strong>: Ihre Linien lassen sich sofort wählen und ändern.</p>
+<p>In einem Grundriss wird auf der Ebene skizziert; in der 3D-Ansicht liegt die Skizze auf der
+Ebene des Elements (Oberseite der Geschossdecke, Basis des Dachs), und die 3D-Ansicht bleibt
+offen.</p>
 <h2 id="floors">Geschossdecken</h2>
 <ol>
 <li>Klicken Sie auf <strong>Start ▸ Erstellen ▸ Bodenbelag</strong>. Der Skizzenmodus beginnt mit <strong>Wände
@@ -778,7 +798,8 @@ Podeste und die Geländer.</p>
 <ul>
 <li><strong>Monolithische Treppe</strong> aktiviert: Jeder Lauf ist eine Betonplatte, nach den Stufen geformt;
   ihre Unterseite verläuft parallel zur Neigung, <strong>Plattendicke</strong> unter den inneren Ecken der
-  Stufen, und die Podeste sind gleich dick;</li>
+  Stufen, und die Podeste sind gleich dick: Die geneigte Unterseite eines Laufs trifft die
+  Unterseite des Podests entlang einer Linie, ohne Stufe;</li>
 <li>sonst Auftritte (<strong>Auftrittsdicke</strong>) mit Setzstufen (<strong>Setzstufentyp</strong> <strong>Gerade</strong>,
   <strong>Setzstufendicke</strong>) oder offen (<strong>Keine</strong>), auf Wangen: <strong>Rechte Wange</strong> und <strong>Linke Wange</strong>
 <strong>Geschlossen</strong> (ein Brett, in das die Auftritte eingelassen sind), <strong>Offen</strong> (ein nach den
@@ -799,6 +820,13 @@ Podeste und die Geländer.</p>
 <p><strong>Pfad bearbeiten</strong> öffnet den Pfad eines Geländers wieder. Die <strong>Typeigenschaften</strong> des
 Geländers haben die <strong>Geländerhöhe</strong> und den <strong>Abstand der Geländerstäbe</strong>: Sie zu ändern ändert
 alle Geländer dieses Typs.</p>
+<p>Die Geländer einer Treppe laufen als ein Handlauf über die Podeste weiter, in ihrer Höhe über der
+Linie der Stufenvorderkanten und über den Podesten. Wo ein Lauf ein Podest eine Steigung höher
+verlässt, entscheiden die <strong>Tangentiale Verbindungen</strong> (der Handlauf geht gerade weiter) und die
+<strong>Winkelverbindungen</strong> (er knickt ab) des Typs: <strong>Handläufe bis zur Verbindung verlängern</strong> (nur
+tangential) führt den geneigten Handlauf bis zum Podest hinunter, <strong>Vertikale/horizontale
+Segmente hinzufügen</strong> steigt an der ersten Setzstufe senkrecht auf, <strong>Kein Verbindungsstück</strong>
+lässt eine Lücke.</p>
 <h2 id="components">Bauteile</h2>
 <ol>
 <li>Klicken Sie auf <strong>Start ▸ Erstellen ▸ Bauteil</strong>. Die Typenauswahl listet die im Projekt

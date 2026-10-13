@@ -426,27 +426,27 @@ styles.</p>
 <tr>
 <td><strong>Rail</strong></td>
 <td>Left edge</td>
-<td><strong>Home</strong> (the project and its files), <strong>Create</strong> (the modelling tools), <strong>Systems</strong>, <strong>Coordinate</strong> (IFC export and views from other projects), <strong>Check</strong>, <strong>Document</strong> (views, graphics, sheets and schedules), the open project and <strong>Settings</strong> (the project settings and <strong>Options</strong>). A click on the selected entry folds the tool panel</td>
+<td>BIMopen's mark (the application menu), <strong>Home</strong> (the project), <strong>Create</strong>, <strong>Document</strong>, <strong>View</strong>, <strong>Coordinate</strong>, the open project and <strong>Settings</strong>. They take the place of the ribbon's tabs. A click on the selected entry folds the tool panel</td>
 </tr>
 <tr>
 <td><strong>Top bar</strong></td>
 <td>Top</td>
-<td>The project and the active view, the command search, the save state, the light or dark theme, the help and <strong>Options</strong></td>
+<td>The project and the active view, the command search, undo and redo, the save state, the light or dark theme, the <strong>?</strong> menu and <strong>Options</strong></td>
 </tr>
 <tr>
 <td><strong>Tool panel</strong></td>
 <td>Left, beside the rail</td>
-<td>The tools of the rail entry, as tiles. <strong>Create</strong> has the <strong>Architecture</strong> tab with the building tools, then <strong>Curtain Wall</strong>, <strong>Room &amp; Area</strong>, <strong>Drawing and references</strong> and <strong>Modify</strong></td>
+<td>The ribbon's tabs as groups of tiles, each command once: <strong>Create</strong> has <strong>Home</strong> and <strong>Insert</strong> (with the <strong>Architecture</strong> tab), <strong>Document</strong> the sheets and <strong>Annotate</strong>, <strong>View</strong> the <strong>View</strong> tab and the <strong>Project Browser</strong>, <strong>Coordinate</strong> <strong>Inquiry</strong>, <strong>Settings</strong> <strong>Manage</strong>. While a tool works or something is selected, the contextual tab («<strong>Modify | Walls</strong>»: move, copy, rotate, mirror, trim, align, edit profile, <strong>Finish Edit Mode</strong>…) sits on top; <span class="keys"><kbd class="key-escape">Esc</kbd></span> or a click on empty space takes it away</td>
 </tr>
 <tr>
-<td><strong>Context bar</strong></td>
-<td>Over the view, while a tool works or something is selected</td>
-<td>What the options bar and the contextual <strong>Modify</strong> tab show in the <strong>Revit</strong> style: the options of the tool, the type properties, the modify tools, <strong>Finish Edit Mode</strong> and <strong>Cancel Edit Mode</strong> of a sketch. The chevron folds it to one row</td>
+<td><strong>Options strip</strong></td>
+<td>Over the view, while a tool works</td>
+<td>The options of the tool (height, location line, chain…), the options bar of the <strong>Revit</strong> style</td>
 </tr>
 <tr>
 <td><strong>View</strong></td>
 <td>Centre</td>
-<td>The view selector and <strong>+</strong> for a new view; on the side, select, the <strong>Pan</strong>, <strong>Orbit</strong> (3D) and <strong>Zoom</strong> modes (with one on, the left button drags the view; <span class="keys"><kbd class="key-escape">Esc</kbd></span> ends it), zoom to fit, hide and isolate, reveal hidden elements; in 3D views the ViewCube (a click on a face, an edge or a corner looks from there, a drag orbits, the house goes back to the starting view); on the selection, the move arrows (drag one to move along it, the centre to move freely in plan: the distance shows as you drag, the release moves as <strong>Move</strong> does); at the bottom, the visual style, the detail level, the sun path and the shadows in 3D, the crop region and full screen</td>
+<td>The view selector and <strong>+</strong> for a new view. One view bar, bottom centre: select, the <strong>Pan</strong>, <strong>Orbit</strong> (3D) and <strong>Zoom</strong> modes (with one on, the left button drags the view; <span class="keys"><kbd class="key-escape">Esc</kbd></span> ends it), zoom to fit | the visual style, the detail level, <strong>Sun and shadows</strong> (3D), <strong>Crop</strong> (crop view, show the crop region), <strong>Visibility</strong> (temporary hide and isolate, reveal hidden elements) | full screen. In 3D views the ViewCube (a click on a face, an edge or a corner looks from there, a drag orbits, the house goes back to the starting view); on the selection, the move arrows (drag one to move along it, the centre to move freely in plan: the distance shows as you drag, the release moves as <strong>Move</strong> does)</td>
 </tr>
 <tr>
 <td><strong>Element panel</strong></td>
@@ -461,12 +461,11 @@ styles.</p>
 <tr>
 <td><strong>Status bar</strong></td>
 <td>Bottom</td>
-<td>The project and the version, the active view, the prompt of the active tool, the cursor coordinates, the active level (its menu opens the plan of another level), the <strong>Snap</strong>, <strong>Grid</strong> and <strong>Ortho</strong> switches and the scale of the view</td>
+<td>The project and the version, the active view, the prompt of the active tool, the cursor coordinates, the active level (its menu opens the plan of another level), the selection count (it opens <strong>Filter</strong>), the <strong>Select and Drag</strong>, <strong>Snap</strong>, <strong>Grid</strong> and <strong>Ortho</strong> switches, the scale of the view and the command log</td>
 </tr>
 </tbody>
 </table>
-<p>The <strong>Structure</strong> and <strong>MEP</strong> tabs of <strong>Create</strong>, and <strong>Systems</strong>, say that these disciplines are
-not in BIMopen yet.</p>
+<p>The <strong>Structure</strong> and <strong>MEP</strong> tabs of <strong>Create</strong> say that these disciplines are not in BIMopen yet.</p>
 <h2 id="command-search">Command search</h2>
 <p>Press <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-k">K</kbd></span>, or click the search box in the top bar, and type a few letters: the list shows
 the commands, views, sheets, schedules, elements and materials that match. Click a result, or
@@ -481,22 +480,20 @@ command line does in the <strong>Revit</strong> style, and <span class="keys"><k
 modify commands first (<strong>Move</strong>, <strong>Copy</strong>, <strong>Rotate</strong>, <strong>Align</strong>, <strong>Offset</strong> and the others),
 then the same items as the view's menu in the <strong>Revit</strong> style.</p>
 <h2 id="everything-of-the-revit-style">Everything of the Revit style</h2>
-<p>Every function of the <strong>Revit</strong> style has its place in the <strong>BIMopen</strong> style:</p>
+<p>Every function of the <strong>Revit</strong> style is in the <strong>BIMopen</strong> style, once:</p>
 <ul>
-<li>the <strong>tab bar</strong> over the view shows the ribbon's tabs as pills; a click opens the tab's
-  panels, the same as on the ribbon, and the contextual <strong>Modify</strong> tab opens with the options
-  bar while a tool works or something is selected;</li>
+<li>every button of the ribbon is a tile of the tool panel, in the rail entry that holds its tab,
+  and the contextual <strong>Modify</strong> tab sits on top of the panel while a tool works or something is
+  selected;</li>
 <li>BIMopen's mark at the top of the rail opens the application menu; the top bar has undo, redo
   and the <strong>?</strong> menu;</li>
-<li><strong>Document</strong> holds the whole <strong>Project Browser</strong>, with its menus;</li>
+<li><strong>View</strong> holds the whole <strong>Project Browser</strong>, with its menus;</li>
 <li>a thumbnail of the view strip can be dragged onto the open sheet, or onto a sheet's
   thumbnail, and its right-click menu has the browser's actions and <strong>Open in the active
   window</strong>;</li>
 <li>the view selector's menu arranges the view windows (<strong>Switch Windows</strong>, <strong>Tile</strong>,
   <strong>Cascade</strong>, <strong>Maximize</strong>, <strong>Replicate</strong>, <strong>Close Hidden</strong>); <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-tab">Tab</kbd></span> goes to the
-  previous window;</li>
-<li>the status bar has <strong>Select and Drag</strong>, the selection count that opens <strong>Filter</strong>, and the
-  command log.</li>
+  previous window.</li>
 </ul>
 <h2 id="light-and-dark">Light and dark</h2>
 <p><img alt="The BIMopen style in the dark theme" src="../assets/screens/interface-bimopen-dark.png"/></p>

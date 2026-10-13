@@ -799,11 +799,49 @@ where it is dropped; a type of <strong>Families ▸ Symbols</strong> places that
 that places it with its type: for a legend component, with its view and host length too.</p>
 <h2 id="detail-lines-and-regions">Detail lines and regions</h2>
 <p><strong>Annotate ▸ Detail ▸ Detail line</strong> (<code>DL</code>) draws lines in the open view only, in the line style of
-the <strong>Line style</strong> panel, with the shapes of the <strong>Draw</strong> panel; <strong>Chain</strong> starts each line where
-the last ended.</p>
-<p><strong>Region ▸ Filled region</strong> sketches a boundary with lines, rectangles or circles: each loop closes
-when you click its first point again, and loops inside another are holes. <strong>Finish Edit Mode</strong> makes
-the region in the current region type, which sets its fill pattern, colour and background
+the <strong>Line style</strong> panel. The <strong>Draw</strong> panel offers <strong>Line</strong>, <strong>Rectangle</strong>, <strong>Inscribed Polygon</strong>,
+<strong>Circumscribed Polygon</strong>, <strong>Circle</strong>, <strong>Start-End-Radius Arc</strong>, <strong>Center-ends Arc</strong>, <strong>Tangent
+End Arc</strong>, <strong>Spline</strong>, <strong>Ellipse</strong> and <strong>Partial Ellipse</strong>. The options bar shows what the shape
+takes:</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Chain</strong></td>
+<td>Each line (or arc, or spline) starts where the last ended; off, each one stands alone</td>
+</tr>
+<tr>
+<td><strong>Offset</strong></td>
+<td>What is drawn moves that far sideways; chained lines join at their corners</td>
+</tr>
+<tr>
+<td><strong>Radius</strong></td>
+<td>A circle, polygon or centre-ends arc of that radius (a circle takes one click); chained lines and rectangles get round corners. <strong>Offset</strong> is then ignored</td>
+</tr>
+<tr>
+<td><strong>Sides</strong></td>
+<td>The number of sides of a polygon</td>
+</tr>
+</tbody>
+</table>
+<p>After the first click, type a length (a line, a chord) or a radius (circles, polygons, arcs,
+ellipse axes) and press <span class="keys"><kbd class="key-enter">Enter</kbd></span>; the value shows at the cursor. A centre-ends arc never exceeds
+180°: past it, it turns the other way, and a typed angle sets its end. A tangent arc starts at the
+end of a line or arc you click. <span class="keys"><kbd class="key-shift">Shift</kbd></span> keeps lines and polygon radii horizontal or vertical and
+turns chords, arc radii and ellipse axes in steps of 45°, and keeps the sweep of an arc at 90°,
+180° or 270°. <span class="keys"><kbd class="key-escape">Esc</kbd></span> ends a chain or a spline. The same shapes and options are in every sketch
+(floors, roofs, regions, revision clouds, wall profiles).</p>
+<p><strong>Region ▸ Filled region</strong> opens sketch mode: the boundary is sketched with every shape of the
+<strong>Draw</strong> panel and with <strong>Pick Lines</strong>, and loops inside another are holes. Curves are kept as short
+straight segments. <span class="keys"><kbd class="key-escape">Esc</kbd></span> ends a chain and keeps the sketch; <strong>Modify</strong> and the Modify tools work
+on its lines. <strong>Finish Edit Mode</strong> makes the region in the current region type, or says why it
+cannot (an open or crossing boundary). A selected region's <strong>Edit Boundary</strong> opens its sketch
+again. The type sets its fill pattern, colour and background
 (<strong>Opaque</strong> hides what is behind). <strong>Region ▸ Masking Region</strong> makes a region in the paper colour
 that hides what is beneath it. A region shows its <strong>Area</strong> and has <strong>Comments</strong>. A selected region
 has a grip at each vertex: drag one to change its shape.</p>

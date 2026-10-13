@@ -300,6 +300,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#symbols">
+<span class="md-ellipsis">
+      Simboli
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#tags">
 <span class="md-ellipsis">
       Etichette
@@ -480,6 +487,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#symbols">
+<span class="md-ellipsis">
+      Simboli
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#tags">
 <span class="md-ellipsis">
       Etichette
@@ -598,8 +612,8 @@ quota.</p>
   effettivo</strong> mantiene la misura e aggiunge testo sopra, sotto, prima o dopo; <strong>Sostituisci con
   testo</strong> mostra al suo posto delle parole (un numero viene rifiutato).</li>
 <li>Trascina il controllo blu sotto il testo per allontanarlo dalla linea; trascinato di nuovo vicino
-  alla linea, si aggancia al suo posto. Un testo spostato lontano riceve una direttrice verso il suo
-  segmento.</li>
+  alla linea, si aggancia al suo posto. Un testo spostato lontano riceve una direttrice ad arco verso
+  il suo segmento; <strong>Direttrice</strong> nella barra delle opzioni la rimuove.</li>
 <li><strong>Modifica | Quote ▸ Linee di guida ▸ Modifica linee di guida</strong>: clicca gli elementi per aggiungere
   linee di guida, clicca una linea di guida esistente per rimuoverla, poi clicca un punto vuoto per
   terminare.</li>
@@ -613,7 +627,13 @@ con i suoi decimali) e, per le quote lineari, il <strong>Tipo di stringa di quot
 base</strong> (valori sovrapposti a partire dal primo riferimento) oppure <strong>Coordinata</strong> (valori dal primo
 riferimento lungo un'unica linea). <strong>Mostra altezza apertura</strong> scrive l'altezza di una porta o di una
 finestra sotto la larghezza misurata da stipite a stipite. I tipi radiali possono omettere il
-prefisso <strong>R</strong>.</p>
+prefisso <strong>R</strong> e il loro segno di centro (<strong>Contrassegni centrali</strong>, con la sua dimensione). Con le
+frecce, un segmento troppo corto per contenerle le ha all'esterno, e la linea prosegue oltre di esse
+di <strong>Prolungamento linea di quota invertita</strong>. <strong>Annota ▸ Quota ▸ Tipi di quota</strong> apre le proprietà
+del tipo corrente di ciascuna famiglia, da impostare prima di quotare.</p>
+<p>Una stringa di tipo linea base selezionata mostra un controllo di inversione alla sua origine:
+cliccalo, o premi la <strong>barra spaziatrice</strong>, per misurare dall'altra estremità. <strong>Offset della linea
+base</strong> nelle sue proprietà imposta la distanza tra le sue linee su carta.</p>
 <h3 id="temporary-dimensions">Quote temporanee</h3>
 <p>Seleziona un muro o una griglia: le quote temporanee mostrano la distanza dai muri o dalle griglie
 parallele più vicini. Clicca un valore, digitane uno nuovo e premi Invio per spostare l'elemento;
@@ -655,11 +675,17 @@ testo è su carta: la nota mantiene la sua dimensione di stampa a qualsiasi scal
 <li>l'allineamento, a sinistra, al centro o a destra, e <strong>Grassetto</strong>, <strong>Corsivo</strong> e <strong>Sottolineato</strong>
   (Ctrl+B, Ctrl+I, Ctrl+U mentre digiti), che si applicano all'intera nota;</li>
 <li>su una nota selezionata, <strong>Aggiungi linea direttrice dritta a sinistra</strong> e gli altri tre pulsanti
-  delle direttrici, e <strong>Rimuovi linea direttrice più recente</strong>.</li>
+  delle direttrici, e <strong>Rimuovi linea direttrice più recente</strong>;</li>
+<li><strong>Collegamento a sinistra</strong> e <strong>Collegamento a destra</strong> (<strong>In alto</strong>, <strong>Al centro</strong>, <strong>In
+  basso</strong>): dove le direttrici si uniscono alla nota; scelti durante il posizionamento, restano per
+  le note successive.</li>
 </ul>
+<p>Vicino alla linea dell'angolo di un'altra nota, una nuova nota vi si aggancia, e una linea
+tratteggiata lo mostra.</p>
 <p>Su una nota selezionata, trascina la croce per spostare il riquadro (le punte delle direttrici
 restano ferme), i controlli rotondi laterali per cambiarne la larghezza e il controllo di rotazione
-per ruotarla. Fai doppio clic al suo interno per modificarne le parole. Le sue proprietà includono
+per ruotarla. Un controllo a metà di ogni direttrice crea un gomito se trascinato, oppure piega una
+direttrice curva. Fai doppio clic al suo interno per modificarne le parole. Le sue proprietà includono
 <strong>Linee direttrici arco</strong>, <strong>Collegamento a sinistra</strong> e <strong>Collegamento a destra</strong>, e <strong>Mantieni
 leggibile</strong>, che non la mostra mai capovolta. Il tipo di testo imposta il colore (di testo, bordo e
 direttrici), lo sfondo (<strong>Opaco</strong> maschera ciò che sta dietro), <strong>Mostra bordo</strong> con il suo offset,
@@ -667,8 +693,19 @@ la punta della direttrice, la dimensione, il grassetto, il corsivo e la sottolin
 <strong>Duplica…</strong> in <strong>Proprietà del tipo</strong> crea un nuovo tipo di testo.</p>
 <p><strong>Annota ▸ Testo ▸ Trova/Sostituisci</strong> trova parole nelle note della selezione corrente, della
 vista corrente o dell'intero progetto (<strong>Ambito:</strong>), con opzioni per maiuscole e parole intere.
-<strong>Trova tutti</strong> elenca le corrispondenze con la vista in cui si trovano; <strong>Sostituisci</strong> cambia la
-prima, <strong>Sostituisci tutto</strong> ogni corrispondenza.</p>
+<strong>Trova tutti</strong> elenca le corrispondenze con la vista in cui si trovano; <strong>Trova successivo</strong>, o un
+clic su una riga, seleziona quella nota e ne mostra l'intero testo sotto <strong>Contesto</strong>.
+<strong>Sostituisci</strong> cambia la prima, <strong>Sostituisci tutto</strong> ogni corrispondenza, e <strong>Chiudi</strong> chiude la
+finestra.</p>
+<h2 id="symbols">Simboli</h2>
+<p><strong>Annota ▸ Simbolo ▸ Simbolo</strong> (<code>SY</code>) colloca un simbolo di annotazione 2D in una pianta, una
+sezione, una vista di disegno o una legenda: una <strong>Freccia nord</strong>, un <strong>Simbolo linea d'asse</strong>, una
+<strong>Freccia di flusso</strong>, un <strong>Bersaglio</strong> o un <strong>Delta revisione</strong>, gli ultimi due con un testo
+proprio. Il simbolo segue il cursore prima del clic; la <strong>barra spaziatrice</strong> lo ruota di un quarto,
+oppure <strong>Rotazione</strong> nella barra delle opzioni ne imposta l'angolo. Con <strong>Numero di linee
+direttrici:</strong> superiore a zero, il clic colloca il simbolo e i clic successivi collocano le
+estremità delle sue direttrici. Il tipo imposta la dimensione del simbolo su carta e la punta delle
+sue direttrici; <strong>Duplica…</strong> in <strong>Proprietà del tipo</strong> ne crea uno nuovo.</p>
 <h2 id="tags">Etichette</h2>
 <p><strong>Annota ▸ Etichetta ▸ Etichetta per categoria</strong> (<code>TG</code>): passa con il cursore su un elemento (una
 porta, una finestra, un muro, un locale o un'area) e clicca per etichettarlo. La barra delle opzioni
@@ -679,10 +716,20 @@ arriva con la sua etichetta.</p>
 <p><strong>Assegna etichette a tutti</strong> apre <strong>Assegna etichette mancanti</strong>: spunta le categorie, il tipo di
 etichetta di ciascuna, la direttrice e l'orientamento, per tutti gli elementi della vista o solo per
 quelli selezionati; solo gli elementi senza etichetta ne ricevono una.</p>
+<p>Con una direttrice, <strong>Estremità associata</strong> la termina sull'elemento; <strong>Estremità libera</strong> la
+termina dove hai cliccato, e un'etichetta selezionata mostra un controllo per trascinare quella
+estremità ovunque (<strong>Estremità linea direttrice</strong> nelle proprietà passa dall'una all'altra).
+L'etichetta di un locale o di un'area si allinea alle altre etichette dello stesso tipo mentre la
+collochi: vicino alla linea del centro di un'altra etichetta vi si aggancia, e una linea tratteggiata
+lo mostra. Le etichette nascoste nella vista (<strong>Visibilità/Grafica</strong>) vengono attivate quando
+etichetti, e il messaggio lo segnala.</p>
 <p>Fai doppio clic su un'etichetta per modificare ciò che mostra: il nome di un locale, il contrassegno
 di una porta, il contrassegno di tipo di un muro. Un'etichetta accetta un altro tipo della propria
 categoria dal selettore dei tipi. I tipi di etichetta dei locali scelgono se mostrare il numero,
-l'area e il volume.</p>
+l'area e il volume. L'etichetta di un locale o di un'area impostata su <strong>Modello</strong> mantiene un
+angolo: ruota con <strong>Ruota</strong>, e la <strong>barra spaziatrice</strong> la allinea a turno a ciascun muro vicino
+(<strong>Rotazione</strong> nelle sue proprietà). Eliminare l'etichetta di un locale lascia il locale, e il
+messaggio lo segnala.</p>
 <h2 id="rooms">Locali</h2>
 <p><strong>Inizio ▸ Locale e area ▸ Locale</strong> (<code>RM</code>), poi clicca all'interno di una regione racchiusa da muri
 o linee di delimitazione dei locali: il locale la riempie, anche attorno a muri isolati. Nella barra
@@ -698,7 +745,9 @@ delle opzioni:</p>
 </ul>
 <p>Un locale collocato in uno spazio aperto viene conservato con un avviso, e prende la sua forma
 quando lo spazio viene chiuso; un secondo locale in una regione già occupata è contrassegnato come
-<strong>Locale ridondante</strong> e non viene contato due volte.</p>
+<strong>Locale ridondante</strong> e non viene contato due volte. Vengono segnalati con un avviso anche un numero
+che un altro locale ha già, un locale più basso dell'altezza di calcolo (1200 mm) e una base sopra di
+essa, come pure una linea di delimitazione dei locali tracciata sopra un'altra.</p>
 <p><strong>Linea di delimitazione dei locali</strong> disegna linee che dividono uno spazio in locali senza muri.
 Un muro delimita i locali finché la sua proprietà <strong>Delimita il locale</strong> è attiva. I pavimenti e i
 tetti sovrastanti limitano il volume del locale.</p>
@@ -720,9 +769,13 @@ seconda scheda è <strong>Schemi aree</strong>.</p>
 <li><strong>Area ▸ Linea di contorno area</strong>: disegna i contorni, oppure scegli dei muri; con le regole
    delle aree attive, un muro esterno di una pianta complessiva dà la sua superficie esterna.</li>
 <li><strong>Area ▸ Area</strong>: clicca all'interno dei contorni. L'area è etichettata quando viene collocata;
-   <strong>Etichetta ▸ Etichetta di area</strong> la etichetta in seguito.</li>
+   <strong>Etichetta ▸ Etichetta di area</strong> la etichetta in seguito. Collocata dove nessun contorno chiude una regione, l'area viene conservata
+   con un avviso e prende la sua forma quando lo fanno; una seconda area in una regione è <strong>Area
+   ridondante</strong>.</li>
 </ol>
-<p>Eliminare un'area la lascia nel progetto, non posizionata, senza le sue etichette.</p>
+<p>Eliminare un'area la lascia nel progetto, non posizionata, senza le sue etichette; <strong>Area:</strong> nella
+barra delle opzioni dello strumento <strong>Area</strong> elenca le aree non posizionate, per rimetterne una con
+un clic.</p>
 <h2 id="colour-schemes">Schemi di colori</h2>
 <p>Uno schema di colori riempie i locali o le aree di una pianta in base a un valore (nome, numero,
 reparto, tipo di area) o a intervalli di area. Si imposta nella proprietà <strong>Schema di colori</strong> della
@@ -745,6 +798,10 @@ di muro in cui si trova una porta o una finestra. I componenti di legenda si dis
 di dettaglio della legenda, si possono spostare e quotare (i bordi di porte, finestre e componenti;
 non muri, pavimenti e tetti) e non vengono contati dalle tabelle. Testo, linee di dettaglio e
 regioni funzionano come in una vista di disegno. Una legenda può essere collocata su più tavole.</p>
+<p>Un tipo trascinato da <strong>Famiglie</strong> nel Browser di progetto in una legenda diventa il suo componente
+di legenda dove viene rilasciato. <strong>Crea simile</strong>, nel menu contestuale di un elemento selezionato,
+avvia lo strumento che lo colloca con il suo tipo: per un componente di legenda, anche con la sua
+vista e la lunghezza host.</p>
 <h2 id="detail-lines-and-regions">Linee di dettaglio e regioni</h2>
 <p><strong>Annota ▸ Dettaglio ▸ Linea di dettaglio</strong> (<code>DL</code>) disegna linee solo nella vista aperta, con lo
 stile di linea del gruppo <strong>Stile di linea</strong>, e con le forme del gruppo <strong>Disegna</strong>; <strong>Concatena</strong>
@@ -753,18 +810,22 @@ inizia ogni linea dove è terminata la precedente.</p>
 modifica</strong> crea la regione nel tipo di regione corrente, che ne imposta il motivo di riempimento, il
 colore e lo sfondo (<strong>Opaco</strong> nasconde ciò che sta dietro). <strong>Regione ▸ Mascheratura</strong> crea una
 regione del colore della carta che nasconde ciò che si trova sotto. Una regione mostra la sua
-<strong>Area</strong>.</p>
+<strong>Area</strong> e ha <strong>Commenti</strong>. Una
+regione selezionata ha un controllo su ogni vertice: trascinane uno per cambiarne la forma.</p>
 <h2 id="detail-components-repeating-details-and-insulation">Componenti di dettaglio, dettagli ripetuti e isolamento</h2>
 <ul>
 <li><strong>Componente ▸ Componente di dettaglio</strong>: un simbolo 2D (mattone, blocco, legno, profilo in
   acciaio, pannello isolante, linea di interruzione) collocato in una vista di disegno o di
-  dettaglio; la <strong>barra spaziatrice</strong> lo ruota durante il posizionamento.</li>
+  dettaglio; la <strong>barra spaziatrice</strong> lo allinea a turno a ciascun muro o linea di dettaglio vicino al
+  cursore (un quarto di giro se non ce ne sono).</li>
 <li><strong>Componente ▸ Dettaglio ripetuto</strong>: clicca un inizio e una fine; il tipo imposta il componente
   ripetuto, il <strong>Layout</strong> (riempi lo spazio disponibile, distanza fissa, numero fisso, spaziatura
   massima), la <strong>Spaziatura</strong>, <strong>Interno</strong> e la rotazione all'interno del motivo. L'istanza ha il
   <strong>Numero</strong> quando il layout è a numero fisso.</li>
-<li><strong>Isolamento</strong>: clicca due punti; <strong>Larghezza</strong> nella barra delle opzioni, la larghezza
-  dell'isolamento e il rapporto di rigonfiamento nelle sue proprietà.</li>
+<li><strong>Isolamento</strong>: clicca due punti; <strong>Larghezza</strong> e <strong>Offset</strong> (l'isolamento corre di tanto a
+  sinistra dei clic) nella barra delle opzioni, la larghezza dell'isolamento e il rapporto di
+  rigonfiamento nelle sue proprietà. Un isolamento selezionato, e un dettaglio ripetuto selezionato,
+  hanno un controllo a ciascuna estremità.</li>
 </ul>
 <h2 id="draw-order">Ordine di disegno</h2>
 <p>Seleziona solo elementi di dettaglio: <strong>Disponi</strong> offre <strong>Porta in primo piano</strong>, <strong>Porta avanti</strong>,

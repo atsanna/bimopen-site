@@ -300,6 +300,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#symbols">
+<span class="md-ellipsis">
+      Symbols
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#tags">
 <span class="md-ellipsis">
       Tags
@@ -480,6 +487,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#symbols">
+<span class="md-ellipsis">
+      Symbols
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#tags">
 <span class="md-ellipsis">
       Tags
@@ -593,7 +607,8 @@ goes.</p>
   the measure and adds text above, below, before or after it; <strong>Replace with text</strong> shows words
   instead (a number is refused).</li>
 <li>Drag the blue control under the text to move it away from the line; dragged back near the line,
-  it snaps into place. Text moved far away gets a leader to its segment.</li>
+  it snaps into place. Text moved far away gets an arc leader to its segment; <strong>Leader</strong> on the
+  options bar removes it.</li>
 <li><strong>Modify | Dimensions ▸ Witness Lines ▸ Edit Witness Lines</strong>: click elements to add witness lines,
   click an existing witness line to remove it, then click an empty spot to finish.</li>
 <li>Select an element the dimension measures and click a value next to it: type a new distance and
@@ -605,7 +620,13 @@ units (<strong>Use project settings</strong> or a unit with its decimals), and f
 <strong>Dimension String Type</strong>: <strong>Continuous</strong>, <strong>Baseline</strong> (stacked values from the first
 reference) or <strong>Ordinate</strong> (values from the first reference along one line). <strong>Show Opening
 Height</strong> writes the height of a door or window under the width measured jamb to jamb. Radial
-types can drop the <strong>R</strong> prefix.</p>
+types can drop the <strong>R</strong> prefix and their centre mark (<strong>Center Marks</strong>, with its size). With
+arrows, a segment too short for them has them outside, and the line runs on past them by <strong>Flipped
+Dimension Line Extension</strong>. <strong>Annotate ▸ Dimension ▸ Dimension Types</strong> opens the type properties
+of each family's current type, to set before dimensioning.</p>
+<p>A selected baseline string shows a flip control at its origin: click it, or press the <strong>space
+bar</strong>, to measure from the other end. <strong>Baseline Offset</strong> in its properties sets the distance
+between its lines on paper.</p>
 <h3 id="temporary-dimensions">Temporary dimensions</h3>
 <p>Select a wall or a grid: temporary dimensions show the distance to the nearest parallel walls or
 grids. Click a value, type a new one and press Enter to move the element; click the dimension
@@ -645,10 +666,14 @@ note keeps its printed size at any view scale.</p>
 <li>the alignment, left, centre or right, and <strong>Bold</strong>, <strong>Italic</strong> and <strong>Underline</strong> (Ctrl+B,
   Ctrl+I, Ctrl+U while typing), which apply to the whole note;</li>
 <li>on a selected note, <strong>Add Left Straight Leader</strong> and the other three leader buttons, and
-  <strong>Remove Last Leader</strong>.</li>
+  <strong>Remove Last Leader</strong>;</li>
+<li><strong>Left Attachment</strong> and <strong>Right Attachment</strong> (<strong>Top</strong>, <strong>Middle</strong>, <strong>Bottom</strong>): where the
+  leaders meet the note; chosen while placing, they stay for the next notes.</li>
 </ul>
+<p>Near the line of another note's corner, a new note snaps to it, and a dashed line shows it.</p>
 <p>On a selected note, drag the cross to move the box (the leader tips stay), the round side controls
-to change its width, and the rotation control to turn it. Double-click inside it to edit the
+to change its width, and the rotation control to turn it. A grip in the middle of each leader
+makes an elbow when dragged, or bends a curved leader. Double-click inside it to edit the
 words. Its properties include <strong>Arc Leaders</strong>, <strong>Left Attachment</strong> and <strong>Right Attachment</strong>, and
 <strong>Keep Readable</strong>, which never shows it upside down. The text type sets the colour (of text,
 border and leaders), the background (<strong>Opaque</strong> masks what is behind), <strong>Show Border</strong> with its
@@ -656,7 +681,17 @@ offset, the leader arrowhead, the size, bold, italic and underline. <strong>Dupl
 Properties</strong> makes a new text type.</p>
 <p><strong>Annotate ▸ Text ▸ Find/Replace</strong> finds words in the notes of the current selection, the current
 view or the whole project (<strong>Scope:</strong>), with options for case and whole words. <strong>Find All</strong> lists
-the matches with the view they are in; <strong>Replace</strong> changes the first, <strong>Replace All</strong> every one.</p>
+the matches with the view they are in; <strong>Find Next</strong>, or a click on a row, selects that note and
+shows its whole text under <strong>Context</strong>. <strong>Replace</strong> changes the first, <strong>Replace All</strong> every one,
+and <strong>Close</strong> closes the dialog.</p>
+<h2 id="symbols">Symbols</h2>
+<p><strong>Annotate ▸ Symbol ▸ Symbol</strong> (<code>SY</code>) places a 2D annotation symbol in a plan, a section, a
+drafting view or a legend: a <strong>North Arrow</strong>, a <strong>Centerline Symbol</strong>, a <strong>Flow Arrow</strong>, a
+<strong>Target</strong> or a <strong>Revision Delta</strong>, the last two with a text of their own. The symbol follows the
+cursor before the click; the <strong>space bar</strong> turns it a quarter, or <strong>Rotation</strong> on the options bar
+sets its angle. With <strong>Number of leaders:</strong> above zero, the click places the symbol and the next
+clicks put the ends of its leaders. The type sets the symbol's size on paper and its leaders'
+arrowhead; <strong>Duplicate…</strong> in <strong>Type Properties</strong> makes a new one.</p>
 <h2 id="tags">Tags</h2>
 <p><strong>Annotate ▸ Tag ▸ Tag by Category</strong> (<code>TG</code>): hover an element (a door, window, wall, room or area)
 and click to tag it. The options bar sets <strong>Horizontal</strong> or <strong>Vertical</strong>, the <strong>Leader</strong> and its
@@ -665,9 +700,18 @@ window tools have <strong>Tag on Placement</strong>, so each new door or window 
 <p><strong>Tag All</strong> opens <strong>Tag All Not Tagged</strong>: tick the categories, the tag type of each, the leader and
 the orientation, for all the elements of the view or only the selected ones; only elements with
 no tag get one.</p>
+<p>With a leader, <strong>Attached End</strong> ends it on the element; <strong>Free End</strong> ends it where you clicked,
+and a selected tag shows a grip to drag that end anywhere (<strong>Leader End</strong> in the properties
+switches between the two). A room's or area's tag lines up with the other tags of its kind while
+you place it: near the line of another tag's centre it snaps to it, and a dashed line shows it.
+Tags hidden in the view (<strong>Visibility/Graphics</strong>) are turned on when you tag, and the message says
+so.</p>
 <p>Double-click a tag to edit what it shows: a room's name, a door's mark, a wall's type mark. A tag
-takes another type of its own category from the type selector. Room tag types choose whether they
-show the number, the area and the volume.</p>
+takes another type of its own category from the type selector, and <strong>Pick New Host</strong> (<strong>Host</strong>
+panel) moves it to another element of the same category. Room tag types choose whether they
+show the number, the area and the volume. A room or area tag set to <strong>Pattern</strong> keeps an angle: it
+turns with <strong>Rotate</strong>, and the <strong>space bar</strong> lines it up with each wall near it in turn
+(<strong>Rotation</strong> in its properties). Deleting a room's tag leaves the room, and the message says so.</p>
 <h2 id="rooms">Rooms</h2>
 <p><strong>Home ▸ Room &amp; Area ▸ Room</strong> (<code>RM</code>), then click inside a region enclosed by walls or room
 separators: the room fills it, around free-standing walls too. In the options bar:</p>
@@ -680,7 +724,9 @@ separators: the room fills it, around free-standing walls too. In the options ba
   them.</li>
 </ul>
 <p>A room placed in open space is kept with a warning, and takes its shape once the space is closed;
-a second room in a region already taken is marked <strong>Redundant Room</strong> and not counted twice.</p>
+a second room in a region already taken is marked <strong>Redundant Room</strong> and not counted twice. A
+number another room already has, a room lower than the computation height (1200 mm) and a base
+above it are warned about too, and so is a room separator drawn over another.</p>
 <p><strong>Room Separator</strong> draws lines that split a space into rooms without walls. A wall bounds rooms
 while its <strong>Room Bounding</strong> property is on. Floors and roofs above cap the room's volume.</p>
 <p>Deleting a room removes it from the plan but keeps it in the project, <strong>Not Placed</strong>, with its
@@ -700,9 +746,11 @@ with every project, and <strong>Area Schemes ▸ New</strong> adds more.</p>
 <li><strong>Area ▸ Area Boundary Line</strong>: draw the boundaries, or pick walls; with the area rules on, an
    exterior wall of a gross plan gives its outer face.</li>
 <li><strong>Area ▸ Area</strong>: click inside the boundaries. The area is tagged when placed; <strong>Tag ▸ Area Tag</strong>
-   tags it later.</li>
+   tags it later. Placed where no boundaries close a region, the area is kept with a warning and
+   takes its shape once they do; a second area in a region is <strong>Redundant Area</strong>.</li>
 </ol>
-<p>Deleting an area leaves it in the project, not placed, without its tags.</p>
+<p>Deleting an area leaves it in the project, not placed, without its tags; <strong>Area:</strong> in the options
+bar of the <strong>Area</strong> tool lists the areas not placed, to put one back with a click.</p>
 <h2 id="colour-schemes">Colour schemes</h2>
 <p>A colour scheme fills the rooms or areas of a plan by a value (name, number, department, area
 type) or by ranges of area. Set it in the plan's <strong>Color Scheme</strong> property; <strong>(none)</strong> turns it
@@ -722,6 +770,9 @@ and the <strong>Host Length</strong>, the piece of wall a door or window sits in
 legend's detail level, can be moved and dimensioned (the edges of doors, windows and components;
 walls, floors and roofs are not), and are not counted by schedules. Text, detail lines and regions
 work as in a drafting view. A legend can be placed on several sheets.</p>
+<p>A type dragged from <strong>Families</strong> in the Project Browser into a legend becomes its legend component
+where it is dropped. <strong>Create Similar</strong>, in the context menu of a selected element, starts the tool
+that places it with its type: for a legend component, with its view and host length too.</p>
 <h2 id="detail-lines-and-regions">Detail lines and regions</h2>
 <p><strong>Annotate ▸ Detail ▸ Detail line</strong> (<code>DL</code>) draws lines in the open view only, in the line style of
 the <strong>Line style</strong> panel, with the shapes of the <strong>Draw</strong> panel; <strong>Chain</strong> starts each line where
@@ -729,17 +780,20 @@ the last ended.</p>
 <p><strong>Region ▸ Filled region</strong> sketches a boundary with lines or a rectangle; <strong>Finish Edit Mode</strong> makes
 the region in the current region type, which sets its fill pattern, colour and background
 (<strong>Opaque</strong> hides what is behind). <strong>Region ▸ Masking Region</strong> makes a region in the paper colour
-that hides what is beneath it. A region shows its <strong>Area</strong>.</p>
+that hides what is beneath it. A region shows its <strong>Area</strong> and has <strong>Comments</strong>. A selected region
+has a grip at each vertex: drag one to change its shape.</p>
 <h2 id="detail-components-repeating-details-and-insulation">Detail components, repeating details and insulation</h2>
 <ul>
 <li><strong>Component ▸ Detail component</strong>: a 2D symbol (brick, block, timber, steel section, insulation
-  board, break line) placed in a drafting or detail view; the <strong>space bar</strong> turns it while placing.</li>
+  board, break line) placed in a drafting or detail view; the <strong>space bar</strong> lines it up with each
+  wall or detail line near the cursor in turn (a quarter turn when there is none).</li>
 <li><strong>Component ▸ Repeating detail</strong>: click a start and an end; the type sets the repeated component,
   the <strong>Layout</strong> (fill the available space, fixed distance, fixed number, maximum spacing), the
   <strong>Spacing</strong>, <strong>Inside</strong> and the rotation within the pattern. The instance has the <strong>Number</strong> when
   the layout is a fixed number.</li>
-<li><strong>Insulation</strong>: click two points; <strong>Width</strong> in the options bar, the insulation width and the bulge
-  ratio in its properties.</li>
+<li><strong>Insulation</strong>: click two points; <strong>Width</strong> and <strong>Offset</strong> (the insulation runs that far to the
+  left of the clicks) in the options bar, the insulation width and the bulge ratio in its
+  properties. Selected insulation, and a selected repeating detail, have a grip at each end.</li>
 </ul>
 <h2 id="draw-order">Draw order</h2>
 <p>Select detail items only: <strong>Arrange</strong> offers <strong>Bring to Front</strong>, <strong>Bring Forward</strong>, <strong>Send to Back</strong>

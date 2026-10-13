@@ -300,6 +300,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#symbols">
+<span class="md-ellipsis">
+      Symboles
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#tags">
 <span class="md-ellipsis">
       Étiquettes
@@ -480,6 +487,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#symbols">
+<span class="md-ellipsis">
+      Symboles
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#tags">
 <span class="md-ellipsis">
       Étiquettes
@@ -596,7 +610,8 @@ l'endroit où va la cote.</p>
   réelle</strong> garde la mesure et ajoute du texte au-dessus, au-dessous, avant ou après ; <strong>Remplacer par
   du texte</strong> affiche des mots à la place (un nombre est refusé).</li>
 <li>Faites glisser la poignée bleue sous le texte pour l'éloigner de la ligne ; ramené près de la
-  ligne, il s'y aimante. Un texte déplacé loin reçoit une ligne de repère vers son segment.</li>
+  ligne, il s'y aimante. Un texte déplacé loin reçoit une ligne de repère en arc vers son segment ; <strong>Ligne de repère</strong>
+  dans la barre des options la supprime.</li>
 <li><strong>Édition | Cotes ▸ Lignes d'attache ▸ Modifier les lignes d'attache</strong> : cliquez des éléments pour
   ajouter des lignes d'attache, cliquez une ligne d'attache existante pour la retirer, puis cliquez
   dans un endroit vide pour terminer.</li>
@@ -610,7 +625,13 @@ et pour les cotes linéaires le <strong>Type de chaîne de cotes</strong> : <str
 empilées à partir de la première référence) ou <strong>Coordonnée</strong> (valeurs à partir de la première
 référence le long d'une seule ligne). <strong>Afficher la hauteur d'ouverture</strong> écrit la hauteur d'une
 porte ou d'une fenêtre sous la largeur mesurée de tableau à tableau. Les types radiaux peuvent
-supprimer le préfixe <strong>R</strong>.</p>
+supprimer le préfixe <strong>R</strong> et leur repère de centre (<strong>Repères de centre</strong>, avec sa taille). Avec des
+flèches, un segment trop court pour les contenir les a à l'extérieur, et la ligne de cote se
+prolonge au-delà d'elles de <strong>Prolongement de ligne de cote inversée</strong>. <strong>Annoter ▸ Cote ▸ Types de
+cote</strong> ouvre les propriétés du type courant de chaque famille, à régler avant de coter.</p>
+<p>Une chaîne de lignes de base sélectionnée montre à son origine une poignée d'inversion : cliquez-la,
+ou appuyez sur la <strong>barre d'espace</strong>, pour mesurer depuis l'autre extrémité. <strong>Décalage de ligne de
+base</strong> dans ses propriétés fixe la distance entre ses lignes sur le papier.</p>
 <h3 id="temporary-dimensions">Cotes temporaires</h3>
 <p>Sélectionnez un mur ou un quadrillage : des cotes temporaires montrent la distance aux murs ou
 quadrillages parallèles les plus proches. Cliquez une valeur, tapez-en une nouvelle et appuyez sur
@@ -654,11 +675,17 @@ La taille du texte est celle du papier : la note garde sa taille imprimée à to
 <li>l'alignement, à gauche, au centre ou à droite, et <strong>Gras</strong>, <strong>Italique</strong> et <strong>Souligné</strong> (Ctrl+B,
   Ctrl+I, Ctrl+U pendant la saisie), qui s'appliquent à la note entière ;</li>
 <li>sur une note sélectionnée, <strong>Ajouter une ligne de repère droite à gauche</strong> et les trois autres
-  boutons de ligne de repère, et <strong>Supprimer la dernière ligne de repère</strong>.</li>
+  boutons de ligne de repère, et <strong>Supprimer la dernière ligne de repère</strong> ;</li>
+<li><strong>Attache à gauche</strong> et <strong>Attache à droite</strong> (<strong>En haut</strong>, <strong>Au milieu</strong>, <strong>En bas</strong>) : l'endroit
+  où les lignes de repère rejoignent la note ; choisies pendant le placement, elles restent pour les
+  notes suivantes.</li>
 </ul>
+<p>Près de la ligne d'un coin d'une autre note, une nouvelle note s'y aimante, et une ligne
+discontinue le montre.</p>
 <p>Sur une note sélectionnée, faites glisser la croix pour déplacer le cadre (les pointes des lignes de
 repère restent), les poignées rondes latérales pour changer sa largeur, et la poignée de rotation
-pour la tourner. Double-cliquez à l'intérieur pour modifier les mots. Ses propriétés comprennent
+pour la tourner. Une poignée au milieu de chaque ligne de repère fait un coude quand on la fait
+glisser, ou courbe une ligne de repère courbe. Double-cliquez à l'intérieur pour modifier les mots. Ses propriétés comprennent
 <strong>Lignes de repère en arc</strong>, <strong>Attache à gauche</strong> et <strong>Attache à droite</strong>, et <strong>Garder lisible</strong>, qui
 ne l'affiche jamais à l'envers. Le type de texte fixe la couleur (du texte, de la bordure et des
 lignes de repère), le fond (<strong>Opaque</strong> masque ce qui est derrière), <strong>Afficher la bordure</strong> avec son
@@ -667,7 +694,18 @@ décalage, la pointe des lignes de repère, la taille, le gras, l'italique et le
 <p><strong>Annoter ▸ Texte ▸ Rechercher/Remplacer</strong> cherche des mots dans les notes de la sélection
 courante, de la vue courante ou du projet entier (<strong>Portée :</strong>), avec des options pour la casse et
 les mots entiers. <strong>Rechercher tout</strong> liste les occurrences avec la vue où elles se trouvent ;
-<strong>Remplacer</strong> change la première, <strong>Remplacer tout</strong> chacune d'elles.</p>
+<strong>Rechercher le suivant</strong>, ou un clic sur une ligne, sélectionne cette note et montre son texte
+entier sous <strong>Contexte</strong>. <strong>Remplacer</strong> change la première, <strong>Remplacer tout</strong> chacune d'elles, et
+<strong>Fermer</strong> ferme la boîte de dialogue.</p>
+<h2 id="symbols">Symboles</h2>
+<p><strong>Annoter ▸ Symbole ▸ Symbole</strong> (<code>SY</code>) place un symbole d'annotation 2D dans un plan, une coupe,
+une vue de dessin ou une légende : une <strong>Flèche du nord</strong>, un <strong>Symbole d'axe</strong>, une <strong>Flèche de
+flux</strong>, une <strong>Cible</strong> ou un <strong>Delta de révision</strong>, les deux derniers avec un texte propre. Le
+symbole suit le curseur avant le clic ; la <strong>barre d'espace</strong> le tourne d'un quart de tour, ou
+<strong>Rotation</strong> dans la barre des options fixe son angle. Avec <strong>Nombre de lignes de repère :</strong>
+au-dessus de zéro, le clic place le symbole et les clics suivants posent les extrémités de ses
+lignes de repère. Le type fixe la taille du symbole sur le papier et la pointe de ses lignes de
+repère ; <strong>Dupliquer…</strong> dans <strong>Propriétés du type</strong> en crée un nouveau.</p>
 <h2 id="tags">Étiquettes</h2>
 <p><strong>Annoter ▸ Étiquette ▸ Etiqueter par catégorie</strong> (<code>TG</code>) : survolez un élément (une porte, une
 fenêtre, un mur, une pièce ou une surface) et cliquez pour l'étiqueter. La barre des options règle
@@ -678,10 +716,20 @@ avec son étiquette.</p>
 <p><strong>Etiqueter tout</strong> ouvre <strong>Étiqueter tout ce qui n'est pas étiqueté</strong> : cochez les catégories, le
 type d'étiquette de chacune, la ligne de repère et l'orientation, pour tous les éléments de la vue
 ou seulement les éléments sélectionnés ; seuls les éléments sans étiquette en reçoivent une.</p>
+<p>Avec une ligne de repère, <strong>Extrémité attachée</strong> la termine sur l'élément ; <strong>Extrémité libre</strong> la
+termine là où vous avez cliqué, et une étiquette sélectionnée montre une poignée pour faire glisser
+cette extrémité n'importe où (<strong>Extrémité de la ligne de repère</strong> dans les propriétés passe de l'une
+à l'autre). L'étiquette d'une pièce ou d'une surface s'aligne sur les autres étiquettes du même
+genre pendant le placement : près de la ligne du centre d'une autre étiquette, elle s'y aimante, et
+une ligne discontinue le montre. Les étiquettes masquées dans la vue (<strong>Visibilité/Graphismes</strong>)
+sont activées quand vous étiquetez, et le message l'indique.</p>
 <p>Double-cliquez une étiquette pour modifier ce qu'elle montre : le nom d'une pièce, le repère d'une
 porte, le repère de type d'un mur. Une étiquette prend un autre type de sa propre catégorie dans le
 sélecteur de type. Les types d'étiquette de pièce choisissent s'ils montrent le numéro, la surface
-et le volume.</p>
+et le volume. Une étiquette de pièce ou de surface réglée sur <strong>Motif</strong> garde un angle : elle
+tourne avec <strong>Faire pivoter</strong>, et la <strong>barre d'espace</strong> l'aligne tour à tour sur chaque mur proche
+(<strong>Rotation</strong> dans ses propriétés). Supprimer l'étiquette d'une pièce laisse la pièce, et le message
+l'indique.</p>
 <h2 id="rooms">Pièces</h2>
 <p><strong>Début ▸ Pièce et surface ▸ Pièce</strong> (<code>RM</code>), puis cliquez à l'intérieur d'une région fermée par des
 murs ou des séparateurs de pièce : la pièce la remplit, autour des murs isolés aussi. Dans la barre
@@ -697,7 +745,9 @@ des options :</p>
 </ul>
 <p>Une pièce placée dans un espace ouvert est conservée avec un avertissement, et prend sa forme une
 fois l'espace fermé ; une seconde pièce dans une région déjà occupée est marquée <strong>Pièce
-redondante</strong> et n'est pas comptée deux fois.</p>
+redondante</strong> et n'est pas comptée deux fois. Un numéro que porte déjà une autre pièce, une pièce plus basse que la
+hauteur de calcul (1200 mm) et une base au-dessus d'elle font aussi l'objet d'un avertissement, de
+même qu'un séparateur de pièce dessiné sur un autre.</p>
 <p><strong>Séparateur de pièce</strong> dessine des lignes qui divisent un espace en pièces sans murs. Un mur
 délimite des pièces tant que sa propriété <strong>Délimitation de pièce</strong> est activée. Les sols et les
 toits au-dessus plafonnent le volume de la pièce.</p>
@@ -721,9 +771,13 @@ ajoute d'autres.</p>
 <li><strong>Surface ▸ Ligne de limite de surface</strong> : dessinez les limites, ou désignez des murs ; avec les
    règles de surface activées, un mur extérieur d'un plan brut donne sa face extérieure.</li>
 <li><strong>Surface ▸ Surface</strong> : cliquez à l'intérieur des limites. La surface est étiquetée au placement ;
-   <strong>Étiquette ▸ Étiquette de surface</strong> l'étiquette plus tard.</li>
+   <strong>Étiquette ▸ Étiquette de surface</strong> l'étiquette plus tard. Placée là où aucune limite ne ferme de région, la surface est conservée avec
+   un avertissement et prend sa forme dès qu'elles la ferment ; une seconde surface dans une région
+   est <strong>Surface redondante</strong>.</li>
 </ol>
-<p>Supprimer une surface la laisse dans le projet, non placée, sans ses étiquettes.</p>
+<p>Supprimer une surface la laisse dans le projet, non placée, sans ses étiquettes ; <strong>Surface :</strong> dans
+la barre des options de l'outil <strong>Surface</strong> liste les surfaces non placées, pour en remettre une en
+un clic.</p>
 <h2 id="colour-schemes">Schémas de couleurs</h2>
 <p>Un schéma de couleurs remplit les pièces ou les surfaces d'un plan selon une valeur (nom, numéro,
 service, type de surface) ou selon des plages de surface. Réglez-le dans la propriété <strong>Schéma de
@@ -746,6 +800,10 @@ porte ou une fenêtre. Les composants de légende se dessinent au niveau de dét
 peuvent être déplacés et cotés (les bords des portes, fenêtres et composants ; pas les murs, sols ni
 toits), et ne sont pas comptés par les nomenclatures. Le texte, les lignes de détail et les régions
 fonctionnent comme dans une vue de dessin. Une légende peut être placée sur plusieurs feuilles.</p>
+<p>Un type glissé depuis <strong>Familles</strong> dans l'explorateur de projet vers une légende devient son
+composant de légende à l'endroit où on le dépose. <strong>Créer un type similaire</strong>, dans le menu
+contextuel d'un élément sélectionné, lance l'outil qui le place avec son type : pour un composant de
+légende, avec aussi sa vue et la longueur de l'hôte.</p>
 <h2 id="detail-lines-and-regions">Lignes de détail et régions</h2>
 <p><strong>Annoter ▸ Détail ▸ Ligne de détail</strong> (<code>DL</code>) dessine des lignes dans la seule vue ouverte, avec le
 style de ligne du groupe <strong>Style de ligne</strong>, et avec les formes du groupe <strong>Dessiner</strong> ; <strong>Chaîne</strong>
@@ -753,18 +811,22 @@ commence chaque ligne là où la précédente s'est terminée.</p>
 <p><strong>Région ▸ Région remplie</strong> esquisse une limite avec des lignes ou un rectangle ; <strong>Terminer le mode
 d'édition</strong> crée la région dans le type de région courant, qui fixe sa trame de remplissage, sa
 couleur et son fond (<strong>Opaque</strong> cache ce qui est derrière). <strong>Région ▸ Région de masquage</strong> crée une
-région de la couleur du papier qui cache ce qui se trouve dessous. Une région montre sa <strong>Surface</strong>.</p>
+région de la couleur du papier qui cache ce qui se trouve dessous. Une région montre sa <strong>Surface</strong> et a des <strong>Commentaires</strong>. Une région sélectionnée a une poignée à
+chaque sommet : faites-en glisser une pour changer sa forme.</p>
 <h2 id="detail-components-repeating-details-and-insulation">Composants de détail, détails répétitifs et isolation</h2>
 <ul>
 <li><strong>Composant ▸ Composant de détail</strong> : un symbole 2D (brique, parpaing, bois, profilé d'acier,
   panneau isolant, ligne de coupure) placé dans une vue de dessin ou de détail ; la <strong>barre
-  d'espace</strong> le tourne pendant le placement.</li>
+  d'espace</strong> l'aligne tour à tour sur chaque mur ou ligne de détail proche du curseur (d'un quart de
+  tour s'il n'y en a pas).</li>
 <li><strong>Composant ▸ Détail répétitif</strong> : cliquez un début et une fin ; le type fixe le composant répété,
   la <strong>Disposition</strong> (remplir l'espace disponible, distance fixe, nombre fixe, espacement maximal),
   l'<strong>Espacement</strong>, <strong>Intérieur</strong> et la rotation dans le motif. L'instance a le <strong>Numéro</strong> quand la
   disposition est un nombre fixe.</li>
-<li><strong>Isolation</strong> : cliquez deux points ; <strong>Largeur</strong> dans la barre des options, la largeur de
-  l'isolant et le rapport de boucle dans ses propriétés.</li>
+<li><strong>Isolation</strong> : cliquez deux points ; <strong>Largeur</strong> et <strong>Décaler</strong> (l'isolant court à cette distance
+  à gauche des clics) dans la barre des options, la largeur de l'isolant et le rapport de boucle
+  dans ses propriétés. Une isolation sélectionnée, comme un détail répétitif sélectionné, a une
+  poignée à chaque extrémité.</li>
 </ul>
 <h2 id="draw-order">Ordre de dessin</h2>
 <p>Sélectionnez uniquement des éléments de détail : <strong>Organiser</strong> propose <strong>Mettre au premier plan</strong>,

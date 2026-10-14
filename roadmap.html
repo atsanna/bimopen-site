@@ -5,23 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title data-i18n="rp.meta.title">Roadmap di BIMopen — Stato e prossimi passi</title>
 <meta name="keywords" content="BIM, BIM open source, software BIM gratuito, IFC, IFC4, Revit, BIMopen, Rust">
-<meta name="description" data-i18n-attr="content:rp.meta.desc" content="La roadmap completa di BIMopen: cosa funziona oggi, i 67 passi pianificati per priorità e quanta parte delle funzionalità principali di Revit Architecture è già coperta.">
+<meta name="description" data-i18n-attr="content:rp.meta.desc" content="La roadmap completa di BIMopen: cosa funziona oggi, i 67 passi pianificati per priorità e quanta parte delle funzionalità principali di Revit® Architecture è già coperta.">
 <link rel="canonical" href="https://bimopen.it/roadmap.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="BIMopen">
 <meta property="og:locale" content="it_IT">
 <meta property="og:title" content="Roadmap di BIMopen — Stato e prossimi passi">
-<meta property="og:description" content="La roadmap completa di BIMopen: cosa funziona oggi, i 67 passi pianificati per priorità e quanta parte delle funzionalità principali di Revit Architecture è già coperta.">
+<meta property="og:description" content="La roadmap completa di BIMopen: cosa funziona oggi, i 67 passi pianificati per priorità e quanta parte delle funzionalità principali di Revit® Architecture è già coperta.">
 <meta property="og:url" content="https://bimopen.it/roadmap.html">
 <meta property="og:image" content="https://bimopen.it/assets/og-bimopen.jpg">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" href="assets/favicon.svg?v=a8140611" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=44b8f81c">
-<meta name="theme-color" content="#f7f6f2" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0d1724" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#0d1724">
 <script>
   // tema scelto in precedenza, applicato prima del disegno della pagina (nessun lampo di colore)
-  try { var t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  var t = null; try { t = localStorage.getItem('theme'); } catch (e) {} document.documentElement.dataset.theme = t || 'dark';
 </script>
 <style>
   :root {
@@ -63,7 +63,7 @@
   nav.links a { color: var(--ink-soft); text-decoration: none; font-size: 15px; }
   nav.links a:hover { color: var(--blue); }
   .bar-right { display: flex; align-items: center; gap: 10px; margin-inline-start: auto; }
-  @media (min-width: 1080px) { nav.links { display: flex; } .bar-right { margin-inline-start: 0; } }
+  @media (min-width: 1240px) { nav.links { display: flex; } .bar-right { margin-inline-start: 0; } }
   .lang-pick { display: flex; align-items: center; gap: 6px; color: var(--muted); font-size: 14px; }
   .lang-pick svg { width: 16px; height: 16px; flex: none; }
   .lang-pick select { font: inherit; color: var(--ink); background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 6px 8px; cursor: pointer; }
@@ -260,6 +260,7 @@
       <a href="./#formati" data-con-lingua="./#formati" data-i18n="nav.formati">Formati</a>
       <a href="./#agenti" data-con-lingua="./#agenti" data-i18n="nav.agenti">Automazione</a>
       <a href="roadmap.html" data-con-lingua="roadmap.html" data-i18n="nav.roadmap" aria-current="page">Roadmap</a>
+      <a href="download.html" data-con-lingua="download.html" data-i18n="nav.scarica">Scarica</a>
       <a href="manual/it/" data-manuale data-i18n="nav.manuale">Manuale</a>
       <a href="./#faq" data-con-lingua="./#faq" data-i18n="nav.faq">Domande</a>
     </nav>
@@ -279,7 +280,7 @@
         <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
         <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
       </button>
-      <a class="btn btn-primary" href="app/" data-app="4cd67bd7" data-i18n="cta.prova">Provalo nel browser</a>
+      <a class="btn btn-primary" href="app/" data-app="fc488514" data-i18n="cta.prova">Provalo nel browser</a>
     </div>
   </div>
 </header>
@@ -289,7 +290,7 @@
     <div class="wrap">
       <span class="eyebrow" data-i18n="rp.kicker">Roadmap</span>
       <h1 data-i18n="rp.h1">Dove siamo, <em>dove andiamo</em></h1>
-      <p class="lead" data-i18n="rp.lead">BIMopen segue le funzionalità principali di Revit Architecture, comando per comando. Abbiamo confrontato il programma con Revit opzione per opzione: da qui vengono i passi, in ordine di priorità, e le percentuali di copertura. Un passo conta come fatto solo quando i suoi comandi sono stati provati nell'interfaccia, sul computer e nel browser, come li usa chi progetta, e sono coperti da test automatici dell'interfaccia.</p>
+      <p class="lead" data-i18n="rp.lead">BIMopen segue le funzionalità principali di Revit® Architecture, comando per comando. Abbiamo confrontato il programma con Revit® opzione per opzione: da qui vengono i passi, in ordine di priorità, e le percentuali di copertura. Un passo conta come fatto solo quando i suoi comandi sono stati provati nell'interfaccia, sul computer e nel browser, come li usa chi progetta, e sono coperti da test automatici dell'interfaccia.</p>
       <ul class="stats">
         <li><b>40</b><span data-i18n="rp.stat.avail">funzioni disponibili</span></li>
         <li><b>67</b><span data-i18n="rp.stat.steps">passi pianificati</span></li>
@@ -310,7 +311,7 @@
       <span class="eyebrow" data-i18n="rp.av.kicker">Disponibile oggi</span>
       <h2 id="disponibile-t" data-i18n="rp.av.h2">Cosa funziona già</h2>
       <p class="sub" data-i18n="rp.av.p">Tutto questo si prova subito nel browser, con una casa di esempio.</p>
-      <ul class="avail" data-i18n="rm1.ul"><li>Livelli, griglie, muri, porte, finestre, solai</li><li>Locali, quote, testi ed etichette</li><li>Piante, sezioni, prospetti, 3D, abachi, computo</li><li>IFC4, import .rvt, SVG, PNG, CSV</li><li>Desktop, browser, riga di comando, MCP</li><li>Interfaccia in sei lingue, arabo compreso</li><li>Più finestre di vista: affianca, sovrapponi, replica</li><li>Scala della vista, intervallo di visualizzazione, livello di dettaglio, stili 3D</li><li>Tavole con cartiglio, stampa in PDF vettoriale</li><li>Tetti a padiglione, a due falde e piani; muri associati al tetto</li><li>Regione di taglio, nascondi e isola elementi</li><li>Selezione con TAB e catene di muri, filtro, Seleziona tutte le istanze; trascinamento in ogni vista con i muri uniti che si allungano; sposta, copia, ruota, allinea con lucchetto, offset, copia speculare, serie lineare e radiale, riduci/estendi, dividi, scala, blocca</li><li>Componenti: arredi e sanitari, nel computo e in IFC</li><li>Visibilità/Grafica per categoria e stili oggetti</li><li>Linee di dettaglio, campiture e regioni di mascheramento</li><li>Gestione dei tipi: modifica assieme degli strati, elimina inutilizzati</li><li>Unità di misura del progetto</li><li>Filtri di vista</li><li>Modelli di vista</li><li>Sezioni segmentate con ritaglio lontano regolabile; viste di dettaglio</li><li>Quote lineari e angolari, quote temporanee, vincoli EQ e blocco</li><li>Scale a rampe con pianerottolo e ringhiere, in pianta, 3D, abachi e IFC</li><li>Piante delle aree e schemi di colore con legenda</li><li>Componenti di dettaglio, dettagli ripetuti, isolamento e viste di disegno</li><li>Facciate continue con griglie, montanti e pannelli, in pianta, 3D, abachi e IFC</li><li>Più piante per livello, viste duplicate (anche con i dettagli) e rinominate, viste 3D salvate</li><li>Muri con linea di ubicazione, altezza o profondità, concatena, offset e inversione</li><li>Materiali e retini del progetto: colore ombreggiato, motivi di superficie e di taglio, per strato e per categoria</li><li>Abachi configurabili come viste: campi, filtri, ordinamento e raggruppamento, totali, formule, abachi chiave e computo dei materiali, parametri di progetto e condivisi; affiancati alle altre viste, modificano il modello e lo seguono; sulle tavole, nei modelli di vista e tra progetti</li><li>File di progetto come database: salva solo le modifiche, recupera il lavoro dopo un arresto, copie di backup, export JSON</li><li>Spessori di linea per scala della vista, modelli di linea modificabili, sottocategorie degli stili oggetti e linee sottili</li><li>Navigazione come in Revit: zoom verso il cursore, orbita attorno alla selezione, finestre affiancate in ordine d'uso, menu contestuali in ogni vista, viste trascinate sulle tavole</li><li>Manuale utente in sei lingue, sul web e in PDF, aperto anche dal programma con F1</li><li>ViewCube con bussola, menu e vista iniziale, disco di navigazione, suggerimenti dei tasti con Alt, barra di accesso rapido e scorciatoie da tastiera personalizzabili, esportate e importate in XML</li><li>Nessuno strumento cambia vista da solo: dove non può lavorare, «Vai a vista» chiede quale vista aprire</li><li>Anteprima anche nel 3D: muri come solidi con la quota temporanea, pavimenti disegnati sul livello, porte, finestre e componenti che seguono il cursore</li><li>Apertura di file IFC2x3 e IFC4: muri, solai, porte, finestre e locali diventano elementi nativi, il resto modelli generici</li><li>Prospetti telaio sulle griglie e blocchi annotazioni</li><li>Ogni strumento provato in pianta, prospetto, sezione e 3D: specchio e serie anche in sezione e prospetto, facciate continue e «Seleziona linee» anche nel 3D</li><li>Scorciatoie di due lettere digitate nella vista, in entrambi gli stili; override degli snap per il punto successivo</li></ul>
+      <ul class="avail" data-i18n="rm1.ul"><li>Livelli, griglie, muri, porte, finestre, solai</li><li>Locali, quote, testi ed etichette</li><li>Piante, sezioni, prospetti, 3D, abachi, computo</li><li>IFC4, import .rvt, SVG, PNG, CSV</li><li>Desktop, browser, riga di comando, MCP</li><li>Interfaccia in sei lingue, arabo compreso</li><li>Più finestre di vista: affianca, sovrapponi, replica</li><li>Scala della vista, intervallo di visualizzazione, livello di dettaglio, stili 3D</li><li>Tavole con cartiglio, stampa in PDF vettoriale</li><li>Tetti a padiglione, a due falde e piani; muri associati al tetto</li><li>Regione di taglio, nascondi e isola elementi</li><li>Selezione con TAB e catene di muri, filtro, Seleziona tutte le istanze; trascinamento in ogni vista con i muri uniti che si allungano; sposta, copia, ruota, allinea con lucchetto, offset, copia speculare, serie lineare e radiale, riduci/estendi, dividi, scala, blocca</li><li>Componenti: arredi e sanitari, nel computo e in IFC</li><li>Visibilità/Grafica per categoria e stili oggetti</li><li>Linee di dettaglio, campiture e regioni di mascheramento</li><li>Gestione dei tipi: modifica assieme degli strati, elimina inutilizzati</li><li>Unità di misura del progetto</li><li>Filtri di vista</li><li>Modelli di vista</li><li>Sezioni segmentate con ritaglio lontano regolabile; viste di dettaglio</li><li>Quote lineari e angolari, quote temporanee, vincoli EQ e blocco</li><li>Scale a rampe con pianerottolo e ringhiere, in pianta, 3D, abachi e IFC</li><li>Piante delle aree e schemi di colore con legenda</li><li>Componenti di dettaglio, dettagli ripetuti, isolamento e viste di disegno</li><li>Facciate continue con griglie, montanti e pannelli, in pianta, 3D, abachi e IFC</li><li>Più piante per livello, viste duplicate (anche con i dettagli) e rinominate, viste 3D salvate</li><li>Muri con linea di ubicazione, altezza o profondità, concatena, offset e inversione</li><li>Materiali e retini del progetto: colore ombreggiato, motivi di superficie e di taglio, per strato e per categoria</li><li>Abachi configurabili come viste: campi, filtri, ordinamento e raggruppamento, totali, formule, abachi chiave e computo dei materiali, parametri di progetto e condivisi; affiancati alle altre viste, modificano il modello e lo seguono; sulle tavole, nei modelli di vista e tra progetti</li><li>File di progetto come database: salva solo le modifiche, recupera il lavoro dopo un arresto, copie di backup, export JSON</li><li>Spessori di linea per scala della vista, modelli di linea modificabili, sottocategorie degli stili oggetti e linee sottili</li><li>Navigazione come in Revit®: zoom verso il cursore, orbita attorno alla selezione, finestre affiancate in ordine d'uso, menu contestuali in ogni vista, viste trascinate sulle tavole</li><li>Manuale utente in sei lingue, sul web e in PDF, aperto anche dal programma con F1</li><li>ViewCube con bussola, menu e vista iniziale, disco di navigazione, suggerimenti dei tasti con Alt, barra di accesso rapido e scorciatoie da tastiera personalizzabili, esportate e importate in XML</li><li>Nessuno strumento cambia vista da solo: dove non può lavorare, «Vai a vista» chiede quale vista aprire</li><li>Anteprima anche nel 3D: muri come solidi con la quota temporanea, pavimenti disegnati sul livello, porte, finestre e componenti che seguono il cursore</li><li>Apertura di file IFC2x3 e IFC4: muri, solai, porte, finestre e locali diventano elementi nativi, il resto modelli generici</li><li>Prospetti telaio sulle griglie e blocchi annotazioni</li><li>Ogni strumento provato in pianta, prospetto, sezione e 3D: specchio e serie anche in sezione e prospetto, facciate continue e «Seleziona linee» anche nel 3D</li><li>Scorciatoie di due lettere digitate nella vista, in entrambi gli stili; override degli snap per il punto successivo</li></ul>
     </div>
   </section>
 
@@ -318,14 +319,14 @@
     <div class="wrap">
       <span class="eyebrow" data-i18n="rp.steps.kicker">Prossimi passi</span>
       <h2 id="passi-t" data-i18n="rp.steps.h2">67 passi, in ordine di priorità</h2>
-      <p class="sub" data-i18n="rp.steps.p">Ogni passo è un blocco completo: comandi, interfaccia come in Revit, prove, sito e sei lingue. L'ordine segue priorità e dipendenze.</p>
+      <p class="sub" data-i18n="rp.steps.p">Ogni passo è un blocco completo: comandi, interfaccia come in Revit®, prove, sito e sei lingue. L'ordine segue priorità e dipendenze.</p>
     <div class="phase pr">
-      <div class="phase-head"><span class="prio">R</span><div><h3 data-i18n="rp.pr.h3">Riallineamento con Revit</h3><p data-i18n="rp.pr.p">Prima delle nuove funzioni, ogni funzione già fatta viene confrontata voce per voce con Revit, corretta e provata dall'interfaccia.</p></div><span class="count">4/7</span></div>
+      <div class="phase-head"><span class="prio">R</span><div><h3 data-i18n="rp.pr.h3">Riallineamento con Revit®</h3><p data-i18n="rp.pr.p">Prima delle nuove funzioni, ogni funzione già fatta viene confrontata voce per voce con Revit®, corretta e provata dall'interfaccia.</p></div><span class="count">4/7</span></div>
       <ol class="steps">
       <li class="step done"><span class="n">R1</span><div><h4 data-i18n="rr1.t">Interfaccia e navigazione</h4><p data-i18n="rr1.d">Allineati e provati: barra multifunzione con i tasti di accesso (Alt), barra di accesso rapido con separatori e scorciatoie da tastiera personalizzabili, esportate e importate in XML, scorciatoie di due lettere digitate nella vista, barra delle opzioni agganciabile, proprietà, browser anche da tastiera con le viste sotto ogni tavola, viste trascinate sulle tavole, finestre affiancate in ordine d'uso, zoom verso il cursore, orbita attorno alla selezione, ViewCube con bussola e menu, disco di navigazione e menu contestuali in ogni vista; ogni strumento provato allo stesso modo in pianta, prospetto, sezione e 3D.</p></div><span class="pill" data-i18n="st.done">Fatto</span></li>
       <li class="step done"><span class="n">R2</span><div><h4 data-i18n="rr2.t">Selezione e modifica</h4><p data-i18n="rr2.d">TAB e catene di muri, filtro e Seleziona tutte le istanze, trascinamento in ogni vista con i muri uniti che si allungano, Sposta, Copia, Ruota, Specchio, Serie, Allinea, Offset, Riduci/Estendi, Dividi, Scala e Blocca, ognuno con l'anteprima prima del clic come porte, finestre, griglie e livelli (in pianta, sezione, prospetto e 3D), provati attraverso l'interfaccia.</p></div><span class="pill" data-i18n="st.done">Fatto</span></li>
       <li class="step done"><span class="n">R3</span><div><h4 data-i18n="rr3.t">Muri, porte e finestre</h4><p data-i18n="rr3.d">Giunti puliti a L, T e X con gli strati che girano gli angoli, associazione e dissociazione di tetti e solai, strumento Giunti dei muri, simboli di porte e finestre completi a ogni livello di dettaglio.</p></div><span class="pill" data-i18n="st.done">Fatto</span></li>
-      <li class="step done"><span class="n">R4</span><div><h4 data-i18n="rr4.t">Solai, tetti, scale e facciate</h4><p data-i18n="rr4.d">Allineati e provati: la modalità schizzo di solai e tetti con selezione dei muri, aperture, frecce e linee di inclinazione e modifica del contorno; il profilo di muri e facciate continue disegnato in sezione o prospetto; scale per rampa, ringhiere e componenti dalla libreria, con l'anteprima che segue il cursore. Le facciate continue sono state allineate con R3. Le rampe monolitiche si uniscono ai pianerottoli senza gradini nell'intradosso e le ringhiere proseguono sui pianerottoli con un unico corrente. Le linee degli schizzi si selezionano e si modificano come le altre linee: estremi trascinati, Sposta, Offset, Riduci/Estendi, quote temporanee. Gli strati e i contorni del nucleo dei muri si scelgono con TAB come riferimenti per Allinea e Seleziona linee.</p></div><span class="pill" data-i18n="st.done">Fatto</span></li>
+      <li class="step done"><span class="n">R4</span><div><h4 data-i18n="rr4.t">Solai, tetti, scale e facciate</h4><p data-i18n="rr4.d">Allineati e provati: la modalità schizzo di solai e tetti con selezione dei muri, aperture, frecce e linee di inclinazione e modifica del contorno; il profilo di muri e facciate continue disegnato in sezione o prospetto; scale per rampa (con le guide per la rampa successiva) o per linee di contorno e di alzata, anche a chiocciola, e rampe inclinate, ringhiere e componenti dalla libreria, con l'anteprima che segue il cursore. Le facciate continue sono state allineate con R3. Le rampe monolitiche si uniscono ai pianerottoli senza gradini nell'intradosso e le ringhiere proseguono sui pianerottoli con un unico corrente. Le linee degli schizzi si selezionano e si modificano come le altre linee: estremi trascinati, Sposta, Offset, Riduci/Estendi, quote temporanee. Gli strati e i contorni del nucleo dei muri si scelgono con TAB come riferimenti per Allinea e Seleziona linee.</p></div><span class="pill" data-i18n="st.done">Fatto</span></li>
       <li class="step wip"><span class="n">R5</span><div><h4 data-i18n="rr5.t">Viste e grafica</h4><p data-i18n="rr5.d">Selezione semitrasparente nel 3D, solo gli spigoli veri in linea nascosta, solai che tagliano i muri senza sfarfallio, finestre affiancate che riempiono l'area. Stili di visualizzazione in piante e sezioni, intervallo di visualizzazione con i livelli, grafica per elemento, motivi e trasparenza in Visibilità/Grafica, mostra elementi nascosti, modelli di vista per ogni vista, sole e ombre nel 3D. Restano le ombre nelle viste 2D.</p></div><span class="pill" data-i18n="st.wip">In corso</span></li>
       <li class="step wip"><span class="n">R6</span><div><h4 data-i18n="rr6.t">Annotazioni e 2D</h4><p data-i18n="rr6.d">Testi scritti sul disegno con linee direttrici e Trova/Sostituisci, quote di ogni tipo con i loro tipi, testo della quota, linee di guida, blocchi, EQ e quote altimetriche, etichette per categoria e per tutti, locali con limiti e calcolo di aree e volumi, schemi di colore in primo piano e le loro legende, viste legenda, ordine di disegno dei dettagli. Restano le note chiave, i simboli e i locali in sezione.</p></div><span class="pill" data-i18n="st.wip">In corso</span></li>
       <li class="step wip"><span class="n">R7</span><div><h4 data-i18n="rr7.t">Documentazione e file</h4><p data-i18n="rr7.d">Allineati e provati: tavole con cartigli scelti e inseriti con l'anteprima che segue il cursore, finestre di layout con titolo, rotazione e vista attivata sulla tavola, griglie guida, elenco tavole con tavole segnaposto, revisioni e nuvole di revisione; stampa in PDF con impostazioni salvate, anteprima, insiemi di viste e tavole, file unici o separati, anche del 3D e degli abachi; esportazione di immagini e IFC con le classi; unità, opzioni a schede, modelli di progetto, trasferimento degli standard di progetto e apertura di file IFC. Già fatti prima: abachi come viste collegate al modello, apertura, salvataggio e copie di backup.</p></div><span class="pill" data-i18n="st.wip">In corso</span></li>
@@ -347,13 +348,13 @@
       <li class="step todo"><span class="n">B10</span><div><h4 data-i18n="rb10.t">App web installabile</h4><p data-i18n="rb10.d">La versione nel browser installabile con un'icona, anche su tablet e telefono, e usabile senza rete.</p></div><span class="pill" data-i18n="st.todo">Da fare</span></li>
       <li class="step todo"><span class="n">B11</span><div><h4 data-i18n="rb11.t">Rilasci per tutte le piattaforme</h4><p data-i18n="rb11.d">Pacchetti pronti da scaricare per ogni sistema, compilati e provati in automatico a ogni versione.</p></div><span class="pill" data-i18n="st.todo">Da fare</span></li>
       <li class="step done"><span class="n">B12</span><div><h4 data-i18n="rb12.t">Manuale utente</h4><p data-i18n="rb12.d">Un manuale passo per passo in sei lingue, sul web e in PDF, pubblicato in automatico e aperto anche dal programma (? ▸ Guida, F1); ogni capitolo si completa quando la sua area è riallineata e provata.</p></div><span class="pill" data-i18n="st.done">Fatto</span></li>
-      <li class="step wip"><span class="n">B13</span><div><h4 data-i18n="rb13.t">Due stili di interfaccia</h4><p data-i18n="rb13.d">In Opzioni, su computer e nel browser, si sceglie lo stile «Revit», con la barra multifunzione, o lo stile «BIMopen»: barra laterale, ricerca dei comandi, pannelli a schede, strumenti mobili sulla vista, miniature delle viste, tema chiaro e scuro. Stessi comandi, stessi nomi e tasti; la scelta resta memorizzata.</p></div><span class="pill" data-i18n="st.wip">In corso</span></li>
+      <li class="step wip"><span class="n">B13</span><div><h4 data-i18n="rb13.t">Due stili di interfaccia</h4><p data-i18n="rb13.d">In Opzioni, su computer e nel browser, si sceglie lo stile «Revit®», con la barra multifunzione, o lo stile «BIMopen»: barra laterale, ricerca dei comandi, pannelli a schede, strumenti mobili sulla vista, miniature delle viste, tema chiaro e scuro. Stessi comandi, stessi nomi e tasti; la scelta resta memorizzata.</p></div><span class="pill" data-i18n="st.wip">In corso</span></li>
       </ol>
     </div>
     <div class="phase p1">
       <div class="phase-head"><span class="prio">P1</span><div><h3 data-i18n="rp.p1.h3">Essenziali</h3><p data-i18n="rp.p1.p">Per disegnare e documentare un progetto reale.</p></div><span class="count">6/20</span></div>
       <ol class="steps">
-      <li class="step done"><span class="n">1</span><div><h4 data-i18n="rs1.t">Muro completo e barra delle opzioni</h4><p data-i18n="rs1.d">Linea di ubicazione, altezza, vincolo, offset e «Concatena» come in Revit.</p></div><span class="pill" data-i18n="st.done">Fatto</span></li>
+      <li class="step done"><span class="n">1</span><div><h4 data-i18n="rs1.t">Muro completo e barra delle opzioni</h4><p data-i18n="rs1.d">Linea di ubicazione, altezza, vincolo, offset e «Concatena» come in Revit®.</p></div><span class="pill" data-i18n="st.done">Fatto</span></li>
       <li class="step todo"><span class="n">2</span><div><h4 data-i18n="rs2.t">Pannello «Disegna» comune</h4><p data-i18n="rs2.d">Rettangolo, poligoni, cerchio, archi, raccordo, offset e raggio per muri, pavimenti, tetti e linee.</p></div><span class="pill" data-i18n="st.todo">Da fare</span></li>
       <li class="step done"><span class="n">3</span><div><h4 data-i18n="rs3.t">Selezione completa</h4><p data-i18n="rs3.d">TAB, filtro di selezione, controlli di trascinamento; «Seleziona tutte le istanze» è già nel menu contestuale.</p></div><span class="pill" data-i18n="st.done">Fatto</span></li>
       <li class="step done"><span class="n">4</span><div><h4 data-i18n="rs4.t">Viste come elementi propri</h4><p data-i18n="rs4.d">Più piante per livello; duplica, rinomina ed elimina le viste dal Browser.</p></div><span class="pill" data-i18n="st.done">Fatto</span></li>
@@ -417,18 +418,18 @@
   <section id="copertura" class="alt" aria-labelledby="copertura-t">
     <div class="wrap">
       <span class="eyebrow" data-i18n="rp.cov.kicker">Copertura delle funzionalità</span>
-      <h2 id="copertura-t" data-i18n="rp.cov.h2">Quanto di Revit Architecture è già in BIMopen</h2>
-      <p class="sub" data-i18n="rp.cov.p">Per ogni area di Revit contiamo le opzioni fatte, parziali e da fare (le parziali valgono metà), dal documento di copertura che ogni passo aggiorna. Ultimo calcolo: 14 ottobre 2026.</p>
+      <h2 id="copertura-t" data-i18n="rp.cov.h2">Quanto di Revit® Architecture è già in BIMopen</h2>
+      <p class="sub" data-i18n="rp.cov.p">Per ogni area di Revit® contiamo le opzioni fatte, parziali e da fare (le parziali valgono metà), dal documento di copertura che ogni passo aggiorna. Ultimo calcolo: 14 ottobre 2026.</p>
       <ul class="bars">
       <li><span class="name" data-i18n="area.docs">Documentazione e annotazioni</span><span class="track" role="img" aria-label="77 %"><span class="d" style="width:71.3%"></span><span class="p" style="width:10.4%"></span></span><span class="pct">77 %</span></li>
-      <li><span class="name" data-i18n="area.circulation">Circolazione e spazi</span><span class="track" role="img" aria-label="60 %"><span class="d" style="width:55.4%"></span><span class="p" style="width:10.1%"></span></span><span class="pct">60 %</span></li>
+      <li><span class="name" data-i18n="area.circulation">Circolazione e spazi</span><span class="track" role="img" aria-label="71 %"><span class="d" style="width:65.5%"></span><span class="p" style="width:12.0%"></span></span><span class="pct">71 %</span></li>
       <li><span class="name" data-i18n="area.interface">Interfaccia e progetti</span><span class="track" role="img" aria-label="60 %"><span class="d" style="width:55.0%"></span><span class="p" style="width:11.1%"></span></span><span class="pct">60 %</span></li>
       <li><span class="name" data-i18n="area.tools">Strumenti e impostazioni</span><span class="track" role="img" aria-label="43 %"><span class="d" style="width:38.5%"></span><span class="p" style="width:8.8%"></span></span><span class="pct">43 %</span></li>
       <li><span class="name" data-i18n="area.model">Modellazione</span><span class="track" role="img" aria-label="38 %"><span class="d" style="width:34.8%"></span><span class="p" style="width:6.2%"></span></span><span class="pct">38 %</span></li>
       <li><span class="name" data-i18n="area.views">Viste e grafica</span><span class="track" role="img" aria-label="38 %"><span class="d" style="width:33.6%"></span><span class="p" style="width:7.9%"></span></span><span class="pct">38 %</span></li>
       <li><span class="name" data-i18n="area.sharing">Condivisione e analisi</span><span class="track" role="img" aria-label="24 %"><span class="d" style="width:21.7%"></span><span class="p" style="width:5.3%"></span></span><span class="pct">24 %</span></li>
       <li><span class="name" data-i18n="area.design">Progettazione preliminare e sito</span><span class="track" role="img" aria-label="1 %"><span class="d" style="width:0.0%"></span><span class="p" style="width:1.3%"></span></span><span class="pct">1 %</span></li>
-      <li class="total"><span class="name" data-i18n="rp.cov.total">Totale</span><span class="track" role="img" aria-label="47 %"><span class="d" style="width:42.7%"></span><span class="p" style="width:8.1%"></span></span><span class="pct">47 %</span></li>
+      <li class="total"><span class="name" data-i18n="rp.cov.total">Totale</span><span class="track" role="img" aria-label="47 %"><span class="d" style="width:43.1%"></span><span class="p" style="width:8.2%"></span></span><span class="pct">47 %</span></li>
       </ul>
       <p class="legend"><span><i style="background:var(--blue)"></i><span data-i18n="rp.cov.leg.done">fatto</span></span><span><i style="background:color-mix(in srgb, var(--blue) 40%, transparent)"></i><span data-i18n="rp.cov.leg.part">parziale</span></span></p>
     </div>
@@ -438,7 +439,7 @@
     <div class="wrap">
       <span class="eyebrow" data-i18n="rp.out.kicker">Fuori ambito</span>
       <h2 id="fuori-t" data-i18n="rp.out.h2">Cosa BIMopen non farà</h2>
-      <ul class="outs" data-i18n="rp.out.ul"><li>Gestione delle licenze e servizi in rete di Autodesk</li><li>Condivisione del lavoro su server con file centrale</li><li>Librerie di materiali e servizi di rendering in cloud di Autodesk</li><li>Macro VSTA: in BIMopen l'automazione passa da comandi, riga di comando e server MCP</li><li>Analisi energetiche e strutturali proprietarie</li></ul>
+      <ul class="outs" data-i18n="rp.out.ul"><li>Gestione delle licenze e servizi in rete di Autodesk®</li><li>Condivisione del lavoro su server con file centrale</li><li>Librerie di materiali e servizi di rendering in cloud di Autodesk®</li><li>Macro VSTA: in BIMopen l'automazione passa da comandi, riga di comando e server MCP</li><li>Analisi energetiche e strutturali proprietarie</li></ul>
     </div>
   </section>
 
@@ -447,7 +448,7 @@
       <h2 data-i18n="rp.cta.h2">Provalo mentre cresce</h2>
       <p class="sub" style="margin-inline:auto" data-i18n="rp.cta.p">Ogni passo finito arriva subito nella versione per browser.</p>
       <div class="cta">
-        <a class="btn btn-primary" href="app/" data-app="4cd67bd7" data-i18n="cta.prova">Provalo nel browser</a>
+        <a class="btn btn-primary" href="app/" data-app="fc488514" data-i18n="cta.prova">Provalo nel browser</a>
         <a class="btn btn-ghost" href="./" data-con-lingua="./" data-i18n="rp.back">Torna alla pagina principale</a>
       </div>
     </div>
@@ -457,17 +458,17 @@
 <footer>
   <div class="wrap">
     <div class="row">
-      <span>© <span id="year">2026</span> BIMopen · <span data-i18n="foot.lic">Software libero con licenza MIT o Apache 2.0</span> · <span data-i18n="foot.claude">Sviluppato con</span> <a href="https://claude.com/claude-code" rel="noopener">Claude Code</a></span>
-      <span><a href="./#formati" data-con-lingua="./#formati" data-i18n="nav.formati">Formati</a> · <a href="roadmap.html" data-con-lingua="roadmap.html" data-i18n="nav.roadmap">Roadmap</a> · <a href="manual/it/" data-manuale data-i18n="nav.manuale">Manuale</a> · <span data-i18n="foot.codice">Codice sorgente in arrivo</span></span>
+      <span>© <span id="year">2026</span> BIMopen · <span data-i18n="foot.lic">Sarà rilasciato come open source (MIT/Apache)</span> · <span data-i18n="foot.claude">Sviluppato con</span> <a href="https://claude.com/claude-code" rel="noopener">Claude Code</a></span>
+      <span><a href="./#formati" data-con-lingua="./#formati" data-i18n="nav.formati">Formati</a> · <a href="roadmap.html" data-con-lingua="roadmap.html" data-i18n="nav.roadmap">Roadmap</a> · <a href="download.html" data-con-lingua="download.html" data-i18n="nav.scarica">Scarica</a> · <a href="manual/it/" data-manuale data-i18n="nav.manuale">Manuale</a> · <span data-i18n="foot.codice">Codice sorgente in arrivo</span></span>
     </div>
-    <small data-i18n="foot.marchi">Autodesk e Revit sono marchi o marchi registrati di Autodesk, Inc. BIMopen è un progetto indipendente, non affiliato, sponsorizzato né approvato da Autodesk; i nomi sono usati solo per indicare i formati e i flussi di lavoro con cui BIMopen è compatibile. IFC è uno standard di buildingSMART International.</small>
+    <small data-i18n="foot.marchi">Autodesk® e Revit® sono marchi o marchi registrati di Autodesk, Inc. BIMopen è un progetto indipendente, non affiliato, sponsorizzato né approvato da Autodesk®; i nomi sono usati solo per indicare i formati e i flussi di lavoro con cui BIMopen è compatibile. IFC è uno standard di buildingSMART International.</small>
   </div>
 </footer>
 
 <button class="to-top" id="to-top" type="button" aria-label="Torna all'inizio" data-i18n-attr="aria-label:ui.top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
-<script src="lingua.js?v=6410f9fd"></script>
+<script src="lingua.js?v=5bc22bf5"></script>
 <script>
-  // tema: quello di sistema finché non si sceglie; poi chiaro o scuro, ricordato in questo browser
+  // tema: scuro finché non si sceglie; poi chiaro o scuro, ricordato in questo browser
   (function () {
     var root = document.documentElement;
     document.getElementById('themeToggle').addEventListener('click', function () {

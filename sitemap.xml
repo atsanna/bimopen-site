@@ -133,6 +133,72 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://bimopen.it/roadmap.html"/>
   </url>
   <url>
+    <loc>https://bimopen.it/download.html</loc>
+    <lastmod>2026-10-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bimopen.it/download.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bimopen.it/download.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bimopen.it/download.html?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bimopen.it/download.html?lang=fr"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bimopen.it/download.html?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bimopen.it/download.html?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bimopen.it/download.html"/>
+  </url>
+  <url>
+    <loc>https://bimopen.it/download.html?lang=en</loc>
+    <lastmod>2026-10-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bimopen.it/download.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bimopen.it/download.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bimopen.it/download.html?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bimopen.it/download.html?lang=fr"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bimopen.it/download.html?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bimopen.it/download.html?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bimopen.it/download.html"/>
+  </url>
+  <url>
+    <loc>https://bimopen.it/download.html?lang=de</loc>
+    <lastmod>2026-10-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bimopen.it/download.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bimopen.it/download.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bimopen.it/download.html?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bimopen.it/download.html?lang=fr"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bimopen.it/download.html?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bimopen.it/download.html?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bimopen.it/download.html"/>
+  </url>
+  <url>
+    <loc>https://bimopen.it/download.html?lang=fr</loc>
+    <lastmod>2026-10-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bimopen.it/download.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bimopen.it/download.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bimopen.it/download.html?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bimopen.it/download.html?lang=fr"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bimopen.it/download.html?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bimopen.it/download.html?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bimopen.it/download.html"/>
+  </url>
+  <url>
+    <loc>https://bimopen.it/download.html?lang=es</loc>
+    <lastmod>2026-10-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bimopen.it/download.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bimopen.it/download.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bimopen.it/download.html?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bimopen.it/download.html?lang=fr"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bimopen.it/download.html?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bimopen.it/download.html?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bimopen.it/download.html"/>
+  </url>
+  <url>
+    <loc>https://bimopen.it/download.html?lang=ar</loc>
+    <lastmod>2026-10-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://bimopen.it/download.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bimopen.it/download.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bimopen.it/download.html?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://bimopen.it/download.html?lang=fr"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bimopen.it/download.html?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bimopen.it/download.html?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bimopen.it/download.html"/>
+  </url>
+  <url>
     <loc>https://bimopen.it/manual/it/</loc>
     <lastmod>2026-10-12</lastmod>
     <xhtml:link rel="alternate" hreflang="it" href="https://bimopen.it/manual/it/"/>
@@ -596,7 +662,7 @@
   </url>
   <url>
     <loc>https://bimopen.it/manual/it/floors-roofs-stairs/</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <xhtml:link rel="alternate" hreflang="it" href="https://bimopen.it/manual/it/floors-roofs-stairs/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://bimopen.it/manual/en/floors-roofs-stairs/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://bimopen.it/manual/de/floors-roofs-stairs/"/>
@@ -607,7 +673,7 @@
   </url>
   <url>
     <loc>https://bimopen.it/manual/en/floors-roofs-stairs/</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <xhtml:link rel="alternate" hreflang="it" href="https://bimopen.it/manual/it/floors-roofs-stairs/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://bimopen.it/manual/en/floors-roofs-stairs/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://bimopen.it/manual/de/floors-roofs-stairs/"/>
@@ -618,7 +684,7 @@
   </url>
   <url>
     <loc>https://bimopen.it/manual/de/floors-roofs-stairs/</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <xhtml:link rel="alternate" hreflang="it" href="https://bimopen.it/manual/it/floors-roofs-stairs/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://bimopen.it/manual/en/floors-roofs-stairs/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://bimopen.it/manual/de/floors-roofs-stairs/"/>
@@ -629,7 +695,7 @@
   </url>
   <url>
     <loc>https://bimopen.it/manual/fr/floors-roofs-stairs/</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <xhtml:link rel="alternate" hreflang="it" href="https://bimopen.it/manual/it/floors-roofs-stairs/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://bimopen.it/manual/en/floors-roofs-stairs/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://bimopen.it/manual/de/floors-roofs-stairs/"/>
@@ -640,7 +706,7 @@
   </url>
   <url>
     <loc>https://bimopen.it/manual/es/floors-roofs-stairs/</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <xhtml:link rel="alternate" hreflang="it" href="https://bimopen.it/manual/it/floors-roofs-stairs/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://bimopen.it/manual/en/floors-roofs-stairs/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://bimopen.it/manual/de/floors-roofs-stairs/"/>
@@ -651,7 +717,7 @@
   </url>
   <url>
     <loc>https://bimopen.it/manual/ar/floors-roofs-stairs/</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <xhtml:link rel="alternate" hreflang="it" href="https://bimopen.it/manual/it/floors-roofs-stairs/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://bimopen.it/manual/en/floors-roofs-stairs/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://bimopen.it/manual/de/floors-roofs-stairs/"/>

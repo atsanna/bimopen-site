@@ -3,9 +3,16 @@ Copyright (c) 2026 Antonio Sanna and the BIMopen contributors
 Licensed under MIT OR Apache-2.0.
 
 This product depends on rvt by Griffin Long (https://github.com/DrunkOnJava/rvt-rs),
-a clean-room reader for Autodesk Revit files, licensed under Apache-2.0.
+a clean-room reader for Autodesk® Revit® files, licensed under Apache-2.0.
 crates/rvt/tests/architectural-2024.rvt is a fixture from that project.
 
-Autodesk and Revit are trademarks or registered trademarks of Autodesk, Inc.
+Autodesk® and Revit® are trademarks or registered trademarks of Autodesk, Inc.
 BIMopen is an independent project and is not affiliated with, sponsored by or
 endorsed by Autodesk, Inc.
+
+The «BIMopen» interface style bundles:
+- Inter 4.1 by The Inter Project Authors (https://github.com/rsms/inter), subset, licensed
+  under the SIL Open Font License 1.1: crates/ui-egui/assets/fonts/inter/ (LICENSE.txt);
+- icons of Lucide (lucide-static 1.55.0, https://lucide.dev), licensed under the ISC License:
+  the SVG sources in crates/ui-egui/assets/icons/lucide/ (LICENSE), converted to
+  crates/ui-egui/src/style_bimopen/lucide.rs.

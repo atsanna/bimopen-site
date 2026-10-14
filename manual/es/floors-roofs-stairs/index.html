@@ -331,6 +331,13 @@
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#ramps">
+<span class="md-ellipsis">
+      Rampas
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#railings">
 <span class="md-ellipsis">
       Barandillas
@@ -532,6 +539,13 @@
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#ramps">
+<span class="md-ellipsis">
+      Rampas
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#railings">
 <span class="md-ellipsis">
       Barandillas
@@ -618,6 +632,7 @@ barandilla</strong>) y contiene:</p>
 </table>
 <p><strong>Desfase</strong> en la barra de opciones desplaza esa distancia las líneas dibujadas (y las de los
 muros designados).</p>
+<p>Los arcos del grupo <strong>Dibujar</strong> (y un círculo, en dos mitades) son cada uno una sola línea de boceto: se seleccionan, miden y arrastran como arcos, el suelo, la cubierta, la escalera, el perfil del muro o la región los conservan, y <strong>Editar contorno</strong>, <strong>Editar boceto</strong> o <strong>Editar perfil</strong> los devuelven como arcos. En cada vista un punto del boceto se ajusta a los extremos y puntos medios de las líneas y arcos del boceto, a los centros de los arcos, donde las líneas se cruzan y sobre una línea o un arco; desde el punto desde el que se dibuja, al pie de la perpendicular y al punto donde una línea toca un arco. El símbolo y su nombre muestran dónde se ajusta el punto; <span class="keys"><kbd class="key-s">S</kbd></span> <span class="keys"><kbd class="key-c">C</kbd></span> y <span class="keys"><kbd class="key-s">S</kbd></span> <span class="keys"><kbd class="key-p">P</kbd></span> piden el centro o la perpendicular para el punto siguiente.</p>
 <p>Los suelos y las cubiertas necesitan contornos cerrados. Un contorno dibujado dentro del exterior
 es una <strong>abertura</strong>: el suelo o la cubierta tiene ahí un hueco. Cuando <strong>Finalizar modo de edición</strong>
 encuentra líneas que no se cierran o que se cortan, un mensaje lo indica y el boceto queda abierto
@@ -777,16 +792,20 @@ voladizos y capas.</p>
    a huellas enteras y la barra de estado cuenta las contrahuellas creadas y restantes (por ejemplo
    <code>9 contrahuellas creadas, 8 restantes</code>).</li>
 <li>Para girar, haz clic de nuevo lejos del final del primer tramo y dibuja el siguiente: un
-   descansillo los une.</li>
+   descansillo los une. Con cualquier ángulo el descansillo queda entre las contrahuellas de los dos
+   tramos, con su esquina exterior donde se encuentran sus lados exteriores.</li>
 <li>Cuando todas las contrahuellas están colocadas, haz clic en <strong>Finalizar modo de edición</strong>.</li>
 </ol>
+<p>Unas guías discontinuas muestran dónde puede empezar el tramo siguiente: la prolongación del último tramo más allá de su final y las líneas de su primera y última contrahuella. Un clic cerca de ellas se ajusta a ellas. En una vista 3D la escalera se dibuja de la misma forma, en el plano del nivel activo.</p>
+<p>Un tramo curvo (una escalera de caracol): con <strong>Tramo</strong> activo, haz clic en <strong>Arco por centro y extremos</strong>, luego en el centro, en el inicio de la línea de tramo (su distancia al centro es el radio de la línea de recorrido) y en el final, dando más de media vuelta si hace falta, pero menos de una vuelta (más allá, el tramo se detiene antes y la barra de estado avisa de que los tramos se superpondrían). Las contrahuellas salen del centro a una huella de distancia sobre la línea de tramo; líneas de contrahuella dibujadas en abanico desde un centro también forman un tramo curvo. Un segundo tramo curvo alrededor del mismo centro y sobre la misma línea de tramo (un clic cerca los toma) se une al primero con un descansillo en arco.</p>
+<p>Una escalera también se puede dibujar por sus líneas. En su boceto, haz clic en <strong>Dibujar ▸ Contorno</strong> y dibuja los bordes izquierdo y derecho (verdes), luego en <strong>Contrahuella</strong> y dibuja las líneas de contrahuella (negras) entre ellos, con <strong>Línea</strong> o <strong>Seleccionar líneas</strong>. Las contrahuellas paralelas y a paso regular forman un tramo, tan ancho como las contrahuellas; un descansillo une dos tramos hasta las líneas de contorno. Cada contrahuella es tan alta como la planta dividida por el número de contrahuellas deseado; con menos líneas de contrahuella la escalera se queda por debajo del nivel superior (<strong>Propiedades</strong> muestra el número real). <strong>Editar boceto</strong> devuelve las mismas líneas. Cada tramo dibujado con <strong>Tramo</strong> se convierte enseguida en líneas de contorno y de contrahuella como estas: se pueden mover o borrar como las demás. Un descansillo sigue sus líneas de contorno: divide su borde exterior con <strong>Dividir elemento</strong> y arrastra un trozo para hacer una muesca, o dibújalo más ancho que los tramos.</p>
 <p>La <strong>Anchura</strong> en la barra de opciones es la de la nueva escalera (por defecto la del tipo).
 <strong>Herramientas ▸ Tipo de barandilla</strong> elige las barandillas de la nueva escalera: un tipo de
 barandilla, puesto en ambos lados, o <strong>Ninguno</strong>.</p>
 <p>El número de contrahuellas sale de la altura entre <strong>Nivel base</strong> y <strong>Nivel superior</strong> (con sus
 desfases) y de la <strong>Altura máxima de contrahuella</strong> del tipo; cambiar un nivel o un desfase en
-<strong>Propiedades</strong> cambia las contrahuellas. <strong>Editar boceto</strong> vuelve a abrir los tramos: borra un
-tramo (clic, <span class="keys"><kbd class="key-delete">Del</kbd></span>) y dibújalo de nuevo; las barandillas de la escalera lo siguen.</p>
+<strong>Propiedades</strong> cambia las contrahuellas. <strong>Editar boceto</strong> vuelve a abrir sus líneas de contorno y de
+contrahuella: cámbialas o bórralas (clic, <span class="keys"><kbd class="key-delete">Del</kbd></span>) y dibuja de nuevo los tramos; las barandillas de la escalera siguen. <strong>Nivel superior de varias plantas</strong> repite la escalera, con sus barandillas, planta por planta hasta ese nivel; una planta cuya altura no es la de la escalera no recibe copia, y un aviso la nombra. Con la escalera seleccionada, las flechas azules de inversión junto a la primera contrahuella la hacen subir desde el otro extremo; <strong>Etiqueta SUBE</strong>, <strong>Flecha SUBE</strong>, <strong>Etiqueta BAJA</strong> y <strong>Flecha BAJA</strong> en <strong>Propiedades</strong> muestran u ocultan las partes del símbolo en planta. El pinzamiento cuadrado bajo el texto <strong>SUBE</strong> lo arrastra a otro lugar.</p>
 <p>En planta la escalera muestra sus huellas hasta la línea de corte, la línea de rotura, la flecha y
 el texto <strong>SUBE</strong>/<strong>BAJA</strong>; en 3D sus huellas y contrahuellas, o una losa monolítica, sus
 descansillos y barandillas.</p>
@@ -802,15 +821,41 @@ descansillos y barandillas.</p>
   izquierda</strong> <strong>Cerrada</strong> (un tablero en el que encajan las huellas), <strong>Abierta</strong> (un tablero
   cortado a los peldaños, las huellas encima) o <strong>Ninguno</strong>, y <strong>Zancas centrales</strong> bajo las
   huellas, con su <strong>Grosor de zanca</strong> y <strong>Altura de zanca</strong>.</li>
+<li><strong>Comenzar con contrahuella</strong> y <strong>Terminar con contrahuella</strong> desmarcados: no se construye el
+  tablero de la primera o la última contrahuella de la escalera.</li>
+<li><strong>Tipo de contrahuella</strong> <strong>Inclinada</strong> inclina cada tablero de contrahuella, con su parte alta
+  bajo el frente de la huella superior; <strong>Conexión contrahuella-huella</strong> lleva cada huella bajo la
+  contrahuella de detrás (<strong>Extender huella bajo contrahuella</strong>) o la contrahuella hacia abajo
+  detrás de la huella (<strong>Extender contrahuella detrás de huella</strong>).</li>
+<li><strong>Longitud de vuelo</strong> fija cuánto sobresale la huella de la contrahuella; <strong>Extender por debajo
+  de la base</strong> mueve el pie de las zancas (negativo: bajo el nivel base); <strong>Material de huella</strong>,
+  <strong>Material de contrahuella</strong>, <strong>Material de zanca</strong> y <strong>Material de escalera monolítica</strong> colorean
+  las partes; <strong>Símbolo de rotura en planta</strong> y <strong>Tamaño de texto</strong> controlan el símbolo en planta.</li>
 </ul>
-<p>El descansillo se detiene detrás de la última contrahuella del tramo que llega, siguiendo su cara posterior; en una escalera monolítica empieza en la cara de la contrahuella. Arriba, la cara inferior del tramo sigue bajo el forjado del nivel superior hasta encontrar su cara inferior, como bajo un descansillo.</p>
+<p>El descansillo se detiene detrás de la última contrahuella del tramo que llega, siguiendo su cara posterior; en una escalera monolítica empieza en la cara de la contrahuella. En una escalera monolítica cuyo forjado superior tiene el borde en la última contrahuella, la cara inferior del tramo sigue bajo ese forjado hasta encontrar su cara inferior, como bajo un descansillo.</p>
 <p>Una sección a través de la escalera la muestra cortada con su losa. <strong>Volumen</strong> en
 <strong>Propiedades</strong> y en la tabla de planificación de escaleras es el volumen de sus sólidos.</p>
+<p>La <strong>Fuente de texto</strong> del tipo, el <strong>Perfil de mamperlán</strong> (<strong>Por defecto</strong> o <strong>Redondeado</strong>) y <strong>Aplicar perfil de mamperlán</strong> (solo delante, delante e izquierda, o delante, izquierda y derecha: más allá de un lado sin zanca cerrada), el <strong>Desfase de zanca abierta</strong>, <strong>Recortar zancas en la parte superior</strong> (<strong>Igualar nivel</strong> detiene las zancas laterales en el nivel superior) y sus datos de identidad (<strong>Nota clave</strong>, <strong>Modelo</strong>, <strong>Fabricante</strong>, <strong>Comentarios de tipo</strong>, <strong>URL</strong>, <strong>Descripción</strong>, <strong>Código de montaje</strong>) están en <strong>Propiedades de tipo</strong>, como la <strong>Parte inferior de la zanca</strong> de una escalera monolítica (<strong>Lisa</strong>, una losa inclinada, o <strong>Escalonada</strong>: la losa sigue los peldaños). En <strong>Reglas de cálculo</strong>, <strong>Usar calculadora de escalera</strong> con un <strong>Resultado objetivo</strong>, <strong>máximo</strong> y <strong>mínimo</strong> comprueba 2 contrahuellas + 1 huella: una escalera fuera del intervalo se crea, y un aviso lo indica.</p>
+<h2 id="ramps">Rampas</h2>
+<ol>
+<li>Haz clic en <strong>Inicio ▸ Circulación ▸ Rampa</strong>. El modo de boceto empieza con <strong>Tramo</strong>.</li>
+<li>Haz clic donde empieza un tramo y luego donde termina: tiene como mucho la <strong>Pendiente máxima
+   de rampa (1/x)</strong> del tipo y sube como mucho la <strong>Longitud máxima inclinada</strong> (al dibujar, un tramo más
+   largo se detiene ahí); junto al cursor aparecen la longitud hecha y la que queda.</li>
+<li>Dibuja el tramo siguiente lejos del final del primero: un descansillo los une. <strong>Contorno</strong> y
+   <strong>Contrahuella</strong> dibujan una rampa por sus líneas, con una línea de contrahuella al inicio y al
+   final de cada tramo.</li>
+<li>Haz clic en <strong>Finalizar modo de edición</strong>.</li>
+</ol>
+<p>La <strong>Forma</strong> del tipo es <strong>Grueso</strong> (con su <strong>Grosor</strong>) o <strong>Sólido</strong> (hasta la base), y <strong>Material
+de rampa</strong> la colorea. Las barandillas, <strong>Editar boceto</strong> y <strong>Propiedades</strong> funcionan como en las
+escaleras.</p>
+<p>Con <strong>Arco de centro y extremos</strong> en el grupo <strong>Dibujar</strong>, haz clic en el centro, en el inicio de la línea del tramo y luego en su final alrededor del centro: el tramo gira alrededor de él, con dos líneas radiales en sus extremos y dos arcos de contorno a sus lados. <strong>Mostrar flecha SUBE en todas las vistas</strong> del tipo dibuja la flecha entera y <strong>SUBE</strong> también en la planta del nivel superior; la <strong>Fuente de texto</strong> y los datos de identidad son como en las escaleras.</p>
 <h2 id="railings">Barandillas</h2>
 <ol>
 <li>Haz clic en <strong>Inicio ▸ Circulación ▸ Barandilla</strong>.</li>
-<li>Dibuja el camino con <strong>Línea</strong>: una sola cadena de líneas conectadas (un camino a trozos lo
-   rechaza <strong>Finalizar modo de edición</strong>).</li>
+<li>Dibuja el camino con <strong>Línea</strong>: una sola cadena de líneas conectadas (un camino a trozos, cerrado o que
+   vuelve sobre sí mismo lo rechaza <strong>Finalizar modo de edición</strong>).</li>
 <li>Para poner la barandilla en una escalera, haz clic en <strong>Herramientas ▸ Elegir nuevo anfitrión</strong>
    y luego en la escalera: el camino dibujado sobre ella sube con la escalera.</li>
 <li>Haz clic en <strong>Finalizar modo de edición</strong>.</li>
@@ -850,12 +895,10 @@ altura y material.</p>
 planificación (<strong>Vista ▸ Crear ▸ Tablas de planificación ▸ Tabla de planificación/cantidades</strong>),
 una fila por elemento. <strong>Exportar ▸ Exportar IFC4…</strong> escribe los suelos como losas (con sus
 aberturas y pendientes), las cubiertas, las escaleras con sus tramos y descansillos, las
-barandillas, el mobiliario y los aparatos sanitarios.</p>
+barandillas, el mobiliario y los aparatos sanitarios. Una escalera de varias plantas se escribe una vez en cada planta en que se repite, con sus barandillas.</p>
 <h2 id="not-yet-in-bimopen">Todavía no en BIMopen</h2>
-<p>Los falsos techos, las rampas, las cubiertas por extrusión, los huecos de patinillo y las
-aberturas verticales, los bordes de losa, las impostas, los canalones y los plafones, las escaleras
-dibujadas por líneas de contorno y de contrahuella, las escaleras de caracol y los arcos en los
-bocetos llegan después del realineamiento de este capítulo.</p>
+<p>Los falsos techos, las cubiertas por extrusión, los huecos de patinillo y las
+aberturas verticales, los bordes de losa, las impostas, los canalones y los plafones llegan después del realineamiento de este capítulo.</p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

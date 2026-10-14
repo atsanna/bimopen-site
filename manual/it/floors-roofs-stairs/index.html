@@ -331,6 +331,13 @@
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#ramps">
+<span class="md-ellipsis">
+      Rampe inclinate
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#railings">
 <span class="md-ellipsis">
       Ringhiere
@@ -532,6 +539,13 @@
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#ramps">
+<span class="md-ellipsis">
+      Rampe inclinate
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#railings">
 <span class="md-ellipsis">
       Ringhiere
@@ -618,6 +632,7 @@ contiene:</p>
 </table>
 <p><strong>Offset</strong> nella barra delle opzioni sposta di quella distanza le linee disegnate (e quelle dei
 muri selezionati).</p>
+<p>Gli archi del pannello <strong>Disegna</strong> (e un cerchio, come due metà) sono ciascuno una sola linea di disegno: si selezionano, si misurano e si trascinano come archi, restano archi nel pavimento, tetto, scala, profilo del muro o regione, e <strong>Modifica contorno</strong>, <strong>Modifica disegno</strong> o <strong>Modifica profilo</strong> li restituiscono come archi. In ogni vista un punto del disegno si aggancia agli estremi e ai punti medi delle linee e degli archi del disegno, ai centri degli archi, dove le linee si incrociano e su una linea o un arco; dal punto da cui si disegna, al piede della perpendicolare e al punto in cui una linea tocca un arco. Il simbolo e il suo nome mostrano dove il punto si aggancia; <span class="keys"><kbd class="key-s">S</kbd></span> <span class="keys"><kbd class="key-c">C</kbd></span> e <span class="keys"><kbd class="key-s">S</kbd></span> <span class="keys"><kbd class="key-p">P</kbd></span> chiedono il centro o la perpendicolare per il punto successivo.</p>
 <p>Pavimenti e tetti richiedono perimetri chiusi. Un perimetro disegnato dentro quello esterno è
 un'<strong>apertura</strong>: il pavimento o il tetto ha lì un foro. Se <strong>Termina modalità di modifica</strong> trova
 linee che non si chiudono o che si intersecano, un messaggio lo dice e il disegno resta aperto per
@@ -784,16 +799,20 @@ strati.</p>
    intere e la barra di stato conta le alzate create e rimanenti (per esempio <code>9 alzate create, 8
    rimanenti</code>).</li>
 <li>Per girare, fai clic di nuovo lontano dalla fine della prima rampa e disegna la successiva: un
-   pianerottolo le unisce.</li>
+   pianerottolo le unisce. A qualunque angolo il pianerottolo è chiuso dalle alzate delle due rampe,
+   con l'angolo esterno dove si incontrano i loro lati esterni.</li>
 <li>Quando tutte le alzate sono posizionate, fai clic su <strong>Termina modalità di modifica</strong>.</li>
 </ol>
+<p>Linee guida tratteggiate mostrano dove può iniziare la rampa successiva: il prolungamento dell'ultima rampa oltre la sua fine e le linee della sua prima e ultima alzata. Un clic vicino a esse vi si aggancia. In una vista 3D la scala si disegna allo stesso modo, sul piano del livello attivo.</p>
+<p>Una rampa curva (una scala a chiocciola): con <strong>Rampa</strong> attiva fai clic su <strong>Arco da centro ed estremità</strong>, poi sul centro, sull'inizio della linea di rampa (la sua distanza dal centro è il raggio della linea di percorrenza) e sulla fine, girando oltre il mezzo giro se serve, ma meno di un giro (oltre, la rampa si ferma prima e la barra di stato avvisa che le rampe si sovrapporrebbero). Le alzate partono dal centro a una pedata l'una dall'altra sulla linea di rampa; anche linee di alzata disegnate a raggiera da un centro fanno una rampa curva. Una seconda rampa curva attorno allo stesso centro e sulla stessa linea di rampa (un clic vicino li prende) si unisce alla prima con un pianerottolo ad arco.</p>
+<p>Una scala si può anche disegnare per linee. Nel suo disegno fai clic su <strong>Disegna ▸ Contorno</strong> e disegna i bordi sinistro e destro (verdi), poi su <strong>Alzata</strong> e disegna le linee delle alzate (nere) fra di essi, con <strong>Linea</strong> o <strong>Seleziona linee</strong>. Alzate parallele e a passo regolare formano una rampa, larga quanto le alzate; un pianerottolo unisce due rampe fino alle linee di contorno. Ogni alzata è alta quanto il piano diviso per il numero di alzate desiderato; con meno linee di alzata la scala si ferma prima del livello superiore (<strong>Proprietà</strong> mostra il numero effettivo). <strong>Modifica disegno</strong> restituisce le stesse linee. Ogni rampa disegnata con <strong>Rampa</strong> diventa subito linee di contorno e di alzata come queste: si possono spostare o eliminare come le altre. Un pianerottolo segue le sue linee di contorno: dividi il bordo esterno con <strong>Dividi elemento</strong> e trascina un pezzo per fare una rientranza, oppure disegnalo più largo delle rampe.</p>
 <p>La <strong>Larghezza</strong> nella barra delle opzioni è quella della nuova scala (come predefinito quella
 del tipo). <strong>Strumenti ▸ Tipo di ringhiera</strong> sceglie le ringhiere della nuova scala: un tipo di
 ringhiera, messo su entrambi i lati, oppure <strong>Nessuno</strong>.</p>
 <p>Il numero di alzate deriva dall'altezza fra <strong>Livello di base</strong> e <strong>Livello superiore</strong> (con i loro
 offset) e dall'<strong>Altezza massima alzata</strong> del tipo; cambiare un livello o un offset in <strong>Proprietà</strong>
-cambia le alzate. <strong>Modifica disegno</strong> riapre le rampe: elimina una rampa (clic, <span class="keys"><kbd class="key-delete">Del</kbd></span>) e
-disegnala di nuovo; le ringhiere della scala la seguono.</p>
+cambia le alzate. <strong>Modifica disegno</strong> riapre le sue linee di contorno e di alzata:
+cambiale o eliminale (clic, <span class="keys"><kbd class="key-delete">Del</kbd></span>) e disegna di nuovo le rampe; le ringhiere della scala seguono. <strong>Livello superiore di multipiano</strong> ripete la scala, con le sue ringhiere, piano per piano fino a quel livello; un piano di altezza diversa da quella della scala non ne riceve la copia, e un avviso lo nomina. Con la scala selezionata, le frecce blu d'inversione accanto alla prima alzata la fanno salire dall'altra estremità; <strong>Etichetta SU</strong>, <strong>Freccia in alto</strong>, <strong>Etichetta GIÙ</strong> e <strong>Freccia GIÙ</strong> in <strong>Proprietà</strong> mostrano o nascondono le parti del simbolo in pianta. Il punto di manipolazione quadrato sotto il testo <strong>SU</strong> lo sposta altrove.</p>
 <p>In pianta la scala mostra le pedate fino alla linea di taglio, la linea di interruzione, la
 freccia e il testo <strong>SU</strong>/<strong>GIÙ</strong>; in 3D pedate e alzate, oppure una soletta monolitica, i
 pianerottoli e le ringhiere.</p>
@@ -809,15 +828,44 @@ pianerottoli e le ringhiere.</p>
   sinistro</strong> <strong>Chiuso</strong> (una tavola in cui sono incastrate le pedate), <strong>Aperto</strong> (una tavola
   sagomata ai gradini, con le pedate sopra) o <strong>Nessuno</strong>, e <strong>Montanti centrali</strong> sotto le pedate,
   con il loro <strong>Spessore montante scala</strong> e <strong>Altezza montante scala</strong>.</li>
+<li><strong>Inizia con alzata</strong> e <strong>Termina con alzata</strong> deselezionati: la tavola della prima o
+  dell'ultima alzata della scala non viene costruita.</li>
+<li><strong>Tipo di alzata</strong> <strong>Obliqua</strong> inclina ogni tavola d'alzata, con la sommità sotto il fronte
+  della pedata superiore; <strong>Connessione alzata-pedata</strong> prolunga ogni pedata sotto l'alzata dietro
+  di essa (<strong>Estendi pedata sotto alzata</strong>) o l'alzata in basso dietro la pedata (<strong>Estendi alzata
+  dietro pedata</strong>).</li>
+<li><strong>Lunghezza dell'aggetto</strong> fissa quanto la pedata sporge oltre l'alzata; <strong>Estendi sotto la
+  base</strong> sposta il piede dei montanti (negativo: sotto il livello di base); <strong>Materiale pedata</strong>,
+  <strong>Materiale alzata</strong>, <strong>Materiale montante scala</strong> e <strong>Materiale della scala monolitica</strong> colorano
+  le parti; <strong>Simbolo di interruzione in pianta</strong> e <strong>Dimensione del testo</strong> regolano il simbolo in
+  pianta.</li>
 </ul>
-<p>Il pianerottolo si ferma dietro l'ultima alzata della rampa che vi arriva, seguendone la faccia posteriore; in una scala monolitica comincia sulla faccia dell'alzata. In cima l'intradosso della rampa prosegue sotto il solaio del livello superiore fino a incontrarne l'intradosso, come sotto un pianerottolo.</p>
+<p>Il pianerottolo si ferma dietro l'ultima alzata della rampa che vi arriva, seguendone la faccia posteriore; in una scala monolitica comincia sulla faccia dell'alzata. In una scala monolitica il cui solaio superiore ha il bordo sull'ultima alzata, l'intradosso della rampa prosegue sotto quel solaio fino a incontrarne l'intradosso, come sotto un pianerottolo.</p>
 <p>Una sezione attraverso la scala la mostra tagliata con la sua soletta. <strong>Volume</strong> in <strong>Proprietà</strong>
 e nell'abaco delle scale è il volume dei suoi solidi.</p>
+<p>Il <strong>Carattere del testo</strong> del tipo, il <strong>Profilo dell'aggetto</strong> (<strong>Predefinito</strong> o <strong>Arrotondato</strong>) e <strong>Applica profilo di aggetto</strong> (solo anteriore, anteriore e sinistra, oppure anteriore, sinistra e destra: oltre un lato senza montante chiuso), l'<strong>Offset montante scala aperto</strong>, <strong>Taglia montanti alla sommità</strong> (<strong>Allinea al livello</strong> ferma i montanti laterali al livello superiore) e i dati identità (<strong>Nota chiave</strong>, <strong>Modello prodotto</strong>, <strong>Produttore</strong>, <strong>Commenti sul tipo</strong>, <strong>URL</strong>, <strong>Descrizione</strong>, <strong>Codice assieme</strong>) sono in <strong>Proprietà del tipo</strong>, come la <strong>Parte inferiore del montante</strong> di una scala monolitica (<strong>Liscia</strong>, una soletta inclinata, o <strong>A gradini</strong>: la soletta segue i gradini). In <strong>Regole di calcolo</strong>, <strong>Usa calcolatore scala</strong> con un <strong>Risultato di destinazione</strong>, <strong>massimo</strong> e <strong>minimo</strong> controlla 2 alzate + 1 pedata: una scala fuori dall'intervallo viene creata, e un avviso lo dice.</p>
+<h2 id="ramps">Rampe inclinate</h2>
+<ol>
+<li>Fai clic su <strong>Inizio ▸ Distribuzione verticale ▸ Rampa inclinata</strong>. La modalità di disegno
+   inizia con <strong>Rampa</strong>.</li>
+<li>Fai clic dove inizia una rampa, poi dove finisce: ha al massimo la pendenza <strong>Inclinazione
+   massima della rampa inclinata (1/x)</strong> del tipo e sale al massimo di <strong>Lunghezza massima
+   inclinata</strong> (mentre si disegna, una rampa più lunga si ferma lì); accanto al cursore compaiono la lunghezza fatta
+   e quella rimasta.</li>
+<li>Disegna la rampa successiva lontano dalla fine della prima: un pianerottolo le unisce.
+   <strong>Contorno</strong> e <strong>Alzata</strong> disegnano una rampa inclinata per linee, con una linea di alzata
+   all'inizio e alla fine di ogni rampa.</li>
+<li>Fai clic su <strong>Termina modalità di modifica</strong>.</li>
+</ol>
+<p>La <strong>Forma</strong> del tipo è <strong>Spesso</strong> (con il suo <strong>Spessore</strong>) o <strong>Solido</strong> (fino alla base), e
+<strong>Materiale rampa inclinata</strong> la colora. Ringhiere, <strong>Modifica disegno</strong> e <strong>Proprietà</strong> funzionano
+come per le scale.</p>
+<p>Con <strong>Arco da centro ed estremità</strong> nel pannello <strong>Disegna</strong>, fai clic sul centro, sull'inizio della linea della rampa e poi sulla sua fine attorno al centro: la rampa gira attorno al centro, con due linee radiali alle estremità e due archi di contorno ai lati. <strong>Mostra freccia SU in tutte le viste</strong> del tipo disegna la freccia SU intera e <strong>SU</strong> anche nella pianta del livello superiore; il <strong>Carattere del testo</strong> e i dati identità sono come per le scale.</p>
 <h2 id="railings">Ringhiere</h2>
 <ol>
 <li>Fai clic su <strong>Inizio ▸ Distribuzione verticale ▸ Ringhiera</strong>.</li>
-<li>Disegna il percorso con <strong>Linea</strong>: una sola catena di linee collegate (un percorso a pezzi è
-   rifiutato da <strong>Termina modalità di modifica</strong>).</li>
+<li>Disegna il percorso con <strong>Linea</strong>: una sola catena di linee collegate (un percorso a pezzi, chiuso o che
+   torna su se stesso è rifiutato da <strong>Termina modalità di modifica</strong>).</li>
 <li>Per mettere la ringhiera su una scala, fai clic su <strong>Strumenti ▸ Seleziona nuovo host</strong> e poi
    sulla scala: il percorso disegnato su di essa sale con la scala.</li>
 <li>Fai clic su <strong>Termina modalità di modifica</strong>.</li>
@@ -856,11 +904,10 @@ altezza e materiale.</p>
 <p>Pavimenti, tetti, scale, ringhiere e arredi hanno i loro abachi (<strong>Vista ▸ Crea ▸ Abachi ▸
 Abaco/Quantità</strong>), una riga per elemento. <strong>Esporta ▸ Esporta IFC4…</strong> scrive i pavimenti come
 solette (con aperture e inclinazioni), i tetti, le scale con rampe e pianerottoli, le ringhiere,
-gli arredi e i sanitari.</p>
+gli arredi e i sanitari. Una scala multipiano è scritta una volta in ogni piano in cui si ripete, con le sue ringhiere.</p>
 <h2 id="not-yet-in-bimopen">Non ancora in BIMopen</h2>
-<p>Controsoffitti, rampe inclinate, tetti da estrusione, cavedi e aperture verticali, bordi dei
-solai, fasce, grondaie e intradossi, scale disegnate per linee di contorno e di alzata, scale a
-chiocciola e archi nei disegni vengono dopo il riallineamento di questo capitolo.</p>
+<p>Controsoffitti, tetti da estrusione, cavedi e aperture verticali, bordi dei
+solai, fasce, grondaie e intradossi vengono dopo il riallineamento di questo capitolo.</p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

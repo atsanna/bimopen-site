@@ -331,6 +331,13 @@
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#ramps">
+<span class="md-ellipsis">
+      Ramps
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#railings">
 <span class="md-ellipsis">
       Railings
@@ -532,6 +539,13 @@
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#ramps">
+<span class="md-ellipsis">
+      Ramps
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#railings">
 <span class="md-ellipsis">
       Railings
@@ -617,6 +631,7 @@ takes it away.</p>
 </table>
 <p><strong>Offset</strong> on the options bar moves the drawn lines (and the lines of picked walls) by that
 distance.</p>
+<p>The arcs of the <strong>Draw</strong> panel (and a circle, as two halves) are one sketch line each: picked, measured and dragged as arcs, kept by the floor, roof, stair, wall profile or region, and given back as arcs by <strong>Edit Boundary</strong>, <strong>Edit Sketch</strong> or <strong>Edit Profile</strong>. In every view a sketch point snaps to the ends and middles of the sketch's lines and arcs, to arcs' centres, where lines cross and onto a line or an arc; from the point being drawn from, to the foot of a perpendicular and to the point where a line touches an arc. The marker and its name show where the point snaps; <span class="keys"><kbd class="key-s">S</kbd></span> <span class="keys"><kbd class="key-c">C</kbd></span> and <span class="keys"><kbd class="key-s">S</kbd></span> <span class="keys"><kbd class="key-p">P</kbd></span> ask for the centre or the perpendicular for the next point.</p>
 <p>Floors and roofs need closed loops. A loop drawn inside the outer one is an <strong>opening</strong>: the
 floor or the roof has a hole there. When <strong>Finish Edit Mode</strong> finds lines that do not close or
 that cross, a message says so and the sketch stays open to be fixed (<strong>Continue</strong>).</p>
@@ -766,16 +781,20 @@ gables included (<a href="../walls-doors-windows/">Walls, doors and windows</a> 
 <li>Click where the first riser is, then where the run ends: the run snaps to whole treads, and
    the status bar counts the risers made and left (for example <code>9 risers created, 8 remaining</code>).</li>
 <li>To turn, click again away from the end of the first run and draw the next one: a landing joins
-   them.</li>
+   them. At any angle the landing is bounded by the two runs' risers, its outer corner where their
+   outer sides meet.</li>
 <li>When every riser is placed, click <strong>Finish Edit Mode</strong>.</li>
 </ol>
+<p>Dashed guides show where the next run can start: the last run's extension beyond its end and the lines of its first and last risers. A click near them snaps onto them. In a 3D view the stair is drawn the same way, on the plane of the active level.</p>
+<p>A curved run (a spiral stair): with <strong>Run</strong> active, click <strong>Center-ends arc</strong>, then the centre, the start of the run line (its distance from the centre is the radius of the walking line) and the end, going round past half a turn if needed, but under one turn (further, the run stops short and the status bar warns that the runs would overlap). The risers radiate from the centre a tread apart on the run line; riser lines drawn radiating from a centre make a curved run too. A second curved run round the same centre and on the same run line (a click near them takes them) is joined to the first by a landing along the arc.</p>
+<p>A stair can also be drawn by its lines. In its sketch, click <strong>Draw ▸ Boundary</strong> and draw the left and right edges (green), then <strong>Riser</strong> and draw the riser lines (black) between them, with <strong>Line</strong> or <strong>Pick Lines</strong>. Parallel, evenly spaced risers make a run, as wide as the risers; a landing joins two runs out to the boundary lines. Each riser is as high as the storey divided by the desired number of risers; with fewer riser lines the stair stops short of the top (<strong>Properties</strong> shows the actual number). <strong>Edit Sketch</strong> gives the same lines back. Each run drawn with <strong>Run</strong> is at once boundary and riser lines like these: they can be moved or deleted like the others. A landing follows its boundary lines: split its far edge with <strong>Split Element</strong> and drag a piece to notch it, or draw it wider than the runs.</p>
 <p>The <strong>Width</strong> on the options bar is that of the new stair (by default the type's).
 <strong>Tools ▸ Railing Type</strong> chooses the railings of the new stair: a railing type, put on both sides,
 or <strong>None</strong>.</p>
 <p>The number of risers comes from the height between <strong>Base Level</strong> and <strong>Top Level</strong> (with their
 offsets) and the type's <strong>Maximum Riser Height</strong>; changing a level or an offset in
-<strong>Properties</strong> changes the risers. <strong>Edit Sketch</strong> reopens the runs: delete a run (click it,
-<span class="keys"><kbd class="key-delete">Del</kbd></span>) and draw it again; the railings of the stair follow.</p>
+<strong>Properties</strong> changes the risers. <strong>Edit Sketch</strong> reopens its boundary and riser lines: change
+or delete them (click, <span class="keys"><kbd class="key-delete">Del</kbd></span>) and draw runs again; the railings of the stair follow. <strong>Multistory Top Level</strong> repeats the stair, with its railings, storey by storey up to that level; a storey whose height is not the stair's gets no copy, and a warning names it. With the stair selected, the blue flip arrows beside its first riser make it go up from the other end; <strong>Up Label</strong>, <strong>Up Arrow</strong>, <strong>Down Label</strong> and <strong>Down Arrow</strong> in <strong>Properties</strong> show or hide the plan symbol's parts. The square grip under the <strong>UP</strong> text drags it elsewhere.</p>
 <p>In plan the stair shows its treads up to the cut line, the break line, the arrow and the
 <strong>UP</strong>/<strong>DN</strong> text; in 3D its treads and risers, or a monolithic slab, its landings and railings.</p>
 <h3 id="how-a-stair-is-built">How a stair is built</h3>
@@ -790,14 +809,37 @@ offsets) and the type's <strong>Maximum Riser Height</strong>; changing a level 
 <strong>Closed</strong> (a board the treads are housed in), <strong>Open</strong> (a board cut to the steps, the treads on
   top) or <strong>None</strong>, and <strong>Middle Stringers</strong> under the treads, with their <strong>Stringer Thickness</strong>
   and <strong>Stringer Height</strong>.</li>
+<li><strong>Begin with Riser</strong> and <strong>End with Riser</strong> cleared: the board of the stair's first or last
+  riser is not built.</li>
+<li><strong>Riser Type</strong> <strong>Slanted</strong> leans each riser board, its top under the front of the tread above;
+  <strong>Riser to Tread Connection</strong> runs each tread under the riser behind it (<strong>Extend Tread Under
+  Riser</strong>) or the riser down behind the tread (<strong>Extend Riser Behind Tread</strong>).</li>
+<li><strong>Nosing Length</strong> sets how far a tread runs past its riser; <strong>Extend Below Base</strong> moves the foot
+  of the stringers (negative: below the base level); <strong>Tread Material</strong>, <strong>Riser Material</strong>,
+  <strong>Stringer Material</strong> and <strong>Monolithic Material</strong> colour the parts; <strong>Break Symbol in Plan</strong> and
+  <strong>Text Size</strong> control the plan symbol.</li>
 </ul>
-<p>The landing stops behind the last riser of the run that reaches it, following its back face; in a monolithic stair it starts at the riser's face. At the top the run's underside goes on under the floor of the top level until it meets the floor's underside, as under a landing.</p>
+<p>The landing stops behind the last riser of the run that reaches it, following its back face; in a monolithic stair it starts at the riser's face. In a monolithic stair whose top floor has its edge on the last riser, the run's underside goes on under that floor until it meets the floor's underside, as under a landing.</p>
 <p>A section across the stair shows it cut with its slab. <strong>Volume</strong> in <strong>Properties</strong> and in the
 schedule of stairs is the volume of its solids.</p>
+<p>The type's <strong>Text Font</strong>, <strong>Nosing Profile</strong> (<strong>Default</strong> or <strong>Rounded</strong>) and <strong>Apply Nosing Profile</strong> (front only, front and left, or front, left and right: past a side without a closed stringer), <strong>Open Stringer Offset</strong>, <strong>Trim Stringers at Top</strong> (<strong>Match Level</strong> stops the side stringers at the top level) and its identity data (<strong>Keynote</strong>, <strong>Model</strong>, <strong>Manufacturer</strong>, <strong>Type Comments</strong>, <strong>URL</strong>, <strong>Description</strong>, <strong>Assembly Code</strong>) are in <strong>Type Properties</strong>, as is a monolithic stair's <strong>Underside of Stringer</strong> (<strong>Smooth</strong>, a sloping slab, or <strong>Stepped</strong>: the slab follows the steps). Under <strong>Calculation Rules</strong>, <strong>Use Stair Calculator</strong> with a <strong>Target</strong>, <strong>Maximum</strong> and <strong>Minimum Result</strong> checks 2 risers + 1 tread: a stair outside the range is made, and a warning says so.</p>
+<h2 id="ramps">Ramps</h2>
+<ol>
+<li>Click <strong>Home ▸ Circulation ▸ Ramp</strong>. Sketch mode starts with <strong>Run</strong>.</li>
+<li>Click where a run starts, then where it ends: it slopes at most the type's <strong>Ramp Max Slope
+   (1/x)</strong> and rises at most its <strong>Maximum Incline Length</strong> (while drawing, a longer run stops there); the length
+   made and left show beside the cursor.</li>
+<li>Draw the next run away from the end of the first: a landing joins them. <strong>Boundary</strong> and
+   <strong>Riser</strong> draw a ramp by its lines, with a riser line at the start and the end of each run.</li>
+<li>Click <strong>Finish Edit Mode</strong>.</li>
+</ol>
+<p>The type's <strong>Shape</strong> is <strong>Thick</strong> (its <strong>Thickness</strong>) or <strong>Solid</strong> (down to the base), and <strong>Ramp
+Material</strong> colours it. Its railings, <strong>Edit Sketch</strong> and <strong>Properties</strong> work as for stairs.</p>
+<p>With <strong>Arc from Center and End</strong> in the <strong>Draw</strong> panel, click the centre, the start of the run line and then its end round the centre: the run curves round it, two lines radiating from the centre at its ends and two boundary arcs at its sides. The type's <strong>Show Up Arrow in All Views</strong> draws the whole up arrow and <strong>UP</strong> in the plan of the top level too; its <strong>Text Font</strong> and identity data are as for stairs.</p>
 <h2 id="railings">Railings</h2>
 <ol>
 <li>Click <strong>Home ▸ Circulation ▸ Railing</strong>.</li>
-<li>Draw the path with <strong>Line</strong>: one chain of connected lines (a path in pieces is refused at
+<li>Draw the path with <strong>Line</strong>: one chain of connected lines (a path in pieces, a closed path or one that goes back over itself is refused at
    <strong>Finish Edit Mode</strong>).</li>
 <li>To put the railing on a stair, click <strong>Tools ▸ Pick New Host</strong> and then the stair: the path
    drawn on it climbs with the stair.</li>
@@ -833,11 +875,10 @@ Properties</strong> has its width, depth, height and material.</p>
 <p>Floors, roofs, stairs, railings and furniture have their schedules (<strong>View ▸ Create ▸ Schedules
 ▸ Schedule/Quantities</strong>), one row per element. <strong>Export ▸ Export IFC4…</strong> writes floors as slabs
 (with their openings and slopes), roofs, stairs with their flights and landings, railings,
-furniture and plumbing fixtures.</p>
+furniture and plumbing fixtures. A multistory stair is written once in each storey it is repeated in, with its railings.</p>
 <h2 id="not-yet-in-bimopen">Not yet in BIMopen</h2>
-<p>Ceilings, ramps, roofs by extrusion, shafts and vertical openings, slab edges, fascias, gutters
-and soffits, stairs sketched by boundary and riser lines, spiral stairs, and arcs in sketches
-come after this chapter's realignment.</p>
+<p>Ceilings, roofs by extrusion, shafts and vertical openings, slab edges, fascias, gutters
+and soffits come after this chapter's realignment.</p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

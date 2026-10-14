@@ -331,6 +331,13 @@
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#ramps">
+<span class="md-ellipsis">
+      Rampen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#railings">
 <span class="md-ellipsis">
       Geländer
@@ -532,6 +539,13 @@
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#ramps">
+<span class="md-ellipsis">
+      Rampen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#railings">
 <span class="md-ellipsis">
       Geländer
@@ -618,6 +632,7 @@ erstellen</strong>, <strong>Geländerpfad erstellen</strong>) und enthält:</p>
 </table>
 <p><strong>Versatz</strong> in der Optionsleiste verschiebt die gezeichneten Linien (und die der ausgewählten
 Wände) um diesen Abstand.</p>
+<p>Die Bögen der Gruppe <strong>Zeichnen</strong> (und ein Kreis, als zwei Hälften) sind je eine Skizzenlinie: als Bögen gewählt, bemaßt und gezogen, vom Bodenbelag, Dach, von der Treppe, dem Wandprofil oder Bereich behalten und von <strong>Begrenzung bearbeiten</strong>, <strong>Skizze bearbeiten</strong> oder <strong>Profil bearbeiten</strong> als Bögen zurückgegeben. In jeder Ansicht fängt ein Skizzenpunkt an den Enden und Mittelpunkten der Linien und Bögen der Skizze, an Bogenmittelpunkten, wo sich Linien schneiden und auf einer Linie oder einem Bogen; vom Punkt aus, von dem gezeichnet wird, am Lotfußpunkt und am Punkt, an dem eine Linie einen Bogen berührt. Das Symbol und sein Name zeigen, wo der Punkt fängt; <span class="keys"><kbd class="key-s">S</kbd></span> <span class="keys"><kbd class="key-c">C</kbd></span> und <span class="keys"><kbd class="key-s">S</kbd></span> <span class="keys"><kbd class="key-p">P</kbd></span> verlangen für den nächsten Punkt den Mittelpunkt oder das Lot.</p>
 <p>Geschossdecken und Dächer brauchen geschlossene Umgrenzungen. Eine Umgrenzung innerhalb der
 äußeren ist eine <strong>Öffnung</strong>: Die Geschossdecke oder das Dach hat dort ein Loch. Findet
 <strong>Bearbeitungsmodus beenden</strong> Linien, die sich nicht schließen oder sich schneiden, sagt eine
@@ -785,16 +800,20 @@ erklärt mehr).</p>
    ganze Auftritte ein, und die Statusleiste zählt die erstellten und verbleibenden Setzstufen (zum
    Beispiel <code>9 Setzstufen erstellt, 8 verbleibend</code>).</li>
 <li>Für eine Wendung klicken Sie erneut abseits vom Ende des ersten Laufs und zeichnen den nächsten:
-   Ein Podest verbindet sie.</li>
+   Ein Podest verbindet sie. Bei jedem Winkel ist das Podest von den Setzstufen der beiden Läufe
+   begrenzt, seine äußere Ecke dort, wo sich ihre Außenseiten treffen.</li>
 <li>Sind alle Setzstufen platziert, klicken Sie auf <strong>Bearbeitungsmodus beenden</strong>.</li>
 </ol>
+<p>Gestrichelte Hilfslinien zeigen, wo der nächste Lauf beginnen kann: die Verlängerung des letzten Laufs über sein Ende hinaus und die Linien seiner ersten und letzten Setzstufe. Ein Klick in ihrer Nähe rastet auf ihnen ein. In einer 3D-Ansicht wird die Treppe genauso gezeichnet, auf der Ebene der aktiven Ebene.</p>
+<p>Ein gebogener Lauf (eine Wendeltreppe): Klicken Sie bei aktivem <strong>Lauf</strong> auf <strong>Bogen mit Mittelpunkt und Endpunkten</strong>, dann auf den Mittelpunkt, den Anfang der Lauflinie (ihr Abstand vom Mittelpunkt ist der Radius der Lauflinie) und das Ende, bei Bedarf über eine halbe Drehung hinaus, aber unter einer ganzen (darüber hinaus endet der Lauf vorher und die Statusleiste warnt, dass sich die Läufe überlappen würden). Die Setzstufen gehen strahlenförmig vom Mittelpunkt aus, einen Auftritt voneinander auf der Lauflinie; strahlenförmig gezeichnete Setzstufenlinien ergeben ebenfalls einen gebogenen Lauf. Ein zweiter gebogener Lauf um denselben Mittelpunkt auf derselben Lauflinie (ein Klick in der Nähe übernimmt sie) wird mit dem ersten durch ein Podest entlang des Bogens verbunden.</p>
+<p>Eine Treppe kann auch nach ihren Linien gezeichnet werden. Klicken Sie in ihrer Skizze auf <strong>Zeichnen ▸ Begrenzung</strong> und zeichnen Sie die linke und rechte Kante (grün), dann auf <strong>Setzstufe</strong> und zeichnen Sie die Setzstufenlinien (schwarz) dazwischen, mit <strong>Linie</strong> oder <strong>Linien wählen</strong>. Parallele, gleichmäßig verteilte Setzstufen bilden einen Lauf, so breit wie die Setzstufen; ein Podest verbindet zwei Läufe bis zu den Begrenzungslinien. Jede Setzstufe ist so hoch wie das Geschoss geteilt durch die gewünschte Zahl der Setzstufen; mit weniger Setzstufenlinien endet die Treppe unter der oberen Ebene (<strong>Eigenschaften</strong> zeigt die tatsächliche Zahl). <strong>Skizze bearbeiten</strong> gibt dieselben Linien zurück. Jeder mit <strong>Lauf</strong> gezeichnete Lauf wird sofort zu solchen Begrenzungs- und Setzstufenlinien: Sie lassen sich wie die anderen verschieben oder löschen. Ein Podest folgt seinen Begrenzungslinien: Teilen Sie seine äußere Kante mit <strong>Element teilen</strong> und ziehen Sie ein Stück für eine Einbuchtung, oder zeichnen Sie es breiter als die Läufe.</p>
 <p>Die <strong>Breite</strong> in der Optionsleiste ist die der neuen Treppe (standardmäßig die des Typs).
 <strong>Werkzeuge ▸ Geländertyp</strong> wählt die Geländer der neuen Treppe: einen Geländertyp, auf beide
 Seiten gesetzt, oder <strong>Keiner</strong>.</p>
 <p>Die Zahl der Setzstufen ergibt sich aus der Höhe zwischen <strong>Basisebene</strong> und <strong>Obere Ebene</strong> (mit
 ihren Versätzen) und der <strong>Maximale Setzstufenhöhe</strong> des Typs; eine Ebene oder einen Versatz in
-<strong>Eigenschaften</strong> zu ändern ändert die Setzstufen. <strong>Skizze bearbeiten</strong> öffnet die Läufe wieder:
-Einen Lauf löschen (anklicken, <span class="keys"><kbd class="key-delete">Del</kbd></span>) und neu zeichnen; die Geländer der Treppe folgen.</p>
+<strong>Eigenschaften</strong> zu ändern ändert die Setzstufen. <strong>Skizze bearbeiten</strong> öffnet ihre Begrenzungs- und
+Setzstufenlinien wieder: ändern oder löschen (anklicken, <span class="keys"><kbd class="key-delete">Del</kbd></span>) und Läufe neu zeichnen; die Geländer der Treppe folgen. <strong>Oberste Ebene bei mehrgeschossiger Treppe</strong> wiederholt die Treppe mit ihren Geländern Geschoss für Geschoss bis zu dieser Ebene; ein Geschoss, dessen Höhe nicht der der Treppe entspricht, erhält keine Kopie, und eine Warnung nennt es. Bei ausgewählter Treppe lassen die blauen Umkehrpfeile neben der ersten Setzstufe sie vom anderen Ende aus steigen; <strong>Beschriftung AUF</strong>, <strong>Pfeil AUF</strong>, <strong>Beschriftung AB</strong> und <strong>Pfeil AB</strong> in <strong>Eigenschaften</strong> blenden die Teile des Grundrisssymbols ein oder aus. Der quadratische Griff unter dem Text <strong>AUF</strong> verschiebt ihn.</p>
 <p>Im Grundriss zeigt die Treppe ihre Auftritte bis zur Schnittlinie, die Bruchlinie, den Pfeil und
 den Text <strong>AUF</strong>/<strong>AB</strong>; in 3D Auftritte und Setzstufen, oder eine monolithische Platte, die
 Podeste und die Geländer.</p>
@@ -810,15 +829,42 @@ Podeste und die Geländer.</p>
 <strong>Geschlossen</strong> (ein Brett, in das die Auftritte eingelassen sind), <strong>Offen</strong> (ein nach den
   Stufen geschnittenes Brett, die Auftritte darauf) oder <strong>Keiner</strong>, und <strong>Mittelwangen</strong> unter
   den Auftritten, mit ihrer <strong>Wangendicke</strong> und <strong>Wangenhöhe</strong>.</li>
+<li><strong>Mit Setzstufe beginnen</strong> und <strong>Mit Setzstufe enden</strong> deaktiviert: Das Brett der ersten oder
+  letzten Setzstufe der Treppe wird nicht gebaut.</li>
+<li><strong>Setzstufentyp</strong> <strong>Schräg</strong> neigt jedes Setzstufenbrett, oben unter der Vorderkante des
+  Auftritts darüber; <strong>Verbindung Setzstufe-Auftritt</strong> führt jeden Auftritt unter die Setzstufe
+  dahinter (<strong>Auftritt unter Setzstufe verlängern</strong>) oder die Setzstufe hinter dem Auftritt nach
+  unten (<strong>Setzstufe hinter Auftritt verlängern</strong>).</li>
+<li><strong>Länge der Stufenkante</strong> legt fest, wie weit ein Auftritt über die Setzstufe ragt; <strong>Unter Basis
+  verlängern</strong> verschiebt den Fuß der Wangen (negativ: unter die Basisebene); <strong>Material Auftritt</strong>,
+  <strong>Material Setzstufe</strong>, <strong>Material Wange</strong> und <strong>Material monolithische Treppe</strong> färben die Teile;
+  <strong>Bruchsymbol im Grundriss</strong> und <strong>Textgröße</strong> steuern das Symbol im Grundriss.</li>
 </ul>
-<p>Das Podest endet hinter der letzten Setzstufe des ankommenden Laufs und folgt ihrer Rückseite; bei einer monolithischen Treppe beginnt es an der Vorderseite der Setzstufe. Oben läuft die Unterseite des Laufs unter der Decke der oberen Ebene weiter, bis sie deren Unterseite trifft, wie unter einem Podest.</p>
+<p>Das Podest endet hinter der letzten Setzstufe des ankommenden Laufs und folgt ihrer Rückseite; bei einer monolithischen Treppe beginnt es an der Vorderseite der Setzstufe. Bei einer monolithischen Treppe, deren obere Decke ihre Kante an der letzten Setzstufe hat, läuft die Unterseite des Laufs unter dieser Decke weiter, bis sie deren Unterseite trifft, wie unter einem Podest.</p>
 <p>Ein Schnitt durch die Treppe zeigt sie mit ihrer Platte geschnitten. <strong>Volumen</strong> in
 <strong>Eigenschaften</strong> und in der Bauteilliste der Treppen ist das Volumen ihrer Körper.</p>
+<p><strong>Textschriftart</strong>, <strong>Profil der Trittstufenkante</strong> (<strong>Standard</strong> oder <strong>Gerundet</strong>) und <strong>Kantenprofil anwenden</strong> (nur vorn, vorn und links oder vorn, links und rechts: über eine Seite ohne geschlossene Wange hinaus), <strong>Versatz offene Treppenwange</strong>, <strong>Treppenwangen oben abschneiden</strong> (<strong>An Ebene anpassen</strong> endet die seitlichen Wangen an der oberen Ebene) und die Identitätsdaten (<strong>Schlüsselvermerk</strong>, <strong>Modell</strong>, <strong>Hersteller</strong>, <strong>Typenkommentare</strong>, <strong>URL</strong>, <strong>Beschreibung</strong>, <strong>Baugruppenkennzeichen</strong>) stehen in den <strong>Typeneigenschaften</strong>, ebenso die <strong>Unterseite der Wange</strong> einer monolithischen Treppe (<strong>Glatt</strong>, eine geneigte Platte, oder <strong>Abgetreppt</strong>: die Platte folgt den Stufen). Unter <strong>Berechnungsregeln</strong> prüft <strong>Treppenrechner verwenden</strong> mit <strong>Zielergebnis</strong>, <strong>maximalem</strong> und <strong>minimalem Ergebnis</strong> 2 Steigungen + 1 Auftritt: Eine Treppe außerhalb des Bereichs wird erstellt, und eine Warnung sagt es.</p>
+<h2 id="ramps">Rampen</h2>
+<ol>
+<li>Klicken Sie auf <strong>Start ▸ Erschließung ▸ Rampe</strong>. Der Skizzenmodus beginnt mit <strong>Lauf</strong>.</li>
+<li>Klicken Sie, wo ein Lauf beginnt, dann wo er endet: Er ist höchstens so steil wie die
+   <strong>Maximale Rampenneigung (1/x)</strong> des Typs und steigt höchstens um die <strong>Maximale geneigte
+   Länge</strong> (beim Zeichnen endet ein längerer Lauf dort); neben dem Cursor stehen die erstellte und die
+   verbleibende Länge.</li>
+<li>Zeichnen Sie den nächsten Lauf entfernt vom Ende des ersten: Ein Podest verbindet sie.
+   <strong>Begrenzung</strong> und <strong>Setzstufe</strong> zeichnen eine Rampe nach ihren Linien, mit einer
+   Setzstufenlinie am Anfang und am Ende jedes Laufs.</li>
+<li>Klicken Sie auf <strong>Bearbeitungsmodus beenden</strong>.</li>
+</ol>
+<p>Die <strong>Form</strong> des Typs ist <strong>Dick</strong> (mit seiner <strong>Dicke</strong>) oder <strong>Massiv</strong> (bis zur Basis), und
+<strong>Rampenmaterial</strong> färbt sie. Geländer, <strong>Skizze bearbeiten</strong> und <strong>Eigenschaften</strong> funktionieren
+wie bei Treppen.</p>
+<p>Mit <strong>Bogen aus Mittelpunkt und Endpunkt</strong> in der Gruppe <strong>Zeichnen</strong> klicken Sie den Mittelpunkt, den Anfang der Lauflinie und dann ihr Ende um den Mittelpunkt: Der Lauf biegt sich um ihn, mit zwei vom Mittelpunkt ausgehenden Linien an den Enden und zwei Begrenzungsbögen an den Seiten. <strong>Pfeil AUF in allen Ansichten anzeigen</strong> des Typs zeichnet den ganzen Pfeil und <strong>AUF</strong> auch im Grundriss der oberen Ebene; <strong>Textschriftart</strong> und Identitätsdaten wie bei Treppen.</p>
 <h2 id="railings">Geländer</h2>
 <ol>
 <li>Klicken Sie auf <strong>Start ▸ Erschließung ▸ Geländer</strong>.</li>
-<li>Zeichnen Sie den Pfad mit <strong>Linie</strong>: eine einzige Kette verbundener Linien (ein Pfad in Stücken
-   wird von <strong>Bearbeitungsmodus beenden</strong> abgelehnt).</li>
+<li>Zeichnen Sie den Pfad mit <strong>Linie</strong>: eine einzige Kette verbundener Linien (ein Pfad in Stücken, ein geschlossener
+   oder ein auf sich selbst zurücklaufender Pfad wird von <strong>Bearbeitungsmodus beenden</strong> abgelehnt).</li>
 <li>Um das Geländer auf eine Treppe zu setzen, klicken Sie auf <strong>Werkzeuge ▸ Neues Basisbauteil
    wählen</strong> und dann auf die Treppe: Der darauf gezeichnete Pfad steigt mit der Treppe.</li>
 <li>Klicken Sie auf <strong>Bearbeitungsmodus beenden</strong>.</li>
@@ -857,11 +903,10 @@ eine Geschossdecke: Das Bauteil wandert auf die Geschossdecke und bleibt auf ihr
 <p>Geschossdecken, Dächer, Treppen, Geländer und Möbel haben ihre Bauteillisten (<strong>Ansicht ▸
 Erzeugen ▸ Bauteillisten ▸ Bauteilliste/Mengen</strong>), eine Zeile je Element. <strong>Exportieren ▸ IFC4
 exportieren…</strong> schreibt Geschossdecken als Platten (mit Öffnungen und Neigungen), Dächer, Treppen
-mit Läufen und Podesten, Geländer, Möbel und Sanitärobjekte.</p>
+mit Läufen und Podesten, Geländer, Möbel und Sanitärobjekte. Eine mehrgeschossige Treppe wird in jedem Geschoss, in dem sie sich wiederholt, einmal geschrieben, mit ihren Geländern.</p>
 <h2 id="not-yet-in-bimopen">Noch nicht in BIMopen</h2>
-<p>Abgehängte Decken, Rampen, Extrusionsdächer, Schächte und vertikale Öffnungen, Deckenränder,
-Dachrinnen, Traufbretter und Dachuntersichten, nach Begrenzungs- und Setzstufenlinien gezeichnete
-Treppen, Wendeltreppen und Bögen in Skizzen kommen nach der Neuausrichtung dieses Kapitels.</p>
+<p>Abgehängte Decken, Extrusionsdächer, Schächte und vertikale Öffnungen, Deckenränder,
+Dachrinnen, Traufbretter und Dachuntersichten kommen nach der Neuausrichtung dieses Kapitels.</p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

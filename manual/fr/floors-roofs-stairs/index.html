@@ -331,6 +331,13 @@
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#ramps">
+<span class="md-ellipsis">
+      Rampes
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#railings">
 <span class="md-ellipsis">
       Garde-corps
@@ -532,6 +539,13 @@
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#ramps">
+<span class="md-ellipsis">
+      Rampes
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#railings">
 <span class="md-ellipsis">
       Garde-corps
@@ -618,6 +632,7 @@ du garde-corps</strong>) et contient :</p>
 </table>
 <p><strong>Décalage</strong> dans la barre des options déplace les lignes dessinées (et celles des murs choisis)
 de cette distance.</p>
+<p>Les arcs du groupe <strong>Dessiner</strong> (et un cercle, en deux moitiés) sont chacun une seule ligne d'esquisse : sélectionnés, mesurés et déplacés comme des arcs, gardés par le sol, le toit, l'escalier, le profil du mur ou la région, et rendus comme arcs par <strong>Modifier la limite</strong>, <strong>Modifier l'esquisse</strong> ou <strong>Modifier le profil</strong>. Dans chaque vue, un point de l'esquisse s'accroche aux extrémités et aux milieux des lignes et des arcs de l'esquisse, aux centres des arcs, là où les lignes se croisent et sur une ligne ou un arc ; depuis le point d'où l'on dessine, au pied de la perpendiculaire et au point où une ligne touche un arc. Le symbole et son nom montrent où le point s'accroche ; <span class="keys"><kbd class="key-s">S</kbd></span> <span class="keys"><kbd class="key-c">C</kbd></span> et <span class="keys"><kbd class="key-s">S</kbd></span> <span class="keys"><kbd class="key-p">P</kbd></span> demandent le centre ou la perpendiculaire pour le point suivant.</p>
 <p>Les sols et les toits demandent des contours fermés. Un contour dessiné à l'intérieur du contour
 extérieur est une <strong>ouverture</strong> : le sol ou le toit y a un trou. Lorsque <strong>Terminer le mode
 d'édition</strong> trouve des lignes qui ne se ferment pas ou qui se croisent, un message le dit et
@@ -782,17 +797,21 @@ et ses couches.</p>
    des girons entiers, et la barre d'état compte les contremarches créées et restantes (par exemple
    <code>9 contremarches créées, 8 restantes</code>).</li>
 <li>Pour tourner, cliquez de nouveau à l'écart de la fin de la première volée et dessinez la
-   suivante : un palier les relie.</li>
+   suivante : un palier les relie. Quel que soit l'angle, le palier est fermé par les contremarches des deux
+   volées, son angle extérieur là où leurs côtés extérieurs se rencontrent.</li>
 <li>Quand toutes les contremarches sont placées, cliquez sur <strong>Terminer le mode d'édition</strong>.</li>
 </ol>
+<p>Des lignes guides en pointillé montrent où la volée suivante peut commencer : le prolongement de la dernière volée au-delà de sa fin et les lignes de sa première et de sa dernière contremarche. Un clic à proximité s'y accroche. Dans une vue 3D, l'escalier se dessine de la même façon, sur le plan du niveau actif.</p>
+<p>Une volée courbe (un escalier hélicoïdal) : avec <strong>Volée</strong> active, cliquez sur <strong>Arc par centre et extrémités</strong>, puis sur le centre, le début de la ligne de volée (sa distance au centre est le rayon de la ligne de foulée) et la fin, en dépassant le demi-tour si besoin, mais sans faire un tour complet (au-delà, la volée s'arrête avant et la barre d'état avertit que les volées se chevaucheraient). Les contremarches rayonnent depuis le centre, à un giron l'une de l'autre sur la ligne de volée ; des lignes de contremarche dessinées en rayons depuis un centre font aussi une volée courbe. Une seconde volée courbe autour du même centre et sur la même ligne de volée (un clic à proximité les reprend) est reliée à la première par un palier en arc.</p>
+<p>Un escalier peut aussi se dessiner par ses lignes. Dans son esquisse, cliquez sur <strong>Dessiner ▸ Contour</strong> et dessinez les bords gauche et droit (verts), puis sur <strong>Contremarche</strong> et dessinez les lignes de contremarche (noires) entre eux, avec <strong>Ligne</strong> ou <strong>Choisir des lignes</strong>. Des contremarches parallèles et régulièrement espacées forment une volée, aussi large que les contremarches ; un palier relie deux volées jusqu'aux lignes de contour. Chaque contremarche est aussi haute que l'étage divisé par le nombre de contremarches souhaité ; avec moins de lignes de contremarche, l'escalier s'arrête sous le niveau supérieur (<strong>Propriétés</strong> montre le nombre réel). <strong>Modifier l'esquisse</strong> rend les mêmes lignes. Chaque volée dessinée avec <strong>Volée</strong> devient aussitôt des lignes de contour et de contremarche comme celles-ci : on peut les déplacer ou les supprimer comme les autres. Un palier suit ses lignes de contour : scindez son bord extérieur avec <strong>Scinder l'élément</strong> et faites glisser un morceau pour l'échancrer, ou dessinez-le plus large que les volées.</p>
 <p>La <strong>Largeur</strong> dans la barre des options est celle du nouvel escalier (par défaut celle du type).
 <strong>Outils ▸ Type de garde-corps</strong> choisit les garde-corps du nouvel escalier : un type de
 garde-corps, posé des deux côtés, ou <strong>Aucun</strong>.</p>
 <p>Le nombre de contremarches vient de la hauteur entre <strong>Niveau de base</strong> et <strong>Niveau supérieur</strong>
 (avec leurs décalages) et de la <strong>Hauteur de contremarche maximale</strong> du type ; changer un niveau ou
-un décalage dans <strong>Propriétés</strong> change les contremarches. <strong>Modifier l'esquisse</strong> rouvre les
-volées : supprimez une volée (clic, <span class="keys"><kbd class="key-delete">Del</kbd></span>) et redessinez-la ; les garde-corps de l'escalier
-suivent.</p>
+un décalage dans <strong>Propriétés</strong> change les contremarches. <strong>Modifier l'esquisse</strong> rouvre ses
+lignes de contour et de contremarche : modifiez-les ou supprimez-les (clic, <span class="keys"><kbd class="key-delete">Del</kbd></span>) et redessinez les volées ; les garde-corps de l'escalier
+suivent. <strong>Niveau supérieur multiétage</strong> répète l'escalier, avec ses garde-corps, étage par étage jusqu'à ce niveau ; un étage d'une autre hauteur que l'escalier n'en reçoit pas de copie, et un avertissement le nomme. Escalier sélectionné, les flèches bleues d'inversion près de la première contremarche le font monter depuis l'autre extrémité ; <strong>Étiquette MONTE</strong>, <strong>Flèche MONTE</strong>, <strong>Étiquette DESCEND</strong> et <strong>Flèche DESCEND</strong> dans <strong>Propriétés</strong> affichent ou masquent les parties du symbole en plan. La poignée carrée sous le texte <strong>MONTE</strong> le déplace.</p>
 <p>En plan, l'escalier montre ses girons jusqu'à la ligne de coupe, la ligne de rupture, la flèche et
 le texte <strong>MONTE</strong>/<strong>DESCEND</strong> ; en 3D ses marches et contremarches, ou une dalle monolithique, ses
 paliers et ses garde-corps.</p>
@@ -808,15 +827,42 @@ paliers et ses garde-corps.</p>
   droit</strong> et <strong>Limon gauche</strong> <strong>Fermé</strong> (une planche où les girons sont encastrés), <strong>Ouvert</strong> (une
   planche découpée aux marches, les girons dessus) ou <strong>Aucun</strong>, et des <strong>Limons centraux</strong> sous
   les girons, avec leur <strong>Épaisseur du limon</strong> et <strong>Hauteur du limon</strong>.</li>
+<li><strong>Commencer par une contremarche</strong> et <strong>Terminer par une contremarche</strong> décochés : la planche
+  de la première ou de la dernière contremarche de l'escalier n'est pas construite.</li>
+<li><strong>Type de contremarche</strong> <strong>Inclinée</strong> incline chaque planche de contremarche, son sommet sous
+  l'avant du giron du dessus ; <strong>Raccord contremarche-giron</strong> prolonge chaque giron sous la
+  contremarche derrière lui (<strong>Prolonger le giron sous la contremarche</strong>) ou la contremarche vers
+  le bas derrière le giron (<strong>Prolonger la contremarche derrière le giron</strong>).</li>
+<li><strong>Longueur du nez de marche</strong> fixe de combien le giron dépasse la contremarche ; <strong>Prolonger sous
+  la base</strong> déplace le pied des limons (négatif : sous le niveau de base) ; <strong>Matériau du giron</strong>,
+  <strong>Matériau de contremarche</strong>, <strong>Matériau du limon</strong> et <strong>Matériau de l'escalier monolithique</strong>
+  colorent les parties ; <strong>Symbole de rupture en plan</strong> et <strong>Taille du texte</strong> règlent le symbole en
+  plan.</li>
 </ul>
-<p>Le palier s'arrête derrière la dernière contremarche de la volée qui y arrive, en suivant sa face arrière ; dans un escalier monolithique il commence à la face de la contremarche. En haut, la sous-face de la volée continue sous le plancher du niveau supérieur jusqu'à rencontrer sa sous-face, comme sous un palier.</p>
+<p>Le palier s'arrête derrière la dernière contremarche de la volée qui y arrive, en suivant sa face arrière ; dans un escalier monolithique il commence à la face de la contremarche. Dans un escalier monolithique dont le plancher supérieur a son bord sur la dernière contremarche, la sous-face de la volée continue sous ce plancher jusqu'à rencontrer sa sous-face, comme sous un palier.</p>
 <p>Une coupe à travers l'escalier le montre coupé avec sa dalle. <strong>Volume</strong> dans <strong>Propriétés</strong> et
 dans la nomenclature des escaliers est le volume de ses solides.</p>
+<p>La <strong>Police du texte</strong> du type, le <strong>Profil du nez de marche</strong> (<strong>Par défaut</strong> ou <strong>Arrondi</strong>) et <strong>Appliquer le profil de nez de marche</strong> (avant uniquement, avant et gauche, ou avant, gauche et droite : au-delà d'un côté sans limon fermé), le <strong>Décalage du limon ouvert</strong>, <strong>Couper les limons en haut</strong> (<strong>Aligner sur le niveau</strong> arrête les limons latéraux au niveau supérieur) et ses données d'identification (<strong>Note d'identification</strong>, <strong>Modèle</strong>, <strong>Fabricant</strong>, <strong>Commentaires du type</strong>, <strong>URL</strong>, <strong>Description</strong>, <strong>Code d'assemblage</strong>) sont dans <strong>Propriétés du type</strong>, comme la <strong>Sous-face du limon</strong> d'un escalier monolithique (<strong>Lisse</strong>, une dalle inclinée, ou <strong>En escalier</strong> : la dalle suit les marches). Dans <strong>Règles de calcul</strong>, <strong>Utiliser le calculateur d'escalier</strong> avec un <strong>Résultat cible</strong>, <strong>maximal</strong> et <strong>minimal</strong> contrôle 2 contremarches + 1 giron : un escalier hors de l'intervalle est créé, et un avertissement le signale.</p>
+<h2 id="ramps">Rampes</h2>
+<ol>
+<li>Cliquez sur <strong>Début ▸ Circulation ▸ Rampe</strong>. Le mode esquisse commence avec <strong>Volée</strong>.</li>
+<li>Cliquez où une volée commence, puis où elle finit : sa pente est au plus la <strong>Pente maximale de
+   la rampe (1/x)</strong> du type et elle monte au plus de la <strong>Longueur inclinée maximale</strong> (en dessinant, une volée
+   plus longue s'arrête là) ; la longueur faite et celle qui reste s'affichent près du curseur.</li>
+<li>Dessinez la volée suivante loin de la fin de la première : un palier les relie. <strong>Contour</strong> et
+   <strong>Contremarche</strong> dessinent une rampe par ses lignes, avec une ligne de contremarche au début et
+   à la fin de chaque volée.</li>
+<li>Cliquez sur <strong>Terminer le mode d'édition</strong>.</li>
+</ol>
+<p>La <strong>Forme</strong> du type est <strong>Épais</strong> (avec son <strong>Épaisseur</strong>) ou <strong>Plein</strong> (jusqu'à la base), et le
+<strong>Matériau de la rampe</strong> la colore. Les garde-corps, <strong>Modifier l'esquisse</strong> et <strong>Propriétés</strong>
+fonctionnent comme pour les escaliers.</p>
+<p>Avec <strong>Arc centre-extrémités</strong> dans le groupe <strong>Dessiner</strong>, cliquez le centre, le début de la ligne de volée puis sa fin autour du centre : la volée tourne autour de lui, avec deux lignes rayonnant du centre à ses extrémités et deux arcs de contour sur ses côtés. <strong>Afficher la flèche MONTE dans toutes les vues</strong> du type dessine toute la flèche et <strong>MONTE</strong> aussi dans le plan du niveau supérieur ; la <strong>Police du texte</strong> et les données d'identification sont comme pour les escaliers.</p>
 <h2 id="railings">Garde-corps</h2>
 <ol>
 <li>Cliquez sur <strong>Début ▸ Circulation ▸ Garde-corps</strong>.</li>
 <li>Dessinez la trajectoire avec <strong>Ligne</strong> : une seule chaîne de lignes connectées (une trajectoire
-   en morceaux est refusée par <strong>Terminer le mode d'édition</strong>).</li>
+   en morceaux, fermée ou qui revient sur elle-même est refusée par <strong>Terminer le mode d'édition</strong>).</li>
 <li>Pour poser le garde-corps sur un escalier, cliquez sur <strong>Outils ▸ Choisir un nouvel hôte</strong>, puis
    sur l'escalier : la trajectoire dessinée dessus monte avec l'escalier.</li>
 <li>Cliquez sur <strong>Terminer le mode d'édition</strong>.</li>
@@ -856,11 +902,10 @@ profondeur, hauteur et matériau.</p>
 Créer ▸ Nomenclatures ▸ Nomenclature/Quantités</strong>), une ligne par élément. <strong>Exporter ▸ Exporter
 IFC4…</strong> écrit les sols comme dalles (avec leurs ouvertures et leurs inclinaisons), les toits, les
 escaliers avec leurs volées et leurs paliers, les garde-corps, le mobilier et les appareils
-sanitaires.</p>
+sanitaires. Un escalier multiétage est écrit une fois dans chaque étage où il se répète, avec ses garde-corps.</p>
 <h2 id="not-yet-in-bimopen">Pas encore dans BIMopen</h2>
-<p>Les faux plafonds, les rampes, les toits par extrusion, les gaines et les ouvertures verticales, les
-bords de dalle, les bandeaux, les gouttières et les sous-faces, les escaliers esquissés par lignes
-de contour et de contremarche, les escaliers hélicoïdaux et les arcs dans les esquisses viennent
+<p>Les faux plafonds, les toits par extrusion, les gaines et les ouvertures verticales, les
+bords de dalle, les bandeaux, les gouttières et les sous-faces viennent
 après le réalignement de ce chapitre.</p>
 </article>
 </div>

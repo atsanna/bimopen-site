@@ -418,8 +418,10 @@
 <article class="md-content__inner md-typeset"><a class="md-content__icon pdf-download-btn" download href="../pdf/bimopen-manual-de.pdf" title="Download"><i class="fa fas fa-download"></i><small> PDF</small></a>
 <h1 id="keyboard-shortcuts">Tastenkürzel</h1>
 <p>BIMopen kennt zwei Arten von Kürzeln: <strong>Tasten</strong> wie <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span>, die sofort wirken, und
-<strong>eingegebene Kürzel</strong> wie <code>WA</code>, die Sie Buchstabe für Buchstabe eingeben und wie jeden Befehl mit
-<span class="keys"><kbd class="key-enter">Enter</kbd></span> bestätigen. Die eingegebenen Kürzel sind in jeder Sprache gleich.</p>
+<strong>eingegebene Kürzel</strong> wie <code>WA</code>, die Sie Buchstabe für Buchstabe eingeben. In der Befehlszeile
+wartet ein eingegebenes Kürzel wie jeder Befehl auf <span class="keys"><kbd class="key-enter">Enter</kbd></span>; über dem Zeichenbereich eingegeben,
+wirkt es, sobald es vollständig ist, wenn nichts Längeres mit seinen Buchstaben beginnt (siehe
+unten). Die eingegebenen Kürzel sind in jeder Sprache gleich.</p>
 <p>Unter macOS tritt <span class="keys"><kbd class="key-command">Cmd</kbd></span> an die Stelle von <span class="keys"><kbd class="key-control">Ctrl</kbd></span>.</p>
 <h2 id="keys">Tasten</h2>
 <table>
@@ -533,7 +535,7 @@ die Skizze auch, wenn sie genügend Punkte hat.</p>
 </tr>
 <tr>
 <td>Rechte Taste</td>
-<td>Kontextmenü; bei aktivem Werkzeug bricht sie den Schritt ab</td>
+<td>Kontextmenü; bei aktivem Werkzeug das Menü des Werkzeugs (<strong>Abbrechen</strong>, <strong>Fang-Überschreibungen ▸</strong>…)</td>
 <td>Ebenso; beim Ziehen Orbit</td>
 </tr>
 <tr>
@@ -547,6 +549,8 @@ die Skizze auch, wenn sie genügend Punkte hat.</p>
 <p>Geben Sie die Buchstaben ein, während kein Feld bearbeitet wird, und drücken Sie dann <span class="keys"><kbd class="key-enter">Enter</kbd></span>. Ohne
 Argumente startet ein Kürzel das Werkzeug oder öffnet den Dialog; mit Argumenten führt es den Befehl
 sofort aus (siehe <a href="../command-line-and-mcp/">Befehlszeile und MCP</a>).</p>
+<p>Mit dem Cursor im Zeichenbereich gehen die Buchstaben in die Befehlszeile (im Stil BIMopen in die Suche), und ein Kürzel wirkt sofort nach der Eingabe, ohne <span class="keys"><kbd class="key-enter">Enter</kbd></span>, wenn kein längeres Kürzel und kein Befehlsname mit seinen Buchstaben beginnt: <code>VR</code> (Ansichtsbereich), <code>WT</code> (nebeneinander), <code>ZE</code>, <code>ZF</code>, <code>ZA</code>, <code>ZP</code>, <code>ZR</code>, <code>ZO</code>, <code>ZS</code>, <code>HR</code>, <code>HH</code>, <code>HC</code>, <code>IC</code>, <code>DL</code> (Detaillinie), <code>RT</code> (Raumbeschriftung), <code>TG</code> (nach Kategorie beschriften), <code>TX</code>, <code>CC</code> (kopieren), <code>MV</code>, <code>RM</code>, <code>LL</code> (Ebene), <code>RC</code> (Revisionswolke), <code>PP</code> (blendet <strong>Eigenschaften</strong> ein oder aus), <code>PT</code>, <code>RP</code> und Ihre eigenen Kürzel. Die anderen beginnen längere Namen und warten auf den nächsten Buchstaben, ein Leerzeichen (es folgen Argumente) oder <span class="keys"><kbd class="key-enter">Enter</kbd></span>: <code>VG</code> (<code>vgsub</code>…), <code>HI</code> (<code>hide</code>), <code>DI</code> (<code>dim</code>), <code>AL</code> (<code>align</code>), <code>WA</code> (<code>wall</code>), <code>DR</code> (<code>draworder</code>), <code>UN</code> (<code>undo</code>), <code>MA</code> (<code>mask</code>); so werden <code>dim</code>, <code>wall 0,0 5,0</code> oder <code>WA 0,0 5,0</code> über der Ansicht so ausgeführt, wie sie eingegeben wurden. <code>MA</code>, <code>PT</code> und <code>RP</code> melden in der Statusleiste, dass sie noch nicht verfügbar sind. In die Befehlszeile selbst eingegeben, wartet eine Zeile auf <span class="keys"><kbd class="key-enter">Enter</kbd></span>.</p>
+<p>Während ein Werkzeug in einem Grundriss oder einer Zeichenansicht auf einen Punkt wartet, ersetzen <code>SE</code> (Endpunkte), <code>SM</code> (Mittelpunkte), <code>SI</code> (Schnittpunkte), <code>SN</code> (nächster) und <code>SO</code> (aus) die Fangpunkte nur für diesen Punkt (auch in <strong>Fang-Überschreibungen ▸</strong> der rechten Taste gewählt; <code>SE</code>, <code>SI</code> und <code>SO</code> mit <span class="keys"><kbd class="key-enter">Enter</kbd></span>, da längere Namen mit ihnen beginnen); die Statusleiste zeigt es, <span class="keys"><kbd class="key-escape">Esc</kbd></span> oder der gesetzte Punkt beendet es. In einem Schnitt oder einer 3D-Ansicht, deren Punkte so nicht gefangen werden, werden sie mit einer Meldung abgelehnt.</p>
 <h3 id="modelling">Modellieren</h3>
 <table>
 <thead>
@@ -820,9 +824,8 @@ sofort aus (siehe <a href="../command-line-and-mcp/">Befehlszeile und MCP</a>).<
 </table>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Die QuickInfo der Schaltfläche <strong>Detaillinie</strong> zeigt <code>DL</code>, aber <code>DL</code> startet die lineare
-Bemaßung, wie die QuickInfo von <strong>Linear</strong> angibt. Um die Detaillinie per Eingabe zu starten,
-verwenden Sie <code>detailline</code>.</p>
+<p>Allein eingegeben startet <code>DL</code> die Detaillinie, wie in Revit; gefolgt von Punkten in der
+Befehlszeile zeichnet es eine lineare Bemaßung (<code>lineardim</code>).</p>
 </div>
 <h3 id="views-and-settings">Ansichten und Einstellungen</h3>
 <table>

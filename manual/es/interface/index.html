@@ -704,7 +704,7 @@ El asterisco tras el nombre del proyecto en la barra de título te indica que ha
 guardar.</p>
 </div>
 <h3 id="options">Opciones</h3>
-<p><strong>Menú de la aplicación ▸ Opciones</strong> tiene dos grupos:</p>
+<p><strong>Menú de la aplicación ▸ Opciones</strong> tiene, entre otros, estos parámetros:</p>
 <table>
 <thead>
 <tr>
@@ -728,6 +728,31 @@ guardar.</p>
 <td><strong>Gráficos ▸ Invertir color de fondo</strong></td>
 <td>activado, desactivado</td>
 <td>Vistas con fondo oscuro y líneas claras</td>
+</tr>
+<tr>
+<td><strong>ViewCube ▸ Tamaño del ViewCube</strong>, <strong>Opacidad inactiva</strong></td>
+<td><strong>Pequeño</strong>, <strong>Medio</strong>, <strong>Grande</strong>; de 0 % a 100 %</td>
+<td>El tamaño del cubo, y cuánto se ve mientras el puntero está en otra parte</td>
+</tr>
+<tr>
+<td><strong>ViewCube ▸ Mostrar brújula</strong></td>
+<td>activado, desactivado</td>
+<td>El anillo de la brújula bajo el cubo</td>
+</tr>
+<tr>
+<td><strong>ViewCube ▸ Mantener escena en posición vertical</strong></td>
+<td>activado, desactivado</td>
+<td>Al arrastrar el cubo el modelo nunca se pone boca abajo; desactivado, la vista puede pasar por encima de la cima</td>
+</tr>
+<tr>
+<td><strong>ViewCube ▸ Ajustar a la vista</strong></td>
+<td>activado, desactivado</td>
+<td>Un clic en el cubo también ajusta el modelo a la ventana</td>
+</tr>
+<tr>
+<td><strong>SteeringWheels ▸ Tamaño del disco</strong>, <strong>Opacidad del disco</strong></td>
+<td><strong>Pequeño</strong>, <strong>Medio</strong>, <strong>Grande</strong>; de 0 % a 100 %</td>
+<td>El tamaño y el fondo del disco de navegación</td>
 </tr>
 </tbody>
 </table>
@@ -917,7 +942,7 @@ están atenuados, y su información de herramienta indica que primero hay que ab
 <tbody>
 <tr>
 <td><strong>Crear</strong></td>
-<td><strong>Vista 3D ▾</strong> (<strong>Vista 3D por defecto</strong>, <strong>Guardar vista</strong>), <strong>Vistas de planta ▾</strong> (<strong>Plano de planta</strong>, <strong>Plano de áreas</strong>), <strong>Duplicar vista ▾</strong> (<strong>Duplicar</strong>, <strong>Duplicar con detalles</strong>), <strong>Sección</strong> <code>SE</code>, <strong>Alzado</strong> <code>EL</code>, <strong>Detalle</strong> <code>DT</code> (una llamada), <strong>Vista de diseño</strong> <code>VD</code>, <strong>Tablas de planificación ▾</strong> (<strong>Tabla de planificación/cantidades</strong>, <strong>Tablas de planificación predefinidas</strong>)</td>
+<td><strong>Vista 3D ▾</strong> (<strong>Vista 3D por defecto</strong>, <strong>Guardar vista</strong>), <strong>Vistas de planta ▾</strong> (<strong>Plano de planta</strong>, <strong>Plano de áreas</strong>), <strong>Duplicar vista ▾</strong> (<strong>Duplicar</strong>, <strong>Duplicar con detalles</strong>), <strong>Sección</strong> <code>SE</code>, <strong>Alzado ▾</strong> (<strong>Alzado</strong> <code>EL</code>, <strong>Alzado de estructura</strong>), <strong>Detalle</strong> <code>DT</code> (una llamada), <strong>Vista de diseño</strong> <code>VD</code>, <strong>Tablas de planificación ▾</strong> (<strong>Tabla de planificación/cantidades</strong>, <strong>Tabla de materiales</strong>, <strong>Lista de planos</strong>, <strong>Bloque de notas</strong>, <strong>Tablas de planificación predefinidas</strong>)</td>
 </tr>
 <tr>
 <td><strong>Gráficos</strong></td>
@@ -1210,7 +1235,7 @@ planificación predefinida se abre con un clic.</p>
 derecho tiene <strong>Propiedades de tipo</strong>, <strong>Duplicar…</strong>, <strong>Crear ejemplar</strong> (inicia la herramienta
 que lo coloca, con ese tipo) y <strong>Eliminar</strong>.</p>
 <p>Tras un clic en el navegador de proyectos, el teclado se mueve en él: <span class="keys"><kbd class="key-arrow-up">Up</kbd></span> y <span class="keys"><kbd class="key-arrow-down">Down</kbd></span> pasan de una fila a otra (las propiedades de la vista aparecen en la paleta), <span class="keys"><kbd class="key-arrow-right">Right</kbd></span> abre una rama, <span class="keys"><kbd class="key-arrow-left">Left</kbd></span> la cierra o sube a la rama que contiene la fila, <span class="keys"><kbd class="key-enter">Enter</kbd></span> abre la vista.</p>
-<p>Desde aquí las vistas van también a los planos. Arrastre una planta, una sección, un alzado, una vista de diseño, una leyenda, una vista 3D guardada o una tabla de planificación al plano abierto: su ventana gráfica sigue al cursor y queda donde la suelta. O suéltela sobre el nombre de un plano en el árbol: el plano se abre y la ventana gráfica sigue al cursor hasta que hace clic. Mientras arrastra, el árbol se desplaza cuando el cursor se acerca a su borde. El menú contextual de un plano tiene <strong>Añadir vista…</strong>. Una vista que ya está en un plano se rechaza, con el motivo en la línea de comandos; las leyendas y las tablas pueden ir en varios planos. Una vista 3D guardada aparece en el plano con las aristas vistas desde su cámara.</p>
+<p>Desde aquí las vistas van también a los planos. Arrastre una planta, una sección, un alzado, una vista de diseño, una leyenda, una vista 3D guardada o una tabla de planificación al plano abierto: su ventana gráfica sigue al cursor y queda donde la suelta. O suéltela sobre el nombre de un plano en el árbol: el plano se abre y la ventana gráfica sigue al cursor hasta que hace clic. Mientras arrastra, el árbol se desplaza cuando el cursor se acerca a su borde. El menú contextual de un plano tiene <strong>Añadir vista…</strong>. Las vistas de un plano aparecen debajo de él; el menú contextual de una vista tiene <strong>Eliminar del plano</strong>, y el de <strong>Planos (todos)</strong> tiene <strong>Nuevo plano…</strong>. En una vista 3D el menú contextual también tiene <strong>Zoom a extensión 3D</strong>: todo el modelo, también los elementos ocultos en la vista. Una vista que ya está en un plano se rechaza, con el motivo en la línea de comandos; las leyendas y las tablas pueden ir en varios planos. Una vista 3D guardada aparece en el plano con las aristas vistas desde su cámara.</p>
 <p>El menú contextual de una planta, una sección o una vista de diseño tiene <strong>Buscar vistas de referencia</strong>: las vistas que muestran su símbolo y los planos en los que está; <strong>Ir a vista</strong> abre la elegida.</p>
 <h2 id="drawing-area-and-view-windows">Área de dibujo y ventanas de vista</h2>
 <p>Cada vista que abres es una ventana en el área de dibujo. Una vista que se vuelve a abrir pasa al
@@ -1258,8 +1283,8 @@ frente; siempre queda abierta al menos una ventana. <strong>Vista ▸ Ventanas</
 solo muestran el modelo. En <strong>Mosaico</strong> y <strong>Cascada</strong>, la <strong>×</strong> de la barra de título de una
 ventana la cierra.</p>
 <p><strong>Mosaico</strong> coloca la ventana activa arriba a la izquierda y las demás después, desde la activada más recientemente; <strong>Cambiar ventanas</strong> las lista en el mismo orden. Si vuelve a ordenarlas tras trabajar en otra ventana, esa pasa a ser la primera.</p>
-<p><strong>Interfaz de usuario ▸ Métodos abreviados de teclado</strong> lista los comandos con sus métodos abreviados. Busque un comando por su nombre o use <strong>Filtrar</strong> (<strong>Todo</strong>, <strong>Todos los definidos</strong>, <strong>Todos los no definidos</strong>, <strong>Todos los reservados</strong>); seleccione un comando, escriba las teclas en <strong>Pulse las nuevas teclas</strong> y haga clic en <strong>Asignar</strong>. Las teclas que ya tiene otro comando se rechazan, con el motivo; <strong>Eliminar</strong> quita las teclas que añadió. Sus métodos abreviados se conservan para las sesiones siguientes e inician el comando al escribirlos, como los predefinidos.</p>
-<p>Una herramienta nunca cambia por sí sola la vista activa. Iniciada en una vista en la que no puede trabajar (una cubierta o una habitación en una vista 3D, un nivel en una planta, un área fuera de una planta de áreas), abre <strong>Ir a vista</strong>: las vistas adecuadas, con la planta del nivel activo ya elegida. <strong>Abrir vista</strong> abre la vista elegida e inicia allí la herramienta; <strong>Cancelar</strong> lo deja todo como estaba. <strong>Editar contorno</strong> de un suelo, una cubierta, una escalera o una barandilla, desde una sección o un alzado, pide del mismo modo una planta de su nivel, y una nueva sección o alzado deja activa la planta en la que se dibujó. <strong>Desplazar</strong> y <strong>Copiar</strong> funcionan también en secciones y alzados, a lo largo de la vista.</p>
+<p><strong>Interfaz de usuario ▸ Métodos abreviados de teclado</strong> lista los comandos con sus métodos abreviados. Busque un comando por su nombre o use <strong>Filtrar</strong> (<strong>Todo</strong>, <strong>Todos los definidos</strong>, <strong>Todos los no definidos</strong>, <strong>Todos los reservados</strong>); seleccione un comando, escriba las teclas en <strong>Pulse las nuevas teclas</strong> y haga clic en <strong>Asignar</strong>. Las mismas teclas pueden ir a varios comandos: escritas en el área de dibujo, la barra de estado muestra el primero, las flechas pasan a los demás y <span class="keys"><kbd class="key-enter">Enter</kbd></span> o <span class="keys"><kbd class="key-space">Space</kbd></span> ejecuta el mostrado; <strong>Exportar…</strong> escribe todos los atajos en un archivo XML e <strong>Importar…</strong> lee de nuevo un archivo así como sus atajos (un archivo que no nombra ningún comando de BIMopen se rechaza, y sus atajos se mantienen); <strong>Eliminar</strong> quita las teclas que añadió. Sus métodos abreviados se conservan para las sesiones siguientes e inician el comando al escribirlos, como los predefinidos.</p>
+<p>Una herramienta nunca cambia por sí sola la vista activa. Iniciada en una vista en la que no puede trabajar (una cubierta o una habitación en una vista 3D, un nivel en una planta, un área fuera de una planta de áreas), abre <strong>Ir a vista</strong>: las vistas adecuadas, con la planta del nivel activo ya elegida. <strong>Abrir vista</strong> abre la vista elegida e inicia allí la herramienta; <strong>Cancelar</strong> lo deja todo como estaba. <strong>Editar contorno</strong> de un suelo, una cubierta, una escalera o una barandilla, desde una sección o un alzado, pide del mismo modo una planta de su nivel, y una nueva sección o alzado deja activa la planta en la que se dibujó. <strong>Desplazar</strong>, <strong>Copiar</strong>, una <strong>Matriz</strong> lineal y <strong>Simetría - Dibujar eje</strong> funcionan también en secciones y alzados: a lo largo de la vista; el eje es el plano vertical perpendicular a la vista por su primer punto, se dibuje como se dibuje. Una <strong>Matriz</strong> radial funciona en plantas y vistas 3D: en una sección o un alzado sigue elegida, pero sus clics no hacen nada y la barra de estado pide <strong>Lineal</strong>.</p>
 <h3 id="view-control-bar">Barra de controles de vista</h3>
 <p>En la parte inferior de cada planta, sección, alzado, llamada y vista de diseño:</p>
 <table>
@@ -1360,7 +1385,10 @@ región ajustada</strong> (lo mismo que <span class="keys"><kbd class="key-home"
 <p>Un pequeño trípode en la esquina inferior de la vista 3D muestra las direcciones de los ejes: X
 rojo, Y verde, Z azul. Una vista 3D guardada recuerda dónde la dejaste.</p>
 <p>En 3D la rueda del ratón hace zoom manteniendo fijo el punto del modelo bajo el cursor, y la órbita gira alrededor del centro de la selección, o alrededor del punto al que mira la vista cuando no hay nada seleccionado.</p>
-<p>El <strong>ViewCube</strong>, en la esquina superior de la vista 3D, gira con el modelo. Haga clic en una cara (<strong>SUPERIOR</strong>, <strong>FRONTAL</strong>, <strong>DERECHA</strong>…) para mirar desde ese lado, en una arista para mirar entre dos lados, en un vértice entre tres; arrastre el cubo para orbitar. La casa encima, <strong>Vista inicial</strong>, vuelve a la vista de partida; las letras <strong>N</strong>, <strong>E</strong>, <strong>S</strong>, <strong>O</strong> debajo miran desde ese punto cardinal.</p>
+<p>El <strong>ViewCube</strong>, en la esquina superior de la vista 3D, gira con el modelo. Cada cara tiene un cuadrado en el centro, una franja a lo largo de cada arista y un cuadradito en cada vértice. El cuadrado del centro mira de frente ese lado (<strong>SUPERIOR</strong>, <strong>FRONTAL</strong>, <strong>DERECHA</strong>…); la franja de una arista, que recorre las dos caras contiguas, mira desde entre esos dos lados; el cuadradito de un vértice, en las tres caras de alrededor, mira desde entre tres. La zona bajo el puntero se ilumina antes del clic, y la vista gira hasta allí en una breve transición. Arrastre el cubo para orbitar.</p>
+<p>Visto de frente, el cubo es un cuadrado plano: los triángulos fuera de sus cuatro lados giran la vista hacia la cara más allá de ese lado, y las dos flechas curvas de la esquina superior derecha giran la imagen un cuarto de vuelta en sentido horario o antihorario.</p>
+<p>Un anillo plano de brújula descansa en la base del cubo, con <strong>N</strong>, <strong>E</strong>, <strong>S</strong>, <strong>O</strong> en los verdaderos puntos cardinales; gira con la vista. Haga clic en una letra para mirar desde ese punto cardinal. Arrastre el anillo, o una letra, para girar el modelo alrededor de la vertical por el punto en torno al cual gira la vista, siguiendo el puntero a lo largo del anillo.</p>
+<p>La casa, <strong>Vista inicial</strong>, vuelve a la vista de partida. Haga clic derecho en el cubo, o en el botón redondo de abajo a la derecha, para su menú: <strong>Vista inicial</strong>; <strong>Establecer vista actual como inicial</strong> (cada vista 3D tiene la suya, guardada con el proyecto); <strong>Orientar según vista ▸</strong> (una planta desde arriba, un alzado o una sección a lo largo de su línea, otra vista 3D desde su cámara); <strong>Orientar según dirección ▸</strong> (cualquiera de las 26 direcciones del cubo); <strong>Opciones…</strong>, que abre la página <strong>ViewCube</strong> de <strong>Opciones</strong>.</p>
 <h3 id="the-context-menu-of-a-view">El menú contextual de una vista</h3>
 <p>Haz clic con el botón derecho en una vista mientras no hay ninguna herramienta activa. Si el
 cursor está sobre un elemento que no está seleccionado, primero se selecciona el elemento. El
@@ -1375,8 +1403,7 @@ menú tiene:</p>
   categorías de la selección;</li>
 <li><strong>Visibilidad/Gráficos…</strong>.</li>
 </ul>
-<p>Mientras hay una herramienta activa, un clic con el botón derecho hace lo mismo que <span class="keys"><kbd class="key-escape">Esc</kbd></span>:
-cancela el paso en curso.</p>
+<p>Mientras hay una herramienta activa, un clic con el botón derecho abre en cambio el menú de la herramienta, y el paso en curso se mantiene: <strong>Cancelar</strong> (lo que hace <span class="keys"><kbd class="key-escape">Esc</kbd></span>, que sigue cancelando el paso), <strong>Repetir [comando]</strong>, <strong>Modificaciones de forzado ▸</strong> (el forzado del siguiente punto, como las teclas <code>SE</code>, <code>SM</code>, <code>SN</code>, <code>SI</code> y <code>SO</code>; solo en plantas y vistas de dibujo), <strong>Zoom en región</strong>, <strong>Alejar (2x)</strong>, <strong>Ajustar a la ventana</strong>, <strong>Encuadre/zoom anterior</strong>, <strong>Encuadre/zoom siguiente</strong> y <strong>Propiedades</strong>. Es el mismo en plantas, secciones, alzados, vistas 3D y en los planos, en los dos estilos de interfaz.</p>
 <p>En la parte superior del menú, <strong>Repetir [comando]</strong> vuelve a iniciar la última herramienta usada; <span class="keys"><kbd class="key-enter">Enter</kbd></span> hace lo mismo cuando no hay ninguna herramienta activa y la línea de comandos está vacía. El menú es el mismo en plantas, secciones y vistas 3D.</p>
 <h2 id="command-line">Línea de comandos</h2>
 <p>Bajo el área de dibujo, la línea de comandos muestra el registro de lo que se ha hecho, lo más

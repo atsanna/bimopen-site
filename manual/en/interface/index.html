@@ -701,7 +701,7 @@ first if you want to keep it.</p>
 asterisk after the project's name in the title bar tells you that there are unsaved changes.</p>
 </div>
 <h3 id="options">Options</h3>
-<p><strong>Application menu ▸ Options</strong> has two groups:</p>
+<p><strong>Application menu ▸ Options</strong> has, among others, these settings:</p>
 <table>
 <thead>
 <tr>
@@ -725,6 +725,31 @@ asterisk after the project's name in the title bar tells you that there are unsa
 <td><strong>Graphics ▸ Invert background color</strong></td>
 <td>on, off</td>
 <td>Views with a dark background and light lines</td>
+</tr>
+<tr>
+<td><strong>ViewCube ▸ ViewCube size</strong>, <strong>Inactive opacity</strong></td>
+<td><strong>Small</strong>, <strong>Medium</strong>, <strong>Large</strong>; 0 % to 100 %</td>
+<td>The size of the cube, and how much it shows while the pointer is elsewhere</td>
+</tr>
+<tr>
+<td><strong>ViewCube ▸ Show compass</strong></td>
+<td>on, off</td>
+<td>The compass ring under the cube</td>
+</tr>
+<tr>
+<td><strong>ViewCube ▸ Keep scene upright</strong></td>
+<td>on, off</td>
+<td>Dragging the cube never turns the model upside down; off, the view can pass over the top</td>
+</tr>
+<tr>
+<td><strong>ViewCube ▸ Fit to view</strong></td>
+<td>on, off</td>
+<td>A click on the cube also fits the model in the window</td>
+</tr>
+<tr>
+<td><strong>SteeringWheels ▸ Wheel size</strong>, <strong>Wheel opacity</strong></td>
+<td><strong>Small</strong>, <strong>Medium</strong>, <strong>Large</strong>; 0 % to 100 %</td>
+<td>The navigation wheel's size and background</td>
 </tr>
 </tbody>
 </table>
@@ -911,7 +936,7 @@ their tip says to open an area plan first.</p>
 <tbody>
 <tr>
 <td><strong>Create</strong></td>
-<td><strong>3D View ▾</strong> (<strong>Default 3D View</strong>, <strong>Save View</strong>), <strong>Plan Views ▾</strong> (<strong>Floor Plan</strong>, <strong>Area Plan</strong>), <strong>Duplicate View ▾</strong> (<strong>Duplicate</strong>, <strong>Duplicate with Detailing</strong>), <strong>Section</strong> <code>SE</code>, <strong>Elevation</strong> <code>EL</code>, <strong>Detail</strong> <code>DT</code> (a callout), <strong>Drafting view</strong> <code>VD</code>, <strong>Schedules ▾</strong> (<strong>Schedule/Quantities</strong>, <strong>Predefined schedules</strong>)</td>
+<td><strong>3D View ▾</strong> (<strong>Default 3D View</strong>, <strong>Save View</strong>), <strong>Plan Views ▾</strong> (<strong>Floor Plan</strong>, <strong>Area Plan</strong>), <strong>Duplicate View ▾</strong> (<strong>Duplicate</strong>, <strong>Duplicate with Detailing</strong>), <strong>Section</strong> <code>SE</code>, <strong>Elevation ▾</strong> (<strong>Elevation</strong> <code>EL</code>, <strong>Framing Elevation</strong>), <strong>Detail</strong> <code>DT</code> (a callout), <strong>Drafting view</strong> <code>VD</code>, <strong>Schedules ▾</strong> (<strong>Schedule/Quantities</strong>, <strong>Material Takeoff</strong>, <strong>Sheet List</strong>, <strong>Note Block</strong>, <strong>Predefined schedules</strong>)</td>
 </tr>
 <tr>
 <td><strong>Graphics</strong></td>
@@ -1198,7 +1223,7 @@ click.</p>
 has <strong>Type Properties</strong>, <strong>Duplicate…</strong>, <strong>Create Instance</strong> (starts the tool that places it,
 with that type) and <strong>Delete</strong>.</p>
 <p>After a click in the Project Browser, the keyboard moves in it: <span class="keys"><kbd class="key-arrow-up">Up</kbd></span> and <span class="keys"><kbd class="key-arrow-down">Down</kbd></span> go from row to row (the view's properties show in the palette), <span class="keys"><kbd class="key-arrow-right">Right</kbd></span> opens a branch, <span class="keys"><kbd class="key-arrow-left">Left</kbd></span> closes it or goes up to the branch the row is in, <span class="keys"><kbd class="key-enter">Enter</kbd></span> opens the view.</p>
-<p>Views go on sheets from here too. Drag a plan, section, elevation, drafting view, legend, saved 3D view or schedule onto the open sheet: its viewport follows the cursor and stays where you drop it. Or drop it on a sheet's name in the tree: the sheet opens and the viewport follows the cursor until you click. While you drag, the tree scrolls when the cursor nears its edge. The right-click menu of a sheet has <strong>Add View…</strong>. A view already on a sheet is refused, with the reason on the command line; legends and schedules can go on several sheets. A saved 3D view is drawn on the sheet with the edges seen from its camera.</p>
+<p>Views go on sheets from here too. Drag a plan, section, elevation, drafting view, legend, saved 3D view or schedule onto the open sheet: its viewport follows the cursor and stays where you drop it. Or drop it on a sheet's name in the tree: the sheet opens and the viewport follows the cursor until you click. While you drag, the tree scrolls when the cursor nears its edge. The right-click menu of a sheet has <strong>Add View…</strong>. The views on a sheet are listed under it; the right-click menu of one has <strong>Remove from Sheet</strong>, and the menu of <strong>Sheets (all)</strong> has <strong>New Sheet…</strong>. In a 3D view the right-click menu also has <strong>Zoom to 3D Extents</strong>: the whole model, the elements hidden in the view too. A view already on a sheet is refused, with the reason on the command line; legends and schedules can go on several sheets. A saved 3D view is drawn on the sheet with the edges seen from its camera.</p>
 <p>The right-click menu of a plan, section or drafting view has <strong>Find Referring Views</strong>: the views that show its symbol and the sheets it is on; <strong>Go to View</strong> opens the one chosen.</p>
 <h2 id="drawing-area-and-view-windows">Drawing area and view windows</h2>
 <p>Every view you open is a window in the drawing area. A view opened again comes to the front; at
@@ -1245,8 +1270,8 @@ least one window always stays open. <strong>View ▸ Windows</strong> arranges t
 <p>Click in a window to make it active: the tools work in the active window, the others only show
 the model. In <strong>Tile</strong> and <strong>Cascade</strong>, the <strong>×</strong> on a window's title bar closes it.</p>
 <p><strong>Tile</strong> puts the active window at the top left and the others after it, from the most recently active; <strong>Switch Windows</strong> lists them in the same order. Tile again after working in another window and that window comes first.</p>
-<p><strong>User Interface ▸ Keyboard Shortcuts</strong> lists the commands with their shortcuts. Search a command by name, or <strong>Filter</strong> the list (<strong>All</strong>, <strong>All Defined</strong>, <strong>All Not Defined</strong>, <strong>All Reserved</strong>); select a command, type the keys in <strong>Press new keys</strong> and click <strong>Assign</strong>. Keys that another command already has are refused, with the reason; <strong>Remove</strong> takes away the keys you added. Your shortcuts are kept for the next sessions and start the command when typed, as the built-in ones do.</p>
-<p>A tool never changes the active view by itself. Started in a view where it cannot work (a roof or a room in a 3D view, a level in a plan, an area outside an area plan), it opens <strong>Go to View</strong>: the views that suit it, with the plan of the active level chosen first. <strong>Open View</strong> opens the chosen view and starts the tool there; <strong>Cancel</strong> leaves everything as it was. <strong>Edit Boundary</strong> of a floor, roof, stair or railing, from a section or an elevation, asks the same way for a plan of its level, and a new section or elevation leaves the plan you drew it in active. <strong>Move</strong> and <strong>Copy</strong> also work in sections and elevations, along the view.</p>
+<p><strong>User Interface ▸ Keyboard Shortcuts</strong> lists the commands with their shortcuts. Search a command by name, or <strong>Filter</strong> the list (<strong>All</strong>, <strong>All Defined</strong>, <strong>All Not Defined</strong>, <strong>All Reserved</strong>); select a command, type the keys in <strong>Press new keys</strong> and click <strong>Assign</strong>. The same keys may go to several commands: typed in the drawing area, the status bar shows the first, the arrow keys go through the others and <span class="keys"><kbd class="key-enter">Enter</kbd></span> or <span class="keys"><kbd class="key-space">Space</kbd></span> runs the one shown; <strong>Export…</strong> writes every shortcut to an XML file and <strong>Import…</strong> reads such a file back as your shortcuts (a file naming no command here is refused, and your shortcuts stay); <strong>Remove</strong> takes away the keys you added. Your shortcuts are kept for the next sessions and start the command when typed, as the built-in ones do.</p>
+<p>A tool never changes the active view by itself. Started in a view where it cannot work (a roof or a room in a 3D view, a level in a plan, an area outside an area plan), it opens <strong>Go to View</strong>: the views that suit it, with the plan of the active level chosen first. <strong>Open View</strong> opens the chosen view and starts the tool there; <strong>Cancel</strong> leaves everything as it was. <strong>Edit Boundary</strong> of a floor, roof, stair or railing, from a section or an elevation, asks the same way for a plan of its level, and a new section or elevation leaves the plan you drew it in active. <strong>Move</strong>, <strong>Copy</strong>, a linear <strong>Array</strong> and <strong>Mirror - Draw Axis</strong> also work in sections and elevations: along the view; the axis is the vertical plane at right angles to the view through its first point, however it is drawn. A radial <strong>Array</strong> works in plans and 3D views: in a section or an elevation it stays chosen, but its clicks make nothing and the status bar asks for <strong>Linear</strong>.</p>
 <h3 id="view-control-bar">View control bar</h3>
 <p>At the bottom of every plan, section, elevation, callout and drafting view:</p>
 <table>
@@ -1347,7 +1372,10 @@ control bar: its views have their own scale.</p>
 <p>A small tripod in the lower corner of the 3D view shows the directions of the axes: X red, Y
 green, Z blue. A saved 3D view remembers where you left it.</p>
 <p>In 3D, the wheel zooms keeping the model point under the cursor in place, and the orbit turns about the centre of the selection, or about the point the view looks at when nothing is selected.</p>
-<p>The <strong>ViewCube</strong>, in the top corner of the 3D view, turns with the model. Click a face (<strong>TOP</strong>, <strong>FRONT</strong>, <strong>RIGHT</strong>…) to look from that side, an edge to look from between two sides, a corner from between three; drag the cube to orbit. The house above it, <strong>Home</strong>, goes back to the starting view; the letters <strong>N</strong>, <strong>E</strong>, <strong>S</strong>, <strong>W</strong> under it look from that point of the compass.</p>
+<p>The <strong>ViewCube</strong>, in the top corner of the 3D view, turns with the model. Each face has a square in the middle, a strip along each edge and a small square at each corner. The square in the middle looks straight at that side (<strong>TOP</strong>, <strong>FRONT</strong>, <strong>RIGHT</strong>…); an edge strip, which runs across both faces beside the edge, looks from between those two sides; a corner square, on the three faces around the corner, looks from between three. The region under the pointer lights up before you click, and the view turns there in a brief transition. Drag the cube to orbit.</p>
+<p>Seen straight on, the cube is a flat square: the triangles outside its four sides turn the view to the face beyond that side, and the two curved arrows at its top right corner turn the picture a quarter turn clockwise or counterclockwise.</p>
+<p>A flat compass ring lies at the cube's base, with <strong>N</strong>, <strong>E</strong>, <strong>S</strong>, <strong>W</strong> at the true points of the compass; it turns with the view. Click a letter to look from that point of the compass. Drag the ring, or a letter, to turn the model about the vertical through the point the view turns about, following the pointer round the ring.</p>
+<p>The house, <strong>Home view</strong>, goes back to the starting view. Right-click the cube, or click the round button at its bottom right, for its menu: <strong>Home view</strong>; <strong>Set Current View as Home</strong> (each 3D view keeps its own, with the project); <strong>Orient to View ▸</strong> (a plan from above, an elevation or a section along its line, another 3D view from its camera); <strong>Orient to Direction ▸</strong> (any of the 26 directions of the cube); <strong>Options…</strong>, which opens the <strong>ViewCube</strong> page of <strong>Options</strong>.</p>
 <h3 id="the-context-menu-of-a-view">The context menu of a view</h3>
 <p>Right-click in a view while no tool is active. If the cursor is on an element that is not
 selected, the element is selected first. The menu has:</p>
@@ -1361,7 +1389,7 @@ selected, the element is selected first. The menu has:</p>
   the selection;</li>
 <li><strong>Visibility/Graphics…</strong>.</li>
 </ul>
-<p>While a tool is active, a right-click does what <span class="keys"><kbd class="key-escape">Esc</kbd></span> does: it cancels the step in progress.</p>
+<p>While a tool is active, a right-click opens the tool's menu instead, and the step in progress stays: <strong>Cancel</strong> (what <span class="keys"><kbd class="key-escape">Esc</kbd></span> does, which still cancels the step), <strong>Repeat [command]</strong>, <strong>Snap Overrides ▸</strong> (the snap of the next point, as the keys <code>SE</code>, <code>SM</code>, <code>SN</code>, <code>SI</code> and <code>SO</code> do; only in plans and drafting views), <strong>Zoom in Region</strong>, <strong>Zoom Out (2x)</strong>, <strong>Zoom to Fit</strong>, <strong>Previous Pan/Zoom</strong>, <strong>Next Pan/Zoom</strong> and <strong>Properties</strong>. It is the same in plans, sections, elevations, 3D views and on sheets, in both interface styles.</p>
 <p>At the top of the menu, <strong>Repeat [command]</strong> starts the last tool you used again; <span class="keys"><kbd class="key-enter">Enter</kbd></span> does the same when no tool is active and the command line is empty. The menu is the same in plans, sections and 3D views.</p>
 <h2 id="command-line">Command line</h2>
 <p>Under the drawing area, the command line shows the log of what has been done, the most recent at

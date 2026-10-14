@@ -418,8 +418,10 @@
 <article class="md-content__inner md-typeset"><a class="md-content__icon pdf-download-btn" download href="../pdf/bimopen-manual-en.pdf" title="Download"><i class="fa fas fa-download"></i><small> PDF</small></a>
 <h1 id="keyboard-shortcuts">Keyboard shortcuts</h1>
 <p>BIMopen has two kinds of shortcuts: <strong>keys</strong>, such as <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span>, which act at once, and <strong>typed
-shortcuts</strong>, such as <code>WA</code>, which you type letter by letter and confirm with <span class="keys"><kbd class="key-enter">Enter</kbd></span>, like any
-command. Typed shortcuts are the same in every language.</p>
+shortcuts</strong>, such as <code>WA</code>, which you type letter by letter. At the command line a typed shortcut
+waits for <span class="keys"><kbd class="key-enter">Enter</kbd></span>, like any command; typed over the drawing area, it acts as soon as it is
+complete when nothing longer begins with its letters (see below). Typed shortcuts are the same in
+every language.</p>
 <p>On macOS, <span class="keys"><kbd class="key-command">Cmd</kbd></span> takes the place of <span class="keys"><kbd class="key-control">Ctrl</kbd></span>.</p>
 <h2 id="keys">Keys</h2>
 <table>
@@ -533,7 +535,7 @@ when it has enough points.</p>
 </tr>
 <tr>
 <td>Right button</td>
-<td>Context menu; with a tool active, cancels the step</td>
+<td>Context menu; with a tool active, the tool's menu (<strong>Cancel</strong>, <strong>Snap Overrides ▸</strong>…)</td>
 <td>The same; dragging, orbit</td>
 </tr>
 <tr>
@@ -547,6 +549,8 @@ when it has enough points.</p>
 <p>Type the letters while no field is being edited, then press <span class="keys"><kbd class="key-enter">Enter</kbd></span>. Without arguments, a
 shortcut starts the tool or opens the dialog; with arguments, it runs the command at once (see
 <a href="../command-line-and-mcp/">Command line and MCP</a>).</p>
+<p>With the cursor in the drawing area, the letters go to the command line (in the BIMopen style, to the search), and a shortcut acts as soon as it is typed, with no <span class="keys"><kbd class="key-enter">Enter</kbd></span>, when no longer shortcut or command name begins with its letters: <code>VR</code> (view range), <code>WT</code> (tile), <code>ZE</code>, <code>ZF</code>, <code>ZA</code>, <code>ZP</code>, <code>ZR</code>, <code>ZO</code>, <code>ZS</code>, <code>HR</code>, <code>HH</code>, <code>HC</code>, <code>IC</code>, <code>DL</code> (detail line), <code>RT</code> (room tag), <code>TG</code> (tag by category), <code>TX</code>, <code>CC</code> (copy), <code>MV</code>, <code>RM</code>, <code>LL</code> (level), <code>RC</code> (revision cloud), <code>PP</code> (shows or hides <strong>Properties</strong>), <code>PT</code>, <code>RP</code>, and the shortcuts you added. The others begin longer names and wait for the next letter, a space (arguments follow) or <span class="keys"><kbd class="key-enter">Enter</kbd></span>: <code>VG</code> (<code>vgsub</code>…), <code>HI</code> (<code>hide</code>), <code>DI</code> (<code>dim</code>), <code>AL</code> (<code>align</code>), <code>WA</code> (<code>wall</code>), <code>DR</code> (<code>draworder</code>), <code>UN</code> (<code>undo</code>), <code>MA</code> (<code>mask</code>); so <code>dim</code>, <code>wall 0,0 5,0</code> or <code>WA 0,0 5,0</code> typed over the view run as typed. <code>MA</code>, <code>PT</code> and <code>RP</code> say in the status bar that they are not available yet. Typed in the command line itself, a line waits for <span class="keys"><kbd class="key-enter">Enter</kbd></span>.</p>
+<p>While a tool waits for a point in a plan or a drafting view, <code>SE</code> (ends), <code>SM</code> (middles), <code>SI</code> (intersections), <code>SN</code> (nearest) and <code>SO</code> (off) override the snaps for that point only (also chosen in the right button's <strong>Snap Overrides ▸</strong>; <code>SE</code>, <code>SI</code> and <code>SO</code> with <span class="keys"><kbd class="key-enter">Enter</kbd></span>, as longer names begin with them); the status bar says so, and <span class="keys"><kbd class="key-escape">Esc</kbd></span> or the point taken ends it. In a section or a 3D view, whose points are not snapped that way, they are refused with a message.</p>
 <h3 id="modelling">Modelling</h3>
 <table>
 <thead>
@@ -820,8 +824,8 @@ shortcut starts the tool or opens the dialog; with arguments, it runs the comman
 </table>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The tip of the <strong>Detail line</strong> button shows <code>DL</code>, but <code>DL</code> starts the linear dimension, as
-the tip of <strong>Linear</strong> says. To start the detail line by typing, use <code>detailline</code>.</p>
+<p>Typed alone, <code>DL</code> starts the detail line, as in Revit; followed by points at the command
+line, it draws a linear dimension (<code>lineardim</code>).</p>
 </div>
 <h3 id="views-and-settings">Views and settings</h3>
 <table>

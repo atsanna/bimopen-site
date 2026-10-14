@@ -418,8 +418,9 @@
 <article class="md-content__inner md-typeset"><a class="md-content__icon pdf-download-btn" download href="../pdf/bimopen-manual-ar.pdf" title="Download"><i class="fa fas fa-download"></i><small> PDF</small></a>
 <h1 id="keyboard-shortcuts">اختصارات لوحة المفاتيح</h1>
 <p>في BIMopen نوعان من الاختصارات: <strong>المفاتيح</strong>، مثل <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span>، التي تعمل فورًا، و<strong>الاختصارات
-المكتوبة</strong>، مثل <code>WA</code>، التي تكتبها حرفًا حرفًا وتؤكدها بـ <span class="keys"><kbd class="key-enter">Enter</kbd></span>، مثل أي أمر. والاختصارات
-المكتوبة واحدة في كل اللغات.</p>
+المكتوبة</strong>، مثل <code>WA</code>، التي تكتبها حرفًا حرفًا. في سطر الأوامر ينتظر الاختصار المكتوب <span class="keys"><kbd class="key-enter">Enter</kbd></span> مثل
+أي أمر؛ أما إذا كُتب فوق منطقة الرسم فيعمل حالما يكتمل إن لم يبدأ بأحرفه شيء أطول (انظر أدناه).
+والاختصارات المكتوبة واحدة في كل اللغات.</p>
 <p>على macOS يحل <span class="keys"><kbd class="key-command">Cmd</kbd></span> محل <span class="keys"><kbd class="key-control">Ctrl</kbd></span>.</p>
 <h2 id="keys">المفاتيح</h2>
 <table>
@@ -533,7 +534,7 @@
 </tr>
 <tr>
 <td>الزر الأيمن</td>
-<td>القائمة السياقية؛ ومع أداة نشطة يلغي الخطوة</td>
+<td>القائمة السياقية؛ ومع أداة نشطة قائمة الأداة (<strong>إلغاء</strong>، <strong>تجاوزات الالتقاط ▸</strong>…)</td>
 <td>الشيء نفسه؛ ومع السحب دوران مداري</td>
 </tr>
 <tr>
@@ -547,6 +548,8 @@
 <p>اكتب الأحرف ما دام لا يُحرَّر أي حقل، ثم اضغط <span class="keys"><kbd class="key-enter">Enter</kbd></span>. دون وسائط يبدأ الاختصار الأداة أو يفتح
 نافذة الحوار؛ ومع وسائط ينفذ الأمر فورًا (انظر
 <a href="../command-line-and-mcp/">سطر الأوامر و MCP</a>).</p>
+<p>عندما يكون المؤشر في منطقة الرسم، تذهب الأحرف إلى سطر الأوامر (وفي نمط BIMopen إلى البحث)، ويعمل الاختصار فور كتابته دون <span class="keys"><kbd class="key-enter">Enter</kbd></span> إن لم يبدأ بأحرفه اختصار أو اسم أمر أطول: <code>VR</code> (نطاق العرض) و<code>WT</code> (تجانب) و<code>ZE</code> و<code>ZF</code> و<code>ZA</code> و<code>ZP</code> و<code>ZR</code> و<code>ZO</code> و<code>ZS</code> و<code>HR</code> و<code>HH</code> و<code>HC</code> و<code>IC</code> و<code>DL</code> (خط تفاصيل) و<code>RT</code> (بطاقة غرفة) و<code>TG</code> (بطاقة حسب الفئة) و<code>TX</code> و<code>CC</code> (نسخ) و<code>MV</code> و<code>RM</code> و<code>LL</code> (منسوب) و<code>RC</code> (سحابة مراجعة) و<code>PP</code> (يظهر <strong>الخصائص</strong> أو يخفيها) و<code>PT</code> و<code>RP</code> والاختصارات التي أضفتها. أما البقية فتبدأ بها أسماء أطول، فتنتظر الحرف التالي أو مسافة (تليها وسائط) أو <span class="keys"><kbd class="key-enter">Enter</kbd></span>: <code>VG</code> (<code>vgsub</code>…) و<code>HI</code> (<code>hide</code>) و<code>DI</code> (<code>dim</code>) و<code>AL</code> (<code>align</code>) و<code>WA</code> (<code>wall</code>) و<code>DR</code> (<code>draworder</code>) و<code>UN</code> (<code>undo</code>) و<code>MA</code> (<code>mask</code>)؛ وبذلك تُنفَّذ <code>dim</code> أو <code>wall 0,0 5,0</code> أو <code>WA 0,0 5,0</code> المكتوبة فوق العرض كما كُتبت. تقول <code>MA</code> و<code>PT</code> و<code>RP</code> في شريط الحالة إنها غير متاحة بعد. أما المكتوب في سطر الأوامر نفسه فينتظر <span class="keys"><kbd class="key-enter">Enter</kbd></span>.</p>
+<p>بينما تنتظر أداة نقطة في مسقط أو عرض رسم، تستبدل <code>SE</code> (الأطراف) و<code>SM</code> (المنتصفات) و<code>SI</code> (التقاطعات) و<code>SN</code> (الأقرب) و<code>SO</code> (إيقاف) الالتقاط لتلك النقطة فقط (وتُختار أيضاً من <strong>تجاوزات الالتقاط ▸</strong> في الزر الأيمن؛ <code>SE</code> و<code>SI</code> و<code>SO</code> مع <span class="keys"><kbd class="key-enter">Enter</kbd></span> لأن أسماء أطول تبدأ بها)؛ يوضح ذلك شريط الحالة، ويُنهيه <span class="keys"><kbd class="key-escape">Esc</kbd></span> أو أخذ النقطة. وفي مقطع أو عرض ثلاثي الأبعاد، حيث لا تُلتقط النقاط بهذه الطريقة، تُرفض برسالة.</p>
 <h3 id="modelling">النمذجة</h3>
 <table>
 <thead>
@@ -820,8 +823,8 @@
 </table>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>يعرض تلميح زر <strong>خط تفاصيل</strong> الاختصار <code>DL</code>، لكن <code>DL</code> يبدأ البُعد الخطي، كما يقول
-تلميح <strong>خطي</strong>. لبدء خط التفاصيل بالكتابة، استخدم <code>detailline</code>.</p>
+<p>إذا كُتب <code>DL</code> وحده بدأ خط التفاصيل كما في Revit؛ وإذا تلته نقاط في سطر الأوامر رسم بُعدًا
+خطيًا (<code>lineardim</code>).</p>
 </div>
 <h3 id="views-and-settings">العروض والإعدادات</h3>
 <table>

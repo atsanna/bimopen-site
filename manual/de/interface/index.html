@@ -704,7 +704,7 @@ wählen. Der Stern nach dem Namen des Projekts in der Titelleiste zeigt Ihnen, d
 ungespeicherte Änderungen gibt.</p>
 </div>
 <h3 id="options">Optionen</h3>
-<p><strong>Anwendungsmenü ▸ Optionen</strong> hat zwei Gruppen:</p>
+<p><strong>Anwendungsmenü ▸ Optionen</strong> hat unter anderem diese Einstellungen:</p>
 <table>
 <thead>
 <tr>
@@ -728,6 +728,31 @@ ungespeicherte Änderungen gibt.</p>
 <td><strong>Grafik ▸ Hintergrundfarbe umkehren</strong></td>
 <td>ein, aus</td>
 <td>Ansichten mit dunklem Hintergrund und hellen Linien</td>
+</tr>
+<tr>
+<td><strong>ViewCube ▸ ViewCube-Größe</strong>, <strong>Deckkraft bei Inaktivität</strong></td>
+<td><strong>Klein</strong>, <strong>Mittel</strong>, <strong>Groß</strong>; 0 % bis 100 %</td>
+<td>Die Größe des Würfels und wie stark er sichtbar ist, während der Zeiger woanders ist</td>
+</tr>
+<tr>
+<td><strong>ViewCube ▸ Kompass anzeigen</strong></td>
+<td>ein, aus</td>
+<td>Der Kompassring unter dem Würfel</td>
+</tr>
+<tr>
+<td><strong>ViewCube ▸ Szene aufrecht halten</strong></td>
+<td>ein, aus</td>
+<td>Beim Ziehen des Würfels steht das Modell nie auf dem Kopf; aus, kann die Ansicht über den Scheitel hinausgehen</td>
+</tr>
+<tr>
+<td><strong>ViewCube ▸ An Ansicht anpassen</strong></td>
+<td>ein, aus</td>
+<td>Ein Klick auf den Würfel passt das Modell auch an das Fenster an</td>
+</tr>
+<tr>
+<td><strong>SteeringWheels ▸ Größe des Rads</strong>, <strong>Deckkraft des Rads</strong></td>
+<td><strong>Klein</strong>, <strong>Mittel</strong>, <strong>Groß</strong>; 0 % bis 100 %</td>
+<td>Größe und Hintergrund des Navigationsrads</td>
 </tr>
 </tbody>
 </table>
@@ -919,7 +944,7 @@ geöffnet ist, sind sie ausgegraut, und ihre QuickInfo fordert dazu auf, zuerst 
 <tbody>
 <tr>
 <td><strong>Erzeugen</strong></td>
-<td><strong>3D-Ansicht ▾</strong> (<strong>Standard-3D-Ansicht</strong>, <strong>Ansicht speichern</strong>), <strong>Grundrissansichten ▾</strong> (<strong>Grundriss</strong>, <strong>Flächenplan</strong>), <strong>Ansicht duplizieren ▾</strong> (<strong>Duplizieren</strong>, <strong>Mit Detaillierung duplizieren</strong>), <strong>Schnitt</strong> <code>SE</code>, <strong>Gebäudeansicht</strong> <code>EL</code>, <strong>Detail</strong> <code>DT</code> (ein Detailausschnitt), <strong>Zeichenansicht</strong> <code>VD</code>, <strong>Bauteillisten ▾</strong> (<strong>Bauteilliste/Mengen</strong>, <strong>Vordefinierte Bauteillisten</strong>)</td>
+<td><strong>3D-Ansicht ▾</strong> (<strong>Standard-3D-Ansicht</strong>, <strong>Ansicht speichern</strong>), <strong>Grundrissansichten ▾</strong> (<strong>Grundriss</strong>, <strong>Flächenplan</strong>), <strong>Ansicht duplizieren ▾</strong> (<strong>Duplizieren</strong>, <strong>Mit Detaillierung duplizieren</strong>), <strong>Schnitt</strong> <code>SE</code>, <strong>Gebäudeansicht ▾</strong> (<strong>Gebäudeansicht</strong> <code>EL</code>, <strong>Rahmenansicht</strong>), <strong>Detail</strong> <code>DT</code> (ein Detailausschnitt), <strong>Zeichenansicht</strong> <code>VD</code>, <strong>Bauteillisten ▾</strong> (<strong>Bauteilliste/Mengen</strong>, <strong>Materialliste</strong>, <strong>Planliste</strong>, <strong>Anmerkungsblock</strong>, <strong>Vordefinierte Bauteillisten</strong>)</td>
 </tr>
 <tr>
 <td><strong>Grafik</strong></td>
@@ -1214,7 +1239,7 @@ vordefinierte Bauteilliste öffnet sich mit einem Klick.</p>
 Rechtsklickmenü hat <strong>Typeigenschaften</strong>, <strong>Duplizieren…</strong>, <strong>Exemplar erstellen</strong> (startet das
 Werkzeug, das ihn platziert, mit diesem Typ) und <strong>Löschen</strong>.</p>
 <p>Nach einem Klick in den Projektbrowser bewegt sich die Tastatur darin: <span class="keys"><kbd class="key-arrow-up">Up</kbd></span> und <span class="keys"><kbd class="key-arrow-down">Down</kbd></span> gehen von Zeile zu Zeile (die Eigenschaften der Ansicht erscheinen in der Palette), <span class="keys"><kbd class="key-arrow-right">Right</kbd></span> öffnet einen Zweig, <span class="keys"><kbd class="key-arrow-left">Left</kbd></span> schließt ihn oder geht zum Zweig hinauf, in dem die Zeile steht, <span class="keys"><kbd class="key-enter">Enter</kbd></span> öffnet die Ansicht.</p>
-<p>Von hier kommen Ansichten auch auf Pläne. Ziehen Sie einen Grundriss, einen Schnitt, eine Ansicht, eine Zeichenansicht, eine Legende, eine gespeicherte 3D-Ansicht oder eine Bauteilliste auf den offenen Plan: Ihr Ansichtsfenster folgt dem Cursor und bleibt dort, wo Sie es loslassen. Oder lassen Sie sie auf dem Namen eines Plans im Baum los: Der Plan öffnet sich und das Ansichtsfenster folgt dem Cursor, bis Sie klicken. Beim Ziehen rollt der Baum, wenn der Cursor seinen Rand erreicht. Das Kontextmenü eines Plans hat <strong>Ansicht hinzufügen…</strong>. Eine Ansicht, die schon auf einem Plan ist, wird abgelehnt, mit dem Grund in der Befehlszeile; Legenden und Bauteillisten können auf mehreren Plänen stehen. Eine gespeicherte 3D-Ansicht erscheint auf dem Plan mit den Kanten, die ihre Kamera sieht.</p>
+<p>Von hier kommen Ansichten auch auf Pläne. Ziehen Sie einen Grundriss, einen Schnitt, eine Ansicht, eine Zeichenansicht, eine Legende, eine gespeicherte 3D-Ansicht oder eine Bauteilliste auf den offenen Plan: Ihr Ansichtsfenster folgt dem Cursor und bleibt dort, wo Sie es loslassen. Oder lassen Sie sie auf dem Namen eines Plans im Baum los: Der Plan öffnet sich und das Ansichtsfenster folgt dem Cursor, bis Sie klicken. Beim Ziehen rollt der Baum, wenn der Cursor seinen Rand erreicht. Das Kontextmenü eines Plans hat <strong>Ansicht hinzufügen…</strong>. Die Ansichten auf einem Blatt stehen darunter; das Kontextmenü einer Ansicht hat <strong>Vom Blatt entfernen</strong>, das von <strong>Pläne (alle)</strong> hat <strong>Neues Blatt…</strong>. In einer 3D-Ansicht hat das Kontextmenü außerdem <strong>Auf 3D-Ausdehnung zoomen</strong>: das ganze Modell, auch die in der Ansicht ausgeblendeten Elemente. Eine Ansicht, die schon auf einem Plan ist, wird abgelehnt, mit dem Grund in der Befehlszeile; Legenden und Bauteillisten können auf mehreren Plänen stehen. Eine gespeicherte 3D-Ansicht erscheint auf dem Plan mit den Kanten, die ihre Kamera sieht.</p>
 <p>Das Kontextmenü eines Grundrisses, eines Schnitts oder einer Zeichenansicht hat <strong>Referenzierende Ansichten suchen</strong>: die Ansichten, die ihr Symbol zeigen, und die Pläne, auf denen sie steht; <strong>Gehe zu Ansicht</strong> öffnet die gewählte.</p>
 <h2 id="drawing-area-and-view-windows">Zeichenbereich und Ansichtsfenster</h2>
 <p>Jede geöffnete Ansicht ist ein Fenster im Zeichenbereich. Eine erneut geöffnete Ansicht kommt nach
@@ -1262,8 +1287,8 @@ vorn; mindestens ein Fenster bleibt immer geöffnet. <strong>Ansicht ▸ Fenster
 anderen zeigen das Modell nur an. Bei <strong>Nebeneinander</strong> und <strong>Überlappend</strong> schließt das <strong>×</strong> in der
 Titelleiste eines Fensters dieses Fenster.</p>
 <p><strong>Nebeneinander</strong> setzt das aktive Fenster oben links und die anderen danach, vom zuletzt aktiven an; <strong>Fenster wechseln</strong> listet sie in derselben Reihenfolge. Ordnen Sie erneut an, nachdem Sie in einem anderen Fenster gearbeitet haben, kommt dieses an erste Stelle.</p>
-<p><strong>Benutzeroberfläche ▸ Tastaturkurzbefehle</strong> listet die Befehle mit ihren Kurzbefehlen. Suchen Sie einen Befehl nach Namen oder nutzen Sie <strong>Filter</strong> (<strong>Alle</strong>, <strong>Alle definierten</strong>, <strong>Alle nicht definierten</strong>, <strong>Alle reservierten</strong>); wählen Sie einen Befehl, tippen Sie die Tasten in <strong>Neue Tasten drücken</strong> und klicken Sie auf <strong>Zuweisen</strong>. Tasten, die ein anderer Befehl schon hat, werden abgelehnt, mit dem Grund; <strong>Entfernen</strong> nimmt die von Ihnen hinzugefügten Tasten weg. Ihre Kurzbefehle bleiben für die nächsten Sitzungen und starten den Befehl, wenn Sie sie tippen, wie die vorgegebenen.</p>
-<p>Ein Werkzeug wechselt nie von selbst die aktive Ansicht. In einer Ansicht gestartet, in der es nicht arbeiten kann (ein Dach oder ein Raum in einer 3D-Ansicht, eine Ebene in einem Grundriss, eine Fläche außerhalb eines Flächenplans), öffnet es <strong>Gehe zu Ansicht</strong>: die geeigneten Ansichten, der Grundriss der aktiven Ebene vorausgewählt. <strong>Ansicht öffnen</strong> öffnet die gewählte Ansicht und startet dort das Werkzeug; <strong>Abbrechen</strong> lässt alles, wie es war. <strong>Begrenzung bearbeiten</strong> eines Bodens, Dachs, einer Treppe oder eines Geländers fragt aus einem Schnitt oder einer Ansicht ebenso nach einem Grundriss seiner Ebene, und ein neuer Schnitt oder eine neue Ansicht lässt den Grundriss aktiv, in dem sie gezeichnet wurden. <strong>Verschieben</strong> und <strong>Kopieren</strong> funktionieren auch in Schnitten und Ansichten, entlang der Ansicht.</p>
+<p><strong>Benutzeroberfläche ▸ Tastaturkurzbefehle</strong> listet die Befehle mit ihren Kurzbefehlen. Suchen Sie einen Befehl nach Namen oder nutzen Sie <strong>Filter</strong> (<strong>Alle</strong>, <strong>Alle definierten</strong>, <strong>Alle nicht definierten</strong>, <strong>Alle reservierten</strong>); wählen Sie einen Befehl, tippen Sie die Tasten in <strong>Neue Tasten drücken</strong> und klicken Sie auf <strong>Zuweisen</strong>. Dieselben Tasten können mehreren Befehlen gehören: im Zeichenbereich eingegeben, zeigt die Statusleiste den ersten, die Pfeiltasten gehen durch die anderen, <span class="keys"><kbd class="key-enter">Enter</kbd></span> oder <span class="keys"><kbd class="key-space">Space</kbd></span> führt den gezeigten aus; <strong>Exportieren…</strong> schreibt alle Kurzbefehle in eine XML-Datei, <strong>Importieren…</strong> liest eine solche Datei als Ihre Kurzbefehle ein (eine Datei, die keinen Befehl von BIMopen nennt, wird abgelehnt, und Ihre Kurzbefehle bleiben); <strong>Entfernen</strong> nimmt die von Ihnen hinzugefügten Tasten weg. Ihre Kurzbefehle bleiben für die nächsten Sitzungen und starten den Befehl, wenn Sie sie tippen, wie die vorgegebenen.</p>
+<p>Ein Werkzeug wechselt nie von selbst die aktive Ansicht. In einer Ansicht gestartet, in der es nicht arbeiten kann (ein Dach oder ein Raum in einer 3D-Ansicht, eine Ebene in einem Grundriss, eine Fläche außerhalb eines Flächenplans), öffnet es <strong>Gehe zu Ansicht</strong>: die geeigneten Ansichten, der Grundriss der aktiven Ebene vorausgewählt. <strong>Ansicht öffnen</strong> öffnet die gewählte Ansicht und startet dort das Werkzeug; <strong>Abbrechen</strong> lässt alles, wie es war. <strong>Begrenzung bearbeiten</strong> eines Bodens, Dachs, einer Treppe oder eines Geländers fragt aus einem Schnitt oder einer Ansicht ebenso nach einem Grundriss seiner Ebene, und ein neuer Schnitt oder eine neue Ansicht lässt den Grundriss aktiv, in dem sie gezeichnet wurden. <strong>Verschieben</strong>, <strong>Kopieren</strong>, eine lineare <strong>Reihe</strong> und <strong>Spiegeln - Achse zeichnen</strong> funktionieren auch in Schnitten und Ansichten: entlang der Ansicht; die Achse ist die vertikale Ebene quer zur Ansicht durch ihren ersten Punkt, wie auch immer sie gezeichnet wird. Eine radiale <strong>Reihe</strong> funktioniert in Grundrissen und 3D-Ansichten: in einem Schnitt oder einer Ansicht bleibt sie gewählt, ihre Klicks bewirken aber nichts, und die Statusleiste verlangt <strong>Linear</strong>.</p>
 <h3 id="view-control-bar">Ansichtssteuerungsleiste</h3>
 <p>Am unteren Rand jedes Grundrisses, Schnitts, jeder Ansicht, jedes Detailausschnitts und jeder
 Zeichenansicht:</p>
@@ -1366,7 +1391,10 @@ Grenzen</strong> (dasselbe wie <span class="keys"><kbd class="key-home">Home</kb
 <p>Ein kleines Achsenkreuz in der unteren Ecke der 3D-Ansicht zeigt die Richtungen der Achsen: X rot,
 Y grün, Z blau. Eine gespeicherte 3D-Ansicht merkt sich, wo Sie sie verlassen haben.</p>
 <p>In 3D zoomt das Mausrad und hält dabei den Modellpunkt unter dem Cursor fest, und der Orbit dreht sich um die Mitte der Auswahl oder, ohne Auswahl, um den Punkt, auf den die Ansicht blickt.</p>
-<p>Der <strong>ViewCube</strong> in der oberen Ecke der 3D-Ansicht dreht sich mit dem Modell. Klicken Sie auf eine Fläche (<strong>OBEN</strong>, <strong>VORNE</strong>, <strong>RECHTS</strong>…), um von dieser Seite zu blicken, auf eine Kante, um zwischen zwei Seiten zu blicken, auf eine Ecke zwischen dreien; ziehen Sie den Würfel, um zu orbitieren. Das Haus darüber, <strong>Ausgangsansicht</strong>, führt zur Ausgangsansicht zurück; die Buchstaben <strong>N</strong>, <strong>O</strong>, <strong>S</strong>, <strong>W</strong> darunter blicken aus dieser Himmelsrichtung.</p>
+<p>Der <strong>ViewCube</strong> in der oberen Ecke der 3D-Ansicht dreht sich mit dem Modell. Jede Fläche hat ein Quadrat in der Mitte, einen Streifen entlang jeder Kante und ein kleines Quadrat an jeder Ecke. Das Quadrat in der Mitte blickt gerade auf diese Seite (<strong>OBEN</strong>, <strong>VORNE</strong>, <strong>RECHTS</strong>…); ein Kantenstreifen, der über beide angrenzenden Flächen läuft, blickt zwischen diesen zwei Seiten; ein Eckquadrat auf den drei Flächen um die Ecke blickt zwischen dreien. Der Bereich unter dem Zeiger leuchtet vor dem Klick auf, und die Ansicht dreht sich in einem kurzen Übergang dorthin. Ziehen Sie den Würfel, um zu orbitieren.</p>
+<p>Gerade von vorn gesehen ist der Würfel ein flaches Quadrat: Die Dreiecke außerhalb seiner vier Seiten drehen die Ansicht zur Fläche jenseits dieser Seite, und die zwei gebogenen Pfeile an der oberen rechten Ecke drehen das Bild um eine Vierteldrehung im oder gegen den Uhrzeigersinn.</p>
+<p>Ein flacher Kompassring liegt am Fuß des Würfels, mit <strong>N</strong>, <strong>O</strong>, <strong>S</strong>, <strong>W</strong> an den wahren Himmelsrichtungen; er dreht sich mit der Ansicht. Klicken Sie auf einen Buchstaben, um aus dieser Himmelsrichtung zu blicken. Ziehen Sie den Ring oder einen Buchstaben, um das Modell um die Senkrechte durch den Drehpunkt der Ansicht zu drehen; es folgt dem Zeiger entlang des Rings.</p>
+<p>Das Haus, <strong>Startansicht</strong>, führt zur Ausgangsansicht zurück. Klicken Sie mit der rechten Maustaste auf den Würfel oder auf die runde Schaltfläche unten rechts, um sein Menü zu öffnen: <strong>Startansicht</strong>; <strong>Aktuelle Ansicht als Startansicht festlegen</strong> (jede 3D-Ansicht hat ihre eigene, mit dem Projekt gespeichert); <strong>An Ansicht ausrichten ▸</strong> (ein Grundriss von oben, eine Ansicht oder ein Schnitt entlang seiner Linie, eine andere 3D-Ansicht aus ihrer Kamera); <strong>In Richtung ausrichten ▸</strong> (eine der 26 Richtungen des Würfels); <strong>Optionen…</strong>, das die Seite <strong>ViewCube</strong> der <strong>Optionen</strong> öffnet.</p>
 <h3 id="the-context-menu-of-a-view">Das Kontextmenü einer Ansicht</h3>
 <p>Klicken Sie mit der rechten Maustaste in eine Ansicht, während kein Werkzeug aktiv ist. Befindet
 sich der Cursor auf einem nicht ausgewählten Element, wird dieses zuerst ausgewählt. Das Menü
@@ -1381,8 +1409,7 @@ enthält:</p>
   Kategorien der Auswahl;</li>
 <li><strong>Sichtbarkeit/Grafik…</strong>.</li>
 </ul>
-<p>Solange ein Werkzeug aktiv ist, bewirkt ein Rechtsklick dasselbe wie <span class="keys"><kbd class="key-escape">Esc</kbd></span>: Er bricht den
-laufenden Schritt ab.</p>
+<p>Solange ein Werkzeug aktiv ist, öffnet ein Rechtsklick stattdessen das Menü des Werkzeugs, und der laufende Schritt bleibt: <strong>Abbrechen</strong> (was <span class="keys"><kbd class="key-escape">Esc</kbd></span> tut, das den Schritt weiterhin abbricht), <strong>Wiederholen [Befehl]</strong>, <strong>Fang-Überschreibungen ▸</strong> (der Fang des nächsten Punkts, wie die Tasten <code>SE</code>, <code>SM</code>, <code>SN</code>, <code>SI</code> und <code>SO</code>; nur in Grundrissen und Zeichenansichten), <strong>Bereich vergrößern</strong>, <strong>Verkleinern (2x)</strong>, <strong>Zoom auf Fenstergröße</strong>, <strong>Vorheriges Pan/Zoom</strong>, <strong>Nächstes Pan/Zoom</strong> und <strong>Eigenschaften</strong>. Es ist dasselbe in Grundrissen, Schnitten, Ansichten, 3D-Ansichten und auf Plänen, in beiden Oberflächenstilen.</p>
 <p>Oben im Menü startet <strong>Wiederholen [Befehl]</strong> das zuletzt benutzte Werkzeug erneut; <span class="keys"><kbd class="key-enter">Enter</kbd></span> tut dasselbe, wenn kein Werkzeug aktiv und die Befehlszeile leer ist. Das Menü ist in Grundrissen, Schnitten und 3D-Ansichten dasselbe.</p>
 <h2 id="command-line">Befehlszeile</h2>
 <p>Unter dem Zeichenbereich zeigt die Befehlszeile das Protokoll dessen, was getan wurde, das Neueste

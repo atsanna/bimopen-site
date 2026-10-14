@@ -704,7 +704,7 @@ confirmation : enregistrez-le d'abord si vous souhaitez le conserver.</p>
 vous indique qu'il y a des modifications non enregistrées.</p>
 </div>
 <h3 id="options">Options</h3>
-<p><strong>Menu de l'application ▸ Options</strong> comporte deux groupes :</p>
+<p><strong>Menu de l'application ▸ Options</strong> comporte, entre autres, ces réglages :</p>
 <table>
 <thead>
 <tr>
@@ -728,6 +728,31 @@ vous indique qu'il y a des modifications non enregistrées.</p>
 <td><strong>Graphisme ▸ Inverser la couleur d'arrière-plan</strong></td>
 <td>activé, désactivé</td>
 <td>Des vues avec un arrière-plan sombre et des lignes claires</td>
+</tr>
+<tr>
+<td><strong>ViewCube ▸ Taille du ViewCube</strong>, <strong>Opacité inactive</strong></td>
+<td><strong>Petit</strong>, <strong>Moyen</strong>, <strong>Grand</strong> ; de 0 % à 100 %</td>
+<td>La taille du cube, et combien il se voit pendant que le pointeur est ailleurs</td>
+</tr>
+<tr>
+<td><strong>ViewCube ▸ Afficher la boussole</strong></td>
+<td>activé, désactivé</td>
+<td>L'anneau de la boussole sous le cube</td>
+</tr>
+<tr>
+<td><strong>ViewCube ▸ Garder la scène verticale</strong></td>
+<td>activé, désactivé</td>
+<td>En faisant glisser le cube, le modèle ne se retourne jamais ; désactivé, la vue peut passer par-dessus le sommet</td>
+</tr>
+<tr>
+<td><strong>ViewCube ▸ Adapter à la vue</strong></td>
+<td>activé, désactivé</td>
+<td>Un clic sur le cube adapte aussi le modèle à la fenêtre</td>
+</tr>
+<tr>
+<td><strong>SteeringWheels ▸ Taille du disque</strong>, <strong>Opacité du disque</strong></td>
+<td><strong>Petit</strong>, <strong>Moyen</strong>, <strong>Grand</strong> ; de 0 % à 100 %</td>
+<td>La taille et le fond du disque de navigation</td>
 </tr>
 </tbody>
 </table>
@@ -918,7 +943,7 @@ n'est ouvert, ils sont grisés, et leur info-bulle indique d'ouvrir d'abord un p
 <tbody>
 <tr>
 <td><strong>Créer</strong></td>
-<td><strong>Vue 3D ▾</strong> (<strong>Vue 3D par défaut</strong>, <strong>Enregistrer la vue</strong>), <strong>Vues en plan ▾</strong> (<strong>Plan d'étage</strong>, <strong>Plan de surfaces</strong>), <strong>Dupliquer la vue ▾</strong> (<strong>Dupliquer</strong>, <strong>Dupliquer avec détails</strong>), <strong>Coupe</strong> <code>SE</code>, <strong>Élévation</strong> <code>EL</code>, <strong>Détail</strong> <code>DT</code> (un repère), <strong>Vue de dessin</strong> <code>VD</code>, <strong>Nomenclatures ▾</strong> (<strong>Nomenclature/Quantités</strong>, <strong>Nomenclatures prédéfinies</strong>)</td>
+<td><strong>Vue 3D ▾</strong> (<strong>Vue 3D par défaut</strong>, <strong>Enregistrer la vue</strong>), <strong>Vues en plan ▾</strong> (<strong>Plan d'étage</strong>, <strong>Plan de surfaces</strong>), <strong>Dupliquer la vue ▾</strong> (<strong>Dupliquer</strong>, <strong>Dupliquer avec détails</strong>), <strong>Coupe</strong> <code>SE</code>, <strong>Élévation ▾</strong> (<strong>Élévation</strong> <code>EL</code>, <strong>Élévation de charpente</strong>), <strong>Détail</strong> <code>DT</code> (un repère), <strong>Vue de dessin</strong> <code>VD</code>, <strong>Nomenclatures ▾</strong> (<strong>Nomenclature/Quantités</strong>, <strong>Métré des matériaux</strong>, <strong>Liste de feuilles</strong>, <strong>Bloc de notes</strong>, <strong>Nomenclatures prédéfinies</strong>)</td>
 </tr>
 <tr>
 <td><strong>Graphisme</strong></td>
@@ -1213,7 +1238,7 @@ prédéfinie s'ouvre d'un clic.</p>
 comporte <strong>Propriétés du type</strong>, <strong>Dupliquer…</strong>, <strong>Créer une instance</strong> (lance l'outil qui le
 place, avec ce type) et <strong>Supprimer</strong>.</p>
 <p>Après un clic dans l'arborescence du projet, le clavier s'y déplace : <span class="keys"><kbd class="key-arrow-up">Up</kbd></span> et <span class="keys"><kbd class="key-arrow-down">Down</kbd></span> passent d'une ligne à l'autre (les propriétés de la vue s'affichent dans la palette), <span class="keys"><kbd class="key-arrow-right">Right</kbd></span> ouvre une branche, <span class="keys"><kbd class="key-arrow-left">Left</kbd></span> la ferme ou remonte à la branche qui contient la ligne, <span class="keys"><kbd class="key-enter">Enter</kbd></span> ouvre la vue.</p>
-<p>Les vues vont aussi sur les feuilles d'ici. Faites glisser un plan, une coupe, une élévation, une vue de dessin, une légende, une vue 3D enregistrée ou une nomenclature sur la feuille ouverte : sa fenêtre suit le curseur et reste là où vous la lâchez. Ou lâchez-la sur le nom d'une feuille dans l'arbre : la feuille s'ouvre et la fenêtre suit le curseur jusqu'à votre clic. Pendant le glissement, l'arbre défile quand le curseur approche de son bord. Le menu contextuel d'une feuille propose <strong>Ajouter une vue…</strong>. Une vue déjà placée sur une feuille est refusée, avec la raison dans la ligne de commande ; légendes et nomenclatures peuvent aller sur plusieurs feuilles. Une vue 3D enregistrée apparaît sur la feuille avec les arêtes vues depuis sa caméra.</p>
+<p>Les vues vont aussi sur les feuilles d'ici. Faites glisser un plan, une coupe, une élévation, une vue de dessin, une légende, une vue 3D enregistrée ou une nomenclature sur la feuille ouverte : sa fenêtre suit le curseur et reste là où vous la lâchez. Ou lâchez-la sur le nom d'une feuille dans l'arbre : la feuille s'ouvre et la fenêtre suit le curseur jusqu'à votre clic. Pendant le glissement, l'arbre défile quand le curseur approche de son bord. Le menu contextuel d'une feuille propose <strong>Ajouter une vue…</strong>. Les vues d'une feuille sont listées dessous ; le menu contextuel d'une vue offre <strong>Supprimer de la feuille</strong>, et celui de <strong>Feuilles (toutes)</strong> <strong>Nouvelle feuille…</strong>. Dans une vue 3D, le menu contextuel offre aussi <strong>Zoom sur les étendues 3D</strong> : tout le modèle, même les éléments masqués dans la vue. Une vue déjà placée sur une feuille est refusée, avec la raison dans la ligne de commande ; légendes et nomenclatures peuvent aller sur plusieurs feuilles. Une vue 3D enregistrée apparaît sur la feuille avec les arêtes vues depuis sa caméra.</p>
 <p>Le menu contextuel d'un plan, d'une coupe ou d'une vue de dessin propose <strong>Rechercher les vues de référence</strong> : les vues qui montrent son symbole et les feuilles où elle se trouve ; <strong>Atteindre la vue</strong> ouvre celle choisie.</p>
 <h2 id="drawing-area-and-view-windows">Zone de dessin et fenêtres de vue</h2>
 <p>Chaque vue que vous ouvrez est une fenêtre dans la zone de dessin. Une vue ouverte à nouveau passe
@@ -1261,8 +1286,8 @@ au premier plan ; au moins une fenêtre reste toujours ouverte. <strong>Vue ▸ 
 autres se contentent d'afficher le modèle. En <strong>Mosaïque</strong> et en <strong>Cascade</strong>, le <strong>×</strong> dans la
 barre de titre d'une fenêtre la ferme.</p>
 <p><strong>Mosaïque</strong> place la fenêtre active en haut à gauche et les autres ensuite, de la plus récemment active ; <strong>Changer de fenêtre</strong> les liste dans le même ordre. Si vous disposez à nouveau après avoir travaillé dans une autre fenêtre, celle-ci passe en premier.</p>
-<p><strong>Interface utilisateur ▸ Raccourcis clavier</strong> liste les commandes avec leurs raccourcis. Cherchez une commande par son nom, ou utilisez <strong>Filtrer</strong> (<strong>Tout</strong>, <strong>Tous les éléments définis</strong>, <strong>Tous les éléments non définis</strong>, <strong>Tous les éléments réservés</strong>) ; sélectionnez une commande, tapez les touches dans <strong>Appuyez sur les nouvelles touches</strong> et cliquez sur <strong>Affecter</strong>. Les touches qu'une autre commande possède déjà sont refusées, avec la raison ; <strong>Supprimer</strong> enlève les touches que vous avez ajoutées. Vos raccourcis sont conservés pour les sessions suivantes et lancent la commande quand vous les tapez, comme ceux prévus.</p>
-<p>Un outil ne change jamais la vue active de lui-même. Lancé dans une vue où il ne peut pas travailler (un toit ou une pièce dans une vue 3D, un niveau dans un plan, une surface hors d'un plan de surfaces), il ouvre <strong>Atteindre la vue</strong> : les vues adaptées, le plan du niveau actif choisi d'avance. <strong>Ouvrir la vue</strong> ouvre la vue choisie et y lance l'outil ; <strong>Annuler</strong> laisse tout tel quel. <strong>Modifier le contour</strong> d'un sol, d'un toit, d'un escalier ou d'un garde-corps, depuis une coupe ou une élévation, demande de même un plan de son niveau, et une nouvelle coupe ou élévation laisse actif le plan où elle a été dessinée. <strong>Déplacer</strong> et <strong>Copier</strong> fonctionnent aussi dans les coupes et les élévations, le long de la vue.</p>
+<p><strong>Interface utilisateur ▸ Raccourcis clavier</strong> liste les commandes avec leurs raccourcis. Cherchez une commande par son nom, ou utilisez <strong>Filtrer</strong> (<strong>Tout</strong>, <strong>Tous les éléments définis</strong>, <strong>Tous les éléments non définis</strong>, <strong>Tous les éléments réservés</strong>) ; sélectionnez une commande, tapez les touches dans <strong>Appuyez sur les nouvelles touches</strong> et cliquez sur <strong>Affecter</strong>. Les mêmes touches peuvent aller à plusieurs commandes : tapées dans la zone de dessin, la barre d'état montre la première, les flèches passent aux autres et <span class="keys"><kbd class="key-enter">Enter</kbd></span> ou <span class="keys"><kbd class="key-space">Space</kbd></span> exécute celle affichée ; <strong>Exporter…</strong> écrit tous les raccourcis dans un fichier XML et <strong>Importer…</strong> relit un tel fichier comme vos raccourcis (un fichier qui ne nomme aucune commande de BIMopen est refusé, et vos raccourcis restent) ; <strong>Supprimer</strong> enlève les touches que vous avez ajoutées. Vos raccourcis sont conservés pour les sessions suivantes et lancent la commande quand vous les tapez, comme ceux prévus.</p>
+<p>Un outil ne change jamais la vue active de lui-même. Lancé dans une vue où il ne peut pas travailler (un toit ou une pièce dans une vue 3D, un niveau dans un plan, une surface hors d'un plan de surfaces), il ouvre <strong>Atteindre la vue</strong> : les vues adaptées, le plan du niveau actif choisi d'avance. <strong>Ouvrir la vue</strong> ouvre la vue choisie et y lance l'outil ; <strong>Annuler</strong> laisse tout tel quel. <strong>Modifier le contour</strong> d'un sol, d'un toit, d'un escalier ou d'un garde-corps, depuis une coupe ou une élévation, demande de même un plan de son niveau, et une nouvelle coupe ou élévation laisse actif le plan où elle a été dessinée. <strong>Déplacer</strong>, <strong>Copier</strong>, un <strong>Réseau</strong> linéaire et <strong>Symétrie - Dessiner l'axe</strong> fonctionnent aussi dans les coupes et les élévations : le long de la vue ; l'axe est le plan vertical perpendiculaire à la vue passant par son premier point, quelle que soit la façon dont il est dessiné. Un <strong>Réseau</strong> radial fonctionne dans les plans et les vues 3D : dans une coupe ou une élévation il reste choisi, mais ses clics ne font rien et la barre d'état demande <strong>Linéaire</strong>.</p>
 <h3 id="view-control-bar">Barre de contrôle d'affichage</h3>
 <p>En bas de chaque plan, coupe, élévation, repère et vue de dessin :</p>
 <table>
@@ -1363,7 +1388,10 @@ pas de barre de contrôle d'affichage : ses vues ont leur propre échelle.</p>
 <p>Un petit trièdre dans le coin inférieur de la vue 3D indique les directions des axes : X en rouge,
 Y en vert, Z en bleu. Une vue 3D enregistrée mémorise l'endroit où vous l'avez laissée.</p>
 <p>En 3D, la molette zoome en gardant fixe le point du modèle sous le curseur, et l'orbite tourne autour du centre de la sélection, ou autour du point visé par la vue quand rien n'est sélectionné.</p>
-<p>Le <strong>ViewCube</strong>, dans le coin supérieur de la vue 3D, tourne avec le modèle. Cliquez sur une face (<strong>HAUT</strong>, <strong>AVANT</strong>, <strong>DROITE</strong>…) pour regarder de ce côté, sur une arête pour regarder entre deux côtés, sur un coin entre trois ; faites glisser le cube pour orbiter. La maison au-dessus, <strong>Vue d'accueil</strong>, revient à la vue de départ ; les lettres <strong>N</strong>, <strong>E</strong>, <strong>S</strong>, <strong>O</strong> en dessous regardent depuis ce point cardinal.</p>
+<p>Le <strong>ViewCube</strong>, dans le coin supérieur de la vue 3D, tourne avec le modèle. Chaque face a un carré au centre, une bande le long de chaque arête et un petit carré à chaque coin. Le carré au centre regarde droit vers ce côté (<strong>HAUT</strong>, <strong>AVANT</strong>, <strong>DROITE</strong>…) ; la bande d'une arête, qui court sur les deux faces voisines, regarde entre ces deux côtés ; le petit carré d'un coin, sur les trois faces autour, regarde entre trois. La zone sous le pointeur s'éclaire avant le clic, et la vue tourne jusque-là en une brève transition. Faites glisser le cube pour orbiter.</p>
+<p>Vu de face, le cube est un carré plat : les triangles à l'extérieur de ses quatre côtés tournent la vue vers la face au-delà de ce côté, et les deux flèches courbes au coin supérieur droit tournent l'image d'un quart de tour dans le sens horaire ou antihoraire.</p>
+<p>Un anneau plat de boussole repose à la base du cube, avec <strong>N</strong>, <strong>E</strong>, <strong>S</strong>, <strong>O</strong> aux vrais points cardinaux ; il tourne avec la vue. Cliquez sur une lettre pour regarder depuis ce point cardinal. Faites glisser l'anneau, ou une lettre, pour tourner le modèle autour de la verticale passant par le point autour duquel tourne la vue, en suivant le pointeur le long de l'anneau.</p>
+<p>La maison, <strong>Vue de départ</strong>, revient à la vue de départ. Cliquez avec le bouton droit sur le cube, ou sur le bouton rond en bas à droite, pour son menu : <strong>Vue de départ</strong> ; <strong>Définir la vue actuelle comme vue de départ</strong> (chaque vue 3D a la sienne, enregistrée avec le projet) ; <strong>Orienter selon la vue ▸</strong> (un plan vu d'en haut, une élévation ou une coupe le long de sa ligne, une autre vue 3D depuis sa caméra) ; <strong>Orienter selon une direction ▸</strong> (l'une des 26 directions du cube) ; <strong>Options…</strong>, qui ouvre la page <strong>ViewCube</strong> des <strong>Options</strong>.</p>
 <h3 id="the-context-menu-of-a-view">Le menu contextuel d'une vue</h3>
 <p>Cliquez avec le bouton droit dans une vue lorsqu'aucun outil n'est actif. Si le curseur se trouve
 sur un élément non sélectionné, l'élément est d'abord sélectionné. Le menu comporte :</p>
@@ -1377,7 +1405,7 @@ sur un élément non sélectionné, l'élément est d'abord sélectionné. Le me
   les catégories de la sélection ;</li>
 <li><strong>Visibilité/Graphismes…</strong>.</li>
 </ul>
-<p>Lorsqu'un outil est actif, un clic droit fait la même chose qu'<span class="keys"><kbd class="key-escape">Esc</kbd></span> : il annule l'étape en cours.</p>
+<p>Lorsqu'un outil est actif, un clic droit ouvre plutôt le menu de l'outil, et l'étape en cours reste : <strong>Annuler</strong> (ce que fait <span class="keys"><kbd class="key-escape">Esc</kbd></span>, qui annule toujours l'étape), <strong>Répéter [commande]</strong>, <strong>Remplacements d'accrochage ▸</strong> (l'accrochage du point suivant, comme les touches <code>SE</code>, <code>SM</code>, <code>SN</code>, <code>SI</code> et <code>SO</code> ; seulement dans les plans et les vues de dessin), <strong>Zoom sur une région</strong>, <strong>Zoom arrière (2x)</strong>, <strong>Zoom adapté à la fenêtre</strong>, <strong>Panoramique/zoom précédent</strong>, <strong>Panoramique/zoom suivant</strong> et <strong>Propriétés</strong>. C'est le même dans les plans, les coupes, les élévations, les vues 3D et sur les feuilles, dans les deux styles d'interface.</p>
 <p>En haut du menu, <strong>Répéter [commande]</strong> relance le dernier outil utilisé ; <span class="keys"><kbd class="key-enter">Enter</kbd></span> fait de même quand aucun outil n'est actif et que la ligne de commande est vide. Le menu est le même dans les plans, les coupes et les vues 3D.</p>
 <h2 id="command-line">Ligne de commande</h2>
 <p>Sous la zone de dessin, la ligne de commande affiche le journal de ce qui a été fait, le plus récent

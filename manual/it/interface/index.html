@@ -704,7 +704,7 @@ esempio</strong>. L'asterisco dopo il nome del progetto nella barra del titolo i
 modifiche non salvate.</p>
 </div>
 <h3 id="options">Opzioni</h3>
-<p><strong>Menu dell'applicazione ▸ Opzioni</strong> ha due gruppi:</p>
+<p><strong>Menu dell'applicazione ▸ Opzioni</strong> ha, tra le altre, queste impostazioni:</p>
 <table>
 <thead>
 <tr>
@@ -728,6 +728,31 @@ modifiche non salvate.</p>
 <td><strong>Grafica ▸ Inverti colore sfondo</strong></td>
 <td>attivo, disattivo</td>
 <td>Viste con sfondo scuro e linee chiare</td>
+</tr>
+<tr>
+<td><strong>ViewCube ▸ Dimensione ViewCube</strong>, <strong>Opacità quando inattivo</strong></td>
+<td><strong>Piccolo</strong>, <strong>Medio</strong>, <strong>Grande</strong>; da 0 % a 100 %</td>
+<td>La dimensione del cubo, e quanto si vede mentre il puntatore è altrove</td>
+</tr>
+<tr>
+<td><strong>ViewCube ▸ Mostra bussola</strong></td>
+<td>attivo, disattivo</td>
+<td>L'anello della bussola sotto il cubo</td>
+</tr>
+<tr>
+<td><strong>ViewCube ▸ Mantieni scena in posizione verticale</strong></td>
+<td>attivo, disattivo</td>
+<td>Trascinando il cubo il modello non si capovolge mai; disattivo, la vista può passare oltre la sommità</td>
+</tr>
+<tr>
+<td><strong>ViewCube ▸ Adatta alla vista</strong></td>
+<td>attivo, disattivo</td>
+<td>Un clic sul cubo adatta anche il modello alla finestra</td>
+</tr>
+<tr>
+<td><strong>SteeringWheels ▸ Dimensione del disco</strong>, <strong>Opacità del disco</strong></td>
+<td><strong>Piccolo</strong>, <strong>Medio</strong>, <strong>Grande</strong>; da 0 % a 100 %</td>
+<td>La dimensione e lo sfondo del disco di navigazione</td>
 </tr>
 </tbody>
 </table>
@@ -915,7 +940,7 @@ una sono in grigio, e il loro suggerimento dice di aprire prima una pianta delle
 <tbody>
 <tr>
 <td><strong>Crea</strong></td>
-<td><strong>Vista 3D ▾</strong> (<strong>Vista 3D predefinita</strong>, <strong>Salva vista</strong>), <strong>Viste di pianta ▾</strong> (<strong>Pianta del pavimento</strong>, <strong>Pianta delle aree</strong>), <strong>Duplica vista ▾</strong> (<strong>Duplica</strong>, <strong>Duplica con dettagli</strong>), <strong>Sezione</strong> <code>SE</code>, <strong>Prospetto</strong> <code>EL</code>, <strong>Dettaglio</strong> <code>DT</code> (un richiamo), <strong>Vista di disegno</strong> <code>VD</code>, <strong>Abachi ▾</strong> (<strong>Abaco/Quantità</strong>, <strong>Abachi predefiniti</strong>)</td>
+<td><strong>Vista 3D ▾</strong> (<strong>Vista 3D predefinita</strong>, <strong>Salva vista</strong>), <strong>Viste di pianta ▾</strong> (<strong>Pianta del pavimento</strong>, <strong>Pianta delle aree</strong>), <strong>Duplica vista ▾</strong> (<strong>Duplica</strong>, <strong>Duplica con dettagli</strong>), <strong>Sezione</strong> <code>SE</code>, <strong>Prospetto ▾</strong> (<strong>Prospetto</strong> <code>EL</code>, <strong>Prospetto telaio</strong>), <strong>Dettaglio</strong> <code>DT</code> (un richiamo), <strong>Vista di disegno</strong> <code>VD</code>, <strong>Abachi ▾</strong> (<strong>Abaco/Quantità</strong>, <strong>Computo dei materiali</strong>, <strong>Elenco tavole</strong>, <strong>Blocco annotazioni</strong>, <strong>Abachi predefiniti</strong>)</td>
 </tr>
 <tr>
 <td><strong>Grafica</strong></td>
@@ -1207,7 +1232,7 @@ clic.</p>
 destro ha <strong>Proprietà del tipo</strong>, <strong>Duplica…</strong>, <strong>Crea istanza</strong> (avvia lo strumento che lo
 posiziona, con quel tipo) ed <strong>Elimina</strong>.</p>
 <p>Dopo un clic nel Browser di progetto, la tastiera si muove al suo interno: <span class="keys"><kbd class="key-arrow-up">Up</kbd></span> e <span class="keys"><kbd class="key-arrow-down">Down</kbd></span> passano da una riga all'altra (le proprietà della vista compaiono nella tavolozza), <span class="keys"><kbd class="key-arrow-right">Right</kbd></span> apre un ramo, <span class="keys"><kbd class="key-arrow-left">Left</kbd></span> lo chiude o risale al ramo che contiene la riga, <span class="keys"><kbd class="key-enter">Enter</kbd></span> apre la vista.</p>
-<p>Da qui le viste vanno anche sulle tavole. Trascina una pianta, una sezione, un prospetto, una vista di disegno, una legenda, una vista 3D salvata o un abaco sulla tavola aperta: il suo riquadro segue il cursore e resta dove lo rilasci. Oppure rilascialo sul nome di una tavola nell'albero: la tavola si apre e il riquadro segue il cursore finché non fai clic. Mentre trascini, l'albero scorre quando il cursore si avvicina al bordo. Il menu del tasto destro di una tavola ha <strong>Aggiungi vista…</strong>. Una vista già su una tavola viene rifiutata, con il motivo nella riga di comando; legende e abachi possono stare su più tavole. Una vista 3D salvata appare sulla tavola con gli spigoli visti dalla sua camera.</p>
+<p>Da qui le viste vanno anche sulle tavole. Trascina una pianta, una sezione, un prospetto, una vista di disegno, una legenda, una vista 3D salvata o un abaco sulla tavola aperta: il suo riquadro segue il cursore e resta dove lo rilasci. Oppure rilascialo sul nome di una tavola nell'albero: la tavola si apre e il riquadro segue il cursore finché non fai clic. Mentre trascini, l'albero scorre quando il cursore si avvicina al bordo. Il menu del tasto destro di una tavola ha <strong>Aggiungi vista…</strong>. Le viste su una tavola sono elencate sotto di essa; il menu del tasto destro di una vista ha <strong>Rimuovi da tavola</strong>, e quello di <strong>Tavole (tutto)</strong> ha <strong>Nuova tavola…</strong>. In una vista 3D il menu del tasto destro ha anche <strong>Ingrandisci estensioni 3D</strong>: tutto il modello, anche gli elementi nascosti nella vista. Una vista già su una tavola viene rifiutata, con il motivo nella riga di comando; legende e abachi possono stare su più tavole. Una vista 3D salvata appare sulla tavola con gli spigoli visti dalla sua camera.</p>
 <p>Il menu del tasto destro di una pianta, di una sezione o di una vista di disegno ha <strong>Trova viste di riferimento</strong>: le viste che mostrano il suo simbolo e le tavole su cui si trova; <strong>Vai a vista</strong> apre quella scelta.</p>
 <h2 id="drawing-area-and-view-windows">Area di disegno e finestre di vista</h2>
 <p>Ogni vista che apri è una finestra nell'area di disegno. Una vista aperta di nuovo passa in primo
@@ -1255,8 +1280,8 @@ piano; almeno una finestra resta sempre aperta. <strong>Vista ▸ Finestre</stro
 altre mostrano soltanto il modello. In <strong>Affianca</strong> e <strong>Sovrapponi</strong>, la <strong>×</strong> sulla barra del
 titolo di una finestra la chiude.</p>
 <p><strong>Affianca</strong> mette la finestra attiva in alto a sinistra e le altre dopo, dalla più recente; <strong>Scambia finestre</strong> le elenca nello stesso ordine. Se affianchi di nuovo dopo aver lavorato in un'altra finestra, quella passa per prima.</p>
-<p><strong>Interfaccia utente ▸ Tasti di scelta rapida</strong> elenca i comandi con le loro scorciatoie. Cerca un comando per nome, oppure usa <strong>Filtra</strong> (<strong>Tutto</strong>, <strong>Tutti gli elementi definiti</strong>, <strong>Tutti gli elementi non definiti</strong>, <strong>Tutti gli elementi riservati</strong>); seleziona un comando, digita i tasti in <strong>Premere nuovi tasti</strong> e fai clic su <strong>Assegna</strong>. I tasti che un altro comando ha già vengono rifiutati, con il motivo; <strong>Rimuovi</strong> toglie i tasti che hai aggiunto. Le tue scorciatoie restano nelle sessioni successive e avviano il comando quando le digiti, come quelle predefinite.</p>
-<p>Uno strumento non cambia mai da solo la vista attiva. Avviato in una vista in cui non può lavorare (un tetto o un locale in una vista 3D, un livello in una pianta, un'area fuori da una pianta delle aree), apre <strong>Vai a vista</strong>: le viste adatte, con la pianta del livello attivo già scelta. <strong>Apri vista</strong> apre la vista scelta e avvia lì lo strumento; <strong>Annulla</strong> lascia tutto com'era. <strong>Modifica contorno</strong> di un pavimento, un tetto, una scala o una ringhiera, da una sezione o un prospetto, chiede allo stesso modo una pianta del suo livello, e una nuova sezione o un nuovo prospetto lasciano attiva la pianta in cui li hai disegnati. <strong>Sposta</strong> e <strong>Copia</strong> funzionano anche in sezioni e prospetti, lungo la vista.</p>
+<p><strong>Interfaccia utente ▸ Tasti di scelta rapida</strong> elenca i comandi con le loro scorciatoie. Cerca un comando per nome, oppure usa <strong>Filtra</strong> (<strong>Tutto</strong>, <strong>Tutti gli elementi definiti</strong>, <strong>Tutti gli elementi non definiti</strong>, <strong>Tutti gli elementi riservati</strong>); seleziona un comando, digita i tasti in <strong>Premere nuovi tasti</strong> e fai clic su <strong>Assegna</strong>. Gli stessi tasti possono andare a più comandi: digitati nell'area di disegno, la barra di stato mostra il primo, i tasti freccia passano agli altri e <span class="keys"><kbd class="key-enter">Enter</kbd></span> o <span class="keys"><kbd class="key-space">Space</kbd></span> esegue quello mostrato; <strong>Esporta…</strong> scrive tutte le scorciatoie in un file XML e <strong>Importa…</strong> rilegge un file così come le tue scorciatoie (un file che non nomina nessun comando di BIMopen è rifiutato, e le tue scorciatoie restano); <strong>Rimuovi</strong> toglie i tasti che hai aggiunto. Le tue scorciatoie restano nelle sessioni successive e avviano il comando quando le digiti, come quelle predefinite.</p>
+<p>Uno strumento non cambia mai da solo la vista attiva. Avviato in una vista in cui non può lavorare (un tetto o un locale in una vista 3D, un livello in una pianta, un'area fuori da una pianta delle aree), apre <strong>Vai a vista</strong>: le viste adatte, con la pianta del livello attivo già scelta. <strong>Apri vista</strong> apre la vista scelta e avvia lì lo strumento; <strong>Annulla</strong> lascia tutto com'era. <strong>Modifica contorno</strong> di un pavimento, un tetto, una scala o una ringhiera, da una sezione o un prospetto, chiede allo stesso modo una pianta del suo livello, e una nuova sezione o un nuovo prospetto lasciano attiva la pianta in cui li hai disegnati. <strong>Sposta</strong>, <strong>Copia</strong>, una <strong>Serie</strong> lineare e <strong>Copia speculare - Disegna asse</strong> funzionano anche in sezioni e prospetti: lungo la vista; l'asse è il piano verticale perpendicolare alla vista per il suo primo punto, comunque sia disegnato. Una <strong>Serie</strong> radiale funziona nelle piante e nelle viste 3D: in una sezione o in un prospetto resta scelta, ma i suoi clic non fanno nulla e la barra di stato chiede <strong>Lineare</strong>.</p>
 <h3 id="view-control-bar">Barra di controllo della vista</h3>
 <p>In basso in ogni pianta, sezione, prospetto, richiamo e vista di disegno:</p>
 <table>
@@ -1358,7 +1383,10 @@ adattare</strong> (lo stesso di <span class="keys"><kbd class="key-home">Home</k
 <p>Un piccolo treppiede nell'angolo inferiore della vista 3D mostra le direzioni degli assi: X
 rosso, Y verde, Z blu. Una vista 3D salvata ricorda dove l'hai lasciata.</p>
 <p>In 3D la rotella fa lo zoom tenendo fermo il punto del modello sotto il cursore, e l'orbita gira attorno al centro della selezione, o attorno al punto inquadrato quando non c'è selezione.</p>
-<p>Il <strong>ViewCube</strong>, nell'angolo in alto della vista 3D, ruota con il modello. Fai clic su una faccia (<strong>SUPERIORE</strong>, <strong>ANTERIORE</strong>, <strong>DESTRA</strong>…) per guardare da quel lato, su uno spigolo per guardare da tra due lati, su un vertice da tra tre; trascina il cubo per orbitare. La casa sopra di esso, <strong>Vista iniziale</strong>, riporta alla vista di partenza; le lettere <strong>N</strong>, <strong>E</strong>, <strong>S</strong>, <strong>O</strong> sotto di esso guardano da quel punto cardinale.</p>
+<p>Il <strong>ViewCube</strong>, nell'angolo in alto della vista 3D, ruota con il modello. Ogni faccia ha un quadrato al centro, una striscia lungo ogni spigolo e un quadratino a ogni vertice. Il quadrato al centro guarda dritto quel lato (<strong>SUPERIORE</strong>, <strong>ANTERIORE</strong>, <strong>DESTRA</strong>…); la striscia di uno spigolo, che corre sulle due facce accanto, guarda da tra quei due lati; il quadratino di un vertice, sulle tre facce intorno, guarda da tra tre. La zona sotto il puntatore si illumina prima del clic, e la vista ruota fin lì in una breve transizione. Trascina il cubo per orbitare.</p>
+<p>Visto di fronte, il cubo è un quadrato piatto: i triangoli fuori dai suoi quattro lati ruotano la vista verso la faccia oltre quel lato, e le due frecce curve all'angolo in alto a destra ruotano l'immagine di un quarto di giro in senso orario o antiorario.</p>
+<p>Un anello piatto della bussola giace alla base del cubo, con <strong>N</strong>, <strong>E</strong>, <strong>S</strong>, <strong>O</strong> nei veri punti cardinali; ruota con la vista. Fai clic su una lettera per guardare da quel punto cardinale. Trascina l'anello, o una lettera, per ruotare il modello attorno alla verticale per il punto attorno a cui gira la vista, seguendo il puntatore lungo l'anello.</p>
+<p>La casa, <strong>Vista iniziale</strong>, riporta alla vista di partenza. Fai clic destro sul cubo, o sul pulsante tondo in basso a destra, per il suo menu: <strong>Vista iniziale</strong>; <strong>Imposta vista corrente come iniziale</strong> (ogni vista 3D ha la sua, salvata con il progetto); <strong>Orienta su vista ▸</strong> (una pianta dall'alto, un prospetto o una sezione lungo la sua linea, un'altra vista 3D dalla sua camera); <strong>Orienta su direzione ▸</strong> (una qualsiasi delle 26 direzioni del cubo); <strong>Opzioni…</strong>, che apre la pagina <strong>ViewCube</strong> di <strong>Opzioni</strong>.</p>
 <h3 id="the-context-menu-of-a-view">Il menu contestuale di una vista</h3>
 <p>Fai clic destro in una vista quando nessuno strumento è attivo. Se il cursore è su un elemento non
 selezionato, l'elemento viene prima selezionato. Il menu contiene:</p>
@@ -1372,8 +1400,7 @@ selezionato, l'elemento viene prima selezionato. Il menu contiene:</p>
   della selezione;</li>
 <li><strong>Visibilità/Grafica…</strong>.</li>
 </ul>
-<p>Mentre uno strumento è attivo, un clic destro fa ciò che fa <span class="keys"><kbd class="key-escape">Esc</kbd></span>: annulla il passaggio in
-corso.</p>
+<p>Mentre uno strumento è attivo, un clic destro apre invece il menu dello strumento, e il passaggio in corso resta: <strong>Annulla</strong> (ciò che fa <span class="keys"><kbd class="key-escape">Esc</kbd></span>, che annulla ancora il passaggio), <strong>Ripeti [comando]</strong>, <strong>Sostituzioni di snap ▸</strong> (lo snap del prossimo punto, come i tasti <code>SE</code>, <code>SM</code>, <code>SN</code>, <code>SI</code> e <code>SO</code>; solo nelle piante e nelle viste di disegno), <strong>Zoom su regione</strong>, <strong>Zoom indietro (2x)</strong>, <strong>Adatta alla finestra</strong>, <strong>Pan/Zoom precedente</strong>, <strong>Pan/Zoom successivo</strong> e <strong>Proprietà</strong>. È lo stesso nelle piante, nelle sezioni, nei prospetti, nelle viste 3D e sulle tavole, in entrambi gli stili dell'interfaccia.</p>
 <p>In cima al menu, <strong>Ripeti [comando]</strong> riavvia l'ultimo strumento usato; <span class="keys"><kbd class="key-enter">Enter</kbd></span> fa lo stesso quando nessuno strumento è attivo e la riga di comando è vuota. Il menu è lo stesso in piante, sezioni e viste 3D.</p>
 <h2 id="command-line">Riga di comando</h2>
 <p>Sotto l'area di disegno, la riga di comando mostra il registro di ciò che è stato fatto, il più

@@ -230,7 +230,7 @@
     <div class="wrap">
       <span class="eyebrow" data-i18n="dw.kicker">Versione alpha</span>
       <h1 id="titolo" data-i18n="dw.h1">Scarica BIMopen</h1>
-      <p class="latest"><span data-i18n="dw.latest">Ultima versione:</span> <b data-ver>0.1.0-alpha.2</b> · <time data-ver-date datetime="2026-10-15">2026-10-15</time></p>
+      <p class="latest"><span data-i18n="dw.latest">Ultima versione:</span> <b data-ver>0.1.0-alpha.3</b> · <time data-ver-date datetime="2026-10-15">2026-10-15</time></p>
 
       <div class="warn" role="note" aria-labelledby="avviso-t">
         <h2 id="avviso-t">
@@ -291,6 +291,20 @@
       <p class="sub" data-i18n="dw.nv.p">Le ultime versioni, dalla più recente.</p>
       <div class="rels">
       <!-- novita -->
+      <article class="rel">
+        <h3><span class="ver">0.1.0-alpha.3</span> <time datetime="2026-10-15">2026-10-15</time></h3>
+        <h4 data-i18n="nv.changed">Modificato</h4>
+        <ul>
+          <li data-i18n="nv.v0_1_0_alpha_3.changed.1">Lo stile di interfaccia BIMopen al primo avvio; lo stile Classica resta una volta scelto in Opzioni.</li>
+          <li data-i18n="nv.v0_1_0_alpha_3.changed.2">In uno schizzo, l'estremo di una linea selezionata da sola si trascina da solo; con una catena selezionata (Tab) gli estremi in cui le sue linee si incontrano si trascinano insieme.</li>
+          <li data-i18n="nv.v0_1_0_alpha_3.changed.3">Le impostazioni di snap si aprono da entrambi gli stili di interfaccia; le sostituzioni di snap indicano dove si possono usare.</li>
+        </ul>
+        <h4 data-i18n="nv.fixed">Corretto</h4>
+        <ul>
+          <li data-i18n="nv.v0_1_0_alpha_3.fixed.1">Un arco smusso mantiene il tipo delle linee di schizzo che raccorda (un contorno resta un contorno, non un'alzata).</li>
+          <li data-i18n="nv.v0_1_0_alpha_3.fixed.2">Il valore digitato in una quota sposta solo muri, griglie, porte, finestre e linee di dettaglio.</li>
+        </ul>
+      </article>
       <article class="rel">
         <h3><span class="ver">0.1.0-alpha.2</span> <time datetime="2026-10-15">2026-10-15</time></h3>
         <h4 data-i18n="nv.added">Aggiunto</h4>
@@ -384,7 +398,7 @@
     });
   });
 </script>
-<script src="lingua.js?v=8e036da1"></script>
+<script src="lingua.js?v=da7ea843"></script>
 <script>
   // tema: scuro finché non si sceglie; poi chiaro o scuro, ricordato in questo browser
   (function () {

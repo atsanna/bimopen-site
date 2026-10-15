@@ -12,7 +12,7 @@ This repository holds the **built** website of BIMopen, served by GitHub Pages, 
 **test builds** of the program in its [Releases](https://github.com/atsanna/bimopen-site/releases).
 It contains no source code: only the pages, their translations and images, as they are published.
 
-**BIMopen** is a BIM modeller written in pure Rust, in the spirit of Autodesk® Revit®: you model
+**BIMopen** is a BIM modeller written in pure Rust: you model
 the building (levels, layered walls, doors and windows, curtain walls, floors, roofs, stairs,
 rooms) and plans, sections, elevations, 3D views, schedules and sheets are views of the same
 model, kept in step. It opens and exports IFC (IFC2x3 and IFC4), prints vector PDFs, exports

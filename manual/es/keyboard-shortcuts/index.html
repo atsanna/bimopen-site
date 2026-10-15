@@ -19,7 +19,7 @@
 <link href="../assets/css/theme_dark_mode.css" rel="stylesheet"/>
 <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
-<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="bimopen" dir="ltr">
+<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="slate" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
@@ -55,13 +55,13 @@
 </div>
 </div>
 <form class="md-header__option" data-md-component="palette">
-<input aria-label="Cambiar al tema oscuro" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="custom" data-md-color-scheme="bimopen" id="__palette_0" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Cambiar al tema oscuro">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
-</label>
-<input aria-label="Cambiar al tema claro" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Cambiar al tema claro">
+<input aria-label="Cambiar al tema claro" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Cambiar al tema claro">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Cambiar al tema oscuro" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="bimopen" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Cambiar al tema oscuro">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
 </label>
 </form>
 <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
@@ -550,7 +550,7 @@ finaliza el boceto cuando tiene suficientes puntos.</p>
 argumentos, un atajo inicia la herramienta o abre el cuadro de diálogo; con argumentos, ejecuta el
 comando de inmediato (consulta <a href="../command-line-and-mcp/">Línea de comandos y MCP</a>).</p>
 <p>Con el cursor en el área de dibujo, las letras van a la línea de comandos (en el estilo BIMopen, a la búsqueda), y un atajo actúa en cuanto se escribe, sin <span class="keys"><kbd class="key-enter">Enter</kbd></span>, cuando ningún atajo ni nombre de comando más largo empieza por sus letras: <code>VR</code> (rango de vista), <code>WT</code> (mosaico), <code>ZE</code>, <code>ZF</code>, <code>ZA</code>, <code>ZP</code>, <code>ZR</code>, <code>ZO</code>, <code>ZS</code>, <code>HR</code>, <code>HH</code>, <code>HC</code>, <code>IC</code>, <code>DL</code> (línea de detalle), <code>RT</code> (etiqueta de habitación), <code>TG</code> (etiquetar por categoría), <code>TX</code>, <code>CC</code> (copiar), <code>MV</code>, <code>RM</code>, <code>LL</code> (nivel), <code>RC</code> (nube de revisión), <code>PP</code> (muestra u oculta <strong>Propiedades</strong>), <code>PT</code>, <code>RP</code> y los atajos que haya añadido. Los demás empiezan nombres más largos y esperan la letra siguiente, un espacio (siguen argumentos) o <span class="keys"><kbd class="key-enter">Enter</kbd></span>: <code>VG</code> (<code>vgsub</code>…), <code>HI</code> (<code>hide</code>), <code>DI</code> (<code>dim</code>), <code>AL</code> (<code>align</code>), <code>WA</code> (<code>wall</code>), <code>DR</code> (<code>draworder</code>), <code>UN</code> (<code>undo</code>), <code>MA</code> (<code>mask</code>); así <code>dim</code>, <code>wall 0,0 5,0</code> o <code>WA 0,0 5,0</code> escritos sobre la vista se ejecutan tal como se escriben. <code>MA</code>, <code>PT</code> y <code>RP</code> indican en la barra de estado que aún no están disponibles. Escrita en la línea de comandos misma, una línea espera <span class="keys"><kbd class="key-enter">Enter</kbd></span>.</p>
-<p>Mientras una herramienta espera un punto en una planta o una vista de dibujo, <code>SE</code> (extremos), <code>SM</code> (puntos medios), <code>SI</code> (intersecciones), <code>SN</code> (cercano) y <code>SO</code> (desactivados) sustituyen los forzados solo para ese punto (también elegidos en <strong>Modificaciones de forzado ▸</strong> del botón derecho; <code>SE</code>, <code>SI</code> y <code>SO</code> con <span class="keys"><kbd class="key-enter">Enter</kbd></span>, porque nombres más largos empiezan así); la barra de estado lo indica, y <span class="keys"><kbd class="key-escape">Esc</kbd></span> o el punto tomado lo terminan. En una sección o una vista 3D, cuyos puntos no se fuerzan así, se rechazan con un mensaje. En un boceto valen en todas las vistas, y también <code>SC</code> (el centro de un arco) y <code>SP</code> (la perpendicular desde el punto desde el que se dibuja).</p>
+<p>Mientras una herramienta espera un punto en una planta o una vista de dibujo (o una herramienta de detalle o de anotación en una sección), <code>SE</code> (extremos), <code>SM</code> (puntos medios), <code>SI</code> (intersecciones), <code>SN</code> (cercano) y <code>SO</code> (desactivados) sustituyen los forzados solo para ese punto (también elegidos en <strong>Modificaciones de forzado ▸</strong> del botón derecho; <code>SE</code>, <code>SI</code> y <code>SO</code> con <span class="keys"><kbd class="key-enter">Enter</kbd></span>, porque nombres más largos empiezan así); la barra de estado lo indica, y <span class="keys"><kbd class="key-escape">Esc</kbd></span> o el punto tomado lo terminan. Para las demás herramientas en una sección, o en una vista 3D, cuyos puntos no se fuerzan así, se rechazan con un mensaje. En un boceto valen en todas las vistas, y también <code>SC</code> (el centro de un arco) y <code>SP</code> (la perpendicular desde el punto desde el que se dibuja).</p>
 <h3 id="modelling">Modelado</h3>
 <table>
 <thead>
@@ -824,7 +824,7 @@ comando de inmediato (consulta <a href="../command-line-and-mcp/">Línea de coma
 </table>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Escrito solo, <code>DL</code> inicia la línea de detalle, como en Revit; seguido de puntos en la línea de
+<p>Escrito solo, <code>DL</code> inicia la línea de detalle; seguido de puntos en la línea de
 comandos, dibuja una cota lineal (<code>lineardim</code>).</p>
 </div>
 <h3 id="views-and-settings">Vistas y configuración</h3>

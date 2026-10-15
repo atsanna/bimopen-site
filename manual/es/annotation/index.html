@@ -19,7 +19,7 @@
 <link href="../assets/css/theme_dark_mode.css" rel="stylesheet"/>
 <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
-<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="bimopen" dir="ltr">
+<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="slate" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
@@ -55,13 +55,13 @@
 </div>
 </div>
 <form class="md-header__option" data-md-component="palette">
-<input aria-label="Cambiar al tema oscuro" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="custom" data-md-color-scheme="bimopen" id="__palette_0" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Cambiar al tema oscuro">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
-</label>
-<input aria-label="Cambiar al tema claro" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Cambiar al tema claro">
+<input aria-label="Cambiar al tema claro" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Cambiar al tema claro">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Cambiar al tema oscuro" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="bimopen" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Cambiar al tema oscuro">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
 </label>
 </form>
 <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
@@ -589,7 +589,7 @@ todas las cotas de ese tipo.</p>
 <p>Con <strong>Alineada</strong>, la barra de opciones ofrece qué parte de un muro se selecciona (<strong>Ejes de muro</strong>,
 <strong>Caras de muro</strong>, <strong>Línea central del núcleo</strong>, <strong>Caras de núcleo</strong>) y qué selecciona un clic:</p>
 <ul>
-<li><strong>Referencias individuales</strong>: haga clic en las referencias una tras otra (caras o ejes de muro, rejillas, bordes de
+<li><strong>Referencias</strong>: haga clic en las referencias una tras otra (caras o ejes de muro, rejillas, bordes de
   puertas y ventanas, líneas de detalle, los bordes de los símbolos de una leyenda) y luego haga clic en un punto
   vacío para colocar allí la línea de cota. Mientras elige, la cadena sigue al cursor.
   Pulse <strong>TAB</strong> sobre un muro para recorrer sus referencias.</li>
@@ -612,15 +612,20 @@ se coloca la línea decide cuál, y la <strong>barra espaciadora</strong> altern
 <li><strong>Edición | Cotas ▸ Líneas de referencia ▸ Editar líneas de referencia</strong>: haga clic en elementos para añadir líneas
   de referencia, haga clic en una línea de referencia existente para quitarla y luego haga clic en un punto vacío
   para terminar. Cada línea de referencia de una cota seleccionada tiene un control en su centro: clic derecho en él ▸
-  <strong>Mover línea de referencia</strong> y luego haga clic en la nueva referencia; o ▸ <strong>Suprimir líneas de referencia</strong>.</li>
+  <strong>Mover línea de referencia</strong> y luego haga clic en la nueva referencia; o ▸ <strong>Suprimir líneas de referencia</strong>.
+  El control en el extremo de una línea de referencia junto al elemento arrastra su separación del
+  elemento; cerca de la separación de otra línea de referencia toma la misma.</li>
 <li>Seleccione un elemento que la cota mide y haga clic en un valor junto a él: escriba una nueva distancia y pulse
-  Intro, y el elemento se mueve.</li>
+  Intro, y el elemento se mueve: un muro, una rejilla, una puerta o
+  una ventana (a lo largo de su muro) o una línea de detalle.</li>
 </ul>
 <p>El tipo define la marca (diagonal, flecha rellena o punto), las extensiones de la línea de cota y de las líneas de
 referencia (<strong>Control de línea de referencia</strong>: una separación respecto al elemento, o <strong>Fijo a línea de cota</strong> con su
-<strong>Longitud de línea de referencia</strong>), el <strong>Grosor de línea</strong> y el <strong>Grosor de línea de marca</strong>, el <strong>Símbolo de eje</strong> y el
-<strong>Patrón de eje</strong> de las líneas de referencia a ejes, el color, el tamaño del texto, el desfase, el fondo, la negrita, la cursiva y el subrayado, las
-unidades (<strong>Usar parámetros de proyecto</strong> o una unidad con sus decimales) y, para las cotas lineales, el <strong>Tipo de
+<strong>Longitud de línea de referencia</strong>), la <strong>Distancia de forzado de línea de cota</strong> (al colocarla, la
+línea se ajusta a múltiplos de ella desde lo que mide; 0 la desactiva), el <strong>Grosor de línea</strong> y el <strong>Grosor de línea de marca</strong>, el <strong>Símbolo de eje</strong>, el
+<strong>Patrón de eje</strong> y la <strong>Marca de eje</strong> (<strong>Predeterminado</strong> es la del tipo) de las líneas de referencia a ejes, el color, el tamaño del texto, el desfase, el fondo, la negrita, la cursiva y el subrayado, las
+unidades (<strong>Formato de unidades</strong> abre <strong>Formato</strong>: <strong>Usar parámetros de proyecto</strong>, o una unidad
+con su redondeo, también <strong>Personalizada</strong> con un <strong>Factor de incremento</strong>, su símbolo y sus opciones) y, para las cotas lineales, el <strong>Tipo de
 cadena de cotas</strong>: <strong>Continuo</strong>, <strong>Línea base</strong> (valores apilados desde la primera referencia) u <strong>Coordenada</strong>
 (valores desde la primera referencia a lo largo de una línea). <strong>Mostrar altura de hueco</strong> escribe la altura de una
 puerta o ventana bajo la anchura medida de jamba a jamba. Los tipos radiales pueden quitar el prefijo <strong>R</strong> y su marca de centro (<strong>Marcas de centro</strong>, con su tamaño). Con
@@ -630,6 +635,12 @@ familia, para definirlo antes de acotar.</p>
 <p>Una cadena de línea base seleccionada muestra en su origen un control de inversión: haga clic en él, o pulse la
 <strong>barra espaciadora</strong>, para medir desde el otro extremo. <strong>Desfase de línea base</strong> en sus propiedades define la
 distancia entre sus líneas en el papel.</p>
+<p>Un tipo por coordenadas tiene <strong>Configuración de cotas por coordenadas</strong> en sus propiedades de tipo:
+<strong>Editar…</strong> abre un cuadro con la <strong>Orientación del texto</strong> (<strong>Alineado</strong> con las líneas de referencia
+o <strong>Horizontal</strong>), la <strong>Posición del texto</strong> (<strong>En línea con la línea de referencia</strong> o <strong>Sobre la línea
+de referencia</strong>), la <strong>Visibilidad del origen</strong>, la <strong>Marca de origen</strong> (<strong>Valor cero</strong>, <strong>Círculo</strong> o
+la <strong>Marca</strong> del tipo) y el <strong>Estilo de línea de cota</strong> (<strong>Continua</strong> o <strong>Ninguna</strong>, que deja solo las
+líneas de referencia y sus marcas).</p>
 <h3 id="temporary-dimensions">Cotas temporales</h3>
 <p>Seleccione un muro o una rejilla: las cotas temporales muestran la distancia a los muros o rejillas paralelos más
 próximos. Una puerta o ventana muestra su distancia a lo largo de su muro hasta los muros que lo cruzan a cada lado, y un
@@ -661,27 +672,29 @@ pasa el cursor, el valor se muestra junto a él. Para las cotas de elevación de
 <strong>Origen de elevación</strong> es <strong>Relativo</strong>) y, en plantas, <strong>Mostrar elevaciones:</strong>: la elevación real, la superior, la inferior o ambas.
 Para las pendientes de punto, <strong>Representación de pendiente:</strong> dibuja una <strong>Flecha</strong> o, en secciones, un <strong>Triángulo</strong>.</p>
 <p>Una cota de punto seleccionada tiene tiradores en su punto, su codo y su texto: arrastre el punto y la cota mide lo que hay allí.
-Una cota de punto sobre un suelo o una cubierta se elimina con ellos.</p>
-<p>El tipo de cota de punto define el <strong>Indicador de elevación</strong>, el <strong>Indicador superior</strong> y el <strong>Indicador inferior</strong> (textos
-antes del valor), el <strong>Símbolo</strong>, <strong>Incluir elevación</strong> y el <strong>Indicador Norte/Sur</strong> y el <strong>Indicador Este/Oeste</strong> de las
-coordenadas, y la <strong>Longitud de directriz</strong> y la <strong>Dirección de pendiente</strong> (<strong>Abajo</strong> o <strong>Arriba</strong>) de las pendientes.</p>
+Una cota de punto sobre un suelo o una cubierta se elimina con ellos. Al colocarla, <strong>Esc</strong> suelta la cota a
+medio colocar; un segundo <strong>Esc</strong> termina la herramienta.</p>
+<p>El tipo de cota de punto define el <strong>Indicador de elevación</strong>, el <strong>Indicador superior</strong> y el <strong>Indicador inferior</strong> (el
+indicador superior o inferior, luego el de elevación, luego el valor; el <strong>… como prefijo/sufijo</strong>
+de cada uno lo pone en cambio después del valor), el <strong>Símbolo</strong>, <strong>Incluir elevación</strong> y el <strong>Indicador Norte/Sur</strong> y el <strong>Indicador Este/Oeste</strong> de las
+coordenadas (con <strong>Indicador como prefijo/sufijo</strong>), y la <strong>Longitud de directriz</strong> y la <strong>Dirección de pendiente</strong> (<strong>Abajo</strong> o <strong>Arriba</strong>) de las pendientes.</p>
 <h2 id="text">Texto</h2>
 <p><strong>Anotar ▸ Texto ▸ Texto</strong> (<code>TX</code>): haga clic donde irá la nota y escriba; Intro inicia una línea nueva. Un clic
 da una nota que no se ajusta; arrastrando se le da un ancho y las palabras se ajustan dentro. Hacer clic en otro
-lugar termina la nota, y <strong>Esc</strong> finaliza la herramienta. El tamaño del texto es el del papel: la nota conserva
-su tamaño impreso a cualquier escala de la vista.</p>
+lugar termina la nota, y <strong>Esc</strong> finaliza la herramienta. <span class="keys"><kbd class="key-tab">Tab</kbd></span> al escribir mueve el texto a la siguiente
+tabulación. El tamaño del texto es el del papel: la nota conserva su tamaño impreso a cualquier escala de la vista.</p>
 <p>El panel <strong>Formato</strong> define, antes de colocarla o en una nota seleccionada:</p>
 <ul>
 <li>la directriz: <strong>Sin directriz</strong>, <strong>Un segmento</strong> (clic en la punta y luego en la nota), <strong>Dos segmentos</strong>
   (punta, codo, nota) o <strong>Curva</strong>;</li>
 <li>la alineación, izquierda, centro o derecha, y <strong>Negrita</strong>, <strong>Cursiva</strong> y <strong>Subrayado</strong> (Ctrl+B, Ctrl+I, Ctrl+U
-  al escribir), que se aplican a toda la nota;</li>
+  al escribir o en las notas seleccionadas), que se aplican a toda la nota;</li>
 <li>en una nota seleccionada, <strong>Añadir directriz recta a la izquierda</strong> y los otros tres botones de directriz, y
   <strong>Eliminar última directriz</strong>;</li>
 <li><strong>Conexión a la izquierda</strong> y <strong>Conexión a la derecha</strong> (<strong>Arriba</strong>, <strong>En el centro</strong>, <strong>Abajo</strong>): dónde se unen
   las directrices a la nota; si se eligen al colocar, se conservan para las notas siguientes.</li>
 <li><strong>Formato de párrafo</strong>: los párrafos como lista, con <strong>Viñetas</strong>, <strong>Números</strong>, <strong>Letras minúsculas</strong> o <strong>Letras mayúsculas</strong>;
-  las líneas ajustadas quedan con sangría bajo el texto.</li>
+  el texto de cada elemento empieza en la primera tabulación, y las líneas ajustadas quedan con sangría de una.</li>
 </ul>
 <p>Cerca de la línea de la esquina de otra nota, una nota nueva encaja en ella, y una línea discontinua lo muestra.</p>
 <p>En una nota seleccionada, arrastre la cruz para mover el cuadro (las puntas de las directrices se quedan), los
@@ -690,13 +703,14 @@ cada directriz hace un codo al arrastrarlo, o curva una directriz curva. Haga do
 palabras. Sus propiedades incluyen <strong>Directrices de arco</strong>, <strong>Conexión a la izquierda</strong> y
 <strong>Conexión a la derecha</strong>, y <strong>Mantener legible</strong>, que nunca la muestra al revés. El tipo de texto define el color
 (del texto, del borde y de las directrices), el fondo (<strong>Opaco</strong> tapa lo que hay detrás), <strong>Mostrar borde</strong> con su
-desfase, la punta de flecha de la directriz, el tamaño, la negrita, la cursiva y el subrayado. <strong>Duplicar…</strong> en
-<strong>Propiedades de tipo</strong> crea un nuevo tipo de texto.</p>
+desfase, la punta de flecha de la directriz, el <strong>Grosor de línea</strong> del borde y de las directrices, el tamaño, el
+<strong>Tamaño de tabulación</strong> (12,7 mm), la negrita, la cursiva y el subrayado. El botón pequeño <strong>Tipos de texto</strong> del panel
+<strong>Texto</strong> abre <strong>Propiedades de tipo</strong>, donde <strong>Duplicar…</strong> crea un nuevo tipo de texto.</p>
 <p><strong>Anotar ▸ Texto ▸ Buscar/Reemplazar</strong> busca palabras en las notas de la selección actual, de la vista actual o de
 todo el proyecto (<strong>Ámbito:</strong>), con opciones para mayúsculas y palabras completas. <strong>Buscar todo</strong> lista las
 coincidencias con la vista en la que están; <strong>Buscar siguiente</strong>, o un clic en una fila, selecciona esa nota y
-muestra su texto completo en <strong>Contexto</strong>. <strong>Reemplazar</strong> cambia la primera, <strong>Reemplazar todo</strong> todas, y <strong>Cerrar</strong>
-cierra el cuadro de diálogo.</p>
+muestra su texto completo en <strong>Contexto</strong>. <strong>Reemplazar</strong> cambia la coincidencia resaltada (la primera si no hay ninguna), <strong>Reemplazar todo</strong> todas, y <strong>Cerrar</strong>
+cierra el cuadro de diálogo. En las notas seleccionadas también está en <strong>Herramientas</strong> de su pestaña.</p>
 <h2 id="symbols">Símbolos</h2>
 <p><strong>Anotar ▸ Símbolo ▸ Símbolo</strong> (<code>SY</code>) coloca un símbolo de anotación 2D en una planta, una sección, una vista de
 diseño o una leyenda: una <strong>Flecha norte</strong>, un <strong>Símbolo de eje</strong>, una <strong>Flecha de flujo</strong>, una <strong>Diana</strong> o un
@@ -795,11 +809,56 @@ leyenda donde se suelta; un tipo de <strong>Familias ▸ Símbolos</strong> colo
 que lo coloca con su tipo: para un componente de leyenda, también con su vista y su longitud de anfitrión.</p>
 <h2 id="detail-lines-and-regions">Líneas de detalle y regiones</h2>
 <p><strong>Anotar ▸ Detalle ▸ Línea de detalle</strong> (<code>DL</code>) dibuja líneas solo en la vista abierta, con el estilo de línea del
-panel <strong>Estilo de línea</strong>, con las formas del panel <strong>Dibujar</strong>; <strong>Cadena</strong> inicia cada línea donde terminó la
-anterior.</p>
-<p><strong>Región ▸ Región rellenada</strong> traza un contorno con líneas, rectángulos o círculos: cada bucle se cierra al hacer clic de nuevo en su primer punto, y los
-bucles dentro de otro son huecos. <strong>Finalizar modo de edición</strong> crea la
-región con el tipo de región actual, que define su patrón de relleno, su color y su fondo (<strong>Opaco</strong> oculta lo que
+panel <strong>Estilo de línea</strong>. El panel <strong>Dibujar</strong> ofrece <strong>Línea</strong>, <strong>Rectángulo</strong>, <strong>Polígono inscrito</strong>,
+<strong>Polígono circunscrito</strong>, <strong>Círculo</strong>, <strong>Arco inicio-fin-radio</strong>, <strong>Arco por centro y extremos</strong>, <strong>Arco tangente</strong>,
+<strong>Spline</strong>, <strong>Elipse</strong>, <strong>Elipse parcial</strong> y <strong>Arco de empalme</strong>. La barra de opciones muestra lo que admite cada forma:</p>
+<table>
+<thead>
+<tr>
+<th>Opción</th>
+<th>Qué hace</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Cadena</strong></td>
+<td>Cada línea (o arco, o spline) empieza donde terminó la anterior; desactivada, cada una es independiente</td>
+</tr>
+<tr>
+<td><strong>Desfase</strong></td>
+<td>Lo que se dibuja se desplaza esa distancia hacia un lado; las líneas encadenadas se unen en sus esquinas</td>
+</tr>
+<tr>
+<td><strong>Radio</strong></td>
+<td>Un círculo, polígono o arco por centro y extremos de ese radio (un círculo requiere un solo clic); las líneas encadenadas y los rectángulos tienen esquinas redondeadas. <strong>Desfase</strong> se ignora entonces</td>
+</tr>
+<tr>
+<td><strong>Lados</strong></td>
+<td>El número de lados de un polígono</td>
+</tr>
+</tbody>
+</table>
+<p>Después del primer clic, escriba una longitud (una línea, una cuerda) o un radio (círculos, polígonos, arcos, ejes de
+elipse) y pulse <span class="keys"><kbd class="key-enter">Enter</kbd></span>; el valor aparece junto al cursor. Un arco por centro y extremos nunca supera 180°: al
+pasarlo, gira hacia el otro lado, y un ángulo escrito fija su final. Un arco tangente empieza en el extremo de una
+línea o arco en el que se hace clic. <span class="keys"><kbd class="key-shift">Shift</kbd></span> mantiene horizontales o verticales las líneas y los radios de polígono,
+gira las cuerdas, los radios de arco y los ejes de elipse en pasos de 45°, y mantiene el barrido de un arco en 90°,
+180° o 270°. <span class="keys"><kbd class="key-escape">Esc</kbd></span> finaliza una cadena o una spline. Las mismas formas y opciones están en todos los bocetos (suelos,
+cubiertas, regiones, nubes de revisión, perfiles de muro).</p>
+<p><strong>Seleccionar líneas</strong> crea una línea de detalle en la cara, el eje o la capa de un muro, en una rejilla u otra línea
+bajo el cursor (<span class="keys"><kbd class="key-tab">Tab</kbd></span> para la siguiente), desplazada por <strong>Desfase</strong>; con <strong>Bloquear</strong> la línea queda sobre ella y la
+sigue cuando se mueve. <strong>Arco de empalme</strong> selecciona dos líneas y redondea su esquina, con el arco bajo el cursor o del
+<strong>Radio</strong> indicado. Una línea de detalle seleccionada tiene tiradores en sus extremos y una cota temporal de su
+longitud: escriba un valor para cambiarla. El cursor encaja en los extremos, puntos medios, centros e intersecciones
+de las líneas de detalle de la vista. El extremo de una línea seleccionada sola se arrastra solo y deja la línea vecina donde
+está; con una cadena seleccionada (<span class="keys"><kbd class="key-tab">Tab</kbd></span>), los extremos donde se juntan sus líneas se arrastran juntos,
+en un solo paso de deshacer.</p>
+<p><strong>Región ▸ Región rellenada</strong> abre el modo de boceto: el contorno se traza con todas las formas del panel
+<strong>Dibujar</strong> y con <strong>Seleccionar líneas</strong>, y los bucles dentro de otro son huecos. Las curvas se conservan como
+segmentos rectos cortos. <span class="keys"><kbd class="key-escape">Esc</kbd></span> finaliza una cadena y conserva el boceto; <strong>Modificar</strong> y las herramientas de
+modificación actúan sobre sus líneas. <strong>Finalizar modo de edición</strong> crea la región con el tipo de región actual, o
+explica por qué no puede (un contorno abierto o que se cruza). <strong>Editar contorno</strong> de una región seleccionada abre de
+nuevo su boceto. El tipo define su patrón de relleno, su color y su fondo (<strong>Opaco</strong> oculta lo que
 hay detrás). <strong>Región ▸ Región de máscara</strong> crea una región del color del papel que oculta lo que hay debajo. Una
 región muestra su <strong>Área</strong> y tiene <strong>Comentarios</strong>. Una región seleccionada tiene un tirador en cada vértice:
 arrastre uno para cambiar su forma.</p>

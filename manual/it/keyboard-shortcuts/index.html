@@ -19,7 +19,7 @@
 <link href="../assets/css/theme_dark_mode.css" rel="stylesheet"/>
 <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
-<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="bimopen" dir="ltr">
+<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="slate" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
@@ -55,13 +55,13 @@
 </div>
 </div>
 <form class="md-header__option" data-md-component="palette">
-<input aria-label="Passa al tema scuro" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="custom" data-md-color-scheme="bimopen" id="__palette_0" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Passa al tema scuro">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
-</label>
-<input aria-label="Passa al tema chiaro" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Passa al tema chiaro">
+<input aria-label="Passa al tema chiaro" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Passa al tema chiaro">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Passa al tema scuro" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="bimopen" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Passa al tema scuro">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
 </label>
 </form>
 <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
@@ -551,7 +551,7 @@ annulla.</p>
 scorciatoia avvia lo strumento o apre la finestra di dialogo; con argomenti, esegue subito il
 comando (vedi <a href="../command-line-and-mcp/">Riga di comando e MCP</a>).</p>
 <p>Con il cursore nell'area di disegno, le lettere vanno nella riga di comando (nello stile BIMopen, nella ricerca), e una scorciatoia agisce appena digitata, senza <span class="keys"><kbd class="key-enter">Enter</kbd></span>, quando nessuna scorciatoia o nome di comando più lungo comincia con le sue lettere: <code>VR</code> (intervallo di visualizzazione), <code>WT</code> (affianca), <code>ZE</code>, <code>ZF</code>, <code>ZA</code>, <code>ZP</code>, <code>ZR</code>, <code>ZO</code>, <code>ZS</code>, <code>HR</code>, <code>HH</code>, <code>HC</code>, <code>IC</code>, <code>DL</code> (linea di dettaglio), <code>RT</code> (etichetta locale), <code>TG</code> (etichetta per categoria), <code>TX</code>, <code>CC</code> (copia), <code>MV</code>, <code>RM</code>, <code>LL</code> (livello), <code>RC</code> (nuvola di revisione), <code>PP</code> (mostra o nasconde <strong>Proprietà</strong>), <code>PT</code>, <code>RP</code> e le scorciatoie che hai aggiunto. Le altre cominciano nomi più lunghi e aspettano la lettera successiva, uno spazio (seguono argomenti) o <span class="keys"><kbd class="key-enter">Enter</kbd></span>: <code>VG</code> (<code>vgsub</code>…), <code>HI</code> (<code>hide</code>), <code>DI</code> (<code>dim</code>), <code>AL</code> (<code>align</code>), <code>WA</code> (<code>wall</code>), <code>DR</code> (<code>draworder</code>), <code>UN</code> (<code>undo</code>), <code>MA</code> (<code>mask</code>); così <code>dim</code>, <code>wall 0,0 5,0</code> o <code>WA 0,0 5,0</code> digitati sopra la vista vengono eseguiti come digitati. <code>MA</code>, <code>PT</code> e <code>RP</code> dicono nella barra di stato che non sono ancora disponibili. Digitata nella riga di comando stessa, una riga aspetta <span class="keys"><kbd class="key-enter">Enter</kbd></span>.</p>
-<p>Mentre uno strumento aspetta un punto in una pianta o in una vista di disegno, <code>SE</code> (estremi), <code>SM</code> (punti medi), <code>SI</code> (intersezioni), <code>SN</code> (vicino) e <code>SO</code> (disattivati) sostituiscono gli snap solo per quel punto (scelti anche in <strong>Sostituzioni di snap ▸</strong> del pulsante destro; <code>SE</code>, <code>SI</code> e <code>SO</code> con <span class="keys"><kbd class="key-enter">Enter</kbd></span>, perché nomi più lunghi cominciano con esse); la barra di stato lo dice, e <span class="keys"><kbd class="key-escape">Esc</kbd></span> o il punto preso la terminano. In una sezione o in una vista 3D, i cui punti non hanno questi snap, sono rifiutate con un messaggio. In un disegno valgono in ogni vista, e anche <code>SC</code> (il centro di un arco) e <code>SP</code> (la perpendicolare dal punto da cui si disegna).</p>
+<p>Mentre uno strumento aspetta un punto in una pianta o in una vista di disegno (o uno strumento di dettaglio o di annotazione in una sezione), <code>SE</code> (estremi), <code>SM</code> (punti medi), <code>SI</code> (intersezioni), <code>SN</code> (vicino) e <code>SO</code> (disattivati) sostituiscono gli snap solo per quel punto (scelti anche in <strong>Sostituzioni di snap ▸</strong> del pulsante destro; <code>SE</code>, <code>SI</code> e <code>SO</code> con <span class="keys"><kbd class="key-enter">Enter</kbd></span>, perché nomi più lunghi cominciano con esse); la barra di stato lo dice, e <span class="keys"><kbd class="key-escape">Esc</kbd></span> o il punto preso la terminano. Per gli altri strumenti in una sezione, o in una vista 3D, i cui punti non hanno questi snap, sono rifiutate con un messaggio. In un disegno valgono in ogni vista, e anche <code>SC</code> (il centro di un arco) e <code>SP</code> (la perpendicolare dal punto da cui si disegna).</p>
 <h3 id="modelling">Modellazione</h3>
 <table>
 <thead>
@@ -825,7 +825,7 @@ comando (vedi <a href="../command-line-and-mcp/">Riga di comando e MCP</a>).</p>
 </table>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Digitata da sola, <code>DL</code> avvia la linea di dettaglio, come in Revit; seguita da punti nella riga
+<p>Digitata da sola, <code>DL</code> avvia la linea di dettaglio; seguita da punti nella riga
 di comando, disegna una quota lineare (<code>lineardim</code>).</p>
 </div>
 <h3 id="views-and-settings">Viste e impostazioni</h3>

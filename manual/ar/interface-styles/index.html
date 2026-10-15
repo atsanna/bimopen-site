@@ -19,7 +19,7 @@
 <link href="../assets/css/theme_dark_mode.css" rel="stylesheet"/>
 <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
-<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="bimopen" dir="rtl">
+<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="slate" dir="rtl">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
@@ -55,13 +55,13 @@
 </div>
 </div>
 <form class="md-header__option" data-md-component="palette">
-<input aria-label="التبديل إلى الوضع الداكن" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="custom" data-md-color-scheme="bimopen" id="__palette_0" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_1" hidden="" title="التبديل إلى الوضع الداكن">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
-</label>
-<input aria-label="التبديل إلى الوضع الفاتح" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_0" hidden="" title="التبديل إلى الوضع الفاتح">
+<input aria-label="التبديل إلى الوضع الفاتح" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="التبديل إلى الوضع الفاتح">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="التبديل إلى الوضع الداكن" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="bimopen" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="التبديل إلى الوضع الداكن">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
 </label>
 </form>
 <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
@@ -229,7 +229,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#everything-of-the-revit-style">
 <span class="md-ellipsis">
-      كل ما في نمط Revit
+      كل ما في نمط الكلاسيكي
     </span>
 </a>
 </li>
@@ -376,7 +376,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#everything-of-the-revit-style">
 <span class="md-ellipsis">
-      كل ما في نمط Revit
+      كل ما في نمط الكلاسيكي
     </span>
 </a>
 </li>
@@ -398,7 +398,7 @@
 <p>لدى BIMopen نمطان للواجهة. كلاهما ينفّذ الأوامر نفسها، بالأسماء نفسها واختصارات لوحة المفاتيح
 نفسها والنتائج نفسها؛ يتغيّر فقط المظهر ومكان الأدوات.</p>
 <ul>
-<li>نمط <strong>Revit</strong>، الموصوف في <a href="../interface/">الواجهة</a>: الشريط، وشريط الخيارات، ولوحة <strong>الخصائص</strong>
+<li>نمط <strong>الكلاسيكي</strong>، الموصوف في <a href="../interface/">الواجهة</a>: الشريط، وشريط الخيارات، ولوحة <strong>الخصائص</strong>
   و<strong>متصفح المشروع</strong>. يبدأ BIMopen بهذا النمط.</li>
 <li>نمط <strong>BIMopen</strong>: شريط جانبي، وبحث عن الأوامر، وبطاقات أدوات، وأدوات عائمة فوق العرض، ولوحة
   للعنصر بعلامات تبويب، وشريط من الصور المصغرة للعروض.</li>
@@ -407,7 +407,7 @@
 <ol>
 <li>افتح قائمة التطبيق واختر <strong>خيارات</strong> (في نمط <strong>BIMopen</strong>، الترس في الطرف الأيسر من الشريط
    العلوي).</li>
-<li>في <strong>واجهة المستخدم</strong>، اضبط <strong>الواجهة</strong> على <strong>Revit</strong> أو <strong>BIMopen</strong>.</li>
+<li>في <strong>واجهة المستخدم</strong>، اضبط <strong>الواجهة</strong> على <strong>الكلاسيكي</strong> أو <strong>BIMopen</strong>.</li>
 </ol>
 <p>تتغيّر النافذة فورًا. يبقى الاختيار محفوظًا، على الحاسوب وفي المتصفح، وتبدأ الجلسة التالية
 بالنمط نفسه. تنطبق <strong>السمة</strong> (<strong>فاتح</strong> أو <strong>داكن</strong>) على النمطين.</p>
@@ -440,7 +440,7 @@
 <tr>
 <td><strong>شريط الخيارات</strong></td>
 <td>فوق العرض، أثناء عمل أداة</td>
-<td>خيارات الأداة (الارتفاع، خط الموقع، السلسلة…)، أي شريط الخيارات في نمط <strong>Revit</strong></td>
+<td>خيارات الأداة (الارتفاع، خط الموقع، السلسلة…)، أي شريط الخيارات في نمط <strong>الكلاسيكي</strong></td>
 </tr>
 <tr>
 <td><strong>العرض</strong></td>
@@ -470,14 +470,14 @@
 والعروض واللوحات والجداول والعناصر والمواد المطابقة. انقر على نتيجة، أو اخترها بمفاتيح الأسهم
 واضغط <span class="keys"><kbd class="key-enter">Enter</kbd></span>: يبدأ أمر، أو يُفتح عرض، أو يُحدَّد عنصر ويُعرض، أو تُفتح مادة في <strong>المواد</strong>. يجد البحث كل أمر من علامات تبويب الشريط، ومنها أوامر علامة التبويب السياقية (مع عرض محدد على لوحة، تجد «تفعيل» <strong>تفعيل العرض</strong>)، وينفّذه كما يفعل زره.</p>
 <p>مربع البحث هو أيضًا سطر أوامر النمط. ما يُكتب في عرض يصل إليه، كما في سطر الأوامر في نمط
-<strong>Revit</strong>، ويُنفّذ <span class="keys"><kbd class="key-enter">Enter</kbd></span> اختصار لوحة مفاتيح (<code>WA</code>، <code>DR</code>، <code>ZF</code>…) أو أمرًا مع وسائطه
+<strong>الكلاسيكي</strong>، ويُنفّذ <span class="keys"><kbd class="key-enter">Enter</kbd></span> اختصار لوحة مفاتيح (<code>WA</code>، <code>DR</code>، <code>ZF</code>…) أو أمرًا مع وسائطه
 (<code>wall 0,0 5,0</code>) كما كُتب. قائمة الأوامر في <a href="../command-line-and-mcp/">سطر الأوامر و MCP</a>.</p>
 <h2 id="right-click-menu">قائمة الزر الأيمن</h2>
 <p>في المساقط والمقاطع والعروض ثلاثية الأبعاد يفتح الزر الأيمن قائمة داكنة: مع تحديد، أولًا أوامر
 التعديل (<strong>نقل</strong>، <strong>نسخ</strong>، <strong>تدوير</strong>، <strong>محاذاة</strong>، <strong>إزاحة</strong> وغيرها)، ثم عناصر قائمة العرض نفسها
-في نمط <strong>Revit</strong>.</p>
-<h2 id="everything-of-the-revit-style">كل ما في نمط Revit</h2>
-<p>كل وظيفة في نمط <strong>Revit</strong> موجودة في نمط <strong>BIMopen</strong>، مرة واحدة:</p>
+في نمط <strong>الكلاسيكي</strong>.</p>
+<h2 id="everything-of-the-revit-style">كل ما في نمط الكلاسيكي</h2>
+<p>كل وظيفة في نمط <strong>الكلاسيكي</strong> موجودة في نمط <strong>BIMopen</strong>، مرة واحدة:</p>
 <ul>
 <li>كل زر في الشريط مربع في لوحة الأدوات، ضمن عنصر الشريط الجانبي الذي يضم علامة تبويبه، وتكون
   علامة التبويب السياقية <strong>تعديل</strong> أعلى اللوحة أثناء عمل أداة أو عند تحديد شيء؛</li>

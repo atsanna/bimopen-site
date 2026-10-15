@@ -19,7 +19,7 @@
 <link href="../assets/css/theme_dark_mode.css" rel="stylesheet"/>
 <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
-<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="bimopen" dir="ltr">
+<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="slate" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
@@ -55,13 +55,13 @@
 </div>
 </div>
 <form class="md-header__option" data-md-component="palette">
-<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="custom" data-md-color-scheme="bimopen" id="__palette_0" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to dark mode">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
-</label>
-<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to light mode">
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="bimopen" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
 </label>
 </form>
 <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
@@ -973,7 +973,10 @@ that are not 3D, and <strong>Sheet Composition ▸ View</strong> only while a sh
 </tr>
 </tbody>
 </table>
-<p><strong>Snap</strong> turns snapping on and off for the whole program: it is highlighted while on.</p>
+<p><strong>Snap</strong> turns snapping on and off for the whole program: it is highlighted while on.
+<strong>Additional settings ▸ Snaps…</strong> has <strong>Snaps Off</strong> and the <strong>Length dimension snap increments</strong>
+(lengths separated by semicolons, by default 1000; 100; 10 mm): where no element snaps, the
+cursor moves in steps of the largest of them no longer than a pixel at the zoom.</p>
 <h3 id="the-contextual-tab">The contextual tab</h3>
 <p>When you start a tool or select something, the ribbon switches by itself to the last tab, which
 takes the name of what you are doing: <strong>Edit | Place Wall</strong> while drawing walls, <strong>Edit |
@@ -1389,7 +1392,7 @@ selected, the element is selected first. The menu has:</p>
   the selection;</li>
 <li><strong>Visibility/Graphics…</strong>.</li>
 </ul>
-<p>While a tool is active, a right-click opens the tool's menu instead, and the step in progress stays: <strong>Cancel</strong> (what <span class="keys"><kbd class="key-escape">Esc</kbd></span> does, which still cancels the step), <strong>Repeat [command]</strong>, <strong>Snap Overrides ▸</strong> (the snap of the next point, as the keys <code>SE</code>, <code>SM</code>, <code>SN</code>, <code>SI</code> and <code>SO</code> do; only in plans and drafting views), <strong>Zoom in Region</strong>, <strong>Zoom Out (2x)</strong>, <strong>Zoom to Fit</strong>, <strong>Previous Pan/Zoom</strong>, <strong>Next Pan/Zoom</strong> and <strong>Properties</strong>. It is the same in plans, sections, elevations, 3D views and on sheets, in both interface styles. In a sketch the overrides work in every view, with <strong>Center</strong> and <strong>Perpendicular</strong> too.</p>
+<p>While a tool is active, a right-click opens the tool's menu instead, and the step in progress stays: <strong>Cancel</strong> (what <span class="keys"><kbd class="key-escape">Esc</kbd></span> does, which still cancels the step), <strong>Repeat [command]</strong>, <strong>Snap Overrides ▸</strong> (the snap of the next point, as the keys <code>SE</code>, <code>SM</code>, <code>SN</code>, <code>SI</code> and <code>SO</code> do; only in plans and drafting views), <strong>Zoom in Region</strong>, <strong>Zoom Out (2x)</strong>, <strong>Zoom to Fit</strong>, <strong>Previous Pan/Zoom</strong>, <strong>Next Pan/Zoom</strong> and <strong>Properties</strong>. It is the same in plans, sections, elevations, 3D views and on sheets, in both interface styles. In a sketch the overrides work in every view, with <strong>Center</strong> and <strong>Perpendicular</strong> too. With the menu open, <span class="keys"><kbd class="key-escape">Esc</kbd></span> or a click in the view only closes it.</p>
 <p>At the top of the menu, <strong>Repeat [command]</strong> starts the last tool you used again; <span class="keys"><kbd class="key-enter">Enter</kbd></span> does the same when no tool is active and the command line is empty. The menu is the same in plans, sections and 3D views.</p>
 <h2 id="command-line">Command line</h2>
 <p>Under the drawing area, the command line shows the log of what has been done, the most recent at

@@ -19,7 +19,7 @@
 <link href="../assets/css/theme_dark_mode.css" rel="stylesheet"/>
 <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
-<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="bimopen" dir="ltr">
+<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="slate" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
@@ -55,13 +55,13 @@
 </div>
 </div>
 <form class="md-header__option" data-md-component="palette">
-<input aria-label="Passer au thème sombre" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="custom" data-md-color-scheme="bimopen" id="__palette_0" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Passer au thème sombre">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
-</label>
-<input aria-label="Passer au thème clair" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Passer au thème clair">
+<input aria-label="Passer au thème clair" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Passer au thème clair">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Passer au thème sombre" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="bimopen" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Passer au thème sombre">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
 </label>
 </form>
 <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
@@ -982,7 +982,11 @@ lorsqu'une feuille est ouverte.</p>
 </tbody>
 </table>
 <p><strong>Accrochage</strong> active et désactive l'accrochage pour tout le programme : il est mis en évidence
-lorsqu'il est actif.</p>
+lorsqu'il est actif.
+<strong>Paramètres supplémentaires ▸ Accrochages…</strong> propose <strong>Accrochages désactivés</strong> et les
+<strong>Incréments d'accrochage des cotes linéaires</strong> (longueurs séparées par des points-virgules, par
+défaut 1000; 100; 10 mm) : là où aucun élément n'accroche, le curseur avance par pas du plus grand
+d'entre eux qui ne dépasse pas un pixel au zoom courant.</p>
 <h3 id="the-contextual-tab">L'onglet contextuel</h3>
 <p>Lorsque vous lancez un outil ou sélectionnez quelque chose, le ruban passe de lui-même au dernier
 onglet, qui prend le nom de ce que vous faites : <strong>Édition | Placer : Mur</strong> pendant le dessin de
@@ -1405,7 +1409,7 @@ sur un élément non sélectionné, l'élément est d'abord sélectionné. Le me
   les catégories de la sélection ;</li>
 <li><strong>Visibilité/Graphismes…</strong>.</li>
 </ul>
-<p>Lorsqu'un outil est actif, un clic droit ouvre plutôt le menu de l'outil, et l'étape en cours reste : <strong>Annuler</strong> (ce que fait <span class="keys"><kbd class="key-escape">Esc</kbd></span>, qui annule toujours l'étape), <strong>Répéter [commande]</strong>, <strong>Remplacements d'accrochage ▸</strong> (l'accrochage du point suivant, comme les touches <code>SE</code>, <code>SM</code>, <code>SN</code>, <code>SI</code> et <code>SO</code> ; seulement dans les plans et les vues de dessin), <strong>Zoom sur une région</strong>, <strong>Zoom arrière (2x)</strong>, <strong>Zoom adapté à la fenêtre</strong>, <strong>Panoramique/zoom précédent</strong>, <strong>Panoramique/zoom suivant</strong> et <strong>Propriétés</strong>. C'est le même dans les plans, les coupes, les élévations, les vues 3D et sur les feuilles, dans les deux styles d'interface. Dans une esquisse, les remplacements valent dans toutes les vues, avec aussi <strong>Centre</strong> et <strong>Perpendiculaire</strong>.</p>
+<p>Lorsqu'un outil est actif, un clic droit ouvre plutôt le menu de l'outil, et l'étape en cours reste : <strong>Annuler</strong> (ce que fait <span class="keys"><kbd class="key-escape">Esc</kbd></span>, qui annule toujours l'étape), <strong>Répéter [commande]</strong>, <strong>Remplacements d'accrochage ▸</strong> (l'accrochage du point suivant, comme les touches <code>SE</code>, <code>SM</code>, <code>SN</code>, <code>SI</code> et <code>SO</code> ; seulement dans les plans et les vues de dessin), <strong>Zoom sur une région</strong>, <strong>Zoom arrière (2x)</strong>, <strong>Zoom adapté à la fenêtre</strong>, <strong>Panoramique/zoom précédent</strong>, <strong>Panoramique/zoom suivant</strong> et <strong>Propriétés</strong>. C'est le même dans les plans, les coupes, les élévations, les vues 3D et sur les feuilles, dans les deux styles d'interface. Dans une esquisse, les remplacements valent dans toutes les vues, avec aussi <strong>Centre</strong> et <strong>Perpendiculaire</strong>. Menu ouvert, <span class="keys"><kbd class="key-escape">Esc</kbd></span> ou un clic dans la vue ne font que le fermer.</p>
 <p>En haut du menu, <strong>Répéter [commande]</strong> relance le dernier outil utilisé ; <span class="keys"><kbd class="key-enter">Enter</kbd></span> fait de même quand aucun outil n'est actif et que la ligne de commande est vide. Le menu est le même dans les plans, les coupes et les vues 3D.</p>
 <h2 id="command-line">Ligne de commande</h2>
 <p>Sous la zone de dessin, la ligne de commande affiche le journal de ce qui a été fait, le plus récent

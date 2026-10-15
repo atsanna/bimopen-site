@@ -19,7 +19,7 @@
 <link href="../assets/css/theme_dark_mode.css" rel="stylesheet"/>
 <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
-<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="bimopen" dir="ltr">
+<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="slate" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
@@ -55,13 +55,13 @@
 </div>
 </div>
 <form class="md-header__option" data-md-component="palette">
-<input aria-label="Passer au thème sombre" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="custom" data-md-color-scheme="bimopen" id="__palette_0" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Passer au thème sombre">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
-</label>
-<input aria-label="Passer au thème clair" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Passer au thème clair">
+<input aria-label="Passer au thème clair" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Passer au thème clair">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Passer au thème sombre" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="bimopen" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Passer au thème sombre">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
 </label>
 </form>
 <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
@@ -589,7 +589,7 @@ est actif ; <strong>Propriétés du type</strong> modifie le type, et avec lui c
 <p>Avec <strong>Alignée</strong>, la barre des options propose la partie du mur qui est pointée (<strong>Axes du mur</strong>,
 <strong>Faces du mur</strong>, <strong>Centre de l'âme</strong>, <strong>Faces de l'âme</strong>) et ce que désigne un clic :</p>
 <ul>
-<li><strong>Références individuelles</strong> : cliquez les références l'une après l'autre (faces ou axes de mur,
+<li><strong>Références</strong> : cliquez les références l'une après l'autre (faces ou axes de mur,
   quadrillages, bords de portes et de fenêtres, lignes de détail, bords des symboles de légende),
   puis cliquez dans un endroit vide pour y placer la ligne de cote. Pendant le choix, la chaîne suit
   le curseur. Appuyez sur <strong>TAB</strong> au-dessus d'un mur pour parcourir ses références.</li>
@@ -617,15 +617,24 @@ l'endroit où va la cote.</p>
   ajouter des lignes d'attache, cliquez une ligne d'attache existante pour la retirer, puis cliquez
   dans un endroit vide pour terminer. Chaque ligne d'attache d'une cote sélectionnée a une poignée en
   son milieu : clic droit ▸ <strong>Déplacer la ligne d'attache</strong>, puis cliquez la nouvelle référence ; ou
-  ▸ <strong>Supprimer les lignes d'attache</strong>.</li>
+  ▸ <strong>Supprimer les lignes d'attache</strong>. La poignée à l'extrémité côté élément d'une ligne d'attache
+  fait glisser son écart par rapport à l'élément ; près de l'écart d'une autre ligne d'attache, elle
+  prend le même.</li>
 <li>Sélectionnez un élément que la cote mesure et cliquez une valeur à côté de lui : tapez une nouvelle
-  distance et appuyez sur Entrée, et l'élément se déplace.</li>
+  distance et appuyez sur Entrée, et l'élément se déplace : un mur, une grille,
+  une porte ou une fenêtre (le long de son mur) ou une ligne de détail.</li>
 </ul>
 <p>Le type fixe le repère (diagonale, flèche pleine ou point), les prolongements de la ligne de cote
 et des lignes d'attache (<strong>Contrôle de ligne d'attache</strong> : un espace jusqu'à l'élément, ou <strong>Fixe à la
-ligne de cote</strong> avec sa <strong>Longueur de ligne d'attache</strong>), l'<strong>Épaisseur de ligne</strong> et l'<strong>Épaisseur de
-ligne de la marque</strong>, le <strong>Symbole d'axe</strong> et le <strong>Motif d'axe</strong> des lignes d'attache vers les axes, la couleur, la taille du texte, le décalage, le fond, le gras, l'italique
-et le souligné, les unités (<strong>Utiliser les paramètres du projet</strong> ou une unité avec ses décimales),
+ligne de cote</strong> avec sa <strong>Longueur de ligne d'attache</strong>), la <strong>Distance d'accrochage de la ligne de
+cote</strong> (au placement, la ligne s'accroche à des multiples de celle-ci depuis ce qu'elle mesure ; 0
+la désactive), l'<strong>Épaisseur de ligne</strong> et l'<strong>Épaisseur de
+ligne de la marque</strong>, le <strong>Symbole d'axe</strong>, le <strong>Motif d'axe</strong> et la <strong>Marque d'axe</strong> (<strong>Par défaut</strong> : celle du type)
+des lignes d'attache vers les axes, la couleur, la taille du texte, le décalage, le fond, le gras, l'italique
+et le souligné, les unités
+(<strong>Format des unités</strong> ouvre <strong>Format</strong> : <strong>Utiliser les paramètres du projet</strong>, ou une unité avec
+son arrondi, éventuellement <strong>Personnalisée</strong> avec un <strong>Facteur d'incrément</strong>, son symbole et ses
+options),
 et pour les cotes linéaires le <strong>Type de chaîne de cotes</strong> : <strong>Continue</strong>, <strong>Ligne de base</strong> (valeurs
 empilées à partir de la première référence) ou <strong>Coordonnée</strong> (valeurs à partir de la première
 référence le long d'une seule ligne). <strong>Afficher la hauteur d'ouverture</strong> écrit la hauteur d'une
@@ -637,6 +646,12 @@ cote</strong> ouvre les propriétés du type courant de chaque famille, à régl
 <p>Une chaîne de lignes de base sélectionnée montre à son origine une poignée d'inversion : cliquez-la,
 ou appuyez sur la <strong>barre d'espace</strong>, pour mesurer depuis l'autre extrémité. <strong>Décalage de ligne de
 base</strong> dans ses propriétés fixe la distance entre ses lignes sur le papier.</p>
+<p>Un type en coordonnées a des <strong>Paramètres des cotes en coordonnées</strong> dans ses propriétés de type :
+<strong>Modifier…</strong> ouvre une boîte de dialogue avec l'<strong>Orientation du texte</strong> (<strong>Aligné</strong> sur les lignes
+d'attache ou <strong>Horizontal</strong>), la <strong>Position du texte</strong> (<strong>Dans l'axe de la ligne d'attache</strong> ou
+<strong>Au-dessus de la ligne d'attache</strong>), la <strong>Visibilité de l'origine</strong>, le <strong>Repère d'origine</strong>
+(<strong>Valeur zéro</strong>, <strong>Cercle</strong> ou la <strong>Marque</strong> du type) et le <strong>Style de ligne de cote</strong> (<strong>Continue</strong>
+ou <strong>Aucune</strong>, qui ne laisse que les lignes d'attache et leurs marques).</p>
 <h3 id="temporary-dimensions">Cotes temporaires</h3>
 <p>Sélectionnez un mur ou un quadrillage : des cotes temporaires montrent la distance aux murs ou
 quadrillages parallèles les plus proches. Une porte ou une fenêtre montre sa distance le long de son
@@ -676,30 +691,33 @@ l'élévation réelle, le haut, le bas, ou les deux. Pour les pentes de point, <
 pente :</strong> dessine une <strong>Flèche</strong> ou, dans les coupes, un <strong>Triangle</strong>.</p>
 <p>Une cote de point sélectionnée a des poignées à son point, à son épaulement et à son texte : faites
 glisser le point et la cote mesure ce qui s'y trouve. Une cote de point sur un sol ou un toit est
-supprimée avec lui.</p>
+supprimée avec lui. Pendant le placement, <strong>Échap</strong> abandonne la cote à moitié placée ; un second
+<strong>Échap</strong> termine l'outil.</p>
 <p>Le type de cote de point fixe l'<strong>Indicateur d'élévation</strong>, l'<strong>Indicateur supérieur</strong> et l'<strong>Indicateur
-inférieur</strong> (textes avant la valeur), le <strong>Symbole</strong>, <strong>Inclure l'élévation</strong> et l'<strong>Indicateur
-Nord/Sud</strong> et l'<strong>Indicateur Est/Ouest</strong> des coordonnées, et la <strong>Longueur de la ligne de repère</strong> et la
+inférieur</strong> (l'indicateur supérieur ou inférieur, puis celui de l'élévation, puis la valeur ; le
+<strong>… comme préfixe/suffixe</strong> de chacun le place plutôt après la valeur), le <strong>Symbole</strong>, <strong>Inclure l'élévation</strong> et l'<strong>Indicateur
+Nord/Sud</strong> et l'<strong>Indicateur Est/Ouest</strong> des coordonnées (avec <strong>Indicateur comme préfixe/suffixe</strong>), et la <strong>Longueur de la ligne de repère</strong> et la
 <strong>Direction de la pente</strong> (<strong>Bas</strong> ou <strong>Haut</strong>) des pentes.</p>
 <h2 id="text">Texte</h2>
 <p><strong>Annoter ▸ Texte ▸ Texte</strong> (<code>TX</code>) : cliquez où va la note et tapez ; Entrée commence une nouvelle
 ligne. Un clic donne une note qui ne revient pas à la ligne ; un glissement lui donne une largeur,
-et les mots y passent à la ligne. Cliquer ailleurs termine la note, et <strong>Échap</strong> termine l'outil.
-La taille du texte est celle du papier : la note garde sa taille imprimée à toute échelle de vue.</p>
+et les mots y passent à la ligne. Cliquer ailleurs termine la note, et <strong>Échap</strong> termine l'outil. <span class="keys"><kbd class="key-tab">Tab</kbd></span> pendant la saisie déplace
+le texte à la tabulation suivante. La taille du texte est celle du papier : la note garde sa taille
+imprimée à toute échelle de vue.</p>
 <p>Le groupe <strong>Format</strong> règle, avant le placement ou sur une note sélectionnée :</p>
 <ul>
 <li>la ligne de repère : <strong>Aucune ligne de repère</strong>, <strong>Un segment</strong> (cliquez la pointe, puis la note),
   <strong>Deux segments</strong> (pointe, coude, note) ou <strong>Courbe</strong> ;</li>
 <li>l'alignement, à gauche, au centre ou à droite, et <strong>Gras</strong>, <strong>Italique</strong> et <strong>Souligné</strong> (Ctrl+B,
-  Ctrl+I, Ctrl+U pendant la saisie), qui s'appliquent à la note entière ;</li>
+  Ctrl+I, Ctrl+U pendant la saisie ou sur les notes sélectionnées), qui s'appliquent à la note entière ;</li>
 <li>sur une note sélectionnée, <strong>Ajouter une ligne de repère droite à gauche</strong> et les trois autres
   boutons de ligne de repère, et <strong>Supprimer la dernière ligne de repère</strong> ;</li>
 <li><strong>Attache à gauche</strong> et <strong>Attache à droite</strong> (<strong>En haut</strong>, <strong>Au milieu</strong>, <strong>En bas</strong>) : l'endroit
   où les lignes de repère rejoignent la note ; choisies pendant le placement, elles restent pour les
   notes suivantes.</li>
 <li><strong>Format de paragraphe</strong> : les paragraphes en liste, avec des <strong>Puces</strong>, des <strong>Numéros</strong>, des
-  <strong>Lettres minuscules</strong> ou des <strong>Lettres majuscules</strong> ; les lignes qui reviennent à la ligne sont
-  en retrait sous le texte.</li>
+  <strong>Lettres minuscules</strong> ou des <strong>Lettres majuscules</strong> ; le texte de chaque élément commence à la
+  première tabulation, et les lignes qui reviennent à la ligne sont en retrait d'une tabulation.</li>
 </ul>
 <p>Près de la ligne d'un coin d'une autre note, une nouvelle note s'y aimante, et une ligne
 discontinue le montre.</p>
@@ -710,14 +728,17 @@ glisser, ou courbe une ligne de repère courbe. Double-cliquez à l'intérieur p
 <strong>Lignes de repère en arc</strong>, <strong>Attache à gauche</strong> et <strong>Attache à droite</strong>, et <strong>Garder lisible</strong>, qui
 ne l'affiche jamais à l'envers. Le type de texte fixe la couleur (du texte, de la bordure et des
 lignes de repère), le fond (<strong>Opaque</strong> masque ce qui est derrière), <strong>Afficher la bordure</strong> avec son
-décalage, la pointe des lignes de repère, la taille, le gras, l'italique et le souligné.
-<strong>Dupliquer…</strong> dans <strong>Propriétés du type</strong> crée un nouveau type de texte.</p>
+décalage, la pointe des lignes de repère, l'<strong>Épaisseur de ligne</strong> de la bordure et des lignes de
+repère, la taille, la <strong>Taille de tabulation</strong> (12,7 mm), le gras, l'italique et le souligné. Le petit
+bouton <strong>Types de texte</strong> du groupe <strong>Texte</strong> ouvre <strong>Propriétés du type</strong>, où <strong>Dupliquer…</strong> crée un
+nouveau type de texte.</p>
 <p><strong>Annoter ▸ Texte ▸ Rechercher/Remplacer</strong> cherche des mots dans les notes de la sélection
 courante, de la vue courante ou du projet entier (<strong>Portée :</strong>), avec des options pour la casse et
 les mots entiers. <strong>Rechercher tout</strong> liste les occurrences avec la vue où elles se trouvent ;
 <strong>Rechercher le suivant</strong>, ou un clic sur une ligne, sélectionne cette note et montre son texte
-entier sous <strong>Contexte</strong>. <strong>Remplacer</strong> change la première, <strong>Remplacer tout</strong> chacune d'elles, et
-<strong>Fermer</strong> ferme la boîte de dialogue.</p>
+entier sous <strong>Contexte</strong>. <strong>Remplacer</strong> change l'occurrence en surbrillance (la première s'il n'y
+en a aucune), <strong>Remplacer tout</strong> chacune d'elles, et <strong>Fermer</strong> ferme la boîte de dialogue. Sur des
+notes sélectionnées, il se trouve aussi sous <strong>Outils</strong> de leur onglet.</p>
 <h2 id="symbols">Symboles</h2>
 <p><strong>Annoter ▸ Symbole ▸ Symbole</strong> (<code>SY</code>) place un symbole d'annotation 2D dans un plan, une coupe,
 une vue de dessin ou une légende : une <strong>Flèche du nord</strong>, un <strong>Symbole d'axe</strong>, une <strong>Flèche de
@@ -836,12 +857,62 @@ contextuel d'un élément sélectionné, lance l'outil qui le place avec son typ
 légende, avec aussi sa vue et la longueur de l'hôte.</p>
 <h2 id="detail-lines-and-regions">Lignes de détail et régions</h2>
 <p><strong>Annoter ▸ Détail ▸ Ligne de détail</strong> (<code>DL</code>) dessine des lignes dans la seule vue ouverte, avec le
-style de ligne du groupe <strong>Style de ligne</strong>, et avec les formes du groupe <strong>Dessiner</strong> ; <strong>Chaîne</strong>
-commence chaque ligne là où la précédente s'est terminée.</p>
-<p><strong>Région ▸ Région remplie</strong> esquisse une limite avec des lignes, des rectangles ou des cercles : chaque boucle se ferme quand
-vous cliquez de nouveau son premier point, et les boucles à l'intérieur d'une autre sont des trous. <strong>Terminer le mode
-d'édition</strong> crée la région dans le type de région courant, qui fixe sa trame de remplissage, sa
-couleur et son fond (<strong>Opaque</strong> cache ce qui est derrière). <strong>Région ▸ Région de masquage</strong> crée une
+style de ligne du groupe <strong>Style de ligne</strong>. Le groupe <strong>Dessiner</strong> propose <strong>Ligne</strong>,
+<strong>Rectangle</strong>, <strong>Polygone inscrit</strong>, <strong>Polygone circonscrit</strong>, <strong>Cercle</strong>, <strong>Arc début-fin-rayon</strong>,
+<strong>Arc par centre et extrémités</strong>, <strong>Arc tangent</strong>, <strong>Spline</strong>, <strong>Ellipse</strong>, <strong>Ellipse partielle</strong> et
+<strong>Arc de raccord</strong>.
+La barre des options montre ce que prend la forme :</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Ce qu'elle fait</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Chaîne</strong></td>
+<td>Chaque ligne (ou arc, ou spline) commence là où la précédente s'est terminée ; désactivée, chacune est indépendante</td>
+</tr>
+<tr>
+<td><strong>Décalage</strong></td>
+<td>Ce qui est dessiné se déplace latéralement de cette distance ; les lignes en chaîne se rejoignent à leurs coins</td>
+</tr>
+<tr>
+<td><strong>Rayon</strong></td>
+<td>Un cercle, un polygone ou un arc par centre et extrémités de ce rayon (un cercle prend un seul clic) ; les lignes en chaîne et les rectangles reçoivent des coins arrondis. Le <strong>Décalage</strong> est alors ignoré</td>
+</tr>
+<tr>
+<td><strong>Côtés</strong></td>
+<td>Le nombre de côtés d'un polygone</td>
+</tr>
+</tbody>
+</table>
+<p>Après le premier clic, tapez une longueur (une ligne, une corde) ou un rayon (cercles, polygones,
+arcs, axes d'ellipse) et appuyez sur <span class="keys"><kbd class="key-enter">Enter</kbd></span> ; la valeur s'affiche au curseur. Un arc par centre
+et extrémités ne dépasse jamais 180° : au-delà, il tourne dans l'autre sens, et un angle tapé fixe
+son extrémité. Un arc tangent commence à l'extrémité d'une ligne ou d'un arc que vous cliquez.
+<span class="keys"><kbd class="key-shift">Shift</kbd></span> garde les lignes et les rayons de polygone horizontaux ou verticaux, fait tourner les
+cordes, les rayons d'arc et les axes d'ellipse par pas de 45°, et garde l'ouverture d'un arc à 90°,
+180° ou 270°. <span class="keys"><kbd class="key-escape">Esc</kbd></span> termine une chaîne ou une spline. Les mêmes formes et options se trouvent dans
+toute esquisse (sols, toits, régions, nuages de révision, profils de mur).</p>
+<p><strong>Choisir des lignes</strong> crée une ligne de détail sur la face, l'axe ou une couche d'un mur, sur un
+quadrillage ou sur une autre ligne sous le curseur (<span class="keys"><kbd class="key-tab">Tab</kbd></span> pour la suivante), déplacée du
+<strong>Décalage</strong> ; avec <strong>Verrouiller</strong>, la ligne reste sur elle et la suit quand elle bouge. <strong>Arc de
+raccord</strong> choisit deux lignes et arrondit leur coin, avec l'arc sous le curseur ou du <strong>Rayon</strong>
+réglé. Une ligne de détail sélectionnée a des poignées à ses extrémités et une cote temporaire de
+sa longueur : tapez une valeur pour la changer. Le curseur s'aimante aux extrémités, aux milieux,
+aux centres et aux croisements des lignes de détail de la vue. L'extrémité d'une ligne sélectionnée
+seule glisse seule et laisse la ligne voisine en place ; avec une chaîne sélectionnée (<span class="keys"><kbd class="key-tab">Tab</kbd></span>), les
+extrémités où ses lignes se rejoignent glissent ensemble, en une seule étape d'annulation.</p>
+<p><strong>Région ▸ Région remplie</strong> ouvre le mode esquisse : la limite s'esquisse avec toutes les formes du
+groupe <strong>Dessiner</strong> et avec <strong>Choisir des lignes</strong>, et les boucles à l'intérieur d'une autre sont
+des trous. Les courbes sont conservées sous forme de courts segments droits. <span class="keys"><kbd class="key-escape">Esc</kbd></span> termine une
+chaîne et garde l'esquisse ; <strong>Modifier</strong> et les outils de modification agissent sur ses lignes.
+<strong>Terminer le mode d'édition</strong> crée la région dans le type de région courant, ou dit pourquoi il
+ne le peut pas (une limite ouverte ou qui se croise). <strong>Modifier le contour</strong> d'une région
+sélectionnée rouvre son esquisse. Le type fixe sa trame de remplissage, sa couleur et son fond
+(<strong>Opaque</strong> cache ce qui est derrière). <strong>Région ▸ Région de masquage</strong> crée une
 région de la couleur du papier qui cache ce qui se trouve dessous. Une région montre sa <strong>Surface</strong> et a des <strong>Commentaires</strong>. Une région sélectionnée a une poignée à
 chaque sommet : faites-en glisser une pour changer sa forme.</p>
 <h2 id="detail-components-repeating-details-and-insulation">Composants de détail, détails répétitifs et isolation</h2>

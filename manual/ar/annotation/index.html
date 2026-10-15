@@ -19,7 +19,7 @@
 <link href="../assets/css/theme_dark_mode.css" rel="stylesheet"/>
 <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
-<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="bimopen" dir="rtl">
+<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="slate" dir="rtl">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
@@ -55,13 +55,13 @@
 </div>
 </div>
 <form class="md-header__option" data-md-component="palette">
-<input aria-label="التبديل إلى الوضع الداكن" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="custom" data-md-color-scheme="bimopen" id="__palette_0" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_1" hidden="" title="التبديل إلى الوضع الداكن">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
-</label>
-<input aria-label="التبديل إلى الوضع الفاتح" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_0" hidden="" title="التبديل إلى الوضع الفاتح">
+<input aria-label="التبديل إلى الوضع الفاتح" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="التبديل إلى الوضع الفاتح">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="التبديل إلى الوضع الداكن" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="bimopen" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="التبديل إلى الوضع الداكن">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
 </label>
 </form>
 <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
@@ -587,7 +587,7 @@
 <p>مع <strong>محاذية</strong> يعرض شريط الخيارات أي جزء من الجدار يُلتقط (<strong>محاور الجدار</strong> أو <strong>أوجه الجدار</strong> أو
 <strong>محور النواة</strong> أو <strong>أوجه النواة</strong>) وماذا تلتقط النقرة:</p>
 <ul>
-<li><strong>مراجع منفردة</strong>: انقر المراجع واحداً بعد الآخر (أوجه الجدار أو محاوره، والشبكات، وحواف الأبواب
+<li><strong>المراجع</strong>: انقر المراجع واحداً بعد الآخر (أوجه الجدار أو محاوره، والشبكات، وحواف الأبواب
   والنوافذ، وخطوط التفاصيل، وحواف رموز وسائل الإيضاح)، ثم انقر موضعاً فارغاً لوضع خط البُعد هناك.
   أثناء الاختيار تتبع السلسلة المؤشر. اضغط <strong>TAB</strong> فوق جدار للتنقل بين مراجعه.</li>
 <li><strong>جدران كاملة</strong>: نقرة واحدة تُبعِّد جداراً كاملاً. يفتح <strong>خيارات</strong> خيارات التبعيد التلقائي:
@@ -605,12 +605,13 @@
 <li>اسحب المقبض الأزرق تحت النص لإبعاده عن الخط؛ وإذا أعدته قرب الخط استقر في موضعه. النص الذي يُنقل
   بعيداً يحصل على خط إشارة قوسي إلى مقطعه؛ ويزيله <strong>خط الإشارة</strong> في شريط الخيارات.</li>
 <li><strong>تعديل | الأبعاد ▸ خطوط الامتداد ▸ تعديل خطوط الامتداد</strong>: انقر عناصر لإضافة خطوط امتداد،
-  وانقر خط امتداد قائماً لإزالته، ثم انقر موضعاً فارغاً للإنهاء. لكل خط امتداد في بُعد محدد عنصر تحكم في منتصفه: انقر عليه بزر الفأرة الأيمن ▸ <strong>نقل خط الامتداد</strong>، ثم انقر المرجع الجديد؛ أو ▸ <strong>حذف خطوط الامتداد</strong>.</li>
-<li>حدّد عنصراً يقيسه البُعد وانقر قيمة بجواره: اكتب مسافة جديدة واضغط Enter، فينتقل العنصر.</li>
+  وانقر خط امتداد قائماً لإزالته، ثم انقر موضعاً فارغاً للإنهاء. لكل خط امتداد في بُعد محدد عنصر تحكم في منتصفه: انقر عليه بزر الفأرة الأيمن ▸ <strong>نقل خط الامتداد</strong>، ثم انقر المرجع الجديد؛ أو ▸ <strong>حذف خطوط الامتداد</strong>. وعنصر التحكم عند طرف خط الامتداد من جهة العنصر يسحب فجوته عن العنصر؛ وقرب فجوة خط امتداد آخر يأخذ الفجوة نفسها.</li>
+<li>حدّد عنصراً يقيسه البُعد وانقر قيمة بجواره: اكتب مسافة جديدة واضغط Enter، فينتقل العنصر:
+  جدار أو شبكة أو باب أو نافذة (على طول جداره) أو خط تفصيل.</li>
 </ul>
-<p>يحدد النوع العلامة (مائلة أو سهماً ممتلئاً أو نقطة)، وامتدادات خط البُعد وخطوط الامتداد (<strong>عنصر تحكم خط الامتداد</strong>: فجوة عن العنصر، أو <strong>مثبت على خط البُعد</strong> مع <strong>طول خط الامتداد</strong>)، و<strong>سماكة الخط</strong> و<strong>سماكة خط العلامة</strong>، و<strong>رمز خط المحور</strong> و<strong>نمط خط المحور</strong> لخطوط الامتداد الممتدة إلى خطوط المحاور، واللون،
-وحجم النص، والإزاحة، والخلفية، والعريض والمائل والتسطير، والوحدات (<strong>استخدام إعدادات المشروع</strong> أو
-وحدة مع منازلها العشرية)، وللأبعاد الخطية <strong>نوع سلسلة الأبعاد</strong>: <strong>متصل</strong> أو <strong>خط الأساس</strong> (قيم
+<p>يحدد النوع العلامة (مائلة أو سهماً ممتلئاً أو نقطة)، وامتدادات خط البُعد وخطوط الامتداد (<strong>عنصر تحكم خط الامتداد</strong>: فجوة عن العنصر، أو <strong>مثبت على خط البُعد</strong> مع <strong>طول خط الامتداد</strong>)، و<strong>مسافة التقاط خط البُعد</strong> (عند الوضع يلتقط الخط مضاعفاتها بعيداً عما يقيسه؛ و0 يعطّلها)، و<strong>سماكة الخط</strong> و<strong>سماكة خط العلامة</strong>، و<strong>رمز خط المحور</strong> و<strong>نمط خط المحور</strong> و<strong>علامة خط المحور</strong> (<strong>افتراضي</strong> هي علامة النوع) لخطوط الامتداد الممتدة إلى خطوط المحاور، واللون،
+وحجم النص، والإزاحة، والخلفية، والعريض والمائل والتسطير، والوحدات (يفتح <strong>تنسيق الوحدات</strong> نافذة <strong>التنسيق</strong>: <strong>استخدام إعدادات المشروع</strong>،
+أو وحدة مع تقريبها، ولو <strong>مخصصاً</strong> مع <strong>معامل الزيادة</strong>، ورمزها وخياراتها)، وللأبعاد الخطية <strong>نوع سلسلة الأبعاد</strong>: <strong>متصل</strong> أو <strong>خط الأساس</strong> (قيم
 مكدّسة من المرجع الأول) أو <strong>الإحداثيات</strong> (قيم من المرجع الأول على خط واحد). يكتب <strong>إظهار ارتفاع
 الفتحة</strong> ارتفاع الباب أو النافذة تحت العرض المقيس من حلق إلى حلق. ويمكن لأنواع الأبعاد الشعاعية
 حذف البادئة <strong>R</strong> وعلامة مركزها (<strong>علامات المركز</strong>، مع حجمها). ومع الأسهم، يوضع الأسهم خارج المقطع
@@ -618,6 +619,10 @@
 بُعد ▸ أنواع الأبعاد</strong> خصائص النوع الحالي لكل عائلة، لضبطه قبل وضع الأبعاد.</p>
 <p>تُظهر سلسلة خط الأساس المحددة عند أصلها مقبض قلب: انقره، أو اضغط <strong>مفتاح المسافة</strong>، للقياس من
 الطرف الآخر. تحدد <strong>إزاحة خط الأساس</strong> في خصائصها المسافة بين خطوطها على الورق.</p>
+<p>لنوع الأبعاد الإحداثية <strong>إعدادات الأبعاد الإحداثية</strong> في خصائص النوع: يفتح <strong>تحرير…</strong> نافذة فيها
+<strong>اتجاه النص</strong> (<strong>محاذٍ</strong> لخطوط الامتداد أو <strong>أفقي</strong>)، و<strong>موضع النص</strong> (<strong>على امتداد خط الامتداد</strong> أو
+<strong>فوق خط الامتداد</strong>)، و<strong>إظهار نقطة الأصل</strong>، و<strong>علامة نقطة الأصل</strong> (<strong>قيمة الصفر</strong> أو <strong>دائرة</strong> أو
+<strong>علامة</strong> النوع)، و<strong>نمط خط البُعد</strong> (<strong>متصل</strong> أو <strong>بلا</strong>، فلا تبقى إلا خطوط الامتداد وعلاماتها).</p>
 <h3 id="temporary-dimensions">الأبعاد المؤقتة</h3>
 <p>حدّد جداراً أو شبكة: تعرض الأبعاد المؤقتة المسافة إلى أقرب الجدران أو الشبكات الموازية. ويعرض الباب أو النافذة مسافته على امتداد جداره إلى الجدران التي تقطعه على كل جانب، ويعرض المكوّن مسافته إلى أقرب جدار في كل اتجاه. انقر قيمة
 واكتب قيمة جديدة واضغط Enter لنقل العنصر؛ وانقر رمز البُعد بجانبها لجعله دائماً. أثناء وضع باب أو
@@ -644,27 +649,29 @@
 و<strong>عرض المناسيب:</strong> في المساقط الأفقية: المنسوب الفعلي أو الأعلى أو الأسفل أو كليهما. ولميول النقاط يرسم
 <strong>تمثيل الميل:</strong> <strong>سهماً</strong> أو، في المقاطع، <strong>مثلثاً</strong>.</p>
 <p>للنقطة المحددة مقابض عند نقطتها وكتفها ونصها: اسحب النقطة فتقيس النقطة ما هو موجود هناك. وتُحذف النقطة
-الموضوعة على أرضية أو سقف معه.</p>
-<p>يحدد نوع النقطة <strong>مؤشر المنسوب</strong> و<strong>مؤشر الأعلى</strong> و<strong>مؤشر الأسفل</strong> (نصوص قبل القيمة)، و<strong>الرمز</strong>،
-و<strong>تضمين المنسوب</strong> و<strong>مؤشر شمال/جنوب</strong> و<strong>مؤشر شرق/غرب</strong> للإحداثيات، و<strong>طول خط الإشارة</strong> و<strong>اتجاه
+الموضوعة على أرضية أو سقف معه. أثناء الوضع يترك <strong>Esc</strong> النقطة الموضوعة نصفياً؛ ويُنهي <strong>Esc</strong>
+ثانٍ الأداة.</p>
+<p>يحدد نوع النقطة <strong>مؤشر المنسوب</strong> و<strong>مؤشر الأعلى</strong> و<strong>مؤشر الأسفل</strong> (مؤشر الأعلى أو الأسفل، ثم مؤشر المنسوب، ثم القيمة؛ ويضعه
+<strong>… كبادئة/لاحقة</strong> لكل منها بعد القيمة بدلاً من ذلك)، و<strong>الرمز</strong>،
+و<strong>تضمين المنسوب</strong> و<strong>مؤشر شمال/جنوب</strong> و<strong>مؤشر شرق/غرب</strong> للإحداثيات (مع <strong>المؤشر كبادئة/لاحقة</strong>)، و<strong>طول خط الإشارة</strong> و<strong>اتجاه
 الميل</strong> (<strong>لأسفل</strong> أو <strong>لأعلى</strong>) للميول.</p>
 <h2 id="text">النص</h2>
 <p><strong>التعليقات التوضيحية ▸ النص ▸ النص</strong> (<code>TX</code>): انقر موضع الملاحظة واكتب؛ يبدأ Enter سطراً جديداً.
 تعطي النقرة ملاحظة لا تلتف؛ ويعطيها السحب عرضاً فتلتف الكلمات داخله. تنهي النقرة في موضع آخر
-الملاحظة، وينهي <strong>Esc</strong> الأداة. حجم النص على الورق: تحتفظ الملاحظة بحجمها المطبوع عند أي مقياس
+الملاحظة، وينهي <strong>Esc</strong> الأداة. ينقل <span class="keys"><kbd class="key-tab">Tab</kbd></span> أثناء الكتابة النص إلى نقطة الجدولة التالية. حجم النص على الورق: تحتفظ الملاحظة بحجمها المطبوع عند أي مقياس
 للعرض.</p>
 <p>تضبط لوحة <strong>التنسيق</strong>، قبل الوضع أو على ملاحظة محددة:</p>
 <ul>
 <li>خط الإشارة: <strong>بلا خط إشارة</strong> أو <strong>مقطع واحد</strong> (انقر الطرف ثم الملاحظة) أو <strong>مقطعان</strong> (الطرف
   والمرفق والملاحظة) أو <strong>منحنى</strong>؛</li>
 <li>المحاذاة يساراً أو وسطاً أو يميناً، و<strong>عريض</strong> و<strong>مائل</strong> و<strong>تسطير</strong> (Ctrl+B وCtrl+I وCtrl+U أثناء
-  الكتابة)، وتنطبق على الملاحظة كلها؛</li>
+  الكتابة أو على الملاحظات المحددة)، وتنطبق على الملاحظة كلها؛</li>
 <li>على ملاحظة محددة، <strong>إضافة خط إشارة مستقيم إلى اليسار</strong> وأزرار خطوط الإشارة الثلاثة الأخرى،
   و<strong>إزالة آخر خط إشارة</strong>؛</li>
 <li><strong>الوصل إلى اليسار</strong> و<strong>الوصل إلى اليمين</strong> (<strong>الأعلى</strong> و<strong>الوسط</strong> و<strong>الأسفل</strong>): موضع التقاء خطوط
   الإشارة بالملاحظة؛ وما يُختار أثناء الوضع يبقى للملاحظات التالية.</li>
-<li><strong>تنسيق الفقرة</strong>: الفقرات في قائمة، مع <strong>تعداد نقطي</strong> أو <strong>ترقيم</strong> أو <strong>أحرف صغيرة</strong> أو <strong>أحرف كبيرة</strong>؛ وتُزاح
-  الأسطر الملتفة تحت النص.</li>
+<li><strong>تنسيق الفقرة</strong>: الفقرات في قائمة، مع <strong>تعداد نقطي</strong> أو <strong>ترقيم</strong> أو <strong>أحرف صغيرة</strong> أو <strong>أحرف كبيرة</strong>؛ ويبدأ نص كل بند عند
+  نقطة الجدولة الأولى، وتُزاح الأسطر الملتفة بمقدارها.</li>
 </ul>
 <p>قرب خط زاوية ملاحظة أخرى، تلتصق الملاحظة الجديدة به، ويظهرها خط متقطع.</p>
 <p>على ملاحظة محددة، اسحب الصليب لنقل الصندوق (تبقى أطراف خطوط الإشارة)، والمقابض الجانبية المستديرة
@@ -672,12 +679,11 @@
 انقر مرتين داخله لتحرير الكلمات. تتضمن خصائصه <strong>خطوط إشارة
 قوسية</strong> و<strong>الوصل إلى اليسار</strong> و<strong>الوصل إلى اليمين</strong>، و<strong>إبقاء مقروءًا</strong> الذي لا يعرضه مقلوباً أبداً.
 يحدد نوع النص اللون (للنص والإطار وخطوط الإشارة)، والخلفية (<strong>معتم</strong> يخفي ما خلفه)، و<strong>إظهار
-الإطار</strong> مع إزاحته، ورأس سهم خط الإشارة، والحجم، والعريض والمائل والتسطير. ينشئ <strong>تكرار…</strong> في
-<strong>خصائص النوع</strong> نوع نص جديداً.</p>
+الإطار</strong> مع إزاحته، ورأس سهم خط الإشارة، والحجم، و<strong>سماكة الخط</strong> للإطار وخطوط الإشارة، والحجم، و<strong>حجم الجدولة</strong> (12.7 مم)، والعريض والمائل والتسطير. يفتح الزر الصغير <strong>أنواع النصوص</strong> في لوحة <strong>النص</strong> <strong>خصائص النوع</strong>، حيث ينشئ <strong>تكرار…</strong> نوع نص جديداً.</p>
 <p>يبحث <strong>التعليقات التوضيحية ▸ النص ▸ بحث/استبدال</strong> عن كلمات في ملاحظات التحديد الحالي أو العرض الحالي
 أو المشروع كله (<strong>النطاق:</strong>)، مع خيارات لحالة الأحرف والكلمات الكاملة. يسرد <strong>بحث عن الكل</strong>
 المطابقات مع العرض الذي توجد فيه؛ ويحدد <strong>البحث عن التالي</strong>، أو النقر على صف، تلك الملاحظة ويعرض نصها الكامل تحت <strong>السياق</strong>. ويغيّر
-<strong>استبدال</strong> الأولى، و<strong>استبدال الكل</strong> كل المطابقات، ويغلق <strong>إغلاق</strong> الحوار.</p>
+<strong>استبدال</strong> المطابقة المميّزة (الأولى إن لم توجد)، و<strong>استبدال الكل</strong> كل المطابقات، ويغلق <strong>إغلاق</strong> الحوار. وهو موجود أيضاً في <strong>الأدوات</strong> من تبويب الملاحظات المحددة.</p>
 <h2 id="symbols">الرموز</h2>
 <p>يضع <strong>التعليقات التوضيحية ▸ الرمز ▸ الرمز</strong> (<code>SY</code>) رمزاً توضيحياً ثنائي الأبعاد في مسقط أفقي أو مقطع
 أو عرض رسم أو وسيلة إيضاح: <strong>سهم الشمال</strong> أو <strong>رمز خط المحور</strong> أو <strong>سهم التدفق</strong> أو <strong>هدف</strong> أو
@@ -764,10 +770,53 @@
 الإيضاح، بعرضه وطول مضيفه أيضاً.</p>
 <h2 id="detail-lines-and-regions">خطوط التفاصيل والمناطق</h2>
 <p>يرسم <strong>التعليقات التوضيحية ▸ التفاصيل ▸ خط تفاصيل</strong> (<code>DL</code>) خطوطاً في العرض المفتوح فقط، بنمط الخط
-المختار في لوحة <strong>نمط الخط</strong>، وبالأشكال الواردة في لوحة <strong>رسم</strong>؛ ويبدأ <strong>تسلسل</strong> كل خط من حيث انتهى
-السابق.</p>
-<p>يرسم <strong>منطقة ▸ منطقة معبأة</strong> حداً بخطوط أو مستطيلات أو دوائر: تُغلق كل حلقة حين تنقر نقطتها الأولى مرة أخرى، والحلقات داخل أخرى ثقوب؛ ويصنع <strong>إنهاء وضع التحرير</strong> المنطقة بنوع
-المنطقة الحالي الذي يحدد نمط تعبئتها ولونها وخلفيتها (<strong>معتم</strong> يخفي ما خلفه). تصنع <strong>منطقة ▸ منطقة
+المختار في لوحة <strong>نمط الخط</strong>. تقدم لوحة <strong>رسم</strong>: <strong>خط</strong> و<strong>مستطيل</strong> و<strong>مضلع محاط</strong> و<strong>مضلع محيط</strong>
+و<strong>دائرة</strong> و<strong>قوس بداية-نهاية-نصف قطر</strong> و<strong>قوس بالمركز والطرفين</strong> و<strong>قوس مماس</strong> و<strong>منحنى</strong> و<strong>قطع ناقص</strong>
+و<strong>قطع ناقص جزئي</strong> و<strong>قوس تدوير</strong>. ويعرض شريط الخيارات ما يحتاجه الشكل:</p>
+<table>
+<thead>
+<tr>
+<th>الخيار</th>
+<th>وظيفته</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>تسلسل</strong></td>
+<td>يبدأ كل خط (أو قوس أو منحنى) من حيث انتهى السابق؛ وبدونه يقف كل منها وحده</td>
+</tr>
+<tr>
+<td><strong>الإزاحة</strong></td>
+<td>ما يُرسم ينتقل جانبياً بذلك المقدار؛ وتلتقي الخطوط المتسلسلة عند زواياها</td>
+</tr>
+<tr>
+<td><strong>نصف القطر</strong></td>
+<td>دائرة أو مضلع أو قوس بالمركز والطرفين بذلك نصف القطر (تكفي للدائرة نقرة واحدة)؛ وتأخذ الخطوط المتسلسلة والمستطيلات زوايا مستديرة. وتُهمل <strong>الإزاحة</strong> عندئذ</td>
+</tr>
+<tr>
+<td><strong>الأضلاع</strong></td>
+<td>عدد أضلاع المضلع</td>
+</tr>
+</tbody>
+</table>
+<p>بعد النقرة الأولى، اكتب طولاً (لخط أو وتر) أو نصف قطر (للدوائر والمضلعات والأقواس ومحاور القطع
+الناقص) واضغط <span class="keys"><kbd class="key-enter">Enter</kbd></span>؛ وتظهر القيمة عند المؤشر. لا يتجاوز القوس بالمركز والطرفين 180°: وبعدها
+يدور في الاتجاه الآخر، وتحدد الزاوية المكتوبة نهايته. ويبدأ القوس المماس من نهاية خط أو قوس تنقره.
+يُبقي <span class="keys"><kbd class="key-shift">Shift</kbd></span> الخطوط وأنصاف أقطار المضلعات أفقية أو رأسية، ويدير الأوتار وأنصاف أقطار الأقواس
+ومحاور القطع الناقص بخطوات 45°، ويُبقي مسح القوس عند 90° أو 180° أو 270°. وينهي <span class="keys"><kbd class="key-escape">Esc</kbd></span> سلسلة أو
+منحنى. وتوجد الأشكال والخيارات نفسها في كل مخطط (الأرضيات والأسقف والمناطق وسحب المراجعة وأشكال
+الجدران).</p>
+<p>يصنع <strong>اختيار الخطوط</strong> خط تفاصيل على وجه جدار أو محوره أو طبقته، أو على شبكة أو خط آخر تحت المؤشر
+(<span class="keys"><kbd class="key-tab">Tab</kbd></span> للتالي)، ينتقل بـ<strong>الإزاحة</strong>؛ ومع <strong>قفل</strong> يبقى الخط عليه ويتبعه عند انتقاله. يختار <strong>قوس
+تدوير</strong> خطين ويدوّر زاويتهما، بالقوس الذي تحت المؤشر أو بـ<strong>نصف القطر</strong> المضبوط. لخط التفاصيل
+المحدد مقبضان عند طرفيه وبُعد مؤقت لطوله: اكتب قيمة لتغييره. ويلتصق المؤشر بنهايات خطوط تفاصيل
+العرض ومنتصفاتها ومراكزها وتقاطعاتها. ويُسحب طرف الخط المختار وحده منفردًا ويبقى الخط المجاور في
+مكانه؛ ومع اختيار سلسلة (<span class="keys"><kbd class="key-tab">Tab</kbd></span>) تُسحب معًا الأطراف التي تلتقي عندها خطوطها، في خطوة تراجع واحدة.</p>
+<p>تفتح <strong>منطقة ▸ منطقة معبأة</strong> وضع المخطط: يُرسم الحد بكل أشكال لوحة <strong>رسم</strong> وبـ<strong>اختيار الخطوط</strong>،
+والحلقات داخل أخرى ثقوب. وتُحفظ المنحنيات قطعاً مستقيمة قصيرة. وينهي <span class="keys"><kbd class="key-escape">Esc</kbd></span> سلسلة ويُبقي المخطط؛
+ويعمل <strong>تعديل</strong> وأدوات التعديل على خطوطه. ويصنع <strong>إنهاء وضع التحرير</strong> المنطقة بنوع المنطقة الحالي،
+أو يذكر السبب إن تعذر (حد مفتوح أو متقاطع). ويفتح <strong>تحرير الحدود</strong> للمنطقة المحددة مخططها من جديد.
+يحدد النوع نمط تعبئتها ولونها وخلفيتها (<strong>معتم</strong> يخفي ما خلفه). تصنع <strong>منطقة ▸ منطقة
 إخفاء</strong> منطقة بلون الورق تخفي ما تحتها. وتعرض المنطقة <strong>المساحة</strong> الخاصة بها ولها <strong>التعليقات</strong>. وللمنطقة المحددة مقبض عند كل رأس: اسحب
 أحدها لتغيير شكلها.</p>
 <h2 id="detail-components-repeating-details-and-insulation">المكوّنات التفصيلية والتفاصيل المتكررة والعزل</h2>

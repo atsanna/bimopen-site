@@ -19,7 +19,7 @@
 <link href="../assets/css/theme_dark_mode.css" rel="stylesheet"/>
 <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
-<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="bimopen" dir="ltr">
+<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="slate" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
@@ -55,13 +55,13 @@
 </div>
 </div>
 <form class="md-header__option" data-md-component="palette">
-<input aria-label="Zum dunklen Design wechseln" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="custom" data-md-color-scheme="bimopen" id="__palette_0" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Zum dunklen Design wechseln">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
-</label>
-<input aria-label="Zum hellen Design wechseln" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Zum hellen Design wechseln">
+<input aria-label="Zum hellen Design wechseln" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Zum hellen Design wechseln">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Zum dunklen Design wechseln" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="bimopen" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Zum dunklen Design wechseln">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
 </label>
 </form>
 <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
@@ -591,7 +591,7 @@ Legenden. Wählen Sie den Bemaßungstyp in der Typenauswahl, solange das Werkzeu
 (<strong>Wandachsen</strong>, <strong>Wandflächen</strong>, <strong>Tragschichtmitte</strong>, <strong>Tragschichtflächen</strong>) und was ein Klick
 wählt:</p>
 <ul>
-<li><strong>Einzelne Referenzen</strong>: Klicken Sie die Referenzen nacheinander an (Wandflächen oder Achsen,
+<li><strong>Referenzen</strong>: Klicken Sie die Referenzen nacheinander an (Wandflächen oder Achsen,
   Raster, Kanten von Türen und Fenstern, Detaillinien, die Kanten von Legendensymbolen) und klicken
   Sie dann auf eine leere Stelle, um die Bemaßungslinie dort zu platzieren. Während Sie wählen,
   folgt die Maßkette dem Cursor. Drücken Sie <strong>TAB</strong> über einer Wand, um ihre Referenzen
@@ -620,17 +620,24 @@ an und dann dorthin, wo die Bemaßung stehen soll.</p>
   Maßhilfslinien hinzuzufügen, klicken Sie eine vorhandene Maßhilfslinie an, um sie zu entfernen,
   und klicken Sie dann auf eine leere Stelle, um abzuschließen. Jede Maßhilfslinie einer gewählten
   Bemaßung hat in ihrer Mitte ein Steuerelement: Klicken Sie mit der rechten Maustaste darauf ▸
-  <strong>Hilfslinie verschieben</strong> und klicken Sie dann die neue Referenz an; oder ▸ <strong>Hilfslinien löschen</strong>.</li>
+  <strong>Hilfslinie verschieben</strong> und klicken Sie dann die neue Referenz an; oder ▸ <strong>Hilfslinien löschen</strong>.
+  Das Steuerelement am Elementende einer Hilfslinie zieht ihren Abstand vom Element; nahe dem Abstand
+  einer anderen Hilfslinie übernimmt es denselben.</li>
 <li>Wählen Sie ein Element, das die Bemaßung misst, und klicken Sie auf einen Wert daneben: Geben Sie
-  einen neuen Abstand ein und drücken Sie die Eingabetaste, und das Element wird verschoben.</li>
+  einen neuen Abstand ein und drücken Sie die Eingabetaste, und das Element wird verschoben:
+  eine Wand, ein Raster, eine Tür oder ein Fenster (entlang ihrer
+  Wand) oder eine Detaillinie.</li>
 </ul>
 <p>Der Typ legt den Maßpfeil (Schrägstrich, gefüllter Pfeil oder Punkt), die Verlängerungen der
 Bemaßungs- und Maßhilfslinien (<strong>Steuerelement der Hilfslinie</strong>: ein Abstand zum Element oder
-<strong>An Maßlinie fixiert</strong> mit ihrer <strong>Hilfslinienlänge</strong>), die <strong>Linienstärke</strong> und die <strong>Linienstärke der
-Markierung</strong>, das <strong>Mittellinien-Symbol</strong> und das <strong>Mittellinienmuster</strong> von Maßhilfslinien zu
+<strong>An Maßlinie fixiert</strong> mit ihrer <strong>Hilfslinienlänge</strong>), den <strong>Fangabstand der Maßlinie</strong> (beim Platzieren
+rastet die Linie in Vielfachen davon vom Gemessenen ein; 0 schaltet ihn aus), die <strong>Linienstärke</strong> und die <strong>Linienstärke der
+Markierung</strong>, das <strong>Mittellinien-Symbol</strong>, das <strong>Mittellinienmuster</strong> und die <strong>Mittellinien-Markierung</strong>
+(<strong>Standard</strong> ist die des Typs) von Maßhilfslinien zu
 Mittellinien, die Farbe, die Textgröße, den Versatz, den Hintergrund sowie Fett,
-Kursiv und Unterstrichen fest, ferner die Einheiten (<strong>Projekteinstellungen verwenden</strong> oder eine
-Einheit mit ihren Dezimalstellen) und bei linearen Bemaßungen den <strong>Typ Maßkette</strong>:
+Kursiv und Unterstrichen fest, ferner die Einheiten
+(<strong>Einheitenformat</strong> öffnet <strong>Format</strong>: <strong>Projekteinstellungen verwenden</strong> oder eine Einheit mit ihrer
+Rundung, auch <strong>Benutzerdefiniert</strong> mit einem <strong>Inkrementfaktor</strong>, ihrem Symbol und den Optionen) und bei linearen Bemaßungen den <strong>Typ Maßkette</strong>:
 <strong>Durchgehend</strong>, <strong>Basislinie</strong> (übereinandergestapelte Werte ab der ersten Referenz) oder
 <strong>Koordinate</strong> (Werte ab der ersten Referenz entlang einer Linie). <strong>Öffnungshöhe anzeigen</strong>
 schreibt die Höhe einer Tür oder eines Fensters unter die von Laibung zu Laibung gemessene Breite.
@@ -642,6 +649,12 @@ dem Bemaßen festzulegen.</p>
 <p>Eine gewählte Basislinien-Maßkette zeigt an ihrem Ursprung ein Umkehrsteuerelement: Klicken Sie
 darauf oder drücken Sie die <strong>Leertaste</strong>, um vom anderen Ende aus zu messen. <strong>Basislinienversatz</strong>
 in ihren Eigenschaften legt den Abstand zwischen ihren Linien auf dem Papier fest.</p>
+<p>Ein Koordinatentyp hat in seinen Typeigenschaften <strong>Einstellungen für Koordinatenmaße</strong>:
+<strong>Bearbeiten…</strong> öffnet ein Dialogfeld mit <strong>Textausrichtung</strong> (an den Hilfslinien <strong>Ausgerichtet</strong>
+oder <strong>Horizontal</strong>), <strong>Textposition</strong> (<strong>In Linie mit der Hilfslinie</strong> oder <strong>Über der
+Hilfslinie</strong>), <strong>Ursprung sichtbar</strong>, <strong>Ursprungsmarkierung</strong> (<strong>Nullwert</strong>, <strong>Kreis</strong> oder die
+<strong>Markierung</strong> des Typs) und <strong>Maßlinienstil</strong> (<strong>Durchgehend</strong> oder <strong>Keine</strong>, dann bleiben nur die
+Hilfslinien und ihre Markierungen).</p>
 <h3 id="temporary-dimensions">Temporäre Bemaßungen</h3>
 <p>Wählen Sie eine Wand oder ein Raster: Temporäre Bemaßungen zeigen den Abstand zu den nächsten
 parallelen Wänden oder Rastern. Eine Tür oder ein Fenster zeigt seinen Abstand entlang seiner Wand zu den
@@ -683,30 +696,35 @@ Unterkante oder beide. Bei Neigungsbemaßungen zeichnet <strong>Darstellung der 
 oder, in Schnitten, ein <strong>Dreieck</strong>.</p>
 <p>Eine gewählte Punktbemaßung hat Griffe an ihrem Punkt, ihrer Schulter und ihrem Text: Ziehen Sie den
 Punkt, und die Punktbemaßung misst, was dort ist. Eine Punktbemaßung auf einer Geschossdecke oder
-einem Dach wird mit ihr gelöscht.</p>
+einem Dach wird mit ihr gelöscht. Beim Platzieren lässt <strong>Esc</strong> die halb platzierte Bemaßung los;
+ein zweites <strong>Esc</strong> beendet das Werkzeug.</p>
 <p>Der Typ der Punktbemaßung legt <strong>Höhenkennzeichnung</strong>, <strong>Oberkanten-Kennzeichnung</strong> und
-<strong>Unterkanten-Kennzeichnung</strong> (Texte vor dem Wert), das <strong>Symbol</strong>, <strong>Höhe einschließen</strong> und die
-<strong>Nord/Süd-Kennzeichnung</strong> und <strong>Ost/West-Kennzeichnung</strong> von Koordinaten sowie die <strong>Länge der
+<strong>Unterkanten-Kennzeichnung</strong> (die Ober- oder Unterkanten-Kennzeichnung, dann die
+Höhenkennzeichnung, dann der Wert; die <strong>… als Präfix/Suffix</strong> jeder Kennzeichnung setzt sie
+stattdessen hinter den Wert), das <strong>Symbol</strong>, <strong>Höhe einschließen</strong> und die
+<strong>Nord/Süd-Kennzeichnung</strong> und <strong>Ost/West-Kennzeichnung</strong> von Koordinaten (mit <strong>Kennzeichnung als Präfix/Suffix</strong>) sowie die <strong>Länge der
 Führungslinie</strong> und die <strong>Neigungsrichtung</strong> (<strong>Nach unten</strong> oder <strong>Nach oben</strong>) von Neigungen fest.</p>
 <h2 id="text">Text</h2>
 <p><strong>Beschriften ▸ Text ▸ Text</strong> (<code>TX</code>): Klicken Sie dorthin, wo die Notiz stehen soll, und tippen Sie;
 die Eingabetaste beginnt eine neue Zeile. Ein Klick ergibt eine Notiz ohne Umbruch; durch Ziehen
 erhält sie eine Breite, und die Wörter werden darin umgebrochen. Ein Klick an anderer Stelle
-beendet die Notiz, und <strong>Esc</strong> beendet das Werkzeug. Die Textgröße gilt auf dem Papier: Die Notiz
-behält in jedem Ansichtsmaßstab ihre gedruckte Größe.</p>
+beendet die Notiz, und <strong>Esc</strong> beendet das Werkzeug. <span class="keys"><kbd class="key-tab">Tab</kbd></span> beim Tippen setzt den Text zum
+nächsten Tabulator. Die Textgröße gilt auf dem Papier: Die Notiz behält in jedem Ansichtsmaßstab
+ihre gedruckte Größe.</p>
 <p>Die Gruppe <strong>Format</strong> legt fest, vor dem Platzieren oder an einer gewählten Notiz:</p>
 <ul>
 <li>die Führungslinie: <strong>Keine Führungslinie</strong>, <strong>Ein Segment</strong> (Spitze anklicken, dann die Notiz),
   <strong>Zwei Segmente</strong> (Spitze, Knick, Notiz) oder <strong>Bogen</strong>;</li>
 <li>die Ausrichtung, links, zentriert oder rechts, sowie <strong>Fett</strong>, <strong>Kursiv</strong> und <strong>Unterstrichen</strong>
-  (Strg+B, Strg+I, Strg+U beim Tippen), die für die ganze Notiz gelten;</li>
+  (Strg+B, Strg+I, Strg+U beim Tippen oder an den gewählten Notizen), die für die ganze Notiz gelten;</li>
 <li>bei einer gewählten Notiz <strong>Gerade Führungslinie links hinzufügen</strong> und die drei anderen
   Schaltflächen für Führungslinien   <strong>Letzte Führungslinie entfernen</strong>;</li>
 <li><strong>Anschluss links</strong> und <strong>Anschluss rechts</strong> (<strong>Oben</strong>, <strong>Mittig</strong>, <strong>Unten</strong>): wo die
   Führungslinien auf die Notiz treffen; beim Platzieren gewählt, bleiben sie für die nächsten
   Notizen erhalten.</li>
 <li><strong>Absatzformat</strong>: die Absätze als Liste, mit <strong>Aufzählungszeichen</strong>, <strong>Nummerierung</strong>,
-  <strong>Kleinbuchstaben</strong> oder <strong>Großbuchstaben</strong>; umgebrochene Zeilen werden unter dem Text eingerückt.</li>
+  <strong>Kleinbuchstaben</strong> oder <strong>Großbuchstaben</strong>; der Text jedes Eintrags beginnt am ersten
+  Tabulator, und umgebrochene Zeilen werden um einen eingerückt.</li>
 </ul>
 <p>Nahe an der Linie der Ecke einer anderen Notiz rastet eine neue Notiz dort ein, und eine
 gestrichelte Linie zeigt es an.</p>
@@ -718,15 +736,17 @@ bearbeiten. Zu
 ihren Eigenschaften gehören <strong>Bogenführungslinien</strong>, <strong>Anschluss links</strong> und <strong>Anschluss rechts</strong>
 sowie <strong>Lesbar halten</strong>, was sie nie auf dem Kopf zeigt. Der Texttyp legt die Farbe (von Text,
 Rahmen und Führungslinien), den Hintergrund (<strong>Undurchsichtig</strong> verdeckt, was dahinter liegt),
-<strong>Rahmen anzeigen</strong> mit seinem Versatz, die Pfeilspitze der Führungslinie, die Größe sowie Fett,
-Kursiv und Unterstrichen fest. <strong>Duplizieren…</strong> in <strong>Typeigenschaften</strong> erstellt einen neuen
-Texttyp.</p>
+<strong>Rahmen anzeigen</strong> mit seinem Versatz, die Pfeilspitze der Führungslinie, die <strong>Linienstärke</strong>
+von Rahmen und Führungslinien, die Größe, die <strong>Tabulatorgröße</strong> (12,7 mm) sowie Fett, Kursiv und
+Unterstrichen fest. Die kleine Schaltfläche <strong>Texttypen</strong> der Gruppe <strong>Text</strong> öffnet die
+<strong>Typeigenschaften</strong>, wo <strong>Duplizieren…</strong> einen neuen Texttyp erstellt.</p>
 <p><strong>Beschriften ▸ Text ▸ Suchen/Ersetzen</strong> sucht Wörter in den Notizen der aktuellen Auswahl, der
 aktuellen Ansicht oder des gesamten Projekts (<strong>Bereich:</strong>), mit Optionen für Groß- und
 Kleinschreibung und ganze Wörter. <strong>Alle suchen</strong> listet die Treffer mit der Ansicht auf, in der
 sie stehen; <strong>Weitersuchen</strong> oder ein Klick auf eine Zeile wählt diese Notiz und zeigt ihren
-gesamten Text unter <strong>Kontext</strong>. <strong>Ersetzen</strong> ändert den ersten, <strong>Alle ersetzen</strong> jeden, und
-<strong>Schließen</strong> schließt den Dialog.</p>
+gesamten Text unter <strong>Kontext</strong>. <strong>Ersetzen</strong> ändert den markierten Treffer (den ersten, wenn keiner markiert
+ist), <strong>Alle ersetzen</strong> jeden, und <strong>Schließen</strong> schließt den Dialog. An gewählten Notizen steht es
+auch unter <strong>Werkzeuge</strong> ihrer Registerkarte.</p>
 <h2 id="symbols">Symbole</h2>
 <p><strong>Beschriften ▸ Symbol ▸ Symbol</strong> (<code>SY</code>) platziert ein 2D-Beschriftungssymbol in einem Grundriss,
 einem Schnitt, einer Zeichenansicht oder einer Legende: einen <strong>Nordpfeil</strong>, ein
@@ -848,12 +868,63 @@ Elements startet das Werkzeug, das es mit seinem Typ platziert: bei einem Legend
 seiner Ansicht und der Länge Basisbauteil.</p>
 <h2 id="detail-lines-and-regions">Detaillinien und Bereiche</h2>
 <p><strong>Beschriften ▸ Detail ▸ Detaillinie</strong> (<code>DL</code>) zeichnet Linien nur in der geöffneten Ansicht, im
-Linienstil der Gruppe <strong>Linienstil</strong>, mit den Formen der Gruppe <strong>Zeichnen</strong>; <strong>Kette</strong> beginnt
-jede Linie dort, wo die letzte endete.</p>
-<p><strong>Bereich ▸ Gefüllter Bereich</strong> skizziert eine Begrenzung mit Linien, Rechtecken oder Kreisen: Jede Schleife schließt sich, wenn Sie
-ihren ersten Punkt erneut anklicken, und Schleifen innerhalb einer anderen sind Löcher.
-<strong>Bearbeitungsmodus beenden</strong> erzeugt den Bereich im aktuellen Bereichstyp, der sein Füllmuster,
-seine Farbe und seinen Hintergrund festlegt (<strong>Undurchsichtig</strong> verdeckt, was dahinter liegt).
+Linienstil der Gruppe <strong>Linienstil</strong>. Die Gruppe <strong>Zeichnen</strong> bietet <strong>Linie</strong>, <strong>Rechteck</strong>,
+<strong>Einbeschriebenes Polygon</strong>, <strong>Umschriebenes Polygon</strong>, <strong>Kreis</strong>, <strong>Bogen Start-Ende-Radius</strong>,
+<strong>Bogen mit Mittelpunkt und Endpunkten</strong>, <strong>Tangentialer Bogen</strong>, <strong>Spline</strong>, <strong>Ellipse</strong>,
+<strong>Teilellipse</strong> und <strong>Abrundungsbogen</strong>. Die Optionsleiste zeigt, was die Form annimmt:</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Was sie bewirkt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Kette</strong></td>
+<td>Jede Linie (oder jeder Bogen oder Spline) beginnt dort, wo die letzte endete; ausgeschaltet steht jede für sich</td>
+</tr>
+<tr>
+<td><strong>Versatz</strong></td>
+<td>Das Gezeichnete wird um diesen Betrag seitlich verschoben; verkettete Linien treffen sich an ihren Ecken</td>
+</tr>
+<tr>
+<td><strong>Radius</strong></td>
+<td>Ein Kreis, ein Polygon oder ein Bogen mit Mittelpunkt und Endpunkten mit diesem Radius (ein Kreis braucht einen Klick); verkettete Linien und Rechtecke erhalten abgerundete Ecken. <strong>Versatz</strong> wird dann ignoriert</td>
+</tr>
+<tr>
+<td><strong>Seiten</strong></td>
+<td>Die Anzahl der Seiten eines Polygons</td>
+</tr>
+</tbody>
+</table>
+<p>Nach dem ersten Klick tippen Sie eine Länge (eine Linie, eine Sehne) oder einen Radius (Kreise,
+Polygone, Bögen, Ellipsenachsen) und drücken <span class="keys"><kbd class="key-enter">Enter</kbd></span>; der Wert steht am Cursor. Ein Bogen mit
+Mittelpunkt und Endpunkten überschreitet nie 180°: Darüber hinaus dreht er sich in die andere
+Richtung, und ein getippter Winkel legt sein Ende fest. Ein tangentialer Bogen beginnt am Ende einer
+Linie oder eines Bogens, den Sie anklicken. <span class="keys"><kbd class="key-shift">Shift</kbd></span> hält Linien und Polygonradien waagerecht oder
+senkrecht, dreht Sehnen, Bogenradien und Ellipsenachsen in Schritten von 45° und hält den
+Öffnungswinkel eines Bogens bei 90°, 180° oder 270°. <span class="keys"><kbd class="key-escape">Esc</kbd></span> beendet eine Kette oder einen Spline.
+Dieselben Formen und Optionen gibt es in jeder Skizze (Geschossdecken, Dächer, Bereiche,
+Revisionswolken, Wandprofile).</p>
+<p><strong>Linien wählen</strong> erzeugt eine Detaillinie auf der Fläche, der Achse oder der Schicht einer Wand,
+an einem Raster oder einer anderen Linie unter dem Cursor (<span class="keys"><kbd class="key-tab">Tab</kbd></span> für die nächste), verschoben um
+den <strong>Versatz</strong>; mit <strong>Sperren</strong> bleibt die Linie daran und folgt, wenn es sich bewegt.
+<strong>Abrundungsbogen</strong> wählt zwei Linien und rundet ihre Ecke ab, mit dem Bogen unter dem Cursor oder
+mit dem eingestellten <strong>Radius</strong>. Eine gewählte Detaillinie hat Griffe an ihren Enden und eine
+temporäre Bemaßung ihrer Länge: Tippen Sie einen Wert, um sie zu ändern. Der Cursor rastet an
+Endpunkten, Mitten, Mittelpunkten und Schnittpunkten der Detaillinien der Ansicht ein. Das Ende
+einer allein gewählten Linie wird allein gezogen und lässt die Nachbarlinie, wo sie ist; ist eine
+Kette gewählt (<span class="keys"><kbd class="key-tab">Tab</kbd></span>), werden die Enden, an denen ihre Linien zusammentreffen, gemeinsam gezogen,
+in einem einzigen Rückgängig-Schritt.</p>
+<p><strong>Bereich ▸ Gefüllter Bereich</strong> öffnet den Skizziermodus: Die Begrenzung wird mit jeder Form der
+Gruppe <strong>Zeichnen</strong> und mit <strong>Linien wählen</strong> skizziert, und Schleifen innerhalb einer anderen sind
+Löcher. Kurven bleiben als kurze gerade Segmente erhalten. <span class="keys"><kbd class="key-escape">Esc</kbd></span> beendet eine Kette und behält
+die Skizze; <strong>Ändern</strong> und die Werkzeuge von Ändern wirken auf ihre Linien.
+<strong>Bearbeitungsmodus beenden</strong> erzeugt den Bereich im aktuellen Bereichstyp oder nennt den Grund,
+warum es nicht geht (eine offene oder sich kreuzende Begrenzung). <strong>Begrenzung bearbeiten</strong> eines
+gewählten Bereichs öffnet seine Skizze erneut. Der Typ legt sein Füllmuster,
+seine Farbe und seinen Hintergrund fest (<strong>Undurchsichtig</strong> verdeckt, was dahinter liegt).
 <strong>Bereich ▸ Maskierungsbereich</strong> erzeugt einen Bereich in der Papierfarbe, der verdeckt, was
 darunter liegt. Ein Bereich zeigt seine <strong>Fläche</strong> und hat <strong>Kommentare</strong>. Ein gewählter Bereich hat
 an jedem Eckpunkt einen Griff: Ziehen Sie einen, um seine Form zu ändern.</p>

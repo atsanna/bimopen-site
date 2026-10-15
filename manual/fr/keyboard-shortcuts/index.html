@@ -19,7 +19,7 @@
 <link href="../assets/css/theme_dark_mode.css" rel="stylesheet"/>
 <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
-<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="bimopen" dir="ltr">
+<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="slate" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
@@ -55,13 +55,13 @@
 </div>
 </div>
 <form class="md-header__option" data-md-component="palette">
-<input aria-label="Passer au thème sombre" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="custom" data-md-color-scheme="bimopen" id="__palette_0" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Passer au thème sombre">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
-</label>
-<input aria-label="Passer au thème clair" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Passer au thème clair">
+<input aria-label="Passer au thème clair" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Passer au thème clair">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Passer au thème sombre" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="bimopen" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Passer au thème sombre">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
 </label>
 </form>
 <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
@@ -550,7 +550,7 @@ termine aussi l'esquisse lorsqu'elle comporte suffisamment de points.</p>
 Sans arguments, un raccourci lance l'outil ou ouvre la boîte de dialogue ; avec des arguments, il
 exécute la commande immédiatement (voir <a href="../command-line-and-mcp/">Ligne de commande et MCP</a>).</p>
 <p>Le curseur dans la zone de dessin, les lettres vont dans la ligne de commande (dans le style BIMopen, dans la recherche), et un raccourci agit dès qu'il est tapé, sans <span class="keys"><kbd class="key-enter">Enter</kbd></span>, lorsqu'aucun raccourci ni nom de commande plus long ne commence par ses lettres : <code>VR</code> (plage de vue), <code>WT</code> (mosaïque), <code>ZE</code>, <code>ZF</code>, <code>ZA</code>, <code>ZP</code>, <code>ZR</code>, <code>ZO</code>, <code>ZS</code>, <code>HR</code>, <code>HH</code>, <code>HC</code>, <code>IC</code>, <code>DL</code> (ligne de détail), <code>RT</code> (étiquette de pièce), <code>TG</code> (étiqueter par catégorie), <code>TX</code>, <code>CC</code> (copier), <code>MV</code>, <code>RM</code>, <code>LL</code> (niveau), <code>RC</code> (nuage de révision), <code>PP</code> (affiche ou masque <strong>Propriétés</strong>), <code>PT</code>, <code>RP</code> et les raccourcis que vous avez ajoutés. Les autres commencent des noms plus longs et attendent la lettre suivante, une espace (des arguments suivent) ou <span class="keys"><kbd class="key-enter">Enter</kbd></span> : <code>VG</code> (<code>vgsub</code>…), <code>HI</code> (<code>hide</code>), <code>DI</code> (<code>dim</code>), <code>AL</code> (<code>align</code>), <code>WA</code> (<code>wall</code>), <code>DR</code> (<code>draworder</code>), <code>UN</code> (<code>undo</code>), <code>MA</code> (<code>mask</code>) ; ainsi <code>dim</code>, <code>wall 0,0 5,0</code> ou <code>WA 0,0 5,0</code> tapés au-dessus de la vue s'exécutent tels quels. <code>MA</code>, <code>PT</code> et <code>RP</code> indiquent dans la barre d'état qu'ils ne sont pas encore disponibles. Tapée dans la ligne de commande elle-même, une ligne attend <span class="keys"><kbd class="key-enter">Enter</kbd></span>.</p>
-<p>Pendant qu'un outil attend un point dans un plan ou une vue de dessin, <code>SE</code> (extrémités), <code>SM</code> (milieux), <code>SI</code> (intersections), <code>SN</code> (proche) et <code>SO</code> (désactivés) remplacent les accrochages pour ce point seulement (aussi choisis dans <strong>Remplacements d'accrochage ▸</strong> du bouton droit ; <code>SE</code>, <code>SI</code> et <code>SO</code> avec <span class="keys"><kbd class="key-enter">Enter</kbd></span>, car des noms plus longs commencent ainsi) ; la barre d'état l'indique, et <span class="keys"><kbd class="key-escape">Esc</kbd></span> ou le point pris y met fin. Dans une coupe ou une vue 3D, dont les points ne sont pas accrochés ainsi, ils sont refusés avec un message. Dans une esquisse, ils valent dans toutes les vues, ainsi que <code>SC</code> (le centre d'un arc) et <code>SP</code> (la perpendiculaire depuis le point d'où l'on dessine).</p>
+<p>Pendant qu'un outil attend un point dans un plan ou une vue de dessin (ou un outil de détail ou d'annotation dans une coupe), <code>SE</code> (extrémités), <code>SM</code> (milieux), <code>SI</code> (intersections), <code>SN</code> (proche) et <code>SO</code> (désactivés) remplacent les accrochages pour ce point seulement (aussi choisis dans <strong>Remplacements d'accrochage ▸</strong> du bouton droit ; <code>SE</code>, <code>SI</code> et <code>SO</code> avec <span class="keys"><kbd class="key-enter">Enter</kbd></span>, car des noms plus longs commencent ainsi) ; la barre d'état l'indique, et <span class="keys"><kbd class="key-escape">Esc</kbd></span> ou le point pris y met fin. Pour les autres outils dans une coupe, ou dans une vue 3D, dont les points ne sont pas accrochés ainsi, ils sont refusés avec un message. Dans une esquisse, ils valent dans toutes les vues, ainsi que <code>SC</code> (le centre d'un arc) et <code>SP</code> (la perpendiculaire depuis le point d'où l'on dessine).</p>
 <h3 id="modelling">Modélisation</h3>
 <table>
 <thead>
@@ -824,7 +824,7 @@ exécute la commande immédiatement (voir <a href="../command-line-and-mcp/">Lig
 </table>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Tapé seul, <code>DL</code> lance la ligne de détail, comme dans Revit ; suivi de points dans la ligne de
+<p>Tapé seul, <code>DL</code> lance la ligne de détail ; suivi de points dans la ligne de
 commande, il dessine une cote linéaire (<code>lineardim</code>).</p>
 </div>
 <h3 id="views-and-settings">Vues et paramètres</h3>

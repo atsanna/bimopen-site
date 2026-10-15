@@ -19,7 +19,7 @@
 <link href="../assets/css/theme_dark_mode.css" rel="stylesheet"/>
 <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
-<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="bimopen" dir="ltr">
+<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="slate" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
@@ -55,13 +55,13 @@
 </div>
 </div>
 <form class="md-header__option" data-md-component="palette">
-<input aria-label="Passa al tema scuro" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="custom" data-md-color-scheme="bimopen" id="__palette_0" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Passa al tema scuro">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
-</label>
-<input aria-label="Passa al tema chiaro" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Passa al tema chiaro">
+<input aria-label="Passa al tema chiaro" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Passa al tema chiaro">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Passa al tema scuro" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="bimopen" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Passa al tema scuro">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
 </label>
 </form>
 <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
@@ -229,7 +229,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#everything-of-the-revit-style">
 <span class="md-ellipsis">
-      Tutto lo stile Revit
+      Tutto lo stile Classica
     </span>
 </a>
 </li>
@@ -376,7 +376,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#everything-of-the-revit-style">
 <span class="md-ellipsis">
-      Tutto lo stile Revit
+      Tutto lo stile Classica
     </span>
 </a>
 </li>
@@ -399,7 +399,7 @@
 nomi, le stesse scorciatoie da tastiera e gli stessi risultati; cambiano solo l'aspetto e la
 posizione degli strumenti.</p>
 <ul>
-<li>Lo stile <strong>Revit</strong>, descritto in <a href="../interface/">L'interfaccia</a>: la barra multifunzione, la
+<li>Lo stile <strong>Classica</strong>, descritto in <a href="../interface/">L'interfaccia</a>: la barra multifunzione, la
   barra delle opzioni, la tavolozza <strong>Proprietà</strong> e il <strong>Browser di progetto</strong>. BIMopen si apre
   in questo stile.</li>
 <li>Lo stile <strong>BIMopen</strong>: una barra laterale, una ricerca dei comandi, schede di strumenti,
@@ -410,7 +410,7 @@ posizione degli strumenti.</p>
 <ol>
 <li>Apri il menu dell'applicazione e scegli <strong>Opzioni</strong> (nello stile <strong>BIMopen</strong>, l'ingranaggio
    all'estremità destra della barra superiore).</li>
-<li>In <strong>Interfaccia utente</strong>, imposta <strong>Interfaccia</strong> su <strong>Revit</strong> o <strong>BIMopen</strong>.</li>
+<li>In <strong>Interfaccia utente</strong>, imposta <strong>Interfaccia</strong> su <strong>Classica</strong> o <strong>BIMopen</strong>.</li>
 </ol>
 <p>La finestra cambia subito. La scelta resta memorizzata, sul computer e nel browser, e la
 sessione successiva si apre nello stesso stile. <strong>Tema</strong> (<strong>Chiaro</strong> o <strong>Scuro</strong>) vale per
@@ -444,7 +444,7 @@ entrambi gli stili.</p>
 <tr>
 <td><strong>Striscia delle opzioni</strong></td>
 <td>Sopra la vista, mentre uno strumento lavora</td>
-<td>Le opzioni dello strumento (altezza, linea di ubicazione, concatena…), la barra delle opzioni dello stile <strong>Revit</strong></td>
+<td>Le opzioni dello strumento (altezza, linea di ubicazione, concatena…), la barra delle opzioni dello stile <strong>Classica</strong></td>
 </tr>
 <tr>
 <td><strong>Vista</strong></td>
@@ -476,15 +476,15 @@ che corrispondono. Fai clic su un risultato, o sceglilo con i tasti freccia e pr
 comando parte, una vista si apre, un elemento viene selezionato e mostrato, un materiale si apre
 in <strong>Materiali</strong>. La ricerca trova ogni comando delle schede della barra multifunzione, anche quelli della scheda contestuale (con una vista selezionata su una tavola, «attiva» trova <strong>Attiva vista</strong>), e lo esegue come il suo pulsante.</p>
 <p>La casella di ricerca è anche la riga di comando dello stile. Ciò che si scrive in una vista
-finisce lì, come nella riga di comando dello stile <strong>Revit</strong>, e <span class="keys"><kbd class="key-enter">Enter</kbd></span> esegue così com'è
+finisce lì, come nella riga di comando dello stile <strong>Classica</strong>, e <span class="keys"><kbd class="key-enter">Enter</kbd></span> esegue così com'è
 scritta una scorciatoia da tastiera (<code>WA</code>, <code>DR</code>, <code>ZF</code>…) o un comando con i suoi argomenti
 (<code>wall 0,0 5,0</code>). L'elenco dei comandi è in <a href="../command-line-and-mcp/">Riga di comando e MCP</a>.</p>
 <h2 id="right-click-menu">Menu del tasto destro</h2>
 <p>Nelle piante, nelle sezioni e nelle viste 3D il tasto destro apre un menu scuro: con una
 selezione, prima i comandi di modifica (<strong>Sposta</strong>, <strong>Copia</strong>, <strong>Ruota</strong>, <strong>Allinea</strong>,
-<strong>Offset</strong> e gli altri), poi le stesse voci del menu della vista nello stile <strong>Revit</strong>.</p>
-<h2 id="everything-of-the-revit-style">Tutto lo stile Revit</h2>
-<p>Ogni funzione dello stile <strong>Revit</strong> è nello stile <strong>BIMopen</strong>, una volta sola:</p>
+<strong>Offset</strong> e gli altri), poi le stesse voci del menu della vista nello stile <strong>Classica</strong>.</p>
+<h2 id="everything-of-the-revit-style">Tutto lo stile Classica</h2>
+<p>Ogni funzione dello stile <strong>Classica</strong> è nello stile <strong>BIMopen</strong>, una volta sola:</p>
 <ul>
 <li>ogni pulsante della barra multifunzione è un riquadro del pannello degli strumenti, nella voce
   della barra laterale che contiene la sua scheda, e la scheda contestuale <strong>Modifica</strong> sta in

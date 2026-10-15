@@ -19,7 +19,7 @@
 <link href="../assets/css/theme_dark_mode.css" rel="stylesheet"/>
 <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
-<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="bimopen" dir="ltr">
+<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="slate" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
@@ -55,13 +55,13 @@
 </div>
 </div>
 <form class="md-header__option" data-md-component="palette">
-<input aria-label="Passer au thème sombre" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="custom" data-md-color-scheme="bimopen" id="__palette_0" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Passer au thème sombre">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
-</label>
-<input aria-label="Passer au thème clair" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Passer au thème clair">
+<input aria-label="Passer au thème clair" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Passer au thème clair">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Passer au thème sombre" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="bimopen" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Passer au thème sombre">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
 </label>
 </form>
 <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
@@ -229,7 +229,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#everything-of-the-revit-style">
 <span class="md-ellipsis">
-      Tout le style Revit
+      Tout le style Classique
     </span>
 </a>
 </li>
@@ -376,7 +376,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#everything-of-the-revit-style">
 <span class="md-ellipsis">
-      Tout le style Revit
+      Tout le style Classique
     </span>
 </a>
 </li>
@@ -399,7 +399,7 @@
 les mêmes raccourcis clavier et les mêmes résultats ; seuls l'aspect et la place des outils
 changent.</p>
 <ul>
-<li>Le style <strong>Revit</strong>, décrit dans <a href="../interface/">L'interface</a> : le ruban, la barre des options,
+<li>Le style <strong>Classique</strong>, décrit dans <a href="../interface/">L'interface</a> : le ruban, la barre des options,
   la palette <strong>Propriétés</strong> et l'<strong>Arborescence du projet</strong>. BIMopen démarre dans ce style.</li>
 <li>Le style <strong>BIMopen</strong> : une barre latérale, une recherche de commandes, des cartes d'outils,
   des outils flottants sur la vue, un panneau d'élément à onglets et une bande de vignettes des
@@ -409,7 +409,7 @@ changent.</p>
 <ol>
 <li>Ouvrez le menu de l'application et choisissez <strong>Options</strong> (dans le style <strong>BIMopen</strong>,
    l'engrenage à l'extrémité droite de la barre supérieure).</li>
-<li>Sous <strong>Interface utilisateur</strong>, réglez <strong>Interface</strong> sur <strong>Revit</strong> ou <strong>BIMopen</strong>.</li>
+<li>Sous <strong>Interface utilisateur</strong>, réglez <strong>Interface</strong> sur <strong>Classique</strong> ou <strong>BIMopen</strong>.</li>
 </ol>
 <p>La fenêtre change aussitôt. Le choix est mémorisé, sur l'ordinateur et dans le navigateur, et la
 session suivante démarre dans le même style. <strong>Thème</strong> (<strong>Clair</strong> ou <strong>Sombre</strong>) s'applique aux
@@ -443,7 +443,7 @@ deux styles.</p>
 <tr>
 <td><strong>Bande des options</strong></td>
 <td>Sur la vue, pendant qu'un outil travaille</td>
-<td>Les options de l'outil (hauteur, ligne de justification, chaîne…), la barre des options du style <strong>Revit</strong></td>
+<td>Les options de l'outil (hauteur, ligne de justification, chaîne…), la barre des options du style <strong>Classique</strong></td>
 </tr>
 <tr>
 <td><strong>Vue</strong></td>
@@ -475,16 +475,16 @@ matériaux qui correspondent. Cliquez sur un résultat, ou choisissez-le avec le
 appuyez sur <span class="keys"><kbd class="key-enter">Enter</kbd></span> : une commande démarre, une vue s'ouvre, un élément est sélectionné et
 montré, un matériau s'ouvre dans <strong>Matériaux</strong>. La recherche trouve chaque commande des onglets du ruban, y compris celles de l'onglet contextuel (avec une vue sélectionnée sur une feuille, « activer » trouve <strong>Activer la vue</strong>), et l'exécute comme son bouton.</p>
 <p>La zone de recherche est aussi la ligne de commande du style. Ce que l'on tape dans une vue y
-arrive, comme dans la ligne de commande du style <strong>Revit</strong>, et <span class="keys"><kbd class="key-enter">Enter</kbd></span> exécute tel quel un
+arrive, comme dans la ligne de commande du style <strong>Classique</strong>, et <span class="keys"><kbd class="key-enter">Enter</kbd></span> exécute tel quel un
 raccourci clavier (<code>WA</code>, <code>DR</code>, <code>ZF</code>…) ou une commande avec ses arguments (<code>wall 0,0 5,0</code>). La
 liste des commandes est dans <a href="../command-line-and-mcp/">Ligne de commande et MCP</a>.</p>
 <h2 id="right-click-menu">Menu contextuel</h2>
 <p>Dans les plans, les coupes et les vues 3D, le bouton droit ouvre un menu sombre : avec une
 sélection, d'abord les commandes de modification (<strong>Déplacer</strong>, <strong>Copier</strong>, <strong>Faire pivoter</strong>,
 <strong>Aligner</strong>, <strong>Décaler</strong> et les autres), puis les mêmes entrées que le menu de la vue dans le
-style <strong>Revit</strong>.</p>
-<h2 id="everything-of-the-revit-style">Tout le style Revit</h2>
-<p>Chaque fonction du style <strong>Revit</strong> est dans le style <strong>BIMopen</strong>, une seule fois :</p>
+style <strong>Classique</strong>.</p>
+<h2 id="everything-of-the-revit-style">Tout le style Classique</h2>
+<p>Chaque fonction du style <strong>Classique</strong> est dans le style <strong>BIMopen</strong>, une seule fois :</p>
 <ul>
 <li>chaque bouton du ruban est une tuile du panneau d'outils, dans l'entrée de la barre latérale qui
   contient son onglet, et l'onglet contextuel <strong>Modifier</strong> est en haut du panneau pendant qu'un

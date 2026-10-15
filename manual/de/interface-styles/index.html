@@ -19,7 +19,7 @@
 <link href="../assets/css/theme_dark_mode.css" rel="stylesheet"/>
 <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
-<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="bimopen" dir="ltr">
+<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="slate" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
@@ -55,13 +55,13 @@
 </div>
 </div>
 <form class="md-header__option" data-md-component="palette">
-<input aria-label="Zum dunklen Design wechseln" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="custom" data-md-color-scheme="bimopen" id="__palette_0" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Zum dunklen Design wechseln">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
-</label>
-<input aria-label="Zum hellen Design wechseln" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Zum hellen Design wechseln">
+<input aria-label="Zum hellen Design wechseln" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Zum hellen Design wechseln">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Zum dunklen Design wechseln" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="bimopen" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Zum dunklen Design wechseln">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
 </label>
 </form>
 <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
@@ -229,7 +229,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#everything-of-the-revit-style">
 <span class="md-ellipsis">
-      Alles aus dem Stil Revit
+      Alles aus dem Stil Klassisch
     </span>
 </a>
 </li>
@@ -376,7 +376,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#everything-of-the-revit-style">
 <span class="md-ellipsis">
-      Alles aus dem Stil Revit
+      Alles aus dem Stil Klassisch
     </span>
 </a>
 </li>
@@ -398,7 +398,7 @@
 <p>BIMopen hat zwei Oberflächenstile. Beide führen dieselben Befehle aus, mit denselben Namen,
 Tastenkürzeln und Ergebnissen; nur das Aussehen und der Ort der Werkzeuge ändern sich.</p>
 <ul>
-<li>Der Stil <strong>Revit</strong>, beschrieben in <a href="../interface/">Die Benutzeroberfläche</a>: die
+<li>Der Stil <strong>Klassisch</strong>, beschrieben in <a href="../interface/">Die Benutzeroberfläche</a>: die
   Multifunktionsleiste, die Optionsleiste, die Palette <strong>Eigenschaften</strong> und der
   <strong>Projektbrowser</strong>. BIMopen startet in diesem Stil.</li>
 <li>Der Stil <strong>BIMopen</strong>: eine Seitenleiste, eine Befehlssuche, Werkzeugkarten, schwebende
@@ -409,7 +409,7 @@ Tastenkürzeln und Ergebnissen; nur das Aussehen und der Ort der Werkzeuge ände
 <ol>
 <li>Öffnen Sie das Anwendungsmenü und wählen Sie <strong>Optionen</strong> (im Stil <strong>BIMopen</strong> das Zahnrad
    am rechten Ende der oberen Leiste).</li>
-<li>Stellen Sie unter <strong>Benutzeroberfläche</strong> die <strong>Oberfläche</strong> auf <strong>Revit</strong> oder <strong>BIMopen</strong>.</li>
+<li>Stellen Sie unter <strong>Benutzeroberfläche</strong> die <strong>Oberfläche</strong> auf <strong>Klassisch</strong> oder <strong>BIMopen</strong>.</li>
 </ol>
 <p>Das Fenster ändert sich sofort. Die Wahl bleibt gespeichert, am Computer und im Browser, und die
 nächste Sitzung startet im selben Stil. <strong>Design</strong> (<strong>Hell</strong> oder <strong>Dunkel</strong>) gilt für beide
@@ -443,7 +443,7 @@ Stile.</p>
 <tr>
 <td><strong>Optionsstreifen</strong></td>
 <td>Über der Ansicht, solange ein Werkzeug arbeitet</td>
-<td>Die Optionen des Werkzeugs (Höhe, Positionslinie, Kette…), die Optionsleiste des Stils <strong>Revit</strong></td>
+<td>Die Optionen des Werkzeugs (Höhe, Positionslinie, Kette…), die Optionsleiste des Stils <strong>Klassisch</strong></td>
 </tr>
 <tr>
 <td><strong>Ansicht</strong></td>
@@ -475,16 +475,16 @@ Materialien. Klicken Sie auf ein Ergebnis oder wählen Sie es mit den Pfeiltaste
 <span class="keys"><kbd class="key-enter">Enter</kbd></span>: Ein Befehl startet, eine Ansicht öffnet sich, ein Element wird gewählt und gezeigt, ein
 Material öffnet sich in <strong>Materialien</strong>. Die Suche findet jeden Befehl der Registerkarten der Multifunktionsleiste, auch die der kontextbezogenen Registerkarte (mit einer auf einem Plan gewählten Ansicht findet «aktivieren» <strong>Ansicht aktivieren</strong>), und führt ihn aus wie seine Schaltfläche.</p>
 <p>Das Suchfeld ist auch die Befehlszeile des Stils. Was man in einer Ansicht tippt, landet dort,
-wie in der Befehlszeile des Stils <strong>Revit</strong>, und <span class="keys"><kbd class="key-enter">Enter</kbd></span> führt ein Tastenkürzel (<code>WA</code>, <code>DR</code>,
+wie in der Befehlszeile des Stils <strong>Klassisch</strong>, und <span class="keys"><kbd class="key-enter">Enter</kbd></span> führt ein Tastenkürzel (<code>WA</code>, <code>DR</code>,
 <code>ZF</code>…) oder einen Befehl mit seinen Argumenten (<code>wall 0,0 5,0</code>) so aus, wie er getippt wurde.
 Die Liste der Befehle steht in <a href="../command-line-and-mcp/">Befehlszeile und MCP</a>.</p>
 <h2 id="right-click-menu">Kontextmenü</h2>
 <p>In Grundrissen, Schnitten und 3D-Ansichten öffnet die rechte Maustaste ein dunkles Menü: bei
 einer Auswahl zuerst die Änderungsbefehle (<strong>Verschieben</strong>, <strong>Kopieren</strong>, <strong>Drehen</strong>,
 <strong>Ausrichten</strong>, <strong>Versatz</strong> und die anderen), dann dieselben Einträge wie das Menü der Ansicht im
-Stil <strong>Revit</strong>.</p>
-<h2 id="everything-of-the-revit-style">Alles aus dem Stil Revit</h2>
-<p>Jede Funktion des Stils <strong>Revit</strong> ist im Stil <strong>BIMopen</strong>, genau einmal:</p>
+Stil <strong>Klassisch</strong>.</p>
+<h2 id="everything-of-the-revit-style">Alles aus dem Stil Klassisch</h2>
+<p>Jede Funktion des Stils <strong>Klassisch</strong> ist im Stil <strong>BIMopen</strong>, genau einmal:</p>
 <ul>
 <li>jede Schaltfläche der Multifunktionsleiste ist eine Kachel des Werkzeugbereichs, im Eintrag
   der Seitenleiste, der ihre Registerkarte enthält, und die kontextbezogene Registerkarte

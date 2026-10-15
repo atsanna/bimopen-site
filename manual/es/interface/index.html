@@ -19,7 +19,7 @@
 <link href="../assets/css/theme_dark_mode.css" rel="stylesheet"/>
 <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
-<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="bimopen" dir="ltr">
+<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="slate" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
@@ -55,13 +55,13 @@
 </div>
 </div>
 <form class="md-header__option" data-md-component="palette">
-<input aria-label="Cambiar al tema oscuro" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="custom" data-md-color-scheme="bimopen" id="__palette_0" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Cambiar al tema oscuro">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
-</label>
-<input aria-label="Cambiar al tema claro" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Cambiar al tema claro">
+<input aria-label="Cambiar al tema claro" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Cambiar al tema claro">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Cambiar al tema oscuro" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="bimopen" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Cambiar al tema oscuro">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
 </label>
 </form>
 <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
@@ -980,7 +980,11 @@ para vistas que no son 3D, y <strong>Composición de plano ▸ Vista</strong> so
 </tbody>
 </table>
 <p><strong>Forzado</strong> activa y desactiva el forzado de cursor para todo el programa: aparece resaltado
-mientras está activo.</p>
+mientras está activo.
+<strong>Parámetros adicionales ▸ Forzados de cursor…</strong> tiene <strong>Forzados desactivados</strong> y los
+<strong>Incrementos de forzado de cotas de longitud</strong> (longitudes separadas por punto y coma, por defecto
+1000; 100; 10 mm): donde ningún elemento fuerza el cursor, este avanza en pasos del mayor de ellos
+que no supera un píxel con el zoom actual.</p>
 <h3 id="the-contextual-tab">La ficha contextual</h3>
 <p>Cuando inicias una herramienta o seleccionas algo, la cinta de opciones pasa por sí sola a la
 última ficha, que toma el nombre de lo que estás haciendo: <strong>Edición | Colocar: Muro</strong> mientras
@@ -1403,7 +1407,7 @@ menú tiene:</p>
   categorías de la selección;</li>
 <li><strong>Visibilidad/Gráficos…</strong>.</li>
 </ul>
-<p>Mientras hay una herramienta activa, un clic con el botón derecho abre en cambio el menú de la herramienta, y el paso en curso se mantiene: <strong>Cancelar</strong> (lo que hace <span class="keys"><kbd class="key-escape">Esc</kbd></span>, que sigue cancelando el paso), <strong>Repetir [comando]</strong>, <strong>Modificaciones de forzado ▸</strong> (el forzado del siguiente punto, como las teclas <code>SE</code>, <code>SM</code>, <code>SN</code>, <code>SI</code> y <code>SO</code>; solo en plantas y vistas de dibujo), <strong>Zoom en región</strong>, <strong>Alejar (2x)</strong>, <strong>Ajustar a la ventana</strong>, <strong>Encuadre/zoom anterior</strong>, <strong>Encuadre/zoom siguiente</strong> y <strong>Propiedades</strong>. Es el mismo en plantas, secciones, alzados, vistas 3D y en los planos, en los dos estilos de interfaz. En un boceto las modificaciones valen en todas las vistas, también <strong>Centro</strong> y <strong>Perpendicular</strong>.</p>
+<p>Mientras hay una herramienta activa, un clic con el botón derecho abre en cambio el menú de la herramienta, y el paso en curso se mantiene: <strong>Cancelar</strong> (lo que hace <span class="keys"><kbd class="key-escape">Esc</kbd></span>, que sigue cancelando el paso), <strong>Repetir [comando]</strong>, <strong>Modificaciones de forzado ▸</strong> (el forzado del siguiente punto, como las teclas <code>SE</code>, <code>SM</code>, <code>SN</code>, <code>SI</code> y <code>SO</code>; solo en plantas y vistas de dibujo), <strong>Zoom en región</strong>, <strong>Alejar (2x)</strong>, <strong>Ajustar a la ventana</strong>, <strong>Encuadre/zoom anterior</strong>, <strong>Encuadre/zoom siguiente</strong> y <strong>Propiedades</strong>. Es el mismo en plantas, secciones, alzados, vistas 3D y en los planos, en los dos estilos de interfaz. En un boceto las modificaciones valen en todas las vistas, también <strong>Centro</strong> y <strong>Perpendicular</strong>. Con el menú abierto, <span class="keys"><kbd class="key-escape">Esc</kbd></span> o un clic en la vista solo lo cierran.</p>
 <p>En la parte superior del menú, <strong>Repetir [comando]</strong> vuelve a iniciar la última herramienta usada; <span class="keys"><kbd class="key-enter">Enter</kbd></span> hace lo mismo cuando no hay ninguna herramienta activa y la línea de comandos está vacía. El menú es el mismo en plantas, secciones y vistas 3D.</p>
 <h2 id="command-line">Línea de comandos</h2>
 <p>Bajo el área de dibujo, la línea de comandos muestra el registro de lo que se ha hecho, lo más

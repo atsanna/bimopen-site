@@ -19,7 +19,7 @@
 <link href="../assets/css/theme_dark_mode.css" rel="stylesheet"/>
 <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
-<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="bimopen" dir="rtl">
+<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="slate" dir="rtl">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
@@ -55,13 +55,13 @@
 </div>
 </div>
 <form class="md-header__option" data-md-component="palette">
-<input aria-label="التبديل إلى الوضع الداكن" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="custom" data-md-color-scheme="bimopen" id="__palette_0" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_1" hidden="" title="التبديل إلى الوضع الداكن">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
-</label>
-<input aria-label="التبديل إلى الوضع الفاتح" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_0" hidden="" title="التبديل إلى الوضع الفاتح">
+<input aria-label="التبديل إلى الوضع الفاتح" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="التبديل إلى الوضع الفاتح">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="التبديل إلى الوضع الداكن" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="bimopen" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="التبديل إلى الوضع الداكن">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
 </label>
 </form>
 <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
@@ -971,7 +971,8 @@
 </tr>
 </tbody>
 </table>
-<p>يشغّل <strong>الالتقاط</strong> الالتقاط ويوقفه في البرنامج كله: ويكون مميزًا ما دام مفعّلًا.</p>
+<p>يشغّل <strong>الالتقاط</strong> الالتقاط ويوقفه في البرنامج كله: ويكون مميزًا ما دام مفعّلًا.
+وفي <strong>إعدادات إضافية ▸ الالتقاط…</strong> خيار <strong>إيقاف الالتقاط</strong> و<strong>زيادات التقاط أبعاد الطول</strong> (أطوال تفصل بينها فواصل منقوطة، افتراضيًا 1000; 100; 10 مم): حيث لا يلتقط أي عنصر، يتحرك المؤشر بخطوات أكبرها الذي لا يتجاوز بكسلًا واحدًا عند التكبير الحالي.</p>
 <h3 id="the-contextual-tab">التبويب السياقي</h3>
 <p>حين تبدأ أداة أو تحدد شيئًا، ينتقل الشريط من تلقاء نفسه إلى التبويب الأخير، الذي يأخذ اسم ما
 تفعله: <strong>تحرير | وضع جدار</strong> أثناء رسم الجدران، و<strong>تحرير | الجدران</strong> مع تحديد جدران، و<strong>تحرير |
@@ -1381,7 +1382,7 @@
 <li><strong>تجاوز الرسومات في العرض ▸ حسب الفئة…</strong>: يفتح <strong>الرؤية/الرسومات</strong> على فئات التحديد؛</li>
 <li><strong>الرؤية/الرسومات…</strong>.</li>
 </ul>
-<p>ما دامت هناك أداة نشطة، يفتح النقر بالزر الأيمن قائمة الأداة بدلاً من ذلك، وتبقى الخطوة الجارية: <strong>إلغاء</strong> (ما يفعله <span class="keys"><kbd class="key-escape">Esc</kbd></span> الذي ما زال يلغي الخطوة)، <strong>تكرار [الأمر]</strong>، <strong>تجاوزات الالتقاط ▸</strong> (التقاط النقطة التالية، كما تفعل المفاتيح <code>SE</code> و<code>SM</code> و<code>SN</code> و<code>SI</code> و<code>SO</code>؛ في المساقط وعروض الرسم فقط)، <strong>تكبير منطقة</strong>، <strong>تصغير (2×)</strong>، <strong>ملاءمة النافذة</strong>، <strong>التحريك/التكبير السابق</strong>، <strong>التحريك/التكبير التالي</strong> و<strong>الخصائص</strong>. وهي نفسها في المساقط والمقاطع والواجهات والعروض ثلاثية الأبعاد وعلى اللوحات، في نمطي الواجهة كليهما. وفي المخطط تعمل التجاوزات في كل عرض، ومعها <strong>المركز</strong> و<strong>عمودي</strong>.</p>
+<p>ما دامت هناك أداة نشطة، يفتح النقر بالزر الأيمن قائمة الأداة بدلاً من ذلك، وتبقى الخطوة الجارية: <strong>إلغاء</strong> (ما يفعله <span class="keys"><kbd class="key-escape">Esc</kbd></span> الذي ما زال يلغي الخطوة)، <strong>تكرار [الأمر]</strong>، <strong>تجاوزات الالتقاط ▸</strong> (التقاط النقطة التالية، كما تفعل المفاتيح <code>SE</code> و<code>SM</code> و<code>SN</code> و<code>SI</code> و<code>SO</code>؛ في المساقط وعروض الرسم فقط)، <strong>تكبير منطقة</strong>، <strong>تصغير (2×)</strong>، <strong>ملاءمة النافذة</strong>، <strong>التحريك/التكبير السابق</strong>، <strong>التحريك/التكبير التالي</strong> و<strong>الخصائص</strong>. وهي نفسها في المساقط والمقاطع والواجهات والعروض ثلاثية الأبعاد وعلى اللوحات، في نمطي الواجهة كليهما. وفي المخطط تعمل التجاوزات في كل عرض، ومعها <strong>المركز</strong> و<strong>عمودي</strong>. وما دامت القائمة مفتوحة فإن <span class="keys"><kbd class="key-escape">Esc</kbd></span> أو النقر في العرض يغلقها فقط.</p>
 <p>في أعلى القائمة يعيد <strong>تكرار [الأمر]</strong> تشغيل آخر أداة استعملتها؛ ويفعل <span class="keys"><kbd class="key-enter">Enter</kbd></span> الشيء نفسه حين لا تكون أداة نشطة ويكون سطر الأوامر فارغاً. القائمة نفسها في المساقط والمقاطع والعروض ثلاثية الأبعاد.</p>
 <h2 id="command-line">سطر الأوامر</h2>
 <p>تحت منطقة الرسم، يعرض سطر الأوامر سجل ما تم تنفيذه، والأحدث في الأسفل: الأوامر المنفذة، بالرمادي

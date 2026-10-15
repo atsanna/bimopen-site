@@ -19,7 +19,7 @@
 <link href="../assets/css/theme_dark_mode.css" rel="stylesheet"/>
 <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
-<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="bimopen" dir="ltr">
+<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="slate" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
@@ -55,13 +55,13 @@
 </div>
 </div>
 <form class="md-header__option" data-md-component="palette">
-<input aria-label="Passa al tema scuro" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="custom" data-md-color-scheme="bimopen" id="__palette_0" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Passa al tema scuro">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
-</label>
-<input aria-label="Passa al tema chiaro" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Passa al tema chiaro">
+<input aria-label="Passa al tema chiaro" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Passa al tema chiaro">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Passa al tema scuro" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="bimopen" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Passa al tema scuro">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
 </label>
 </form>
 <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
@@ -591,7 +591,7 @@ del tipo</strong> modifica il tipo, e con esso ogni quota di quel tipo.</p>
 del muro</strong>, <strong>Superfici del muro</strong>, <strong>Centro del nucleo</strong>, <strong>Superfici del nucleo</strong>) e che cosa
 sceglie un clic:</p>
 <ul>
-<li><strong>Riferimenti singoli</strong>: clicca i riferimenti uno dopo l'altro (superfici o linee d'asse dei muri,
+<li><strong>Riferimenti</strong>: clicca i riferimenti uno dopo l'altro (superfici o linee d'asse dei muri,
   griglie, bordi di porte e finestre, linee di dettaglio, bordi dei simboli di legenda), poi clicca
   un punto vuoto per collocarvi la linea di quota. Mentre scegli, la stringa segue il cursore.
   Premi <strong>TAB</strong> su un muro per scorrere i suoi riferimenti.</li>
@@ -619,17 +619,23 @@ quota.</p>
   linee di guida, clicca una linea di guida esistente per rimuoverla, poi clicca un punto vuoto per
   terminare. Ogni linea di guida di una quota selezionata ha un controllo a metà: clic con il tasto
   destro ▸ <strong>Sposta linea di guida</strong>, poi clicca il nuovo riferimento; oppure ▸ <strong>Elimina linee di
-  guida</strong>.</li>
+  guida</strong>.
+  Il controllo all'estremità di una linea di guida dalla parte dell'elemento ne trascina la distanza
+  dall'elemento; vicino alla distanza di un'altra linea di guida prende la stessa.</li>
 <li>Seleziona un elemento misurato dalla quota e clicca un valore accanto a esso: digita una nuova
-  distanza e premi Invio, e l'elemento si sposta.</li>
+  distanza e premi Invio, e l'elemento si sposta: un muro, una griglia,
+  una porta o una finestra (lungo il suo muro) o una linea di dettaglio.</li>
 </ul>
 <p>Il tipo imposta il segno di estremità (diagonale, freccia piena o punto), le estensioni della linea
 di quota e delle linee di guida (<strong>Controllo della linea di guida</strong>: uno spazio dall'elemento, oppure
-<strong>Fissato a linea di quota</strong> con la sua <strong>Lunghezza linea di guida</strong>), lo <strong>Spessore di linea</strong> e lo
-<strong>Spessore della linea del contrassegno</strong>, il <strong>Simbolo linea d'asse</strong> e il <strong>Modello linea d'asse</strong>
+<strong>Fissato a linea di quota</strong> con la sua <strong>Lunghezza linea di guida</strong>), lo <strong>Snap distanza linea di quota</strong> (durante il
+posizionamento la linea si aggancia a multipli di questa distanza da ciò che misura; 0 lo disattiva), lo <strong>Spessore di linea</strong> e lo
+<strong>Spessore della linea del contrassegno</strong>, il <strong>Simbolo linea d'asse</strong>, il <strong>Modello linea d'asse</strong> e il
+<strong>Contrassegno linea d'asse</strong> (<strong>Predefinito</strong> è quello del tipo)
 delle linee di guida verso le linee d'asse, il colore, la dimensione del testo, l'offset, lo sfondo, il
-grassetto, il corsivo e la sottolineatura, le unità (<strong>Usa impostazioni di progetto</strong> oppure un'unità
-con i suoi decimali) e, per le quote lineari, il <strong>Tipo di stringa di quote</strong>: <strong>Continuo</strong>, <strong>Linea
+grassetto, il corsivo e la sottolineatura, le unità
+(<strong>Formato unità</strong> apre <strong>Formato</strong>: <strong>Usa impostazioni di progetto</strong>, oppure un'unità con il suo
+arrotondamento, anche <strong>Personalizzato</strong> con un <strong>Fattore d'incremento</strong>, il simbolo e le opzioni) e, per le quote lineari, il <strong>Tipo di stringa di quote</strong>: <strong>Continuo</strong>, <strong>Linea
 base</strong> (valori sovrapposti a partire dal primo riferimento) oppure <strong>Coordinata</strong> (valori dal primo
 riferimento lungo un'unica linea). <strong>Mostra altezza apertura</strong> scrive l'altezza di una porta o di una
 finestra sotto la larghezza misurata da stipite a stipite. I tipi radiali possono omettere il
@@ -640,6 +646,12 @@ del tipo corrente di ciascuna famiglia, da impostare prima di quotare.</p>
 <p>Una stringa di tipo linea base selezionata mostra un controllo di inversione alla sua origine:
 cliccalo, o premi la <strong>barra spaziatrice</strong>, per misurare dall'altra estremità. <strong>Offset della linea
 base</strong> nelle sue proprietà imposta la distanza tra le sue linee su carta.</p>
+<p>Un tipo a coordinate ha <strong>Impostazioni quote coordinate</strong> nelle proprietà del tipo: <strong>Modifica…</strong>
+apre una finestra con <strong>Orientamento testo</strong> (<strong>Allineato</strong> alle linee di guida oppure
+<strong>Orizzontale</strong>), <strong>Posizione del testo</strong> (<strong>In linea con la linea di guida</strong> oppure <strong>Sopra la linea
+di guida</strong>), <strong>Visibilità origine</strong>, <strong>Contrassegno origine</strong> (<strong>Valore zero</strong>, <strong>Cerchio</strong> o il
+<strong>Contrassegno</strong> del tipo) e <strong>Stile linea di quota</strong> (<strong>Continua</strong> oppure <strong>Nessuna</strong>, che lascia
+solo le linee di guida e i contrassegni).</p>
 <h3 id="temporary-dimensions">Quote temporanee</h3>
 <p>Seleziona un muro o una griglia: le quote temporanee mostrano la distanza dai muri o dalle griglie
 parallele più vicini. Una porta o una finestra mostra la sua distanza, lungo il muro, dai muri che lo
@@ -678,30 +690,33 @@ inclinazioni, <strong>Rappresentazione dell'inclinazione:</strong> disegna una <
 <strong>Triangolo</strong>.</p>
 <p>Una quota di punto selezionata ha controlli sul punto, sulla spalla e sul testo: trascina il punto e
 la quota misura ciò che trova lì. Una quota di punto su un pavimento o su un tetto viene eliminata
-con esso.</p>
+con esso. Mentre colloca una quota di punto, <strong>Esc</strong> lascia quella a metà; un secondo <strong>Esc</strong> termina
+lo strumento.</p>
 <p>Il tipo di quota di punto imposta <strong>Indicatore quota altimetrica</strong>, <strong>Indicatore altezza</strong> e
-<strong>Indicatore base</strong> (testi prima del valore), il <strong>Simbolo</strong>, <strong>Includi quota altimetrica</strong> e
-l'<strong>Indicatore Nord/Sud</strong> e l'<strong>Indicatore Est/Ovest</strong> delle coordinate, e la <strong>Lunghezza della linea
+<strong>Indicatore base</strong> (l'indicatore altezza o base, poi quello della quota altimetrica, poi il
+valore; il <strong>… come prefisso/suffisso</strong> di ciascuno lo mette invece dopo il valore), il <strong>Simbolo</strong>, <strong>Includi quota altimetrica</strong> e
+l'<strong>Indicatore Nord/Sud</strong> e l'<strong>Indicatore Est/Ovest</strong> delle coordinate (con <strong>Indicatore come prefisso/suffisso</strong>), e la <strong>Lunghezza della linea
 direttrice</strong> e la <strong>Direzione inclinazione</strong> (<strong>Giù</strong> o <strong>Su</strong>) delle inclinazioni.</p>
 <h2 id="text">Testo</h2>
 <p><strong>Annota ▸ Testo ▸ Testo</strong> (<code>TX</code>): clicca dove va la nota e digita; Invio inizia una nuova riga. Un
 clic dà una nota che non va a capo; trascinando le si dà una larghezza, e le parole vanno a capo al
-suo interno. Cliccare altrove termina la nota, ed <strong>Esc</strong> termina lo strumento. La dimensione del
-testo è su carta: la nota mantiene la sua dimensione di stampa a qualsiasi scala della vista.</p>
+suo interno. Cliccare altrove termina la nota, ed <strong>Esc</strong> termina lo strumento. <span class="keys"><kbd class="key-tab">Tab</kbd></span> mentre digiti
+sposta il testo alla tabulazione successiva. La dimensione del testo è su carta: la nota mantiene
+la sua dimensione di stampa a qualsiasi scala della vista.</p>
 <p>Il gruppo <strong>Formato</strong> imposta, prima di collocarla o su una nota selezionata:</p>
 <ul>
 <li>la direttrice: <strong>Nessuna direttrice</strong>, <strong>Un segmento</strong> (clicca la punta, poi la nota), <strong>Due
   segmenti</strong> (punta, gomito, nota) oppure <strong>Curva</strong>;</li>
 <li>l'allineamento, a sinistra, al centro o a destra, e <strong>Grassetto</strong>, <strong>Corsivo</strong> e <strong>Sottolineato</strong>
-  (Ctrl+B, Ctrl+I, Ctrl+U mentre digiti), che si applicano all'intera nota;</li>
+  (Ctrl+B, Ctrl+I, Ctrl+U mentre digiti o sulle note selezionate), che si applicano all'intera nota;</li>
 <li>su una nota selezionata, <strong>Aggiungi linea direttrice dritta a sinistra</strong> e gli altri tre pulsanti
   delle direttrici, e <strong>Rimuovi linea direttrice più recente</strong>;</li>
 <li><strong>Collegamento a sinistra</strong> e <strong>Collegamento a destra</strong> (<strong>In alto</strong>, <strong>Al centro</strong>, <strong>In
   basso</strong>): dove le direttrici si uniscono alla nota; scelti durante il posizionamento, restano per
   le note successive;</li>
 <li><strong>Formato paragrafo</strong>: i paragrafi come elenco, con <strong>Elenco puntato</strong>, <strong>Elenco numerato</strong>,
-  <strong>Elenco con lettere minuscole</strong> o <strong>Elenco con lettere maiuscole</strong>; le righe a capo sono rientrate
-  sotto il testo.</li>
+  <strong>Elenco con lettere minuscole</strong> o <strong>Elenco con lettere maiuscole</strong>; il testo di ogni voce inizia
+  alla prima tabulazione, e le righe a capo sono rientrate di una.</li>
 </ul>
 <p>Vicino alla linea dell'angolo di un'altra nota, una nuova nota vi si aggancia, e una linea
 tratteggiata lo mostra.</p>
@@ -712,14 +727,17 @@ direttrice curva. Fai doppio clic al suo interno per modificarne le parole. Le s
 <strong>Linee direttrici arco</strong>, <strong>Collegamento a sinistra</strong> e <strong>Collegamento a destra</strong>, e <strong>Mantieni
 leggibile</strong>, che non la mostra mai capovolta. Il tipo di testo imposta il colore (di testo, bordo e
 direttrici), lo sfondo (<strong>Opaco</strong> maschera ciò che sta dietro), <strong>Mostra bordo</strong> con il suo offset,
-la punta della direttrice, la dimensione, il grassetto, il corsivo e la sottolineatura.
-<strong>Duplica…</strong> in <strong>Proprietà del tipo</strong> crea un nuovo tipo di testo.</p>
+la punta della direttrice, lo <strong>Spessore di linea</strong> del bordo e delle direttrici, la dimensione, le
+<strong>Dimensioni tabulazione</strong> (12,7 mm), il grassetto, il corsivo e la sottolineatura. Il piccolo
+pulsante <strong>Tipi di testo</strong> del gruppo <strong>Testo</strong> apre <strong>Tipi di testo: proprietà del tipo</strong>, dove
+<strong>Duplica…</strong> crea un nuovo tipo di testo.</p>
 <p><strong>Annota ▸ Testo ▸ Trova/Sostituisci</strong> trova parole nelle note della selezione corrente, della
 vista corrente o dell'intero progetto (<strong>Ambito:</strong>), con opzioni per maiuscole e parole intere.
 <strong>Trova tutti</strong> elenca le corrispondenze con la vista in cui si trovano; <strong>Trova successivo</strong>, o un
 clic su una riga, seleziona quella nota e ne mostra l'intero testo sotto <strong>Contesto</strong>.
-<strong>Sostituisci</strong> cambia la prima, <strong>Sostituisci tutto</strong> ogni corrispondenza, e <strong>Chiudi</strong> chiude la
-finestra.</p>
+<strong>Sostituisci</strong> cambia la corrispondenza evidenziata (la prima, se nessuna lo è), <strong>Sostituisci
+tutto</strong> ogni corrispondenza, e <strong>Chiudi</strong> chiude la finestra. Sulle note selezionate si trova anche
+sotto <strong>Strumenti</strong> della loro scheda.</p>
 <h2 id="symbols">Simboli</h2>
 <p><strong>Annota ▸ Simbolo ▸ Simbolo</strong> (<code>SY</code>) colloca un simbolo di annotazione 2D in una pianta, una
 sezione, una vista di disegno o una legenda: una <strong>Freccia nord</strong>, un <strong>Simbolo linea d'asse</strong>, una
@@ -836,12 +854,60 @@ avvia lo strumento che lo colloca con il suo tipo: per un componente di legenda,
 vista e la lunghezza host.</p>
 <h2 id="detail-lines-and-regions">Linee di dettaglio e regioni</h2>
 <p><strong>Annota ▸ Dettaglio ▸ Linea di dettaglio</strong> (<code>DL</code>) disegna linee solo nella vista aperta, con lo
-stile di linea del gruppo <strong>Stile di linea</strong>, e con le forme del gruppo <strong>Disegna</strong>; <strong>Concatena</strong>
-inizia ogni linea dove è terminata la precedente.</p>
-<p><strong>Regione ▸ Campitura</strong> traccia un contorno con linee, rettangoli o cerchi: ogni anello si chiude
-quando clicchi di nuovo il suo primo punto, e gli anelli dentro un altro sono fori. <strong>Termina modalità di
-modifica</strong> crea la regione nel tipo di regione corrente, che ne imposta il motivo di riempimento, il
-colore e lo sfondo (<strong>Opaco</strong> nasconde ciò che sta dietro). <strong>Regione ▸ Mascheratura</strong> crea una
+stile di linea del gruppo <strong>Stile di linea</strong>. Il gruppo <strong>Disegna</strong> offre <strong>Linea</strong>,
+<strong>Rettangolo</strong>, <strong>Poligono inscritto</strong>, <strong>Poligono circoscritto</strong>, <strong>Cerchio</strong>, <strong>Arco
+inizio-fine-raggio</strong>, <strong>Arco da centro ed estremità</strong>, <strong>Arco tangente</strong>, <strong>Spline</strong>, <strong>Ellisse</strong>,
+<strong>Ellisse parziale</strong> e <strong>Arco smusso</strong>. La barra delle opzioni mostra ciò che la forma richiede:</p>
+<table>
+<thead>
+<tr>
+<th>Opzione</th>
+<th>Cosa fa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Concatena</strong></td>
+<td>Ogni linea (o arco, o spline) inizia dove è terminata la precedente; disattivata, ognuna è a sé</td>
+</tr>
+<tr>
+<td><strong>Offset:</strong></td>
+<td>Ciò che si disegna si sposta di tanto di lato; le linee concatenate si uniscono ai loro angoli</td>
+</tr>
+<tr>
+<td><strong>Raggio:</strong></td>
+<td>Un cerchio, un poligono o un arco da centro ed estremità di quel raggio (un cerchio richiede un solo clic); le linee concatenate e i rettangoli hanno gli angoli arrotondati. <strong>Offset:</strong> viene allora ignorato</td>
+</tr>
+<tr>
+<td><strong>Lati:</strong></td>
+<td>Il numero di lati di un poligono</td>
+</tr>
+</tbody>
+</table>
+<p>Dopo il primo clic, digita una lunghezza (una linea, una corda) o un raggio (cerchi, poligoni, archi,
+assi dell'ellisse) e premi <span class="keys"><kbd class="key-enter">Enter</kbd></span>; il valore è mostrato accanto al cursore. Un arco da centro ed
+estremità non supera mai i 180°: oltre, gira dall'altra parte, e un angolo digitato ne imposta
+l'estremità. Un arco tangente inizia all'estremità di una linea o di un arco che clicchi. <span class="keys"><kbd class="key-shift">Shift</kbd></span>
+mantiene orizzontali o verticali le linee e i raggi dei poligoni, fa ruotare corde, raggi degli
+archi e assi dell'ellisse a passi di 45°, e mantiene l'ampiezza di un arco a 90°, 180° o 270°.
+<span class="keys"><kbd class="key-escape">Esc</kbd></span> termina una catena o una spline. Le stesse forme e opzioni sono in ogni disegno (pavimenti,
+tetti, regioni, nuvole di revisione, profili dei muri).</p>
+<p><strong>Seleziona linee</strong> crea una linea di dettaglio sulla faccia, sull'asse o sullo strato di un muro,
+su una griglia o su un'altra linea sotto il cursore (<span class="keys"><kbd class="key-tab">Tab</kbd></span> per la successiva), spostata da
+<strong>Offset:</strong>; con <strong>Blocca</strong> la linea resta su di essa e la segue quando si sposta. <strong>Arco smusso</strong>
+sceglie due linee e ne arrotonda l'angolo, con l'arco sotto il cursore o del <strong>Raggio:</strong> impostato.
+Una linea di dettaglio selezionata ha controlli alle estremità e una quota temporanea della sua
+lunghezza: digita un valore per cambiarla. Il cursore si aggancia alle estremità, ai punti medi, ai
+centri e agli incroci delle linee di dettaglio della vista. L'estremo di una linea selezionata da
+sola si trascina da solo e lascia la linea vicina dov'è; con una catena selezionata (<span class="keys"><kbd class="key-tab">Tab</kbd></span>), gli
+estremi in cui le sue linee si incontrano si trascinano insieme, in un solo passo di annullamento.</p>
+<p><strong>Regione ▸ Campitura</strong> apre la modalità disegno: il contorno si traccia con ogni forma del gruppo
+<strong>Disegna</strong> e con <strong>Seleziona linee</strong>, e gli anelli dentro un altro sono fori. Le curve sono
+conservate come brevi segmenti dritti. <span class="keys"><kbd class="key-escape">Esc</kbd></span> termina una catena e conserva il disegno; <strong>Modifica</strong>
+e gli strumenti di modifica agiscono sulle sue linee. <strong>Termina modalità di modifica</strong> crea la
+regione nel tipo di regione corrente, oppure dice perché non può (un contorno aperto o
+autointersecante). <strong>Modifica contorno</strong> di una regione selezionata riapre il suo disegno. Il tipo ne
+imposta il motivo di riempimento, il colore e lo sfondo (<strong>Opaco</strong> nasconde ciò che sta dietro). <strong>Regione ▸ Mascheratura</strong> crea una
 regione del colore della carta che nasconde ciò che si trova sotto. Una regione mostra la sua
 <strong>Area</strong> e ha <strong>Commenti</strong>. Una
 regione selezionata ha un controllo su ogni vertice: trascinane uno per cambiarne la forma.</p>

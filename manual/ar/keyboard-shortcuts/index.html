@@ -19,7 +19,7 @@
 <link href="../assets/css/theme_dark_mode.css" rel="stylesheet"/>
 <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
-<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="bimopen" dir="rtl">
+<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="slate" dir="rtl">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
@@ -55,13 +55,13 @@
 </div>
 </div>
 <form class="md-header__option" data-md-component="palette">
-<input aria-label="التبديل إلى الوضع الداكن" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="custom" data-md-color-scheme="bimopen" id="__palette_0" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_1" hidden="" title="التبديل إلى الوضع الداكن">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
-</label>
-<input aria-label="التبديل إلى الوضع الفاتح" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_0" hidden="" title="التبديل إلى الوضع الفاتح">
+<input aria-label="التبديل إلى الوضع الفاتح" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="التبديل إلى الوضع الفاتح">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="التبديل إلى الوضع الداكن" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="bimopen" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="التبديل إلى الوضع الداكن">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
 </label>
 </form>
 <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
@@ -549,7 +549,7 @@
 نافذة الحوار؛ ومع وسائط ينفذ الأمر فورًا (انظر
 <a href="../command-line-and-mcp/">سطر الأوامر و MCP</a>).</p>
 <p>عندما يكون المؤشر في منطقة الرسم، تذهب الأحرف إلى سطر الأوامر (وفي نمط BIMopen إلى البحث)، ويعمل الاختصار فور كتابته دون <span class="keys"><kbd class="key-enter">Enter</kbd></span> إن لم يبدأ بأحرفه اختصار أو اسم أمر أطول: <code>VR</code> (نطاق العرض) و<code>WT</code> (تجانب) و<code>ZE</code> و<code>ZF</code> و<code>ZA</code> و<code>ZP</code> و<code>ZR</code> و<code>ZO</code> و<code>ZS</code> و<code>HR</code> و<code>HH</code> و<code>HC</code> و<code>IC</code> و<code>DL</code> (خط تفاصيل) و<code>RT</code> (بطاقة غرفة) و<code>TG</code> (بطاقة حسب الفئة) و<code>TX</code> و<code>CC</code> (نسخ) و<code>MV</code> و<code>RM</code> و<code>LL</code> (منسوب) و<code>RC</code> (سحابة مراجعة) و<code>PP</code> (يظهر <strong>الخصائص</strong> أو يخفيها) و<code>PT</code> و<code>RP</code> والاختصارات التي أضفتها. أما البقية فتبدأ بها أسماء أطول، فتنتظر الحرف التالي أو مسافة (تليها وسائط) أو <span class="keys"><kbd class="key-enter">Enter</kbd></span>: <code>VG</code> (<code>vgsub</code>…) و<code>HI</code> (<code>hide</code>) و<code>DI</code> (<code>dim</code>) و<code>AL</code> (<code>align</code>) و<code>WA</code> (<code>wall</code>) و<code>DR</code> (<code>draworder</code>) و<code>UN</code> (<code>undo</code>) و<code>MA</code> (<code>mask</code>)؛ وبذلك تُنفَّذ <code>dim</code> أو <code>wall 0,0 5,0</code> أو <code>WA 0,0 5,0</code> المكتوبة فوق العرض كما كُتبت. تقول <code>MA</code> و<code>PT</code> و<code>RP</code> في شريط الحالة إنها غير متاحة بعد. أما المكتوب في سطر الأوامر نفسه فينتظر <span class="keys"><kbd class="key-enter">Enter</kbd></span>.</p>
-<p>بينما تنتظر أداة نقطة في مسقط أو عرض رسم، تستبدل <code>SE</code> (الأطراف) و<code>SM</code> (المنتصفات) و<code>SI</code> (التقاطعات) و<code>SN</code> (الأقرب) و<code>SO</code> (إيقاف) الالتقاط لتلك النقطة فقط (وتُختار أيضاً من <strong>تجاوزات الالتقاط ▸</strong> في الزر الأيمن؛ <code>SE</code> و<code>SI</code> و<code>SO</code> مع <span class="keys"><kbd class="key-enter">Enter</kbd></span> لأن أسماء أطول تبدأ بها)؛ يوضح ذلك شريط الحالة، ويُنهيه <span class="keys"><kbd class="key-escape">Esc</kbd></span> أو أخذ النقطة. وفي مقطع أو عرض ثلاثي الأبعاد، حيث لا تُلتقط النقاط بهذه الطريقة، تُرفض برسالة. وفي المخطط تعمل في كل عرض، وكذلك <code>SC</code> (مركز القوس) و<code>SP</code> (العمود من النقطة التي يبدأ منها الرسم).</p>
+<p>بينما تنتظر أداة نقطة في مسقط أو عرض رسم (أو أداة تفصيل أو تعليق توضيحي في مقطع)، تستبدل <code>SE</code> (الأطراف) و<code>SM</code> (المنتصفات) و<code>SI</code> (التقاطعات) و<code>SN</code> (الأقرب) و<code>SO</code> (إيقاف) الالتقاط لتلك النقطة فقط (وتُختار أيضاً من <strong>تجاوزات الالتقاط ▸</strong> في الزر الأيمن؛ <code>SE</code> و<code>SI</code> و<code>SO</code> مع <span class="keys"><kbd class="key-enter">Enter</kbd></span> لأن أسماء أطول تبدأ بها)؛ يوضح ذلك شريط الحالة، ويُنهيه <span class="keys"><kbd class="key-escape">Esc</kbd></span> أو أخذ النقطة. ولبقية الأدوات في مقطع، أو في عرض ثلاثي الأبعاد، حيث لا تُلتقط النقاط بهذه الطريقة، تُرفض برسالة. وفي المخطط تعمل في كل عرض، وكذلك <code>SC</code> (مركز القوس) و<code>SP</code> (العمود من النقطة التي يبدأ منها الرسم).</p>
 <h3 id="modelling">النمذجة</h3>
 <table>
 <thead>
@@ -823,7 +823,7 @@
 </table>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>إذا كُتب <code>DL</code> وحده بدأ خط التفاصيل كما في Revit؛ وإذا تلته نقاط في سطر الأوامر رسم بُعدًا
+<p>إذا كُتب <code>DL</code> وحده بدأ خط التفاصيل؛ وإذا تلته نقاط في سطر الأوامر رسم بُعدًا
 خطيًا (<code>lineardim</code>).</p>
 </div>
 <h3 id="views-and-settings">العروض والإعدادات</h3>

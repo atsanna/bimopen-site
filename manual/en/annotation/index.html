@@ -19,7 +19,7 @@
 <link href="../assets/css/theme_dark_mode.css" rel="stylesheet"/>
 <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
-<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="bimopen" dir="ltr">
+<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="slate" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
@@ -55,13 +55,13 @@
 </div>
 </div>
 <form class="md-header__option" data-md-component="palette">
-<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="custom" data-md-color-scheme="bimopen" id="__palette_0" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to dark mode">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
-</label>
-<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="custom" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to light mode">
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="bimopen" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
 </label>
 </form>
 <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
@@ -588,7 +588,7 @@ and with it every dimension of that type.</p>
 <p>With <strong>Aligned</strong>, the options bar offers which part of a wall is picked (<strong>Wall centerlines</strong>,
 <strong>Wall faces</strong>, <strong>Center of Core</strong>, <strong>Faces of Core</strong>) and what a click picks:</p>
 <ul>
-<li><strong>Individual References</strong>: click references one after the other (wall faces or centre lines,
+<li><strong>References</strong>: click references one after the other (wall faces or centre lines,
   grids, door and window edges, detail lines, the edges of legend symbols), then click an empty
   spot to place the dimension line there. While you choose, the string follows the cursor.
   Press <strong>TAB</strong> over a wall to step through its references.</li>
@@ -601,6 +601,11 @@ ends: where you place the line decides which, and the <strong>space bar</strong>
 <p><strong>Angular</strong> measures the angle between two walls, grids or lines that meet; more lines through
 the same point make a string of angles, each with its value; the last click picks the sector. <strong>Radial</strong> and <strong>Arc Length</strong> dimension an arc: click it, then where the dimension
 goes.</p>
+<p>An ordinate type has <strong>Ordinate Dimension Settings</strong> in its type properties: <strong>Edit…</strong> opens a
+dialog with the <strong>Text Orientation</strong> (<strong>Aligned</strong> with the witness lines or <strong>Horizontal</strong>), the
+<strong>Text Location</strong> (<strong>In line with the witness line</strong> or <strong>Above the witness line</strong>), the <strong>Origin
+Visibility</strong>, the <strong>Origin Marker</strong> (<strong>Zero value</strong>, <strong>Circle</strong> or the type's <strong>Tick Mark</strong>) and the
+<strong>Dimension Line Style</strong> (<strong>Continuous</strong> or <strong>None</strong>, which leaves only the witness lines and ticks).</p>
 <h3 id="changing-a-dimension">Changing a dimension</h3>
 <ul>
 <li>Select a dimension and click its value: <strong>Dimension Text</strong> opens. <strong>Use Actual Value</strong> keeps
@@ -612,15 +617,20 @@ goes.</p>
 <li><strong>Modify | Dimensions ▸ Witness Lines ▸ Edit Witness Lines</strong>: click elements to add witness lines,
   click an existing witness line to remove it, then click an empty spot to finish. Each witness line
   of a selected dimension has a control in its middle: right-click it ▸ <strong>Move Witness Line</strong>, then
-  click the new reference; or ▸ <strong>Delete Witness Lines</strong>.</li>
+  click the new reference; or ▸ <strong>Delete Witness Lines</strong>. The control at the element's end of a
+  witness line drags its gap from the element; near another witness line's gap it takes the same.</li>
 <li>Select an element the dimension measures and click a value next to it: type a new distance and
-  press Enter, and the element moves.</li>
+  press Enter, and the element moves: a wall, a grid, a door or window (along its wall)
+  or a detail line.</li>
 </ul>
 <p>The type sets the tick (diagonal, filled arrow or dot), the extensions of the dimension and
 witness lines (<strong>Witness line control</strong>: a gap to the element, or <strong>Fixed to Dimension Line</strong> with
-its <strong>Witness Line Length</strong>), the <strong>Line Weight</strong> and <strong>Tick Mark Line Weight</strong>, the
-<strong>Centerline Symbol</strong> and <strong>Centerline Pattern</strong> of witness lines to centre lines, the colour, the text size, offset, background, bold, italic and underline, the
-units (<strong>Use project settings</strong> or a unit with its decimals), and for linear dimensions the
+its <strong>Witness Line Length</strong>), the <strong>Dimension Line Snap Distance</strong> (while placing, the line
+snaps at multiples of it from what it measures; 0 turns it off), the <strong>Line Weight</strong> and <strong>Tick Mark Line Weight</strong>, the
+<strong>Centerline Symbol</strong>, <strong>Centerline Pattern</strong> and <strong>Centerline Tick Mark</strong> (<strong>Default</strong> is the type's
+tick) of witness lines to centre lines, the colour, the text size, offset, background, bold, italic and underline, the
+units (<strong>Units Format</strong> opens <strong>Format</strong>: <strong>Use project settings</strong>, or a unit with its rounding,
+which may be <strong>Custom</strong> with a <strong>Increment factor</strong>, its symbol and options), and for linear dimensions the
 <strong>Dimension String Type</strong>: <strong>Continuous</strong>, <strong>Baseline</strong> (stacked values from the first
 reference) or <strong>Ordinate</strong> (values from the first reference along one line). <strong>Show Opening
 Height</strong> writes the height of a door or window under the width measured jamb to jamb. Radial
@@ -664,28 +674,32 @@ also offers <strong>Relative Base:</strong> (for a type whose <strong>Elevation 
 plans, <strong>Display Elevations:</strong>: the actual elevation, the top, the bottom, or both. For spot
 slopes, <strong>Slope Representation:</strong> draws an <strong>Arrow</strong> or, in sections, a <strong>Triangle</strong>.</p>
 <p>A selected spot has grips at its point, its shoulder and its text: drag the point and the spot
-measures what is there. A spot on a floor or a roof is deleted with it.</p>
-<p>The spot type sets <strong>Elevation Indicator</strong>, <strong>Top Indicator</strong> and <strong>Bottom Indicator</strong> (texts
-before the value), the <strong>Symbol</strong>, <strong>Include Elevation</strong> and the <strong>North/South Indicator</strong> and
-<strong>East/West Indicator</strong> of coordinates, and the <strong>Leader Line Length</strong> and <strong>Slope Direction</strong>
+measures what is there. A spot on a floor or a roof is deleted with it. While placing a spot,
+<strong>Esc</strong> lets go of the one half placed; a second <strong>Esc</strong> ends the tool.</p>
+<p>The spot type sets <strong>Elevation Indicator</strong>, <strong>Top Indicator</strong> and <strong>Bottom Indicator</strong> (the top
+or bottom indicator, then the elevation's, then the value; each one's <strong>… as Prefix/Suffix</strong> puts
+it after the value instead), the <strong>Symbol</strong>, <strong>Include Elevation</strong> and the <strong>North/South Indicator</strong> and
+<strong>East/West Indicator</strong> of coordinates (with <strong>Indicator as Prefix/Suffix</strong>), and the <strong>Leader Line Length</strong> and <strong>Slope Direction</strong>
 (<strong>Down</strong> or <strong>Up</strong>) of slopes.</p>
 <h2 id="text">Text</h2>
 <p><strong>Annotate ▸ Text ▸ Text</strong> (<code>TX</code>): click where the note goes and type; Enter starts a new line.
 A click gives a note that does not wrap; dragging gives it a width, and the words wrap in it.
-Clicking elsewhere finishes the note, and <strong>Esc</strong> ends the tool. The text size is on paper: the
-note keeps its printed size at any view scale.</p>
+Clicking elsewhere finishes the note, and <strong>Esc</strong> ends the tool. <span class="keys"><kbd class="key-tab">Tab</kbd></span> while typing moves the
+text to the next tab stop. The text size is on paper: the note keeps its printed size at any view
+scale.</p>
 <p>The <strong>Format</strong> panel sets, before placing or on a selected note:</p>
 <ul>
 <li>the leader: <strong>No Leader</strong>, <strong>One Segment</strong> (click the tip, then the note), <strong>Two Segments</strong>
   (tip, elbow, note) or <strong>Curved</strong>;</li>
 <li>the alignment, left, centre or right, and <strong>Bold</strong>, <strong>Italic</strong> and <strong>Underline</strong> (Ctrl+B,
-  Ctrl+I, Ctrl+U while typing), which apply to the whole note;</li>
+  Ctrl+I, Ctrl+U while typing or on the selected notes), which apply to the whole note;</li>
 <li>on a selected note, <strong>Add Left Straight Leader</strong> and the other three leader buttons, and
   <strong>Remove Last Leader</strong>;</li>
 <li><strong>Left Attachment</strong> and <strong>Right Attachment</strong> (<strong>Top</strong>, <strong>Middle</strong>, <strong>Bottom</strong>): where the
   leaders meet the note; chosen while placing, they stay for the next notes.</li>
 <li><strong>Paragraph Format</strong>: the paragraphs as a list, with <strong>Bullets</strong>, <strong>Numbers</strong>, <strong>Lowercase
-  letters</strong> or <strong>Uppercase letters</strong>; wrapped lines are indented under the text.</li>
+  letters</strong> or <strong>Uppercase letters</strong>; the text of each item starts at the first tab stop, and
+  wrapped lines are indented by one.</li>
 </ul>
 <p>Near the line of another note's corner, a new note snaps to it, and a dashed line shows it.</p>
 <p>On a selected note, drag the cross to move the box (the leader tips stay), the round side controls
@@ -694,13 +708,15 @@ makes an elbow when dragged, or bends a curved leader. Double-click inside it to
 words. Its properties include <strong>Arc Leaders</strong>, <strong>Left Attachment</strong> and <strong>Right Attachment</strong>, and
 <strong>Keep Readable</strong>, which never shows it upside down. The text type sets the colour (of text,
 border and leaders), the background (<strong>Opaque</strong> masks what is behind), <strong>Show Border</strong> with its
-offset, the leader arrowhead, the size, bold, italic and underline. <strong>Duplicate…</strong> in <strong>Type
-Properties</strong> makes a new text type.</p>
+offset, the leader arrowhead, the <strong>Line Weight</strong> of the border and leaders, the size, the <strong>Tab
+Size</strong> (12.7 mm), bold, italic and underline. The small <strong>Text Types</strong> button of the <strong>Text</strong> panel
+opens <strong>Type Properties</strong>, where <strong>Duplicate…</strong> makes a new text type.</p>
 <p><strong>Annotate ▸ Text ▸ Find/Replace</strong> finds words in the notes of the current selection, the current
 view or the whole project (<strong>Scope:</strong>), with options for case and whole words. <strong>Find All</strong> lists
 the matches with the view they are in; <strong>Find Next</strong>, or a click on a row, selects that note and
-shows its whole text under <strong>Context</strong>. <strong>Replace</strong> changes the first, <strong>Replace All</strong> every one,
-and <strong>Close</strong> closes the dialog.</p>
+shows its whole text under <strong>Context</strong>. <strong>Replace</strong> changes the match highlighted (the first when
+none is), <strong>Replace All</strong> every one, and <strong>Close</strong> closes the dialog. On selected notes it is also
+under <strong>Tools</strong> of their tab.</p>
 <h2 id="symbols">Symbols</h2>
 <p><strong>Annotate ▸ Symbol ▸ Symbol</strong> (<code>SY</code>) places a 2D annotation symbol in a plan, a section, a
 drafting view or a legend: a <strong>North Arrow</strong>, a <strong>Centerline Symbol</strong>, a <strong>Flow Arrow</strong>, a
@@ -801,8 +817,8 @@ that places it with its type: for a legend component, with its view and host len
 <p><strong>Annotate ▸ Detail ▸ Detail line</strong> (<code>DL</code>) draws lines in the open view only, in the line style of
 the <strong>Line style</strong> panel. The <strong>Draw</strong> panel offers <strong>Line</strong>, <strong>Rectangle</strong>, <strong>Inscribed Polygon</strong>,
 <strong>Circumscribed Polygon</strong>, <strong>Circle</strong>, <strong>Start-End-Radius Arc</strong>, <strong>Center-ends Arc</strong>, <strong>Tangent
-End Arc</strong>, <strong>Spline</strong>, <strong>Ellipse</strong> and <strong>Partial Ellipse</strong>. The options bar shows what the shape
-takes:</p>
+End Arc</strong>, <strong>Spline</strong>, <strong>Ellipse</strong>, <strong>Partial Ellipse</strong> and <strong>Fillet Arc</strong>. The options bar shows
+what the shape takes:</p>
 <table>
 <thead>
 <tr>
@@ -836,6 +852,14 @@ end of a line or arc you click. <span class="keys"><kbd class="key-shift">Shift<
 turns chords, arc radii and ellipse axes in steps of 45°, and keeps the sweep of an arc at 90°,
 180° or 270°. <span class="keys"><kbd class="key-escape">Esc</kbd></span> ends a chain or a spline. The same shapes and options are in every sketch
 (floors, roofs, regions, revision clouds, wall profiles).</p>
+<p><strong>Pick Lines</strong> makes a detail line on a wall's face, axis or layer, a grid or another line under the
+cursor (<span class="keys"><kbd class="key-tab">Tab</kbd></span> for the next one), moved by <strong>Offset</strong>; with <strong>Lock</strong> the line stays on it and
+follows when it moves. <strong>Fillet Arc</strong> picks two lines and rounds their corner, with the arc under
+the cursor or of the <strong>Radius</strong> set. A selected detail line has grips at its ends and a temporary
+dimension of its length: type a value to change it. The end of a line selected on its own drags
+alone and leaves the next line where it is; with a chain selected (<span class="keys"><kbd class="key-tab">Tab</kbd></span>), the ends where its
+lines meet drag together, in one undo step. The cursor snaps to the ends, middles,
+centres and crossings of the view's detail lines.</p>
 <p><strong>Region ▸ Filled region</strong> opens sketch mode: the boundary is sketched with every shape of the
 <strong>Draw</strong> panel and with <strong>Pick Lines</strong>, and loops inside another are holes. Curves are kept as short
 straight segments. <span class="keys"><kbd class="key-escape">Esc</kbd></span> ends a chain and keeps the sketch; <strong>Modify</strong> and the Modify tools work

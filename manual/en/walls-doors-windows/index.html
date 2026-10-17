@@ -339,6 +339,45 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#levels">
+<span class="md-ellipsis">
+      Levels
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#work-planes">
+<span class="md-ellipsis">
+      Work planes
+    </span>
+</a>
+<nav aria-label="Work planes" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#setting-the-work-plane">
+<span class="md-ellipsis">
+      Setting the work plane
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#showing-the-work-plane">
+<span class="md-ellipsis">
+      Showing the work plane
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reference-planes">
+<span class="md-ellipsis">
+      Reference planes
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#at-the-command-line">
 <span class="md-ellipsis">
       At the command line
@@ -550,6 +589,45 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#levels">
+<span class="md-ellipsis">
+      Levels
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#work-planes">
+<span class="md-ellipsis">
+      Work planes
+    </span>
+</a>
+<nav aria-label="Work planes" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#setting-the-work-plane">
+<span class="md-ellipsis">
+      Setting the work plane
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#showing-the-work-plane">
+<span class="md-ellipsis">
+      Showing the work plane
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reference-planes">
+<span class="md-ellipsis">
+      Reference planes
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#at-the-command-line">
 <span class="md-ellipsis">
       At the command line
@@ -688,19 +766,23 @@ top is attached, <strong>Unconnected Height</strong> is read-only.</p>
 parallel to it, with holes, as for a gable or a stepped wall.</p>
 <ol>
 <li>Select the wall and click <strong>Mode ▸ Edit Profile</strong> in its contextual tab. From a plan or a view
-   that is not parallel to the wall, <strong>Go To View</strong> lists the sections and elevations parallel to
+   that is not parallel to the wall, <strong>Go to View</strong> lists the sections and elevations parallel to
    it: choose one and click <strong>Open View</strong>.</li>
 <li>Sketch mode opens with the wall's outline in magenta. Change it with <strong>Line</strong> and
    <strong>Rectangle</strong> (see <a href="../floors-roofs-stairs/#sketch-mode">sketch mode</a>): pick a line and press
-   <span class="keys"><kbd class="key-delete">Del</kbd></span>, draw new ones; a loop inside is a hole.</li>
+   <span class="keys"><kbd class="key-delete">Del</kbd></span>, draw new ones, or a <strong>Circle</strong>. Every closed loop inside the outline is a hole through all the
+   layers; a loop inside a hole is solid again.</li>
 <li>Click <strong>Finish Edit Mode</strong> (or <strong>Cancel Edit Mode</strong> to leave the wall as it was).</li>
 </ol>
 <p>The wall takes that outline in 3D, in sections and in plan, where it is cut only where the outline
-reaches the cut plane; its doors and windows still cut it. A top attached to a roof or a floor
-still clips it. A curtain wall keeps the panels and mullions inside its new outline.
+reaches the cut plane; its doors and windows still cut it, also over a hole, which stays a hole. A top attached to a roof or a floor
+still clips it. Plan, sections, elevations and the 3D view all show one solid, cut from the same
+outline and holes. The layers that wrap line the holes as they line doors and windows (see
+<a href="#wall-types-and-layers">Wall types and layers</a>). A curtain wall keeps the panels and mullions
+inside its new outline.
 <strong>Mode ▸ Reset Profile</strong> makes it a rectangle again; <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span> undoes either.</p>
 <p>The profile can also be edited in the 3D view: the sketch lies on the wall's plane and the view
-stays 3D. Only from a plan does <strong>Go To View</strong> appear, and nothing changes until a view is opened
+stays 3D. Only from a plan does <strong>Go to View</strong> appear, and nothing changes until a view is opened
 with <strong>Open View</strong>. While sketching, the wall's original outline is drawn as dashed reference
 lines; the sketch snaps to their ends and onto them.</p>
 <h2 id="wall-joins">Wall joins</h2>
@@ -756,8 +838,10 @@ and every other layer is at least 4 mm thick: other values are refused, and the 
 <li><strong>Wrapping at Ends</strong> (<strong>Do not wrap</strong>, <strong>Exterior</strong>, <strong>Interior</strong>): the same at the free ends of
   the walls.</li>
 </ul>
-<p>Wrapping is drawn in plan only. A door or window type overrides the wall's wrapping with its
-<strong>Wall Closure</strong>.</p>
+<p>Wrapping shows in every view: in plan, in the 3D view, in sections and in elevations the ticked
+layers line the jambs, the head and the sill of doors and windows, the sides of the holes of an
+edited profile (see <a href="#editing-a-walls-profile">Editing a wall's profile</a>) and the free ends. A
+door or window type overrides the wall's wrapping with its <strong>Wall Closure</strong>.</p>
 <h2 id="wall-properties">Wall properties</h2>
 <p>Under <strong>Constraints</strong>: <strong>Location Line</strong>, <strong>Base Constraint</strong>, <strong>Base Offset</strong>, <strong>Base is
 Attached</strong>, <strong>Top Constraint</strong> (a level, or <strong>Unconnected</strong>), <strong>Unconnected Height</strong>, <strong>Top
@@ -784,6 +868,7 @@ same: <strong>Flip Hand</strong> (the hinge) and <strong>Flip Facing</strong> (t
 <h2 id="moving-a-door-or-window-to-another-wall">Moving a door or window to another wall</h2>
 <p>Select it, <strong>Edit | Doors ▸ Host ▸ Pick New Host</strong> (or <strong>Edit | Windows</strong>), then click another
 wall: the opening moves there, where you clicked, with its type and sill. It stays selected.</p>
+<p>Dragging a door or window keeps it in a wall: the pointer is projected onto the wall's location line, so the opening slides along the wall, between its ends, with the temporary dimensions to the nearest walls, in a plan, a section, an elevation or the 3D view; there a click on a window's glass picks the window, not what is seen through it. Dropped over another wall, it moves into that wall; released over empty space, it stays at the last place on its own. The arrow keys move it along its wall the same way.</p>
 <h2 id="door-and-window-properties">Door and window properties</h2>
 <p>Instance: <strong>Level</strong>, <strong>Sill Height</strong>, <strong>Width</strong> and <strong>Height</strong> (of the type), <strong>Head Height</strong>,
 <strong>Comments</strong>, <strong>Mark</strong>. Changing <strong>Sill Height</strong> or <strong>Head Height</strong> moves the opening up or
@@ -856,6 +941,67 @@ in plan, sections, 3D and IFC.</p>
 </ul>
 <p>Panels and mullions have their own schedules, and the IFC export writes the curtain wall with its
 plates and members.</p>
+<ul>
+<li><strong>Curtain Grid</strong> ▸ <strong>Placement</strong>: <strong>All Segments</strong> (the whole line), <strong>One Segment</strong> (only across
+  the panel clicked) or <strong>All Except Picked</strong> (click to place the line, click the segments to leave
+  out, then click away from the line).</li>
+<li>With a curtain wall selected, <strong>Add/Remove Segments</strong>: click a segment of a grid line to take it
+  off (the two panels on either side become one, and its mullion goes) or to put it back. Panels
+  stay rectangular: a segment that would make an L-shaped panel is refused.</li>
+<li>Hover over a curtain wall and press TAB: the panel under the cursor is outlined; click to select
+  it alone. The <strong>Properties</strong> palette shows its <strong>Width</strong> and <strong>Height</strong>, and the type selector
+  changes its type.</li>
+</ul>
+<h2 id="levels">Levels</h2>
+<p><strong>Home ▸ Datum ▸ Level</strong> draws a level in a section or an elevation with two clicks, at the
+height of the first one; while drawing, a temporary dimension gives the distance to the nearest
+level. The options bar shows:</p>
+<ul>
+<li><strong>Make Plan View</strong>: on, the new level gets its floor plan; off, it is a reference level with no
+  plan, which walls and other elements can still take as their base or top;</li>
+<li><strong>Plan View Types...</strong>: the kinds of plan the level gets (<strong>Floor Plan</strong>; ceiling plans are not
+  available yet);</li>
+<li><strong>Offset</strong>: how far above the clicks the level goes.</li>
+</ul>
+<h2 id="work-planes">Work planes</h2>
+<p>Every view draws and places on a work plane. A plan's work plane is its level, a 3D view's the
+lowest level; a section or an elevation has none until one is set. The plane is kept with the
+view.</p>
+<h3 id="setting-the-work-plane">Setting the work plane</h3>
+<p><strong>Home ▸ Work Plane ▸ Set</strong> opens the <strong>Work Plane</strong> dialog. <strong>Current Work Plane</strong> shows the
+plane the view uses now. Under <strong>Specify a new Work Plane</strong>:</p>
+<ul>
+<li><strong>Name</strong>: pick a level, a grid or a named reference plane in the list (picking one selects
+  <strong>Name</strong>), then <strong>OK</strong>;</li>
+<li><strong>Pick a plane</strong>: after <strong>OK</strong>, click a wall (its face on the side of the cursor in a plan, the
+  face turned to you in a section or a 3D view), a grid, a reference plane or, in a section, a
+  level;</li>
+<li><strong>Pick a line and use the work plane it was sketched in</strong>: after <strong>OK</strong>, click a wall or a room
+  separation line: its level becomes the work plane.</li>
+</ul>
+<p>A plane that does not lie in the view, such as a grid picked in a plan or a level in a section,
+is not set there: <strong>Go to View</strong> lists the views it lies in (the sections and elevations facing
+a vertical plane, the plans of a horizontal one) and the 3D views, and <strong>Open View</strong> opens the
+chosen one with that work plane. <strong>Undo</strong> takes a new work plane back.</p>
+<h3 id="showing-the-work-plane">Showing the work plane</h3>
+<p><strong>Home ▸ Work Plane ▸ Show</strong> draws the work plane's grid in the view, over the model, when the
+plane lies in the view (in a 3D view always); <strong>Show</strong> again hides it. In a section with no work
+plane it opens the <strong>Work Plane</strong> dialog first. Click the border of the grid to select it: the
+options bar shows <strong>Spacing</strong>, the distance between its lines (1 m to start with). While the
+grid is shown, the points of walls and other lines drawn in the plan snap to the crossings of
+its lines.</p>
+<p>In a 3D view, a click where there is no element under the cursor lands on the view's work
+plane when one has been set for it: a component placed east of the house with the work plane
+set to the first floor stands on the first floor.</p>
+<h3 id="reference-planes">Reference planes</h3>
+<p><strong>Home ▸ Work Plane ▸ Reference Plane</strong> (or type <code>RP</code>) draws a reference plane with two clicks,
+like a grid. Drawn in a plan it is the vertical plane through the line, shown as a green dashed
+line in every plan and in the sections and elevations that cross it. Drawn in a section or an
+elevation it is the plane through the line across the view's depth (a horizontal line makes a
+horizontal plane), shown in the views facing the same way. Select one to give it a <strong>Name</strong> in
+the <strong>Properties</strong> palette: a named reference plane is listed in the <strong>Work Plane</strong> dialog and
+its name is written at the start of its line. Reference planes are snapped to, moved, copied,
+rotated, mirrored and deleted like grids.</p>
 <h2 id="at-the-command-line">At the command line</h2>
 <p>The same operations, typed:</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>attach                      attach the selected walls to the roof over them
@@ -866,6 +1012,9 @@ plates and members.</p>
 <a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>walljoin 57 1 disallow      wall 57 does not join at its end
 <a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a>rehost 120 12,4             move door or window 120 into the wall at 12,4
 <a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a>door {"point":[3,0],"tag":{"vertical":true,"leader":true,"length":1}}
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a>refplane 3,-2 3,11 Entrance axis   a reference plane in the open plan, named
+<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a>workplane Entrance axis     the open view's work plane, by name
+<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a>showworkplane on 0.5        show the work plane's grid, 0.5 m apart
 </code></pre></div>
 <h2 id="not-available-yet">Not available yet</h2>
 <p>Curved walls (<strong>Arc</strong>, <strong>Circle</strong>, <strong>Radius</strong>), <strong>Pick Faces</strong>, structural walls, stacked walls,

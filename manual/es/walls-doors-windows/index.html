@@ -339,6 +339,45 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#levels">
+<span class="md-ellipsis">
+      Niveles
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#work-planes">
+<span class="md-ellipsis">
+      Planos de trabajo
+    </span>
+</a>
+<nav aria-label="Planos de trabajo" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#setting-the-work-plane">
+<span class="md-ellipsis">
+      Definir el plano de trabajo
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#showing-the-work-plane">
+<span class="md-ellipsis">
+      Mostrar el plano de trabajo
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reference-planes">
+<span class="md-ellipsis">
+      Planos de referencia
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#at-the-command-line">
 <span class="md-ellipsis">
       En la línea de comandos
@@ -550,6 +589,45 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#levels">
+<span class="md-ellipsis">
+      Niveles
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#work-planes">
+<span class="md-ellipsis">
+      Planos de trabajo
+    </span>
+</a>
+<nav aria-label="Planos de trabajo" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#setting-the-work-plane">
+<span class="md-ellipsis">
+      Definir el plano de trabajo
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#showing-the-work-plane">
+<span class="md-ellipsis">
+      Mostrar el plano de trabajo
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reference-planes">
+<span class="md-ellipsis">
+      Planos de referencia
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#at-the-command-line">
 <span class="md-ellipsis">
       En la línea de comandos
@@ -697,14 +775,17 @@ paralelos, con huecos, como para un hastial o un muro escalonado.</p>
    elige uno y haz clic en <strong>Abrir vista</strong>.</li>
 <li>El modo de boceto se abre con el contorno del muro en magenta. Cámbialo con <strong>Línea</strong> y
    <strong>Rectángulo</strong> (ver el <a href="../floors-roofs-stairs/#sketch-mode">modo de boceto</a>): designa una línea y
-   pulsa <span class="keys"><kbd class="key-delete">Del</kbd></span>, dibuja otras nuevas; un contorno interior es un hueco.</li>
+   pulsa <span class="keys"><kbd class="key-delete">Del</kbd></span>, dibuja otras nuevas, o un <strong>Círculo</strong>. Cada contorno cerrado interior
+   es un hueco a través de todas las capas; un contorno dentro de un hueco vuelve a ser macizo.</li>
 <li>Haz clic en <strong>Finalizar modo de edición</strong> (o <strong>Cancelar modo de edición</strong> para dejar el muro
    como estaba).</li>
 </ol>
 <p>El muro toma ese contorno en 3D, en las secciones y en planta, donde se corta solo donde el
-contorno alcanza el plano de corte; sus puertas y ventanas lo siguen cortando. Una parte superior
-enlazada a una cubierta o a un suelo lo sigue limitando. Un muro cortina mantiene los paneles y
-montantes dentro de su nuevo contorno. <strong>Modo ▸ Restablecer perfil</strong> lo vuelve rectangular;
+contorno alcanza el plano de corte; sus puertas y ventanas lo siguen cortando, también sobre un hueco, que sigue siendo un hueco. Una parte superior
+enlazada a una cubierta o a un suelo lo sigue limitando. Planta, secciones, alzados y vista 3D muestran un solo sólido, sacado del mismo
+contorno y de los mismos huecos. Las capas que se envuelven revisten los huecos como revisten
+puertas y ventanas (ver <a href="#wall-types-and-layers">Tipos de muro y capas</a>). Un muro cortina mantiene
+los paneles y montantes dentro de su nuevo contorno. <strong>Modo ▸ Restablecer perfil</strong> lo vuelve rectangular;
 <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span> deshace una u otra cosa.</p>
 <p>El perfil también se edita en la vista 3D: el boceto queda en el plano del muro y la vista sigue
 en 3D. Solo desde una planta aparece <strong>Ir a vista</strong>, y nada cambia hasta que se abre una vista con
@@ -765,8 +846,11 @@ abierto.</p>
 <li><strong>Envolvente en extremos</strong> (<strong>No envolver</strong>, <strong>Exterior</strong>, <strong>Interior</strong>): lo mismo en los
   extremos libres de los muros.</li>
 </ul>
-<p>La envolvente solo se dibuja en planta. Un tipo de puerta o de ventana sustituye la envolvente del
-muro por su <strong>Cierre de muro</strong>.</p>
+<p>La envolvente se ve en todas las vistas: en planta, en la vista 3D, en las secciones y en los
+alzados las capas marcadas revisten las jambas, el dintel y el alféizar de puertas y ventanas, los
+lados de los huecos de un perfil editado (ver <a href="#editing-a-walls-profile">Editar el perfil de un muro</a>)
+y los extremos libres. Un tipo de puerta o de ventana sustituye la envolvente del muro por su
+<strong>Cierre de muro</strong>.</p>
 <h2 id="wall-properties">Propiedades de los muros</h2>
 <p>En <strong>Restricciones</strong>: <strong>Línea de ubicación</strong>, <strong>Restricción de base</strong>, <strong>Desfase de base</strong>, <strong>Base
 enlazada</strong>, <strong>Restricción superior</strong> (un nivel, o <strong>Sin conexión</strong>), <strong>Altura desconectada</strong>,
@@ -797,6 +881,7 @@ orientación</strong> (la apertura).</p>
 <p>Selecciónela, <strong>Edición | Puertas ▸ Anfitrión ▸ Designar nuevo anfitrión</strong> (o <strong>Edición |
 Ventanas</strong>), y pulse otro muro: la abertura se mueve allí, donde pulsó, con su tipo y su alféizar.
 Sigue seleccionada.</p>
+<p>Al arrastrar una puerta o una ventana, se queda en un muro: el puntero se proyecta sobre la línea de ubicación del muro, de modo que el hueco se desliza a lo largo del muro, entre sus extremos, con las cotas temporales hasta los muros más cercanos, en planta, en sección, en alzado o en la vista 3D; allí un clic en el vidrio de una ventana selecciona la ventana, no lo que se ve a través. Soltada sobre otro muro, pasa a ese muro; soltada en el vacío, se queda en el último punto válido del suyo. Las teclas de flecha la mueven a lo largo del muro del mismo modo.</p>
 <h2 id="door-and-window-properties">Propiedades de puertas y ventanas</h2>
 <p>Ejemplar: <strong>Nivel</strong>, <strong>Altura de alféizar</strong>, <strong>Anchura</strong> y <strong>Altura</strong> (del tipo), <strong>Altura de
 dintel</strong>, <strong>Comentarios</strong>, <strong>Marca</strong>. Cambiar <strong>Altura de alféizar</strong> o <strong>Altura de dintel</strong> mueve la
@@ -871,6 +956,70 @@ aloja, y un mensaje lo indica (deshacer las recupera).</p>
 </ul>
 <p>Paneles y montantes tienen sus tablas de planificación, y la exportación IFC escribe el muro
 cortina con sus placas y elementos.</p>
+<ul>
+<li><strong>Rejilla de muro cortina</strong> ▸ <strong>Colocación</strong>: <strong>Todos los segmentos</strong> (toda la línea), <strong>Un
+  segmento</strong> (solo a través del panel pulsado) o <strong>Todos excepto los designados</strong> (clic para
+  colocar la línea, clic en los segmentos que excluir y luego clic fuera de la línea).</li>
+<li>Con un muro cortina seleccionado, <strong>Añadir/Suprimir segmentos</strong>: un clic en un segmento de una
+  línea de rejilla lo quita (los dos paneles a sus lados pasan a ser uno y su montante desaparece)
+  o lo vuelve a poner. Los paneles siguen siendo rectangulares: un segmento que daría un panel en
+  L se rechaza.</li>
+<li>Con el cursor sobre un muro cortina, TAB resalta el panel bajo el cursor; un clic selecciona solo
+  ese. La paleta <strong>Propiedades</strong> muestra su <strong>Anchura</strong> y su <strong>Altura</strong>, y el selector de tipo
+  cambia su tipo.</li>
+</ul>
+<h2 id="levels">Niveles</h2>
+<p><strong>Inicio ▸ Referencia ▸ Nivel</strong> dibuja un nivel en una sección o un alzado con dos clics, a la
+altura del primero; mientras se dibuja, una cota temporal da la distancia al nivel más cercano.
+La barra de opciones muestra:</p>
+<ul>
+<li><strong>Crear vista de planta</strong>: activado, el nuevo nivel recibe su planta; desactivado, es un nivel
+  de referencia sin planta, que muros y otros elementos pueden tomar igualmente como base o
+  parte superior;</li>
+<li><strong>Tipos de vista de planta...</strong>: los tipos de planta que recibe el nivel (<strong>Plano de
+  planta</strong>; las plantas de techo aún no están disponibles);</li>
+<li><strong>Desfase</strong>: a qué distancia por encima de los clics queda el nivel.</li>
+</ul>
+<h2 id="work-planes">Planos de trabajo</h2>
+<p>Cada vista dibuja y coloca sobre un plano de trabajo. El de una planta es su nivel, el de una
+vista 3D el nivel más bajo; una sección o un alzado no tienen ninguno hasta que se define uno. El
+plano se queda con la vista.</p>
+<h3 id="setting-the-work-plane">Definir el plano de trabajo</h3>
+<p><strong>Inicio ▸ Plano de trabajo ▸ Definir</strong> abre la ventana <strong>Plano de trabajo</strong>. <strong>Plano de trabajo
+actual</strong> muestra el plano que la vista usa ahora. En <strong>Especificar un nuevo plano de trabajo</strong>:</p>
+<ul>
+<li><strong>Nombre</strong>: elegir en la lista un nivel, una rejilla o un plano de referencia con nombre
+  (elegirlo selecciona <strong>Nombre</strong>), luego <strong>Aceptar</strong>;</li>
+<li><strong>Designar un plano</strong>: tras <strong>Aceptar</strong>, hacer clic en un muro (en planta su cara del lado del
+  cursor, en sección o en 3D la que mira al observador), una rejilla, un plano de referencia o,
+  en sección, un nivel;</li>
+<li><strong>Designar una línea y usar el plano de trabajo en que se dibujó</strong>: tras <strong>Aceptar</strong>, hacer clic
+  en un muro o una línea de separación de habitaciones: su nivel pasa a ser el plano de trabajo.</li>
+</ul>
+<p>Un plano que no está en la vista, como una rejilla elegida en planta o un nivel en sección, no se
+define allí: <strong>Ir a vista</strong> lista las vistas en que está (las secciones y alzados orientados
+hacia un plano vertical, las plantas de uno horizontal) y las vistas 3D, y <strong>Abrir vista</strong> abre la
+elegida con ese plano de trabajo. <strong>Deshacer</strong> devuelve el plano anterior.</p>
+<h3 id="showing-the-work-plane">Mostrar el plano de trabajo</h3>
+<p><strong>Inicio ▸ Plano de trabajo ▸ Mostrar</strong> dibuja la rejilla del plano de trabajo sobre el modelo
+cuando el plano está en la vista (en 3D siempre); <strong>Mostrar</strong> de nuevo la oculta. En una sección
+sin plano de trabajo abre antes la ventana <strong>Plano de trabajo</strong>. Un clic en el borde de la
+rejilla la selecciona: la barra de opciones muestra <strong>Separación</strong>, la distancia entre sus líneas
+(1 m al principio). Mientras la rejilla está visible, los puntos de los muros y de las demás
+líneas dibujados en planta se ajustan a los cruces de sus líneas.</p>
+<p>En una vista 3D, un clic donde no hay ningún elemento bajo el cursor cae en el plano de trabajo
+de la vista cuando se ha definido uno: un componente colocado al este de la casa con el plano de
+trabajo en la primera planta queda en la primera planta.</p>
+<h3 id="reference-planes">Planos de referencia</h3>
+<p><strong>Inicio ▸ Plano de trabajo ▸ Plano de referencia</strong> (o escribir <code>RP</code>) dibuja un plano de
+referencia con dos clics, como una rejilla. Dibujado en planta es el plano vertical que pasa por
+la línea, mostrado como una línea discontinua verde en cada planta y en las secciones y alzados
+que lo cruzan. Dibujado en una sección o un alzado es el plano que pasa por la línea a través de
+la profundidad de la vista (una línea horizontal da un plano horizontal), mostrado en las vistas
+orientadas en el mismo sentido. Seleccionado, se le da un <strong>Nombre</strong> en la paleta
+<strong>Propiedades</strong>: un plano de referencia con nombre aparece en la ventana <strong>Plano de trabajo</strong> y
+su nombre se escribe al principio de su línea. Los planos de referencia se ajustan, se mueven, se
+copian, se giran, se reflejan y se eliminan como las rejillas.</p>
 <h2 id="at-the-command-line">En la línea de comandos</h2>
 <p>Las mismas operaciones, escritas:</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>attach                      attach the selected walls to the roof over them
@@ -881,6 +1030,9 @@ cortina con sus placas y elementos.</p>
 <a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>walljoin 57 1 disallow      wall 57 does not join at its end
 <a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a>rehost 120 12,4             move door or window 120 into the wall at 12,4
 <a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a>door {"point":[3,0],"tag":{"vertical":true,"leader":true,"length":1}}
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a>refplane 3,-2 3,11 Entrance axis   a reference plane in the open plan, named
+<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a>workplane Entrance axis     the open view's work plane, by name
+<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a>showworkplane on 0.5        show the work plane's grid, 0.5 m apart
 </code></pre></div>
 <h2 id="not-available-yet">Aún no disponible</h2>
 <p>Muros curvos (arco, <strong>Círculo</strong>, <strong>Radio</strong>), selección de superficies, muros estructurales, muros

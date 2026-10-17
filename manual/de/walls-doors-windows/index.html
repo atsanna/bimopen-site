@@ -339,6 +339,45 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#levels">
+<span class="md-ellipsis">
+      Ebenen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#work-planes">
+<span class="md-ellipsis">
+      Arbeitsebenen
+    </span>
+</a>
+<nav aria-label="Arbeitsebenen" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#setting-the-work-plane">
+<span class="md-ellipsis">
+      Die Arbeitsebene festlegen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#showing-the-work-plane">
+<span class="md-ellipsis">
+      Die Arbeitsebene anzeigen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reference-planes">
+<span class="md-ellipsis">
+      Referenzebenen
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#at-the-command-line">
 <span class="md-ellipsis">
       In der Befehlszeile
@@ -550,6 +589,45 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#levels">
+<span class="md-ellipsis">
+      Ebenen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#work-planes">
+<span class="md-ellipsis">
+      Arbeitsebenen
+    </span>
+</a>
+<nav aria-label="Arbeitsebenen" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#setting-the-work-plane">
+<span class="md-ellipsis">
+      Die Arbeitsebene festlegen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#showing-the-work-plane">
+<span class="md-ellipsis">
+      Die Arbeitsebene anzeigen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reference-planes">
+<span class="md-ellipsis">
+      Referenzebenen
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#at-the-command-line">
 <span class="md-ellipsis">
       In der Befehlszeile
@@ -696,14 +774,18 @@ parallelen Schnitt skizzieren, mit Löchern, etwa für einen Giebel oder eine ab
    <strong>Ansicht öffnen</strong>.</li>
 <li>Der Skizzenmodus öffnet sich mit dem Umriss der Wand in Magenta. Ändern Sie ihn mit <strong>Linie</strong>
    und <strong>Rechteck</strong> (siehe <a href="../floors-roofs-stairs/#sketch-mode">Skizzenmodus</a>): Eine Linie wählen
-   und <span class="keys"><kbd class="key-delete">Del</kbd></span> drücken, neue zeichnen; eine innere Umgrenzung ist ein Loch.</li>
+   und <span class="keys"><kbd class="key-delete">Del</kbd></span> drücken, neue zeichnen, oder einen <strong>Kreis</strong>. Jede geschlossene
+   Umgrenzung innerhalb des Umrisses ist ein Loch durch alle Schichten; eine Umgrenzung in einem
+   Loch ist wieder massiv.</li>
 <li>Klicken Sie auf <strong>Bearbeitungsmodus beenden</strong> (oder <strong>Bearbeitungsmodus abbrechen</strong>, um die
    Wand unverändert zu lassen).</li>
 </ol>
 <p>Die Wand erhält diesen Umriss in 3D, in Schnitten und im Grundriss, wo sie nur geschnitten wird,
-wo der Umriss die Schnittebene erreicht; ihre Türen und Fenster schneiden sie weiterhin. Eine an
-ein Dach oder eine Geschossdecke fixierte Oberkante begrenzt sie weiterhin. Eine Vorhangfassade
-behält die Paneele und Pfosten innerhalb ihres neuen Umrisses. <strong>Modus ▸ Profil zurücksetzen</strong>
+wo der Umriss die Schnittebene erreicht; ihre Türen und Fenster schneiden sie weiterhin, auch über einer Öffnung, die eine Öffnung bleibt. Eine an
+ein Dach oder eine Geschossdecke fixierte Oberkante begrenzt sie weiterhin. Grundriss, Schnitte, Ansichten und 3D-Ansicht zeigen
+ein einziges Volumen aus demselben Umriss und denselben Löchern. Die umschließenden Schichten
+kleiden die Löcher aus wie Türen und Fenster (siehe <a href="#wall-types-and-layers">Wandtypen und Schichten</a>).
+Eine Vorhangfassade behält die Paneele und Pfosten innerhalb ihres neuen Umrisses. <strong>Modus ▸ Profil zurücksetzen</strong>
 macht sie wieder rechteckig; <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span> macht beides rückgängig.</p>
 <p>Das Profil lässt sich auch in der 3D-Ansicht bearbeiten: Die Skizze liegt auf der Wandebene,
 und die Ansicht bleibt 3D. Nur aus einem Grundriss erscheint <strong>Gehe zu Ansicht</strong>, und nichts
@@ -767,8 +849,11 @@ Werte werden abgelehnt, und der Dialog bleibt offen.</p>
 <li><strong>Umschließung an Enden</strong> (<strong>Nicht umschließen</strong>, <strong>Außen</strong>, <strong>Innen</strong>): dasselbe an den freien
   Enden der Wände.</li>
 </ul>
-<p>Die Umschließung wird nur im Grundriss gezeichnet. Ein Tür- oder Fenstertyp ersetzt die
-Umschließung der Wand durch seinen <strong>Wandabschluss</strong>.</p>
+<p>Die Umschließung erscheint in jeder Ansicht: Im Grundriss, in der 3D-Ansicht, in Schnitten und in
+Ansichten kleiden die angehakten Schichten die Laibungen, den Sturz und die Brüstung von Türen und
+Fenstern aus, die Seiten der Löcher eines bearbeiteten Profils (siehe
+<a href="#editing-a-walls-profile">Das Profil einer Wand bearbeiten</a>) und die freien Enden. Ein Tür- oder
+Fenstertyp ersetzt die Umschließung der Wand durch seinen <strong>Wandabschluss</strong>.</p>
 <h2 id="wall-properties">Wandeigenschaften</h2>
 <p>Unter <strong>Abhängigkeiten</strong>: <strong>Basislinie</strong>, <strong>Basisabhängigkeit</strong>, <strong>Versatz unten</strong>, <strong>Basis
 fixiert</strong>, <strong>Abhängigkeit oben</strong> (eine Ebene, oder <strong>Nicht verbunden</strong>), <strong>Nicht verknüpfte
@@ -800,6 +885,7 @@ umkehren</strong> (der Aufschlag).</p>
 <p>Wählen Sie sie, <strong>Bearbeiten | Türen ▸ Basisbauteil ▸ Neues Basisbauteil wählen</strong> (oder
 <strong>Bearbeiten | Fenster</strong>), dann eine andere Wand anklicken: die Öffnung wandert dorthin, an die
 angeklickte Stelle, mit ihrem Typ und ihrer Brüstung. Sie bleibt gewählt.</p>
+<p>Beim Ziehen bleibt eine Tür oder ein Fenster in einer Wand: der Zeiger wird auf die Basislinie der Wand projiziert, die Öffnung gleitet also entlang der Wand zwischen ihren Enden, mit den temporären Bemaßungen zu den nächsten Wänden, im Grundriss, im Schnitt, in einer Ansicht oder in der 3D-Ansicht; dort wählt ein Klick auf das Glas eines Fensters das Fenster, nicht das, was man dahinter sieht. Über einer anderen Wand losgelassen, wechselt sie in diese Wand; im leeren Raum losgelassen, bleibt sie an der letzten gültigen Stelle ihrer Wand. Die Pfeiltasten verschieben sie ebenso entlang der Wand.</p>
 <h2 id="door-and-window-properties">Eigenschaften von Türen und Fenstern</h2>
 <p>Exemplar: <strong>Ebene</strong>, <strong>Brüstungshöhe</strong>, <strong>Breite</strong> und <strong>Höhe</strong> (des Typs), <strong>Sturzhöhe</strong>,
 <strong>Kommentare</strong>, <strong>Kennzeichen</strong>. Das Ändern von <strong>Brüstungshöhe</strong> oder <strong>Sturzhöhe</strong> verschiebt die
@@ -873,6 +959,72 @@ schneidet seine Öffnung in diese, im Grundriss, in Schnitten, in 3D und in IFC.
 </ul>
 <p>Paneele und Pfosten haben eigene Bauteillisten, und der IFC-Export schreibt die Vorhangfassade mit
 ihren Platten und Gliedern.</p>
+<ul>
+<li><strong>Fassadenraster</strong> ▸ <strong>Platzierung</strong>: <strong>Alle Segmente</strong> (die ganze Linie), <strong>Ein Segment</strong> (nur
+  quer durch das angeklickte Paneel) oder <strong>Alle außer ausgewählten</strong> (klicken, um die Linie zu
+  platzieren, auf die auszulassenden Segmente klicken, dann außerhalb der Linie klicken).</li>
+<li>Mit ausgewählter Vorhangfassade <strong>Segmente hinzufügen/entfernen</strong>: ein Klick auf ein Segment einer
+  Rasterlinie entfernt es (die beiden Paneele daneben werden eines, sein Pfosten verschwindet) oder
+  setzt es wieder ein. Die Paneele bleiben rechteckig: ein Segment, das ein L-förmiges Paneel
+  ergäbe, wird abgelehnt.</li>
+<li>Mit dem Cursor über einer Vorhangfassade hebt TAB das Paneel unter dem Cursor hervor; ein Klick
+  wählt nur dieses aus. Die Palette <strong>Eigenschaften</strong> zeigt <strong>Breite</strong> und <strong>Höhe</strong>, und die
+  Typenauswahl ändert seinen Typ.</li>
+</ul>
+<h2 id="levels">Ebenen</h2>
+<p><strong>Start ▸ Bezug ▸ Ebene</strong> zeichnet eine Ebene in einem Schnitt oder einer Ansicht mit zwei
+Klicks, in der Höhe des ersten; beim Zeichnen gibt ein temporäres Maß den Abstand zur nächsten
+Ebene an. Die Optionsleiste zeigt:</p>
+<ul>
+<li><strong>Grundrissansicht erstellen</strong>: an, die neue Ebene erhält ihren Grundriss; aus, ist sie eine
+  Referenzebene ohne Grundriss, die Wände und andere Elemente dennoch als Basis oder Oberkante
+  nehmen können;</li>
+<li><strong>Grundrissansichtstypen...</strong>: die Grundrissarten, die die Ebene erhält (<strong>Grundriss</strong>;
+  Deckenpläne sind noch nicht verfügbar);</li>
+<li><strong>Versatz</strong>: wie weit über den Klicks die Ebene liegt.</li>
+</ul>
+<h2 id="work-planes">Arbeitsebenen</h2>
+<p>Jede Ansicht zeichnet und platziert auf einer Arbeitsebene. Die eines Grundrisses ist seine
+Ebene, die einer 3D-Ansicht die unterste Ebene; ein Schnitt oder eine Ansicht hat keine, bis eine
+festgelegt wird. Die Ebene bleibt bei der Ansicht.</p>
+<h3 id="setting-the-work-plane">Die Arbeitsebene festlegen</h3>
+<p><strong>Start ▸ Arbeitsebene ▸ Festlegen</strong> öffnet das Fenster <strong>Arbeitsebene</strong>. <strong>Aktuelle
+Arbeitsebene</strong> zeigt die Ebene, die die Ansicht jetzt verwendet. Unter <strong>Neue Arbeitsebene
+angeben</strong>:</p>
+<ul>
+<li><strong>Name</strong>: eine Ebene, ein Raster oder eine benannte Referenzebene in der Liste wählen (das
+  wählt <strong>Name</strong> aus), dann <strong>OK</strong>;</li>
+<li><strong>Ebene auswählen</strong>: nach <strong>OK</strong> auf eine Wand (im Grundriss ihre Fläche auf der Seite des
+  Cursors, im Schnitt oder in 3D die dem Betrachter zugewandte), ein Raster, eine Referenzebene
+  oder, im Schnitt, eine Ebene klicken;</li>
+<li><strong>Linie auswählen und die Arbeitsebene verwenden, in der sie skizziert wurde</strong>: nach <strong>OK</strong> auf
+  eine Wand oder eine Raumtrennlinie klicken: ihre Ebene wird zur Arbeitsebene.</li>
+</ul>
+<p>Eine Ebene, die nicht in der Ansicht liegt, etwa ein im Grundriss gewähltes Raster oder eine
+Ebene im Schnitt, wird dort nicht festgelegt: <strong>Gehe zu Ansicht</strong> listet die Ansichten, in denen
+sie liegt (die Schnitte und Ansichten, die einer senkrechten Ebene zugewandt sind, die
+Grundrisse einer waagerechten) und die 3D-Ansichten, und <strong>Ansicht öffnen</strong> öffnet die gewählte
+mit dieser Arbeitsebene. <strong>Rückgängig</strong> stellt die vorige Ebene wieder her.</p>
+<h3 id="showing-the-work-plane">Die Arbeitsebene anzeigen</h3>
+<p><strong>Start ▸ Arbeitsebene ▸ Anzeigen</strong> zeichnet das Raster der Arbeitsebene über das Modell, wenn
+die Ebene in der Ansicht liegt (in 3D immer); erneut <strong>Anzeigen</strong> blendet es aus. In einem Schnitt
+ohne Arbeitsebene öffnet es zuerst das Fenster <strong>Arbeitsebene</strong>. Ein Klick auf den Rand des
+Rasters wählt es aus: die Optionsleiste zeigt <strong>Abstand</strong>, den Abstand seiner Linien (anfangs
+1 m). Solange das Raster sichtbar ist, rasten die Punkte von Wänden und anderen im Grundriss
+gezeichneten Linien an den Kreuzungen seiner Linien ein.</p>
+<p>In einer 3D-Ansicht fällt ein Klick, unter dem kein Element liegt, auf die Arbeitsebene der
+Ansicht, wenn eine festgelegt wurde: eine östlich des Hauses platzierte Komponente steht mit der
+Arbeitsebene auf dem Obergeschoss auf dem Obergeschoss.</p>
+<h3 id="reference-planes">Referenzebenen</h3>
+<p><strong>Start ▸ Arbeitsebene ▸ Referenzebene</strong> (oder <code>RP</code> eingeben) zeichnet eine Referenzebene mit
+zwei Klicks, wie ein Raster. Im Grundriss gezeichnet ist sie die senkrechte Ebene durch die
+Linie, als grüne gestrichelte Linie in jedem Grundriss und in den Schnitten und Ansichten, die
+sie kreuzen. In einem Schnitt oder einer Ansicht gezeichnet ist sie die Ebene durch die Linie
+quer durch die Tiefe der Ansicht (eine waagerechte Linie ergibt eine waagerechte Ebene),
+gezeigt in den Ansichten mit derselben Blickrichtung. Ausgewählt erhält sie in der Palette
+<strong>Eigenschaften</strong> einen <strong>Name</strong>: eine benannte Referenzebene steht im Fenster <strong>Arbeitsebene</strong>,
+und ihr Name steht am Anfang ihrer Linie. Referenzebenen werden wie Raster gefangen, verschoben,
+kopiert, gedreht, gespiegelt und gelöscht.</p>
 <h2 id="at-the-command-line">In der Befehlszeile</h2>
 <p>Dieselben Vorgänge, eingegeben:</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>attach                      attach the selected walls to the roof over them
@@ -883,6 +1035,9 @@ ihren Platten und Gliedern.</p>
 <a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>walljoin 57 1 disallow      wall 57 does not join at its end
 <a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a>rehost 120 12,4             move door or window 120 into the wall at 12,4
 <a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a>door {"point":[3,0],"tag":{"vertical":true,"leader":true,"length":1}}
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a>refplane 3,-2 3,11 Entrance axis   a reference plane in the open plan, named
+<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a>workplane Entrance axis     the open view's work plane, by name
+<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a>showworkplane on 0.5        show the work plane's grid, 0.5 m apart
 </code></pre></div>
 <h2 id="not-available-yet">Noch nicht verfügbar</h2>
 <p>Gekrümmte Wände (Bogen, <strong>Kreis</strong>, <strong>Radius</strong>), Flächen wählen, tragende Wände, gestapelte Wände,

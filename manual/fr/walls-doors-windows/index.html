@@ -339,6 +339,45 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#levels">
+<span class="md-ellipsis">
+      Niveaux
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#work-planes">
+<span class="md-ellipsis">
+      Plans de construction
+    </span>
+</a>
+<nav aria-label="Plans de construction" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#setting-the-work-plane">
+<span class="md-ellipsis">
+      Définir le plan de construction
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#showing-the-work-plane">
+<span class="md-ellipsis">
+      Afficher le plan de construction
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reference-planes">
+<span class="md-ellipsis">
+      Plans de référence
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#at-the-command-line">
 <span class="md-ellipsis">
       En ligne de commande
@@ -550,6 +589,45 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#levels">
+<span class="md-ellipsis">
+      Niveaux
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#work-planes">
+<span class="md-ellipsis">
+      Plans de construction
+    </span>
+</a>
+<nav aria-label="Plans de construction" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#setting-the-work-plane">
+<span class="md-ellipsis">
+      Définir le plan de construction
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#showing-the-work-plane">
+<span class="md-ellipsis">
+      Afficher le plan de construction
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reference-planes">
+<span class="md-ellipsis">
+      Plans de référence
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#at-the-command-line">
 <span class="md-ellipsis">
       En ligne de commande
@@ -696,14 +774,18 @@ parallèle, avec des trous, comme pour un pignon ou un mur en gradins.</p>
    élévations parallèles : choisissez-en une et cliquez sur <strong>Ouvrir la vue</strong>.</li>
 <li>Le mode esquisse s'ouvre avec le contour du mur en magenta. Changez-le avec <strong>Ligne</strong> et
    <strong>Rectangle</strong> (voir le <a href="../floors-roofs-stairs/#sketch-mode">mode esquisse</a>) : choisissez une
-   ligne et appuyez sur <span class="keys"><kbd class="key-delete">Del</kbd></span>, dessinez-en de nouvelles ; un contour intérieur est un trou.</li>
+   ligne et appuyez sur <span class="keys"><kbd class="key-delete">Del</kbd></span>, dessinez-en de nouvelles, ou un <strong>Cercle</strong>. Chaque contour
+   fermé à l'intérieur est un trou à travers toutes les couches ; un contour dans un trou est de
+   nouveau plein.</li>
 <li>Cliquez sur <strong>Terminer le mode d'édition</strong> (ou <strong>Annuler le mode d'édition</strong> pour laisser le mur
    tel qu'il était).</li>
 </ol>
 <p>Le mur prend ce contour en 3D, dans les coupes et en plan, où il n'est coupé que là où le contour
-atteint le plan de coupe ; ses portes et fenêtres le coupent toujours. Un haut attaché à un toit ou
-à un sol le limite toujours. Un mur-rideau garde les panneaux et les meneaux à l'intérieur de son
-nouveau contour. <strong>Mode ▸ Réinitialiser le profil</strong> le rend de nouveau rectangulaire ; <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span>
+atteint le plan de coupe ; ses portes et fenêtres le coupent toujours, aussi sur un trou, qui reste un trou. Un haut attaché à un toit ou
+à un sol le limite toujours. Plan, coupes, élévations et vue 3D montrent un seul
+solide, tiré du même contour et des mêmes trous. Les couches qui se retournent habillent les trous
+comme les portes et les fenêtres (voir <a href="#wall-types-and-layers">Types de murs et couches</a>). Un
+mur-rideau garde les panneaux et les meneaux à l'intérieur de son nouveau contour. <strong>Mode ▸ Réinitialiser le profil</strong> le rend de nouveau rectangulaire ; <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span>
 annule l'un comme l'autre.</p>
 <p>Le profil se modifie aussi dans la vue 3D : l'esquisse se trouve sur le plan du mur et la vue
 reste en 3D. Ce n'est que depuis un plan qu'<strong>Atteindre la vue</strong> apparaît, et rien ne change tant
@@ -767,8 +849,11 @@ la boîte de dialogue reste ouverte.</p>
 <li><strong>Retournement aux extrémités</strong> (<strong>Ne pas retourner</strong>, <strong>Extérieur</strong>, <strong>Intérieur</strong>) : de même
   aux extrémités libres des murs.</li>
 </ul>
-<p>Le retournement n'est dessiné qu'en plan. Un type de porte ou de fenêtre remplace le retournement du
-mur par sa <strong>Fermeture du mur</strong>.</p>
+<p>Le retournement apparaît dans toutes les vues : en plan, dans la vue 3D, dans les coupes et les
+élévations, les couches cochées habillent les tableaux, le linteau et l'appui des portes et
+fenêtres, les côtés des trous d'un profil modifié (voir
+<a href="#editing-a-walls-profile">Modifier le profil d'un mur</a>) et les extrémités libres. Un type de porte
+ou de fenêtre remplace le retournement du mur par sa <strong>Fermeture du mur</strong>.</p>
 <h2 id="wall-properties">Propriétés des murs</h2>
 <p>Sous <strong>Contraintes</strong> : <strong>Ligne de justification</strong>, <strong>Contrainte de base</strong>, <strong>Décalage de la base</strong>,
 <strong>Base attachée</strong>, <strong>Contrainte supérieure</strong> (un niveau, ou <strong>Non lié</strong>), <strong>Hauteur non
@@ -799,6 +884,7 @@ l'autre tableau. Le menu contextuel fait de même : <strong>Inverser le sens</st
 <p>Sélectionnez-la, <strong>Édition | Portes ▸ Hôte ▸ Choisir un nouvel hôte</strong> (ou <strong>Édition | Fenêtres</strong>),
 puis cliquez un autre mur : l'ouverture s'y déplace, à l'endroit cliqué, avec son type et son
 allège. Elle reste sélectionnée.</p>
+<p>En faisant glisser une porte ou une fenêtre, elle reste dans un mur : le pointeur est projeté sur la ligne de justification du mur, l'ouverture glisse donc le long du mur, entre ses extrémités, avec les cotes temporaires vers les murs les plus proches, en plan, en coupe, en élévation ou dans la vue 3D ; là, un clic sur le vitrage d'une fenêtre sélectionne la fenêtre, pas ce que l'on voit au travers. Relâchée au-dessus d'un autre mur, elle passe dans ce mur ; relâchée dans le vide, elle reste au dernier endroit valide du sien. Les touches fléchées la déplacent le long du mur de la même façon.</p>
 <h2 id="door-and-window-properties">Propriétés des portes et des fenêtres</h2>
 <p>Occurrence : <strong>Niveau</strong>, <strong>Hauteur d'allège</strong>, <strong>Largeur</strong> et <strong>Hauteur</strong> (du type), <strong>Hauteur de
 linteau</strong>, <strong>Commentaires</strong>, <strong>Marque</strong>. Changer <strong>Hauteur d'allège</strong> ou <strong>Hauteur de linteau</strong>
@@ -874,6 +960,73 @@ ouverture, en plan, en coupe, en 3D et en IFC.</p>
 </ul>
 <p>Panneaux et meneaux ont leurs nomenclatures, et l'export IFC écrit le mur-rideau avec ses plaques
 et ses éléments.</p>
+<ul>
+<li><strong>Quadrillage de mur-rideau</strong> ▸ <strong>Placement</strong> : <strong>Tous les segments</strong> (toute la ligne), <strong>Un
+  segment</strong> (seulement à travers le panneau cliqué) ou <strong>Tout sauf la sélection</strong> (cliquez pour
+  placer la ligne, cliquez sur les segments à exclure, puis cliquez hors de la ligne).</li>
+<li>Un mur-rideau sélectionné, <strong>Ajouter/Supprimer des segments</strong> : un clic sur un segment d'une ligne
+  de quadrillage le retire (les deux panneaux de part et d'autre n'en font qu'un et son meneau
+  disparaît) ou le remet. Les panneaux restent rectangulaires : un segment qui donnerait un panneau
+  en L est refusé.</li>
+<li>Le curseur sur un mur-rideau, TAB met en évidence le panneau sous le curseur ; un clic ne
+  sélectionne que lui. La palette <strong>Propriétés</strong> en montre la <strong>Largeur</strong> et la <strong>Hauteur</strong>, et le
+  sélecteur de type en change le type.</li>
+</ul>
+<h2 id="levels">Niveaux</h2>
+<p><strong>Début ▸ Référence ▸ Niveau</strong> dessine un niveau dans une coupe ou une élévation en deux clics, à
+la hauteur du premier ; pendant le dessin, une cote temporaire donne la distance au niveau le
+plus proche. La barre des options montre :</p>
+<ul>
+<li><strong>Créer une vue en plan</strong> : activé, le nouveau niveau reçoit son plan ; désactivé, c'est un
+  niveau de référence sans plan, que les murs et les autres éléments peuvent quand même prendre
+  comme base ou sommet ;</li>
+<li><strong>Types de vues en plan...</strong> : les types de plan que reçoit le niveau (<strong>Plan d'étage</strong> ; les
+  plans de plafond ne sont pas encore disponibles) ;</li>
+<li><strong>Décaler</strong> : à quelle distance au-dessus des clics se place le niveau.</li>
+</ul>
+<h2 id="work-planes">Plans de construction</h2>
+<p>Chaque vue dessine et place sur un plan de construction. Celui d'un plan d'étage est son niveau,
+celui d'une vue 3D le niveau le plus bas ; une coupe ou une élévation n'en a pas tant qu'on n'en
+définit pas un. Le plan reste avec la vue.</p>
+<h3 id="setting-the-work-plane">Définir le plan de construction</h3>
+<p><strong>Début ▸ Plan de construction ▸ Définir</strong> ouvre la fenêtre <strong>Plan de construction</strong>. <strong>Plan de
+construction courant</strong> montre le plan que la vue utilise. Sous <strong>Spécifier un nouveau plan de
+construction</strong> :</p>
+<ul>
+<li><strong>Nom</strong> : choisir dans la liste un niveau, une grille ou un plan de référence nommé (le choisir
+  sélectionne <strong>Nom</strong>), puis <strong>OK</strong> ;</li>
+<li><strong>Choisir un plan</strong> : après <strong>OK</strong>, cliquer sur un mur (en plan sa face du côté du curseur, en
+  coupe ou en 3D celle tournée vers l'observateur), une grille, un plan de référence ou, en
+  coupe, un niveau ;</li>
+<li><strong>Choisir une ligne et utiliser le plan de construction où elle a été esquissée</strong> : après
+  <strong>OK</strong>, cliquer sur un mur ou une ligne de séparation des pièces : son niveau devient le plan de
+  construction.</li>
+</ul>
+<p>Un plan qui ne se trouve pas dans la vue, comme une grille choisie en plan ou un niveau en coupe,
+n'y est pas défini : <strong>Atteindre la vue</strong> liste les vues où il se trouve (les coupes et
+élévations tournées vers un plan vertical, les plans d'étage d'un plan horizontal) et les vues
+3D, et <strong>Ouvrir la vue</strong> ouvre celle choisie avec ce plan de construction. <strong>Annuler</strong> rétablit le
+plan précédent.</p>
+<h3 id="showing-the-work-plane">Afficher le plan de construction</h3>
+<p><strong>Début ▸ Plan de construction ▸ Afficher</strong> dessine la grille du plan de construction sur le
+modèle quand le plan se trouve dans la vue (en 3D toujours) ; <strong>Afficher</strong> à nouveau la masque.
+Dans une coupe sans plan de construction, il ouvre d'abord la fenêtre <strong>Plan de construction</strong>.
+Un clic sur le bord de la grille la sélectionne : la barre des options montre <strong>Espacement</strong>, la
+distance entre ses lignes (1 m au départ). Tant que la grille est affichée, les points des murs
+et des autres lignes dessinés en plan s'accrochent aux croisements de ses lignes.</p>
+<p>Dans une vue 3D, un clic là où aucun élément n'est sous le curseur tombe sur le plan de
+construction de la vue quand il en a été défini un : un composant placé à l'est de la maison
+avec le plan de construction sur l'étage se pose sur l'étage.</p>
+<h3 id="reference-planes">Plans de référence</h3>
+<p><strong>Début ▸ Plan de construction ▸ Plan de référence</strong> (ou taper <code>RP</code>) dessine un plan de
+référence en deux clics, comme une grille. Dessiné en plan, c'est le plan vertical passant par la
+ligne, montré comme une ligne verte en tirets dans chaque plan d'étage et dans les coupes et
+élévations qui le croisent. Dessiné dans une coupe ou une élévation, c'est le plan passant par la
+ligne à travers la profondeur de la vue (une ligne horizontale donne un plan horizontal), montré
+dans les vues tournées dans le même sens. Sélectionné, on lui donne un <strong>Nom</strong> dans la palette
+<strong>Propriétés</strong> : un plan de référence nommé est listé dans la fenêtre <strong>Plan de construction</strong> et
+son nom est écrit au début de sa ligne. Les plans de référence s'accrochent, se déplacent, se
+copient, pivotent, se symétrisent et se suppriment comme les grilles.</p>
 <h2 id="at-the-command-line">En ligne de commande</h2>
 <p>Les mêmes opérations, tapées :</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>attach                      attach the selected walls to the roof over them
@@ -884,6 +1037,9 @@ et ses éléments.</p>
 <a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>walljoin 57 1 disallow      wall 57 does not join at its end
 <a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a>rehost 120 12,4             move door or window 120 into the wall at 12,4
 <a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a>door {"point":[3,0],"tag":{"vertical":true,"leader":true,"length":1}}
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a>refplane 3,-2 3,11 Entrance axis   a reference plane in the open plan, named
+<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a>workplane Entrance axis     the open view's work plane, by name
+<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a>showworkplane on 0.5        show the work plane's grid, 0.5 m apart
 </code></pre></div>
 <h2 id="not-available-yet">Pas encore disponible</h2>
 <p>Murs courbes (arc, <strong>Cercle</strong>, <strong>Rayon</strong>), choix de surfaces, murs porteurs, murs empilés, profilés

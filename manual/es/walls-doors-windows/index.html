@@ -232,7 +232,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#the-location-line-and-flipping">
 <span class="md-ellipsis">
-      La línea de ubicación y el volteo
+      La alineación y el volteo
     </span>
 </a>
 </li>
@@ -482,7 +482,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#the-location-line-and-flipping">
 <span class="md-ellipsis">
-      La línea de ubicación y el volteo
+      La alineación y el volteo
     </span>
 </a>
 </li>
@@ -651,12 +651,12 @@
 <h1 id="walls-doors-and-windows">Muros, puertas y ventanas</h1>
 <p>Este capítulo describe cómo se dibujan los muros, cómo se unen y se enlazan a cubiertas y suelos,
 cómo se configuran sus tipos y capas, y cómo se colocan en ellos puertas y ventanas, cómo se
-voltean, se mueven y cómo se dibujan en cada nivel de detalle.</p>
+voltean, se mueven y cómo se dibujan con cada valor de <strong>Detalle</strong>.</p>
 <h2 id="drawing-walls">Dibujar muros</h2>
 <p><strong>Inicio ▸ Construir ▸ Muro</strong> (o <code>WA</code>) inicia la herramienta muro, en una planta, una sección, un alzado o en la vista 3D.
 Elija el tipo de muro en el selector de tipos de la parte superior de la paleta <strong>Propiedades</strong>;
-<strong>Propiedades de tipo</strong> modifica el tipo y, con él, todos los muros de ese tipo. La ficha
-contextual <strong>Edición | Colocar: Muro</strong> muestra el grupo <strong>Dibujar</strong>, y la barra de opciones
+<strong>Parámetros de tipo</strong> modifica el tipo y, con él, todos los muros de ese tipo. La ficha
+contextual <strong>Dibujar: muro</strong> muestra el grupo <strong>Dibujar</strong>, y la barra de opciones
 muestra:</p>
 <table>
 <thead>
@@ -679,16 +679,16 @@ muestra:</p>
 <td>Solo en una vista 3D: el nivel sobre el que se apoyan los muros; <strong><superficie pulsada=""></superficie></strong> toma el nivel de la superficie del primer clic</td>
 </tr>
 <tr>
-<td><strong>Línea de ubicación</strong></td>
-<td>El plano del muro que sigue los clics: <strong>Eje de muro</strong> (por defecto), el eje del núcleo, o una de las caras de acabado y del núcleo, exterior o interior</td>
+<td><strong>Alineación</strong></td>
+<td>El plano del muro que sigue los clics: <strong>Eje</strong> (por defecto), el eje del núcleo, o una de las caras de acabado y del núcleo, exterior o interior</td>
 </tr>
 <tr>
-<td><strong>Cadena</strong></td>
+<td><strong>Continuar</strong></td>
 <td>Activada, cada clic termina un muro y empieza el siguiente; desactivada, cada dos clics hacen un muro aparte</td>
 </tr>
 <tr>
 <td><strong>Desfase</strong></td>
-<td>La línea de ubicación pasa a esta distancia de los clics, hacia el exterior</td>
+<td>La alineación pasa a esta distancia de los clics, hacia el exterior</td>
 </tr>
 <tr>
 <td><strong>Radio</strong></td>
@@ -703,8 +703,8 @@ muestra:</p>
   derecha, la cara exterior queda arriba. La vista previa muestra la cara exterior más gruesa;</li>
 <li>la <strong>barra espaciadora</strong> pone el exterior del muro siguiente al otro lado;</li>
 <li>tras el primer punto, escriba una longitud y pulse Intro: el valor aparece en un recuadro junto al
-  cursor, y el muro termina a esa distancia, en la dirección del cursor (las rejillas, las líneas de
-  separación de habitaciones y de contorno de áreas, las secciones y los alzados aceptan igual una
+  cursor, y el muro termina a esa distancia, en la dirección del cursor (las rejillas, los separadores
+  de espacios y los contornos de superficie, las secciones y los alzados aceptan igual una
   longitud escrita);</li>
 <li><strong>Esc</strong> termina la cadena; otra vez <strong>Esc</strong>, o <strong>Modificar</strong>, cierra la herramienta.</li>
 </ul>
@@ -739,38 +739,37 @@ muestra:</p>
 </tr>
 </tbody>
 </table>
-<h2 id="the-location-line-and-flipping">La línea de ubicación y el volteo</h2>
-<p>Seleccione un muro: unos puntos azules marcan los extremos de su línea de ubicación, y dos flechas
+<h2 id="the-location-line-and-flipping">La alineación y el volteo</h2>
+<p>Seleccione un muro: unos puntos azules marcan los extremos de su línea de alineación, y dos flechas
 aparecen en su lado exterior. Un clic en las flechas voltea el muro alrededor de su línea de
-ubicación: la primera y la última capa se intercambian, y las puertas y ventanas conservan su
-orientación. Cambiar la <strong>Línea de ubicación</strong> de un muro colocado no lo mueve; el siguiente volteo
+alineación: la primera y la última capa se intercambian, y las puertas y ventanas conservan su
+orientación. Cambiar la <strong>Alineación</strong> de un muro colocado no lo mueve; el siguiente volteo
 lo gira alrededor del nuevo plano. Cambiar el tipo de un muro, o sus capas, deja su línea de
-ubicación donde estaba.</p>
+alineación donde estaba.</p>
 <h2 id="attaching-walls-to-roofs-and-floors">Enlazar muros a cubiertas y suelos</h2>
 <p>Un muro puede seguir una cubierta o un suelo en lugar de tener una altura fija.</p>
 <ol>
 <li>Seleccione los muros.</li>
-<li><strong>Edición | Muros ▸ Modificar muro ▸ Enlazar parte superior/base</strong>.</li>
+<li><strong>Selección: muros ▸ Modificar muro ▸ Unir arriba/abajo</strong>.</li>
 <li>En la barra de opciones, <strong>Enlazar muro:</strong> <strong>Superior</strong> o <strong>Base</strong>.</li>
 <li>Pulse la cubierta o el suelo, en una planta, una sección o la vista 3D.</li>
 </ol>
 <p>Con <strong>Superior</strong>, los muros suben o bajan hasta la cara inferior de la cubierta (siguiendo sus
 pendientes: los muros hastiales llegan a la cumbrera) o del suelo de encima. Con <strong>Base</strong>, se apoyan
 en la cara superior del suelo de debajo. A partir de entonces lo siguen: una cubierta más
-inclinada, una cubierta elevada con su desfase de base, un suelo movido arrastran los muros con
+inclinada, una cubierta elevada con su desfase en la base, un suelo movido arrastran los muros con
 ellos.</p>
-<p>Para desenlazarlos: seleccione los muros, <strong>Edición | Muros ▸ Modificar muro ▸ Desenlazar parte
-superior/base</strong>, y pulse el elemento del que separarlos, o pulse <strong>Desenlazar todo</strong> en la barra de
+<p>Para desenlazarlos: seleccione los muros, <strong>Selección: muros ▸ Modificar muro ▸ Separar arriba/abajo</strong>, y pulse el elemento del que separarlos, o pulse <strong>Desenlazar todo</strong> en la barra de
 opciones. Los muros conservan la altura que tienen en ese momento y se pueden enlazar de nuevo
 cuando se quiera. Si se elimina una cubierta o un suelo con muros enlazados, estos también conservan
 su altura.</p>
 <p>Las propiedades <strong>Parte superior enlazada</strong> y <strong>Base enlazada</strong> muestran el estado (solo lectura);
-mientras la parte superior está enlazada, <strong>Altura desconectada</strong> es de solo lectura.</p>
+mientras la parte superior está enlazada, <strong>Altura libre</strong> es de solo lectura.</p>
 <h2 id="editing-a-walls-profile">Editar el perfil de un muro</h2>
 <p>Un muro no tiene por qué ser un rectángulo: su contorno se dibuja en un alzado o una sección
 paralelos, con huecos, como para un hastial o un muro escalonado.</p>
 <ol>
-<li>Selecciona el muro y haz clic en <strong>Modo ▸ Editar perfil</strong> en su ficha contextual. Desde una
+<li>Selecciona el muro y haz clic en <strong>Modo ▸ Editar contorno</strong> en su ficha contextual. Desde una
    planta o una vista no paralela al muro, <strong>Ir a vista</strong> lista las secciones y alzados paralelos:
    elige uno y haz clic en <strong>Abrir vista</strong>.</li>
 <li>El modo de boceto se abre con el contorno del muro en magenta. Cámbialo con <strong>Línea</strong> y
@@ -785,7 +784,7 @@ contorno alcanza el plano de corte; sus puertas y ventanas lo siguen cortando, t
 enlazada a una cubierta o a un suelo lo sigue limitando. Planta, secciones, alzados y vista 3D muestran un solo sólido, sacado del mismo
 contorno y de los mismos huecos. Las capas que se envuelven revisten los huecos como revisten
 puertas y ventanas (ver <a href="#wall-types-and-layers">Tipos de muro y capas</a>). Un muro cortina mantiene
-los paneles y montantes dentro de su nuevo contorno. <strong>Modo ▸ Restablecer perfil</strong> lo vuelve rectangular;
+los paneles y montantes dentro de su nuevo contorno. <strong>Modo ▸ Restablecer contorno</strong> lo vuelve rectangular;
 <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span> deshace una u otra cosa.</p>
 <p>El perfil también se edita en la vista 3D: el boceto queda en el plano del muro y la vista sigue
 en 3D. Solo desde una planta aparece <strong>Ir a vista</strong>, y nada cambia hasta que se abre una vista con
@@ -793,7 +792,7 @@ en 3D. Solo desde una planta aparece <strong>Ir a vista</strong>, y nada cambia 
 referencia discontinuas; el boceto se ajusta a sus extremos y sobre ellas.</p>
 <h2 id="wall-joins">Uniones de muro</h2>
 <p>Los muros cuyos extremos se encuentran se unen solos, igual que un muro que termina en el costado
-de otro y dos muros que se cruzan. Con nivel de detalle <strong>Medio</strong> y <strong>Alto</strong>, cada capa se resuelve
+de otro y dos muros que se cruzan. Con <strong>Detalle</strong> <strong>Medio</strong> y <strong>Alto</strong>, cada capa se resuelve
 frente a las capas del otro muro:</p>
 <ul>
 <li>en una esquina (en L), cada capa se encuentra con la misma capa del otro muro: los acabados giran
@@ -804,7 +803,7 @@ frente a las capas del otro muro:</p>
 <li>los trozos del mismo material se funden sin línea entre ellos; una línea fina separa dos
   materiales distintos; el contorno libre se dibuja grueso.</li>
 </ul>
-<p>Con nivel de detalle <strong>Bajo</strong>, los muros unidos son un solo relleno, sin línea entre ellos. Las
+<p>Con <strong>Detalle</strong> <strong>Bajo</strong>, los muros unidos son un solo relleno, sin línea entre ellos. Las
 secciones y la vista 3D usan los mismos trozos, de modo que nada se superpone.</p>
 <h3 id="the-wall-joins-tool">La herramienta Uniones de muro</h3>
 <p><strong>Edición ▸ Geometría ▸ Uniones de muro</strong>, y pulse el cuadrado gris que aparece en una esquina. La
@@ -827,12 +826,12 @@ ambos muros terminan entonces a escuadra, separados. Una pequeña marca junto al
 púlsela, o haga clic con el botón derecho en el punto y elija <strong>Permitir unión</strong>, para unirlo de
 nuevo.</p>
 <h2 id="wall-types-and-layers">Tipos de muro y capas</h2>
-<p><strong>Propiedades de tipo</strong> de un muro muestra, en <strong>Construcción</strong>, <strong>Estructura</strong> con su botón
-<strong>Editar…</strong>, <strong>Envolvente en inserciones</strong>, <strong>Envolvente en extremos</strong>, <strong>Anchura</strong> (la suma de
+<p><strong>Parámetros de tipo</strong> de un muro muestra, en <strong>Construcción</strong>, <strong>Estructura</strong> con su botón
+<strong>Editar…</strong>, <strong>Retorno en aberturas</strong>, <strong>Retorno en extremos</strong>, <strong>Anchura</strong> (la suma de
 las capas, solo lectura) y <strong>Función</strong> (<strong>Interior</strong>, <strong>Exterior</strong>, <strong>Cimentación</strong>,
 <strong>Contención</strong>, <strong>Plafón</strong>, <strong>Núcleo</strong>); en <strong>Gráficos</strong>, <strong>Patrón de relleno de escala baja</strong> y
 <strong>Color de relleno de escala baja</strong>, es decir, cómo se rellenan los muros cortados del tipo con
-nivel de detalle <strong>Bajo</strong>. <strong>Duplicar…</strong> crea un tipo nuevo; su nombre no sigue a sus capas.</p>
+<strong>Detalle</strong> <strong>Bajo</strong>. <strong>Duplicar…</strong> crea un tipo nuevo; su nombre no sigue a sus capas.</p>
 <p><strong>Estructura ▸ Editar…</strong> abre <strong>Editar montaje</strong>: las capas del lado exterior al lado interior, cada
 una con su función, material y grosor, entre las dos filas <strong>Contorno del núcleo</strong>. <strong>Insertar</strong>,
 <strong>Eliminar</strong>, <strong>Arriba</strong> y <strong>Abajo</strong> cambian la lista. Una capa de membrana no tiene grosor, y
@@ -840,10 +839,10 @@ cualquier otra capa tiene al menos 4 mm: los demás valores se rechazan y el cua
 abierto.</p>
 <p>La columna <strong>Envolventes</strong> marca las capas que pueden envolver. Bajo la tabla:</p>
 <ul>
-<li><strong>Envolvente en inserciones</strong> (<strong>No envolver</strong>, <strong>Exterior</strong>, <strong>Interior</strong>, <strong>Ambos</strong>): las capas
+<li><strong>Retorno en aberturas</strong> (<strong>No envolver</strong>, <strong>Exterior</strong>, <strong>Interior</strong>, <strong>Ambos</strong>): las capas
   marcadas fuera del núcleo en ese lado giran hacia las jambas de puertas y ventanas; las capas
   detrás de ellas retroceden;</li>
-<li><strong>Envolvente en extremos</strong> (<strong>No envolver</strong>, <strong>Exterior</strong>, <strong>Interior</strong>): lo mismo en los
+<li><strong>Retorno en extremos</strong> (<strong>No envolver</strong>, <strong>Exterior</strong>, <strong>Interior</strong>): lo mismo en los
   extremos libres de los muros.</li>
 </ul>
 <p>La envolvente se ve en todas las vistas: en planta, en la vista 3D, en las secciones y en los
@@ -852,11 +851,11 @@ lados de los huecos de un perfil editado (ver <a href="#editing-a-walls-profile"
 y los extremos libres. Un tipo de puerta o de ventana sustituye la envolvente del muro por su
 <strong>Cierre de muro</strong>.</p>
 <h2 id="wall-properties">Propiedades de los muros</h2>
-<p>En <strong>Restricciones</strong>: <strong>Línea de ubicación</strong>, <strong>Restricción de base</strong>, <strong>Desfase de base</strong>, <strong>Base
-enlazada</strong>, <strong>Restricción superior</strong> (un nivel, o <strong>Sin conexión</strong>), <strong>Altura desconectada</strong>,
-<strong>Desfase superior</strong> (con un nivel), <strong>Parte superior enlazada</strong> y <strong>Delimitación de habitación</strong>
+<p>En <strong>Restricciones</strong>: <strong>Alineación</strong>, <strong>Nivel de base</strong>, <strong>Desfase en la base</strong>, <strong>Base
+enlazada</strong>, <strong>Nivel superior</strong> (un nivel, o <strong>Sin conexión</strong>), <strong>Altura libre</strong>,
+<strong>Desfase en la parte superior</strong> (con un nivel), <strong>Parte superior enlazada</strong> y <strong>Delimitación de habitación</strong>
 (desmarcada, las habitaciones alrededor del muro lo ignoran). En <strong>Cotas</strong>: <strong>Longitud</strong>, <strong>Área</strong>,
-<strong>Volumen</strong>. En <strong>Datos de identidad</strong>: <strong>Marca</strong> y <strong>Comentarios</strong>.</p>
+<strong>Volumen</strong>. En <strong>Identificación</strong>: <strong>Marca</strong> y <strong>Comentarios</strong>.</p>
 <h2 id="placing-doors-and-windows">Colocar puertas y ventanas</h2>
 <p><strong>Inicio ▸ Construir ▸ Puerta</strong> (<code>DR</code>) o <strong>Ventana</strong> (<code>WN</code>), en una planta o en la vista 3D. Elija
 el tipo y pase sobre un muro: la abertura sigue al cursor a lo largo de él, y unas cotas temporales
@@ -867,10 +866,10 @@ toma la <strong>Altura de alféizar por defecto</strong> de su tipo.</p>
 <p>Las puertas y ventanas reciben una <strong>Marca</strong> que cuenta por categoría (1, 2, 3…), desde la más
 alta.</p>
 <h2 id="tags">Etiquetas</h2>
-<p><strong>Edición | Colocar: Puerta ▸ Etiqueta ▸ Etiquetar al colocar</strong> (o lo mismo para las ventanas)
+<p><strong>Dibujar: puerta ▸ Etiqueta ▸ Etiquetar al colocar</strong> (o lo mismo para las ventanas)
 etiqueta cada abertura al colocarla. La barra de opciones ofrece entonces <strong>Horizontal</strong> o
 <strong>Vertical</strong>, y <strong>Directriz</strong> con su longitud. La etiqueta de una puerta muestra su <strong>Marca</strong>; la de
-una ventana, la <strong>Marca de tipo</strong> de su tipo. <strong>Anotar ▸ Etiquetar todo</strong> etiqueta las aberturas
+una ventana, la <strong>Marca de tipo</strong> de su tipo. <strong>Anotaciones ▸ Etiquetar todo</strong> etiqueta las aberturas
 que aún no tienen etiqueta.</p>
 <h2 id="flipping-a-door-or-window">Voltear una puerta o una ventana</h2>
 <p>Seleccione una puerta o una ventana en planta: unas flechas a través del muro, en el lado hacia el
@@ -878,10 +877,10 @@ que abre, voltean su apertura; unas flechas al lado, a lo largo del muro, ponen 
 otra jamba. El menú contextual hace lo mismo: <strong>Voltear mano</strong> (la bisagra) y <strong>Voltear
 orientación</strong> (la apertura).</p>
 <h2 id="moving-a-door-or-window-to-another-wall">Mover una puerta o una ventana a otro muro</h2>
-<p>Selecciónela, <strong>Edición | Puertas ▸ Anfitrión ▸ Designar nuevo anfitrión</strong> (o <strong>Edición |
-Ventanas</strong>), y pulse otro muro: la abertura se mueve allí, donde pulsó, con su tipo y su alféizar.
+<p>Selecciónela, <strong>Selección: puertas ▸ Anfitrión ▸ Designar nuevo anfitrión</strong> (o <strong>Selección:
+ventanas</strong>), y pulse otro muro: la abertura se mueve allí, donde pulsó, con su tipo y su alféizar.
 Sigue seleccionada.</p>
-<p>Al arrastrar una puerta o una ventana, se queda en un muro: el puntero se proyecta sobre la línea de ubicación del muro, de modo que el hueco se desliza a lo largo del muro, entre sus extremos, con las cotas temporales hasta los muros más cercanos, en planta, en sección, en alzado o en la vista 3D; allí un clic en el vidrio de una ventana selecciona la ventana, no lo que se ve a través. Soltada sobre otro muro, pasa a ese muro; soltada en el vacío, se queda en el último punto válido del suyo. Las teclas de flecha la mueven a lo largo del muro del mismo modo.</p>
+<p>Al arrastrar una puerta o una ventana, se queda en un muro: el puntero se proyecta sobre la línea de alineación del muro, de modo que el hueco se desliza a lo largo del muro, entre sus extremos, con las cotas temporales hasta los muros más cercanos, en planta, en sección, en alzado o en la vista 3D; allí un clic en el vidrio de una ventana selecciona la ventana, no lo que se ve a través. Soltada sobre otro muro, pasa a ese muro; soltada en el vacío, se queda en el último punto válido del suyo. Las teclas de flecha la mueven a lo largo del muro del mismo modo.</p>
 <h2 id="door-and-window-properties">Propiedades de puertas y ventanas</h2>
 <p>Ejemplar: <strong>Nivel</strong>, <strong>Altura de alféizar</strong>, <strong>Anchura</strong> y <strong>Altura</strong> (del tipo), <strong>Altura de
 dintel</strong>, <strong>Comentarios</strong>, <strong>Marca</strong>. Cambiar <strong>Altura de alféizar</strong> o <strong>Altura de dintel</strong> mueve la
@@ -894,7 +893,7 @@ qué distancia de la cara exterior queda el marco), <strong>Proyección exterior
 <strong>Proyección interior de embellecedor</strong> (puertas), <strong>Hojas</strong> y <strong>Marca de tipo</strong>. Una puerta no
 puede convertirse en ventana cambiando de tipo.</p>
 <h2 id="how-walls-doors-and-windows-are-drawn">Cómo se dibujan muros, puertas y ventanas</h2>
-<p>El <strong>Nivel de detalle</strong> de la planta decide:</p>
+<p>El <strong>Detalle</strong> de la planta decide:</p>
 <table>
 <thead>
 <tr>
@@ -932,7 +931,7 @@ marco, hojas, vidrio y alféizares, en los materiales del tipo.</p>
 <p>Un muro cortina es un muro de un tipo de muro cortina, dibujado con la herramienta <strong>Muro</strong>: elija
 <strong>Muro cortina</strong> (un solo panel de vidrio a lo largo del muro), <strong>Acristalamiento exterior</strong>
 (líneas de rejilla del tipo) o <strong>Escaparate</strong> (líneas de rejilla y montantes) en el selector de
-tipos, y dibuje como cualquier muro, en planta o en 3D, con <strong>Cadena</strong> y las formas de
+tipos, y dibuje como cualquier muro, en planta o en 3D, con <strong>Continuar</strong> y las formas de
 <strong>Dibujar</strong>. Un muro básico se convierte en muro cortina eligiendo un tipo de muro cortina en el
 selector de tipos; las puertas y ventanas que aloja se eliminan, porque un muro cortina no las
 aloja, y un mensaje lo indica (deshacer las recupera).</p>
@@ -994,7 +993,7 @@ actual</strong> muestra el plano que la vista usa ahora. En <strong>Especificar 
   cursor, en sección o en 3D la que mira al observador), una rejilla, un plano de referencia o,
   en sección, un nivel;</li>
 <li><strong>Designar una línea y usar el plano de trabajo en que se dibujó</strong>: tras <strong>Aceptar</strong>, hacer clic
-  en un muro o una línea de separación de habitaciones: su nivel pasa a ser el plano de trabajo.</li>
+  en un muro o un separador de espacios: su nivel pasa a ser el plano de trabajo.</li>
 </ul>
 <p>Un plano que no está en la vista, como una rejilla elegida en planta o un nivel en sección, no se
 define allí: <strong>Ir a vista</strong> lista las vistas en que está (las secciones y alzados orientados

@@ -610,7 +610,7 @@ contiene:</p>
 <tbody>
 <tr>
 <td><strong>Linea</strong></td>
-<td>Clic dopo clic: ogni clic chiude una linea e inizia la successiva. Accanto alla linea sotto il cursore compaiono lunghezza e angolo; <span class="keys"><kbd class="key-shift">Shift</kbd></span> la tiene orizzontale o verticale. Con <strong>Concatena</strong> disattivato nella barra delle opzioni, ogni linea è disegnata da sola. Un clic sull'inizio della catena chiude il perimetro Scrivi una lunghezza e premi <span class="keys"><kbd class="key-enter">Enter</kbd></span>: la linea finisce a quella distanza nella direzione del cursore (anche la rampa di una scala).</td>
+<td>Clic dopo clic: ogni clic chiude una linea e inizia la successiva. Accanto alla linea sotto il cursore compaiono lunghezza e angolo; <span class="keys"><kbd class="key-shift">Shift</kbd></span> la tiene orizzontale o verticale. Con <strong>Continua</strong> disattivato nella barra delle opzioni, ogni linea è disegnata da sola. Un clic sull'inizio della catena chiude il perimetro Scrivi una lunghezza e premi <span class="keys"><kbd class="key-enter">Enter</kbd></span>: la linea finisce a quella distanza nella direzione del cursore (anche la rampa di una scala).</td>
 </tr>
 <tr>
 <td><strong>Rettangolo</strong></td>
@@ -632,7 +632,7 @@ contiene:</p>
 </table>
 <p><strong>Offset</strong> nella barra delle opzioni sposta di quella distanza le linee disegnate (e quelle dei
 muri selezionati).</p>
-<p>Gli archi del pannello <strong>Disegna</strong> (e un cerchio, come due metà) sono ciascuno una sola linea di disegno: si selezionano, si misurano e si trascinano come archi, restano archi nel pavimento, tetto, scala, profilo del muro o regione, e <strong>Modifica contorno</strong>, <strong>Modifica disegno</strong> o <strong>Modifica profilo</strong> li restituiscono come archi. In ogni vista un punto del disegno si aggancia agli estremi e ai punti medi delle linee e degli archi del disegno, ai centri degli archi, dove le linee si incrociano e su una linea o un arco; dal punto da cui si disegna, al piede della perpendicolare e al punto in cui una linea tocca un arco. Il simbolo e il suo nome mostrano dove il punto si aggancia; <span class="keys"><kbd class="key-s">S</kbd></span> <span class="keys"><kbd class="key-c">C</kbd></span> e <span class="keys"><kbd class="key-s">S</kbd></span> <span class="keys"><kbd class="key-p">P</kbd></span> chiedono il centro o la perpendicolare per il punto successivo.</p>
+<p>Gli archi del pannello <strong>Disegna</strong> (e un cerchio, come due metà) sono ciascuno una sola linea di disegno: si selezionano, si misurano e si trascinano come archi, restano archi nel pavimento, tetto, scala, contorno del muro o campitura, e <strong>Modifica contorno</strong> o <strong>Modifica disegno</strong> li restituiscono come archi. In ogni vista un punto del disegno si aggancia agli estremi e ai punti medi delle linee e degli archi del disegno, ai centri degli archi, dove le linee si incrociano e su una linea o un arco; dal punto da cui si disegna, al piede della perpendicolare e al punto in cui una linea tocca un arco. Il simbolo e il suo nome mostrano dove il punto si aggancia; <span class="keys"><kbd class="key-s">S</kbd></span> <span class="keys"><kbd class="key-c">C</kbd></span> e <span class="keys"><kbd class="key-s">S</kbd></span> <span class="keys"><kbd class="key-p">P</kbd></span> chiedono il centro o la perpendicolare per il punto successivo.</p>
 <p>Pavimenti e tetti richiedono perimetri chiusi. Un perimetro disegnato dentro quello esterno è
 un'<strong>apertura</strong>: il pavimento o il tetto ha lì un foro. Se <strong>Termina modalità di modifica</strong> trova
 linee che non si chiudono o che si intersecano, un messaggio lo dice e il disegno resta aperto per
@@ -648,7 +648,7 @@ terminato:</p>
 <li>l'estremo di una linea selezionata da sola si trascina da solo: la linea vicina resta dov'è e
   l'unione si interrompe; con una catena selezionata (<span class="keys"><kbd class="key-tab">Tab</kbd></span>), gli estremi in cui le sue linee si
   incontrano si trascinano insieme; una linea trascinata porta con sé le linee unite a essa;</li>
-<li><strong>Sposta</strong>, <strong>Copia</strong>, <strong>Ruota</strong>, <strong>Copia speculare - Disegna asse</strong>, <strong>Serie</strong>, <strong>Allinea</strong>,
+<li><strong>Sposta</strong>, <strong>Copia</strong>, <strong>Ruota</strong>, <strong>Specchia su linea</strong>, <strong>Ripeti in serie</strong>, <strong>Allinea</strong>,
   <strong>Offset</strong>, <strong>Riduci/Estendi ad angolo</strong> e <strong>Dividi elemento</strong> lavorano su di esse, e il disegno
   resta aperto;</li>
 <li>una sola linea selezionata mostra le quote temporanee verso la linea parallela più vicina da
@@ -660,7 +660,7 @@ terminato:</p>
   <strong>Lunghezza</strong>.</li>
 </ul>
 <p><strong>Allinea</strong> prende come riferimento la linea sotto il cursore, e <span class="keys"><kbd class="key-tab">Tab</kbd></span> passa alla successiva lì, così una linea del disegno si allinea a uno strato o al contorno del nucleo di un muro. Mentre si disegna o si trascina un estremo, i punti si agganciano agli angoli delle facce, degli strati e dei contorni del nucleo dei muri, poi su quelle linee. <span class="keys"><kbd class="key-delete">Del</kbd></span> elimina le linee selezionate. <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span> durante il disegno annulla l'ultima modifica al
-disegno, non al modello. Tutto questo funziona in pianta, in sezione e in prospetto (il profilo di
+disegno, non al modello. Tutto questo funziona in pianta, in sezione e in prospetto (il contorno di
 un muro) e, per selezionare, trascinare gli estremi ed eliminare, nella vista 3D.</p>
 <h3 id="editing-the-sketch-of-an-element">Modificare il disegno di un elemento</h3>
 <p>Seleziona un pavimento, un tetto, una scala o una ringhiera: il gruppo <strong>Modalità</strong> della sua
@@ -733,7 +733,7 @@ il pavimento e prosegue sopra, e nelle aperture del pavimento i muri passano.</p
 </tr>
 </tbody>
 </table>
-<p><strong>Proprietà del tipo</strong> contiene la <strong>Struttura</strong> del pavimento (i suoi strati) e lo spessore di
+<p><strong>Parametri del tipo</strong> contiene la <strong>Struttura</strong> del pavimento (i suoi strati) e lo spessore di
 default.</p>
 <h2 id="roofs">Tetti</h2>
 <ol>
@@ -753,14 +753,14 @@ quelle linee:</p>
 <ul>
 <li>tutte le linee definiscono l'inclinazione: un tetto <strong>a padiglione</strong>;</li>
 <li>due linee opposte no: un tetto <strong>a due falde</strong>, e i muri sotto le testate salgono fino al colmo
-  quando sono associati;</li>
+  quando sono collegati;</li>
 <li>nessuna linea definisce l'inclinazione: un tetto <strong>piano</strong>, oppure un tetto inclinato lungo una
   <strong>Freccia di inclinazione</strong> (allora nessuna linea può definire un'inclinazione).</li>
 </ul>
 <p>Per cambiare una linea, premi due volte <span class="keys"><kbd class="key-escape">Esc</kbd></span>, fai clic sulla linea e cambia in <strong>Proprietà</strong>
 <strong>Definisce l'inclinazione del tetto</strong>, <strong>Inclinazione</strong> o (per le linee prese dai muri)
 <strong>Sporgenza</strong>.</p>
-<p>Seleziona dei muri, fai clic su <strong>Modifica muro ▸ Associa parte superiore/base</strong>, poi sul tetto:
+<p>Seleziona dei muri, fai clic su <strong>Modifica muro ▸ Collega sopra/sotto</strong>, poi sul tetto:
 salgono fino al suo intradosso, testate comprese (<a href="../walls-doors-windows/">Muri, porte e finestre</a>
 ne dice di più).</p>
 <h3 id="roof-properties">Proprietà dei tetti</h3>
@@ -794,7 +794,7 @@ ne dice di più).</p>
 strati.</p>
 <h2 id="stairs">Scale</h2>
 <ol>
-<li>Fai clic su <strong>Inizio ▸ Distribuzione verticale ▸ Scale</strong>. La modalità di disegno parte con
+<li>Fai clic su <strong>Inizio ▸ Collegamenti verticali ▸ Scale</strong>. La modalità di disegno parte con
    <strong>Rampa</strong>.</li>
 <li>Fai clic dove sta la prima alzata, poi dove finisce la rampa: la rampa si aggancia a pedate
    intere e la barra di stato conta le alzate create e rimanenti (per esempio <code>9 alzate create, 8
@@ -818,7 +818,7 @@ cambiale o eliminale (clic, <span class="keys"><kbd class="key-delete">Del</kbd>
 freccia e il testo <strong>SU</strong>/<strong>GIÙ</strong>; in 3D pedate e alzate, oppure una soletta monolitica, i
 pianerottoli e le ringhiere.</p>
 <h3 id="how-a-stair-is-built">Come è costruita una scala</h3>
-<p>Le <strong>Proprietà del tipo</strong> della scala ne decidono la costruzione:</p>
+<p>Le <strong>Parametri del tipo</strong> della scala ne decidono la costruzione:</p>
 <ul>
 <li><strong>Scale monolitiche</strong> spuntato: ogni rampa è una soletta in calcestruzzo sagomata a gradini; il
   suo intradosso è parallelo alla pendenza, <strong>Spessore soletta</strong> sotto gli spigoli interni dei
@@ -844,10 +844,10 @@ pianerottoli e le ringhiere.</p>
 <p>Il pianerottolo si ferma dietro l'ultima alzata della rampa che vi arriva, seguendone la faccia posteriore; in una scala monolitica comincia sulla faccia dell'alzata. In una scala monolitica il cui solaio superiore ha il bordo sull'ultima alzata, l'intradosso della rampa prosegue sotto quel solaio fino a incontrarne l'intradosso, come sotto un pianerottolo.</p>
 <p>Una sezione attraverso la scala la mostra tagliata con la sua soletta. <strong>Volume</strong> in <strong>Proprietà</strong>
 e nell'abaco delle scale è il volume dei suoi solidi.</p>
-<p>Il <strong>Carattere del testo</strong> del tipo, il <strong>Profilo dell'aggetto</strong> (<strong>Predefinito</strong> o <strong>Arrotondato</strong>) e <strong>Applica profilo di aggetto</strong> (solo anteriore, anteriore e sinistra, oppure anteriore, sinistra e destra: oltre un lato senza montante chiuso), l'<strong>Offset montante scala aperto</strong>, <strong>Taglia montanti alla sommità</strong> (<strong>Allinea al livello</strong> ferma i montanti laterali al livello superiore) e i dati identità (<strong>Nota chiave</strong>, <strong>Modello prodotto</strong>, <strong>Produttore</strong>, <strong>Commenti sul tipo</strong>, <strong>URL</strong>, <strong>Descrizione</strong>, <strong>Codice assieme</strong>) sono in <strong>Proprietà del tipo</strong>, come la <strong>Parte inferiore del montante</strong> di una scala monolitica (<strong>Liscia</strong>, una soletta inclinata, o <strong>A gradini</strong>: la soletta segue i gradini). In <strong>Regole di calcolo</strong>, <strong>Usa calcolatore scala</strong> con un <strong>Risultato di destinazione</strong>, <strong>massimo</strong> e <strong>minimo</strong> controlla 2 alzate + 1 pedata: una scala fuori dall'intervallo viene creata, e un avviso lo dice.</p>
+<p>Il <strong>Carattere del testo</strong> del tipo, il <strong>Profilo dell'aggetto</strong> (<strong>Predefinito</strong> o <strong>Arrotondato</strong>) e <strong>Applica profilo di aggetto</strong> (solo anteriore, anteriore e sinistra, oppure anteriore, sinistra e destra: oltre un lato senza montante chiuso), l'<strong>Offset montante scala aperto</strong>, <strong>Taglia montanti alla sommità</strong> (<strong>Allinea al livello</strong> ferma i montanti laterali al livello superiore) e i dati di <strong>Identificazione</strong> (<strong>Codice</strong>, <strong>Modello prodotto</strong>, <strong>Produttore</strong>, <strong>Commenti sul tipo</strong>, <strong>URL</strong>, <strong>Descrizione</strong>, <strong>Codice assieme</strong>) sono in <strong>Parametri del tipo</strong>, come la <strong>Parte inferiore del montante</strong> di una scala monolitica (<strong>Liscia</strong>, una soletta inclinata, o <strong>A gradini</strong>: la soletta segue i gradini). In <strong>Regole di calcolo</strong>, <strong>Usa calcolatore scala</strong> con un <strong>Risultato di destinazione</strong>, <strong>massimo</strong> e <strong>minimo</strong> controlla 2 alzate + 1 pedata: una scala fuori dall'intervallo viene creata, e un avviso lo dice.</p>
 <h2 id="ramps">Rampe inclinate</h2>
 <ol>
-<li>Fai clic su <strong>Inizio ▸ Distribuzione verticale ▸ Rampa inclinata</strong>. La modalità di disegno
+<li>Fai clic su <strong>Inizio ▸ Collegamenti verticali ▸ Rampa inclinata</strong>. La modalità di disegno
    inizia con <strong>Rampa</strong>.</li>
 <li>Fai clic dove inizia una rampa, poi dove finisce: ha al massimo la pendenza <strong>Inclinazione
    massima della rampa inclinata (1/x)</strong> del tipo e sale al massimo di <strong>Lunghezza massima
@@ -861,17 +861,17 @@ e nell'abaco delle scale è il volume dei suoi solidi.</p>
 <p>La <strong>Forma</strong> del tipo è <strong>Spesso</strong> (con il suo <strong>Spessore</strong>) o <strong>Solido</strong> (fino alla base), e
 <strong>Materiale rampa inclinata</strong> la colora. Ringhiere, <strong>Modifica disegno</strong> e <strong>Proprietà</strong> funzionano
 come per le scale.</p>
-<p>Con <strong>Arco da centro ed estremità</strong> nel pannello <strong>Disegna</strong>, fai clic sul centro, sull'inizio della linea della rampa e poi sulla sua fine attorno al centro: la rampa gira attorno al centro, con due linee radiali alle estremità e due archi di contorno ai lati. <strong>Mostra freccia SU in tutte le viste</strong> del tipo disegna la freccia SU intera e <strong>SU</strong> anche nella pianta del livello superiore; il <strong>Carattere del testo</strong> e i dati identità sono come per le scale.</p>
+<p>Con <strong>Arco da centro ed estremità</strong> nel pannello <strong>Disegna</strong>, fai clic sul centro, sull'inizio della linea della rampa e poi sulla sua fine attorno al centro: la rampa gira attorno al centro, con due linee radiali alle estremità e due archi di contorno ai lati. <strong>Mostra freccia SU in tutte le viste</strong> del tipo disegna la freccia SU intera e <strong>SU</strong> anche nella pianta del livello superiore; il <strong>Carattere del testo</strong> e i dati di <strong>Identificazione</strong> sono come per le scale.</p>
 <h2 id="railings">Ringhiere</h2>
 <ol>
-<li>Fai clic su <strong>Inizio ▸ Distribuzione verticale ▸ Ringhiera</strong>.</li>
+<li>Fai clic su <strong>Inizio ▸ Collegamenti verticali ▸ Ringhiera</strong>.</li>
 <li>Disegna il percorso con <strong>Linea</strong>: una sola catena di linee collegate (un percorso a pezzi, chiuso o che
    torna su se stesso è rifiutato da <strong>Termina modalità di modifica</strong>).</li>
 <li>Per mettere la ringhiera su una scala, fai clic su <strong>Strumenti ▸ Seleziona nuovo host</strong> e poi
    sulla scala: il percorso disegnato su di essa sale con la scala.</li>
 <li>Fai clic su <strong>Termina modalità di modifica</strong>.</li>
 </ol>
-<p><strong>Modifica percorso</strong> riapre il percorso di una ringhiera. Le <strong>Proprietà del tipo</strong> della
+<p><strong>Modifica percorso</strong> riapre il percorso di una ringhiera. Le <strong>Parametri del tipo</strong> della
 ringhiera hanno l'<strong>Altezza ringhiera</strong> e la <strong>Spaziatura balaustre</strong>: cambiarle cambia tutte le
 ringhiere di quel tipo.</p>
 <p>Le ringhiere di una scala proseguono sui pianerottoli come un unico corrente, alla loro altezza
@@ -899,10 +899,10 @@ una famiglia e fai clic su <strong>Apri</strong> per aggiungere i suoi tipi al p
 <p>Seleziona un componente e fai clic su <strong>Host ▸ Seleziona nuovo host</strong>, poi su un pavimento: il
 componente si sposta sul pavimento e resta sulla sua faccia superiore (fai clic in un punto vuoto
 per riportarlo sul livello). Le sue proprietà sono <strong>Livello</strong>, <strong>Host</strong>, <strong>Offset dal livello</strong>,
-<strong>Rotazione</strong>, <strong>Contrassegno</strong> e <strong>Commenti</strong>; <strong>Proprietà del tipo</strong> ha larghezza, profondità,
+<strong>Rotazione</strong>, <strong>Contrassegno</strong> e <strong>Commenti</strong>; <strong>Parametri del tipo</strong> ha larghezza, profondità,
 altezza e materiale.</p>
 <h2 id="schedules-and-ifc">Abachi e IFC</h2>
-<p>Pavimenti, tetti, scale, ringhiere e arredi hanno i loro abachi (<strong>Vista ▸ Crea ▸ Abachi ▸
+<p>Pavimenti, tetti, scale, ringhiere e arredi hanno i loro abachi (<strong>Viste ▸ Crea ▸ Abachi ▸
 Abaco/Quantità</strong>), una riga per elemento. <strong>Esporta ▸ Esporta IFC4…</strong> scrive i pavimenti come
 solette (con aperture e inclinazioni), i tetti, le scale con rampe e pianerottoli, le ringhiere,
 gli arredi e i sanitari. Una scala multipiano è scritta una volta in ogni piano in cui si ripete, con le sue ringhiere.</p>

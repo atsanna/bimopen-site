@@ -610,7 +610,7 @@ du garde-corps</strong>) et contient :</p>
 <tbody>
 <tr>
 <td><strong>Ligne</strong></td>
-<td>Cliquez point après point : chaque clic termine une ligne et commence la suivante. La longueur et l'angle de la ligne sous le curseur s'affichent à côté ; <span class="keys"><kbd class="key-shift">Shift</kbd></span> la garde horizontale ou verticale. Avec <strong>Chaîne</strong> désactivée dans la barre des options, chaque ligne est dessinée seule. Cliquer de nouveau sur le début de la chaîne ferme le contour Tapez une longueur et appuyez sur <span class="keys"><kbd class="key-enter">Enter</kbd></span> : la ligne s'arrête à cette distance dans la direction du curseur (la volée d'un escalier aussi).</td>
+<td>Cliquez point après point : chaque clic termine une ligne et commence la suivante. La longueur et l'angle de la ligne sous le curseur s'affichent à côté ; <span class="keys"><kbd class="key-shift">Shift</kbd></span> la garde horizontale ou verticale. Avec <strong>Continuer</strong> désactivée dans la barre des options, chaque ligne est dessinée seule. Cliquer de nouveau sur le début de la chaîne ferme le contour Tapez une longueur et appuyez sur <span class="keys"><kbd class="key-enter">Enter</kbd></span> : la ligne s'arrête à cette distance dans la direction du curseur (la volée d'un escalier aussi).</td>
 </tr>
 <tr>
 <td><strong>Rectangle</strong></td>
@@ -632,7 +632,7 @@ du garde-corps</strong>) et contient :</p>
 </table>
 <p><strong>Décalage</strong> dans la barre des options déplace les lignes dessinées (et celles des murs choisis)
 de cette distance.</p>
-<p>Les arcs du groupe <strong>Dessiner</strong> (et un cercle, en deux moitiés) sont chacun une seule ligne d'esquisse : sélectionnés, mesurés et déplacés comme des arcs, gardés par le sol, le toit, l'escalier, le profil du mur ou la région, et rendus comme arcs par <strong>Modifier la limite</strong>, <strong>Modifier l'esquisse</strong> ou <strong>Modifier le profil</strong>. Dans chaque vue, un point de l'esquisse s'accroche aux extrémités et aux milieux des lignes et des arcs de l'esquisse, aux centres des arcs, là où les lignes se croisent et sur une ligne ou un arc ; depuis le point d'où l'on dessine, au pied de la perpendiculaire et au point où une ligne touche un arc. Le symbole et son nom montrent où le point s'accroche ; <span class="keys"><kbd class="key-s">S</kbd></span> <span class="keys"><kbd class="key-c">C</kbd></span> et <span class="keys"><kbd class="key-s">S</kbd></span> <span class="keys"><kbd class="key-p">P</kbd></span> demandent le centre ou la perpendiculaire pour le point suivant.</p>
+<p>Les arcs du groupe <strong>Dessiner</strong> (et un cercle, en deux moitiés) sont chacun une seule ligne d'esquisse : sélectionnés, mesurés et déplacés comme des arcs, gardés par le sol, le toit, l'escalier, le profil du mur ou la région, et rendus comme arcs par <strong>Modifier la limite</strong>, <strong>Modifier l'esquisse</strong> ou <strong>Modifier le contour</strong>. Dans chaque vue, un point de l'esquisse s'accroche aux extrémités et aux milieux des lignes et des arcs de l'esquisse, aux centres des arcs, là où les lignes se croisent et sur une ligne ou un arc ; depuis le point d'où l'on dessine, au pied de la perpendiculaire et au point où une ligne touche un arc. Le symbole et son nom montrent où le point s'accroche ; <span class="keys"><kbd class="key-s">S</kbd></span> <span class="keys"><kbd class="key-c">C</kbd></span> et <span class="keys"><kbd class="key-s">S</kbd></span> <span class="keys"><kbd class="key-p">P</kbd></span> demandent le centre ou la perpendiculaire pour le point suivant.</p>
 <p>Les sols et les toits demandent des contours fermés. Un contour dessiné à l'intérieur du contour
 extérieur est une <strong>ouverture</strong> : le sol ou le toit y a un trou. Lorsque <strong>Terminer le mode
 d'édition</strong> trouve des lignes qui ne se ferment pas ou qui se croisent, un message le dit et
@@ -650,7 +650,7 @@ terminée :</p>
   place et la jonction est rompue ; avec une chaîne sélectionnée (<span class="keys"><kbd class="key-tab">Tab</kbd></span>), les extrémités où ses
   lignes se rejoignent glissent ensemble ; une ligne déplacée entraîne les lignes qui lui sont
   jointes ;</li>
-<li><strong>Déplacer</strong>, <strong>Copier</strong>, <strong>Faire pivoter</strong>, <strong>Symétrie - Dessiner l'axe</strong>, <strong>Réseau</strong>,
+<li><strong>Déplacer</strong>, <strong>Copier</strong>, <strong>Faire pivoter</strong>, <strong>Symétrie par ligne</strong>, <strong>Répéter en série</strong>,
   <strong>Aligner</strong>, <strong>Décaler</strong>, <strong>Ajuster/Prolonger pour former un angle</strong> et <strong>Scinder l'élément</strong>
   agissent sur elles, et l'esquisse reste ouverte ;</li>
 <li>une seule ligne sélectionnée montre des cotes temporaires vers la ligne parallèle la plus proche
@@ -735,7 +735,7 @@ continue au-dessus, et les murs passent dans les ouvertures du sol.</p>
 </tr>
 </tbody>
 </table>
-<p><strong>Propriétés du type</strong> contient la <strong>Structure</strong> du sol (ses couches) et son épaisseur par défaut.</p>
+<p><strong>Paramètres du type</strong> contient la <strong>Structure</strong> du sol (ses couches) et son épaisseur par défaut.</p>
 <h2 id="roofs">Toits</h2>
 <ol>
 <li>Cliquez sur <strong>Début ▸ Construire ▸ Toit</strong>. Le mode esquisse commence avec <strong>Choisir des
@@ -760,7 +760,7 @@ défaut) ; un petit triangle avec la pente est dessiné à côté. La forme vien
 <p>Pour changer une ligne, appuyez deux fois sur <span class="keys"><kbd class="key-escape">Esc</kbd></span>, cliquez la ligne et changez dans
 <strong>Propriétés</strong> <strong>Définit l'inclinaison du toit</strong>, <strong>Pente</strong> ou (lignes prises sur des murs)
 <strong>Débord</strong>.</p>
-<p>Sélectionnez des murs, cliquez sur <strong>Modifier le mur ▸ Attacher haut/base</strong>, puis sur le toit : ils
+<p>Sélectionnez des murs, cliquez sur <strong>Modifier le mur ▸ Lier haut/bas</strong>, puis sur le toit : ils
 montent jusqu'à sa sous-face, pignons compris (<a href="../walls-doors-windows/">Murs, portes et fenêtres</a> en dit
 plus).</p>
 <h3 id="roof-properties">Propriétés des toits</h3>
@@ -794,7 +794,7 @@ plus).</p>
 et ses couches.</p>
 <h2 id="stairs">Escaliers</h2>
 <ol>
-<li>Cliquez sur <strong>Début ▸ Circulation ▸ Escaliers</strong>. Le mode esquisse commence avec <strong>Volée</strong>.</li>
+<li>Cliquez sur <strong>Début ▸ Liaisons verticales ▸ Escaliers</strong>. Le mode esquisse commence avec <strong>Volée</strong>.</li>
 <li>Cliquez là où est la première contremarche, puis là où finit la volée : la volée s'accroche à
    des girons entiers, et la barre d'état compte les contremarches créées et restantes (par exemple
    <code>9 contremarches créées, 8 restantes</code>).</li>
@@ -818,7 +818,7 @@ suivent. <strong>Niveau supérieur multiétage</strong> répète l'escalier, ave
 le texte <strong>MONTE</strong>/<strong>DESCEND</strong> ; en 3D ses marches et contremarches, ou une dalle monolithique, ses
 paliers et ses garde-corps.</p>
 <h3 id="how-a-stair-is-built">Comment un escalier est construit</h3>
-<p>Les <strong>Propriétés du type</strong> de l'escalier décident de sa construction :</p>
+<p>Les <strong>Paramètres du type</strong> de l'escalier décident de sa construction :</p>
 <ul>
 <li><strong>Escaliers monolithiques</strong> coché : chaque volée est une dalle en béton découpée aux marches ;
   sa sous-face est parallèle à la pente, <strong>Épaisseur de la paillasse</strong> sous les angles intérieurs
@@ -844,10 +844,10 @@ paliers et ses garde-corps.</p>
 <p>Le palier s'arrête derrière la dernière contremarche de la volée qui y arrive, en suivant sa face arrière ; dans un escalier monolithique il commence à la face de la contremarche. Dans un escalier monolithique dont le plancher supérieur a son bord sur la dernière contremarche, la sous-face de la volée continue sous ce plancher jusqu'à rencontrer sa sous-face, comme sous un palier.</p>
 <p>Une coupe à travers l'escalier le montre coupé avec sa dalle. <strong>Volume</strong> dans <strong>Propriétés</strong> et
 dans la nomenclature des escaliers est le volume de ses solides.</p>
-<p>La <strong>Police du texte</strong> du type, le <strong>Profil du nez de marche</strong> (<strong>Par défaut</strong> ou <strong>Arrondi</strong>) et <strong>Appliquer le profil de nez de marche</strong> (avant uniquement, avant et gauche, ou avant, gauche et droite : au-delà d'un côté sans limon fermé), le <strong>Décalage du limon ouvert</strong>, <strong>Couper les limons en haut</strong> (<strong>Aligner sur le niveau</strong> arrête les limons latéraux au niveau supérieur) et ses données d'identification (<strong>Note d'identification</strong>, <strong>Modèle</strong>, <strong>Fabricant</strong>, <strong>Commentaires du type</strong>, <strong>URL</strong>, <strong>Description</strong>, <strong>Code d'assemblage</strong>) sont dans <strong>Propriétés du type</strong>, comme la <strong>Sous-face du limon</strong> d'un escalier monolithique (<strong>Lisse</strong>, une dalle inclinée, ou <strong>En escalier</strong> : la dalle suit les marches). Dans <strong>Règles de calcul</strong>, <strong>Utiliser le calculateur d'escalier</strong> avec un <strong>Résultat cible</strong>, <strong>maximal</strong> et <strong>minimal</strong> contrôle 2 contremarches + 1 giron : un escalier hors de l'intervalle est créé, et un avertissement le signale.</p>
+<p>La <strong>Police du texte</strong> du type, le <strong>Profil du nez de marche</strong> (<strong>Par défaut</strong> ou <strong>Arrondi</strong>) et <strong>Appliquer le profil de nez de marche</strong> (avant uniquement, avant et gauche, ou avant, gauche et droite : au-delà d'un côté sans limon fermé), le <strong>Décalage du limon ouvert</strong>, <strong>Couper les limons en haut</strong> (<strong>Aligner sur le niveau</strong> arrête les limons latéraux au niveau supérieur) et son groupe <strong>Identification</strong> (<strong>Code</strong>, <strong>Modèle</strong>, <strong>Fabricant</strong>, <strong>Commentaires du type</strong>, <strong>URL</strong>, <strong>Description</strong>, <strong>Code d'assemblage</strong>) sont dans <strong>Paramètres du type</strong>, comme la <strong>Sous-face du limon</strong> d'un escalier monolithique (<strong>Lisse</strong>, une dalle inclinée, ou <strong>En escalier</strong> : la dalle suit les marches). Dans <strong>Règles de calcul</strong>, <strong>Utiliser le calculateur d'escalier</strong> avec un <strong>Résultat cible</strong>, <strong>maximal</strong> et <strong>minimal</strong> contrôle 2 contremarches + 1 giron : un escalier hors de l'intervalle est créé, et un avertissement le signale.</p>
 <h2 id="ramps">Rampes</h2>
 <ol>
-<li>Cliquez sur <strong>Début ▸ Circulation ▸ Rampe</strong>. Le mode esquisse commence avec <strong>Volée</strong>.</li>
+<li>Cliquez sur <strong>Début ▸ Liaisons verticales ▸ Rampe</strong>. Le mode esquisse commence avec <strong>Volée</strong>.</li>
 <li>Cliquez où une volée commence, puis où elle finit : sa pente est au plus la <strong>Pente maximale de
    la rampe (1/x)</strong> du type et elle monte au plus de la <strong>Longueur inclinée maximale</strong> (en dessinant, une volée
    plus longue s'arrête là) ; la longueur faite et celle qui reste s'affichent près du curseur.</li>
@@ -859,17 +859,17 @@ dans la nomenclature des escaliers est le volume de ses solides.</p>
 <p>La <strong>Forme</strong> du type est <strong>Épais</strong> (avec son <strong>Épaisseur</strong>) ou <strong>Plein</strong> (jusqu'à la base), et le
 <strong>Matériau de la rampe</strong> la colore. Les garde-corps, <strong>Modifier l'esquisse</strong> et <strong>Propriétés</strong>
 fonctionnent comme pour les escaliers.</p>
-<p>Avec <strong>Arc centre-extrémités</strong> dans le groupe <strong>Dessiner</strong>, cliquez le centre, le début de la ligne de volée puis sa fin autour du centre : la volée tourne autour de lui, avec deux lignes rayonnant du centre à ses extrémités et deux arcs de contour sur ses côtés. <strong>Afficher la flèche MONTE dans toutes les vues</strong> du type dessine toute la flèche et <strong>MONTE</strong> aussi dans le plan du niveau supérieur ; la <strong>Police du texte</strong> et les données d'identification sont comme pour les escaliers.</p>
+<p>Avec <strong>Arc centre-extrémités</strong> dans le groupe <strong>Dessiner</strong>, cliquez le centre, le début de la ligne de volée puis sa fin autour du centre : la volée tourne autour de lui, avec deux lignes rayonnant du centre à ses extrémités et deux arcs de contour sur ses côtés. <strong>Afficher la flèche MONTE dans toutes les vues</strong> du type dessine toute la flèche et <strong>MONTE</strong> aussi dans le plan du niveau supérieur ; la <strong>Police du texte</strong> et l'<strong>Identification</strong> sont comme pour les escaliers.</p>
 <h2 id="railings">Garde-corps</h2>
 <ol>
-<li>Cliquez sur <strong>Début ▸ Circulation ▸ Garde-corps</strong>.</li>
+<li>Cliquez sur <strong>Début ▸ Liaisons verticales ▸ Garde-corps</strong>.</li>
 <li>Dessinez la trajectoire avec <strong>Ligne</strong> : une seule chaîne de lignes connectées (une trajectoire
    en morceaux, fermée ou qui revient sur elle-même est refusée par <strong>Terminer le mode d'édition</strong>).</li>
 <li>Pour poser le garde-corps sur un escalier, cliquez sur <strong>Outils ▸ Choisir un nouvel hôte</strong>, puis
    sur l'escalier : la trajectoire dessinée dessus monte avec l'escalier.</li>
 <li>Cliquez sur <strong>Terminer le mode d'édition</strong>.</li>
 </ol>
-<p><strong>Modifier la trajectoire</strong> rouvre la trajectoire d'un garde-corps. Les <strong>Propriétés du type</strong> du
+<p><strong>Modifier la trajectoire</strong> rouvre la trajectoire d'un garde-corps. Les <strong>Paramètres du type</strong> du
 garde-corps comportent la <strong>Hauteur du garde-corps</strong> et l'<strong>Espacement des balustres</strong> : les
 changer change tous les garde-corps de ce type.</p>
 <p>Les garde-corps d'un escalier continuent sur ses paliers en une seule lisse, à leur hauteur
@@ -897,10 +897,10 @@ sanitaires</strong>) : choisissez une famille et cliquez sur <strong>Ouvrir</str
 <p>Sélectionnez un composant et cliquez sur <strong>Hôte ▸ Choisir un nouvel hôte</strong>, puis sur un sol : le
 composant passe sur le sol et reste sur sa face supérieure (cliquez un point vide pour le remettre
 sur le niveau). Ses propriétés sont <strong>Niveau</strong>, <strong>Hôte</strong>, <strong>Hauteur de décalage par rapport au
-niveau</strong>, <strong>Rotation</strong>, <strong>Marque</strong> et <strong>Commentaires</strong> ; <strong>Propriétés du type</strong> comporte largeur,
+niveau</strong>, <strong>Rotation</strong>, <strong>Marque</strong> et <strong>Commentaires</strong> ; <strong>Paramètres du type</strong> comporte largeur,
 profondeur, hauteur et matériau.</p>
 <h2 id="schedules-and-ifc">Nomenclatures et IFC</h2>
-<p>Les sols, les toits, les escaliers, les garde-corps et le mobilier ont leurs nomenclatures (<strong>Vue ▸
+<p>Les sols, les toits, les escaliers, les garde-corps et le mobilier ont leurs nomenclatures (<strong>Vues ▸
 Créer ▸ Nomenclatures ▸ Nomenclature/Quantités</strong>), une ligne par élément. <strong>Exporter ▸ Exporter
 IFC4…</strong> écrit les sols comme dalles (avec leurs ouvertures et leurs inclinaisons), les toits, les
 escaliers avec leurs volées et leurs paliers, les garde-corps, le mobilier et les appareils

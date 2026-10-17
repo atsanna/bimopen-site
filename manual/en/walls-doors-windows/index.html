@@ -232,7 +232,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#the-location-line-and-flipping">
 <span class="md-ellipsis">
-      The location line and flipping
+      The alignment and flipping
     </span>
 </a>
 </li>
@@ -246,7 +246,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#editing-a-walls-profile">
 <span class="md-ellipsis">
-      Editing a wall's profile
+      Editing a wall's boundary
     </span>
 </a>
 </li>
@@ -482,7 +482,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#the-location-line-and-flipping">
 <span class="md-ellipsis">
-      The location line and flipping
+      The alignment and flipping
     </span>
 </a>
 </li>
@@ -496,7 +496,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#editing-a-walls-profile">
 <span class="md-ellipsis">
-      Editing a wall's profile
+      Editing a wall's boundary
     </span>
 </a>
 </li>
@@ -651,11 +651,11 @@
 <h1 id="walls-doors-and-windows">Walls, doors and windows</h1>
 <p>This chapter describes how walls are drawn, how they join and attach to roofs and floors, how
 their types and layers are set up, and how doors and windows are placed in them, flipped, moved
-and drawn at each detail level.</p>
+and drawn at each level of detail.</p>
 <h2 id="drawing-walls">Drawing walls</h2>
 <p><strong>Home ▸ Build ▸ Wall</strong> (or type <code>WA</code>) starts the wall tool, in a plan or in the 3D view. Pick the
-wall type in the type selector at the top of the <strong>Properties</strong> palette; <strong>Type Properties</strong>
-changes the type, and with it every wall of that type. The contextual tab <strong>Edit | Place Wall</strong>
+wall type in the type selector at the top of the <strong>Properties</strong> palette; <strong>Type Parameters</strong>
+changes the type, and with it every wall of that type. The contextual tab <strong>Draw Wall</strong>
 shows the <strong>Draw</strong> panel, and the options bar shows:</p>
 <table>
 <thead>
@@ -678,16 +678,16 @@ shows the <strong>Draw</strong> panel, and the options bar shows:</p>
 <td>In a 3D view only: the level the walls stand on; <strong><surface clicked=""></surface></strong> takes the level of the surface of the first click</td>
 </tr>
 <tr>
-<td><strong>Location Line</strong></td>
-<td>The plane of the wall that runs along the clicks: <strong>Wall Centerline</strong> (the default), the core centre line, or one of the finish and core faces, exterior or interior</td>
+<td><strong>Alignment</strong></td>
+<td>The plane of the wall that runs along the clicks: <strong>Axis</strong> (the default), the core centre line, or one of the finish and core faces, exterior or interior</td>
 </tr>
 <tr>
-<td><strong>Chain</strong></td>
+<td><strong>Continue</strong></td>
 <td>On, each click ends a wall and starts the next one; off, each two clicks make a wall on its own</td>
 </tr>
 <tr>
 <td><strong>Offset</strong></td>
-<td>The location line runs this far from the clicks, towards the exterior</td>
+<td>The alignment line runs this far from the clicks, towards the exterior</td>
 </tr>
 <tr>
 <td><strong>Radius</strong></td>
@@ -702,8 +702,8 @@ shows the <strong>Draw</strong> panel, and the options bar shows:</p>
   exterior face is at the top. The preview shows the exterior face thicker;</li>
 <li>the <strong>space bar</strong> puts the exterior of the next wall on the other side;</li>
 <li>after the first point, type a length and press Enter: the value shows in a box at the cursor,
-  and the wall ends that far, in the direction of the cursor (grids, room separation and area
-  boundary lines, sections and elevations take a typed length the same way);</li>
+  and the wall ends that far, in the direction of the cursor (grids, room separators and area
+  outlines, sections and elevations take a typed length the same way);</li>
 <li><strong>Esc</strong> ends the chain; <strong>Esc</strong> again, or <strong>Modify</strong>, ends the tool.</li>
 </ul>
 <p>The <strong>Draw</strong> panel picks the shape:</p>
@@ -737,35 +737,35 @@ shows the <strong>Draw</strong> panel, and the options bar shows:</p>
 </tr>
 </tbody>
 </table>
-<h2 id="the-location-line-and-flipping">The location line and flipping</h2>
-<p>Select a wall: blue dots mark the ends of its location line, and two arrows stand on its exterior
-side. Clicking the arrows turns the wall over about its location line: the first and the last
-layers swap, and the doors and windows keep their orientation. Changing <strong>Location Line</strong> of a
+<h2 id="the-location-line-and-flipping">The alignment and flipping</h2>
+<p>Select a wall: blue dots mark the ends of its alignment line, and two arrows stand on its exterior
+side. Clicking the arrows turns the wall over about its alignment line: the first and the last
+layers swap, and the doors and windows keep their orientation. Changing <strong>Alignment</strong> of a
 placed wall does not move it; the next flip turns it about the new plane. Changing the type of a
-wall, or its layers, keeps its location line where it was.</p>
+wall, or its layers, keeps its alignment line where it was.</p>
 <h2 id="attaching-walls-to-roofs-and-floors">Attaching walls to roofs and floors</h2>
 <p>A wall can follow a roof or a floor instead of a fixed height.</p>
 <ol>
 <li>Select the walls.</li>
-<li><strong>Edit | Walls ▸ Modify Wall ▸ Attach Top/Base</strong>.</li>
+<li><strong>Selection: Walls ▸ Modify Wall ▸ Link Top/Base</strong>.</li>
 <li>In the options bar, <strong>Attach Wall:</strong> <strong>Top</strong> or <strong>Base</strong>.</li>
 <li>Click the roof or floor, in a plan, a section or the 3D view.</li>
 </ol>
 <p>With <strong>Top</strong>, the walls rise or drop to the underside of the roof (following its slopes: the
 gable walls go up to the ridge) or of the floor above. With <strong>Base</strong>, they stand on the top face of
-the floor below. From then on they follow it: a steeper roof, a roof raised by its base offset, a
+the floor below. From then on they follow it: a steeper roof, a roof raised by its offset, a
 moved floor carry the walls with them.</p>
-<p>To detach them: select the walls, <strong>Edit | Walls ▸ Modify Wall ▸ Detach Top/Base</strong>, then click the
+<p>To detach them: select the walls, <strong>Selection: Walls ▸ Modify Wall ▸ Unlink Top/Base</strong>, then click the
 element to detach them from, or press <strong>Detach All</strong> in the options bar. The walls keep the height
 they have at that moment, and can be attached again at any time. When a roof or floor with walls
 attached to it is deleted, the walls keep their height too.</p>
 <p>The properties <strong>Top is Attached</strong> and <strong>Base is Attached</strong> show the state (read-only); while the
-top is attached, <strong>Unconnected Height</strong> is read-only.</p>
-<h2 id="editing-a-walls-profile">Editing a wall's profile</h2>
+top is attached, <strong>Free Height</strong> is read-only.</p>
+<h2 id="editing-a-walls-profile">Editing a wall's boundary</h2>
 <p>A wall need not be a rectangle: its outline can be sketched in an elevation or a section
 parallel to it, with holes, as for a gable or a stepped wall.</p>
 <ol>
-<li>Select the wall and click <strong>Mode ▸ Edit Profile</strong> in its contextual tab. From a plan or a view
+<li>Select the wall and click <strong>Mode ▸ Edit Boundary</strong> in its contextual tab. From a plan or a view
    that is not parallel to the wall, <strong>Go to View</strong> lists the sections and elevations parallel to
    it: choose one and click <strong>Open View</strong>.</li>
 <li>Sketch mode opens with the wall's outline in magenta. Change it with <strong>Line</strong> and
@@ -780,8 +780,8 @@ still clips it. Plan, sections, elevations and the 3D view all show one solid, c
 outline and holes. The layers that wrap line the holes as they line doors and windows (see
 <a href="#wall-types-and-layers">Wall types and layers</a>). A curtain wall keeps the panels and mullions
 inside its new outline.
-<strong>Mode ▸ Reset Profile</strong> makes it a rectangle again; <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span> undoes either.</p>
-<p>The profile can also be edited in the 3D view: the sketch lies on the wall's plane and the view
+<strong>Mode ▸ Reset Boundary</strong> makes it a rectangle again; <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span> undoes either.</p>
+<p>The boundary can also be edited in the 3D view: the sketch lies on the wall's plane and the view
 stays 3D. Only from a plan does <strong>Go to View</strong> appear, and nothing changes until a view is opened
 with <strong>Open View</strong>. While sketching, the wall's original outline is drawn as dashed reference
 lines; the sketch snaps to their ends and onto them.</p>
@@ -820,8 +820,8 @@ blue dot of that end and choose <strong>Disallow Join</strong>: both walls then 
 beside the end shows it; click it, or right-click the dot and choose <strong>Allow Join</strong>, to join it
 again.</p>
 <h2 id="wall-types-and-layers">Wall types and layers</h2>
-<p><strong>Type Properties</strong> of a wall shows, under <strong>Construction</strong>, <strong>Structure</strong> with its <strong>Edit…</strong>
-button, <strong>Wrapping at Inserts</strong>, <strong>Wrapping at Ends</strong>, <strong>Width</strong> (the sum of the layers,
+<p><strong>Type Parameters</strong> of a wall shows, under <strong>Construction</strong>, <strong>Structure</strong> with its <strong>Edit…</strong>
+button, <strong>Return at Openings</strong>, <strong>Return at Ends</strong>, <strong>Width</strong> (the sum of the layers,
 read-only) and <strong>Function</strong> (<strong>Interior</strong>, <strong>Exterior</strong>, <strong>Foundation</strong>, <strong>Retaining</strong>,
 <strong>Soffit</strong>, <strong>Core-shaft</strong>); under <strong>Graphics</strong>, <strong>Coarse Scale Fill Pattern</strong> and <strong>Coarse Scale
 Fill Color</strong>, how cut walls of the type are filled at <strong>Coarse</strong> detail. <strong>Duplicate…</strong> makes a
@@ -832,22 +832,21 @@ side, each with its function, material and thickness, between the two <strong>Co
 and every other layer is at least 4 mm thick: other values are refused, and the dialog stays open.</p>
 <p>The <strong>Wraps</strong> column ticks the layers that may wrap. Below the table:</p>
 <ul>
-<li><strong>Wrapping at Inserts</strong> (<strong>Do not wrap</strong>, <strong>Exterior</strong>, <strong>Interior</strong>, <strong>Both</strong>): the ticked
+<li><strong>Return at Openings</strong> (<strong>Do not wrap</strong>, <strong>Exterior</strong>, <strong>Interior</strong>, <strong>Both</strong>): the ticked
   layers outside the core on that side turn into the jambs of doors and windows; the layers
   behind them are pulled back;</li>
-<li><strong>Wrapping at Ends</strong> (<strong>Do not wrap</strong>, <strong>Exterior</strong>, <strong>Interior</strong>): the same at the free ends of
+<li><strong>Return at Ends</strong> (<strong>Do not wrap</strong>, <strong>Exterior</strong>, <strong>Interior</strong>): the same at the free ends of
   the walls.</li>
 </ul>
 <p>Wrapping shows in every view: in plan, in the 3D view, in sections and in elevations the ticked
 layers line the jambs, the head and the sill of doors and windows, the sides of the holes of an
-edited profile (see <a href="#editing-a-walls-profile">Editing a wall's profile</a>) and the free ends. A
+edited boundary (see <a href="#editing-a-walls-profile">Editing a wall's boundary</a>) and the free ends. A
 door or window type overrides the wall's wrapping with its <strong>Wall Closure</strong>.</p>
 <h2 id="wall-properties">Wall properties</h2>
-<p>Under <strong>Constraints</strong>: <strong>Location Line</strong>, <strong>Base Constraint</strong>, <strong>Base Offset</strong>, <strong>Base is
-Attached</strong>, <strong>Top Constraint</strong> (a level, or <strong>Unconnected</strong>), <strong>Unconnected Height</strong>, <strong>Top
-Offset</strong> (with a level), <strong>Top is Attached</strong> and <strong>Room Bounding</strong> (untick it and the rooms
+<p>Under <strong>Constraints</strong>: <strong>Alignment</strong>, <strong>Base Level</strong>, <strong>Offset at Base</strong>, <strong>Base is
+Attached</strong>, <strong>Top Level</strong> (a level, or <strong>Unconnected</strong>), <strong>Free Height</strong>, <strong>Offset at Top</strong> (with a level), <strong>Top is Attached</strong> and <strong>Room Bounding</strong> (untick it and the rooms
 around the wall ignore it). Under <strong>Dimensions</strong>: <strong>Length</strong>, <strong>Area</strong>, <strong>Volume</strong>. Under
-<strong>Identity Data</strong>: <strong>Mark</strong> and <strong>Comments</strong>.</p>
+<strong>Identification</strong>: <strong>Mark</strong> and <strong>Comments</strong>.</p>
 <h2 id="placing-doors-and-windows">Placing doors and windows</h2>
 <p><strong>Home ▸ Build ▸ Door</strong> (<code>DR</code>) or <strong>Window</strong> (<code>WN</code>), in a plan, a section, an elevation or the 3D view. Pick the type, then
 move over a wall: the opening follows the cursor along it, and temporary dimensions measure from
@@ -857,18 +856,18 @@ jamb. Click to place it: the wall is cut in every view. A window takes its type'
 Height</strong>.</p>
 <p>Doors and windows get a <strong>Mark</strong> that counts up by category (1, 2, 3…), from the highest.</p>
 <h2 id="tags">Tags</h2>
-<p><strong>Edit | Place Door ▸ Tag ▸ Tag on Placement</strong> (or the same for windows) tags each opening as it
+<p><strong>Draw Door ▸ Tag ▸ Tag on Placement</strong> (or the same for windows) tags each opening as it
 is placed. The options bar then offers <strong>Horizontal</strong> or <strong>Vertical</strong>, and <strong>Leader</strong> with its
 length. A door's tag shows its <strong>Mark</strong>; a window's tag shows its type's <strong>Type Mark</strong>.
-<strong>Annotate ▸ Tag All</strong> tags the openings not tagged yet.</p>
+<strong>Annotations ▸ Tag All</strong> tags the openings not tagged yet.</p>
 <h2 id="flipping-a-door-or-window">Flipping a door or window</h2>
 <p>Select a door or window in a plan: arrows across the wall, on the side it opens to, turn its swing
 over; arrows beside it, along the wall, put its hinge on the other jamb. The context menu does the
 same: <strong>Flip Hand</strong> (the hinge) and <strong>Flip Facing</strong> (the swing).</p>
 <h2 id="moving-a-door-or-window-to-another-wall">Moving a door or window to another wall</h2>
-<p>Select it, <strong>Edit | Doors ▸ Host ▸ Pick New Host</strong> (or <strong>Edit | Windows</strong>), then click another
+<p>Select it, <strong>Selection: Doors ▸ Host ▸ Pick New Host</strong> (or <strong>Selection: Windows</strong>), then click another
 wall: the opening moves there, where you clicked, with its type and sill. It stays selected.</p>
-<p>Dragging a door or window keeps it in a wall: the pointer is projected onto the wall's location line, so the opening slides along the wall, between its ends, with the temporary dimensions to the nearest walls, in a plan, a section, an elevation or the 3D view; there a click on a window's glass picks the window, not what is seen through it. Dropped over another wall, it moves into that wall; released over empty space, it stays at the last place on its own. The arrow keys move it along its wall the same way.</p>
+<p>Dragging a door or window keeps it in a wall: the pointer is projected onto the wall's alignment line, so the opening slides along the wall, between its ends, with the temporary dimensions to the nearest walls, in a plan, a section, an elevation or the 3D view; there a click on a window's glass picks the window, not what is seen through it. Dropped over another wall, it moves into that wall; released over empty space, it stays at the last place on its own. The arrow keys move it along its wall the same way.</p>
 <h2 id="door-and-window-properties">Door and window properties</h2>
 <p>Instance: <strong>Level</strong>, <strong>Sill Height</strong>, <strong>Width</strong> and <strong>Height</strong> (of the type), <strong>Head Height</strong>,
 <strong>Comments</strong>, <strong>Mark</strong>. Changing <strong>Sill Height</strong> or <strong>Head Height</strong> moves the opening up or
@@ -880,7 +879,7 @@ Height</strong> and <strong>Window Inset</strong> (windows: how far the frame si
 Projection Ext</strong> and <strong>Trim Projection Int</strong> (doors), <strong>Leaves</strong> and <strong>Type Mark</strong>. A door cannot
 become a window by changing its type.</p>
 <h2 id="how-walls-doors-and-windows-are-drawn">How walls, doors and windows are drawn</h2>
-<p>The <strong>Detail Level</strong> of the plan decides:</p>
+<p>The <strong>Detail</strong> of the plan decides:</p>
 <table>
 <thead>
 <tr>
@@ -918,7 +917,7 @@ and sills, in the type's materials.</p>
 <p>A curtain wall is a wall of a curtain wall type, drawn with the <strong>Wall</strong> tool: pick <strong>Curtain
 Wall</strong> (one glass panel the length of the wall), <strong>Exterior Glazing</strong> (grid lines by the type) or
 <strong>Storefront</strong> (grid lines and mullions) in the type selector, then draw as for any wall, in plan
-or in 3D, with <strong>Chain</strong> and the <strong>Draw</strong> shapes. A basic wall changes into a curtain wall by
+or in 3D, with <strong>Continue</strong> and the <strong>Draw</strong> shapes. A basic wall changes into a curtain wall by
 picking a curtain wall type in the type selector; the doors and windows it hosts are deleted,
 because a curtain wall does not host them, and a message says so (undo brings them back).</p>
 <p>In plan each glass panel is drawn with its thickness and the mullions are cut. A type with
@@ -977,7 +976,7 @@ plane the view uses now. Under <strong>Specify a new Work Plane</strong>:</p>
   face turned to you in a section or a 3D view), a grid, a reference plane or, in a section, a
   level;</li>
 <li><strong>Pick a line and use the work plane it was sketched in</strong>: after <strong>OK</strong>, click a wall or a room
-  separation line: its level becomes the work plane.</li>
+  separator: its level becomes the work plane.</li>
 </ul>
 <p>A plane that does not lie in the view, such as a grid picked in a plan or a level in a section,
 is not set there: <strong>Go to View</strong> lists the views it lies in (the sections and elevations facing

@@ -507,7 +507,7 @@ no estás escribiendo en un campo: en un campo actúan sobre el texto.</p>
 <p>En un boceto de suelo, cubierta, escalera o barandilla, <span class="keys"><kbd class="key-escape">Esc</kbd></span> (o un doble clic) también
 finaliza el boceto cuando tiene suficientes puntos.</p>
 <p>En el cuadro de diálogo <strong>Nota de texto</strong>, <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-enter">Enter</kbd></span> inserta la nota y <span class="keys"><kbd class="key-escape">Esc</kbd></span> la cancela.</p>
-<p><span class="keys"><kbd class="key-alt">Alt</kbd></span> pulsada y soltada, o <span class="keys"><kbd class="key-f10">F10</kbd></span>, muestra las sugerencias de teclas de la cinta de opciones. Sin herramienta activa y sin nada escrito, <span class="keys"><kbd class="key-enter">Enter</kbd></span> repite la última herramienta. Tras un clic en el navegador de proyectos, las flechas y <span class="keys"><kbd class="key-enter">Enter</kbd></span> se mueven por su árbol.</p>
+<p><span class="keys"><kbd class="key-alt">Alt</kbd></span> pulsada y soltada, o <span class="keys"><kbd class="key-f10">F10</kbd></span>, muestra las sugerencias de teclas de la cinta de opciones. Sin herramienta activa y sin nada escrito, <span class="keys"><kbd class="key-enter">Enter</kbd></span> repite la última herramienta. Tras un clic en el Índice del proyecto, las flechas y <span class="keys"><kbd class="key-enter">Enter</kbd></span> se mueven por su árbol.</p>
 <h2 id="mouse">Ratón</h2>
 <table>
 <thead>
@@ -549,7 +549,7 @@ finaliza el boceto cuando tiene suficientes puntos.</p>
 <p>Escribe las letras mientras no se está editando ningún campo y luego pulsa <span class="keys"><kbd class="key-enter">Enter</kbd></span>. Sin
 argumentos, un atajo inicia la herramienta o abre el cuadro de diálogo; con argumentos, ejecuta el
 comando de inmediato (consulta <a href="../command-line-and-mcp/">Línea de comandos y MCP</a>).</p>
-<p>Con el cursor en el área de dibujo, las letras van a la línea de comandos (en el estilo BIMopen, a la búsqueda), y un atajo actúa en cuanto se escribe, sin <span class="keys"><kbd class="key-enter">Enter</kbd></span>, cuando ningún atajo ni nombre de comando más largo empieza por sus letras: <code>VR</code> (rango de vista), <code>WT</code> (mosaico), <code>ZE</code>, <code>ZF</code>, <code>ZA</code>, <code>ZP</code>, <code>ZR</code>, <code>ZO</code>, <code>ZS</code>, <code>HR</code>, <code>HH</code>, <code>HC</code>, <code>IC</code>, <code>DL</code> (línea de detalle), <code>RT</code> (etiqueta de habitación), <code>TG</code> (etiquetar por categoría), <code>TX</code>, <code>CC</code> (copiar), <code>MV</code>, <code>RM</code>, <code>LL</code> (nivel), <code>RC</code> (nube de revisión), <code>PP</code> (muestra u oculta <strong>Propiedades</strong>), <code>PT</code>, <code>RP</code> y los atajos que haya añadido. Los demás empiezan nombres más largos y esperan la letra siguiente, un espacio (siguen argumentos) o <span class="keys"><kbd class="key-enter">Enter</kbd></span>: <code>VG</code> (<code>vgsub</code>…), <code>HI</code> (<code>hide</code>), <code>DI</code> (<code>dim</code>), <code>AL</code> (<code>align</code>), <code>WA</code> (<code>wall</code>), <code>DR</code> (<code>draworder</code>), <code>UN</code> (<code>undo</code>), <code>MA</code> (<code>mask</code>); así <code>dim</code>, <code>wall 0,0 5,0</code> o <code>WA 0,0 5,0</code> escritos sobre la vista se ejecutan tal como se escriben. <code>MA</code> y <code>PT</code> indican en la barra de estado que aún no están disponibles; <code>RP</code> inicia el plano de referencia. Escrita en la línea de comandos misma, una línea espera <span class="keys"><kbd class="key-enter">Enter</kbd></span>.</p>
+<p>Con el cursor en el área de dibujo, las letras van a la línea de comandos (en el estilo BIMopen, a la búsqueda), y un atajo actúa en cuanto se escribe, sin <span class="keys"><kbd class="key-enter">Enter</kbd></span>, cuando ningún atajo ni nombre de comando más largo empieza por sus letras: <code>VR</code> (alturas de corte), <code>WT</code> (mosaico), <code>ZE</code>, <code>ZF</code>, <code>ZA</code>, <code>ZP</code>, <code>ZR</code>, <code>ZO</code>, <code>ZS</code>, <code>HR</code>, <code>HH</code>, <code>HC</code>, <code>IC</code>, <code>DL</code> (línea de detalle), <code>RT</code> (etiqueta de espacio), <code>TG</code> (etiquetar por categoría), <code>TX</code>, <code>CC</code> (copiar), <code>MV</code>, <code>RM</code>, <code>LL</code> (nivel), <code>RC</code> (nube de revisión), <code>PP</code> (muestra u oculta <strong>Propiedades</strong>), <code>PT</code>, <code>RP</code> y los atajos que haya añadido. Los demás empiezan nombres más largos y esperan la letra siguiente, un espacio (siguen argumentos) o <span class="keys"><kbd class="key-enter">Enter</kbd></span>: <code>VG</code> (<code>vgsub</code>…), <code>HI</code> (<code>hide</code>), <code>DI</code> (<code>dim</code>), <code>AL</code> (<code>align</code>), <code>WA</code> (<code>wall</code>), <code>DR</code> (<code>draworder</code>), <code>UN</code> (<code>undo</code>), <code>MA</code> (<code>mask</code>); así <code>dim</code>, <code>wall 0,0 5,0</code> o <code>WA 0,0 5,0</code> escritos sobre la vista se ejecutan tal como se escriben. <code>MA</code> y <code>PT</code> indican en la barra de estado que aún no están disponibles; <code>RP</code> inicia el plano de referencia. Escrita en la línea de comandos misma, una línea espera <span class="keys"><kbd class="key-enter">Enter</kbd></span>.</p>
 <p>Mientras una herramienta espera un punto en una planta o una vista de dibujo (o una herramienta de detalle o de anotación en una sección), <code>SE</code> (extremos), <code>SM</code> (puntos medios), <code>SI</code> (intersecciones), <code>SN</code> (cercano) y <code>SO</code> (desactivados) sustituyen los forzados solo para ese punto (también elegidos en <strong>Modificaciones de forzado ▸</strong> del botón derecho; <code>SE</code>, <code>SI</code> y <code>SO</code> con <span class="keys"><kbd class="key-enter">Enter</kbd></span>, porque nombres más largos empiezan así); la barra de estado lo indica, y <span class="keys"><kbd class="key-escape">Esc</kbd></span> o el punto tomado lo terminan. Para las demás herramientas en una sección, o en una vista 3D, cuyos puntos no se fuerzan así, se rechazan con un mensaje. En un boceto valen en todas las vistas, y también <code>SC</code> (el centro de un arco) y <code>SP</code> (la perpendicular desde el punto desde el que se dibuja).</p>
 <h3 id="modelling">Modelado</h3>
 <table>
@@ -624,12 +624,12 @@ comando de inmediato (consulta <a href="../command-line-and-mcp/">Línea de coma
 <tr>
 <td><code>RM</code></td>
 <td><code>room</code></td>
-<td>Habitación</td>
+<td>Espacio</td>
 </tr>
 <tr>
 <td><code>RS</code></td>
 <td><code>roomsep</code></td>
-<td>Separación de habitación</td>
+<td>Separador de espacios</td>
 </tr>
 <tr>
 <td><code>PA</code></td>
@@ -639,12 +639,12 @@ comando de inmediato (consulta <a href="../command-line-and-mcp/">Línea de coma
 <tr>
 <td><code>CA</code></td>
 <td><code>areaboundary</code></td>
-<td>Línea de contorno de área</td>
+<td>Contorno de superficie</td>
 </tr>
 <tr>
 <td>–</td>
 <td><code>area</code></td>
-<td>Área</td>
+<td>Superficie</td>
 </tr>
 <tr>
 <td><code>LG</code></td>
@@ -686,17 +686,17 @@ comando de inmediato (consulta <a href="../command-line-and-mcp/">Línea de coma
 <tr>
 <td><code>MM</code></td>
 <td><code>mirror</code></td>
-<td>Simetría - Designar eje</td>
+<td>Simetría sobre eje</td>
 </tr>
 <tr>
 <td><code>DM</code></td>
 <td><code>mirror</code></td>
-<td>Simetría - Dibujar eje</td>
+<td>Simetría sobre línea</td>
 </tr>
 <tr>
 <td><code>AR</code></td>
 <td><code>array</code></td>
-<td>Matriz</td>
+<td>Repetir en serie</td>
 </tr>
 <tr>
 <td><code>OF</code></td>
@@ -721,7 +721,7 @@ comando de inmediato (consulta <a href="../command-line-and-mcp/">Línea de coma
 <tr>
 <td><code>SG</code></td>
 <td><code>split</code></td>
-<td>Dividir con separación</td>
+<td>Dividir con junta</td>
 </tr>
 <tr>
 <td><code>RE</code></td>
@@ -860,7 +860,7 @@ comandos, dibuja una cota lineal (<code>lineardim</code>).</p>
 <tr>
 <td><code>VD</code></td>
 <td><code>draftingview</code></td>
-<td>El cuadro de diálogo <strong>Vista de diseño</strong></td>
+<td>El cuadro de diálogo <strong>Vista 2D libre</strong></td>
 </tr>
 <tr>
 <td><code>PP</code></td>
@@ -875,12 +875,12 @@ comandos, dibuja una cota lineal (<code>lineardim</code>).</p>
 <tr>
 <td><code>VG</code> o <code>VV</code></td>
 <td><code>vg</code></td>
-<td><strong>Visibilidad/Gráficos</strong></td>
+<td><strong>Visibilidad y gráficos</strong></td>
 </tr>
 <tr>
 <td><code>WF</code>, <code>HL</code>, <code>SD</code></td>
 <td>–</td>
-<td><strong>Estructura alámbrica</strong>, <strong>Línea oculta</strong>, <strong>Sombreado</strong>: el estilo visual de la vista activa</td>
+<td><strong>Estructura alámbrica</strong>, <strong>Líneas</strong>, <strong>Sombreado</strong>: el estilo gráfico de la vista activa</td>
 </tr>
 <tr>
 <td><code>HH</code>, <code>HI</code></td>
@@ -895,7 +895,7 @@ comandos, dibuja una cota lineal (<code>lineardim</code>).</p>
 <tr>
 <td><code>HR</code></td>
 <td>–</td>
-<td><strong>Restablecer Ocultar/Aislar temporalmente</strong></td>
+<td><strong>Restablecer Aislar temporalmente</strong></td>
 </tr>
 <tr>
 <td><code>EH</code>, <code>VH</code></td>
@@ -905,7 +905,7 @@ comandos, dibuja una cota lineal (<code>lineardim</code>).</p>
 <tr>
 <td><code>RH</code></td>
 <td>–</td>
-<td><strong>Mostrar elementos ocultos</strong>, activar y desactivar</td>
+<td><strong>Revelar ocultos</strong>, activar y desactivar</td>
 </tr>
 <tr>
 <td><code>TL</code></td>
@@ -915,7 +915,7 @@ comandos, dibuja una cota lineal (<code>lineardim</code>).</p>
 <tr>
 <td><code>SO</code></td>
 <td><code>objectstyle</code></td>
-<td><strong>Estilos de objeto</strong></td>
+<td><strong>Estilos por categoría</strong></td>
 </tr>
 <tr>
 <td><code>MA</code></td>
@@ -971,7 +971,7 @@ comandos, dibuja una cota lineal (<code>lineardim</code>).</p>
 </table>
 <p>Los comandos con <strong>–</strong> no tienen forma abreviada, pero su nombre completo funciona del mismo modo.
 <code>help</code> enumera todos los comandos y sus formas abreviadas.</p>
-<p>Los comandos de zoom también tienen métodos abreviados escritos: <code>ZR</code> zoom en región, <code>ZO</code> alejar (2x), <code>ZF</code> ajustar a la ventana, <code>ZA</code> ajustar todo a la ventana, <code>ZS</code> zoom a tamaño de plano, <code>ZP</code> encuadre/zoom anterior. <strong>Vista ▸ Ventanas ▸ Interfaz de usuario ▸ Métodos abreviados de teclado</strong> da a cualquier comando métodos abreviados propios (<a href="../interface/#drawing-area-and-view-windows">La interfaz</a>).</p>
+<p>Los comandos de zoom también tienen métodos abreviados escritos: <code>ZR</code> zoom en región, <code>ZO</code> alejar (2x), <code>ZF</code> ajustar a la ventana, <code>ZA</code> ajustar todo a la ventana, <code>ZS</code> zoom a tamaño de plano, <code>ZP</code> encuadre/zoom anterior. <strong>Vistas ▸ Ventanas ▸ Paneles ▸ Métodos abreviados de teclado</strong> da a cualquier comando métodos abreviados propios (<a href="../interface/#drawing-area-and-view-windows">La interfaz</a>).</p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

@@ -344,7 +344,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#detail-lines-and-regions">
 <span class="md-ellipsis">
-      Linee di dettaglio e regioni
+      Linee di dettaglio e campiture
     </span>
 </a>
 </li>
@@ -365,7 +365,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#drafting-views">
 <span class="md-ellipsis">
-      Viste di disegno
+      Viste 2D libere
     </span>
 </a>
 </li>
@@ -531,7 +531,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#detail-lines-and-regions">
 <span class="md-ellipsis">
-      Linee di dettaglio e regioni
+      Linee di dettaglio e campiture
     </span>
 </a>
 </li>
@@ -552,7 +552,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#drafting-views">
 <span class="md-ellipsis">
-      Viste di disegno
+      Viste 2D libere
     </span>
 </a>
 </li>
@@ -573,19 +573,18 @@
 <h1 id="annotation-and-2d-details">Annotazioni e dettagli 2D</h1>
 <p>Questo capitolo descrive le quote e i vincoli, le note di testo, le etichette, i locali e le aree
 con i loro schemi di colori, le viste di legenda e gli strumenti di disegno 2D: linee di dettaglio,
-regioni, componenti di dettaglio, dettagli ripetuti, isolamento e viste di disegno. Le annotazioni
+campiture, componenti di dettaglio, dettagli ripetuti, isolamento e viste 2D libere. Le annotazioni
 appartengono alla vista in cui sono fatte: una quota collocata in una pianta non compare in
 un'altra pianta.</p>
 <p>Prima di ogni clic, ogni strumento mostra ciò che creerebbe dove si trova il cursore: la quota
 con il suo valore, il riquadro della nota, l'etichetta sull'elemento sotto il cursore, la regione
-che un locale o un'area occuperebbe, la linea, la regione, il componente o l'isolamento che si sta
+che un locale o un'area occuperebbe, la linea, la campitura, il componente o l'isolamento che si sta
 disegnando.</p>
 <h2 id="dimensions">Quote</h2>
-<p><strong>Annota ▸ Quota</strong> contiene gli strumenti di quotatura: <strong>Allineata</strong>, <strong>Lineare</strong>, <strong>Angolare</strong>,
+<p><strong>Annotazioni ▸ Quota</strong> contiene gli strumenti di quotatura: <strong>Allineata</strong>, <strong>Lineare</strong>, <strong>Angolare</strong>,
 <strong>Radiale</strong>, <strong>Lunghezza dell'arco</strong> e le quote di punto <strong>Quota altimetrica punto</strong>, <strong>Coordinata
-punto</strong> e <strong>Inclinazione in un punto</strong>. Funzionano in piante, sezioni, prospetti, viste di disegno
-e legende. Scegli il tipo di quota nel selettore dei tipi mentre lo strumento è attivo; <strong>Proprietà
-del tipo</strong> modifica il tipo, e con esso ogni quota di quel tipo.</p>
+punto</strong> e <strong>Inclinazione in un punto</strong>. Funzionano in piante, sezioni, prospetti, viste 2D libere
+e legende. Scegli il tipo di quota nel selettore dei tipi mentre lo strumento è attivo; <strong>Parametri del tipo</strong> modifica il tipo, e con esso ogni quota di quel tipo.</p>
 <h3 id="aligned-and-linear-dimensions">Quote allineate e lineari</h3>
 <p>Con <strong>Allineata</strong>, la barra delle opzioni offre quale parte del muro viene scelta (<strong>Linee d'asse
 del muro</strong>, <strong>Superfici del muro</strong>, <strong>Centro del nucleo</strong>, <strong>Superfici del nucleo</strong>) e che cosa
@@ -615,7 +614,7 @@ quota.</p>
 <li>Trascina il controllo blu sotto il testo per allontanarlo dalla linea; trascinato di nuovo vicino
   alla linea, si aggancia al suo posto. Un testo spostato lontano riceve una direttrice ad arco verso
   il suo segmento; <strong>Direttrice</strong> nella barra delle opzioni la rimuove.</li>
-<li><strong>Modifica | Quote ▸ Linee di guida ▸ Modifica linee di guida</strong>: clicca gli elementi per aggiungere
+<li><strong>Selezione: quote ▸ Linee di guida ▸ Modifica linee di guida</strong>: clicca gli elementi per aggiungere
   linee di guida, clicca una linea di guida esistente per rimuoverla, poi clicca un punto vuoto per
   terminare. Ogni linea di guida di una quota selezionata ha un controllo a metà: clic con il tasto
   destro ▸ <strong>Sposta linea di guida</strong>, poi clicca il nuovo riferimento; oppure ▸ <strong>Elimina linee di
@@ -641,12 +640,12 @@ riferimento lungo un'unica linea). <strong>Mostra altezza apertura</strong> scri
 finestra sotto la larghezza misurata da stipite a stipite. I tipi radiali possono omettere il
 prefisso <strong>R</strong> e il loro segno di centro (<strong>Contrassegni centrali</strong>, con la sua dimensione). Con le
 frecce, un segmento troppo corto per contenerle le ha all'esterno, e la linea prosegue oltre di esse
-di <strong>Prolungamento linea di quota invertita</strong>. <strong>Annota ▸ Quota ▸ Tipi di quota</strong> apre le proprietà
+di <strong>Prolungamento linea di quota invertita</strong>. <strong>Annotazioni ▸ Quota ▸ Tipi di quota</strong> apre le proprietà
 del tipo corrente di ciascuna famiglia, da impostare prima di quotare.</p>
 <p>Una stringa di tipo linea base selezionata mostra un controllo di inversione alla sua origine:
 cliccalo, o premi la <strong>barra spaziatrice</strong>, per misurare dall'altra estremità. <strong>Offset della linea
 base</strong> nelle sue proprietà imposta la distanza tra le sue linee su carta.</p>
-<p>Un tipo a coordinate ha <strong>Impostazioni quote coordinate</strong> nelle proprietà del tipo: <strong>Modifica…</strong>
+<p>Un tipo a coordinate ha <strong>Impostazioni quote coordinate</strong> nei parametri del tipo: <strong>Modifica…</strong>
 apre una finestra con <strong>Orientamento testo</strong> (<strong>Allineato</strong> alle linee di guida oppure
 <strong>Orizzontale</strong>), <strong>Posizione del testo</strong> (<strong>In linea con la linea di guida</strong> oppure <strong>Sopra la linea
 di guida</strong>), <strong>Visibilità origine</strong>, <strong>Contrassegno origine</strong> (<strong>Valore zero</strong>, <strong>Cerchio</strong> o il
@@ -659,7 +658,7 @@ attraversano da ciascun lato, e un componente la sua distanza dal muro più vici
 Clicca un valore, digitane uno nuovo e premi Invio per spostare l'elemento;
 clicca il simbolo di quota accanto per renderla permanente. Mentre si colloca una porta o una
 finestra, le quote temporanee mostrano la sua distanza dai muri più vicini. Con più elementi
-selezionati non ne è mostrata alcuna, e la barra delle opzioni offre <strong>Attiva quote</strong> per mostrarle
+selezionati non ne è mostrata alcuna, e la barra delle opzioni offre <strong>Quote temporanee</strong> per mostrarle
 per tutti gli elementi selezionati.</p>
 <h3 id="constraints">Vincoli</h3>
 <p>Seleziona una quota: su ogni segmento compare un lucchetto. Cliccalo per bloccare il segmento: la
@@ -670,7 +669,7 @@ che il blocco collega. Una stringa di due o più segmenti mostra <strong>EQ</str
 diventano equidistanti, e restano tali quando uno di essi si sposta. <strong>Visualizzazione
 eguaglianza</strong> nelle proprietà mostra i valori al posto di <strong>EQ</strong>.</p>
 <p>Selezionando un elemento tenuto da un vincolo, il vincolo compare come linee tratteggiate blu, a
-meno che la categoria <strong>Vincoli</strong> sia nascosta in <strong>Visibilità/Grafica</strong>. Eliminare una quota che
+meno che la categoria <strong>Vincoli</strong> sia nascosta in <strong>Visibilità e grafica</strong>. Eliminare una quota che
 tiene un vincolo chiede che cosa fare: <strong>OK</strong> elimina la quota e mantiene il vincolo; <strong>Elimina
 elementi</strong> elimina entrambi. Anche <strong>Modifica ▸ Allinea</strong> con il lucchetto chiuso è un vincolo.</p>
 <h3 id="spot-dimensions">Quote di punto</h3>
@@ -698,7 +697,7 @@ valore; il <strong>… come prefisso/suffisso</strong> di ciascuno lo mette inve
 l'<strong>Indicatore Nord/Sud</strong> e l'<strong>Indicatore Est/Ovest</strong> delle coordinate (con <strong>Indicatore come prefisso/suffisso</strong>), e la <strong>Lunghezza della linea
 direttrice</strong> e la <strong>Direzione inclinazione</strong> (<strong>Giù</strong> o <strong>Su</strong>) delle inclinazioni.</p>
 <h2 id="text">Testo</h2>
-<p><strong>Annota ▸ Testo ▸ Testo</strong> (<code>TX</code>): clicca dove va la nota e digita; Invio inizia una nuova riga. Un
+<p><strong>Annotazioni ▸ Testo ▸ Testo</strong> (<code>TX</code>): clicca dove va la nota e digita; Invio inizia una nuova riga. Un
 clic dà una nota che non va a capo; trascinando le si dà una larghezza, e le parole vanno a capo al
 suo interno. Cliccare altrove termina la nota, ed <strong>Esc</strong> termina lo strumento. <span class="keys"><kbd class="key-tab">Tab</kbd></span> mentre digiti
 sposta il testo alla tabulazione successiva. La dimensione del testo è su carta: la nota mantiene
@@ -729,9 +728,9 @@ leggibile</strong>, che non la mostra mai capovolta. Il tipo di testo imposta il
 direttrici), lo sfondo (<strong>Opaco</strong> maschera ciò che sta dietro), <strong>Mostra bordo</strong> con il suo offset,
 la punta della direttrice, lo <strong>Spessore di linea</strong> del bordo e delle direttrici, la dimensione, le
 <strong>Dimensioni tabulazione</strong> (12,7 mm), il grassetto, il corsivo e la sottolineatura. Il piccolo
-pulsante <strong>Tipi di testo</strong> del gruppo <strong>Testo</strong> apre <strong>Tipi di testo: proprietà del tipo</strong>, dove
+pulsante <strong>Tipi di testo</strong> del gruppo <strong>Testo</strong> apre <strong>Tipi di testo: parametri del tipo</strong>, dove
 <strong>Duplica…</strong> crea un nuovo tipo di testo.</p>
-<p><strong>Annota ▸ Testo ▸ Trova/Sostituisci</strong> trova parole nelle note della selezione corrente, della
+<p><strong>Annotazioni ▸ Testo ▸ Trova/Sostituisci</strong> trova parole nelle note della selezione corrente, della
 vista corrente o dell'intero progetto (<strong>Ambito:</strong>), con opzioni per maiuscole e parole intere.
 <strong>Trova tutti</strong> elenca le corrispondenze con la vista in cui si trovano; <strong>Trova successivo</strong>, o un
 clic su una riga, seleziona quella nota e ne mostra l'intero testo sotto <strong>Contesto</strong>.
@@ -739,16 +738,16 @@ clic su una riga, seleziona quella nota e ne mostra l'intero testo sotto <strong
 tutto</strong> ogni corrispondenza, e <strong>Chiudi</strong> chiude la finestra. Sulle note selezionate si trova anche
 sotto <strong>Strumenti</strong> della loro scheda.</p>
 <h2 id="symbols">Simboli</h2>
-<p><strong>Annota ▸ Simbolo ▸ Simbolo</strong> (<code>SY</code>) colloca un simbolo di annotazione 2D in una pianta, una
-sezione, una vista di disegno o una legenda: una <strong>Freccia nord</strong>, un <strong>Simbolo linea d'asse</strong>, una
+<p><strong>Annotazioni ▸ Simbolo ▸ Simbolo</strong> (<code>SY</code>) colloca un simbolo di annotazione 2D in una pianta, una
+sezione, una vista 2D libera o una legenda: una <strong>Freccia nord</strong>, un <strong>Simbolo linea d'asse</strong>, una
 <strong>Freccia di flusso</strong>, un <strong>Bersaglio</strong> o un <strong>Delta revisione</strong>, gli ultimi due con un testo
 proprio. Il simbolo segue il cursore prima del clic; la <strong>barra spaziatrice</strong> lo ruota di un quarto,
 oppure <strong>Rotazione</strong> nella barra delle opzioni ne imposta l'angolo. Con <strong>Numero di linee
 direttrici:</strong> superiore a zero, il clic colloca il simbolo e i clic successivi collocano le
 estremità delle sue direttrici. Il tipo imposta la dimensione del simbolo su carta e la punta delle
-sue direttrici; <strong>Duplica…</strong> in <strong>Proprietà del tipo</strong> ne crea uno nuovo.</p>
+sue direttrici; <strong>Duplica…</strong> in <strong>Parametri del tipo</strong> ne crea uno nuovo.</p>
 <h2 id="tags">Etichette</h2>
-<p><strong>Annota ▸ Etichetta ▸ Etichetta per categoria</strong> (<code>TG</code>): passa con il cursore su un elemento (una
+<p><strong>Annotazioni ▸ Etichetta ▸ Etichetta per categoria</strong> (<code>TG</code>): passa con il cursore su un elemento (una
 porta, una finestra, un muro, un locale o un'area) e clicca per etichettarlo. La barra delle opzioni
 imposta <strong>Orizzontale</strong> o <strong>Verticale</strong>, la <strong>Direttrice</strong> e la sua lunghezza; la <strong>barra
 spaziatrice</strong> cambia l'orientamento, durante il posizionamento o su un'etichetta selezionata. Gli
@@ -761,7 +760,7 @@ quelli selezionati; solo gli elementi senza etichetta ne ricevono una.</p>
 termina dove hai cliccato, e un'etichetta selezionata mostra un controllo per trascinare quella
 estremità ovunque (<strong>Estremità linea direttrice</strong> nelle proprietà passa dall'una all'altra).
 Un'etichetta si allinea alle altre etichette dello stesso tipo mentre la collochi o la trascini: vicino alla linea del centro di un'altra etichetta vi si aggancia, e una linea tratteggiata
-lo mostra. Le etichette nascoste nella vista (<strong>Visibilità/Grafica</strong>) vengono attivate quando
+lo mostra. Le etichette nascoste nella vista (<strong>Visibilità e grafica</strong>) vengono attivate quando
 etichetti, e il messaggio lo segnala.</p>
 <p>Fai doppio clic su un'etichetta per modificare ciò che mostra: il contrassegno di una porta o il
 contrassegno di tipo di un muro sul posto; il numero e il nome di un locale o di un'area insieme in
@@ -773,8 +772,8 @@ angolo: ruota con <strong>Ruota</strong>, e la <strong>barra spaziatrice</strong
 (<strong>Rotazione</strong> nelle sue proprietà). Eliminare l'etichetta di un locale lascia il locale, e il
 messaggio lo segnala.</p>
 <h2 id="rooms">Locali</h2>
-<p><strong>Inizio ▸ Locale e area ▸ Locale</strong> (<code>RM</code>), poi clicca all'interno di una regione racchiusa da muri
-o linee di delimitazione dei locali: il locale la riempie, anche attorno a muri isolati. Nella barra
+<p><strong>Inizio ▸ Ambienti e superfici ▸ Ambiente</strong> (<code>RM</code>), poi clicca all'interno di una regione racchiusa da muri
+o separatori ambienti: il locale la riempie, anche attorno a muri isolati. Nella barra
 delle opzioni:</p>
 <ul>
 <li><strong>Limite superiore</strong> e <strong>Offset</strong>: il locale raggiunge quel livello più l'offset (4000 mm per
@@ -789,20 +788,20 @@ delle opzioni:</p>
 quando lo spazio viene chiuso; un secondo locale in una regione già occupata è contrassegnato come
 <strong>Locale ridondante</strong> e non viene contato due volte. Vengono segnalati con un avviso anche un numero
 che un altro locale ha già, un locale più basso dell'altezza di calcolo (1200 mm) e una base sopra di
-essa, come pure una linea di delimitazione dei locali tracciata sopra un'altra.</p>
+essa, come pure un separatore ambienti tracciato sopra un altro.</p>
 <p>Un muro delimita i locali di un livello quando si trova alla sua altezza di calcolo: 1200 mm finché
 <strong>Altezza di calcolo automatica dei locali</strong> è spuntata nelle proprietà del livello, altrimenti la sua
 <strong>Altezza di calcolo</strong>.</p>
 <p>Una sezione mostra i locali che taglia quando sono selezionati o sotto il cursore (<strong>TAB</strong> raggiunge
 un locale dietro altri elementi). Un locale selezionato in essa ha una freccia in alto e una alla
-base: trascinale per cambiarne l'<strong>Offset limite</strong> e l'<strong>Offset base</strong>.</p>
-<p><strong>Linea di delimitazione dei locali</strong> disegna linee che dividono uno spazio in locali senza muri.
+base: trascinale per cambiarne l'<strong>Offset limite</strong> e l'<strong>Scostamento alla base</strong>.</p>
+<p><strong>Separatore ambienti</strong> disegna linee che dividono uno spazio in locali senza muri.
 Un muro delimita i locali finché la sua proprietà <strong>Delimita il locale</strong> è attiva. I pavimenti e i
 tetti sovrastanti limitano il volume del locale.</p>
 <p>Eliminare un locale lo toglie dalla pianta ma lo mantiene nel progetto, <strong>Non posizionato</strong>, con i
 suoi dati; le sue etichette se ne vanno con lui. Eliminare l'etichetta di un locale lascia il
 locale. Un'etichetta di locale trascinata fuori dal proprio locale chiede se <strong>Sposta in locale</strong>.</p>
-<p>I locali si vedono attraverso le loro etichette. In <strong>Visibilità/Grafica</strong>, <strong>Locali</strong> ha
+<p>I locali si vedono attraverso le loro etichette. In <strong>Visibilità e grafica</strong>, <strong>Locali</strong> ha
 <strong>Riempimento interno</strong> e <strong>Riferimento</strong> (le linee a croce). <strong>Impostazioni ▸ Calcolo aree e
 volumi</strong> si apre su <strong>Calcolo</strong>: il contorno del locale alla finitura del muro, all'asse, allo
 strato del nucleo o all'asse del nucleo, e <strong>Aree e volumi</strong> per calcolare anche i volumi (per
@@ -812,17 +811,17 @@ seconda scheda è <strong>Schemi aree</strong>.</p>
 <p>Le aree appartengono a uno schema di aree: <strong>Area complessiva</strong> (che non si può eliminare) e
 <strong>Affittabile</strong> sono presenti in ogni progetto, e <strong>Schemi aree ▸ Nuovo</strong> ne aggiunge altri.</p>
 <ol>
-<li><strong>Locale e area ▸ Area ▸ Pianta delle aree</strong>: scegli lo schema e i livelli. Rispondi <strong>Sì</strong> per
-   disegnare le linee di contorno area lungo i muri esterni, <strong>No</strong> per disegnarle tu.</li>
-<li><strong>Area ▸ Linea di contorno area</strong>: disegna i contorni, oppure scegli dei muri; con le regole
+<li><strong>Ambienti e superfici ▸ Superficie ▸ Pianta delle aree</strong>: scegli lo schema e i livelli. Rispondi <strong>Sì</strong> per
+   disegnare i contorni superficie lungo i muri esterni, <strong>No</strong> per disegnarle tu.</li>
+<li><strong>Superficie ▸ Contorno superficie</strong>: disegna i contorni, oppure scegli dei muri; con le regole
    delle aree attive, un muro esterno di una pianta complessiva dà la sua superficie esterna.</li>
-<li><strong>Area ▸ Area</strong>: clicca all'interno dei contorni. L'area è etichettata quando viene collocata;
-   <strong>Etichetta ▸ Etichetta di area</strong> la etichetta in seguito. Collocata dove nessun contorno chiude una regione, l'area viene conservata
+<li><strong>Superficie ▸ Superficie</strong>: clicca all'interno dei contorni. L'area è etichettata quando viene collocata;
+   <strong>Etichetta ▸ Etichetta superficie</strong> la etichetta in seguito. Collocata dove nessun contorno chiude una regione, l'area viene conservata
    con un avviso e prende la sua forma quando lo fanno; una seconda area in una regione è <strong>Area
    ridondante</strong>.</li>
 </ol>
 <p>Eliminare un'area la lascia nel progetto, non posizionata, senza le sue etichette; <strong>Area:</strong> nella
-barra delle opzioni dello strumento <strong>Area</strong> elenca le aree non posizionate, per rimetterne una con
+barra delle opzioni dello strumento <strong>Superficie</strong> elenca le aree non posizionate, per rimetterne una con
 un clic.</p>
 <h2 id="colour-schemes">Schemi di colori</h2>
 <p>Uno schema di colori riempie i locali o le aree di una pianta (e i locali tagliati da una sezione) in base a un valore (nome, numero,
@@ -833,27 +832,27 @@ visibilità, il loro ordine e gli intervalli. <strong>Applica</strong> mantiene 
 la finestra aperta. <strong>Posizione schema colori</strong>, una proprietà della vista,
 disegna i riempimenti nello <strong>Sfondo</strong> (sotto il modello) o in <strong>Primo piano</strong> (sopra il modello,
 sotto le annotazioni).</p>
-<p><strong>Locale e area ▸ Legenda</strong> colloca la legenda dello schema della pianta: un campione e
+<p><strong>Ambienti e superfici ▸ Legenda</strong> colloca la legenda dello schema della pianta: un campione e
 un'etichetta per ogni valore. I suoi <strong>Valori visualizzati</strong> sono <strong>Per vista</strong> (quelli presenti
 nella pianta) oppure <strong>Tutto</strong>, e <strong>Colonne</strong> distribuisce i campioni su più colonne. Una pianta può
 avere più legende; eliminarne una lascia lo schema.</p>
 <h2 id="legend-views">Viste di legenda</h2>
-<p><strong>Vista ▸ Legende ▸ Legenda</strong> apre <strong>Nuova vista di legenda</strong>: un nome e una scala. La legenda si
-apre ed è elencata sotto <strong>Legende</strong> nel Browser di progetto. <strong>Annota ▸ Componente ▸ Componente
+<p><strong>Viste ▸ Legende ▸ Legenda</strong> apre <strong>Nuova vista di legenda</strong>: un nome e una scala. La legenda si
+apre ed è elencata sotto <strong>Legende</strong> nell'Indice del progetto. <strong>Annotazioni ▸ Componente ▸ Componente
 legenda</strong> colloca il simbolo di un tipo: nella barra delle opzioni, il tipo, la <strong>Vista</strong> da cui
 lo si vede (un muro in pianta o in sezione; un pavimento o un tetto in sezione o in pianta; una
 porta, una finestra o un componente in pianta, davanti o dietro) e la <strong>Lunghezza host</strong>, il tratto
 di muro in cui si trova una porta o una finestra. I componenti di legenda si disegnano al livello
 di dettaglio della legenda, si possono spostare e quotare (i bordi di porte, finestre e componenti;
 non muri, pavimenti e tetti) e non vengono contati dalle tabelle. Testo, linee di dettaglio e
-regioni funzionano come in una vista di disegno. Una legenda può essere collocata su più tavole.</p>
-<p>Un tipo trascinato da <strong>Famiglie</strong> nel Browser di progetto in una legenda diventa il suo componente
+campiture funzionano come in una vista 2D libera. Una legenda può essere collocata su più tavole.</p>
+<p>Un tipo trascinato da <strong>Famiglie</strong> nell'Indice del progetto in una legenda diventa il suo componente
 di legenda dove viene rilasciato; un tipo di <strong>Famiglie ▸ Simboli</strong> colloca quel simbolo di
-annotazione. <strong>Crea simile</strong>, nel menu contestuale di un elemento selezionato,
+annotazione. <strong>Crea uguale</strong>, nel menu contestuale di un elemento selezionato,
 avvia lo strumento che lo colloca con il suo tipo: per un componente di legenda, anche con la sua
 vista e la lunghezza host.</p>
-<h2 id="detail-lines-and-regions">Linee di dettaglio e regioni</h2>
-<p><strong>Annota ▸ Dettaglio ▸ Linea di dettaglio</strong> (<code>DL</code>) disegna linee solo nella vista aperta, con lo
+<h2 id="detail-lines-and-regions">Linee di dettaglio e campiture</h2>
+<p><strong>Annotazioni ▸ Dettaglio ▸ Linea di dettaglio</strong> (<code>DL</code>) disegna linee solo nella vista aperta, con lo
 stile di linea del gruppo <strong>Stile di linea</strong>. Il gruppo <strong>Disegna</strong> offre <strong>Linea</strong>,
 <strong>Rettangolo</strong>, <strong>Poligono inscritto</strong>, <strong>Poligono circoscritto</strong>, <strong>Cerchio</strong>, <strong>Arco
 inizio-fine-raggio</strong>, <strong>Arco da centro ed estremità</strong>, <strong>Arco tangente</strong>, <strong>Spline</strong>, <strong>Ellisse</strong>,
@@ -867,7 +866,7 @@ inizio-fine-raggio</strong>, <strong>Arco da centro ed estremità</strong>, <str
 </thead>
 <tbody>
 <tr>
-<td><strong>Concatena</strong></td>
+<td><strong>Continua</strong></td>
 <td>Ogni linea (o arco, o spline) inizia dove è terminata la precedente; disattivata, ognuna è a sé</td>
 </tr>
 <tr>
@@ -894,27 +893,27 @@ archi e assi dell'ellisse a passi di 45°, e mantiene l'ampiezza di un arco a 90
 tetti, regioni, nuvole di revisione, profili dei muri).</p>
 <p><strong>Seleziona linee</strong> crea una linea di dettaglio sulla faccia, sull'asse o sullo strato di un muro,
 su una griglia o su un'altra linea sotto il cursore (<span class="keys"><kbd class="key-tab">Tab</kbd></span> per la successiva), spostata da
-<strong>Offset:</strong>; con <strong>Blocca</strong> la linea resta su di essa e la segue quando si sposta. <strong>Arco smusso</strong>
+<strong>Offset:</strong>; con <strong>Fissa</strong> la linea resta su di essa e la segue quando si sposta. <strong>Arco smusso</strong>
 sceglie due linee e ne arrotonda l'angolo, con l'arco sotto il cursore o del <strong>Raggio:</strong> impostato.
 Una linea di dettaglio selezionata ha controlli alle estremità e una quota temporanea della sua
 lunghezza: digita un valore per cambiarla. Il cursore si aggancia alle estremità, ai punti medi, ai
 centri e agli incroci delle linee di dettaglio della vista. L'estremo di una linea selezionata da
 sola si trascina da solo e lascia la linea vicina dov'è; con una catena selezionata (<span class="keys"><kbd class="key-tab">Tab</kbd></span>), gli
 estremi in cui le sue linee si incontrano si trascinano insieme, in un solo passo di annullamento.</p>
-<p><strong>Regione ▸ Campitura</strong> apre la modalità disegno: il contorno si traccia con ogni forma del gruppo
+<p><strong>Campitura ▸ Campitura</strong> apre la modalità disegno: il contorno si traccia con ogni forma del gruppo
 <strong>Disegna</strong> e con <strong>Seleziona linee</strong>, e gli anelli dentro un altro sono fori. Le curve sono
 conservate come brevi segmenti dritti. <span class="keys"><kbd class="key-escape">Esc</kbd></span> termina una catena e conserva il disegno; <strong>Modifica</strong>
 e gli strumenti di modifica agiscono sulle sue linee. <strong>Termina modalità di modifica</strong> crea la
-regione nel tipo di regione corrente, oppure dice perché non può (un contorno aperto o
-autointersecante). <strong>Modifica contorno</strong> di una regione selezionata riapre il suo disegno. Il tipo ne
-imposta il motivo di riempimento, il colore e lo sfondo (<strong>Opaco</strong> nasconde ciò che sta dietro). <strong>Regione ▸ Mascheratura</strong> crea una
-regione del colore della carta che nasconde ciò che si trova sotto. Una regione mostra la sua
+campitura nel tipo di campitura corrente, oppure dice perché non può (un contorno aperto o
+autointersecante). <strong>Modifica contorno</strong> di una campitura selezionata riapre il suo disegno. Il tipo ne
+imposta il motivo di riempimento, il colore e lo sfondo (<strong>Opaco</strong> nasconde ciò che sta dietro). <strong>Campitura ▸ Mascheratura</strong> crea una
+campitura del colore della carta che nasconde ciò che si trova sotto. Una campitura mostra la sua
 <strong>Area</strong> e ha <strong>Commenti</strong>. Una
-regione selezionata ha un controllo su ogni vertice: trascinane uno per cambiarne la forma.</p>
+campitura selezionata ha un controllo su ogni vertice: trascinane uno per cambiarne la forma.</p>
 <h2 id="detail-components-repeating-details-and-insulation">Componenti di dettaglio, dettagli ripetuti e isolamento</h2>
 <ul>
 <li><strong>Componente ▸ Componente di dettaglio</strong>: un simbolo 2D (mattone, blocco, legno, profilo in
-  acciaio, pannello isolante, linea di interruzione) collocato in una vista di disegno o di
+  acciaio, pannello isolante, linea di interruzione) collocato in una vista 2D libera o di
   dettaglio; la <strong>barra spaziatrice</strong> lo allinea a turno a ciascun muro o linea di dettaglio vicino al
   cursore (un quarto di giro se non ce ne sono).</li>
 <li><strong>Componente ▸ Dettaglio ripetuto</strong>: clicca un inizio e una fine; il tipo imposta il componente
@@ -931,18 +930,18 @@ regione selezionata ha un controllo su ogni vertice: trascinane uno per cambiarn
 <p>Seleziona solo elementi di dettaglio: <strong>Disponi</strong> offre <strong>Porta in primo piano</strong>, <strong>Porta avanti</strong>,
 <strong>Porta indietro</strong> e <strong>Porta sotto</strong>. Gli elementi di dettaglio si disegnano sempre sopra il modello,
 e uno nuovo va in cima. <strong>Annulla</strong> ripristina l'ordine precedente.</p>
-<h2 id="drafting-views">Viste di disegno</h2>
-<p><strong>Vista ▸ Crea ▸ Vista di disegno</strong> chiede un nome e una scala (o una personalizzata). La vista si
-apre ed è elencata sotto <strong>Viste di disegno</strong>; tutto ciò che vi si disegna è 2D, senza alcun modello
+<h2 id="drafting-views">Viste 2D libere</h2>
+<p><strong>Viste ▸ Crea ▸ Vista 2D libera</strong> chiede un nome e una scala (o una personalizzata). La vista si
+apre ed è elencata sotto <strong>Viste 2D libere</strong>; tutto ciò che vi si disegna è 2D, senza alcun modello
 dietro. Può essere collocata su una sola tavola. <strong>Duplica vista ▸ Duplica con dettagli</strong> copia una
 vista con i suoi elementi di dettaglio, il testo, le quote e i componenti di legenda.</p>
 <p><strong>Visualizza modello</strong> nelle proprietà di una pianta, di una sezione o di una vista di dettaglio
 disegna il modello <strong>Normale</strong>, in <strong>Mezzitoni</strong> (in grigio sotto i dettagli) o per nulla (<strong>Non
 visualizzato</strong>), lasciando i dettagli e le annotazioni.</p>
-<p><strong>Vista ▸ Crea ▸ Dettaglio</strong> con <strong>Rif. ad altra vista</strong> spuntato nella barra delle opzioni disegna un
-richiamo che punta a una vista di dettaglio o di disegno esistente invece di crearne una nuova: la sua
+<p><strong>Viste ▸ Crea ▸ Dettaglio</strong> con <strong>Rif. ad altra vista</strong> spuntato nella barra delle opzioni disegna un
+richiamo che punta a una vista di dettaglio o a una vista 2D libera esistente invece di crearne una nuova: la sua
 testa ne riporta il nome e un doppio clic la apre; <strong>Vista di riferimento</strong> nelle sue proprietà la
-cambia. In una vista di disegno il richiamo è sempre di questo tipo.</p>
+cambia. In una vista 2D libera il richiamo è sempre di questo tipo.</p>
 <p><strong>Nascondi nelle scale minori di</strong> nelle proprietà di una sezione o di un richiamo ne nasconde il
 simbolo nelle viste la cui scala è minore, per esempio un dettaglio 1 : 50 omesso dalla pianta
 1 : 100.</p>

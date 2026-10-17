@@ -365,7 +365,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#drafting-views">
 <span class="md-ellipsis">
-      Zeichenansichten
+      Freie 2D-Ansichten
     </span>
 </a>
 </li>
@@ -552,7 +552,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#drafting-views">
 <span class="md-ellipsis">
-      Zeichenansichten
+      Freie 2D-Ansichten
     </span>
 </a>
 </li>
@@ -573,7 +573,7 @@
 <h1 id="annotation-and-2d-details">Beschriftung und 2D-Details</h1>
 <p>Dieses Kapitel beschreibt Bemaßungen und Abhängigkeiten, Textnotizen, Beschriftungen, Räume und
 Flächen mit ihren Farbschemata, Legendenansichten und die 2D-Zeichenwerkzeuge: Detaillinien,
-Bereiche, Detailbauteile, wiederholte Details, Dämmung und Zeichenansichten. Beschriftungen gehören
+gefüllte Bereiche, Detailbauteile, wiederholte Details, Dämmung und freie 2D-Ansichten. Beschriftungen gehören
 zu der Ansicht, in der sie erstellt wurden: Eine Bemaßung, die in einem Grundriss platziert wird,
 erscheint in keinem anderen Grundriss.</p>
 <p>Vor jedem Klick zeigt jedes Werkzeug, was es an der Stelle des Cursors erzeugen würde: die
@@ -581,11 +581,11 @@ Bemaßung mit ihrem Wert, den Rahmen der Notiz, die Beschriftung am Element unte
 Bereich, den ein Raum oder eine Fläche füllen würde, die Linie, den Bereich, die Komponente oder
 die Dämmung, die gerade gezeichnet wird.</p>
 <h2 id="dimensions">Bemaßungen</h2>
-<p><strong>Beschriften ▸ Bemaßung</strong> enthält die Bemaßungswerkzeuge: <strong>Ausgerichtet</strong>, <strong>Linear</strong>, <strong>Winkel</strong>,
+<p><strong>Beschriftungen ▸ Bemaßung</strong> enthält die Bemaßungswerkzeuge: <strong>Ausgerichtet</strong>, <strong>Linear</strong>, <strong>Winkel</strong>,
 <strong>Radial</strong>, <strong>Bogenlänge</strong> und die Punktbemaßungen <strong>Höhenkote</strong>, <strong>Punktkoordinate</strong> und
-<strong>Neigungsbemaßung</strong>. Sie funktionieren in Grundrissen, Schnitten, Ansichten, Zeichenansichten und
+<strong>Neigungsbemaßung</strong>. Sie funktionieren in Grundrissen, Schnitten, Ansichten, freien 2D-Ansichten und
 Legenden. Wählen Sie den Bemaßungstyp in der Typenauswahl, solange das Werkzeug aktiv ist;
-<strong>Typeigenschaften</strong> ändert den Typ und damit jede Bemaßung dieses Typs.</p>
+<strong>Typparameter</strong> ändert den Typ und damit jede Bemaßung dieses Typs.</p>
 <h3 id="aligned-and-linear-dimensions">Ausgerichtete und lineare Bemaßungen</h3>
 <p>Bei <strong>Ausgerichtet</strong> bietet die Optionsleiste an, welcher Teil einer Wand gewählt wird
 (<strong>Wandachsen</strong>, <strong>Wandflächen</strong>, <strong>Tragschichtmitte</strong>, <strong>Tragschichtflächen</strong>) und was ein Klick
@@ -616,7 +616,7 @@ an und dann dorthin, wo die Bemaßung stehen soll.</p>
 <li>Ziehen Sie das blaue Steuerelement unter dem Text, um ihn von der Linie wegzubewegen; nahe an die
   Linie zurückgezogen, rastet er ein. Weit entfernter Text erhält eine Bogenführungslinie zu seinem
   Segment; <strong>Führungslinie</strong> in der Optionsleiste entfernt sie.</li>
-<li><strong>Ändern | Bemaßungen ▸ Maßhilfslinien ▸ Maßhilfslinien bearbeiten</strong>: Klicken Sie Elemente an, um
+<li><strong>Auswahl: Bemaßungen ▸ Maßhilfslinien ▸ Maßhilfslinien bearbeiten</strong>: Klicken Sie Elemente an, um
   Maßhilfslinien hinzuzufügen, klicken Sie eine vorhandene Maßhilfslinie an, um sie zu entfernen,
   und klicken Sie dann auf eine leere Stelle, um abzuschließen. Jede Maßhilfslinie einer gewählten
   Bemaßung hat in ihrer Mitte ein Steuerelement: Klicken Sie mit der rechten Maustaste darauf ▸
@@ -638,18 +638,18 @@ Mittellinien, die Farbe, die Textgröße, den Versatz, den Hintergrund sowie Fet
 Kursiv und Unterstrichen fest, ferner die Einheiten
 (<strong>Einheitenformat</strong> öffnet <strong>Format</strong>: <strong>Projekteinstellungen verwenden</strong> oder eine Einheit mit ihrer
 Rundung, auch <strong>Benutzerdefiniert</strong> mit einem <strong>Inkrementfaktor</strong>, ihrem Symbol und den Optionen) und bei linearen Bemaßungen den <strong>Typ Maßkette</strong>:
-<strong>Durchgehend</strong>, <strong>Basislinie</strong> (übereinandergestapelte Werte ab der ersten Referenz) oder
+<strong>Durchgehend</strong>, <strong>Ausrichtung</strong> (übereinandergestapelte Werte ab der ersten Referenz) oder
 <strong>Koordinate</strong> (Werte ab der ersten Referenz entlang einer Linie). <strong>Öffnungshöhe anzeigen</strong>
 schreibt die Höhe einer Tür oder eines Fensters unter die von Laibung zu Laibung gemessene Breite.
 Radiale Typen können das Präfix <strong>R</strong> und ihre Mittelpunktmarkierung (<strong>Mittelpunktmarkierungen</strong>,
 mit ihrer Größe) weglassen. Bei Pfeilen stehen diese außen, wenn ein Segment zu kurz für sie ist,
-und die Linie läuft um die <strong>Verlängerung der umgekehrten Maßlinie</strong> darüber hinaus. <strong>Beschriften ▸
-Bemaßung ▸ Bemaßungstypen</strong> öffnet die Typeigenschaften des aktuellen Typs jeder Familie, um sie vor
+und die Linie läuft um die <strong>Verlängerung der umgekehrten Maßlinie</strong> darüber hinaus. <strong>Beschriftungen ▸
+Bemaßung ▸ Bemaßungstypen</strong> öffnet die Typparameter des aktuellen Typs jeder Familie, um sie vor
 dem Bemaßen festzulegen.</p>
 <p>Eine gewählte Basislinien-Maßkette zeigt an ihrem Ursprung ein Umkehrsteuerelement: Klicken Sie
 darauf oder drücken Sie die <strong>Leertaste</strong>, um vom anderen Ende aus zu messen. <strong>Basislinienversatz</strong>
 in ihren Eigenschaften legt den Abstand zwischen ihren Linien auf dem Papier fest.</p>
-<p>Ein Koordinatentyp hat in seinen Typeigenschaften <strong>Einstellungen für Koordinatenmaße</strong>:
+<p>Ein Koordinatentyp hat in seinen Typparametern <strong>Einstellungen für Koordinatenmaße</strong>:
 <strong>Bearbeiten…</strong> öffnet ein Dialogfeld mit <strong>Textausrichtung</strong> (an den Hilfslinien <strong>Ausgerichtet</strong>
 oder <strong>Horizontal</strong>), <strong>Textposition</strong> (<strong>In Linie mit der Hilfslinie</strong> oder <strong>Über der
 Hilfslinie</strong>), <strong>Ursprung sichtbar</strong>, <strong>Ursprungsmarkierung</strong> (<strong>Nullwert</strong>, <strong>Kreis</strong> oder die
@@ -663,7 +663,7 @@ Richtung. Klicken Sie auf einen Wert, geben Sie einen neuen ein und drücken
 Sie die Eingabetaste, um das Element zu verschieben; klicken Sie auf das Bemaßungssymbol daneben,
 um sie dauerhaft zu machen. Beim Platzieren einer Tür oder eines Fensters zeigen temporäre
 Bemaßungen den Abstand zu den nächsten Wänden. Sind mehrere Elemente gewählt, wird keine angezeigt,
-und die Optionsleiste bietet <strong>Bemaßungen aktivieren</strong>, um sie für alle gewählten Elemente
+und die Optionsleiste bietet <strong>Temporäre Bemaßungen</strong>, um sie für alle gewählten Elemente
 anzuzeigen.</p>
 <h3 id="constraints">Abhängigkeiten</h3>
 <p>Wählen Sie eine Bemaßung: An jedem Segment wird ein Vorhängeschloss angezeigt. Klicken Sie darauf,
@@ -675,7 +675,7 @@ aus zwei oder mehr Segmenten zeigt <strong>EQ</strong>: Klicken Sie darauf, und 
 Abstände, die auch bleiben, wenn eine davon bewegt wird. <strong>Gleichheitsanzeige</strong> in den
 Eigenschaften zeigt die Werte statt <strong>EQ</strong>.</p>
 <p>Wählen Sie ein Element, das eine Abhängigkeit hält, so zeigt sie sich als blaue gestrichelte
-Linien, sofern die Kategorie <strong>Abhängigkeiten</strong> in <strong>Sichtbarkeit/Grafik</strong> nicht ausgeblendet ist.
+Linien, sofern die Kategorie <strong>Abhängigkeiten</strong> in <strong>Sichtbarkeit und Grafik</strong> nicht ausgeblendet ist.
 Das Löschen einer Bemaßung, die eine Abhängigkeit hält, fragt nach, was geschehen soll: <strong>OK</strong>
 löscht die Bemaßung und behält die Abhängigkeit; <strong>Elemente löschen</strong> löscht beides.
 <strong>Ändern ▸ Ausrichten</strong> mit geschlossenem Vorhängeschloss ist ebenfalls eine Abhängigkeit.</p>
@@ -705,7 +705,7 @@ stattdessen hinter den Wert), das <strong>Symbol</strong>, <strong>Höhe einschl
 <strong>Nord/Süd-Kennzeichnung</strong> und <strong>Ost/West-Kennzeichnung</strong> von Koordinaten (mit <strong>Kennzeichnung als Präfix/Suffix</strong>) sowie die <strong>Länge der
 Führungslinie</strong> und die <strong>Neigungsrichtung</strong> (<strong>Nach unten</strong> oder <strong>Nach oben</strong>) von Neigungen fest.</p>
 <h2 id="text">Text</h2>
-<p><strong>Beschriften ▸ Text ▸ Text</strong> (<code>TX</code>): Klicken Sie dorthin, wo die Notiz stehen soll, und tippen Sie;
+<p><strong>Beschriftungen ▸ Text ▸ Text</strong> (<code>TX</code>): Klicken Sie dorthin, wo die Notiz stehen soll, und tippen Sie;
 die Eingabetaste beginnt eine neue Zeile. Ein Klick ergibt eine Notiz ohne Umbruch; durch Ziehen
 erhält sie eine Breite, und die Wörter werden darin umgebrochen. Ein Klick an anderer Stelle
 beendet die Notiz, und <strong>Esc</strong> beendet das Werkzeug. <span class="keys"><kbd class="key-tab">Tab</kbd></span> beim Tippen setzt den Text zum
@@ -739,8 +739,8 @@ Rahmen und Führungslinien), den Hintergrund (<strong>Undurchsichtig</strong> ve
 <strong>Rahmen anzeigen</strong> mit seinem Versatz, die Pfeilspitze der Führungslinie, die <strong>Linienstärke</strong>
 von Rahmen und Führungslinien, die Größe, die <strong>Tabulatorgröße</strong> (12,7 mm) sowie Fett, Kursiv und
 Unterstrichen fest. Die kleine Schaltfläche <strong>Texttypen</strong> der Gruppe <strong>Text</strong> öffnet die
-<strong>Typeigenschaften</strong>, wo <strong>Duplizieren…</strong> einen neuen Texttyp erstellt.</p>
-<p><strong>Beschriften ▸ Text ▸ Suchen/Ersetzen</strong> sucht Wörter in den Notizen der aktuellen Auswahl, der
+<strong>Typparameter</strong>, wo <strong>Duplizieren…</strong> einen neuen Texttyp erstellt.</p>
+<p><strong>Beschriftungen ▸ Text ▸ Suchen/Ersetzen</strong> sucht Wörter in den Notizen der aktuellen Auswahl, der
 aktuellen Ansicht oder des gesamten Projekts (<strong>Bereich:</strong>), mit Optionen für Groß- und
 Kleinschreibung und ganze Wörter. <strong>Alle suchen</strong> listet die Treffer mit der Ansicht auf, in der
 sie stehen; <strong>Weitersuchen</strong> oder ein Klick auf eine Zeile wählt diese Notiz und zeigt ihren
@@ -748,17 +748,17 @@ gesamten Text unter <strong>Kontext</strong>. <strong>Ersetzen</strong> ändert 
 ist), <strong>Alle ersetzen</strong> jeden, und <strong>Schließen</strong> schließt den Dialog. An gewählten Notizen steht es
 auch unter <strong>Werkzeuge</strong> ihrer Registerkarte.</p>
 <h2 id="symbols">Symbole</h2>
-<p><strong>Beschriften ▸ Symbol ▸ Symbol</strong> (<code>SY</code>) platziert ein 2D-Beschriftungssymbol in einem Grundriss,
-einem Schnitt, einer Zeichenansicht oder einer Legende: einen <strong>Nordpfeil</strong>, ein
+<p><strong>Beschriftungen ▸ Symbol ▸ Symbol</strong> (<code>SY</code>) platziert ein 2D-Beschriftungssymbol in einem Grundriss,
+einem Schnitt, einer freien 2D-Ansicht oder einer Legende: einen <strong>Nordpfeil</strong>, ein
 <strong>Mittellinien-Symbol</strong>, einen <strong>Flusspfeil</strong>, eine <strong>Zielmarke</strong> oder ein <strong>Revisionsdelta</strong>, die
 letzten beiden mit einem eigenen Text. Das Symbol folgt vor dem Klick dem Cursor; die <strong>Leertaste</strong>
 dreht es um eine Vierteldrehung, oder <strong>Drehung</strong> in der Optionsleiste legt seinen Winkel fest. Ist
 <strong>Anzahl der Führungslinien:</strong> größer als null, platziert der Klick das Symbol, und die nächsten
 Klicks setzen die Enden seiner Führungslinien. Der Typ legt die Größe des Symbols auf dem Papier und
-die Pfeilspitze seiner Führungslinien fest; <strong>Duplizieren…</strong> in <strong>Typeigenschaften</strong> erstellt einen
+die Pfeilspitze seiner Führungslinien fest; <strong>Duplizieren…</strong> in <strong>Typparameter</strong> erstellt einen
 neuen.</p>
 <h2 id="tags">Beschriftungen</h2>
-<p><strong>Beschriften ▸ Beschriftung ▸ Nach Kategorie beschriften</strong> (<code>TG</code>): Fahren Sie über ein Element
+<p><strong>Beschriftungen ▸ Beschriftung ▸ Nach Kategorie beschriften</strong> (<code>TG</code>): Fahren Sie über ein Element
 (eine Tür, ein Fenster, eine Wand, einen Raum oder eine Fläche) und klicken Sie, um es zu
 beschriften. Die Optionsleiste legt <strong>Horizontal</strong> oder <strong>Vertikal</strong>, die <strong>Führungslinie</strong> und
 ihre Länge fest; die <strong>Leertaste</strong> schaltet die Ausrichtung um, beim Platzieren oder an einer
@@ -772,7 +772,7 @@ enden, wo Sie geklickt haben, und eine gewählte Beschriftung zeigt einen Griff,
 beliebig zu ziehen (<strong>Ende der Führungslinie</strong> in den Eigenschaften schaltet zwischen beiden um). Eine
 Beschriftung richtet sich beim Platzieren oder Ziehen an den anderen Beschriftungen
 ihrer Art aus: Nahe an der Linie der Mitte einer anderen Beschriftung rastet sie dort ein, und eine
-gestrichelte Linie zeigt es an. In der Ansicht ausgeblendete Beschriftungen (<strong>Sichtbarkeit/Grafik</strong>)
+gestrichelte Linie zeigt es an. In der Ansicht ausgeblendete Beschriftungen (<strong>Sichtbarkeit und Grafik</strong>)
 werden beim Beschriften eingeschaltet, und die Meldung weist darauf hin.</p>
 <p>Doppelklicken Sie auf eine Beschriftung, um zu bearbeiten, was sie zeigt: die Kennzeichnung einer
 Tür oder die Typkennzeichnung einer Wand direkt; Nummer und Name eines Raums oder einer Fläche
@@ -784,7 +784,7 @@ behält einen Winkel: Sie dreht sich mit <strong>Drehen</strong>, und die <stron
 jeder Wand in ihrer Nähe aus (<strong>Drehung</strong> in ihren Eigenschaften). Das Löschen der Beschriftung eines
 Raums lässt den Raum bestehen, und die Meldung weist darauf hin.</p>
 <h2 id="rooms">Räume</h2>
-<p><strong>Start ▸ Raum und Fläche ▸ Raum</strong> (<code>RM</code>), dann klicken Sie in einen von Wänden oder Raumtrennungen
+<p><strong>Start ▸ Räume und Flächen ▸ Raum</strong> (<code>RM</code>), dann klicken Sie in einen von Wänden oder Raumtrennern
 umschlossenen Bereich: Der Raum füllt ihn aus, auch um freistehende Wände herum. In der
 Optionsleiste:</p>
 <ul>
@@ -794,28 +794,28 @@ Optionsleiste:</p>
 <li><strong>Beim Platzieren beschriften</strong>, standardmäßig ein, mit der Ausrichtung und der Führungslinie der
   Beschriftung;</li>
 <li><strong>Raum</strong>: <strong>Neu</strong>, oder ein nicht platzierter Raum, um ihn wieder einzusetzen;</li>
-<li><strong>Begrenzungen hervorheben</strong>: Wände und Trennungen, die Räume begrenzen, werden orange, und die
+<li><strong>Begrenzungen hervorheben</strong>: Wände und Raumtrenner, die Räume begrenzen, werden orange, und die
   Warnung listet sie auf.</li>
 </ul>
 <p>Ein Raum, der im offenen Raum platziert wird, bleibt mit einer Warnung erhalten und nimmt seine
 Form an, sobald der Raum geschlossen ist; ein zweiter Raum in einem bereits belegten Bereich wird
 als <strong>Redundanter Raum</strong> markiert und nicht doppelt gezählt. Vor einer Nummer, die ein anderer Raum bereits hat, einem Raum unterhalb der
-Berechnungshöhe (1200 mm) und einer Basis darüber wird ebenfalls gewarnt, ebenso vor einer über eine
-andere gezeichneten Raumtrennung.</p>
+Berechnungshöhe (1200 mm) und einer Basis darüber wird ebenfalls gewarnt, ebenso vor einem über einen
+anderen gezeichneten Raumtrenner.</p>
 <p>Wände begrenzen die Räume einer Ebene, wenn sie in deren Berechnungshöhe stehen: 1200 mm, solange
 <strong>Automatische Raumberechnungshöhe</strong> in den Eigenschaften der Ebene angehakt ist, sonst ihre
 <strong>Berechnungshöhe</strong>.</p>
 <p>Ein Schnitt zeigt die Räume, die er schneidet, wenn sie gewählt sind oder unter dem Cursor liegen
 (<strong>TAB</strong> erreicht einen Raum hinter anderen Elementen). Ein dort gewählter Raum hat oben und an seiner
 Basis einen Pfeil: Ziehen Sie sie, um seinen <strong>Begrenzungsversatz</strong> und <strong>Versatz unten</strong> zu ändern.</p>
-<p><strong>Raumtrennung</strong> zeichnet Linien, die einen Raum ohne Wände in Räume teilen. Eine Wand begrenzt
+<p><strong>Raumtrenner</strong> zeichnet Linien, die einen Raum ohne Wände in Räume teilen. Eine Wand begrenzt
 Räume, solange ihre Eigenschaft <strong>Raumbegrenzung</strong> ein ist. Darüberliegende Geschossdecken und
 Dächer begrenzen das Volumen des Raums nach oben.</p>
 <p>Das Löschen eines Raums entfernt ihn aus dem Grundriss, behält ihn aber im Projekt, <strong>Nicht
 platziert</strong>, mit seinen Daten; seine Beschriftungen verschwinden mit ihm. Das Löschen einer
 Raumbeschriftung lässt den Raum bestehen. Wird eine Raumbeschriftung aus ihrem Raum gezogen, fragt
 das Programm, ob sie <strong>In Raum verschieben</strong> soll.</p>
-<p>Räume zeigen sich durch ihre Beschriftungen. In <strong>Sichtbarkeit/Grafik</strong> hat <strong>Räume</strong> die Einträge
+<p>Räume zeigen sich durch ihre Beschriftungen. In <strong>Sichtbarkeit und Grafik</strong> hat <strong>Räume</strong> die Einträge
 <strong>Innenfüllung</strong> und <strong>Bezug</strong> (die Kreuzlinien). <strong>Einstellungen ▸ Flächen- und
 Volumenberechnungen</strong> öffnet sich auf <strong>Berechnung</strong>: die Raumbegrenzung an der Wandoberfläche, in
 der Mitte, an der Tragschicht oder in der Tragschichtmitte, und <strong>Flächen und Volumen</strong>, um auch
@@ -825,10 +825,10 @@ gemessen). Die zweite Registerkarte ist <strong>Flächenschemata</strong>.</p>
 <p>Flächen gehören zu einem Flächenschema: <strong>Bruttogeschossfläche</strong> (die nicht gelöscht werden kann)
 und <strong>Vermietbar</strong> gehören zu jedem Projekt, und <strong>Flächenschemata ▸ Neu</strong> fügt weitere hinzu.</p>
 <ol>
-<li><strong>Raum und Fläche ▸ Fläche ▸ Flächenplan</strong>: Wählen Sie das Schema und die Ebenen. Antworten Sie
-   <strong>Ja</strong>, um Flächenbegrenzungslinien entlang der Außenwände zu zeichnen, <strong>Nein</strong>, um sie selbst
+<li><strong>Räume und Flächen ▸ Fläche ▸ Flächenplan</strong>: Wählen Sie das Schema und die Ebenen. Antworten Sie
+   <strong>Ja</strong>, um Flächenumrisse entlang der Außenwände zu zeichnen, <strong>Nein</strong>, um sie selbst
    zu zeichnen.</li>
-<li><strong>Fläche ▸ Flächenbegrenzungslinie</strong>: Zeichnen Sie die Begrenzungen oder wählen Sie Wände; bei
+<li><strong>Fläche ▸ Flächenumriss</strong>: Zeichnen Sie die Begrenzungen oder wählen Sie Wände; bei
    eingeschalteten Flächenregeln ergibt eine Außenwand eines Bruttoplans ihre Außenfläche.</li>
 <li><strong>Fläche ▸ Fläche</strong>: Klicken Sie innerhalb der Begrenzungen. Die Fläche wird beim Platzieren
    beschriftet; <strong>Beschriftung ▸ Flächenbeschriftung</strong> beschriftet sie später. Wird die Fläche dort
@@ -847,27 +847,27 @@ bearbeiten</strong>) erstellt und dupliziert Schemata und bearbeitet den Titel, 
 mit ihrer Farbe und Sichtbarkeit, ihre Reihenfolge und die Bereiche. <strong>Anwenden</strong> behält die Änderungen und legt das Schema der Ansicht fest, bei der der Dialog geöffnet wurde. <strong>Position des Farbschemas</strong>,
 eine Ansichtseigenschaft, zeichnet die Füllungen im <strong>Hintergrund</strong> (unter dem Modell) oder im
 <strong>Vordergrund</strong> (über dem Modell, unter den Beschriftungen).</p>
-<p><strong>Raum und Fläche ▸ Legende</strong> platziert die Legende des Schemas des Grundrisses: ein Farbfeld und
+<p><strong>Räume und Flächen ▸ Legende</strong> platziert die Legende des Schemas des Grundrisses: ein Farbfeld und
 eine Bezeichnung für jeden Wert. Ihre <strong>Angezeigte Werte</strong> sind <strong>Nach Ansicht</strong> (die im Grundriss)
 oder <strong>Alle</strong>, und <strong>Spalten</strong> verteilt die Farbfelder auf mehrere Spalten. Ein Grundriss kann
 mehrere Legenden haben; das Löschen einer Legende lässt das Schema bestehen.</p>
 <h2 id="legend-views">Legendenansichten</h2>
-<p><strong>Ansicht ▸ Legenden ▸ Legende</strong> öffnet <strong>Neue Legendenansicht</strong>: einen Namen und einen Maßstab. Die
-Legende öffnet sich und wird im Projektbrowser unter <strong>Legenden</strong> aufgeführt. <strong>Beschriften ▸
+<p><strong>Ansichten ▸ Legenden ▸ Legende</strong> öffnet <strong>Neue Legendenansicht</strong>: einen Namen und einen Maßstab. Die
+Legende öffnet sich und wird im Projektindex unter <strong>Legenden</strong> aufgeführt. <strong>Beschriftungen ▸
 Bauteil ▸ Legendenbauteil</strong> platziert das Symbol eines Typs: in der Optionsleiste den Typ, die
 <strong>Ansicht</strong>, aus der es gesehen wird (eine Wand im Grundriss oder Schnitt; eine Geschossdecke oder
 ein Dach im Schnitt oder Grundriss; eine Tür, ein Fenster oder ein Bauteil im Grundriss, von vorn
 oder von hinten) und die <strong>Länge Basisbauteil</strong>, das Wandstück, in dem eine Tür oder ein Fenster
-sitzt. Legendenbauteile werden im Detaillierungsgrad der Legende gezeichnet, können verschoben und
+sitzt. Legendenbauteile werden mit dem <strong>Detail</strong> der Legende gezeichnet, können verschoben und
 bemaßt werden (die Kanten von Türen, Fenstern und Bauteilen; Wände, Geschossdecken und Dächer
-nicht) und werden von Tabellen nicht gezählt. Text, Detaillinien und Bereiche funktionieren wie in
-einer Zeichenansicht. Eine Legende kann auf mehreren Plänen platziert werden.</p>
-<p>Ein Typ, der aus <strong>Familien</strong> im Projektbrowser in eine Legende gezogen wird, wird dort, wo er
-abgelegt wird, zu ihrem Legendenbauteil; ein Typ aus <strong>Familien ▸ Symbole</strong> platziert dieses Beschriftungssymbol. <strong>Ähnliches erstellen</strong> im Kontextmenü eines gewählten
+nicht) und werden von Tabellen nicht gezählt. Text, Detaillinien und gefüllte Bereiche funktionieren wie in
+einer freien 2D-Ansicht. Eine Legende kann auf mehreren Plänen platziert werden.</p>
+<p>Ein Typ, der aus <strong>Familien</strong> im Projektindex in eine Legende gezogen wird, wird dort, wo er
+abgelegt wird, zu ihrem Legendenbauteil; ein Typ aus <strong>Familien ▸ Symbole</strong> platziert dieses Beschriftungssymbol. <strong>Gleiches erstellen</strong> im Kontextmenü eines gewählten
 Elements startet das Werkzeug, das es mit seinem Typ platziert: bei einem Legendenbauteil auch mit
 seiner Ansicht und der Länge Basisbauteil.</p>
 <h2 id="detail-lines-and-regions">Detaillinien und Bereiche</h2>
-<p><strong>Beschriften ▸ Detail ▸ Detaillinie</strong> (<code>DL</code>) zeichnet Linien nur in der geöffneten Ansicht, im
+<p><strong>Beschriftungen ▸ Detail ▸ Detaillinie</strong> (<code>DL</code>) zeichnet Linien nur in der geöffneten Ansicht, im
 Linienstil der Gruppe <strong>Linienstil</strong>. Die Gruppe <strong>Zeichnen</strong> bietet <strong>Linie</strong>, <strong>Rechteck</strong>,
 <strong>Einbeschriebenes Polygon</strong>, <strong>Umschriebenes Polygon</strong>, <strong>Kreis</strong>, <strong>Bogen Start-Ende-Radius</strong>,
 <strong>Bogen mit Mittelpunkt und Endpunkten</strong>, <strong>Tangentialer Bogen</strong>, <strong>Spline</strong>, <strong>Ellipse</strong>,
@@ -881,7 +881,7 @@ Linienstil der Gruppe <strong>Linienstil</strong>. Die Gruppe <strong>Zeichnen</
 </thead>
 <tbody>
 <tr>
-<td><strong>Kette</strong></td>
+<td><strong>Fortsetzen</strong></td>
 <td>Jede Linie (oder jeder Bogen oder Spline) beginnt dort, wo die letzte endete; ausgeschaltet steht jede für sich</td>
 </tr>
 <tr>
@@ -917,7 +917,7 @@ Endpunkten, Mitten, Mittelpunkten und Schnittpunkten der Detaillinien der Ansich
 einer allein gewählten Linie wird allein gezogen und lässt die Nachbarlinie, wo sie ist; ist eine
 Kette gewählt (<span class="keys"><kbd class="key-tab">Tab</kbd></span>), werden die Enden, an denen ihre Linien zusammentreffen, gemeinsam gezogen,
 in einem einzigen Rückgängig-Schritt.</p>
-<p><strong>Bereich ▸ Gefüllter Bereich</strong> öffnet den Skizziermodus: Die Begrenzung wird mit jeder Form der
+<p><strong>Gefüllter Bereich ▸ Gefüllter Bereich</strong> öffnet den Skizziermodus: Die Begrenzung wird mit jeder Form der
 Gruppe <strong>Zeichnen</strong> und mit <strong>Linien wählen</strong> skizziert, und Schleifen innerhalb einer anderen sind
 Löcher. Kurven bleiben als kurze gerade Segmente erhalten. <span class="keys"><kbd class="key-escape">Esc</kbd></span> beendet eine Kette und behält
 die Skizze; <strong>Ändern</strong> und die Werkzeuge von Ändern wirken auf ihre Linien.
@@ -925,7 +925,7 @@ die Skizze; <strong>Ändern</strong> und die Werkzeuge von Ändern wirken auf ih
 warum es nicht geht (eine offene oder sich kreuzende Begrenzung). <strong>Begrenzung bearbeiten</strong> eines
 gewählten Bereichs öffnet seine Skizze erneut. Der Typ legt sein Füllmuster,
 seine Farbe und seinen Hintergrund fest (<strong>Undurchsichtig</strong> verdeckt, was dahinter liegt).
-<strong>Bereich ▸ Maskierungsbereich</strong> erzeugt einen Bereich in der Papierfarbe, der verdeckt, was
+<strong>Gefüllter Bereich ▸ Maskierungsbereich</strong> erzeugt einen Bereich in der Papierfarbe, der verdeckt, was
 darunter liegt. Ein Bereich zeigt seine <strong>Fläche</strong> und hat <strong>Kommentare</strong>. Ein gewählter Bereich hat
 an jedem Eckpunkt einen Griff: Ziehen Sie einen, um seine Form zu ändern.</p>
 <h2 id="detail-components-repeating-details-and-insulation">Detailbauteile, wiederholte Details und Dämmung</h2>
@@ -949,19 +949,19 @@ an jedem Eckpunkt einen Griff: Ziehen Sie einen, um seine Form zu ändern.</p>
 vorne</strong>, <strong>In den Hintergrund</strong> und <strong>Eine Ebene nach hinten</strong>. Detailelemente werden immer über
 dem Modell gezeichnet, und ein neues kommt nach oben. <strong>Rückgängig</strong> stellt die vorherige
 Reihenfolge wieder her.</p>
-<h2 id="drafting-views">Zeichenansichten</h2>
-<p><strong>Ansicht ▸ Erzeugen ▸ Zeichenansicht</strong> fragt nach einem Namen und einem Maßstab (oder einem
-benutzerdefinierten). Die Ansicht öffnet sich und wird unter <strong>Zeichenansichten</strong> aufgeführt; alles,
+<h2 id="drafting-views">Freie 2D-Ansichten</h2>
+<p><strong>Ansichten ▸ Erzeugen ▸ Freie 2D-Ansicht</strong> fragt nach einem Namen und einem Maßstab (oder einem
+benutzerdefinierten). Die Ansicht öffnet sich und wird unter <strong>Freie 2D-Ansichten</strong> aufgeführt; alles,
 was darin gezeichnet wird, ist 2D, ohne Modell dahinter. Sie kann auf einem Plan platziert werden.
 <strong>Ansicht duplizieren ▸ Mit Detaillierung duplizieren</strong> kopiert eine Ansicht mit ihren
 Detailelementen, Texten, Bemaßungen und Legendenbauteilen.</p>
 <p><strong>Modell anzeigen</strong> in den Eigenschaften eines Grundrisses, eines Schnitts oder einer Detailansicht
 zeichnet das Modell <strong>Normal</strong>, <strong>Halbton</strong> (grau unter den Details) oder gar nicht (<strong>Nicht
 anzeigen</strong>), sodass die Details und Beschriftungen bleiben.</p>
-<p><strong>Ansicht ▸ Erzeugen ▸ Detail</strong> mit angehaktem <strong>Auf andere Ansicht verweisen</strong> in der Optionsleiste
-zeichnet einen Ausschnitt, der auf eine vorhandene Detail- oder Zeichenansicht verweist, statt eine
+<p><strong>Ansichten ▸ Erzeugen ▸ Detail</strong> mit angehaktem <strong>Auf andere Ansicht verweisen</strong> in der Optionsleiste
+zeichnet einen Ausschnitt, der auf eine vorhandene Detailansicht oder freie 2D-Ansicht verweist, statt eine
 neue zu erzeugen: Sein Kopf nennt diese Ansicht, und ein Doppelklick öffnet sie; <strong>Referenzierte
-Ansicht</strong> in seinen Eigenschaften ändert sie. In einer Zeichenansicht ist der Ausschnitt immer von
+Ansicht</strong> in seinen Eigenschaften ändert sie. In einer freien 2D-Ansicht ist der Ausschnitt immer von
 dieser Art.</p>
 <p><strong>Ausblenden bei Maßstäben gröber als</strong> in den Eigenschaften eines Schnitts oder eines Ausschnitts
 blendet sein Symbol in den Ansichten aus, deren Maßstab gröber ist, zum Beispiel ein Detail 1 : 50

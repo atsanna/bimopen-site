@@ -507,7 +507,7 @@ Sie nicht gerade in ein Feld schreiben: In einem Feld wirken sie auf den Text.</
 <p>In einer Skizze für Geschossdecke, Dach, Treppe oder Geländer beendet <span class="keys"><kbd class="key-escape">Esc</kbd></span> (oder ein Doppelklick)
 die Skizze auch, wenn sie genügend Punkte hat.</p>
 <p>Im Dialog <strong>Textnotiz</strong> fügt <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-enter">Enter</kbd></span> die Notiz ein, und <span class="keys"><kbd class="key-escape">Esc</kbd></span> bricht sie ab.</p>
-<p><span class="keys"><kbd class="key-alt">Alt</kbd></span> gedrückt und losgelassen, oder <span class="keys"><kbd class="key-f10">F10</kbd></span>, zeigt die Tastenhinweise der Multifunktionsleiste. Ohne aktives Werkzeug und ohne Getipptes wiederholt <span class="keys"><kbd class="key-enter">Enter</kbd></span> das letzte Werkzeug. Nach einem Klick in den Projektbrowser bewegen sich die Pfeiltasten und <span class="keys"><kbd class="key-enter">Enter</kbd></span> in seinem Baum.</p>
+<p><span class="keys"><kbd class="key-alt">Alt</kbd></span> gedrückt und losgelassen, oder <span class="keys"><kbd class="key-f10">F10</kbd></span>, zeigt die Tastenhinweise der Multifunktionsleiste. Ohne aktives Werkzeug und ohne Getipptes wiederholt <span class="keys"><kbd class="key-enter">Enter</kbd></span> das letzte Werkzeug. Nach einem Klick in den Projektindex bewegen sich die Pfeiltasten und <span class="keys"><kbd class="key-enter">Enter</kbd></span> in seinem Baum.</p>
 <h2 id="mouse">Maus</h2>
 <table>
 <thead>
@@ -549,8 +549,8 @@ die Skizze auch, wenn sie genügend Punkte hat.</p>
 <p>Geben Sie die Buchstaben ein, während kein Feld bearbeitet wird, und drücken Sie dann <span class="keys"><kbd class="key-enter">Enter</kbd></span>. Ohne
 Argumente startet ein Kürzel das Werkzeug oder öffnet den Dialog; mit Argumenten führt es den Befehl
 sofort aus (siehe <a href="../command-line-and-mcp/">Befehlszeile und MCP</a>).</p>
-<p>Mit dem Cursor im Zeichenbereich gehen die Buchstaben in die Befehlszeile (im Stil BIMopen in die Suche), und ein Kürzel wirkt sofort nach der Eingabe, ohne <span class="keys"><kbd class="key-enter">Enter</kbd></span>, wenn kein längeres Kürzel und kein Befehlsname mit seinen Buchstaben beginnt: <code>VR</code> (Ansichtsbereich), <code>WT</code> (nebeneinander), <code>ZE</code>, <code>ZF</code>, <code>ZA</code>, <code>ZP</code>, <code>ZR</code>, <code>ZO</code>, <code>ZS</code>, <code>HR</code>, <code>HH</code>, <code>HC</code>, <code>IC</code>, <code>DL</code> (Detaillinie), <code>RT</code> (Raumbeschriftung), <code>TG</code> (nach Kategorie beschriften), <code>TX</code>, <code>CC</code> (kopieren), <code>MV</code>, <code>RM</code>, <code>LL</code> (Ebene), <code>RC</code> (Revisionswolke), <code>PP</code> (blendet <strong>Eigenschaften</strong> ein oder aus), <code>PT</code>, <code>RP</code> und Ihre eigenen Kürzel. Die anderen beginnen längere Namen und warten auf den nächsten Buchstaben, ein Leerzeichen (es folgen Argumente) oder <span class="keys"><kbd class="key-enter">Enter</kbd></span>: <code>VG</code> (<code>vgsub</code>…), <code>HI</code> (<code>hide</code>), <code>DI</code> (<code>dim</code>), <code>AL</code> (<code>align</code>), <code>WA</code> (<code>wall</code>), <code>DR</code> (<code>draworder</code>), <code>UN</code> (<code>undo</code>), <code>MA</code> (<code>mask</code>); so werden <code>dim</code>, <code>wall 0,0 5,0</code> oder <code>WA 0,0 5,0</code> über der Ansicht so ausgeführt, wie sie eingegeben wurden. <code>MA</code> und <code>PT</code> melden in der Statusleiste, dass sie noch nicht verfügbar sind; <code>RP</code> startet die Referenzebene. In die Befehlszeile selbst eingegeben, wartet eine Zeile auf <span class="keys"><kbd class="key-enter">Enter</kbd></span>.</p>
-<p>Während ein Werkzeug in einem Grundriss oder einer Zeichenansicht (oder ein Detail- oder Beschriftungswerkzeug in einem Schnitt) auf einen Punkt wartet, ersetzen <code>SE</code> (Endpunkte), <code>SM</code> (Mittelpunkte), <code>SI</code> (Schnittpunkte), <code>SN</code> (nächster) und <code>SO</code> (aus) die Fangpunkte nur für diesen Punkt (auch in <strong>Fang-Überschreibungen ▸</strong> der rechten Taste gewählt; <code>SE</code>, <code>SI</code> und <code>SO</code> mit <span class="keys"><kbd class="key-enter">Enter</kbd></span>, da längere Namen mit ihnen beginnen); die Statusleiste zeigt es, <span class="keys"><kbd class="key-escape">Esc</kbd></span> oder der gesetzte Punkt beendet es. Für andere Werkzeuge in einem Schnitt oder in einer 3D-Ansicht, deren Punkte so nicht gefangen werden, werden sie mit einer Meldung abgelehnt. In einer Skizze gelten sie in jeder Ansicht, ebenso <code>SC</code> (der Mittelpunkt eines Bogens) und <code>SP</code> (das Lot vom Punkt, von dem gezeichnet wird).</p>
+<p>Mit dem Cursor im Zeichenbereich gehen die Buchstaben in die Befehlszeile (im Stil BIMopen in die Suche), und ein Kürzel wirkt sofort nach der Eingabe, ohne <span class="keys"><kbd class="key-enter">Enter</kbd></span>, wenn kein längeres Kürzel und kein Befehlsname mit seinen Buchstaben beginnt: <code>VR</code> (Schnitthöhen), <code>WT</code> (nebeneinander), <code>ZE</code>, <code>ZF</code>, <code>ZA</code>, <code>ZP</code>, <code>ZR</code>, <code>ZO</code>, <code>ZS</code>, <code>HR</code>, <code>HH</code>, <code>HC</code>, <code>IC</code>, <code>DL</code> (Detaillinie), <code>RT</code> (Raumbeschriftung), <code>TG</code> (nach Kategorie beschriften), <code>TX</code>, <code>CC</code> (kopieren), <code>MV</code>, <code>RM</code>, <code>LL</code> (Ebene), <code>RC</code> (Revisionswolke), <code>PP</code> (blendet <strong>Eigenschaften</strong> ein oder aus), <code>PT</code>, <code>RP</code> und Ihre eigenen Kürzel. Die anderen beginnen längere Namen und warten auf den nächsten Buchstaben, ein Leerzeichen (es folgen Argumente) oder <span class="keys"><kbd class="key-enter">Enter</kbd></span>: <code>VG</code> (<code>vgsub</code>…), <code>HI</code> (<code>hide</code>), <code>DI</code> (<code>dim</code>), <code>AL</code> (<code>align</code>), <code>WA</code> (<code>wall</code>), <code>DR</code> (<code>draworder</code>), <code>UN</code> (<code>undo</code>), <code>MA</code> (<code>mask</code>); so werden <code>dim</code>, <code>wall 0,0 5,0</code> oder <code>WA 0,0 5,0</code> über der Ansicht so ausgeführt, wie sie eingegeben wurden. <code>MA</code> und <code>PT</code> melden in der Statusleiste, dass sie noch nicht verfügbar sind; <code>RP</code> startet die Referenzebene. In die Befehlszeile selbst eingegeben, wartet eine Zeile auf <span class="keys"><kbd class="key-enter">Enter</kbd></span>.</p>
+<p>Während ein Werkzeug in einem Grundriss oder einer freien 2D-Ansicht (oder ein Detail- oder Beschriftungswerkzeug in einem Schnitt) auf einen Punkt wartet, ersetzen <code>SE</code> (Endpunkte), <code>SM</code> (Mittelpunkte), <code>SI</code> (Schnittpunkte), <code>SN</code> (nächster) und <code>SO</code> (aus) die Fangpunkte nur für diesen Punkt (auch in <strong>Fang-Überschreibungen ▸</strong> der rechten Taste gewählt; <code>SE</code>, <code>SI</code> und <code>SO</code> mit <span class="keys"><kbd class="key-enter">Enter</kbd></span>, da längere Namen mit ihnen beginnen); die Statusleiste zeigt es, <span class="keys"><kbd class="key-escape">Esc</kbd></span> oder der gesetzte Punkt beendet es. Für andere Werkzeuge in einem Schnitt oder in einer 3D-Ansicht, deren Punkte so nicht gefangen werden, werden sie mit einer Meldung abgelehnt. In einer Skizze gelten sie in jeder Ansicht, ebenso <code>SC</code> (der Mittelpunkt eines Bogens) und <code>SP</code> (das Lot vom Punkt, von dem gezeichnet wird).</p>
 <h3 id="modelling">Modellieren</h3>
 <table>
 <thead>
@@ -629,7 +629,7 @@ sofort aus (siehe <a href="../command-line-and-mcp/">Befehlszeile und MCP</a>).<
 <tr>
 <td><code>RS</code></td>
 <td><code>roomsep</code></td>
-<td>Raumtrennung</td>
+<td>Raumtrenner</td>
 </tr>
 <tr>
 <td><code>PA</code></td>
@@ -639,7 +639,7 @@ sofort aus (siehe <a href="../command-line-and-mcp/">Befehlszeile und MCP</a>).<
 <tr>
 <td><code>CA</code></td>
 <td><code>areaboundary</code></td>
-<td>Flächenbegrenzungslinie</td>
+<td>Flächenumriss</td>
 </tr>
 <tr>
 <td>–</td>
@@ -686,17 +686,17 @@ sofort aus (siehe <a href="../command-line-and-mcp/">Befehlszeile und MCP</a>).<
 <tr>
 <td><code>MM</code></td>
 <td><code>mirror</code></td>
-<td>Spiegeln - Achse wählen</td>
+<td>An Achse spiegeln</td>
 </tr>
 <tr>
 <td><code>DM</code></td>
 <td><code>mirror</code></td>
-<td>Spiegeln - Achse zeichnen</td>
+<td>An Linie spiegeln</td>
 </tr>
 <tr>
 <td><code>AR</code></td>
 <td><code>array</code></td>
-<td>Reihe</td>
+<td>In Reihe wiederholen</td>
 </tr>
 <tr>
 <td><code>OF</code></td>
@@ -721,7 +721,7 @@ sofort aus (siehe <a href="../command-line-and-mcp/">Befehlszeile und MCP</a>).<
 <tr>
 <td><code>SG</code></td>
 <td><code>split</code></td>
-<td>Teilen mit Lücke</td>
+<td>Mit Fuge teilen</td>
 </tr>
 <tr>
 <td><code>RE</code></td>
@@ -860,7 +860,7 @@ Befehlszeile zeichnet es eine lineare Bemaßung (<code>lineardim</code>).</p>
 <tr>
 <td><code>VD</code></td>
 <td><code>draftingview</code></td>
-<td>Den Dialog <strong>Zeichenansicht</strong></td>
+<td>Den Dialog <strong>Freie 2D-Ansicht</strong></td>
 </tr>
 <tr>
 <td><code>PP</code></td>
@@ -875,12 +875,12 @@ Befehlszeile zeichnet es eine lineare Bemaßung (<code>lineardim</code>).</p>
 <tr>
 <td><code>VG</code> oder <code>VV</code></td>
 <td><code>vg</code></td>
-<td><strong>Sichtbarkeit/Grafik</strong></td>
+<td><strong>Sichtbarkeit und Grafik</strong></td>
 </tr>
 <tr>
 <td><code>WF</code>, <code>HL</code>, <code>SD</code></td>
 <td>–</td>
-<td><strong>Drahtmodell</strong>, <strong>Verdeckte Linie</strong>, <strong>Schattiert</strong>: der visuelle Stil der aktiven Ansicht</td>
+<td><strong>Drahtmodell</strong>, <strong>Linien</strong>, <strong>Schattiert</strong>: der Grafikstil der aktiven Ansicht</td>
 </tr>
 <tr>
 <td><code>HH</code>, <code>HI</code></td>
@@ -895,7 +895,7 @@ Befehlszeile zeichnet es eine lineare Bemaßung (<code>lineardim</code>).</p>
 <tr>
 <td><code>HR</code></td>
 <td>–</td>
-<td><strong>Temporäres Ausblenden/Isolieren zurücksetzen</strong></td>
+<td><strong>Vorübergehendes Isolieren zurücksetzen</strong></td>
 </tr>
 <tr>
 <td><code>EH</code>, <code>VH</code></td>
@@ -905,7 +905,7 @@ Befehlszeile zeichnet es eine lineare Bemaßung (<code>lineardim</code>).</p>
 <tr>
 <td><code>RH</code></td>
 <td>–</td>
-<td><strong>Verdeckte Elemente anzeigen</strong>, ein und aus</td>
+<td><strong>Verborgene zeigen</strong>, ein und aus</td>
 </tr>
 <tr>
 <td><code>TL</code></td>
@@ -915,7 +915,7 @@ Befehlszeile zeichnet es eine lineare Bemaßung (<code>lineardim</code>).</p>
 <tr>
 <td><code>SO</code></td>
 <td><code>objectstyle</code></td>
-<td><strong>Objektstile</strong></td>
+<td><strong>Stile nach Kategorie</strong></td>
 </tr>
 <tr>
 <td><code>MA</code></td>
@@ -971,7 +971,7 @@ Befehlszeile zeichnet es eine lineare Bemaßung (<code>lineardim</code>).</p>
 </table>
 <p>Die Befehle mit <strong>–</strong> haben keine Kurzform, aber ihr vollständiger Name funktioniert genauso.
 <code>help</code> listet alle Befehle und ihre Kurzformen auf.</p>
-<p>Auch die Zoombefehle haben getippte Kurzbefehle: <code>ZR</code> Bereich vergrößern, <code>ZO</code> verkleinern (2x), <code>ZF</code> Zoom auf Fenstergröße, <code>ZA</code> alle auf Fenstergröße, <code>ZS</code> Zoom auf Plangröße, <code>ZP</code> vorheriges Pan/Zoom. <strong>Ansicht ▸ Fenster ▸ Benutzeroberfläche ▸ Tastaturkurzbefehle</strong> gibt jedem Befehl eigene Kurzbefehle (<a href="../interface/#drawing-area-and-view-windows">Die Benutzeroberfläche</a>).</p>
+<p>Auch die Zoombefehle haben getippte Kurzbefehle: <code>ZR</code> Bereich vergrößern, <code>ZO</code> verkleinern (2x), <code>ZF</code> Zoom auf Fenstergröße, <code>ZA</code> alle auf Fenstergröße, <code>ZS</code> Zoom auf Plangröße, <code>ZP</code> vorheriges Pan/Zoom. <strong>Ansichten ▸ Fenster ▸ Paneele ▸ Tastaturkurzbefehle</strong> gibt jedem Befehl eigene Kurzbefehle (<a href="../interface/#drawing-area-and-view-windows">Die Benutzeroberfläche</a>).</p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

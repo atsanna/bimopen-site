@@ -232,7 +232,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#the-location-line-and-flipping">
 <span class="md-ellipsis">
-      Die Basislinie und das Umkehren
+      Die Ausrichtungslinie und das Umkehren
     </span>
 </a>
 </li>
@@ -246,7 +246,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#editing-a-walls-profile">
 <span class="md-ellipsis">
-      Das Profil einer Wand bearbeiten
+      Die Begrenzung einer Wand bearbeiten
     </span>
 </a>
 </li>
@@ -482,7 +482,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#the-location-line-and-flipping">
 <span class="md-ellipsis">
-      Die Basislinie und das Umkehren
+      Die Ausrichtungslinie und das Umkehren
     </span>
 </a>
 </li>
@@ -496,7 +496,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#editing-a-walls-profile">
 <span class="md-ellipsis">
-      Das Profil einer Wand bearbeiten
+      Die Begrenzung einer Wand bearbeiten
     </span>
 </a>
 </li>
@@ -651,13 +651,13 @@
 <h1 id="walls-doors-and-windows">Wände, Türen und Fenster</h1>
 <p>Dieses Kapitel beschreibt, wie Wände gezeichnet werden, wie sie sich verbinden und an Dächern und
 Geschossdecken fixiert werden, wie ihre Typen und Schichten eingerichtet werden und wie Türen und
-Fenster in sie eingesetzt, umgekehrt, verschoben und in jedem Detaillierungsgrad gezeichnet
+Fenster in sie eingesetzt, umgekehrt, verschoben und bei jedem <strong>Detail</strong> gezeichnet
 werden.</p>
 <h2 id="drawing-walls">Wände zeichnen</h2>
 <p><strong>Start ▸ Erstellen ▸ Wand</strong> (oder <code>WA</code> eingeben) startet das Wandwerkzeug, in einem Grundriss
 oder in der 3D-Ansicht. Wählen Sie den Wandtyp in der Typenauswahl oben in der Palette
-<strong>Eigenschaften</strong>; <strong>Typeigenschaften</strong> ändert den Typ und damit jede Wand dieses Typs. Die
-kontextabhängige Registerkarte <strong>Bearbeiten | Wand platzieren</strong> zeigt die Gruppe <strong>Zeichnen</strong>, und
+<strong>Eigenschaften</strong>; <strong>Typparameter</strong> ändert den Typ und damit jede Wand dieses Typs. Die
+kontextabhängige Registerkarte <strong>Wand zeichnen</strong> zeigt die Gruppe <strong>Zeichnen</strong>, und
 die Optionsleiste zeigt:</p>
 <table>
 <thead>
@@ -680,16 +680,16 @@ die Optionsleiste zeigt:</p>
 <td>Nur in einer 3D-Ansicht: die Ebene, auf der die Wände stehen; <strong><angeklickte fläche=""></angeklickte></strong> nimmt die Ebene der Fläche des ersten Klicks</td>
 </tr>
 <tr>
-<td><strong>Basislinie</strong></td>
-<td>Die Ebene der Wand, die entlang der Klicks verläuft: <strong>Wandachse</strong> (Standard), die Achse des Kerns oder eine der Oberflächen der Schichten und des Kerns, außen oder innen</td>
+<td><strong>Ausrichtung</strong></td>
+<td>Die Ebene der Wand, die entlang der Klicks verläuft: <strong>Achse</strong> (Standard), die Achse des Kerns oder eine der Oberflächen der Schichten und des Kerns, außen oder innen</td>
 </tr>
 <tr>
-<td><strong>Kette</strong></td>
+<td><strong>Fortsetzen</strong></td>
 <td>Ein: jeder Klick beendet eine Wand und beginnt die nächste; aus: je zwei Klicks ergeben eine eigene Wand</td>
 </tr>
 <tr>
 <td><strong>Versatz</strong></td>
-<td>Die Basislinie verläuft in diesem Abstand von den Klicks, nach außen hin</td>
+<td>Die Ausrichtungslinie verläuft in diesem Abstand von den Klicks, nach außen hin</td>
 </tr>
 <tr>
 <td><strong>Radius</strong></td>
@@ -704,8 +704,8 @@ die Optionsleiste zeigt:</p>
   die Außenfläche oben. Die Vorschau zeigt die Außenfläche dicker;</li>
 <li>die <strong>Leertaste</strong> legt die Außenseite der nächsten Wand auf die andere Seite;</li>
 <li>nach dem ersten Punkt eine Länge eingeben und Enter drücken: der Wert erscheint in einem Feld am
-  Cursor, und die Wand endet in diesem Abstand, in Richtung des Cursors (Raster, Raumtrennlinien,
-  Flächenbegrenzungen, Schnitte und Ansichten nehmen eine eingegebene Länge ebenso an);</li>
+  Cursor, und die Wand endet in diesem Abstand, in Richtung des Cursors (Raster, Raumtrenner,
+  Flächenumrisse, Schnitte und Ansichten nehmen eine eingegebene Länge ebenso an);</li>
 <li><strong>Esc</strong> beendet die Kette; nochmals <strong>Esc</strong>, oder <strong>Ändern</strong>, beendet das Werkzeug.</li>
 </ul>
 <p>Die Gruppe <strong>Zeichnen</strong> wählt die Form:</p>
@@ -739,17 +739,17 @@ die Optionsleiste zeigt:</p>
 </tr>
 </tbody>
 </table>
-<h2 id="the-location-line-and-flipping">Die Basislinie und das Umkehren</h2>
-<p>Wählen Sie eine Wand: blaue Punkte markieren die Enden ihrer Basislinie, und zwei Pfeile stehen auf
-ihrer Außenseite. Ein Klick auf die Pfeile kehrt die Wand um ihre Basislinie um: die erste und die
-letzte Schicht tauschen, Türen und Fenster behalten ihre Ausrichtung. Das Ändern der <strong>Basislinie</strong>
+<h2 id="the-location-line-and-flipping">Die Ausrichtungslinie und das Umkehren</h2>
+<p>Wählen Sie eine Wand: blaue Punkte markieren die Enden ihrer Ausrichtungslinie, und zwei Pfeile stehen auf
+ihrer Außenseite. Ein Klick auf die Pfeile kehrt die Wand um ihre Ausrichtungslinie um: die erste und die
+letzte Schicht tauschen, Türen und Fenster behalten ihre Ausrichtung. Das Ändern der <strong>Ausrichtung</strong>
 einer platzierten Wand verschiebt sie nicht; das nächste Umkehren dreht sie um die neue Ebene. Das
-Ändern des Typs einer Wand oder ihrer Schichten lässt die Basislinie, wo sie war.</p>
+Ändern des Typs einer Wand oder ihrer Schichten lässt die Ausrichtungslinie, wo sie war.</p>
 <h2 id="attaching-walls-to-roofs-and-floors">Wände an Dächern und Geschossdecken fixieren</h2>
 <p>Eine Wand kann einem Dach oder einer Geschossdecke folgen, statt eine feste Höhe zu haben.</p>
 <ol>
 <li>Wählen Sie die Wände.</li>
-<li><strong>Bearbeiten | Wände ▸ Wand ändern ▸ Oben/Basis fixieren</strong>.</li>
+<li><strong>Auswahl: Wände ▸ Wand ändern ▸ Oben/unten verbinden</strong>.</li>
 <li>In der Optionsleiste <strong>Wand fixieren:</strong> <strong>Oben</strong> oder <strong>Basis</strong>.</li>
 <li>Klicken Sie auf das Dach oder die Geschossdecke, in einem Grundriss, einem Schnitt oder der
    3D-Ansicht.</li>
@@ -758,18 +758,18 @@ einer platzierten Wand verschiebt sie nicht; das nächste Umkehren dreht sie um 
 die Giebelwände reichen bis zum First) oder der Geschossdecke darüber. Mit <strong>Basis</strong> stehen sie auf
 der Oberseite der Geschossdecke darunter. Von da an folgen sie ihr: ein steileres Dach, ein über
 seinen Basisversatz angehobenes Dach, eine verschobene Geschossdecke nehmen die Wände mit.</p>
-<p>Zum Lösen: Wände wählen, <strong>Bearbeiten | Wände ▸ Wand ändern ▸ Oben/Basis lösen</strong>, dann das Element
+<p>Zum Lösen: Wände wählen, <strong>Auswahl: Wände ▸ Wand ändern ▸ Oben/unten lösen</strong>, dann das Element
 anklicken, von dem sie gelöst werden, oder <strong>Alle lösen</strong> in der Optionsleiste drücken. Die Wände
 behalten die Höhe, die sie in diesem Moment haben, und können jederzeit wieder fixiert werden. Wird
 ein Dach oder eine Geschossdecke mit fixierten Wänden gelöscht, behalten auch diese ihre Höhe.</p>
 <p>Die Eigenschaften <strong>Oben fixiert</strong> und <strong>Basis fixiert</strong> zeigen den Zustand (schreibgeschützt);
-solange die Oberkante fixiert ist, ist <strong>Nicht verknüpfte Höhe</strong> schreibgeschützt.</p>
-<h2 id="editing-a-walls-profile">Das Profil einer Wand bearbeiten</h2>
+solange die Oberkante fixiert ist, ist <strong>Freie Höhe</strong> schreibgeschützt.</p>
+<h2 id="editing-a-walls-profile">Die Begrenzung einer Wand bearbeiten</h2>
 <p>Eine Wand muss kein Rechteck sein: Ihr Umriss lässt sich in einer parallelen Ansicht oder einem
 parallelen Schnitt skizzieren, mit Löchern, etwa für einen Giebel oder eine abgetreppte Wand.</p>
 <ol>
 <li>Wählen Sie die Wand und klicken Sie in ihrer kontextabhängigen Registerkarte auf <strong>Modus ▸
-   Profil bearbeiten</strong>. Aus einem Grundriss oder einer nicht parallelen Ansicht listet <strong>Gehe zu
+   Begrenzung bearbeiten</strong>. Aus einem Grundriss oder einer nicht parallelen Ansicht listet <strong>Gehe zu
    Ansicht</strong> die zur Wand parallelen Schnitte und Ansichten: Wählen Sie eine und klicken Sie auf
    <strong>Ansicht öffnen</strong>.</li>
 <li>Der Skizzenmodus öffnet sich mit dem Umriss der Wand in Magenta. Ändern Sie ihn mit <strong>Linie</strong>
@@ -785,16 +785,16 @@ wo der Umriss die Schnittebene erreicht; ihre Türen und Fenster schneiden sie w
 ein Dach oder eine Geschossdecke fixierte Oberkante begrenzt sie weiterhin. Grundriss, Schnitte, Ansichten und 3D-Ansicht zeigen
 ein einziges Volumen aus demselben Umriss und denselben Löchern. Die umschließenden Schichten
 kleiden die Löcher aus wie Türen und Fenster (siehe <a href="#wall-types-and-layers">Wandtypen und Schichten</a>).
-Eine Vorhangfassade behält die Paneele und Pfosten innerhalb ihres neuen Umrisses. <strong>Modus ▸ Profil zurücksetzen</strong>
+Eine Vorhangfassade behält die Paneele und Pfosten innerhalb ihres neuen Umrisses. <strong>Modus ▸ Begrenzung zurücksetzen</strong>
 macht sie wieder rechteckig; <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span> macht beides rückgängig.</p>
-<p>Das Profil lässt sich auch in der 3D-Ansicht bearbeiten: Die Skizze liegt auf der Wandebene,
+<p>Die Begrenzung lässt sich auch in der 3D-Ansicht bearbeiten: Die Skizze liegt auf der Wandebene,
 und die Ansicht bleibt 3D. Nur aus einem Grundriss erscheint <strong>Gehe zu Ansicht</strong>, und nichts
 ändert sich, bis eine Ansicht mit <strong>Ansicht öffnen</strong> geöffnet wird. Beim Skizzieren ist der
 ursprüngliche Umriss der Wand mit gestrichelten Referenzlinien gezeichnet; die Skizze rastet an
 ihren Enden und auf ihnen ein.</p>
 <h2 id="wall-joins">Wandverbindungen</h2>
 <p>Wände, deren Enden sich treffen, verbinden sich von selbst, ebenso eine Wand, die an der Seite einer
-anderen endet, und zwei Wände, die sich kreuzen. Im Detaillierungsgrad <strong>Mittel</strong> und <strong>Fein</strong> wird
+anderen endet, und zwei Wände, die sich kreuzen. Mit <strong>Detail</strong> auf <strong>Mittel</strong> und <strong>Fein</strong> wird
 jede Schicht gegen die Schichten der anderen Wand aufgelöst:</p>
 <ul>
 <li>an einer Ecke (L) trifft jede Schicht auf dieselbe Schicht der anderen Wand: die Oberflächen
@@ -805,7 +805,7 @@ jede Schicht gegen die Schichten der anderen Wand aufgelöst:</p>
 <li>Teile aus demselben Material verschmelzen ohne Linie dazwischen; eine dünne Linie trennt zwei
   verschiedene Materialien; der freie Umriss wird dick gezeichnet.</li>
 </ul>
-<p>Im Detaillierungsgrad <strong>Grob</strong> sind verbundene Wände eine einzige Füllung, ohne Linie dazwischen.
+<p>Mit <strong>Detail</strong> auf <strong>Grob</strong> sind verbundene Wände eine einzige Füllung, ohne Linie dazwischen.
 Schnitte und die 3D-Ansicht verwenden dieselben Teile, nichts überlappt.</p>
 <h3 id="the-wall-joins-tool">Das Werkzeug Wandverbindungen</h3>
 <p><strong>Bearbeiten ▸ Geometrie ▸ Wandverbindungen</strong>, dann das graue Quadrat anklicken, das an einer Ecke
@@ -829,11 +829,11 @@ beide Wände enden dann rechtwinklig, getrennt. Ein kleines Zeichen neben dem En
 klicken Sie darauf, oder rechtsklicken Sie den Punkt und wählen <strong>Verbindung zulassen</strong>, um es
 wieder zu verbinden.</p>
 <h2 id="wall-types-and-layers">Wandtypen und Schichten</h2>
-<p><strong>Typeigenschaften</strong> einer Wand zeigen unter <strong>Konstruktion</strong> <strong>Tragwerk</strong> mit der Schaltfläche
-<strong>Bearbeiten…</strong>, <strong>Umschließung an Einfügungen</strong>, <strong>Umschließung an Enden</strong>, <strong>Breite</strong> (die Summe
+<p><strong>Typparameter</strong> einer Wand zeigen unter <strong>Konstruktion</strong> <strong>Tragwerk</strong> mit der Schaltfläche
+<strong>Bearbeiten…</strong>, <strong>Umschlag an Öffnungen</strong>, <strong>Umschlag an Enden</strong>, <strong>Breite</strong> (die Summe
 der Schichten, schreibgeschützt) und <strong>Funktion</strong> (<strong>Innen</strong>, <strong>Außen</strong>, <strong>Fundament</strong>,
 <strong>Stützmauer</strong>, <strong>Untersicht</strong>, <strong>Kern</strong>); unter <strong>Grafik</strong> <strong>Füllmuster für grobe Darstellung</strong>
-und <strong>Füllfarbe für grobe Darstellung</strong>, also wie geschnittene Wände des Typs im Detaillierungsgrad
+und <strong>Füllfarbe für grobe Darstellung</strong>, also wie geschnittene Wände des Typs mit <strong>Detail</strong> auf
 <strong>Grob</strong> gefüllt werden. <strong>Duplizieren…</strong> erstellt einen neuen Typ; sein Name folgt den Schichten
 nicht.</p>
 <p><strong>Tragwerk ▸ Bearbeiten…</strong> öffnet <strong>Baugruppe bearbeiten</strong>: die Schichten von der Außenseite zur
@@ -843,23 +843,22 @@ Liste. Eine Membranschicht hat keine Dicke, jede andere Schicht ist mindestens 4
 Werte werden abgelehnt, und der Dialog bleibt offen.</p>
 <p>Die Spalte <strong>Umschließt</strong> markiert die Schichten, die umschließen dürfen. Unter der Tabelle:</p>
 <ul>
-<li><strong>Umschließung an Einfügungen</strong> (<strong>Nicht umschließen</strong>, <strong>Außen</strong>, <strong>Innen</strong>, <strong>Beide</strong>): die
+<li><strong>Umschlag an Öffnungen</strong> (<strong>Nicht umschließen</strong>, <strong>Außen</strong>, <strong>Innen</strong>, <strong>Beide</strong>): die
   markierten Schichten außerhalb des Kerns auf dieser Seite laufen in die Laibungen von Türen und
   Fenstern; die Schichten dahinter treten zurück;</li>
-<li><strong>Umschließung an Enden</strong> (<strong>Nicht umschließen</strong>, <strong>Außen</strong>, <strong>Innen</strong>): dasselbe an den freien
+<li><strong>Umschlag an Enden</strong> (<strong>Nicht umschließen</strong>, <strong>Außen</strong>, <strong>Innen</strong>): dasselbe an den freien
   Enden der Wände.</li>
 </ul>
 <p>Die Umschließung erscheint in jeder Ansicht: Im Grundriss, in der 3D-Ansicht, in Schnitten und in
 Ansichten kleiden die angehakten Schichten die Laibungen, den Sturz und die Brüstung von Türen und
-Fenstern aus, die Seiten der Löcher eines bearbeiteten Profils (siehe
-<a href="#editing-a-walls-profile">Das Profil einer Wand bearbeiten</a>) und die freien Enden. Ein Tür- oder
+Fenstern aus, die Seiten der Löcher einer bearbeiteten Begrenzung (siehe
+<a href="#editing-a-walls-profile">Die Begrenzung einer Wand bearbeiten</a>) und die freien Enden. Ein Tür- oder
 Fenstertyp ersetzt die Umschließung der Wand durch seinen <strong>Wandabschluss</strong>.</p>
 <h2 id="wall-properties">Wandeigenschaften</h2>
-<p>Unter <strong>Abhängigkeiten</strong>: <strong>Basislinie</strong>, <strong>Basisabhängigkeit</strong>, <strong>Versatz unten</strong>, <strong>Basis
-fixiert</strong>, <strong>Abhängigkeit oben</strong> (eine Ebene, oder <strong>Nicht verbunden</strong>), <strong>Nicht verknüpfte
-Höhe</strong>, <strong>Versatz oben</strong> (mit einer Ebene), <strong>Oben fixiert</strong> und <strong>Raumbegrenzung</strong> (abgewählt
+<p>Unter <strong>Abhängigkeiten</strong>: <strong>Ausrichtung</strong>, <strong>Basisebene</strong>, <strong>Versatz unten</strong>, <strong>Basis
+fixiert</strong>, <strong>Obere Ebene</strong> (eine Ebene, oder <strong>Nicht verbunden</strong>), <strong>Freie Höhe</strong>, <strong>Versatz oben</strong> (mit einer Ebene), <strong>Oben fixiert</strong> und <strong>Raumbegrenzung</strong> (abgewählt
 ignorieren die Räume um die Wand sie). Unter <strong>Abmessungen</strong>: <strong>Länge</strong>, <strong>Fläche</strong>, <strong>Volumen</strong>.
-Unter <strong>ID-Daten</strong>: <strong>Kennzeichen</strong> und <strong>Kommentare</strong>.</p>
+Unter <strong>Identifikation</strong>: <strong>Kennzeichen</strong> und <strong>Kommentare</strong>.</p>
 <h2 id="placing-doors-and-windows">Türen und Fenster einsetzen</h2>
 <p><strong>Start ▸ Erstellen ▸ Tür</strong> (<code>DR</code>) oder <strong>Fenster</strong> (<code>WN</code>), in einem Grundriss, einem Schnitt,
 einer Ansicht oder der 3D-Ansicht. Typ wählen, dann über eine Wand fahren: die Öffnung folgt dem Cursor entlang der Wand,
@@ -871,10 +870,10 @@ Typs.</p>
 <p>Türen und Fenster erhalten ein <strong>Kennzeichen</strong>, das nach Kategorie hochzählt (1, 2, 3…), ab dem
 höchsten.</p>
 <h2 id="tags">Beschriftungen</h2>
-<p><strong>Bearbeiten | Tür platzieren ▸ Beschriftung ▸ Beim Platzieren beschriften</strong> (oder dasselbe für
+<p><strong>Tür zeichnen ▸ Beschriftung ▸ Beim Platzieren beschriften</strong> (oder dasselbe für
 Fenster) beschriftet jede Öffnung beim Einsetzen. Die Optionsleiste bietet dann <strong>Horizontal</strong> oder
 <strong>Vertikal</strong> und <strong>Führungslinie</strong> mit ihrer Länge. Die Beschriftung einer Tür zeigt ihr
-<strong>Kennzeichen</strong>, die eines Fensters das <strong>Typenkennzeichen</strong> seines Typs. <strong>Beschriften ▸ Alle
+<strong>Kennzeichen</strong>, die eines Fensters das <strong>Typenkennzeichen</strong> seines Typs. <strong>Beschriftungen ▸ Alle
 beschriften</strong> beschriftet die noch nicht beschrifteten Öffnungen.</p>
 <h2 id="flipping-a-door-or-window">Eine Tür oder ein Fenster umkehren</h2>
 <p>Wählen Sie eine Tür oder ein Fenster im Grundriss: Pfeile quer zur Wand, auf der Seite, zu der sie
@@ -882,10 +881,10 @@ beschriften</strong> beschriftet die noch nicht beschrifteten Öffnungen.</p>
 andere Laibung. Das Kontextmenü tut dasselbe: <strong>Seite umkehren</strong> (der Anschlag) und <strong>Ausrichtung
 umkehren</strong> (der Aufschlag).</p>
 <h2 id="moving-a-door-or-window-to-another-wall">Eine Tür oder ein Fenster in eine andere Wand verschieben</h2>
-<p>Wählen Sie sie, <strong>Bearbeiten | Türen ▸ Basisbauteil ▸ Neues Basisbauteil wählen</strong> (oder
-<strong>Bearbeiten | Fenster</strong>), dann eine andere Wand anklicken: die Öffnung wandert dorthin, an die
+<p>Wählen Sie sie, <strong>Auswahl: Türen ▸ Basisbauteil ▸ Neues Basisbauteil wählen</strong> (oder
+<strong>Auswahl: Fenster</strong>), dann eine andere Wand anklicken: die Öffnung wandert dorthin, an die
 angeklickte Stelle, mit ihrem Typ und ihrer Brüstung. Sie bleibt gewählt.</p>
-<p>Beim Ziehen bleibt eine Tür oder ein Fenster in einer Wand: der Zeiger wird auf die Basislinie der Wand projiziert, die Öffnung gleitet also entlang der Wand zwischen ihren Enden, mit den temporären Bemaßungen zu den nächsten Wänden, im Grundriss, im Schnitt, in einer Ansicht oder in der 3D-Ansicht; dort wählt ein Klick auf das Glas eines Fensters das Fenster, nicht das, was man dahinter sieht. Über einer anderen Wand losgelassen, wechselt sie in diese Wand; im leeren Raum losgelassen, bleibt sie an der letzten gültigen Stelle ihrer Wand. Die Pfeiltasten verschieben sie ebenso entlang der Wand.</p>
+<p>Beim Ziehen bleibt eine Tür oder ein Fenster in einer Wand: der Zeiger wird auf die Ausrichtungslinie der Wand projiziert, die Öffnung gleitet also entlang der Wand zwischen ihren Enden, mit den temporären Bemaßungen zu den nächsten Wänden, im Grundriss, im Schnitt, in einer Ansicht oder in der 3D-Ansicht; dort wählt ein Klick auf das Glas eines Fensters das Fenster, nicht das, was man dahinter sieht. Über einer anderen Wand losgelassen, wechselt sie in diese Wand; im leeren Raum losgelassen, bleibt sie an der letzten gültigen Stelle ihrer Wand. Die Pfeiltasten verschieben sie ebenso entlang der Wand.</p>
 <h2 id="door-and-window-properties">Eigenschaften von Türen und Fenstern</h2>
 <p>Exemplar: <strong>Ebene</strong>, <strong>Brüstungshöhe</strong>, <strong>Breite</strong> und <strong>Höhe</strong> (des Typs), <strong>Sturzhöhe</strong>,
 <strong>Kommentare</strong>, <strong>Kennzeichen</strong>. Das Ändern von <strong>Brüstungshöhe</strong> oder <strong>Sturzhöhe</strong> verschiebt die
@@ -898,7 +897,7 @@ der Außenfläche entfernt sitzt), <strong>Verkleidungsprojektion außen</strong
 innen</strong> (Türen), <strong>Flügel</strong> und <strong>Typenkennzeichen</strong>. Eine Tür kann durch einen Typwechsel nicht
 zu einem Fenster werden.</p>
 <h2 id="how-walls-doors-and-windows-are-drawn">Wie Wände, Türen und Fenster gezeichnet werden</h2>
-<p>Der <strong>Detaillierungsgrad</strong> des Grundrisses entscheidet:</p>
+<p>Der <strong>Detail</strong> des Grundrisses entscheidet:</p>
 <table>
 <thead>
 <tr>
@@ -936,7 +935,7 @@ Rahmen, Flügel, Glas und Fensterbänke in den Materialien des Typs.</p>
 <p>Eine Vorhangfassade ist eine Wand eines Vorhangfassadentyps, gezeichnet mit dem Werkzeug
 <strong>Wand</strong>: wählen Sie <strong>Vorhangfassade</strong> (ein einziges Glaspaneel über die Wandlänge),
 <strong>Außenverglasung</strong> (Rasterlinien nach Typ) oder <strong>Ladenfront</strong> (Rasterlinien und Pfosten) in
-der Typenauswahl und zeichnen Sie wie jede Wand, im Grundriss oder in 3D, mit <strong>Kette</strong> und den
+der Typenauswahl und zeichnen Sie wie jede Wand, im Grundriss oder in 3D, mit <strong>Fortsetzen</strong> und den
 Formen von <strong>Zeichnen</strong>. Eine Basiswand wird zur Vorhangfassade, indem man in der Typenauswahl
 einen Vorhangfassadentyp wählt; die Türen und Fenster darin werden gelöscht, weil eine
 Vorhangfassade sie nicht aufnimmt, und eine Meldung sagt es (Rückgängig bringt sie zurück).</p>
@@ -998,7 +997,7 @@ angeben</strong>:</p>
   Cursors, im Schnitt oder in 3D die dem Betrachter zugewandte), ein Raster, eine Referenzebene
   oder, im Schnitt, eine Ebene klicken;</li>
 <li><strong>Linie auswählen und die Arbeitsebene verwenden, in der sie skizziert wurde</strong>: nach <strong>OK</strong> auf
-  eine Wand oder eine Raumtrennlinie klicken: ihre Ebene wird zur Arbeitsebene.</li>
+  eine Wand oder einen Raumtrenner klicken: die Ebene des Elements wird zur Arbeitsebene.</li>
 </ul>
 <p>Eine Ebene, die nicht in der Ansicht liegt, etwa ein im Grundriss gewähltes Raster oder eine
 Ebene im Schnitt, wird dort nicht festgelegt: <strong>Gehe zu Ansicht</strong> listet die Ansichten, in denen

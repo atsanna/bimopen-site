@@ -507,7 +507,7 @@ vous n'êtes pas en train de taper dans un champ : dans un champ, elles agissent
 <p>Dans une esquisse de sol, de toit, d'escalier ou de garde-corps, <span class="keys"><kbd class="key-escape">Esc</kbd></span> (ou un double-clic)
 termine aussi l'esquisse lorsqu'elle comporte suffisamment de points.</p>
 <p>Dans la boîte de dialogue <strong>Note textuelle</strong>, <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-enter">Enter</kbd></span> insère la note et <span class="keys"><kbd class="key-escape">Esc</kbd></span> l'annule.</p>
-<p><span class="keys"><kbd class="key-alt">Alt</kbd></span> pressée puis relâchée, ou <span class="keys"><kbd class="key-f10">F10</kbd></span>, affiche les info-touches du ruban. Sans outil actif et sans rien de tapé, <span class="keys"><kbd class="key-enter">Enter</kbd></span> répète le dernier outil. Après un clic dans l'arborescence du projet, les flèches et <span class="keys"><kbd class="key-enter">Enter</kbd></span> se déplacent dans son arbre.</p>
+<p><span class="keys"><kbd class="key-alt">Alt</kbd></span> pressée puis relâchée, ou <span class="keys"><kbd class="key-f10">F10</kbd></span>, affiche les info-touches du ruban. Sans outil actif et sans rien de tapé, <span class="keys"><kbd class="key-enter">Enter</kbd></span> répète le dernier outil. Après un clic dans l'<strong>Index du projet</strong>, les flèches et <span class="keys"><kbd class="key-enter">Enter</kbd></span> se déplacent dans son arbre.</p>
 <h2 id="mouse">Souris</h2>
 <table>
 <thead>
@@ -549,8 +549,8 @@ termine aussi l'esquisse lorsqu'elle comporte suffisamment de points.</p>
 <p>Tapez les lettres lorsqu'aucun champ n'est en cours de modification, puis appuyez sur <span class="keys"><kbd class="key-enter">Enter</kbd></span>.
 Sans arguments, un raccourci lance l'outil ou ouvre la boîte de dialogue ; avec des arguments, il
 exécute la commande immédiatement (voir <a href="../command-line-and-mcp/">Ligne de commande et MCP</a>).</p>
-<p>Le curseur dans la zone de dessin, les lettres vont dans la ligne de commande (dans le style BIMopen, dans la recherche), et un raccourci agit dès qu'il est tapé, sans <span class="keys"><kbd class="key-enter">Enter</kbd></span>, lorsqu'aucun raccourci ni nom de commande plus long ne commence par ses lettres : <code>VR</code> (plage de vue), <code>WT</code> (mosaïque), <code>ZE</code>, <code>ZF</code>, <code>ZA</code>, <code>ZP</code>, <code>ZR</code>, <code>ZO</code>, <code>ZS</code>, <code>HR</code>, <code>HH</code>, <code>HC</code>, <code>IC</code>, <code>DL</code> (ligne de détail), <code>RT</code> (étiquette de pièce), <code>TG</code> (étiqueter par catégorie), <code>TX</code>, <code>CC</code> (copier), <code>MV</code>, <code>RM</code>, <code>LL</code> (niveau), <code>RC</code> (nuage de révision), <code>PP</code> (affiche ou masque <strong>Propriétés</strong>), <code>PT</code>, <code>RP</code> et les raccourcis que vous avez ajoutés. Les autres commencent des noms plus longs et attendent la lettre suivante, une espace (des arguments suivent) ou <span class="keys"><kbd class="key-enter">Enter</kbd></span> : <code>VG</code> (<code>vgsub</code>…), <code>HI</code> (<code>hide</code>), <code>DI</code> (<code>dim</code>), <code>AL</code> (<code>align</code>), <code>WA</code> (<code>wall</code>), <code>DR</code> (<code>draworder</code>), <code>UN</code> (<code>undo</code>), <code>MA</code> (<code>mask</code>) ; ainsi <code>dim</code>, <code>wall 0,0 5,0</code> ou <code>WA 0,0 5,0</code> tapés au-dessus de la vue s'exécutent tels quels. <code>MA</code> et <code>PT</code> indiquent dans la barre d'état qu'ils ne sont pas encore disponibles ; <code>RP</code> lance le plan de référence. Tapée dans la ligne de commande elle-même, une ligne attend <span class="keys"><kbd class="key-enter">Enter</kbd></span>.</p>
-<p>Pendant qu'un outil attend un point dans un plan ou une vue de dessin (ou un outil de détail ou d'annotation dans une coupe), <code>SE</code> (extrémités), <code>SM</code> (milieux), <code>SI</code> (intersections), <code>SN</code> (proche) et <code>SO</code> (désactivés) remplacent les accrochages pour ce point seulement (aussi choisis dans <strong>Remplacements d'accrochage ▸</strong> du bouton droit ; <code>SE</code>, <code>SI</code> et <code>SO</code> avec <span class="keys"><kbd class="key-enter">Enter</kbd></span>, car des noms plus longs commencent ainsi) ; la barre d'état l'indique, et <span class="keys"><kbd class="key-escape">Esc</kbd></span> ou le point pris y met fin. Pour les autres outils dans une coupe, ou dans une vue 3D, dont les points ne sont pas accrochés ainsi, ils sont refusés avec un message. Dans une esquisse, ils valent dans toutes les vues, ainsi que <code>SC</code> (le centre d'un arc) et <code>SP</code> (la perpendiculaire depuis le point d'où l'on dessine).</p>
+<p>Le curseur dans la zone de dessin, les lettres vont dans la ligne de commande (dans le style BIMopen, dans la recherche), et un raccourci agit dès qu'il est tapé, sans <span class="keys"><kbd class="key-enter">Enter</kbd></span>, lorsqu'aucun raccourci ni nom de commande plus long ne commence par ses lettres : <code>VR</code> (hauteurs de coupe), <code>WT</code> (mosaïque), <code>ZE</code>, <code>ZF</code>, <code>ZA</code>, <code>ZP</code>, <code>ZR</code>, <code>ZO</code>, <code>ZS</code>, <code>HR</code>, <code>HH</code>, <code>HC</code>, <code>IC</code>, <code>DL</code> (ligne de détail), <code>RT</code> (étiquette de pièce), <code>TG</code> (étiqueter par catégorie), <code>TX</code>, <code>CC</code> (copier), <code>MV</code>, <code>RM</code>, <code>LL</code> (niveau), <code>RC</code> (nuage de révision), <code>PP</code> (affiche ou masque <strong>Propriétés</strong>), <code>PT</code>, <code>RP</code> et les raccourcis que vous avez ajoutés. Les autres commencent des noms plus longs et attendent la lettre suivante, une espace (des arguments suivent) ou <span class="keys"><kbd class="key-enter">Enter</kbd></span> : <code>VG</code> (<code>vgsub</code>…), <code>HI</code> (<code>hide</code>), <code>DI</code> (<code>dim</code>), <code>AL</code> (<code>align</code>), <code>WA</code> (<code>wall</code>), <code>DR</code> (<code>draworder</code>), <code>UN</code> (<code>undo</code>), <code>MA</code> (<code>mask</code>) ; ainsi <code>dim</code>, <code>wall 0,0 5,0</code> ou <code>WA 0,0 5,0</code> tapés au-dessus de la vue s'exécutent tels quels. <code>MA</code> et <code>PT</code> indiquent dans la barre d'état qu'ils ne sont pas encore disponibles ; <code>RP</code> lance le plan de référence. Tapée dans la ligne de commande elle-même, une ligne attend <span class="keys"><kbd class="key-enter">Enter</kbd></span>.</p>
+<p>Pendant qu'un outil attend un point dans un plan ou une vue 2D libre (ou un outil de détail ou d'annotation dans une coupe), <code>SE</code> (extrémités), <code>SM</code> (milieux), <code>SI</code> (intersections), <code>SN</code> (proche) et <code>SO</code> (désactivés) remplacent les accrochages pour ce point seulement (aussi choisis dans <strong>Remplacements d'accrochage ▸</strong> du bouton droit ; <code>SE</code>, <code>SI</code> et <code>SO</code> avec <span class="keys"><kbd class="key-enter">Enter</kbd></span>, car des noms plus longs commencent ainsi) ; la barre d'état l'indique, et <span class="keys"><kbd class="key-escape">Esc</kbd></span> ou le point pris y met fin. Pour les autres outils dans une coupe, ou dans une vue 3D, dont les points ne sont pas accrochés ainsi, ils sont refusés avec un message. Dans une esquisse, ils valent dans toutes les vues, ainsi que <code>SC</code> (le centre d'un arc) et <code>SP</code> (la perpendiculaire depuis le point d'où l'on dessine).</p>
 <h3 id="modelling">Modélisation</h3>
 <table>
 <thead>
@@ -629,7 +629,7 @@ exécute la commande immédiatement (voir <a href="../command-line-and-mcp/">Lig
 <tr>
 <td><code>RS</code></td>
 <td><code>roomsep</code></td>
-<td>Séparation de pièces</td>
+<td>Séparateur de pièces</td>
 </tr>
 <tr>
 <td><code>PA</code></td>
@@ -639,7 +639,7 @@ exécute la commande immédiatement (voir <a href="../command-line-and-mcp/">Lig
 <tr>
 <td><code>CA</code></td>
 <td><code>areaboundary</code></td>
-<td>Ligne de limite de surface</td>
+<td>Contour de surface</td>
 </tr>
 <tr>
 <td>–</td>
@@ -686,17 +686,17 @@ exécute la commande immédiatement (voir <a href="../command-line-and-mcp/">Lig
 <tr>
 <td><code>MM</code></td>
 <td><code>mirror</code></td>
-<td>Symétrie - Choisir l'axe</td>
+<td>Symétrie par axe</td>
 </tr>
 <tr>
 <td><code>DM</code></td>
 <td><code>mirror</code></td>
-<td>Symétrie - Dessiner l'axe</td>
+<td>Symétrie par ligne</td>
 </tr>
 <tr>
 <td><code>AR</code></td>
 <td><code>array</code></td>
-<td>Réseau</td>
+<td>Répéter en série</td>
 </tr>
 <tr>
 <td><code>OF</code></td>
@@ -721,7 +721,7 @@ exécute la commande immédiatement (voir <a href="../command-line-and-mcp/">Lig
 <tr>
 <td><code>SG</code></td>
 <td><code>split</code></td>
-<td>Scinder avec espace</td>
+<td>Diviser avec joint</td>
 </tr>
 <tr>
 <td><code>RE</code></td>
@@ -731,7 +731,7 @@ exécute la commande immédiatement (voir <a href="../command-line-and-mcp/">Lig
 <tr>
 <td><code>PN</code></td>
 <td><code>pin</code></td>
-<td>Verrouille la sélection</td>
+<td>Fixe la sélection</td>
 </tr>
 <tr>
 <td><code>UP</code></td>
@@ -860,7 +860,7 @@ commande, il dessine une cote linéaire (<code>lineardim</code>).</p>
 <tr>
 <td><code>VD</code></td>
 <td><code>draftingview</code></td>
-<td>La boîte de dialogue <strong>Vue de dessin</strong></td>
+<td>La boîte de dialogue <strong>Vue 2D libre</strong></td>
 </tr>
 <tr>
 <td><code>PP</code></td>
@@ -875,12 +875,12 @@ commande, il dessine une cote linéaire (<code>lineardim</code>).</p>
 <tr>
 <td><code>VG</code> ou <code>VV</code></td>
 <td><code>vg</code></td>
-<td><strong>Visibilité/Graphismes</strong></td>
+<td><strong>Visibilité et graphisme</strong></td>
 </tr>
 <tr>
 <td><code>WF</code>, <code>HL</code>, <code>SD</code></td>
 <td>–</td>
-<td><strong>Filaire</strong>, <strong>Ligne cachée</strong>, <strong>Ombré</strong> : le style visuel de la vue active</td>
+<td><strong>Filaire</strong>, <strong>Lignes</strong>, <strong>Ombré</strong> : le style graphique de la vue active</td>
 </tr>
 <tr>
 <td><code>HH</code>, <code>HI</code></td>
@@ -895,7 +895,7 @@ commande, il dessine une cote linéaire (<code>lineardim</code>).</p>
 <tr>
 <td><code>HR</code></td>
 <td>–</td>
-<td><strong>Réinitialiser Masquer/Isoler temporairement</strong></td>
+<td><strong>Réinitialiser Isoler temporairement</strong></td>
 </tr>
 <tr>
 <td><code>EH</code>, <code>VH</code></td>
@@ -905,7 +905,7 @@ commande, il dessine une cote linéaire (<code>lineardim</code>).</p>
 <tr>
 <td><code>RH</code></td>
 <td>–</td>
-<td><strong>Révéler les éléments masqués</strong>, activer et désactiver</td>
+<td><strong>Révéler les masqués</strong>, activer et désactiver</td>
 </tr>
 <tr>
 <td><code>TL</code></td>
@@ -915,7 +915,7 @@ commande, il dessine une cote linéaire (<code>lineardim</code>).</p>
 <tr>
 <td><code>SO</code></td>
 <td><code>objectstyle</code></td>
-<td><strong>Styles d'objets</strong></td>
+<td><strong>Styles par catégorie</strong></td>
 </tr>
 <tr>
 <td><code>MA</code></td>
@@ -971,7 +971,7 @@ commande, il dessine une cote linéaire (<code>lineardim</code>).</p>
 </table>
 <p>Les commandes marquées <strong>–</strong> n'ont pas de forme courte, mais leur nom complet fonctionne de la même
 façon. <code>help</code> répertorie toutes les commandes et leurs formes courtes.</p>
-<p>Les commandes de zoom ont aussi des raccourcis tapés : <code>ZR</code> zoom sur une région, <code>ZO</code> zoom arrière (2x), <code>ZF</code> zoom adapté à la fenêtre, <code>ZA</code> tout adapter à la fenêtre, <code>ZS</code> zoom taille de la feuille, <code>ZP</code> panoramique/zoom précédent. <strong>Vue ▸ Fenêtres ▸ Interface utilisateur ▸ Raccourcis clavier</strong> donne à toute commande vos propres raccourcis (<a href="../interface/#drawing-area-and-view-windows">L'interface</a>).</p>
+<p>Les commandes de zoom ont aussi des raccourcis tapés : <code>ZR</code> zoom sur une région, <code>ZO</code> zoom arrière (2x), <code>ZF</code> zoom adapté à la fenêtre, <code>ZA</code> tout adapter à la fenêtre, <code>ZS</code> zoom taille de la feuille, <code>ZP</code> panoramique/zoom précédent. <strong>Vues ▸ Fenêtres ▸ Panneaux ▸ Raccourcis clavier</strong> donne à toute commande vos propres raccourcis (<a href="../interface/#drawing-area-and-view-windows">L'interface</a>).</p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

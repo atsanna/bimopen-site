@@ -288,14 +288,14 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#mirror">
 <span class="md-ellipsis">
-      Copia speculare
+      Specchia su asse e Specchia su linea
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#array">
 <span class="md-ellipsis">
-      Serie
+      Ripeti in serie
     </span>
 </a>
 </li>
@@ -323,7 +323,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#split">
 <span class="md-ellipsis">
-      Dividi elemento e Dividi con spazio
+      Dividi elemento e Dividi con giunto
     </span>
 </a>
 </li>
@@ -337,7 +337,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#pin">
 <span class="md-ellipsis">
-      Blocca e Sblocca
+      Fissa e Sblocca
     </span>
 </a>
 </li>
@@ -528,14 +528,14 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#mirror">
 <span class="md-ellipsis">
-      Copia speculare
+      Specchia su asse e Specchia su linea
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#array">
 <span class="md-ellipsis">
-      Serie
+      Ripeti in serie
     </span>
 </a>
 </li>
@@ -563,7 +563,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#split">
 <span class="md-ellipsis">
-      Dividi elemento e Dividi con spazio
+      Dividi elemento e Dividi con giunto
     </span>
 </a>
 </li>
@@ -577,7 +577,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#pin">
 <span class="md-ellipsis">
-      Blocca e Sblocca
+      Fissa e Sblocca
     </span>
 </a>
 </li>
@@ -671,7 +671,7 @@ una tavola, tra le viste collocate una sopra l'altra.</p>
 <h2 id="chains">Catene di muri e linee</h2>
 <p>Muri e linee uniti alle estremità formano una catena. Con il cursore su uno di essi, <span class="keys"><kbd class="key-tab">Tab</kbd></span>
 evidenzia l'intera catena (la barra di stato dice <strong>Catena di n elementi uniti</strong>); un clic la
-seleziona. Una catena può mescolare muri, linee di separazione dei locali e linee di contorno area;
+seleziona. Una catena può mescolare muri, separatori ambienti e contorni superficie;
 le linee di dettaglio fanno catena con le linee di dettaglio della loro vista. Dove se ne incontrano
 tre o più, la catena prosegue lungo quello che forma l'angolo più piccolo con l'ultimo; un muro che
 si ferma contro un altro tra le sue estremità porta la catena lungo quel muro.</p>
@@ -720,14 +720,12 @@ tavole (le viste) e nelle viste 3D, dove si muovono sul piano orizzontale in cui
 tasti freccia spostano la selezione di un piccolo passo, arrotondato a un valore ordinato secondo
 lo zoom della vista; con <span class="keys"><kbd class="key-shift">Shift</kbd></span>, di dieci passi.</p>
 <h2 id="the-modify-tools">Gli strumenti di modifica</h2>
-<p>Il gruppo <strong>Modifica</strong> della scheda contestuale ha tre righe: <strong>Allinea</strong>, <strong>Offset</strong>, <strong>Copia
-speculare - Seleziona asse</strong>, <strong>Copia speculare - Disegna asse</strong>, <strong>Dividi elemento</strong>, <strong>Dividi
-con spazio</strong>; <strong>Sposta</strong>, <strong>Copia</strong>, <strong>Ruota</strong>, <strong>Riduci/Estendi ad angolo</strong>, <strong>Riduci/Estendi
-elemento singolo</strong>, <strong>Riduci/Estendi più elementi</strong>; <strong>Serie</strong>, <strong>Scala</strong>, <strong>Blocca</strong>,
+<p>Il gruppo <strong>Modifica</strong> della scheda contestuale ha tre righe: <strong>Allinea</strong>, <strong>Offset</strong>, <strong>Specchia su asse</strong>, <strong>Specchia su linea</strong>, <strong>Dividi elemento</strong>, <strong>Dividi con giunto</strong>; <strong>Sposta</strong>, <strong>Copia</strong>, <strong>Ruota</strong>, <strong>Riduci/Estendi ad angolo</strong>, <strong>Riduci/Estendi
+elemento singolo</strong>, <strong>Riduci/Estendi più elementi</strong>; <strong>Ripeti in serie</strong>, <strong>Scala</strong>, <strong>Fissa</strong>,
 <strong>Sblocca</strong>, <strong>Elimina</strong>. La barra di stato dice che cosa si aspetta ogni strumento, e la barra
 delle opzioni ne mostra le opzioni. <span class="keys"><kbd class="key-escape">Esc</kbd></span> annulla il passaggio in corso; premuto di nuovo,
 termina lo strumento.</p>
-<p><strong>Sposta</strong>, <strong>Copia</strong>, <strong>Ruota</strong>, i due strumenti <strong>Copia speculare</strong>, <strong>Serie</strong> e <strong>Scala</strong>
+<p><strong>Sposta</strong>, <strong>Copia</strong>, <strong>Ruota</strong>, <strong>Specchia su asse</strong>, <strong>Specchia su linea</strong>, <strong>Ripeti in serie</strong> e <strong>Scala</strong>
 lavorano sulla selezione. Avviati senza nulla di selezionato, ti lasciano selezionare prima (clic,
 <span class="keys"><kbd class="key-control">Ctrl</kbd></span>, finestre, <span class="keys"><kbd class="key-tab">Tab</kbd></span>), poi proseguono quando premi <span class="keys"><kbd class="key-enter">Enter</kbd></span> o <strong>Fine</strong> nella barra delle
 opzioni.</p>
@@ -758,11 +756,11 @@ sul primo raggio, poi sul secondo: la selezione ruota dell'angolo tra i due, mos
 angolare temporanea. Invece del secondo raggio, digita l'angolo e premi <span class="keys"><kbd class="key-enter">Enter</kbd></span>, oppure scrivilo
 in <strong>Angolo</strong> nella barra delle opzioni e premi <span class="keys"><kbd class="key-enter">Enter</kbd></span>. <strong>Copia</strong> ruota una copia; senza
 <strong>Dividi</strong>, i muri uniti a quelli ruotati li seguono.</p>
-<h3 id="mirror">Copia speculare</h3>
-<p><strong>Copia speculare - Seleziona asse</strong>: fai clic su un muro, una griglia o una linea come asse.
-<strong>Copia speculare - Disegna asse</strong>: fai clic su due punti. <strong>Copia</strong> è spuntato: si colloca una
+<h3 id="mirror">Specchia su asse e Specchia su linea</h3>
+<p><strong>Specchia su asse</strong>: fai clic su un muro, una griglia o una linea come asse.
+<strong>Specchia su linea</strong>: fai clic su due punti. <strong>Copia</strong> è spuntato: si colloca una
 copia speculare; togli la spunta per specchiare gli elementi stessi.</p>
-<h3 id="array">Serie</h3>
+<h3 id="array">Ripeti in serie</h3>
 <p><strong>Lineare</strong>: fai clic su due punti. <strong>Numero</strong> è quanti elementi in tutto. Con <strong>Sposta a: 2°</strong> i
 due punti danno la spaziatura; con <strong>Ultimo</strong>, l'ultimo elemento va al secondo punto e gli altri
 si distribuiscono uniformemente. <strong>Vincola</strong> mantiene la direzione lungo la selezione o
@@ -795,10 +793,10 @@ volta inizia un nuovo allineamento, due volte termina lo strumento.</p>
 <li><strong>Riduci/Estendi elemento singolo</strong>: il contorno, poi l'elemento;</li>
 <li><strong>Riduci/Estendi più elementi</strong>: il contorno, poi ogni elemento a turno.</li>
 </ul>
-<h3 id="split">Dividi elemento e Dividi con spazio</h3>
+<h3 id="split">Dividi elemento e Dividi con giunto</h3>
 <p><strong>Dividi elemento</strong>: fai clic su un muro o su una linea dove deve diventare due. Con <strong>Elimina
 segmento interno</strong>, fai clic su due punti: la parte fra di essi viene rimossa, con le porte e le
-finestre che contiene. <strong>Dividi con spazio</strong>: imposta <strong>Distanza giunto</strong>, poi fai clic: le due
+finestre che contiene. <strong>Dividi con giunto</strong>: imposta <strong>Distanza giunto</strong>, poi fai clic: le due
 parti restano a quella distanza.</p>
 <h3 id="scale">Scala</h3>
 <p>Si possono mettere in scala muri e linee (e la posizione delle quote); con qualsiasi altra cosa
@@ -806,29 +804,29 @@ selezionata, <strong>Scala</strong> non è disponibile. <strong>Grafico</strong>
 primo vettore, sulla fine di un secondo: gli elementi si scalano secondo il rapporto tra le due
 lunghezze (puoi digitare la seconda). <strong>Numerico</strong>: imposta <strong>Fattore di scala</strong>, poi fai clic
 sull'origine. Porte e finestre mantengono la loro distanza dal centro del muro.</p>
-<h3 id="pin">Blocca e Sblocca</h3>
-<p><strong>Blocca</strong> tiene gli elementi selezionati dove sono: non si possono trascinare, spostare con uno
-strumento né eliminare, e un messaggio lo dice. Un elemento bloccato mostra una puntina quando è
+<h3 id="pin">Fissa e Sblocca</h3>
+<p><strong>Fissa</strong> tiene gli elementi selezionati dove sono: non si possono trascinare, spostare con uno
+strumento né eliminare, e un messaggio lo dice. Un elemento fissato mostra una puntina quando è
 selezionato; fai clic sulla puntina, o usa <strong>Sblocca</strong>, per liberarlo.</p>
 <h3 id="delete-undo">Eliminare, annullare e ripristinare</h3>
-<p><strong>Elimina</strong> (o il tasto <span class="keys"><kbd class="key-delete">Del</kbd></span>) rimuove la selezione e ciò che ospita; gli elementi bloccati
+<p><strong>Elimina</strong> (o il tasto <span class="keys"><kbd class="key-delete">Del</kbd></span>) rimuove la selezione e ciò che ospita; gli elementi fissati
 restano. <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span> annulla l'ultima modifica e <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-y">Y</kbd></span> la ripristina: ogni strumento,
 trascinamento o spostamento con i tasti freccia è un solo passo.</p>
 <h2 id="typed-shortcuts">Scorciatoie digitate</h2>
 <p>Digita le lettere e premi <span class="keys"><kbd class="key-enter">Enter</kbd></span>: <code>MV</code> <strong>Sposta</strong>, <code>CO</code> <strong>Copia</strong>, <code>RO</code> <strong>Ruota</strong>, <code>MM</code>
-<strong>Copia speculare - Seleziona asse</strong>, <code>DM</code> <strong>Copia speculare - Disegna asse</strong>, <code>AR</code> <strong>Serie</strong>, <code>OF</code>
+<strong>Specchia su asse</strong>, <code>DM</code> <strong>Specchia su linea</strong>, <code>AR</code> <strong>Ripeti in serie</strong>, <code>OF</code>
 <strong>Offset</strong>, <code>AL</code> <strong>Allinea</strong>, <code>TR</code> <strong>Riduci/Estendi ad angolo</strong>, <code>SL</code> <strong>Dividi elemento</strong>, <code>SG</code>
-<strong>Dividi con spazio</strong>, <code>RE</code> <strong>Scala</strong>. <code>PN</code> blocca e <code>UP</code> sblocca la selezione, <code>SA</code> seleziona
+<strong>Dividi con giunto</strong>, <code>RE</code> <strong>Scala</strong>. <code>PN</code> fissa e <code>UP</code> sblocca la selezione, <code>SA</code> seleziona
 tutte le sue istanze visibili nella vista. <a href="../keyboard-shortcuts/">Scorciatoie da tastiera</a> le
 elenca tutte.</p>
 <h2 id="not-yet-available">Non ancora disponibile</h2>
 <ul>
 <li><span class="keys"><kbd class="key-tab">Tab</kbd></span> per raggiungere una parte di un elemento: un pannello o un montante di facciata continua,
   una parte di un muro sovrapposto;</li>
-<li><strong>Seleziona tutte le istanze</strong> da un tipo nel Browser di progetto;</li>
-<li><strong>Raggruppa e associa</strong> di <strong>Serie</strong>;</li>
+<li><strong>Seleziona tutte le istanze</strong> da un tipo nell'Indice del progetto;</li>
+<li><strong>Raggruppa e associa</strong> di <strong>Ripeti in serie</strong>;</li>
 <li>la divisione dei muri lungo una linea orizzontale nei prospetti e nelle viste 3D;</li>
-<li>taglia, copia e incolla tramite gli appunti, <strong>Incolla allineato</strong>, <strong>Crea simile</strong>.</li>
+<li>taglia, copia e incolla tramite gli appunti, <strong>Incolla allineato</strong>, <strong>Crea uguale</strong>.</li>
 </ul>
 </article>
 </div>

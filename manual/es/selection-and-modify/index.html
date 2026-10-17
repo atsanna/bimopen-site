@@ -295,7 +295,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#array">
 <span class="md-ellipsis">
-      Matriz
+      Repetir en serie
     </span>
 </a>
 </li>
@@ -323,7 +323,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#split">
 <span class="md-ellipsis">
-      Dividir elemento y Dividir con separación
+      Dividir elemento y Dividir con junta
     </span>
 </a>
 </li>
@@ -535,7 +535,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#array">
 <span class="md-ellipsis">
-      Matriz
+      Repetir en serie
     </span>
 </a>
 </li>
@@ -563,7 +563,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#split">
 <span class="md-ellipsis">
-      Dividir elemento y Dividir con separación
+      Dividir elemento y Dividir con junta
     </span>
 </a>
 </li>
@@ -671,8 +671,8 @@ vistas colocadas una sobre otra.</p>
 <h2 id="chains">Cadenas de muros y líneas</h2>
 <p>Los muros y las líneas unidos por sus extremos forman una cadena. Con el cursor sobre uno de ellos,
 <span class="keys"><kbd class="key-tab">Tab</kbd></span> resalta toda la cadena (la barra de estado dice <strong>Cadena de n elementos unidos</strong>); un clic
-la selecciona. Una cadena puede mezclar muros con líneas de separación de habitación y contornos de
-área; las líneas de detalle forman cadena con las líneas de detalle de su vista. Donde se
+la selecciona. Una cadena puede mezclar muros con separadores de espacios y contornos de
+superficie; las líneas de detalle forman cadena con las líneas de detalle de su vista. Donde se
 encuentran tres o más, la cadena sigue por el que forma el ángulo más pequeño con el último; un
 muro que se detiene contra otro entre sus extremos lleva la cadena a lo largo de ese muro.</p>
 <p><strong>Parte de una cadena.</strong> Selecciona el primer elemento de la parte, lleva el cursor sobre el último
@@ -721,13 +721,12 @@ flechas mueven la selección un paso pequeño, redondeado a un valor limpio seg�
 vista; con <span class="keys"><kbd class="key-shift">Shift</kbd></span>, diez pasos.</p>
 <h2 id="the-modify-tools">Las herramientas de modificación</h2>
 <p>El grupo <strong>Modificar</strong> de la ficha contextual tiene tres filas: <strong>Alinear</strong>, <strong>Desfase</strong>,
-<strong>Simetría - Designar eje</strong>, <strong>Simetría - Dibujar eje</strong>, <strong>Dividir elemento</strong>, <strong>Dividir con
-separación</strong>; <strong>Mover</strong>, <strong>Copiar</strong>, <strong>Girar</strong>, <strong>Recortar/Alargar a esquina</strong>, <strong>Recortar/Alargar
-un elemento</strong>, <strong>Recortar/Alargar varios elementos</strong>; <strong>Matriz</strong>, <strong>Escala</strong>, <strong>Fijar</strong>,
+<strong>Simetría sobre eje</strong>, <strong>Simetría sobre línea</strong>, <strong>Dividir elemento</strong>, <strong>Dividir con junta</strong>; <strong>Mover</strong>, <strong>Copiar</strong>, <strong>Girar</strong>, <strong>Recortar/Alargar a esquina</strong>, <strong>Recortar/Alargar
+un elemento</strong>, <strong>Recortar/Alargar varios elementos</strong>; <strong>Repetir en serie</strong>, <strong>Escala</strong>, <strong>Fijar</strong>,
 <strong>Liberar</strong>, <strong>Eliminar</strong>. La barra de estado dice qué espera cada herramienta a continuación, y la
 barra de opciones muestra sus opciones. <span class="keys"><kbd class="key-escape">Esc</kbd></span> cancela el paso en curso; pulsada otra vez, termina
 la herramienta.</p>
-<p><strong>Mover</strong>, <strong>Copiar</strong>, <strong>Girar</strong>, las dos herramientas de <strong>Simetría</strong>, <strong>Matriz</strong> y <strong>Escala</strong>
+<p><strong>Mover</strong>, <strong>Copiar</strong>, <strong>Girar</strong>, las dos herramientas de <strong>Simetría</strong>, <strong>Repetir en serie</strong> y <strong>Escala</strong>
 trabajan sobre la selección. Iniciadas sin nada seleccionado, te dejan seleccionar primero (clics,
 <span class="keys"><kbd class="key-control">Ctrl</kbd></span>, ventanas, <span class="keys"><kbd class="key-tab">Tab</kbd></span>) y continúan cuando pulsas <span class="keys"><kbd class="key-enter">Enter</kbd></span> o <strong>Fin</strong> en la barra de opciones.</p>
 <p><strong>Mover</strong>, <strong>Copiar</strong> y <strong>Girar</strong> funcionan también en vistas 3D: sus puntos se toman en el plano
@@ -757,10 +756,9 @@ una cota angular temporal. En lugar del segundo radio, escribe el ángulo y puls
 escríbelo en <strong>Ángulo</strong> de la barra de opciones y pulsa <span class="keys"><kbd class="key-enter">Enter</kbd></span>. <strong>Copiar</strong> gira una copia; sin
 <strong>Desunir</strong>, los muros unidos a los girados los siguen.</p>
 <h3 id="mirror">Simetría</h3>
-<p><strong>Simetría - Designar eje</strong>: haz clic en un muro, una rejilla o una línea como eje. <strong>Simetría -
-Dibujar eje</strong>: haz clic en dos puntos. <strong>Copiar</strong> está marcado: se coloca una copia simétrica;
+<p><strong>Simetría sobre eje</strong>: haz clic en un muro, una rejilla o una línea como eje. <strong>Simetría sobre línea</strong>: haz clic en dos puntos. <strong>Copiar</strong> está marcado: se coloca una copia simétrica;
 desmárcalo para aplicar la simetría a los propios elementos.</p>
-<h3 id="array">Matriz</h3>
+<h3 id="array">Repetir en serie</h3>
 <p><strong>Lineal</strong>: haz clic en dos puntos. <strong>Número</strong> es cuántos elementos hay en total. Con <strong>Desplazar
 a: 2°</strong> los dos puntos dan la separación; con <strong>Último</strong>, el último elemento va al segundo punto y
 los demás se reparten por igual. <strong>Restringir</strong> mantiene la dirección a lo largo de la selección o
@@ -793,10 +791,10 @@ veces termina la herramienta.</p>
 <li><strong>Recortar/Alargar un elemento</strong>: el contorno y luego el elemento;</li>
 <li><strong>Recortar/Alargar varios elementos</strong>: el contorno y luego cada elemento por turno.</li>
 </ul>
-<h3 id="split">Dividir elemento y Dividir con separación</h3>
+<h3 id="split">Dividir elemento y Dividir con junta</h3>
 <p><strong>Dividir elemento</strong>: haz clic en un muro o una línea donde deba convertirse en dos. Con <strong>Suprimir
 segmento interior</strong>, haz clic en dos puntos: se elimina la parte entre ellos, con las puertas y
-ventanas que contiene. <strong>Dividir con separación</strong>: ajusta <strong>Separación de junta</strong> y haz clic: las
+ventanas que contiene. <strong>Dividir con junta</strong>: ajusta <strong>Separación de junta</strong> y haz clic: las
 dos partes quedan a esa distancia.</p>
 <h3 id="scale">Escala</h3>
 <p>Se pueden escalar muros y líneas (y la posición de las cotas); con cualquier otra cosa
@@ -814,18 +812,17 @@ quedan. <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd
 desplazamiento con las flechas es un solo paso.</p>
 <h2 id="typed-shortcuts">Atajos escritos</h2>
 <p>Escribe las letras y pulsa <span class="keys"><kbd class="key-enter">Enter</kbd></span>: <code>MV</code> <strong>Mover</strong>, <code>CO</code> <strong>Copiar</strong>, <code>RO</code> <strong>Girar</strong>, <code>MM</code>
-<strong>Simetría - Designar eje</strong>, <code>DM</code> <strong>Simetría - Dibujar eje</strong>, <code>AR</code> <strong>Matriz</strong>, <code>OF</code> <strong>Desfase</strong>,
-<code>AL</code> <strong>Alinear</strong>, <code>TR</code> <strong>Recortar/Alargar a esquina</strong>, <code>SL</code> <strong>Dividir elemento</strong>, <code>SG</code> <strong>Dividir con
-separación</strong>, <code>RE</code> <strong>Escala</strong>. <code>PN</code> fija y <code>UP</code> libera la selección, <code>SA</code> selecciona todos sus
+<strong>Simetría sobre eje</strong>, <code>DM</code> <strong>Simetría sobre línea</strong>, <code>AR</code> <strong>Repetir en serie</strong>, <code>OF</code> <strong>Desfase</strong>,
+<code>AL</code> <strong>Alinear</strong>, <code>TR</code> <strong>Recortar/Alargar a esquina</strong>, <code>SL</code> <strong>Dividir elemento</strong>, <code>SG</code> <strong>Dividir con junta</strong>, <code>RE</code> <strong>Escala</strong>. <code>PN</code> fija y <code>UP</code> libera la selección, <code>SA</code> selecciona todos sus
 ejemplares visibles en la vista. <a href="../keyboard-shortcuts/">Atajos de teclado</a> los enumera todos.</p>
 <h2 id="not-yet-available">Todavía no disponible</h2>
 <ul>
 <li><span class="keys"><kbd class="key-tab">Tab</kbd></span> para llegar a una parte de un elemento: un panel o un montante de muro cortina, una parte
   de un muro apilado;</li>
-<li><strong>Seleccionar todos los ejemplares</strong> desde un tipo en el navegador de proyectos;</li>
-<li><strong>Agrupar y asociar</strong> de <strong>Matriz</strong>;</li>
+<li><strong>Seleccionar todos los ejemplares</strong> desde un tipo en el Índice del proyecto;</li>
+<li><strong>Agrupar y asociar</strong> de <strong>Repetir en serie</strong>;</li>
 <li>dividir muros a lo largo de una línea horizontal en alzados y vistas 3D;</li>
-<li>cortar, copiar y pegar mediante el portapapeles, <strong>Pegar alineado</strong>, <strong>Crear similar</strong>.</li>
+<li>cortar, copiar y pegar mediante el portapapeles, <strong>Pegar alineado</strong>, <strong>Crear igual</strong>.</li>
 </ul>
 </article>
 </div>

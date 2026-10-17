@@ -508,7 +508,7 @@ stai digitando in un campo: in un campo agiscono sul testo.</p>
 lo schizzo quando ha abbastanza punti.</p>
 <p>Nella finestra di dialogo <strong>Nota di testo</strong>, <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-enter">Enter</kbd></span> inserisce la nota e <span class="keys"><kbd class="key-escape">Esc</kbd></span> la
 annulla.</p>
-<p><span class="keys"><kbd class="key-alt">Alt</kbd></span> premuto e rilasciato, oppure <span class="keys"><kbd class="key-f10">F10</kbd></span>, mostra i suggerimenti dei tasti della barra multifunzione. Senza strumenti attivi e senza nulla digitato, <span class="keys"><kbd class="key-enter">Enter</kbd></span> ripete l'ultimo strumento. Dopo un clic nel Browser di progetto, i tasti freccia e <span class="keys"><kbd class="key-enter">Enter</kbd></span> si muovono nel suo albero.</p>
+<p><span class="keys"><kbd class="key-alt">Alt</kbd></span> premuto e rilasciato, oppure <span class="keys"><kbd class="key-f10">F10</kbd></span>, mostra i suggerimenti dei tasti della barra multifunzione. Senza strumenti attivi e senza nulla digitato, <span class="keys"><kbd class="key-enter">Enter</kbd></span> ripete l'ultimo strumento. Dopo un clic nell'Indice del progetto, i tasti freccia e <span class="keys"><kbd class="key-enter">Enter</kbd></span> si muovono nel suo albero.</p>
 <h2 id="mouse">Mouse</h2>
 <table>
 <thead>
@@ -550,8 +550,8 @@ annulla.</p>
 <p>Digita le lettere mentre nessun campo è in modifica, poi premi <span class="keys"><kbd class="key-enter">Enter</kbd></span>. Senza argomenti, una
 scorciatoia avvia lo strumento o apre la finestra di dialogo; con argomenti, esegue subito il
 comando (vedi <a href="../command-line-and-mcp/">Riga di comando e MCP</a>).</p>
-<p>Con il cursore nell'area di disegno, le lettere vanno nella riga di comando (nello stile BIMopen, nella ricerca), e una scorciatoia agisce appena digitata, senza <span class="keys"><kbd class="key-enter">Enter</kbd></span>, quando nessuna scorciatoia o nome di comando più lungo comincia con le sue lettere: <code>VR</code> (intervallo di visualizzazione), <code>WT</code> (affianca), <code>ZE</code>, <code>ZF</code>, <code>ZA</code>, <code>ZP</code>, <code>ZR</code>, <code>ZO</code>, <code>ZS</code>, <code>HR</code>, <code>HH</code>, <code>HC</code>, <code>IC</code>, <code>DL</code> (linea di dettaglio), <code>RT</code> (etichetta locale), <code>TG</code> (etichetta per categoria), <code>TX</code>, <code>CC</code> (copia), <code>MV</code>, <code>RM</code>, <code>LL</code> (livello), <code>RC</code> (nuvola di revisione), <code>PP</code> (mostra o nasconde <strong>Proprietà</strong>), <code>PT</code>, <code>RP</code> e le scorciatoie che hai aggiunto. Le altre cominciano nomi più lunghi e aspettano la lettera successiva, uno spazio (seguono argomenti) o <span class="keys"><kbd class="key-enter">Enter</kbd></span>: <code>VG</code> (<code>vgsub</code>…), <code>HI</code> (<code>hide</code>), <code>DI</code> (<code>dim</code>), <code>AL</code> (<code>align</code>), <code>WA</code> (<code>wall</code>), <code>DR</code> (<code>draworder</code>), <code>UN</code> (<code>undo</code>), <code>MA</code> (<code>mask</code>); così <code>dim</code>, <code>wall 0,0 5,0</code> o <code>WA 0,0 5,0</code> digitati sopra la vista vengono eseguiti come digitati. <code>MA</code> e <code>PT</code> dicono nella barra di stato che non sono ancora disponibili; <code>RP</code> avvia il piano di riferimento. Digitata nella riga di comando stessa, una riga aspetta <span class="keys"><kbd class="key-enter">Enter</kbd></span>.</p>
-<p>Mentre uno strumento aspetta un punto in una pianta o in una vista di disegno (o uno strumento di dettaglio o di annotazione in una sezione), <code>SE</code> (estremi), <code>SM</code> (punti medi), <code>SI</code> (intersezioni), <code>SN</code> (vicino) e <code>SO</code> (disattivati) sostituiscono gli snap solo per quel punto (scelti anche in <strong>Sostituzioni di snap ▸</strong> del pulsante destro; <code>SE</code>, <code>SI</code> e <code>SO</code> con <span class="keys"><kbd class="key-enter">Enter</kbd></span>, perché nomi più lunghi cominciano con esse); la barra di stato lo dice, e <span class="keys"><kbd class="key-escape">Esc</kbd></span> o il punto preso la terminano. Per gli altri strumenti in una sezione, o in una vista 3D, i cui punti non hanno questi snap, sono rifiutate con un messaggio. In un disegno valgono in ogni vista, e anche <code>SC</code> (il centro di un arco) e <code>SP</code> (la perpendicolare dal punto da cui si disegna).</p>
+<p>Con il cursore nell'area di disegno, le lettere vanno nella riga di comando (nello stile BIMopen, nella ricerca), e una scorciatoia agisce appena digitata, senza <span class="keys"><kbd class="key-enter">Enter</kbd></span>, quando nessuna scorciatoia o nome di comando più lungo comincia con le sue lettere: <code>VR</code> (altezze di taglio), <code>WT</code> (affianca), <code>ZE</code>, <code>ZF</code>, <code>ZA</code>, <code>ZP</code>, <code>ZR</code>, <code>ZO</code>, <code>ZS</code>, <code>HR</code>, <code>HH</code>, <code>HC</code>, <code>IC</code>, <code>DL</code> (linea di dettaglio), <code>RT</code> (etichetta ambiente), <code>TG</code> (etichetta per categoria), <code>TX</code>, <code>CC</code> (copia), <code>MV</code>, <code>RM</code>, <code>LL</code> (livello), <code>RC</code> (nuvola di revisione), <code>PP</code> (mostra o nasconde <strong>Proprietà</strong>), <code>PT</code>, <code>RP</code> e le scorciatoie che hai aggiunto. Le altre cominciano nomi più lunghi e aspettano la lettera successiva, uno spazio (seguono argomenti) o <span class="keys"><kbd class="key-enter">Enter</kbd></span>: <code>VG</code> (<code>vgsub</code>…), <code>HI</code> (<code>hide</code>), <code>DI</code> (<code>dim</code>), <code>AL</code> (<code>align</code>), <code>WA</code> (<code>wall</code>), <code>DR</code> (<code>draworder</code>), <code>UN</code> (<code>undo</code>), <code>MA</code> (<code>mask</code>); così <code>dim</code>, <code>wall 0,0 5,0</code> o <code>WA 0,0 5,0</code> digitati sopra la vista vengono eseguiti come digitati. <code>MA</code> e <code>PT</code> dicono nella barra di stato che non sono ancora disponibili; <code>RP</code> avvia il piano di riferimento. Digitata nella riga di comando stessa, una riga aspetta <span class="keys"><kbd class="key-enter">Enter</kbd></span>.</p>
+<p>Mentre uno strumento aspetta un punto in una pianta o in una vista 2D libera (o uno strumento di dettaglio o di annotazione in una sezione), <code>SE</code> (estremi), <code>SM</code> (punti medi), <code>SI</code> (intersezioni), <code>SN</code> (vicino) e <code>SO</code> (disattivati) sostituiscono gli snap solo per quel punto (scelti anche in <strong>Sostituzioni di snap ▸</strong> del pulsante destro; <code>SE</code>, <code>SI</code> e <code>SO</code> con <span class="keys"><kbd class="key-enter">Enter</kbd></span>, perché nomi più lunghi cominciano con esse); la barra di stato lo dice, e <span class="keys"><kbd class="key-escape">Esc</kbd></span> o il punto preso la terminano. Per gli altri strumenti in una sezione, o in una vista 3D, i cui punti non hanno questi snap, sono rifiutate con un messaggio. In un disegno valgono in ogni vista, e anche <code>SC</code> (il centro di un arco) e <code>SP</code> (la perpendicolare dal punto da cui si disegna).</p>
 <h3 id="modelling">Modellazione</h3>
 <table>
 <thead>
@@ -625,12 +625,12 @@ comando (vedi <a href="../command-line-and-mcp/">Riga di comando e MCP</a>).</p>
 <tr>
 <td><code>RM</code></td>
 <td><code>room</code></td>
-<td>Locale</td>
+<td>Ambiente</td>
 </tr>
 <tr>
 <td><code>RS</code></td>
 <td><code>roomsep</code></td>
-<td>Separazione dei locali</td>
+<td>Separatore ambienti</td>
 </tr>
 <tr>
 <td><code>PA</code></td>
@@ -640,12 +640,12 @@ comando (vedi <a href="../command-line-and-mcp/">Riga di comando e MCP</a>).</p>
 <tr>
 <td><code>CA</code></td>
 <td><code>areaboundary</code></td>
-<td>Linea di contorno area</td>
+<td>Contorno superficie</td>
 </tr>
 <tr>
 <td>–</td>
 <td><code>area</code></td>
-<td>Area</td>
+<td>Superficie</td>
 </tr>
 <tr>
 <td><code>LG</code></td>
@@ -687,17 +687,17 @@ comando (vedi <a href="../command-line-and-mcp/">Riga di comando e MCP</a>).</p>
 <tr>
 <td><code>MM</code></td>
 <td><code>mirror</code></td>
-<td>Copia speculare - Seleziona asse</td>
+<td>Specchia su asse</td>
 </tr>
 <tr>
 <td><code>DM</code></td>
 <td><code>mirror</code></td>
-<td>Copia speculare - Disegna asse</td>
+<td>Specchia su linea</td>
 </tr>
 <tr>
 <td><code>AR</code></td>
 <td><code>array</code></td>
-<td>Serie</td>
+<td>Ripeti in serie</td>
 </tr>
 <tr>
 <td><code>OF</code></td>
@@ -722,7 +722,7 @@ comando (vedi <a href="../command-line-and-mcp/">Riga di comando e MCP</a>).</p>
 <tr>
 <td><code>SG</code></td>
 <td><code>split</code></td>
-<td>Dividi con spazio</td>
+<td>Dividi con giunto</td>
 </tr>
 <tr>
 <td><code>RE</code></td>
@@ -732,7 +732,7 @@ comando (vedi <a href="../command-line-and-mcp/">Riga di comando e MCP</a>).</p>
 <tr>
 <td><code>PN</code></td>
 <td><code>pin</code></td>
-<td>Blocca la selezione</td>
+<td>Fissa la selezione</td>
 </tr>
 <tr>
 <td><code>UP</code></td>
@@ -804,7 +804,7 @@ comando (vedi <a href="../command-line-and-mcp/">Riga di comando e MCP</a>).</p>
 <tr>
 <td>–</td>
 <td><code>mask</code></td>
-<td>Regione di mascheramento</td>
+<td>Mascheratura</td>
 </tr>
 <tr>
 <td><code>CD</code></td>
@@ -861,7 +861,7 @@ di comando, disegna una quota lineare (<code>lineardim</code>).</p>
 <tr>
 <td><code>VD</code></td>
 <td><code>draftingview</code></td>
-<td>La finestra di dialogo <strong>Vista di disegno</strong></td>
+<td>La finestra di dialogo <strong>Vista 2D libera</strong></td>
 </tr>
 <tr>
 <td><code>PP</code></td>
@@ -876,12 +876,12 @@ di comando, disegna una quota lineare (<code>lineardim</code>).</p>
 <tr>
 <td><code>VG</code> o <code>VV</code></td>
 <td><code>vg</code></td>
-<td><strong>Visibilità/Grafica</strong></td>
+<td><strong>Visibilità e grafica</strong></td>
 </tr>
 <tr>
 <td><code>WF</code>, <code>HL</code>, <code>SD</code></td>
 <td>–</td>
-<td><strong>Wireframe</strong>, <strong>Linea nascosta</strong>, <strong>Ombreggiato</strong>: lo stile di visualizzazione della vista attiva</td>
+<td><strong>Wireframe</strong>, <strong>Linee</strong>, <strong>Ombreggiato</strong>: lo stile grafico della vista attiva</td>
 </tr>
 <tr>
 <td><code>HH</code>, <code>HI</code></td>
@@ -896,7 +896,7 @@ di comando, disegna una quota lineare (<code>lineardim</code>).</p>
 <tr>
 <td><code>HR</code></td>
 <td>–</td>
-<td><strong>Ripristina Nascondi/Isola temporaneamente</strong></td>
+<td><strong>Ripristina Isola temporaneamente</strong></td>
 </tr>
 <tr>
 <td><code>EH</code>, <code>VH</code></td>
@@ -906,7 +906,7 @@ di comando, disegna una quota lineare (<code>lineardim</code>).</p>
 <tr>
 <td><code>RH</code></td>
 <td>–</td>
-<td><strong>Mostra elementi nascosti</strong>, attiva e disattiva</td>
+<td><strong>Rivela nascosti</strong>, attiva e disattiva</td>
 </tr>
 <tr>
 <td><code>TL</code></td>
@@ -916,7 +916,7 @@ di comando, disegna una quota lineare (<code>lineardim</code>).</p>
 <tr>
 <td><code>SO</code></td>
 <td><code>objectstyle</code></td>
-<td><strong>Stili oggetti</strong></td>
+<td><strong>Stili per categoria</strong></td>
 </tr>
 <tr>
 <td><code>MA</code></td>
@@ -972,7 +972,7 @@ di comando, disegna una quota lineare (<code>lineardim</code>).</p>
 </table>
 <p>I comandi con <strong>–</strong> non hanno una forma breve, ma il loro nome completo funziona allo stesso modo.
 <code>help</code> elenca tutti i comandi e le loro forme brevi.</p>
-<p>Anche i comandi di zoom hanno scorciatoie digitate: <code>ZR</code> zoom su regione, <code>ZO</code> zoom indietro (2x), <code>ZF</code> adatta alla finestra, <code>ZA</code> adatta tutto alla finestra, <code>ZS</code> zoom dimensione tavola, <code>ZP</code> pan/zoom precedente. <strong>Vista ▸ Finestre ▸ Interfaccia utente ▸ Tasti di scelta rapida</strong> dà a qualunque comando scorciatoie tue (<a href="../interface/#drawing-area-and-view-windows">L'interfaccia</a>).</p>
+<p>Anche i comandi di zoom hanno scorciatoie digitate: <code>ZR</code> zoom su regione, <code>ZO</code> zoom indietro (2x), <code>ZF</code> adatta alla finestra, <code>ZA</code> adatta tutto alla finestra, <code>ZS</code> zoom dimensione tavola, <code>ZP</code> pan/zoom precedente. <strong>Viste ▸ Finestre ▸ Pannelli ▸ Tasti di scelta rapida</strong> dà a qualunque comando scorciatoie tue (<a href="../interface/#drawing-area-and-view-windows">L'interfaccia</a>).</p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

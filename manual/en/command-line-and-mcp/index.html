@@ -437,13 +437,13 @@ you type.</p>
 </ul>
 <h3 id="typed-shortcuts-start-the-tools">Typed shortcuts start the tools</h3>
 <p>A command typed <strong>without arguments</strong> starts the interactive tool, as if you clicked its button:
-<code>WA</code> (or <code>wall</code>) starts the wall tool, <code>DR</code> the door tool, <code>VG</code> opens Visibility/Graphics. The
+<code>WA</code> (or <code>wall</code>) starts the wall tool, <code>DR</code> the door tool, <code>VG</code> opens Visibility and Graphics. The
 same command <strong>with arguments</strong> does the work at once, without the tool: <code>wall 0,0 5,0</code> draws a
 wall from the origin to 5 m along x.</p>
 <p>Command names, their short forms and their arguments are the same in every language of the
 interface; most also accept an Italian name, such as <code>muro</code> for <code>wall</code>. Parameter names, type
 names and view names follow the language of the interface: in English you type
-<code>set Unconnected Height 2.7m</code>, in Italian <code>set Altezza non collegata 2.7m</code>. The
+<code>set Free Height 2.7m</code>, in Italian <code>set Altezza libera 2.7m</code>. The
 <a href="../keyboard-shortcuts/">keyboard shortcuts chapter</a> lists every short form.</p>
 <h3 id="points-and-lengths">Points and lengths</h3>
 <table>
@@ -479,7 +479,7 @@ names and view names follow the language of the interface: in English you type
 <p>For example, <code>wall 0,0 @6,0 @4&lt;90 0,4 c</code> draws a 6 × 4 m rectangle; the final <code>c</code> closes it.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>At the command line <code>set Unconnected Height 2700</code> means 2700 <strong>metres</strong>. Write the unit:
+<p>At the command line <code>set Free Height 2700</code> means 2700 <strong>metres</strong>. Write the unit:
 <code>2700mm</code>. In the Properties palette, instead, a number without unit is in the project's
 units, millimetres in a new project.</p>
 </div>
@@ -677,7 +677,7 @@ project; <code>--sample</code> starts from the sample house.</p>
 <tr>
 <td><code>render</code></td>
 <td><code>view</code>, <code>width</code>, <code>height</code>, <code>yaw</code>, <code>pitch</code></td>
-<td>A PNG image of a view: <code>3d</code>, the name of a level for its plan, of a section, elevation, callout or drafting view, or the number or name of a sheet; <code>yaw</code> and <code>pitch</code> turn the 3D camera, in degrees</td>
+<td>A PNG image of a view: <code>3d</code>, the name of a level for its plan, of a section, elevation, callout or free 2D view, or the number or name of a sheet; <code>yaw</code> and <code>pitch</code> turn the 3D camera, in degrees</td>
 </tr>
 </tbody>
 </table>

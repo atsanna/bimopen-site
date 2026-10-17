@@ -248,7 +248,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#visual-styles">
 <span class="md-ellipsis">
-      Visual styles
+      Graphic styles
     </span>
 </a>
 </li>
@@ -262,7 +262,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#plans-and-their-view-range">
 <span class="md-ellipsis">
-      Plans and their view range
+      Plans and their cut heights
     </span>
 </a>
 </li>
@@ -283,7 +283,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#scale-detail-level-and-crop-region">
 <span class="md-ellipsis">
-      Scale, detail level and crop region
+      Scale, detail and crop region
     </span>
 </a>
 </li>
@@ -297,7 +297,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#visibilitygraphics">
 <span class="md-ellipsis">
-      Visibility/Graphics
+      Visibility and Graphics
     </span>
 </a>
 </li>
@@ -397,7 +397,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#visual-styles">
 <span class="md-ellipsis">
-      Visual styles
+      Graphic styles
     </span>
 </a>
 </li>
@@ -411,7 +411,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#plans-and-their-view-range">
 <span class="md-ellipsis">
-      Plans and their view range
+      Plans and their cut heights
     </span>
 </a>
 </li>
@@ -432,7 +432,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#scale-detail-level-and-crop-region">
 <span class="md-ellipsis">
-      Scale, detail level and crop region
+      Scale, detail and crop region
     </span>
 </a>
 </li>
@@ -446,7 +446,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#visibilitygraphics">
 <span class="md-ellipsis">
-      Visibility/Graphics
+      Visibility and Graphics
     </span>
 </a>
 </li>
@@ -480,25 +480,25 @@
 <article class="md-content__inner md-typeset"><a class="md-content__icon pdf-download-btn" download href="../pdf/bimopen-manual-en.pdf" title="Download"><i class="fa fas fa-download"></i><small> PDF</small></a>
 <h1 id="views-and-graphics">Views and graphics</h1>
 <p>This chapter describes the views of the model, how each one is drawn, and how to change what a
-view shows and how: visual styles, scale and detail level, the view range of a plan, crop
-regions, hiding and isolating, <strong>Visibility/Graphics</strong>, filters and view templates. Line
-weights, line patterns and object styles are described in the same terms by the program's
-dialogs <strong>Manage ▸ Settings</strong>.</p>
+view shows and how: graphic styles, scale and detail, the cut heights of a plan, crop
+regions, hiding and isolating, <strong>Visibility and Graphics</strong>, filters and view templates. Line
+weights, line patterns and styles by category are described in the same terms by the program's
+dialogs <strong>Project ▸ Settings</strong>.</p>
 <h2 id="3d-views">3D views</h2>
-<p><strong>View ▸ Create ▸ 3D View ▸ Default 3D View</strong> opens the default 3D view, <strong>{3D}</strong>, framing the
+<p><strong>Views ▸ Create ▸ 3D View ▸ Default 3D View</strong> opens the default 3D view, <strong>{3D}</strong>, framing the
 whole model; opened again, it shows the model as it was left. Drag to orbit (or <strong>Shift</strong> and the
 middle button), drag with the middle button to pan, and turn the wheel to zoom at the cursor; see
 <a href="../interface/">The interface</a>.</p>
-<p>To keep a framing, <strong>View ▸ Create ▸ 3D View ▸ Save View</strong>: type a name and press Enter. The new
-view is listed under <strong>3D Views</strong> in the <strong>Project Browser</strong> and opens at once; it keeps the
-framing it is left with. Renaming <strong>{3D}</strong> in the <strong>Project Browser</strong> (right-click ▸ <strong>Rename…</strong>)
+<p>To keep a framing, <strong>Views ▸ Create ▸ 3D View ▸ Save View</strong>: type a name and press Enter. The new
+view is listed under <strong>3D Views</strong> in the <strong>Project Index</strong> and opens at once; it keeps the
+framing it is left with. Renaming <strong>{3D}</strong> in the <strong>Project Index</strong> (right-click ▸ <strong>Rename…</strong>)
 does the same: <strong>{3D}</strong> becomes a named view, and the next default 3D view is a new <strong>{3D}</strong>.</p>
 <p>A selected element is washed in blue and half see-through, its edges in blue: what is behind it
 stays visible.</p>
 <p>Floors cut the walls they pass through: where a slab crosses a wall the wall stops under it and
 goes on above it, so the slab's edge and the wall's face are one surface.</p>
-<h2 id="visual-styles">Visual styles</h2>
-<p>The <strong>Visual Style</strong> button of the view control bar, at the bottom of every view window, offers:</p>
+<h2 id="visual-styles">Graphic styles</h2>
+<p>The <strong>Graphic Style</strong> button of the view control bar, at the bottom of every view window, offers:</p>
 <table>
 <thead>
 <tr>
@@ -512,7 +512,7 @@ goes on above it, so the slab's edge and the wall's face are one surface.</p>
 <td>Every edge, also those behind other faces; no faces</td>
 </tr>
 <tr>
-<td><strong>Hidden Line</strong></td>
+<td><strong>Lines</strong></td>
 <td>Faces in the paper colour and the edges in front of them</td>
 </tr>
 <tr>
@@ -524,17 +524,17 @@ goes on above it, so the slab's edge and the wall's face are one surface.</p>
 <td>As <strong>Shaded</strong>, with the edges in front</td>
 </tr>
 <tr>
-<td><strong>Consistent Colors</strong></td>
+<td><strong>Flat Colors</strong></td>
 <td>Faces in the colour of their material, the same whatever the light</td>
 </tr>
 </tbody>
 </table>
 <p>The style belongs to the view and can be undone. The keyboard shortcuts <code>WF</code>, <code>HL</code> and <code>SD</code>
-choose <strong>Wireframe</strong>, <strong>Hidden Line</strong> and <strong>Shaded</strong>.</p>
+choose <strong>Wireframe</strong>, <strong>Lines</strong> and <strong>Shaded</strong>.</p>
 <p>The edges are the real ones: where two faces meet at an angle, and the outline of each face and
 each opening. A wall with a window shows its own outline and the window's, and no line where the
 pieces of the wall meet.</p>
-<p>Plans, sections and elevations have a visual style too. A plan is drawn in <strong>Hidden Line</strong> until
+<p>Plans, sections and elevations have a graphic style too. A plan is drawn in <strong>Lines</strong> until
 another style is chosen; in <strong>Shaded</strong> its floors, seen from above, take the colour of their
 material, and the faces of sections and elevations take their materials' colours.</p>
 <h2 id="sun-and-shadows">Sun and shadows</h2>
@@ -566,15 +566,15 @@ material, and the faces of sections and elevations take their materials' colours
 </table>
 <p>Each view has its own sun settings, and the changes can be undone. Shadows are drawn by the 3D
 window on the graphics card; plans, sections, elevations and exported images do not show them yet.</p>
-<h2 id="plans-and-their-view-range">Plans and their view range</h2>
-<p><strong>View ▸ Create ▸ Plan Views ▸ Floor Plan</strong> opens <strong>New Plan</strong>: pick the levels and the scale,
+<h2 id="plans-and-their-view-range">Plans and their cut heights</h2>
+<p><strong>Views ▸ Create ▸ Plan Views ▸ Floor Plan</strong> opens <strong>New Plan</strong>: pick the levels and the scale,
 then <strong>OK</strong>. With <strong>Do not duplicate existing views</strong> on, the levels that already have a plan are
 left out; turn it off to make a second plan of a level.</p>
-<p>A plan is a horizontal cut of the model at the <strong>Cut Plane</strong> of its view range. Walls crossing
+<p>A plan is a horizontal cut of the model at the <strong>Cut Plane</strong> of its cut heights. Walls crossing
 the cut plane are drawn cut, with the cut patterns of their layers' materials at <strong>Medium</strong> and
 <strong>Fine</strong> detail; lower walls and the floors of the level are seen from above.</p>
-<p>To change the view range, select nothing (so that <strong>Properties</strong> shows the view), then
-<strong>View range ▸ Edit…</strong>. Each plane is measured from a level, with an offset:</p>
+<p>To change the cut heights, select nothing (so that <strong>Properties</strong> shows the view), then
+<strong>Cut Heights ▸ Edit…</strong>. Each plane is measured from a level, with an offset:</p>
 <table>
 <thead>
 <tr>
@@ -615,12 +615,12 @@ the screen's own scale: useful on screens with many pixels. It is kept for the n
 <p>Double-click a view's symbol to open its view: a section line or its head, an elevation symbol,
 a callout's boundary (a reference callout opens the view it points at), a level's line in a section or elevation (its floor plan opens), or a view
 placed on a sheet. The view's window becomes the active one.</p>
-<p><strong>View ▸ Create ▸ Elevation ▾ ▸ Framing Elevation</strong> makes an elevation of a grid: click beside
+<p><strong>Views ▸ Create ▸ Elevation ▾ ▸ Framing Elevation</strong> makes an elevation of a grid: click beside
 the grid, on the side to look from (before the click, a line and an arrow show the view). The
 elevation looks at the nearest grid, as wide as the bay between the grids that cross it and as
 deep as the next grid parallel to it.</p>
-<h2 id="scale-detail-level-and-crop-region">Scale, detail level and crop region</h2>
-<p>The view control bar shows the view's <strong>View Scale</strong> and <strong>Detail Level</strong> (in 3D views too).</p>
+<h2 id="scale-detail-level-and-crop-region">Scale, detail and crop region</h2>
+<p>The view control bar shows the view's <strong>View Scale</strong> and <strong>Detail</strong> (in 3D views too).</p>
 <ul>
 <li>At a smaller scale the model is drawn smaller on paper while text, tags and symbols keep
   their size on paper: at 1:200 a text covers twice as much of the model as at 1:100.</li>
@@ -639,7 +639,7 @@ lines.</p>
 edges to resize it. To type its size: <strong>Properties ▸ Size Crop ▸ Edit…</strong>, then <strong>Width</strong> and
 <strong>Height</strong>; the region keeps its centre.</p>
 <h2 id="hiding-and-isolating">Hiding and isolating</h2>
-<p><strong>Temporary Hide/Isolate</strong> (the glasses on the view control bar) acts on the selected
+<p><strong>Isolate Temporarily</strong> (the glasses on the view control bar) acts on the selected
 elements, in the active view only, and does not change the project:</p>
 <table>
 <thead>
@@ -673,17 +673,17 @@ elements, in the active view only, and does not change the project:</p>
 </tbody>
 </table>
 <p>The view gets a coloured border. Each use narrows what is shown: hiding one element and then
-another hides both. <strong>Reset Temporary Hide/Isolate</strong> (<code>HR</code>) shows everything again; <strong>Apply
+another hides both. <strong>Reset Isolate Temporarily</strong> (<code>HR</code>) shows everything again; <strong>Apply
 Hide/Isolate to View</strong> hides for good what was hidden for now.</p>
 <p>To hide for good in the view, select the elements, then right-click ▸ <strong>Hide in view ▸
 Elements</strong> or <strong>Category</strong>, or the contextual tab's <strong>View ▸ Hide in View</strong>, or type <code>EH</code>
 (elements) or <code>VH</code> (category).</p>
-<p><strong>Reveal Hidden Elements</strong> (the light bulb on the view control bar, or <code>RH</code>) frames the view in
+<p><strong>Reveal Hidden</strong> (the light bulb on the view control bar, or <code>RH</code>) frames the view in
 magenta and shows what is hidden in magenta, the rest in halftone. A hidden element can then be
 selected and shown again: right-click ▸ <strong>Unhide in View ▸ Elements</strong> (or <strong>Category</strong>). Click
 the light bulb again, or type <code>RH</code>, to leave.</p>
-<h2 id="visibilitygraphics">Visibility/Graphics</h2>
-<p><strong>View ▸ Graphics ▸ Visibility/Graphics</strong> (or <code>VG</code>, or <strong>Properties ▸ Visibility/graphics
+<h2 id="visibilitygraphics">Visibility and Graphics</h2>
+<p><strong>Views ▸ Graphics ▸ Visibility and Graphics</strong> (or <code>VG</code>, or <strong>Properties ▸ Visibility/graphics
 overrides ▸ Edit…</strong>) shows, for the active view, one row per category:</p>
 <ul>
 <li>the check box shows or hides the category; <strong>Show model categories in this view</strong> shows or
@@ -693,37 +693,36 @@ overrides ▸ Edit…</strong>) shows, for the active view, one row per category
   or replaced by another fill pattern;</li>
 <li><strong>Halftone</strong> blends the lines with the background;</li>
 <li><strong>Transparent</strong> makes the surfaces see-through in the 3D view;</li>
-<li><strong>Detail Level</strong> draws the category at another level than the view.</li>
+<li><strong>Detail</strong> draws the category at another level than the view.</li>
 </ul>
-<p><strong>Clear overrides</strong> takes the selected rows back to the object styles. Changes show at once:
+<p><strong>Clear overrides</strong> takes the selected rows back to the styles by category. Changes show at once:
 <strong>Apply</strong> keeps them and the window, <strong>Cancel</strong> (or the window's ×) takes back what was not
 applied, <strong>OK</strong> keeps them and closes.</p>
-<p>One element can have its own graphics in a view: select it, then right-click ▸ <strong>Override
-graphics in view ▸ By Element…</strong> (or the contextual tab's <strong>View</strong> panel). <strong>View-Specific Element
+<p>One element can have its own graphics in a view: select it, then right-click ▸ <strong>Custom Graphics ▸ By Element…</strong> (or the contextual tab's <strong>View</strong> panel). <strong>View-Specific Element
 Graphics</strong> has <strong>Visible</strong>, <strong>Halftone</strong>, <strong>Transparent</strong>, the surface and cut patterns and the
 projection and cut lines. They apply only in this view, over the category's and the filters'.</p>
 <h2 id="filters">Filters</h2>
-<p><strong>View ▸ Graphics ▸ Filters</strong> lists the project's filters: <strong>New</strong>, <strong>Duplicate</strong>, <strong>Rename</strong>,
+<p><strong>Views ▸ Graphics ▸ Filters</strong> lists the project's filters: <strong>New</strong>, <strong>Duplicate</strong>, <strong>Rename</strong>,
 <strong>Delete</strong>. A filter has categories and up to four rules on their parameters, all of which an
 element must meet.</p>
-<p>In <strong>Visibility/Graphics ▸ Filters</strong>, <strong>Add</strong> applies a filter to the view; its row then sets
+<p>In <strong>Visibility and Graphics ▸ Filters</strong>, <strong>Add</strong> applies a filter to the view; its row then sets
 visibility, lines, <strong>Halftone</strong> and <strong>Transparent</strong> for the elements that pass it. Where filters
 disagree, the one higher in the list wins: <strong>Up</strong> and <strong>Down</strong> move the selected filter.</p>
 <h2 id="view-templates">View templates</h2>
-<p><strong>View ▸ Graphics ▸ View templates ▸ Create template from current view</strong> keeps the view's
-scale, detail level, visual style, view range and graphics as a template, by name.
+<p><strong>Views ▸ Graphics ▸ View templates ▸ Create template from current view</strong> keeps the view's
+scale, detail, graphic style, cut heights and graphics as a template, by name.
 <strong>View templates ▸ Apply template to current view</strong> gives them to another view of the same
 kind: a plan (a second plan of a level too), a section or elevation, or a 3D view. A view does
 not follow later changes of its template until it is applied again, and the graphics of single
 elements are never part of a template.</p>
 <h2 id="managing-views">Managing views</h2>
-<p>Right-click a view in the <strong>Project Browser</strong>:</p>
+<p>Right-click a view in the <strong>Project Index</strong>:</p>
 <ul>
 <li><strong>Duplicate View ▸ Duplicate</strong> copies the view with its properties; <strong>Duplicate with
   Detailing</strong> copies its dimensions, text, tags and 2D details too. The copy opens;</li>
 <li><strong>Rename…</strong> asks for the new name (<strong>Rename View</strong>); names stay unique among views.</li>
 </ul>
-<p><strong>View ▸ Windows ▸ Tile</strong> shows all the open views side by side, filling the drawing area: with
+<p><strong>Views ▸ Windows ▸ Tile</strong> shows all the open views side by side, filling the drawing area: with
 three windows, the active one on the left at full height and two stacked on the right.</p>
 </article>
 </div>

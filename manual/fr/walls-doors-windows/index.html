@@ -232,21 +232,21 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#the-location-line-and-flipping">
 <span class="md-ellipsis">
-      La ligne de justification et l'inversion
+      L'alignement et l'inversion
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#attaching-walls-to-roofs-and-floors">
 <span class="md-ellipsis">
-      Attacher les murs aux toits et aux sols
+      Lier les murs aux toits et aux sols
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#editing-a-walls-profile">
 <span class="md-ellipsis">
-      Modifier le profil d'un mur
+      Modifier le contour d'un mur
     </span>
 </a>
 </li>
@@ -482,21 +482,21 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#the-location-line-and-flipping">
 <span class="md-ellipsis">
-      La ligne de justification et l'inversion
+      L'alignement et l'inversion
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#attaching-walls-to-roofs-and-floors">
 <span class="md-ellipsis">
-      Attacher les murs aux toits et aux sols
+      Lier les murs aux toits et aux sols
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#editing-a-walls-profile">
 <span class="md-ellipsis">
-      Modifier le profil d'un mur
+      Modifier le contour d'un mur
     </span>
 </a>
 </li>
@@ -656,8 +656,8 @@ détail.</p>
 <h2 id="drawing-walls">Dessiner des murs</h2>
 <p><strong>Début ▸ Construire ▸ Mur</strong> (ou <code>WA</code>) lance l'outil mur, dans un plan ou dans la vue 3D.
 Choisissez le type de mur dans le sélecteur de type en haut de la palette <strong>Propriétés</strong> ;
-<strong>Propriétés du type</strong> modifie le type, et avec lui chaque mur de ce type. L'onglet contextuel
-<strong>Édition | Placer : Mur</strong> montre le groupe <strong>Dessiner</strong>, et la barre des options montre :</p>
+<strong>Paramètres du type</strong> modifie le type, et avec lui chaque mur de ce type. L'onglet contextuel
+<strong>Dessiner : mur</strong> montre le groupe <strong>Dessiner</strong>, et la barre des options montre :</p>
 <table>
 <thead>
 <tr>
@@ -679,16 +679,16 @@ Choisissez le type de mur dans le sélecteur de type en haut de la palette <stro
 <td>Dans une vue 3D seulement : le niveau sur lequel reposent les murs ; <strong><surface cliquée=""></surface></strong> prend le niveau de la surface du premier clic</td>
 </tr>
 <tr>
-<td><strong>Ligne de justification</strong></td>
-<td>Le plan du mur qui suit les clics : <strong>Axe du mur</strong> (par défaut), l'axe du noyau, ou l'une des faces de finition et du noyau, extérieure ou intérieure</td>
+<td><strong>Alignement</strong></td>
+<td>Le plan du mur qui suit les clics : <strong>Axe</strong> (par défaut), l'axe du noyau, ou l'une des faces de finition et du noyau, extérieure ou intérieure</td>
 </tr>
 <tr>
-<td><strong>Chaîne</strong></td>
+<td><strong>Continuer</strong></td>
 <td>Activée, chaque clic termine un mur et commence le suivant ; désactivée, chaque paire de clics fait un mur à part</td>
 </tr>
 <tr>
 <td><strong>Décaler</strong></td>
-<td>La ligne de justification passe à cette distance des clics, vers l'extérieur</td>
+<td>L'<strong>Alignement</strong> passe à cette distance des clics, vers l'extérieur</td>
 </tr>
 <tr>
 <td><strong>Rayon</strong></td>
@@ -704,7 +704,7 @@ Choisissez le type de mur dans le sélecteur de type en haut de la palette <stro
 <li>la <strong>barre d'espace</strong> met l'extérieur du mur suivant de l'autre côté ;</li>
 <li>après le premier point, tapez une longueur et appuyez sur Entrée : la valeur s'affiche dans un cadre près
   du curseur, et le mur s'arrête à cette distance, dans la direction du curseur (les quadrillages,
-  les lignes de séparation de pièces et de limite de surfaces, les coupes et les élévations
+  les séparateurs de pièces et les contours de surface, les coupes et les élévations
   acceptent de même une longueur tapée) ;</li>
 <li><strong>Échap</strong> termine la chaîne ; encore <strong>Échap</strong>, ou <strong>Modifier</strong>, ferme l'outil.</li>
 </ul>
@@ -739,18 +739,18 @@ Choisissez le type de mur dans le sélecteur de type en haut de la palette <stro
 </tr>
 </tbody>
 </table>
-<h2 id="the-location-line-and-flipping">La ligne de justification et l'inversion</h2>
-<p>Sélectionnez un mur : des points bleus marquent les extrémités de sa ligne de justification, et
+<h2 id="the-location-line-and-flipping">L'alignement et l'inversion</h2>
+<p>Sélectionnez un mur : des points bleus marquent les extrémités de sa ligne d'alignement, et
 deux flèches se tiennent sur son côté extérieur. Un clic sur les flèches retourne le mur autour de
-sa ligne de justification : la première et la dernière couche s'échangent, les portes et les
-fenêtres gardent leur orientation. Changer la <strong>Ligne de justification</strong> d'un mur placé ne le
+sa ligne d'alignement : la première et la dernière couche s'échangent, les portes et les
+fenêtres gardent leur orientation. Changer l'<strong>Alignement</strong> d'un mur placé ne le
 déplace pas ; l'inversion suivante le tourne autour du nouveau plan. Changer le type d'un mur, ou
-ses couches, laisse sa ligne de justification où elle était.</p>
-<h2 id="attaching-walls-to-roofs-and-floors">Attacher les murs aux toits et aux sols</h2>
+ses couches, laisse sa ligne d'alignement où elle était.</p>
+<h2 id="attaching-walls-to-roofs-and-floors">Lier les murs aux toits et aux sols</h2>
 <p>Un mur peut suivre un toit ou un sol au lieu d'une hauteur fixe.</p>
 <ol>
 <li>Sélectionnez les murs.</li>
-<li><strong>Édition | Murs ▸ Modifier le mur ▸ Attacher haut/base</strong>.</li>
+<li><strong>Sélection : murs ▸ Modifier le mur ▸ Lier haut/bas</strong>.</li>
 <li>Dans la barre des options, <strong>Attacher le mur :</strong> <strong>Haut</strong> ou <strong>Base</strong>.</li>
 <li>Cliquez le toit ou le sol, dans un plan, une coupe ou la vue 3D.</li>
 </ol>
@@ -758,18 +758,17 @@ ses couches, laisse sa ligne de justification où elle était.</p>
 les murs pignons montent jusqu'au faîtage) ou du sol au-dessus. Avec <strong>Base</strong>, ils reposent sur la
 face supérieure du sol en dessous. Dès lors ils le suivent : un toit plus raide, un toit relevé par
 son décalage de base, un sol déplacé emportent les murs avec eux.</p>
-<p>Pour les détacher : sélectionnez les murs, <strong>Édition | Murs ▸ Modifier le mur ▸ Détacher
-haut/base</strong>, puis cliquez l'élément dont les détacher, ou appuyez sur <strong>Détacher tout</strong> dans la
+<p>Pour les délier : sélectionnez les murs, <strong>Sélection : murs ▸ Modifier le mur ▸ Délier haut/bas</strong>, puis cliquez l'élément dont les détacher, ou appuyez sur <strong>Détacher tout</strong> dans la
 barre des options. Les murs gardent la hauteur qu'ils ont à ce moment, et peuvent être attachés de
 nouveau à tout moment. Quand un toit ou un sol auquel des murs sont attachés est supprimé, ces murs
 gardent aussi leur hauteur.</p>
 <p>Les propriétés <strong>Haut attaché</strong> et <strong>Base attachée</strong> montrent l'état (lecture seule) ; tant que le
-haut est attaché, <strong>Hauteur non contrainte</strong> est en lecture seule.</p>
-<h2 id="editing-a-walls-profile">Modifier le profil d'un mur</h2>
+haut est attaché, <strong>Hauteur libre</strong> est en lecture seule.</p>
+<h2 id="editing-a-walls-profile">Modifier le contour d'un mur</h2>
 <p>Un mur n'est pas forcément un rectangle : son contour s'esquisse dans une élévation ou une coupe
 parallèle, avec des trous, comme pour un pignon ou un mur en gradins.</p>
 <ol>
-<li>Sélectionnez le mur et cliquez sur <strong>Mode ▸ Modifier le profil</strong> dans son onglet contextuel.
+<li>Sélectionnez le mur et cliquez sur <strong>Mode ▸ Modifier le contour</strong> dans son onglet contextuel.
    Depuis un plan ou une vue non parallèle au mur, <strong>Atteindre la vue</strong> liste les coupes et
    élévations parallèles : choisissez-en une et cliquez sur <strong>Ouvrir la vue</strong>.</li>
 <li>Le mode esquisse s'ouvre avec le contour du mur en magenta. Changez-le avec <strong>Ligne</strong> et
@@ -785,16 +784,16 @@ atteint le plan de coupe ; ses portes et fenêtres le coupent toujours, aussi su
 à un sol le limite toujours. Plan, coupes, élévations et vue 3D montrent un seul
 solide, tiré du même contour et des mêmes trous. Les couches qui se retournent habillent les trous
 comme les portes et les fenêtres (voir <a href="#wall-types-and-layers">Types de murs et couches</a>). Un
-mur-rideau garde les panneaux et les meneaux à l'intérieur de son nouveau contour. <strong>Mode ▸ Réinitialiser le profil</strong> le rend de nouveau rectangulaire ; <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span>
+mur-rideau garde les panneaux et les meneaux à l'intérieur de son nouveau contour. <strong>Mode ▸ Réinitialiser le contour</strong> le rend de nouveau rectangulaire ; <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span>
 annule l'un comme l'autre.</p>
-<p>Le profil se modifie aussi dans la vue 3D : l'esquisse se trouve sur le plan du mur et la vue
+<p>Le contour se modifie aussi dans la vue 3D : l'esquisse se trouve sur le plan du mur et la vue
 reste en 3D. Ce n'est que depuis un plan qu'<strong>Atteindre la vue</strong> apparaît, et rien ne change tant
 qu'une vue n'est pas ouverte avec <strong>Ouvrir la vue</strong>. Pendant l'esquisse, le contour d'origine du
 mur est tracé en lignes de référence pointillées ; l'esquisse s'accroche à leurs extrémités et
 sur elles.</p>
 <h2 id="wall-joins">Jonctions de murs</h2>
 <p>Les murs dont les extrémités se rencontrent se joignent d'eux-mêmes, de même qu'un mur qui se
-termine sur le flanc d'un autre et deux murs qui se croisent. Aux niveaux de détail <strong>Moyen</strong> et
+termine sur le flanc d'un autre et deux murs qui se croisent. Au <strong>Détail</strong> <strong>Moyen</strong> et
 <strong>Élevé</strong>, chaque couche est résolue contre les couches de l'autre mur :</p>
 <ul>
 <li>dans un angle (en L), chaque couche rencontre la même couche de l'autre mur : les finitions
@@ -805,7 +804,7 @@ termine sur le flanc d'un autre et deux murs qui se croisent. Aux niveaux de dé
 <li>les morceaux du même matériau fusionnent sans ligne entre eux ; une ligne fine sépare deux
   matériaux différents ; le contour libre est dessiné épais.</li>
 </ul>
-<p>Au niveau de détail <strong>Faible</strong>, les murs joints forment un seul remplissage, sans ligne entre eux.
+<p>Au <strong>Détail</strong> <strong>Faible</strong>, les murs joints forment un seul remplissage, sans ligne entre eux.
 Les coupes et la vue 3D utilisent les mêmes morceaux : rien ne se superpose.</p>
 <h3 id="the-wall-joins-tool">L'outil Jonctions de murs</h3>
 <p><strong>Édition ▸ Géométrie ▸ Jonctions de murs</strong>, puis cliquez le carré gris qui apparaît sur un angle.
@@ -829,12 +828,12 @@ jonction</strong> : les deux murs se terminent alors à l'équerre, séparés. U
 l'extrémité l'indique ; cliquez-la, ou faites un clic droit sur le point et choisissez <strong>Autoriser
 la jonction</strong>, pour la joindre à nouveau.</p>
 <h2 id="wall-types-and-layers">Types de murs et couches</h2>
-<p><strong>Propriétés du type</strong> d'un mur montre, sous <strong>Construction</strong>, <strong>Structure</strong> avec son bouton
-<strong>Modifier…</strong>, <strong>Retournement aux insertions</strong>, <strong>Retournement aux extrémités</strong>, <strong>Largeur</strong> (la
+<p><strong>Paramètres du type</strong> d'un mur montre, sous <strong>Construction</strong>, <strong>Structure</strong> avec son bouton
+<strong>Modifier…</strong>, <strong>Retour aux ouvertures</strong>, <strong>Retour aux extrémités</strong>, <strong>Largeur</strong> (la
 somme des couches, lecture seule) et <strong>Fonction</strong> (<strong>Intérieur</strong>, <strong>Extérieur</strong>, <strong>Fondation</strong>,
 <strong>Soutènement</strong>, <strong>Sous-face</strong>, <strong>Noyau</strong>) ; sous <strong>Graphisme</strong>, <strong>Motif de remplissage à l'échelle
 grossière</strong> et <strong>Couleur du motif de remplissage à l'échelle grossière</strong>, c'est-à-dire comment les
-murs coupés du type sont remplis au niveau de détail <strong>Faible</strong>. <strong>Dupliquer…</strong> crée un nouveau
+murs coupés du type sont remplis au <strong>Détail</strong> <strong>Faible</strong>. <strong>Dupliquer…</strong> crée un nouveau
 type ; son nom ne suit pas ses couches.</p>
 <p><strong>Structure ▸ Modifier…</strong> ouvre <strong>Modifier l'assemblage</strong> : les couches du côté extérieur au côté
 intérieur, chacune avec sa fonction, son matériau et son épaisseur, entre les deux lignes <strong>Limite
@@ -843,23 +842,22 @@ n'a pas d'épaisseur, et toute autre couche a au moins 4 mm : les autres valeurs
 la boîte de dialogue reste ouverte.</p>
 <p>La colonne <strong>Retournements</strong> coche les couches qui peuvent se retourner. Sous le tableau :</p>
 <ul>
-<li><strong>Retournement aux insertions</strong> (<strong>Ne pas retourner</strong>, <strong>Extérieur</strong>, <strong>Intérieur</strong>, <strong>Les
+<li><strong>Retour aux ouvertures</strong> (<strong>Ne pas retourner</strong>, <strong>Extérieur</strong>, <strong>Intérieur</strong>, <strong>Les
   deux</strong>) : les couches cochées hors du noyau de ce côté tournent dans les tableaux des portes et
   des fenêtres ; les couches derrière elles reculent ;</li>
-<li><strong>Retournement aux extrémités</strong> (<strong>Ne pas retourner</strong>, <strong>Extérieur</strong>, <strong>Intérieur</strong>) : de même
+<li><strong>Retour aux extrémités</strong> (<strong>Ne pas retourner</strong>, <strong>Extérieur</strong>, <strong>Intérieur</strong>) : de même
   aux extrémités libres des murs.</li>
 </ul>
 <p>Le retournement apparaît dans toutes les vues : en plan, dans la vue 3D, dans les coupes et les
 élévations, les couches cochées habillent les tableaux, le linteau et l'appui des portes et
-fenêtres, les côtés des trous d'un profil modifié (voir
-<a href="#editing-a-walls-profile">Modifier le profil d'un mur</a>) et les extrémités libres. Un type de porte
+fenêtres, les côtés des trous d'un contour modifié (voir
+<a href="#editing-a-walls-profile">Modifier le contour d'un mur</a>) et les extrémités libres. Un type de porte
 ou de fenêtre remplace le retournement du mur par sa <strong>Fermeture du mur</strong>.</p>
 <h2 id="wall-properties">Propriétés des murs</h2>
-<p>Sous <strong>Contraintes</strong> : <strong>Ligne de justification</strong>, <strong>Contrainte de base</strong>, <strong>Décalage de la base</strong>,
-<strong>Base attachée</strong>, <strong>Contrainte supérieure</strong> (un niveau, ou <strong>Non lié</strong>), <strong>Hauteur non
-contrainte</strong>, <strong>Décalage supérieur</strong> (avec un niveau), <strong>Haut attaché</strong> et <strong>Délimitation de
+<p>Sous <strong>Contraintes</strong> : <strong>Alignement</strong>, <strong>Niveau de base</strong>, <strong>Décalage en bas</strong>,
+<strong>Base attachée</strong>, <strong>Niveau supérieur</strong> (un niveau, ou <strong>Non lié</strong>), <strong>Hauteur libre</strong>, <strong>Décalage en haut</strong> (avec un niveau), <strong>Haut attaché</strong> et <strong>Délimitation de
 pièce</strong> (décochée, les pièces autour du mur l'ignorent). Sous <strong>Cotes</strong> : <strong>Longueur</strong>,
-<strong>Surface</strong>, <strong>Volume</strong>. Sous <strong>Données d'identification</strong> : <strong>Marque</strong> et <strong>Commentaires</strong>.</p>
+<strong>Surface</strong>, <strong>Volume</strong>. Sous <strong>Identification</strong> : <strong>Marque</strong> et <strong>Commentaires</strong>.</p>
 <h2 id="placing-doors-and-windows">Placer des portes et des fenêtres</h2>
 <p><strong>Début ▸ Construire ▸ Porte</strong> (<code>DR</code>) ou <strong>Fenêtre</strong> (<code>WN</code>), dans un plan, une coupe, une élévation ou la vue 3D. Choisissez
 le type, puis passez sur un mur : l'ouverture suit le curseur le long de celui-ci, et des cotes
@@ -870,10 +868,10 @@ Une fenêtre prend la <strong>Hauteur d'allège par défaut</strong> de son type
 <p>Les portes et les fenêtres reçoivent une <strong>Marque</strong> qui compte par catégorie (1, 2, 3…), à partir
 de la plus haute.</p>
 <h2 id="tags">Étiquettes</h2>
-<p><strong>Édition | Placer : Porte ▸ Étiquette ▸ Étiqueter lors du placement</strong> (ou de même pour les
+<p><strong>Dessiner : porte ▸ Étiquette ▸ Étiqueter lors du placement</strong> (ou de même pour les
 fenêtres) étiquette chaque ouverture à mesure qu'elle est placée. La barre des options propose alors
 <strong>Horizontale</strong> ou <strong>Verticale</strong>, et <strong>Ligne de repère</strong> avec sa longueur. L'étiquette d'une porte
-montre sa <strong>Marque</strong> ; celle d'une fenêtre la <strong>Marque de type</strong> de son type. <strong>Annoter ▸ Etiqueter
+montre sa <strong>Marque</strong> ; celle d'une fenêtre la <strong>Marque de type</strong> de son type. <strong>Annotations ▸ Etiqueter
 tout</strong> étiquette les ouvertures qui ne le sont pas encore.</p>
 <h2 id="flipping-a-door-or-window">Inverser une porte ou une fenêtre</h2>
 <p>Sélectionnez une porte ou une fenêtre en plan : des flèches en travers du mur, du côté où elle
@@ -881,10 +879,10 @@ s'ouvre, retournent son ouverture ; des flèches à côté, le long du mur, mett
 l'autre tableau. Le menu contextuel fait de même : <strong>Inverser le sens</strong> (la charnière) et
 <strong>Inverser l'orientation</strong> (l'ouverture).</p>
 <h2 id="moving-a-door-or-window-to-another-wall">Déplacer une porte ou une fenêtre dans un autre mur</h2>
-<p>Sélectionnez-la, <strong>Édition | Portes ▸ Hôte ▸ Choisir un nouvel hôte</strong> (ou <strong>Édition | Fenêtres</strong>),
+<p>Sélectionnez-la, <strong>Sélection : portes ▸ Hôte ▸ Choisir un nouvel hôte</strong> (ou <strong>Sélection : fenêtres</strong>),
 puis cliquez un autre mur : l'ouverture s'y déplace, à l'endroit cliqué, avec son type et son
 allège. Elle reste sélectionnée.</p>
-<p>En faisant glisser une porte ou une fenêtre, elle reste dans un mur : le pointeur est projeté sur la ligne de justification du mur, l'ouverture glisse donc le long du mur, entre ses extrémités, avec les cotes temporaires vers les murs les plus proches, en plan, en coupe, en élévation ou dans la vue 3D ; là, un clic sur le vitrage d'une fenêtre sélectionne la fenêtre, pas ce que l'on voit au travers. Relâchée au-dessus d'un autre mur, elle passe dans ce mur ; relâchée dans le vide, elle reste au dernier endroit valide du sien. Les touches fléchées la déplacent le long du mur de la même façon.</p>
+<p>En faisant glisser une porte ou une fenêtre, elle reste dans un mur : le pointeur est projeté sur la ligne d'alignement du mur, l'ouverture glisse donc le long du mur, entre ses extrémités, avec les cotes temporaires vers les murs les plus proches, en plan, en coupe, en élévation ou dans la vue 3D ; là, un clic sur le vitrage d'une fenêtre sélectionne la fenêtre, pas ce que l'on voit au travers. Relâchée au-dessus d'un autre mur, elle passe dans ce mur ; relâchée dans le vide, elle reste au dernier endroit valide du sien. Les touches fléchées la déplacent le long du mur de la même façon.</p>
 <h2 id="door-and-window-properties">Propriétés des portes et des fenêtres</h2>
 <p>Occurrence : <strong>Niveau</strong>, <strong>Hauteur d'allège</strong>, <strong>Largeur</strong> et <strong>Hauteur</strong> (du type), <strong>Hauteur de
 linteau</strong>, <strong>Commentaires</strong>, <strong>Marque</strong>. Changer <strong>Hauteur d'allège</strong> ou <strong>Hauteur de linteau</strong>
@@ -897,7 +895,7 @@ profondeur du cadre d'une fenêtre), <strong>Hauteur d'allège par défaut</stro
 de l'habillage</strong> et <strong>Projection intérieure de l'habillage</strong> (portes), <strong>Vantaux</strong> et <strong>Marque de
 type</strong>. Une porte ne peut pas devenir une fenêtre en changeant de type.</p>
 <h2 id="how-walls-doors-and-windows-are-drawn">Comment sont dessinés murs, portes et fenêtres</h2>
-<p>Le <strong>Niveau de détail</strong> du plan décide :</p>
+<p>Le <strong>Détail</strong> du plan décide :</p>
 <table>
 <thead>
 <tr>
@@ -935,7 +933,7 @@ montrent cadre, vantaux, vitrage et appuis, dans les matériaux du type.</p>
 <p>Un mur-rideau est un mur d'un type de mur-rideau, dessiné avec l'outil <strong>Mur</strong> : choisissez
 <strong>Mur-rideau</strong> (un seul panneau de verre sur la longueur du mur), <strong>Vitrage extérieur</strong>
 (quadrillage défini par le type) ou <strong>Devanture</strong> (quadrillage et meneaux) dans le sélecteur de
-type, puis dessinez comme tout mur, en plan ou en 3D, avec <strong>Chaîne</strong> et les formes de
+type, puis dessinez comme tout mur, en plan ou en 3D, avec <strong>Continuer</strong> et les formes de
 <strong>Dessiner</strong>. Un mur de base devient mur-rideau en choisissant un type de mur-rideau dans le
 sélecteur de type ; les portes et fenêtres qu'il accueille sont supprimées, car un mur-rideau ne
 les accueille pas, et un message l'indique (annuler les ramène).</p>
@@ -999,7 +997,7 @@ construction</strong> :</p>
   coupe ou en 3D celle tournée vers l'observateur), une grille, un plan de référence ou, en
   coupe, un niveau ;</li>
 <li><strong>Choisir une ligne et utiliser le plan de construction où elle a été esquissée</strong> : après
-  <strong>OK</strong>, cliquer sur un mur ou une ligne de séparation des pièces : son niveau devient le plan de
+  <strong>OK</strong>, cliquer sur un mur ou un séparateur de pièces : son niveau devient le plan de
   construction.</li>
 </ul>
 <p>Un plan qui ne se trouve pas dans la vue, comme une grille choisie en plan ou un niveau en coupe,

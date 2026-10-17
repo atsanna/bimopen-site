@@ -506,7 +506,7 @@
 <p>في الرسم التخطيطي لأرضية أو سقف أو درج أو درابزين، ينهي <span class="keys"><kbd class="key-escape">Esc</kbd></span> (أو النقر المزدوج) الرسم
 التخطيطي أيضًا حين تكون فيه نقاط كافية.</p>
 <p>في نافذة الحوار <strong>ملاحظة نصية</strong> يُدرج <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-enter">Enter</kbd></span> الملاحظة ويلغيها <span class="keys"><kbd class="key-escape">Esc</kbd></span>.</p>
-<p><span class="keys"><kbd class="key-alt">Alt</kbd></span> مضغوطاً ثم محرراً، أو <span class="keys"><kbd class="key-f10">F10</kbd></span>، يُظهر تلميحات مفاتيح الشريط. دون أداة نشطة ودون كتابة، يكرر <span class="keys"><kbd class="key-enter">Enter</kbd></span> آخر أداة. بعد نقرة في مستعرض المشروع تتحرك مفاتيح الأسهم و<span class="keys"><kbd class="key-enter">Enter</kbd></span> في شجرته.</p>
+<p><span class="keys"><kbd class="key-alt">Alt</kbd></span> مضغوطاً ثم محرراً، أو <span class="keys"><kbd class="key-f10">F10</kbd></span>، يُظهر تلميحات مفاتيح الشريط. دون أداة نشطة ودون كتابة، يكرر <span class="keys"><kbd class="key-enter">Enter</kbd></span> آخر أداة. بعد نقرة في فهرس المشروع تتحرك مفاتيح الأسهم و<span class="keys"><kbd class="key-enter">Enter</kbd></span> في شجرته.</p>
 <h2 id="mouse">الفأرة</h2>
 <table>
 <thead>
@@ -548,8 +548,8 @@
 <p>اكتب الأحرف ما دام لا يُحرَّر أي حقل، ثم اضغط <span class="keys"><kbd class="key-enter">Enter</kbd></span>. دون وسائط يبدأ الاختصار الأداة أو يفتح
 نافذة الحوار؛ ومع وسائط ينفذ الأمر فورًا (انظر
 <a href="../command-line-and-mcp/">سطر الأوامر و MCP</a>).</p>
-<p>عندما يكون المؤشر في منطقة الرسم، تذهب الأحرف إلى سطر الأوامر (وفي نمط BIMopen إلى البحث)، ويعمل الاختصار فور كتابته دون <span class="keys"><kbd class="key-enter">Enter</kbd></span> إن لم يبدأ بأحرفه اختصار أو اسم أمر أطول: <code>VR</code> (نطاق العرض) و<code>WT</code> (تجانب) و<code>ZE</code> و<code>ZF</code> و<code>ZA</code> و<code>ZP</code> و<code>ZR</code> و<code>ZO</code> و<code>ZS</code> و<code>HR</code> و<code>HH</code> و<code>HC</code> و<code>IC</code> و<code>DL</code> (خط تفاصيل) و<code>RT</code> (بطاقة غرفة) و<code>TG</code> (بطاقة حسب الفئة) و<code>TX</code> و<code>CC</code> (نسخ) و<code>MV</code> و<code>RM</code> و<code>LL</code> (منسوب) و<code>RC</code> (سحابة مراجعة) و<code>PP</code> (يظهر <strong>الخصائص</strong> أو يخفيها) و<code>PT</code> و<code>RP</code> والاختصارات التي أضفتها. أما البقية فتبدأ بها أسماء أطول، فتنتظر الحرف التالي أو مسافة (تليها وسائط) أو <span class="keys"><kbd class="key-enter">Enter</kbd></span>: <code>VG</code> (<code>vgsub</code>…) و<code>HI</code> (<code>hide</code>) و<code>DI</code> (<code>dim</code>) و<code>AL</code> (<code>align</code>) و<code>WA</code> (<code>wall</code>) و<code>DR</code> (<code>draworder</code>) و<code>UN</code> (<code>undo</code>) و<code>MA</code> (<code>mask</code>)؛ وبذلك تُنفَّذ <code>dim</code> أو <code>wall 0,0 5,0</code> أو <code>WA 0,0 5,0</code> المكتوبة فوق العرض كما كُتبت. تقول <code>MA</code> و<code>PT</code> في شريط الحالة إنهما غير متاحين بعد؛ و<code>RP</code> يبدأ المستوى المرجعي. أما المكتوب في سطر الأوامر نفسه فينتظر <span class="keys"><kbd class="key-enter">Enter</kbd></span>.</p>
-<p>بينما تنتظر أداة نقطة في مسقط أو عرض رسم (أو أداة تفصيل أو تعليق توضيحي في مقطع)، تستبدل <code>SE</code> (الأطراف) و<code>SM</code> (المنتصفات) و<code>SI</code> (التقاطعات) و<code>SN</code> (الأقرب) و<code>SO</code> (إيقاف) الالتقاط لتلك النقطة فقط (وتُختار أيضاً من <strong>تجاوزات الالتقاط ▸</strong> في الزر الأيمن؛ <code>SE</code> و<code>SI</code> و<code>SO</code> مع <span class="keys"><kbd class="key-enter">Enter</kbd></span> لأن أسماء أطول تبدأ بها)؛ يوضح ذلك شريط الحالة، ويُنهيه <span class="keys"><kbd class="key-escape">Esc</kbd></span> أو أخذ النقطة. ولبقية الأدوات في مقطع، أو في عرض ثلاثي الأبعاد، حيث لا تُلتقط النقاط بهذه الطريقة، تُرفض برسالة. وفي المخطط تعمل في كل عرض، وكذلك <code>SC</code> (مركز القوس) و<code>SP</code> (العمود من النقطة التي يبدأ منها الرسم).</p>
+<p>عندما يكون المؤشر في منطقة الرسم، تذهب الأحرف إلى سطر الأوامر (وفي نمط BIMopen إلى البحث)، ويعمل الاختصار فور كتابته دون <span class="keys"><kbd class="key-enter">Enter</kbd></span> إن لم يبدأ بأحرفه اختصار أو اسم أمر أطول: <code>VR</code> (ارتفاعات القطع) و<code>WT</code> (تجانب) و<code>ZE</code> و<code>ZF</code> و<code>ZA</code> و<code>ZP</code> و<code>ZR</code> و<code>ZO</code> و<code>ZS</code> و<code>HR</code> و<code>HH</code> و<code>HC</code> و<code>IC</code> و<code>DL</code> (خط تفاصيل) و<code>RT</code> (تسمية الغرفة) و<code>TG</code> (بطاقة حسب الفئة) و<code>TX</code> و<code>CC</code> (نسخ) و<code>MV</code> و<code>RM</code> و<code>LL</code> (منسوب) و<code>RC</code> (سحابة مراجعة) و<code>PP</code> (يظهر <strong>الخصائص</strong> أو يخفيها) و<code>PT</code> و<code>RP</code> والاختصارات التي أضفتها. أما البقية فتبدأ بها أسماء أطول، فتنتظر الحرف التالي أو مسافة (تليها وسائط) أو <span class="keys"><kbd class="key-enter">Enter</kbd></span>: <code>VG</code> (<code>vgsub</code>…) و<code>HI</code> (<code>hide</code>) و<code>DI</code> (<code>dim</code>) و<code>AL</code> (<code>align</code>) و<code>WA</code> (<code>wall</code>) و<code>DR</code> (<code>draworder</code>) و<code>UN</code> (<code>undo</code>) و<code>MA</code> (<code>mask</code>)؛ وبذلك تُنفَّذ <code>dim</code> أو <code>wall 0,0 5,0</code> أو <code>WA 0,0 5,0</code> المكتوبة فوق العرض كما كُتبت. تقول <code>MA</code> و<code>PT</code> في شريط الحالة إنهما غير متاحين بعد؛ و<code>RP</code> يبدأ المستوى المرجعي. أما المكتوب في سطر الأوامر نفسه فينتظر <span class="keys"><kbd class="key-enter">Enter</kbd></span>.</p>
+<p>بينما تنتظر أداة نقطة في مسقط أو عرض ثنائي الأبعاد حر (أو أداة تفصيل أو تعليق توضيحي في مقطع)، تستبدل <code>SE</code> (الأطراف) و<code>SM</code> (المنتصفات) و<code>SI</code> (التقاطعات) و<code>SN</code> (الأقرب) و<code>SO</code> (إيقاف) الالتقاط لتلك النقطة فقط (وتُختار أيضاً من <strong>تجاوزات الالتقاط ▸</strong> في الزر الأيمن؛ <code>SE</code> و<code>SI</code> و<code>SO</code> مع <span class="keys"><kbd class="key-enter">Enter</kbd></span> لأن أسماء أطول تبدأ بها)؛ يوضح ذلك شريط الحالة، ويُنهيه <span class="keys"><kbd class="key-escape">Esc</kbd></span> أو أخذ النقطة. ولبقية الأدوات في مقطع، أو في عرض ثلاثي الأبعاد، حيث لا تُلتقط النقاط بهذه الطريقة، تُرفض برسالة. وفي المخطط تعمل في كل عرض، وكذلك <code>SC</code> (مركز القوس) و<code>SP</code> (العمود من النقطة التي يبدأ منها الرسم).</p>
 <h3 id="modelling">النمذجة</h3>
 <table>
 <thead>
@@ -628,7 +628,7 @@
 <tr>
 <td><code>RS</code></td>
 <td><code>roomsep</code></td>
-<td>فصل الغرف</td>
+<td>فاصل الغرف</td>
 </tr>
 <tr>
 <td><code>PA</code></td>
@@ -638,12 +638,12 @@
 <tr>
 <td><code>CA</code></td>
 <td><code>areaboundary</code></td>
-<td>خط حد المساحة</td>
+<td>حدود المساحة</td>
 </tr>
 <tr>
 <td>–</td>
 <td><code>area</code></td>
-<td>المساحة</td>
+<td>مساحة</td>
 </tr>
 <tr>
 <td><code>LG</code></td>
@@ -685,17 +685,17 @@
 <tr>
 <td><code>MM</code></td>
 <td><code>mirror</code></td>
-<td>عكس - اختيار المحور</td>
+<td>انعكاس حول محور</td>
 </tr>
 <tr>
 <td><code>DM</code></td>
 <td><code>mirror</code></td>
-<td>عكس - رسم المحور</td>
+<td>انعكاس حول خط</td>
 </tr>
 <tr>
 <td><code>AR</code></td>
 <td><code>array</code></td>
-<td>مصفوفة</td>
+<td>تكرار متسلسل</td>
 </tr>
 <tr>
 <td><code>OF</code></td>
@@ -720,7 +720,7 @@
 <tr>
 <td><code>SG</code></td>
 <td><code>split</code></td>
-<td>تقسيم مع فجوة</td>
+<td>تقسيم بفاصل</td>
 </tr>
 <tr>
 <td><code>RE</code></td>
@@ -859,7 +859,7 @@
 <tr>
 <td><code>VD</code></td>
 <td><code>draftingview</code></td>
-<td>نافذة الحوار <strong>عرض الرسم</strong></td>
+<td>نافذة الحوار <strong>عرض ثنائي الأبعاد حر</strong></td>
 </tr>
 <tr>
 <td><code>PP</code></td>
@@ -874,12 +874,12 @@
 <tr>
 <td><code>VG</code> أو <code>VV</code></td>
 <td><code>vg</code></td>
-<td><strong>الرؤية/الرسومات</strong></td>
+<td><strong>الرؤية والرسومات</strong></td>
 </tr>
 <tr>
 <td><code>WF</code>، <code>HL</code>، <code>SD</code></td>
 <td>–</td>
-<td><strong>إطار سلكي</strong>، <strong>خط مخفي</strong>، <strong>مظلل</strong>: النمط المرئي للعرض النشط</td>
+<td><strong>إطار سلكي</strong>، <strong>خطوط</strong>، <strong>مظلل</strong>: النمط الرسومي للعرض النشط</td>
 </tr>
 <tr>
 <td><code>HH</code>، <code>HI</code></td>
@@ -894,7 +894,7 @@
 <tr>
 <td><code>HR</code></td>
 <td>–</td>
-<td><strong>إعادة ضبط الإخفاء/العزل المؤقت</strong></td>
+<td><strong>إعادة ضبط العزل المؤقت</strong></td>
 </tr>
 <tr>
 <td><code>EH</code>، <code>VH</code></td>
@@ -904,7 +904,7 @@
 <tr>
 <td><code>RH</code></td>
 <td>–</td>
-<td><strong>إظهار العناصر المخفية</strong>، تشغيل وإيقاف</td>
+<td><strong>إظهار المخفي</strong>، تشغيل وإيقاف</td>
 </tr>
 <tr>
 <td><code>TL</code></td>
@@ -914,7 +914,7 @@
 <tr>
 <td><code>SO</code></td>
 <td><code>objectstyle</code></td>
-<td><strong>أنماط الكائنات</strong></td>
+<td><strong>الأنماط حسب الفئة</strong></td>
 </tr>
 <tr>
 <td><code>MA</code></td>
@@ -970,7 +970,7 @@
 </table>
 <p>الأوامر التي عليها <strong>–</strong> ليس لها صيغة مختصرة، لكن اسمها الكامل يعمل بالطريقة نفسها.
 ويسرد <code>help</code> كل أمر وصيغه المختصرة.</p>
-<p>لأوامر التكبير أيضاً اختصارات مكتوبة: <code>ZR</code> تكبير منطقة، <code>ZO</code> تصغير (2×)، <code>ZF</code> ملاءمة النافذة، <code>ZA</code> ملاءمة الكل للنافذة، <code>ZS</code> تكبير بحجم اللوحة، <code>ZP</code> التحريك/التكبير السابق. <strong>العرض ▸ النوافذ ▸ واجهة المستخدم ▸ اختصارات لوحة المفاتيح</strong> يمنح أي أمر اختصارات خاصة بك (<a href="../interface/#drawing-area-and-view-windows">الواجهة</a>).</p>
+<p>لأوامر التكبير أيضاً اختصارات مكتوبة: <code>ZR</code> تكبير منطقة، <code>ZO</code> تصغير (2×)، <code>ZF</code> ملاءمة النافذة، <code>ZA</code> ملاءمة الكل للنافذة، <code>ZS</code> تكبير بحجم اللوحة، <code>ZP</code> التحريك/التكبير السابق. <strong>العروض ▸ النوافذ ▸ الألواح ▸ اختصارات لوحة المفاتيح</strong> يمنح أي أمر اختصارات خاصة بك (<a href="../interface/#drawing-area-and-view-windows">الواجهة</a>).</p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

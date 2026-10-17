@@ -400,7 +400,7 @@ les mêmes raccourcis clavier et les mêmes résultats ; seuls l'aspect et la pl
 changent.</p>
 <ul>
 <li>Le style <strong>Classique</strong>, décrit dans <a href="../interface/">L'interface</a> : le ruban, la barre des options,
-  la palette <strong>Propriétés</strong> et l'<strong>Arborescence du projet</strong>. BIMopen démarre dans ce style.</li>
+  la palette <strong>Propriétés</strong> et l'<strong>Index du projet</strong>. BIMopen démarre dans ce style.</li>
 <li>Le style <strong>BIMopen</strong> : une barre latérale, une recherche de commandes, des cartes d'outils,
   des outils flottants sur la vue, un panneau d'élément à onglets et une bande de vignettes des
   vues.</li>
@@ -428,7 +428,7 @@ deux styles.</p>
 <tr>
 <td><strong>Barre latérale</strong></td>
 <td>Bord gauche</td>
-<td>La marque de BIMopen (le menu de l'application), <strong>Accueil</strong> (le projet), <strong>Créer</strong>, <strong>Documenter</strong>, <strong>Vue</strong>, <strong>Coordonner</strong>, le projet ouvert et <strong>Paramètres</strong>. Elles remplacent les onglets du ruban. Un clic sur l'entrée sélectionnée replie le panneau d'outils</td>
+<td>La marque de BIMopen (le menu de l'application), <strong>Accueil</strong> (le projet), <strong>Créer</strong>, <strong>Documenter</strong>, <strong>Vues</strong>, <strong>Coordonner</strong>, le projet ouvert et <strong>Paramètres</strong>. Elles remplacent les onglets du ruban. Un clic sur l'entrée sélectionnée replie le panneau d'outils</td>
 </tr>
 <tr>
 <td><strong>Barre supérieure</strong></td>
@@ -438,17 +438,17 @@ deux styles.</p>
 <tr>
 <td><strong>Panneau d'outils</strong></td>
 <td>À gauche, près de la barre latérale</td>
-<td>Les onglets du ruban en groupes de tuiles, chaque commande une fois : <strong>Créer</strong> a <strong>Début</strong> et <strong>Insérer</strong> (avec l'onglet <strong>Architecture</strong>), <strong>Documenter</strong> les feuilles et <strong>Annoter</strong>, <strong>Vue</strong> l'onglet <strong>Vue</strong> et l'<strong>Arborescence du projet</strong>, <strong>Coordonner</strong> <strong>Requête</strong>, <strong>Paramètres</strong> <strong>Gérer</strong>. Pendant qu'un outil travaille ou que quelque chose est sélectionné, l'onglet contextuel (« <strong>Modifier | Murs</strong> » : déplacer, copier, faire pivoter, symétrie, ajuster, aligner, modifier le profil, <strong>Terminer le mode d'édition</strong>…) est en haut ; <span class="keys"><kbd class="key-escape">Esc</kbd></span> ou un clic dans le vide l'enlève</td>
+<td>Les onglets du ruban en groupes de tuiles, chaque commande une fois : <strong>Créer</strong> a <strong>Début</strong> et <strong>Insérer</strong> (avec l'onglet <strong>Architecture</strong>), <strong>Documenter</strong> les feuilles et <strong>Annotations</strong>, <strong>Vues</strong> l'onglet <strong>Vues</strong> et l'<strong>Index du projet</strong>, <strong>Coordonner</strong> <strong>Requête</strong>, <strong>Paramètres</strong> <strong>Projet</strong>. Pendant qu'un outil travaille ou que quelque chose est sélectionné, l'onglet contextuel (« <strong>Sélection : murs</strong> » : déplacer, copier, faire pivoter, symétrie, ajuster, aligner, modifier le contour, <strong>Terminer le mode d'édition</strong>…) est en haut ; <span class="keys"><kbd class="key-escape">Esc</kbd></span> ou un clic dans le vide l'enlève</td>
 </tr>
 <tr>
 <td><strong>Bande des options</strong></td>
 <td>Sur la vue, pendant qu'un outil travaille</td>
-<td>Les options de l'outil (hauteur, ligne de justification, chaîne…), la barre des options du style <strong>Classique</strong></td>
+<td>Les options de l'outil (hauteur, alignement, continuer…), la barre des options du style <strong>Classique</strong></td>
 </tr>
 <tr>
 <td><strong>Vue</strong></td>
 <td>Au centre</td>
-<td>Le sélecteur de vue et <strong>+</strong> pour une nouvelle vue. Une seule barre de vue, en bas au centre : sélectionner, les modes <strong>Panoramique</strong>, <strong>Orbite</strong> (3D) et <strong>Zoom</strong> (quand l'un est actif, le bouton gauche fait glisser la vue ; <span class="keys"><kbd class="key-escape">Esc</kbd></span> le termine), zoom adapté, <strong>Options de zoom</strong>, <strong>SteeringWheels</strong> (3D) | le style visuel, le niveau de détail, <strong>Soleil et ombres</strong> (3D), <strong>Cadrage</strong> (cadrer la vue, afficher la zone cadrée), <strong>Masquer/Isoler temporairement</strong> (son menu, comme dans la barre de contrôle de la vue ; la vue est encadrée tant qu'il est actif) et <strong>Révéler les éléments masqués</strong> | plein écran. Dans les vues 3D le ViewCube (un clic sur une face, une arête ou un coin regarde depuis là, un glissement fait orbiter, la maison revient à la vue de départ) ; sur la sélection, les flèches de déplacement (faites-en glisser une pour déplacer le long de celle-ci, le centre pour déplacer librement en plan : la distance s'affiche pendant le glissement, le relâchement déplace comme <strong>Déplacer</strong>)</td>
+<td>Le sélecteur de vue et <strong>+</strong> pour une nouvelle vue. Une seule barre de vue, en bas au centre : sélectionner, les modes <strong>Panoramique</strong>, <strong>Orbite</strong> (3D) et <strong>Zoom</strong> (quand l'un est actif, le bouton gauche fait glisser la vue ; <span class="keys"><kbd class="key-escape">Esc</kbd></span> le termine), zoom adapté, <strong>Options de zoom</strong> | le style graphique, le détail, <strong>Soleil et ombres</strong> (3D), <strong>Cadrage</strong> (cadrer la vue, afficher la zone cadrée), <strong>Isoler temporairement</strong> (son menu, comme dans la barre de contrôle de la vue ; la vue est encadrée tant qu'il est actif) et <strong>Révéler les masqués</strong> | plein écran. Dans les vues 3D le cube d'orientation (un clic sur une face, une arête ou un coin regarde depuis là, un glissement fait orbiter, la maison revient à la vue de départ) ; sur la sélection, les flèches de déplacement (faites-en glisser une pour déplacer le long de celle-ci, le centre pour déplacer librement en plan : la distance s'affiche pendant le glissement, le relâchement déplace comme <strong>Déplacer</strong>)</td>
 </tr>
 <tr>
 <td><strong>Panneau d'élément</strong></td>
@@ -491,11 +491,11 @@ style <strong>Classique</strong>.</p>
   outil travaille ou que quelque chose est sélectionné ;</li>
 <li>la marque de BIMopen en haut de la barre latérale ouvre le menu de l'application ; la barre
   supérieure a annuler, rétablir et le menu <strong>?</strong> ;</li>
-<li><strong>Vue</strong> contient toute l'<strong>Arborescence du projet</strong>, avec ses menus ;</li>
+<li><strong>Vues</strong> contient tout l'<strong>Index du projet</strong>, avec ses menus ;</li>
 <li>une vignette de la bande des vues se fait glisser sur la feuille ouverte, ou sur la vignette
-  d'une feuille, et son menu contextuel a les actions de l'arborescence et <strong>Ouvrir dans la
+  d'une feuille, et son menu contextuel a les actions de l'<strong>Index du projet</strong> et <strong>Ouvrir dans la
   fenêtre active</strong> ;</li>
-<li>le menu du sélecteur de vue organise les fenêtres des vues (<strong>Changer de fenêtre</strong>,
+<li>le menu du sélecteur de vue organise les fenêtres des vues (<strong>Changer de vue</strong>,
   <strong>Mosaïque</strong>, <strong>Cascade</strong>, <strong>Agrandir</strong>, <strong>Répliquer</strong>, <strong>Fermer masquées</strong>) ; <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-tab">Tab</kbd></span>
   passe à la fenêtre précédente ;</li>
 <li>le bouton droit sur une tuile propose <strong>Ajouter à la barre d'outils d'accès rapide</strong> : l'outil

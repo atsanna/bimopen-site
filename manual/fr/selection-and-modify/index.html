@@ -295,7 +295,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#array">
 <span class="md-ellipsis">
-      Réseau
+      Répéter en série
     </span>
 </a>
 </li>
@@ -323,7 +323,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#split">
 <span class="md-ellipsis">
-      Scinder l'élément et Scinder avec espace
+      Scinder l'élément et Diviser avec joint
     </span>
 </a>
 </li>
@@ -337,7 +337,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#pin">
 <span class="md-ellipsis">
-      Verrouiller et Déverrouiller
+      Fixer et Déverrouiller
     </span>
 </a>
 </li>
@@ -535,7 +535,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#array">
 <span class="md-ellipsis">
-      Réseau
+      Répéter en série
     </span>
 </a>
 </li>
@@ -563,7 +563,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#split">
 <span class="md-ellipsis">
-      Scinder l'élément et Scinder avec espace
+      Scinder l'élément et Diviser avec joint
     </span>
 </a>
 </li>
@@ -577,7 +577,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#pin">
 <span class="md-ellipsis">
-      Verrouiller et Déverrouiller
+      Fixer et Déverrouiller
     </span>
 </a>
 </li>
@@ -671,7 +671,7 @@ plus proche à ceux qui sont derrière ; sur une feuille, entre les vues placée
 <h2 id="chains">Chaînes de murs et de lignes</h2>
 <p>Les murs et les lignes joints par leurs extrémités forment une chaîne. Le curseur sur l'un d'eux,
 <span class="keys"><kbd class="key-tab">Tab</kbd></span> met en évidence toute la chaîne (la barre d'état indique <strong>Chaîne de n éléments joints</strong>) ;
-un clic la sélectionne. Une chaîne peut mêler murs, lignes de séparation de pièce et limites de
+un clic la sélectionne. Une chaîne peut mêler murs, séparateurs de pièces et contours de
 surface ; les lignes de détail forment des chaînes avec les lignes de détail de leur vue. Là où
 trois éléments ou plus se rejoignent, la chaîne continue le long de celui qui forme le plus petit
 angle avec le dernier ; un mur qui s'arrête contre un autre entre ses extrémités prolonge la chaîne
@@ -724,13 +724,12 @@ avez saisis. Les touches fléchées déplacent la sélection d'un petit pas, arr
 ronde selon le zoom de la vue ; avec <span class="keys"><kbd class="key-shift">Shift</kbd></span>, de dix pas.</p>
 <h2 id="the-modify-tools">Les outils de modification</h2>
 <p>Le groupe <strong>Modifier</strong> de l'onglet contextuel a trois rangées : <strong>Aligner</strong>, <strong>Décaler</strong>,
-<strong>Symétrie - Choisir l'axe</strong>, <strong>Symétrie - Dessiner l'axe</strong>, <strong>Scinder l'élément</strong>, <strong>Scinder avec
-espace</strong> ; <strong>Déplacer</strong>, <strong>Copier</strong>, <strong>Faire pivoter</strong>, <strong>Ajuster/Prolonger pour former un angle</strong>,
-<strong>Ajuster/Prolonger un élément</strong>, <strong>Ajuster/Prolonger plusieurs éléments</strong> ; <strong>Réseau</strong>,
-<strong>Échelle</strong>, <strong>Verrouiller</strong>, <strong>Déverrouiller</strong>, <strong>Supprimer</strong>. La barre d'état indique ce que
+<strong>Symétrie par axe</strong>, <strong>Symétrie par ligne</strong>, <strong>Scinder l'élément</strong>, <strong>Diviser avec joint</strong> ; <strong>Déplacer</strong>, <strong>Copier</strong>, <strong>Faire pivoter</strong>, <strong>Ajuster/Prolonger pour former un angle</strong>,
+<strong>Ajuster/Prolonger un élément</strong>, <strong>Ajuster/Prolonger plusieurs éléments</strong> ; <strong>Répéter en série</strong>,
+<strong>Échelle</strong>, <strong>Fixer</strong>, <strong>Déverrouiller</strong>, <strong>Supprimer</strong>. La barre d'état indique ce que
 chaque outil attend ensuite, et la barre des options montre ses options. <span class="keys"><kbd class="key-escape">Esc</kbd></span> annule l'étape en
 cours ; pressée de nouveau, elle termine l'outil.</p>
-<p><strong>Déplacer</strong>, <strong>Copier</strong>, <strong>Faire pivoter</strong>, les deux outils <strong>Symétrie</strong>, <strong>Réseau</strong> et
+<p><strong>Déplacer</strong>, <strong>Copier</strong>, <strong>Faire pivoter</strong>, les deux outils <strong>Symétrie</strong>, <strong>Répéter en série</strong> et
 <strong>Échelle</strong> travaillent sur la sélection. Lancés sans rien de sélectionné, ils vous laissent
 sélectionner d'abord (clics, <span class="keys"><kbd class="key-control">Ctrl</kbd></span>, fenêtres, <span class="keys"><kbd class="key-tab">Tab</kbd></span>), puis continuent quand vous appuyez sur
 <span class="keys"><kbd class="key-enter">Enter</kbd></span> ou sur <strong>Fin</strong> dans la barre des options.</p>
@@ -763,10 +762,9 @@ sur <span class="keys"><kbd class="key-enter">Enter</kbd></span>, ou tapez-le da
 <strong>Copier</strong> fait pivoter une copie ; sans <strong>Disjoindre</strong>, les murs joints à ceux qui tournent
 suivent.</p>
 <h3 id="mirror">Symétrie</h3>
-<p><strong>Symétrie - Choisir l'axe</strong> : cliquez sur un mur, une grille ou une ligne comme axe. <strong>Symétrie -
-Dessiner l'axe</strong> : cliquez sur deux points. <strong>Copier</strong> est coché : une copie symétrique est placée ;
+<p><strong>Symétrie par axe</strong> : cliquez sur un mur, une grille ou une ligne comme axe. <strong>Symétrie par ligne</strong> : cliquez sur deux points. <strong>Copier</strong> est coché : une copie symétrique est placée ;
 décochez-le pour appliquer la symétrie aux éléments eux-mêmes.</p>
-<h3 id="array">Réseau</h3>
+<h3 id="array">Répéter en série</h3>
 <p><strong>Linéaire</strong> : cliquez sur deux points. <strong>Numéro</strong> est le nombre total d'éléments. Avec <strong>Déplacer
 vers : 2°</strong> les deux points donnent l'espacement ; avec <strong>Dernier</strong>, le dernier élément va au second
 point et les autres sont répartis régulièrement. <strong>Contraindre</strong> garde la direction le long de la
@@ -800,10 +798,10 @@ commence un nouvel alignement, deux fois termine l'outil.</p>
 <li><strong>Ajuster/Prolonger un élément</strong> : la limite, puis l'élément ;</li>
 <li><strong>Ajuster/Prolonger plusieurs éléments</strong> : la limite, puis chaque élément tour à tour.</li>
 </ul>
-<h3 id="split">Scinder l'élément et Scinder avec espace</h3>
+<h3 id="split">Scinder l'élément et Diviser avec joint</h3>
 <p><strong>Scinder l'élément</strong> : cliquez sur un mur ou une ligne là où il doit devenir deux. Avec <strong>Supprimer
 le segment intérieur</strong>, cliquez sur deux points : la partie entre eux est supprimée, avec les
-portes et fenêtres qu'elle contient. <strong>Scinder avec espace</strong> : réglez <strong>Espace de jonction</strong>, puis
+portes et fenêtres qu'elle contient. <strong>Diviser avec joint</strong> : réglez <strong>Espace de jonction</strong>, puis
 cliquez : les deux parties sont séparées de cette distance.</p>
 <h3 id="scale">Échelle</h3>
 <p>Les murs et les lignes (et la position des cotes) peuvent être mis à l'échelle ; avec autre chose
@@ -811,30 +809,30 @@ dans la sélection, <strong>Échelle</strong> n'est pas disponible. <strong>Grap
 d'un premier vecteur, la fin d'un second : les éléments sont mis à l'échelle selon le rapport des
 deux longueurs (vous pouvez taper la seconde). <strong>Numérique</strong> : réglez <strong>Facteur d'échelle</strong>, puis
 cliquez sur l'origine. Les portes et fenêtres gardent leur distance au milieu de leur mur.</p>
-<h3 id="pin">Verrouiller et Déverrouiller</h3>
-<p><strong>Verrouiller</strong> maintient les éléments sélectionnés en place : on ne peut ni les faire glisser, ni
-les déplacer avec un outil, ni les supprimer, et un message l'indique. Un élément verrouillé montre
+<h3 id="pin">Fixer et Déverrouiller</h3>
+<p><strong>Fixer</strong> maintient les éléments sélectionnés en place : on ne peut ni les faire glisser, ni
+les déplacer avec un outil, ni les supprimer, et un message l'indique. Un élément fixé montre
 une punaise lorsqu'il est sélectionné ; cliquez sur la punaise, ou utilisez <strong>Déverrouiller</strong>, pour
 le libérer.</p>
 <h3 id="delete-undo">Supprimer, annuler et rétablir</h3>
 <p><strong>Supprimer</strong> (ou la touche <span class="keys"><kbd class="key-delete">Del</kbd></span>) retire la sélection et ce qu'elle héberge ; les éléments
-verrouillés restent. <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span> annule la dernière modification et <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-y">Y</kbd></span> la rétablit : chaque
+fixés restent. <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span> annule la dernière modification et <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-y">Y</kbd></span> la rétablit : chaque
 outil, glisser ou déplacement aux flèches est une seule étape.</p>
 <h2 id="typed-shortcuts">Raccourcis tapés</h2>
 <p>Tapez les lettres et appuyez sur <span class="keys"><kbd class="key-enter">Enter</kbd></span> : <code>MV</code> <strong>Déplacer</strong>, <code>CO</code> <strong>Copier</strong>, <code>RO</code> <strong>Faire
-pivoter</strong>, <code>MM</code> <strong>Symétrie - Choisir l'axe</strong>, <code>DM</code> <strong>Symétrie - Dessiner l'axe</strong>, <code>AR</code> <strong>Réseau</strong>,
+pivoter</strong>, <code>MM</code> <strong>Symétrie par axe</strong>, <code>DM</code> <strong>Symétrie par ligne</strong>, <code>AR</code> <strong>Répéter en série</strong>,
 <code>OF</code> <strong>Décaler</strong>, <code>AL</code> <strong>Aligner</strong>, <code>TR</code> <strong>Ajuster/Prolonger pour former un angle</strong>, <code>SL</code> <strong>Scinder
-l'élément</strong>, <code>SG</code> <strong>Scinder avec espace</strong>, <code>RE</code> <strong>Échelle</strong>. <code>PN</code> verrouille et <code>UP</code> déverrouille la
+l'élément</strong>, <code>SG</code> <strong>Diviser avec joint</strong>, <code>RE</code> <strong>Échelle</strong>. <code>PN</code> fixe et <code>UP</code> déverrouille la
 sélection, <code>SA</code> sélectionne toutes ses occurrences visibles dans la vue. <a href="../keyboard-shortcuts/">Raccourcis
 clavier</a> les liste tous.</p>
 <h2 id="not-yet-available">Pas encore disponible</h2>
 <ul>
 <li><span class="keys"><kbd class="key-tab">Tab</kbd></span> pour atteindre une partie d'un élément : un panneau ou un meneau de mur-rideau, une
   partie d'un mur empilé ;</li>
-<li><strong>Sélectionner toutes les occurrences</strong> depuis un type dans l'arborescence du projet ;</li>
-<li><strong>Grouper et associer</strong> du <strong>Réseau</strong> ;</li>
+<li><strong>Sélectionner toutes les occurrences</strong> depuis un type dans l'<strong>Index du projet</strong> ;</li>
+<li><strong>Grouper et associer</strong> du <strong>Répéter en série</strong> ;</li>
 <li>la scission des murs le long d'une ligne horizontale dans les élévations et les vues 3D ;</li>
-<li>couper, copier et coller par le presse-papiers, <strong>Coller aligné</strong>, <strong>Créer un élément similaire</strong>.</li>
+<li>couper, copier et coller par le presse-papiers, <strong>Coller aligné</strong>, <strong>Créer identique</strong>.</li>
 </ul>
 </article>
 </div>

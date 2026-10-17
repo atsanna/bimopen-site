@@ -610,7 +610,7 @@ barandilla</strong>) y contiene:</p>
 <tbody>
 <tr>
 <td><strong>Línea</strong></td>
-<td>Haz clic punto tras punto: cada clic termina una línea y empieza la siguiente. Junto a la línea bajo el cursor aparecen su longitud y su ángulo; <span class="keys"><kbd class="key-shift">Shift</kbd></span> la mantiene horizontal o vertical. Con <strong>Cadena</strong> desactivada en la barra de opciones, cada línea se dibuja sola. Hacer clic otra vez en el inicio de la cadena cierra el contorno Escribe una longitud y pulsa <span class="keys"><kbd class="key-enter">Enter</kbd></span>: la línea termina a esa distancia en la dirección del cursor (también el tramo de una escalera).</td>
+<td>Haz clic punto tras punto: cada clic termina una línea y empieza la siguiente. Junto a la línea bajo el cursor aparecen su longitud y su ángulo; <span class="keys"><kbd class="key-shift">Shift</kbd></span> la mantiene horizontal o vertical. Con <strong>Continuar</strong> desactivada en la barra de opciones, cada línea se dibuja sola. Hacer clic otra vez en el inicio de la cadena cierra el contorno Escribe una longitud y pulsa <span class="keys"><kbd class="key-enter">Enter</kbd></span>: la línea termina a esa distancia en la dirección del cursor (también el tramo de una escalera).</td>
 </tr>
 <tr>
 <td><strong>Rectángulo</strong></td>
@@ -632,7 +632,7 @@ barandilla</strong>) y contiene:</p>
 </table>
 <p><strong>Desfase</strong> en la barra de opciones desplaza esa distancia las líneas dibujadas (y las de los
 muros designados).</p>
-<p>Los arcos del grupo <strong>Dibujar</strong> (y un círculo, en dos mitades) son cada uno una sola línea de boceto: se seleccionan, miden y arrastran como arcos, el suelo, la cubierta, la escalera, el perfil del muro o la región los conservan, y <strong>Editar contorno</strong>, <strong>Editar boceto</strong> o <strong>Editar perfil</strong> los devuelven como arcos. En cada vista un punto del boceto se ajusta a los extremos y puntos medios de las líneas y arcos del boceto, a los centros de los arcos, donde las líneas se cruzan y sobre una línea o un arco; desde el punto desde el que se dibuja, al pie de la perpendicular y al punto donde una línea toca un arco. El símbolo y su nombre muestran dónde se ajusta el punto; <span class="keys"><kbd class="key-s">S</kbd></span> <span class="keys"><kbd class="key-c">C</kbd></span> y <span class="keys"><kbd class="key-s">S</kbd></span> <span class="keys"><kbd class="key-p">P</kbd></span> piden el centro o la perpendicular para el punto siguiente.</p>
+<p>Los arcos del grupo <strong>Dibujar</strong> (y un círculo, en dos mitades) son cada uno una sola línea de boceto: se seleccionan, miden y arrastran como arcos, el suelo, la cubierta, la escalera, el perfil del muro o la región los conservan, y <strong>Editar contorno</strong>, <strong>Editar boceto</strong> o <strong>Editar contorno</strong> los devuelven como arcos. En cada vista un punto del boceto se ajusta a los extremos y puntos medios de las líneas y arcos del boceto, a los centros de los arcos, donde las líneas se cruzan y sobre una línea o un arco; desde el punto desde el que se dibuja, al pie de la perpendicular y al punto donde una línea toca un arco. El símbolo y su nombre muestran dónde se ajusta el punto; <span class="keys"><kbd class="key-s">S</kbd></span> <span class="keys"><kbd class="key-c">C</kbd></span> y <span class="keys"><kbd class="key-s">S</kbd></span> <span class="keys"><kbd class="key-p">P</kbd></span> piden el centro o la perpendicular para el punto siguiente.</p>
 <p>Los suelos y las cubiertas necesitan contornos cerrados. Un contorno dibujado dentro del exterior
 es una <strong>abertura</strong>: el suelo o la cubierta tiene ahí un hueco. Cuando <strong>Finalizar modo de edición</strong>
 encuentra líneas que no se cierran o que se cortan, un mensaje lo indica y el boceto queda abierto
@@ -648,7 +648,7 @@ terminar el boceto:</p>
 <li>el extremo de una línea seleccionada sola se arrastra solo: la línea vecina se queda donde está
   y la unión se rompe; con una cadena seleccionada (<span class="keys"><kbd class="key-tab">Tab</kbd></span>), los extremos donde se juntan sus
   líneas se arrastran juntos; una línea arrastrada lleva consigo las líneas unidas a ella;</li>
-<li><strong>Mover</strong>, <strong>Copiar</strong>, <strong>Girar</strong>, <strong>Simetría - Dibujar eje</strong>, <strong>Matriz</strong>, <strong>Alinear</strong>,
+<li><strong>Mover</strong>, <strong>Copiar</strong>, <strong>Girar</strong>, <strong>Simetría sobre línea</strong>, <strong>Repetir en serie</strong>, <strong>Alinear</strong>,
   <strong>Desfase</strong>, <strong>Recortar/Alargar a esquina</strong> y <strong>Dividir elemento</strong> actúan sobre ellas, y el
   boceto sigue abierto;</li>
 <li>una sola línea seleccionada muestra cotas temporales hasta la línea paralela más cercana a cada
@@ -731,7 +731,7 @@ suelo y sigue por encima, y los muros pasan por las aberturas del suelo.</p>
 </tr>
 </tbody>
 </table>
-<p><strong>Propiedades de tipo</strong> contiene la <strong>Estructura</strong> del suelo (sus capas) y su grosor por defecto.</p>
+<p><strong>Parámetros de tipo</strong> contiene la <strong>Estructura</strong> del suelo (sus capas) y su grosor por defecto.</p>
 <h2 id="roofs">Cubiertas</h2>
 <ol>
 <li>Haz clic en <strong>Inicio ▸ Construir ▸ Cubierta</strong>. El modo de boceto empieza con <strong>Designar
@@ -754,7 +754,7 @@ a ella se dibuja un pequeño triángulo con la pendiente. La forma sale de esas 
 </ul>
 <p>Para cambiar una línea, pulsa dos veces <span class="keys"><kbd class="key-escape">Esc</kbd></span>, haz clic en la línea y cambia en <strong>Propiedades</strong>
 <strong>Define pendiente del tejado</strong>, <strong>Pendiente</strong> o (líneas tomadas de muros) <strong>Voladizo</strong>.</p>
-<p>Selecciona muros, haz clic en <strong>Modificar muro ▸ Enlazar parte superior/base</strong> y luego en la
+<p>Selecciona muros, haz clic en <strong>Modificar muro ▸ Unir arriba/abajo</strong> y luego en la
 cubierta: suben hasta su cara inferior, hastiales incluidos (<a href="../walls-doors-windows/">Muros, puertas y ventanas</a>
 explica más).</p>
 <h3 id="roof-properties">Propiedades de las cubiertas</h3>
@@ -788,7 +788,7 @@ explica más).</p>
 voladizos y capas.</p>
 <h2 id="stairs">Escaleras</h2>
 <ol>
-<li>Haz clic en <strong>Inicio ▸ Circulación ▸ Escaleras</strong>. El modo de boceto empieza con <strong>Tramo</strong>.</li>
+<li>Haz clic en <strong>Inicio ▸ Conexiones verticales ▸ Escaleras</strong>. El modo de boceto empieza con <strong>Tramo</strong>.</li>
 <li>Haz clic donde está la primera contrahuella y luego donde termina el tramo: el tramo se ajusta
    a huellas enteras y la barra de estado cuenta las contrahuellas creadas y restantes (por ejemplo
    <code>9 contrahuellas creadas, 8 restantes</code>).</li>
@@ -811,7 +811,7 @@ contrahuella: cámbialas o bórralas (clic, <span class="keys"><kbd class="key-d
 el texto <strong>SUBE</strong>/<strong>BAJA</strong>; en 3D sus huellas y contrahuellas, o una losa monolítica, sus
 descansillos y barandillas.</p>
 <h3 id="how-a-stair-is-built">Cómo está construida una escalera</h3>
-<p>Las <strong>Propiedades de tipo</strong> de la escalera deciden su construcción:</p>
+<p>Las <strong>Parámetros de tipo</strong> de la escalera deciden su construcción:</p>
 <ul>
 <li><strong>Escaleras monolíticas</strong> marcado: cada tramo es una losa de hormigón con la forma de los
   peldaños; su cara inferior es paralela a la pendiente, <strong>Espesor de losa</strong> bajo las esquinas
@@ -836,10 +836,10 @@ descansillos y barandillas.</p>
 <p>El descansillo se detiene detrás de la última contrahuella del tramo que llega, siguiendo su cara posterior; en una escalera monolítica empieza en la cara de la contrahuella. En una escalera monolítica cuyo forjado superior tiene el borde en la última contrahuella, la cara inferior del tramo sigue bajo ese forjado hasta encontrar su cara inferior, como bajo un descansillo.</p>
 <p>Una sección a través de la escalera la muestra cortada con su losa. <strong>Volumen</strong> en
 <strong>Propiedades</strong> y en la tabla de planificación de escaleras es el volumen de sus sólidos.</p>
-<p>La <strong>Fuente de texto</strong> del tipo, el <strong>Perfil de mamperlán</strong> (<strong>Por defecto</strong> o <strong>Redondeado</strong>) y <strong>Aplicar perfil de mamperlán</strong> (solo delante, delante e izquierda, o delante, izquierda y derecha: más allá de un lado sin zanca cerrada), el <strong>Desfase de zanca abierta</strong>, <strong>Recortar zancas en la parte superior</strong> (<strong>Igualar nivel</strong> detiene las zancas laterales en el nivel superior) y sus datos de identidad (<strong>Nota clave</strong>, <strong>Modelo</strong>, <strong>Fabricante</strong>, <strong>Comentarios de tipo</strong>, <strong>URL</strong>, <strong>Descripción</strong>, <strong>Código de montaje</strong>) están en <strong>Propiedades de tipo</strong>, como la <strong>Parte inferior de la zanca</strong> de una escalera monolítica (<strong>Lisa</strong>, una losa inclinada, o <strong>Escalonada</strong>: la losa sigue los peldaños). En <strong>Reglas de cálculo</strong>, <strong>Usar calculadora de escalera</strong> con un <strong>Resultado objetivo</strong>, <strong>máximo</strong> y <strong>mínimo</strong> comprueba 2 contrahuellas + 1 huella: una escalera fuera del intervalo se crea, y un aviso lo indica.</p>
+<p>La <strong>Fuente de texto</strong> del tipo, el <strong>Perfil de mamperlán</strong> (<strong>Por defecto</strong> o <strong>Redondeado</strong>) y <strong>Aplicar perfil de mamperlán</strong> (solo delante, delante e izquierda, o delante, izquierda y derecha: más allá de un lado sin zanca cerrada), el <strong>Desfase de zanca abierta</strong>, <strong>Recortar zancas en la parte superior</strong> (<strong>Igualar nivel</strong> detiene las zancas laterales en el nivel superior) y sus datos de identificación (<strong>Código</strong>, <strong>Modelo</strong>, <strong>Fabricante</strong>, <strong>Comentarios de tipo</strong>, <strong>URL</strong>, <strong>Descripción</strong>, <strong>Código de montaje</strong>) están en <strong>Parámetros de tipo</strong>, como la <strong>Parte inferior de la zanca</strong> de una escalera monolítica (<strong>Lisa</strong>, una losa inclinada, o <strong>Escalonada</strong>: la losa sigue los peldaños). En <strong>Reglas de cálculo</strong>, <strong>Usar calculadora de escalera</strong> con un <strong>Resultado objetivo</strong>, <strong>máximo</strong> y <strong>mínimo</strong> comprueba 2 contrahuellas + 1 huella: una escalera fuera del intervalo se crea, y un aviso lo indica.</p>
 <h2 id="ramps">Rampas</h2>
 <ol>
-<li>Haz clic en <strong>Inicio ▸ Circulación ▸ Rampa</strong>. El modo de boceto empieza con <strong>Tramo</strong>.</li>
+<li>Haz clic en <strong>Inicio ▸ Conexiones verticales ▸ Rampa</strong>. El modo de boceto empieza con <strong>Tramo</strong>.</li>
 <li>Haz clic donde empieza un tramo y luego donde termina: tiene como mucho la <strong>Pendiente máxima
    de rampa (1/x)</strong> del tipo y sube como mucho la <strong>Longitud máxima inclinada</strong> (al dibujar, un tramo más
    largo se detiene ahí); junto al cursor aparecen la longitud hecha y la que queda.</li>
@@ -851,17 +851,17 @@ descansillos y barandillas.</p>
 <p>La <strong>Forma</strong> del tipo es <strong>Grueso</strong> (con su <strong>Grosor</strong>) o <strong>Sólido</strong> (hasta la base), y <strong>Material
 de rampa</strong> la colorea. Las barandillas, <strong>Editar boceto</strong> y <strong>Propiedades</strong> funcionan como en las
 escaleras.</p>
-<p>Con <strong>Arco de centro y extremos</strong> en el grupo <strong>Dibujar</strong>, haz clic en el centro, en el inicio de la línea del tramo y luego en su final alrededor del centro: el tramo gira alrededor de él, con dos líneas radiales en sus extremos y dos arcos de contorno a sus lados. <strong>Mostrar flecha SUBE en todas las vistas</strong> del tipo dibuja la flecha entera y <strong>SUBE</strong> también en la planta del nivel superior; la <strong>Fuente de texto</strong> y los datos de identidad son como en las escaleras.</p>
+<p>Con <strong>Arco de centro y extremos</strong> en el grupo <strong>Dibujar</strong>, haz clic en el centro, en el inicio de la línea del tramo y luego en su final alrededor del centro: el tramo gira alrededor de él, con dos líneas radiales en sus extremos y dos arcos de contorno a sus lados. <strong>Mostrar flecha SUBE en todas las vistas</strong> del tipo dibuja la flecha entera y <strong>SUBE</strong> también en la planta del nivel superior; la <strong>Fuente de texto</strong> y los datos de identificación son como en las escaleras.</p>
 <h2 id="railings">Barandillas</h2>
 <ol>
-<li>Haz clic en <strong>Inicio ▸ Circulación ▸ Barandilla</strong>.</li>
+<li>Haz clic en <strong>Inicio ▸ Conexiones verticales ▸ Barandilla</strong>.</li>
 <li>Dibuja el camino con <strong>Línea</strong>: una sola cadena de líneas conectadas (un camino a trozos, cerrado o que
    vuelve sobre sí mismo lo rechaza <strong>Finalizar modo de edición</strong>).</li>
 <li>Para poner la barandilla en una escalera, haz clic en <strong>Herramientas ▸ Elegir nuevo anfitrión</strong>
    y luego en la escalera: el camino dibujado sobre ella sube con la escalera.</li>
 <li>Haz clic en <strong>Finalizar modo de edición</strong>.</li>
 </ol>
-<p><strong>Editar camino</strong> vuelve a abrir el camino de una barandilla. Las <strong>Propiedades de tipo</strong> de la
+<p><strong>Editar camino</strong> vuelve a abrir el camino de una barandilla. Las <strong>Parámetros de tipo</strong> de la
 barandilla tienen la <strong>Altura de barandilla</strong> y la <strong>Separación de balaustres</strong>: cambiarlas cambia
 todas las barandillas de ese tipo.</p>
 <p>Las barandillas de una escalera siguen sobre sus descansillos como un único barandal, a su altura
@@ -889,11 +889,11 @@ sanitarios</strong>): elige una familia y haz clic en <strong>Abrir</strong> par
 <p>Selecciona un componente y haz clic en <strong>Anfitrión ▸ Elegir nuevo anfitrión</strong>, y luego en un
 suelo: el componente pasa al suelo y se queda sobre su cara superior (haz clic en un punto vacío
 para devolverlo al nivel). Sus propiedades son <strong>Nivel</strong>, <strong>Anfitrión</strong>, <strong>Desfase desde nivel</strong>,
-<strong>Rotación</strong>, <strong>Marca</strong> y <strong>Comentarios</strong>; <strong>Propiedades de tipo</strong> tiene anchura, profundidad,
+<strong>Rotación</strong>, <strong>Marca</strong> y <strong>Comentarios</strong>; <strong>Parámetros de tipo</strong> tiene anchura, profundidad,
 altura y material.</p>
 <h2 id="schedules-and-ifc">Tablas de planificación e IFC</h2>
 <p>Los suelos, las cubiertas, las escaleras, las barandillas y el mobiliario tienen sus tablas de
-planificación (<strong>Vista ▸ Crear ▸ Tablas de planificación ▸ Tabla de planificación/cantidades</strong>),
+planificación (<strong>Vistas ▸ Crear ▸ Tablas de planificación ▸ Tabla de planificación/cantidades</strong>),
 una fila por elemento. <strong>Exportar ▸ Exportar IFC4…</strong> escribe los suelos como losas (con sus
 aberturas y pendientes), las cubiertas, las escaleras con sus tramos y descansillos, las
 barandillas, el mobiliario y los aparatos sanitarios. Una escalera de varias plantas se escribe una vez en cada planta en que se repite, con sus barandillas.</p>

@@ -507,7 +507,7 @@ not typing in a field: in a field they act on the text.</p>
 <p>In a floor, roof, stair or railing sketch, <span class="keys"><kbd class="key-escape">Esc</kbd></span> (or a double-click) also finishes the sketch
 when it has enough points.</p>
 <p>In the <strong>Text Note</strong> dialog, <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-enter">Enter</kbd></span> inserts the note and <span class="keys"><kbd class="key-escape">Esc</kbd></span> cancels it.</p>
-<p><span class="keys"><kbd class="key-alt">Alt</kbd></span> pressed and released, or <span class="keys"><kbd class="key-f10">F10</kbd></span>, shows the ribbon's key tips. With no tool active and nothing typed, <span class="keys"><kbd class="key-enter">Enter</kbd></span> repeats the last tool. After a click in the Project Browser, the arrow keys and <span class="keys"><kbd class="key-enter">Enter</kbd></span> move in its tree.</p>
+<p><span class="keys"><kbd class="key-alt">Alt</kbd></span> pressed and released, or <span class="keys"><kbd class="key-f10">F10</kbd></span>, shows the ribbon's key tips. With no tool active and nothing typed, <span class="keys"><kbd class="key-enter">Enter</kbd></span> repeats the last tool. After a click in the Project Index, the arrow keys and <span class="keys"><kbd class="key-enter">Enter</kbd></span> move in its tree.</p>
 <h2 id="mouse">Mouse</h2>
 <table>
 <thead>
@@ -549,8 +549,8 @@ when it has enough points.</p>
 <p>Type the letters while no field is being edited, then press <span class="keys"><kbd class="key-enter">Enter</kbd></span>. Without arguments, a
 shortcut starts the tool or opens the dialog; with arguments, it runs the command at once (see
 <a href="../command-line-and-mcp/">Command line and MCP</a>).</p>
-<p>With the cursor in the drawing area, the letters go to the command line (in the BIMopen style, to the search), and a shortcut acts as soon as it is typed, with no <span class="keys"><kbd class="key-enter">Enter</kbd></span>, when no longer shortcut or command name begins with its letters: <code>VR</code> (view range), <code>WT</code> (tile), <code>ZE</code>, <code>ZF</code>, <code>ZA</code>, <code>ZP</code>, <code>ZR</code>, <code>ZO</code>, <code>ZS</code>, <code>HR</code>, <code>HH</code>, <code>HC</code>, <code>IC</code>, <code>DL</code> (detail line), <code>RT</code> (room tag), <code>TG</code> (tag by category), <code>TX</code>, <code>CC</code> (copy), <code>MV</code>, <code>RM</code>, <code>LL</code> (level), <code>RC</code> (revision cloud), <code>PP</code> (shows or hides <strong>Properties</strong>), <code>PT</code>, <code>RP</code>, and the shortcuts you added. The others begin longer names and wait for the next letter, a space (arguments follow) or <span class="keys"><kbd class="key-enter">Enter</kbd></span>: <code>VG</code> (<code>vgsub</code>…), <code>HI</code> (<code>hide</code>), <code>DI</code> (<code>dim</code>), <code>AL</code> (<code>align</code>), <code>WA</code> (<code>wall</code>), <code>DR</code> (<code>draworder</code>), <code>UN</code> (<code>undo</code>), <code>MA</code> (<code>mask</code>); so <code>dim</code>, <code>wall 0,0 5,0</code> or <code>WA 0,0 5,0</code> typed over the view run as typed. <code>MA</code> and <code>PT</code> say in the status bar that they are not available yet; <code>RP</code> starts the reference plane. Typed in the command line itself, a line waits for <span class="keys"><kbd class="key-enter">Enter</kbd></span>.</p>
-<p>While a tool waits for a point in a plan or a drafting view (or a detail or annotation tool in a section), <code>SE</code> (ends), <code>SM</code> (middles), <code>SI</code> (intersections), <code>SN</code> (nearest) and <code>SO</code> (off) override the snaps for that point only (also chosen in the right button's <strong>Snap Overrides ▸</strong>; <code>SE</code>, <code>SI</code> and <code>SO</code> with <span class="keys"><kbd class="key-enter">Enter</kbd></span>, as longer names begin with them); the status bar says so, and <span class="keys"><kbd class="key-escape">Esc</kbd></span> or the point taken ends it. For other tools in a section, or in a 3D view, whose points are not snapped that way, they are refused with a message. In a sketch they work in every view, and <code>SC</code> (an arc's centre) and <code>SP</code> (the perpendicular from the point drawn from) too.</p>
+<p>With the cursor in the drawing area, the letters go to the command line (in the BIMopen style, to the search), and a shortcut acts as soon as it is typed, with no <span class="keys"><kbd class="key-enter">Enter</kbd></span>, when no longer shortcut or command name begins with its letters: <code>VR</code> (cut heights), <code>WT</code> (tile), <code>ZE</code>, <code>ZF</code>, <code>ZA</code>, <code>ZP</code>, <code>ZR</code>, <code>ZO</code>, <code>ZS</code>, <code>HR</code>, <code>HH</code>, <code>HC</code>, <code>IC</code>, <code>DL</code> (detail line), <code>RT</code> (room label), <code>TG</code> (tag by category), <code>TX</code>, <code>CC</code> (copy), <code>MV</code>, <code>RM</code>, <code>LL</code> (level), <code>RC</code> (revision cloud), <code>PP</code> (shows or hides <strong>Properties</strong>), <code>PT</code>, <code>RP</code>, and the shortcuts you added. The others begin longer names and wait for the next letter, a space (arguments follow) or <span class="keys"><kbd class="key-enter">Enter</kbd></span>: <code>VG</code> (<code>vgsub</code>…), <code>HI</code> (<code>hide</code>), <code>DI</code> (<code>dim</code>), <code>AL</code> (<code>align</code>), <code>WA</code> (<code>wall</code>), <code>DR</code> (<code>draworder</code>), <code>UN</code> (<code>undo</code>), <code>MA</code> (<code>mask</code>); so <code>dim</code>, <code>wall 0,0 5,0</code> or <code>WA 0,0 5,0</code> typed over the view run as typed. <code>MA</code> and <code>PT</code> say in the status bar that they are not available yet; <code>RP</code> starts the reference plane. Typed in the command line itself, a line waits for <span class="keys"><kbd class="key-enter">Enter</kbd></span>.</p>
+<p>While a tool waits for a point in a plan or a free 2D view (or a detail or annotation tool in a section), <code>SE</code> (ends), <code>SM</code> (middles), <code>SI</code> (intersections), <code>SN</code> (nearest) and <code>SO</code> (off) override the snaps for that point only (also chosen in the right button's <strong>Snap Overrides ▸</strong>; <code>SE</code>, <code>SI</code> and <code>SO</code> with <span class="keys"><kbd class="key-enter">Enter</kbd></span>, as longer names begin with them); the status bar says so, and <span class="keys"><kbd class="key-escape">Esc</kbd></span> or the point taken ends it. For other tools in a section, or in a 3D view, whose points are not snapped that way, they are refused with a message. In a sketch they work in every view, and <code>SC</code> (an arc's centre) and <code>SP</code> (the perpendicular from the point drawn from) too.</p>
 <h3 id="modelling">Modelling</h3>
 <table>
 <thead>
@@ -629,7 +629,7 @@ shortcut starts the tool or opens the dialog; with arguments, it runs the comman
 <tr>
 <td><code>RS</code></td>
 <td><code>roomsep</code></td>
-<td>Room separation</td>
+<td>Room separator</td>
 </tr>
 <tr>
 <td><code>PA</code></td>
@@ -639,7 +639,7 @@ shortcut starts the tool or opens the dialog; with arguments, it runs the comman
 <tr>
 <td><code>CA</code></td>
 <td><code>areaboundary</code></td>
-<td>Area boundary line</td>
+<td>Area outline</td>
 </tr>
 <tr>
 <td>–</td>
@@ -686,17 +686,17 @@ shortcut starts the tool or opens the dialog; with arguments, it runs the comman
 <tr>
 <td><code>MM</code></td>
 <td><code>mirror</code></td>
-<td>Mirror - Pick Axis</td>
+<td>Mirror on Axis</td>
 </tr>
 <tr>
 <td><code>DM</code></td>
 <td><code>mirror</code></td>
-<td>Mirror - Draw Axis</td>
+<td>Mirror on Line</td>
 </tr>
 <tr>
 <td><code>AR</code></td>
 <td><code>array</code></td>
-<td>Array</td>
+<td>Repeat in Series</td>
 </tr>
 <tr>
 <td><code>OF</code></td>
@@ -721,7 +721,7 @@ shortcut starts the tool or opens the dialog; with arguments, it runs the comman
 <tr>
 <td><code>SG</code></td>
 <td><code>split</code></td>
-<td>Split with Gap</td>
+<td>Split with Joint</td>
 </tr>
 <tr>
 <td><code>RE</code></td>
@@ -731,7 +731,7 @@ shortcut starts the tool or opens the dialog; with arguments, it runs the comman
 <tr>
 <td><code>PN</code></td>
 <td><code>pin</code></td>
-<td>Pins the selection</td>
+<td>Fix: pins the selection</td>
 </tr>
 <tr>
 <td><code>UP</code></td>
@@ -860,7 +860,7 @@ line, it draws a linear dimension (<code>lineardim</code>).</p>
 <tr>
 <td><code>VD</code></td>
 <td><code>draftingview</code></td>
-<td>The <strong>Drafting view</strong> dialog</td>
+<td>The <strong>Free 2D View</strong> dialog</td>
 </tr>
 <tr>
 <td><code>PP</code></td>
@@ -875,12 +875,12 @@ line, it draws a linear dimension (<code>lineardim</code>).</p>
 <tr>
 <td><code>VG</code> or <code>VV</code></td>
 <td><code>vg</code></td>
-<td><strong>Visibility/Graphics</strong></td>
+<td><strong>Visibility and Graphics</strong></td>
 </tr>
 <tr>
 <td><code>WF</code>, <code>HL</code>, <code>SD</code></td>
 <td>–</td>
-<td><strong>Wireframe</strong>, <strong>Hidden Line</strong>, <strong>Shaded</strong>: the visual style of the active view</td>
+<td><strong>Wireframe</strong>, <strong>Lines</strong>, <strong>Shaded</strong>: the graphic style of the active view</td>
 </tr>
 <tr>
 <td><code>HH</code>, <code>HI</code></td>
@@ -895,7 +895,7 @@ line, it draws a linear dimension (<code>lineardim</code>).</p>
 <tr>
 <td><code>HR</code></td>
 <td>–</td>
-<td><strong>Reset Temporary Hide/Isolate</strong></td>
+<td><strong>Reset Isolate Temporarily</strong></td>
 </tr>
 <tr>
 <td><code>EH</code>, <code>VH</code></td>
@@ -905,7 +905,7 @@ line, it draws a linear dimension (<code>lineardim</code>).</p>
 <tr>
 <td><code>RH</code></td>
 <td>–</td>
-<td><strong>Reveal Hidden Elements</strong>, on and off</td>
+<td><strong>Reveal Hidden</strong>, on and off</td>
 </tr>
 <tr>
 <td><code>TL</code></td>
@@ -915,7 +915,7 @@ line, it draws a linear dimension (<code>lineardim</code>).</p>
 <tr>
 <td><code>SO</code></td>
 <td><code>objectstyle</code></td>
-<td><strong>Object styles</strong></td>
+<td><strong>Styles by Category</strong></td>
 </tr>
 <tr>
 <td><code>MA</code></td>
@@ -971,7 +971,7 @@ line, it draws a linear dimension (<code>lineardim</code>).</p>
 </table>
 <p>The commands with <strong>–</strong> have no short form, but their whole name works the same way.
 <code>help</code> lists every command and its short forms.</p>
-<p>The zoom commands have typed shortcuts too: <code>ZR</code> zoom in region, <code>ZO</code> zoom out (2x), <code>ZF</code> zoom to fit, <code>ZA</code> zoom all to fit, <code>ZS</code> zoom sheet size, <code>ZP</code> previous pan/zoom. <strong>View ▸ Windows ▸ User Interface ▸ Keyboard Shortcuts</strong> gives any command shortcuts of your own (<a href="../interface/#drawing-area-and-view-windows">The interface</a>).</p>
+<p>The zoom commands have typed shortcuts too: <code>ZR</code> zoom in region, <code>ZO</code> zoom out (2x), <code>ZF</code> zoom to fit, <code>ZA</code> zoom all to fit, <code>ZS</code> zoom sheet size, <code>ZP</code> previous pan/zoom. <strong>Views ▸ Windows ▸ Panels ▸ Keyboard Shortcuts</strong> gives any command shortcuts of your own (<a href="../interface/#drawing-area-and-view-windows">The interface</a>).</p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

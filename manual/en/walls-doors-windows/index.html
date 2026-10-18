@@ -281,6 +281,17 @@
       Wall types and layers
     </span>
 </a>
+<nav aria-label="Wall types and layers" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#type-layers">
+<span class="md-ellipsis">
+      Type layers
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#wall-properties">
@@ -531,6 +542,17 @@
       Wall types and layers
     </span>
 </a>
+<nav aria-label="Wall types and layers" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#type-layers">
+<span class="md-ellipsis">
+      Type layers
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#wall-properties">
@@ -826,18 +848,52 @@ read-only) and <strong>Function</strong> (<strong>Interior</strong>, <strong>Ext
 <strong>Soffit</strong>, <strong>Core-shaft</strong>); under <strong>Graphics</strong>, <strong>Coarse Scale Fill Pattern</strong> and <strong>Coarse Scale
 Fill Color</strong>, how cut walls of the type are filled at <strong>Coarse</strong> detail. <strong>Duplicate…</strong> makes a
 new type; its name does not follow its layers.</p>
-<p><strong>Structure ▸ Edit…</strong> opens <strong>Edit assembly</strong>: the layers from the exterior side to the interior
-side, each with its function, material and thickness, between the two <strong>Core Boundary</strong> rows.
-<strong>Insert</strong>, <strong>Delete</strong>, <strong>Up</strong> and <strong>Down</strong> change the list. A membrane layer has no thickness,
-and every other layer is at least 4 mm thick: other values are refused, and the dialog stays open.</p>
-<p>The <strong>Wraps</strong> column ticks the layers that may wrap. Below the table:</p>
+<p><strong>Type Parameters</strong> also shows a preview of the type on its left (its layers, or a small picture of
+one of its elements); <strong>‹‹ Preview</strong> at the bottom closes it and the dialog narrows, <strong>Preview ››</strong>
+opens it again, and the choice is kept.</p>
+<h3 id="type-layers">Type layers</h3>
+<p><strong>Structure ▸ Edit…</strong> opens <strong>Type layers</strong>, the same dialog for walls, floors, roofs and ceilings.
+At the top are the family and the type, and three figures updated at every change: <strong>Total
+thickness</strong> (in metres), <strong>Resistance R</strong> (m²K/W: the sum of thickness / thermal conductivity of the
+layers, plus 0.17 for the two surfaces) and <strong>Mass per area</strong> (kg/m²: the sum of thickness ×
+density). R and mass show when every material has its <strong>Thermal conductivity</strong> and <strong>Density</strong> (the
+template's materials have them, others are completed in <strong>Materials</strong>); otherwise they show «—».</p>
+<p>On the left is the list of the layers, from the <strong>EXTERIOR SIDE</strong> at the top to the <strong>INTERIOR
+SIDE</strong> at the bottom. Each layer is a card with its number, a sample of its material (colour and cut
+pattern), its <strong>Function</strong> (<strong>Structure</strong>, <strong>Substrate</strong>, <strong>Thermal insulation</strong>, <strong>Air space</strong>,
+<strong>Finish 1</strong>, <strong>Finish 2</strong>, <strong>Membrane</strong>), its <strong>Material</strong> (a click opens <strong>Materials</strong> to choose
+it), its <strong>Thickness</strong> in millimetres and three toggles:</p>
 <ul>
-<li><strong>Return at Openings</strong> (<strong>Do not wrap</strong>, <strong>Exterior</strong>, <strong>Interior</strong>, <strong>Both</strong>): the ticked
-  layers outside the core on that side turn into the jambs of doors and windows; the layers
-  behind them are pulled back;</li>
-<li><strong>Return at Ends</strong> (<strong>Do not wrap</strong>, <strong>Exterior</strong>, <strong>Interior</strong>): the same at the free ends of
-  the walls.</li>
+<li><strong>Wraps</strong>: the layer may wrap at openings and ends (never a layer of a wall's core);</li>
+<li><strong>Structural material</strong>: the layer's material is the type's structural material (only one, in
+  the core);</li>
+<li><strong>Variable</strong>: the layer's thickness may vary (only one, in floors and roofs).</li>
 </ul>
+<p>Two dashed lines, <strong>Core boundary · above</strong> and <strong>Core boundary · below</strong>, delimit the core. A click
+on a card selects it; <strong>Insert</strong> adds a layer under the selected one; <strong>Delete</strong>, <strong>Up</strong> and
+<strong>Down</strong> act on the selected layer and are greyed without a selection. In a wall a core boundary is
+also selected with a click and moved with <strong>Up</strong> and <strong>Down</strong>. A membrane layer has no thickness,
+and every other layer is at least 4 mm thick: other values are refused, the dialog stays open and
+the status line at the bottom says why.</p>
+<p>For walls, on the row of the buttons:</p>
+<ul>
+<li><strong>Wrap at inserts</strong> (<strong>No</strong>, <strong>Exterior</strong>, <strong>Interior</strong>, <strong>Both</strong>): the wrapping layers outside
+  the core on that side turn into the jambs of doors and windows; the layers behind them are pulled
+  back;</li>
+<li><strong>at ends</strong> (<strong>None</strong>, <strong>Exterior</strong>, <strong>Interior</strong>): the same at the free ends of the walls.</li>
+</ul>
+<p>On the right the preview follows every change. <strong>Section</strong> shows the wall cut through, its layers
+side by side and as tall as <strong>Sample height</strong> (6000 mm at first), or the floor, roof or ceiling with
+its layers stacked; <strong>Plan</strong> (walls only) shows the end of the wall with the layers that wrap round
+it. The selected layer is outlined and the core lies between two dashed lines. The buttons above
+the drawing zoom it out, zoom it in and fit it; the wheel, a pinch and a drag zoom and move it too,
+and a click on a layer selects it in the list. Below, for walls, <strong>Vertical structure (in
+section)</strong> gathers <strong>Modify</strong>, <strong>Merge Regions</strong>, <strong>Profiles</strong>, <strong>Assign Layers</strong>, <strong>Split Region</strong>
+and <strong>Reveals</strong>, not available yet (greyed).</p>
+<p>At the bottom <strong>‹‹ Preview</strong> closes the preview and the list takes the whole width; <strong>Preview ››</strong>
+opens it again, and the choice is kept. <strong>OK</strong> applies all the changes in one step, which Ctrl+Z
+undoes; <strong>Cancel</strong> closes without changing anything; <strong>Help</strong> opens this page. In a narrow window
+the preview stands above the list.</p>
 <p>Wrapping shows in every view: in plan, in the 3D view, in sections and in elevations the ticked
 layers line the jambs, the head and the sill of doors and windows, the sides of the holes of an
 edited boundary (see <a href="#editing-a-walls-profile">Editing a wall's boundary</a>) and the free ends. A
@@ -967,7 +1023,7 @@ level. The options bar shows:</p>
 lowest level; a section or an elevation has none until one is set. The plane is kept with the
 view.</p>
 <h3 id="setting-the-work-plane">Setting the work plane</h3>
-<p><strong>Home ▸ Work Plane ▸ Set</strong> opens the <strong>Work Plane</strong> dialog. <strong>Current Work Plane</strong> shows the
+<p><strong>Home ▸ Work Plane ▸ Define</strong> opens the <strong>Work Plane</strong> dialog. <strong>Current Work Plane</strong> shows the
 plane the view uses now. Under <strong>Specify a new Work Plane</strong>:</p>
 <ul>
 <li><strong>Name</strong>: pick a level, a grid or a named reference plane in the list (picking one selects
@@ -983,7 +1039,7 @@ is not set there: <strong>Go to View</strong> lists the views it lies in (the se
 a vertical plane, the plans of a horizontal one) and the 3D views, and <strong>Open View</strong> opens the
 chosen one with that work plane. <strong>Undo</strong> takes a new work plane back.</p>
 <h3 id="showing-the-work-plane">Showing the work plane</h3>
-<p><strong>Home ▸ Work Plane ▸ Show</strong> draws the work plane's grid in the view, over the model, when the
+<p><strong>Home ▸ Work Plane ▸ Display</strong> draws the work plane's grid in the view, over the model, when the
 plane lies in the view (in a 3D view always); <strong>Show</strong> again hides it. In a section with no work
 plane it opens the <strong>Work Plane</strong> dialog first. Click the border of the grid to select it: the
 options bar shows <strong>Spacing</strong>, the distance between its lines (1 m to start with). While the

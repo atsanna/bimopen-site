@@ -226,7 +226,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#the-home-tab">
 <span class="md-ellipsis">
-      The Home tab
+      The Model tab
     </span>
 </a>
 </li>
@@ -305,6 +305,20 @@
 <nav aria-label="Drawing area and view windows" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#torn-off-views">
+<span class="md-ellipsis">
+      Views in separate windows
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#drawing-in-every-view">
+<span class="md-ellipsis">
+      Drawing in every view
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#view-control-bar">
 <span class="md-ellipsis">
       View control bar
@@ -355,6 +369,38 @@
       Selecting, in short
     </span>
 </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#touch-mode">
+<span class="md-ellipsis">
+      Touch mode
+    </span>
+</a>
+<nav aria-label="Touch mode" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#touch-mode-on">
+<span class="md-ellipsis">
+      Turning it on
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#touch-layouts">
+<span class="md-ellipsis">
+      Phone, landscape and tablet
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#touch-gestures">
+<span class="md-ellipsis">
+      Gestures and the pen
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -505,7 +551,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#the-home-tab">
 <span class="md-ellipsis">
-      The Home tab
+      The Model tab
     </span>
 </a>
 </li>
@@ -584,6 +630,20 @@
 <nav aria-label="Drawing area and view windows" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#torn-off-views">
+<span class="md-ellipsis">
+      Views in separate windows
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#drawing-in-every-view">
+<span class="md-ellipsis">
+      Drawing in every view
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#view-control-bar">
 <span class="md-ellipsis">
       View control bar
@@ -634,6 +694,38 @@
       Selecting, in short
     </span>
 </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#touch-mode">
+<span class="md-ellipsis">
+      Touch mode
+    </span>
+</a>
+<nav aria-label="Touch mode" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#touch-mode-on">
+<span class="md-ellipsis">
+      Turning it on
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#touch-layouts">
+<span class="md-ellipsis">
+      Phone, landscape and tablet
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#touch-gestures">
+<span class="md-ellipsis">
+      Gestures and the pen
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -842,41 +934,321 @@ opens the page of what you are doing: the open dialog, the ribbon button under t
 ends with <strong>Press F1 for more information</strong>) or the active tool.</p>
 <p>Right-click a ribbon tool and choose <strong>Add to Quick Access Toolbar</strong>: the tool joins the toolbar and starts from there whatever tab is open. Right-click any tool of the toolbar, the default ones included, for <strong>Remove from Quick Access Toolbar</strong> or <strong>Add Separator</strong> (a line to its right). The small arrow at the end of the toolbar, <strong>Customize Quick Access Toolbar</strong>, lists the default tools: tick one to show it again, untick it to remove it. In the same menu, <strong>Customize Quick Access Toolbar…</strong> opens a window with the toolbar's tools in order: <strong>Move Up</strong> and <strong>Move Down</strong> move the one selected left or right, <strong>Add Separator</strong> puts a line after it, <strong>Remove</strong> takes it (or a line) away, <strong>OK</strong> applies. <strong>Show below the Ribbon</strong> moves the whole toolbar under the ribbon (or above it again). The toolbar is kept for the next sessions. On the ribbon's tabs and in the quick access toolbar each command has its own icon.</p>
 <h2 id="ribbon">Ribbon</h2>
-<p>The ribbon groups the tools in tabs, and each tab in panels. The name of a panel is written
-under its buttons. A button whose name is followed by a small mark opens a menu. Resting the mouse on a button
-shows what it does and, in brackets, the shortcut you can type to start it.</p>
+<p>The ribbon groups the commands in tabs, and each tab in groups: big buttons, columns of three rows and grids of icons, as in the approved design of the interface. A group's name is written under its buttons. A button with a small ▾ mark has a menu: a click on the button starts the command, a click on the mark opens the menu with its variants. Resting the mouse on a button shows what it does and, in brackets, the shortcut you can type to start it. The commands BIMopen does not run yet are greyed, and their tip says «Not available yet»; <strong>Level</strong>, <strong>Grid</strong> and <strong>Guide plane</strong> are greyed in a 3D view («Not available in the 3D view»). The <strong>BIMopen</strong> style has the same commands, with the same availability.</p>
 <table>
 <thead>
 <tr>
 <th>Tab</th>
-<th>Panels</th>
+<th>Group</th>
+<th>Commands</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Home</strong></td>
-<td><strong>Select</strong>, <strong>Build</strong>, <strong>Vertical Links</strong>, <strong>Rooms and Areas</strong>, <strong>Datum</strong></td>
+<td><strong>Model</strong></td>
+<td><strong>Selection</strong></td>
+<td><strong>Modify</strong></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Build</strong></td>
+<td><strong>Wall ▾</strong>, <strong>Door</strong>, <strong>Window</strong>, <strong>Object ▾</strong>, <em>Column ▾</em>, <strong>Roof ▾</strong>, <em>Ceiling</em>, <strong>Flooring ▾</strong>, <strong>Curtain Wall</strong>, <strong>Curtain grid</strong>, <strong>Mullion</strong></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Vertical Links</strong></td>
+<td><strong>Railing ▾</strong>, <strong>Ramp</strong>, <strong>Stair</strong></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>3D elements</strong></td>
+<td><em>3D text</em>, <em>3D line</em>, <em>Group ▾</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Rooms and Areas</strong></td>
+<td><strong>Room</strong>, <strong>Room Separator</strong>, <strong>Room Label ▾</strong>, <strong>Area ▾</strong>, <strong>Area Outline</strong>, <strong>Area Label ▾</strong></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Openings</strong></td>
+<td><em>By face</em>, <em>Shaft</em>, <em>In a wall</em>, <em>Vertical opening</em>, <em>Dormer</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>References</strong></td>
+<td><strong>Level</strong>, <strong>Grid</strong></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Work Plane</strong></td>
+<td><strong>Define</strong>, <strong>Display</strong>, <strong>Guide plane</strong>, <em>Plane viewer</em></td>
+</tr>
+<tr>
+<td><strong>Structure</strong></td>
+<td><strong>Selection</strong></td>
+<td><strong>Modify</strong></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Structural elements</strong></td>
+<td><em>Beam</em>, <em>Structural wall ▾</em>, <em>Structural column</em>, <em>Structural floor ▾</em>, <em>Truss</em>, <em>Brace</em>, <em>Beam layout</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Connections</strong></td>
+<td><em>Connection ▾</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Foundations</strong></td>
+<td><em>Pad footing</em>, <em>Strip footing</em>, <em>Raft foundation ▾</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Reinforcement</strong></td>
+<td><em>Rebar</em>, <em>Reinforcement over an area</em>, <em>Reinforcement along a path</em>, <em>Mesh over an area</em>, <em>Single mesh</em>, <em>Concrete cover</em>, <em>Coupler</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>3D elements</strong></td>
+<td><strong>Object ▾</strong>, <em>3D text</em>, <em>3D line</em>, <em>Group ▾</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Openings</strong></td>
+<td><em>Normal to a face</em>, <em>Shaft</em>, <em>In a wall</em>, <em>Vertical opening</em>, <em>Dormer</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>References</strong></td>
+<td><strong>Level</strong>, <strong>Grid</strong></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Work Plane</strong></td>
+<td><strong>Define</strong>, <strong>Display</strong>, <strong>Guide plane</strong>, <em>Plane viewer</em></td>
+</tr>
+<tr>
+<td><strong>Metal</strong></td>
+<td><strong>Selection</strong></td>
+<td><strong>Modify</strong></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Connections</strong></td>
+<td><em>Connection ▾</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Steelwork parts</strong></td>
+<td><em>Plate</em>, <em>Bolts ▾</em>, <em>Weld</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Fabrication</strong></td>
+<td><em>Cope</em>, <em>Skewed cut</em>, <em>Shorten</em>, <em>Shaped cut</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Automatic cuts</strong></td>
+<td><em>End cut</em>, <em>Corner joint ▾</em>, <em>Intersection</em>, <em>Cut with</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Work Plane</strong></td>
+<td><strong>Define</strong>, <strong>Display</strong>, <strong>Guide plane</strong>, <em>Plane viewer</em></td>
+</tr>
+<tr>
+<td><strong>Prefabrication</strong></td>
+<td><strong>Division</strong></td>
+<td><em>Divide</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Joints</strong></td>
+<td><em>Assembly parts</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Reinforcement</strong></td>
+<td><em>Rebar</em>, <em>Custom mesh</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Production</strong></td>
+<td><em>Workshop drawings</em>, <em>Export for CAM</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Settings</strong></td>
+<td><em>Prefabrication settings</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Automatic update</strong></td>
+<td><em>Suspend ▾</em></td>
+</tr>
+<tr>
+<td><strong>MEP</strong></td>
+<td><strong>Selection</strong></td>
+<td><strong>Modify</strong></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Air</strong></td>
+<td><em>Duct</em>, <em>Duct from a path</em>, <em>Duct fitting</em>, <em>Duct accessory</em>, <em>Duct insulation</em>, <em>Flexible duct</em>, <em>Air outlet</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Prefabricated parts</strong></td>
+<td><em>Prefabricated part</em>, <em>Multi-point route</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>System details</strong></td>
+<td><em>Duct bracing</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>P&amp;ID diagrams</strong></td>
+<td><em>P&amp;ID editor</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Mechanical</strong></td>
+<td><em>Mechanical equipment</em>, <em>Control device</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Other systems</strong></td>
+<td><em>Plumbing ▾</em>, <em>Electrical ▾</em>, <em>Modelling ▾</em>, <strong>Work Plane ▾</strong></td>
+</tr>
+<tr>
+<td><strong>Link and import</strong></td>
+<td><strong>Selection</strong></td>
+<td><strong>Modify</strong></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Link</strong></td>
+<td><em>Link project</em>, <em>Link IFC</em>, <em>Link CAD</em>, <em>Link topography</em>, <em>Decal ▾</em>, <em>Point cloud</em>, <em>Manage links</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Import</strong></td>
+<td><em>Import CAD</em>, <em>Import gbXML</em>, <em>Import PDF</em>, <em>Import image</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Load from library</strong></td>
+<td><strong>Load Family</strong>, <em>Load as group</em>, <strong>Insert from File ▾</strong></td>
 </tr>
 <tr>
 <td><strong>Annotations</strong></td>
-<td><strong>Select</strong>, <strong>Dimension</strong>, <strong>Text</strong>, <strong>Detail</strong>, <strong>Tag</strong></td>
+<td><strong>Dimension</strong></td>
+<td><strong>Aligned</strong>, <strong>Linear</strong>, <strong>Angular</strong>, <strong>Radial</strong>, <em>Diameter</em>, <strong>Arc length</strong>, <strong>Spot dimension ▾</strong></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Detail</strong></td>
+<td><strong>Detail line</strong>, <strong>Filled region ▾</strong>, <strong>Detail symbol ▾</strong>, <strong>Revision Cloud</strong></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Text</strong></td>
+<td><strong>Text</strong></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Tag</strong></td>
+<td><strong>Tag</strong>, <strong>Tag all</strong>, <em>Material</em>, <strong>Color legend</strong></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Symbol</strong></td>
+<td><strong>Symbol</strong></td>
+</tr>
+<tr>
+<td><strong>Check</strong></td>
+<td><strong>Energy</strong></td>
+<td><em>Energy analysis</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Check</strong></td>
+<td><em>Check clashes</em>, <em>Show loads</em></td>
+</tr>
+<tr>
+<td><strong>Massing &amp; site</strong></td>
+<td><strong>Selection</strong></td>
+<td><strong>Modify</strong></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Massing</strong></td>
+<td><em>Display masses ▾</em>, <em>New mass</em>, <em>Place a mass</em>, <em>Draw in 3D</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>From mass faces</strong></td>
+<td><em>Curtain Wall</em>, <em>Roof</em>, <em>Wall</em>, <em>Slab</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Site</strong></td>
+<td><em>Terrain</em>, <em>Site element</em>, <em>Parking</em>, <em>Building pad</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Edit site</strong></td>
+<td><em>Divide terrain</em>, <em>Merge terrains</em>, <em>Sub-area</em>, <em>Property line</em>, <em>Grading</em>, <em>Contour labels</em></td>
+</tr>
+<tr>
+<td><strong>Collaborate</strong></td>
+<td><strong>Shared work</strong></td>
+<td><em>Worksets</em>, <em>Synchronize</em>, <em>Show history</em></td>
 </tr>
 <tr>
 <td><strong>Views</strong></td>
-<td><strong>Create</strong>, <strong>Graphics</strong>, <strong>Sheets</strong>, <strong>Windows</strong></td>
+<td><strong>Graphics</strong></td>
+<td><strong>View presets ▾</strong>, <strong>Visibility and Graphics</strong>, <strong>Filters</strong>, <strong>Thin lines</strong>, <em>Show hidden lines</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Create</strong></td>
+<td><strong>3D View ▾</strong>, <strong>Section</strong>, <strong>Enlarged detail ▾</strong>, <strong>Plan ▾</strong>, <strong>Elevation ▾</strong>, <strong>Free 2D View</strong>, <strong>Duplicate View ▾</strong>, <strong>Legends ▾</strong>, <strong>Schedules ▾</strong></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Sheets</strong></td>
+<td><strong>Sheet</strong>, <strong>View</strong>, <strong>Title Block</strong>, <strong>Revisions</strong></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Windows</strong></td>
+<td><strong>Switch View ▾</strong>, <strong>Close others</strong>, <strong>Tile</strong>, <strong>Cascade</strong>, <strong>Panels ▾</strong></td>
 </tr>
 <tr>
 <td><strong>Project</strong></td>
-<td><strong>Settings</strong>, <strong>Inquiry</strong></td>
+<td><strong>Settings</strong></td>
+<td><strong>Materials</strong>, <strong>Styles by Category</strong>, <strong>Snap</strong>, <strong>Project information</strong>, <strong>Project parameters</strong>, <strong>Project units</strong>, <strong>Copy Settings from Project</strong></td>
 </tr>
 <tr>
-<td><strong>Edit</strong></td>
-<td>The contextual tab: its panels depend on the active tool and on the selection</td>
+<td></td>
+<td><strong>Phases</strong></td>
+<td><em>Phases</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Options</strong></td>
+<td><em>Design options</em></td>
 </tr>
 </tbody>
 </table>
-<p>Press and release <span class="keys"><kbd class="key-alt">Alt</kbd></span>, or press <span class="keys"><kbd class="key-f10">F10</kbd></span>, to show the key tips: a letter on every tab (<strong>I</strong>, <strong>N</strong>, <strong>A</strong>, <strong>V</strong>, <strong>G</strong>, <strong>M</strong>, from the first tab to the contextual one) and, on the buttons of the open tab, the shortcut of their tool. Type a tab's letter to open it, then a button's letters to start its tool; <span class="keys"><kbd class="key-escape">Esc</kbd></span> hides the key tips. While they show, what you type does not go to the command line.</p>
-<h3 id="the-home-tab">The Home tab</h3>
+<p>In italics the commands BIMopen does not run yet; ▾ marks a menu.</p>
+<p>Press and release <span class="keys"><kbd class="key-alt">Alt</kbd></span>, or press <span class="keys"><kbd class="key-f10">F10</kbd></span>, to show the key tips: a letter on each tab (<strong>I</strong>, <strong>K</strong>, <strong>L</strong>, <strong>F</strong>, <strong>P</strong>, <strong>N</strong>, <strong>A</strong>, <strong>Z</strong>, <strong>Q</strong>, <strong>H</strong>, <strong>V</strong>, <strong>G</strong>, <strong>M</strong>, from the first tab to the contextual one) and, on the buttons of the open tab, their tool's shortcut. Type a tab's letter to open it, then a button's letters to start its tool; <span class="keys"><kbd class="key-escape">Esc</kbd></span> hides the tips. While they show, what you type does not go to the command line.</p>
+<h3 id="the-home-tab">The Model tab</h3>
 <table>
 <thead>
 <tr>
@@ -886,12 +1258,12 @@ shows what it does and, in brackets, the shortcut you can type to start it.</p>
 </thead>
 <tbody>
 <tr>
-<td><strong>Select</strong></td>
+<td><strong>Selection</strong></td>
 <td><strong>Modify</strong>: ends the active tool and goes back to selecting, <span class="keys"><kbd class="key-escape">Esc</kbd></span></td>
 </tr>
 <tr>
 <td><strong>Build</strong></td>
-<td><strong>Wall</strong> <code>WA</code>, <strong>Door</strong> <code>DR</code>, <strong>Window</strong> <code>WN</code>, <strong>Roof</strong> <code>RF</code>, <strong>Flooring</strong> <code>SB</code>, <strong>Component</strong> <code>CM</code>, <strong>Curtain Grid</strong> <code>CG</code>, <strong>Mullion</strong> <code>MU</code></td>
+<td><strong>In a wall</strong> <code>WA</code>, <strong>Door</strong> <code>DR</code>, <strong>Window</strong> <code>WN</code>, <strong>Roof</strong> <code>RF</code>, <strong>Flooring</strong> <code>SB</code>, <strong>Object</strong> <code>CM</code>, <strong>Curtain Grid</strong> <code>CG</code>, <strong>Mullion</strong> <code>MU</code></td>
 </tr>
 <tr>
 <td><strong>Vertical Links</strong></td>
@@ -902,7 +1274,7 @@ shows what it does and, in brackets, the shortcut you can type to start it.</p>
 <td><strong>Room</strong> <code>RM</code>, <strong>Room Separator</strong> <code>RS</code>, <strong>Area ▾</strong> (<strong>Area Plan</strong>, <strong>Area Outline</strong>, <strong>Area</strong>), <strong>Legend</strong> <code>LG</code>, <strong>Settings ▾</strong> (<strong>Area and Volume Computations</strong>, <strong>Color Schemes</strong>)</td>
 </tr>
 <tr>
-<td><strong>Datum</strong></td>
+<td><strong>References</strong></td>
 <td><strong>Level</strong>: drawn in an elevation or a section, two clicks at the new level's height (from a plan it opens an elevation); <strong>Grid</strong> <code>GR</code></td>
 </tr>
 </tbody>
@@ -919,7 +1291,7 @@ their tip says to open an area plan first.</p>
 </thead>
 <tbody>
 <tr>
-<td><strong>Select</strong></td>
+<td><strong>Selection</strong></td>
 <td><strong>Modify</strong></td>
 </tr>
 <tr>
@@ -1008,7 +1380,7 @@ goes back to the tab you were using.</p>
 </thead>
 <tbody>
 <tr>
-<td><strong>Select</strong></td>
+<td><strong>Selection</strong></td>
 <td><strong>Modify</strong></td>
 </tr>
 <tr>
@@ -1017,7 +1389,7 @@ goes back to the tab you were using.</p>
 </tr>
 <tr>
 <td><strong>Modify</strong></td>
-<td>Seventeen small tools in three rows: <strong>Align</strong> <code>AL</code>, <strong>Offset</strong> <code>OF</code>, <strong>Mirror on Axis</strong> <code>MM</code>, <strong>Mirror on Line</strong> <code>DM</code>, <strong>Split Element</strong> <code>SL</code>, <strong>Split with Joint</strong> <code>SG</code>; <strong>Move</strong> <code>MV</code>, <strong>Copy</strong> <code>CO</code>, <strong>Rotate</strong> <code>RO</code>, <strong>Trim/Extend to Corner</strong> <code>TR</code>, <strong>Trim/Extend Single Element</strong>, <strong>Trim/Extend Multiple Elements</strong>; <strong>Repeat in Series</strong> <code>AR</code>, <strong>Scale</strong> <code>RE</code>, <strong>Fix</strong> <code>PN</code>, <strong>Unpin</strong> <code>UP</code>, <strong>Delete</strong> (<span class="keys"><kbd class="key-delete">Del</kbd></span>)</td>
+<td>Seventeen small tools in three rows: <strong>Align</strong> <code>AL</code>, <strong>Offset</strong> <code>OF</code>, <strong>Mirror on Axis</strong> <code>MM</code>, <strong>Mirror on Line</strong> <code>DM</code>, <strong>Split Element</strong> <code>SL</code>, <strong>Split with Joint</strong> <code>SG</code>; <strong>Move</strong> <code>MV</code>, <strong>Copy</strong> <code>CO</code>, <strong>Rotate</strong> <code>RO</code>, <strong>Shorten/Lengthen</strong> <code>TR</code>, <strong>Shorten/Lengthen one element</strong>, <strong>Shorten/Lengthen several elements</strong>; <strong>Repeat in Series</strong> <code>AR</code>, <strong>Scale</strong> <code>RE</code>, <strong>Fix</strong> <code>PN</code>, <strong>Unpin</strong> <code>UP</code>, <strong>Delete</strong> (<span class="keys"><kbd class="key-delete">Del</kbd></span>)</td>
 </tr>
 </tbody>
 </table>
@@ -1259,6 +1631,7 @@ three buttons set the size: <strong>Previews</strong>, <strong>Compact</strong> 
 left or on the right of the drawing area, several in a column, or floats where you let it go. The
 buttons in the header dock it left, dock it right, make it float or close it; <strong>Views ▸ Windows ▸
 Panels</strong> opens it again. Each panel stays where you put it in the next sessions.</p>
+<p>While you drag a panel, only the places where it really docks are drawn, each as the panel it will become: a free side's whole column, at its width, or the upper or lower part of a column where another panel is docked (it goes above or below it). The place under the pointer is drawn strongly, the others faintly. Elsewhere nothing is drawn, and the panel floats where you let it go.</p>
 <p>The type selector at the top of <strong>Properties</strong> shows a preview of the type: walls, floors and roofs
 as their layers, doors, windows and components as a small picture. Open it to search the types by
 name; they are grouped by family, each with its preview. The arrow keys move, <span class="keys"><kbd class="key-enter">Enter</kbd></span> picks,
@@ -1309,6 +1682,13 @@ the model. In <strong>Tile</strong> and <strong>Cascade</strong>, the <strong>×
 <p><strong>Tile</strong> puts the active window at the top left and the others after it, from the most recently active; <strong>Switch View</strong> lists them in the same order. Tile again after working in another window and that window comes first.</p>
 <p><strong>User Interface ▸ Keyboard Shortcuts</strong> lists the commands with their shortcuts. Search a command by name, or <strong>Filter</strong> the list (<strong>All</strong>, <strong>All Defined</strong>, <strong>All Not Defined</strong>, <strong>All Reserved</strong>); select a command, type the keys in <strong>Press new keys</strong> and click <strong>Assign</strong>. The same keys may go to several commands: typed in the drawing area, the status bar shows the first, the arrow keys go through the others and <span class="keys"><kbd class="key-enter">Enter</kbd></span> or <span class="keys"><kbd class="key-space">Space</kbd></span> runs the one shown; <strong>Export…</strong> writes every shortcut to an XML file and <strong>Import…</strong> reads such a file back as your shortcuts (a file naming no command here is refused, and your shortcuts stay); <strong>Remove</strong> takes away the keys you added. Your shortcuts are kept for the next sessions and start the command when typed, as the built-in ones do.</p>
 <p>A tool never changes the active view by itself. Started in a view where it cannot work (a roof or a room in a 3D view, a level in a plan, an area outside an area plan), it opens <strong>Go to View</strong>: the views that suit it, with the plan of the active level chosen first. <strong>Open View</strong> opens the chosen view and starts the tool there; <strong>Cancel</strong> leaves everything as it was. <strong>Edit Boundary</strong> of a floor, roof, stair or railing, from a section or an elevation, asks the same way for a plan of its level, and a new section or elevation leaves the plan you drew it in active. <strong>Move</strong>, <strong>Copy</strong>, a linear <strong>Repeat in Series</strong> and <strong>Mirror on Line</strong> also work in sections and elevations: along the view; the axis is the vertical plane at right angles to the view through its first point, however it is drawn. A radial <strong>Repeat in Series</strong> works in plans and 3D views: in a section or an elevation it stays chosen, but its clicks make nothing and the status bar asks for <strong>Linear</strong>.</p>
+<h3 id="torn-off-views">Views in separate windows</h3>
+<p>A view can leave the drawing area: <strong>Separate window</strong> in its menu (right-click it in the <strong>Project Index</strong>, on its thumbnail in the views strip, or on the title bar of a tiled window), or drag the title bar of a tiled or cascaded window out of the drawing area. On the computer the view opens in a system window of its own, which you can move to another monitor too, resize and maximise; on the web it floats in the page, because the browser opens no other windows. A view floating in the program also has <strong>System window</strong>, to move it into a system window.</p>
+<p>You can separate several views at once. Each keeps its tools, its view control bar and, in 3D, its orientation cube; the selection shows in all of them, and the active view is the last one you clicked. <strong>Back to the main window</strong>, at the top of the view, puts it back in the drawing area; a floating view also goes back when dragged onto the band at the top of the drawing area, which lights up. Closing the system window brings it back the same way. Where each separate view was stays with the project, and when it opens again the separate views come back to their places.</p>
+<h3 id="drawing-in-every-view">Drawing in every view</h3>
+<p>A wall is drawn the same way in a plan and in a 3D view, on the level's plane: from the first click the wall being drawn follows the cursor, in the plan as its footprint and in 3D as its see-through solid, at its height and thickness; a dashed line carries its axis on, and others hold it in line with the points of the chain already clicked. The temporary dimension, blue with its witness lines and ticks, gives the length and the angle; type a length and press <span class="keys"><kbd class="key-enter">Enter</kbd></span> to draw the wall that long. The snaps (endpoints, midpoints, intersections, perpendicular, other walls' faces and axes) work in 3D too. The wall selected in a 3D view shows, as in a plan, its temporary dimensions, the flip arrows and the ends to drag. In sections and elevations a wall is not drawn: <strong>Go to View</strong> offers a plan or the 3D view.</p>
+<p>Roofs and floors are drawn in the 3D view too, on the plane of their level: <strong>Pick Walls</strong> takes the wall under the cursor (its top lights up in orange, <span class="keys"><kbd class="key-tab">Tab</kbd></span> takes the whole chain), the lines are drawn with every sketch tool and with temporary dimensions, and <strong>Edit Footprint</strong> of a roof or a floor opens its sketch in 3D. <strong>Edit Boundary</strong> of a wall works in 3D on the wall's plane, and in a section or elevation that sees it face on.</p>
+<p>While you draw or edit a sketch you can switch views (thumbnails, <strong>Project Index</strong>, separate windows): the tool stays active and goes on in the new view if it can work there. A chain of walls begun in a plan goes on in 3D from its last point, and a profile sketch begun in an elevation goes on in 3D. The wall being drawn and the sketch show in every open view at once.</p>
 <h3 id="view-control-bar">View control bar</h3>
 <p>At the bottom of every plan, section, elevation, callout and free 2D view:</p>
 <table>
@@ -1463,6 +1843,99 @@ essentials:</p>
 <li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-a">A</kbd></span> selects the elements of the open plan's level, or of the whole model in a 3D view;
   <span class="keys"><kbd class="key-delete">Del</kbd></span> deletes the selection; <span class="keys"><kbd class="key-escape">Esc</kbd></span> clears it.</li>
 </ul>
+<h2 id="touch-mode">Touch mode</h2>
+<p><strong>Touch mode</strong> lays the interface out for touch screens and pens: phones, tablets and touch
+monitors. It runs the same commands as the other two styles, with the same names; only the
+layout changes, and every control is big enough for a finger.</p>
+<h3 id="touch-mode-on">Turning it on</h3>
+<p><strong>Application menu ▸ Options ▸ User Interface ▸ Touch mode</strong> has three values:</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Automatic</strong></td>
+<td>On where the device is touch first: in a browser with a finger as pointer or a window at most 900 pixels wide, and on Android. On the desktop it stays off</td>
+</tr>
+<tr>
+<td><strong>Always</strong></td>
+<td>Always on, on the desktop too (a touch monitor, a tablet PC)</td>
+</tr>
+<tr>
+<td><strong>Never</strong></td>
+<td>Never on</td>
+</tr>
+</tbody>
+</table>
+<p>BIMopen remembers the choice with the other preferences. <strong>Menu ▸ Leave touch mode</strong> brings
+back the other interface until the next start.</p>
+<h3 id="touch-layouts">Phone, landscape and tablet</h3>
+<p>The layout follows the room the window has:</p>
+<ul>
+<li><strong>narrow and tall</strong> (a phone): a compact top bar with the menu, the project and the view (a tap
+  opens the views), <strong>Undo</strong>, <strong>Redo</strong>, <strong>Command or search</strong> and <strong>Pen</strong>; the drawing takes the
+  whole width; five big buttons at the bottom, <strong>Views</strong>, <strong>Families</strong>, <strong>Tools</strong> (<strong>Modify</strong>
+  while something is selected), <strong>Properties</strong> and <strong>Commands</strong>, each opening a sheet from the
+  bottom. Drag the sheet's handle up to make it taller, down to make it smaller or close it; a tap
+  outside closes it;</li>
+<li><strong>short and wide</strong> (a phone sideways): a rail on the left with the categories <strong>Model</strong>,
+  <strong>Structure</strong>, <strong>MEP</strong>, <strong>Annotations</strong>, <strong>Views</strong> and <strong>Project</strong>, plus the views and the
+  properties; the sheets open on the right;</li>
+<li><strong>wide</strong> (a tablet, a touch monitor): the rail opens a palette of tools for each category, the
+  properties stay on the right, the views and families strip at the bottom, and the <strong>Command or
+  search</strong> field in the top bar.</li>
+</ul>
+<p>The tools are large tiles with an icon and a name. A tool still to come is greyed, <strong>Not available
+yet</strong>; a tool that does not work in the 3D view (<strong>Level</strong>, <strong>Grid</strong>, <strong>Reference Plane</strong>, the
+annotations) is greyed there, <strong>Not available in the 3D view</strong>. A tap on a greyed tile says why.</p>
+<p>While a tool works, a green strip under the top bar shows its options and <strong>Done</strong>, which ends it
+(or finishes a sketch). While you draw a wall, <strong>Length…</strong> opens the command line: type the length
+of the next wall and, if needed, its angle, as <code>4.5</code> or <code>4.5 90</code>.</p>
+<p>A tap selects, and the selected walls show big grips at their ends. Over the drawing a floating bar
+offers <strong>Move</strong>, <strong>Copy</strong>, <strong>Rotate</strong>, <strong>Mirror</strong>, <strong>Properties</strong> and <strong>Delete</strong>; a long press opens
+the context menu. At the bottom left the view button shows the scale and the graphic style and
+opens <strong>Scale</strong>, <strong>Detail</strong>, <strong>Graphic style</strong>, <strong>Sun and shadows</strong>, <strong>Crop</strong> and <strong>Isolate
+Temporarily</strong>; at the bottom right <strong>Zoom to Fit</strong>.</p>
+<h3 id="touch-gestures">Gestures and the pen</h3>
+<table>
+<thead>
+<tr>
+<th>Gesture</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tap</td>
+<td>selects, or places the point of the active tool</td>
+</tr>
+<tr>
+<td>drag with one finger</td>
+<td>as a mouse drag: a selection window, a grip, an element</td>
+</tr>
+<tr>
+<td>long press</td>
+<td>the context menu</td>
+</tr>
+<tr>
+<td>two fingers</td>
+<td>pan; pinch to zoom; in the 3D view twist to turn the model</td>
+</tr>
+<tr>
+<td>double tap</td>
+<td>fits the view in the window</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Pen</strong> in the top bar is for a pen: the pen draws and selects, fingers only move the view (one
+finger pans, two fingers pan, zoom and turn). A pen palette on the side of the drawing has
+<strong>Select</strong>, <strong>Wall</strong>, <strong>Door</strong>, <strong>Window</strong>, <strong>Detail line</strong>, <strong>Aligned</strong>, <strong>Text</strong> and <strong>More
+tools…</strong>. In a browser a pen is told from a finger by the browser; in the desktop app a touch that
+reports a pressure is taken for a pen.</p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

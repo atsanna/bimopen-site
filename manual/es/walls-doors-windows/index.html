@@ -281,6 +281,17 @@
       Tipos de muro y capas
     </span>
 </a>
+<nav aria-label="Tipos de muro y capas" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#type-layers">
+<span class="md-ellipsis">
+      Capas del tipo
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#wall-properties">
@@ -531,6 +542,17 @@
       Tipos de muro y capas
     </span>
 </a>
+<nav aria-label="Tipos de muro y capas" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#type-layers">
+<span class="md-ellipsis">
+      Capas del tipo
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#wall-properties">
@@ -832,19 +854,57 @@ las capas, solo lectura) y <strong>Función</strong> (<strong>Interior</strong>,
 <strong>Contención</strong>, <strong>Plafón</strong>, <strong>Núcleo</strong>); en <strong>Gráficos</strong>, <strong>Patrón de relleno de escala baja</strong> y
 <strong>Color de relleno de escala baja</strong>, es decir, cómo se rellenan los muros cortados del tipo con
 <strong>Detalle</strong> <strong>Bajo</strong>. <strong>Duplicar…</strong> crea un tipo nuevo; su nombre no sigue a sus capas.</p>
-<p><strong>Estructura ▸ Editar…</strong> abre <strong>Editar montaje</strong>: las capas del lado exterior al lado interior, cada
-una con su función, material y grosor, entre las dos filas <strong>Contorno del núcleo</strong>. <strong>Insertar</strong>,
-<strong>Eliminar</strong>, <strong>Arriba</strong> y <strong>Abajo</strong> cambian la lista. Una capa de membrana no tiene grosor, y
-cualquier otra capa tiene al menos 4 mm: los demás valores se rechazan y el cuadro de diálogo sigue
-abierto.</p>
-<p>La columna <strong>Envolventes</strong> marca las capas que pueden envolver. Bajo la tabla:</p>
+<p>También <strong>Parámetros de tipo</strong> muestra a la izquierda una vista previa del tipo (sus capas, o una
+pequeña imagen de uno de sus elementos); <strong>‹‹ Vista previa</strong> abajo la cierra y el cuadro de
+diálogo se estrecha, <strong>Vista previa ››</strong> la vuelve a abrir, y la elección se conserva.</p>
+<h3 id="type-layers">Capas del tipo</h3>
+<p><strong>Estructura ▸ Editar…</strong> abre <strong>Capas del tipo</strong>, el mismo cuadro de diálogo para muros, suelos,
+cubiertas y techos. Arriba están la familia y el tipo, y tres valores que se actualizan con cada
+cambio: <strong>Grosor total</strong> (en metros), <strong>Resistencia R</strong> (m²K/W: la suma de grosor / conductividad
+térmica de las capas, más 0,17 por las dos superficies) y <strong>Masa superficial</strong> (kg/m²: la suma de
+grosor × densidad). R y la masa aparecen cuando cada material tiene su <strong>Conductividad térmica</strong> y
+su <strong>Densidad</strong> (los materiales de la plantilla las tienen, los demás se completan en
+<strong>Materiales</strong>); si no, muestran «—».</p>
+<p>A la izquierda está la lista de las capas, del <strong>LADO EXTERIOR</strong> arriba al <strong>LADO INTERIOR</strong> abajo.
+Cada capa es una tarjeta con su número, una muestra de su material (color y patrón de corte), su
+<strong>Función</strong> (<strong>Estructura</strong>, <strong>Sustrato</strong>, <strong>Aislante térmico</strong>, <strong>Cámara de aire</strong>, <strong>Acabado 1</strong>,
+<strong>Acabado 2</strong>, <strong>Membrana</strong>), su <strong>Material</strong> (un clic abre <strong>Materiales</strong> para elegirlo), su
+<strong>Grosor</strong> en milímetros y tres interruptores:</p>
 <ul>
-<li><strong>Retorno en aberturas</strong> (<strong>No envolver</strong>, <strong>Exterior</strong>, <strong>Interior</strong>, <strong>Ambos</strong>): las capas
-  marcadas fuera del núcleo en ese lado giran hacia las jambas de puertas y ventanas; las capas
-  detrás de ellas retroceden;</li>
-<li><strong>Retorno en extremos</strong> (<strong>No envolver</strong>, <strong>Exterior</strong>, <strong>Interior</strong>): lo mismo en los
-  extremos libres de los muros.</li>
+<li><strong>Envolver</strong>: la capa puede envolver en aberturas y extremos (nunca una capa del núcleo de un
+  muro);</li>
+<li><strong>Material estructural</strong>: el material de la capa es el material estructural del tipo (solo una,
+  en el núcleo);</li>
+<li><strong>Variable</strong>: el grosor de la capa puede variar (solo una, en suelos y cubiertas).</li>
 </ul>
+<p>Dos líneas discontinuas, <strong>Límite del núcleo · arriba</strong> y <strong>Límite del núcleo · abajo</strong>, delimitan
+el núcleo. Un clic en una tarjeta la selecciona; <strong>Insertar</strong> añade una capa bajo la seleccionada;
+<strong>Eliminar</strong>, <strong>Arriba</strong> y <strong>Abajo</strong> actúan sobre la capa seleccionada y están en gris sin
+selección. En un muro también un límite del núcleo se selecciona con un clic y se mueve con
+<strong>Arriba</strong> y <strong>Abajo</strong>. Una capa de membrana no tiene grosor, y cualquier otra capa tiene al menos
+4 mm: los demás valores se rechazan, el cuadro de diálogo sigue abierto y la línea de estado de
+abajo dice por qué.</p>
+<p>Para los muros, en la fila de los botones:</p>
+<ul>
+<li><strong>Envolver en inserciones</strong> (<strong>No</strong>, <strong>Exterior</strong>, <strong>Interior</strong>, <strong>Ambos</strong>): las capas que
+  envuelven fuera del núcleo en ese lado giran hacia las jambas de puertas y ventanas; las capas
+  detrás de ellas retroceden;</li>
+<li><strong>en extremos</strong> (<strong>Ninguno</strong>, <strong>Exterior</strong>, <strong>Interior</strong>): lo mismo en los extremos libres de los
+  muros.</li>
+</ul>
+<p>A la derecha la vista previa sigue cada cambio. <strong>Sección</strong> muestra el muro cortado, con sus capas
+una al lado de otra y tan altas como <strong>Altura de muestra</strong> (6000 mm al principio), o el suelo, la
+cubierta o el techo con sus capas superpuestas; <strong>Planta</strong> (solo muros) muestra el extremo del muro
+con las capas que lo envuelven. La capa seleccionada está contorneada y el núcleo queda entre dos
+líneas discontinuas. Los botones sobre el dibujo lo reducen, lo amplían y lo ajustan; la rueda, el
+gesto de pellizcar y el arrastre también lo amplían y lo mueven, y un clic en una capa la
+selecciona en la lista. Debajo, para los muros, <strong>Estructura vertical (en sección)</strong> reúne
+<strong>Modificar</strong>, <strong>Combinar regiones</strong>, <strong>Perfiles</strong>, <strong>Asignar capas</strong>, <strong>Dividir región</strong> y
+<strong>Rehundidos</strong>, aún no disponibles (en gris).</p>
+<p>Abajo, <strong>‹‹ Vista previa</strong> cierra la vista previa y la lista ocupa todo el ancho; <strong>Vista previa ››</strong>
+la vuelve a abrir, y la elección se conserva. <strong>Aceptar</strong> aplica todos los cambios en un solo paso,
+que Ctrl+Z deshace; <strong>Cancelar</strong> cierra sin cambiar nada; <strong>Ayuda</strong> abre esta página. En una ventana
+estrecha la vista previa queda encima de la lista.</p>
 <p>La envolvente se ve en todas las vistas: en planta, en la vista 3D, en las secciones y en los
 alzados las capas marcadas revisten las jambas, el dintel y el alféizar de puertas y ventanas, los
 lados de los huecos de un perfil editado (ver <a href="#editing-a-walls-profile">Editar el perfil de un muro</a>)
@@ -1000,7 +1060,7 @@ define allí: <strong>Ir a vista</strong> lista las vistas en que está (las sec
 hacia un plano vertical, las plantas de uno horizontal) y las vistas 3D, y <strong>Abrir vista</strong> abre la
 elegida con ese plano de trabajo. <strong>Deshacer</strong> devuelve el plano anterior.</p>
 <h3 id="showing-the-work-plane">Mostrar el plano de trabajo</h3>
-<p><strong>Inicio ▸ Plano de trabajo ▸ Mostrar</strong> dibuja la rejilla del plano de trabajo sobre el modelo
+<p><strong>Inicio ▸ Plano de trabajo ▸ Visualizar</strong> dibuja la rejilla del plano de trabajo sobre el modelo
 cuando el plano está en la vista (en 3D siempre); <strong>Mostrar</strong> de nuevo la oculta. En una sección
 sin plano de trabajo abre antes la ventana <strong>Plano de trabajo</strong>. Un clic en el borde de la
 rejilla la selecciona: la barra de opciones muestra <strong>Separación</strong>, la distancia entre sus líneas

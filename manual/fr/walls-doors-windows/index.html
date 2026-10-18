@@ -281,6 +281,17 @@
       Types de murs et couches
     </span>
 </a>
+<nav aria-label="Types de murs et couches" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#type-layers">
+<span class="md-ellipsis">
+      Couches du type
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#wall-properties">
@@ -531,6 +542,17 @@
       Types de murs et couches
     </span>
 </a>
+<nav aria-label="Types de murs et couches" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#type-layers">
+<span class="md-ellipsis">
+      Couches du type
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#wall-properties">
@@ -835,19 +857,57 @@ somme des couches, lecture seule) et <strong>Fonction</strong> (<strong>Intérie
 grossière</strong> et <strong>Couleur du motif de remplissage à l'échelle grossière</strong>, c'est-à-dire comment les
 murs coupés du type sont remplis au <strong>Détail</strong> <strong>Faible</strong>. <strong>Dupliquer…</strong> crée un nouveau
 type ; son nom ne suit pas ses couches.</p>
-<p><strong>Structure ▸ Modifier…</strong> ouvre <strong>Modifier l'assemblage</strong> : les couches du côté extérieur au côté
-intérieur, chacune avec sa fonction, son matériau et son épaisseur, entre les deux lignes <strong>Limite
-de l'âme</strong>. <strong>Insérer</strong>, <strong>Supprimer</strong>, <strong>Haut</strong> et <strong>Bas</strong> changent la liste. Une couche membrane
-n'a pas d'épaisseur, et toute autre couche a au moins 4 mm : les autres valeurs sont refusées, et
-la boîte de dialogue reste ouverte.</p>
-<p>La colonne <strong>Retournements</strong> coche les couches qui peuvent se retourner. Sous le tableau :</p>
+<p><strong>Paramètres du type</strong> montre lui aussi un aperçu du type à gauche (ses couches, ou une petite image
+d'un de ses éléments) ; <strong>‹‹ Aperçu</strong> en bas le ferme et la boîte de dialogue se rétrécit,
+<strong>Aperçu ››</strong> le rouvre, et le choix est conservé.</p>
+<h3 id="type-layers">Couches du type</h3>
+<p><strong>Structure ▸ Modifier…</strong> ouvre <strong>Couches du type</strong>, la même boîte de dialogue pour les murs, les
+sols, les toits et les plafonds. En haut se trouvent la famille et le type, et trois valeurs mises
+à jour à chaque modification : <strong>Épaisseur totale</strong> (en mètres), <strong>Résistance R</strong> (m²K/W : la somme
+épaisseur / conductivité thermique des couches, plus 0,17 pour les deux surfaces) et <strong>Masse
+surfacique</strong> (kg/m² : la somme épaisseur × masse volumique). R et la masse s'affichent quand chaque
+matériau a sa <strong>Conductivité thermique</strong> et sa <strong>Masse volumique</strong> (les matériaux du gabarit les
+ont, les autres se complètent dans <strong>Matériaux</strong>) ; sinon elles affichent «—».</p>
+<p>À gauche se trouve la liste des couches, du <strong>CÔTÉ EXTÉRIEUR</strong> en haut au <strong>CÔTÉ INTÉRIEUR</strong> en
+bas. Chaque couche est une carte avec son numéro, un échantillon de son matériau (couleur et motif
+de coupe), sa <strong>Fonction</strong> (<strong>Structure</strong>, <strong>Support</strong>, <strong>Isolant thermique</strong>, <strong>Lame d'air</strong>,
+<strong>Finition 1</strong>, <strong>Finition 2</strong>, <strong>Membrane</strong>), son <strong>Matériau</strong> (un clic ouvre <strong>Matériaux</strong> pour le
+choisir), son <strong>Épaisseur</strong> en millimètres et trois interrupteurs :</p>
 <ul>
-<li><strong>Retour aux ouvertures</strong> (<strong>Ne pas retourner</strong>, <strong>Extérieur</strong>, <strong>Intérieur</strong>, <strong>Les
-  deux</strong>) : les couches cochées hors du noyau de ce côté tournent dans les tableaux des portes et
-  des fenêtres ; les couches derrière elles reculent ;</li>
-<li><strong>Retour aux extrémités</strong> (<strong>Ne pas retourner</strong>, <strong>Extérieur</strong>, <strong>Intérieur</strong>) : de même
-  aux extrémités libres des murs.</li>
+<li><strong>Retour</strong> : la couche peut faire retour aux ouvertures et aux extrémités (jamais une couche du
+  noyau d'un mur) ;</li>
+<li><strong>Matériau structurel</strong> : le matériau de la couche est le matériau structurel du type (une seule,
+  dans le noyau) ;</li>
+<li><strong>Variable</strong> : l'épaisseur de la couche peut varier (une seule, dans les sols et les toits).</li>
 </ul>
+<p>Deux lignes pointillées, <strong>Limite du noyau · dessus</strong> et <strong>Limite du noyau · dessous</strong>, délimitent
+le noyau. Un clic sur une carte la sélectionne ; <strong>Insérer</strong> ajoute une couche sous celle
+sélectionnée ; <strong>Supprimer</strong>, <strong>Haut</strong> et <strong>Bas</strong> agissent sur la couche sélectionnée et sont grisés
+sans sélection. Dans un mur, une limite du noyau se sélectionne aussi d'un clic et se déplace avec
+<strong>Haut</strong> et <strong>Bas</strong>. Une couche membrane n'a pas d'épaisseur, et toute autre couche a au moins
+4 mm : les autres valeurs sont refusées, la boîte de dialogue reste ouverte et la ligne d'état en
+bas dit pourquoi.</p>
+<p>Pour les murs, sur la ligne des boutons :</p>
+<ul>
+<li><strong>Retour aux insertions</strong> (<strong>Non</strong>, <strong>Extérieur</strong>, <strong>Intérieur</strong>, <strong>Les deux</strong>) : les couches
+  qui font retour hors du noyau de ce côté tournent dans les tableaux des portes et des fenêtres ;
+  les couches derrière elles reculent ;</li>
+<li><strong>aux extrémités</strong> (<strong>Aucun</strong>, <strong>Extérieur</strong>, <strong>Intérieur</strong>) : de même aux extrémités libres des
+  murs.</li>
+</ul>
+<p>À droite l'aperçu suit chaque modification. <strong>Coupe</strong> montre le mur coupé, ses couches côte à côte
+et aussi hautes que <strong>Hauteur d'exemple</strong> (6000 mm au départ), ou le sol, le toit ou le plafond avec
+ses couches superposées ; <strong>Plan</strong> (murs seulement) montre l'extrémité du mur avec les couches qui
+font retour autour. La couche sélectionnée est entourée et le noyau se trouve entre deux lignes
+pointillées. Les boutons au-dessus du dessin le réduisent, l'agrandissent et l'ajustent ; la
+molette, le pincement et le glissement le zooment et le déplacent aussi, et un clic sur une couche
+la sélectionne dans la liste. En dessous, pour les murs, <strong>Structure verticale (en coupe)</strong>
+rassemble <strong>Modifier</strong>, <strong>Fusionner les régions</strong>, <strong>Profils</strong>, <strong>Affecter des couches</strong>, <strong>Scinder
+la région</strong> et <strong>Rainures</strong>, pas encore disponibles (grisés).</p>
+<p>En bas, <strong>‹‹ Aperçu</strong> ferme l'aperçu et la liste prend toute la largeur ; <strong>Aperçu ››</strong> le rouvre,
+et le choix est conservé. <strong>OK</strong> applique toutes les modifications en une seule étape, que Ctrl+Z
+annule ; <strong>Annuler</strong> ferme sans rien changer ; <strong>Aide</strong> ouvre cette page. Dans une fenêtre étroite,
+l'aperçu se place au-dessus de la liste.</p>
 <p>Le retournement apparaît dans toutes les vues : en plan, dans la vue 3D, dans les coupes et les
 élévations, les couches cochées habillent les tableaux, le linteau et l'appui des portes et
 fenêtres, les côtés des trous d'un contour modifié (voir

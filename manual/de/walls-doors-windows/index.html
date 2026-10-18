@@ -281,6 +281,17 @@
       Wandtypen und Schichten
     </span>
 </a>
+<nav aria-label="Wandtypen und Schichten" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#type-layers">
+<span class="md-ellipsis">
+      Typschichten
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#wall-properties">
@@ -531,6 +542,17 @@
       Wandtypen und Schichten
     </span>
 </a>
+<nav aria-label="Wandtypen und Schichten" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#type-layers">
+<span class="md-ellipsis">
+      Typschichten
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#wall-properties">
@@ -836,19 +858,56 @@ der Schichten, schreibgeschützt) und <strong>Funktion</strong> (<strong>Innen</
 und <strong>Füllfarbe für grobe Darstellung</strong>, also wie geschnittene Wände des Typs mit <strong>Detail</strong> auf
 <strong>Grob</strong> gefüllt werden. <strong>Duplizieren…</strong> erstellt einen neuen Typ; sein Name folgt den Schichten
 nicht.</p>
-<p><strong>Tragwerk ▸ Bearbeiten…</strong> öffnet <strong>Baugruppe bearbeiten</strong>: die Schichten von der Außenseite zur
-Innenseite, jede mit Funktion, Material und Dicke, zwischen den beiden Zeilen
-<strong>Tragschichtbegrenzung</strong>. <strong>Einfügen</strong>, <strong>Löschen</strong>, <strong>Nach oben</strong> und <strong>Nach unten</strong> ändern die
-Liste. Eine Membranschicht hat keine Dicke, jede andere Schicht ist mindestens 4 mm dick: andere
-Werte werden abgelehnt, und der Dialog bleibt offen.</p>
-<p>Die Spalte <strong>Umschließt</strong> markiert die Schichten, die umschließen dürfen. Unter der Tabelle:</p>
+<p>Auch <strong>Typparameter</strong> zeigt links eine Vorschau des Typs (seine Schichten oder ein kleines Bild
+eines seiner Elemente); <strong>‹‹ Vorschau</strong> unten schließt sie und der Dialog wird schmaler,
+<strong>Vorschau ››</strong> öffnet sie wieder, und die Wahl bleibt erhalten.</p>
+<h3 id="type-layers">Typschichten</h3>
+<p><strong>Tragwerk ▸ Bearbeiten…</strong> öffnet <strong>Typschichten</strong>, denselben Dialog für Wände, Geschossdecken,
+Dächer und Decken. Oben stehen Familie und Typ und drei Werte, die sich bei jeder Änderung
+aktualisieren: <strong>Gesamtdicke</strong> (in Metern), <strong>Widerstand R</strong> (m²K/W: die Summe aus Dicke /
+Wärmeleitfähigkeit der Schichten plus 0,17 für die beiden Oberflächen) und <strong>Flächenmasse</strong>
+(kg/m²: die Summe aus Dicke × Dichte). R und Masse erscheinen, wenn jedes Material seine
+<strong>Wärmeleitfähigkeit</strong> und <strong>Dichte</strong> hat (die Materialien der Vorlage haben sie, andere werden in
+<strong>Materialien</strong> ergänzt); sonst zeigen sie «—».</p>
+<p>Links steht die Liste der Schichten, von der <strong>AUSSENSEITE</strong> oben bis zur <strong>INNENSEITE</strong> unten.
+Jede Schicht ist eine Karte mit ihrer Nummer, einem Muster ihres Materials (Farbe und
+Schnittmuster), ihrer <strong>Funktion</strong> (<strong>Tragwerk</strong>, <strong>Trägerschicht</strong>, <strong>Wärmedämmung</strong>,
+<strong>Luftschicht</strong>, <strong>Oberfläche 1</strong>, <strong>Oberfläche 2</strong>, <strong>Folie</strong>), ihrem <strong>Material</strong> (ein Klick
+öffnet <strong>Materialien</strong> zur Auswahl), ihrer <strong>Dicke</strong> in Millimetern und drei Schaltern:</p>
 <ul>
-<li><strong>Umschlag an Öffnungen</strong> (<strong>Nicht umschließen</strong>, <strong>Außen</strong>, <strong>Innen</strong>, <strong>Beide</strong>): die
-  markierten Schichten außerhalb des Kerns auf dieser Seite laufen in die Laibungen von Türen und
-  Fenstern; die Schichten dahinter treten zurück;</li>
-<li><strong>Umschlag an Enden</strong> (<strong>Nicht umschließen</strong>, <strong>Außen</strong>, <strong>Innen</strong>): dasselbe an den freien
-  Enden der Wände.</li>
+<li><strong>Umschlag</strong>: die Schicht darf an Öffnungen und Enden umschlagen (nie eine Schicht des
+  Wandkerns);</li>
+<li><strong>Tragwerksmaterial</strong>: das Material der Schicht ist das Tragwerksmaterial des Typs (nur eine, im
+  Kern);</li>
+<li><strong>Variabel</strong>: die Dicke der Schicht darf sich ändern (nur eine, bei Geschossdecken und Dächern).</li>
 </ul>
+<p>Zwei gestrichelte Linien, <strong>Kerngrenze · oben</strong> und <strong>Kerngrenze · unten</strong>, begrenzen den Kern. Ein
+Klick auf eine Karte wählt sie aus; <strong>Einfügen</strong> fügt eine Schicht unter der ausgewählten ein;
+<strong>Löschen</strong>, <strong>Nach oben</strong> und <strong>Nach unten</strong> wirken auf die ausgewählte Schicht und sind ohne
+Auswahl ausgegraut. Bei einer Wand wird auch eine Kerngrenze per Klick ausgewählt und mit <strong>Nach
+oben</strong> und <strong>Nach unten</strong> verschoben. Eine Folienschicht hat keine Dicke, jede andere Schicht ist
+mindestens 4 mm dick: andere Werte werden abgelehnt, der Dialog bleibt offen und die Statuszeile
+unten nennt den Grund.</p>
+<p>Bei Wänden in der Zeile der Schaltflächen:</p>
+<ul>
+<li><strong>Umschlag an Einfügungen</strong> (<strong>Nein</strong>, <strong>Außen</strong>, <strong>Innen</strong>, <strong>Beide</strong>): die umschlagenden
+  Schichten außerhalb des Kerns auf dieser Seite laufen in die Laibungen von Türen und Fenstern;
+  die Schichten dahinter treten zurück;</li>
+<li><strong>an Enden</strong> (<strong>Keiner</strong>, <strong>Außen</strong>, <strong>Innen</strong>): dasselbe an den freien Enden der Wände.</li>
+</ul>
+<p>Rechts folgt die Vorschau jeder Änderung. <strong>Schnitt</strong> zeigt die geschnittene Wand, ihre Schichten
+nebeneinander und so hoch wie <strong>Beispielhöhe</strong> (anfangs 6000 mm), oder die Geschossdecke, das Dach
+oder die Decke mit übereinanderliegenden Schichten; <strong>Grundriss</strong> (nur Wände) zeigt das Wandende
+mit den Schichten, die darum umschlagen. Die ausgewählte Schicht ist umrandet, der Kern liegt
+zwischen zwei gestrichelten Linien. Die Schaltflächen über der Zeichnung verkleinern, vergrößern
+und zentrieren sie; auch Mausrad, Zwei-Finger-Geste und Ziehen zoomen und verschieben sie, und ein
+Klick auf eine Schicht wählt sie in der Liste aus. Darunter fasst bei Wänden <strong>Vertikale Struktur
+(im Schnitt)</strong> <strong>Ändern</strong>, <strong>Bereiche zusammenführen</strong>, <strong>Profile</strong>, <strong>Schichten zuweisen</strong>,
+<strong>Bereich teilen</strong> und <strong>Aussparungen</strong> zusammen, noch nicht verfügbar (ausgegraut).</p>
+<p>Unten schließt <strong>‹‹ Vorschau</strong> die Vorschau und die Liste nimmt die ganze Breite ein; <strong>Vorschau ››</strong>
+öffnet sie wieder, und die Wahl bleibt erhalten. <strong>OK</strong> übernimmt alle Änderungen in einem Schritt,
+den Strg+Z rückgängig macht; <strong>Abbrechen</strong> schließt ohne Änderung; <strong>Hilfe</strong> öffnet diese Seite. In
+einem schmalen Fenster steht die Vorschau über der Liste.</p>
 <p>Die Umschließung erscheint in jeder Ansicht: Im Grundriss, in der 3D-Ansicht, in Schnitten und in
 Ansichten kleiden die angehakten Schichten die Laibungen, den Sturz und die Brüstung von Türen und
 Fenstern aus, die Seiten der Löcher einer bearbeiteten Begrenzung (siehe

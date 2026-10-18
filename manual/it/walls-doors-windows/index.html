@@ -281,6 +281,17 @@
       Tipi di muro e strati
     </span>
 </a>
+<nav aria-label="Tipi di muro e strati" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#type-layers">
+<span class="md-ellipsis">
+      Strati del tipo
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#wall-properties">
@@ -531,6 +542,17 @@
       Tipi di muro e strati
     </span>
 </a>
+<nav aria-label="Tipi di muro e strati" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#type-layers">
+<span class="md-ellipsis">
+      Strati del tipo
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#wall-properties">
@@ -831,19 +853,56 @@ somma degli strati, sola lettura) e <strong>Funzione</strong> (<strong>Interno</
 <strong>Zoppo</strong>, <strong>Intradosso</strong>, <strong>Nucleo</strong>); in <strong>Grafica</strong>, <strong>Retino a dettaglio basso</strong> e <strong>Colore
 del retino a dettaglio basso</strong>, cioè come si riempiono i muri tagliati del tipo con il dettaglio
 <strong>Basso</strong>. <strong>Duplica…</strong> crea un nuovo tipo; il suo nome non segue gli strati.</p>
-<p><strong>Struttura ▸ Modifica…</strong> apre <strong>Modifica assieme</strong>: gli strati dal lato esterno al lato interno,
-ciascuno con funzione, materiale e spessore, tra le due righe <strong>Contorno del nucleo</strong>.
-<strong>Inserisci</strong>, <strong>Elimina</strong>, <strong>Su</strong> e <strong>Giù</strong> cambiano l'elenco. Uno strato membrana non ha
-spessore, e ogni altro strato è spesso almeno 4 mm: altri valori sono rifiutati, e la finestra di
-dialogo resta aperta.</p>
-<p>La colonna <strong>Chiusure</strong> spunta gli strati che possono ripiegarsi. Sotto la tabella:</p>
+<p>Anche <strong>Parametri del tipo</strong> ha a sinistra un'anteprima del tipo (i suoi strati, o una piccola
+immagine di un suo elemento); <strong>‹‹ Anteprima</strong> in basso la chiude e la finestra si restringe,
+<strong>Anteprima ››</strong> la riapre, e la scelta resta.</p>
+<h3 id="type-layers">Strati del tipo</h3>
+<p><strong>Struttura ▸ Modifica…</strong> apre <strong>Strati del tipo</strong>, la stessa finestra per muri, pavimenti, tetti e
+controsoffitti. In alto ci sono la famiglia e il tipo, e tre valori aggiornati a ogni modifica:
+<strong>Spessore totale</strong> (in metri), <strong>Resistenza R</strong> (m²K/W: la somma di spessore / conducibilità
+termica degli strati, più 0,17 per le due superfici) e <strong>Massa areica</strong> (kg/m²: la somma di
+spessore × densità). R e massa compaiono quando ogni materiale ha la sua <strong>Conducibilità termica</strong> e
+la sua <strong>Densità</strong> (i materiali del modello di progetto le hanno, gli altri si completano in
+<strong>Materiali</strong>); altrimenti mostrano «—».</p>
+<p>A sinistra c'è l'elenco degli strati, dal <strong>LATO ESTERNO</strong> in alto al <strong>LATO INTERNO</strong> in basso.
+Ogni strato è una scheda con il numero, un campione del materiale (colore e retino di sezione), la
+<strong>Funzione</strong> (<strong>Struttura</strong>, <strong>Supporto</strong>, <strong>Isolante termico</strong>, <strong>Strato d'aria</strong>, <strong>Finitura 1</strong>,
+<strong>Finitura 2</strong>, <strong>Membrana</strong>), il <strong>Materiale</strong> (un clic apre <strong>Materiali</strong> per sceglierlo), lo
+<strong>Spessore</strong> in millimetri e tre interruttori:</p>
 <ul>
-<li><strong>Risvolto alle aperture</strong> (<strong>Non ripiegare</strong>, <strong>Esterno</strong>, <strong>Interno</strong>, <strong>Entrambi</strong>): gli
-  strati spuntati fuori dal nucleo su quel lato girano dentro gli stipiti di porte e finestre; gli
-  strati dietro di loro arretrano;</li>
-<li><strong>Risvolto alle estremità</strong> (<strong>Non ripiegare</strong>, <strong>Esterno</strong>, <strong>Interno</strong>): lo stesso alle
-  estremità libere dei muri.</li>
+<li><strong>Avvolgimento</strong>: lo strato può avvolgersi alle aperture e alle estremità (mai uno strato del
+  nucleo di un muro);</li>
+<li><strong>Materiale strutturale</strong>: il materiale dello strato è quello strutturale del tipo (uno solo, nel
+  nucleo);</li>
+<li><strong>Variabile</strong>: lo spessore dello strato può variare (uno solo, nei pavimenti e nei tetti).</li>
 </ul>
+<p>Due linee tratteggiate, <strong>Contorno del nucleo · sopra</strong> e <strong>Contorno del nucleo · sotto</strong>,
+delimitano il nucleo. Un clic su una scheda la seleziona; <strong>Inserisci</strong> aggiunge uno strato sotto
+quello selezionato; <strong>Elimina</strong>, <strong>Su</strong> e <strong>Giù</strong> agiscono sullo strato selezionato e sono grigi
+senza selezione. In un muro anche un contorno del nucleo si seleziona con un clic e si sposta con
+<strong>Su</strong> e <strong>Giù</strong>. Uno strato membrana non ha spessore, e ogni altro strato è spesso almeno 4 mm:
+altri valori sono rifiutati, la finestra resta aperta e la riga di stato in basso dice perché.</p>
+<p>Per i muri, nella riga dei pulsanti:</p>
+<ul>
+<li><strong>Avvolgi agli inserimenti</strong> (<strong>No</strong>, <strong>Esterno</strong>, <strong>Interno</strong>, <strong>Entrambi</strong>): gli strati con
+  l'avvolgimento fuori dal nucleo su quel lato girano dentro gli stipiti di porte e finestre; gli
+  strati dietro di loro arretrano;</li>
+<li><strong>alle estremità</strong> (<strong>Nessuno</strong>, <strong>Esterno</strong>, <strong>Interno</strong>): lo stesso alle estremità libere dei
+  muri.</li>
+</ul>
+<p>A destra l'anteprima segue ogni modifica. <strong>Sezione</strong> mostra il muro tagliato, con gli strati
+affiancati e alti quanto <strong>Altezza di esempio</strong> (6000 mm all'inizio), oppure il pavimento, il tetto
+o il controsoffitto con gli strati sovrapposti; <strong>Pianta</strong> (solo muri) mostra l'estremità del muro
+con gli strati che vi si avvolgono. Lo strato selezionato è contornato e il nucleo sta tra due linee
+tratteggiate. I pulsanti sopra il disegno lo rimpiccioliscono, lo ingrandiscono e lo adattano; anche
+la rotellina, il pizzico e il trascinamento lo ingrandiscono e lo spostano, e un clic su uno strato
+lo seleziona nell'elenco. Sotto, per i muri, <strong>Struttura verticale (in sezione)</strong> raccoglie
+<strong>Modifica</strong>, <strong>Unisci regioni</strong>, <strong>Profili</strong>, <strong>Assegna strati</strong>, <strong>Dividi regione</strong> e
+<strong>Rivelazioni</strong>, non ancora disponibili (grigi).</p>
+<p>In basso <strong>‹‹ Anteprima</strong> chiude l'anteprima e l'elenco prende tutta la larghezza; <strong>Anteprima ››</strong>
+la riapre, e la scelta resta. <strong>OK</strong> applica tutte le modifiche in un solo passo, che Ctrl+Z
+annulla; <strong>Annulla</strong> chiude senza cambiare nulla; <strong>Aiuto</strong> apre questa pagina. In una finestra
+stretta l'anteprima sta sopra l'elenco.</p>
 <p>Il risvolto si vede in ogni vista: in pianta, nella vista 3D, nelle sezioni e nei prospetti gli
 strati spuntati rivestono gli stipiti, l'architrave e il davanzale di porte e finestre, i lati dei
 fori di un contorno modificato (vedi <a href="#editing-a-walls-profile">Modificare il contorno di un muro</a>) e
@@ -983,7 +1042,7 @@ più vicino. La barra delle opzioni mostra:</p>
 quello di una vista 3D il livello più basso; una sezione o un prospetto non ne hanno finché non
 se ne imposta uno. Il piano resta con la vista.</p>
 <h3 id="setting-the-work-plane">Impostare il piano di lavoro</h3>
-<p><strong>Inizio ▸ Piano di lavoro ▸ Imposta</strong> apre la finestra <strong>Piano di lavoro</strong>. <strong>Piano di lavoro
+<p><strong>Inizio ▸ Piano di lavoro ▸ Definisci</strong> apre la finestra <strong>Piano di lavoro</strong>. <strong>Piano di lavoro
 corrente</strong> mostra il piano che la vista usa ora. In <strong>Specifica un nuovo piano di lavoro</strong>:</p>
 <ul>
 <li><strong>Nome</strong>: scegliere nell'elenco un livello, una griglia o un piano di riferimento con nome
@@ -1000,8 +1059,8 @@ viene impostato lì: <strong>Vai a vista</strong> elenca le viste in cui giace (
 verso un piano verticale, le piante di uno orizzontale) e le viste 3D, e <strong>Apri vista</strong> apre
 quella scelta con quel piano di lavoro. <strong>Annulla</strong> riporta il piano precedente.</p>
 <h3 id="showing-the-work-plane">Mostrare il piano di lavoro</h3>
-<p><strong>Inizio ▸ Piano di lavoro ▸ Mostra</strong> disegna la griglia del piano di lavoro nella vista, sopra
-il modello, quando il piano giace nella vista (in 3D sempre); <strong>Mostra</strong> di nuovo la nasconde. In
+<p><strong>Inizio ▸ Piano di lavoro ▸ Visualizza</strong> disegna la griglia del piano di lavoro nella vista, sopra
+il modello, quando il piano giace nella vista (in 3D sempre); <strong>Visualizza</strong> di nuovo la nasconde. In
 una sezione senza piano di lavoro apre prima la finestra <strong>Piano di lavoro</strong>. Un clic sul bordo
 della griglia la seleziona: la barra delle opzioni mostra <strong>Spaziatura</strong>, la distanza tra le sue
 linee (1 m all'inizio). Mentre la griglia è visibile, i punti dei muri e delle altre linee

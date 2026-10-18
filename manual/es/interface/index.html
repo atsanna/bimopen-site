@@ -226,7 +226,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#the-home-tab">
 <span class="md-ellipsis">
-      La ficha Inicio
+      La ficha Modelar
     </span>
 </a>
 </li>
@@ -305,6 +305,20 @@
 <nav aria-label="Área de dibujo y ventanas de vista" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#torn-off-views">
+<span class="md-ellipsis">
+      Vistas en ventanas separadas
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#drawing-in-every-view">
+<span class="md-ellipsis">
+      Dibujar en cualquier vista
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#view-control-bar">
 <span class="md-ellipsis">
       Barra de controles de vista
@@ -355,6 +369,38 @@
       La selección, en resumen
     </span>
 </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#touch-mode">
+<span class="md-ellipsis">
+      Modo táctil
+    </span>
+</a>
+<nav aria-label="Modo táctil" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#touch-mode-on">
+<span class="md-ellipsis">
+      Activarlo
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#touch-layouts">
+<span class="md-ellipsis">
+      Teléfono, horizontal y tableta
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#touch-gestures">
+<span class="md-ellipsis">
+      Gestos y lápiz
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -505,7 +551,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#the-home-tab">
 <span class="md-ellipsis">
-      La ficha Inicio
+      La ficha Modelar
     </span>
 </a>
 </li>
@@ -584,6 +630,20 @@
 <nav aria-label="Área de dibujo y ventanas de vista" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#torn-off-views">
+<span class="md-ellipsis">
+      Vistas en ventanas separadas
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#drawing-in-every-view">
+<span class="md-ellipsis">
+      Dibujar en cualquier vista
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#view-control-bar">
 <span class="md-ellipsis">
       Barra de controles de vista
@@ -634,6 +694,38 @@
       La selección, en resumen
     </span>
 </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#touch-mode">
+<span class="md-ellipsis">
+      Modo táctil
+    </span>
+</a>
+<nav aria-label="Modo táctil" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#touch-mode-on">
+<span class="md-ellipsis">
+      Activarlo
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#touch-layouts">
+<span class="md-ellipsis">
+      Teléfono, horizontal y tableta
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#touch-gestures">
+<span class="md-ellipsis">
+      Gestos y lápiz
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -846,42 +938,321 @@ bajo el ratón (su información termina con <strong>Pulse F1 para obtener más i
 herramienta activa.</p>
 <p>Clic derecho sobre una herramienta de la cinta y <strong>Añadir a la barra de herramientas de acceso rápido</strong>: la herramienta entra en la barra y se inicia desde allí sea cual sea la ficha abierta. Clic derecho sobre cualquier herramienta de la barra, incluidas las predeterminadas, para <strong>Eliminar de la barra de herramientas de acceso rápido</strong> o <strong>Añadir separador</strong> (una línea a su derecha). La pequeña flecha al final de la barra, <strong>Personalizar barra de herramientas de acceso rápido</strong>, enumera las herramientas predeterminadas: marque una para mostrarla de nuevo, desmárquela para quitarla. En el mismo menú, <strong>Personalizar barra de herramientas de acceso rápido…</strong> abre una ventana con las herramientas en orden: <strong>Subir</strong> y <strong>Bajar</strong> mueven la seleccionada a la izquierda o a la derecha, <strong>Añadir separador</strong> pone una línea después de ella, <strong>Eliminar</strong> la quita (o quita una línea), <strong>Aceptar</strong> aplica. <strong>Mostrar debajo de la cinta</strong> mueve toda la barra bajo la cinta (o de nuevo encima). La barra se conserva para las próximas sesiones. En las fichas de la cinta y en la barra de herramientas de acceso rápido cada comando tiene su propio icono.</p>
 <h2 id="ribbon">Cinta de opciones</h2>
-<p>La cinta de opciones agrupa las herramientas en fichas, y cada ficha en grupos. El nombre de un
-grupo está escrito bajo sus botones. Un botón cuyo nombre va seguido de una pequeña marca abre un
-menú. Al dejar el ratón sobre un botón se muestra qué hace y, entre paréntesis, el atajo que
-puedes escribir para iniciarlo.</p>
+<p>La cinta de opciones agrupa los comandos en fichas, y cada ficha en grupos: botones grandes, columnas de tres filas y rejillas de iconos, como en el diseño aprobado de la interfaz. El nombre de un grupo está escrito bajo sus botones. Un botón con una pequeña marca ▾ tiene un menú: un clic en el botón inicia el comando, un clic en la marca abre el menú con sus variantes. Al dejar el ratón sobre un botón se muestra qué hace y, entre paréntesis, el atajo que puede teclear para iniciarlo. Los comandos que BIMopen aún no ejecuta están en gris, y su información dice «Todavía no disponible»; <strong>Nivel</strong>, <strong>Rejilla</strong> y <strong>Plano guía</strong> están en gris en una vista 3D («No disponible en la vista 3D»). El estilo <strong>BIMopen</strong> tiene los mismos comandos, con la misma disponibilidad.</p>
 <table>
 <thead>
 <tr>
 <th>Ficha</th>
-<th>Grupos</th>
+<th>Grupo</th>
+<th>Comandos</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Inicio</strong></td>
-<td><strong>Seleccionar</strong>, <strong>Construir</strong>, <strong>Conexiones verticales</strong>, <strong>Espacios y superficies</strong>, <strong>Referencia</strong></td>
+<td><strong>Modelar</strong></td>
+<td><strong>Selección</strong></td>
+<td><strong>Modificar</strong></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Construir</strong></td>
+<td><strong>Muro ▾</strong>, <strong>Puerta</strong>, <strong>Ventana</strong>, <strong>Objeto ▾</strong>, <em>Columna ▾</em>, <strong>Cubierta ▾</strong>, <em>Falso techo</em>, <strong>Pavimento ▾</strong>, <strong>Muro cortina</strong>, <strong>Rejilla de muro cortina</strong>, <strong>Montante</strong></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Conexiones verticales</strong></td>
+<td><strong>Barandilla ▾</strong>, <strong>Rampa</strong>, <strong>Escalera</strong></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Elementos 3D</strong></td>
+<td><em>Texto 3D</em>, <em>Línea 3D</em>, <em>Grupo ▾</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Espacios y superficies</strong></td>
+<td><strong>Espacio</strong>, <strong>Separador de espacios</strong>, <strong>Etiqueta de espacio ▾</strong>, <strong>Superficie ▾</strong>, <strong>Contorno de superficie</strong>, <strong>Etiqueta de superficie ▾</strong></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Huecos</strong></td>
+<td><em>Por cara</em>, <em>Patinillo</em>, <em>En muro</em>, <em>Hueco vertical</em>, <em>Buhardilla</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Referencias</strong></td>
+<td><strong>Nivel</strong>, <strong>Rejilla</strong></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Plano de trabajo</strong></td>
+<td><strong>Definir</strong>, <strong>Visualizar</strong>, <strong>Plano guía</strong>, <em>Vista del plano</em></td>
+</tr>
+<tr>
+<td><strong>Estructura</strong></td>
+<td><strong>Selección</strong></td>
+<td><strong>Modificar</strong></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Elementos estructurales</strong></td>
+<td><em>Viga</em>, <em>Muro estructural ▾</em>, <em>Pilar estructural</em>, <em>Forjado estructural ▾</em>, <em>Cercha</em>, <em>Arriostramiento</em>, <em>Entramado de vigas</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Uniones</strong></td>
+<td><em>Unión ▾</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Cimentaciones</strong></td>
+<td><em>Zapata aislada</em>, <em>Zapata corrida</em>, <em>Losa de cimentación ▾</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Armaduras</strong></td>
+<td><em>Armadura</em>, <em>Armadura por área</em>, <em>Armadura a lo largo de un recorrido</em>, <em>Malla por área</em>, <em>Malla individual</em>, <em>Recubrimiento</em>, <em>Manguito</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Elementos 3D</strong></td>
+<td><strong>Objeto ▾</strong>, <em>Texto 3D</em>, <em>Línea 3D</em>, <em>Grupo ▾</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Huecos</strong></td>
+<td><em>Normal a la cara</em>, <em>Patinillo</em>, <em>En muro</em>, <em>Hueco vertical</em>, <em>Buhardilla</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Referencias</strong></td>
+<td><strong>Nivel</strong>, <strong>Rejilla</strong></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Plano de trabajo</strong></td>
+<td><strong>Definir</strong>, <strong>Visualizar</strong>, <strong>Plano guía</strong>, <em>Vista del plano</em></td>
+</tr>
+<tr>
+<td><strong>Metal</strong></td>
+<td><strong>Selección</strong></td>
+<td><strong>Modificar</strong></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Uniones</strong></td>
+<td><em>Unión ▾</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Elementos de carpintería metálica</strong></td>
+<td><em>Placa</em>, <em>Pernos ▾</em>, <em>Soldadura</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Mecanizados</strong></td>
+<td><em>Despunte</em>, <em>Corte inclinado</em>, <em>Acortar</em>, <em>Corte perfilado</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Cortes automáticos</strong></td>
+<td><em>Corte de extremo</em>, <em>Unión en esquina ▾</em>, <em>Intersección</em>, <em>Cortar con</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Plano de trabajo</strong></td>
+<td><strong>Definir</strong>, <strong>Visualizar</strong>, <strong>Plano guía</strong>, <em>Vista del plano</em></td>
+</tr>
+<tr>
+<td><strong>Prefabricación</strong></td>
+<td><strong>Subdivisión</strong></td>
+<td><em>Subdividir</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Juntas</strong></td>
+<td><em>Piezas de montaje</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Armaduras</strong></td>
+<td><em>Armadura</em>, <em>Malla a medida</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Producción</strong></td>
+<td><em>Planos de taller</em>, <em>Exportar para CAM</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Configuración</strong></td>
+<td><em>Configuración de prefabricados</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Actualización automática</strong></td>
+<td><em>Suspender ▾</em></td>
+</tr>
+<tr>
+<td><strong>Instalaciones</strong></td>
+<td><strong>Selección</strong></td>
+<td><strong>Modificar</strong></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Aire</strong></td>
+<td><em>Conducto</em>, <em>Conducto desde un trazado</em>, <em>Accesorio de unión de conducto</em>, <em>Accesorio de conducto</em>, <em>Aislamiento de conducto</em>, <em>Conducto flexible</em>, <em>Rejilla de aire</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Componentes prefabricados</strong></td>
+<td><em>Elemento prefabricado</em>, <em>Recorrido de varios puntos</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Detalles de instalaciones</strong></td>
+<td><em>Refuerzo de conducto</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Esquemas P&amp;ID</strong></td>
+<td><em>Editor P&amp;ID</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Mecánica</strong></td>
+<td><em>Equipo mecánico</em>, <em>Dispositivo de regulación</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Otras instalaciones</strong></td>
+<td><em>Fontanería ▾</em>, <em>Electricidad ▾</em>, <em>Modelado ▾</em>, <strong>Plano de trabajo ▾</strong></td>
+</tr>
+<tr>
+<td><strong>Vincular e importar</strong></td>
+<td><strong>Selección</strong></td>
+<td><strong>Modificar</strong></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Vincular</strong></td>
+<td><em>Vincular proyecto</em>, <em>Vincular IFC</em>, <em>Vincular CAD</em>, <em>Vincular topografía</em>, <em>Calcomanía ▾</em>, <em>Nube de puntos</em>, <em>Gestionar vínculos</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Importar</strong></td>
+<td><em>Importar CAD</em>, <em>Importar gbXML</em>, <em>Importar PDF</em>, <em>Importar imagen</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Cargar desde biblioteca</strong></td>
+<td><strong>Cargar familia</strong>, <em>Cargar como grupo</em>, <strong>Insertar desde archivo ▾</strong></td>
 </tr>
 <tr>
 <td><strong>Anotaciones</strong></td>
-<td><strong>Seleccionar</strong>, <strong>Cota</strong>, <strong>Texto</strong>, <strong>Detalle</strong>, <strong>Etiqueta</strong></td>
+<td><strong>Cota</strong></td>
+<td><strong>Alineada</strong>, <strong>Lineal</strong>, <strong>Angular</strong>, <strong>Radial</strong>, <em>Diámetro</em>, <strong>Longitud de arco</strong>, <strong>Cota de punto ▾</strong></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Detalle</strong></td>
+<td><strong>Línea de detalle</strong>, <strong>Región rellenada ▾</strong>, <strong>Símbolo de detalle ▾</strong>, <strong>Nube de revisión</strong></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Texto</strong></td>
+<td><strong>Texto</strong></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Etiqueta</strong></td>
+<td><strong>Etiqueta</strong>, <strong>Etiquetar todo</strong>, <em>Material</em>, <strong>Leyenda de colores</strong></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Símbolo</strong></td>
+<td><strong>Símbolo</strong></td>
+</tr>
+<tr>
+<td><strong>Comprobar</strong></td>
+<td><strong>Energía</strong></td>
+<td><em>Análisis energético</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Comprobar</strong></td>
+<td><em>Comprobar interferencias</em>, <em>Mostrar cargas</em></td>
+</tr>
+<tr>
+<td><strong>Masas y emplazamiento</strong></td>
+<td><strong>Selección</strong></td>
+<td><strong>Modificar</strong></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Masas</strong></td>
+<td><em>Visualizar masas ▾</em>, <em>Nueva masa</em>, <em>Colocar masa</em>, <em>Dibujar en 3D</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Desde caras de masa</strong></td>
+<td><em>Muro cortina</em>, <em>Cubierta</em>, <em>Muro</em>, <em>Forjado</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Emplazamiento</strong></td>
+<td><em>Terreno</em>, <em>Elemento de emplazamiento</em>, <em>Aparcamiento</em>, <em>Plataforma</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Modificar sitio</strong></td>
+<td><em>Dividir terreno</em>, <em>Fusionar terrenos</em>, <em>Subárea</em>, <em>Límite de propiedad</em>, <em>Nivelación</em>, <em>Etiqueta de curvas de nivel</em></td>
+</tr>
+<tr>
+<td><strong>Colaborar</strong></td>
+<td><strong>Trabajo compartido</strong></td>
+<td><em>Subproyectos</em>, <em>Sincronizar</em>, <em>Mostrar historial</em></td>
 </tr>
 <tr>
 <td><strong>Vistas</strong></td>
-<td><strong>Crear</strong>, <strong>Gráficos</strong>, <strong>Planos</strong>, <strong>Ventanas</strong></td>
+<td><strong>Gráficos</strong></td>
+<td><strong>Ajustes de vista ▾</strong>, <strong>Visibilidad y gráficos</strong>, <strong>Filtros</strong>, <strong>Líneas finas</strong>, <em>Mostrar líneas ocultas</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Crear</strong></td>
+<td><strong>Vista 3D ▾</strong>, <strong>Sección</strong>, <strong>Detalle ampliado ▾</strong>, <strong>Planta ▾</strong>, <strong>Alzado ▾</strong>, <strong>Vista 2D libre</strong>, <strong>Duplicar vista ▾</strong>, <strong>Leyendas ▾</strong>, <strong>Tablas de planificación ▾</strong></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Planos</strong></td>
+<td><strong>Plano</strong>, <strong>Vista</strong>, <strong>Cajetín</strong>, <strong>Revisiones</strong></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Ventanas</strong></td>
+<td><strong>Cambiar de vista ▾</strong>, <strong>Cerrar las demás</strong>, <strong>Mosaico</strong>, <strong>Cascada</strong>, <strong>Paneles ▾</strong></td>
 </tr>
 <tr>
 <td><strong>Proyecto</strong></td>
-<td><strong>Configuración</strong>, <strong>Consulta</strong></td>
+<td><strong>Configuración</strong></td>
+<td><strong>Materiales</strong>, <strong>Estilos por categoría</strong>, <strong>Forzado</strong>, <strong>Información del proyecto</strong>, <strong>Parámetros de proyecto</strong>, <strong>Unidades del proyecto</strong>, <strong>Copiar ajustes de un proyecto</strong></td>
 </tr>
 <tr>
-<td><strong>Edición</strong></td>
-<td>La ficha contextual: sus grupos dependen de la herramienta activa y de la selección</td>
+<td></td>
+<td><strong>Fases</strong></td>
+<td><em>Fases</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Alternativas</strong></td>
+<td><em>Alternativas de diseño</em></td>
 </tr>
 </tbody>
 </table>
-<p>Pulse y suelte <span class="keys"><kbd class="key-alt">Alt</kbd></span>, o pulse <span class="keys"><kbd class="key-f10">F10</kbd></span>, para mostrar las sugerencias de teclas: una letra en cada ficha (<strong>I</strong>, <strong>N</strong>, <strong>A</strong>, <strong>V</strong>, <strong>G</strong>, <strong>M</strong>, de la primera ficha a la contextual) y, en los botones de la ficha abierta, el método abreviado de su herramienta. Escriba la letra de una ficha para abrirla y luego las letras de un botón para iniciar su herramienta; <span class="keys"><kbd class="key-escape">Esc</kbd></span> oculta las sugerencias. Mientras se muestran, lo que escribe no va a la línea de comandos.</p>
-<h3 id="the-home-tab">La ficha Inicio</h3>
+<p>En cursiva los comandos que BIMopen aún no ejecuta; ▾ marca un menú.</p>
+<p>Pulse y suelte <span class="keys"><kbd class="key-alt">Alt</kbd></span>, o pulse <span class="keys"><kbd class="key-f10">F10</kbd></span>, para mostrar las sugerencias de teclas: una letra en cada ficha (<strong>I</strong>, <strong>K</strong>, <strong>L</strong>, <strong>F</strong>, <strong>P</strong>, <strong>N</strong>, <strong>A</strong>, <strong>Z</strong>, <strong>Q</strong>, <strong>H</strong>, <strong>V</strong>, <strong>G</strong>, <strong>M</strong>, de la primera ficha a la contextual) y, en los botones de la ficha abierta, el atajo de su herramienta. Teclee la letra de una ficha para abrirla y luego las letras de un botón para iniciar su herramienta; <span class="keys"><kbd class="key-escape">Esc</kbd></span> oculta las sugerencias. Mientras se ven, lo que teclea no va a la línea de comandos.</p>
+<h3 id="the-home-tab">La ficha Modelar</h3>
 <table>
 <thead>
 <tr>
@@ -891,12 +1262,12 @@ puedes escribir para iniciarlo.</p>
 </thead>
 <tbody>
 <tr>
-<td><strong>Seleccionar</strong></td>
+<td><strong>Selección</strong></td>
 <td><strong>Modificar</strong>: termina la herramienta activa y vuelve a la selección, <span class="keys"><kbd class="key-escape">Esc</kbd></span></td>
 </tr>
 <tr>
 <td><strong>Construir</strong></td>
-<td><strong>Muro</strong> <code>WA</code>, <strong>Puerta</strong> <code>DR</code>, <strong>Ventana</strong> <code>WN</code>, <strong>Cubierta</strong> <code>RF</code>, <strong>Pavimento</strong> <code>SB</code>, <strong>Componente</strong> <code>CM</code>, <strong>Rejilla de muro cortina</strong> <code>CG</code>, <strong>Montante</strong> <code>MU</code></td>
+<td><strong>En muro</strong> <code>WA</code>, <strong>Puerta</strong> <code>DR</code>, <strong>Ventana</strong> <code>WN</code>, <strong>Cubierta</strong> <code>RF</code>, <strong>Pavimento</strong> <code>SB</code>, <strong>Objeto</strong> <code>CM</code>, <strong>Rejilla de muro cortina</strong> <code>CG</code>, <strong>Montante</strong> <code>MU</code></td>
 </tr>
 <tr>
 <td><strong>Conexiones verticales</strong></td>
@@ -907,7 +1278,7 @@ puedes escribir para iniciarlo.</p>
 <td><strong>Espacio</strong> <code>RM</code>, <strong>Separador de espacios</strong> <code>RS</code>, <strong>Superficie ▾</strong> (<strong>Plano de áreas</strong>, <strong>Contorno de superficie</strong>, <strong>Superficie</strong>), <strong>Leyenda</strong> <code>LG</code>, <strong>Configuración ▾</strong> (<strong>Cálculos de área y volumen</strong>, <strong>Esquemas de color</strong>)</td>
 </tr>
 <tr>
-<td><strong>Referencia</strong></td>
+<td><strong>Referencias</strong></td>
 <td><strong>Nivel</strong>: se dibuja en un alzado o una sección, dos clics a la altura del nuevo nivel (desde una planta abre un alzado); <strong>Rejilla</strong> <code>GR</code></td>
 </tr>
 </tbody>
@@ -925,7 +1296,7 @@ están atenuados, y su información de herramienta indica que primero hay que ab
 </thead>
 <tbody>
 <tr>
-<td><strong>Seleccionar</strong></td>
+<td><strong>Selección</strong></td>
 <td><strong>Modificar</strong></td>
 </tr>
 <tr>
@@ -1017,7 +1388,7 @@ usando.</p>
 </thead>
 <tbody>
 <tr>
-<td><strong>Seleccionar</strong></td>
+<td><strong>Selección</strong></td>
 <td><strong>Modificar</strong></td>
 </tr>
 <tr>
@@ -1026,7 +1397,7 @@ usando.</p>
 </tr>
 <tr>
 <td><strong>Modificar</strong></td>
-<td>Diecisiete herramientas pequeñas en tres filas: <strong>Alinear</strong> <code>AL</code>, <strong>Desfase</strong> <code>OF</code>, <strong>Simetría sobre eje</strong> <code>MM</code>, <strong>Simetría sobre línea</strong> <code>DM</code>, <strong>Dividir elemento</strong> <code>SL</code>, <strong>Dividir con junta</strong> <code>SG</code>; <strong>Mover</strong> <code>MV</code>, <strong>Copiar</strong> <code>CO</code>, <strong>Girar</strong> <code>RO</code>, <strong>Recortar/Alargar a esquina</strong> <code>TR</code>, <strong>Recortar/Alargar un elemento</strong>, <strong>Recortar/Alargar varios elementos</strong>; <strong>Repetir en serie</strong> <code>AR</code>, <strong>Escala</strong> <code>RE</code>, <strong>Fijar</strong> <code>PN</code>, <strong>Liberar</strong> <code>UP</code>, <strong>Eliminar</strong> (<span class="keys"><kbd class="key-delete">Del</kbd></span>)</td>
+<td>Diecisiete herramientas pequeñas en tres filas: <strong>Alinear</strong> <code>AL</code>, <strong>Desfase</strong> <code>OF</code>, <strong>Simetría sobre eje</strong> <code>MM</code>, <strong>Simetría sobre línea</strong> <code>DM</code>, <strong>Dividir elemento</strong> <code>SL</code>, <strong>Dividir con junta</strong> <code>SG</code>; <strong>Mover</strong> <code>MV</code>, <strong>Copiar</strong> <code>CO</code>, <strong>Girar</strong> <code>RO</code>, <strong>Acortar/Alargar</strong> <code>TR</code>, <strong>Acortar/Alargar un elemento</strong>, <strong>Acortar/Alargar varios elementos</strong>; <strong>Repetir en serie</strong> <code>AR</code>, <strong>Escala</strong> <code>RE</code>, <strong>Fijar</strong> <code>PN</code>, <strong>Liberar</strong> <code>UP</code>, <strong>Eliminar</strong> (<span class="keys"><kbd class="key-delete">Del</kbd></span>)</td>
 </tr>
 </tbody>
 </table>
@@ -1275,6 +1646,7 @@ cabecera: se acopla a la izquierda o a la derecha del área de dibujo, varios en
 donde se suelta. Los botones de la cabecera lo acoplan a la izquierda, a la derecha, lo hacen
 flotante o lo cierran; <strong>Vistas ▸ Ventanas ▸ Paneles</strong> lo vuelve a abrir. Cada panel queda donde se
 puso también en las sesiones siguientes.</p>
+<p>Mientras arrastra un panel solo se dibujan los sitios donde se acopla de verdad, cada uno como el panel que será: la columna entera de un lado libre, a su ancho, o la parte alta o baja de una columna donde hay otro panel acoplado (va encima o debajo de él). El sitio bajo el puntero se dibuja marcado, los demás apenas. En otro lugar no se dibuja nada, y el panel queda flotante donde lo suelte.</p>
 <p>El selector de tipo, arriba en <strong>Propiedades</strong>, muestra una vista previa del tipo: muros, suelos y
 cubiertas con sus capas, puertas, ventanas y objetos como una pequeña imagen. Abierto, busca los
 tipos por nombre; están agrupados por familia, cada uno con su vista previa. Las flechas mueven,
@@ -1326,6 +1698,13 @@ ventana la cierra.</p>
 <p><strong>Mosaico</strong> coloca la ventana activa arriba a la izquierda y las demás después, desde la activada más recientemente; <strong>Cambiar de vista</strong> las lista en el mismo orden. Si vuelve a ordenarlas tras trabajar en otra ventana, esa pasa a ser la primera.</p>
 <p><strong>Interfaz de usuario ▸ Métodos abreviados de teclado</strong> lista los comandos con sus métodos abreviados. Busque un comando por su nombre o use <strong>Filtrar</strong> (<strong>Todo</strong>, <strong>Todos los definidos</strong>, <strong>Todos los no definidos</strong>, <strong>Todos los reservados</strong>); seleccione un comando, escriba las teclas en <strong>Pulse las nuevas teclas</strong> y haga clic en <strong>Asignar</strong>. Las mismas teclas pueden ir a varios comandos: escritas en el área de dibujo, la barra de estado muestra el primero, las flechas pasan a los demás y <span class="keys"><kbd class="key-enter">Enter</kbd></span> o <span class="keys"><kbd class="key-space">Space</kbd></span> ejecuta el mostrado; <strong>Exportar…</strong> escribe todos los atajos en un archivo XML e <strong>Importar…</strong> lee de nuevo un archivo así como sus atajos (un archivo que no nombra ningún comando de BIMopen se rechaza, y sus atajos se mantienen); <strong>Eliminar</strong> quita las teclas que añadió. Sus métodos abreviados se conservan para las sesiones siguientes e inician el comando al escribirlos, como los predefinidos.</p>
 <p>Una herramienta nunca cambia por sí sola la vista activa. Iniciada en una vista en la que no puede trabajar (una cubierta o una habitación en una vista 3D, un nivel en una planta, un área fuera de una planta de áreas), abre <strong>Ir a vista</strong>: las vistas adecuadas, con la planta del nivel activo ya elegida. <strong>Abrir vista</strong> abre la vista elegida e inicia allí la herramienta; <strong>Cancelar</strong> lo deja todo como estaba. <strong>Editar contorno</strong> de un suelo, una cubierta, una escalera o una barandilla, desde una sección o un alzado, pide del mismo modo una planta de su nivel, y una nueva sección o alzado deja activa la planta en la que se dibujó. <strong>Desplazar</strong>, <strong>Copiar</strong>, una <strong>Repetir en serie</strong> lineal y <strong>Simetría sobre línea</strong> funcionan también en secciones y alzados: a lo largo de la vista; el eje es el plano vertical perpendicular a la vista por su primer punto, se dibuje como se dibuje. Una <strong>Repetir en serie</strong> radial funciona en plantas y vistas 3D: en una sección o un alzado sigue elegida, pero sus clics no hacen nada y la barra de estado pide <strong>Lineal</strong>.</p>
+<h3 id="torn-off-views">Vistas en ventanas separadas</h3>
+<p>Una vista puede salir del área de dibujo: <strong>Ventana separada</strong> en su menú (clic derecho en el <strong>Índice del proyecto</strong>, en su miniatura en la barra de vistas o en la barra de título de una ventana en mosaico), o arrastre la barra de título de una ventana en mosaico o en cascada fuera del área de dibujo. En el ordenador la vista se abre en una ventana del sistema propia, que puede llevar también a otro monitor, redimensionar y maximizar; en la web flota en la página, porque el navegador no abre otras ventanas. Una vista flotante en el programa tiene también <strong>Ventana del sistema</strong>, para llevarla a una ventana del sistema.</p>
+<p>Puede separar varias vistas a la vez. Cada una conserva sus herramientas, su barra de controles y, en 3D, su cubo de orientación; la selección se ve en todas, y la vista activa es la última en la que hizo clic. <strong>Devolver a la ventana principal</strong>, arriba en la vista, la devuelve al área de dibujo; una vista flotante vuelve también arrastrándola a la franja superior del área de dibujo, que se resalta. Cerrar la ventana del sistema la devuelve del mismo modo. Dónde estaba cada vista separada queda con el proyecto, y al abrirlo de nuevo las vistas separadas vuelven a su sitio.</p>
+<h3 id="drawing-in-every-view">Dibujar en cualquier vista</h3>
+<p>Un muro se dibuja igual en una planta y en una vista 3D, sobre el plano del nivel: desde el primer clic el muro que dibuja sigue al cursor, en la planta como su huella y en 3D como su volumen transparente, a su altura y espesor; una línea discontinua prolonga su eje, y otras lo mantienen alineado con los puntos ya pulsados de la cadena. La cota temporal, azul con sus líneas de referencia y trazos, da la longitud y el ángulo; teclee una longitud y pulse <span class="keys"><kbd class="key-enter">Enter</kbd></span> para dibujar el muro con esa longitud. Los forzados (extremos, puntos medios, intersecciones, perpendicular, caras y ejes de otros muros) funcionan también en 3D. El muro seleccionado en una vista 3D muestra, como en planta, sus cotas temporales, las flechas para invertirlo y los extremos para arrastrar. En secciones y alzados no se dibujan muros: <strong>Ir a vista</strong> ofrece una planta o la vista 3D.</p>
+<p>Cubiertas y suelos se dibujan también en la vista 3D, sobre el plano de su nivel: <strong>Designar muros</strong> toma el muro bajo el cursor (su coronación se resalta en naranja, <span class="keys"><kbd class="key-tab">Tab</kbd></span> toma toda la cadena), las líneas se dibujan con todas las herramientas de boceto y con cotas temporales, y <strong>Editar huella</strong> de una cubierta o un suelo abre su boceto en 3D. <strong>Editar contorno</strong> de un muro funciona en 3D sobre el plano del muro, y en una sección o alzado que lo ve de frente.</p>
+<p>Mientras dibuja o edita un boceto puede cambiar de vista (miniaturas, <strong>Índice del proyecto</strong>, ventanas separadas): la herramienta sigue activa y continúa en la nueva vista si puede trabajar allí. Una cadena de muros empezada en planta continúa en 3D desde su último punto, y un boceto de perfil empezado en un alzado continúa en 3D. El muro en curso y el boceto se ven en todas las vistas abiertas a la vez.</p>
 <h3 id="view-control-bar">Barra de controles de vista</h3>
 <p>En la parte inferior de cada planta, sección, alzado, llamada y vista 2D libre:</p>
 <table>
@@ -1483,6 +1862,103 @@ detalle. Lo esencial:</p>
 <li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-a">A</kbd></span> selecciona los elementos del nivel de la planta abierta, o de todo el modelo en una
   vista 3D; <span class="keys"><kbd class="key-delete">Del</kbd></span> elimina la selección; <span class="keys"><kbd class="key-escape">Esc</kbd></span> la borra.</li>
 </ul>
+<h2 id="touch-mode">Modo táctil</h2>
+<p>El <strong>Modo táctil</strong> dispone la interfaz para pantallas táctiles y lápices: teléfonos, tabletas y
+monitores táctiles. Ejecuta los mismos comandos que los otros dos estilos, con los mismos nombres;
+solo cambia la disposición, y cada control es lo bastante grande para un dedo.</p>
+<h3 id="touch-mode-on">Activarlo</h3>
+<p><strong>Menú de la aplicación ▸ Opciones ▸ Interfaz de usuario ▸ Modo táctil</strong> tiene tres valores:</p>
+<table>
+<thead>
+<tr>
+<th>Valor</th>
+<th>Efecto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Automático</strong></td>
+<td>Activo donde el dispositivo está pensado para el tacto: en un navegador con el dedo como puntero o una ventana de 900 píxeles de ancho como máximo, y en Android. En el escritorio queda apagado</td>
+</tr>
+<tr>
+<td><strong>Siempre</strong></td>
+<td>Siempre activo, también en el escritorio (un monitor táctil, una tableta PC)</td>
+</tr>
+<tr>
+<td><strong>Nunca</strong></td>
+<td>Nunca activo</td>
+</tr>
+</tbody>
+</table>
+<p>BIMopen recuerda la elección con las demás preferencias. <strong>Menú ▸ Salir del modo táctil</strong> devuelve
+la otra interfaz hasta el próximo inicio.</p>
+<h3 id="touch-layouts">Teléfono, horizontal y tableta</h3>
+<p>La disposición sigue el espacio que tiene la ventana:</p>
+<ul>
+<li><strong>estrecha y alta</strong> (un teléfono): una barra superior compacta con el menú, el proyecto y la vista
+  (un toque abre las vistas), <strong>Deshacer</strong>, <strong>Rehacer</strong>, <strong>Comando o búsqueda</strong> y <strong>Lápiz</strong>; el
+  dibujo ocupa todo el ancho; cinco botones grandes abajo, <strong>Vistas</strong>, <strong>Familias</strong>,
+  <strong>Herramientas</strong> (<strong>Modificar</strong> mientras hay algo seleccionado), <strong>Propiedades</strong> y <strong>Comandos</strong>,
+  cada uno abre un panel desde abajo. Arrastre el asa del panel hacia arriba para alargarlo, hacia
+  abajo para acortarlo o cerrarlo; un toque fuera lo cierra;</li>
+<li><strong>baja y ancha</strong> (un teléfono en horizontal): una barra a la izquierda con las categorías
+  <strong>Modelar</strong>, <strong>Estructura</strong>, <strong>Instalaciones</strong>, <strong>Anotaciones</strong>, <strong>Vistas</strong> y <strong>Proyecto</strong>, más
+  las vistas y las propiedades; los paneles se abren a la derecha;</li>
+<li><strong>ancha</strong> (una tableta, un monitor táctil): la barra abre una paleta de herramientas para cada
+  categoría, las propiedades quedan a la derecha, la barra de vistas y familias abajo y el campo
+  <strong>Comando o búsqueda</strong> en la barra superior.</li>
+</ul>
+<p>Las herramientas son mosaicos grandes con icono y nombre. Una herramienta que aún no existe está en
+gris, <strong>Todavía no disponible</strong>; una que no funciona en la vista 3D (<strong>Nivel</strong>, <strong>Rejilla</strong>, <strong>Plano
+de referencia</strong>, las anotaciones) está allí en gris, <strong>No disponible en la vista 3D</strong>. Un toque en
+un mosaico gris dice por qué.</p>
+<p>Mientras una herramienta trabaja, una franja verde bajo la barra superior muestra sus opciones y
+<strong>Listo</strong>, que la termina (o concluye un boceto). Mientras dibuja un muro, <strong>Longitud…</strong> abre la
+línea de comandos: escriba la longitud del muro siguiente y, si hace falta, su ángulo, como <code>4,5</code>
+o <code>4,5 90</code>.</p>
+<p>Un toque selecciona, y los muros seleccionados muestran asas grandes en sus extremos. Sobre el
+dibujo una barra flotante ofrece <strong>Mover</strong>, <strong>Copiar</strong>, <strong>Girar</strong>, <strong>Simetría</strong>, <strong>Propiedades</strong> y
+<strong>Eliminar</strong>; una pulsación larga abre el menú contextual. Abajo a la izquierda el botón de la
+vista muestra la escala y el estilo gráfico y abre <strong>Escala</strong>, <strong>Detalle</strong>, <strong>Estilo gráfico</strong>,
+<strong>Sol y sombras</strong>, <strong>Recorte</strong> y <strong>Aislar temporalmente</strong>; abajo a la derecha <strong>Ajustar a la
+ventana</strong>.</p>
+<h3 id="touch-gestures">Gestos y lápiz</h3>
+<table>
+<thead>
+<tr>
+<th>Gesto</th>
+<th>Qué hace</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>toque</td>
+<td>selecciona, o coloca el punto de la herramienta activa</td>
+</tr>
+<tr>
+<td>arrastrar con un dedo</td>
+<td>como con el ratón: una ventana de selección, un asa, un elemento</td>
+</tr>
+<tr>
+<td>pulsación larga</td>
+<td>el menú contextual</td>
+</tr>
+<tr>
+<td>dos dedos</td>
+<td>desplazan la vista; sepárelos o júntelos para ampliar; en la vista 3D gírelos para girar el modelo</td>
+</tr>
+<tr>
+<td>doble toque</td>
+<td>ajusta la vista a la ventana</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Lápiz</strong> en la barra superior es para un lápiz: el lápiz dibuja y selecciona, los dedos solo
+mueven la vista (un dedo desplaza, dos dedos desplazan, amplían y giran). Una paleta del lápiz al
+lado del dibujo tiene <strong>Seleccionar</strong>, <strong>Muro</strong>, <strong>Puerta</strong>, <strong>Ventana</strong>, <strong>Línea de detalle</strong>,
+<strong>Alineada</strong>, <strong>Texto</strong> y <strong>Más herramientas…</strong>. En un navegador es el navegador quien distingue el
+lápiz del dedo; en la aplicación de escritorio un toque que indica una presión se toma por un
+lápiz.</p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

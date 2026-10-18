@@ -283,6 +283,20 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#strip">
+<span class="md-ellipsis">
+      Barra de vistas y familias
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#panels">
+<span class="md-ellipsis">
+      Paneles acoplables
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#drawing-area-and-view-windows">
 <span class="md-ellipsis">
       Área de dibujo y ventanas de vista
@@ -548,6 +562,20 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#strip">
+<span class="md-ellipsis">
+      Barra de vistas y familias
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#panels">
+<span class="md-ellipsis">
+      Paneles acoplables
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#drawing-area-and-view-windows">
 <span class="md-ellipsis">
       Área de dibujo y ventanas de vista
@@ -731,11 +759,6 @@ guardar.</p>
 <td><strong>Cubo de orientación ▸ Tamaño del cubo de orientación</strong>, <strong>Opacidad inactiva</strong></td>
 <td><strong>Pequeño</strong>, <strong>Medio</strong>, <strong>Grande</strong>; de 0 % a 100 %</td>
 <td>El tamaño del cubo, y cuánto se ve mientras el puntero está en otra parte</td>
-</tr>
-<tr>
-<td><strong>Cubo de orientación ▸ Mostrar brújula</strong></td>
-<td>activado, desactivado</td>
-<td>El anillo de la brújula bajo el cubo</td>
 </tr>
 <tr>
 <td><strong>Cubo de orientación ▸ Mantener escena en posición vertical</strong></td>
@@ -1231,6 +1254,31 @@ que lo coloca, con ese tipo) y <strong>Eliminar</strong>.</p>
 <p>Tras un clic en el Índice del proyecto, el teclado se mueve en él: <span class="keys"><kbd class="key-arrow-up">Up</kbd></span> y <span class="keys"><kbd class="key-arrow-down">Down</kbd></span> pasan de una fila a otra (las propiedades de la vista aparecen en la paleta), <span class="keys"><kbd class="key-arrow-right">Right</kbd></span> abre una rama, <span class="keys"><kbd class="key-arrow-left">Left</kbd></span> la cierra o sube a la rama que contiene la fila, <span class="keys"><kbd class="key-enter">Enter</kbd></span> abre la vista.</p>
 <p>Desde aquí las vistas van también a los planos. Arrastre una planta, una sección, un alzado, una vista 2D libre, una leyenda, una vista 3D guardada o una tabla de planificación al plano abierto: su ventana gráfica sigue al cursor y queda donde la suelta. O suéltela sobre el nombre de un plano en el árbol: el plano se abre y la ventana gráfica sigue al cursor hasta que hace clic. Mientras arrastra, el árbol se desplaza cuando el cursor se acerca a su borde. El menú contextual de un plano tiene <strong>Añadir vista…</strong>. Las vistas de un plano aparecen debajo de él; el menú contextual de una vista tiene <strong>Eliminar del plano</strong>, y el de <strong>Planos (todos)</strong> tiene <strong>Nuevo plano…</strong>. En una vista 3D el menú contextual también tiene <strong>Zoom a extensión 3D</strong>: todo el modelo, también los elementos ocultos en la vista. Una vista que ya está en un plano se rechaza, con el motivo en la línea de comandos; las leyendas y las tablas pueden ir en varios planos. Una vista 3D guardada aparece en el plano con las aristas vistas desde su cámara.</p>
 <p>El menú contextual de una planta, una sección o una vista 2D libre tiene <strong>Buscar vistas de referencia</strong>: las vistas que muestran su símbolo y los planos en los que está; <strong>Ir a vista</strong> abre la elegida.</p>
+<h2 id="strip">Barra de vistas y familias</h2>
+<p>La barra bajo el área de dibujo tiene tres modos, elegidos con los botones de la izquierda:</p>
+<ul>
+<li><strong>Modo vistas</strong>: las vistas previas reales de las vistas, divididas en <strong>Todas</strong>, <strong>Abiertas (n)</strong>,
+  <strong>Plantas</strong>, <strong>Secciones</strong>, <strong>Alzados</strong>, <strong>3D</strong>, <strong>Leyendas</strong>, <strong>Tablas</strong> y <strong>Planos</strong>. La vista
+  actual está enmarcada, las abiertas tienen una línea de color. Un clic en una vista previa abre
+  la vista; el botón derecho abre su menú; arrastrada sobre un plano, se coloca allí.</li>
+<li><strong>Modo familias</strong>: una vista previa por cada tipo, dividida por categoría. Un clic coloca ese
+  tipo; arrastrada a una planta, se inserta donde se suelta. Una puerta o una ventana soltada
+  cerca de un muro entra en el muro, a lo largo de él.</li>
+<li><strong>Modo comandos</strong>: el historial de la línea de comandos. Un clic en una línea escrita la ejecuta
+  de nuevo.</li>
+</ul>
+<p>A la derecha, <strong>Mostrar</strong> filtra las vistas previas por disciplina y fase, el cuadro de búsqueda por
+nombre, y tres botones eligen la altura: <strong>Vistas previas</strong>, <strong>Compacta</strong> y <strong>Ocultar</strong>.</p>
+<h2 id="panels">Paneles acoplables</h2>
+<p><strong>Propiedades</strong> e <strong>Índice del proyecto</strong> son paneles. Se arrastra un panel por su
+cabecera: se acopla a la izquierda o a la derecha del área de dibujo, varios en columna, o flota
+donde se suelta. Los botones de la cabecera lo acoplan a la izquierda, a la derecha, lo hacen
+flotante o lo cierran; <strong>Vistas ▸ Ventanas ▸ Paneles</strong> lo vuelve a abrir. Cada panel queda donde se
+puso también en las sesiones siguientes.</p>
+<p>El selector de tipo, arriba en <strong>Propiedades</strong>, muestra una vista previa del tipo: muros, suelos y
+cubiertas con sus capas, puertas, ventanas y objetos como una pequeña imagen. Abierto, busca los
+tipos por nombre; están agrupados por familia, cada uno con su vista previa. Las flechas mueven,
+<span class="keys"><kbd class="key-enter">Enter</kbd></span> elige, <span class="keys"><kbd class="key-escape">Esc</kbd></span> cierra la lista.</p>
 <h2 id="drawing-area-and-view-windows">Área de dibujo y ventanas de vista</h2>
 <p>Cada vista que abres es una ventana en el área de dibujo. Una vista que se vuelve a abrir pasa al
 frente; siempre queda abierta al menos una ventana. <strong>Vistas ▸ Ventanas</strong> las organiza:</p>
@@ -1376,10 +1424,10 @@ región ajustada</strong> (lo mismo que <span class="keys"><kbd class="key-home"
 <p>Un pequeño trípode en la esquina inferior de la vista 3D muestra las direcciones de los ejes: X
 rojo, Y verde, Z azul. Una vista 3D guardada recuerda dónde la dejaste.</p>
 <p>En 3D la rueda del ratón hace zoom manteniendo fijo el punto del modelo bajo el cursor, y la órbita gira alrededor del centro de la selección, o alrededor del punto al que mira la vista cuando no hay nada seleccionado.</p>
-<p>El cubo de orientación, en la esquina superior de la vista 3D, gira con el modelo. Cada cara tiene un cuadrado en el centro, una franja a lo largo de cada arista y un cuadradito en cada vértice. El cuadrado del centro mira de frente ese lado (<strong>SUPERIOR</strong>, <strong>FRONTAL</strong>, <strong>DERECHA</strong>…); la franja de una arista, que recorre las dos caras contiguas, mira desde entre esos dos lados; el cuadradito de un vértice, en las tres caras de alrededor, mira desde entre tres. La zona bajo el puntero se ilumina antes del clic, y la vista gira hasta allí en una breve transición. Arrastre el cubo para orbitar.</p>
-<p>Visto de frente, el cubo es un cuadrado plano: los triángulos fuera de sus cuatro lados giran la vista hacia la cara más allá de ese lado, y las dos flechas curvas de la esquina superior derecha giran la imagen un cuarto de vuelta en sentido horario o antihorario.</p>
-<p>Un anillo plano de brújula descansa en la base del cubo, con <strong>N</strong>, <strong>E</strong>, <strong>S</strong>, <strong>O</strong> en los verdaderos puntos cardinales; gira con la vista. Haga clic en una letra para mirar desde ese punto cardinal. Arrastre el anillo, o una letra, para girar el modelo alrededor de la vertical por el punto en torno al cual gira la vista, siguiendo el puntero a lo largo del anillo.</p>
-<p>La casa, <strong>Vista inicial</strong>, vuelve a la vista de partida. Haga clic derecho en el cubo, o en el botón redondo de abajo a la derecha, para su menú: <strong>Vista inicial</strong>; <strong>Establecer vista actual como inicial</strong> (cada vista 3D tiene la suya, guardada con el proyecto); <strong>Orientar según vista ▸</strong> (una planta desde arriba, un alzado o una sección a lo largo de su línea, otra vista 3D desde su cámara); <strong>Orientar según dirección ▸</strong> (cualquiera de las 26 direcciones del cubo); <strong>Opciones…</strong>, que abre la página <strong>Cubo de orientación</strong> de <strong>Opciones</strong>.</p>
+<p>El <strong>Cubo de orientación</strong>, en la esquina superior de la vista 3D, gira con el modelo. Sus aristas y vértices están achaflanados y cada parte es un objetivo propio: las seis caras (<strong>ARRIBA</strong>, <strong>ABAJO</strong>, <strong>FRENTE</strong>, <strong>DETRÁS</strong>, <strong>DERECHA</strong>, <strong>IZQUIERDA</strong>, sus nombres escritos en ellas en perspectiva y girando con ellas) miran de frente ese lado; las doce franjas de las aristas miran desde entre dos lados; los ocho triángulos de los vértices desde entre tres (una vista isométrica). La parte bajo el puntero se tiñe con el color de resaltado, la parte desde la que mira ahora la vista queda resaltada; un clic gira la vista hasta allí en una breve transición. Arrastre el cubo para orbitar.</p>
+<p>Bajo el cubo se escribe la orientación de la vista: <strong>Frente · perspectiva</strong>, <strong>Arriba – Frente · perspectiva</strong>, <strong>Isométrica · perspectiva</strong>, o <strong>Libre · perspectiva</strong> cuando la vista no mira desde ninguna parte del cubo.</p>
+<p>Cuando una cara se ve de frente, cuatro triángulos alrededor del cubo (<strong>Rotar hacia arriba</strong>, <strong>Rotar hacia abajo</strong>, <strong>Rotar a la izquierda</strong>, <strong>Rotar a la derecha</strong>) giran la vista un cuarto hacia la cara más allá de ese lado. Las dos flechas curvas arriba a la derecha, <strong>Girar a la izquierda</strong> y <strong>Girar a la derecha</strong>, giran la imagen un cuarto de vuelta en sentido antihorario u horario.</p>
+<p>El pequeño botón de la casa abajo a la izquierda, <strong>Vista de partida</strong>, vuelve a la vista de partida; con un clic derecho sobre él, <strong>Establecer como vista de partida</strong> hace de la vista actual la de partida (cada vista 3D tiene la suya, guardada con el proyecto). El pequeño botón abajo a la derecha, <strong>Menú del cubo</strong>, o un clic derecho sobre el cubo, abre el menú: <strong>Ortogonal</strong> / <strong>Perspectiva</strong> (por ahora la vista es solo en perspectiva: <strong>Ortogonal</strong> está en gris, «Todavía no disponible»); <strong>Establecer como vista de partida</strong>; <strong>Ajustar a la ventana</strong>, que ajusta el modelo a la ventana; <strong>Opciones…</strong>, que abre la página <strong>Cubo de orientación</strong> de <strong>Opciones</strong>. De derecha a izquierda (árabe) el cubo se sitúa arriba a la izquierda y los dos pequeños botones cambian de lado; las flechas se quedan donde apuntan.</p>
 <h3 id="the-context-menu-of-a-view">El menú contextual de una vista</h3>
 <p>Haz clic con el botón derecho en una vista mientras no hay ninguna herramienta activa. Si el
 cursor está sobre un elemento que no está seleccionado, primero se selecciona el elemento. El
@@ -1407,6 +1455,7 @@ va a la línea de comandos. <span class="keys"><kbd class="key-enter">Enter</kbd
 escritas antes. El <a href="../command-line-and-mcp/">capítulo sobre la línea de comandos</a> describe los
 comandos.</p>
 <h2 id="status-bar">Barra de estado</h2>
+<p>En el estilo Clásica esta información está en el extremo derecho de la barra de opciones.</p>
 <p>A la izquierda, la barra de estado muestra:</p>
 <ul>
 <li>mientras hay una herramienta activa, lo que espera la herramienta (el mismo indicador que la

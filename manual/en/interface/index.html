@@ -283,6 +283,20 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#strip">
+<span class="md-ellipsis">
+      Views and families strip
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#panels">
+<span class="md-ellipsis">
+      Dockable panels
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#drawing-area-and-view-windows">
 <span class="md-ellipsis">
       Drawing area and view windows
@@ -548,6 +562,20 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#strip">
+<span class="md-ellipsis">
+      Views and families strip
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#panels">
+<span class="md-ellipsis">
+      Dockable panels
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#drawing-area-and-view-windows">
 <span class="md-ellipsis">
       Drawing area and view windows
@@ -728,11 +756,6 @@ asterisk after the project's name in the title bar tells you that there are unsa
 <td><strong>Orientation cube ▸ Orientation cube size</strong>, <strong>Inactive opacity</strong></td>
 <td><strong>Small</strong>, <strong>Medium</strong>, <strong>Large</strong>; 0 % to 100 %</td>
 <td>The size of the cube, and how much it shows while the pointer is elsewhere</td>
-</tr>
-<tr>
-<td><strong>Orientation cube ▸ Show compass</strong></td>
-<td>on, off</td>
-<td>The compass ring under the cube</td>
 </tr>
 <tr>
 <td><strong>Orientation cube ▸ Keep scene upright</strong></td>
@@ -1217,6 +1240,29 @@ with that type) and <strong>Delete</strong>.</p>
 <p>After a click in the Project Index, the keyboard moves in it: <span class="keys"><kbd class="key-arrow-up">Up</kbd></span> and <span class="keys"><kbd class="key-arrow-down">Down</kbd></span> go from row to row (the view's properties show in the palette), <span class="keys"><kbd class="key-arrow-right">Right</kbd></span> opens a branch, <span class="keys"><kbd class="key-arrow-left">Left</kbd></span> closes it or goes up to the branch the row is in, <span class="keys"><kbd class="key-enter">Enter</kbd></span> opens the view.</p>
 <p>Views go on sheets from here too. Drag a plan, section, elevation, free 2D view, legend, saved 3D view or schedule onto the open sheet: its viewport follows the cursor and stays where you drop it. Or drop it on a sheet's name in the tree: the sheet opens and the viewport follows the cursor until you click. While you drag, the tree scrolls when the cursor nears its edge. The right-click menu of a sheet has <strong>Add View…</strong>. The views on a sheet are listed under it; the right-click menu of one has <strong>Remove from Sheet</strong>, and the menu of <strong>Sheets (all)</strong> has <strong>New Sheet…</strong>. In a 3D view the right-click menu also has <strong>Zoom to 3D Extents</strong>: the whole model, the elements hidden in the view too. A view already on a sheet is refused, with the reason on the command line; legends and schedules can go on several sheets. A saved 3D view is drawn on the sheet with the edges seen from its camera.</p>
 <p>The right-click menu of a plan, section or free 2D view has <strong>Find Referring Views</strong>: the views that show its symbol and the sheets it is on; <strong>Go to View</strong> opens the one chosen.</p>
+<h2 id="strip">Views and families strip</h2>
+<p>The strip under the drawing area has three modes, chosen with the buttons on its left:</p>
+<ul>
+<li><strong>Views mode</strong>: live thumbnails of the views, grouped by <strong>All</strong>, <strong>Open (n)</strong>, <strong>Plans</strong>,
+  <strong>Sections</strong>, <strong>Elevations</strong>, <strong>3D</strong>, <strong>Legends</strong>, <strong>Schedules</strong> and <strong>Sheets</strong>. The current view
+  is framed, open views have an accent line. Click a thumbnail to open the view; right-click for the
+  view's menu; drag it onto a sheet to place it there.</li>
+<li><strong>Families mode</strong>: one preview for each type, grouped by family category. Click a preview to
+  place that type; drag it into a plan to insert it where you let go. A door or a window dropped
+  near a wall goes into it, along it.</li>
+<li><strong>Commands mode</strong>: the history of the command line. Click a line you typed to run it again.</li>
+</ul>
+<p>On the right, <strong>Show</strong> filters the thumbnails by discipline and phase, the search box by name, and
+three buttons set the size: <strong>Previews</strong>, <strong>Compact</strong> and <strong>Hide</strong>.</p>
+<h2 id="panels">Dockable panels</h2>
+<p><strong>Properties</strong> and <strong>Project Index</strong> are panels. Drag a panel by its header: it docks on the
+left or on the right of the drawing area, several in a column, or floats where you let it go. The
+buttons in the header dock it left, dock it right, make it float or close it; <strong>Views ▸ Windows ▸
+Panels</strong> opens it again. Each panel stays where you put it in the next sessions.</p>
+<p>The type selector at the top of <strong>Properties</strong> shows a preview of the type: walls, floors and roofs
+as their layers, doors, windows and components as a small picture. Open it to search the types by
+name; they are grouped by family, each with its preview. The arrow keys move, <span class="keys"><kbd class="key-enter">Enter</kbd></span> picks,
+<span class="keys"><kbd class="key-escape">Esc</kbd></span> closes the list.</p>
 <h2 id="drawing-area-and-view-windows">Drawing area and view windows</h2>
 <p>Every view you open is a window in the drawing area. A view opened again comes to the front; at
 least one window always stays open. <strong>Views ▸ Windows</strong> arranges them:</p>
@@ -1363,10 +1409,10 @@ control bar: its views have their own scale.</p>
 <p>A small tripod in the lower corner of the 3D view shows the directions of the axes: X red, Y
 green, Z blue. A saved 3D view remembers where you left it.</p>
 <p>In 3D, the wheel zooms keeping the model point under the cursor in place, and the orbit turns about the centre of the selection, or about the point the view looks at when nothing is selected.</p>
-<p>The <strong>Orientation cube</strong>, in the top corner of the 3D view, turns with the model. Each face has a square in the middle, a strip along each edge and a small square at each corner. The square in the middle looks straight at that side (<strong>TOP</strong>, <strong>FRONT</strong>, <strong>RIGHT</strong>…); an edge strip, which runs across both faces beside the edge, looks from between those two sides; a corner square, on the three faces around the corner, looks from between three. The region under the pointer lights up before you click, and the view turns there in a brief transition. Drag the cube to orbit.</p>
-<p>Seen straight on, the cube is a flat square: the triangles outside its four sides turn the view to the face beyond that side, and the two curved arrows at its top right corner turn the picture a quarter turn clockwise or counterclockwise.</p>
-<p>A flat compass ring lies at the cube's base, with <strong>N</strong>, <strong>E</strong>, <strong>S</strong>, <strong>W</strong> at the true points of the compass; it turns with the view. Click a letter to look from that point of the compass. Drag the ring, or a letter, to turn the model about the vertical through the point the view turns about, following the pointer round the ring.</p>
-<p>The house, <strong>Home view</strong>, goes back to the starting view. Right-click the cube, or click the round button at its bottom right, for its menu: <strong>Home view</strong>; <strong>Set Current View as Home</strong> (each 3D view keeps its own, with the project); <strong>Orient to View ▸</strong> (a plan from above, an elevation or a section along its line, another 3D view from its camera); <strong>Orient to Direction ▸</strong> (any of the 26 directions of the cube); <strong>Options…</strong>, which opens the <strong>Orientation cube</strong> page of <strong>Options</strong>.</p>
+<p>The <strong>Orientation cube</strong>, in the top corner of the 3D view, turns with the model. Its edges and corners are bevelled and every part is a target of its own: the six faces (<strong>TOP</strong>, <strong>BOTTOM</strong>, <strong>FRONT</strong>, <strong>BACK</strong>, <strong>RIGHT</strong>, <strong>LEFT</strong>, their names written on them in perspective and turning with them) look straight at that side; the twelve edge strips look from between two sides; the eight corner triangles from between three (an isometric view). The part under the pointer is tinted with the highlight colour, the one the view looks from now stays highlighted; a click turns the view there in a brief transition. Drag the cube to orbit.</p>
+<p>Under the cube the view's orientation is written: <strong>Front · perspective</strong>, <strong>Top – Front · perspective</strong>, <strong>Isometric · perspective</strong>, or <strong>Free · perspective</strong> when the view looks from no part of the cube.</p>
+<p>When a face is seen straight on, four triangles round the cube (<strong>Turn up</strong>, <strong>Turn down</strong>, <strong>Turn left</strong>, <strong>Turn right</strong>) turn the view a quarter to the face beyond that side. The two curved arrows at the top right, <strong>Roll left</strong> and <strong>Roll right</strong>, turn the picture a quarter turn counterclockwise or clockwise.</p>
+<p>The small house button at the bottom left, <strong>Starting view</strong>, goes back to the starting view; right-click it for <strong>Set as starting view</strong>, which makes the present view the starting one (each 3D view keeps its own, with the project). The small button at the bottom right, <strong>Cube menu</strong>, or a right-click on the cube, opens the menu: <strong>Orthographic</strong> / <strong>Perspective</strong> (for now the view is perspective only: <strong>Orthographic</strong> is greyed, «Not available yet»); <strong>Set as starting view</strong>; <strong>Zoom to Fit</strong>, which fits the model in the window; <strong>Options…</strong>, which opens the <strong>Orientation cube</strong> page of <strong>Options</strong>. Right to left (Arabic) the cube sits at the top left and the two small buttons change sides; the arrows stay where they point.</p>
 <h3 id="the-context-menu-of-a-view">The context menu of a view</h3>
 <p>Right-click in a view while no tool is active. If the cursor is on an element that is not
 selected, the element is selected first. The menu has:</p>
@@ -1391,6 +1437,7 @@ finish]:</code>, or <code>Command:</code> when no tool is active.</p>
 command line. <span class="keys"><kbd class="key-enter">Enter</kbd></span> runs the line; <span class="keys"><kbd class="key-arrow-up">Up</kbd></span> and <span class="keys"><kbd class="key-arrow-down">Down</kbd></span> bring back the lines typed before. The
 <a href="../command-line-and-mcp/">command line chapter</a> describes the commands.</p>
 <h2 id="status-bar">Status bar</h2>
+<p>In the Classic style these items sit at the right end of the options bar.</p>
 <p>On the left, the status bar shows:</p>
 <ul>
 <li>while a tool is active, what the tool expects (the same prompt as the command line);</li>

@@ -283,6 +283,20 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#strip">
+<span class="md-ellipsis">
+      Leiste Ansichten und Familien
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#panels">
+<span class="md-ellipsis">
+      Andockbare Bereiche
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#drawing-area-and-view-windows">
 <span class="md-ellipsis">
       Zeichenbereich und Ansichtsfenster
@@ -548,6 +562,20 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#strip">
+<span class="md-ellipsis">
+      Leiste Ansichten und Familien
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#panels">
+<span class="md-ellipsis">
+      Andockbare Bereiche
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#drawing-area-and-view-windows">
 <span class="md-ellipsis">
       Zeichenbereich und Ansichtsfenster
@@ -731,11 +759,6 @@ ungespeicherte Änderungen gibt.</p>
 <td><strong>Orientierungswürfel ▸ Größe des Orientierungswürfels</strong>, <strong>Deckkraft bei Inaktivität</strong></td>
 <td><strong>Klein</strong>, <strong>Mittel</strong>, <strong>Groß</strong>; 0 % bis 100 %</td>
 <td>Die Größe des Würfels und wie stark er sichtbar ist, während der Zeiger woanders ist</td>
-</tr>
-<tr>
-<td><strong>Orientierungswürfel ▸ Kompass anzeigen</strong></td>
-<td>ein, aus</td>
-<td>Der Kompassring unter dem Würfel</td>
 </tr>
 <tr>
 <td><strong>Orientierungswürfel ▸ Szene aufrecht halten</strong></td>
@@ -1235,6 +1258,32 @@ Werkzeug, das ihn platziert, mit diesem Typ) und <strong>Löschen</strong>.</p>
 <p>Nach einem Klick in den Projektindex bewegt sich die Tastatur darin: <span class="keys"><kbd class="key-arrow-up">Up</kbd></span> und <span class="keys"><kbd class="key-arrow-down">Down</kbd></span> gehen von Zeile zu Zeile (die Eigenschaften der Ansicht erscheinen in der Palette), <span class="keys"><kbd class="key-arrow-right">Right</kbd></span> öffnet einen Zweig, <span class="keys"><kbd class="key-arrow-left">Left</kbd></span> schließt ihn oder geht zum Zweig hinauf, in dem die Zeile steht, <span class="keys"><kbd class="key-enter">Enter</kbd></span> öffnet die Ansicht.</p>
 <p>Von hier kommen Ansichten auch auf Pläne. Ziehen Sie einen Grundriss, einen Schnitt, eine Ansicht, eine freie 2D-Ansicht, eine Legende, eine gespeicherte 3D-Ansicht oder eine Bauteilliste auf den offenen Plan: Ihr Ansichtsfenster folgt dem Cursor und bleibt dort, wo Sie es loslassen. Oder lassen Sie sie auf dem Namen eines Plans im Baum los: Der Plan öffnet sich und das Ansichtsfenster folgt dem Cursor, bis Sie klicken. Beim Ziehen rollt der Baum, wenn der Cursor seinen Rand erreicht. Das Kontextmenü eines Plans hat <strong>Ansicht hinzufügen…</strong>. Die Ansichten auf einem Blatt stehen darunter; das Kontextmenü einer Ansicht hat <strong>Vom Blatt entfernen</strong>, das von <strong>Pläne (alle)</strong> hat <strong>Neues Blatt…</strong>. In einer 3D-Ansicht hat das Kontextmenü außerdem <strong>Auf 3D-Ausdehnung zoomen</strong>: das ganze Modell, auch die in der Ansicht ausgeblendeten Elemente. Eine Ansicht, die schon auf einem Plan ist, wird abgelehnt, mit dem Grund in der Befehlszeile; Legenden und Bauteillisten können auf mehreren Plänen stehen. Eine gespeicherte 3D-Ansicht erscheint auf dem Plan mit den Kanten, die ihre Kamera sieht.</p>
 <p>Das Kontextmenü eines Grundrisses, eines Schnitts oder einer freien 2D-Ansicht hat <strong>Referenzierende Ansichten suchen</strong>: die Ansichten, die ihr Symbol zeigen, und die Pläne, auf denen sie steht; <strong>Gehe zu Ansicht</strong> öffnet die gewählte.</p>
+<h2 id="strip">Leiste Ansichten und Familien</h2>
+<p>Die Leiste unter dem Zeichenbereich hat drei Modi, gewählt mit den Schaltflächen links:</p>
+<ul>
+<li><strong>Modus Ansichten</strong>: echte Vorschauen der Ansichten, gegliedert in <strong>Alle</strong>, <strong>Geöffnet (n)</strong>,
+  <strong>Grundrisse</strong>, <strong>Schnitte</strong>, <strong>Ansichten</strong>, <strong>3D</strong>, <strong>Legenden</strong>, <strong>Bauteillisten</strong> und <strong>Pläne</strong>.
+  Die aktuelle Ansicht ist umrahmt, geöffnete haben eine farbige Linie. Ein Klick auf eine Vorschau
+  öffnet die Ansicht; die rechte Maustaste öffnet ihr Menü; auf einen Plan gezogen wird sie dort
+  platziert.</li>
+<li><strong>Modus Familien</strong>: eine Vorschau je Typ, nach Kategorie gegliedert. Ein Klick platziert diesen
+  Typ; in einen Grundriss gezogen wird er dort eingefügt, wo man loslässt. Eine Tür oder ein
+  Fenster nahe einer Wand wird in die Wand gesetzt, entlang der Wand.</li>
+<li><strong>Modus Befehle</strong>: der Verlauf der Befehlszeile. Ein Klick auf eine eingegebene Zeile führt sie
+  erneut aus.</li>
+</ul>
+<p>Rechts filtert <strong>Anzeigen</strong> die Vorschauen nach Disziplin und Phase, das Suchfeld nach Namen, und
+drei Schaltflächen wählen die Höhe: <strong>Vorschauen</strong>, <strong>Kompakt</strong> und <strong>Ausblenden</strong>.</p>
+<h2 id="panels">Andockbare Bereiche</h2>
+<p><strong>Eigenschaften</strong> und <strong>Projektindex</strong> sind Bereiche. Zieht man einen Bereich an seiner
+Kopfzeile, dockt er links oder rechts vom Zeichenbereich an, auch mehrere in einer Spalte, oder er
+schwebt dort, wo man ihn loslässt. Die Schaltflächen der Kopfzeile docken ihn links oder rechts
+an, lassen ihn schweben oder schließen ihn; <strong>Ansichten ▸ Fenster ▸ Bereiche</strong> öffnet ihn wieder.
+Jeder Bereich bleibt auch in den nächsten Sitzungen dort, wo man ihn hingesetzt hat.</p>
+<p>Die Typauswahl oben in <strong>Eigenschaften</strong> zeigt eine Vorschau des Typs: Wände, Geschossdecken und
+Dächer mit ihren Schichten, Türen, Fenster und Objekte als kleines Bild. Geöffnet sucht sie die
+Typen nach Namen; sie sind nach Familie gruppiert, jeder mit seiner Vorschau. Die Pfeiltasten
+bewegen, <span class="keys"><kbd class="key-enter">Enter</kbd></span> wählt, <span class="keys"><kbd class="key-escape">Esc</kbd></span> schließt die Liste.</p>
 <h2 id="drawing-area-and-view-windows">Zeichenbereich und Ansichtsfenster</h2>
 <p>Jede geöffnete Ansicht ist ein Fenster im Zeichenbereich. Eine erneut geöffnete Ansicht kommt nach
 vorn; mindestens ein Fenster bleibt immer geöffnet. <strong>Ansichten ▸ Fenster</strong> ordnet sie an:</p>
@@ -1382,10 +1431,10 @@ Grenzen</strong> (dasselbe wie <span class="keys"><kbd class="key-home">Home</kb
 <p>Ein kleines Achsenkreuz in der unteren Ecke der 3D-Ansicht zeigt die Richtungen der Achsen: X rot,
 Y grün, Z blau. Eine gespeicherte 3D-Ansicht merkt sich, wo Sie sie verlassen haben.</p>
 <p>In 3D zoomt das Mausrad und hält dabei den Modellpunkt unter dem Cursor fest, und der Orbit dreht sich um die Mitte der Auswahl oder, ohne Auswahl, um den Punkt, auf den die Ansicht blickt.</p>
-<p>Der <strong>Orientierungswürfel</strong> in der oberen Ecke der 3D-Ansicht dreht sich mit dem Modell. Jede Fläche hat ein Quadrat in der Mitte, einen Streifen entlang jeder Kante und ein kleines Quadrat an jeder Ecke. Das Quadrat in der Mitte blickt gerade auf diese Seite (<strong>OBEN</strong>, <strong>VORNE</strong>, <strong>RECHTS</strong>…); ein Kantenstreifen, der über beide angrenzenden Flächen läuft, blickt zwischen diesen zwei Seiten; ein Eckquadrat auf den drei Flächen um die Ecke blickt zwischen dreien. Der Bereich unter dem Zeiger leuchtet vor dem Klick auf, und die Ansicht dreht sich in einem kurzen Übergang dorthin. Ziehen Sie den Würfel, um zu orbitieren.</p>
-<p>Gerade von vorn gesehen ist der Würfel ein flaches Quadrat: Die Dreiecke außerhalb seiner vier Seiten drehen die Ansicht zur Fläche jenseits dieser Seite, und die zwei gebogenen Pfeile an der oberen rechten Ecke drehen das Bild um eine Vierteldrehung im oder gegen den Uhrzeigersinn.</p>
-<p>Ein flacher Kompassring liegt am Fuß des Würfels, mit <strong>N</strong>, <strong>O</strong>, <strong>S</strong>, <strong>W</strong> an den wahren Himmelsrichtungen; er dreht sich mit der Ansicht. Klicken Sie auf einen Buchstaben, um aus dieser Himmelsrichtung zu blicken. Ziehen Sie den Ring oder einen Buchstaben, um das Modell um die Senkrechte durch den Drehpunkt der Ansicht zu drehen; es folgt dem Zeiger entlang des Rings.</p>
-<p>Das Haus, <strong>Startansicht</strong>, führt zur Ausgangsansicht zurück. Klicken Sie mit der rechten Maustaste auf den Würfel oder auf die runde Schaltfläche unten rechts, um sein Menü zu öffnen: <strong>Startansicht</strong>; <strong>Aktuelle Ansicht als Startansicht festlegen</strong> (jede 3D-Ansicht hat ihre eigene, mit dem Projekt gespeichert); <strong>An Ansicht ausrichten ▸</strong> (ein Grundriss von oben, eine Ansicht oder ein Schnitt entlang seiner Linie, eine andere 3D-Ansicht aus ihrer Kamera); <strong>In Richtung ausrichten ▸</strong> (eine der 26 Richtungen des Würfels); <strong>Optionen…</strong>, das die Seite <strong>Orientierungswürfel</strong> der <strong>Optionen</strong> öffnet.</p>
+<p>Der <strong>Orientierungswürfel</strong> in der oberen Ecke der 3D-Ansicht dreht sich mit dem Modell. Seine Kanten und Ecken sind abgeschrägt, und jeder Teil ist ein eigenes Ziel: die sechs Flächen (<strong>OBEN</strong>, <strong>UNTEN</strong>, <strong>VORNE</strong>, <strong>HINTEN</strong>, <strong>RECHTS</strong>, <strong>LINKS</strong>, ihre Namen perspektivisch darauf geschrieben und mit ihnen gedreht) blicken gerade auf diese Seite; die zwölf Kantenstreifen blicken von zwischen zwei Seiten; die acht Eckdreiecke von zwischen drei (eine isometrische Ansicht). Der Teil unter dem Zeiger wird in der Hervorhebungsfarbe getönt, der, von dem die Ansicht jetzt blickt, bleibt hervorgehoben; ein Klick dreht die Ansicht in einem kurzen Übergang dorthin. Ziehen Sie den Würfel, um zu orbitieren.</p>
+<p>Unter dem Würfel steht die Ausrichtung der Ansicht: <strong>Vorne · perspektivisch</strong>, <strong>Oben – Vorne · perspektivisch</strong>, <strong>Isometrisch · perspektivisch</strong> oder <strong>Frei · perspektivisch</strong>, wenn die Ansicht von keinem Teil des Würfels blickt.</p>
+<p>Wird eine Fläche gerade von vorn gesehen, drehen vier Dreiecke um den Würfel (<strong>Nach oben drehen</strong>, <strong>Nach unten drehen</strong>, <strong>Nach links drehen</strong>, <strong>Nach rechts drehen</strong>) die Ansicht um eine Vierteldrehung zur Fläche jenseits dieser Seite. Die zwei gebogenen Pfeile oben rechts, <strong>Nach links kippen</strong> und <strong>Nach rechts kippen</strong>, drehen das Bild um eine Vierteldrehung gegen oder im Uhrzeigersinn.</p>
+<p>Die kleine Schaltfläche mit dem Haus unten links, <strong>Startansicht</strong>, führt zur Startansicht zurück; ein Rechtsklick darauf bietet <strong>Als Startansicht festlegen</strong>, das die aktuelle Ansicht zur Startansicht macht (jede 3D-Ansicht hat ihre eigene, mit dem Projekt gespeichert). Die kleine Schaltfläche unten rechts, <strong>Würfelmenü</strong>, oder ein Rechtsklick auf den Würfel öffnet das Menü: <strong>Orthogonal</strong> / <strong>Perspektivisch</strong> (vorerst ist die Ansicht nur perspektivisch: <strong>Orthogonal</strong> ist ausgegraut, „Noch nicht verfügbar“); <strong>Als Startansicht festlegen</strong>; <strong>Zoom auf Fenstergröße</strong>, das das Modell in das Fenster einpasst; <strong>Optionen…</strong>, das die Seite <strong>Orientierungswürfel</strong> der <strong>Optionen</strong> öffnet. Von rechts nach links (Arabisch) steht der Würfel oben links, und die zwei kleinen Schaltflächen tauschen die Seiten; die Pfeile bleiben, wohin sie zeigen.</p>
 <h3 id="the-context-menu-of-a-view">Das Kontextmenü einer Ansicht</h3>
 <p>Klicken Sie mit der rechten Maustaste in eine Ansicht, während kein Werkzeug aktiv ist. Befindet
 sich der Cursor auf einem nicht ausgewählten Element, wird dieses zuerst ausgewählt. Das Menü
@@ -1411,6 +1460,7 @@ oder <code>Command:</code>, wenn kein Werkzeug aktiv ist.</p>
 die Befehlszeile. <span class="keys"><kbd class="key-enter">Enter</kbd></span> führt die Zeile aus; <span class="keys"><kbd class="key-arrow-up">Up</kbd></span> und <span class="keys"><kbd class="key-arrow-down">Down</kbd></span> holen die zuvor eingegebenen
 Zeilen zurück. Das <a href="../command-line-and-mcp/">Kapitel zur Befehlszeile</a> beschreibt die Befehle.</p>
 <h2 id="status-bar">Statusleiste</h2>
+<p>Im klassischen Stil stehen diese Angaben am rechten Ende der Optionsleiste.</p>
 <p>Links zeigt die Statusleiste:</p>
 <ul>
 <li>solange ein Werkzeug aktiv ist, was das Werkzeug erwartet (dieselbe Eingabeaufforderung wie die

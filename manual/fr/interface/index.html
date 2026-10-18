@@ -283,6 +283,20 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#strip">
+<span class="md-ellipsis">
+      Barre des vues et des familles
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#panels">
+<span class="md-ellipsis">
+      Panneaux ancrables
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#drawing-area-and-view-windows">
 <span class="md-ellipsis">
       Zone de dessin et fenêtres de vue
@@ -548,6 +562,20 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#strip">
+<span class="md-ellipsis">
+      Barre des vues et des familles
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#panels">
+<span class="md-ellipsis">
+      Panneaux ancrables
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#drawing-area-and-view-windows">
 <span class="md-ellipsis">
       Zone de dessin et fenêtres de vue
@@ -731,11 +759,6 @@ vous indique qu'il y a des modifications non enregistrées.</p>
 <td><strong>Cube d'orientation ▸ Taille du cube d'orientation</strong>, <strong>Opacité inactive</strong></td>
 <td><strong>Petit</strong>, <strong>Moyen</strong>, <strong>Grand</strong> ; de 0 % à 100 %</td>
 <td>La taille du cube, et combien il se voit pendant que le pointeur est ailleurs</td>
-</tr>
-<tr>
-<td><strong>Cube d'orientation ▸ Afficher la boussole</strong></td>
-<td>activé, désactivé</td>
-<td>L'anneau de la boussole sous le cube</td>
 </tr>
 <tr>
 <td><strong>Cube d'orientation ▸ Garder la scène verticale</strong></td>
@@ -1234,6 +1257,31 @@ place, avec ce type) et <strong>Supprimer</strong>.</p>
 <p>Après un clic dans l'Index du projet, le clavier s'y déplace : <span class="keys"><kbd class="key-arrow-up">Up</kbd></span> et <span class="keys"><kbd class="key-arrow-down">Down</kbd></span> passent d'une ligne à l'autre (les propriétés de la vue s'affichent dans la palette), <span class="keys"><kbd class="key-arrow-right">Right</kbd></span> ouvre une branche, <span class="keys"><kbd class="key-arrow-left">Left</kbd></span> la ferme ou remonte à la branche qui contient la ligne, <span class="keys"><kbd class="key-enter">Enter</kbd></span> ouvre la vue.</p>
 <p>Les vues vont aussi sur les feuilles d'ici. Faites glisser un plan, une coupe, une élévation, une vue 2D libre, une légende, une vue 3D enregistrée ou une nomenclature sur la feuille ouverte : sa fenêtre suit le curseur et reste là où vous la lâchez. Ou lâchez-la sur le nom d'une feuille dans l'arbre : la feuille s'ouvre et la fenêtre suit le curseur jusqu'à votre clic. Pendant le glissement, l'arbre défile quand le curseur approche de son bord. Le menu contextuel d'une feuille propose <strong>Ajouter une vue…</strong>. Les vues d'une feuille sont listées dessous ; le menu contextuel d'une vue offre <strong>Supprimer de la feuille</strong>, et celui de <strong>Feuilles (toutes)</strong> <strong>Nouvelle feuille…</strong>. Dans une vue 3D, le menu contextuel offre aussi <strong>Zoom sur les étendues 3D</strong> : tout le modèle, même les éléments masqués dans la vue. Une vue déjà placée sur une feuille est refusée, avec la raison dans la ligne de commande ; légendes et nomenclatures peuvent aller sur plusieurs feuilles. Une vue 3D enregistrée apparaît sur la feuille avec les arêtes vues depuis sa caméra.</p>
 <p>Le menu contextuel d'un plan, d'une coupe ou d'une vue 2D libre propose <strong>Rechercher les vues de référence</strong> : les vues qui montrent son symbole et les feuilles où elle se trouve ; <strong>Atteindre la vue</strong> ouvre celle choisie.</p>
+<h2 id="strip">Barre des vues et des familles</h2>
+<p>La barre sous la zone de dessin a trois modes, choisis avec les boutons à gauche :</p>
+<ul>
+<li><strong>Mode vues</strong> : les vrais aperçus des vues, répartis en <strong>Toutes</strong>, <strong>Ouvertes (n)</strong>, <strong>Plans</strong>,
+  <strong>Coupes</strong>, <strong>Élévations</strong>, <strong>3D</strong>, <strong>Légendes</strong>, <strong>Nomenclatures</strong> et <strong>Feuilles</strong>. La vue
+  courante est encadrée, les vues ouvertes ont une ligne colorée. Un clic sur un aperçu ouvre la
+  vue ; le bouton droit ouvre son menu ; glissé sur une feuille, il y est placé.</li>
+<li><strong>Mode familles</strong> : un aperçu pour chaque type, réparti par catégorie. Un clic place ce type ;
+  glissé dans un plan, il est inséré là où on le lâche. Une porte ou une fenêtre lâchée près d'un
+  mur entre dans le mur, le long de celui-ci.</li>
+<li><strong>Mode commandes</strong> : l'historique de la ligne de commande. Un clic sur une ligne saisie
+  l'exécute à nouveau.</li>
+</ul>
+<p>À droite, <strong>Afficher</strong> filtre les aperçus par discipline et par phase, la zone de recherche par nom,
+et trois boutons choisissent la hauteur : <strong>Aperçus</strong>, <strong>Compacte</strong> et <strong>Masquer</strong>.</p>
+<h2 id="panels">Panneaux ancrables</h2>
+<p><strong>Propriétés</strong> et <strong>Index du projet</strong> sont des panneaux. On fait glisser un panneau par son
+en-tête : il s'ancre à gauche ou à droite de la zone de dessin, plusieurs en colonne, ou flotte là
+où on le lâche. Les boutons de l'en-tête l'ancrent à gauche, à droite, le rendent flottant ou le
+ferment ; <strong>Vues ▸ Fenêtres ▸ Panneaux</strong> le rouvre. Chaque panneau reste où on l'a mis lors des
+sessions suivantes.</p>
+<p>Le sélecteur de type, en haut de <strong>Propriétés</strong>, montre un aperçu du type : murs, sols et toits avec
+leurs couches, portes, fenêtres et objets en petite image. Ouvert, il cherche les types par nom ;
+ils sont groupés par famille, chacun avec son aperçu. Les flèches déplacent, <span class="keys"><kbd class="key-enter">Enter</kbd></span> choisit,
+<span class="keys"><kbd class="key-escape">Esc</kbd></span> ferme la liste.</p>
 <h2 id="drawing-area-and-view-windows">Zone de dessin et fenêtres de vue</h2>
 <p>Chaque vue que vous ouvrez est une fenêtre dans la zone de dessin. Une vue ouverte à nouveau passe
 au premier plan ; au moins une fenêtre reste toujours ouverte. <strong>Vues ▸ Fenêtres</strong> les dispose :</p>
@@ -1380,10 +1428,10 @@ pas de barre de contrôle d'affichage : ses vues ont leur propre échelle.</p>
 <p>Un petit trièdre dans le coin inférieur de la vue 3D indique les directions des axes : X en rouge,
 Y en vert, Z en bleu. Une vue 3D enregistrée mémorise l'endroit où vous l'avez laissée.</p>
 <p>En 3D, la molette zoome en gardant fixe le point du modèle sous le curseur, et l'orbite tourne autour du centre de la sélection, ou autour du point visé par la vue quand rien n'est sélectionné.</p>
-<p>Le <strong>Cube d'orientation</strong>, dans le coin supérieur de la vue 3D, tourne avec le modèle. Chaque face a un carré au centre, une bande le long de chaque arête et un petit carré à chaque coin. Le carré au centre regarde droit vers ce côté (<strong>HAUT</strong>, <strong>AVANT</strong>, <strong>DROITE</strong>…) ; la bande d'une arête, qui court sur les deux faces voisines, regarde entre ces deux côtés ; le petit carré d'un coin, sur les trois faces autour, regarde entre trois. La zone sous le pointeur s'éclaire avant le clic, et la vue tourne jusque-là en une brève transition. Faites glisser le cube pour orbiter.</p>
-<p>Vu de face, le cube est un carré plat : les triangles à l'extérieur de ses quatre côtés tournent la vue vers la face au-delà de ce côté, et les deux flèches courbes au coin supérieur droit tournent l'image d'un quart de tour dans le sens horaire ou antihoraire.</p>
-<p>Un anneau plat de boussole repose à la base du cube, avec <strong>N</strong>, <strong>E</strong>, <strong>S</strong>, <strong>O</strong> aux vrais points cardinaux ; il tourne avec la vue. Cliquez sur une lettre pour regarder depuis ce point cardinal. Faites glisser l'anneau, ou une lettre, pour tourner le modèle autour de la verticale passant par le point autour duquel tourne la vue, en suivant le pointeur le long de l'anneau.</p>
-<p>La maison, <strong>Vue de départ</strong>, revient à la vue de départ. Cliquez avec le bouton droit sur le cube, ou sur le bouton rond en bas à droite, pour son menu : <strong>Vue de départ</strong> ; <strong>Définir la vue actuelle comme vue de départ</strong> (chaque vue 3D a la sienne, enregistrée avec le projet) ; <strong>Orienter selon la vue ▸</strong> (un plan vu d'en haut, une élévation ou une coupe le long de sa ligne, une autre vue 3D depuis sa caméra) ; <strong>Orienter selon une direction ▸</strong> (l'une des 26 directions du cube) ; <strong>Options…</strong>, qui ouvre la page <strong>Cube d'orientation</strong> des <strong>Options</strong>.</p>
+<p>Le <strong>Cube d'orientation</strong>, dans le coin supérieur de la vue 3D, tourne avec le modèle. Ses arêtes et ses sommets sont chanfreinés et chaque partie est une cible à part : les six faces (<strong>DESSUS</strong>, <strong>DESSOUS</strong>, <strong>AVANT</strong>, <strong>ARRIÈRE</strong>, <strong>DROITE</strong>, <strong>GAUCHE</strong>, leurs noms écrits dessus en perspective et tournant avec elles) regardent ce côté de face ; les douze bandes des arêtes regardent depuis entre deux côtés ; les huit triangles des sommets depuis entre trois (une vue isométrique). La partie sous le pointeur prend la couleur de mise en évidence, celle d'où la vue regarde maintenant reste mise en évidence ; un clic tourne la vue jusque-là en une brève transition. Faites glisser le cube pour orbiter.</p>
+<p>Sous le cube est écrite l'orientation de la vue : <strong>Avant · perspective</strong>, <strong>Dessus – Avant · perspective</strong>, <strong>Isométrique · perspective</strong>, ou <strong>Libre · perspective</strong> quand la vue ne regarde depuis aucune partie du cube.</p>
+<p>Quand une face est vue de face, quatre triangles autour du cube (<strong>Tourner vers le haut</strong>, <strong>Tourner vers le bas</strong>, <strong>Tourner à gauche</strong>, <strong>Tourner à droite</strong>) tournent la vue d'un quart vers la face au-delà de ce côté. Les deux flèches courbes en haut à droite, <strong>Pivoter à gauche</strong> et <strong>Pivoter à droite</strong>, tournent l'image d'un quart de tour dans le sens antihoraire ou horaire.</p>
+<p>Le petit bouton à la maison en bas à gauche, <strong>Vue de départ</strong>, revient à la vue de départ ; un clic droit dessus donne <strong>Définir comme vue de départ</strong>, qui fait de la vue actuelle la vue de départ (chaque vue 3D a la sienne, enregistrée avec le projet). Le petit bouton en bas à droite, <strong>Menu du cube</strong>, ou un clic droit sur le cube, ouvre le menu : <strong>Orthogonale</strong> / <strong>Perspective</strong> (pour l'instant la vue est seulement en perspective : <strong>Orthogonale</strong> est grisé, « Pas encore disponible ») ; <strong>Définir comme vue de départ</strong> ; <strong>Zoom adapté à la fenêtre</strong>, qui adapte le modèle à la fenêtre ; <strong>Options…</strong>, qui ouvre la page <strong>Cube d'orientation</strong> des <strong>Options</strong>. De droite à gauche (arabe) le cube se place en haut à gauche et les deux petits boutons changent de côté ; les flèches restent là où elles pointent.</p>
 <h3 id="the-context-menu-of-a-view">Le menu contextuel d'une vue</h3>
 <p>Cliquez avec le bouton droit dans une vue lorsqu'aucun outil n'est actif. Si le curseur se trouve
 sur un élément non sélectionné, l'élément est d'abord sélectionné. Le menu comporte :</p>
@@ -1409,6 +1457,7 @@ de modification va dans la ligne de commande. <span class="keys"><kbd class="key
 rappellent les lignes tapées auparavant. Le <a href="../command-line-and-mcp/">chapitre sur la ligne de
 commande</a> décrit les commandes.</p>
 <h2 id="status-bar">Barre d'état</h2>
+<p>Dans le style Classique, ces informations se trouvent à l'extrémité droite de la barre des options.</p>
 <p>À gauche, la barre d'état affiche :</p>
 <ul>
 <li>lorsqu'un outil est actif, ce qu'attend l'outil (la même invite que dans la ligne de commande) ;</li>

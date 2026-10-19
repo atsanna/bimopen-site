@@ -258,6 +258,31 @@
       Sonne und Schatten
     </span>
 </a>
+<nav aria-label="Sonne und Schatten" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sun-settings">
+<span class="md-ellipsis">
+      Sonneneinstellungen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sun-study">
+<span class="md-ellipsis">
+      Sonnenstudie
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#graphic-display-options">
+<span class="md-ellipsis">
+      Grafische Darstellungsoptionen
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#plans-and-their-view-range">
@@ -407,6 +432,31 @@
       Sonne und Schatten
     </span>
 </a>
+<nav aria-label="Sonne und Schatten" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sun-settings">
+<span class="md-ellipsis">
+      Sonneneinstellungen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sun-study">
+<span class="md-ellipsis">
+      Sonnenstudie
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#graphic-display-options">
+<span class="md-ellipsis">
+      Grafische Darstellungsoptionen
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#plans-and-their-view-range">
@@ -479,7 +529,7 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset"><a class="md-content__icon pdf-download-btn" download href="../pdf/bimopen-manual-de.pdf" title="Download"><i class="fa fas fa-download"></i><small> PDF</small></a>
 <h1 id="views-and-graphics">Ansichten und Grafik</h1>
-<p>Dieses Kapitel beschreibt die Ansichten des Modells, wie jede einzelne gezeichnet wird und wie sich ändern lässt, was eine Ansicht zeigt und wie: Grafikstile, Maßstab und Detail, die Schnitthöhen eines Grundrisses, Zuschneidebereiche, Ausblenden und Isolieren, <strong>Sichtbarkeit und Grafik</strong>, Filter und Ansichtsvorlagen. Linienstärken, Linienmuster und die Stile nach Kategorie werden in denselben Begriffen von den Dialogen unter <strong>Projekt ▸ Einstellungen</strong> des Programms beschrieben.</p>
+<p>Dieses Kapitel beschreibt die Ansichten des Modells, wie jede einzelne gezeichnet wird und wie sich ändern lässt, was eine Ansicht zeigt und wie: Grafikstile, Maßstab und Detail, die Schnitthöhen eines Grundrisses, Zuschneidebereiche, Ausblenden und Isolieren, <strong>Sichtbarkeit und Grafik</strong>, Filter und Ansichtsvorlagen. Linienstärken, Linienmuster und die Stile nach Kategorie werden in denselben Begriffen von den Dialogen unter <strong>Einstellungen</strong> in der Seitenleiste beschrieben.</p>
 <h2 id="3d-views">3D-Ansichten</h2>
 <p><strong>Ansichten ▸ Erzeugen ▸ 3D-Ansicht ▸ Standard-3D-Ansicht</strong> öffnet die Standard-3D-Ansicht, <strong>{3D}</strong>, die das gesamte Modell einfasst; erneut geöffnet, zeigt sie das Modell so, wie es verlassen wurde. Ziehen Sie, um zu orbiten (oder <strong>Umschalt</strong> und die mittlere Maustaste), ziehen Sie mit der mittleren Maustaste, um zu schwenken, und drehen Sie das Rad, um am Cursor zu zoomen; siehe <a href="../interface/">Die Benutzeroberfläche</a>.</p>
 <p>Um einen Ausschnitt zu behalten, wählen Sie <strong>Ansichten ▸ Erzeugen ▸ 3D-Ansicht ▸ Ansicht speichern</strong>: Geben Sie einen Namen ein und drücken Sie die Eingabetaste. Die neue Ansicht erscheint unter <strong>3D-Ansichten</strong> im <strong>Projektindex</strong> und öffnet sich sofort; sie behält den Ausschnitt, mit dem sie verlassen wird. Dasselbe bewirkt das Umbenennen von <strong>{3D}</strong> im <strong>Projektindex</strong> (Rechtsklick ▸ <strong>Umbenennen…</strong>): <strong>{3D}</strong> wird zu einer benannten Ansicht, und die nächste Standard-3D-Ansicht ist eine neue <strong>{3D}</strong>.</p>
@@ -519,35 +569,112 @@
 </table>
 <p>Der Stil gehört zur Ansicht und lässt sich rückgängig machen. Die Tastaturkürzel <code>WF</code>, <code>HL</code> und <code>SD</code> wählen <strong>Drahtmodell</strong>, <strong>Linien</strong> und <strong>Schattiert</strong>.</p>
 <p>Die Kanten sind die tatsächlichen: dort, wo zwei Flächen im Winkel aufeinandertreffen, sowie der Umriss jeder Fläche und jeder Öffnung. Eine Wand mit einem Fenster zeigt ihren eigenen Umriss und den des Fensters, aber keine Linie dort, wo die Teile der Wand aneinanderstoßen.</p>
-<p>Auch Grundrisse, Schnitte und Gebäudeansichten haben einen Grafikstil. Ein Grundriss wird in <strong>Linien</strong> gezeichnet, bis ein anderer Stil gewählt wird. In <strong>Linien</strong> sind die Oberflächen, geschnitten oder gesehen, nicht eingefärbt: Geschnittenes zeigt sein Schnittmuster, oder bei der Detailstufe <strong>Grob</strong> die volle Füllung. In <strong>Schattiert</strong>, <strong>Schattiert mit Kanten</strong> und <strong>Volle Farben</strong> wird jedes gesehene oder geschnittene Element mit der Schattierungsfarbe seines Materials gefüllt: Wände (jede Schicht, wo sie geschnitten ist), Geschossdecken, Dächer, Türen, Fenster, Möbel und Komponenten, Treppen und Geländer. Grundrisse sind flach; in Schnitten und Gebäudeansichten dunkelt <strong>Schattiert</strong> die vom Betrachter abgewandten Flächen etwas ab, etwa die Dachflächen, während <strong>Volle Farben</strong> sie alle gleich lässt. Bei den Detailstufen <strong>Mittel</strong> und <strong>Fein</strong> bleiben die Schnittmuster über der Farbe. Pläne, Ausdrucke und exportierte Zeichnungen zeigen die Ansichten wie der Bildschirm.</p>
+<p>Auch Grundrisse, Schnitte und Gebäudeansichten haben einen Grafikstil. Ein Grundriss wird in <strong>Linien</strong> gezeichnet, bis ein anderer Stil gewählt wird. In <strong>Linien</strong> sind die Oberflächen, geschnitten oder gesehen, nicht eingefärbt: Geschnittenes zeigt das Schnittmuster seines Materials; bei der Detailstufe <strong>Grob</strong> das Füllmuster für grobe Darstellung des Typs, sonst nur seinen Umriss. In <strong>Schattiert</strong>, <strong>Schattiert mit Kanten</strong> und <strong>Volle Farben</strong> wird jedes gesehene oder geschnittene Element mit der Schattierungsfarbe seines Materials gefüllt (ein Teil ohne Material nimmt das seiner Kategorie aus <strong>Stile nach Kategorie</strong>, sonst die Standardfarbe der Kategorie; die 3D-Ansicht folgt derselben Regel): Wände (jede Schicht, wo sie geschnitten ist), Geschossdecken, Dächer, Türen, Fenster, Möbel und Komponenten, Treppen und Geländer. Grundrisse sind flach; in Schnitten und Gebäudeansichten dunkelt <strong>Schattiert</strong> die vom Betrachter abgewandten Flächen etwas ab, etwa die Dachflächen, während <strong>Volle Farben</strong> sie alle gleich lässt. Bei den Detailstufen <strong>Mittel</strong> und <strong>Fein</strong> bleiben die Schnittmuster über der Farbe. Pläne, Ausdrucke und exportierte Zeichnungen zeigen die Ansichten wie der Bildschirm.</p>
 <p>Das Farbschema der Räume ist in jedem Stil zu sehen. Mit <strong>Position des Farbschemas</strong> auf <strong>Hintergrund</strong> liegt es unter den Linien des Modells: im Grundriss über den Geschossdecken und unter den Möbeln, im Schnitt über den Oberflächen, die durch jeden geschnittenen Raum zu sehen sind. Auf <strong>Vordergrund</strong> deckt es das Modell ab, unter den Beschriftungen.</p>
 <h2 id="sun-and-shadows">Sonne und Schatten</h2>
-<p>In einer 3D-Ansicht hat die Ansichtssteuerungsleiste zwei weitere Schaltflächen:</p>
+<p>Grundrisse, Schnitte, Ansichten und 3D-Ansichten zeigen die Sonne (Zeichenansichten, Legenden,
+Pläne und Bauteillisten nicht). Die Ansichtssteuerungsleiste hat zwei Schaltflächen, jede mit
+einem kleinen Pfeil für ihr Menü (die rechte Maustaste öffnet es auch):</p>
 <ul>
-<li><strong>Schatten ein</strong> / <strong>Schatten aus</strong>: In den schattierten Stilen beleuchtet die Sonne das Modell und wirft Schatten, von den Wänden auf die Geschossdecken, von den Dachüberständen auf die Wände; im Stil <strong>Linien</strong> (verdeckte Kanten) sind die Schatten und die von der Sonne abgewandten Flächen Grautöne des Papiers;</li>
-<li>die Schaltfläche für die Sonnenbahn: <strong>Sonnenbahn ein</strong> zeichnet einen Kompassring auf den Boden rund um das Modell, mit den vier Himmelsrichtungen, der Bahn der Sonne im Tagesverlauf als Bogen darüber und der Sonne an ihrer aktuellen Stelle. <strong>Sonnenstandeinstellungen…</strong> legt fest, wo die Sonne steht:</li>
+<li><strong>Sonnenbahn</strong>: ihr Menü hat <strong>Sonnenbahn anzeigen</strong> / <strong>Sonnenbahn ausblenden</strong>,
+  <strong>Sonneneinstellungen…</strong> und <strong>An Modell anpassen</strong> (zeigt die ganze Sonnenbahn);</li>
+<li><strong>Schatten</strong>: ihr Menü hat <strong>Schatten einschalten</strong> / <strong>Schatten ausschalten</strong>, <strong>Grafische
+  Darstellungsoptionen…</strong> und <strong>Vorschau der Sonnenstudie</strong>.</li>
+</ul>
+<p>Solange eine der beiden an ist, zeigt die Leiste auch Uhrzeit und Datum der Sonne, jedes mit <strong>−</strong>
+und <strong>+</strong> (eine Viertelstunde, ein Tag). Dieselben Schaltflächen und Menüs stehen im Menü <strong>Sonne
+und Schatten</strong> der Ansichtsleiste im BIMopen-Stil, im Ansichtsblatt des Touch-Modus und im
+Kontextmenü der Ansicht. <strong>Sonnenbahn</strong> ist auch ein Kontrollkästchen in den <strong>Eigenschaften</strong> der
+Ansicht (<strong>Grafik</strong>), mit <strong>Größe der Sonnenbahn</strong> (100–500 %, sonst 150 %) und <strong>Gemeinsame
+Sonne</strong>.</p>
+<p><strong>Die Schatten</strong> werden aus dem Modell und der Sonne berechnet, in jeder Ansicht gleich: im
+Grundriss fallen sie auf das, was der Grundriss zeigt, und wo nichts steht, auf die Ebene einer
+Ebene (<strong>Schatten auf der Ebene</strong> in den Sonneneinstellungen, sonst auf das Gelände, die unterste
+Ebene); in Schnitten und Ansichten fallen sie auf die Fassaden und auf das, was dahinter liegt, von
+Traufen, Balkonen, Rücksprüngen und anderen Gebäuden; in 3D-Ansichten zeichnet sie die Grafikkarte
+(der Prozessor, wenn keine da ist). In <strong>Linien</strong> (verdeckte Linien) ist ein Schatten ein Grau des
+Papiers, in den schattierten Stilen dunkelt er die Farben der Materialien ab. Von der Ansicht
+geschnittene Flächen bleiben im Licht.</p>
+<p><strong>Die Sonnenbahn</strong> ist ein Ring um das Modell mit den Himmelsrichtungen nach geografischem Norden,
+dem Bogen des Tages mit seinen Stunden, dem Analemma (wo die Sonne zu dieser Uhrzeit im Lauf des
+Jahres steht), dem Teil, den eine Studie durchläuft, und der Sonne mit Uhrzeit und Datum. In
+Grundrissen, Schnitten und Ansichten lässt sich die Sonne ziehen: entlang des Tages rastet sie auf
+Viertelstunden ein, entlang des Analemmas auf den 1. jedes Monats; mit <span class="keys"><kbd class="key-shift">Shift</kbd></span> bleibt sie auf dem
+Tag, mit <span class="keys"><kbd class="key-control">Ctrl</kbd></span> auf dem Analemma. Mit der Ansicht unter dem Cursor (und nichts ausgewählt, oder
+nach einem Klick auf die Sonne) verschieben <span class="keys"><kbd class="key-arrow-left">Left</kbd></span> und <span class="keys"><kbd class="key-arrow-right">Right</kbd></span> die Uhrzeit, <span class="keys"><kbd class="key-arrow-up">Up</kbd></span> und
+<span class="keys"><kbd class="key-arrow-down">Down</kbd></span> das Datum. Mit <strong>Beleuchtung</strong> steht die Sonne still und hat keine Bahn.</p>
+<p><strong>Gemeinsame Sonne</strong>: die Ansichten teilen die Sonne des Projekts, außer sie haben eine eigene (die
+Eigenschaft <strong>Gemeinsame Sonne</strong>). Die gemeinsame Sonne in einer Ansicht zu bewegen, bewegt sie in
+jeder Ansicht, die sie teilt; eine Ansicht mit eigener Sonne bleibt, wie sie ist. <strong>Eine Sonne für
+alle Ansichten</strong> in den Sonneneinstellungen bringt alle Ansichten wieder auf sie.</p>
+<p>Jede Änderung ist ein Schritt von <strong>Rückgängig</strong>; der Befehl <code>sun</code> tut dasselbe in der
+Befehlszeile und über MCP (siehe <a href="../command-line-and-mcp/">Befehlszeile und MCP</a>).</p>
+<h3 id="sun-settings">Sonneneinstellungen</h3>
+<p><strong>Sonneneinstellungen…</strong> öffnet ein Dialogfeld mit Azimut, Höhenwinkel, Uhrzeit und Datum der
+Sonne in der Kopfzeile:</p>
+<ul>
+<li>links die <strong>Vorgaben</strong>: eine nicht gespeicherte Zeile je Modus, die mitgelieferten
+  (<strong>Sommersonnenwende</strong>, <strong>Wintersonnenwende</strong>, <strong>Frühlings-Tagundnachtgleiche</strong>,
+  <strong>Herbst-Tagundnachtgleiche</strong>, <strong>Sommer, 9 bis 17 Uhr</strong>, <strong>Licht von oben rechts</strong>) und die des
+  Projekts; <strong>Speichern…</strong>, <strong>Duplizieren…</strong>, <strong>Umbenennen…</strong> und <strong>Löschen</strong> (nur die Vorgaben des
+  Projekts lassen sich umbenennen oder löschen);</li>
+<li>in der Mitte der Modus und seine Felder:</li>
 </ul>
 <table>
 <thead>
 <tr>
 <th>Modus</th>
-<th>Was sie benötigt</th>
+<th>Was er braucht</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Standbild</strong></td>
-<td><strong>Breitengrad</strong>, <strong>Längengrad</strong>, <strong>Zeitzone (UTC)</strong>, Tag und Monat sowie die <strong>Uhrzeit</strong>: Daraus ergibt sich der Sonnenstand</td>
+<td><strong>Zeitpunkt</strong></td>
+<td>das <strong>Datum</strong> und die <strong>Uhrzeit</strong>; <strong>Eine Sonne für alle Ansichten</strong></td>
+</tr>
+<tr>
+<td><strong>Ein Tag</strong></td>
+<td>das <strong>Datum</strong>, <strong>Sonnenaufgang bis Sonnenuntergang</strong> oder eine <strong>Startzeit</strong> und eine <strong>Endzeit</strong>, die <strong>Zeit zwischen den Bildern</strong> (15, 30 oder 45 Minuten, 1 Stunde); daraus folgt die Zahl der <strong>Bilder</strong></td>
+</tr>
+<tr>
+<td><strong>Mehrere Tage</strong></td>
+<td><strong>Ab Tag</strong> und <strong>Bis Tag</strong> (Tag/Monat), die <strong>Uhrzeit</strong>, das <strong>Intervall</strong> (1 Stunde, 1 Tag, 1 Woche, 1 Monat)</td>
 </tr>
 <tr>
 <td><strong>Beleuchtung</strong></td>
-<td><strong>Azimut</strong> (Grad im Uhrzeigersinn von Norden) und <strong>Höhe</strong></td>
+<td><strong>Azimut (°)</strong> und <strong>Höhenwinkel (°)</strong>; <strong>Relativ zur Ansicht</strong>: das Licht folgt der Richtung der Ansicht</td>
 </tr>
 </tbody>
 </table>
-<p>Jede Ansicht hat ihre eigenen Sonneneinstellungen, und die Änderungen lassen sich rückgängig machen. Schatten werden vom 3D-Fenster auf der Grafikkarte gezeichnet; Grundrisse, Schnitte, Gebäudeansichten und exportierte Bilder zeigen sie noch nicht.</p>
+<p>Dann der <strong>Standort</strong> des Projekts (eine Stadt, oder <strong>Benutzerdefiniert</strong> mit Breite und Länge:
+  einer für das ganze Projekt) mit <strong>Sommerzeit</strong>, und <strong>Schatten auf der Ebene</strong> mit ihrer
+  <strong>Geländeebene</strong>;
+- rechts die Vorschau: der Himmel von oben, mit der Bahn des Tages, dem Analemma und der Sonne. <strong>Vorschau</strong> in
+  der Kopfzeile, rechts der Werte, ist ein Schalter, der sie aus- und einblendet; das Dialogfeld
+  behält seine Größe, und ohne Vorschau nehmen die Einstellungen ihren Platz ein.</p>
+<p><strong>Anwenden</strong> ändert die Sonne der Ansicht und lässt das Dialogfeld offen, <strong>OK</strong> ändert sie und
+schließt es, <strong>Abbrechen</strong> ändert nichts. Projekte von vor dem Standort des Projekts behalten Ort
+und Datum jeder Ansicht: die erste Ansicht, deren Sonne geändert war, gibt dem Projekt seinen
+Standort, und die Ansichten, deren Sonne geändert war, behalten ihre als eigene.</p>
+<h3 id="sun-study">Sonnenstudie</h3>
+<p><strong>Vorschau der Sonnenstudie</strong> (im Menü <strong>Schatten</strong>) zeigt über der Ansicht die Leiste der Studie:
+<strong>⏮ −10</strong>, <strong>⏴</strong>, <strong>⏵ Abspielen</strong> / <strong>⏸ Pause</strong>, <strong>⏵</strong>, <strong>+10 ⏭</strong> und <strong>Bild n von N</strong>. Eine Sonne
+eines Zeitpunkts wird über ihren Tag studiert. <strong>Als Bild speichern</strong> speichert das gezeigte Bild
+als PNG mit dem Namen der Ansicht, dem Datum und der Uhrzeit; <strong>Studie exportieren…</strong> speichert
+alle Bilder als PNG- oder JPEG-Bildfolge (ein Film bräuchte einen Video-Encoder, den BIMopen nicht
+hat: die Wahl ist ausgegraut, mit dem Grund). <strong>×</strong> schließt die Leiste; eine andere Ansicht
+schließt sie auch.</p>
+<h3 id="graphic-display-options">Grafische Darstellungsoptionen</h3>
+<p><strong>Grafische Darstellungsoptionen…</strong> stellt für die aktive Ansicht ein: den <strong>Grafikstil</strong>, die
+<strong>Silhouettenkanten</strong> (<strong>Keiner</strong>, <strong>Mittel</strong>, <strong>Dick</strong>: eine dickere Linie am Außenumriss des
+Modells), <strong>Schlagschatten</strong>, <strong>Umgebungsschatten</strong> (Ecken und Vertiefungen abgedunkelt), die Sonne
+(ihre Schaltfläche öffnet die <strong>Sonneneinstellungen</strong>), <strong>Sonne</strong>, <strong>Umgebungslicht</strong> und
+<strong>Schattenintensität</strong> (0–100) und, für 3D-Ansichten, den <strong>Hintergrund</strong> (<strong>Keiner</strong>, <strong>Himmel</strong>,
+<strong>Verlauf</strong>). Die Vorschau zeichnet die Ansicht mit den gewählten Optionen; der Schalter <strong>Vorschau</strong> in der
+Kopfzeile blendet sie aus und ein, wie in den Sonneneinstellungen. Ansichtsvorlagen übernehmen diese Optionen mit dem
+Grafikstil, und Sonne und Schatten als <strong>Sonne und Schatten</strong>.</p>
 <h2 id="plans-and-their-view-range">Grundrisse und ihre Schnitthöhen</h2>
-<p><strong>Ansichten ▸ Erzeugen ▸ Grundrissansichten ▸ Grundriss</strong> öffnet <strong>Neuer Grundriss</strong>: Wählen Sie die Ebenen und den Maßstab, dann <strong>OK</strong>. Ist <strong>Vorhandene Ansichten nicht duplizieren</strong> eingeschaltet, werden die Ebenen übergangen, die bereits einen Grundriss haben; schalten Sie es aus, um einen zweiten Grundriss einer Ebene zu erstellen.</p>
+<p><strong>Ansichten ▸ Erzeugen ▸ Grundriss ▸ Grundriss</strong> öffnet <strong>Neuer Grundriss</strong>: Wählen Sie die Ebenen und den Maßstab, dann <strong>OK</strong>. Ist <strong>Vorhandene Ansichten nicht duplizieren</strong> eingeschaltet, werden die Ebenen übergangen, die bereits einen Grundriss haben; schalten Sie es aus, um einen zweiten Grundriss einer Ebene zu erstellen.</p>
 <p>Ein Grundriss ist ein horizontaler Schnitt durch das Modell auf der <strong>Schnittebene</strong> seiner Schnitthöhen. Wände, die die Schnittebene kreuzen, werden geschnitten gezeichnet, mit den Schnittmustern der Materialien ihrer Schichten mit <strong>Detail</strong> auf <strong>Mittel</strong> und <strong>Fein</strong>; tiefer liegende Wände und die Geschossdecken der Ebene sind von oben zu sehen.</p>
 <p>Um die Schnitthöhen zu ändern, wählen Sie nichts aus (damit <strong>Eigenschaften</strong> die Ansicht zeigt) und dann <strong>Schnitthöhen ▸ Bearbeiten…</strong>. Jede Ebene wird von einer Ebene aus gemessen, mit einem Versatz:</p>
 <table>
@@ -588,7 +715,7 @@
 <li>Bei kleinerem Maßstab wird das Modell auf dem Papier kleiner gezeichnet, während Texte, Tags und Symbole ihre Größe auf dem Papier behalten: Bei 1:200 deckt ein Text doppelt so viel vom Modell ab wie bei 1:100.</li>
 <li>Bei <strong>Grob</strong> ist eine geschnittene Wand eine einzige Füllung; bei <strong>Mittel</strong> und <strong>Fein</strong> werden ihre Schichten sichtbar, jede mit ihrem Material.</li>
 </ul>
-<p>Schnitte schneiden das Modell auf dieselbe Weise. Wände, Geschossdecken und Dächer, die sich im Schnitt treffen, werden als Ganzes gezeichnet: eine dicke Umrisslinie um sie herum, eine dünne Linie nur dort, wo zwei Materialien aufeinandertreffen, keine zwischen Teilen desselben Materials; an ein Dach angehängte Wände enden unter ihm. Jede geschnittene Schicht hat das Schnittmuster ihres Materials (bei <strong>Grob</strong> das <strong>Füllmuster für grobe Darstellung</strong> des Typs in seiner <strong>Füllfarbe für grobe Darstellung</strong>, einstellbar bei Wand-, Geschossdecken- und Dachtypen; sonst eine einzige Volltonfüllung). Möbel und Sanitärinstallationen werden nie geschnitten: Sie sind ganz zu sehen. Ein Fenster wird mit seinem Rahmen in der dicken Schnittlinie und seinem Glas in dünnen Linien geschnitten; was hinter dem Schnitt liegt, wird mit den dünneren Projektionslinien gezeichnet.</p>
+<p>Schnitte schneiden das Modell auf dieselbe Weise. Wände, Geschossdecken und Dächer, die sich im Schnitt treffen, werden als Ganzes gezeichnet: eine dicke Umrisslinie um sie herum, eine dünne Linie nur dort, wo zwei Materialien aufeinandertreffen, keine zwischen Teilen desselben Materials; an ein Dach angehängte Wände enden unter ihm. Jede geschnittene Schicht hat das Schnittmuster ihres Materials (bei <strong>Grob</strong> das <strong>Füllmuster für grobe Darstellung</strong> des Typs in seiner <strong>Füllfarbe für grobe Darstellung</strong>, einstellbar bei Wand-, Geschossdecken- und Dachtypen; sonst nur der Umriss). Möbel und Sanitärinstallationen werden nie geschnitten: Sie sind ganz zu sehen. Ein Fenster wird mit seinem Rahmen in der dicken Schnittlinie und seinem Glas in dünnen Linien geschnitten; was hinter dem Schnitt liegt, wird mit den dünneren Projektionslinien gezeichnet.</p>
 <p><strong>Ansicht zuschneiden</strong> beschneidet die Ansicht auf ihren Zuschneidebereich, <strong>Zuschneidebereich anzeigen</strong> zeichnet den Bereich; ziehen Sie an seinen Kanten, um die Größe zu ändern. Um die Größe einzugeben: <strong>Eigenschaften ▸ Zuschnittgröße ▸ Bearbeiten…</strong>, dann <strong>Breite</strong> und <strong>Höhe</strong>; der Bereich behält seine Mitte.</p>
 <h2 id="hiding-and-isolating">Ausblenden und Isolieren</h2>
 <p><strong>Vorübergehend isolieren</strong> (die Brille in der Ansichtssteuerungsleiste) wirkt auf die gewählten Elemente, nur in der aktiven Ansicht, und ändert das Projekt nicht:</p>
@@ -624,7 +751,7 @@
 </tbody>
 </table>
 <p>Die Ansicht erhält einen farbigen Rahmen. Jede Anwendung schränkt das Gezeigte weiter ein: Wird ein Element und danach ein weiteres ausgeblendet, sind beide ausgeblendet. <strong>Vorübergehendes Isolieren zurücksetzen</strong> (<code>HR</code>) zeigt wieder alles; <strong>Ausblenden/Isolieren auf Ansicht anwenden</strong> blendet dauerhaft aus, was vorübergehend ausgeblendet war.</p>
-<p>Um in der Ansicht dauerhaft auszublenden, wählen Sie die Elemente und dann Rechtsklick ▸ <strong>In Ansicht ausblenden ▸ Elemente</strong> oder <strong>Kategorie</strong>, oder <strong>Ansichten ▸ In Ansicht ausblenden</strong> in der kontextbezogenen Registerkarte, oder geben Sie <code>EH</code> (Elemente) beziehungsweise <code>VH</code> (Kategorie) ein.</p>
+<p>Um in der Ansicht dauerhaft auszublenden, wählen Sie die Elemente und dann Rechtsklick ▸ <strong>In Ansicht ausblenden ▸ Elemente</strong> oder <strong>Kategorie</strong>, oder <strong>Ansicht ▸ In Ansicht ausblenden</strong> in der kontextabhängigen Karte, oder geben Sie <code>EH</code> (Elemente) beziehungsweise <code>VH</code> (Kategorie) ein.</p>
 <p><strong>Verborgene zeigen</strong> (die Glühbirne in der Ansichtssteuerungsleiste, oder <code>RH</code>) umrahmt die Ansicht magentafarben und zeigt das Ausgeblendete in Magenta, den Rest im Halbton. Ein ausgeblendetes Element lässt sich dann wählen und wieder einblenden: Rechtsklick ▸ <strong>In Ansicht einblenden ▸ Elemente</strong> (oder <strong>Kategorie</strong>). Klicken Sie erneut auf die Glühbirne oder geben Sie <code>RH</code> ein, um den Modus zu verlassen.</p>
 <h2 id="visibilitygraphics">Sichtbarkeit und Grafik</h2>
 <p><strong>Ansichten ▸ Grafik ▸ Sichtbarkeit und Grafik</strong> (oder <code>VG</code>, oder <strong>Eigenschaften ▸ Überschreibungen Sichtbarkeit/Grafik ▸ Bearbeiten…</strong>) zeigt für die aktive Ansicht eine Zeile je Kategorie:</p>
@@ -637,7 +764,7 @@
 <li><strong>Detail</strong> zeichnet die Kategorie mit einem anderen Grad als die Ansicht.</li>
 </ul>
 <p><strong>Überschreibungen löschen</strong> setzt die gewählten Zeilen auf die Stile nach Kategorie zurück. Änderungen sind sofort zu sehen: <strong>Anwenden</strong> behält sie und lässt das Fenster offen, <strong>Abbrechen</strong> (oder das × des Fensters) nimmt zurück, was nicht angewendet wurde, <strong>OK</strong> behält sie und schließt.</p>
-<p>Ein einzelnes Element kann in einer Ansicht eigene Grafik haben: Wählen Sie es und dann Rechtsklick ▸ <strong>Benutzerdefinierte Grafik ▸ Nach Element…</strong> (oder das Feld <strong>Ansicht</strong> der kontextbezogenen Registerkarte). <strong>Ansichtsspezifische Elementgrafiken</strong> bietet <strong>Sichtbar</strong>, <strong>Halbton</strong>, <strong>Transparent</strong>, die Oberflächen- und Schnittmuster sowie die Projektions- und Schnittlinien. Sie gelten nur in dieser Ansicht, über denen der Kategorie und der Filter.</p>
+<p>Ein einzelnes Element kann in einer Ansicht eigene Grafik haben: Wählen Sie es und dann Rechtsklick ▸ <strong>Benutzerdefinierte Grafik ▸ Nach Element…</strong> (oder die Gruppe <strong>Ansicht</strong> der kontextabhängigen Karte). <strong>Ansichtsspezifische Elementgrafiken</strong> bietet <strong>Sichtbar</strong>, <strong>Halbton</strong>, <strong>Transparent</strong>, die Oberflächen- und Schnittmuster sowie die Projektions- und Schnittlinien. Sie gelten nur in dieser Ansicht, über denen der Kategorie und der Filter.</p>
 <h2 id="filters">Filter</h2>
 <p><strong>Ansichten ▸ Grafik ▸ Filter</strong> listet die Filter des Projekts auf: <strong>Neu</strong>, <strong>Duplizieren</strong>, <strong>Umbenennen</strong>, <strong>Löschen</strong>. Ein Filter hat Kategorien und bis zu vier Regeln für deren Parameter, die ein Element alle erfüllen muss.</p>
 <p>In <strong>Sichtbarkeit und Grafik ▸ Filter</strong> wendet <strong>Hinzufügen</strong> einen Filter auf die Ansicht an; seine Zeile legt dann Sichtbarkeit, Linien, <strong>Halbton</strong> und <strong>Transparent</strong> für die Elemente fest, die ihn erfüllen. Wo Filter sich widersprechen, gewinnt der weiter oben in der Liste: <strong>Nach oben</strong> und <strong>Nach unten</strong> verschieben den gewählten Filter.</p>

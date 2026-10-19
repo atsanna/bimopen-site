@@ -258,6 +258,31 @@
       Soleil et ombres
     </span>
 </a>
+<nav aria-label="Soleil et ombres" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sun-settings">
+<span class="md-ellipsis">
+      Paramètres du soleil
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sun-study">
+<span class="md-ellipsis">
+      Étude d'ensoleillement
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#graphic-display-options">
+<span class="md-ellipsis">
+      Options d'affichage graphique
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#plans-and-their-view-range">
@@ -407,6 +432,31 @@
       Soleil et ombres
     </span>
 </a>
+<nav aria-label="Soleil et ombres" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sun-settings">
+<span class="md-ellipsis">
+      Paramètres du soleil
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sun-study">
+<span class="md-ellipsis">
+      Étude d'ensoleillement
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#graphic-display-options">
+<span class="md-ellipsis">
+      Options d'affichage graphique
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#plans-and-their-view-range">
@@ -483,7 +533,7 @@
 qu'une vue montre et comment elle le montre : styles graphiques, échelle et détail, hauteurs de
 coupe d'un plan, zones cadrées, masquage et isolement, <strong>Visibilité et graphisme</strong>, filtres et gabarits
 de vue. Les épaisseurs de ligne, les motifs de ligne et les styles par catégorie sont décrits dans les
-mêmes termes par les boîtes de dialogue du programme <strong>Projet ▸ Paramètres</strong>.</p>
+mêmes termes par les boîtes de dialogue de <strong>Paramètres</strong> dans la barre latérale.</p>
 <h2 id="3d-views">Vues 3D</h2>
 <p><strong>Vues ▸ Créer ▸ Vue 3D ▸ Vue 3D par défaut</strong> ouvre la vue 3D par défaut, <strong>{3D}</strong>, qui cadre
 l'ensemble du modèle ; ouverte de nouveau, elle montre le modèle tel qu'on l'a laissé. Faites glisser
@@ -540,9 +590,11 @@ contour de chaque face et de chaque ouverture. Un mur avec une fenêtre montre s
 celui de la fenêtre, et aucune ligne là où les morceaux du mur se rejoignent.</p>
 <p>Les plans, les coupes et les élévations ont eux aussi un style graphique. Un plan est dessiné en
 <strong>Lignes</strong> tant qu'un autre style n'est pas choisi. En <strong>Lignes</strong> les surfaces, coupées ou vues,
-ne sont pas colorées : ce qui est coupé montre son motif de coupe, ou le remplissage plein au
-niveau de détail <strong>Faible</strong>. En <strong>Ombré</strong>, <strong>Ombré avec arêtes</strong> et <strong>Couleurs pleines</strong> chaque
-élément vu ou coupé est rempli de la couleur d'ombrage de son matériau : murs (chaque couche là où
+ne sont pas colorées : ce qui est coupé montre le motif de coupe de son matériau ; au
+niveau de détail <strong>Faible</strong> le motif de remplissage grossier du type, sinon seulement son contour. En <strong>Ombré</strong>, <strong>Ombré avec arêtes</strong> et <strong>Couleurs pleines</strong> chaque
+élément vu ou coupé est rempli de la couleur d'ombrage de son matériau (une partie sans matériau prend
+celui de sa catégorie, dans <strong>Styles par catégorie</strong>, sinon la couleur par défaut de la catégorie ; la
+vue 3D suit la même règle) : murs (chaque couche là où
 elle est coupée), planchers, toits, portes, fenêtres, mobilier et composants, escaliers et
 garde-corps. Les plans sont plats ; dans les coupes et les élévations <strong>Ombré</strong> assombrit un peu
 les faces tournées par rapport à l'observateur, comme les pans d'un toit, tandis que <strong>Couleurs
@@ -554,14 +606,53 @@ couleurs</strong> sur <strong>Arrière-plan</strong>, il se trouve sous les lign
 planchers et sous le mobilier, en coupe au-dessus des surfaces vues à travers chaque pièce coupée.
 Sur <strong>Premier plan</strong>, il recouvre le modèle, sous les annotations.</p>
 <h2 id="sun-and-shadows">Soleil et ombres</h2>
-<p>Dans une vue 3D, la barre de contrôle de la vue a deux boutons de plus :</p>
+<p>Les plans, les coupes, les élévations et les vues 3D montrent le soleil (pas les vues de dessin,
+les légendes, les feuilles ni les nomenclatures). La barre de contrôle de la vue a deux boutons,
+chacun avec une petite flèche pour son menu (le bouton droit l'ouvre aussi) :</p>
 <ul>
-<li><strong>Activer les ombres</strong> / <strong>Désactiver les ombres</strong> : dans les styles ombrés, le soleil éclaire le
-  modèle et projette des ombres, des murs sur les sols, des avant-toits sur les murs ; en <strong>Lignes</strong> (lignes cachées), les ombres et les faces à contre-jour sont des gris du papier ;</li>
-<li>le bouton de la trajectoire solaire : <strong>Activer la trajectoire solaire</strong> dessine au sol, autour du
-  modèle, un anneau de boussole avec les quatre points cardinaux, la trajectoire du soleil au cours
-  de la journée en arc au-dessus, et le soleil là où il se trouve. <strong>Paramètres du soleil…</strong> règle
-  la position du soleil :</li>
+<li><strong>Trajectoire du soleil</strong> : son menu a <strong>Afficher la trajectoire du soleil</strong> / <strong>Masquer la
+  trajectoire du soleil</strong>, <strong>Paramètres du soleil…</strong> et <strong>Ajuster au modèle</strong> (cadre toute la
+  trajectoire) ;</li>
+<li><strong>Ombres</strong> : son menu a <strong>Activer les ombres</strong> / <strong>Désactiver les ombres</strong>, <strong>Options
+  d'affichage graphique…</strong> et <strong>Aperçu de l'étude d'ensoleillement</strong>.</li>
+</ul>
+<p>Tant que l'un des deux est actif, la barre montre aussi l'heure et la date du soleil, chacune avec
+<strong>−</strong> et <strong>+</strong> (un quart d'heure, un jour). Les mêmes boutons et menus sont dans le menu <strong>Soleil
+et ombres</strong> de la barre de la vue du style BIMopen, dans la feuille de la vue du mode tactile et
+dans le menu contextuel de la vue. <strong>Trajectoire du soleil</strong> est aussi une case des
+<strong>Propriétés</strong> de la vue (<strong>Graphisme</strong>), avec <strong>Taille de la trajectoire</strong> (100–500 %, 150 % par
+défaut) et <strong>Soleil partagé</strong>.</p>
+<p><strong>Les ombres</strong> se calculent à partir du modèle et du soleil, les mêmes dans chaque vue : en plan
+elles tombent sur ce que le plan montre et, là où rien ne se trouve, sur le plan d'un niveau
+(<strong>Ombres sur le niveau</strong> dans les paramètres du soleil, sinon sur le terrain, le niveau le plus
+bas) ; en coupe et en élévation elles tombent sur les façades et sur ce qui est derrière, depuis les
+avant-toits, les balcons, les retraits et les autres bâtiments ; dans les vues 3D la carte
+graphique les dessine (le processeur quand il n'y en a pas). En <strong>Lignes</strong> (lignes cachées) une
+ombre est un gris du papier, dans les styles ombrés elle assombrit les couleurs des matériaux. Les
+faces coupées par la vue restent dans la lumière.</p>
+<p><strong>La trajectoire du soleil</strong> est un anneau autour du modèle avec les points cardinaux au nord
+géographique, l'arc du jour avec ses heures, l'analemme (où se trouve le soleil à cette heure au
+cours de l'année), la partie qu'une étude parcourt, et le soleil avec son heure et sa date. En plan,
+en coupe et en élévation le soleil se fait glisser : le long du jour il s'accroche aux quarts
+d'heure, le long de l'analemme au 1er de chaque mois ; avec <span class="keys"><kbd class="key-shift">Shift</kbd></span> il reste sur le jour, avec
+<span class="keys"><kbd class="key-control">Ctrl</kbd></span> sur l'analemme. Avec la vue sous le curseur (et rien de sélectionné, ou après un clic sur
+le soleil), <span class="keys"><kbd class="key-arrow-left">Left</kbd></span> et <span class="keys"><kbd class="key-arrow-right">Right</kbd></span> déplacent l'heure, <span class="keys"><kbd class="key-arrow-up">Up</kbd></span> et <span class="keys"><kbd class="key-arrow-down">Down</kbd></span> la date. Avec
+<strong>Éclairage</strong> le soleil est immobile et n'a pas de trajectoire.</p>
+<p><strong>Soleil partagé</strong> : les vues partagent le soleil du projet sauf si elles ont le leur (la
+propriété <strong>Soleil partagé</strong>). Déplacer le soleil partagé dans une vue le déplace dans toutes les
+vues qui le partagent ; une vue qui a son propre soleil ne change pas. <strong>Un soleil commun à toutes
+les vues</strong> dans les paramètres du soleil y ramène toutes les vues.</p>
+<p>Chaque changement est une étape d'<strong>Annuler</strong> ; la commande <code>sun</code> fait de même dans la ligne de
+commande et par MCP (voir <a href="../command-line-and-mcp/">Ligne de commande et MCP</a>).</p>
+<h3 id="sun-settings">Paramètres du soleil</h3>
+<p><strong>Paramètres du soleil…</strong> ouvre une boîte de dialogue avec l'azimut, la hauteur, l'heure et la
+date du soleil dans son en-tête :</p>
+<ul>
+<li>à gauche les <strong>préréglages</strong> : une ligne non enregistrée par mode, ceux fournis (<strong>Solstice
+  d'été</strong>, <strong>Solstice d'hiver</strong>, <strong>Équinoxe de printemps</strong>, <strong>Équinoxe d'automne</strong>, <strong>Été, de 9 h à
+  17 h</strong>, <strong>Lumière en haut à droite</strong>) et ceux du projet ; <strong>Enregistrer…</strong>, <strong>Dupliquer…</strong>,
+  <strong>Renommer…</strong> et <strong>Supprimer</strong> (seuls les préréglages du projet se renomment ou se suppriment) ;</li>
+<li>au milieu le mode et ses champs :</li>
 </ul>
 <table>
 <thead>
@@ -572,20 +663,52 @@ Sur <strong>Premier plan</strong>, il recouvre le modèle, sous les annotations.
 </thead>
 <tbody>
 <tr>
-<td><strong>Fixe</strong></td>
-<td><strong>Latitude</strong>, <strong>Longitude</strong>, <strong>Fuseau horaire (UTC)</strong>, le jour et le mois et l'<strong>Heure</strong> : la position du soleil en découle</td>
+<td><strong>Instant</strong></td>
+<td>la <strong>Date</strong> et l'<strong>Heure</strong> ; <strong>Un soleil commun à toutes les vues</strong></td>
+</tr>
+<tr>
+<td><strong>Un jour</strong></td>
+<td>la <strong>Date</strong>, <strong>Du lever au coucher du soleil</strong> ou une <strong>Heure de début</strong> et une <strong>Heure de fin</strong>, l'<strong>Intervalle entre les images</strong> (15, 30 ou 45 minutes, 1 heure) ; le nombre d'<strong>Images</strong> en découle</td>
+</tr>
+<tr>
+<td><strong>Plusieurs jours</strong></td>
+<td><strong>Du jour</strong> et <strong>Au jour</strong> (jour/mois), l'<strong>Heure</strong>, l'<strong>Intervalle</strong> (1 heure, 1 jour, 1 semaine, 1 mois)</td>
 </tr>
 <tr>
 <td><strong>Éclairage</strong></td>
-<td><strong>Azimut</strong> (degrés dans le sens horaire à partir du nord) et <strong>Hauteur</strong></td>
+<td><strong>Azimut (°)</strong> et <strong>Altitude (°)</strong> ; <strong>Relative à la vue</strong> : la lumière suit la direction de la vue</td>
 </tr>
 </tbody>
 </table>
-<p>Chaque vue a ses propres paramètres du soleil, et les modifications peuvent être annulées. Les
-ombres sont dessinées par la fenêtre 3D sur la carte graphique ; les plans, coupes, élévations et
-images exportées ne les montrent pas encore.</p>
+<p>Puis l'<strong>Emplacement</strong> du projet (une ville, ou <strong>Personnalisée</strong> avec sa latitude et sa
+  longitude : un seul pour tout le projet) avec l'<strong>Heure d'été</strong>, et <strong>Ombres sur le niveau</strong> avec
+  son <strong>Niveau du terrain</strong> ;
+- à droite l'aperçu : le ciel vu d'en haut, avec la trajectoire du jour, l'analemme et le soleil.
+  <strong>Aperçu</strong> dans l'en-tête, à droite des valeurs, est un interrupteur qui le masque et
+  l'affiche ; la boîte garde sa taille, et sans aperçu les paramètres prennent sa place.</p>
+<p><strong>Appliquer</strong> change le soleil de la vue et garde la boîte ouverte, <strong>OK</strong> le change et la ferme,
+<strong>Annuler</strong> ne change rien. Les projets faits avant que le projet ait un emplacement gardent le lieu
+et la date de chaque vue : la première vue dont le soleil avait été changé donne au projet son
+emplacement, et les vues dont le soleil avait été changé gardent le leur comme propre.</p>
+<h3 id="sun-study">Étude d'ensoleillement</h3>
+<p><strong>Aperçu de l'étude d'ensoleillement</strong> (dans le menu <strong>Ombres</strong>) montre au-dessus de la vue la
+barre de l'étude : <strong>⏮ −10</strong>, <strong>⏴</strong>, <strong>⏵ Lire</strong> / <strong>⏸ Pause</strong>, <strong>⏵</strong>, <strong>+10 ⏭</strong> et <strong>image n sur
+N</strong>. Un soleil d'un instant s'étudie au long de son jour. <strong>Enregistrer comme image</strong> enregistre
+l'image montrée en PNG au nom de la vue, de la date et de l'heure ; <strong>Exporter l'étude…</strong>
+enregistre toutes les images en séquence PNG ou JPEG (un film demande un encodeur vidéo que
+BIMopen n'a pas : le choix est grisé, avec la raison). <strong>×</strong> ferme la barre ; une autre vue la
+ferme aussi.</p>
+<h3 id="graphic-display-options">Options d'affichage graphique</h3>
+<p><strong>Options d'affichage graphique…</strong> règle pour la vue active : le <strong>Style graphique</strong>, les
+<strong>Contours de silhouette</strong> (<strong>Aucun</strong>, <strong>Moyen</strong>, <strong>Épais</strong> : un trait plus épais sur le contour
+extérieur du modèle), <strong>Ombres portées</strong>, <strong>Ombres ambiantes</strong> (angles et creux assombris), le
+soleil (son bouton ouvre les <strong>Paramètres du soleil</strong>), <strong>Soleil</strong>, <strong>Lumière ambiante</strong> et
+<strong>Intensité des ombres</strong> (0–100) et, pour les vues 3D, l'<strong>Arrière-plan</strong> (<strong>Aucun</strong>, <strong>Ciel</strong>,
+<strong>Dégradé</strong>). L'aperçu dessine la vue avec les options choisies ; l'interrupteur <strong>Aperçu</strong> de l'en-tête le masque et l'affiche,
+comme dans les paramètres du soleil. Les gabarits de vue emportent ces options avec le style
+graphique, et le soleil et les ombres comme <strong>Soleil et ombres</strong>.</p>
 <h2 id="plans-and-their-view-range">Plans et hauteurs de coupe</h2>
-<p><strong>Vues ▸ Créer ▸ Vues en plan ▸ Plan d'étage</strong> ouvre <strong>Nouveau plan</strong> : choisissez les niveaux et
+<p><strong>Vues ▸ Créer ▸ Plan ▸ Plan d'étage</strong> ouvre <strong>Nouveau plan</strong> : choisissez les niveaux et
 l'échelle, puis <strong>OK</strong>. Avec <strong>Ne pas dupliquer les vues existantes</strong> activé, les niveaux qui ont
 déjà un plan sont écartés ; désactivez-le pour créer un second plan d'un niveau.</p>
 <p>Un plan est une coupe horizontale du modèle au <strong>Plan de coupe</strong> de ses hauteurs de coupe. Les murs qui
@@ -702,8 +825,8 @@ masquer un élément puis un autre masque les deux. <strong>Réinitialiser Isole
 (<code>HR</code>) montre de nouveau tout ; <strong>Appliquer Masquer/Isoler à la vue</strong> masque définitivement ce qui
 l'était pour l'instant.</p>
 <p>Pour masquer définitivement dans la vue, sélectionnez les éléments, puis clic droit ▸ <strong>Masquer
-dans la vue ▸ Éléments</strong> ou <strong>Catégorie</strong>, ou le bouton <strong>Vues ▸ Masquer dans la vue</strong> de l'onglet
-contextuel, ou tapez <code>EH</code> (éléments) ou <code>VH</code> (catégorie).</p>
+dans la vue ▸ Éléments</strong> ou <strong>Catégorie</strong>, ou le bouton <strong>Vues ▸ Masquer dans la vue</strong> de la carte
+contextuelle, ou tapez <code>EH</code> (éléments) ou <code>VH</code> (catégorie).</p>
 <p><strong>Révéler les masqués</strong> (l'ampoule de la barre de contrôle d'affichage, ou <code>RH</code>) encadre la
 vue en magenta et montre en magenta ce qui est masqué, le reste en demi-teinte. Un élément masqué
 peut alors être sélectionné et affiché de nouveau : clic droit ▸ <strong>Afficher dans la vue ▸
@@ -726,8 +849,8 @@ graphisme ▸ Modifier…</strong>) montre, pour la vue active, une ligne par ca
 s'affichent aussitôt : <strong>Appliquer</strong> les conserve et laisse la fenêtre ouverte, <strong>Annuler</strong> (ou le ×
 de la fenêtre) reprend ce qui n'a pas été appliqué, <strong>OK</strong> les conserve et ferme.</p>
 <p>Un élément peut avoir ses propres graphismes dans une vue : sélectionnez-le, puis clic droit ▸
-<strong>Graphisme personnalisé ▸ Par élément…</strong> (ou le groupe <strong>Vue</strong> de l'onglet
-contextuel). <strong>Graphismes des éléments propres à la vue</strong> propose <strong>Visible</strong>, <strong>Demi-teinte</strong>,
+<strong>Graphisme personnalisé ▸ Par élément…</strong> (ou le groupe <strong>Vue</strong> de la carte
+contextuelle). <strong>Graphismes des éléments propres à la vue</strong> propose <strong>Visible</strong>, <strong>Demi-teinte</strong>,
 <strong>Transparent</strong>, les motifs de surface et de coupe, ainsi que les lignes de projection et de coupe.
 Ils ne s'appliquent que dans cette vue, par-dessus ceux de la catégorie et des filtres.</p>
 <h2 id="filters">Filtres</h2>

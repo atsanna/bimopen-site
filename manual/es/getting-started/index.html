@@ -191,6 +191,13 @@
 <nav aria-label="Ejecutar BIMopen en el escritorio" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#start-screen">
+<span class="md-ellipsis">
+      Pantalla de inicio
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#language-and-theme">
 <span class="md-ellipsis">
       Idioma y tema
@@ -418,6 +425,13 @@
 <nav aria-label="Ejecutar BIMopen en el escritorio" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#start-screen">
+<span class="md-ellipsis">
+      Pantalla de inicio
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#language-and-theme">
 <span class="md-ellipsis">
       Idioma y tema
@@ -554,16 +568,31 @@ interfaz gráfica necesita además los archivos de desarrollo de xkbcommon, Wayl
 <td><code>bimopen house.bimopen</code></td>
 <td>El proyecto guardado en <code>house.bimopen</code></td>
 </tr>
+<tr>
+<td><code>bimopen --no-splash</code></td>
+<td>Como <code>bimopen</code>, sin la pantalla de inicio</td>
+</tr>
 </tbody>
 </table>
 <p>También puedes abrir un proyecto arrastrando un archivo <code>.bimopen</code> desde el gestor de archivos a
 la ventana.</p>
+<h3 id="start-screen">Pantalla de inicio</h3>
+<p>Mientras BIMopen se carga aparece la pantalla de inicio: una ventana sin marco, centrada en la
+pantalla, con el nombre, la versión, la fase de carga en curso con su porcentaje y una línea
+turquesa que avanza por el borde inferior. Las fases son las reales (preferencias, fuentes, tarjeta
+gráfica, familias, apertura del proyecto); la pantalla se queda al menos medio segundo, para no
+parpadear, y se desvanece cuando la ventana principal está lista. Habla el idioma elegido en la
+aplicación; si no, el del sistema cuando es uno de los seis; si no, el inglés.</p>
+<p>Para no verla, desmarca <strong>Opciones ▸ General ▸ Mostrar la pantalla de inicio</strong> (BIMopen lo
+recuerda), o inicia <code>bimopen --no-splash</code>. En Wayland es el compositor quien decide dónde aparece
+la ventana (normalmente en el centro).</p>
 <h3 id="language-and-theme">Idioma y tema</h3>
 <p>La primera vez, BIMopen habla el idioma del sistema operativo si es uno de sus seis idiomas
 (italiano, inglés, alemán, francés, español, árabe), y en caso contrario inglés. Para cambiarlo,
-usa el menú de idioma en el extremo derecho de la barra de título (el globo con el nombre del
-idioma), o <strong>Menú de la aplicación ▸ Opciones ▸ Idioma</strong>. La interfaz cambia al instante.</p>
-<p>En <strong>Opciones</strong> también eliges el <strong>Tema</strong>, <strong>Claro</strong> u <strong>Oscuro</strong>, y si el fondo de las vistas
+haz clic en el engranaje del extremo derecho de la barra superior (<strong>Opciones</strong>) y elige el
+<strong>Idioma</strong> en <strong>Interfaz de usuario</strong>. La interfaz cambia al instante.</p>
+<p>En <strong>Opciones</strong> también eliges el <strong>Tema</strong>, <strong>Claro</strong> u <strong>Oscuro</strong> (el sol o la luna de la
+barra superior también lo cambian), y si el fondo de las vistas
 se invierte (<strong>Invertir color de fondo</strong>: vistas oscuras con líneas claras). Elegir el tema oscuro
 también invierte el fondo; puedes volver a desactivarlo. En el primer inicio BIMopen usa el tema oscuro, con el fondo invertido. Recuerda el idioma, el
 tema y el fondo para la próxima vez.</p>
@@ -610,7 +639,8 @@ envía a ninguna parte.</p>
 resultado es más pequeño.</p>
 <h2 id="the-sample-project">El proyecto de ejemplo</h2>
 <p>La casa de ejemplo muestra la mayor parte de lo que BIMopen sabe hacer. Ábrela con <strong>Menú de la
-aplicación ▸ Proyecto de ejemplo</strong>, con <code>bimopen --sample</code>, o escribiendo <code>sample</code> en la línea de
+aplicación ▸ Proyecto de ejemplo</strong> (el menú de la aplicación es la marca de BIMopen, arriba en
+la barra lateral), con <code>bimopen --sample</code>, o escribiendo <code>sample</code> en la línea de
 comandos.</p>
 <p>Contiene:</p>
 <ul>
@@ -632,13 +662,13 @@ proyecto: un ejemplo nuevo está siempre a un clic, y nada de lo que cambies en 
 menos que lo guardes tú.</p>
 </div>
 <h2 id="your-first-house">Tu primera casa</h2>
-<p>Los pasos siguientes parten de un proyecto vacío y terminan con un plano. Cada paso indica el
-botón en el que hacer clic; el <a href="../interface/">capítulo sobre la interfaz</a> explica cada parte de la
+<p>Los pasos siguientes parten de un proyecto vacío y terminan con un plano. Cada paso indica dónde
+hacer clic en el estilo de interfaz <strong>BIMopen</strong>, aquel con el que BIMopen se inicia; el <a href="../interface/">capítulo sobre la interfaz</a> explica cada parte de la
 ventana.</p>
 <h3 id="1-start-a-new-project">1. Inicia un proyecto nuevo</h3>
 <ol>
-<li>Haz clic en el botón azul <strong>B</strong> en el extremo izquierdo de la barra de título: se abre el
-   <strong>menú de la aplicación</strong>.</li>
+<li>Haz clic en la marca de BIMopen, arriba en la barra lateral: se abre el <strong>menú de la
+   aplicación</strong>.</li>
 <li>Haz clic en <strong>Nuevo ▸ Proyecto…</strong>. El diálogo <strong>Proyecto nuevo</strong> propone la plantilla por
    defecto de BIMopen: haz clic en <strong>Aceptar</strong>.</li>
 </ol>
@@ -646,22 +676,29 @@ ventana.</p>
 uno y la vista 3D por defecto. Todavía no tiene muros. Sus tipos de muro, puerta, ventana, suelo y
 cubierta están listos para usar.</p>
 <h3 id="2-open-the-ground-floor-plan">2. Abre la planta baja</h3>
-<p>En el <strong>Índice del proyecto</strong>, bajo <strong>Vistas (todas) ▸ Planos de planta</strong>, haz doble clic en
-<strong>Planta baja</strong>. La planta se abre en el área de dibujo y la barra de título muestra
+<p>En la tira de vistas bajo el área de dibujo, haz clic en la miniatura <strong>Planta: Planta baja</strong>.
+La planta se abre en el área de dibujo, y la barra superior y el selector de vistas muestran
 <strong>Planta: Planta baja</strong>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Un solo clic en una vista del Índice del proyecto muestra sus propiedades en la paleta
-<strong>Propiedades</strong> sin abrirla. Un doble clic la abre.</p>
+<p><strong>Vistas</strong> en la barra lateral muestra también el <strong>Índice del proyecto</strong>, el árbol de todas
+las vistas: allí, un solo clic en una vista muestra sus propiedades en el panel del elemento
+sin abrirla, y un doble clic la abre.</p>
 </div>
 <h3 id="3-draw-four-walls">3. Dibuja cuatro muros</h3>
 <ol>
-<li>Haz clic en <strong>Inicio ▸ Construir ▸ Muro</strong>. La cinta de opciones pasa a la ficha contextual
-   <strong>Dibujar: muro</strong>, la barra de opciones muestra los parámetros del muro y
-   <strong>Propiedades</strong> muestra el tipo del próximo muro, <strong>Muro exterior - Bloque cerámico 300 + SATE</strong>.</li>
-<li>En la barra de opciones, activa <strong>Orto (Mayús)</strong>: los muros quedan horizontales o verticales.</li>
-<li>Haz clic en la planta donde va la primera esquina. La línea de comandos pide el punto
+<li>En las herramientas de <strong>Crear</strong>, la entrada de la barra lateral con la que se abre BIMopen,
+   haz clic en <strong>Muro</strong> en el grupo <strong>Construir</strong> (si el panel de herramientas está plegado, haz
+   clic antes en <strong>Crear</strong> en la barra lateral). La tarjeta contextual <strong>Dibujar: muro</strong> aparece
+   encima del panel de herramientas, la franja de opciones sobre la vista muestra los parámetros
+   del muro y el panel del elemento muestra el tipo del próximo muro, <strong>Muro exterior - Bloque
+   cerámico 300 + SATE</strong>.</li>
+<li>En la barra de estado, activa <strong>Orto</strong>: los muros quedan horizontales o verticales.</li>
+<li>Haz clic en la planta donde va la primera esquina. La barra de estado pide el punto
    siguiente: <code>WALL  next point [Esc to finish]:</code>.</li>
+</ol>
+<p><img alt="La herramienta muro: la tarjeta contextual Dibujar: muro, la franja de opciones y el tipo del próximo muro" src="../assets/screens/bimopen-wall.png"/></p>
+<ol>
 <li>Haz clic en la segunda, la tercera y la cuarta esquina. Mientras mueves el ratón, la longitud y
    el ángulo del muro que se está dibujando se muestran junto a él.</li>
 <li>Vuelve a hacer clic en la primera esquina: los cuatro muros quedan unidos en las esquinas.</li>
@@ -675,42 +712,42 @@ cubierta están listos para usar.</p>
 </div>
 <h3 id="4-add-a-door-and-a-window">4. Añade una puerta y una ventana</h3>
 <ol>
-<li>Haz clic en <strong>Inicio ▸ Construir ▸ Puerta</strong> y luego en un muro donde va la puerta. La puerta se
-   coloca en el muro, que se corta a su alrededor. La línea de comandos lo confirma:
+<li>Haz clic en <strong>Crear ▸ Construir ▸ Puerta</strong> y luego en un muro donde va la puerta. La puerta se
+   coloca en el muro, que se corta a su alrededor. El registro de comandos lo confirma:
    <code>Door «Single swing door 80x210» in wall …</code>.</li>
-<li>Pulsa <span class="keys"><kbd class="key-escape">Esc</kbd></span>: la herramienta termina y la cinta de opciones vuelve a la ficha <strong>Inicio</strong>.</li>
-<li>Haz clic en <strong>Inicio ▸ Construir ▸ Ventana</strong>, haz clic en otro muro y pulsa <span class="keys"><kbd class="key-escape">Esc</kbd></span>.</li>
+<li>Pulsa <span class="keys"><kbd class="key-escape">Esc</kbd></span>: la herramienta termina y la tarjeta contextual desaparece.</li>
+<li>Haz clic en <strong>Crear ▸ Construir ▸ Ventana</strong>, haz clic en otro muro y pulsa <span class="keys"><kbd class="key-escape">Esc</kbd></span>.</li>
 </ol>
 <p>Una puerta o una ventana solo se puede colocar en un muro: tras un clic lejos de los muros, la
 línea de comandos responde <code>no wall at that point</code> y no se coloca nada.</p>
 <h3 id="5-add-a-floor-and-a-roof">5. Añade un suelo y una cubierta</h3>
 <ol>
-<li>Haz clic en <strong>Inicio ▸ Construir ▸ Pavimento</strong>. Se abre el modo de boceto: la ficha
+<li>Haz clic en <strong>Crear ▸ Construir ▸ Pavimento</strong>. Se abre el modo de boceto: la tarjeta
    contextual <strong>Edición | Crear contorno de suelo</strong>, con <strong>Designar muros</strong> activo.</li>
 <li>Lleva el cursor sobre un muro y pulsa <span class="keys"><kbd class="key-tab">Tab</kbd></span>: los cuatro muros se resaltan. Haz clic: sus
    líneas van a las caras interiores de los muros.</li>
-<li>Haz clic en <strong>Finalizar modo de edición</strong>: se crea el suelo y la línea de comandos indica su
+<li>Haz clic en <strong>Finalizar modo de edición</strong>: se crea el suelo y el registro de comandos indica su
    área.</li>
-<li>Haz clic en <strong>Inicio ▸ Construir ▸ Cubierta</strong>. <strong>Designar muros</strong> vuelve a estar activo; la
-   barra de opciones tiene <strong>Define pendiente</strong> (marcado) y el <strong>Voladizo</strong> (500 mm por defecto).</li>
+<li>Haz clic en <strong>Crear ▸ Construir ▸ Cubierta</strong>. <strong>Designar muros</strong> vuelve a estar activo; la
+   franja de opciones tiene <strong>Define pendiente</strong> (marcado) y el <strong>Voladizo</strong> (500 mm por defecto).</li>
 <li>Pulsa <span class="keys"><kbd class="key-tab">Tab</kbd></span> sobre un muro, haz clic y luego <strong>Finalizar modo de edición</strong>: una cubierta a
    cuatro aguas con 30° de pendiente cubre los muros, con el voladizo en todo el contorno.</li>
 </ol>
 <p><a href="../floors-roofs-stairs/">Suelos, cubiertas, escaleras y componentes</a> explica más sobre el modo de
 boceto.</p>
 <h3 id="6-look-at-it-in-3d">6. Mírala en 3D</h3>
-<p>Haz clic en el botón <strong>Vista 3D</strong> (el cubo) de la barra de herramientas de acceso rápido. Se abre
-la vista 3D por defecto, <strong>{3D}</strong>. Arrastra con el botón derecho del ratón (o con <span class="keys"><kbd class="key-shift">Shift</kbd></span> y el
+<p>Haz clic en la miniatura <strong>{3D}</strong> de la tira de vistas. Se abre la vista 3D por defecto,
+<strong>{3D}</strong>. Arrastra con el botón derecho del ratón (o con <span class="keys"><kbd class="key-shift">Shift</kbd></span> y el
 botón central) para orbitar, arrastra con el botón central para encuadrar, y gira la rueda para
 hacer zoom; el botón izquierdo selecciona, como en las plantas. <span class="keys"><kbd class="key-home">Home</kbd></span> ajusta todo el modelo a la vista.</p>
 <h3 id="7-put-the-plan-on-a-sheet">7. Coloca la planta en un plano</h3>
 <ol>
-<li>Haz clic en la ficha <strong>Vistas</strong> y luego en <strong>Planos ▸ Plano</strong>. El cuadro de
-   diálogo <strong>Nuevo plano</strong> enumera los cajetines: ninguno, A0, A1, A2 o A3, con su tamaño en
+<li>Haz clic en <strong>Documentar</strong> en la barra lateral y luego en <strong>Plano</strong> en el grupo <strong>Planos</strong>. El
+   cuadro de diálogo <strong>Nuevo plano</strong> enumera los cajetines: ninguno, A0, A1, A2 o A3, con su tamaño en
    milímetros.</li>
 <li>Haz clic en <strong>Aceptar</strong>. El plano se crea con el siguiente número libre (<strong>A101</strong> para el
    primero, luego <strong>A102</strong>…) y se abre.</li>
-<li>Haz clic en <strong>Planos ▸ Vista</strong>. El cuadro de diálogo <strong>Vistas</strong> enumera las vistas
+<li>Haz clic en <strong>Documentar ▸ Planos ▸ Vista</strong>. El cuadro de diálogo <strong>Vistas</strong> enumera las vistas
    que aún no están en un plano.</li>
 <li>Elige <strong>Planta: Planta baja</strong> y haz clic en <strong>Añadir vista a plano</strong>. Un rectángulo del tamaño de
    la planta sigue al cursor: haz clic en el plano donde va la planta. Se coloca a su propia escala,
@@ -719,12 +756,13 @@ hacer zoom; el botón izquierdo selecciona, como en las plantas. <span class="ke
 <h3 id="8-undo-redo-and-save">8. Deshaz, rehaz y guarda</h3>
 <ul>
 <li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span> deshace el último cambio (aquí, la ventana gráfica desaparece); <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-y">Y</kbd></span> lo rehace.
-  Las flechas de la barra de herramientas de acceso rápido hacen lo mismo.</li>
-<li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span> guarda el proyecto. Un proyecto que nunca se ha guardado pide primero un nombre de
+  Las flechas de la barra superior, <strong>Deshacer</strong> y <strong>Rehacer</strong>, hacen lo mismo.</li>
+<li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span> guarda el proyecto, como un clic en el estado de guardado de la barra superior. Un
+  proyecto que nunca se ha guardado pide primero un nombre de
   archivo; el archivo tiene la extensión <code>.bimopen</code>. En el navegador, el archivo se descarga.</li>
 </ul>
-<p>La barra de título muestra un asterisco tras el nombre del proyecto mientras haya cambios sin
-guardar: <strong>Proyecto sin nombre *</strong>.</p>
+<p>La barra superior indica <strong>Cambios sin guardar</strong> mientras haya cambios por guardar, y
+<strong>Guardado</strong> después de guardar.</p>
 <h2 id="what-next">Y ahora</h2>
 <ul>
 <li><a href="../interface/">La interfaz</a> describe cada parte de la ventana.</li>

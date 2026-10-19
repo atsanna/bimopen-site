@@ -258,6 +258,31 @@
       Sol y sombras
     </span>
 </a>
+<nav aria-label="Sol y sombras" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sun-settings">
+<span class="md-ellipsis">
+      Configuración del sol
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sun-study">
+<span class="md-ellipsis">
+      Estudio solar
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#graphic-display-options">
+<span class="md-ellipsis">
+      Opciones de visualización gráfica
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#plans-and-their-view-range">
@@ -407,6 +432,31 @@
       Sol y sombras
     </span>
 </a>
+<nav aria-label="Sol y sombras" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sun-settings">
+<span class="md-ellipsis">
+      Configuración del sol
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sun-study">
+<span class="md-ellipsis">
+      Estudio solar
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#graphic-display-options">
+<span class="md-ellipsis">
+      Opciones de visualización gráfica
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#plans-and-their-view-range">
@@ -483,7 +533,7 @@
 una vista y de qué manera: estilos gráficos, escala y detalle, las alturas de corte de una
 planta, las regiones de recorte, ocultar y aislar, <strong>Visibilidad y gráficos</strong>, los filtros y las
 plantillas de vista. Los grosores de línea, los patrones de línea y los estilos por categoría se
-describen en los mismos términos que los cuadros de diálogo del programa en <strong>Proyecto ▸ Configuración</strong>.</p>
+describen en los mismos términos que los cuadros de diálogo de <strong>Configuración</strong> en la barra lateral.</p>
 <h2 id="3d-views">Vistas 3D</h2>
 <p><strong>Vistas ▸ Crear ▸ Vista 3D ▸ Vista 3D por defecto</strong> abre la vista 3D por defecto, <strong>{3D}</strong>, que
 encuadra todo el modelo; si se abre de nuevo, muestra el modelo tal como se dejó. Arrastra para
@@ -539,9 +589,11 @@ y de cada hueco. Un muro con una ventana muestra su propio contorno y el de la v
 línea donde se unen las piezas del muro.</p>
 <p>Las plantas, las secciones y los alzados también tienen estilo gráfico. Una planta se dibuja en
 <strong>Líneas</strong> hasta que se elige otro estilo. En <strong>Líneas</strong> las superficies, cortadas o vistas, no
-se colorean: lo cortado muestra su patrón de corte, o el relleno sólido con el nivel de detalle
-<strong>Bajo</strong>. En <strong>Sombreado</strong>, <strong>Sombreado con aristas</strong> y <strong>Colores planos</strong> cada elemento visto o
-cortado se rellena con el color de sombreado de su material: muros (cada capa donde está
+se colorean: lo cortado muestra el patrón de corte de su material; con el nivel de detalle
+<strong>Bajo</strong> el patrón de relleno de escala baja del tipo, o si no solo su contorno. En <strong>Sombreado</strong>, <strong>Sombreado con aristas</strong> y <strong>Colores planos</strong> cada elemento visto o
+cortado se rellena con el color de sombreado de su material (una parte sin material toma el de
+su categoría, de <strong>Estilos por categoría</strong>, si no el color predeterminado de la categoría; la vista 3D
+sigue la misma regla): muros (cada capa donde está
 cortada), suelos, cubiertas, puertas, ventanas, mobiliario y componentes, escaleras y barandillas.
 Las plantas son planas; en secciones y alzados <strong>Sombreado</strong> oscurece un poco las caras giradas
 respecto a quien mira, como los faldones de una cubierta, mientras que <strong>Colores planos</strong> las deja
@@ -553,38 +605,108 @@ combinación de colores</strong> en <strong>Fondo</strong> queda bajo las línea
 suelos y debajo del mobiliario, en sección encima de las superficies vistas a través de cada
 habitación cortada. En <strong>Primer plano</strong> cubre el modelo, debajo de las anotaciones.</p>
 <h2 id="sun-and-shadows">Sol y sombras</h2>
-<p>En una vista 3D la barra de control de la vista tiene dos botones más:</p>
+<p>Las plantas, secciones, alzados y vistas 3D muestran el sol (las vistas de dibujo, leyendas,
+planos y tablas no). La barra de control de la vista tiene dos botones, cada uno con una flecha
+pequeña para su menú (el botón derecho también lo abre):</p>
 <ul>
-<li><strong>Activar sombras</strong> / <strong>Desactivar sombras</strong>: en los estilos sombreados el sol ilumina el modelo
-  y proyecta sombras, de los muros sobre los suelos, de los aleros de la cubierta sobre los muros; en <strong>Líneas</strong> (líneas ocultas) las sombras y las caras a contraluz son grises del papel;</li>
-<li>el botón de la trayectoria solar: <strong>Activar trayectoria solar</strong> dibuja en el suelo, alrededor del
-  modelo, un anillo de brújula con los cuatro puntos cardinales, la trayectoria del sol a lo largo
-  del día como un arco por encima, y el sol donde está. <strong>Parámetros de sol…</strong> define dónde está el
-  sol:</li>
+<li><strong>Trayectoria solar</strong>: su menú tiene <strong>Mostrar trayectoria solar</strong> / <strong>Ocultar trayectoria
+  solar</strong>, <strong>Configuración del sol…</strong> y <strong>Ajustar al modelo</strong> (encuadra toda la trayectoria);</li>
+<li><strong>Sombras</strong>: su menú tiene <strong>Activar sombras</strong> / <strong>Desactivar sombras</strong>, <strong>Opciones de
+  visualización gráfica…</strong> y <strong>Vista previa del estudio solar</strong>.</li>
+</ul>
+<p>Mientras uno de los dos está activo, la barra muestra también la hora y la fecha del sol, cada una
+con <strong>−</strong> y <strong>+</strong> (un cuarto de hora, un día). Los mismos botones y menús están en el menú <strong>Sol y
+sombras</strong> de la barra de la vista del estilo BIMopen, en la hoja de la vista del modo táctil y en
+el menú contextual de la vista. <strong>Trayectoria solar</strong> es también una casilla de las
+<strong>Propiedades</strong> de la vista (<strong>Gráficos</strong>), con <strong>Tamaño de la trayectoria</strong> (100–500 %, 150 % por
+defecto) y <strong>Sol compartido</strong>.</p>
+<p><strong>Las sombras</strong> se calculan a partir del modelo y del sol, iguales en todas las vistas: en planta
+caen sobre lo que la planta muestra y, donde no hay nada, sobre el plano de un nivel (<strong>Sombras en
+el nivel</strong> en la configuración del sol; si no, sobre el terreno, el nivel más bajo); en secciones y
+alzados caen sobre las fachadas y sobre lo que está detrás, desde aleros, balcones, entrantes y
+otros edificios; en las vistas 3D las dibuja la tarjeta gráfica (el procesador cuando no la hay).
+En <strong>Líneas</strong> (líneas ocultas) una sombra es un gris del papel; en los estilos sombreados oscurece
+los colores de los materiales. Las caras cortadas por la vista quedan a la luz.</p>
+<p><strong>La trayectoria solar</strong> es un anillo alrededor del modelo con los puntos cardinales al norte
+real, el arco del día con sus horas, el analema (dónde está el sol a esa hora a lo largo del año),
+el tramo que recorre un estudio, y el sol con su hora y su fecha. En plantas, secciones y alzados
+el sol se arrastra: a lo largo del día se ajusta a los cuartos de hora, a lo largo del analema al
+día 1 de cada mes; con <span class="keys"><kbd class="key-shift">Shift</kbd></span> se queda en el día, con <span class="keys"><kbd class="key-control">Ctrl</kbd></span> en el analema. Con la vista bajo
+el cursor (y nada seleccionado, o tras un clic en el sol), <span class="keys"><kbd class="key-arrow-left">Left</kbd></span> y <span class="keys"><kbd class="key-arrow-right">Right</kbd></span> mueven la hora,
+<span class="keys"><kbd class="key-arrow-up">Up</kbd></span> y <span class="keys"><kbd class="key-arrow-down">Down</kbd></span> la fecha. Con <strong>Iluminación</strong> el sol está quieto y no tiene trayectoria.</p>
+<p><strong>Sol compartido</strong>: las vistas comparten el sol del proyecto salvo que tengan uno propio (la
+propiedad <strong>Sol compartido</strong>). Mover el sol compartido en una vista lo mueve en todas las vistas
+que lo comparten; una vista con su propio sol no cambia. <strong>Un sol común a todas las vistas</strong> en la
+configuración del sol devuelve todas las vistas a él.</p>
+<p>Cada cambio es un paso de <strong>Deshacer</strong>; el comando <code>sun</code> hace lo mismo en la línea de comandos y
+por MCP (véase <a href="../command-line-and-mcp/">Línea de comandos y MCP</a>).</p>
+<h3 id="sun-settings">Configuración del sol</h3>
+<p><strong>Configuración del sol…</strong> abre un cuadro de diálogo con el acimut, la altitud, la hora y la fecha
+del sol en su cabecera:</p>
+<ul>
+<li>a la izquierda los <strong>preajustes</strong>: una fila sin guardar por cada modo, los incluidos
+  (<strong>Solsticio de verano</strong>, <strong>Solsticio de invierno</strong>, <strong>Equinoccio de primavera</strong>, <strong>Equinoccio
+  de otoño</strong>, <strong>Verano, de 9 a 17</strong>, <strong>Luz desde arriba a la derecha</strong>) y los del proyecto;
+  <strong>Guardar…</strong>, <strong>Duplicar…</strong>, <strong>Cambiar nombre…</strong> y <strong>Eliminar</strong> (solo los preajustes del proyecto
+  se renombran o se eliminan);</li>
+<li>en el centro el modo y sus campos:</li>
 </ul>
 <table>
 <thead>
 <tr>
 <th>Modo</th>
-<th>Qué requiere</th>
+<th>Qué pide</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Estático</strong></td>
-<td><strong>Latitud</strong>, <strong>Longitud</strong>, <strong>Zona horaria (UTC)</strong>, el día y el mes y la <strong>Hora</strong>: de ahí resulta la posición del sol</td>
+<td><strong>Instante</strong></td>
+<td>la <strong>Fecha</strong> y la <strong>Hora</strong>; <strong>Un sol común a todas las vistas</strong></td>
+</tr>
+<tr>
+<td><strong>Un día</strong></td>
+<td>la <strong>Fecha</strong>, <strong>Del amanecer al atardecer</strong> o una <strong>Hora de inicio</strong> y una <strong>Hora de fin</strong>, el <strong>Intervalo entre fotogramas</strong> (15, 30 o 45 minutos, 1 hora); de ahí el número de <strong>Fotogramas</strong></td>
+</tr>
+<tr>
+<td><strong>Varios días</strong></td>
+<td><strong>Desde el día</strong> y <strong>Hasta el día</strong> (día/mes), la <strong>Hora</strong>, el <strong>Intervalo</strong> (1 hora, 1 día, 1 semana, 1 mes)</td>
 </tr>
 <tr>
 <td><strong>Iluminación</strong></td>
-<td><strong>Acimut</strong> (grados en sentido horario desde el norte) y <strong>Altura</strong></td>
+<td><strong>Acimut (°)</strong> y <strong>Altitud (°)</strong>; <strong>Relativa a la vista</strong>: la luz sigue la dirección de la vista</td>
 </tr>
 </tbody>
 </table>
-<p>Cada vista tiene sus propios parámetros de sol, y los cambios se pueden deshacer. Las sombras las
-dibuja la ventana 3D en la tarjeta gráfica; las plantas, secciones, alzados y las imágenes
-exportadas aún no las muestran.</p>
+<p>Después la <strong>Ubicación</strong> del proyecto (una ciudad, o <strong>Personalizada</strong> con su latitud y
+  longitud: una sola para todo el proyecto) con el <strong>Horario de verano</strong>, y <strong>Sombras en el nivel</strong>
+  con su <strong>Nivel del terreno</strong>;
+- a la derecha la vista previa: el cielo visto desde arriba, con la trayectoria del día, el
+  analema y el sol. <strong>Vista preliminar</strong> en la cabecera, a la derecha de los valores, es un
+  interruptor que la oculta y la muestra; el cuadro de diálogo conserva su tamaño y, sin vista
+  previa, la configuración ocupa su espacio.</p>
+<p><strong>Aplicar</strong> cambia el sol de la vista y deja abierto el cuadro de diálogo, <strong>Aceptar</strong> lo cambia y
+lo cierra, <strong>Cancelar</strong> no cambia nada. Los proyectos hechos antes de que el proyecto tuviera
+ubicación conservan el lugar y la fecha de cada vista: la primera vista cuyo sol se había cambiado
+da al proyecto su ubicación, y las vistas cuyo sol se había cambiado conservan el suyo como propio.</p>
+<h3 id="sun-study">Estudio solar</h3>
+<p><strong>Vista previa del estudio solar</strong> (en el menú <strong>Sombras</strong>) muestra sobre la vista la barra del
+estudio: <strong>⏮ −10</strong>, <strong>⏴</strong>, <strong>⏵ Reproducir</strong> / <strong>⏸ Pausa</strong>, <strong>⏵</strong>, <strong>+10 ⏭</strong> y <strong>fotograma n de
+N</strong>. Un sol de un instante se estudia a lo largo de su día. <strong>Guardar como imagen</strong> guarda el
+fotograma mostrado como PNG con el nombre de la vista, la fecha y la hora; <strong>Exportar estudio…</strong>
+guarda todos los fotogramas como secuencia de imágenes PNG o JPEG (un vídeo requiere un codificador
+que BIMopen no tiene: la opción aparece en gris, con el motivo). <strong>×</strong> cierra la barra; otra vista
+también la cierra.</p>
+<h3 id="graphic-display-options">Opciones de visualización gráfica</h3>
+<p><strong>Opciones de visualización gráfica…</strong> fija para la vista activa: el <strong>Estilo gráfico</strong>, los
+<strong>Bordes de silueta</strong> (<strong>Ninguno</strong>, <strong>Medio</strong>, <strong>Grueso</strong>: una línea más gruesa en el contorno
+exterior del modelo), <strong>Proyectar sombras</strong>, <strong>Sombras ambientales</strong> (esquinas y huecos
+oscurecidos), el sol (su botón abre la <strong>Configuración del sol</strong>), <strong>Sol</strong>, <strong>Luz ambiental</strong> e
+<strong>Intensidad de las sombras</strong> (0–100) y, para las vistas 3D, el <strong>Fondo</strong> (<strong>Ninguno</strong>, <strong>Cielo</strong>,
+<strong>Degradado</strong>). La vista previa dibuja la vista con las opciones elegidas; el interruptor <strong>Vista preliminar</strong> de la cabecera la oculta y la
+muestra, como en la configuración del sol. Las plantillas de vista llevan estas opciones con el
+estilo gráfico, y el sol y las sombras como <strong>Sol y sombras</strong>.</p>
 <h2 id="plans-and-their-view-range">Plantas y sus alturas de corte</h2>
-<p><strong>Vistas ▸ Crear ▸ Vistas de planta ▸ Plano de planta</strong> abre <strong>Nueva planta</strong>: elige los niveles y
+<p><strong>Vistas ▸ Crear ▸ Planta ▸ Plano de planta</strong> abre <strong>Nueva planta</strong>: elige los niveles y
 la escala, y después <strong>Aceptar</strong>. Con <strong>No duplicar vistas existentes</strong> activado, se omiten los
 niveles que ya tienen una planta; desactívalo para crear una segunda planta de un nivel.</p>
 <p>Una planta es un corte horizontal del modelo en el <strong>Plano de corte</strong> de sus alturas de corte. Los
@@ -700,7 +822,7 @@ elementos seleccionados, solo en la vista activa, y no cambia el proyecto:</p>
 después otro oculta ambos. <strong>Restablecer Aislar temporalmente</strong> (<code>HR</code>) vuelve a mostrar
 todo; <strong>Aplicar Ocultar/Aislar a vista</strong> oculta de forma permanente lo que estaba oculto por ahora.</p>
 <p>Para ocultar de forma permanente en la vista, selecciona los elementos y después clic derecho ▸
-<strong>Ocultar en vista ▸ Elementos</strong> o <strong>Categoría</strong>, o bien <strong>Vistas ▸ Ocultar en vista</strong> de la ficha
+<strong>Ocultar en vista ▸ Elementos</strong> o <strong>Categoría</strong>, o bien <strong>Vistas ▸ Ocultar en vista</strong> de la tarjeta
 contextual, o escribe <code>EH</code> (elementos) o <code>VH</code> (categoría).</p>
 <p><strong>Revelar ocultos</strong> (la bombilla de la barra de controles de vista, o <code>RH</code>) enmarca la
 vista en magenta y muestra lo oculto en magenta y el resto en medio tono. Un elemento oculto
@@ -724,7 +846,7 @@ visibilidad y gráficos ▸ Editar…</strong>) muestra, para la vista activa, u
 se ven al instante: <strong>Aplicar</strong> los conserva y mantiene la ventana, <strong>Cancelar</strong> (o la × de la
 ventana) deshace lo que no se aplicó, <strong>Aceptar</strong> los conserva y cierra.</p>
 <p>Un elemento puede tener sus propios gráficos en una vista: selecciónalo y después clic derecho ▸
-<strong>Gráficos personalizados ▸ Por elemento…</strong> (o el panel <strong>Vista</strong> de la ficha contextual).
+<strong>Gráficos personalizados ▸ Por elemento…</strong> (o el grupo <strong>Vista</strong> de la tarjeta contextual).
 <strong>Gráficos de elementos específicos de vista</strong> tiene <strong>Visible</strong>, <strong>Medio tono</strong>,
 <strong>Transparente</strong>, los patrones de superficie y de corte y las líneas de proyección y de corte.
 Solo se aplican en esta vista, por encima de los de la categoría y los de los filtros.</p>

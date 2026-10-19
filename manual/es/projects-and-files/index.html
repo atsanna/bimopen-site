@@ -563,8 +563,7 @@ guardarlo se pide un nombre, de modo que la plantilla no se sobrescribe.</p>
 guarda el proyecto abierto como plantilla; un proyecto creado como <strong>Plantilla de proyecto</strong>, o
 una plantilla abierta, también se guarda como plantilla.</p>
 <h2 id="opening-a-project">Abrir un proyecto</h2>
-<p><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-o">O</kbd></span>, <strong>menú de la aplicación ➤ Abrir…</strong> o <strong>Abrir</strong> en la barra de herramientas de acceso
-rápido abre un proyecto. <strong>menú de la aplicación ➤ Documentos recientes</strong> enumera los últimos
+<p><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-o">O</kbd></span> o <strong>menú de la aplicación ➤ Abrir…</strong> abre un proyecto. <strong>menú de la aplicación ➤ Documentos recientes</strong> enumera los últimos
 proyectos, el más reciente primero; una chincheta mantiene un proyecto en la lista. Sin archivo,
 BIMopen se inicia en <strong>Archivos recientes</strong>, con los proyectos recientes, <strong>Abrir…</strong>, <strong>Nuevo</strong> y
 el <strong>Proyecto de ejemplo</strong> (salvo que
@@ -574,9 +573,9 @@ archivo de proyecto en la ventana también lo abre.</p>
 nombre nuevo. Si BIMopen se detuvo sin guardar (un bloqueo, un corte de corriente), al volver a
 abrir el proyecto el trabajo no guardado vuelve como cambios sin guardar.</p>
 <h2 id="saving">Guardar</h2>
-<p><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span>, o <strong>Guardar</strong> en la barra de herramientas de acceso rápido, guarda el proyecto; hasta
-entonces el archivo se queda como se guardó la última vez, y la barra de título muestra un
-asterisco. <strong>menú de la aplicación ➤ Guardar como ➤ Proyecto…</strong> lo escribe en un archivo nuevo y
+<p><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span>, o un clic en el estado de guardado de la barra superior, guarda el proyecto; hasta
+entonces el archivo se queda como se guardó la última vez, y la barra superior indica <strong>Cambios
+sin guardar</strong>. <strong>menú de la aplicación ➤ Guardar como ➤ Proyecto…</strong> lo escribe en un archivo nuevo y
 sigue en él.</p>
 <p><strong>Guardar como ➤ Opciones…</strong> abre <strong>Opciones de guardado de archivo</strong>:
 <strong>Número máximo de copias de seguridad</strong> conserva ese número de versiones anteriores junto al
@@ -593,18 +592,18 @@ archivo; las copias de seguridad, la recuperación tras un bloqueo y la apertura
 necesitan un archivo en disco y solo existen en el escritorio.</p>
 <h2 id="project-settings">Configuración del proyecto</h2>
 <h3 id="project-information">Información del proyecto</h3>
-<p><strong>Proyecto ➤ Configuración ➤ Información del proyecto</strong> fija el nombre, el número, el cliente, la
+<p><strong>Configuración ➤ Configuración ➤ Información del proyecto</strong> fija el nombre, el número, el cliente, la
 dirección, la fecha de emisión y el estado del proyecto: los cajetines de todos los planos los
 muestran.</p>
 <h3 id="project-units">Unidades del proyecto</h3>
-<p><strong>Proyecto ➤ Configuración ➤ Unidades del proyecto</strong> enumera las magnitudes (longitud, área,
+<p><strong>Configuración ➤ Configuración ➤ Unidades del proyecto</strong> enumera las magnitudes (longitud, área,
 volumen, ángulo, pendiente y las demás) con un ejemplo de cada una, y el
 <strong>Símbolo decimal/agrupación de dígitos</strong>. <strong>Formato…</strong> de una magnitud fija su unidad, su
 <strong>Redondeo</strong> (un número de decimales, o <strong>Personalizada</strong> con un <strong>Factor de incremento</strong>, como
 5 mm), su <strong>Símbolo de unidad</strong>, <strong>Suprimir ceros finales</strong>, el signo más de los valores positivos
 y la agrupación de dígitos.</p>
 <h3 id="sun-settings">Parámetros de sol</h3>
-<p><strong>Proyecto ➤ Parámetros adicionales ➤ Parámetros de sol</strong> abre los parámetros de sol de la
+<p><strong>Configuración ➤ Parámetros adicionales ➤ Parámetros de sol</strong> abre los parámetros de sol de la
 vista activa, lo mismo que el botón del sol de la barra de controles de vista (véase
 <a href="../views-and-graphics/">Vistas y gráficos</a>).</p>
 <h2 id="options">Opciones</h2>
@@ -624,7 +623,7 @@ sesiones.</p>
 </tr>
 <tr>
 <td><strong>Interfaz de usuario</strong></td>
-<td>El tema (<strong>Claro</strong> u <strong>Oscuro</strong>), el idioma, el estilo y el tamaño de la interfaz; <strong>Activar la página de archivos recientes al inicio</strong>; la ficha de la cinta de opciones cuando termina una selección o se cierra una herramienta (<strong>Permanecer en la ficha Modificar</strong> o <strong>Volver a la ficha anterior</strong>) y <strong>Mostrar ficha contextual al seleccionar</strong>; <strong>Asistencia de información de herramientas</strong> (<strong>Ninguna</strong>, <strong>Mínima</strong>, <strong>Normal</strong>, <strong>Elevada</strong>)</td>
+<td>El tema (<strong>Claro</strong> u <strong>Oscuro</strong>), el idioma, el estilo y el tamaño de la interfaz; <strong>Activar la página de archivos recientes al inicio</strong>; en el estilo <strong>Clásica</strong>, la ficha de la cinta de opciones cuando termina una selección o se cierra una herramienta (<strong>Permanecer en la ficha Modificar</strong> o <strong>Volver a la ficha anterior</strong>) y <strong>Mostrar ficha contextual al seleccionar</strong>; <strong>Asistencia de información de herramientas</strong> (<strong>Ninguna</strong>, <strong>Mínima</strong>, <strong>Normal</strong>, <strong>Elevada</strong>)</td>
 </tr>
 <tr>
 <td><strong>Gráficos</strong></td>
@@ -637,7 +636,7 @@ sesiones.</p>
 </tbody>
 </table>
 <h2 id="transferring-project-standards">Copiar ajustes de un proyecto</h2>
-<p><strong>Proyecto ➤ Configuración ➤ Copiar ajustes de un proyecto</strong> copia ajustes de otro proyecto a
+<p><strong>Configuración ➤ Configuración ➤ Copiar ajustes de un proyecto</strong> copia ajustes de otro proyecto a
 este. En <strong>Seleccionar elementos para copiar</strong>, elija el proyecto con <strong>Examinar…</strong>
 (<strong>Copiar de:</strong>) y marque lo que se va a copiar: los tipos de muros, suelos, cubiertas, puertas y
 ventanas, escaleras, barandillas, paneles y montantes de muro cortina, los estilos de línea, los

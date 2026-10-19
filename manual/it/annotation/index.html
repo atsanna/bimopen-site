@@ -652,14 +652,34 @@ di guida</strong>), <strong>Visibilità origine</strong>, <strong>Contrassegno o
 <strong>Contrassegno</strong> del tipo) e <strong>Stile linea di quota</strong> (<strong>Continua</strong> oppure <strong>Nessuna</strong>, che lascia
 solo le linee di guida e i contrassegni).</p>
 <h3 id="temporary-dimensions">Quote temporanee</h3>
-<p>Seleziona un muro o una griglia: le quote temporanee mostrano la distanza dai muri o dalle griglie
-parallele più vicini. Una porta o una finestra mostra la sua distanza, lungo il muro, dai muri che lo
-attraversano da ciascun lato, e un componente la sua distanza dal muro più vicino in ogni direzione.
-Clicca un valore, digitane uno nuovo e premi Invio per spostare l'elemento;
-clicca il simbolo di quota accanto per renderla permanente. Mentre si colloca una porta o una
-finestra, le quote temporanee mostrano la sua distanza dai muri più vicini. Con più elementi
-selezionati non ne è mostrata alcuna, e la barra delle opzioni offre <strong>Quote temporanee</strong> per mostrarle
-per tutti gli elementi selezionati.</p>
+<p>Seleziona un elemento e le quote temporanee mostrano le sue distanze dai riferimenti paralleli
+più vicini: muri, griglie, livelli, piani di riferimento, bordi dei pavimenti, linee di
+separazione dei locali e linee di dettaglio. Compaiono per ogni categoria in ogni vista in cui
+l'elemento è disegnato: piante, sezioni, prospetti e viste 3D, dove stanno sul livello
+dell'elemento. Un livello selezionato mostra, in una sezione o in un prospetto, le distanze dai
+livelli sopra e sotto.</p>
+<p>Clicca un valore, digitane uno nuovo e premi Invio per spostare l'elemento: una lunghezza può
+avere un'unità propria (<code>2.5 m</code>) e una formula comincia con <code>=</code> (<code>=8000/2</code>). Clicca il simbolo di
+quota accanto per renderla permanente.</p>
+<p>Ogni linea di guida ha un controllo blu. Trascina quello sul riferimento su un qualsiasi altro
+riferimento per misurare da lì; oppure clic destro ▸ <strong>Sposta linea di guida</strong>, poi clicca il
+nuovo riferimento. Un clic su un controllo passa da un riferimento all'altro dello stesso
+oggetto: l'asse del muro, le sue facce, le facce del nucleo e il centro del nucleo. L'elemento
+ricorda i riferimenti scelti, per ogni vista, e questi lo seguono quando il riferimento si
+sposta; clic destro ▸ <strong>Ripristina riferimenti</strong> torna a quelli più vicini.</p>
+<p>Con più elementi selezionati non ne è mostrata alcuna, e la barra delle opzioni offre <strong>Mostra
+quote</strong> per mostrarle per tutti gli elementi selezionati.</p>
+<p>Mentre si colloca un componente, una porta o una finestra, le quote temporanee mostrano le sue
+distanze dai riferimenti più vicini; <strong>Tab</strong> passa ai successivi. Fermando il puntatore per un
+momento, l'elemento resta lì mentre il puntatore va verso uno dei suoi valori, e un clic sul
+valore permette di scrivere la distanza a cui va. Mentre si disegna sono mostrati la lunghezza e l'angolo; <strong>Ruota</strong> mostra l'angolo come
+una quota angolare, e un angolo digitato ruota la selezione.</p>
+<p><strong>Progetto ▸ Impostazioni aggiuntive ▸ Quote temporanee</strong> stabilisce da dove misurano i muri
+(<strong>Asse</strong>, <strong>Facce</strong>, <strong>Centro del nucleo</strong>, <strong>Facce del nucleo</strong>) e le porte e finestre
+(<strong>Asse</strong> o <strong>Aperture</strong>), per tutto il progetto. La stessa finestra imposta il testo di tutte le
+quote temporanee, per l'applicazione: da 8 a 20 pt (8 all'inizio), su sfondo trasparente o
+pieno. Accanto alle impostazioni un'anteprima mostra tre muri quotati come scelto; l'interruttore
+<strong>Anteprima</strong> nell'intestazione la nasconde, la finestra mantiene la sua dimensione, e la scelta resta.</p>
 <h3 id="constraints">Vincoli</h3>
 <p>Seleziona una quota: su ogni segmento compare un lucchetto. Cliccalo per bloccare il segmento: la
 distanza resta allora costante quando uno dei due elementi si sposta, e uno spostamento che la

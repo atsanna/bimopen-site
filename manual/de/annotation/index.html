@@ -656,15 +656,35 @@ Hilfslinie</strong>), <strong>Ursprung sichtbar</strong>, <strong>Ursprungsmarki
 <strong>Markierung</strong> des Typs) und <strong>Maßlinienstil</strong> (<strong>Durchgehend</strong> oder <strong>Keine</strong>, dann bleiben nur die
 Hilfslinien und ihre Markierungen).</p>
 <h3 id="temporary-dimensions">Temporäre Bemaßungen</h3>
-<p>Wählen Sie eine Wand oder ein Raster: Temporäre Bemaßungen zeigen den Abstand zu den nächsten
-parallelen Wänden oder Rastern. Eine Tür oder ein Fenster zeigt seinen Abstand entlang seiner Wand zu den
-Wänden, die es auf jeder Seite kreuzen, und ein Bauteil seinen Abstand zur nächsten Wand in jeder
-Richtung. Klicken Sie auf einen Wert, geben Sie einen neuen ein und drücken
-Sie die Eingabetaste, um das Element zu verschieben; klicken Sie auf das Bemaßungssymbol daneben,
-um sie dauerhaft zu machen. Beim Platzieren einer Tür oder eines Fensters zeigen temporäre
-Bemaßungen den Abstand zu den nächsten Wänden. Sind mehrere Elemente gewählt, wird keine angezeigt,
-und die Optionsleiste bietet <strong>Temporäre Bemaßungen</strong>, um sie für alle gewählten Elemente
-anzuzeigen.</p>
+<p>Wählen Sie ein Element aus, und temporäre Bemaßungen zeigen seine Abstände zu den nächsten
+parallelen Referenzen: Wände, Raster, Ebenen, Referenzebenen, Geschossdeckenkanten,
+Raumtrennlinien und Detaillinien. Sie erscheinen für jede Kategorie in jeder Ansicht, in der das
+Element gezeichnet wird: Grundrisse, Schnitte, Ansichten und 3D-Ansichten, wo sie auf der Ebene
+des Elements liegen. Eine ausgewählte Ebene zeigt in einem Schnitt oder einer Ansicht ihre
+Abstände zu den Ebenen darüber und darunter.</p>
+<p>Klicken Sie auf einen Wert, geben Sie einen neuen ein und drücken Sie die Eingabetaste, um das
+Element zu verschieben: eine Länge kann eine eigene Einheit haben (<code>2.5 m</code>), und eine Formel
+beginnt mit <code>=</code> (<code>=8000/2</code>). Klicken Sie auf das Bemaßungssymbol daneben, um sie dauerhaft zu
+machen.</p>
+<p>Jede Maßhilfslinie hat einen blauen Griff. Ziehen Sie den Griff an der Referenz auf eine beliebige
+andere Referenz, um von dort zu messen; oder Rechtsklick ▸ <strong>Hilfslinie verschieben</strong>, dann auf
+die neue Referenz klicken. Ein Klick auf einen Griff geht die Referenzen desselben Objekts durch:
+die Achse einer Wand, ihre Flächen, ihre Kernflächen und ihre Tragschichtmitte. Das Element merkt
+sich die gewählten Referenzen für jede Ansicht, und sie folgen, wenn sich die Referenz bewegt;
+Rechtsklick ▸ <strong>Referenzen zurücksetzen</strong> kehrt zu den nächsten zurück.</p>
+<p>Sind mehrere Elemente ausgewählt, wird keine angezeigt, und die Optionsleiste bietet
+<strong>Bemaßungen aktivieren</strong>, um sie für alle ausgewählten Elemente anzuzeigen.</p>
+<p>Beim Platzieren einer Komponente, einer Tür oder eines Fensters zeigen temporäre Bemaßungen die
+Abstände zu den nächsten Referenzen; <strong>Tab</strong> springt zu den nächsten. Lassen Sie den Zeiger kurz
+ruhen: das Element wartet, während der Zeiger zu einem seiner Werte geht, und ein Klick auf den
+Wert erlaubt es, den Abstand einzugeben, in dem es platziert wird. Beim Zeichnen werden Länge und Winkel angezeigt; <strong>Drehen</strong>
+zeigt den Winkel als Winkelbemaßung, und ein eingegebener Winkel dreht die Auswahl.</p>
+<p><strong>Projekt ▸ Weitere Einstellungen ▸ Temporäre Bemaßungen</strong> legt fest, wovon Wände messen
+(<strong>Achse</strong>, <strong>Flächen</strong>, <strong>Tragschichtmitte</strong>, <strong>Kernflächen</strong>) und Türen und Fenster (<strong>Achse</strong>
+oder <strong>Öffnungen</strong>), für das ganze Projekt. Derselbe Dialog legt den Text aller temporären
+Bemaßungen für die Anwendung fest: 8 bis 20 pt (anfangs 8), auf transparentem oder
+undurchsichtigem Hintergrund. Neben den Einstellungen zeigt eine Vorschau drei Wände, bemaßt wie gewählt;
+der Schalter <strong>Vorschau</strong> in der Kopfzeile blendet sie aus, der Dialog behält seine Größe, und die Wahl bleibt erhalten.</p>
 <h3 id="constraints">Abhängigkeiten</h3>
 <p>Wählen Sie eine Bemaßung: An jedem Segment wird ein Vorhängeschloss angezeigt. Klicken Sie darauf,
 um das Segment zu sperren: Der Abstand bleibt dann erhalten, wenn eines der beiden Elemente bewegt

@@ -635,17 +635,18 @@ Bilder.</p>
 <h2 id="sheets">Pläne</h2>
 <p>Ein Plan ist eine zu druckende Zeichnung: ein Plankopf und die darauf platzierten Ansichten. Pläne
 stehen im Projektindex unter <strong>Pläne (alle)</strong>, nach Nummer.</p>
+<p><img alt="Ein Plan mit beiden Grundrissen und die Werkzeuge von Dokumentieren in der Seitenleiste" src="../assets/screens/bimopen-sheet.png"/></p>
 <h3 id="creating-a-sheet">Einen Plan erstellen</h3>
-<p><strong>Ansichten ➤ Pläne ➤ Plan</strong> öffnet <strong>Neuer Plan</strong>: Wählen Sie einen Plankopf (sein
+<p><strong>Dokumentieren ➤ Pläne ➤ Plan</strong> öffnet <strong>Neuer Plan</strong>: Wählen Sie einen Plankopf (sein
 Papierformat wird angezeigt), <strong>Keiner</strong> oder einen der Platzhalterpläne der Planliste. <strong>OK</strong>
 erstellt den Plan mit der nächsten freien Nummer (<strong>A101</strong>, <strong>A102</strong>…) und öffnet ihn.</p>
 <p>Rechtsklick auf einen Plan im Projektindex ➤ <strong>Umbenennen…</strong> ändert seine Nummer und seinen
-Namen in <strong>Plantitel</strong>. Die anderen Parameter des Plans stehen in der Palette <strong>Eigenschaften</strong>:
+Namen in <strong>Plantitel</strong>. Die anderen Parameter des Plans stehen im Elementbereich:
 <strong>Plannummer</strong>, <strong>Planname</strong>, <strong>Planausgabedatum</strong>, <strong>Gezeichnet von</strong>, <strong>Geprüft von</strong>,
 <strong>Entworfen von</strong>, <strong>Genehmigt von</strong>, <strong>In Planliste anzeigen</strong>, sein Führungsraster und seine
 Revisionen. Mehrere zusammen im Projektindex gewählte Pläne (mit <span class="keys"><kbd class="key-control">Ctrl</kbd></span> oder <span class="keys"><kbd class="key-shift">Shift</kbd></span>) werden
-zusammen geändert: Die Palette zeigt die Werte, die sie gemeinsam haben.</p>
-<p><strong>Projekt ➤ Einstellungen ➤ Informationen zum Projekt</strong> legt fest, was jeder Plan zeigt:
+zusammen geändert: Der Bereich zeigt die Werte, die sie gemeinsam haben.</p>
+<p><strong>Einstellungen ➤ Einstellungen ➤ Informationen zum Projekt</strong> legt fest, was jeder Plan zeigt:
 <strong>Projektausgabedatum</strong>, <strong>Projektstatus</strong>, <strong>Name des Bauherrn</strong>, <strong>Projektadresse</strong>,
 <strong>Projektname</strong> und <strong>Projektnummer</strong>.</p>
 <h3 id="title-blocks">Planköpfe</h3>
@@ -656,7 +657,7 @@ Datum auf. Ein Doppelklick auf eines seiner Felder lässt den Wert direkt dort e
 <ul>
 <li>Klicken Sie auf eine Linie des Plankopfs, um ihn zu wählen: Die Typenauswahl ändert ihn in ein
   anderes Papierformat, <span class="keys"><kbd class="key-delete">Del</kbd></span> entfernt ihn (der Plan und seine Ansichten bleiben).</li>
-<li><strong>Ansichten ➤ Pläne ➤ Plankopf</strong> fügt einen in den geöffneten Plan ein: Wählen Sie
+<li><strong>Dokumentieren ➤ Pläne ➤ Plankopf</strong> fügt einen in den geöffneten Plan ein: Wählen Sie
   ihn in der Typenauswahl, sein Rahmen folgt dem Cursor, ein Klick platziert ihn.</li>
 <li><strong>Typparameter</strong> zeigt seine <strong>Planbreite</strong> und <strong>Planhöhe</strong>; <strong>Duplizieren…</strong> erstellt ein
   neues Papierformat.</li>
@@ -680,13 +681,13 @@ steht nur auf einem Plan; eine Bauteilliste auf mehreren.</p>
   Linienstärke, Farbe und Muster der Linie);</li>
 <li>verlässt den Plan mit <span class="keys"><kbd class="key-delete">Del</kbd></span>; die Ansicht bleibt im Projekt.</li>
 </ul>
-<p><strong>Ansicht aktivieren</strong> (in der Registerkarte <strong>Auswahl: Ansichtsfenster</strong> oder über die rechte
+<p><strong>Ansicht aktivieren</strong> (in der Karte <strong>Auswahl: Ansichtsfenster</strong> oder über die rechte
 Maustaste) bearbeitet die Ansicht dort, wo sie auf dem Plan steht, den Rest des Plans in Halbton;
 <strong>Ansicht deaktivieren</strong> kehrt zum Plan zurück. Eine auf ihrem Plan gedrehte Ansicht kann nicht
 aktiviert werden: Nehmen Sie zuerst ihre Drehung zurück. Ein Doppelklick auf eine Ansicht öffnet
 sie in einem eigenen Fenster.</p>
 <h3 id="guide-grids">Führungsraster</h3>
-<p><strong>Ansichten ➤ Pläne ➤ Führungsraster</strong> fragt nach einem Namen und bedeckt den Plan
+<p><strong>Dokumentieren ➤ Pläne ➤ Führungsraster</strong> fragt nach einem Namen und bedeckt den Plan
 mit einem Raster. Gewählt, lassen sich seine Ecken ziehen oder sein <strong>Führungsabstand</strong>
 festlegen; der Parameter <strong>Führungsraster</strong> des Plans zeigt dasselbe Raster auf anderen Plänen
 oder keines. In die Nähe der Rasterlinien gezogene Ansichten rasten auf ihnen ein. Das Raster wird
@@ -700,7 +701,7 @@ Platzhalter aus oder zeigt nur sie. Ein in <strong>Neuer Plan</strong> gewählte
 Plan.</p>
 <p><strong>Ansichten ➤ Erzeugen ➤ Bauteillisten ➤ Anmerkungsblock</strong> erstellt eine Bauteilliste der mit <strong>Symbol</strong> platzierten Symbole einer einzigen Familie (Nordpfeile, Zielmarken, Revisionsdreiecke…): Wählen Sie in <strong>Neuer Anmerkungsblock</strong> die <strong>Familie</strong> und geben Sie den <strong>Namen des Anmerkungsblocks</strong> ein, dann <strong>OK</strong>. Zuerst öffnet sich <strong>Eigenschaften Anmerkungsblock</strong> mit denselben Registerkarten wie jede Bauteilliste; standardmäßig zeigt jede Zeile den Typ des Symbols, seinen Text und die Anzahl.</p>
 <h3 id="revisions">Revisionen</h3>
-<p><strong>Ansichten ➤ Pläne ➤ Planausgaben/Revisionen</strong> listet die Revisionen des Projekts
+<p><strong>Dokumentieren ➤ Pläne ➤ Planausgaben/Revisionen</strong> listet die Revisionen des Projekts
 auf, eine je Zeile: <strong>Folge</strong>, <strong>Nummerierung</strong> (<strong>Numerisch</strong>, <strong>Alphabetisch</strong> oder keine),
 <strong>Datum</strong>, <strong>Beschreibung</strong>, <strong>Ausgegeben</strong>, <strong>Ausgegeben an</strong>, <strong>Ausgegeben von</strong> und
 <strong>Anzeigen</strong>. <strong>Hinzufügen</strong> fügt eine hinzu; eine über ihre Folgenummer gewählte Zeile wird mit
@@ -709,7 +710,7 @@ verschoben. <strong>Nummerierung</strong> ist <strong>Pro Projekt</strong> oder 
 den Revisionen des Plans); <strong>Alphabetische Reihenfolge ➤ Optionen…</strong> legt die verwendeten
 Buchstaben fest. Eine ausgegebene Revision kann nicht geändert werden, ihre Wolken ebenso wenig,
 bis <strong>Ausgegeben</strong> deaktiviert wird.</p>
-<p><strong>Beschriftungen ➤ Detail ➤ Revisionswolke</strong> zeichnet eine Wolke in einem Grundriss, einem Schnitt,
+<p><strong>Dokumentieren ➤ Detail ➤ Revisionswolke</strong> zeichnet eine Wolke in einem Grundriss, einem Schnitt,
 einer freien 2D-Ansicht oder auf einem Plan: Skizzieren Sie geschlossene Schleifen mit den Formen der
 Gruppe <strong>Zeichnen</strong>, dann <strong>Bearbeitungsmodus beenden</strong>; <strong>Skizze bearbeiten</strong> einer gewählten Wolke
 öffnet sie erneut, außer ihre Revision ist ausgegeben. Die Wolke erhält die letzte nicht ausgegebene
@@ -717,7 +718,7 @@ Revision; gewählt, zeigt sie ihre <strong>Revision</strong> (zum Ändern), ihre
 Personen, ihr <strong>Kennzeichen</strong> und <strong>Kommentare</strong>. <strong>Anzeigen</strong> einer Revision zeichnet ihre Wolken
 und Beschriftungen, behält sie, ohne sie zu zeichnen, oder blendet sie aus.</p>
 <p>Ein Plan führt die Revisionen der Wolken seiner Ansichten und seiner eigenen Wolken auf. Seine
-<strong>Revisionen auf Plan</strong> (in der Palette Eigenschaften, <strong>Bearbeiten…</strong>) fügen der Liste weitere
+<strong>Revisionen auf Plan</strong> (im Elementbereich, <strong>Bearbeiten…</strong>) fügen der Liste weitere
 Revisionen hinzu.</p>
 <h2 id="schedules">Bauteillisten</h2>
 <p>Eine Bauteilliste ist eine Tabelle der Elemente des Modells und eine Ansicht wie die anderen: Sie
@@ -733,7 +734,7 @@ und <strong>Bauteile in Liste aufnehmen</strong> oder <strong>Schlüssel der Bau
 Ansicht. <strong>Materialliste</strong> im selben Menü führt die Materialien der Schichten von Wänden, Böden
 und Dächern auf.</p>
 <h3 id="schedule-properties">Eigenschaften der Bauteilliste</h3>
-<p>Das Dialogfeld öffnet sich erneut über die Palette <strong>Eigenschaften</strong> der Bauteilliste (jede
+<p>Das Dialogfeld öffnet sich erneut über den Elementbereich der Bauteilliste (jede
 Registerkarte hat ihre Schaltfläche <strong>Bearbeiten…</strong>) oder mit der rechten Maustaste auf die
 Bauteilliste im Projektindex. Seine Registerkarten:</p>
 <table>
@@ -770,7 +771,7 @@ Bauteilliste im Projektindex. Seine Registerkarten:</p>
 <ul>
 <li>Eine Zelle ändert das Element oder, bei einem Typparameter, seinen Typ; jede Änderung ist ein
   Rückgängig-Schritt.</li>
-<li>Eine Zeile wählt ihre Elemente in allen Ansichten. <strong>Im Modell markieren</strong> in der Registerkarte
+<li>Eine Zeile wählt ihre Elemente in allen Ansichten. <strong>Im Modell markieren</strong> in der Karte
   <strong>Ändern | Bauteilliste/Mengen</strong> öffnet <strong>Elemente in Ansicht anzeigen</strong>, das einen auf sie
   ausgerichteten Grundriss nach vorne holt; <strong>Anzeigen</strong> geht zur nächsten Ansicht.</li>
 <li><strong>Zeilen ➤ Löschen</strong> löscht nach einer Rückfrage die Elemente der gewählten Zeilen.</li>
@@ -794,10 +795,10 @@ gibt ihm alle Werte dieser Zeile.</p>
 <p>Eine Materialliste führt für jedes Element die Materialien seiner Schichten mit Fläche und Volumen
 auf; ihre Felder werden wie alle anderen sortiert, gruppiert und summiert.</p>
 <h3 id="project-and-shared-parameters">Projektparameter und gemeinsam genutzte Parameter</h3>
-<p><strong>Projekt ➤ Einstellungen ➤ Projektparameter</strong> fügt den Elementen einiger Kategorien oder ihren
-Typen Parameter hinzu, mit einem Namen, einem Werttyp und der Gruppe, in der sie in der Palette
-Eigenschaften erscheinen.</p>
-<p><strong>Projekt ➤ Einstellungen ➤ Gemeinsam genutzte Parameter</strong> öffnet <strong>Gemeinsam genutzte Parameter
+<p><strong>Einstellungen ➤ Einstellungen ➤ Projektparameter</strong> fügt den Elementen einiger Kategorien oder ihren
+Typen Parameter hinzu, mit einem Namen, einem Werttyp und der Gruppe, in der sie im
+Elementbereich erscheinen.</p>
+<p><strong>Einstellungen ➤ Einstellungen ➤ Gemeinsam genutzte Parameter</strong> öffnet <strong>Gemeinsam genutzte Parameter
 bearbeiten</strong>: die verwendete Datei für gemeinsam genutzte Parameter (<strong>Durchsuchen…</strong>,
 <strong>Erstellen…</strong>), ihre Gruppen und die Parameter jeder Gruppe. Ein gemeinsam genutzter Parameter
 behält Namen und Typ und hat eine eigene Kennung, sodass mehrere Projekte denselben Parameter
@@ -813,7 +814,7 @@ genutzten Parameter des Projekts zurück in die Datei.</p>
   erstellt eine Ansichtsvorlage mit ihren Feldern, ihrem Filter, Sortieren, Formatierung und
   Darstellung; <strong>Ansichtsvorlage anwenden…</strong> gibt sie einer anderen Bauteilliste.</li>
 <li><strong>In neuer Datei speichern…</strong> über die rechte Maustaste schreibt die Einrichtung der
-  Bauteilliste ohne die Elemente in eine eigene Datei. <strong>Einfügen ➤ Importieren ➤ Aus Datei
+  Bauteilliste ohne die Elemente in eine eigene Datei. <strong>Erzeugen ➤ Aus Bibliothek laden ➤ Aus Datei
   einfügen ➤ Ansichten aus Datei einfügen…</strong> holt die Bauteillisten eines anderen Projekts mit
   ihren Projektparametern in dieses.</li>
 </ul>

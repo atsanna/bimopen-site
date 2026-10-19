@@ -313,7 +313,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#the-properties-palette-the-project-browser-or-the-command-line-has-disappeared">
 <span class="md-ellipsis">
-      Die Palette Eigenschaften, der Projektindex oder die Befehlszeile ist verschwunden
+      Der Elementbereich oder der Projektindex ist verschwunden
     </span>
 </a>
 </li>
@@ -327,7 +327,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#a-button-is-greyed">
 <span class="md-ellipsis">
-      Eine Schaltfläche ist ausgegraut
+      Eine Kachel ist ausgegraut
     </span>
 </a>
 </li>
@@ -459,7 +459,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#the-properties-palette-the-project-browser-or-the-command-line-has-disappeared">
 <span class="md-ellipsis">
-      Die Palette Eigenschaften, der Projektindex oder die Befehlszeile ist verschwunden
+      Der Elementbereich oder der Projektindex ist verschwunden
     </span>
 </a>
 </li>
@@ -473,7 +473,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#a-button-is-greyed">
 <span class="md-ellipsis">
-      Eine Schaltfläche ist ausgegraut
+      Eine Kachel ist ausgegraut
     </span>
 </a>
 </li>
@@ -571,24 +571,26 @@ Debian und Ubuntu:</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>libxkbcommon-dev<span class="w"> </span>libwayland-dev<span class="w"> </span>libgtk-3-dev
 </code></pre></div>
 <h2 id="the-interface">Die Benutzeroberfläche</h2>
-<h3 id="the-properties-palette-the-project-browser-or-the-command-line-has-disappeared">Die Palette Eigenschaften, der Projektindex oder die Befehlszeile ist verschwunden</h3>
-<p>Sie werden mit dem <strong>×</strong> in ihrem Titel oder über <strong>Ansichten ▸ Fenster ▸ Paneele</strong>
-geschlossen. Haken Sie sie in <strong>Paneele</strong> wieder an. Auch die Schaltfläche
-<strong>Eigenschaften</strong> der kontextabhängigen Registerkarte zeigt die Palette wieder an.</p>
+<h3 id="the-properties-palette-the-project-browser-or-the-command-line-has-disappeared">Der Elementbereich oder der Projektindex ist verschwunden</h3>
+<p><strong>Ansichten ▸ Fenster ▸ Paneele</strong> blendet sie ein oder aus: Haken Sie sie dort wieder an. Auch
+die Kachel <strong>Eigenschaften</strong> der kontextabhängigen Karte zeigt den Elementbereich wieder an. Ein
+Klick auf den bereits gewählten Eintrag der Seitenleiste klappt den Werkzeugbereich ein: Klicken
+Sie erneut darauf, um ihn zu öffnen.</p>
 <h3 id="what-i-type-ends-up-at-the-command-line">Was ich eingebe, landet in der Befehlszeile</h3>
-<p>Alles, was Sie eingeben, während kein Feld bearbeitet wird, geht an die Befehlszeile: So
-funktionieren die eingegebenen Kürzel. Um in ein Feld der Palette Eigenschaften oder eines Dialogs
+<p>Alles, was Sie eingeben, während kein Feld bearbeitet wird, geht an die Befehlszeile, das
+Suchfeld der oberen Leiste: So funktionieren die eingegebenen Kürzel. Um in ein Feld des
+Elementbereichs oder eines Dialogs
 zu schreiben, klicken Sie zuerst in das Feld.</p>
-<h3 id="a-button-is-greyed">Eine Schaltfläche ist ausgegraut</h3>
+<h3 id="a-button-is-greyed">Eine Kachel ist ausgegraut</h3>
 <p>Manche Werkzeuge funktionieren nur in der passenden Ansicht, und ihre QuickInfo sagt, warum.
 <strong>Flächenumriss</strong> und <strong>Fläche</strong> benötigen einen geöffneten Flächenplan: Die QuickInfo
 lautet <strong>Zuerst einen Flächenplan öffnen</strong>. <strong>Ansicht speichern</strong> benötigt eine geöffnete
-3D-Ansicht; <strong>Pläne ▸ Ansicht</strong> benötigt einen geöffneten Plan; <strong>Rückgängig</strong> und
+3D-Ansicht; <strong>Dokumentieren ▸ Pläne ▸ Ansicht</strong> benötigt einen geöffneten Plan; <strong>Rückgängig</strong> und
 <strong>Wiederherstellen</strong> sind ausgegraut, wenn es nichts rückgängig zu machen oder wiederherzustellen
 gibt.</p>
 <h3 id="dl-starts-a-dimension-instead-of-a-detail-line"><code>DL</code> startet eine Bemaßung statt einer Detaillinie</h3>
 <p><code>DL</code> ist die Kurzform der linearen Bemaßung. Um Detaillinien zu zeichnen, verwenden Sie
-<strong>Beschriftungen ▸ Detail ▸ Detaillinie</strong> oder geben Sie <code>detailline</code> ein.</p>
+<strong>Dokumentieren ▸ Detail ▸ Detaillinie</strong> oder geben Sie <code>detailline</code> ein.</p>
 <h2 id="modelling">Modellieren</h2>
 <h3 id="no-wall-at-that-point">«no wall at that point»</h3>
 <p>Eine Tür oder ein Fenster muss in eine Wand gesetzt werden. Klicken Sie auf die Wand selbst, oder
@@ -596,12 +598,12 @@ geben Sie in der Befehlszeile einen Punkt auf ihrer Linie an.</p>
 <h3 id="a-height-set-at-the-command-line-is-enormous">Eine in der Befehlszeile gesetzte Höhe ist riesig</h3>
 <p>In der Befehlszeile ist eine Zahl ohne Einheit in Metern: <code>set Unconnected Height 2700</code> macht die
 Wand 2700 m hoch. Machen Sie dies mit <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span> rückgängig und schreiben Sie die Einheit:
-<code>2700mm</code> oder <code>2.7m</code>. In der Palette Eigenschaften ist eine Zahl ohne Einheit in den Einheiten des
+<code>2700mm</code> oder <code>2.7m</code>. Im Elementbereich ist eine Zahl ohne Einheit in den Einheiten des
 Projekts.</p>
 <h2 id="files">Dateien</h2>
 <h3 id="unsaved-work-is-gone-after-new-open-or-sample-project">Ungespeicherte Arbeit ist nach Neu, Öffnen oder Beispielprojekt verloren</h3>
 <p>Diese Befehle ersetzen das aktuelle Projekt ohne Rückfrage. Speichern Sie, bevor Sie sie verwenden:
-Der Stern nach dem Namen des Projekts in der Titelleiste zeigt, dass es ungespeicherte Änderungen
+<strong>Nicht gespeicherte Änderungen</strong> in der oberen Leiste zeigt, dass es Änderungen zu speichern
 gibt.</p>
 <h3 id="open-in-the-browser-does-not-show-a-file-dialog">Öffnen… zeigt im Browser keinen Dateidialog</h3>
 <p>Ziehen Sie im Browser die <code>.bimopen</code>-Datei in die Seite: Die Befehlszeile meldet

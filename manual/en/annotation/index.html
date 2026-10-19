@@ -642,12 +642,34 @@ of each family's current type, to set before dimensioning.</p>
 bar</strong>, to measure from the other end. <strong>Baseline Offset</strong> in its properties sets the distance
 between its lines on paper.</p>
 <h3 id="temporary-dimensions">Temporary dimensions</h3>
-<p>Select a wall or a grid: temporary dimensions show the distance to the nearest parallel walls or
-grids. A door or window shows its distance along its wall to the walls crossing it on each side,
-and a component its distance to the nearest wall in each direction. Click a value, type a new one and press Enter to move the element; click the dimension
-symbol beside it to make it permanent. While a door or window is placed, temporary dimensions
-show its distance to the nearest walls. With several elements selected none are shown, and the
-options bar offers <strong>Temporary Dimensions</strong> to show them for all the selected elements.</p>
+<p>Select an element and temporary dimensions show its distances to the nearest references
+parallel to it: walls, grids, levels, reference planes, floor edges, room separation lines and
+detail lines. They show for every category in every view the element is drawn in: plans,
+sections, elevations and 3D views, where they lie on the element's level. A selected level shows
+its distances to the levels above and below it, in a section or an elevation.</p>
+<p>Click a value, type a new one and press Enter to move the element: a length takes a unit of its
+own (<code>2.5 m</code>), and a formula starts with <code>=</code> (<code>=8000/2</code>). Click the dimension symbol beside it to
+make it permanent.</p>
+<p>Each witness line has a blue control. Drag the one on the reference onto any other reference to
+measure from there; or right-click it ▸ <strong>Move Witness Line</strong>, then click the new reference. A
+click on a control steps through the references of the same object: a wall's centerline, its
+faces, its core faces and its core centerline. The element remembers the references chosen, for
+each view, and they follow when the reference moves; right-click ▸ <strong>Reset References</strong> goes back
+to the nearest ones.</p>
+<p>With several elements selected none are shown, and the options bar offers <strong>Activate
+Dimensions</strong> to show them for all the selected elements.</p>
+<p>While a component, a door or a window is placed, temporary dimensions show its distances to the
+nearest references; <strong>Tab</strong> steps to the next ones. Rest the pointer for a moment: the element
+waits while the pointer goes to one of its values, and a click on the value types the distance it
+goes at. While drawing, the
+length and the angle are shown; <strong>Rotate</strong> shows the angle as an angular dimension, and an angle
+typed turns the selection.</p>
+<p><strong>Project ▸ Additional settings ▸ Temporary Dimensions</strong> sets where walls measure from
+(<strong>Centerline</strong>, <strong>Faces</strong>, <strong>Center of Core</strong>, <strong>Core Faces</strong>) and doors and windows
+(<strong>Centerline</strong> or <strong>Openings</strong>), for the whole project. The same dialog sets the text of every
+temporary dimension, for the application: from 8 to 20 pt (8 at first), on a transparent or an
+opaque background. Beside the settings a preview shows three walls measured as chosen; the <strong>Preview</strong>
+switch in the dialog's header hides it, the dialog keeping its size, and the choice is kept.</p>
 <h3 id="constraints">Constraints</h3>
 <p>Select a dimension: a padlock is shown on each segment. Click it to lock the segment: the
 distance then holds when either element moves, and a move that would break it is refused. Click

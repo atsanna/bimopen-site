@@ -191,6 +191,13 @@
 <nav aria-label="Running BIMopen on the desktop" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#start-screen">
+<span class="md-ellipsis">
+      Start screen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#language-and-theme">
 <span class="md-ellipsis">
       Language and theme
@@ -418,6 +425,13 @@
 <nav aria-label="Running BIMopen on the desktop" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#start-screen">
+<span class="md-ellipsis">
+      Start screen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#language-and-theme">
 <span class="md-ellipsis">
       Language and theme
@@ -553,15 +567,30 @@ interface also needs the development files of xkbcommon, Wayland and GTK 3.</p>
 <td><code>bimopen house.bimopen</code></td>
 <td>The project saved in <code>house.bimopen</code></td>
 </tr>
+<tr>
+<td><code>bimopen --no-splash</code></td>
+<td>As <code>bimopen</code>, without the start screen</td>
+</tr>
 </tbody>
 </table>
 <p>You can also open a project by dragging a <code>.bimopen</code> file from the file manager into the window.</p>
+<h3 id="start-screen">Start screen</h3>
+<p>While BIMopen loads, the start screen appears: a window without a frame, centred on the screen,
+with the name, the version, the loading stage under way with its percentage and a turquoise line
+growing along the bottom edge. The stages are the real ones (preferences, fonts, graphics card,
+families, opening the project); the screen stays at least half a second, so it does not flash,
+and fades out when the main window is ready. It speaks the language chosen in the app, otherwise
+the system's when it is one of the six, otherwise English.</p>
+<p>To leave it out, clear <strong>Options ▸ General ▸ Show the start screen</strong> (BIMopen remembers it), or
+start <code>bimopen --no-splash</code>. On Wayland the compositor decides where the window appears (usually
+in the middle).</p>
 <h3 id="language-and-theme">Language and theme</h3>
 <p>The first time, BIMopen speaks the language of the operating system when it is one of its six
 languages (Italian, English, German, French, Spanish, Arabic), and English otherwise. To change
-it, use the language menu at the right end of the title bar (the globe with the language's name),
-or <strong>Application menu ▸ Options ▸ Language</strong>. The interface changes at once.</p>
-<p>In <strong>Options</strong> you also choose the <strong>Theme</strong>, <strong>Light</strong> or <strong>Dark</strong>, and whether the background
+it, click the gear at the right end of the top bar (<strong>Options</strong>) and choose the <strong>Language</strong>
+under <strong>User Interface</strong>. The interface changes at once.</p>
+<p>In <strong>Options</strong> you also choose the <strong>Theme</strong>, <strong>Light</strong> or <strong>Dark</strong> (the sun or the moon in the
+top bar switches it too), and whether the background
 of the views is inverted (<strong>Invert background color</strong>: dark views with light lines). Choosing the
 dark theme also inverts the background; you can turn it back off. At the first start BIMopen uses the dark theme, with the background inverted. It remembers the
 language, the theme and the background for the next time.</p>
@@ -607,7 +636,7 @@ of the version written in <code>Cargo.lock</code>; with binaryen's <code>wasm-op
 smaller.</p>
 <h2 id="the-sample-project">The sample project</h2>
 <p>The sample house shows most of what BIMopen can do. Open it with <strong>Application menu ▸ Sample
-project</strong>, with <code>bimopen --sample</code>, or by typing <code>sample</code> at the command line.</p>
+project</strong> (the application menu is BIMopen's mark, at the top of the rail), with <code>bimopen --sample</code>, or by typing <code>sample</code> at the command line.</p>
 <p>It contains:</p>
 <ul>
 <li>two levels, each with its floor plan, and five grid lines;</li>
@@ -624,11 +653,12 @@ project</strong>, with <code>bimopen --sample</code>, or by typing <code>sample<
 is always one click away, and nothing you change in it is saved unless you save it.</p>
 </div>
 <h2 id="your-first-house">Your first house</h2>
-<p>The steps below start from an empty project and end with a sheet. Every step names the button
-to click; the <a href="../interface/">interface chapter</a> explains each part of the window.</p>
+<p>The steps below start from an empty project and end with a sheet. Every step names what to
+click in the <strong>BIMopen</strong> interface style, the one BIMopen starts in; the <a href="../interface/">interface
+chapter</a> explains each part of the window.</p>
 <h3 id="1-start-a-new-project">1. Start a new project</h3>
 <ol>
-<li>Click the blue <strong>B</strong> button at the left end of the title bar: the <strong>application menu</strong> opens.</li>
+<li>Click BIMopen's mark at the top of the rail: the <strong>application menu</strong> opens.</li>
 <li>Click <strong>New ▸ Project…</strong>. The <strong>New project</strong> dialog proposes BIMopen's default template:
    click <strong>OK</strong>.</li>
 </ol>
@@ -636,21 +666,28 @@ to click; the <a href="../interface/">interface chapter</a> explains each part o
 the default 3D view. It has no walls yet. Its wall, door, window, floor and roof types are ready
 to use.</p>
 <h3 id="2-open-the-ground-floor-plan">2. Open the ground floor plan</h3>
-<p>In the <strong>Project Index</strong>, under <strong>Views (all) ▸ Floor Plans</strong>, double-click <strong>Ground Floor</strong>.
-The plan opens in the drawing area and the title bar shows <strong>Floor Plan: Ground Floor</strong>.</p>
+<p>In the views strip under the drawing area, click the thumbnail <strong>Floor Plan: Ground Floor</strong>.
+The plan opens in the drawing area, and the top bar and the view selector show <strong>Floor Plan:
+Ground Floor</strong>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>A single click on a view in the Project Index shows its properties in the <strong>Properties</strong>
-palette without opening it. A double-click opens it.</p>
+<p><strong>Views</strong> on the rail also shows the <strong>Project Index</strong>, the tree of every view: there, a
+single click on a view shows its properties in the element panel without opening it, and a
+double-click opens it.</p>
 </div>
 <h3 id="3-draw-four-walls">3. Draw four walls</h3>
 <ol>
-<li>Click <strong>Home ▸ Build ▸ Wall</strong>. The ribbon switches to the contextual tab <strong>Draw
-   Wall</strong>, the options bar shows the settings of the wall, and <strong>Properties</strong> shows the type of
-   the next wall, <strong>Exterior wall - Clay block 300 + ETICS</strong>.</li>
-<li>On the options bar, turn on <strong>Ortho (Shift)</strong>: the walls stay horizontal or vertical.</li>
-<li>Click in the plan where the first corner goes. The command line asks for the next point:
+<li>In the tools of <strong>Create</strong>, the rail entry BIMopen opens with, click <strong>Wall</strong> in the <strong>Build</strong>
+   group (if the tool panel is folded, click <strong>Create</strong> on the rail first). The contextual card <strong>Draw
+   Wall</strong> comes on top of the tool panel, the options strip over the view shows the settings of
+   the wall, and the element panel shows the type of the next wall, <strong>Exterior wall - Clay block
+   300 + ETICS</strong>.</li>
+<li>In the status bar, turn on <strong>Ortho</strong>: the walls stay horizontal or vertical.</li>
+<li>Click in the plan where the first corner goes. The status bar asks for the next point:
    <code>WALL  next point [Esc to finish]:</code>.</li>
+</ol>
+<p><img alt="The wall tool: the contextual card Draw Wall, the options strip and the type of the next wall" src="../assets/screens/bimopen-wall.png"/></p>
+<ol>
 <li>Click the second, third and fourth corners. While you move the mouse, the length and the
    angle of the wall being drawn are shown next to it.</li>
 <li>Click the first corner again: the four walls are joined at the corners.</li>
@@ -664,39 +701,38 @@ palette without opening it. A double-click opens it.</p>
 </div>
 <h3 id="4-add-a-door-and-a-window">4. Add a door and a window</h3>
 <ol>
-<li>Click <strong>Home ▸ Build ▸ Door</strong>, then click on a wall where the door goes. The door is placed in
-   the wall, which is cut around it. The command line confirms it:
+<li>Click <strong>Create ▸ Build ▸ Door</strong>, then click on a wall where the door goes. The door is placed
+   in the wall, which is cut around it. The command log confirms it:
    <code>Door «Single swing door 80x210» in wall …</code>.</li>
-<li>Press <span class="keys"><kbd class="key-escape">Esc</kbd></span>: the tool ends and the ribbon returns to the <strong>Home</strong> tab.</li>
-<li>Click <strong>Home ▸ Build ▸ Window</strong>, click on another wall, and press <span class="keys"><kbd class="key-escape">Esc</kbd></span>.</li>
+<li>Press <span class="keys"><kbd class="key-escape">Esc</kbd></span>: the tool ends and the contextual card goes away.</li>
+<li>Click <strong>Create ▸ Build ▸ Window</strong>, click on another wall, and press <span class="keys"><kbd class="key-escape">Esc</kbd></span>.</li>
 </ol>
 <p>A door or a window can only be placed in a wall: after a click away from the walls, the command
 line answers <code>no wall at that point</code> and nothing is placed.</p>
 <h3 id="5-add-a-floor-and-a-roof">5. Add a floor and a roof</h3>
 <ol>
-<li>Click <strong>Home ▸ Build ▸ Flooring</strong>. Sketch mode opens: the contextual tab <strong>Edit | Create
+<li>Click <strong>Create ▸ Build ▸ Flooring</strong>. Sketch mode opens: the contextual card <strong>Edit | Create
    Floor Boundary</strong>, with <strong>Pick Walls</strong> active.</li>
 <li>Move the cursor over a wall and press <span class="keys"><kbd class="key-tab">Tab</kbd></span>: the four walls are highlighted. Click: their
    lines go on the inner faces of the walls.</li>
-<li>Click <strong>Finish Edit Mode</strong>: the floor is made and the command line gives its area.</li>
-<li>Click <strong>Home ▸ Build ▸ Roof</strong>. <strong>Pick Walls</strong> is active again; the options bar has <strong>Defines
+<li>Click <strong>Finish Edit Mode</strong>: the floor is made and the command log gives its area.</li>
+<li>Click <strong>Create ▸ Build ▸ Roof</strong>. <strong>Pick Walls</strong> is active again; the options strip has <strong>Defines
    Slope</strong> (ticked) and the <strong>Overhang</strong> (500 mm by default).</li>
 <li>Press <span class="keys"><kbd class="key-tab">Tab</kbd></span> over a wall, click, then <strong>Finish Edit Mode</strong>: a hip roof sloping at 30° covers
    the walls, with the overhang all around.</li>
 </ol>
 <p><a href="../floors-roofs-stairs/">Floors, roofs, stairs and components</a> tells more about sketch mode.</p>
 <h3 id="6-look-at-it-in-3d">6. Look at it in 3D</h3>
-<p>Click the <strong>3D View</strong> button (the cube) on the quick access toolbar. The default 3D view, <strong>{3D}</strong>,
-opens. Drag with the right mouse button (or with <span class="keys"><kbd class="key-shift">Shift</kbd></span> and the middle button) to orbit, drag
+<p>Click the <strong>{3D}</strong> thumbnail in the views strip. The default 3D view, <strong>{3D}</strong>, opens. Drag with the right mouse button (or with <span class="keys"><kbd class="key-shift">Shift</kbd></span> and the middle button) to orbit, drag
 with the middle button to pan, and turn the wheel to zoom; the left button selects, as in plans. <span class="keys"><kbd class="key-home">Home</kbd></span> fits the whole model in the
 view.</p>
 <h3 id="7-put-the-plan-on-a-sheet">7. Put the plan on a sheet</h3>
 <ol>
-<li>Click the <strong>Views</strong> tab, then <strong>Sheets ▸ Sheet</strong>. The <strong>New Sheet</strong> dialog lists the
-   title blocks: none, A0, A1, A2 or A3, with their size in millimetres.</li>
+<li>Click <strong>Document</strong> on the rail, then <strong>Sheet</strong> in the <strong>Sheets</strong> group. The <strong>New Sheet</strong>
+   dialog lists the title blocks: none, A0, A1, A2 or A3, with their size in millimetres.</li>
 <li>Click <strong>OK</strong>. The sheet is created with the next free number (<strong>A101</strong> for the first one,
    then <strong>A102</strong>…) and opens.</li>
-<li>Click <strong>Sheets ▸ View</strong>. The <strong>Views</strong> dialog lists the views that are not on a
+<li>Click <strong>Document ▸ Sheets ▸ View</strong>. The <strong>Views</strong> dialog lists the views that are not on a
    sheet yet.</li>
 <li>Choose <strong>Floor Plan: Ground Floor</strong> and click <strong>Add View to Sheet</strong>. A rectangle of the
    plan's size follows the cursor: click on the sheet where the plan goes. It is placed at its own
@@ -705,12 +741,13 @@ view.</p>
 <h3 id="8-undo-redo-and-save">8. Undo, redo and save</h3>
 <ul>
 <li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span> undoes the last change (here, the viewport goes away); <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-y">Y</kbd></span> redoes it. The
-  arrows of the quick access toolbar do the same.</li>
-<li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span> saves the project. A project that has never been saved asks for a file name first;
-  the file has the extension <code>.bimopen</code>. In the browser, the file is downloaded.</li>
+  arrows of the top bar, <strong>Undo</strong> and <strong>Redo</strong>, do the same.</li>
+<li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span> saves the project, as a click on the save state in the top bar. A project that has
+  never been saved asks for a file name first; the file has the extension <code>.bimopen</code>. In the
+  browser, the file is downloaded.</li>
 </ul>
-<p>The title bar shows an asterisk after the project's name while there are unsaved changes:
-<strong>Untitled project *</strong>.</p>
+<p>The top bar says <strong>Unsaved changes</strong> while there are changes to save, and <strong>Saved</strong> after
+saving.</p>
 <h2 id="what-next">What next</h2>
 <ul>
 <li><a href="../interface/">The interface</a> describes every part of the window.</li>

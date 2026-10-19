@@ -586,7 +586,7 @@ loro linee, e l'elemento nasce solo quando il disegno è terminato. I componenti
 sanitari) si posizionano con un clic. Le facciate continue sono descritte in
 <a href="../walls-doors-windows/">Muri, porte e finestre</a>.</p>
 <h2 id="sketch-mode">Modalità di disegno</h2>
-<p><strong>Inizio ▸ Costruisci ▸ Pavimento</strong>, <strong>Tetto</strong>, <strong>Scale</strong> e <strong>Ringhiera</strong> aprono la modalità di
+<p><strong>Crea ▸ Costruisci ▸ Pavimento</strong>, <strong>Tetto</strong>, <strong>Scale</strong> e <strong>Ringhiera</strong> aprono la modalità di
 disegno. La scheda contestuale prende il nome di ciò che si disegna (<strong>Modifica | Crea contorno
 pavimento</strong>, <strong>Crea perimetro tetto</strong>, <strong>Crea disegno scale</strong>, <strong>Crea percorso ringhiera</strong>) e
 contiene:</p>
@@ -610,7 +610,7 @@ contiene:</p>
 <tbody>
 <tr>
 <td><strong>Linea</strong></td>
-<td>Clic dopo clic: ogni clic chiude una linea e inizia la successiva. Accanto alla linea sotto il cursore compaiono lunghezza e angolo; <span class="keys"><kbd class="key-shift">Shift</kbd></span> la tiene orizzontale o verticale. Con <strong>Continua</strong> disattivato nella barra delle opzioni, ogni linea è disegnata da sola. Un clic sull'inizio della catena chiude il perimetro Scrivi una lunghezza e premi <span class="keys"><kbd class="key-enter">Enter</kbd></span>: la linea finisce a quella distanza nella direzione del cursore (anche la rampa di una scala).</td>
+<td>Clic dopo clic: ogni clic chiude una linea e inizia la successiva. Accanto alla linea sotto il cursore compaiono lunghezza e angolo; <span class="keys"><kbd class="key-shift">Shift</kbd></span> la tiene orizzontale o verticale. Con <strong>Continua</strong> disattivato nella striscia delle opzioni, ogni linea è disegnata da sola. Un clic sull'inizio della catena chiude il perimetro Scrivi una lunghezza e premi <span class="keys"><kbd class="key-enter">Enter</kbd></span>: la linea finisce a quella distanza nella direzione del cursore (anche la rampa di una scala).</td>
 </tr>
 <tr>
 <td><strong>Rettangolo</strong></td>
@@ -630,9 +630,9 @@ contiene:</p>
 </tr>
 </tbody>
 </table>
-<p><strong>Offset</strong> nella barra delle opzioni sposta di quella distanza le linee disegnate (e quelle dei
+<p><strong>Offset</strong> nella striscia delle opzioni sposta di quella distanza le linee disegnate (e quelle dei
 muri selezionati).</p>
-<p>Gli archi del pannello <strong>Disegna</strong> (e un cerchio, come due metà) sono ciascuno una sola linea di disegno: si selezionano, si misurano e si trascinano come archi, restano archi nel pavimento, tetto, scala, contorno del muro o campitura, e <strong>Modifica contorno</strong> o <strong>Modifica disegno</strong> li restituiscono come archi. In ogni vista un punto del disegno si aggancia agli estremi e ai punti medi delle linee e degli archi del disegno, ai centri degli archi, dove le linee si incrociano e su una linea o un arco; dal punto da cui si disegna, al piede della perpendicolare e al punto in cui una linea tocca un arco. Il simbolo e il suo nome mostrano dove il punto si aggancia; <span class="keys"><kbd class="key-s">S</kbd></span> <span class="keys"><kbd class="key-c">C</kbd></span> e <span class="keys"><kbd class="key-s">S</kbd></span> <span class="keys"><kbd class="key-p">P</kbd></span> chiedono il centro o la perpendicolare per il punto successivo.</p>
+<p>Gli archi del gruppo <strong>Disegna</strong> (e un cerchio, come due metà) sono ciascuno una sola linea di disegno: si selezionano, si misurano e si trascinano come archi, restano archi nel pavimento, tetto, scala, contorno del muro o campitura, e <strong>Modifica contorno</strong> o <strong>Modifica disegno</strong> li restituiscono come archi. In ogni vista un punto del disegno si aggancia agli estremi e ai punti medi delle linee e degli archi del disegno, ai centri degli archi, dove le linee si incrociano e su una linea o un arco; dal punto da cui si disegna, al piede della perpendicolare e al punto in cui una linea tocca un arco. Il simbolo e il suo nome mostrano dove il punto si aggancia; <span class="keys"><kbd class="key-s">S</kbd></span> <span class="keys"><kbd class="key-c">C</kbd></span> e <span class="keys"><kbd class="key-s">S</kbd></span> <span class="keys"><kbd class="key-p">P</kbd></span> chiedono il centro o la perpendicolare per il punto successivo.</p>
 <p>Pavimenti e tetti richiedono perimetri chiusi. Un perimetro disegnato dentro quello esterno è
 un'<strong>apertura</strong>: il pavimento o il tetto ha lì un foro. Se <strong>Termina modalità di modifica</strong> trova
 linee che non si chiudono o che si intersecano, un messaggio lo dice e il disegno resta aperto per
@@ -655,7 +655,7 @@ terminato:</p>
   ogni lato (un'altra linea del disegno, il contorno originale del muro, un muro, una griglia, un
   livello): fai clic sul valore e scrivi una distanza per spostare la linea; il simbolo accanto
   la rende una quota permanente, che resta finché il disegno è aperto;</li>
-<li>le sue proprietà sono nella tavolozza <strong>Proprietà</strong>: <strong>Definisce l'inclinazione</strong> e
+<li>le sue proprietà sono nel pannello dell'elemento: <strong>Definisce l'inclinazione</strong> e
   <strong>Inclinazione</strong>, per una linea di tetto presa da un muro la sua <strong>Sporgenza</strong>, e la
   <strong>Lunghezza</strong>.</li>
 </ul>
@@ -671,10 +671,10 @@ modifica</strong> modifica lo stesso elemento, <strong>Annulla modalità di modi
 <p>Il disegno si apre con <strong>Modifica</strong> attivo: le sue linee si possono subito selezionare e modificare.</p>
 <p>In una pianta il disegno si fa sul livello; nella vista 3D si trova sul piano dell'elemento (la
 faccia superiore del pavimento, la base del tetto) e la vista 3D resta aperta.</p>
-<p>Anche un nuovo pavimento si può disegnare nella vista 3D: <strong>Pavimento</strong> avviato lì mette il disegno sul piano del livello, la linea che stai disegnando segue il cursore con la sua lunghezza e <strong>Termina modalità di modifica</strong> crea il pavimento senza lasciare la vista 3D. Nella vista 3D il <strong>Livello</strong> della barra delle opzioni sceglie il piano di lavoro: il livello sul cui piano sta il disegno e su cui va il pavimento. <strong>Seleziona muri</strong> prende il muro la cui faccia è sotto il cursore. Tetti da perimetro, scale e ringhiere si disegnano in pianta.</p>
+<p>Anche un nuovo pavimento si può disegnare nella vista 3D: <strong>Pavimento</strong> avviato lì mette il disegno sul piano del livello, la linea che stai disegnando segue il cursore con la sua lunghezza e <strong>Termina modalità di modifica</strong> crea il pavimento senza lasciare la vista 3D. Nella vista 3D il <strong>Livello</strong> della striscia delle opzioni sceglie il piano di lavoro: il livello sul cui piano sta il disegno e su cui va il pavimento. <strong>Seleziona muri</strong> prende il muro la cui faccia è sotto il cursore. Tetti da perimetro, scale e ringhiere si disegnano in pianta.</p>
 <h2 id="floors">Pavimenti</h2>
 <ol>
-<li>Fai clic su <strong>Inizio ▸ Costruisci ▸ Pavimento</strong>. La modalità di disegno parte con <strong>Seleziona
+<li>Fai clic su <strong>Crea ▸ Costruisci ▸ Pavimento</strong>. La modalità di disegno parte con <strong>Seleziona
    muri</strong>.</li>
 <li>Fai clic sui muri attorno al pavimento, oppure premi <span class="keys"><kbd class="key-tab">Tab</kbd></span> su uno di essi e fai clic per
    selezionarli tutti. Ogni linea va sulla <strong>faccia interna</strong> del suo muro; le linee dei muri che
@@ -683,7 +683,7 @@ faccia superiore del pavimento, la base del tetto) e la vista 3D resta aperta.</
    per un'apertura.</li>
 <li>Fai clic su <strong>Termina modalità di modifica</strong>.</li>
 </ol>
-<p>Nella barra delle opzioni, <strong>Prolunga nel muro (al nucleo)</strong> porta le linee selezionate dentro il
+<p>Nella striscia delle opzioni, <strong>Prolunga nel muro (al nucleo)</strong> porta le linee selezionate dentro il
 muro fino alla faccia del suo nucleo, e <strong>Offset</strong> le sposta (un offset negativo le allontana dai
 muri). Il tipo del nuovo pavimento è quello del selettore di tipo in cima a <strong>Proprietà</strong>.</p>
 <h3 id="sloped-floors">Pavimenti inclinati</h3>
@@ -737,8 +737,8 @@ il pavimento e prosegue sopra, e nelle aperture del pavimento i muri passano.</p
 default.</p>
 <h2 id="roofs">Tetti</h2>
 <ol>
-<li>Fai clic su <strong>Inizio ▸ Costruisci ▸ Tetto</strong>. La modalità di disegno parte con <strong>Seleziona
-   muri</strong>; la barra delle opzioni ha <strong>Definisce l'inclinazione</strong>, <strong>Sporgenza</strong> e <strong>Prolunga nel
+<li>Fai clic su <strong>Crea ▸ Costruisci ▸ Tetto</strong>. La modalità di disegno parte con <strong>Seleziona
+   muri</strong>; la striscia delle opzioni ha <strong>Definisce l'inclinazione</strong>, <strong>Sporgenza</strong> e <strong>Prolunga nel
    muro (al nucleo)</strong>.</li>
 <li>Seleziona i muri (<span class="keys"><kbd class="key-tab">Tab</kbd></span> per tutta la catena). Ogni linea va sulla <strong>faccia esterna</strong> del suo
    muro, spostata in fuori della sporgenza (dalla faccia del nucleo con <strong>Prolunga nel muro (al
@@ -794,7 +794,7 @@ ne dice di più).</p>
 strati.</p>
 <h2 id="stairs">Scale</h2>
 <ol>
-<li>Fai clic su <strong>Inizio ▸ Collegamenti verticali ▸ Scale</strong>. La modalità di disegno parte con
+<li>Fai clic su <strong>Crea ▸ Collegamenti verticali ▸ Scale</strong>. La modalità di disegno parte con
    <strong>Rampa</strong>.</li>
 <li>Fai clic dove sta la prima alzata, poi dove finisce la rampa: la rampa si aggancia a pedate
    intere e la barra di stato conta le alzate create e rimanenti (per esempio <code>9 alzate create, 8
@@ -807,7 +807,7 @@ strati.</p>
 <p>Linee guida tratteggiate mostrano dove può iniziare la rampa successiva: il prolungamento dell'ultima rampa oltre la sua fine e le linee della sua prima e ultima alzata. Un clic vicino a esse vi si aggancia. In una vista 3D la scala si disegna allo stesso modo, sul piano del livello attivo.</p>
 <p>Una rampa curva (una scala a chiocciola): con <strong>Rampa</strong> attiva fai clic su <strong>Arco da centro ed estremità</strong>, poi sul centro, sull'inizio della linea di rampa (la sua distanza dal centro è il raggio della linea di percorrenza) e sulla fine, girando oltre il mezzo giro se serve, ma meno di un giro (oltre, la rampa si ferma prima e la barra di stato avvisa che le rampe si sovrapporrebbero). Le alzate partono dal centro a una pedata l'una dall'altra sulla linea di rampa; anche linee di alzata disegnate a raggiera da un centro fanno una rampa curva. Una seconda rampa curva attorno allo stesso centro e sulla stessa linea di rampa (un clic vicino li prende) si unisce alla prima con un pianerottolo ad arco.</p>
 <p>Una scala si può anche disegnare per linee. Nel suo disegno fai clic su <strong>Disegna ▸ Contorno</strong> e disegna i bordi sinistro e destro (verdi), poi su <strong>Alzata</strong> e disegna le linee delle alzate (nere) fra di essi, con <strong>Linea</strong> o <strong>Seleziona linee</strong>. Alzate parallele e a passo regolare formano una rampa, larga quanto le alzate; un pianerottolo unisce due rampe fino alle linee di contorno. Ogni alzata è alta quanto il piano diviso per il numero di alzate desiderato; con meno linee di alzata la scala si ferma prima del livello superiore (<strong>Proprietà</strong> mostra il numero effettivo). <strong>Modifica disegno</strong> restituisce le stesse linee. Ogni rampa disegnata con <strong>Rampa</strong> diventa subito linee di contorno e di alzata come queste: si possono spostare o eliminare come le altre. Un pianerottolo segue le sue linee di contorno: dividi il bordo esterno con <strong>Dividi elemento</strong> e trascina un pezzo per fare una rientranza, oppure disegnalo più largo delle rampe.</p>
-<p>La <strong>Larghezza</strong> nella barra delle opzioni è quella della nuova scala (come predefinito quella
+<p>La <strong>Larghezza</strong> nella striscia delle opzioni è quella della nuova scala (come predefinito quella
 del tipo). <strong>Strumenti ▸ Tipo di ringhiera</strong> sceglie le ringhiere della nuova scala: un tipo di
 ringhiera, messo su entrambi i lati, oppure <strong>Nessuno</strong>.</p>
 <p>Il numero di alzate deriva dall'altezza fra <strong>Livello di base</strong> e <strong>Livello superiore</strong> (con i loro
@@ -847,7 +847,7 @@ e nell'abaco delle scale è il volume dei suoi solidi.</p>
 <p>Il <strong>Carattere del testo</strong> del tipo, il <strong>Profilo dell'aggetto</strong> (<strong>Predefinito</strong> o <strong>Arrotondato</strong>) e <strong>Applica profilo di aggetto</strong> (solo anteriore, anteriore e sinistra, oppure anteriore, sinistra e destra: oltre un lato senza montante chiuso), l'<strong>Offset montante scala aperto</strong>, <strong>Taglia montanti alla sommità</strong> (<strong>Allinea al livello</strong> ferma i montanti laterali al livello superiore) e i dati di <strong>Identificazione</strong> (<strong>Codice</strong>, <strong>Modello prodotto</strong>, <strong>Produttore</strong>, <strong>Commenti sul tipo</strong>, <strong>URL</strong>, <strong>Descrizione</strong>, <strong>Codice assieme</strong>) sono in <strong>Parametri del tipo</strong>, come la <strong>Parte inferiore del montante</strong> di una scala monolitica (<strong>Liscia</strong>, una soletta inclinata, o <strong>A gradini</strong>: la soletta segue i gradini). In <strong>Regole di calcolo</strong>, <strong>Usa calcolatore scala</strong> con un <strong>Risultato di destinazione</strong>, <strong>massimo</strong> e <strong>minimo</strong> controlla 2 alzate + 1 pedata: una scala fuori dall'intervallo viene creata, e un avviso lo dice.</p>
 <h2 id="ramps">Rampe inclinate</h2>
 <ol>
-<li>Fai clic su <strong>Inizio ▸ Collegamenti verticali ▸ Rampa inclinata</strong>. La modalità di disegno
+<li>Fai clic su <strong>Crea ▸ Collegamenti verticali ▸ Rampa inclinata</strong>. La modalità di disegno
    inizia con <strong>Rampa</strong>.</li>
 <li>Fai clic dove inizia una rampa, poi dove finisce: ha al massimo la pendenza <strong>Inclinazione
    massima della rampa inclinata (1/x)</strong> del tipo e sale al massimo di <strong>Lunghezza massima
@@ -861,10 +861,10 @@ e nell'abaco delle scale è il volume dei suoi solidi.</p>
 <p>La <strong>Forma</strong> del tipo è <strong>Spesso</strong> (con il suo <strong>Spessore</strong>) o <strong>Solido</strong> (fino alla base), e
 <strong>Materiale rampa inclinata</strong> la colora. Ringhiere, <strong>Modifica disegno</strong> e <strong>Proprietà</strong> funzionano
 come per le scale.</p>
-<p>Con <strong>Arco da centro ed estremità</strong> nel pannello <strong>Disegna</strong>, fai clic sul centro, sull'inizio della linea della rampa e poi sulla sua fine attorno al centro: la rampa gira attorno al centro, con due linee radiali alle estremità e due archi di contorno ai lati. <strong>Mostra freccia SU in tutte le viste</strong> del tipo disegna la freccia SU intera e <strong>SU</strong> anche nella pianta del livello superiore; il <strong>Carattere del testo</strong> e i dati di <strong>Identificazione</strong> sono come per le scale.</p>
+<p>Con <strong>Arco da centro ed estremità</strong> nel gruppo <strong>Disegna</strong>, fai clic sul centro, sull'inizio della linea della rampa e poi sulla sua fine attorno al centro: la rampa gira attorno al centro, con due linee radiali alle estremità e due archi di contorno ai lati. <strong>Mostra freccia SU in tutte le viste</strong> del tipo disegna la freccia SU intera e <strong>SU</strong> anche nella pianta del livello superiore; il <strong>Carattere del testo</strong> e i dati di <strong>Identificazione</strong> sono come per le scale.</p>
 <h2 id="railings">Ringhiere</h2>
 <ol>
-<li>Fai clic su <strong>Inizio ▸ Collegamenti verticali ▸ Ringhiera</strong>.</li>
+<li>Fai clic su <strong>Crea ▸ Collegamenti verticali ▸ Ringhiera</strong>.</li>
 <li>Disegna il percorso con <strong>Linea</strong>: una sola catena di linee collegate (un percorso a pezzi, chiuso o che
    torna su se stesso è rifiutato da <strong>Termina modalità di modifica</strong>).</li>
 <li>Per mettere la ringhiera su una scala, fai clic su <strong>Strumenti ▸ Seleziona nuovo host</strong> e poi
@@ -889,7 +889,7 @@ altezza pianerottolo</strong> con <strong>Adeguamento altezza pianerottolo</stro
 corrente sopra i pianerottoli.</p>
 <h2 id="components">Componenti</h2>
 <ol>
-<li>Fai clic su <strong>Inizio ▸ Costruisci ▸ Componente</strong>. Il selettore di tipo elenca i componenti
+<li>Fai clic su <strong>Crea ▸ Costruisci ▸ Componente</strong>. Il selettore di tipo elenca i componenti
    caricati nel progetto; un'anteprima segue il cursore, in pianta e nella vista 3D.</li>
 <li>Premi la <span class="keys"><kbd class="key-space">Space</kbd></span> per ruotare l'anteprima di 90°.</li>
 <li>Fai clic per posizionare il componente sul livello della pianta.</li>

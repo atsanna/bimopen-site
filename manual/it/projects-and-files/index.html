@@ -563,8 +563,7 @@ modello non viene sovrascritto.</p>
 progetto aperto come modello; anche un progetto creato come <strong>Modello di progetto</strong>, o un modello
 aperto, si salva come modello.</p>
 <h2 id="opening-a-project">Aprire un progetto</h2>
-<p><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-o">O</kbd></span>, <strong>Menu dell'applicazione ➤ Apri…</strong> o <strong>Apri</strong> sulla barra di accesso rapido apre un
-progetto. <strong>Menu dell'applicazione ➤ Documenti recenti</strong> elenca gli ultimi progetti, dal più
+<p><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-o">O</kbd></span> o <strong>Menu dell'applicazione ➤ Apri…</strong> apre un progetto. <strong>Menu dell'applicazione ➤ Documenti recenti</strong> elenca gli ultimi progetti, dal più
 recente; una puntina tiene un progetto nell'elenco. Senza un file, BIMopen si avvia su
 <strong>File recenti</strong>, con i progetti recenti, <strong>Apri…</strong>, <strong>Nuovo</strong> e il <strong>Progetto di esempio</strong> (a meno
 che <strong>Attiva pagina dei file recenti all'avvio</strong> non sia disattivato nelle opzioni). Anche
@@ -573,8 +572,8 @@ trascinare un file di progetto sulla finestra lo apre.</p>
 nuovo nome. Se BIMopen si è fermato senza salvare (un arresto anomalo, un'interruzione di
 corrente), riaprire il progetto riporta il lavoro non salvato come modifiche non salvate.</p>
 <h2 id="saving">Salvare</h2>
-<p><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span>, o <strong>Salva</strong> sulla barra di accesso rapido, salva il progetto; fino ad allora il file
-resta com'era all'ultimo salvataggio, e la barra del titolo mostra un asterisco. <strong>Menu
+<p><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span>, o un clic sullo stato di salvataggio nella barra superiore, salva il progetto; fino ad
+allora il file resta com'era all'ultimo salvataggio, e la barra superiore dice <strong>Modifiche non salvate</strong>. <strong>Menu
 dell'applicazione ➤ Salva con nome ➤ Progetto…</strong> lo scrive in un nuovo file e prosegue su quello.</p>
 <p><strong>Salva con nome ➤ Opzioni…</strong> apre <strong>Opzioni di salvataggio del file</strong>: <strong>Backup massimi</strong>
 conserva quel numero di versioni precedenti accanto al file (<code>house.0001.bimopen</code>,
@@ -591,17 +590,17 @@ backup, recupero dopo un arresto anomalo e apertura in sola lettura richiedono u
 sono solo sul desktop.</p>
 <h2 id="project-settings">Impostazioni del progetto</h2>
 <h3 id="project-information">Informazioni sul progetto</h3>
-<p><strong>Progetto ➤ Impostazioni ➤ Informazioni sul progetto</strong> imposta nome, numero, cliente, indirizzo,
+<p><strong>Impostazioni ➤ Impostazioni ➤ Informazioni sul progetto</strong> imposta nome, numero, cliente, indirizzo,
 data di consegna e stato del progetto: i cartigli di ogni tavola li mostrano.</p>
 <h3 id="project-units">Unità di misura del progetto</h3>
-<p><strong>Progetto ➤ Impostazioni ➤ Unità di misura</strong> elenca le grandezze (lunghezza, area, volume,
+<p><strong>Impostazioni ➤ Impostazioni ➤ Unità di misura</strong> elenca le grandezze (lunghezza, area, volume,
 angolo, pendenza e le altre) con un esempio per ciascuna, e il <strong>Simbolo decimale/raggruppamento
 cifre</strong>. <strong>Formato…</strong> di una grandezza ne imposta l'unità, l'<strong>Arrotondamento</strong> (un numero di
 decimali, o <strong>Personalizzato</strong> con un <strong>Fattore d'incremento</strong>, come 5 mm), il <strong>Simbolo unità di
 misura</strong>, <strong>Elimina gli zero finali</strong>, il segno più per i valori positivi e il raggruppamento delle
 cifre.</p>
 <h3 id="sun-settings">Impostazioni sole</h3>
-<p><strong>Progetto ➤ Impostazioni aggiuntive ➤ Impostazioni sole</strong> apre le impostazioni del sole della
+<p><strong>Impostazioni ➤ Impostazioni aggiuntive ➤ Impostazioni sole</strong> apre le impostazioni del sole della
 vista attiva, come il pulsante del sole della barra di controllo della vista (vedi
 <a href="../views-and-graphics/">Viste e grafica</a>).</p>
 <h2 id="options">Opzioni</h2>
@@ -621,7 +620,7 @@ l'altra.</p>
 </tr>
 <tr>
 <td><strong>Interfaccia utente</strong></td>
-<td>Il tema (<strong>Chiaro</strong> o <strong>Scuro</strong>), la lingua, lo stile e la dimensione dell'interfaccia; <strong>Attiva pagina dei file recenti all'avvio</strong>; la scheda della barra multifunzione quando termina una selezione o si chiude uno strumento (<strong>Rimani su scheda Modifica</strong> o <strong>Torna alla scheda precedente</strong>) e <strong>Visualizza scheda contestuale alla selezione</strong>; <strong>Assistente descrizione comandi</strong> (<strong>Nessuno</strong>, <strong>Minima</strong>, <strong>Normale</strong>, <strong>Elevata</strong>)</td>
+<td>Il tema (<strong>Chiaro</strong> o <strong>Scuro</strong>), la lingua, lo stile e la dimensione dell'interfaccia; <strong>Attiva pagina dei file recenti all'avvio</strong>; nello stile <strong>Classica</strong>, la scheda della barra multifunzione quando termina una selezione o si chiude uno strumento (<strong>Rimani su scheda Modifica</strong> o <strong>Torna alla scheda precedente</strong>) e <strong>Visualizza scheda contestuale alla selezione</strong>; <strong>Assistente descrizione comandi</strong> (<strong>Nessuno</strong>, <strong>Minima</strong>, <strong>Normale</strong>, <strong>Elevata</strong>)</td>
 </tr>
 <tr>
 <td><strong>Grafica</strong></td>
@@ -634,7 +633,7 @@ l'altra.</p>
 </tbody>
 </table>
 <h2 id="transferring-project-standards">Copiare le impostazioni da un progetto</h2>
-<p><strong>Progetto ➤ Impostazioni ➤ Copia impostazioni da progetto</strong> copia impostazioni da un altro
+<p><strong>Impostazioni ➤ Impostazioni ➤ Copia impostazioni da progetto</strong> copia impostazioni da un altro
 progetto in questo. In <strong>Selezione elementi da copiare</strong> si sceglie il progetto con <strong>Sfoglia…</strong>
 (<strong>Copia da:</strong>), poi si spunta che cosa copiare: i tipi di muri, pavimenti, tetti, porte e
 finestre, scale, ringhiere, pannelli e montanti di facciata continua, gli stili di linea, i tipi di

@@ -258,6 +258,31 @@
       Sole e ombre
     </span>
 </a>
+<nav aria-label="Sole e ombre" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sun-settings">
+<span class="md-ellipsis">
+      Impostazioni del sole
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sun-study">
+<span class="md-ellipsis">
+      Studio del soleggiamento
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#graphic-display-options">
+<span class="md-ellipsis">
+      Opzioni grafiche della vista
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#plans-and-their-view-range">
@@ -407,6 +432,31 @@
       Sole e ombre
     </span>
 </a>
+<nav aria-label="Sole e ombre" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sun-settings">
+<span class="md-ellipsis">
+      Impostazioni del sole
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sun-study">
+<span class="md-ellipsis">
+      Studio del soleggiamento
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#graphic-display-options">
+<span class="md-ellipsis">
+      Opzioni grafiche della vista
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#plans-and-their-view-range">
@@ -483,7 +533,7 @@
 che una vista mostra e in che modo: stili grafici, scala e dettaglio,
 le altezze di taglio di una pianta, le regioni di taglio, nascondere e isolare,
 <strong>Visibilità e grafica</strong>, filtri e modelli vista. Spessori di linea, motivi di linea e stili per categoria
-sono descritti negli stessi termini dalle finestre del programma <strong>Progetto ▸ Impostazioni</strong>.</p>
+sono descritti negli stessi termini dalle finestre del programma di <strong>Impostazioni</strong> nella barra laterale.</p>
 <h2 id="3d-views">Viste 3D</h2>
 <p><strong>Viste ▸ Crea ▸ Vista 3D ▸ Vista 3D predefinita</strong> apre la vista 3D predefinita, <strong>{3D}</strong>,
 inquadrando l'intero modello; aperta di nuovo, mostra il modello come lo si era lasciato.
@@ -539,9 +589,11 @@ di ogni apertura. Un muro con una finestra mostra il proprio contorno e quello d
 nessuna linea dove si incontrano i pezzi del muro.</p>
 <p>Anche piante, sezioni e prospetti hanno uno stile grafico. Una pianta è disegnata in
 <strong>Linee</strong> finché non si sceglie un altro stile. In <strong>Linee</strong> le superfici, tagliate o viste, non
-sono colorate: ciò che è tagliato mostra il suo motivo di sezione, o il riempimento pieno al
-livello di dettaglio <strong>Basso</strong>. In <strong>Ombreggiato</strong>, <strong>Ombreggiato con bordi</strong> e <strong>Colori pieni</strong>
-ogni elemento visto o tagliato è riempito con il colore di ombreggiatura del suo materiale: muri
+sono colorate: ciò che è tagliato mostra il motivo di sezione del suo materiale; al
+livello di dettaglio <strong>Basso</strong> il retino a dettaglio basso del tipo, altrimenti solo il contorno. In <strong>Ombreggiato</strong>, <strong>Ombreggiato con bordi</strong> e <strong>Colori pieni</strong>
+ogni elemento visto o tagliato è riempito con il colore di ombreggiatura del suo materiale (una parte senza materiale prende quello
+della sua categoria, da <strong>Stili per categoria</strong>, altrimenti il colore predefinito della categoria; la
+vista 3D segue la stessa regola): muri
 (ogni strato dove è tagliato), pavimenti, tetti, porte, finestre, arredi e componenti, scale e
 ringhiere. Le piante sono piatte; in sezioni e prospetti <strong>Ombreggiato</strong> scurisce un poco le facce
 girate rispetto a chi guarda, come le falde di un tetto, mentre <strong>Colori pieni</strong> le lascia tutte
@@ -552,37 +604,108 @@ Tavole, stampe e disegni esportati mostrano le viste come lo schermo.</p>
 sezione sopra le superfici viste attraverso ogni locale tagliato. Su <strong>Primo piano</strong> copre il
 modello, sotto le annotazioni.</p>
 <h2 id="sun-and-shadows">Sole e ombre</h2>
-<p>In una vista 3D la barra di controllo della vista ha altri due pulsanti:</p>
+<p>Piante, sezioni, prospetti e viste 3D mostrano il sole (le viste di disegno, le legende, le tavole
+e gli abachi no). La barra di controllo della vista ha due pulsanti, ciascuno con una piccola
+freccia per il suo menu (lo apre anche il tasto destro):</p>
 <ul>
-<li><strong>Attiva ombre</strong> / <strong>Disattiva ombre</strong>: negli stili ombreggiati il sole illumina il modello e
-  proietta ombre, dai muri sui pavimenti, dalle gronde del tetto sui muri; in <strong>Linee</strong> (linee nascoste) le ombre e le facce in controluce sono grigi della carta;</li>
-<li>il pulsante del percorso solare: <strong>Attiva percorso solare</strong> disegna sul terreno, attorno al
-  modello, un anello con i quattro punti cardinali, il percorso del sole durante il giorno come un
-  arco sopra di esso, e il sole dov'è. <strong>Impostazioni sole…</strong> imposta dove si trova il sole:</li>
+<li><strong>Traiettoria del sole</strong>: il suo menu ha <strong>Mostra la traiettoria del sole</strong> / <strong>Nascondi la
+  traiettoria del sole</strong>, <strong>Impostazioni del sole…</strong> e <strong>Adatta al modello</strong> (inquadra la
+  traiettoria intera);</li>
+<li><strong>Ombre</strong>: il suo menu ha <strong>Attiva le ombre</strong> / <strong>Disattiva le ombre</strong>, <strong>Opzioni grafiche della
+  vista…</strong> e <strong>Anteprima dello studio del soleggiamento</strong>.</li>
+</ul>
+<p>Mentre uno dei due è attivo, la barra mostra anche l'ora e la data del sole, ciascuna con <strong>−</strong> e
+<strong>+</strong> (un quarto d'ora, un giorno). Gli stessi pulsanti e menu sono nel menu <strong>Sole e ombre</strong> della
+barra della vista nello stile BIMopen, nel foglio della vista della modalità touch e nel menu
+contestuale della vista. <strong>Traiettoria del sole</strong> è anche una casella delle <strong>Proprietà</strong> della
+vista (<strong>Grafica</strong>), con <strong>Dimensione della traiettoria</strong> (100–500 %, 150 % se non cambiata) e
+<strong>Sole comune</strong>.</p>
+<p><strong>Le ombre</strong> si calcolano dal modello e dal sole, uguali in ogni vista: in pianta cadono su ciò che
+la pianta mostra e, dove non c'è nulla, sul piano di un livello (<strong>Ombre sul livello</strong> nelle
+impostazioni del sole, altrimenti sul terreno, il livello più basso); in sezione e in prospetto
+cadono sulle facciate e su ciò che sta dietro, da gronde, balconi, rientranze e altri edifici; nelle
+viste 3D le disegna la scheda grafica (il processore quando non c'è). In <strong>Linee</strong> (linee nascoste)
+un'ombra è un grigio della carta, negli stili ombreggiati scurisce i colori dei materiali. Le facce
+tagliate dalla vista restano in luce.</p>
+<p><strong>La traiettoria del sole</strong> è un anello intorno al modello con i punti cardinali al nord vero,
+l'arco del giorno con le sue ore, l'analemma (dove sta il sole a quell'ora durante l'anno), il tratto
+che uno studio percorre, e il sole con la sua ora e data. In pianta, in sezione e in prospetto il
+sole si trascina: lungo il giorno si aggancia ai quarti d'ora, lungo l'analemma al 1° di ogni mese;
+con <span class="keys"><kbd class="key-shift">Shift</kbd></span> resta sul giorno, con <span class="keys"><kbd class="key-control">Ctrl</kbd></span> sull'analemma. Con la vista sotto il cursore (e nulla
+selezionato, o dopo un clic sul sole), <span class="keys"><kbd class="key-arrow-left">Left</kbd></span> e <span class="keys"><kbd class="key-arrow-right">Right</kbd></span> spostano l'ora, <span class="keys"><kbd class="key-arrow-up">Up</kbd></span> e <span class="keys"><kbd class="key-arrow-down">Down</kbd></span> la
+data. Con <strong>Luce fissa</strong> il sole sta fermo e non ha traiettoria.</p>
+<p><strong>Sole comune</strong>: le viste condividono il sole del progetto, a meno che ne abbiano uno proprio (la
+proprietà <strong>Sole comune</strong>). Spostare il sole comune in una vista lo sposta in tutte le viste che lo
+condividono; una vista con il proprio sole non cambia. <strong>Sole comune a tutte le viste</strong> nelle
+impostazioni del sole riporta tutte le viste su di esso.</p>
+<p>Ogni modifica è un passo di <strong>Annulla</strong>; il comando <code>sun</code> fa lo stesso dalla riga di comando e via
+MCP (vedi <a href="../command-line-and-mcp/">Riga di comando e MCP</a>).</p>
+<h3 id="sun-settings">Impostazioni del sole</h3>
+<p><strong>Impostazioni del sole…</strong> apre una finestra con l'azimut, l'altezza, l'ora e la data del sole
+nell'intestazione:</p>
+<ul>
+<li>a sinistra le <strong>preimpostazioni</strong>: una riga non salvata per ogni modalità, quelle predefinite
+  (<strong>Solstizio d’estate</strong>, <strong>Solstizio d’inverno</strong>, <strong>Equinozio di primavera</strong>, <strong>Equinozio
+  d’autunno</strong>, <strong>Estate, dalle 9 alle 17</strong>, <strong>Luce dall’alto a destra</strong>) e quelle del progetto;
+  <strong>Salva…</strong>, <strong>Duplica…</strong>, <strong>Rinomina…</strong> ed <strong>Elimina</strong> (si rinominano o si eliminano solo quelle
+  del progetto);</li>
+<li>al centro la modalità e i suoi campi:</li>
 </ul>
 <table>
 <thead>
 <tr>
 <th>Modalità</th>
-<th>Che cosa richiede</th>
+<th>Che cosa chiede</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Statico</strong></td>
-<td><strong>Latitudine</strong>, <strong>Longitudine</strong>, <strong>Fuso orario (UTC)</strong>, il giorno e il mese e l'<strong>Ora</strong>: ne segue la posizione del sole</td>
+<td><strong>Istante</strong></td>
+<td>la <strong>Data</strong> e l'<strong>Ora</strong>; <strong>Sole comune a tutte le viste</strong></td>
 </tr>
 <tr>
-<td><strong>Illuminazione</strong></td>
-<td><strong>Azimut</strong> (gradi in senso orario dal nord) e <strong>Altezza</strong></td>
+<td><strong>Un giorno</strong></td>
+<td>la <strong>Data</strong>, <strong>Dall’alba al tramonto</strong> o un'<strong>Ora di inizio</strong> e un'<strong>Ora di fine</strong>, l'<strong>Intervallo tra i fotogrammi</strong> (15, 30 o 45 minuti, 1 ora); ne segue il numero di <strong>Fotogrammi</strong></td>
+</tr>
+<tr>
+<td><strong>Più giorni</strong></td>
+<td><strong>Dal giorno</strong> e <strong>Al giorno</strong> (giorno/mese), l'<strong>Ora</strong>, l'<strong>Intervallo</strong> (1 ora, 1 giorno, 1 settimana, 1 mese)</td>
+</tr>
+<tr>
+<td><strong>Luce fissa</strong></td>
+<td><strong>Azimut (°)</strong> e <strong>Altezza (°)</strong>; <strong>Relativa alla vista</strong>: la luce segue la direzione della vista</td>
 </tr>
 </tbody>
 </table>
-<p>Ogni vista ha le proprie impostazioni del sole, e le modifiche si possono annullare. Le ombre sono
-disegnate dalla finestra 3D sulla scheda grafica; piante, sezioni, prospetti e immagini esportate
-non le mostrano ancora.</p>
+<p>Poi la <strong>Località</strong> del progetto (una città, o <strong>Personalizzata</strong> con latitudine e longitudine: una
+  sola per tutto il progetto) con l'<strong>Ora legale</strong>, e <strong>Ombre sul livello</strong> con il suo <strong>Livello del
+  terreno</strong>;
+- a destra l'anteprima: il cielo visto dall'alto, con la traiettoria del giorno, l'analemma e il
+  sole. <strong>Anteprima</strong> nell'intestazione, a destra dei valori, è un interruttore che la nasconde e
+  la mostra; la finestra tiene la sua dimensione, e senza anteprima le impostazioni ne prendono lo spazio.</p>
+<p><strong>Applica</strong> cambia il sole della vista e lascia aperta la finestra, <strong>OK</strong> lo cambia e la chiude,
+<strong>Annulla</strong> non cambia nulla. I progetti fatti prima che il progetto avesse una località tengono il
+luogo e la data di ogni vista: la prima vista il cui sole era stato cambiato dà al progetto la sua
+località, e le viste il cui sole era stato cambiato tengono il loro come proprio.</p>
+<h3 id="sun-study">Studio del soleggiamento</h3>
+<p><strong>Anteprima dello studio del soleggiamento</strong> (nel menu <strong>Ombre</strong>) mostra sopra la vista la barra
+dello studio: <strong>⏮ −10</strong>, <strong>⏴</strong>, <strong>⏵ Riproduci</strong> / <strong>⏸ Pausa</strong>, <strong>⏵</strong>, <strong>+10 ⏭</strong> e <strong>fotogramma n
+di N</strong>. Un sole di un istante si studia lungo il suo giorno. <strong>Salva come immagine</strong> salva il
+fotogramma mostrato come PNG con il nome della vista, la data e l'ora; <strong>Esporta studio…</strong> salva
+tutti i fotogrammi come sequenza di immagini PNG o JPEG (un filmato richiede un codificatore video
+che BIMopen non ha: la scelta è in grigio, con il motivo). <strong>×</strong> chiude la barra; la chiude anche
+un'altra vista.</p>
+<h3 id="graphic-display-options">Opzioni grafiche della vista</h3>
+<p><strong>Opzioni grafiche della vista…</strong> imposta per la vista attiva: lo <strong>Stile di visualizzazione</strong>, il
+<strong>Contorno esterno</strong> (<strong>Nessuno</strong>, <strong>Medio</strong>, <strong>Spesso</strong>: una linea più spessa sul profilo esterno
+del modello), <strong>Proietta ombre</strong>, <strong>Ombre d’ambiente</strong> (angoli e incavi scuriti), il sole (il suo
+pulsante apre le <strong>Impostazioni del sole</strong>), <strong>Sole</strong>, <strong>Luce d’ambiente</strong> e <strong>Intensità delle
+ombre</strong> (0–100) e, per le viste 3D, lo <strong>Sfondo</strong> (<strong>Nessuno</strong>, <strong>Cielo</strong>, <strong>Sfumatura</strong>).
+L'anteprima disegna la vista con le opzioni scelte; l'interruttore <strong>Anteprima</strong> nell'intestazione la nasconde e la mostra, come
+nelle impostazioni del sole. I modelli di vista portano queste opzioni con lo stile di
+visualizzazione, e il sole e le ombre come <strong>Sole e ombre</strong>.</p>
 <h2 id="plans-and-their-view-range">Piante e altezze di taglio</h2>
-<p><strong>Viste ▸ Crea ▸ Viste di pianta ▸ Pianta dei pavimenti</strong> apre <strong>Nuova pianta</strong>: scegli i livelli
+<p><strong>Viste ▸ Crea ▸ Pianta ▸ Pianta dei pavimenti</strong> apre <strong>Nuova pianta</strong>: scegli i livelli
 e la scala, poi <strong>OK</strong>. Con <strong>Non duplicare viste esistenti</strong> attivo, i livelli che hanno già una
 pianta vengono esclusi; disattivalo per fare una seconda pianta di un livello.</p>
 <p>Una pianta è un taglio orizzontale del modello al <strong>Piano di taglio</strong> delle sue altezze di
@@ -655,7 +778,7 @@ taglio sono disegnati come un tutto: un contorno spesso attorno, una linea sotti
 incontrano due materiali, nessuna tra parti dello stesso materiale; i muri collegati a un tetto si
 fermano sotto di esso. Ogni strato tagliato ha il retino di sezione del suo materiale (a
 <strong>Basso</strong>, il <strong>Retino a dettaglio basso</strong> del tipo nel suo <strong>Colore del retino a dettaglio
-basso</strong>, impostabili sui tipi di muro, pavimento e tetto; altrimenti un unico riempimento pieno).
+basso</strong>, impostabili sui tipi di muro, pavimento e tetto; altrimenti solo il contorno).
 Arredi e apparecchi sanitari non si tagliano mai: si vedono interi. Una finestra è tagliata con
 il telaio nella linea spessa di taglio e il vetro in linee sottili; ciò che sta oltre il taglio è
 disegnato con le linee di proiezione, più sottili.</p>

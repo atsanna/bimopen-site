@@ -191,6 +191,13 @@
 <nav aria-label="Lancer BIMopen sur le poste de travail" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#start-screen">
+<span class="md-ellipsis">
+      Écran de démarrage
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#language-and-theme">
 <span class="md-ellipsis">
       Langue et thème
@@ -418,6 +425,13 @@
 <nav aria-label="Lancer BIMopen sur le poste de travail" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#start-screen">
+<span class="md-ellipsis">
+      Écran de démarrage
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#language-and-theme">
 <span class="md-ellipsis">
       Langue et thème
@@ -554,16 +568,31 @@ l'interface graphique nécessite aussi les fichiers de développement de xkbcomm
 <td><code>bimopen house.bimopen</code></td>
 <td>Le projet enregistré dans <code>house.bimopen</code></td>
 </tr>
+<tr>
+<td><code>bimopen --no-splash</code></td>
+<td>Comme <code>bimopen</code>, sans l'écran de démarrage</td>
+</tr>
 </tbody>
 </table>
 <p>Vous pouvez aussi ouvrir un projet en faisant glisser un fichier <code>.bimopen</code> depuis le gestionnaire
 de fichiers dans la fenêtre.</p>
+<h3 id="start-screen">Écran de démarrage</h3>
+<p>Pendant le chargement de BIMopen apparaît l'écran de démarrage : une fenêtre sans cadre, centrée
+sur l'écran, avec le nom, la version, l'étape de chargement en cours et son pourcentage, et une
+ligne turquoise qui avance le long du bord inférieur. Les étapes sont les vraies (préférences,
+polices, carte graphique, familles, ouverture du projet) ; l'écran reste au moins une demi-seconde,
+pour ne pas clignoter, et s'efface quand la fenêtre principale est prête. Il parle la langue
+choisie dans l'application, sinon celle du système si c'est l'une des six, sinon l'anglais.</p>
+<p>Pour ne plus le voir, décoche <strong>Options ▸ Général ▸ Afficher l'écran de démarrage</strong> (BIMopen s'en
+souvient), ou lance <code>bimopen --no-splash</code>. Sous Wayland, c'est le compositeur qui décide où
+apparaît la fenêtre (en général au centre).</p>
 <h3 id="language-and-theme">Langue et thème</h3>
 <p>La première fois, BIMopen parle la langue du système d'exploitation lorsqu'elle fait partie de ses
 six langues (italien, anglais, allemand, français, espagnol, arabe), et l'anglais sinon. Pour la
-changer, utilisez le menu des langues à l'extrémité droite de la barre de titre (le globe avec le
-nom de la langue), ou <strong>Menu de l'application ▸ Options ▸ Langue</strong>. L'interface change aussitôt.</p>
-<p>Dans <strong>Options</strong>, vous choisissez aussi le <strong>Thème</strong>, <strong>Clair</strong> ou <strong>Sombre</strong>, et si l'arrière-plan
+changer, cliquez sur l'engrenage à l'extrémité droite de la barre supérieure (<strong>Options</strong>) et
+choisissez la <strong>Langue</strong> sous <strong>Interface utilisateur</strong>. L'interface change aussitôt.</p>
+<p>Dans <strong>Options</strong>, vous choisissez aussi le <strong>Thème</strong>, <strong>Clair</strong> ou <strong>Sombre</strong> (le soleil ou la lune
+de la barre supérieure le change aussi), et si l'arrière-plan
 des vues est inversé (<strong>Inverser la couleur d'arrière-plan</strong> : vues sombres avec des lignes
 claires). Choisir le thème sombre inverse aussi l'arrière-plan ; vous pouvez désactiver cette
 inversion. Au premier démarrage, BIMopen utilise le thème sombre, avec l'arrière-plan inversé. Il mémorise
@@ -612,7 +641,8 @@ de la version indiquée dans <code>Cargo.lock</code> ; si <code>wasm-opt</code> 
 plus petit.</p>
 <h2 id="the-sample-project">Le projet d'exemple</h2>
 <p>La maison d'exemple montre l'essentiel de ce que BIMopen sait faire. Ouvrez-la avec <strong>Menu de
-l'application ▸ Projet d'exemple</strong>, avec <code>bimopen --sample</code>, ou en tapant <code>sample</code> dans la ligne
+l'application ▸ Projet d'exemple</strong> (le menu de l'application est la marque de BIMopen, en haut de
+la barre latérale), avec <code>bimopen --sample</code>, ou en tapant <code>sample</code> dans la ligne
 de commande.</p>
 <p>Elle contient :</p>
 <ul>
@@ -634,12 +664,12 @@ enregistré si vous ne l'enregistrez pas.</p>
 </div>
 <h2 id="your-first-house">Votre première maison</h2>
 <p>Les étapes ci-dessous partent d'un projet vide et se terminent par une feuille. Chaque étape
-indique le bouton sur lequel cliquer ; le <a href="../interface/">chapitre sur l'interface</a> explique chaque
-partie de la fenêtre.</p>
+indique où cliquer dans le style d'interface <strong>BIMopen</strong>, celui avec lequel BIMopen démarre ; le
+<a href="../interface/">chapitre sur l'interface</a> explique chaque partie de la fenêtre.</p>
 <h3 id="1-start-a-new-project">1. Démarrer un nouveau projet</h3>
 <ol>
-<li>Cliquez sur le bouton bleu <strong>B</strong> à l'extrémité gauche de la barre de titre : le <strong>menu de
-   l'application</strong> s'ouvre.</li>
+<li>Cliquez sur la marque de BIMopen en haut de la barre latérale : le <strong>menu de l'application</strong>
+   s'ouvre.</li>
 <li>Cliquez sur <strong>Nouveau ▸ Projet…</strong>. La boîte de dialogue <strong>Nouveau projet</strong> propose le gabarit
    par défaut de BIMopen : cliquez sur <strong>OK</strong>.</li>
 </ol>
@@ -647,22 +677,29 @@ partie de la fenêtre.</p>
 chacun, et la vue 3D par défaut. Il n'a encore aucun mur. Ses types de murs, portes, fenêtres, sols
 et toits sont prêts à l'emploi.</p>
 <h3 id="2-open-the-ground-floor-plan">2. Ouvrir le plan du rez-de-chaussée</h3>
-<p>Dans l'<strong>Index du projet</strong>, sous <strong>Vues (toutes) ▸ Plans d'étage</strong>, double-cliquez sur
-<strong>Rez-de-chaussée</strong>. Le plan s'ouvre dans la zone de dessin et la barre de titre affiche
-<strong>Plan : Rez-de-chaussée</strong>.</p>
+<p>Dans la barre des vues sous la zone de dessin, cliquez sur la vignette <strong>Plan :
+Rez-de-chaussée</strong>. Le plan s'ouvre dans la zone de dessin, et la barre supérieure et le sélecteur
+de vue affichent <strong>Plan : Rez-de-chaussée</strong>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Un simple clic sur une vue dans l'<strong>Index du projet</strong> affiche ses propriétés dans la palette
-<strong>Propriétés</strong> sans l'ouvrir. Un double-clic l'ouvre.</p>
+<p><strong>Vues</strong> dans la barre latérale montre aussi l'<strong>Index du projet</strong>, l'arborescence de toutes
+les vues : là, un simple clic sur une vue affiche ses propriétés dans le panneau de l'élément
+sans l'ouvrir, et un double-clic l'ouvre.</p>
 </div>
 <h3 id="3-draw-four-walls">3. Dessiner quatre murs</h3>
 <ol>
-<li>Cliquez sur <strong>Début ▸ Construire ▸ Mur</strong>. Le ruban passe à l'onglet contextuel <strong>Dessiner :
-   mur</strong>, la barre des options affiche les réglages du mur, et <strong>Propriétés</strong> affiche le
-   type du prochain mur, <strong>Mur extérieur - Brique alvéolaire 300 + ITE</strong>.</li>
-<li>Dans la barre des options, activez <strong>Ortho (Maj)</strong> : les murs restent horizontaux ou verticaux.</li>
-<li>Cliquez dans le plan à l'emplacement du premier angle. La ligne de commande demande le point
+<li>Dans les outils de <strong>Créer</strong>, l'entrée de la barre latérale avec laquelle BIMopen s'ouvre,
+   cliquez sur <strong>Mur</strong> dans le groupe <strong>Construire</strong> (si le panneau d'outils est replié, cliquez
+   d'abord sur <strong>Créer</strong> dans la barre latérale). La carte contextuelle <strong>Dessiner : mur</strong> vient
+   au-dessus du panneau d'outils, le bandeau des options au-dessus de la vue affiche les réglages
+   du mur, et le panneau de l'élément affiche le type du prochain mur, <strong>Mur extérieur - Brique
+   alvéolaire 300 + ITE</strong>.</li>
+<li>Dans la barre d'état, activez <strong>Ortho</strong> : les murs restent horizontaux ou verticaux.</li>
+<li>Cliquez dans le plan à l'emplacement du premier angle. La barre d'état demande le point
    suivant : <code>WALL  next point [Esc to finish]:</code>.</li>
+</ol>
+<p><img alt="L'outil mur : la carte contextuelle Dessiner : mur, le bandeau des options et le type du prochain mur" src="../assets/screens/bimopen-wall.png"/></p>
+<ol>
 <li>Cliquez sur le deuxième, le troisième et le quatrième angle. Pendant que vous déplacez la
    souris, la longueur et l'angle du mur en cours de dessin sont affichés à côté de celui-ci.</li>
 <li>Cliquez à nouveau sur le premier angle : les quatre murs sont joints aux angles.</li>
@@ -676,42 +713,42 @@ et toits sont prêts à l'emploi.</p>
 </div>
 <h3 id="4-add-a-door-and-a-window">4. Ajouter une porte et une fenêtre</h3>
 <ol>
-<li>Cliquez sur <strong>Début ▸ Construire ▸ Porte</strong>, puis cliquez sur un mur à l'emplacement de la porte.
-   La porte est placée dans le mur, qui est découpé autour d'elle. La ligne de commande le
+<li>Cliquez sur <strong>Créer ▸ Construire ▸ Porte</strong>, puis cliquez sur un mur à l'emplacement de la porte.
+   La porte est placée dans le mur, qui est découpé autour d'elle. Le journal des commandes le
    confirme : <code>Door «Single swing door 80x210» in wall …</code>.</li>
-<li>Appuyez sur <span class="keys"><kbd class="key-escape">Esc</kbd></span> : l'outil se termine et le ruban revient à l'onglet <strong>Début</strong>.</li>
-<li>Cliquez sur <strong>Début ▸ Construire ▸ Fenêtre</strong>, cliquez sur un autre mur, puis appuyez sur
+<li>Appuyez sur <span class="keys"><kbd class="key-escape">Esc</kbd></span> : l'outil se termine et la carte contextuelle disparaît.</li>
+<li>Cliquez sur <strong>Créer ▸ Construire ▸ Fenêtre</strong>, cliquez sur un autre mur, puis appuyez sur
    <span class="keys"><kbd class="key-escape">Esc</kbd></span>.</li>
 </ol>
 <p>Une porte ou une fenêtre ne peut être placée que dans un mur : après un clic à l'écart des murs, la
 ligne de commande répond <code>no wall at that point</code> et rien n'est placé.</p>
 <h3 id="5-add-a-floor-and-a-roof">5. Ajouter un sol et un toit</h3>
 <ol>
-<li>Cliquez sur <strong>Début ▸ Construire ▸ Revêtement de sol</strong>. Le mode esquisse s'ouvre : l'onglet
-   contextuel <strong>Édition | Créer la limite du sol</strong>, avec <strong>Choisir des murs</strong> actif.</li>
+<li>Cliquez sur <strong>Créer ▸ Construire ▸ Revêtement de sol</strong>. Le mode esquisse s'ouvre : la carte
+   contextuelle <strong>Édition | Créer la limite du sol</strong>, avec <strong>Choisir des murs</strong> actif.</li>
 <li>Placez le curseur sur un mur et appuyez sur <span class="keys"><kbd class="key-tab">Tab</kbd></span> : les quatre murs sont mis en évidence.
    Cliquez : leurs lignes vont sur les faces intérieures des murs.</li>
-<li>Cliquez sur <strong>Terminer le mode d'édition</strong> : le sol est créé et la ligne de commande indique sa
-   surface.</li>
-<li>Cliquez sur <strong>Début ▸ Construire ▸ Toit</strong>. <strong>Choisir des murs</strong> est de nouveau actif ; la barre
+<li>Cliquez sur <strong>Terminer le mode d'édition</strong> : le sol est créé et le journal des commandes indique
+   sa surface.</li>
+<li>Cliquez sur <strong>Créer ▸ Construire ▸ Toit</strong>. <strong>Choisir des murs</strong> est de nouveau actif ; le bandeau
    des options comporte <strong>Définit l'inclinaison</strong> (cochée) et le <strong>Débord</strong> (500 mm par défaut).</li>
 <li>Appuyez sur <span class="keys"><kbd class="key-tab">Tab</kbd></span> sur un mur, cliquez, puis <strong>Terminer le mode d'édition</strong> : un toit en croupe
    incliné à 30° couvre les murs, avec le débord tout autour.</li>
 </ol>
 <p><a href="../floors-roofs-stairs/">Sols, toits, escaliers et composants</a> en dit plus sur le mode esquisse.</p>
 <h3 id="6-look-at-it-in-3d">6. L'observer en 3D</h3>
-<p>Cliquez sur le bouton <strong>Vue 3D</strong> (le cube) de la barre d'outils d'accès rapide. La vue 3D par
-défaut, <strong>{3D}</strong>, s'ouvre. Faites glisser avec le bouton droit de la souris (ou avec <span class="keys"><kbd class="key-shift">Shift</kbd></span> et le
+<p>Cliquez sur la vignette <strong>{3D}</strong> dans la barre des vues. La vue 3D par défaut, <strong>{3D}</strong>,
+s'ouvre. Faites glisser avec le bouton droit de la souris (ou avec <span class="keys"><kbd class="key-shift">Shift</kbd></span> et le
 bouton central) pour orbiter, faites glisser avec le bouton central pour effectuer un panoramique,
 et tournez la molette pour zoomer ; le bouton gauche sélectionne, comme dans les plans. <span class="keys"><kbd class="key-home">Home</kbd></span> ajuste l'ensemble du modèle à la vue.</p>
 <h3 id="7-put-the-plan-on-a-sheet">7. Placer le plan sur une feuille</h3>
 <ol>
-<li>Cliquez sur l'onglet <strong>Vues</strong>, puis sur <strong>Feuilles ▸ Feuille</strong>. La boîte de
-   dialogue <strong>Nouvelle feuille</strong> répertorie les cartouches : aucun, A0, A1, A2 ou A3, avec leurs
+<li>Cliquez sur <strong>Documenter</strong> dans la barre latérale, puis sur <strong>Feuille</strong> dans le groupe
+   <strong>Feuilles</strong>. La boîte de dialogue <strong>Nouvelle feuille</strong> répertorie les cartouches : aucun, A0, A1, A2 ou A3, avec leurs
    dimensions en millimètres.</li>
 <li>Cliquez sur <strong>OK</strong>. La feuille est créée avec le prochain numéro libre (<strong>A101</strong> pour la
    première, puis <strong>A102</strong>…) et s'ouvre.</li>
-<li>Cliquez sur <strong>Feuilles ▸ Vue</strong>. La boîte de dialogue <strong>Vues</strong> répertorie les
+<li>Cliquez sur <strong>Documenter ▸ Feuilles ▸ Vue</strong>. La boîte de dialogue <strong>Vues</strong> répertorie les
    vues qui ne sont pas encore sur une feuille.</li>
 <li>Choisissez <strong>Plan : Rez-de-chaussée</strong> et cliquez sur <strong>Ajouter la vue à la feuille</strong>. Un
    rectangle de la taille du plan suit le curseur : cliquez sur la feuille à l'endroit où va le plan.
@@ -720,12 +757,13 @@ et tournez la molette pour zoomer ; le bouton gauche sélectionne, comme dans le
 <h3 id="8-undo-redo-and-save">8. Annuler, rétablir et enregistrer</h3>
 <ul>
 <li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span> annule la dernière modification (ici, la fenêtre disparaît) ; <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-y">Y</kbd></span> la rétablit.
-  Les flèches de la barre d'outils d'accès rapide font de même.</li>
-<li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span> enregistre le projet. Un projet jamais enregistré demande d'abord un nom de fichier ;
-  le fichier porte l'extension <code>.bimopen</code>. Dans le navigateur, le fichier est téléchargé.</li>
+  Les flèches de la barre supérieure, <strong>Annuler</strong> et <strong>Rétablir</strong>, font de même.</li>
+<li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span> enregistre le projet, comme un clic sur l'état d'enregistrement dans la barre
+  supérieure. Un projet jamais enregistré demande d'abord un nom de fichier ; le fichier porte
+  l'extension <code>.bimopen</code>. Dans le navigateur, le fichier est téléchargé.</li>
 </ul>
-<p>La barre de titre affiche un astérisque après le nom du projet tant qu'il y a des modifications non
-enregistrées : <strong>Projet sans nom *</strong>.</p>
+<p>La barre supérieure indique <strong>Modifications non enregistrées</strong> tant qu'il y a des modifications à
+enregistrer, et <strong>Enregistré</strong> après l'enregistrement.</p>
 <h2 id="what-next">Et ensuite</h2>
 <ul>
 <li><a href="../interface/">L'interface</a> décrit chaque partie de la fenêtre.</li>

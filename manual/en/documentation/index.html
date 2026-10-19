@@ -634,17 +634,18 @@ placed on them, revisions, schedules, printed drawings and exported images.</p>
 <h2 id="sheets">Sheets</h2>
 <p>A sheet is a drawing to print: a title block and the views placed on it. Sheets are listed under
 <strong>Sheets (all)</strong> in the Project Index, by number.</p>
+<p><img alt="A sheet with both floor plans, and the Document tools on the rail" src="../assets/screens/bimopen-sheet.png"/></p>
 <h3 id="creating-a-sheet">Creating a sheet</h3>
-<p><strong>Views ➤ Sheets ➤ Sheet</strong> opens <strong>New Sheet</strong>: choose a title block (its paper size is
+<p><strong>Document ➤ Sheets ➤ Sheet</strong> opens <strong>New Sheet</strong>: choose a title block (its paper size is
 shown), <strong>None</strong>, or one of the placeholder sheets of the sheet list. <strong>OK</strong> creates the sheet with
 the next free number (<strong>A101</strong>, <strong>A102</strong>…) and opens it.</p>
 <p>Right-click a sheet in the Project Index ➤ <strong>Rename…</strong> to change its number and name in
-<strong>Sheet Title</strong>. The other parameters of the sheet are in the <strong>Properties</strong> palette:
+<strong>Sheet Title</strong>. The other parameters of the sheet are in the element panel:
 <strong>Sheet Number</strong>, <strong>Sheet Name</strong>, <strong>Sheet Issue Date</strong>, <strong>Drawn By</strong>, <strong>Checked By</strong>,
 <strong>Designed By</strong>, <strong>Approved By</strong>, <strong>Appears In Sheet List</strong>, its guide grid and its revisions.
 Several sheets picked together in the Project Index (with <span class="keys"><kbd class="key-control">Ctrl</kbd></span> or <span class="keys"><kbd class="key-shift">Shift</kbd></span>) are changed
-together: the palette shows the values they share.</p>
-<p><strong>Project ➤ Settings ➤ Project information</strong> sets what every sheet shows: <strong>Project Issue Date</strong>,
+together: the panel shows the values they share.</p>
+<p><strong>Settings ➤ Settings ➤ Project information</strong> sets what every sheet shows: <strong>Project Issue Date</strong>,
 <strong>Project Status</strong>, <strong>Client Name</strong>, <strong>Project Address</strong>, <strong>Project Name</strong> and
 <strong>Project Number</strong>.</p>
 <p><strong>Views ➤ Create ➤ Schedules ➤ Note Block</strong> makes a schedule of the symbols placed with
@@ -660,13 +661,13 @@ click on one of its fields types the value in place.</p>
 <ul>
 <li>Click a line of the title block to pick it: the type selector changes it to another paper size,
   <span class="keys"><kbd class="key-delete">Del</kbd></span> removes it (the sheet and its views stay).</li>
-<li><strong>Views ➤ Sheets ➤ Title Block</strong> inserts one on the open sheet: choose it in the type
+<li><strong>Document ➤ Sheets ➤ Title Block</strong> inserts one on the open sheet: choose it in the type
   selector, its frame follows the cursor, click to place it.</li>
 <li><strong>Type Parameters</strong> shows its <strong>Sheet width</strong> and <strong>Sheet height</strong>; <strong>Duplicate…</strong> makes a new paper
   size.</li>
 </ul>
 <h3 id="views-on-sheets">Views on sheets</h3>
-<p>Drag a view from the Project Index onto the sheet, or use <strong>Views ➤ Sheets ➤ View</strong>
+<p>Drag a view from the Project Index onto the sheet, or use <strong>Document ➤ Sheets ➤ View</strong>
 (<strong>Views</strong>, then <strong>Add View to Sheet</strong>): the view follows the cursor at its scale, and a click
 places it as a viewport. A view goes on one sheet only; a schedule on several.</p>
 <p>A picked viewport:</p>
@@ -681,12 +682,12 @@ places it as a viewport. A view goes on one sheet only; a schedule on several.</
   colour and pattern of the line);</li>
 <li>leaves the sheet with <span class="keys"><kbd class="key-delete">Del</kbd></span>; the view stays in the project.</li>
 </ul>
-<p><strong>Activate View</strong> (on the <strong>Selection: Viewports</strong> tab or the right button) edits the view where it is
+<p><strong>Activate View</strong> (on the <strong>Selection: Viewports</strong> card or the right button) edits the view where it is
 on the sheet, the rest of the sheet in halftone; <strong>Deactivate View</strong> goes back to the sheet. A
 view turned on its sheet cannot be activated: take its rotation off first. A double click on a
 view opens it in its own window.</p>
 <h3 id="guide-grids">Guide grids</h3>
-<p><strong>Views ➤ Sheets ➤ Guide Grid</strong> asks for a name and covers the sheet with a grid. Pick it
+<p><strong>Document ➤ Sheets ➤ Guide Grid</strong> asks for a name and covers the sheet with a grid. Pick it
 to drag its corners or to set its <strong>Guide spacing</strong>; the sheet's <strong>Guide Grid</strong> parameter shows the
 same grid on other sheets, or none. Views dragged near the grid's lines snap onto them. The grid
 is never printed.</p>
@@ -697,21 +698,21 @@ placeholder sheet: a row that is not a sheet yet and is not in the Project Index
 <strong>Filter placeholder sheets</strong> shows every row, hides the placeholders or shows only them. A
 placeholder chosen in <strong>New Sheet</strong> becomes a real sheet.</p>
 <h3 id="revisions">Revisions</h3>
-<p><strong>Views ➤ Sheets ➤ Sheet Issues/Revisions</strong> lists the revisions of the project, one per
+<p><strong>Document ➤ Sheets ➤ Sheet Issues/Revisions</strong> lists the revisions of the project, one per
 row: <strong>Sequence</strong>, <strong>Numbering</strong> (<strong>Numeric</strong>, <strong>Alphabetic</strong> or none), <strong>Date</strong>,
 <strong>Description</strong>, <strong>Issued</strong>, <strong>Issued to</strong>, <strong>Issued by</strong> and <strong>Show</strong>. <strong>Add</strong> adds one; a row
 picked by its sequence number is merged into the one above or below (its clouds go with it) or
 moved up and down. <strong>Numbering</strong> is <strong>Per Project</strong> or <strong>Per Sheet</strong> (the place of the revision
 among the sheet's revisions); <strong>Alphabetical order ➤ Options…</strong> sets the letters used. An issued
 revision cannot be changed, and neither can its clouds, until <strong>Issued</strong> is unticked.</p>
-<p><strong>Annotations ➤ Detail ➤ Revision Cloud</strong> draws a cloud in a plan, a section, a free 2D view or on a
-sheet: sketch closed loops with the shapes of the <strong>Draw</strong> panel, then <strong>Finish Edit Mode</strong>; a
+<p><strong>Document ➤ Detail ➤ Revision Cloud</strong> draws a cloud in a plan, a section, a free 2D view or on a
+sheet: sketch closed loops with the shapes of the <strong>Draw</strong> group, then <strong>Finish Edit Mode</strong>; a
 selected cloud's <strong>Edit Sketch</strong> opens them again, unless its revision is issued. The cloud takes the
 latest revision not issued; picked, it shows its <strong>Revision</strong> (to change), its number, date and
 people, its <strong>Mark</strong> and <strong>Comments</strong>. <strong>Show</strong> of a revision draws its clouds and tags, keeps
 them but does not draw them, or hides them.</p>
 <p>A sheet lists the revisions of the clouds of its views and of its own clouds. Its
-<strong>Revisions on Sheet</strong> (in the Properties palette, <strong>Edit…</strong>) adds other revisions to the list.</p>
+<strong>Revisions on Sheet</strong> (in the element panel, <strong>Edit…</strong>) adds other revisions to the list.</p>
 <h2 id="schedules">Schedules</h2>
 <p>A schedule is a table of the elements of the model, and a view like the others: it opens in a
 window of the drawing area, is tiled, cascaded and switched with plans, sections and 3D views, and
@@ -724,7 +725,7 @@ or <strong>Schedule keys</strong>. <strong>OK</strong> opens <strong>Schedule Pr
 schedule and opens its view. <strong>Material Takeoff</strong> in the same menu lists the materials of the
 layers of walls, floors and roofs.</p>
 <h3 id="schedule-properties">Schedule Properties</h3>
-<p>The dialog opens again from the <strong>Properties</strong> palette of the schedule (each tab has its <strong>Edit…</strong>
+<p>The dialog opens again from the element panel of the schedule (each tab has its <strong>Edit…</strong>
 button) or from the right button on the schedule in the Project Index. Its tabs:</p>
 <table>
 <thead>
@@ -760,7 +761,7 @@ button) or from the right button on the schedule in the Project Index. Its tabs:
 <ul>
 <li>A cell edits the element, or its type for a type parameter; every edit is one step of undo.</li>
 <li>A row selects its elements in every view. <strong>Highlight in model</strong> on the
-  <strong>Edit | Schedule/Quantities</strong> tab opens <strong>Show Elements in View</strong>, which brings a plan
+  <strong>Edit | Schedule/Quantities</strong> card opens <strong>Show Elements in View</strong>, which brings a plan
   forward framed on them; <strong>Show</strong> goes on to the next view.</li>
 <li><strong>Rows ➤ Delete</strong> deletes the elements of the selected rows, after asking.</li>
 <li>Headings picked together are joined under a common heading with <strong>Group</strong>, and parted with
@@ -780,9 +781,9 @@ choosing a key for an element gives it all the values of that row.</p>
 <p>A material takeoff lists, for each element, the materials of its layers with their area and
 volume; its fields can be sorted, grouped and totalled like any other.</p>
 <h3 id="project-and-shared-parameters">Project and shared parameters</h3>
-<p><strong>Project ➤ Settings ➤ Project Parameters</strong> adds parameters to the elements of some categories, or
-to their types, with a name, a type of value and the group they show in the Properties palette.</p>
-<p><strong>Project ➤ Settings ➤ Shared Parameters</strong> opens <strong>Edit Shared Parameters</strong>: the shared parameter
+<p><strong>Settings ➤ Settings ➤ Project Parameters</strong> adds parameters to the elements of some categories, or
+to their types, with a name, a type of value and the group they show in the element panel.</p>
+<p><strong>Settings ➤ Settings ➤ Shared Parameters</strong> opens <strong>Edit Shared Parameters</strong>: the shared parameter
 file in use (<strong>Browse…</strong>, <strong>Create…</strong>), its groups and the parameters of each group. A shared
 parameter keeps its name and type, and has an identifier of its own, so that several projects
 add the same parameter. In <strong>Parameter Properties</strong>, choose <strong>Shared parameter</strong> and <strong>Select…</strong>
@@ -796,7 +797,7 @@ to add one to the project; <strong>Export…</strong> writes a shared parameter 
   with its fields, filter, sorting, formatting and appearance; <strong>Apply view template…</strong> gives them
   to another schedule.</li>
 <li><strong>Save to New File…</strong> on the right button writes the schedule's setup, without the elements,
-  to a file of its own. <strong>Insert ➤ Import ➤ Insert from File ➤ Insert Views from File…</strong> brings
+  to a file of its own. <strong>Create ➤ Load from library ➤ Insert from File ➤ Insert Views from File…</strong> brings
   the schedules of another project into this one, with their project parameters.</li>
 </ul>
 <h2 id="printing">Printing</h2>

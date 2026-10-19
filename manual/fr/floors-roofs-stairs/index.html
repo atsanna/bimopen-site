@@ -586,8 +586,8 @@ esquisse d'abord leurs lignes, et l'élément n'est créé que lorsque l'esquiss
 composants (mobilier et appareils sanitaires) se placent d'un clic. Les murs-rideaux sont décrits
 dans <a href="../walls-doors-windows/">Murs, portes et fenêtres</a>.</p>
 <h2 id="sketch-mode">Mode esquisse</h2>
-<p><strong>Début ▸ Construire ▸ Revêtement de sol</strong>, <strong>Toit</strong>, <strong>Escaliers</strong> et <strong>Garde-corps</strong> ouvrent le
-mode esquisse. L'onglet contextuel porte le nom de ce qui est esquissé (<strong>Édition | Créer la limite
+<p><strong>Créer ▸ Construire ▸ Revêtement de sol</strong>, <strong>Toit</strong>, <strong>Escaliers</strong> et <strong>Garde-corps</strong> ouvrent le
+mode esquisse. La carte contextuelle porte le nom de ce qui est esquissé (<strong>Édition | Créer la limite
 du sol</strong>, <strong>Créer l'empreinte du toit</strong>, <strong>Créer une esquisse d'escalier</strong>, <strong>Créer la trajectoire
 du garde-corps</strong>) et contient :</p>
 <ul>
@@ -610,7 +610,7 @@ du garde-corps</strong>) et contient :</p>
 <tbody>
 <tr>
 <td><strong>Ligne</strong></td>
-<td>Cliquez point après point : chaque clic termine une ligne et commence la suivante. La longueur et l'angle de la ligne sous le curseur s'affichent à côté ; <span class="keys"><kbd class="key-shift">Shift</kbd></span> la garde horizontale ou verticale. Avec <strong>Continuer</strong> désactivée dans la barre des options, chaque ligne est dessinée seule. Cliquer de nouveau sur le début de la chaîne ferme le contour Tapez une longueur et appuyez sur <span class="keys"><kbd class="key-enter">Enter</kbd></span> : la ligne s'arrête à cette distance dans la direction du curseur (la volée d'un escalier aussi).</td>
+<td>Cliquez point après point : chaque clic termine une ligne et commence la suivante. La longueur et l'angle de la ligne sous le curseur s'affichent à côté ; <span class="keys"><kbd class="key-shift">Shift</kbd></span> la garde horizontale ou verticale. Avec <strong>Continuer</strong> désactivée dans le bandeau des options, chaque ligne est dessinée seule. Cliquer de nouveau sur le début de la chaîne ferme le contour Tapez une longueur et appuyez sur <span class="keys"><kbd class="key-enter">Enter</kbd></span> : la ligne s'arrête à cette distance dans la direction du curseur (la volée d'un escalier aussi).</td>
 </tr>
 <tr>
 <td><strong>Rectangle</strong></td>
@@ -630,7 +630,7 @@ du garde-corps</strong>) et contient :</p>
 </tr>
 </tbody>
 </table>
-<p><strong>Décalage</strong> dans la barre des options déplace les lignes dessinées (et celles des murs choisis)
+<p><strong>Décalage</strong> dans le bandeau des options déplace les lignes dessinées (et celles des murs choisis)
 de cette distance.</p>
 <p>Les arcs du groupe <strong>Dessiner</strong> (et un cercle, en deux moitiés) sont chacun une seule ligne d'esquisse : sélectionnés, mesurés et déplacés comme des arcs, gardés par le sol, le toit, l'escalier, le profil du mur ou la région, et rendus comme arcs par <strong>Modifier la limite</strong>, <strong>Modifier l'esquisse</strong> ou <strong>Modifier le contour</strong>. Dans chaque vue, un point de l'esquisse s'accroche aux extrémités et aux milieux des lignes et des arcs de l'esquisse, aux centres des arcs, là où les lignes se croisent et sur une ligne ou un arc ; depuis le point d'où l'on dessine, au pied de la perpendiculaire et au point où une ligne touche un arc. Le symbole et son nom montrent où le point s'accroche ; <span class="keys"><kbd class="key-s">S</kbd></span> <span class="keys"><kbd class="key-c">C</kbd></span> et <span class="keys"><kbd class="key-s">S</kbd></span> <span class="keys"><kbd class="key-p">P</kbd></span> demandent le centre ou la perpendiculaire pour le point suivant.</p>
 <p>Les sols et les toits demandent des contours fermés. Un contour dessiné à l'intérieur du contour
@@ -657,7 +657,7 @@ terminée :</p>
   de chaque côté (une autre ligne d'esquisse, le contour d'origine du mur, un mur, une grille, un
   niveau) : cliquez sur la valeur et tapez une distance pour déplacer la ligne ; le symbole à côté
   en fait une cote permanente, qui reste tant que l'esquisse est ouverte ;</li>
-<li>ses propriétés sont dans la palette <strong>Propriétés</strong> : <strong>Définit l'inclinaison</strong> et <strong>Pente</strong>,
+<li>ses propriétés sont dans le panneau de l'élément : <strong>Définit l'inclinaison</strong> et <strong>Pente</strong>,
   pour une ligne de toit prise sur un mur son <strong>Débord</strong>, et sa <strong>Longueur</strong>.</li>
 </ul>
 <p><strong>Aligner</strong> prend comme référence la ligne sous le curseur, et <span class="keys"><kbd class="key-tab">Tab</kbd></span> passe à la suivante, de sorte qu'une ligne d'esquisse s'aligne sur une couche ou la limite de l'âme d'un mur. En dessinant ou en faisant glisser une extrémité, les points s'accrochent aux angles des faces, couches et limites de l'âme des murs, puis sur ces lignes. <span class="keys"><kbd class="key-delete">Del</kbd></span> supprime les lignes sélectionnées. <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span> pendant l'esquisse annule la dernière
@@ -665,18 +665,18 @@ modification de l'esquisse, pas du modèle. Tout cela fonctionne en plan, en cou
 (le profil d'un mur) et, pour sélectionner, faire glisser les extrémités et supprimer, dans la vue
 3D.</p>
 <h3 id="editing-the-sketch-of-an-element">Modifier l'esquisse d'un élément</h3>
-<p>Sélectionnez un sol, un toit, un escalier ou un garde-corps : le groupe <strong>Mode</strong> de son onglet
-contextuel comporte <strong>Modifier le contour</strong> (sols), <strong>Modifier l'empreinte</strong> (toits), <strong>Modifier
+<p>Sélectionnez un sol, un toit, un escalier ou un garde-corps : le groupe <strong>Mode</strong> de sa carte
+contextuelle comporte <strong>Modifier le contour</strong> (sols), <strong>Modifier l'empreinte</strong> (toits), <strong>Modifier
 l'esquisse</strong> (escaliers) ou <strong>Modifier la trajectoire</strong> (garde-corps). Le mode esquisse s'ouvre
 avec les lignes, les ouvertures, les inclinaisons et la flèche de l'élément ; <strong>Terminer le mode
 d'édition</strong> modifie le même élément, <strong>Annuler le mode d'édition</strong> le laisse inchangé.</p>
 <p>L'esquisse s'ouvre avec <strong>Modifier</strong> actif : ses lignes peuvent être sélectionnées et modifiées aussitôt.</p>
 <p>En plan l'esquisse se dessine sur le niveau ; dans la vue 3D elle se trouve sur le plan de
 l'élément (le dessus du sol, la base du toit) et la vue 3D reste ouverte.</p>
-<p>Un nouveau sol peut aussi être esquissé dans la vue 3D : <strong>Revêtement de sol</strong> lancé là place l'esquisse sur le plan du niveau, la ligne en cours suit le curseur avec sa longueur, et <strong>Terminer le mode d'édition</strong> crée le sol sans quitter la vue 3D. Dans la vue 3D, le <strong>Niveau</strong> de la barre des options choisit le plan de construction : le niveau sur le plan duquel se trouve l'esquisse et où va le sol. <strong>Choisir des murs</strong> prend le mur dont la face est sous le curseur. Les toits par tracé, les escaliers et les garde-corps s'esquissent en plan.</p>
+<p>Un nouveau sol peut aussi être esquissé dans la vue 3D : <strong>Revêtement de sol</strong> lancé là place l'esquisse sur le plan du niveau, la ligne en cours suit le curseur avec sa longueur, et <strong>Terminer le mode d'édition</strong> crée le sol sans quitter la vue 3D. Dans la vue 3D, le <strong>Niveau</strong> du bandeau des options choisit le plan de construction : le niveau sur le plan duquel se trouve l'esquisse et où va le sol. <strong>Choisir des murs</strong> prend le mur dont la face est sous le curseur. Les toits par tracé, les escaliers et les garde-corps s'esquissent en plan.</p>
 <h2 id="floors">Sols</h2>
 <ol>
-<li>Cliquez sur <strong>Début ▸ Construire ▸ Revêtement de sol</strong>. Le mode esquisse commence avec
+<li>Cliquez sur <strong>Créer ▸ Construire ▸ Revêtement de sol</strong>. Le mode esquisse commence avec
    <strong>Choisir des murs</strong>.</li>
 <li>Cliquez les murs autour du sol, ou appuyez sur <span class="keys"><kbd class="key-tab">Tab</kbd></span> sur l'un d'eux et cliquez pour les
    choisir tous. Chaque ligne va sur la <strong>face intérieure</strong> de son mur ; les lignes des murs qui se
@@ -685,7 +685,7 @@ l'élément (le dessus du sol, la base du toit) et la vue 3D reste ouverte.</p>
    une ouverture.</li>
 <li>Cliquez sur <strong>Terminer le mode d'édition</strong>.</li>
 </ol>
-<p>Dans la barre des options, <strong>Prolonger dans le mur (jusqu'au noyau)</strong> porte les lignes choisies
+<p>Dans le bandeau des options, <strong>Prolonger dans le mur (jusqu'au noyau)</strong> porte les lignes choisies
 dans le mur jusqu'à la face de son noyau, et <strong>Décalage</strong> les déplace (un décalage négatif les
 éloigne des murs). Le type du nouveau sol est celui du sélecteur de type en haut de <strong>Propriétés</strong>.</p>
 <h3 id="sloped-floors">Sols inclinés</h3>
@@ -738,8 +738,8 @@ continue au-dessus, et les murs passent dans les ouvertures du sol.</p>
 <p><strong>Paramètres du type</strong> contient la <strong>Structure</strong> du sol (ses couches) et son épaisseur par défaut.</p>
 <h2 id="roofs">Toits</h2>
 <ol>
-<li>Cliquez sur <strong>Début ▸ Construire ▸ Toit</strong>. Le mode esquisse commence avec <strong>Choisir des
-   murs</strong> ; la barre des options comporte <strong>Définit l'inclinaison</strong>, <strong>Débord</strong> et <strong>Prolonger dans
+<li>Cliquez sur <strong>Créer ▸ Construire ▸ Toit</strong>. Le mode esquisse commence avec <strong>Choisir des
+   murs</strong> ; le bandeau des options comporte <strong>Définit l'inclinaison</strong>, <strong>Débord</strong> et <strong>Prolonger dans
    le mur (jusqu'au noyau)</strong>.</li>
 <li>Choisissez les murs (<span class="keys"><kbd class="key-tab">Tab</kbd></span> pour toute la chaîne). Chaque ligne va sur la <strong>face extérieure</strong>
    de son mur, déplacée vers l'extérieur du débord (depuis la face du noyau avec <strong>Prolonger dans le
@@ -794,7 +794,7 @@ plus).</p>
 et ses couches.</p>
 <h2 id="stairs">Escaliers</h2>
 <ol>
-<li>Cliquez sur <strong>Début ▸ Liaisons verticales ▸ Escaliers</strong>. Le mode esquisse commence avec <strong>Volée</strong>.</li>
+<li>Cliquez sur <strong>Créer ▸ Liaisons verticales ▸ Escaliers</strong>. Le mode esquisse commence avec <strong>Volée</strong>.</li>
 <li>Cliquez là où est la première contremarche, puis là où finit la volée : la volée s'accroche à
    des girons entiers, et la barre d'état compte les contremarches créées et restantes (par exemple
    <code>9 contremarches créées, 8 restantes</code>).</li>
@@ -806,7 +806,7 @@ et ses couches.</p>
 <p>Des lignes guides en pointillé montrent où la volée suivante peut commencer : le prolongement de la dernière volée au-delà de sa fin et les lignes de sa première et de sa dernière contremarche. Un clic à proximité s'y accroche. Dans une vue 3D, l'escalier se dessine de la même façon, sur le plan du niveau actif.</p>
 <p>Une volée courbe (un escalier hélicoïdal) : avec <strong>Volée</strong> active, cliquez sur <strong>Arc par centre et extrémités</strong>, puis sur le centre, le début de la ligne de volée (sa distance au centre est le rayon de la ligne de foulée) et la fin, en dépassant le demi-tour si besoin, mais sans faire un tour complet (au-delà, la volée s'arrête avant et la barre d'état avertit que les volées se chevaucheraient). Les contremarches rayonnent depuis le centre, à un giron l'une de l'autre sur la ligne de volée ; des lignes de contremarche dessinées en rayons depuis un centre font aussi une volée courbe. Une seconde volée courbe autour du même centre et sur la même ligne de volée (un clic à proximité les reprend) est reliée à la première par un palier en arc.</p>
 <p>Un escalier peut aussi se dessiner par ses lignes. Dans son esquisse, cliquez sur <strong>Dessiner ▸ Contour</strong> et dessinez les bords gauche et droit (verts), puis sur <strong>Contremarche</strong> et dessinez les lignes de contremarche (noires) entre eux, avec <strong>Ligne</strong> ou <strong>Choisir des lignes</strong>. Des contremarches parallèles et régulièrement espacées forment une volée, aussi large que les contremarches ; un palier relie deux volées jusqu'aux lignes de contour. Chaque contremarche est aussi haute que l'étage divisé par le nombre de contremarches souhaité ; avec moins de lignes de contremarche, l'escalier s'arrête sous le niveau supérieur (<strong>Propriétés</strong> montre le nombre réel). <strong>Modifier l'esquisse</strong> rend les mêmes lignes. Chaque volée dessinée avec <strong>Volée</strong> devient aussitôt des lignes de contour et de contremarche comme celles-ci : on peut les déplacer ou les supprimer comme les autres. Un palier suit ses lignes de contour : scindez son bord extérieur avec <strong>Scinder l'élément</strong> et faites glisser un morceau pour l'échancrer, ou dessinez-le plus large que les volées.</p>
-<p>La <strong>Largeur</strong> dans la barre des options est celle du nouvel escalier (par défaut celle du type).
+<p>La <strong>Largeur</strong> dans le bandeau des options est celle du nouvel escalier (par défaut celle du type).
 <strong>Outils ▸ Type de garde-corps</strong> choisit les garde-corps du nouvel escalier : un type de
 garde-corps, posé des deux côtés, ou <strong>Aucun</strong>.</p>
 <p>Le nombre de contremarches vient de la hauteur entre <strong>Niveau de base</strong> et <strong>Niveau supérieur</strong>
@@ -847,7 +847,7 @@ dans la nomenclature des escaliers est le volume de ses solides.</p>
 <p>La <strong>Police du texte</strong> du type, le <strong>Profil du nez de marche</strong> (<strong>Par défaut</strong> ou <strong>Arrondi</strong>) et <strong>Appliquer le profil de nez de marche</strong> (avant uniquement, avant et gauche, ou avant, gauche et droite : au-delà d'un côté sans limon fermé), le <strong>Décalage du limon ouvert</strong>, <strong>Couper les limons en haut</strong> (<strong>Aligner sur le niveau</strong> arrête les limons latéraux au niveau supérieur) et son groupe <strong>Identification</strong> (<strong>Code</strong>, <strong>Modèle</strong>, <strong>Fabricant</strong>, <strong>Commentaires du type</strong>, <strong>URL</strong>, <strong>Description</strong>, <strong>Code d'assemblage</strong>) sont dans <strong>Paramètres du type</strong>, comme la <strong>Sous-face du limon</strong> d'un escalier monolithique (<strong>Lisse</strong>, une dalle inclinée, ou <strong>En escalier</strong> : la dalle suit les marches). Dans <strong>Règles de calcul</strong>, <strong>Utiliser le calculateur d'escalier</strong> avec un <strong>Résultat cible</strong>, <strong>maximal</strong> et <strong>minimal</strong> contrôle 2 contremarches + 1 giron : un escalier hors de l'intervalle est créé, et un avertissement le signale.</p>
 <h2 id="ramps">Rampes</h2>
 <ol>
-<li>Cliquez sur <strong>Début ▸ Liaisons verticales ▸ Rampe</strong>. Le mode esquisse commence avec <strong>Volée</strong>.</li>
+<li>Cliquez sur <strong>Créer ▸ Liaisons verticales ▸ Rampe</strong>. Le mode esquisse commence avec <strong>Volée</strong>.</li>
 <li>Cliquez où une volée commence, puis où elle finit : sa pente est au plus la <strong>Pente maximale de
    la rampe (1/x)</strong> du type et elle monte au plus de la <strong>Longueur inclinée maximale</strong> (en dessinant, une volée
    plus longue s'arrête là) ; la longueur faite et celle qui reste s'affichent près du curseur.</li>
@@ -862,7 +862,7 @@ fonctionnent comme pour les escaliers.</p>
 <p>Avec <strong>Arc centre-extrémités</strong> dans le groupe <strong>Dessiner</strong>, cliquez le centre, le début de la ligne de volée puis sa fin autour du centre : la volée tourne autour de lui, avec deux lignes rayonnant du centre à ses extrémités et deux arcs de contour sur ses côtés. <strong>Afficher la flèche MONTE dans toutes les vues</strong> du type dessine toute la flèche et <strong>MONTE</strong> aussi dans le plan du niveau supérieur ; la <strong>Police du texte</strong> et l'<strong>Identification</strong> sont comme pour les escaliers.</p>
 <h2 id="railings">Garde-corps</h2>
 <ol>
-<li>Cliquez sur <strong>Début ▸ Liaisons verticales ▸ Garde-corps</strong>.</li>
+<li>Cliquez sur <strong>Créer ▸ Liaisons verticales ▸ Garde-corps</strong>.</li>
 <li>Dessinez la trajectoire avec <strong>Ligne</strong> : une seule chaîne de lignes connectées (une trajectoire
    en morceaux, fermée ou qui revient sur elle-même est refusée par <strong>Terminer le mode d'édition</strong>).</li>
 <li>Pour poser le garde-corps sur un escalier, cliquez sur <strong>Outils ▸ Choisir un nouvel hôte</strong>, puis
@@ -887,7 +887,7 @@ et à la fin de chaque garde-corps et à chaque changement de direction en plan 
 (ou abaisse) d'autant la lisse au-dessus des paliers.</p>
 <h2 id="components">Composants</h2>
 <ol>
-<li>Cliquez sur <strong>Début ▸ Construire ▸ Composant</strong>. Le sélecteur de type liste les composants
+<li>Cliquez sur <strong>Créer ▸ Construire ▸ Composant</strong>. Le sélecteur de type liste les composants
    chargés dans le projet ; un aperçu suit le curseur, en plan et dans la vue 3D.</li>
 <li>Appuyez sur la <span class="keys"><kbd class="key-space">Space</kbd></span> pour tourner l'aperçu de 90°.</li>
 <li>Cliquez pour placer le composant sur le niveau du plan.</li>

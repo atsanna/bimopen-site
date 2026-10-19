@@ -653,14 +653,35 @@ d'attache ou <strong>Horizontal</strong>), la <strong>Position du texte</strong>
 (<strong>Valeur zéro</strong>, <strong>Cercle</strong> ou la <strong>Marque</strong> du type) et le <strong>Style de ligne de cote</strong> (<strong>Continue</strong>
 ou <strong>Aucune</strong>, qui ne laisse que les lignes d'attache et leurs marques).</p>
 <h3 id="temporary-dimensions">Cotes temporaires</h3>
-<p>Sélectionnez un mur ou un quadrillage : des cotes temporaires montrent la distance aux murs ou
-quadrillages parallèles les plus proches. Une porte ou une fenêtre montre sa distance le long de son
-mur aux murs qui le croisent de chaque côté, et un composant sa distance au mur le plus proche dans
-chaque direction. Cliquez une valeur, tapez-en une nouvelle et appuyez sur
-Entrée pour déplacer l'élément ; cliquez le symbole de cote à côté pour la rendre permanente.
-Pendant qu'une porte ou une fenêtre est placée, des cotes temporaires montrent sa distance aux murs
-les plus proches. Avec plusieurs éléments sélectionnés, aucune n'est affichée, et la barre des
-options propose <strong>Cotes temporaires</strong> pour les montrer pour tous les éléments sélectionnés.</p>
+<p>Sélectionnez un élément : les cotes temporaires montrent ses distances aux références parallèles
+les plus proches : murs, quadrillages, niveaux, plans de référence, bords des sols, lignes de
+séparation de pièce et lignes de détail. Elles apparaissent pour chaque catégorie dans chaque vue
+où l'élément est dessiné : plans, coupes, élévations et vues 3D, où elles se trouvent sur le
+niveau de l'élément. Un niveau sélectionné montre, dans une coupe ou une élévation, ses distances
+aux niveaux au-dessus et au-dessous.</p>
+<p>Cliquez une valeur, saisissez-en une nouvelle et appuyez sur Entrée pour déplacer l'élément : une
+longueur peut avoir son unité (<code>2.5 m</code>), et une formule commence par <code>=</code> (<code>=8000/2</code>). Cliquez le
+symbole de cote à côté pour la rendre permanente.</p>
+<p>Chaque ligne d'attache a une poignée bleue. Faites glisser celle de la référence sur n'importe
+quelle autre référence pour mesurer depuis celle-ci ; ou clic droit ▸ <strong>Déplacer la ligne
+d'attache</strong>, puis cliquez la nouvelle référence. Un clic sur une poignée passe d'une référence à
+l'autre du même objet : l'axe d'un mur, ses faces, les faces de l'âme et le centre de l'âme.
+L'élément mémorise les références choisies, pour chaque vue, et elles suivent quand la référence
+se déplace ; clic droit ▸ <strong>Réinitialiser les références</strong> revient aux plus proches.</p>
+<p>Avec plusieurs éléments sélectionnés, aucune n'est affichée, et la barre des options propose
+<strong>Activer les cotes</strong> pour les afficher pour tous les éléments sélectionnés.</p>
+<p>Pendant le placement d'un composant, d'une porte ou d'une fenêtre, les cotes temporaires
+montrent ses distances aux références les plus proches ; <strong>Tab</strong> passe aux suivantes. Laissez le
+pointeur immobile un instant : l'élément attend pendant que le pointeur va vers l'une de ses
+valeurs, et un clic sur la valeur permet de saisir la distance à laquelle il se place. Pendant le dessin, la longueur et l'angle sont
+affichés ; <strong>Faire pivoter</strong> montre l'angle comme une cote angulaire, et un angle saisi fait
+pivoter la sélection.</p>
+<p><strong>Projet ▸ Paramètres supplémentaires ▸ Cotes temporaires</strong> définit d'où mesurent les murs
+(<strong>Axe</strong>, <strong>Faces</strong>, <strong>Centre de l'âme</strong>, <strong>Faces de l'âme</strong>) et les portes et fenêtres
+(<strong>Axe</strong> ou <strong>Ouvertures</strong>), pour tout le projet. La même boîte de dialogue définit le texte de
+toutes les cotes temporaires, pour l'application : de 8 à 20 pt (8 au départ), sur un
+arrière-plan transparent ou opaque. À côté des réglages, un aperçu montre trois murs cotés comme choisi ;
+l'interrupteur <strong>Aperçu</strong> de l'en-tête le masque, la boîte de dialogue garde sa taille, et le choix est conservé.</p>
 <h3 id="constraints">Contraintes</h3>
 <p>Sélectionnez une cote : un cadenas s'affiche sur chaque segment. Cliquez-le pour verrouiller le
 segment : la distance tient alors quand l'un ou l'autre élément se déplace, et un déplacement qui la

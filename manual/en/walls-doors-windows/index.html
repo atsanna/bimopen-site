@@ -284,6 +284,13 @@
 <nav aria-label="Wall types and layers" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#wall-type-parameters">
+<span class="md-ellipsis">
+      Type parameters
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#type-layers">
 <span class="md-ellipsis">
       Type layers
@@ -348,6 +355,24 @@
       Curtain walls
     </span>
 </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#stacked-walls">
+<span class="md-ellipsis">
+      Stacked walls
+    </span>
+</a>
+<nav aria-label="Stacked walls" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-sub-walls-of-the-type">
+<span class="md-ellipsis">
+      The sub-walls of the type
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#levels">
@@ -545,6 +570,13 @@
 <nav aria-label="Wall types and layers" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#wall-type-parameters">
+<span class="md-ellipsis">
+      Type parameters
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#type-layers">
 <span class="md-ellipsis">
       Type layers
@@ -611,6 +643,24 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#stacked-walls">
+<span class="md-ellipsis">
+      Stacked walls
+    </span>
+</a>
+<nav aria-label="Stacked walls" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-sub-walls-of-the-type">
+<span class="md-ellipsis">
+      The sub-walls of the type
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#levels">
 <span class="md-ellipsis">
       Levels
@@ -675,10 +725,10 @@
 their types and layers are set up, and how doors and windows are placed in them, flipped, moved
 and drawn at each level of detail.</p>
 <h2 id="drawing-walls">Drawing walls</h2>
-<p><strong>Home ▸ Build ▸ Wall</strong> (or type <code>WA</code>) starts the wall tool, in a plan or in the 3D view. Pick the
-wall type in the type selector at the top of the <strong>Properties</strong> palette; <strong>Type Parameters</strong>
-changes the type, and with it every wall of that type. The contextual tab <strong>Draw Wall</strong>
-shows the <strong>Draw</strong> panel, and the options bar shows:</p>
+<p><strong>Create ▸ Build ▸ Wall</strong> (or type <code>WA</code>) starts the wall tool, in a plan or in the 3D view. Pick the
+wall type in the type selector at the top of the element panel; <strong>Type Parameters</strong>
+changes the type, and with it every wall of that type. The contextual card <strong>Draw Wall</strong>
+shows the <strong>Draw</strong> group, and the options strip shows:</p>
 <table>
 <thead>
 <tr>
@@ -728,7 +778,7 @@ shows the <strong>Draw</strong> panel, and the options bar shows:</p>
   outlines, sections and elevations take a typed length the same way);</li>
 <li><strong>Esc</strong> ends the chain; <strong>Esc</strong> again, or <strong>Modify</strong>, ends the tool.</li>
 </ul>
-<p>The <strong>Draw</strong> panel picks the shape:</p>
+<p>The <strong>Draw</strong> group picks the shape:</p>
 <table>
 <thead>
 <tr>
@@ -747,7 +797,7 @@ shows the <strong>Draw</strong> panel, and the options bar shows:</p>
 </tr>
 <tr>
 <td><strong>Inscribed Polygon</strong></td>
-<td>Set <strong>Sides</strong> in the options bar, click the centre and a corner: the corners are on the circle</td>
+<td>Set <strong>Sides</strong> in the options strip, click the centre and a corner: the corners are on the circle</td>
 </tr>
 <tr>
 <td><strong>Circumscribed Polygon</strong></td>
@@ -770,7 +820,7 @@ wall, or its layers, keeps its alignment line where it was.</p>
 <ol>
 <li>Select the walls.</li>
 <li><strong>Selection: Walls ▸ Modify Wall ▸ Link Top/Base</strong>.</li>
-<li>In the options bar, <strong>Attach Wall:</strong> <strong>Top</strong> or <strong>Base</strong>.</li>
+<li>In the options strip, <strong>Attach Wall:</strong> <strong>Top</strong> or <strong>Base</strong>.</li>
 <li>Click the roof or floor, in a plan, a section or the 3D view.</li>
 </ol>
 <p>With <strong>Top</strong>, the walls rise or drop to the underside of the roof (following its slopes: the
@@ -778,7 +828,7 @@ gable walls go up to the ridge) or of the floor above. With <strong>Base</strong
 the floor below. From then on they follow it: a steeper roof, a roof raised by its offset, a
 moved floor carry the walls with them.</p>
 <p>To detach them: select the walls, <strong>Selection: Walls ▸ Modify Wall ▸ Unlink Top/Base</strong>, then click the
-element to detach them from, or press <strong>Detach All</strong> in the options bar. The walls keep the height
+element to detach them from, or press <strong>Detach All</strong> in the options strip. The walls keep the height
 they have at that moment, and can be attached again at any time. When a roof or floor with walls
 attached to it is deleted, the walls keep their height too.</p>
 <p>The properties <strong>Top is Attached</strong> and <strong>Base is Attached</strong> show the state (read-only); while the
@@ -787,7 +837,7 @@ top is attached, <strong>Free Height</strong> is read-only.</p>
 <p>A wall need not be a rectangle: its outline can be sketched in an elevation or a section
 parallel to it, with holes, as for a gable or a stepped wall.</p>
 <ol>
-<li>Select the wall and click <strong>Mode ▸ Edit Boundary</strong> in its contextual tab. From a plan or a view
+<li>Select the wall and click <strong>Mode ▸ Edit Boundary</strong> in its contextual card. From a plan or a view
    that is not parallel to the wall, <strong>Go to View</strong> lists the sections and elevations parallel to
    it: choose one and click <strong>Open View</strong>.</li>
 <li>Sketch mode opens with the wall's outline in magenta. Change it with <strong>Line</strong> and
@@ -823,8 +873,8 @@ layers of the other wall:</p>
 <p>At <strong>Coarse</strong> detail joined walls are one fill, with no line between them. Sections and the 3D
 view use the same pieces, so nothing overlaps.</p>
 <h3 id="the-wall-joins-tool">The Wall Joins tool</h3>
-<p><strong>Edit ▸ Geometry ▸ Wall Joins</strong>, then click the grey square that appears on a corner. The
-options bar offers:</p>
+<p><strong>Shapes ▸ Wall Joins</strong> in the contextual card, then click the grey square that appears on a corner. The
+options strip offers:</p>
 <ul>
 <li><strong>Configuration:</strong> <strong>Butt</strong> (one wall runs through, the other stops against it), <strong>Miter</strong>
   (both end on the bisector) or <strong>Square off</strong> (the wall that stops ends square); <strong>Previous</strong>
@@ -842,17 +892,45 @@ blue dot of that end and choose <strong>Disallow Join</strong>: both walls then 
 beside the end shows it; click it, or right-click the dot and choose <strong>Allow Join</strong>, to join it
 again.</p>
 <h2 id="wall-types-and-layers">Wall types and layers</h2>
-<p><strong>Type Parameters</strong> of a wall shows, under <strong>Construction</strong>, <strong>Structure</strong> with its <strong>Edit…</strong>
-button, <strong>Return at Openings</strong>, <strong>Return at Ends</strong>, <strong>Width</strong> (the sum of the layers,
-read-only) and <strong>Function</strong> (<strong>Interior</strong>, <strong>Exterior</strong>, <strong>Foundation</strong>, <strong>Retaining</strong>,
-<strong>Soffit</strong>, <strong>Core-shaft</strong>); under <strong>Graphics</strong>, <strong>Coarse Scale Fill Pattern</strong> and <strong>Coarse Scale
-Fill Color</strong>, how cut walls of the type are filled at <strong>Coarse</strong> detail. <strong>Duplicate…</strong> makes a
-new type; its name does not follow its layers.</p>
-<p><strong>Type Parameters</strong> also shows a preview of the type on its left (its layers, or a small picture of
-one of its elements); <strong>‹‹ Preview</strong> at the bottom closes it and the dialog narrows, <strong>Preview ››</strong>
-opens it again, and the choice is kept.</p>
+<p><strong>Type Parameters</strong> (the tile of the tool panel while a wall is selected, the button under the type selector of <strong>Properties</strong>, or a type's menu in the
+Project Browser) shows the parameters of a wall type; a change applies to every wall of that type.</p>
+<h3 id="wall-type-parameters">Type parameters</h3>
+<p><img alt="The Type Parameters of a wall type, with its section" src="../assets/screens/wall-type-parameters.png"/></p>
+<p>At the top are the family and the type and, for a type with layers, the three figures of <strong>Type
+layers</strong>: <strong>Total thickness</strong>, <strong>Resistance R</strong> and <strong>Mass per area</strong>. Below, <strong>Family</strong> with
+<strong>Load…</strong> (a family from the library; greyed for walls and the other system families, which are
+duplicated rather than loaded) and <strong>Type</strong> with the other types of the family,
+<strong>Duplicate…</strong> (a copy, which becomes the type of the selected walls; its name does not follow its
+layers) and <strong>Rename…</strong>. The parameters follow in a table <strong>Parameter · Value · Formula</strong>, in
+groups that open and close with a click on their title:</p>
+<ul>
+<li><strong>Construction</strong>: <strong>Layers</strong> with <strong>Edit…</strong>, which opens <strong>Type layers</strong>; <strong>Wrap at inserts</strong>
+  (<strong>No</strong>, <strong>Exterior</strong>, <strong>Interior</strong>, <strong>Both</strong>); <strong>Wrap at ends</strong> (<strong>None</strong>, <strong>Exterior</strong>,
+  <strong>Interior</strong>); <strong>Thickness</strong> (the sum of the layers in metres, read-only); <strong>Function</strong> (<strong>Exterior</strong>,
+  <strong>Interior</strong>, <strong>Foundation</strong>, <strong>Retaining</strong>, <strong>Cavity</strong>, <strong>Core-shaft</strong>).</li>
+<li><strong>Cross-section</strong>: <strong>Thickness measured at</strong> (<strong>Core</strong>, <strong>Exterior face</strong>, <strong>Interior face</strong>).</li>
+<li><strong>Graphics</strong>: <strong>Coarse Scale Fill Pattern</strong> and <strong>Coarse Scale Fill Color</strong> (a swatch that opens the colour picker), how cut walls of
+  the type are filled at <strong>Coarse</strong> detail.</li>
+<li><strong>Materials</strong>: <strong>Structural material</strong>, read-only: the material of the layer marked structural in <strong>Type layers</strong>, «<by category="">» when none.</by></li>
+<li><strong>Thermal properties</strong>: <strong>Resistance R</strong> and <strong>Mass per area</strong>,
+  read-only and computed from the layers (they show «—» while a material lacks its
+  thermal values); <strong>Solar absorptance</strong> (0 to 1, 0.7 at first) and <strong>Roughness</strong> (from <strong>1 · Very
+  smooth</strong> to <strong>5 · Very rough</strong>).</li>
+<li><strong>Identification</strong>: <strong>Keynote</strong> (typed, or <strong>…</strong> opens the project's <strong>Keynotes</strong>: codes and
+  descriptions to add, change or delete; a row picked and <strong>OK</strong> give its code to the type), <strong>Assembly Code</strong>, <strong>Assembly Description</strong> (read-only), <strong>Model</strong>,
+  <strong>Manufacturer</strong>, <strong>Type Comments</strong>, <strong>URL</strong>, <strong>Description</strong>, <strong>Type Mark</strong> (what a wall tag
+  shows), <strong>Fire resistance</strong> and <strong>Cost</strong>.</li>
+</ul>
+<p>The <strong>Formula</strong> column marks with «=» the values that can be changed. Every change applies at once
+and Ctrl+Z undoes it, one step each; <strong>Cancel</strong> undoes all the changes made since the dialog
+opened, <strong>OK</strong> keeps them, <strong>Help</strong> opens this page.</p>
+<p>On the right the preview draws the type as <strong>Type layers</strong> does: <strong>Section</strong> (the wall cut through,
+its layers side by side) or <strong>Plan</strong> (the end of the wall), with the buttons to zoom out, zoom in
+and fit; floors and roofs show their layers stacked; doors, windows, components and curtain walls
+a picture of one of them. The <strong>Preview</strong> switch in the header, beside the figures (an eye and an on/off switch), hides it and the table widens into the freed space, while the dialog keeps its size and place; switched on again it shows the preview, and the choice is kept. Floors, roofs and the other families use the same
+dialog, with their own parameters.</p>
 <h3 id="type-layers">Type layers</h3>
-<p><strong>Structure ▸ Edit…</strong> opens <strong>Type layers</strong>, the same dialog for walls, floors, roofs and ceilings.
+<p><strong>Layers ▸ Edit…</strong> opens <strong>Type layers</strong>, the same dialog for walls, floors, roofs and ceilings.
 At the top are the family and the type, and three figures updated at every change: <strong>Total
 thickness</strong> (in metres), <strong>Resistance R</strong> (m²K/W: the sum of thickness / thermal conductivity of the
 layers, plus 0.17 for the two surfaces) and <strong>Mass per area</strong> (kg/m²: the sum of thickness ×
@@ -890,8 +968,13 @@ the drawing zoom it out, zoom it in and fit it; the wheel, a pinch and a drag zo
 and a click on a layer selects it in the list. Below, for walls, <strong>Vertical structure (in
 section)</strong> gathers <strong>Modify</strong>, <strong>Merge Regions</strong>, <strong>Profiles</strong>, <strong>Assign Layers</strong>, <strong>Split Region</strong>
 and <strong>Reveals</strong>, not available yet (greyed).</p>
-<p>At the bottom <strong>‹‹ Preview</strong> closes the preview and the list takes the whole width; <strong>Preview ››</strong>
-opens it again, and the choice is kept. <strong>OK</strong> applies all the changes in one step, which Ctrl+Z
+<p>The preview draws each layer exactly as plans and sections draw it at <strong>Medium</strong> detail: the
+material's cut pattern in its colour, on the view's background in <strong>Lines</strong> or over the
+material's shading colour in the shaded styles, following the active view's graphic style and the
+theme. A material changed in <strong>Materials</strong> changes the preview, the plans, the sections and the 3D
+view alike; the overrides of a view (<strong>Visibility/Graphics</strong>, filters, an element's overrides)
+change that view only, never the preview.</p>
+<p>The <strong>Preview</strong> switch in the header, beside the figures, hides the preview and the list takes the whole width, while the dialog keeps its size and place; switched on again it shows the preview, and the choice is kept. At the bottom, <strong>OK</strong> applies all the changes in one step, which Ctrl+Z
 undoes; <strong>Cancel</strong> closes without changing anything; <strong>Help</strong> opens this page. In a narrow window
 the preview stands above the list.</p>
 <p>Wrapping shows in every view: in plan, in the 3D view, in sections and in elevations the ticked
@@ -899,12 +982,44 @@ layers line the jambs, the head and the sill of doors and windows, the sides of 
 edited boundary (see <a href="#editing-a-walls-profile">Editing a wall's boundary</a>) and the free ends. A
 door or window type overrides the wall's wrapping with its <strong>Wall Closure</strong>.</p>
 <h2 id="wall-properties">Wall properties</h2>
-<p>Under <strong>Constraints</strong>: <strong>Alignment</strong>, <strong>Base Level</strong>, <strong>Offset at Base</strong>, <strong>Base is
-Attached</strong>, <strong>Top Level</strong> (a level, or <strong>Unconnected</strong>), <strong>Free Height</strong>, <strong>Offset at Top</strong> (with a level), <strong>Top is Attached</strong> and <strong>Room Bounding</strong> (untick it and the rooms
-around the wall ignore it). Under <strong>Dimensions</strong>: <strong>Length</strong>, <strong>Area</strong>, <strong>Volume</strong>. Under
-<strong>Identification</strong>: <strong>Mark</strong> and <strong>Comments</strong>.</p>
+<p><img alt="A wall selected, with its Properties" src="../assets/screens/wall-properties.png"/></p>
+<p>With a wall selected, <strong>Properties</strong> shows at the top the type selector: the picture of the type,
+its family and its name. A click opens the list of the types grouped by family (<strong>Basic Wall</strong>,
+<strong>Curtain Wall</strong>), each with a small picture — a wall's layers side by side in their materials'
+colours, a curtain wall's grid — and the current type highlighted; typing in <strong>Search a type…</strong>
+keeps the types whose name contains the text, the arrows and Enter pick one. Under it <strong>Walls (1)</strong>
+says what is shown and <strong>Type Parameters</strong> opens the dialog described above.</p>
+<p>The parameters come in groups that open and close with a click on their title:</p>
+<ul>
+<li><strong>Constraints</strong>: <strong>Alignment</strong> (<strong>Axis</strong>, <strong>Core Centerline</strong>, <strong>Finish Face: Exterior</strong>,
+  <strong>Finish Face: Interior</strong>, <strong>Core Face: Exterior</strong>, <strong>Core Face: Interior</strong>), <strong>Base Level</strong>,
+  <strong>Offset at Base</strong>, <strong>Base is Attached</strong> (read-only), <strong>Extend layers at base</strong>, <strong>Top Level</strong> (a
+  level, or <strong>Unconnected</strong>), <strong>Free Height</strong> (typed only with <strong>Unconnected</strong>, greyed otherwise; at the command line it is
+  refused, saying why, while the wall has a top level),
+  <strong>Offset at Top</strong> (only with a level, greyed otherwise), <strong>Top is Attached</strong> (read-only),
+  <strong>Extend layers at top</strong>, <strong>Room Bounding</strong> (untick it and the rooms around the wall ignore it)
+  and <strong>Created from mass</strong> (read-only).</li>
+<li><strong>Structural</strong>: <strong>Role</strong> (<strong>Non-bearing</strong>, <strong>Bearing</strong>, <strong>Shear</strong>, <strong>Combined</strong>). A wall other
+  than <strong>Non-bearing</strong> is structural, and its <strong>Rebar cover at top</strong>, <strong>Rebar cover, interior side</strong>
+  and <strong>Rebar cover, exterior side</strong> can be chosen (25, 35 or 40 mm); they are greyed otherwise.
+  <strong>Rebar volume</strong> is read-only.</li>
+<li><strong>Dimensions</strong>: <strong>Length</strong>, <strong>Thickness</strong>, <strong>Area</strong>, <strong>Volume</strong> and the ends of the wall's line.</li>
+<li><strong>Identification</strong>: <strong>Comments</strong>, <strong>Mark</strong> and <strong>Classify as</strong> (<strong>Exterior wall</strong>, <strong>Interior
+  wall</strong>, <strong>Partition</strong>, <strong>Foundation wall</strong>; until one is chosen, after the type's function).</li>
+<li><strong>Phasing</strong>: <strong>Phase created</strong> (<strong>Existing</strong>, <strong>New construction</strong>) and <strong>Phase demolished</strong>
+  (<strong>None</strong>, <strong>Existing</strong>, <strong>New construction</strong>). They are kept with the wall; views do not draw
+  phases yet.</li>
+</ul>
+<p><strong>Extend layers at base</strong> and <strong>at top</strong> carry the layers outside the core below the base and above
+the top by that distance (a negative one shortens them), in the 3D view, in sections and in
+elevations; the core stays between the base and the top. At the top they extend where the top is
+flat, not where the wall is attached to a roof or a sloped plane.</p>
+<p>With several walls selected the filter says <strong>Walls (n)</strong>, the type selector shows their type (or
+«‹varies›») and each row shows the value the walls share, or «‹varies›» where they differ; a change
+goes to all of them in one step. <strong>Help on properties</strong> at the bottom opens this page; <strong>Apply</strong>
+confirms the value being typed. Every change is one step that Ctrl+Z undoes.</p>
 <h2 id="placing-doors-and-windows">Placing doors and windows</h2>
-<p><strong>Home ▸ Build ▸ Door</strong> (<code>DR</code>) or <strong>Window</strong> (<code>WN</code>), in a plan, a section, an elevation or the 3D view. Pick the type, then
+<p><strong>Create ▸ Build ▸ Door</strong> (<code>DR</code>) or <strong>Window</strong> (<code>WN</code>), in a plan, a section, an elevation or the 3D view. Pick the type, then
 move over a wall: the opening follows the cursor along it, and temporary dimensions measure from
 its centre line to the centre lines of the nearest walls across the host on each side. A door
 swings to the side of the wall the cursor is on; the <strong>space bar</strong> puts its hinge on the other
@@ -913,9 +1028,9 @@ Height</strong>.</p>
 <p>Doors and windows get a <strong>Mark</strong> that counts up by category (1, 2, 3…), from the highest.</p>
 <h2 id="tags">Tags</h2>
 <p><strong>Draw Door ▸ Tag ▸ Tag on Placement</strong> (or the same for windows) tags each opening as it
-is placed. The options bar then offers <strong>Horizontal</strong> or <strong>Vertical</strong>, and <strong>Leader</strong> with its
+is placed. The options strip then offers <strong>Horizontal</strong> or <strong>Vertical</strong>, and <strong>Leader</strong> with its
 length. A door's tag shows its <strong>Mark</strong>; a window's tag shows its type's <strong>Type Mark</strong>.
-<strong>Annotations ▸ Tag All</strong> tags the openings not tagged yet.</p>
+<strong>Document ▸ Tag All</strong> tags the openings not tagged yet.</p>
 <h2 id="flipping-a-door-or-window">Flipping a door or window</h2>
 <p>Select a door or window in a plan: arrows across the wall, on the side it opens to, turn its swing
 over; arrows beside it, along the wall, put its hinge on the other jamb. The context menu does the
@@ -983,14 +1098,14 @@ in plan, sections, 3D and IFC.</p>
 <li>The type's <strong>Vertical Layout</strong> and horizontal layout (<strong>Fixed distance</strong>, <strong>Fixed number</strong>,
   <strong>Maximum spacing</strong>) with their spacing, and the instance's <strong>Number of Vertical Grids</strong> and
   <strong>Vertical Justification</strong>, place the grid lines by themselves.</li>
-<li><strong>Home ▸ Build ▸ Curtain Grid</strong>: click near the top or bottom edge for a vertical line, near a
+<li><strong>Create ▸ Build ▸ Curtain Grid</strong>: click near the top or bottom edge for a vertical line, near a
   side for a horizontal one, in an elevation, a section, a plan or the 3D view (on the face under
   the cursor); it snaps to the middle and the
   thirds of the panel.</li>
-<li><strong>Home ▸ Build ▸ Mullion</strong>: <strong>Grid Line</strong>, <strong>Grid Line Segment</strong> or <strong>All Grid Lines</strong>, with
+<li><strong>Create ▸ Build ▸ Mullion</strong>: <strong>Grid Line</strong>, <strong>Grid Line Segment</strong> or <strong>All Grid Lines</strong>, with
   the mullion type picked in the type selector; click the grid line in an elevation, a section
   or the 3D view.</li>
-<li>Select the curtain wall, then <strong>Panel</strong> in its contextual tab: pick a panel type (a
+<li>Select the curtain wall, then <strong>Panel</strong> in its contextual card: pick a panel type (a
   <strong>Curtain Wall Door</strong>, a glazed or solid panel, or none) and click the panel to change, in an
   elevation, a section or the 3D view.</li>
 </ul>
@@ -1004,13 +1119,50 @@ plates and members.</p>
   off (the two panels on either side become one, and its mullion goes) or to put it back. Panels
   stay rectangular: a segment that would make an L-shaped panel is refused.</li>
 <li>Hover over a curtain wall and press TAB: the panel under the cursor is outlined; click to select
-  it alone. The <strong>Properties</strong> palette shows its <strong>Width</strong> and <strong>Height</strong>, and the type selector
+  it alone. The element panel shows its <strong>Width</strong> and <strong>Height</strong>, and the type selector
   changes its type.</li>
 </ul>
+<h2 id="stacked-walls">Stacked walls</h2>
+<p><img alt="A stacked wall selected, with its Properties" src="../assets/screens/stacked-wall.png"/></p>
+<p>A <strong>stacked wall</strong> is made of sub-walls one above the other: a rendered wall over a stone plinth,
+for instance. Each sub-wall is a basic wall type, with its own layers and materials. The template
+has one, <strong>Stacked wall - Render over stone plinth</strong> (the exterior wall over a 0.9 m stone
+plinth): pick it in the type selector of <strong>Wall</strong> and draw it as any wall.</p>
+<p>The stacked wall holds the line, the levels and the height; its sub-walls follow them. In plans,
+sections, elevations and the 3D view each sub-wall is drawn with its own type's layers, in the
+colours of their materials; the sub-walls join the walls they meet, and the <strong>Wall Schedule</strong> lists
+them, one row each. A door or window placed on a stacked wall cuts every sub-wall it passes
+through, its sill measured from the stacked wall's base.</p>
+<p>A click selects the whole wall; <strong>Tab</strong> goes on to each sub-wall, from the bottom up (the status
+bar says «Tab · next element»). The Properties of the whole wall hold for all its sub-walls; its
+<strong>Alignment</strong> comes from the type and is read-only. Of a sub-wall only <strong>Room Bounding</strong> and
+<strong>Role</strong> change: the rest comes from the stacked wall and its type, and its type is changed in the
+stacked type. <strong>Break up into single walls</strong>, in the context menu and with the wall selected,
+makes each sub-wall an independent basic wall where it stands; they do not go back together
+(Ctrl+Z undoes it). The boundary of a stacked wall or of a sub-wall cannot be edited yet.</p>
+<h3 id="the-sub-walls-of-the-type">The sub-walls of the type</h3>
+<p><img alt="The Type sub-walls of the sample stacked type" src="../assets/screens/stacked-wall-sub-walls.png"/></p>
+<p><strong>Type Parameters</strong> of a stacked wall type shows <strong>Sub-walls</strong> with <strong>Edit…</strong>, which opens <strong>Type
+sub-walls</strong>. At the top are the type and three figures: how many sub-walls, the sum of the fixed
+heights and the greatest thickness. The table lists the sub-walls from <strong>TOP</strong> to <strong>BOTTOM</strong>,
+numbered from the bottom: <strong>Wall Type</strong> (a basic wall type), <strong>Height</strong> in metres, <strong>Offset</strong> from
+the reference line (positive towards the exterior), <strong>Extends at top</strong> and <strong>Extends at base</strong> (how
+far the layers outside the core go beyond the sub-wall; negative, they stop short) and <strong>Flip</strong>.
+Exactly one sub-wall is <strong>Variable</strong>: its height is what remains of the wall's height.</p>
+<p><strong>Insert</strong> adds a sub-wall below the selected one, <strong>Delete</strong> removes it (never the last one;
+deleting the variable one makes the one above variable), <strong>Up</strong> and <strong>Down</strong> move it, <strong>Variable</strong>
+makes it the variable one. A positive <strong>Extends at base</strong> hooks the top of the sub-wall below
+(«Hooked»): its layers stop where those of the one above begin. <strong>Align sub-walls to</strong> chooses the
+plane of each sub-wall that lies on the reference line, among those of <strong>Alignment</strong> (<strong>Axis</strong>,
+<strong>Finish Face: Exterior</strong>…).</p>
+<p>On the right is the section of the type, as tall as <strong>Sample height</strong>, the reference line in blue,
+the exterior on the left; a click on a sub-wall selects its row. The slim <strong>Preview</strong> strip hides
+and shows it, and the dialog keeps its size and place. <strong>OK</strong> applies the changes in one step
+(Ctrl+Z undoes it); <strong>Cancel</strong> leaves the type as it was.</p>
 <h2 id="levels">Levels</h2>
-<p><strong>Home ▸ Datum ▸ Level</strong> draws a level in a section or an elevation with two clicks, at the
+<p><strong>Create ▸ References ▸ Level</strong> draws a level in a section or an elevation with two clicks, at the
 height of the first one; while drawing, a temporary dimension gives the distance to the nearest
-level. The options bar shows:</p>
+level. The options strip shows:</p>
 <ul>
 <li><strong>Make Plan View</strong>: on, the new level gets its floor plan; off, it is a reference level with no
   plan, which walls and other elements can still take as their base or top;</li>
@@ -1023,7 +1175,7 @@ level. The options bar shows:</p>
 lowest level; a section or an elevation has none until one is set. The plane is kept with the
 view.</p>
 <h3 id="setting-the-work-plane">Setting the work plane</h3>
-<p><strong>Home ▸ Work Plane ▸ Define</strong> opens the <strong>Work Plane</strong> dialog. <strong>Current Work Plane</strong> shows the
+<p><strong>Create ▸ Work Plane ▸ Define</strong> opens the <strong>Work Plane</strong> dialog. <strong>Current Work Plane</strong> shows the
 plane the view uses now. Under <strong>Specify a new Work Plane</strong>:</p>
 <ul>
 <li><strong>Name</strong>: pick a level, a grid or a named reference plane in the list (picking one selects
@@ -1039,22 +1191,22 @@ is not set there: <strong>Go to View</strong> lists the views it lies in (the se
 a vertical plane, the plans of a horizontal one) and the 3D views, and <strong>Open View</strong> opens the
 chosen one with that work plane. <strong>Undo</strong> takes a new work plane back.</p>
 <h3 id="showing-the-work-plane">Showing the work plane</h3>
-<p><strong>Home ▸ Work Plane ▸ Display</strong> draws the work plane's grid in the view, over the model, when the
+<p><strong>Create ▸ Work Plane ▸ Display</strong> draws the work plane's grid in the view, over the model, when the
 plane lies in the view (in a 3D view always); <strong>Show</strong> again hides it. In a section with no work
 plane it opens the <strong>Work Plane</strong> dialog first. Click the border of the grid to select it: the
-options bar shows <strong>Spacing</strong>, the distance between its lines (1 m to start with). While the
+options strip shows <strong>Spacing</strong>, the distance between its lines (1 m to start with). While the
 grid is shown, the points of walls and other lines drawn in the plan snap to the crossings of
 its lines.</p>
 <p>In a 3D view, a click where there is no element under the cursor lands on the view's work
 plane when one has been set for it: a component placed east of the house with the work plane
 set to the first floor stands on the first floor.</p>
 <h3 id="reference-planes">Reference planes</h3>
-<p><strong>Home ▸ Work Plane ▸ Reference Plane</strong> (or type <code>RP</code>) draws a reference plane with two clicks,
+<p><strong>Create ▸ Work Plane ▸ Reference Plane</strong> (or type <code>RP</code>) draws a reference plane with two clicks,
 like a grid. Drawn in a plan it is the vertical plane through the line, shown as a green dashed
 line in every plan and in the sections and elevations that cross it. Drawn in a section or an
 elevation it is the plane through the line across the view's depth (a horizontal line makes a
 horizontal plane), shown in the views facing the same way. Select one to give it a <strong>Name</strong> in
-the <strong>Properties</strong> palette: a named reference plane is listed in the <strong>Work Plane</strong> dialog and
+the element panel: a named reference plane is listed in the <strong>Work Plane</strong> dialog and
 its name is written at the start of its line. Reference planes are snapped to, moved, copied,
 rotated, mirrored and deleted like grids.</p>
 <h2 id="at-the-command-line">At the command line</h2>

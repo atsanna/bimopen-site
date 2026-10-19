@@ -284,6 +284,13 @@
 <nav aria-label="Tipos de muro y capas" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#wall-type-parameters">
+<span class="md-ellipsis">
+      Parámetros de tipo
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#type-layers">
 <span class="md-ellipsis">
       Capas del tipo
@@ -348,6 +355,24 @@
       Muros cortina
     </span>
 </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#stacked-walls">
+<span class="md-ellipsis">
+      Muros apilados
+    </span>
+</a>
+<nav aria-label="Muros apilados" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-sub-walls-of-the-type">
+<span class="md-ellipsis">
+      Los submuros del tipo
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#levels">
@@ -545,6 +570,13 @@
 <nav aria-label="Tipos de muro y capas" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#wall-type-parameters">
+<span class="md-ellipsis">
+      Parámetros de tipo
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#type-layers">
 <span class="md-ellipsis">
       Capas del tipo
@@ -611,6 +643,24 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#stacked-walls">
+<span class="md-ellipsis">
+      Muros apilados
+    </span>
+</a>
+<nav aria-label="Muros apilados" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-sub-walls-of-the-type">
+<span class="md-ellipsis">
+      Los submuros del tipo
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#levels">
 <span class="md-ellipsis">
       Niveles
@@ -675,10 +725,10 @@
 cómo se configuran sus tipos y capas, y cómo se colocan en ellos puertas y ventanas, cómo se
 voltean, se mueven y cómo se dibujan con cada valor de <strong>Detalle</strong>.</p>
 <h2 id="drawing-walls">Dibujar muros</h2>
-<p><strong>Inicio ▸ Construir ▸ Muro</strong> (o <code>WA</code>) inicia la herramienta muro, en una planta, una sección, un alzado o en la vista 3D.
-Elija el tipo de muro en el selector de tipos de la parte superior de la paleta <strong>Propiedades</strong>;
-<strong>Parámetros de tipo</strong> modifica el tipo y, con él, todos los muros de ese tipo. La ficha
-contextual <strong>Dibujar: muro</strong> muestra el grupo <strong>Dibujar</strong>, y la barra de opciones
+<p><strong>Crear ▸ Construir ▸ Muro</strong> (o <code>WA</code>) inicia la herramienta muro, en una planta, una sección, un alzado o en la vista 3D.
+Elija el tipo de muro en el selector de tipos de la parte superior del panel del elemento;
+<strong>Parámetros de tipo</strong> modifica el tipo y, con él, todos los muros de ese tipo. La tarjeta
+contextual <strong>Dibujar: muro</strong> muestra el grupo <strong>Dibujar</strong>, y la franja de opciones
 muestra:</p>
 <table>
 <thead>
@@ -749,7 +799,7 @@ muestra:</p>
 </tr>
 <tr>
 <td><strong>Polígono inscrito</strong></td>
-<td>Ajuste <strong>Lados</strong> en la barra de opciones, pulse el centro y un vértice: los vértices quedan sobre el círculo</td>
+<td>Ajuste <strong>Lados</strong> en la franja de opciones, pulse el centro y un vértice: los vértices quedan sobre el círculo</td>
 </tr>
 <tr>
 <td><strong>Polígono circunscrito</strong></td>
@@ -773,7 +823,7 @@ alineación donde estaba.</p>
 <ol>
 <li>Seleccione los muros.</li>
 <li><strong>Selección: muros ▸ Modificar muro ▸ Unir arriba/abajo</strong>.</li>
-<li>En la barra de opciones, <strong>Enlazar muro:</strong> <strong>Superior</strong> o <strong>Base</strong>.</li>
+<li>En la franja de opciones, <strong>Enlazar muro:</strong> <strong>Superior</strong> o <strong>Base</strong>.</li>
 <li>Pulse la cubierta o el suelo, en una planta, una sección o la vista 3D.</li>
 </ol>
 <p>Con <strong>Superior</strong>, los muros suben o bajan hasta la cara inferior de la cubierta (siguiendo sus
@@ -791,7 +841,7 @@ mientras la parte superior está enlazada, <strong>Altura libre</strong> es de s
 <p>Un muro no tiene por qué ser un rectángulo: su contorno se dibuja en un alzado o una sección
 paralelos, con huecos, como para un hastial o un muro escalonado.</p>
 <ol>
-<li>Selecciona el muro y haz clic en <strong>Modo ▸ Editar contorno</strong> en su ficha contextual. Desde una
+<li>Selecciona el muro y haz clic en <strong>Modo ▸ Editar contorno</strong> en su tarjeta contextual. Desde una
    planta o una vista no paralela al muro, <strong>Ir a vista</strong> lista las secciones y alzados paralelos:
    elige uno y haz clic en <strong>Abrir vista</strong>.</li>
 <li>El modo de boceto se abre con el contorno del muro en magenta. Cámbialo con <strong>Línea</strong> y
@@ -828,8 +878,8 @@ frente a las capas del otro muro:</p>
 <p>Con <strong>Detalle</strong> <strong>Bajo</strong>, los muros unidos son un solo relleno, sin línea entre ellos. Las
 secciones y la vista 3D usan los mismos trozos, de modo que nada se superpone.</p>
 <h3 id="the-wall-joins-tool">La herramienta Uniones de muro</h3>
-<p><strong>Edición ▸ Geometría ▸ Uniones de muro</strong>, y pulse el cuadrado gris que aparece en una esquina. La
-barra de opciones ofrece:</p>
+<p><strong>Formas ▸ Uniones de muro</strong> en la tarjeta contextual, y pulse el cuadrado gris que aparece en una esquina. La
+franja de opciones ofrece:</p>
 <ul>
 <li><strong>Configuración:</strong> <strong>A tope</strong> (un muro continúa, el otro se detiene contra él), <strong>Inglete</strong>
   (ambos terminan en la bisectriz) o <strong>Escuadra</strong> (el muro que se detiene termina a escuadra);
@@ -848,17 +898,49 @@ ambos muros terminan entonces a escuadra, separados. Una pequeña marca junto al
 púlsela, o haga clic con el botón derecho en el punto y elija <strong>Permitir unión</strong>, para unirlo de
 nuevo.</p>
 <h2 id="wall-types-and-layers">Tipos de muro y capas</h2>
-<p><strong>Parámetros de tipo</strong> de un muro muestra, en <strong>Construcción</strong>, <strong>Estructura</strong> con su botón
-<strong>Editar…</strong>, <strong>Retorno en aberturas</strong>, <strong>Retorno en extremos</strong>, <strong>Anchura</strong> (la suma de
-las capas, solo lectura) y <strong>Función</strong> (<strong>Interior</strong>, <strong>Exterior</strong>, <strong>Cimentación</strong>,
-<strong>Contención</strong>, <strong>Plafón</strong>, <strong>Núcleo</strong>); en <strong>Gráficos</strong>, <strong>Patrón de relleno de escala baja</strong> y
-<strong>Color de relleno de escala baja</strong>, es decir, cómo se rellenan los muros cortados del tipo con
-<strong>Detalle</strong> <strong>Bajo</strong>. <strong>Duplicar…</strong> crea un tipo nuevo; su nombre no sigue a sus capas.</p>
-<p>También <strong>Parámetros de tipo</strong> muestra a la izquierda una vista previa del tipo (sus capas, o una
-pequeña imagen de uno de sus elementos); <strong>‹‹ Vista previa</strong> abajo la cierra y el cuadro de
-diálogo se estrecha, <strong>Vista previa ››</strong> la vuelve a abrir, y la elección se conserva.</p>
+<p><strong>Parámetros de tipo</strong> (el mosaico del panel de herramientas con un muro seleccionado, el botón bajo el selector de tipo de <strong>Propiedades</strong>, o el menú de un tipo
+en el navegador de proyectos) muestra los parámetros de un tipo de muro; un cambio vale para todos
+los muros de ese tipo.</p>
+<h3 id="wall-type-parameters">Parámetros de tipo</h3>
+<p><img alt="Los Parámetros de tipo de un tipo de muro, con su sección" src="../assets/screens/wall-type-parameters.png"/></p>
+<p>Arriba están la familia y el tipo y, para un tipo con capas, las tres cifras de <strong>Capas del tipo</strong>:
+<strong>Grosor total</strong>, <strong>Resistencia R</strong> y <strong>Masa superficial</strong>. Debajo, <strong>Familia</strong> con <strong>Cargar…</strong>
+(una familia de la biblioteca; en gris para los muros y las demás familias de sistema, que se
+duplican en lugar de cargarse) y <strong>Tipo</strong> con los demás tipos de la familia, <strong>Duplicar…</strong> (una
+copia, que pasa a ser el tipo de los muros seleccionados; su nombre no sigue sus capas) y <strong>Cambiar
+nombre…</strong>. Siguen los parámetros en una tabla <strong>Parámetro · Valor · Fórmula</strong>, en grupos que se
+abren y se cierran con un clic en su título:</p>
+<ul>
+<li><strong>Construcción</strong>: <strong>Capas</strong> con <strong>Editar…</strong>, que abre <strong>Capas del tipo</strong>; <strong>Envolver en
+  inserciones</strong> (<strong>No</strong>, <strong>Exterior</strong>, <strong>Interior</strong>, <strong>Ambos</strong>); <strong>Envolver en extremos</strong>
+  (<strong>Ninguno</strong>, <strong>Exterior</strong>, <strong>Interior</strong>); <strong>Grosor</strong> (la suma de las capas en metros, de solo lectura);
+  <strong>Función</strong> (<strong>Exterior</strong>, <strong>Interior</strong>, <strong>Cimentación</strong>, <strong>Contención</strong>, <strong>Cámara</strong>,
+  <strong>Núcleo</strong>).</li>
+<li><strong>Sección transversal</strong>: <strong>Espesor medido en</strong> (<strong>Núcleo</strong>, <strong>Cara exterior</strong>, <strong>Cara
+  interior</strong>).</li>
+<li><strong>Gráficos</strong>: <strong>Patrón de relleno de escala baja</strong> y <strong>Color de relleno de escala baja</strong> (una muestra que abre la elección del color), es
+  decir, cómo se rellenan los muros cortados del tipo con el detalle <strong>Bajo</strong>.</li>
+<li><strong>Materiales</strong>: <strong>Material estructural</strong>, de solo lectura: el material de la capa marcada como estructural en <strong>Capas del tipo</strong>, «<por categoría="">» si no hay ninguna.</por></li>
+<li><strong>Propiedades térmicas</strong>: <strong>Resistencia R</strong> y <strong>Masa superficial</strong>, de solo
+  lectura y calculadas a partir de las capas (muestran «—» mientras a un material le
+  faltan sus valores térmicos); <strong>Absortancia solar</strong> (de 0 a 1, 0,7 al principio) y <strong>Rugosidad</strong>
+  (de <strong>1 · Muy liso</strong> a <strong>5 · Muy rugoso</strong>).</li>
+<li><strong>Identificación</strong>: <strong>Nota clave</strong> (se escribe, o <strong>…</strong> abre las <strong>Notas clave</strong> del proyecto:
+  códigos y descripciones para añadir, cambiar o eliminar; una fila elegida y <strong>OK</strong> dan su código
+  al tipo), <strong>Código de montaje</strong>, <strong>Descripción de montaje</strong> (solo lectura),
+  <strong>Modelo</strong>, <strong>Fabricante</strong>, <strong>Comentarios de tipo</strong>, <strong>URL</strong>, <strong>Descripción</strong>, <strong>Marca de tipo</strong>
+  (lo que muestra una etiqueta de muro), <strong>Resistencia al fuego</strong> y <strong>Coste</strong>.</li>
+</ul>
+<p>La columna <strong>Fórmula</strong> marca con «=» los valores que se pueden cambiar. Cada cambio se aplica al
+momento y Ctrl+Z lo deshace, un paso cada uno; <strong>Cancelar</strong> deshace todos los cambios hechos desde
+que se abrió el cuadro de diálogo, <strong>OK</strong> los conserva, <strong>Ayuda</strong> abre esta página.</p>
+<p>A la derecha la vista previa dibuja el tipo como <strong>Capas del tipo</strong>: <strong>Sección</strong> (el muro cortado,
+sus capas una junto a otra) o <strong>Planta</strong> (el extremo del muro), con los botones para reducir,
+ampliar y ajustar; suelos y cubiertas muestran sus capas superpuestas; puertas, ventanas,
+componentes y muros cortina una imagen de uno de ellos. El interruptor <strong>Vista previa</strong> del encabezado, junto a las cifras (un ojo y un interruptor de encendido/apagado), la oculta y la tabla se ensancha en el espacio liberado, mientras el cuadro conserva su tamaño y su posición; encendido de nuevo la vuelve a mostrar, y la elección se conserva. Suelos,
+cubiertas y las demás familias usan el mismo cuadro de diálogo, con sus propios parámetros.</p>
 <h3 id="type-layers">Capas del tipo</h3>
-<p><strong>Estructura ▸ Editar…</strong> abre <strong>Capas del tipo</strong>, el mismo cuadro de diálogo para muros, suelos,
+<p><strong>Capas ▸ Editar…</strong> abre <strong>Capas del tipo</strong>, el mismo cuadro de diálogo para muros, suelos,
 cubiertas y techos. Arriba están la familia y el tipo, y tres valores que se actualizan con cada
 cambio: <strong>Grosor total</strong> (en metros), <strong>Resistencia R</strong> (m²K/W: la suma de grosor / conductividad
 térmica de las capas, más 0,17 por las dos superficies) y <strong>Masa superficial</strong> (kg/m²: la suma de
@@ -901,8 +983,13 @@ gesto de pellizcar y el arrastre también lo amplían y lo mueven, y un clic en 
 selecciona en la lista. Debajo, para los muros, <strong>Estructura vertical (en sección)</strong> reúne
 <strong>Modificar</strong>, <strong>Combinar regiones</strong>, <strong>Perfiles</strong>, <strong>Asignar capas</strong>, <strong>Dividir región</strong> y
 <strong>Rehundidos</strong>, aún no disponibles (en gris).</p>
-<p>Abajo, <strong>‹‹ Vista previa</strong> cierra la vista previa y la lista ocupa todo el ancho; <strong>Vista previa ››</strong>
-la vuelve a abrir, y la elección se conserva. <strong>Aceptar</strong> aplica todos los cambios en un solo paso,
+<p>La vista previa dibuja cada capa exactamente como las plantas y las secciones con el detalle
+<strong>Medio</strong>: el patrón de corte del material en su color, sobre el fondo de la vista en <strong>Líneas</strong> o
+sobre el color de sombreado del material en los estilos sombreados, según el estilo gráfico de la
+vista activa y el tema. Un material cambiado en <strong>Materiales</strong> cambia igual la vista previa, las
+plantas, las secciones y la vista 3D; las modificaciones de una vista (<strong>Visibilidad/Gráficos</strong>,
+filtros, modificaciones de un elemento) cambian solo esa vista, nunca la vista previa.</p>
+<p>El interruptor <strong>Vista previa</strong> del encabezado, junto a las cifras, oculta la vista previa y la lista ocupa todo el ancho, mientras el cuadro conserva su tamaño y su posición; encendido de nuevo la vuelve a mostrar, y la elección se conserva. Abajo, <strong>Aceptar</strong> aplica todos los cambios en un solo paso,
 que Ctrl+Z deshace; <strong>Cancelar</strong> cierra sin cambiar nada; <strong>Ayuda</strong> abre esta página. En una ventana
 estrecha la vista previa queda encima de la lista.</p>
 <p>La envolvente se ve en todas las vistas: en planta, en la vista 3D, en las secciones y en los
@@ -911,13 +998,48 @@ lados de los huecos de un perfil editado (ver <a href="#editing-a-walls-profile"
 y los extremos libres. Un tipo de puerta o de ventana sustituye la envolvente del muro por su
 <strong>Cierre de muro</strong>.</p>
 <h2 id="wall-properties">Propiedades de los muros</h2>
-<p>En <strong>Restricciones</strong>: <strong>Alineación</strong>, <strong>Nivel de base</strong>, <strong>Desfase en la base</strong>, <strong>Base
-enlazada</strong>, <strong>Nivel superior</strong> (un nivel, o <strong>Sin conexión</strong>), <strong>Altura libre</strong>,
-<strong>Desfase en la parte superior</strong> (con un nivel), <strong>Parte superior enlazada</strong> y <strong>Delimitación de habitación</strong>
-(desmarcada, las habitaciones alrededor del muro lo ignoran). En <strong>Cotas</strong>: <strong>Longitud</strong>, <strong>Área</strong>,
-<strong>Volumen</strong>. En <strong>Identificación</strong>: <strong>Marca</strong> y <strong>Comentarios</strong>.</p>
+<p><img alt="Un muro seleccionado, con sus Propiedades" src="../assets/screens/wall-properties.png"/></p>
+<p>Con un muro seleccionado, <strong>Propiedades</strong> muestra arriba el selector de tipo: la imagen del tipo, su
+familia y su nombre. Un clic abre la lista de los tipos agrupados por familia (<strong>Muro básico</strong>,
+<strong>Muro cortina</strong>), cada uno con una pequeña imagen — las capas de un muro una junto a otra en los
+colores de sus materiales, la rejilla de un muro cortina — y el tipo actual resaltado; el texto
+escrito en <strong>Buscar un tipo…</strong> deja los tipos cuyo nombre lo contiene, las flechas e Intro eligen
+uno. Debajo, <strong>Muros (1)</strong> dice lo que se muestra y <strong>Parámetros de tipo</strong> abre el cuadro descrito
+arriba.</p>
+<p>Los parámetros están en grupos que se abren y se cierran con un clic en su título:</p>
+<ul>
+<li><strong>Restricciones</strong>: <strong>Alineación</strong> (<strong>Eje</strong>, <strong>Eje de núcleo</strong>, <strong>Cara de acabado: exterior</strong>,
+  <strong>Cara de acabado: interior</strong>, <strong>Cara de núcleo: exterior</strong>, <strong>Cara de núcleo: interior</strong>),
+  <strong>Nivel de base</strong>, <strong>Desfase en la base</strong>, <strong>Base enlazada</strong> (solo lectura), <strong>Extender capas
+  abajo</strong>, <strong>Nivel superior</strong> (un nivel, o <strong>Sin conexión</strong>), <strong>Altura libre</strong> (se escribe solo con
+  <strong>Sin conexión</strong>, si no está en gris; en la línea de comandos se rechaza, diciendo por qué,
+  mientras el muro tiene un nivel superior), <strong>Desfase en la parte superior</strong> (solo con un nivel, si no
+  en gris), <strong>Parte superior enlazada</strong> (solo lectura), <strong>Extender capas arriba</strong>, <strong>Delimitación de
+  habitación</strong> (desmarcada, las habitaciones alrededor del muro lo ignoran) y <strong>Creado a partir de
+  masa</strong> (solo lectura).</li>
+<li><strong>Estructural</strong>: <strong>Rol</strong> (<strong>No portante</strong>, <strong>Portante</strong>, <strong>Arriostramiento</strong>, <strong>Combinado</strong>). Un
+  muro distinto de <strong>No portante</strong> es estructural, y se eligen su <strong>Recubrimiento superior</strong>, su
+  <strong>Recubrimiento cara interior</strong> y su <strong>Recubrimiento cara exterior</strong> (25, 35 o 40 mm); si no,
+  están en gris. <strong>Volumen de armadura</strong> es de solo lectura.</li>
+<li><strong>Cotas</strong>: <strong>Longitud</strong>, <strong>Grosor</strong>, <strong>Área</strong>, <strong>Volumen</strong> y los extremos de la línea del muro.</li>
+<li><strong>Identificación</strong>: <strong>Comentarios</strong>, <strong>Marca</strong> y <strong>Clasificar como</strong> (<strong>Muro exterior</strong>, <strong>Muro
+  interior</strong>, <strong>Tabique</strong>, <strong>Muro de cimentación</strong>; mientras no se elige uno, según la función del
+  tipo).</li>
+<li><strong>Fases</strong>: <strong>Fase de creación</strong> (<strong>Existente</strong>, <strong>Nueva construcción</strong>) y <strong>Fase de derribo</strong>
+  (<strong>Ninguna</strong>, <strong>Existente</strong>, <strong>Nueva construcción</strong>). Se guardan con el muro; las vistas aún no
+  dibujan las fases.</li>
+</ul>
+<p><strong>Extender capas abajo</strong> y <strong>arriba</strong> llevan las capas fuera del núcleo bajo la base y sobre la
+parte superior esa distancia (una negativa las acorta), en la vista 3D, en las secciones y en los
+alzados; el núcleo queda entre la base y la parte superior. Arriba se extienden donde la parte
+superior es plana, no donde el muro está enlazado a una cubierta o a un plano inclinado.</p>
+<p>Con varios muros seleccionados el filtro dice <strong>Muros (n)</strong>, el selector de tipo muestra su tipo (o
+«‹valores distintos›») y cada fila el valor común a los muros, o «‹valores distintos›» donde
+difieren; un cambio va a todos en un solo paso. <strong>Ayuda sobre las propiedades</strong> abajo abre esta
+página; <strong>Aplicar</strong> confirma el valor que se está escribiendo. Cada cambio es un paso que Ctrl+Z
+deshace.</p>
 <h2 id="placing-doors-and-windows">Colocar puertas y ventanas</h2>
-<p><strong>Inicio ▸ Construir ▸ Puerta</strong> (<code>DR</code>) o <strong>Ventana</strong> (<code>WN</code>), en una planta o en la vista 3D. Elija
+<p><strong>Crear ▸ Construir ▸ Puerta</strong> (<code>DR</code>) o <strong>Ventana</strong> (<code>WN</code>), en una planta o en la vista 3D. Elija
 el tipo y pase sobre un muro: la abertura sigue al cursor a lo largo de él, y unas cotas temporales
 miden desde su eje hasta los ejes de los muros más cercanos que cruzan el anfitrión, a cada lado.
 Una puerta abre hacia el lado del muro en que está el cursor; la <strong>barra espaciadora</strong> pone su
@@ -927,9 +1049,9 @@ toma la <strong>Altura de alféizar por defecto</strong> de su tipo.</p>
 alta.</p>
 <h2 id="tags">Etiquetas</h2>
 <p><strong>Dibujar: puerta ▸ Etiqueta ▸ Etiquetar al colocar</strong> (o lo mismo para las ventanas)
-etiqueta cada abertura al colocarla. La barra de opciones ofrece entonces <strong>Horizontal</strong> o
+etiqueta cada abertura al colocarla. La franja de opciones ofrece entonces <strong>Horizontal</strong> o
 <strong>Vertical</strong>, y <strong>Directriz</strong> con su longitud. La etiqueta de una puerta muestra su <strong>Marca</strong>; la de
-una ventana, la <strong>Marca de tipo</strong> de su tipo. <strong>Anotaciones ▸ Etiquetar todo</strong> etiqueta las aberturas
+una ventana, la <strong>Marca de tipo</strong> de su tipo. <strong>Documentar ▸ Etiquetar todo</strong> etiqueta las aberturas
 que aún no tienen etiqueta.</p>
 <h2 id="flipping-a-door-or-window">Voltear una puerta o una ventana</h2>
 <p>Seleccione una puerta o una ventana en planta: unas flechas a través del muro, en el lado hacia el
@@ -1002,14 +1124,14 @@ aloja, y un mensaje lo indica (deshacer las recupera).</p>
 <li>La <strong>Disposición vertical</strong> y la disposición horizontal del tipo (<strong>Distancia fija</strong>, <strong>Número
   fijo</strong>, <strong>Separación máxima</strong>) con su separación, y el <strong>Número de rejillas verticales</strong> y la
   <strong>Justificación vertical</strong> del ejemplar, colocan solas las líneas de rejilla.</li>
-<li><strong>Inicio ▸ Construir ▸ Rejilla de muro cortina</strong>: pulse cerca del borde superior o inferior para
+<li><strong>Crear ▸ Construir ▸ Rejilla de muro cortina</strong>: pulse cerca del borde superior o inferior para
   una línea vertical, cerca de un lado para una horizontal, en un alzado, una sección, una planta o la vista 3D
   (sobre la cara bajo el cursor);
   se ajusta al centro y a los tercios del panel.</li>
-<li><strong>Inicio ▸ Construir ▸ Montante</strong>: <strong>Línea de rejilla</strong>, <strong>Segmento de línea de rejilla</strong> o
+<li><strong>Crear ▸ Construir ▸ Montante</strong>: <strong>Línea de rejilla</strong>, <strong>Segmento de línea de rejilla</strong> o
   <strong>Todas las líneas de rejilla</strong>, con el tipo de montante elegido en el selector de tipos; pulse
   la línea de rejilla en un alzado, una sección o la vista 3D.</li>
-<li>Seleccione el muro cortina y luego <strong>Panel</strong> en su ficha contextual: elija un tipo de panel
+<li>Seleccione el muro cortina y luego <strong>Panel</strong> en su tarjeta contextual: elija un tipo de panel
   (una <strong>Puerta de muro cortina</strong>, un panel acristalado o macizo, o ninguno) y pulse el panel que
   cambiar, en un alzado, una sección o la vista 3D.</li>
 </ul>
@@ -1024,13 +1146,51 @@ cortina con sus placas y elementos.</p>
   o lo vuelve a poner. Los paneles siguen siendo rectangulares: un segmento que daría un panel en
   L se rechaza.</li>
 <li>Con el cursor sobre un muro cortina, TAB resalta el panel bajo el cursor; un clic selecciona solo
-  ese. La paleta <strong>Propiedades</strong> muestra su <strong>Anchura</strong> y su <strong>Altura</strong>, y el selector de tipo
+  ese. El panel del elemento muestra su <strong>Anchura</strong> y su <strong>Altura</strong>, y el selector de tipo
   cambia su tipo.</li>
 </ul>
+<h2 id="stacked-walls">Muros apilados</h2>
+<p><img alt="Un muro apilado seleccionado, con sus Propiedades" src="../assets/screens/stacked-wall.png"/></p>
+<p>Un <strong>muro apilado</strong> está hecho de submuros uno encima del otro: por ejemplo un muro revocado sobre
+un zócalo de piedra. Cada submuro es un tipo de muro básico, con sus capas y materiales. La
+plantilla tiene uno, <strong>Muro apilado - Revoco sobre zócalo de piedra</strong> (el muro exterior sobre un
+zócalo de piedra de 0,9 m): elígelo en el selector de tipo de <strong>Muro</strong> y dibújalo como cualquier
+muro.</p>
+<p>El muro apilado lleva la línea, los niveles y la altura; sus submuros los siguen. En planta, en
+sección, en alzado y en la vista 3D cada submuro se dibuja con las capas de su tipo, en los colores
+de sus materiales; los submuros se unen a los muros que encuentran y la <strong>Tabla de planificación
+de muros</strong> los lista, una fila cada uno. Una puerta o una ventana colocada en un muro apilado corta
+cada submuro que atraviesa, con su antepecho medido desde la base del muro apilado.</p>
+<p>Un clic selecciona el muro entero; <strong>Tab</strong> pasa a cada submuro, de abajo arriba (la barra de estado
+dice «Tab · elemento siguiente»). Las Propiedades del muro entero valen para todos sus submuros;
+su <strong>Alineación</strong> viene del tipo y es de solo lectura. De un submuro solo se modifican
+<strong>Delimitación de habitación</strong> y <strong>Rol</strong>: el resto viene del muro apilado y de su tipo, y su tipo
+se cambia en el tipo apilado. <strong>Descomponer en muros simples</strong>, en el menú contextual y con el muro
+seleccionado, convierte cada submuro en un muro básico independiente donde está; no se recomponen
+(Ctrl+Z lo deshace). El contorno de un muro apilado o de un submuro todavía no se edita.</p>
+<h3 id="the-sub-walls-of-the-type">Los submuros del tipo</h3>
+<p><img alt="Los Submuros del tipo del muro apilado de la plantilla" src="../assets/screens/stacked-wall-sub-walls.png"/></p>
+<p>Los <strong>Parámetros de tipo</strong> de un tipo de muro apilado muestran <strong>Submuros</strong> con <strong>Editar…</strong>, que
+abre <strong>Submuros del tipo</strong>. Arriba, el tipo y tres cifras: cuántos submuros, la suma de las alturas
+fijas y el grosor máximo. La tabla lista los submuros de <strong>ARRIBA</strong> a <strong>ABAJO</strong>, numerados desde
+abajo: <strong>Tipo de muro</strong> (un tipo de muro básico), <strong>Altura</strong> en metros, <strong>Desfase</strong> respecto a la
+línea de referencia (positivo hacia el exterior), <strong>Extiende arriba</strong> y <strong>Extiende abajo</strong> (cuánto
+pasan las capas fuera del núcleo más allá del submuro; negativo, se detienen antes) e <strong>Invertir</strong>.
+Un solo submuro es <strong>Variable</strong>: su altura es lo que queda de la altura del muro.</p>
+<p><strong>Insertar</strong> añade un submuro debajo del seleccionado, <strong>Eliminar</strong> lo quita (nunca el último; al
+eliminar el variable pasa a serlo el de arriba), <strong>Arriba</strong> y <strong>Abajo</strong> lo mueven, <strong>Variable</strong> lo
+hace el variable. Un <strong>Extiende abajo</strong> positivo engancha la parte superior del submuro de debajo
+(«Enganchado»): sus capas se detienen donde empiezan las del de arriba. <strong>Alinear los submuros a</strong>
+elige el plano de cada submuro que queda sobre la línea de referencia, entre los de la
+<strong>Alineación</strong> (<strong>Eje</strong>, <strong>Cara de acabado: exterior</strong>…).</p>
+<p>A la derecha, la sección del tipo, tan alta como la <strong>Altura de muestra</strong>, la línea de referencia
+en azul, el exterior a la izquierda; un clic en un submuro selecciona su fila. La fina franja
+<strong>Vista preliminar</strong> la oculta y la muestra, y el cuadro conserva su tamaño y su posición. <strong>OK</strong>
+aplica los cambios en un solo paso (Ctrl+Z lo deshace); <strong>Cancelar</strong> deja el tipo como estaba.</p>
 <h2 id="levels">Niveles</h2>
-<p><strong>Inicio ▸ Referencia ▸ Nivel</strong> dibuja un nivel en una sección o un alzado con dos clics, a la
+<p><strong>Crear ▸ Referencias ▸ Nivel</strong> dibuja un nivel en una sección o un alzado con dos clics, a la
 altura del primero; mientras se dibuja, una cota temporal da la distancia al nivel más cercano.
-La barra de opciones muestra:</p>
+La franja de opciones muestra:</p>
 <ul>
 <li><strong>Crear vista de planta</strong>: activado, el nuevo nivel recibe su planta; desactivado, es un nivel
   de referencia sin planta, que muros y otros elementos pueden tomar igualmente como base o
@@ -1044,7 +1204,7 @@ La barra de opciones muestra:</p>
 vista 3D el nivel más bajo; una sección o un alzado no tienen ninguno hasta que se define uno. El
 plano se queda con la vista.</p>
 <h3 id="setting-the-work-plane">Definir el plano de trabajo</h3>
-<p><strong>Inicio ▸ Plano de trabajo ▸ Definir</strong> abre la ventana <strong>Plano de trabajo</strong>. <strong>Plano de trabajo
+<p><strong>Crear ▸ Plano de trabajo ▸ Definir</strong> abre la ventana <strong>Plano de trabajo</strong>. <strong>Plano de trabajo
 actual</strong> muestra el plano que la vista usa ahora. En <strong>Especificar un nuevo plano de trabajo</strong>:</p>
 <ul>
 <li><strong>Nombre</strong>: elegir en la lista un nivel, una rejilla o un plano de referencia con nombre
@@ -1060,23 +1220,23 @@ define allí: <strong>Ir a vista</strong> lista las vistas en que está (las sec
 hacia un plano vertical, las plantas de uno horizontal) y las vistas 3D, y <strong>Abrir vista</strong> abre la
 elegida con ese plano de trabajo. <strong>Deshacer</strong> devuelve el plano anterior.</p>
 <h3 id="showing-the-work-plane">Mostrar el plano de trabajo</h3>
-<p><strong>Inicio ▸ Plano de trabajo ▸ Visualizar</strong> dibuja la rejilla del plano de trabajo sobre el modelo
+<p><strong>Crear ▸ Plano de trabajo ▸ Visualizar</strong> dibuja la rejilla del plano de trabajo sobre el modelo
 cuando el plano está en la vista (en 3D siempre); <strong>Mostrar</strong> de nuevo la oculta. En una sección
 sin plano de trabajo abre antes la ventana <strong>Plano de trabajo</strong>. Un clic en el borde de la
-rejilla la selecciona: la barra de opciones muestra <strong>Separación</strong>, la distancia entre sus líneas
+rejilla la selecciona: la franja de opciones muestra <strong>Separación</strong>, la distancia entre sus líneas
 (1 m al principio). Mientras la rejilla está visible, los puntos de los muros y de las demás
 líneas dibujados en planta se ajustan a los cruces de sus líneas.</p>
 <p>En una vista 3D, un clic donde no hay ningún elemento bajo el cursor cae en el plano de trabajo
 de la vista cuando se ha definido uno: un componente colocado al este de la casa con el plano de
 trabajo en la primera planta queda en la primera planta.</p>
 <h3 id="reference-planes">Planos de referencia</h3>
-<p><strong>Inicio ▸ Plano de trabajo ▸ Plano de referencia</strong> (o escribir <code>RP</code>) dibuja un plano de
+<p><strong>Crear ▸ Plano de trabajo ▸ Plano de referencia</strong> (o escribir <code>RP</code>) dibuja un plano de
 referencia con dos clics, como una rejilla. Dibujado en planta es el plano vertical que pasa por
 la línea, mostrado como una línea discontinua verde en cada planta y en las secciones y alzados
 que lo cruzan. Dibujado en una sección o un alzado es el plano que pasa por la línea a través de
 la profundidad de la vista (una línea horizontal da un plano horizontal), mostrado en las vistas
-orientadas en el mismo sentido. Seleccionado, se le da un <strong>Nombre</strong> en la paleta
-<strong>Propiedades</strong>: un plano de referencia con nombre aparece en la ventana <strong>Plano de trabajo</strong> y
+orientadas en el mismo sentido. Seleccionado, se le da un <strong>Nombre</strong> en el panel
+del elemento: un plano de referencia con nombre aparece en la ventana <strong>Plano de trabajo</strong> y
 su nombre se escribe al principio de su línea. Los planos de referencia se ajustan, se mueven, se
 copian, se giran, se reflejan y se eliminan como las rejillas.</p>
 <h2 id="at-the-command-line">En la línea de comandos</h2>

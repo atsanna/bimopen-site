@@ -258,6 +258,31 @@
       Sun and shadows
     </span>
 </a>
+<nav aria-label="Sun and shadows" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sun-settings">
+<span class="md-ellipsis">
+      Sun settings
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sun-study">
+<span class="md-ellipsis">
+      Sun study
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#graphic-display-options">
+<span class="md-ellipsis">
+      Graphic display options
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#plans-and-their-view-range">
@@ -407,6 +432,31 @@
       Sun and shadows
     </span>
 </a>
+<nav aria-label="Sun and shadows" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sun-settings">
+<span class="md-ellipsis">
+      Sun settings
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sun-study">
+<span class="md-ellipsis">
+      Sun study
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#graphic-display-options">
+<span class="md-ellipsis">
+      Graphic display options
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#plans-and-their-view-range">
@@ -483,7 +533,7 @@
 view shows and how: graphic styles, scale and detail, the cut heights of a plan, crop
 regions, hiding and isolating, <strong>Visibility and Graphics</strong>, filters and view templates. Line
 weights, line patterns and styles by category are described in the same terms by the program's
-dialogs <strong>Project ▸ Settings</strong>.</p>
+dialogs of <strong>Settings</strong> on the rail.</p>
 <h2 id="3d-views">3D views</h2>
 <p><strong>Views ▸ Create ▸ 3D View ▸ Default 3D View</strong> opens the default 3D view, <strong>{3D}</strong>, framing the
 whole model; opened again, it shows the model as it was left. Drag to orbit (or <strong>Shift</strong> and the
@@ -536,9 +586,11 @@ each opening. A wall with a window shows its own outline and the window's, and n
 pieces of the wall meet.</p>
 <p>Plans, sections and elevations have a graphic style too. A plan is drawn in <strong>Lines</strong> until
 another style is chosen. In <strong>Lines</strong> the surfaces, cut or seen, are not coloured: what is cut
-shows its cut pattern, or the solid fill at <strong>Coarse</strong> detail. In <strong>Shaded</strong>, <strong>Shaded with
+shows its material's cut pattern; at <strong>Coarse</strong> detail the type's coarse fill pattern, or else
+only its outline. In <strong>Shaded</strong>, <strong>Shaded with
 Edges</strong> and <strong>Flat Colors</strong> every element seen or cut is filled with the shading colour of its
-material: walls (each layer where it is cut), floors, roofs, doors, windows, furniture and
+material (a part with no material takes its category's, from <strong>Styles by Category</strong>, else the
+category's default colour; the 3D view follows the same rule): walls (each layer where it is cut), floors, roofs, doors, windows, furniture and
 components, stairs and railings. Plans are flat; in sections and elevations <strong>Shaded</strong> darkens a
 little the faces turned away from the viewer, such as the slopes of a roof, while <strong>Flat Colors</strong>
 keeps them all alike. At <strong>Medium</strong> and <strong>Fine</strong> detail the cut patterns stay on top of the
@@ -548,13 +600,48 @@ it lies under the model's lines: in a plan over the floors and under the furnitu
 over the surfaces seen through each room it cuts. At <strong>Foreground</strong> it covers the model, under
 the annotations.</p>
 <h2 id="sun-and-shadows">Sun and shadows</h2>
-<p>In a 3D view the view control bar has two more buttons:</p>
+<p>Plans, sections, elevations and 3D views show the sun (drafting views, legends, sheets and
+schedules do not). The view control bar has two buttons, each with a small arrow for its menu (the
+right button opens it too):</p>
 <ul>
-<li><strong>Shadows On</strong> / <strong>Shadows Off</strong>: in the shaded styles the sun lights the model and casts
-  shadows, from the walls onto the floors, from the roof's eaves onto the walls; in <strong>Lines</strong> (hidden line) the shadows and the faces turned away from the sun are greys of the paper;</li>
-<li>the sun path button: <strong>Sun Path On</strong> draws a compass ring on the ground around the model, with
-  the four points of the compass, the sun's path through the day as an arc over it, and the sun
-  where it is. <strong>Sun Settings…</strong> sets where the sun is:</li>
+<li><strong>Sun Path</strong>: its menu has <strong>Show Sun Path</strong> / <strong>Hide Sun Path</strong>, <strong>Sun Settings…</strong> and <strong>Fit to
+  Model</strong> (frames the whole sun path);</li>
+<li><strong>Shadows</strong>: its menu has <strong>Shadows On</strong> / <strong>Shadows Off</strong>, <strong>Graphic Display Options…</strong> and
+  <strong>Preview Sun Study</strong>.</li>
+</ul>
+<p>While either is on, the bar also shows the sun's hour and date, each with <strong>−</strong> and <strong>+</strong> (a
+quarter of an hour, a day). The same buttons and menus are in the <strong>Sun and shadows</strong> menu of the
+BIMopen style's view bar, in the touch mode's view sheet and in the view's context menu. <strong>Sun
+Path</strong> is also a check box of the view's <strong>Properties</strong> (<strong>Graphics</strong>), with <strong>Sun Path Size</strong>
+(100–500 %, 150 % by default) and <strong>Shared Sun</strong>.</p>
+<p><strong>Shadows</strong> are computed from the model and the sun, the same in every view: in plans they fall
+on what the plan shows and, where nothing stands, on the plane of a level (<strong>Ground Plane at
+Level</strong> in the sun settings, otherwise on the ground, the lowest level); in sections and
+elevations they fall on the façades and on what is behind them, from eaves, balconies, recesses
+and other buildings; in 3D views the graphics card draws them (the processor when there is
+none). In <strong>Lines</strong> (hidden line) a shadow is a grey of the paper, in the shaded styles it darkens
+the materials' colours. Faces cut by the view stay in the light.</p>
+<p><strong>The sun path</strong> is a ring round the model with the points of the compass at true north, the day's
+arc with its hours, the analemma (where the sun stands at that hour through the year), the part a
+study goes through, and the sun with its hour and date. In plans, sections and elevations the sun
+can be dragged: along the day it snaps to quarters of an hour, along the analemma to the 1st of
+each month; with <span class="keys"><kbd class="key-shift">Shift</kbd></span> it keeps to the day, with <span class="keys"><kbd class="key-control">Ctrl</kbd></span> to the analemma. With the view
+under the cursor (and nothing selected, or after a click on the sun), <span class="keys"><kbd class="key-arrow-left">Left</kbd></span> and <span class="keys"><kbd class="key-arrow-right">Right</kbd></span> move
+the hour, <span class="keys"><kbd class="key-arrow-up">Up</kbd></span> and <span class="keys"><kbd class="key-arrow-down">Down</kbd></span> the date. With <strong>Lighting</strong> the sun stands still and has no path.</p>
+<p><strong>Shared Sun</strong>: the views share the project's sun unless they have one of their own (the <strong>Shared
+Sun</strong> property). Moving the shared sun in one view moves it in every view that shares it; a view
+with its own sun is not touched. <strong>Shared Sun in All Views</strong> in the sun settings puts every view
+back on it.</p>
+<p>Each change is one step of <strong>Undo</strong>; the <code>sun</code> command does the same at the command line and over
+MCP (see <a href="../command-line-and-mcp/">Command line and MCP</a>).</p>
+<h3 id="sun-settings">Sun settings</h3>
+<p><strong>Sun Settings…</strong> opens a dialog with the sun's azimuth, altitude, time and date in its header:</p>
+<ul>
+<li>on the left the <strong>presets</strong>: one unsaved row for each mode, the built-in ones (<strong>Summer
+  Solstice</strong>, <strong>Winter Solstice</strong>, <strong>Spring Equinox</strong>, <strong>Autumn Equinox</strong>, <strong>Summer, from 9 to
+  17</strong>, <strong>Light from top right</strong>) and the project's own; <strong>Save…</strong>, <strong>Duplicate…</strong>, <strong>Rename…</strong>
+  and <strong>Delete</strong> (only the project's presets are renamed or deleted);</li>
+<li>in the middle the mode and its fields:</li>
 </ul>
 <table>
 <thead>
@@ -566,18 +653,49 @@ the annotations.</p>
 <tbody>
 <tr>
 <td><strong>Still</strong></td>
-<td><strong>Latitude</strong>, <strong>Longitude</strong>, <strong>Time zone (UTC)</strong>, the day and month and the <strong>Time</strong>: the sun's position follows</td>
+<td>the <strong>Date</strong> and the <strong>Time</strong>; <strong>Shared Sun in All Views</strong></td>
+</tr>
+<tr>
+<td><strong>One Day</strong></td>
+<td>the <strong>Date</strong>, <strong>From Sunrise to Sunset</strong> or a <strong>Start Time</strong> and an <strong>End Time</strong>, the <strong>Frame Interval</strong> (15, 30 or 45 minutes, 1 hour); the number of <strong>Frames</strong> follows</td>
+</tr>
+<tr>
+<td><strong>Multi-Day</strong></td>
+<td><strong>From</strong> and <strong>To</strong> (day/month), the <strong>Time</strong>, the <strong>Interval</strong> (1 hour, 1 day, 1 week, 1 month)</td>
 </tr>
 <tr>
 <td><strong>Lighting</strong></td>
-<td><strong>Azimuth</strong> (degrees clockwise from north) and <strong>Altitude</strong></td>
+<td><strong>Azimuth (°)</strong> and <strong>Altitude (°)</strong>; <strong>Relative to View</strong>: the light follows the view's direction</td>
 </tr>
 </tbody>
 </table>
-<p>Each view has its own sun settings, and the changes can be undone. Shadows are drawn by the 3D
-window on the graphics card; plans, sections, elevations and exported images do not show them yet.</p>
+<p>Then the project's <strong>Location</strong> (a city, or <strong>Custom</strong> with its latitude and longitude: one for
+  the whole project) with <strong>Daylight Saving Time</strong>, and <strong>Ground Plane at Level</strong> with its
+  <strong>Ground Level</strong>;
+- on the right the preview: the sky seen from above, with the day's path, the analemma and the
+  sun. <strong>Preview</strong> in the dialog's header, right of the figures, is a switch that hides and
+  shows it; the dialog keeps its size, and without the preview the settings take its room.</p>
+<p><strong>Apply</strong> changes the view's sun and keeps the dialog open, <strong>OK</strong> changes it and closes it,
+<strong>Cancel</strong> changes nothing. Projects made before the project had a location keep each view's place
+and date: the first view whose sun was changed gives the project its location, and the views whose
+sun was changed keep theirs as their own.</p>
+<h3 id="sun-study">Sun study</h3>
+<p><strong>Preview Sun Study</strong> (in the <strong>Shadows</strong> menu) shows the study bar over the view: <strong>⏮ −10</strong>,
+<strong>⏴</strong>, <strong>⏵ Play</strong> / <strong>⏸ Pause</strong>, <strong>⏵</strong>, <strong>+10 ⏭</strong> and <strong>frame n of N</strong>. A sun of one moment is
+studied through its day. <strong>Save as Image</strong> saves the frame shown as a PNG named after the view, the
+date and the hour; <strong>Export Study…</strong> saves every frame as a PNG or JPEG image sequence (a film needs
+a video encoder BIMopen does not have: the choice is greyed, with the reason). <strong>×</strong> closes the bar;
+another view closes it too.</p>
+<h3 id="graphic-display-options">Graphic display options</h3>
+<p><strong>Graphic Display Options…</strong> sets for the active view: the <strong>Graphic Style</strong>, <strong>Silhouette Edges</strong>
+(<strong>None</strong>, <strong>Medium</strong>, <strong>Thick</strong>: a thicker line round the model's outline), <strong>Cast Shadows</strong>,
+<strong>Ambient Shadows</strong> (corners and recesses darkened), the sun (its button opens the <strong>Sun
+Settings</strong>), <strong>Sun</strong>, <strong>Ambient Light</strong> and <strong>Shadow Intensity</strong> (0–100) and, for 3D views, the
+<strong>Background</strong> (<strong>None</strong>, <strong>Sky</strong>, <strong>Gradient</strong>). The preview draws the view with the options
+chosen; the <strong>Preview</strong> switch in the header hides and shows it, as in the sun settings. View templates carry these options
+with the graphic style, and the sun and the shadows as <strong>Sun and shadows</strong>.</p>
 <h2 id="plans-and-their-view-range">Plans and their cut heights</h2>
-<p><strong>Views ▸ Create ▸ Plan Views ▸ Floor Plan</strong> opens <strong>New Plan</strong>: pick the levels and the scale,
+<p><strong>Views ▸ Create ▸ Plan ▸ Floor Plan</strong> opens <strong>New Plan</strong>: pick the levels and the scale,
 then <strong>OK</strong>. With <strong>Do not duplicate existing views</strong> on, the levels that already have a plan are
 left out; turn it off to make a second plan of a level.</p>
 <p>A plan is a horizontal cut of the model at the <strong>Cut Plane</strong> of its cut heights. Walls crossing
@@ -641,7 +759,7 @@ deep as the next grid parallel to it.</p>
 one: a thick outline round them, a thin line only where two materials meet, none between two
 parts of the same material; walls attached to a roof stop under it. Each cut layer has its
 material's cut pattern (at <strong>Coarse</strong>, the type's <strong>Coarse Scale Fill Pattern</strong> in its <strong>Coarse
-Scale Fill Color</strong>, set on wall, floor and roof types, else one solid fill). Furniture and
+Scale Fill Color</strong>, set on wall, floor and roof types, else only its outline). Furniture and
 plumbing fixtures are never cut: they are seen whole. A window is cut with its frame in the thick
 cut line and its glass in thin lines; what lies beyond the cut is drawn in thinner projection
 lines.</p>
@@ -686,7 +804,7 @@ elements, in the active view only, and does not change the project:</p>
 another hides both. <strong>Reset Isolate Temporarily</strong> (<code>HR</code>) shows everything again; <strong>Apply
 Hide/Isolate to View</strong> hides for good what was hidden for now.</p>
 <p>To hide for good in the view, select the elements, then right-click ▸ <strong>Hide in view ▸
-Elements</strong> or <strong>Category</strong>, or the contextual tab's <strong>View ▸ Hide in View</strong>, or type <code>EH</code>
+Elements</strong> or <strong>Category</strong>, or the contextual card's <strong>View ▸ Hide in View</strong>, or type <code>EH</code>
 (elements) or <code>VH</code> (category).</p>
 <p><strong>Reveal Hidden</strong> (the light bulb on the view control bar, or <code>RH</code>) frames the view in
 magenta and shows what is hidden in magenta, the rest in halftone. A hidden element can then be
@@ -708,7 +826,7 @@ overrides ▸ Edit…</strong>) shows, for the active view, one row per category
 <p><strong>Clear overrides</strong> takes the selected rows back to the styles by category. Changes show at once:
 <strong>Apply</strong> keeps them and the window, <strong>Cancel</strong> (or the window's ×) takes back what was not
 applied, <strong>OK</strong> keeps them and closes.</p>
-<p>One element can have its own graphics in a view: select it, then right-click ▸ <strong>Custom Graphics ▸ By Element…</strong> (or the contextual tab's <strong>View</strong> panel). <strong>View-Specific Element
+<p>One element can have its own graphics in a view: select it, then right-click ▸ <strong>Custom Graphics ▸ By Element…</strong> (or the contextual card's <strong>View</strong> group). <strong>View-Specific Element
 Graphics</strong> has <strong>Visible</strong>, <strong>Halftone</strong>, <strong>Transparent</strong>, the surface and cut patterns and the
 projection and cut lines. They apply only in this view, over the category's and the filters'.</p>
 <h2 id="filters">Filters</h2>

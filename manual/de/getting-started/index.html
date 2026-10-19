@@ -191,6 +191,13 @@
 <nav aria-label="BIMopen auf dem Desktop ausführen" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#start-screen">
+<span class="md-ellipsis">
+      Startbildschirm
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#language-and-theme">
 <span class="md-ellipsis">
       Sprache und Design
@@ -418,6 +425,13 @@
 <nav aria-label="BIMopen auf dem Desktop ausführen" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#start-screen">
+<span class="md-ellipsis">
+      Startbildschirm
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#language-and-theme">
 <span class="md-ellipsis">
       Sprache und Design
@@ -554,17 +568,31 @@ grafische Oberfläche außerdem die Entwicklungsdateien von xkbcommon, Wayland u
 <td><code>bimopen house.bimopen</code></td>
 <td>Das in <code>house.bimopen</code> gespeicherte Projekt</td>
 </tr>
+<tr>
+<td><code>bimopen --no-splash</code></td>
+<td>Wie <code>bimopen</code>, ohne Startbildschirm</td>
+</tr>
 </tbody>
 </table>
 <p>Sie können ein Projekt auch öffnen, indem Sie eine <code>.bimopen</code>-Datei aus dem Dateimanager in das
 Fenster ziehen.</p>
+<h3 id="start-screen">Startbildschirm</h3>
+<p>Während BIMopen lädt, erscheint der Startbildschirm: ein Fenster ohne Rahmen, in der Mitte des
+Bildschirms, mit dem Namen, der Version, dem laufenden Ladeschritt mit Prozentangabe und einer
+türkisen Linie, die am unteren Rand wächst. Die Schritte sind die echten (Einstellungen, Schriften,
+Grafikkarte, Familien, Öffnen des Projekts); der Bildschirm bleibt mindestens eine halbe Sekunde,
+damit er nicht aufblitzt, und blendet aus, sobald das Hauptfenster bereit ist. Er spricht die in
+der App gewählte Sprache, sonst die des Systems, wenn sie eine der sechs ist, sonst Englisch.</p>
+<p>Um ihn auszulassen, deaktiviere <strong>Optionen ▸ Allgemein ▸ Startbildschirm anzeigen</strong> (BIMopen merkt
+es sich) oder starte <code>bimopen --no-splash</code>. Unter Wayland entscheidet der Compositor, wo das
+Fenster erscheint (meist in der Mitte).</p>
 <h3 id="language-and-theme">Sprache und Design</h3>
 <p>Beim ersten Start verwendet BIMopen die Sprache des Betriebssystems, sofern es eine seiner sechs
 Sprachen ist (Italienisch, Englisch, Deutsch, Französisch, Spanisch, Arabisch), und andernfalls
-Englisch. Zum Ändern verwenden Sie das Sprachmenü am rechten Ende der Titelleiste (die Weltkugel
-mit dem Namen der Sprache) oder <strong>Anwendungsmenü ▸ Optionen ▸ Sprache</strong>. Die Benutzeroberfläche
-wechselt sofort.</p>
-<p>In <strong>Optionen</strong> wählen Sie außerdem das <strong>Design</strong>, <strong>Hell</strong> oder <strong>Dunkel</strong>, und ob der Hintergrund
+Englisch. Zum Ändern klicken Sie auf das Zahnrad am rechten Ende der oberen Leiste (<strong>Optionen</strong>) und
+wählen die <strong>Sprache</strong> unter <strong>Benutzeroberfläche</strong>. Die Benutzeroberfläche wechselt sofort.</p>
+<p>In <strong>Optionen</strong> wählen Sie außerdem das <strong>Design</strong>, <strong>Hell</strong> oder <strong>Dunkel</strong> (auch die Sonne bzw. der Mond in
+der oberen Leiste schaltet es um), und ob der Hintergrund
 der Ansichten umgekehrt wird (<strong>Hintergrundfarbe umkehren</strong>: dunkle Ansichten mit hellen Linien).
 Die Wahl des dunklen Designs kehrt auch den Hintergrund um; Sie können dies wieder ausschalten.
 Beim ersten Start verwendet BIMopen das dunkle Design mit umgekehrtem Hintergrund. Es merkt sich
@@ -612,7 +640,7 @@ der in <code>Cargo.lock</code> angegebenen Version; ist <code>wasm-opt</code> vo
 kleiner.</p>
 <h2 id="the-sample-project">Das Beispielprojekt</h2>
 <p>Das Beispielhaus zeigt das meiste von dem, was BIMopen kann. Öffnen Sie es mit <strong>Anwendungsmenü ▸
-Beispielprojekt</strong>, mit <code>bimopen --sample</code> oder durch Eingabe von <code>sample</code> in der Befehlszeile.</p>
+Beispielprojekt</strong> (das Anwendungsmenü ist das Zeichen von BIMopen oben in der Seitenleiste), mit <code>bimopen --sample</code> oder durch Eingabe von <code>sample</code> in der Befehlszeile.</p>
 <p>Es enthält:</p>
 <ul>
 <li>zwei Ebenen, jede mit ihrem Grundriss, und fünf Rasterlinien;</li>
@@ -633,12 +661,12 @@ daran ändern, wird gespeichert, solange Sie es nicht speichern.</p>
 </div>
 <h2 id="your-first-house">Ihr erstes Haus</h2>
 <p>Die folgenden Schritte beginnen mit einem leeren Projekt und enden mit einem Plan. Jeder Schritt
-nennt die Schaltfläche, auf die Sie klicken; das <a href="../interface/">Kapitel zur Benutzeroberfläche</a>
-erklärt jeden Teil des Fensters.</p>
+nennt, worauf Sie im Oberflächenstil <strong>BIMopen</strong> klicken, dem Stil, mit dem BIMopen startet; das
+<a href="../interface/">Kapitel zur Benutzeroberfläche</a> erklärt jeden Teil des Fensters.</p>
 <h3 id="1-start-a-new-project">1. Ein neues Projekt beginnen</h3>
 <ol>
-<li>Klicken Sie auf die blaue Schaltfläche <strong>B</strong> am linken Ende der Titelleiste: Das
-   <strong>Anwendungsmenü</strong> öffnet sich.</li>
+<li>Klicken Sie auf das Zeichen von BIMopen oben in der Seitenleiste: Das <strong>Anwendungsmenü</strong>
+   öffnet sich.</li>
 <li>Klicken Sie auf <strong>Neu ▸ Projekt…</strong>. Das Dialogfeld <strong>Neues Projekt</strong> schlägt die
    Standardvorlage von BIMopen vor: Klicken Sie auf <strong>OK</strong>.</li>
 </ol>
@@ -646,23 +674,29 @@ erklärt jeden Teil des Fensters.</p>
 Grundriss und die Standard-3D-Ansicht. Es hat noch keine Wände. Seine Wand-, Tür-, Fenster-,
 Geschossdecken- und Dachtypen sind einsatzbereit.</p>
 <h3 id="2-open-the-ground-floor-plan">2. Den Grundriss des Erdgeschosses öffnen</h3>
-<p>Doppelklicken Sie im <strong>Projektindex</strong> unter <strong>Ansichten (alle) ▸ Grundrisse</strong> auf <strong>Erdgeschoss</strong>.
-Der Grundriss öffnet sich im Zeichenbereich, und die Titelleiste zeigt <strong>Grundriss: Erdgeschoss</strong>.</p>
+<p>Klicken Sie im Ansichtenstreifen unter dem Zeichenbereich auf die Miniatur <strong>Grundriss:
+Erdgeschoss</strong>. Der Grundriss öffnet sich im Zeichenbereich, und die obere Leiste und die
+Ansichtsauswahl zeigen <strong>Grundriss: Erdgeschoss</strong>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Ein einfacher Klick auf eine Ansicht im Projektindex zeigt ihre Eigenschaften in der Palette
-<strong>Eigenschaften</strong>, ohne sie zu öffnen. Ein Doppelklick öffnet sie.</p>
+<p><strong>Ansichten</strong> in der Seitenleiste zeigt auch den <strong>Projektindex</strong>, den Baum aller Ansichten:
+Dort zeigt ein einfacher Klick auf eine Ansicht ihre Eigenschaften im Elementbereich, ohne sie
+zu öffnen, und ein Doppelklick öffnet sie.</p>
 </div>
 <h3 id="3-draw-four-walls">3. Vier Wände zeichnen</h3>
 <ol>
-<li>Klicken Sie auf <strong>Start ▸ Erstellen ▸ Wand</strong>. Die Multifunktionsleiste wechselt zur
-   kontextabhängigen Registerkarte <strong>Wand zeichnen</strong>, die Optionsleiste zeigt die
-   Einstellungen der Wand, und <strong>Eigenschaften</strong> zeigt den Typ der nächsten Wand,
-   <strong>Außenwand - Porosierter Ziegel 300 + WDVS</strong>.</li>
-<li>Schalten Sie in der Optionsleiste <strong>Orthogonal (Shift)</strong> ein: Die Wände bleiben waagerecht oder
-   senkrecht.</li>
-<li>Klicken Sie im Grundriss dorthin, wo die erste Ecke liegen soll. Die Befehlszeile fragt nach dem
+<li>Klicken Sie in den Werkzeugen von <strong>Erzeugen</strong>, dem Eintrag der Seitenleiste, mit dem BIMopen
+   startet, auf <strong>Wand</strong> in der Gruppe <strong>Erstellen</strong> (ist der Werkzeugbereich eingeklappt, klicken
+   Sie zuerst in der Seitenleiste auf <strong>Erzeugen</strong>). Die kontextabhängige Karte <strong>Wand zeichnen</strong>
+   erscheint oben im Werkzeugbereich, der Optionsstreifen über der Ansicht zeigt die Einstellungen
+   der Wand, und der Elementbereich zeigt den Typ der nächsten Wand, <strong>Außenwand - Porosierter
+   Ziegel 300 + WDVS</strong>.</li>
+<li>Schalten Sie in der Statusleiste <strong>Ortho</strong> ein: Die Wände bleiben waagerecht oder senkrecht.</li>
+<li>Klicken Sie im Grundriss dorthin, wo die erste Ecke liegen soll. Die Statusleiste fragt nach dem
    nächsten Punkt: <code>WALL  next point [Esc to finish]:</code>.</li>
+</ol>
+<p><img alt="Das Wandwerkzeug: die kontextabhängige Karte Wand zeichnen, der Optionsstreifen und der Typ der nächsten Wand" src="../assets/screens/bimopen-wall.png"/></p>
+<ol>
 <li>Klicken Sie auf die zweite, dritte und vierte Ecke. Während Sie die Maus bewegen, werden Länge
    und Winkel der gerade gezeichneten Wand daneben angezeigt.</li>
 <li>Klicken Sie erneut auf die erste Ecke: Die vier Wände werden an den Ecken verbunden.</li>
@@ -676,27 +710,27 @@ Der Grundriss öffnet sich im Zeichenbereich, und die Titelleiste zeigt <strong>
 </div>
 <h3 id="4-add-a-door-and-a-window">4. Eine Tür und ein Fenster hinzufügen</h3>
 <ol>
-<li>Klicken Sie auf <strong>Start ▸ Erstellen ▸ Tür</strong> und dann auf eine Wand, wo die Tür hin soll. Die Tür
-   wird in die Wand gesetzt, die um sie herum ausgeschnitten wird. Die Befehlszeile bestätigt es:
+<li>Klicken Sie auf <strong>Erzeugen ▸ Erstellen ▸ Tür</strong> und dann auf eine Wand, wo die Tür hin soll. Die
+   Tür wird in die Wand gesetzt, die um sie herum ausgeschnitten wird. Das Befehlsprotokoll
+   bestätigt es:
    <code>Door «Single swing door 80x210» in wall …</code>.</li>
-<li>Drücken Sie <span class="keys"><kbd class="key-escape">Esc</kbd></span>: Das Werkzeug endet, und die Multifunktionsleiste kehrt zur Registerkarte
-   <strong>Start</strong> zurück.</li>
-<li>Klicken Sie auf <strong>Start ▸ Erstellen ▸ Fenster</strong>, klicken Sie auf eine andere Wand und drücken Sie
+<li>Drücken Sie <span class="keys"><kbd class="key-escape">Esc</kbd></span>: Das Werkzeug endet, und die kontextabhängige Karte verschwindet.</li>
+<li>Klicken Sie auf <strong>Erzeugen ▸ Erstellen ▸ Fenster</strong>, klicken Sie auf eine andere Wand und drücken Sie
    <span class="keys"><kbd class="key-escape">Esc</kbd></span>.</li>
 </ol>
 <p>Eine Tür oder ein Fenster kann nur in eine Wand gesetzt werden: Nach einem Klick abseits der Wände
 antwortet die Befehlszeile <code>no wall at that point</code>, und es wird nichts platziert.</p>
 <h3 id="5-add-a-floor-and-a-roof">5. Eine Geschossdecke und ein Dach hinzufügen</h3>
 <ol>
-<li>Klicken Sie auf <strong>Start ▸ Erstellen ▸ Bodenbelag</strong>. Der Skizzenmodus öffnet sich: die
-   kontextabhängige Registerkarte <strong>Bearbeiten | Geschossdecken-Begrenzung erstellen</strong>, mit
+<li>Klicken Sie auf <strong>Erzeugen ▸ Erstellen ▸ Bodenbelag</strong>. Der Skizzenmodus öffnet sich: die
+   kontextabhängige Karte <strong>Bearbeiten | Geschossdecken-Begrenzung erstellen</strong>, mit
    <strong>Wände auswählen</strong> aktiv.</li>
 <li>Bewegen Sie den Cursor über eine Wand und drücken Sie <span class="keys"><kbd class="key-tab">Tab</kbd></span>: die vier Wände werden
    hervorgehoben. Klicken Sie: ihre Linien liegen auf den Innenseiten der Wände.</li>
-<li>Klicken Sie auf <strong>Bearbeitungsmodus beenden</strong>: die Geschossdecke wird erzeugt, und die
-   Befehlszeile gibt ihre Fläche an.</li>
-<li>Klicken Sie auf <strong>Start ▸ Erstellen ▸ Dach</strong>. <strong>Wände auswählen</strong> ist wieder aktiv; die
-   Optionsleiste hat <strong>Definiert Neigung</strong> (aktiviert) und den <strong>Überstand</strong> (standardmäßig
+<li>Klicken Sie auf <strong>Bearbeitungsmodus beenden</strong>: die Geschossdecke wird erzeugt, und das
+   Befehlsprotokoll gibt ihre Fläche an.</li>
+<li>Klicken Sie auf <strong>Erzeugen ▸ Erstellen ▸ Dach</strong>. <strong>Wände auswählen</strong> ist wieder aktiv; der
+   Optionsstreifen hat <strong>Definiert Neigung</strong> (aktiviert) und den <strong>Überstand</strong> (standardmäßig
    500 mm).</li>
 <li>Drücken Sie <span class="keys"><kbd class="key-tab">Tab</kbd></span> über einer Wand, klicken Sie, dann <strong>Bearbeitungsmodus beenden</strong>: ein
    Walmdach mit 30° Neigung überdeckt die Wände, mit dem Überstand ringsum.</li>
@@ -704,18 +738,17 @@ antwortet die Befehlszeile <code>no wall at that point</code>, und es wird nicht
 <p><a href="../floors-roofs-stairs/">Geschossdecken, Dächer, Treppen und Bauteile</a> erklärt mehr über den
 Skizzenmodus.</p>
 <h3 id="6-look-at-it-in-3d">6. In 3D betrachten</h3>
-<p>Klicken Sie im Schnellzugriff-Werkzeugkasten auf die Schaltfläche <strong>3D-Ansicht</strong> (den Würfel). Die
-Standard-3D-Ansicht, <strong>{3D}</strong>, öffnet sich. Ziehen Sie mit der rechten Maustaste (oder mit <span class="keys"><kbd class="key-shift">Shift</kbd></span>
+<p>Klicken Sie im Ansichtenstreifen auf die Miniatur <strong>{3D}</strong>. Die Standard-3D-Ansicht, <strong>{3D}</strong>, öffnet sich. Ziehen Sie mit der rechten Maustaste (oder mit <span class="keys"><kbd class="key-shift">Shift</kbd></span>
 und der mittleren Taste), um zu orbitieren, ziehen Sie mit der mittleren Taste, um zu verschieben,
 und drehen Sie das Mausrad, um zu zoomen; die linke Taste wählt aus, wie in Grundrissen. <span class="keys"><kbd class="key-home">Home</kbd></span> passt das ganze Modell in die Ansicht ein.</p>
 <h3 id="7-put-the-plan-on-a-sheet">7. Den Grundriss auf einen Plan setzen</h3>
 <ol>
-<li>Klicken Sie auf die Registerkarte <strong>Ansichten</strong>, dann auf <strong>Pläne ▸ Plan</strong>. Der
-   Dialog <strong>Neuer Plan</strong> listet die Planköpfe auf: keine, A0, A1, A2 oder A3, mit ihrer
+<li>Klicken Sie in der Seitenleiste auf <strong>Dokumentieren</strong>, dann auf <strong>Plan</strong> in der Gruppe
+   <strong>Pläne</strong>. Der Dialog <strong>Neuer Plan</strong> listet die Planköpfe auf: keine, A0, A1, A2 oder A3, mit ihrer
    Größe in Millimetern.</li>
 <li>Klicken Sie auf <strong>OK</strong>. Der Plan wird mit der nächsten freien Nummer erzeugt (<strong>A101</strong> für den
    ersten, dann <strong>A102</strong>…) und geöffnet.</li>
-<li>Klicken Sie auf <strong>Pläne ▸ Ansicht</strong>. Der Dialog <strong>Ansichten</strong> listet die
+<li>Klicken Sie auf <strong>Dokumentieren ▸ Pläne ▸ Ansicht</strong>. Der Dialog <strong>Ansichten</strong> listet die
    Ansichten auf, die noch auf keinem Plan sind.</li>
 <li>Wählen Sie <strong>Grundriss: Erdgeschoss</strong> und klicken Sie auf <strong>Ansicht zu Plan hinzufügen</strong>. Ein
    Rechteck in der Größe des Grundrisses folgt dem Cursor: Klicken Sie auf dem Plan dorthin, wo der
@@ -725,12 +758,12 @@ und drehen Sie das Mausrad, um zu zoomen; die linke Taste wählt aus, wie in Gru
 <h3 id="8-undo-redo-and-save">8. Rückgängig machen, wiederherstellen und speichern</h3>
 <ul>
 <li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span> macht die letzte Änderung rückgängig (hier verschwindet das Ansichtsfenster);
-  <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-y">Y</kbd></span> stellt sie wieder her. Die Pfeile des Schnellzugriff-Werkzeugkastens tun dasselbe.</li>
-<li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span> speichert das Projekt. Ein noch nie gespeichertes Projekt fragt zuerst nach einem
+  <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-y">Y</kbd></span> stellt sie wieder her. Die Pfeile der oberen Leiste, <strong>Rückgängig</strong> und <strong>Wiederholen</strong>, tun dasselbe.</li>
+<li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span> speichert das Projekt, wie ein Klick auf den Speicherstatus in der oberen Leiste. Ein noch nie gespeichertes Projekt fragt zuerst nach einem
   Dateinamen; die Datei hat die Erweiterung <code>.bimopen</code>. Im Browser wird die Datei heruntergeladen.</li>
 </ul>
-<p>Die Titelleiste zeigt einen Stern nach dem Namen des Projekts, solange es ungespeicherte Änderungen
-gibt: <strong>Unbenanntes Projekt *</strong>.</p>
+<p>Die obere Leiste zeigt <strong>Nicht gespeicherte Änderungen</strong>, solange es Änderungen zu speichern gibt,
+und <strong>Gespeichert</strong> nach dem Speichern.</p>
 <h2 id="what-next">Wie es weitergeht</h2>
 <ul>
 <li><a href="../interface/">Die Benutzeroberfläche</a> beschreibt jeden Teil des Fensters.</li>

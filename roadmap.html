@@ -191,7 +191,7 @@
   .rp-hero::before { content: ""; position: absolute; inset: 0; background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px); background-size: 32px 32px; mask-image: radial-gradient(ellipse at 80% 20%, #000 0%, transparent 65%); opacity: .7; pointer-events: none; }
   .rp-hero .wrap { position: relative; }
   .rp-hero h1 { max-width: 15em; }
-  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 36px 0 0; padding: 0; list-style: none; }
+  .stats { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; margin: 36px 0 0; padding: 0; list-style: none; }
   .stats li { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 20px; box-shadow: var(--shadow); }
   .stats b { display: block; font-size: clamp(28px, 3.6vw, 40px); line-height: 1.05; letter-spacing: -.02em; color: var(--ink); font-variant-numeric: tabular-nums; direction: ltr; unicode-bidi: isolate; }
   .stats span { color: var(--muted); font-size: 14px; }
@@ -237,7 +237,7 @@
   .outs li { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px 14px 44px; position: relative; color: var(--ink-soft); font-size: 15px; }
   :root[dir="rtl"] .outs li { padding: 14px 44px 14px 16px; }
   .outs li::before { content: "×"; position: absolute; inset-inline-start: 16px; top: 11px; color: var(--muted); font-size: 20px; line-height: 1; }
-  @media (max-width: 920px) { .stats { grid-template-columns: repeat(2, 1fr); } .steps, .outs { grid-template-columns: 1fr; } .bars li { grid-template-columns: 1fr 4em; } .bars .track { grid-column: 1 / -1; grid-row: 2; } }
+  @media (max-width: 920px) { .stats { grid-template-columns: repeat(2, 1fr); } .stats li:last-child { grid-column: 1 / -1; } .steps, .outs { grid-template-columns: 1fr; } .bars li { grid-template-columns: 1fr 4em; } .bars .track { grid-column: 1 / -1; grid-row: 2; } }
   @media (max-width: 560px) { .phase-head { flex-wrap: wrap; } .phase-head .count { margin-inline-start: 0; } }
 </style>
 </head>
@@ -294,7 +294,8 @@
       <ul class="stats">
         <li><b>46</b><span data-i18n="rp.stat.avail">funzioni disponibili</span></li>
         <li><b>67</b><span data-i18n="rp.stat.steps">passi pianificati</span></li>
-        <li><b>50 %</b><span data-i18n="rp.stat.cov">delle funzionalità coperte</span></li>
+        <li><b>89 / 276</b><span data-i18n="rp.stat.cmds">comandi della barra multifunzione già attivi</span></li>
+        <li><b>50 %</b><span data-i18n="rp.stat.cov">delle funzioni descritte nel manuale</span></li>
         <li><b>6</b><span data-i18n="rp.stat.lang">lingue, arabo compreso</span></li>
       </ul>
       <ul class="toc">
@@ -466,7 +467,7 @@
 </footer>
 
 <button class="to-top" id="to-top" type="button" aria-label="Torna all'inizio" data-i18n-attr="aria-label:ui.top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
-<script src="lingua.js?v=574cc717"></script>
+<script src="lingua.js?v=e516ebe9"></script>
 <script>
   // tema: scuro finché non si sceglie; poi chiaro o scuro, ricordato in questo browser
   (function () {

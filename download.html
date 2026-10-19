@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title data-i18n="dw.meta.title">Scarica BIMopen — Versione di prova per Windows, Linux e browser</title>
-<meta name="description" data-i18n-attr="content:dw.meta.desc" content="Scarica la versione di prova (alpha) di BIMopen per Windows 10/11 e Linux, o aprilo nel browser senza installare niente. Versione parziale e non definitiva, solo per provare il programma.">
+<title data-i18n="dw.meta.title">Scarica BIMopen — Versione di prova per Windows, Linux, Android e browser</title>
+<meta name="description" data-i18n-attr="content:dw.meta.desc" content="Scarica la versione di prova (alpha) di BIMopen per Windows 10/11, Linux e Android, o aprilo nel browser senza installare niente. Versione parziale e non definitiva, solo per provare il programma.">
 <link rel="canonical" href="https://bimopen.it/download.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="BIMopen">
 <meta property="og:locale" content="it_IT">
-<meta property="og:title" content="Scarica BIMopen — Versione di prova per Windows, Linux e browser">
-<meta property="og:description" content="Scarica la versione di prova (alpha) di BIMopen per Windows 10/11 e Linux, o aprilo nel browser senza installare niente. Versione parziale e non definitiva, solo per provare il programma.">
+<meta property="og:title" content="Scarica BIMopen — Versione di prova per Windows, Linux, Android e browser">
+<meta property="og:description" content="Scarica la versione di prova (alpha) di BIMopen per Windows 10/11, Linux e Android, o aprilo nel browser senza installare niente. Versione parziale e non definitiva, solo per provare il programma.">
 <meta property="og:url" content="https://bimopen.it/download.html">
 <meta property="og:image" content="https://bimopen.it/assets/og-bimopen.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -156,6 +156,8 @@
   .accept input { width: 22px; height: 22px; flex: none; accent-color: var(--blue); cursor: pointer; margin: 0; }
   .gate-hint { margin: 10px 0 0; color: var(--muted); font-size: 14px; }
   .dw { padding-top: 40px; }
+  .oses { grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 920px) { .oses { grid-template-columns: 1fr; } }
   .os { position: relative; display: flex; flex-direction: column; gap: 6px; }
   .os .ico { margin-bottom: 4px; }
   .os h3 { margin: 4px 0 0; }
@@ -220,7 +222,7 @@
         <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
         <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
       </button>
-      <a class="btn btn-primary" href="app/" data-app="80251c56" data-i18n="cta.prova">Provalo nel browser</a>
+      <a class="btn btn-primary" href="app/" data-app="c5209f88" data-i18n="cta.prova">Provalo nel browser</a>
     </div>
   </div>
 </header>
@@ -230,7 +232,7 @@
     <div class="wrap">
       <span class="eyebrow" data-i18n="dw.kicker">Versione alpha</span>
       <h1 id="titolo" data-i18n="dw.h1">Scarica BIMopen</h1>
-      <p class="latest"><span data-i18n="dw.latest">Ultima versione:</span> <b data-ver>0.1.0-alpha.3</b> · <time data-ver-date datetime="2026-10-15">2026-10-15</time></p>
+      <p class="latest"><span data-i18n="dw.latest">Ultima versione:</span> <b data-ver>0.1.0-alpha.4</b> · <time data-ver-date datetime="2026-10-19">2026-10-19</time></p>
 
       <div class="warn" role="note" aria-labelledby="avviso-t">
         <h2 id="avviso-t">
@@ -249,7 +251,7 @@
   <section class="dw" aria-labelledby="sistemi-t">
     <div class="wrap">
       <h2 id="sistemi-t" class="skip" data-i18n="dw.os.h2">Scegli il sistema</h2>
-      <div class="grid3">
+      <div class="grid3 oses">
         <article class="card os" data-os="win">
           <span class="mine-tag" hidden data-i18n="dw.mine">Il tuo sistema</span>
           <span class="ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.5 10.5 4.4v7.1H3zM11.5 4.3 21 3v8.5h-9.5zM3 12.5h7.5v7.1L3 18.5zM11.5 12.5H21V21l-9.5-1.3z"/></svg></span>
@@ -266,13 +268,21 @@
           <p data-i18n="dw.lin.p">Un solo file eseguibile per i sistemi Linux a 64 bit: rendilo eseguibile e avvialo.</p>
           <p class="go"><a class="btn btn-primary" href="https://github.com/atsanna/bimopen-site/releases/latest/download/bimopen-linux-x86_64" data-gate data-i18n="dw.lin.btn">Scarica per Linux</a></p>
         </article>
+        <article class="card os" data-os="android">
+          <span class="mine-tag" hidden data-i18n="dw.mine">Il tuo sistema</span>
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg></span>
+          <h3>Android</h3>
+          <span class="meta">.apk · arm64 · Android 9+</span>
+          <p data-i18n="dw.and.p">L'app per tablet e telefoni, con la modalità touch: scarica il file APK sul dispositivo e aprilo per installarla.</p>
+          <p class="go"><a class="btn btn-primary" href="https://github.com/atsanna/bimopen-site/releases/latest/download/bimopen-android.apk" data-gate data-i18n="dw.and.btn">Scarica per Android</a></p>
+        </article>
         <article class="card os" data-os="web">
           <span class="mine-tag" hidden data-i18n="dw.mine">Il tuo sistema</span>
           <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg></span>
           <h3 data-i18n="dl1.h3">Nel browser</h3>
           <span class="meta">WebGPU · WebGL2</span>
           <p data-i18n="dw.web.p">Si apre subito, senza installare niente: serve un browser recente. I file restano sul tuo computer.</p>
-          <p class="go"><a class="btn btn-ghost" href="app/" data-app="80251c56" data-i18n="dl1.btn">Apri BIMopen</a></p>
+          <p class="go"><a class="btn btn-ghost" href="app/" data-app="c5209f88" data-i18n="dl1.btn">Apri BIMopen</a></p>
         </article>
       </div>
       <p class="small">
@@ -280,6 +290,7 @@
         <span><a href="https://github.com/atsanna/bimopen-site/releases/latest/download/NOTICE" data-i18n="dw.notice">Licenze di terze parti (NOTICE)</a></span>
         <span data-i18n="dw.hint.lin">Linux: prima di avviarlo, <code>chmod +x bimopen-linux-x86_64</code></span>
         <span data-i18n="dw.hint.win">Windows: il file .exe non è firmato, quindi SmartScreen può fermarlo; scegli «Ulteriori informazioni» ➤ «Esegui comunque»</span>
+        <span data-i18n="dw.hint.and">Android: l'APK non è firmato per lo store; per installarlo consenti l'installazione da fonti sconosciute (app sconosciute) per il browser o il gestore file che lo apre</span>
       </p>
     </div>
   </section>
@@ -291,6 +302,47 @@
       <p class="sub" data-i18n="dw.nv.p">Le ultime versioni, dalla più recente.</p>
       <div class="rels">
       <!-- novita -->
+      <article class="rel">
+        <h3><span class="ver">0.1.0-alpha.4</span> <time datetime="2026-10-19">2026-10-19</time></h3>
+        <h4 data-i18n="nv.added">Aggiunto</h4>
+        <ul>
+          <li data-i18n="nv.v0_1_0_alpha_4.added.1">Una schermata di avvio mentre il programma si carica, con le fasi reali del caricamento, nella lingua salvata, altrimenti in quella del sistema, altrimenti in inglese; si disattiva in Opzioni.</li>
+          <li data-i18n="nv.v0_1_0_alpha_4.added.2">Muri sovrapposti: sottomuri disegnati in ogni vista con i loro strati, impostati in «Sottomuri del tipo», scelti uno per uno con Tab e separati con «Scomponi in muri singoli».</li>
+          <li data-i18n="nv.v0_1_0_alpha_4.added.3">Sole e ombre in piante, sezioni e prospetti come nelle viste 3D, con la traiettoria del sole, «Impostazioni del sole» e lo studio del soleggiamento; un sole per il progetto o uno per una vista.</li>
+          <li data-i18n="nv.v0_1_0_alpha_4.added.4">Quote temporanee su ogni elemento in ogni vista, 3D compreso, con le linee di riferimento agganciate a qualunque riferimento e ricordate, e le impostazioni «Quote temporanee».</li>
+          <li data-i18n="nv.v0_1_0_alpha_4.added.5">Modalità touch per schermi tattili e penne, con gesti a due dita e disposizioni per tablet e telefoni.</li>
+          <li data-i18n="nv.v0_1_0_alpha_4.added.6">Disegno nelle viste 3D: muri, pavimenti, tetti e schizzi con la stessa anteprima, le stesse guide e quote temporanee della pianta, e gli strumenti di modifica su linee di schizzo ed elementi.</li>
+          <li data-i18n="nv.v0_1_0_alpha_4.added.7">Piani di lavoro e piani di riferimento.</li>
+          <li data-i18n="nv.v0_1_0_alpha_4.added.8">«Strati del tipo»: gli strati di un tipo come schede, con spessore totale, resistenza termica, massa per unità di superficie e un'anteprima dal vivo.</li>
+          <li data-i18n="nv.v0_1_0_alpha_4.added.9">Ogni scheda della barra multifunzione completa: 75 comandi ancora da fare compaiono in grigio come «Non ancora disponibile», tra cui dieci nuovi gruppi.</li>
+          <li data-i18n="nv.v0_1_0_alpha_4.added.10">Una vista trascinata fuori dall'area di disegno si apre in una finestra propria, anche su un altro monitor.</li>
+          <li data-i18n="nv.v0_1_0_alpha_4.added.11">La striscia delle viste e delle famiglie con miniature dal vivo, e i pannelli Proprietà e Indice del progetto agganciabili, con un selettore dei tipi che mostra le anteprime.</li>
+        </ul>
+        <h4 data-i18n="nv.changed">Modificato</h4>
+        <ul>
+          <li data-i18n="nv.v0_1_0_alpha_4.changed.1">Il pannello Proprietà del muro e «Parametri del tipo» in gruppi, con i valori derivati in sola lettura e le righe in grigio quando un altro valore non le consente.</li>
+          <li data-i18n="nv.v0_1_0_alpha_4.changed.2">Ogni finestra di dialogo con un'anteprima ha un interruttore «Anteprima» nell'intestazione e mantiene una sola dimensione e posizione.</li>
+          <li data-i18n="nv.v0_1_0_alpha_4.changed.3">Lo stile Classica si sceglie in Opzioni accanto a quello BIMopen, senza un'opzione a parte per abilitarlo.</li>
+          <li data-i18n="nv.v0_1_0_alpha_4.changed.4">Lo stile Classica ha una nuova barra del titolo, una barra multifunzione che scorre invece di tagliare i pulsanti, una sola barra delle opzioni e nessuna barra di stato.</li>
+          <li data-i18n="nv.v0_1_0_alpha_4.changed.5">La finestra principale riempie lo schermo al primo avvio; in seguito si apre come è stata chiusa.</li>
+          <li data-i18n="nv.v0_1_0_alpha_4.changed.6">Il cubo di orientamento ha facce smussate e frecce attorno, e più contrasto su sfondi chiari e scuri.</li>
+          <li data-i18n="nv.v0_1_0_alpha_4.changed.7">Le linee nascoste mantengono facce bianche e linee scure in entrambi i temi; gli stili ombreggiati riempiono piante e sezioni con i colori dei materiali.</li>
+          <li data-i18n="nv.v0_1_0_alpha_4.changed.8">Colori e motivi vengono solo dal materiale, in ogni vista e in ogni anteprima.</li>
+          <li data-i18n="nv.v0_1_0_alpha_4.changed.9">Le ringhiere di scale e rampe seguono fin dall'inizio il contorno della scala su ogni lato; scale e corrimano curvi sono superfici lisce.</li>
+          <li data-i18n="nv.v0_1_0_alpha_4.changed.10">Le funzioni non ancora disponibili sono in grigio in entrambi gli stili di interfaccia.</li>
+          <li data-i18n="nv.v0_1_0_alpha_4.changed.11">Il manuale utente mostra lo stile BIMopen; il suo capitolo «Stili dell'interfaccia» mostra lo stile Classica e la modalità touch su monitor, tablet e telefono.</li>
+        </ul>
+        <h4 data-i18n="nv.fixed">Corretto</h4>
+        <ul>
+          <li data-i18n="nv.v0_1_0_alpha_4.fixed.1">La vista 3D disegna muri, pavimenti, tetti e telai senza crepe sottili.</li>
+          <li data-i18n="nv.v0_1_0_alpha_4.fixed.2">I telai di porte e finestre non si sovrappongono più agli angoli: nessuno sfarfallio in 3D, nessuna linea spuria in sezioni e prospetti.</li>
+          <li data-i18n="nv.v0_1_0_alpha_4.fixed.3">Il solaio del primo piano della casa di esempio si ferma al nucleo dei muri, dietro l'isolamento.</li>
+          <li data-i18n="nv.v0_1_0_alpha_4.fixed.4">Nessuna punta sugli spigoli del cubo di orientamento.</li>
+          <li data-i18n="nv.v0_1_0_alpha_4.fixed.5">Su Wayland la finestra principale non si chiude più dopo la schermata di avvio.</li>
+          <li data-i18n="nv.v0_1_0_alpha_4.fixed.6">Un pannello reso mobile non viene più disegnato due volte.</li>
+          <li data-i18n="nv.v0_1_0_alpha_4.fixed.7">Le aperture restano nel loro muro agli angoli e quando vengono copiate; un clic sul vetro di una finestra sceglie la finestra in sezioni, prospetti e 3D.</li>
+        </ul>
+      </article>
       <article class="rel">
         <h3><span class="ver">0.1.0-alpha.3</span> <time datetime="2026-10-15">2026-10-15</time></h3>
         <h4 data-i18n="nv.changed">Modificato</h4>
@@ -321,28 +373,6 @@
           <li data-i18n="nv.v0_1_0_alpha_2.fixed.1">Eliminare il livello superiore di una scala multipiano non elimina più la scala.</li>
           <li data-i18n="nv.v0_1_0_alpha_2.fixed.2">Nello stile BIMopen la striscia delle viste elenca gli abachi, compresi quelli predefiniti.</li>
           <li data-i18n="nv.v0_1_0_alpha_2.fixed.3">Il clic o il tasto Esc che chiude il menu dello strumento in corso non inserisce più un punto, in tutte le viste.</li>
-        </ul>
-      </article>
-      <article class="rel">
-        <h3><span class="ver">0.1.0-alpha.1</span> <time datetime="2026-10-15">2026-10-15</time></h3>
-        <h4 data-i18n="nv.added">Aggiunto</h4>
-        <ul>
-          <li data-i18n="nv.v0_1_0_alpha_1.added.1">Prime versioni di prova per Windows 10/11 (64 bit) e Linux (x86_64), accanto all'applicazione web.</li>
-          <li data-i18n="nv.v0_1_0_alpha_1.added.2">Modellazione di livelli, griglie, muri stratificati, porte, finestre, solai, tetti, scale, ringhiere, facciate continue e locali, con piante, sezioni, prospetti, viste 3D, abachi, tavole stampate in PDF ed export IFC4.</li>
-          <li data-i18n="nv.v0_1_0_alpha_1.added.3">Import IFC (IFC2x3 e IFC4): ogni elemento con un corpo viene mostrato, con le facce orientate correttamente, anche per i gusci aperti o con facce di verso misto.</li>
-          <li data-i18n="nv.v0_1_0_alpha_1.added.4">Cubo di orientamento con 26 zone cliccabili, la bussola ad anello alla base, le frecce quando una faccia è vista di fronte e un menu con le sue opzioni.</li>
-          <li data-i18n="nv.v0_1_0_alpha_1.added.5">Prospetti di intelaiatura.</li>
-          <li data-i18n="nv.v0_1_0_alpha_1.added.6">Abaco dei blocchi di annotazione: un abaco dei simboli di una famiglia.</li>
-          <li data-i18n="nv.v0_1_0_alpha_1.added.7">Le scorciatoie da tastiera di due lettere, come <code>WA</code> per il muro, agiscono appena digitate nell'area di disegno; le scorciatoie condivise si esportano e si importano in XML.</li>
-          <li data-i18n="nv.v0_1_0_alpha_1.added.8">Il tasto destro del mouse apre il menu dello strumento in uso, con le sostituzioni di snap; le sostituzioni si possono anche digitare per il punto successivo (<code>SE</code>, <code>SM</code>, <code>SI</code>, <code>SN</code>, <code>SO</code>).</li>
-        </ul>
-        <h4 data-i18n="nv.changed">Modificato</h4>
-        <ul>
-          <li data-i18n="nv.v0_1_0_alpha_1.changed.1">Un'unica orbita per ogni navigazione 3D: l'area di disegno, il cubo di orientamento e la rotellina del mouse ruotano la vista allo stesso modo.</li>
-        </ul>
-        <h4 data-i18n="nv.fixed">Corretto</h4>
-        <ul>
-          <li data-i18n="nv.v0_1_0_alpha_1.fixed.1">Le campiture di prospetti e sezioni sono disegnate dentro i loro contorni, senza punte né riempimenti sull'intera sagoma.</li>
         </ul>
       </article>
       <!-- /novita -->
@@ -386,7 +416,7 @@
     });
     stato();
     var ua = navigator.userAgent || '';
-    var os = /Windows/i.test(ua) ? 'win' : /Android|CrOS/i.test(ua) ? 'web' : /Linux/i.test(ua) ? 'linux' : 'web';
+    var os = /Windows/i.test(ua) ? 'win' : /Android/i.test(ua) ? 'android' : /CrOS/i.test(ua) ? 'web' : /Linux/i.test(ua) ? 'linux' : 'web';
     var card = document.querySelector('.os[data-os="' + os + '"]');
     if (card) { card.classList.add('mine'); card.querySelector('.mine-tag').hidden = false; }
   })();
@@ -398,7 +428,7 @@
     });
   });
 </script>
-<script src="lingua.js?v=50271578"></script>
+<script src="lingua.js?v=574cc717"></script>
 <script>
   // tema: scuro finché non si sceglie; poi chiaro o scuro, ricordato in questo browser
   (function () {

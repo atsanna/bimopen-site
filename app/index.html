@@ -5,98 +5,165 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <title>BIMopen</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%227%22%20fill%3D%22%230f2742%22/%3E%3Cpath%20d%3D%22M16%205%2027%2011%2016%2017%205%2011z%22%20fill%3D%22%236ea4ff%22/%3E%3Cpath%20d%3D%22M5%2015.5%2016%2021.5%2027%2015.5%22%20fill%3D%22none%22%20stroke%3D%22%236ea4ff%22%20stroke-width%3D%222.2%22%20stroke-linejoin%3D%22round%22%20opacity%3D%22.75%22/%3E%3Cpath%20d%3D%22M5%2020.5%2016%2026.5%2027%2020.5%22%20fill%3D%22none%22%20stroke%3D%22%23ea8a70%22%20stroke-width%3D%222.2%22%20stroke-linejoin%3D%22round%22/%3E%3C/svg%3E" type="image/svg+xml">
-  <link rel="modulepreload" href="./bimopen-web-5c0dcf16b6c0b520.js">
-  <link rel="preload" href="./bimopen-web-5c0dcf16b6c0b520_bg.wasm" as="fetch" type="application/wasm" crossorigin>
+  <link rel="preload" href="./splash-1b28c8921d0137ce.jpg" as="image">
+  <link rel="modulepreload" href="./bimopen-web-2d7063bbfb51ed1b.js">
   <script type="module">
-    import init from './bimopen-web-5c0dcf16b6c0b520.js';
+    import init from './bimopen-web-2d7063bbfb51ed1b.js';
+    const splash = window.bimopenSplash;
     try {
-      await init({ module_or_path: './bimopen-web-5c0dcf16b6c0b520_bg.wasm' });
-    } catch (e) {
-      // Not loaded: the splash stops its bar and says why.
-      const splash = document.getElementById('bimopen_splash');
-      if (splash) {
-        splash.classList.add('failed');
-        splash.querySelector('.step').textContent = String(e);
+      const response = await fetch('./bimopen-web-2d7063bbfb51ed1b_bg.wasm');
+      if (!response.ok) throw new Error(response.status + ' ' + response.statusText);
+      const total = Number(response.headers.get('content-length')) || 30158281;
+      const reader = response.body.getReader();
+      const parts = [];
+      let got = 0;
+      for (;;) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        parts.push(value);
+        got += value.length;
+        if (splash) splash.progress(Math.min(0.9, 0.9 * got / total));
       }
+      if (splash) splash.progress(0.92, 'Avvio…');
+      await new Promise(requestAnimationFrame);
+      const module = new Response(new Blob(parts, { type: 'application/wasm' }), { headers: { 'content-type': 'application/wasm' } });
+      await init({ module_or_path: module });
+    } catch (e) {
+      // Not loaded: the start screen stops its bar and says why.
+      if (splash) splash.fail(e);
       throw e;
     }
   </script>
   <style>
+    /* The app's own fonts (Inter, shipped with it), for the start screen. */
+    @font-face { font-family: "BIMopen Inter"; src: url("./inter-regular-dd20d109756ee7a9.ttf") format("truetype"); font-weight: 400; font-display: swap; }
+    @font-face { font-family: "BIMopen Inter"; src: url("./inter-semibold-3565a60fd9a38b50.ttf") format("truetype"); font-weight: 600 700; font-display: swap; }
     /* Dark, as the app starts, unless the theme saved is light (see the script below). */
     html, body { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: #1e2228; }
     html.light, html.light body { background: #f4f5f7; }
     #bimopen_canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
-    /* The splash, as the desktop app's (crates/ui-egui/src/splash.rs), until the app starts:
-       dark by default, light when the theme saved is light. */
-    #bimopen_splash { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
-      background: #1e2228; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; z-index: 1; }
-    #bimopen_splash .card { position: relative; width: 480px; height: 300px; box-sizing: border-box; max-width: calc(100vw - 16px);
-      background: #20242b; border: 1px solid #404752; color: #e8ebf0; }
-    #bimopen_splash .logo { position: absolute; left: 50%; top: 30px; width: 64px; height: 64px; margin-left: -32px; }
-    #bimopen_splash .title { position: absolute; left: 0; right: 0; top: 102px; text-align: center; font-size: 34px; direction: ltr; }
-    #bimopen_splash .title span { color: #6ea4ff; }
-    #bimopen_splash .version { position: absolute; left: 0; right: 0; top: 156px; text-align: center; font-size: 13px; color: #969eaa; }
-    #bimopen_splash .step { position: absolute; left: 32px; right: 32px; bottom: 76px; font-size: 13px; }
-    #bimopen_splash .bar { position: absolute; left: 32px; right: 32px; bottom: 63px; height: 3px; border-radius: 1.5px;
-      background: #3a414c; overflow: hidden; }
-    #bimopen_splash .bar div { width: 30%; height: 100%; border-radius: 1.5px; background: #6ea4ff;
-      animation: bimopen_load 1.4s ease-in-out infinite; }
-    @keyframes bimopen_load { from { transform: translateX(-100%); } to { transform: translateX(340%); } }
-    #bimopen_splash .foot { position: absolute; left: 32px; right: 32px; bottom: 22px; display: flex; justify-content: space-between;
-      gap: 16px; font-size: 11px; color: #969eaa; }
-    #bimopen_splash.light { background: #f4f5f7; }
-    #bimopen_splash.light .card { background: #fff; border-color: #d0d4da; color: #1c2026; }
-    #bimopen_splash.light .title span { color: #1c70c4; }
-    #bimopen_splash.light .bar { background: #e2e5ea; }
-    #bimopen_splash.light .bar div { background: #1c70c4; }
-    #bimopen_splash.light .version, #bimopen_splash.light .foot { color: #6e747e; }
-    /* The app did not start: no progress any more, the reason in place of the step. */
-    #bimopen_splash .fail { display: none; position: absolute; left: 32px; right: 32px; top: 184px; font-size: 13px; font-weight: 600; }
+    /* The start screen, as the desktop app's (crates/ui-egui/src/splash.rs), until the app
+       starts: 640 × 384, rounded, centred, fading out when the app is ready. */
+    #bimopen_splash { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; z-index: 1;
+      font-family: "BIMopen Inter", system-ui, -apple-system, "Segoe UI", sans-serif; transition: opacity .4s ease; }
+    #bimopen_splash.off { display: none; }
+    #bimopen_splash.out { opacity: 0; pointer-events: none; }
+    #bimopen_splash .card { position: relative; flex: none; width: 640px; height: 384px; border-radius: 12px; overflow: hidden; background: #071422;
+      box-shadow: 0 28px 70px rgba(0,0,0,.55), 0 0 0 1px rgba(255,255,255,.06); transform-origin: center; }
+    #bimopen_splash .picture { position: absolute; top: 0; bottom: 0; right: 0; width: 84%; height: 100%; object-fit: cover; object-position: 70% 50%; }
+    #bimopen_splash[dir="rtl"] .picture { left: 0; right: auto; transform: scaleX(-1); }
+    #bimopen_splash .shade { position: absolute; inset: 0;
+      background: linear-gradient(90deg, #071422 0%, #071422 28%, rgba(7,20,34,.8) 46%, rgba(7,20,34,.1) 74%, rgba(7,20,34,0) 100%),
+                  linear-gradient(0deg, rgba(7,20,34,.8) 0%, rgba(7,20,34,0) 26%); }
+    #bimopen_splash[dir="rtl"] .shade {
+      background: linear-gradient(270deg, #071422 0%, #071422 28%, rgba(7,20,34,.8) 46%, rgba(7,20,34,.1) 74%, rgba(7,20,34,0) 100%),
+                  linear-gradient(0deg, rgba(7,20,34,.8) 0%, rgba(7,20,34,0) 26%); }
+    #bimopen_splash .version { position: absolute; top: 14px; inset-inline-end: 18px; font-size: 11px; color: #C9DAE7; }
+    #bimopen_splash .brand { position: absolute; top: 40px; inset-inline-start: 34px; display: flex; flex-direction: column; gap: 12px; max-width: 330px; }
+    #bimopen_splash .row { display: flex; align-items: center; gap: 12px; direction: ltr; }
+    #bimopen_splash[dir="rtl"] .row { align-self: flex-end; }
+    #bimopen_splash .name { font-size: 40px; line-height: 1; letter-spacing: -.01em; }
+    #bimopen_splash .name b { font-weight: 600; color: #F8FAFC; }
+    #bimopen_splash .name span { font-weight: 400; color: #08C4CE; }
+    #bimopen_splash .motto { font-size: 9px; letter-spacing: .34em; color: #D5E8F2; margin-top: 6px; }
+    #bimopen_splash .slogan { font-size: 13.5px; color: #D5E8F2; margin-top: 4px; }
+    #bimopen_splash .status { position: absolute; inset-inline-start: 34px; bottom: 22px; display: flex; align-items: baseline; gap: 10px; }
+    #bimopen_splash .step { font-size: 12px; color: #E6F0F8; }
+    #bimopen_splash .pct { font-size: 11px; color: #8fb1c7; font-variant-numeric: tabular-nums; }
+    #bimopen_splash .copy { position: absolute; bottom: 22px; inset-inline-end: 18px; font-size: 10.5px; color: #9fb8c9; }
+    #bimopen_splash .bar { position: absolute; left: 0; right: 0; bottom: 0; height: 4px; background: rgba(16,45,64,.9); direction: ltr; }
+    #bimopen_splash .bar div { position: absolute; top: 0; bottom: 0; left: 0; width: 0; transition: width .15s linear;
+      background: linear-gradient(90deg, #08C4CE, #25E0D2); box-shadow: 0 0 10px rgba(25,217,224,.7); }
+    /* The app did not start: no progress any more, the reason in place of the slogan. */
+    #bimopen_splash .fail { display: none; position: absolute; inset-inline-start: 34px; inset-inline-end: 34px; top: 150px; bottom: 50px; overflow: auto;
+      font-size: 12px; color: #ff8a80; white-space: pre-wrap; }
+    #bimopen_splash .fail strong { display: block; font-size: 13px; color: #F8FAFC; margin-bottom: 6px; }
     #bimopen_splash.failed .fail { display: block; }
-    #bimopen_splash.failed .bar { display: none; }
-    #bimopen_splash.failed .step { bottom: 50px; top: 204px; overflow: auto; font-size: 11px; color: #ff8a80; white-space: pre-wrap; }
-    #bimopen_splash.failed.light .step { color: #c62828; }
+    #bimopen_splash.failed .bar, #bimopen_splash.failed .status { display: none; }
   </style>
 </head>
 <body>
   <canvas id="bimopen_canvas"></canvas>
-  <div id="bimopen_splash" data-version="0.1.0">
+  <div id="bimopen_splash" data-version="0.1.0" role="img" aria-label="BIMopen">
     <div class="card">
-      <svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#0f2742"/><path d="M16 5 27 11 16 17 5 11z" fill="#6ea4ff"/><path d="M5 15.5 16 21.5 27 15.5" fill="none" stroke="#6ea4ff" stroke-width="2.2" stroke-linejoin="round" opacity=".75"/><path d="M5 20.5 16 26.5 27 20.5" fill="none" stroke="#ea8a70" stroke-width="2.2" stroke-linejoin="round"/></svg>
-      <div class="title">BIM<span>open</span></div>
+      <img class="picture" src="./splash-1b28c8921d0137ce.jpg" alt="">
+      <div class="shade"></div>
       <div class="version" data-text="{version} pre-alpha · versione di prova"></div>
-      <div class="step" data-text="Caricamento in corso"></div>
+      <div class="brand">
+        <div class="row">
+          <svg width="46" height="60" viewBox="5 0 100 140" aria-hidden="true"><g fill="none" stroke="#08C4CE" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><path d="M15 58 54 35 93 58V105L54 128 15 105Z"/><path d="M15 58 54 81 93 58M54 81V128"/><path d="M54 35V10H82"/></g></svg>
+          <div><div class="name"><b>BIM</b><span>open</span></div><div class="motto">ONE MODEL. OPEN POSSIBILITIES.</div></div>
+        </div>
+        <div class="slogan" data-text="Progetta. Coordina. Verifica. Documenta."></div>
+      </div>
+      <div class="status"><span class="step" data-text="Scaricamento dell'applicazione…"></span><span class="pct">0%</span></div>
+      <div class="fail"><strong data-text="BIMopen non si è avviato"></strong><span class="reason"></span></div>
+      <div class="copy">© 2026 BIMopen</div>
       <div class="bar"><div></div></div>
-      <div class="fail" data-text="BIMopen non si è avviato"></div>
-      <div class="foot"><span data-text="Versione parziale, solo per prova"></span><span data-text="Sarà open source (MIT/Apache)"></span></div>
     </div>
   </div>
-  <!-- The splash's texts in every language: the catalogs' (a test of bimopen-ui-egui checks them). -->
-  <script id="bimopen_splash_texts" type="application/json">{"it":{"Caricamento in corso":"Caricamento in corso","{version} pre-alpha · versione di prova":"{version} pre-alpha · versione di prova","Versione parziale, solo per prova":"Versione parziale, solo per prova","Sarà open source (MIT/Apache)":"Sarà open source (MIT/Apache)","BIMopen non si è avviato":"BIMopen non si è avviato"},
-    "en":{"Caricamento in corso":"Loading","{version} pre-alpha · versione di prova":"{version} pre-alpha · trial version","Versione parziale, solo per prova":"Partial version, for testing only","Sarà open source (MIT/Apache)":"Will be open source (MIT/Apache)","BIMopen non si è avviato":"BIMopen did not start"},
-    "de":{"Caricamento in corso":"Wird geladen","{version} pre-alpha · versione di prova":"{version} Pre-Alpha · Testversion","Versione parziale, solo per prova":"Teilversion, nur zum Testen","Sarà open source (MIT/Apache)":"Wird Open Source (MIT/Apache)","BIMopen non si è avviato":"BIMopen konnte nicht starten"},
-    "fr":{"Caricamento in corso":"Chargement en cours","{version} pre-alpha · versione di prova":"{version} pré-alpha · version d'essai","Versione parziale, solo per prova":"Version partielle, pour essai uniquement","Sarà open source (MIT/Apache)":"Sera open source (MIT/Apache)","BIMopen non si è avviato":"BIMopen n'a pas démarré"},
-    "es":{"Caricamento in corso":"Cargando","{version} pre-alpha · versione di prova":"{version} prealfa · versión de prueba","Versione parziale, solo per prova":"Versión parcial, solo para pruebas","Sarà open source (MIT/Apache)":"Será de código abierto (MIT/Apache)","BIMopen non si è avviato":"BIMopen no se ha iniciado"},
-    "ar":{"Caricamento in corso":"جارٍ التحميل","{version} pre-alpha · versione di prova":"{version} ما قبل ألفا · نسخة تجريبية","Versione parziale, solo per prova":"نسخة جزئية، للتجربة فقط","Sarà open source (MIT/Apache)":"ستصبح مفتوحة المصدر (MIT/Apache)","BIMopen non si è avviato":"لم يبدأ BIMopen"}}</script>
+  <!-- The start screen's texts in every language: the catalogs' (a test of bimopen-ui-egui checks them). -->
+  <script id="bimopen_splash_texts" type="application/json">{"it":{"Progetta. Coordina. Verifica. Documenta.":"Progetta. Coordina. Verifica. Documenta.","{version} pre-alpha · versione di prova":"{version} pre-alpha · versione di prova","Scaricamento dell'applicazione…":"Scaricamento dell'applicazione…","Avvio…":"Avvio…","Pronto":"Pronto","BIMopen non si è avviato":"BIMopen non si è avviato"},
+    "en":{"Progetta. Coordina. Verifica. Documenta.":"Design. Coordinate. Check. Document.","{version} pre-alpha · versione di prova":"{version} pre-alpha · trial version","Scaricamento dell'applicazione…":"Downloading the application…","Avvio…":"Starting…","Pronto":"Ready","BIMopen non si è avviato":"BIMopen did not start"},
+    "de":{"Progetta. Coordina. Verifica. Documenta.":"Entwerfen. Koordinieren. Prüfen. Dokumentieren.","{version} pre-alpha · versione di prova":"{version} Pre-Alpha · Testversion","Scaricamento dell'applicazione…":"Anwendung wird heruntergeladen…","Avvio…":"Start…","Pronto":"Bereit","BIMopen non si è avviato":"BIMopen konnte nicht starten"},
+    "fr":{"Progetta. Coordina. Verifica. Documenta.":"Concevoir. Coordonner. Vérifier. Documenter.","{version} pre-alpha · versione di prova":"{version} pré-alpha · version d'essai","Scaricamento dell'applicazione…":"Téléchargement de l'application…","Avvio…":"Démarrage…","Pronto":"Prêt","BIMopen non si è avviato":"BIMopen n'a pas démarré"},
+    "es":{"Progetta. Coordina. Verifica. Documenta.":"Diseña. Coordina. Verifica. Documenta.","{version} pre-alpha · versione di prova":"{version} prealfa · versión de prueba","Scaricamento dell'applicazione…":"Descargando la aplicación…","Avvio…":"Iniciando…","Pronto":"Listo","BIMopen non si è avviato":"BIMopen no se ha iniciado"},
+    "ar":{"Progetta. Coordina. Verifica. Documenta.":"صمّم. نسّق. تحقّق. وثّق.","{version} pre-alpha · versione di prova":"{version} ما قبل ألفا · نسخة تجريبية","Scaricamento dell'applicazione…":"تنزيل التطبيق…","Avvio…":"بدء التشغيل…","Pronto":"جاهز","BIMopen non si è avviato":"لم يبدأ BIMopen"}}</script>
   <script>
-    // The splash follows the language and theme the app saved (?lang=xx first, as the app),
-    // otherwise the browser's language when it is one of the six, otherwise English.
-    (function () {
+    // The start screen follows the language the app saved (?lang=xx first, as the app),
+    // otherwise the browser's language when it is one of the six, otherwise English. It shows
+    // only while the app loads, at least half a second, and fades out when the app is ready;
+    // «Mostra la schermata di avvio» off (or ?no-splash) leaves it out.
+    window.bimopenSplash = (function () {
       var splash = document.getElementById("bimopen_splash");
       var texts = JSON.parse(document.getElementById("bimopen_splash_texts").textContent);
       var stored = function (key) { try { return localStorage.getItem(key); } catch (e) { return null; } };
       var known = function (code) { code = (code || "").slice(0, 2).toLowerCase(); return texts[code] ? code : null; };
-      var lang = known(new URLSearchParams(location.search).get("lang")) || known(stored("bimopen.lang"));
+      var query = new URLSearchParams(location.search);
+      var lang = known(query.get("lang")) || known(stored("bimopen.lang"));
       for (var i = 0; !lang && i < (navigator.languages || []).length; i++) lang = known(navigator.languages[i]);
       lang = lang || "en";
       document.documentElement.lang = lang;
       splash.dir = lang === "ar" ? "rtl" : "ltr";
-      // Dark unless the theme saved is light, as the app.
-      var dark = stored("bimopen.dark") !== "0";
-      if (!dark) { splash.classList.add("light"); document.documentElement.classList.add("light"); }
-      splash.querySelectorAll("[data-text]").forEach(function (el) {
-        el.textContent = texts[lang][el.dataset.text].replace("{version}", splash.dataset.version);
-      });
+      if (stored("bimopen.dark") === "0") document.documentElement.classList.add("light");
+      var tr = function (key) { return texts[lang][key].replace("{version}", splash.dataset.version); };
+      splash.querySelectorAll("[data-text]").forEach(function (el) { el.textContent = tr(el.dataset.text); });
+      var options = null;
+      try { options = JSON.parse(stored("bimopen.options") || "null"); } catch (e) { options = null; }
+      var shows = !query.has("no-splash") && !(options && options.show_splash === false);
+      if (!shows) splash.classList.add("off");
+      // Narrow screens: the whole screen shrinks to fit.
+      var card = splash.querySelector(".card");
+      function fit() { var k = Math.min(1, (innerWidth - 16) / 640, (innerHeight - 16) / 384); card.style.transform = k < 1 ? "scale(" + k + ")" : ""; }
+      fit();
+      addEventListener("resize", fit);
+      var shownAt = performance.now(), shown = 0;
+      var step = splash.querySelector(".step"), pct = splash.querySelector(".pct"), bar = splash.querySelector(".bar div");
+      // The bar only goes forward.
+      function progress(f, key) {
+        shown = Math.max(shown, Math.min(1, f));
+        bar.style.width = (shown * 100).toFixed(1) + "%";
+        pct.textContent = Math.round(shown * 100) + "%";
+        if (key) step.textContent = tr(key);
+      }
+      return {
+        progress: progress,
+        // The app is ready: «Pronto», then the screen fades (after half a second on screen).
+        done: function () {
+          progress(1, "Pronto");
+          var wait = Math.max(0, 500 - (performance.now() - shownAt));
+          setTimeout(function () {
+            splash.classList.add("out");
+            setTimeout(function () { splash.remove(); }, 450);
+          }, wait);
+        },
+        // It did not start: the screen stays (even when left out) and says why.
+        fail: function (reason) {
+          splash.classList.remove("off");
+          splash.classList.add("failed");
+          splash.querySelector(".reason").textContent = String(reason);
+        }
+      };
     })();
   </script>
 </body>

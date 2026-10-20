@@ -1,10 +1,24 @@
 // Lingua della pagina (schema di antoniosanna.dev): i dizionari stanno in lingue/<lingua>.js, generati da i18n/*.json con i18n/costruisci.py.
 // L'italiano e' il testo della pagina stessa, letto al caricamento: una sola fonte.
 (function () {
+  // Pagina in cache dopo una pubblicazione: versione.json (mai in cache) dice la build pubblicata;
+  // se non e' quella della pagina, la pagina si ricarica una volta.
+  var BUILD = document.documentElement.getAttribute('data-build');
+  if (BUILD && window.fetch) {
+    fetch(new URL('versione.json', (document.currentScript && document.currentScript.src) || location.href).href + '?t=' + Date.now(), { cache: 'no-store' })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (j) {
+        if (!j || !j.v || j.v === BUILD) return;
+        var k = 'bo-build-reload';
+        try { if (sessionStorage.getItem(k) === j.v) return; sessionStorage.setItem(k, j.v); } catch (e) { return; }
+        location.reload();
+      })
+      .catch(function () {});
+  }
   var D = window.BO_I18N = window.BO_I18N || {};
   var LINGUE = ['it', 'en', 'de', 'fr', 'es', 'ar'];
   // file di lingua: lingue/<lingua>.js accanto a questo script, scaricato solo alla prima richiesta
-  var VER = {"en": "f9b5171d", "de": "3f76d245", "fr": "76921e99", "es": "a8c8dbe4", "ar": "a51e197b"};
+  var VER = {"en": "2fb0c5e2", "de": "e1f571bb", "fr": "821e8325", "es": "59956732", "ar": "9607e515"};
   var BASE = (document.currentScript && document.currentScript.src) || location.href;
   function carica(lang, poi) {
     if (lang === 'it' || D[lang]) return poi();

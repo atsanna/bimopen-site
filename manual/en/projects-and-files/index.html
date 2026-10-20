@@ -10,7 +10,7 @@
 <link href="https://atsanna.github.io/bimopen-site/manual/en/projects-and-files/" rel="canonical"/>
 <link href="../interface-styles/" rel="prev"/>
 <link href="../selection-and-modify/" rel="next"/>
-<link href="../assets/images/logo.svg" rel="icon"/>
+<link href="../assets/images/bimopen-cube.svg" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.9" name="generator"/>
 <title>Projects and files - BIMopen user manual</title>
 <link href="../assets/stylesheets/main.4af4bdda.min.css" rel="stylesheet"/>
@@ -33,7 +33,7 @@
 <header class="md-header md-header--shadow" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
 <a aria-label="BIMopen user manual" class="md-header__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/?lang=en" title="BIMopen user manual">
-<img alt="logo" src="../assets/images/logo.svg"/>
+<img alt="logo" src="../assets/images/bimopen-cube.svg"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
@@ -148,7 +148,7 @@
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
 <a aria-label="BIMopen user manual" class="md-nav__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/?lang=en" title="BIMopen user manual">
-<img alt="logo" src="../assets/images/logo.svg"/>
+<img alt="logo" src="../assets/images/bimopen-cube.svg"/>
 </a>
     BIMopen user manual
   </label>
@@ -659,8 +659,9 @@ become rooms. The messages count what was not read.</p>
 <p><strong>Open ➤ IFC Options…</strong> opens <strong>Import IFC Options</strong>: what each IFC class becomes (walls, floors,
 doors, windows, rooms or <strong>Not Imported</strong>), and <strong>Default</strong>. The choices are kept between sessions.</p>
 <h3 id="revit-projects">.rvt files</h3>
-<p>Opening a <code>.rvt</code> file makes a new project from what can be read of it: levels, wall types and
-walls, doors and windows, floors. The messages say what was approximated.</p>
+<p>Opening a <code>.rvt</code> file is experimental: today it reads only the project name and the level
+names, so the new project has its levels and no walls, doors, windows or floors. The messages say
+so after the import. To exchange models with other BIM software, use IFC4.</p>
 <h3 id="other-exports">Other exports</h3>
 <p>Printing to PDF and exporting images are described in
 <a href="../documentation/">Sheets, schedules and printing</a>; schedules export as delimited text from the

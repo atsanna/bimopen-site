@@ -1,9 +1,9 @@
-/* The dark palette of the BIMopen website: ink #e8eef5, ink-soft #bccadb, muted #93a3b6,
-   paper #0d1724, card #142235, line #22344b, blue #6ea4ff, blue-soft #16294a, terra #ea8a70,
-   code #08111c. The variables are mapped to Material's in theme.css. */
+/* The dark palette of the BIMopen website: ink #E4EBF1, ink-soft #B7C3CE, muted #8A98A6,
+   paper #0D1319, card #182129, field #1F2A33, line #28343E, accent #14BECC, amber #E6961E,
+   code #141C23. The variables are mapped to Material's in theme.css. */
 [data-md-color-scheme="slate"] {
-    --bo-ink: #e8eef5; --bo-ink-soft: #bccadb; --bo-muted: #93a3b6; --bo-paper: #0d1724;
-    --bo-card: #142235; --bo-line: #22344b; --bo-blue: #6ea4ff; --bo-blue-soft: #16294a;
-    --bo-terra: #ea8a70; --bo-code-bg: #08111c; --bo-code-ink: #e6edf5;
-    --md-hue: 215;
+    --bo-ink: #E4EBF1; --bo-ink-soft: #B7C3CE; --bo-muted: #8A98A6; --bo-paper: #0D1319;
+    --bo-card: #182129; --bo-field: #1F2A33; --bo-line: #28343E; --bo-accent: #14BECC;
+    --bo-accent-text: #14BECC; --bo-second: #E6961E; --bo-code-bg: #141C23; --bo-code-ink: #E8EEF2;
+    --md-hue: 210;
 }

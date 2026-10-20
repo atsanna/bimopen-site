@@ -628,12 +628,28 @@ otros edificios; en las vistas 3D las dibuja la tarjeta gráfica (el procesador 
 En <strong>Líneas</strong> (líneas ocultas) una sombra es un gris del papel; en los estilos sombreados oscurece
 los colores de los materiales. Las caras cortadas por la vista quedan a la luz.</p>
 <p><strong>La trayectoria solar</strong> es un anillo alrededor del modelo con los puntos cardinales al norte
-real, el arco del día con sus horas, el analema (dónde está el sol a esa hora a lo largo del año),
-el tramo que recorre un estudio, y el sol con su hora y su fecha. En plantas, secciones y alzados
-el sol se arrastra: a lo largo del día se ajusta a los cuartos de hora, a lo largo del analema al
-día 1 de cada mes; con <span class="keys"><kbd class="key-shift">Shift</kbd></span> se queda en el día, con <span class="keys"><kbd class="key-control">Ctrl</kbd></span> en el analema. Con la vista bajo
-el cursor (y nada seleccionado, o tras un clic en el sol), <span class="keys"><kbd class="key-arrow-left">Left</kbd></span> y <span class="keys"><kbd class="key-arrow-right">Right</kbd></span> mueven la hora,
-<span class="keys"><kbd class="key-arrow-up">Up</kbd></span> y <span class="keys"><kbd class="key-arrow-down">Down</kbd></span> la fecha. Con <strong>Iluminación</strong> el sol está quieto y no tiene trayectoria.</p>
+real, el arco del día con sus horas, el analema (dónde está el sol a esa hora a lo largo del año:
+un ocho continuo, cada día a la hora de reloj de la fecha elegida), el tramo que recorre un estudio,
+y el sol con su hora y su fecha; en una vista 3D es una cúpula sobre el anillo. En plantas,
+secciones, alzados y vistas 3D el sol se arrastra: a lo largo del día se ajusta a los cuartos de
+hora, a lo largo del año sigue el analema día a día (con el cambio de hora el reloj se desplaza el
+cambio, así el sol no salta); <span class="keys"><kbd class="key-shift">Shift</kbd></span> mientras arrastras toma el otro, y <strong>A lo largo del día</strong> /
+<strong>A lo largo del año</strong> en el menú de la trayectoria eligen cuál va primero. Las sombras siguen el
+arrastre: en planta, en sección y en alzado, mientras el sol se mueve, son un borrador más tosco,
+cada vista muestra sus últimas sombras hasta que las nuevas están listas, y se dibujan completas
+cuando se suelta el sol. Con la vista bajo el cursor (y nada seleccionado, o tras un clic en el sol), <span class="keys"><kbd class="key-arrow-left">Left</kbd></span> y
+<span class="keys"><kbd class="key-arrow-right">Right</kbd></span> mueven la hora, <span class="keys"><kbd class="key-arrow-up">Up</kbd></span> y <span class="keys"><kbd class="key-arrow-down">Down</kbd></span> la fecha. Con <strong>Iluminación</strong> el sol está quieto y no
+tiene trayectoria.</p>
+<p>El menú de la trayectoria (en la barra de la vista, en el menú de la vista y en modo táctil) tiene
+también <strong>Ayudas visuales</strong> para leerla: <strong>Líneas verticales de las horas</strong> (de cada hora par una línea
+discontinua baja al suelo y va al anillo, con la hora allí; en planta un punto en el anillo),
+<strong>Proyección del arco en el suelo</strong>, <strong>Mediodía solar</strong> (el punto más alto del arco con su hora de
+reloj, y la línea norte–sur), <strong>Franja del año</strong> (el cielo que el sol cruza en el año, en amarillo
+claro, los arcos de los solsticios y del equinoccio, los analemas de las horas pares), <strong>Amanecer y
+atardecer</strong> (marcas en el anillo con sus horas; la barra de la vista las muestra con la duración del
+día) y <strong>Analema</strong>; todas salvo la proyección están activas al principio. En una vista 3D lo que
+queda detrás del modelo queda oculto por él. La <strong>Configuración del sol</strong> muestra también los
+amaneceres y atardeceres del año en un gráfico: un clic o un arrastre sobre él elige el día.</p>
 <p><strong>Sol compartido</strong>: las vistas comparten el sol del proyecto salvo que tengan uno propio (la
 propiedad <strong>Sol compartido</strong>). Mover el sol compartido en una vista lo mueve en todas las vistas
 que lo comparten; una vista con su propio sol no cambia. <strong>Un sol común a todas las vistas</strong> en la
@@ -678,8 +694,12 @@ del sol en su cabecera:</p>
 </tbody>
 </table>
 <p>Después la <strong>Ubicación</strong> del proyecto (una ciudad, o <strong>Personalizada</strong> con su latitud y
-  longitud: una sola para todo el proyecto) con el <strong>Horario de verano</strong>, y <strong>Sombras en el nivel</strong>
-  con su <strong>Nivel del terreno</strong>;
+  longitud: una sola para todo el proyecto; una ubicación personalizada toma el huso horario de la
+  ciudad más cercana; un proyecto nuevo empieza en <strong>Roma</strong>, la casa de ejemplo está en
+  <strong>Cagliari</strong>) con el <strong>Horario de verano</strong>, que es automático: la regla del lugar (Europa,
+  América del Norte, Chile, Australia sudoriental, Nueva Zelanda, Egipto, o ninguna) y el domingo
+  exacto del <strong>Año</strong> del sol, así las horas de la trayectoria y de los estudios son las del reloj;
+  la regla se puede cambiar. Después <strong>Sombras en el nivel</strong> con su <strong>Nivel del terreno</strong>;
 - a la derecha la vista previa: el cielo visto desde arriba, con la trayectoria del día, el
   analema y el sol. <strong>Vista preliminar</strong> en la cabecera, a la derecha de los valores, es un
   interruptor que la oculta y la muestra; el cuadro de diálogo conserva su tamaño y, sin vista
@@ -780,7 +800,9 @@ cubierta se detienen bajo ella. Cada capa cortada tiene el patrón de corte de s
 baja</strong>, que se definen en los tipos de muro, suelo y cubierta; si no, un único relleno sólido).
 El mobiliario y los aparatos sanitarios nunca se cortan: se ven enteros. Una ventana se corta con
 su marco en la línea gruesa de corte y su vidrio en líneas finas; lo que queda más allá del corte
-se dibuja con las líneas de proyección, más finas.</p>
+se dibuja con las líneas de proyección, más finas. Más allá del corte, y en los alzados, una cara
+delante oculta lo que está detrás, y el vidrio de una ventana es opaco: cada ventana muestra su
+marco y su vidrio, no las habitaciones de detrás.</p>
 <p><strong>Recortar vista</strong> recorta la vista a su región de recorte, y <strong>Mostrar región de recorte</strong> dibuja
 la región; arrastra sus bordes para cambiar su tamaño. Para escribir su tamaño: <strong>Propiedades ▸
 Tamaño de recorte ▸ Editar…</strong>, y después <strong>Anchura</strong> y <strong>Altura</strong>; la región conserva su centro.</p>
@@ -931,5 +953,6 @@ derecha.</p>
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.footer", "navigation.tracking", "toc.follow", "content.code.copy", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
 <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+<script src="../assets/js/zoom.js"></script>
 </body>
 </html>

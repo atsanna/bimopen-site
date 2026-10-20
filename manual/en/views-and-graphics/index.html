@@ -622,12 +622,27 @@ and other buildings; in 3D views the graphics card draws them (the processor whe
 none). In <strong>Lines</strong> (hidden line) a shadow is a grey of the paper, in the shaded styles it darkens
 the materials' colours. Faces cut by the view stay in the light.</p>
 <p><strong>The sun path</strong> is a ring round the model with the points of the compass at true north, the day's
-arc with its hours, the analemma (where the sun stands at that hour through the year), the part a
-study goes through, and the sun with its hour and date. In plans, sections and elevations the sun
-can be dragged: along the day it snaps to quarters of an hour, along the analemma to the 1st of
-each month; with <span class="keys"><kbd class="key-shift">Shift</kbd></span> it keeps to the day, with <span class="keys"><kbd class="key-control">Ctrl</kbd></span> to the analemma. With the view
-under the cursor (and nothing selected, or after a click on the sun), <span class="keys"><kbd class="key-arrow-left">Left</kbd></span> and <span class="keys"><kbd class="key-arrow-right">Right</kbd></span> move
-the hour, <span class="keys"><kbd class="key-arrow-up">Up</kbd></span> and <span class="keys"><kbd class="key-arrow-down">Down</kbd></span> the date. With <strong>Lighting</strong> the sun stands still and has no path.</p>
+arc with its hours, the analemma (where the sun stands at that hour through the year: one smooth
+figure of eight, every day at the clock of the chosen date), the part a study goes through, and the
+sun with its hour and date; in a 3D view it is a dome over the ring. In plans, sections,
+elevations and 3D views the sun can be dragged: along the day it snaps to quarters of an hour,
+along the year it follows the analemma day by day (across a change of summer time the clock moves
+by the change, so the sun does not jump); <span class="keys"><kbd class="key-shift">Shift</kbd></span> while dragging takes the other, and <strong>Along
+the Day</strong> / <strong>Along the Year</strong> in the sun path's menu choose which comes first. The shadows follow
+the drag: in plans, sections and elevations, while the sun moves, they are a coarser draft, each
+view showing its last shadows until the new ones are ready, and they are drawn in full when the sun
+is released. With the view under the cursor (and nothing selected, or after a click on the sun),
+<span class="keys"><kbd class="key-arrow-left">Left</kbd></span> and <span class="keys"><kbd class="key-arrow-right">Right</kbd></span> move the hour, <span class="keys"><kbd class="key-arrow-up">Up</kbd></span> and <span class="keys"><kbd class="key-arrow-down">Down</kbd></span> the date. With <strong>Lighting</strong> the sun stands
+still and has no path.</p>
+<p>The sun path's menu (in the view bar, in the view's menu and in touch mode) also has <strong>Visual Aids</strong>
+that help read it: <strong>Vertical Hour Lines</strong> (from each even hour a dashed line down to the ground and out to
+the ring, with the hour there; in plans a dot on the ring), <strong>Arc Projected on the Ground</strong>, <strong>Solar
+Noon</strong> (the arc's highest point with its clock time, and the north–south line), <strong>Band of the
+Year</strong> (the sky the sun crosses in the year, in a light yellow, the arcs of the solstices and of the
+equinox, the analemmas of the even hours), <strong>Sunrise and Sunset</strong> (marks on the ring with their
+times; the view bar shows them with the length of the day) and <strong>Analemma</strong>; all but the projection
+are on at first. In a 3D view what stands behind the model is hidden by it. <strong>Sun Settings</strong> also
+show the year's sunrises and sunsets as a chart: a click or a drag on it picks the day.</p>
 <p><strong>Shared Sun</strong>: the views share the project's sun unless they have one of their own (the <strong>Shared
 Sun</strong> property). Moving the shared sun in one view moves it in every view that shares it; a view
 with its own sun is not touched. <strong>Shared Sun in All Views</strong> in the sun settings puts every view
@@ -670,8 +685,11 @@ MCP (see <a href="../command-line-and-mcp/">Command line and MCP</a>).</p>
 </tbody>
 </table>
 <p>Then the project's <strong>Location</strong> (a city, or <strong>Custom</strong> with its latitude and longitude: one for
-  the whole project) with <strong>Daylight Saving Time</strong>, and <strong>Ground Plane at Level</strong> with its
-  <strong>Ground Level</strong>;
+  the whole project; a custom place takes the time zone of the nearest city; a new project starts in
+  <strong>Rome</strong>, the sample house stands in <strong>Cagliari</strong>) with <strong>Daylight Saving Time</strong>, which is automatic: the place's rule (Europe, North America, Chile, South-eastern
+  Australia, New Zealand, Egypt, or none) and the exact Sunday of the sun's <strong>Year</strong>, so the times
+  on the sun path and in the studies are those of the clock; the rule can be changed. Then <strong>Ground
+  Plane at Level</strong> with its <strong>Ground Level</strong>;
 - on the right the preview: the sky seen from above, with the day's path, the analemma and the
   sun. <strong>Preview</strong> in the dialog's header, right of the figures, is a switch that hides and
   shows it; the dialog keeps its size, and without the preview the settings take its room.</p>
@@ -762,7 +780,8 @@ material's cut pattern (at <strong>Coarse</strong>, the type's <strong>Coarse Sc
 Scale Fill Color</strong>, set on wall, floor and roof types, else only its outline). Furniture and
 plumbing fixtures are never cut: they are seen whole. A window is cut with its frame in the thick
 cut line and its glass in thin lines; what lies beyond the cut is drawn in thinner projection
-lines.</p>
+lines. Beyond the cut, and in elevations, a face in front hides what is behind it, and a window's
+glass is opaque: each window shows its frame and glass, not the rooms behind it.</p>
 <p><strong>Crop View</strong> clips the view to its crop region, <strong>Show Crop Region</strong> draws the region; drag its
 edges to resize it. To type its size: <strong>Properties ▸ Size Crop ▸ Edit…</strong>, then <strong>Width</strong> and
 <strong>Height</strong>; the region keeps its centre.</p>
@@ -906,5 +925,6 @@ three windows, the active one on the left at full height and two stacked on the 
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.footer", "navigation.tracking", "toc.follow", "content.code.copy", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
 <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+<script src="../assets/js/zoom.js"></script>
 </body>
 </html>

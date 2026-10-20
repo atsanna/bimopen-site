@@ -765,6 +765,14 @@ shows the <strong>Draw</strong> group, and the options strip shows:</p>
 <td><strong>Radius</strong></td>
 <td>Not available: it needs curved walls, and is shown disabled</td>
 </tr>
+<tr>
+<td><strong>Join at the ends</strong></td>
+<td>Not available yet, shown greyed: the walls drawn always join; an end's join is prevented afterwards from its control</td>
+</tr>
+<tr>
+<td><strong>Automatic joining</strong></td>
+<td>Not available yet, shown greyed and ticked: the walls join those they meet</td>
+</tr>
 </tbody>
 </table>
 <p>In the 3D view the wall being drawn follows the cursor as a solid, with its thickness and its height up to the top level (or the height typed), on the plane of the level, with its length and angle as a temporary dimension; <strong>Shift</strong> keeps it square and <strong>Esc</strong> takes it away. <strong>Rectangle</strong>, the polygons and <strong>Pick Lines</strong> work there too: the walls of the whole shape follow the cursor, and the line of the level under the cursor is picked as in plan.</p>
@@ -1027,7 +1035,7 @@ jamb. Click to place it: the wall is cut in every view. A window takes its type'
 Height</strong>.</p>
 <p>Doors and windows get a <strong>Mark</strong> that counts up by category (1, 2, 3…), from the highest.</p>
 <h2 id="tags">Tags</h2>
-<p><strong>Draw Door ▸ Tag ▸ Tag on Placement</strong> (or the same for windows) tags each opening as it
+<p><strong>Tag on Placement</strong>, on the options strip of the door and window tools, tags each opening as it
 is placed. The options strip then offers <strong>Horizontal</strong> or <strong>Vertical</strong>, and <strong>Leader</strong> with its
 length. A door's tag shows its <strong>Mark</strong>; a window's tag shows its type's <strong>Type Mark</strong>.
 <strong>Document ▸ Tag All</strong> tags the openings not tagged yet.</p>
@@ -1093,7 +1101,9 @@ picking a curtain wall type in the type selector; the doors and windows it hosts
 because a curtain wall does not host them, and a message says so (undo brings them back).</p>
 <p>In plan each glass panel is drawn with its thickness and the mullions are cut. A type with
 <strong>Automatically Embed</strong> ticked (the <strong>Storefront</strong>) drawn along a wall cuts its own hole in it,
-in plan, sections, 3D and IFC.</p>
+in plan, sections, 3D and IFC. The wall stays one wall: beside and above the hole it goes on with
+its layers, its net area leaves the hole out, and moving or resizing the curtain wall takes the
+hole with it.</p>
 <ul>
 <li>The type's <strong>Vertical Layout</strong> and horizontal layout (<strong>Fixed distance</strong>, <strong>Fixed number</strong>,
   <strong>Maximum spacing</strong>) with their spacing, and the instance's <strong>Number of Vertical Grids</strong> and
@@ -1130,16 +1140,21 @@ has one, <strong>Stacked wall - Render over stone plinth</strong> (the exterior 
 plinth): pick it in the type selector of <strong>Wall</strong> and draw it as any wall.</p>
 <p>The stacked wall holds the line, the levels and the height; its sub-walls follow them. In plans,
 sections, elevations and the 3D view each sub-wall is drawn with its own type's layers, in the
-colours of their materials; the sub-walls join the walls they meet, and the <strong>Wall Schedule</strong> lists
-them, one row each. A door or window placed on a stacked wall cuts every sub-wall it passes
+colours of their materials. The sub-walls join the walls they meet, each at its own height: at a
+corner of two stacked walls plinth meets plinth and the wall above meets the wall above, a basic
+wall meets each sub-wall in turn, and two stacks of different heights or thicknesses meet over each
+height they share; every layer closes round the corner, in plan and in 3D. The <strong>Wall Schedule</strong>
+lists the sub-walls, one row each. A door or window placed on a stacked wall cuts every sub-wall it passes
 through, its sill measured from the stacked wall's base.</p>
-<p>A click selects the whole wall; <strong>Tab</strong> goes on to each sub-wall, from the bottom up (the status
-bar says «Tab · next element»). The Properties of the whole wall hold for all its sub-walls; its
-<strong>Alignment</strong> comes from the type and is read-only. Of a sub-wall only <strong>Room Bounding</strong> and
-<strong>Role</strong> change: the rest comes from the stacked wall and its type, and its type is changed in the
-stacked type. <strong>Break up into single walls</strong>, in the context menu and with the wall selected,
-makes each sub-wall an independent basic wall where it stands; they do not go back together
-(Ctrl+Z undoes it). The boundary of a stacked wall or of a sub-wall cannot be edited yet.</p>
+<p>A click selects the whole wall; <strong>Tab</strong> goes on to each sub-wall, from the bottom up (the status bar
+says «Tab · next element»). The Properties of the whole wall hold for all its sub-walls; its
+<strong>Alignment</strong> is the plane it is drawn on, as for any wall: the faces of the band its sub-walls
+fill, or the core of the variable sub-wall. Giving a basic wall a stacked type, or a stacked wall a
+basic one, keeps it on its alignment. Of a sub-wall only <strong>Room Bounding</strong> and <strong>Role</strong> change: the
+rest comes from the stacked wall and its type, and its type is changed in the stacked type. <strong>Break
+up into single walls</strong>, in the context menu and with the wall selected, makes each sub-wall an
+independent basic wall where it stands; they do not go back together (Ctrl+Z undoes it). The
+boundary of a stacked wall or of a sub-wall cannot be edited yet.</p>
 <h3 id="the-sub-walls-of-the-type">The sub-walls of the type</h3>
 <p><img alt="The Type sub-walls of the sample stacked type" src="../assets/screens/stacked-wall-sub-walls.png"/></p>
 <p><strong>Type Parameters</strong> of a stacked wall type shows <strong>Sub-walls</strong> with <strong>Edit…</strong>, which opens <strong>Type
@@ -1281,5 +1296,6 @@ Geometry</strong>, phases, and skylights in roofs.</p>
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.footer", "navigation.tracking", "toc.follow", "content.code.copy", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
 <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+<script src="../assets/js/zoom.js"></script>
 </body>
 </html>

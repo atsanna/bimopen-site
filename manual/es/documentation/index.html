@@ -860,7 +860,7 @@ de nombres vuelve a elegir uno.</p>
 </tr>
 <tr>
 <td><strong>Vistas de líneas ocultas</strong></td>
-<td><strong>Procesamiento vectorial</strong> o <strong>Procesamiento de trama</strong> (las páginas como imágenes, con la calidad de trama elegida)</td>
+<td><strong>Procesamiento vectorial</strong> (secciones y alzados imprimen solo las líneas que se ven: las líneas detrás de superficies más cercanas se eliminan, no solo se cubren, y las líneas superpuestas se imprimen una sola vez, de modo que el PDF se abre limpio en otros programas) o <strong>Procesamiento de trama</strong> (las páginas como imágenes, con la calidad de trama elegida)</td>
 </tr>
 <tr>
 <td><strong>Zoom</strong></td>
@@ -872,7 +872,7 @@ de nombres vuelve a elegir uno.</p>
 </tr>
 <tr>
 <td>Opciones</td>
-<td><strong>Mostrar vínculos de vista en azul</strong>, <strong>Ocultar etiquetas de vistas no referenciadas</strong>, <strong>Ocultar límites de recorte</strong>, <strong>Reemplazar medios tonos por líneas finas</strong></td>
+<td><strong>Mostrar vínculos de vista en azul</strong>, <strong>Ocultar etiquetas de vistas no referenciadas</strong>, <strong>Ocultar límites de recorte</strong>, <strong>Reemplazar medios tonos por líneas finas</strong>, <strong>Mantener líneas coincidentes</strong> (desactivada: dos líneas superpuestas en secciones y alzados impresos y exportados se convierten en una; activada: se mantienen ambas, cada una con su propio elemento)</td>
 </tr>
 </tbody>
 </table>
@@ -950,5 +950,6 @@ cambios; <strong>No</strong> los conserva solo para esta sesión.</p>
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.footer", "navigation.tracking", "toc.follow", "content.code.copy", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
 <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+<script src="../assets/js/zoom.js"></script>
 </body>
 </html>

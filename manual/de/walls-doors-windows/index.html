@@ -767,6 +767,14 @@ der Optionsstreifen zeigt:</p>
 <td><strong>Radius</strong></td>
 <td>Nicht verfügbar: er braucht gekrümmte Wände und wird deaktiviert angezeigt</td>
 </tr>
+<tr>
+<td><strong>Verbindung an den Enden</strong></td>
+<td>Noch nicht verfügbar, ausgegraut angezeigt: gezeichnete Wände verbinden sich immer; die Verbindung eines Endes wird danach über sein Steuerelement verhindert</td>
+</tr>
+<tr>
+<td><strong>Automatisches Verbinden</strong></td>
+<td>Noch nicht verfügbar, ausgegraut und angehakt angezeigt: die Wände verbinden sich mit denen, auf die sie treffen</td>
+</tr>
 </tbody>
 </table>
 <p>In der 3D-Ansicht folgt die gezeichnete Wand dem Cursor als Volumen, mit ihrer Dicke und ihrer Höhe bis zur oberen Ebene (oder der eingegebenen Höhe), auf der Ebene des Geschosses, mit Länge und Winkel als temporärer Bemaßung; <strong>Umschalt</strong> hält sie rechtwinklig, <strong>Esc</strong> entfernt sie. Auch <strong>Rechteck</strong>, die Polygone und <strong>Linien wählen</strong> funktionieren dort: die Wände der ganzen Form folgen dem Cursor, und die Linie der Ebene unter dem Cursor wird wie im Grundriss gewählt.</p>
@@ -1050,8 +1058,8 @@ Typs.</p>
 <p>Türen und Fenster erhalten ein <strong>Kennzeichen</strong>, das nach Kategorie hochzählt (1, 2, 3…), ab dem
 höchsten.</p>
 <h2 id="tags">Beschriftungen</h2>
-<p><strong>Tür zeichnen ▸ Beschriftung ▸ Beim Platzieren beschriften</strong> (oder dasselbe für
-Fenster) beschriftet jede Öffnung beim Einsetzen. Der Optionsstreifen bietet dann <strong>Horizontal</strong> oder
+<p><strong>Beim Platzieren beschriften</strong> im Optionsstreifen der Tür- und Fensterwerkzeuge
+beschriftet jede Öffnung beim Einsetzen. Der Optionsstreifen bietet dann <strong>Horizontal</strong> oder
 <strong>Vertikal</strong> und <strong>Führungslinie</strong> mit ihrer Länge. Die Beschriftung einer Tür zeigt ihr
 <strong>Kennzeichen</strong>, die eines Fensters das <strong>Typenkennzeichen</strong> seines Typs. <strong>Dokumentieren ▸ Alle
 beschriften</strong> beschriftet die noch nicht beschrifteten Öffnungen.</p>
@@ -1121,7 +1129,10 @@ einen Vorhangfassadentyp wählt; die Türen und Fenster darin werden gelöscht, 
 Vorhangfassade sie nicht aufnimmt, und eine Meldung sagt es (Rückgängig bringt sie zurück).</p>
 <p>Im Grundriss wird jedes Glaspaneel mit seiner Dicke gezeichnet, die Pfosten werden geschnitten.
 Ein Typ mit <strong>Automatisch einbetten</strong> (die <strong>Ladenfront</strong>), entlang einer Wand gezeichnet,
-schneidet seine Öffnung in diese, im Grundriss, in Schnitten, in 3D und in IFC.</p>
+schneidet seine Öffnung in diese, im Grundriss, in Schnitten, in 3D und in IFC. Die Wand bleibt
+eine einzige Wand: neben und über der Öffnung läuft sie mit ihren Schichten weiter, ihre
+Nettofläche zählt die Öffnung nicht mit, und wird die Fassade verschoben oder in der Größe
+geändert, folgt ihr die Öffnung.</p>
 <ul>
 <li><strong>Vertikales Layout</strong> und horizontales Layout des Typs (<strong>Fester Abstand</strong>, <strong>Feste Anzahl</strong>,
   <strong>Maximaler Abstand</strong>) mit ihrem Abstand sowie <strong>Anzahl vertikaler Raster</strong> und <strong>Vertikale
@@ -1158,18 +1169,24 @@ Die Vorlage enthält eine, <strong>Gestapelte Wand - Putz über Steinsockel</str
 0,9 m hohen Steinsockel): wähle sie in der Typauswahl von <strong>Wand</strong> und zeichne sie wie jede Wand.</p>
 <p>Die gestapelte Wand hält die Linie, die Ebenen und die Höhe; ihre Unterwände folgen ihnen. In
 Grundrissen, Schnitten, Ansichten und in der 3D-Ansicht wird jede Unterwand mit den Schichten
-ihres Typs gezeichnet, in den Farben ihrer Materialien; die Unterwände verbinden sich mit den
-Wänden, auf die sie treffen, und die <strong>Bauteilliste Wände</strong> führt sie auf, je eine Zeile. Eine Tür
+ihres Typs gezeichnet, in den Farben ihrer Materialien. Die Unterwände verbinden sich mit den
+Wänden, auf die sie treffen, jede auf ihrer Höhe: An der Ecke zweier gestapelter Wände trifft Sockel
+auf Sockel und die obere Wand auf die obere Wand, eine Basiswand trifft der Reihe nach auf jede
+Unterwand, und zwei Stapel mit verschiedenen Höhen oder Dicken treffen sich auf jeder gemeinsamen
+Höhe; jede Schicht schließt sich um die Ecke, im Grundriss und in 3D. Die <strong>Bauteilliste Wände</strong>
+führt die Unterwände auf, je eine Zeile. Eine Tür
 oder ein Fenster in einer gestapelten Wand schneidet jede Unterwand, die es durchquert; die
 Brüstung wird von der Basis der gestapelten Wand gemessen.</p>
 <p>Ein Klick wählt die ganze Wand; <strong>Tab</strong> geht zu jeder Unterwand weiter, von unten nach oben (die
-Statusleiste zeigt «Tab · nächstes Element»). Die Eigenschaften der ganzen Wand gelten für alle
-ihre Unterwände; ihre <strong>Ausrichtung</strong> kommt vom Typ und ist schreibgeschützt. An einer Unterwand
-ändern sich nur <strong>Raumbegrenzung</strong> und <strong>Rolle</strong>: der Rest kommt von der gestapelten Wand und
-ihrem Typ, und ihr Typ wird im gestapelten Typ geändert. <strong>In Einzelwände zerlegen</strong>, im
-Kontextmenü und bei ausgewählter Wand, macht jede Unterwand zu einer eigenständigen Basiswand an
-ihrer Stelle; sie werden nicht wieder zusammengesetzt (Strg+Z macht es rückgängig). Die Kontur
-einer gestapelten Wand oder einer Unterwand lässt sich noch nicht bearbeiten.</p>
+Statusleiste zeigt «Tab · nächstes Element»). Die Eigenschaften der ganzen Wand gelten für alle ihre
+Unterwände; ihre <strong>Ausrichtung</strong> ist die Ebene, auf der sie gezeichnet ist, wie bei jeder Wand: die
+Flächen des Bands, das ihre Unterwände füllen, oder der Kern der variablen Unterwand. Erhält eine
+Basiswand einen gestapelten Typ oder eine gestapelte Wand einen Basistyp, bleibt sie auf ihrer
+Ausrichtung. An einer Unterwand ändern sich nur <strong>Raumbegrenzung</strong> und <strong>Rolle</strong>: der Rest kommt von
+der gestapelten Wand und ihrem Typ, und ihr Typ wird im gestapelten Typ geändert. <strong>In Einzelwände
+zerlegen</strong>, im Kontextmenü und bei ausgewählter Wand, macht jede Unterwand zu einer eigenständigen
+Basiswand an ihrer Stelle; sie werden nicht wieder zusammengesetzt (Strg+Z macht es rückgängig). Die
+Kontur einer gestapelten Wand oder einer Unterwand lässt sich noch nicht bearbeiten.</p>
 <h3 id="the-sub-walls-of-the-type">Die Unterwände des Typs</h3>
 <p><img alt="Die Typ-Unterwände der gestapelten Wand der Vorlage" src="../assets/screens/stacked-wall-sub-walls.png"/></p>
 <p>Die <strong>Typparameter</strong> eines gestapelten Wandtyps zeigen <strong>Unterwände</strong> mit <strong>Bearbeiten…</strong>, das
@@ -1317,5 +1334,6 @@ Geometrie verbinden, Phasen und Dachfenster in Dächern.</p>
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.footer", "navigation.tracking", "toc.follow", "content.code.copy", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}}</script>
 <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+<script src="../assets/js/zoom.js"></script>
 </body>
 </html>

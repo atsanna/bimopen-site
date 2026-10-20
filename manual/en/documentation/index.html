@@ -843,7 +843,7 @@ picks one again.</p>
 </tr>
 <tr>
 <td><strong>Hidden line views</strong></td>
-<td><strong>Vector Processing</strong> or <strong>Raster Processing</strong> (the pages as images, at the raster quality chosen)</td>
+<td><strong>Vector Processing</strong> (sections and elevations print only the lines that are seen: the lines behind nearer surfaces are removed, not just covered, and lines lying on one another print once, so the PDF opens clean in other programs) or <strong>Raster Processing</strong> (the pages as images, at the raster quality chosen)</td>
 </tr>
 <tr>
 <td><strong>Zoom</strong></td>
@@ -855,7 +855,7 @@ picks one again.</p>
 </tr>
 <tr>
 <td>Options</td>
-<td><strong>Show view links in blue</strong>, <strong>Hide unreferenced view tags</strong>, <strong>Hide crop boundaries</strong>, <strong>Replace halftone with thin lines</strong></td>
+<td><strong>Show view links in blue</strong>, <strong>Hide unreferenced view tags</strong>, <strong>Hide crop boundaries</strong>, <strong>Replace halftone with thin lines</strong>, <strong>Keep coincident lines</strong> (off: two lines lying on one another in printed and exported sections and elevations become one; on: both stay, each with its own element)</td>
 </tr>
 </tbody>
 </table>
@@ -932,5 +932,6 @@ and dragging pans; <strong>Print…</strong> prints, <strong>Close</strong> goes
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.footer", "navigation.tracking", "toc.follow", "content.code.copy", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
 <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+<script src="../assets/js/zoom.js"></script>
 </body>
 </html>

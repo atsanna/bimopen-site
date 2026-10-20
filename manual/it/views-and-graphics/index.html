@@ -628,12 +628,28 @@ viste 3D le disegna la scheda grafica (il processore quando non c'è). In <stron
 un'ombra è un grigio della carta, negli stili ombreggiati scurisce i colori dei materiali. Le facce
 tagliate dalla vista restano in luce.</p>
 <p><strong>La traiettoria del sole</strong> è un anello intorno al modello con i punti cardinali al nord vero,
-l'arco del giorno con le sue ore, l'analemma (dove sta il sole a quell'ora durante l'anno), il tratto
-che uno studio percorre, e il sole con la sua ora e data. In pianta, in sezione e in prospetto il
-sole si trascina: lungo il giorno si aggancia ai quarti d'ora, lungo l'analemma al 1° di ogni mese;
-con <span class="keys"><kbd class="key-shift">Shift</kbd></span> resta sul giorno, con <span class="keys"><kbd class="key-control">Ctrl</kbd></span> sull'analemma. Con la vista sotto il cursore (e nulla
-selezionato, o dopo un clic sul sole), <span class="keys"><kbd class="key-arrow-left">Left</kbd></span> e <span class="keys"><kbd class="key-arrow-right">Right</kbd></span> spostano l'ora, <span class="keys"><kbd class="key-arrow-up">Up</kbd></span> e <span class="keys"><kbd class="key-arrow-down">Down</kbd></span> la
-data. Con <strong>Luce fissa</strong> il sole sta fermo e non ha traiettoria.</p>
+l'arco del giorno con le sue ore, l'analemma (dove sta il sole a quell'ora durante l'anno: un otto
+continuo, ogni giorno all'ora d'orologio della data scelta), il tratto che uno studio percorre, e il
+sole con la sua ora e data; in una vista 3D è una cupola sopra l'anello. In pianta, in sezione, in
+prospetto e in 3D il sole si trascina: lungo il giorno si aggancia ai quarti d'ora, lungo l'anno
+segue l'analemma giorno per giorno (al cambio dell'ora legale l'orologio si sposta del cambio, così
+il sole non salta); <span class="keys"><kbd class="key-shift">Shift</kbd></span> mentre trascini prende l'altro, e <strong>Lungo la giornata</strong> / <strong>Lungo
+l’anno</strong> nel menu della traiettoria scelgono quale viene prima. Le ombre seguono il trascinamento:
+in pianta, in sezione e in prospetto, mentre il sole si muove, sono una bozza più grossolana, ogni
+vista mostra le sue ultime ombre finché le nuove non sono pronte, e sono disegnate per intero quando
+il sole viene rilasciato.
+Con la vista sotto il cursore (e nulla selezionato, o dopo un clic sul sole), <span class="keys"><kbd class="key-arrow-left">Left</kbd></span> e <span class="keys"><kbd class="key-arrow-right">Right</kbd></span>
+spostano l'ora, <span class="keys"><kbd class="key-arrow-up">Up</kbd></span> e <span class="keys"><kbd class="key-arrow-down">Down</kbd></span> la data. Con <strong>Luce fissa</strong> il sole sta fermo e non ha traiettoria.</p>
+<p>Il menu della traiettoria (nella barra della vista, nel menu della vista e in modalità touch) ha
+anche gli <strong>Aiuti visivi</strong> per leggerla: <strong>Linee verticali delle ore</strong> (da ogni ora pari una linea tratteggiata
+scende a terra e va all'anello, con l'ora lì; in pianta un punto sull'anello), <strong>Proiezione a terra
+dell’arco</strong>, <strong>Mezzogiorno del sole</strong> (il punto più alto dell'arco con la sua ora d'orologio, e la
+linea nord–sud), <strong>Fascia dell’anno</strong> (il cielo che il sole attraversa nell'anno, in giallo tenue,
+gli archi dei solstizi e dell'equinozio, gli analemmi delle ore pari), <strong>Alba e tramonto</strong> (segni
+sull'anello con le loro ore; la barra della vista le mostra con la durata del giorno) e
+<strong>Analemma</strong>; tutti tranne la proiezione sono attivi all'inizio. In una vista 3D ciò che sta dietro
+al modello è nascosto da esso. Le <strong>Impostazioni del sole</strong> mostrano anche albe e tramonti
+dell'anno in un grafico: un clic o un trascinamento sul grafico sceglie il giorno.</p>
 <p><strong>Sole comune</strong>: le viste condividono il sole del progetto, a meno che ne abbiano uno proprio (la
 proprietà <strong>Sole comune</strong>). Spostare il sole comune in una vista lo sposta in tutte le viste che lo
 condividono; una vista con il proprio sole non cambia. <strong>Sole comune a tutte le viste</strong> nelle
@@ -678,8 +694,11 @@ nell'intestazione:</p>
 </tbody>
 </table>
 <p>Poi la <strong>Località</strong> del progetto (una città, o <strong>Personalizzata</strong> con latitudine e longitudine: una
-  sola per tutto il progetto) con l'<strong>Ora legale</strong>, e <strong>Ombre sul livello</strong> con il suo <strong>Livello del
-  terreno</strong>;
+  sola per tutto il progetto; una località personalizzata prende il fuso orario della città più
+  vicina; un nuovo progetto parte da <strong>Roma</strong>, la casa di esempio sta a <strong>Cagliari</strong>) con l'<strong>Ora legale</strong>, che è automatica: la regola del luogo (Europa, Nord America, Cile,
+  Australia sud-orientale, Nuova Zelanda, Egitto, o nessuna) e la domenica esatta dell'<strong>Anno</strong> del
+  sole, così le ore della traiettoria e degli studi sono quelle dell'orologio; la regola si può
+  cambiare. Poi <strong>Ombre sul livello</strong> con il suo <strong>Livello del terreno</strong>;
 - a destra l'anteprima: il cielo visto dall'alto, con la traiettoria del giorno, l'analemma e il
   sole. <strong>Anteprima</strong> nell'intestazione, a destra dei valori, è un interruttore che la nasconde e
   la mostra; la finestra tiene la sua dimensione, e senza anteprima le impostazioni ne prendono lo spazio.</p>
@@ -781,7 +800,9 @@ fermano sotto di esso. Ogni strato tagliato ha il retino di sezione del suo mate
 basso</strong>, impostabili sui tipi di muro, pavimento e tetto; altrimenti solo il contorno).
 Arredi e apparecchi sanitari non si tagliano mai: si vedono interi. Una finestra è tagliata con
 il telaio nella linea spessa di taglio e il vetro in linee sottili; ciò che sta oltre il taglio è
-disegnato con le linee di proiezione, più sottili.</p>
+disegnato con le linee di proiezione, più sottili. Oltre il taglio, e nei prospetti, una faccia
+davanti nasconde ciò che sta dietro, e il vetro di una finestra è opaco: ogni finestra mostra il suo
+telaio e il suo vetro, non i locali dietro.</p>
 <p><strong>Ritaglia vista</strong> ritaglia la vista alla sua regione di taglio, <strong>Mostra regione di taglio</strong>
 disegna la regione; trascina i suoi bordi per ridimensionarla. Per digitarne la dimensione:
 <strong>Proprietà ▸ Dimensioni ritaglio ▸ Modifica…</strong>, poi <strong>Larghezza</strong> e <strong>Altezza</strong>; la regione
@@ -934,5 +955,6 @@ destra.</p>
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.footer", "navigation.tracking", "toc.follow", "content.code.copy", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiato", "clipboard.copy": "Copia", "search.result.more.one": "1 altro in questa pagina", "search.result.more.other": "# altri in questa pagina", "search.result.none": "Nessun documento trovato", "search.result.one": "1 documento trovato", "search.result.other": "# documenti trovati", "search.result.placeholder": "Scrivi per iniziare a cercare", "search.result.term.missing": "Non presente", "select.version": "Seleziona la versione"}}</script>
 <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+<script src="../assets/js/zoom.js"></script>
 </body>
 </html>

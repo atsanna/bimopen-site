@@ -863,7 +863,7 @@ Namensliste wählt einen wieder.</p>
 </tr>
 <tr>
 <td><strong>Ansichten mit verdeckten Linien</strong></td>
-<td><strong>Vektorverarbeitung</strong> oder <strong>Rasterverarbeitung</strong> (die Seiten als Bilder, in der gewählten Rasterqualität)</td>
+<td><strong>Vektorverarbeitung</strong> (Schnitte und Ansichten drucken nur die sichtbaren Linien: Linien hinter näheren Flächen werden entfernt, nicht nur verdeckt, und übereinanderliegende Linien werden einmal gedruckt, sodass sich das PDF in anderen Programmen sauber öffnet) oder <strong>Rasterverarbeitung</strong> (die Seiten als Bilder, in der gewählten Rasterqualität)</td>
 </tr>
 <tr>
 <td><strong>Zoom</strong></td>
@@ -875,7 +875,7 @@ Namensliste wählt einen wieder.</p>
 </tr>
 <tr>
 <td>Optionen</td>
-<td><strong>Ansichtsverknüpfungen in Blau anzeigen</strong>, <strong>Nicht referenzierte Ansichtsmarken ausblenden</strong>, <strong>Zuschneidebereiche ausblenden</strong>, <strong>Halbton durch dünne Linien ersetzen</strong></td>
+<td><strong>Ansichtsverknüpfungen in Blau anzeigen</strong>, <strong>Nicht referenzierte Ansichtsmarken ausblenden</strong>, <strong>Zuschneidebereiche ausblenden</strong>, <strong>Halbton durch dünne Linien ersetzen</strong>, <strong>Deckungsgleiche Linien beibehalten</strong> (aus: zwei übereinanderliegende Linien in gedruckten und exportierten Schnitten und Ansichten werden zu einer; an: beide bleiben, jede mit ihrem eigenen Element)</td>
 </tr>
 </tbody>
 </table>
@@ -953,5 +953,6 @@ sie, das Mausrad zoomt und Ziehen verschiebt; <strong>Drucken…</strong> druckt
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.footer", "navigation.tracking", "toc.follow", "content.code.copy", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}}</script>
 <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+<script src="../assets/js/zoom.js"></script>
 </body>
 </html>

@@ -297,6 +297,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#dialogs">
+<span class="md-ellipsis">
+      Boîtes de dialogue
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#drawing-area-and-view-windows">
 <span class="md-ellipsis">
       Zone de dessin et fenêtres de vue
@@ -343,6 +350,13 @@
 <a class="md-nav__link" href="#the-context-menu-of-a-view">
 <span class="md-ellipsis">
       Le menu contextuel d'une vue
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#snaps">
+<span class="md-ellipsis">
+      Accrochage
     </span>
 </a>
 </li>
@@ -590,6 +604,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#dialogs">
+<span class="md-ellipsis">
+      Boîtes de dialogue
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#drawing-area-and-view-windows">
 <span class="md-ellipsis">
       Zone de dessin et fenêtres de vue
@@ -636,6 +657,13 @@
 <a class="md-nav__link" href="#the-context-menu-of-a-view">
 <span class="md-ellipsis">
       Le menu contextuel d'une vue
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#snaps">
+<span class="md-ellipsis">
+      Accrochage
     </span>
 </a>
 </li>
@@ -963,12 +991,6 @@ n'exécute pas encore sont grisées, et leur info-bulle dit « Pas encore dispon
 <tr>
 <td></td>
 <td></td>
-<td><strong>Armatures</strong></td>
-<td><em>Armature</em>, <em>Armature sur une surface</em>, <em>Armature le long d'un tracé</em>, <em>Treillis sur une surface</em>, <em>Treillis unique</em>, <em>Enrobage</em>, <em>Manchon</em>, <em>Armature adaptative</em>, <em>Options d'enrobage</em>, <em>Options d'armature</em></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
 <td><strong>Éléments 3D</strong></td>
 <td><strong>Objet ▾</strong>, <em>Texte 3D</em>, <em>Ligne 3D</em>, <em>Groupe ▾</em></td>
 </tr>
@@ -1025,6 +1047,24 @@ n'exécute pas encore sont grisées, et leur info-bulle dit « Pas encore dispon
 <td></td>
 <td><strong>Autres réseaux</strong></td>
 <td><em>Plomberie ▾</em>, <em>Électricité ▾</em>, <em>Modélisation ▾</em>, <strong>Plan de construction ▾</strong></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Béton armé</strong></td>
+<td><strong>Armatures</strong></td>
+<td><em>Armature</em>, <em>Armature le long d'un tracé</em>, <em>Armature adaptative</em>, <em>Armature sur une surface</em>, <em>Treillis sur une surface</em>, <em>Treillis unique</em>, <em>Enrobage</em>, <em>Manchon</em></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><strong>Paramètres</strong></td>
+<td><em>Options d'enrobage</em>, <em>Options d'armature</em></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><strong>Plan de construction</strong></td>
+<td><strong>Définir</strong>, <strong>Afficher</strong>, <strong>Plan guide</strong>, <em>Vue du plan</em></td>
 </tr>
 <tr>
 <td></td>
@@ -1387,6 +1427,8 @@ n'est ouvert, ils sont grisés, et leur info-bulle indique d'ouvrir d'abord un p
 <p><strong>Enregistrer la vue</strong> ne fonctionne que lorsqu'une vue 3D est ouverte, et <strong>Dupliquer avec
 détails</strong> uniquement pour les vues qui ne sont pas en 3D. Sous les outils, la carte <strong>Index du
 projet</strong> contient toute l'arborescence du projet.</p>
+<p>Chaque menu ▾ liste aussi, grisées, les entrées pas encore disponibles ; la recherche des
+commandes les trouve toutes.</p>
 <h3 id="the-manage-tab">Les outils de Paramètres</h3>
 <table>
 <thead>
@@ -1408,10 +1450,8 @@ projet</strong> contient toute l'arborescence du projet.</p>
 </table>
 <p><strong>Accrochage</strong> active et désactive l'accrochage pour tout le programme : il est mis en évidence
 lorsqu'il est actif, comme l'interrupteur <strong>Accrochage</strong> de la barre d'état.
-<strong>Paramètres supplémentaires ▸ Accrochages…</strong> propose <strong>Accrochages désactivés</strong> et les
-<strong>Incréments d'accrochage des cotes linéaires</strong> (longueurs séparées par des points-virgules, par
-défaut 1000; 100; 10 mm) : là où aucun élément n'accroche, le curseur avance par pas du plus grand
-d'entre eux qui ne dépasse pas un pixel au zoom courant.</p>
+<strong>Paramètres supplémentaires ▸ Accrochages…</strong> ouvre la fenêtre <strong>Accrochage</strong> : les incréments de
+longueur et d'angle, les accrochages aux objets et les remplacements (voir <a href="#snaps">Accrochage</a>).</p>
 <h3 id="the-contextual-tab">La carte contextuelle</h3>
 <p><img alt="L'outil mur au travail : la carte contextuelle en haut du panneau d'outils et le bandeau des options au-dessus de la vue" src="../assets/screens/bimopen-wall.png"/></p>
 <p>Lorsque vous lancez un outil ou sélectionnez quelque chose, une carte vient en haut du panneau
@@ -1509,7 +1549,15 @@ puis les réglages de l'outil. Ils s'appliquent aux prochains éléments que vou
 <tbody>
 <tr>
 <td><strong>Mur</strong></td>
-<td><strong>Hauteur</strong> ou <strong>Profondeur</strong> ; le niveau qu'atteint le mur, ou <strong>Non lié</strong> avec sa valeur ; <strong>Alignement</strong> ; <strong>Continuer</strong> ; <strong>Décaler</strong> ; <strong>Rayon</strong> (grisé : les murs courbes ne sont pas encore disponibles) ; <strong>Extérieur à gauche</strong> ou <strong>Extérieur à droite</strong> (la barre d'espace les permute)</td>
+<td><strong>Hauteur</strong> ou <strong>Profondeur</strong> ; le niveau qu'atteint le mur, ou <strong>Non lié</strong> avec sa valeur ; <strong>Alignement</strong> ; <strong>Continuer</strong> ; <strong>Décalage</strong> ; <strong>Rayon</strong> (grisé : les murs courbes ne sont pas encore disponibles) ; <strong>Jonction aux extrémités</strong> et <strong>Jonction automatique</strong> (grisées) ; <strong>Extérieur à gauche</strong> ou <strong>Extérieur à droite</strong> (la barre d'espace les permute)</td>
+</tr>
+<tr>
+<td><strong>Porte</strong>, <strong>Fenêtre</strong></td>
+<td><strong>Charger la famille</strong> ; <strong>Modéliser sur place</strong> (grisé) ; <strong>Étiqueter lors du placement</strong> avec <strong>Horizontale</strong> ou <strong>Verticale</strong>, <strong>Ligne de repère</strong> et sa longueur ; <strong>Étiquettes chargées…</strong> (grisé)</td>
+</tr>
+<tr>
+<td><strong>Objet</strong></td>
+<td><strong>Charger la famille</strong> ; <strong>Modéliser sur place</strong> (grisé) ; <strong>Faire pivoter après l'insertion</strong> : l'objet placé reste sélectionné et <strong>Faire pivoter</strong> démarre</td>
 </tr>
 <tr>
 <td><strong>Toit</strong></td>
@@ -1707,6 +1755,18 @@ l'avez mis lors des sessions suivantes.</p>
 dessinés, chacun comme le panneau qu'il deviendra. L'endroit sous le pointeur est dessiné
 nettement, les autres à peine. Ailleurs rien n'est dessiné, et le panneau reste flottant là où
 vous le lâchez.</p>
+<h2 id="dialogs">Boîtes de dialogue</h2>
+<p>Chaque boîte de dialogue s'ouvre au milieu de l'écran, chaque fois qu'elle s'ouvre, même si elle a
+été déplacée la dernière fois ou si la fenêtre a changé de taille. Une fois ouverte, elle reste où
+elle est : faites-la glisser par sa barre de titre pour la déplacer. Un changement à l'intérieur,
+comme l'interrupteur <strong>Aperçu</strong>, ne la déplace pas.</p>
+<p>Chaque boîte de dialogue a une taille fixe, qui ne change pas avec son contenu. Font exception les
+boîtes construites autour d'une longue liste ou d'un long tableau (matériaux, visibilité/graphismes,
+styles d'objet, filtres, styles et motifs de ligne, motifs de remplissage, épaisseurs de ligne,
+propriétés de nomenclature, paramètres de projet et partagés, raccourcis clavier, purger les
+éléments inutilisés, classes d'exportation IFC, gabarits de vue) : en faisant glisser un de leurs
+bords on les agrandit, jamais plus petites qu'à leur première ouverture ni plus grandes que
+l'écran, et la liste grandit avec elles. Elles se rouvrent au milieu avec la dernière taille donnée.</p>
 <h2 id="drawing-area-and-view-windows">Zone de dessin et fenêtres de vue</h2>
 <p>Chaque vue que vous ouvrez est une fenêtre dans la zone de dessin. Une vue ouverte à nouveau passe
 au premier plan ; au moins une fenêtre reste toujours ouverte. En haut à gauche de la vue, le
@@ -1908,7 +1968,39 @@ sélection, d'abord les commandes de modification (<strong>Déplacer</strong>, <
   les catégories de la sélection ;</li>
 <li><strong>Visibilité et graphisme…</strong>.</li>
 </ul>
-<p>Lorsqu'un outil est actif, un clic droit ouvre plutôt le menu de l'outil, et l'étape en cours reste : <strong>Annuler</strong> (ce que fait <span class="keys"><kbd class="key-escape">Esc</kbd></span>, qui annule toujours l'étape), <strong>Répéter [commande]</strong>, <strong>Remplacements d'accrochage ▸</strong> (l'accrochage du point suivant, comme les touches <code>SE</code>, <code>SM</code>, <code>SN</code>, <code>SI</code> et <code>SO</code> ; seulement dans les plans et les vues 2D libres), <strong>Zoom sur une région</strong>, <strong>Zoom arrière (2x)</strong>, <strong>Zoom adapté à la fenêtre</strong>, <strong>Panoramique/zoom précédent</strong>, <strong>Panoramique/zoom suivant</strong> et <strong>Propriétés</strong>. C'est le même dans les plans, les coupes, les élévations, les vues 3D et sur les feuilles. Dans une esquisse, les remplacements valent dans toutes les vues, avec aussi <strong>Centre</strong> et <strong>Perpendiculaire</strong>. Menu ouvert, <span class="keys"><kbd class="key-escape">Esc</kbd></span> ou un clic dans la vue ne font que le fermer.</p>
+<p>Lorsqu'un outil est actif, un clic droit ouvre plutôt le menu de l'outil, et l'étape en cours reste : <strong>Annuler</strong> (ce que fait <span class="keys"><kbd class="key-escape">Esc</kbd></span>, qui annule toujours l'étape), <strong>Répéter [commande]</strong>, <strong>Remplacements d'accrochage ▸</strong> (l'accrochage du point suivant, comme les touches à deux lettres ; dans toutes les vues, voir <a href="#snaps">Accrochage</a>), <strong>Zoom sur une région</strong>, <strong>Zoom arrière (2x)</strong>, <strong>Zoom adapté à la fenêtre</strong>, <strong>Panoramique/zoom précédent</strong>, <strong>Panoramique/zoom suivant</strong> et <strong>Propriétés</strong>. C'est le même dans les plans, les coupes, les élévations, les vues 3D et sur les feuilles. Menu ouvert, <span class="keys"><kbd class="key-escape">Esc</kbd></span> ou un clic dans la vue ne font que le fermer.</p>
+<h3 id="snaps">Accrochage</h3>
+<p><strong>Paramètres supplémentaires ▸ Accrochages…</strong> (dans le style BIMopen la commande
+<strong>Accrochages…</strong>) ouvre la fenêtre <strong>Accrochage</strong>, la même dans les deux styles :</p>
+<ul>
+<li><strong>Accrochages désactivés</strong> éteint tout (comme l'interrupteur <strong>Accrochage</strong> de la barre d'état,
+  qui reste tel quel à la réouverture du programme).</li>
+<li><strong>Incréments d'accrochage des cotes linéaires</strong> et <strong>des cotes angulaires</strong>, chacun avec sa case :
+  valeurs séparées par des points-virgules (par défaut 1000 ; 100 ; 10 mm et 90° ; 45° ; 15° ; 5° ;
+  1°). Le zoom choisit le pas : en zoom avant, des pas plus fins.</li>
+<li><strong>Accrochages aux objets</strong> : une case pour <strong>Extrémité</strong>, <strong>Milieu</strong>, <strong>Le plus proche</strong>, <strong>Grille du plan
+  de construction</strong>, <strong>Quadrant</strong>, <strong>Intersection</strong>, <strong>Centre</strong>, <strong>Perpendiculaire</strong>, <strong>Tangente</strong>
+  et <strong>Objets distants</strong>, avec leurs deux lettres ; <strong>Tout sélectionner</strong> et <strong>Tout désélectionner</strong>. <strong>Le plus
+  proche</strong> éteint, la ligne sous le curseur offre encore ses extrémités et son milieu, même lointains.
+  <strong>Objets distants</strong> (désactivé au départ) aligne le point, horizontalement ou verticalement, sur les extrémités de
+  lignes lointaines, avec un guide en tirets.</li>
+<li><strong>Remplacements temporaires</strong> : la liste des deux lettres valables pour un point.</li>
+<li><strong>Restaurer les valeurs par défaut</strong> remet tout comme au début.</li>
+</ul>
+<p>Les réglages appartiennent au programme, pas au projet : ils restent d'une session à l'autre.</p>
+<p>En dessinant depuis un point (murs, lignes, quadrillages, plans de référence, esquisses, et le
+second rayon de <strong>Faire pivoter</strong>), le segment accroche sa direction de la même façon dans toutes les
+vues : horizontale ou verticale, parallèle ou perpendiculaire à une ligne proche, ou un multiple
+de l'incrément angulaire que donne le zoom ; seulement quand le curseur est à quelques pixels de
+cette direction, sinon l'angle reste libre. Un guide en tirets suit la direction, un arc avec la
+valeur montre l'angle, et la barre d'état dit par exemple <em>Accrochage : Angle 30° · pas 15°</em>. La
+longueur est arrondie à l'incrément linéaire. <strong>Angle mesuré depuis</strong>, dans la barre des options,
+compte les angles depuis l'<strong>Axe horizontal</strong> de la vue ou depuis le <strong>Segment précédent</strong>. Dans
+la vue 3D tout se mesure sur le plan de construction (le plan du niveau). En ligne de commande,
+<code>snap {"angles":[45,15],"objects":{"quadrant":false}}</code> change les réglages et <code>snap</code> seul les
+affiche.</p>
+<p>La commande <code>anglesnap 0,0 3,0.02</code> (aussi via MCP, et <code>snap</code> avec deux points) renvoie la
+direction où un segment s'accroche, selon les mêmes règles que toutes les vues.</p>
 <p>En haut du menu, <strong>Répéter [commande]</strong> relance le dernier outil utilisé ; <span class="keys"><kbd class="key-enter">Enter</kbd></span> fait de même quand aucun outil n'est actif et que la ligne de commande est vide. Le menu est le même dans les plans, les coupes et les vues 3D.</p>
 <h2 id="command-line">Recherche de commandes et ligne de commande</h2>
 <p><img alt="La recherche de commandes : les commandes, éléments et vues qui correspondent à ce qui est tapé" src="../assets/screens/bimopen-search.png"/></p>
@@ -2012,5 +2104,6 @@ tactile</a>.</p>
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.footer", "navigation.tracking", "toc.follow", "content.code.copy", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
 <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+<script src="../assets/js/zoom.js"></script>
 </body>
 </html>

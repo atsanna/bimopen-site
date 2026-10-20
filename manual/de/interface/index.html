@@ -297,6 +297,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#dialogs">
+<span class="md-ellipsis">
+      Dialoge
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#drawing-area-and-view-windows">
 <span class="md-ellipsis">
       Zeichenbereich und Ansichtsfenster
@@ -343,6 +350,13 @@
 <a class="md-nav__link" href="#the-context-menu-of-a-view">
 <span class="md-ellipsis">
       Das Kontextmenü einer Ansicht
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#snaps">
+<span class="md-ellipsis">
+      Fang
     </span>
 </a>
 </li>
@@ -590,6 +604,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#dialogs">
+<span class="md-ellipsis">
+      Dialoge
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#drawing-area-and-view-windows">
 <span class="md-ellipsis">
       Zeichenbereich und Ansichtsfenster
@@ -636,6 +657,13 @@
 <a class="md-nav__link" href="#the-context-menu-of-a-view">
 <span class="md-ellipsis">
       Das Kontextmenü einer Ansicht
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#snaps">
+<span class="md-ellipsis">
+      Fang
     </span>
 </a>
 </li>
@@ -963,12 +991,6 @@ ausführt, sind ausgegraut, und ihr Tipp sagt „Noch nicht verfügbar“; <stro
 <tr>
 <td></td>
 <td></td>
-<td><strong>Bewehrung</strong></td>
-<td><em>Bewehrung</em>, <em>Flächenbewehrung</em>, <em>Bewehrung entlang eines Pfads</em>, <em>Flächenmatte</em>, <em>Einzelmatte</em>, <em>Betondeckung</em>, <em>Muffe</em>, <em>Anpassbare Bewehrung</em>, <em>Betondeckungsoptionen</em>, <em>Bewehrungsoptionen</em></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
 <td><strong>3D-Elemente</strong></td>
 <td><strong>Objekt ▾</strong>, <em>3D-Text</em>, <em>3D-Linie</em>, <em>Gruppe ▾</em></td>
 </tr>
@@ -1025,6 +1047,24 @@ ausführt, sind ausgegraut, und ihr Tipp sagt „Noch nicht verfügbar“; <stro
 <td></td>
 <td><strong>Weitere Anlagen</strong></td>
 <td><em>Sanitär ▾</em>, <em>Elektro ▾</em>, <em>Modellierung ▾</em>, <strong>Arbeitsebene ▾</strong></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Stahlbeton</strong></td>
+<td><strong>Bewehrung</strong></td>
+<td><em>Bewehrung</em>, <em>Bewehrung entlang eines Pfads</em>, <em>Anpassbare Bewehrung</em>, <em>Flächenbewehrung</em>, <em>Flächenmatte</em>, <em>Einzelmatte</em>, <em>Betondeckung</em>, <em>Muffe</em></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><strong>Einstellungen</strong></td>
+<td><em>Betondeckungsoptionen</em>, <em>Bewehrungsoptionen</em></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><strong>Arbeitsebene</strong></td>
+<td><strong>Festlegen</strong>, <strong>Anzeigen</strong>, <strong>Führungsebene</strong>, <em>Ebenenansicht</em></td>
 </tr>
 <tr>
 <td></td>
@@ -1389,6 +1429,8 @@ geöffnet ist, sind sie ausgegraut, und ihre QuickInfo fordert dazu auf, zuerst 
 <p><strong>Ansicht speichern</strong> funktioniert nur, solange eine 3D-Ansicht geöffnet ist, und <strong>Mit
 Detaillierung duplizieren</strong> nur für Ansichten, die keine 3D-Ansichten sind. Unter den Werkzeugen
 enthält die Karte <strong>Projektindex</strong> den ganzen Baum des Projekts.</p>
+<p>Jedes ▾-Menü listet ausgegraut auch die noch nicht verfügbaren Einträge auf; die Befehlssuche
+findet sie alle.</p>
 <h3 id="the-manage-tab">Die Werkzeuge von Einstellungen</h3>
 <table>
 <thead>
@@ -1410,9 +1452,8 @@ enthält die Karte <strong>Projektindex</strong> den ganzen Baum des Projekts.</
 </table>
 <p><strong>Fang</strong> schaltet den Objektfang für das ganze Programm ein und aus: Solange er eingeschaltet ist,
 ist die Kachel hervorgehoben, wie der Schalter <strong>Fang</strong> der Statusleiste. <strong>Weitere Einstellungen ▸
-Fangen…</strong> enthält <strong>Fangen aus</strong> und die <strong>Fangschritte für Längenmaße</strong> (durch Semikolon getrennte
-Längen, standardmäßig 1000; 100; 10 mm): Wo kein Element fängt, bewegt sich der Cursor in Schritten
-des größten Werts, der beim aktuellen Zoom nicht länger als ein Pixel ist.</p>
+Fangen…</strong> öffnet das Fenster <strong>Fang</strong>: die Längen- und Winkelinkremente, die Objektfänge und die
+Überschreibungen (siehe <a href="#snaps">Fang</a>).</p>
 <h3 id="the-contextual-tab">Die kontextabhängige Karte</h3>
 <p><img alt="Das Wandwerkzeug bei der Arbeit: die kontextabhängige Karte oben im Werkzeugbereich und der Optionsstreifen über der Ansicht" src="../assets/screens/bimopen-wall.png"/></p>
 <p>Wenn Sie ein Werkzeug starten oder etwas auswählen, erscheint oben im Werkzeugbereich eine Karte,
@@ -1511,7 +1552,15 @@ platzieren.</p>
 <tbody>
 <tr>
 <td><strong>Wand</strong></td>
-<td><strong>Höhe</strong> oder <strong>Tiefe</strong>; die Ebene, bis zu der die Wand reicht, oder <strong>Nicht verbunden</strong> mit ihrem Wert; <strong>Ausrichtung</strong>; <strong>Fortsetzen</strong>; <strong>Versatz</strong>; <strong>Radius</strong> (ausgegraut: gekrümmte Wände sind noch nicht verfügbar); <strong>Außenseite links</strong> oder <strong>Außenseite rechts</strong> (die Leertaste vertauscht sie)</td>
+<td><strong>Höhe</strong> oder <strong>Tiefe</strong>; die Ebene, bis zu der die Wand reicht, oder <strong>Nicht verbunden</strong> mit ihrem Wert; <strong>Ausrichtung</strong>; <strong>Fortsetzen</strong>; <strong>Versatz</strong>; <strong>Radius</strong> (ausgegraut: gekrümmte Wände sind noch nicht verfügbar); <strong>Verbindung an den Enden</strong> und <strong>Automatisches Verbinden</strong> (ausgegraut); <strong>Außenseite links</strong> oder <strong>Außenseite rechts</strong> (die Leertaste vertauscht sie)</td>
+</tr>
+<tr>
+<td><strong>Tür</strong>, <strong>Fenster</strong></td>
+<td><strong>Familie laden</strong>; <strong>Vor Ort modellieren</strong> (ausgegraut); <strong>Beim Platzieren beschriften</strong> mit <strong>Horizontal</strong> oder <strong>Vertikal</strong>, <strong>Führungslinie</strong> und ihrer Länge; <strong>Geladene Beschriftungen…</strong> (ausgegraut)</td>
+</tr>
+<tr>
+<td><strong>Objekt</strong></td>
+<td><strong>Familie laden</strong>; <strong>Vor Ort modellieren</strong> (ausgegraut); <strong>Nach dem Einfügen drehen</strong>: das platzierte Objekt bleibt ausgewählt und <strong>Drehen</strong> beginnt</td>
 </tr>
 <tr>
 <td><strong>Dach</strong></td>
@@ -1710,6 +1759,18 @@ nächsten Sitzungen dort, wo Sie ihn hingesetzt haben.</p>
 jede als der Bereich, der er dort wird. Die Stelle unter dem Zeiger ist kräftig gezeichnet, die
 anderen nur angedeutet. Anderswo wird nichts gezeichnet, und der Bereich schwebt, wo Sie ihn
 loslassen.</p>
+<h2 id="dialogs">Dialoge</h2>
+<p>Jeder Dialog öffnet sich in der Mitte des Bildschirms, jedes Mal, wenn er sich öffnet, auch wenn er
+beim letzten Mal verschoben wurde oder das Fenster seine Größe geändert hat. Einmal geöffnet, bleibt
+er, wo er ist: Ziehen Sie ihn an seiner Titelleiste, um ihn zu verschieben. Eine Änderung in ihm,
+wie der Schalter <strong>Vorschau</strong>, verschiebt ihn nicht.</p>
+<p>Jeder Dialog hat eine feste Größe, die sich mit seinem Inhalt nicht ändert. Eine Ausnahme sind die
+Dialoge, die um eine lange Liste oder Tabelle gebaut sind (Materialien, Sichtbarkeit/Grafiken,
+Objektstile, Filter, Linienstile und Linienmuster, Füllmuster, Linienstärken,
+Bauteillisteneigenschaften, Projekt- und gemeinsam genutzte Parameter, Tastaturkürzel, Nicht
+verwendete bereinigen, IFC-Exportklassen, Ansichtsvorlagen): Durch Ziehen an einem ihrer Ränder
+werden sie größer, nie kleiner als beim ersten Öffnen und nie größer als der Bildschirm, und die
+Liste wächst mit. Sie öffnen sich wieder in der Mitte mit der zuletzt gegebenen Größe.</p>
 <h2 id="drawing-area-and-view-windows">Zeichenbereich und Ansichtsfenster</h2>
 <p>Jede geöffnete Ansicht ist ein Fenster im Zeichenbereich. Eine erneut geöffnete Ansicht kommt nach
 vorn; mindestens ein Fenster bleibt immer geöffnet. Oben links in der Ansicht zeigt die
@@ -1911,7 +1972,38 @@ enthält, bei einer Auswahl, zuerst die Änderungsbefehle (<strong>Verschieben</
   Kategorien der Auswahl;</li>
 <li><strong>Sichtbarkeit und Grafik…</strong>.</li>
 </ul>
-<p>Solange ein Werkzeug aktiv ist, öffnet ein Rechtsklick stattdessen das Menü des Werkzeugs, und der laufende Schritt bleibt: <strong>Abbrechen</strong> (was <span class="keys"><kbd class="key-escape">Esc</kbd></span> tut, das den Schritt weiterhin abbricht), <strong>Wiederholen [Befehl]</strong>, <strong>Fang-Überschreibungen ▸</strong> (der Fang des nächsten Punkts, wie die Tasten <code>SE</code>, <code>SM</code>, <code>SN</code>, <code>SI</code> und <code>SO</code>; nur in Grundrissen und freien 2D-Ansichten), <strong>Bereich vergrößern</strong>, <strong>Verkleinern (2x)</strong>, <strong>Zoom auf Fenstergröße</strong>, <strong>Vorheriges Pan/Zoom</strong>, <strong>Nächstes Pan/Zoom</strong> und <strong>Eigenschaften</strong>. Es ist dasselbe in Grundrissen, Schnitten, Ansichten, 3D-Ansichten und auf Plänen. In einer Skizze gelten die Überschreibungen in jeder Ansicht, auch <strong>Zentrum</strong> und <strong>Lotrecht</strong>. Bei offenem Menü schließen <span class="keys"><kbd class="key-escape">Esc</kbd></span> oder ein Klick in die Ansicht nur das Menü.</p>
+<p>Solange ein Werkzeug aktiv ist, öffnet ein Rechtsklick stattdessen das Menü des Werkzeugs, und der laufende Schritt bleibt: <strong>Abbrechen</strong> (was <span class="keys"><kbd class="key-escape">Esc</kbd></span> tut, das den Schritt weiterhin abbricht), <strong>Wiederholen [Befehl]</strong>, <strong>Fang-Überschreibungen ▸</strong> (der Fang des nächsten Punkts, wie die Tasten mit zwei Buchstaben; in jeder Ansicht, siehe <a href="#snaps">Fang</a>), <strong>Bereich vergrößern</strong>, <strong>Verkleinern (2x)</strong>, <strong>Zoom auf Fenstergröße</strong>, <strong>Vorheriges Pan/Zoom</strong>, <strong>Nächstes Pan/Zoom</strong> und <strong>Eigenschaften</strong>. Es ist dasselbe in Grundrissen, Schnitten, Ansichten, 3D-Ansichten und auf Plänen. Bei offenem Menü schließen <span class="keys"><kbd class="key-escape">Esc</kbd></span> oder ein Klick in die Ansicht nur das Menü.</p>
+<h3 id="snaps">Fang</h3>
+<p><strong>Weitere Einstellungen ▸ Fangen…</strong> (im BIMopen-Stil der Befehl <strong>Fangen…</strong>) öffnet das Fenster
+<strong>Fang</strong>, in beiden Stilen gleich:</p>
+<ul>
+<li><strong>Fangen aus</strong> schaltet alles aus (wie der Schalter <strong>Fang</strong> der Statusleiste, der beim nächsten
+  Start so bleibt).</li>
+<li><strong>Fangschritte für Längenmaße</strong> und <strong>Fangschritte für Winkelmaße</strong>, jeweils mit eigenem
+  Kästchen: Werte durch Semikolon getrennt (vorgegeben 1000; 100; 10 mm und 90°; 45°; 15°; 5°; 1°).
+  Der Zoom wählt den Schritt: nah herangezoomt feinere Schritte.</li>
+<li><strong>Objektfang</strong>: ein Kästchen für <strong>Endpunkt</strong>, <strong>Mittelpunkt</strong>, <strong>Nächster</strong>,
+  <strong>Arbeitsebenenraster</strong>, <strong>Quadrant</strong>, <strong>Schnittpunkt</strong>, <strong>Mitte</strong>, <strong>Lotrecht</strong>, <strong>Tangente</strong>
+  und <strong>Entfernte Objekte</strong>, mit ihren zwei Buchstaben; <strong>Alle auswählen</strong> und <strong>Keine auswählen</strong>.
+  Ist <strong>Nächster</strong> aus, bietet die Linie unter dem Cursor weiter ihre Enden und ihren Mittelpunkt,
+  auch weit entfernt. <strong>Entfernte Objekte</strong> (anfangs aus) richtet den Punkt waagrecht oder senkrecht an den Enden
+  entfernter Linien aus, mit einer gestrichelten Hilfslinie.</li>
+<li><strong>Temporäre Überschreibungen</strong>: die Liste der zwei Buchstaben, die für einen Punkt gelten.</li>
+<li><strong>Vorgaben wiederherstellen</strong> stellt alles auf den Anfang zurück.</li>
+</ul>
+<p>Die Einstellungen gehören zum Programm, nicht zum Projekt: sie bleiben zwischen den Sitzungen.</p>
+<p>Beim Zeichnen von einem Punkt aus (Wände, Linien, Raster, Referenzebenen, Skizzen und der zweite
+Strahl von <strong>Drehen</strong>) fängt das Segment seine Richtung in jeder Ansicht gleich: waagrecht oder
+senkrecht, parallel oder lotrecht zu einer nahen Linie oder ein Vielfaches des Winkelschritts, den
+der Zoom gibt; nur wenn der Cursor wenige Pixel von dieser Richtung entfernt ist, sonst bleibt der
+Winkel frei. Eine gestrichelte Hilfslinie folgt der Richtung, ein Bogen mit dem Wert zeigt den
+Winkel, und die Statusleiste sagt etwa <em>Fang: Winkel 30° · Schritt 15°</em>. Die Länge wird auf den
+Längenschritt gerundet. <strong>Winkel gemessen ab</strong> in der Optionsleiste zählt die Winkel ab der
+<strong>Horizontalen Achse</strong> der Ansicht oder ab dem <strong>Vorherigen Segment</strong>. In der 3D-Ansicht wird alles
+auf der Arbeitsebene (der Ebene des Geschosses) gemessen. In der Befehlszeile ändert
+<code>snap {"angles":[45,15],"objects":{"quadrant":false}}</code> die Einstellungen, <code>snap</code> allein zeigt sie.</p>
+<p>Der Befehl <code>anglesnap 0,0 3,0.02</code> (auch über MCP, und <code>snap</code> mit zwei Punkten) gibt die
+Richtung zurück, in die ein Segment fängt, nach denselben Regeln wie jede Ansicht.</p>
 <p>Oben im Menü startet <strong>Wiederholen [Befehl]</strong> das zuletzt benutzte Werkzeug erneut; <span class="keys"><kbd class="key-enter">Enter</kbd></span> tut dasselbe, wenn kein Werkzeug aktiv und die Befehlszeile leer ist. Das Menü ist in Grundrissen, Schnitten und 3D-Ansichten dasselbe.</p>
 <h2 id="command-line">Befehlssuche und Befehlszeile</h2>
 <p><img alt="Die Befehlssuche: Befehle, Elemente und Ansichten, die zum Getippten passen" src="../assets/screens/bimopen-search.png"/></p>
@@ -2013,5 +2105,6 @@ vollständig. Das Wichtigste:</p>
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.footer", "navigation.tracking", "toc.follow", "content.code.copy", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}}</script>
 <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+<script src="../assets/js/zoom.js"></script>
 </body>
 </html>

@@ -766,6 +766,14 @@ muestra:</p>
 <td><strong>Radio</strong></td>
 <td>No disponible: necesita muros curvos y aparece desactivado</td>
 </tr>
+<tr>
+<td><strong>Unión en los extremos</strong></td>
+<td>Aún no disponible, se muestra atenuada: los muros dibujados siempre se unen; la unión de un extremo se impide después desde su control</td>
+</tr>
+<tr>
+<td><strong>Unión automática</strong></td>
+<td>Aún no disponible, se muestra atenuada y marcada: los muros se unen a los que encuentran</td>
+</tr>
 </tbody>
 </table>
 <p>En la vista 3D el muro que se dibuja sigue al cursor como un sólido, con su grosor y su altura hasta el nivel superior (o la altura escrita), sobre el plano del nivel, con su longitud y su ángulo como cota temporal; <strong>Mayús</strong> lo mantiene ortogonal y <strong>Esc</strong> lo quita. <strong>Rectángulo</strong>, los polígonos y <strong>Seleccionar líneas</strong> funcionan también allí: los muros de toda la forma siguen al cursor, y la línea del nivel bajo el cursor se selecciona como en planta.</p>
@@ -1048,7 +1056,7 @@ toma la <strong>Altura de alféizar por defecto</strong> de su tipo.</p>
 <p>Las puertas y ventanas reciben una <strong>Marca</strong> que cuenta por categoría (1, 2, 3…), desde la más
 alta.</p>
 <h2 id="tags">Etiquetas</h2>
-<p><strong>Dibujar: puerta ▸ Etiqueta ▸ Etiquetar al colocar</strong> (o lo mismo para las ventanas)
+<p><strong>Etiquetar al colocar</strong>, en la franja de opciones de las herramientas puerta y ventana,
 etiqueta cada abertura al colocarla. La franja de opciones ofrece entonces <strong>Horizontal</strong> o
 <strong>Vertical</strong>, y <strong>Directriz</strong> con su longitud. La etiqueta de una puerta muestra su <strong>Marca</strong>; la de
 una ventana, la <strong>Marca de tipo</strong> de su tipo. <strong>Documentar ▸ Etiquetar todo</strong> etiqueta las aberturas
@@ -1119,7 +1127,9 @@ selector de tipos; las puertas y ventanas que aloja se eliminan, porque un muro 
 aloja, y un mensaje lo indica (deshacer las recupera).</p>
 <p>En planta cada panel de vidrio se dibuja con su grosor y los montantes se cortan. Un tipo con
 <strong>Incrustar automáticamente</strong> marcado (el <strong>Escaparate</strong>) dibujado a lo largo de un muro corta en
-él su hueco, en planta, secciones, 3D e IFC.</p>
+él su hueco, en planta, secciones, 3D e IFC. El muro sigue siendo uno solo: a los lados y encima
+del hueco continúa con sus capas, su área neta no cuenta el hueco, y al mover o redimensionar el
+muro cortina el hueco lo sigue.</p>
 <ul>
 <li>La <strong>Disposición vertical</strong> y la disposición horizontal del tipo (<strong>Distancia fija</strong>, <strong>Número
   fijo</strong>, <strong>Separación máxima</strong>) con su separación, y el <strong>Número de rejillas verticales</strong> y la
@@ -1158,16 +1168,21 @@ zócalo de piedra de 0,9 m): elígelo en el selector de tipo de <strong>Muro</st
 muro.</p>
 <p>El muro apilado lleva la línea, los niveles y la altura; sus submuros los siguen. En planta, en
 sección, en alzado y en la vista 3D cada submuro se dibuja con las capas de su tipo, en los colores
-de sus materiales; los submuros se unen a los muros que encuentran y la <strong>Tabla de planificación
-de muros</strong> los lista, una fila cada uno. Una puerta o una ventana colocada en un muro apilado corta
+de sus materiales. Los submuros se unen a los muros que encuentran, cada uno a su altura: en la
+esquina de dos muros apilados el zócalo se une al zócalo y el muro de arriba al muro de arriba, un
+muro básico se une por turno a cada submuro, y dos pilas de alturas o espesores distintos se unen
+en cada altura que comparten; cada capa se cierra alrededor de la esquina, en planta y en 3D. La
+<strong>Tabla de planificación de muros</strong> lista los submuros, una fila cada uno. Una puerta o una ventana colocada en un muro apilado corta
 cada submuro que atraviesa, con su antepecho medido desde la base del muro apilado.</p>
 <p>Un clic selecciona el muro entero; <strong>Tab</strong> pasa a cada submuro, de abajo arriba (la barra de estado
-dice «Tab · elemento siguiente»). Las Propiedades del muro entero valen para todos sus submuros;
-su <strong>Alineación</strong> viene del tipo y es de solo lectura. De un submuro solo se modifican
-<strong>Delimitación de habitación</strong> y <strong>Rol</strong>: el resto viene del muro apilado y de su tipo, y su tipo
-se cambia en el tipo apilado. <strong>Descomponer en muros simples</strong>, en el menú contextual y con el muro
-seleccionado, convierte cada submuro en un muro básico independiente donde está; no se recomponen
-(Ctrl+Z lo deshace). El contorno de un muro apilado o de un submuro todavía no se edita.</p>
+dice «Tab · elemento siguiente»). Las Propiedades del muro entero valen para todos sus submuros; su
+<strong>Alineación</strong> es el plano sobre el que está dibujado, como en cualquier muro: las caras de la
+franja que ocupan sus submuros, o el núcleo del submuro variable. Un muro básico que toma un tipo
+apilado, o un muro apilado que toma un tipo básico, se queda en su alineación. De un submuro solo se
+modifican <strong>Delimitación de habitación</strong> y <strong>Rol</strong>: el resto viene del muro apilado y de su tipo, y
+su tipo se cambia en el tipo apilado. <strong>Descomponer en muros simples</strong>, en el menú contextual y con
+el muro seleccionado, convierte cada submuro en un muro básico independiente donde está; no se
+recomponen (Ctrl+Z lo deshace). El contorno de un muro apilado o de un submuro todavía no se edita.</p>
 <h3 id="the-sub-walls-of-the-type">Los submuros del tipo</h3>
 <p><img alt="Los Submuros del tipo del muro apilado de la plantilla" src="../assets/screens/stacked-wall-sub-walls.png"/></p>
 <p>Los <strong>Parámetros de tipo</strong> de un tipo de muro apilado muestran <strong>Submuros</strong> con <strong>Editar…</strong>, que
@@ -1311,5 +1326,6 @@ unión de geometría, fases y lucernarios en las cubiertas.</p>
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.footer", "navigation.tracking", "toc.follow", "content.code.copy", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
 <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+<script src="../assets/js/zoom.js"></script>
 </body>
 </html>

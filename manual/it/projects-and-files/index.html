@@ -582,9 +582,14 @@ parti obsolete al salvataggio successivo.</p>
 <p>Quando un progetto modificato resta non salvato per l'intervallo impostato in <strong>Opzioni ➤
 Generale</strong> (<strong>Intervallo promemoria di salvataggio</strong>, 30 minuti all'inizio), <strong>Promemoria di
 salvataggio</strong> propone di salvarlo, di non salvarlo o di cambiare l'intervallo.</p>
-<p>Prima di <strong>Nuovo</strong>, <strong>Apri…</strong>, un documento recente, il progetto di esempio o la chiusura della
-finestra, un progetto modificato chiede <strong>Salvare le modifiche apportate a …?</strong>: <strong>Sì</strong> lo salva,
-<strong>No</strong> scarta le modifiche, <strong>Annulla</strong> lo lascia aperto.</p>
+<p>È aperto un progetto alla volta: il progetto aperto prende il posto di quello aperto prima, e
+le viste di quello si chiudono con lui. Aprire il progetto già aperto lo lascia com'è,
+se non ha modifiche non salvate; con modifiche, rispondere <strong>No</strong> alla domanda se salvarle le scarta
+e riapre il file com'era all'ultimo salvataggio, come chiuderlo senza salvare e riaprirlo.</p>
+<p>Prima di <strong>Nuovo</strong>, <strong>Apri…</strong>, un documento recente, un file trascinato, <code>open</code> dalla riga di
+comando, il progetto di esempio o la chiusura della finestra, un progetto modificato chiede
+<strong>Salvare le modifiche apportate a …?</strong>: <strong>Sì</strong> lo salva, <strong>No</strong> scarta le modifiche,
+<strong>Annulla</strong> lo lascia aperto.</p>
 <p>Nel browser, <strong>Apri…</strong> usa la finestra di scelta dei file del browser, e <strong>Salva</strong> scarica il file;
 backup, recupero dopo un arresto anomalo e apertura in sola lettura richiedono un file su disco e
 sono solo sul desktop.</p>
@@ -723,5 +728,6 @@ stesso capitolo. <code>bimopen-cli convert</code> esporta dalla riga di comando 
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.footer", "navigation.tracking", "toc.follow", "content.code.copy", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiato", "clipboard.copy": "Copia", "search.result.more.one": "1 altro in questa pagina", "search.result.more.other": "# altri in questa pagina", "search.result.none": "Nessun documento trovato", "search.result.one": "1 documento trovato", "search.result.other": "# documenti trovati", "search.result.placeholder": "Scrivi per iniziare a cercare", "search.result.term.missing": "Non presente", "select.version": "Seleziona la versione"}}</script>
 <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+<script src="../assets/js/zoom.js"></script>
 </body>
 </html>

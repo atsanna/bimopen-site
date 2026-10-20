@@ -869,9 +869,28 @@ fonctionnent comme pour les escaliers.</p>
    sur l'escalier : la trajectoire dessinée dessus monte avec l'escalier.</li>
 <li>Cliquez sur <strong>Terminer le mode d'édition</strong>.</li>
 </ol>
-<p><strong>Modifier la trajectoire</strong> rouvre la trajectoire d'un garde-corps. Les <strong>Paramètres du type</strong> du
-garde-corps comportent la <strong>Hauteur du garde-corps</strong> et l'<strong>Espacement des balustres</strong> : les
-changer change tous les garde-corps de ce type.</p>
+<p><strong>Modifier la trajectoire</strong> rouvre la trajectoire d'un garde-corps. <strong>Créer ▸ Liaisons verticales ▸
+Garde-corps ▸ Placer sur un support</strong> pose un garde-corps de chaque côté de l'escalier ou de la
+rampe cliqué : dans la barre des options, <strong>Position</strong> choisit <strong>Sur les marches</strong> (au bord de
+l'escalier) ou <strong>Sur le limon</strong> (au-dessus du limon, là où l'escalier en a un), <strong>Décalage par
+rapport à la trajectoire</strong> le déplace vers l'intérieur de l'escalier et <strong>Inverser</strong> passe d'une
+position à l'autre. Les deux mêmes valeurs sont dans les <strong>Propriétés</strong> d'un garde-corps d'escalier.</p>
+<p>Les <strong>Paramètres du type</strong> du garde-corps valent pour tous les garde-corps de ce type : <strong>Hauteur du
+garde-corps</strong> (celle de la lisse supérieure), <strong>Espacement des balustres</strong>, <strong>Décalage des
+balustres</strong> (balustres et poteaux déplacés sur le côté) et les données d'identité ; l'aperçu montre
+le garde-corps sur un escalier d'exemple, vu de côté. <strong>Structure des lisses (non continue) ▸
+Modifier…</strong> ouvre la liste des lisses sous la lisse supérieure (<strong>Nom</strong>, <strong>Hauteur</strong> au-dessus de la
+surface de marche, <strong>Décaler</strong> sur le côté, <strong>Profil</strong> carré ou rond) avec <strong>Insérer</strong>,
+<strong>Supprimer</strong>, <strong>Haut</strong> et <strong>Bas</strong>. <strong>Emplacement des balustres ▸ Modifier…</strong> ouvre le <strong>Motif
+principal</strong> : le balustre ou <strong>Aucune</strong>, où il commence et finit (<strong>Hôte</strong>, <strong>Lisse supérieure</strong> ou
+l'une des lisses) avec leurs décalages, la distance entre balustres, <strong>Interrompre le motif à</strong> (à
+la fin de chaque segment, aux angles supérieurs à une valeur ou jamais), <strong>Justifier</strong>,
+<strong>Remplissage de la longueur excédentaire</strong> et <strong>Utiliser balustre par marche</strong> avec leur nombre par
+marche ; et les <strong>Poteaux</strong> de départ, d'angle et de fin (le poteau ou <strong>Aucun</strong>, ses décalages,
+<strong>Espace</strong> le long de la trajectoire, <strong>Décaler</strong> sur le côté) avec <strong>Poteaux d'angle à</strong>. Les
+modifications de ces deux fenêtres s'appliquent avec <strong>OK</strong> et s'annulent d'un seul <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span>. Les
+lignes <strong>Lisse supérieure</strong>, <strong>Main courante 1</strong> et <strong>Main courante 2</strong> sont grisées : pas encore
+disponibles.</p>
 <p>Les garde-corps d'un escalier continuent sur ses paliers en une seule lisse, à leur hauteur
 au-dessus de la ligne des nez de marche et au-dessus des paliers. Là où une volée part d'un palier
 une contremarche plus haut, les <strong>Joints tangents</strong> (la lisse continue tout droit) et les
@@ -885,6 +904,12 @@ change : avec <strong>Connexions des lisses</strong> <strong>Soudure</strong> ch
 et à la fin de chaque garde-corps et à chaque changement de direction en plan et là où la pente change, comme là où une volée rejoint un palier.
 <strong>Utiliser l'ajustement de hauteur de palier</strong> avec <strong>Ajustement de hauteur de palier</strong> relève
 (ou abaisse) d'autant la lisse au-dessus des paliers.</p>
+<p>La trajectoire d'un garde-corps d'escalier suit le contour de l'escalier. Chaque poteau repose
+entièrement sur la marche, le palier ou le sol en dessous : là où il tomberait sur la ligne d'une
+contremarche, il se décale d'une demi-section, de sorte qu'aucun poteau n'entre dans les marches ni
+ne reste suspendu devant la première. Entre deux poteaux, les balustres sont régulièrement espacés,
+jamais plus que l'espacement.</p>
+<p><strong>Placer sur un support</strong> fonctionne en plan et dans la vue 3D : l'escalier sous le curseur montre où vont les deux garde-corps. <strong>Sur le limon</strong> ne se choisit que pour un escalier qui a un limon : sur un escalier monolithique il est grisé, dans la barre des options et dans les <strong>Propriétés</strong>. Un nouveau type de garde-corps a les <strong>Joints angulaires</strong> et les <strong>Joints tangents</strong> sur <strong>Ajouter des segments verticaux/horizontaux</strong>, <strong>Soudure</strong>, aucun ajustement de hauteur du palier, une lisse basse à 0,100 m (30×30), des balustres 20×20 de la lisse basse à la lisse haute tous les 0,120 m, interrompus à la fin de chaque segment et ajustés à sa longueur, et des poteaux 50×50 posés sur l'hôte : là où une volée rencontre un palier, le poteau se trouve sur le palier à la ligne de contremarche, avec le segment vertical de la lisse, et rien ne passe au-dessus des marches. Là où la lisse monte à la verticale au début d'une volée, une lisse basse reste sur le palier sans entrer dans la première marche. <strong>Modifier les raccords</strong> (un raccord à la fois) est grisé : pas encore disponible.</p>
 <h2 id="components">Composants</h2>
 <ol>
 <li>Cliquez sur <strong>Créer ▸ Construire ▸ Composant</strong>. Le sélecteur de type liste les composants
@@ -963,5 +988,6 @@ après le réalignement de ce chapitre.</p>
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.footer", "navigation.tracking", "toc.follow", "content.code.copy", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
 <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+<script src="../assets/js/zoom.js"></script>
 </body>
 </html>

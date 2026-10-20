@@ -757,12 +757,20 @@ muro</strong> mostra il gruppo <strong>Disegna</strong>, e la striscia delle opz
 <td>Attivo, ogni clic termina un muro e inizia il successivo; spento, ogni due clic fanno un muro a sé</td>
 </tr>
 <tr>
-<td><strong>Offset</strong></td>
+<td><strong>Scostamento</strong></td>
 <td>La linea di allineamento corre a questa distanza dai clic, verso l'esterno</td>
 </tr>
 <tr>
 <td><strong>Raggio</strong></td>
 <td>Non disponibile: richiede i muri curvi, ed è mostrato disattivato</td>
+</tr>
+<tr>
+<td><strong>Giunto alle estremità</strong></td>
+<td>Non ancora disponibile, mostrato in grigio: i muri disegnati si uniscono sempre; il giunto di un'estremità si impedisce poi dal suo controllo</td>
+</tr>
+<tr>
+<td><strong>Giunzione automatica</strong></td>
+<td>Non ancora disponibile, mostrata in grigio e spuntata: i muri si uniscono a quelli che incontrano</td>
 </tr>
 </tbody>
 </table>
@@ -1046,8 +1054,8 @@ tagliato in ogni vista. Una finestra prende l'<strong>Altezza di default della s
 <p>Porte e finestre ricevono un <strong>Contrassegno</strong> che conta per categoria (1, 2, 3…), a partire dal più
 alto.</p>
 <h2 id="tags">Etichette</h2>
-<p><strong>Disegna porta ▸ Etichetta ▸ Etichetta al posizionamento</strong> (o lo stesso per le
-finestre) etichetta ogni apertura man mano che viene inserita. La striscia delle opzioni propone allora
+<p><strong>Etichetta al posizionamento</strong>, nella striscia delle opzioni degli strumenti porta e
+finestra, etichetta ogni apertura man mano che viene inserita. La striscia delle opzioni propone allora
 <strong>Orizzontale</strong> o <strong>Verticale</strong>, e <strong>Direttrice</strong> con la sua lunghezza. L'etichetta di una porta
 mostra il suo <strong>Contrassegno</strong>; quella di una finestra il <strong>Contrassegno tipo</strong> del suo tipo.
 <strong>Documenta ▸ Assegna etichette a tutti</strong> etichetta le aperture ancora senza etichetta.</p>
@@ -1118,7 +1126,9 @@ eliminate, perché una facciata continua non le ospita, e un messaggio lo dice (
 riporta).</p>
 <p>In pianta ogni pannello di vetro è disegnato con il suo spessore e i montanti sono tagliati. Un tipo
 con <strong>Incorpora automaticamente</strong> spuntato (la <strong>Facciata negozio</strong>) disegnato lungo un muro vi
-taglia il suo vano, in pianta, nelle sezioni, in 3D e in IFC.</p>
+taglia il suo vano, in pianta, nelle sezioni, in 3D e in IFC. Il muro resta uno solo: ai lati e
+sopra il vano prosegue con i suoi strati, la sua area netta non conta il vano, e spostando o
+ridimensionando la facciata il vano la segue.</p>
 <ul>
 <li><strong>Layout verticale</strong> e layout orizzontale del tipo (<strong>Distanza fissa</strong>, <strong>Numero
   predefinito</strong>, <strong>Spaziatura massima</strong>) con la loro spaziatura, e <strong>Numero griglie verticali</strong> e
@@ -1156,17 +1166,22 @@ zoccolo in pietra di 0,9 m): sceglilo nel selettore del tipo di <strong>Muro</st
 muro.</p>
 <p>Il muro sovrapposto tiene la linea, i livelli e l'altezza; i suoi sottomuri li seguono. In pianta,
 in sezione, in prospetto e nella vista 3D ogni sottomuro è disegnato con gli strati del suo tipo,
-nei colori dei loro materiali; i sottomuri si uniscono ai muri che incontrano e l'<strong>Abaco dei muri</strong>
-li elenca, una riga ciascuno. Una porta o una finestra messa su un muro sovrapposto taglia ogni
+nei colori dei loro materiali. I sottomuri si uniscono ai muri che incontrano, ciascuno alla sua
+altezza: all'angolo tra due muri sovrapposti lo zoccolo incontra lo zoccolo e il muro sopra il muro
+sopra, un muro di base incontra a turno ogni sottomuro, e due pile di altezze o spessori diversi si
+incontrano su ogni altezza in comune; ogni strato si chiude attorno all'angolo, in pianta e in 3D.
+L'<strong>Abaco dei muri</strong> elenca i sottomuri, una riga ciascuno. Una porta o una finestra messa su un muro sovrapposto taglia ogni
 sottomuro che attraversa, con il davanzale misurato dalla base del muro sovrapposto.</p>
 <p>Un clic seleziona il muro intero; <strong>Tab</strong> passa a ciascun sottomuro, dal basso in alto (la barra di
 stato dice «Tab · elemento successivo»). Le Proprietà del muro intero valgono per tutti i suoi
-sottomuri; il suo <strong>Allineamento</strong> viene dal tipo ed è di sola lettura. Di un sottomuro si
-modificano solo <strong>Delimita ambiente</strong> e <strong>Ruolo</strong>: il resto viene dal muro sovrapposto e dal suo
-tipo, e il suo tipo si cambia nel tipo sovrapposto. <strong>Scomponi in muri singoli</strong>, nel menu
+sottomuri; il suo <strong>Allineamento</strong> è il piano su cui è disegnato, come per ogni muro: le facce della
+fascia occupata dai suoi sottomuri, o il nucleo del sottomuro variabile. Dando a un muro di base un
+tipo sovrapposto, o a un muro sovrapposto un tipo di base, il muro resta sul suo allineamento. Di un
+sottomuro si modificano solo <strong>Delimita ambiente</strong> e <strong>Ruolo</strong>: il resto viene dal muro sovrapposto
+e dal suo tipo, e il suo tipo si cambia nel tipo sovrapposto. <strong>Scomponi in muri singoli</strong>, nel menu
 contestuale e con il muro selezionato, fa di ogni sottomuro un muro di base indipendente dove si
-trova; non si ricompongono (Ctrl+Z annulla). Il contorno di un muro sovrapposto o di un
-sottomuro non si modifica ancora.</p>
+trova; non si ricompongono (Ctrl+Z annulla). Il contorno di un muro sovrapposto o di un sottomuro
+non si modifica ancora.</p>
 <h3 id="the-sub-walls-of-the-type">I sottomuri del tipo</h3>
 <p><img alt="I Sottomuri del tipo del muro sovrapposto del modello" src="../assets/screens/stacked-wall-sub-walls.png"/></p>
 <p>I <strong>Parametri del tipo</strong> di un tipo di muro sovrapposto mostrano <strong>Sottomuri</strong> con <strong>Modifica…</strong>,
@@ -1312,5 +1327,6 @@ geometria</strong>, fasi, e lucernari nei tetti.</p>
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.footer", "navigation.tracking", "toc.follow", "content.code.copy", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiato", "clipboard.copy": "Copia", "search.result.more.one": "1 altro in questa pagina", "search.result.more.other": "# altri in questa pagina", "search.result.none": "Nessun documento trovato", "search.result.one": "1 documento trovato", "search.result.other": "# documenti trovati", "search.result.placeholder": "Scrivi per iniziare a cercare", "search.result.term.missing": "Non presente", "select.version": "Seleziona la versione"}}</script>
 <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+<script src="../assets/js/zoom.js"></script>
 </body>
 </html>

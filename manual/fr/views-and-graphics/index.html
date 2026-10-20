@@ -632,12 +632,29 @@ ombre est un gris du papier, dans les styles ombrés elle assombrit les couleurs
 faces coupées par la vue restent dans la lumière.</p>
 <p><strong>La trajectoire du soleil</strong> est un anneau autour du modèle avec les points cardinaux au nord
 géographique, l'arc du jour avec ses heures, l'analemme (où se trouve le soleil à cette heure au
-cours de l'année), la partie qu'une étude parcourt, et le soleil avec son heure et sa date. En plan,
-en coupe et en élévation le soleil se fait glisser : le long du jour il s'accroche aux quarts
-d'heure, le long de l'analemme au 1er de chaque mois ; avec <span class="keys"><kbd class="key-shift">Shift</kbd></span> il reste sur le jour, avec
-<span class="keys"><kbd class="key-control">Ctrl</kbd></span> sur l'analemme. Avec la vue sous le curseur (et rien de sélectionné, ou après un clic sur
-le soleil), <span class="keys"><kbd class="key-arrow-left">Left</kbd></span> et <span class="keys"><kbd class="key-arrow-right">Right</kbd></span> déplacent l'heure, <span class="keys"><kbd class="key-arrow-up">Up</kbd></span> et <span class="keys"><kbd class="key-arrow-down">Down</kbd></span> la date. Avec
-<strong>Éclairage</strong> le soleil est immobile et n'a pas de trajectoire.</p>
+cours de l'année : un huit continu, chaque jour à l'heure d'horloge de la date choisie), la partie
+qu'une étude parcourt, et le soleil avec son heure et sa date ; dans une vue 3D c'est une coupole
+au-dessus de l'anneau. En plan, en coupe, en élévation et en 3D le soleil se fait glisser : le long
+du jour il s'accroche aux quarts d'heure, le long de l'année il suit l'analemme jour après jour (au
+changement d'heure l'horloge se décale du changement, ainsi le soleil ne saute pas) ; <span class="keys"><kbd class="key-shift">Shift</kbd></span>
+pendant le glissement prend l'autre, et <strong>Le long de la journée</strong> / <strong>Le long de l'année</strong> dans le
+menu de la trajectoire choisissent lequel vient d'abord. Les ombres suivent le glissement : en
+plan, en coupe et en élévation, pendant que le soleil bouge, elles sont une ébauche plus grossière,
+chaque vue montre ses dernières ombres jusqu'à ce que les nouvelles soient prêtes, et elles sont
+dessinées en entier quand le soleil est relâché. Avec la
+vue sous le curseur (et rien de sélectionné, ou après un clic sur le soleil), <span class="keys"><kbd class="key-arrow-left">Left</kbd></span> et <span class="keys"><kbd class="key-arrow-right">Right</kbd></span>
+déplacent l'heure, <span class="keys"><kbd class="key-arrow-up">Up</kbd></span> et <span class="keys"><kbd class="key-arrow-down">Down</kbd></span> la date. Avec <strong>Éclairage</strong> le soleil est immobile et n'a pas
+de trajectoire.</p>
+<p>Le menu de la trajectoire (dans la barre de la vue, dans le menu de la vue et en mode tactile) a
+aussi des <strong>Aides visuelles</strong> pour la lire : <strong>Lignes verticales des heures</strong> (de chaque heure paire une ligne
+tiretée descend au sol et va à l'anneau, avec l'heure ; en plan un point sur l'anneau),
+<strong>Projection de l'arc au sol</strong>, <strong>Midi solaire</strong> (le point le plus haut de l'arc avec son heure
+d'horloge, et la ligne nord–sud), <strong>Bande de l'année</strong> (le ciel que le soleil traverse dans l'année,
+en jaune clair, les arcs des solstices et de l'équinoxe, les analemmes des heures paires), <strong>Lever
+et coucher du soleil</strong> (des repères sur l'anneau avec leurs heures ; la barre de la vue les montre
+avec la durée du jour) et <strong>Analemme</strong> ; tous sauf la projection sont actifs au départ. Dans une vue
+3D ce qui est derrière le modèle est caché par lui. Les <strong>Paramètres du soleil</strong> montrent aussi les
+levers et couchers de l'année en graphique : un clic ou un glissement dessus choisit le jour.</p>
 <p><strong>Soleil partagé</strong> : les vues partagent le soleil du projet sauf si elles ont le leur (la
 propriété <strong>Soleil partagé</strong>). Déplacer le soleil partagé dans une vue le déplace dans toutes les
 vues qui le partagent ; une vue qui a son propre soleil ne change pas. <strong>Un soleil commun à toutes
@@ -681,8 +698,13 @@ date du soleil dans son en-tête :</p>
 </tbody>
 </table>
 <p>Puis l'<strong>Emplacement</strong> du projet (une ville, ou <strong>Personnalisée</strong> avec sa latitude et sa
-  longitude : un seul pour tout le projet) avec l'<strong>Heure d'été</strong>, et <strong>Ombres sur le niveau</strong> avec
-  son <strong>Niveau du terrain</strong> ;
+  longitude : un seul pour tout le projet ; un lieu personnalisé prend le fuseau horaire de la ville
+  la plus proche ; un nouveau projet commence à <strong>Rome</strong>, la maison d'exemple se trouve à
+  <strong>Cagliari</strong>) avec l'<strong>Heure d'été</strong>, qui est automatique : la règle du lieu (Europe, Amérique
+  du Nord, Chili, Australie du Sud-Est, Nouvelle-Zélande, Égypte, ou aucune) et le dimanche exact de
+  l'<strong>Année</strong> du soleil, de sorte que les heures de la trajectoire et des études sont celles de
+  l'horloge ; la règle peut être changée. Puis <strong>Ombres sur le niveau</strong> avec son <strong>Niveau du
+  terrain</strong> ;
 - à droite l'aperçu : le ciel vu d'en haut, avec la trajectoire du jour, l'analemme et le soleil.
   <strong>Aperçu</strong> dans l'en-tête, à droite des valeurs, est un interrupteur qui le masque et
   l'affiche ; la boîte garde sa taille, et sans aperçu les paramètres prennent sa place.</p>
@@ -782,7 +804,9 @@ de remplissage à l'échelle grossière</strong>, définis sur les types de mur,
 aplat unique). Le mobilier et les appareils sanitaires ne sont jamais coupés : ils sont vus en
 entier. Une fenêtre est coupée avec son cadre dans le trait épais de coupe et son vitrage en
 traits fins ; ce qui se trouve au-delà de la coupe est dessiné avec les traits de projection, plus
-fins.</p>
+fins. Au-delà de la coupe, et dans les élévations, une face placée devant cache ce qui est derrière
+elle, et le vitrage d'une fenêtre est opaque : chaque fenêtre montre son cadre et son vitrage, pas
+les pièces qui sont derrière.</p>
 <p><strong>Cadrer la vue</strong> découpe la vue selon sa zone cadrée, <strong>Afficher la zone cadrée</strong> dessine cette
 zone ; faites glisser ses bords pour la redimensionner. Pour saisir sa taille : <strong>Propriétés ▸
 Taille de cadrage ▸ Modifier…</strong>, puis <strong>Largeur</strong> et <strong>Hauteur</strong> ; la zone garde son centre.</p>
@@ -933,5 +957,6 @@ droite.</p>
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.footer", "navigation.tracking", "toc.follow", "content.code.copy", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
 <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+<script src="../assets/js/zoom.js"></script>
 </body>
 </html>

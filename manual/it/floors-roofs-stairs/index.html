@@ -871,9 +871,27 @@ come per le scale.</p>
    sulla scala: il percorso disegnato su di essa sale con la scala.</li>
 <li>Fai clic su <strong>Termina modalità di modifica</strong>.</li>
 </ol>
-<p><strong>Modifica percorso</strong> riapre il percorso di una ringhiera. Le <strong>Parametri del tipo</strong> della
-ringhiera hanno l'<strong>Altezza ringhiera</strong> e la <strong>Spaziatura balaustre</strong>: cambiarle cambia tutte le
-ringhiere di quel tipo.</p>
+<p><strong>Modifica percorso</strong> riapre il percorso di una ringhiera. <strong>Crea ▸ Collegamenti verticali ▸
+Ringhiera ▸ Posiziona su ospite</strong> mette una ringhiera su ogni lato della scala o della rampa su cui
+fai clic: nella barra delle opzioni <strong>Posizione</strong> sceglie <strong>Su pedate</strong> (sul bordo della scala) o
+<strong>Su cosciale</strong> (sopra il cosciale, dove la scala ne ha uno), <strong>Offset dal percorso</strong> la sposta
+verso l'interno della scala e <strong>Inverti</strong> passa dall'una all'altra posizione. Le stesse due voci
+sono in <strong>Proprietà</strong> di una ringhiera di scala.</p>
+<p>I <strong>Parametri del tipo</strong> della ringhiera valgono per tutte le ringhiere di quel tipo: <strong>Altezza
+ringhiera</strong> (quella del corrente superiore), <strong>Spaziatura balaustre</strong>, <strong>Offset balaustra</strong>
+(balaustre e montanti spostati di lato) e i dati di identità; l'anteprima mostra la ringhiera su una
+scala di esempio, vista di lato. <strong>Struttura del corrente (non continuo) ▸ Modifica…</strong> apre l'elenco
+dei correnti sotto quello superiore (<strong>Nome</strong>, <strong>Altezza</strong> sul piano di calpestio, <strong>Offset</strong> di
+lato, <strong>Sezione</strong> quadrata o tonda) con <strong>Inserisci</strong>, <strong>Elimina</strong>, <strong>Su</strong> e <strong>Giù</strong>.
+<strong>Posizionamento balaustre ▸ Modifica…</strong> apre la <strong>Trama principale</strong>: la balaustra o <strong>Nessuna</strong>,
+dove parte e dove arriva (<strong>Ospite</strong>, <strong>Corrente superiore</strong> o uno dei correnti) con i loro offset,
+la distanza tra le balaustre, <strong>Interrompi trama a</strong> (a fine di ogni segmento, agli angoli maggiori
+di un valore o mai), <strong>Giustifica</strong>, <strong>Riempimento eccedenza</strong> e <strong>Usa balaustra per pedata</strong> con
+quante balaustre su ogni pedata; e i <strong>Montanti</strong> iniziale, d'angolo e finale (il montante o
+<strong>Nessuno</strong>, i suoi offset, <strong>Spazio</strong> lungo il percorso, <strong>Offset</strong> di lato) con <strong>Montanti agli
+angoli a</strong>. Le modifiche di queste due finestre si applicano con <strong>OK</strong> e si annullano con un solo
+<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span>. Le righe <strong>Corrente superiore</strong>, <strong>Corrimano 1</strong> e <strong>Corrimano 2</strong> sono in grigio: non
+ancora disponibili.</p>
 <p>Le ringhiere di una scala proseguono sui pianerottoli come un unico corrente, alla loro altezza
 sopra la linea dei bordi dei gradini e sopra i pianerottoli. Dove una rampa parte da un
 pianerottolo un'alzata più in alto, i <strong>Giunti tangenti</strong> (il corrente prosegue diritto) e i
@@ -887,6 +905,11 @@ suoi pezzi sono tagliati sul piano verticale del giunto. Un montante sta all'ini
 ogni ringhiera e a ogni cambio di direzione in pianta e dove cambia la pendenza, come dove una rampa incontra un pianerottolo. <strong>Usa adeguamento
 altezza pianerottolo</strong> con <strong>Adeguamento altezza pianerottolo</strong> alza (o abbassa) di tanto il
 corrente sopra i pianerottoli.</p>
+<p>Il percorso di una ringhiera di scala segue il contorno della scala. Ogni montante appoggia per
+intero sulla pedata, sul pianerottolo o sul pavimento sotto di lui: dove cadrebbe sulla linea di
+un'alzata si sposta di mezza sezione, così nessun montante entra nei gradini o resta sospeso davanti
+al primo. Fra due montanti le balaustre hanno passo uniforme, mai più largo della spaziatura.</p>
+<p><strong>Posiziona su ospite</strong> funziona in pianta e nella vista 3D: la scala sotto il cursore mostra dove vanno le due ringhiere. <strong>Su cosciale</strong> si sceglie solo per una scala che ha un cosciale: su una scala monolitica è in grigio, nella barra delle opzioni e in <strong>Proprietà</strong>. Un tipo di ringhiera nuovo ha <strong>Giunti ad angolo</strong> e <strong>Giunti tangenti</strong> su <strong>Aggiungi segmenti verticali/orizzontali</strong>, <strong>Saldatura</strong>, nessun adeguamento altezza pianerottolo, un corrente inferiore a 0,100 m (30×30), balaustre 20×20 dal corrente inferiore al corrente superiore ogni 0,120 m, interrotte a fine di ogni segmento e ridimensionate alla sua lunghezza, e montanti 50×50 sull'ospite: dove una rampa incontra un pianerottolo il montante sta sul pianerottolo alla linea dell'alzata, con il tratto verticale del corrente, e nulla passa sopra le pedate. Dove il corrente sale in verticale all'inizio di una rampa, un corrente basso resta sul pianerottolo senza entrare nel primo gradino. <strong>Modifica giunzioni</strong> (un giunto alla volta) è in grigio: non ancora disponibile.</p>
 <h2 id="components">Componenti</h2>
 <ol>
 <li>Fai clic su <strong>Crea ▸ Costruisci ▸ Componente</strong>. Il selettore di tipo elenca i componenti
@@ -963,5 +986,6 @@ solai, fasce, grondaie e intradossi vengono dopo il riallineamento di questo cap
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.footer", "navigation.tracking", "toc.follow", "content.code.copy", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiato", "clipboard.copy": "Copia", "search.result.more.one": "1 altro in questa pagina", "search.result.more.other": "# altri in questa pagina", "search.result.none": "Nessun documento trovato", "search.result.one": "1 documento trovato", "search.result.other": "# documenti trovati", "search.result.placeholder": "Scrivi per iniziare a cercare", "search.result.term.missing": "Non presente", "select.version": "Seleziona la versione"}}</script>
 <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+<script src="../assets/js/zoom.js"></script>
 </body>
 </html>

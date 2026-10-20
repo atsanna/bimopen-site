@@ -759,12 +759,20 @@ Choisissez le type de mur dans le sélecteur de type en haut du panneau de l'él
 <td>Activée, chaque clic termine un mur et commence le suivant ; désactivée, chaque paire de clics fait un mur à part</td>
 </tr>
 <tr>
-<td><strong>Décaler</strong></td>
+<td><strong>Décalage</strong></td>
 <td>L'<strong>Alignement</strong> passe à cette distance des clics, vers l'extérieur</td>
 </tr>
 <tr>
 <td><strong>Rayon</strong></td>
 <td>Indisponible : il demande des murs courbes, et apparaît désactivé</td>
+</tr>
+<tr>
+<td><strong>Jonction aux extrémités</strong></td>
+<td>Pas encore disponible, affichée grisée : les murs dessinés se joignent toujours ; la jonction d'une extrémité s'empêche ensuite depuis sa commande</td>
+</tr>
+<tr>
+<td><strong>Jonction automatique</strong></td>
+<td>Pas encore disponible, affichée grisée et cochée : les murs se joignent à ceux qu'ils rencontrent</td>
 </tr>
 </tbody>
 </table>
@@ -1050,8 +1058,8 @@ Une fenêtre prend la <strong>Hauteur d'allège par défaut</strong> de son type
 <p>Les portes et les fenêtres reçoivent une <strong>Marque</strong> qui compte par catégorie (1, 2, 3…), à partir
 de la plus haute.</p>
 <h2 id="tags">Étiquettes</h2>
-<p><strong>Dessiner : porte ▸ Étiquette ▸ Étiqueter lors du placement</strong> (ou de même pour les
-fenêtres) étiquette chaque ouverture à mesure qu'elle est placée. Le bandeau des options propose alors
+<p><strong>Étiqueter lors du placement</strong>, dans le bandeau des options des outils porte et
+fenêtre, étiquette chaque ouverture à mesure qu'elle est placée. Le bandeau des options propose alors
 <strong>Horizontale</strong> ou <strong>Verticale</strong>, et <strong>Ligne de repère</strong> avec sa longueur. L'étiquette d'une porte
 montre sa <strong>Marque</strong> ; celle d'une fenêtre la <strong>Marque de type</strong> de son type. <strong>Documenter ▸ Étiqueter
 tout</strong> étiquette les ouvertures qui ne le sont pas encore.</p>
@@ -1121,7 +1129,9 @@ sélecteur de type ; les portes et fenêtres qu'il accueille sont supprimées, c
 les accueille pas, et un message l'indique (annuler les ramène).</p>
 <p>En plan, chaque panneau de verre est dessiné avec son épaisseur et les meneaux sont coupés. Un type
 avec <strong>Incorporer automatiquement</strong> coché (la <strong>Devanture</strong>) dessiné le long d'un mur y découpe son
-ouverture, en plan, en coupe, en 3D et en IFC.</p>
+ouverture, en plan, en coupe, en 3D et en IFC. Le mur reste un seul mur : à côté et au-dessus de
+l'ouverture il continue avec ses couches, sa surface nette ne compte pas l'ouverture, et déplacer
+ou redimensionner le mur-rideau déplace l'ouverture avec lui.</p>
 <ul>
 <li><strong>Disposition verticale</strong> et disposition horizontale du type (<strong>Distance fixe</strong>, <strong>Nombre
   fixe</strong>, <strong>Espacement maximal</strong>) avec leur espacement, ainsi que <strong>Nombre de quadrillages
@@ -1161,16 +1171,21 @@ extérieur sur un soubassement en pierre de 0,9 m) : choisissez-le dans le séle
 <strong>Mur</strong> et dessinez-le comme tout mur.</p>
 <p>Le mur empilé porte la ligne, les niveaux et la hauteur ; ses sous-murs les suivent. En plan, en
 coupe, en élévation et dans la vue 3D, chaque sous-mur est dessiné avec les couches de son type,
-dans les couleurs de leurs matériaux ; les sous-murs se joignent aux murs qu'ils rencontrent et la
-<strong>Nomenclature des murs</strong> les liste, une ligne chacun. Une porte ou une fenêtre placée dans un mur
+dans les couleurs de leurs matériaux. Les sous-murs se joignent aux murs qu'ils rencontrent, chacun
+à sa hauteur : à l'angle de deux murs empilés, le socle rejoint le socle et le mur du dessus le mur
+du dessus, un mur de base rejoint tour à tour chaque sous-mur, et deux piles de hauteurs ou
+d'épaisseurs différentes se rejoignent sur chaque hauteur commune ; chaque couche se ferme autour de
+l'angle, en plan et en 3D. La <strong>Nomenclature des murs</strong> liste les sous-murs, une ligne chacun. Une porte ou une fenêtre placée dans un mur
 empilé coupe chaque sous-mur qu'elle traverse, son allège mesurée depuis la base du mur empilé.</p>
-<p>Un clic sélectionne le mur entier ; <strong>Tab</strong> passe à chaque sous-mur, de bas en haut (la barre
-d'état indique «Tab · élément suivant»). Les Propriétés du mur entier valent pour tous ses
-sous-murs ; son <strong>Alignement</strong> vient du type et est en lecture seule. D'un sous-mur, seuls
-<strong>Délimitation de pièce</strong> et <strong>Rôle</strong> se modifient : le reste vient du mur empilé et de son type,
-et son type se change dans le type empilé. <strong>Décomposer en murs simples</strong>, dans le menu contextuel
-et avec le mur sélectionné, fait de chaque sous-mur un mur de base indépendant à sa place ; ils ne
-se recomposent pas (Ctrl+Z annule). Le contour d'un mur empilé ou d'un sous-mur ne se modifie pas
+<p>Un clic sélectionne le mur entier ; <strong>Tab</strong> passe à chaque sous-mur, de bas en haut (la barre d'état
+indique «Tab · élément suivant»). Les Propriétés du mur entier valent pour tous ses sous-murs ; son
+<strong>Alignement</strong> est le plan sur lequel il est dessiné, comme pour tout mur : les faces de la bande
+qu'occupent ses sous-murs, ou le noyau du sous-mur variable. Un mur de base qui prend un type
+empilé, ou un mur empilé qui prend un type de base, reste sur son alignement. D'un sous-mur, seuls
+<strong>Délimitation de pièce</strong> et <strong>Rôle</strong> se modifient : le reste vient du mur empilé et de son type, et
+son type se change dans le type empilé. <strong>Décomposer en murs simples</strong>, dans le menu contextuel et
+avec le mur sélectionné, fait de chaque sous-mur un mur de base indépendant à sa place ; ils ne se
+recomposent pas (Ctrl+Z annule). Le contour d'un mur empilé ou d'un sous-mur ne se modifie pas
 encore.</p>
 <h3 id="the-sub-walls-of-the-type">Les sous-murs du type</h3>
 <p><img alt="Les Sous-murs du type du mur empilé du gabarit" src="../assets/screens/stacked-wall-sub-walls.png"/></p>
@@ -1319,5 +1334,6 @@ géométrie, phases, et lucarnes dans les toits.</p>
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.footer", "navigation.tracking", "toc.follow", "content.code.copy", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
 <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+<script src="../assets/js/zoom.js"></script>
 </body>
 </html>

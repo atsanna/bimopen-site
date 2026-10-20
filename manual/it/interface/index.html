@@ -297,6 +297,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#dialogs">
+<span class="md-ellipsis">
+      Finestre di dialogo
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#drawing-area-and-view-windows">
 <span class="md-ellipsis">
       Area di disegno e finestre di vista
@@ -343,6 +350,13 @@
 <a class="md-nav__link" href="#the-context-menu-of-a-view">
 <span class="md-ellipsis">
       Il menu contestuale di una vista
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#snaps">
+<span class="md-ellipsis">
+      Snap
     </span>
 </a>
 </li>
@@ -590,6 +604,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#dialogs">
+<span class="md-ellipsis">
+      Finestre di dialogo
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#drawing-area-and-view-windows">
 <span class="md-ellipsis">
       Area di disegno e finestre di vista
@@ -636,6 +657,13 @@
 <a class="md-nav__link" href="#the-context-menu-of-a-view">
 <span class="md-ellipsis">
       Il menu contestuale di una vista
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#snaps">
+<span class="md-ellipsis">
+      Snap
     </span>
 </a>
 </li>
@@ -961,12 +989,6 @@ sono in grigio, e il loro suggerimento dice «Non ancora disponibile»; <strong>
 <tr>
 <td></td>
 <td></td>
-<td><strong>Armature</strong></td>
-<td><em>Armatura</em>, <em>Armatura ad area</em>, <em>Armatura a percorso</em>, <em>Rete ad area</em>, <em>Rete singola</em>, <em>Copriferro</em>, <em>Manicotto</em>, <em>Armatura adattiva</em>, <em>Opzioni copriferro</em>, <em>Opzioni armature</em></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
 <td><strong>Elementi 3D</strong></td>
 <td><strong>Oggetto ▾</strong>, <em>Testo 3D</em>, <em>Linea 3D</em>, <em>Gruppo ▾</em></td>
 </tr>
@@ -1023,6 +1045,24 @@ sono in grigio, e il loro suggerimento dice «Non ancora disponibile»; <strong>
 <td></td>
 <td><strong>Altri impianti</strong></td>
 <td><em>Idrico-sanitario ▾</em>, <em>Impianto elettrico ▾</em>, <em>Modellazione ▾</em>, <strong>Piano di lavoro ▾</strong></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Cemento armato</strong></td>
+<td><strong>Armature</strong></td>
+<td><em>Armatura</em>, <em>Armatura a percorso</em>, <em>Armatura adattiva</em>, <em>Armatura ad area</em>, <em>Rete ad area</em>, <em>Rete singola</em>, <em>Copriferro</em>, <em>Manicotto</em></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><strong>Impostazioni</strong></td>
+<td><em>Opzioni copriferro</em>, <em>Opzioni armature</em></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><strong>Piano di lavoro</strong></td>
+<td><strong>Definisci</strong>, <strong>Visualizza</strong>, <strong>Piano guida</strong>, <em>Vista del piano</em></td>
 </tr>
 <tr>
 <td></td>
@@ -1385,6 +1425,8 @@ una sono in grigio, e il loro suggerimento dice di aprire prima una pianta delle
 <p><strong>Salva vista</strong> funziona solo mentre è aperta una vista 3D, e <strong>Duplica con dettagli</strong> solo per le
 viste che non sono 3D. Sotto gli strumenti, la scheda <strong>Indice del progetto</strong> contiene l'intero
 albero del progetto.</p>
+<p>Ogni menu ▾ elenca anche, in grigio, le voci non ancora disponibili; la ricerca dei comandi le
+trova tutte.</p>
 <h3 id="the-manage-tab">Gli strumenti di Impostazioni</h3>
 <table>
 <thead>
@@ -1405,10 +1447,9 @@ albero del progetto.</p>
 </tbody>
 </table>
 <p><strong>Snap</strong> attiva e disattiva lo snap per tutto il programma: è evidenziato quando è attivo, come
-l'interruttore <strong>Snap</strong> della barra di stato. <strong>Impostazioni aggiuntive ▸ Snap…</strong> ha <strong>Snap
-disattivati</strong> e gli <strong>Incrementi di aggancio per quote lineari</strong> (lunghezze separate da punto e
-virgola, per impostazione 1000; 100; 10 mm): dove nessun elemento aggancia, il cursore si muove a
-passi del maggiore di essi che non supera un pixel allo zoom corrente.</p>
+l'interruttore <strong>Snap</strong> della barra di stato. <strong>Impostazioni aggiuntive ▸ Snap…</strong> apre la finestra
+<strong>Snap</strong>: gli incrementi lineari e angolari, gli snap ad oggetto e le sostituzioni (vedi
+<a href="#snaps">Snap</a>).</p>
 <h3 id="the-contextual-tab">La scheda contestuale</h3>
 <p><img alt="Lo strumento muro al lavoro: la scheda contestuale in cima al pannello degli strumenti e la striscia delle opzioni sopra la vista" src="../assets/screens/bimopen-wall.png"/></p>
 <p>Quando avvii uno strumento o selezioni qualcosa, una scheda compare in cima al pannello degli
@@ -1507,7 +1548,15 @@ posizioni.</p>
 <tbody>
 <tr>
 <td><strong>Muro</strong></td>
-<td><strong>Altezza</strong> o <strong>Profondità</strong>; il livello che il muro raggiunge, oppure <strong>Non collegata</strong> con il suo valore; <strong>Allineamento</strong>; <strong>Continua</strong>; <strong>Offset</strong>; <strong>Raggio</strong> (in grigio: i muri curvi non sono ancora disponibili); <strong>Esterno a sinistra</strong> o <strong>Esterno a destra</strong> (la barra spaziatrice li scambia)</td>
+<td><strong>Altezza</strong> o <strong>Profondità</strong>; il livello che il muro raggiunge, oppure <strong>Non collegata</strong> con il suo valore; <strong>Allineamento</strong>; <strong>Continua</strong>; <strong>Scostamento</strong>; <strong>Raggio</strong> (in grigio: i muri curvi non sono ancora disponibili); <strong>Giunto alle estremità</strong> e <strong>Giunzione automatica</strong> (in grigio); <strong>Esterno a sinistra</strong> o <strong>Esterno a destra</strong> (la barra spaziatrice li scambia)</td>
+</tr>
+<tr>
+<td><strong>Porta</strong>, <strong>Finestra</strong></td>
+<td><strong>Carica famiglia</strong>; <strong>Modella sul posto</strong> (in grigio); <strong>Etichetta al posizionamento</strong> con <strong>Orizzontale</strong> o <strong>Verticale</strong>, <strong>Direttrice</strong> e la sua lunghezza; <strong>Etichette caricate…</strong> (in grigio)</td>
+</tr>
+<tr>
+<td><strong>Oggetto</strong></td>
+<td><strong>Carica famiglia</strong>; <strong>Modella sul posto</strong> (in grigio); <strong>Ruota dopo l'inserimento</strong>: l'oggetto posizionato resta selezionato e parte <strong>Ruota</strong></td>
 </tr>
 <tr>
 <td><strong>Tetto</strong></td>
@@ -1704,6 +1753,18 @@ dove l'hai messo anche nelle sessioni successive.</p>
 <p>Mentre trascini un pannello sono disegnati solo i posti dove si aggancia davvero, ciascuno come il
 pannello che diventerà. Il posto sotto il puntatore è disegnato marcato, gli altri appena
 accennati. Altrove non è disegnato nulla, e il pannello resta flottante dove lo lasci.</p>
+<h2 id="dialogs">Finestre di dialogo</h2>
+<p>Ogni finestra di dialogo si apre al centro dello schermo, ogni volta che si apre, anche se l'ultima
+volta era stata spostata o la finestra ha cambiato dimensione. Una volta aperta resta dov'è: per
+spostarla trascinala per la barra del titolo. Un cambiamento al suo interno, come l'interruttore
+<strong>Anteprima</strong>, non la sposta.</p>
+<p>Ogni finestra di dialogo ha una dimensione fissa, che non cambia con il suo contenuto. Fanno
+eccezione le finestre costruite attorno a un elenco o a una tabella lunghi (materiali,
+visibilità/grafica, stili oggetti, filtri, stili e motivi di linea, retini, spessori di linea,
+proprietà dell'abaco, parametri di progetto e condivisi, tasti di scelta rapida, elimina
+inutilizzati, classi di esportazione IFC, modelli di vista): trascinandone un bordo si
+ingrandiscono, mai più piccole di come si aprono la prima volta né più grandi dello schermo, e
+l'elenco cresce con loro. Si riaprono al centro con l'ultima dimensione data.</p>
 <h2 id="drawing-area-and-view-windows">Area di disegno e finestre di vista</h2>
 <p>Ogni vista che apri è una finestra nell'area di disegno. Una vista aperta di nuovo passa in primo
 piano; almeno una finestra resta sempre aperta. In alto a sinistra della vista, il <strong>selettore
@@ -1904,7 +1965,39 @@ comandi di modifica (<strong>Sposta</strong>, <strong>Copia</strong>, <strong>Ru
   della selezione;</li>
 <li><strong>Visibilità e grafica…</strong>.</li>
 </ul>
-<p>Mentre uno strumento è attivo, un clic destro apre invece il menu dello strumento, e il passaggio in corso resta: <strong>Annulla</strong> (ciò che fa <span class="keys"><kbd class="key-escape">Esc</kbd></span>, che annulla ancora il passaggio), <strong>Ripeti [comando]</strong>, <strong>Sostituzioni di snap ▸</strong> (lo snap del prossimo punto, come i tasti <code>SE</code>, <code>SM</code>, <code>SN</code>, <code>SI</code> e <code>SO</code>; solo nelle piante e nelle viste 2D libere), <strong>Zoom su regione</strong>, <strong>Zoom indietro (2x)</strong>, <strong>Adatta alla finestra</strong>, <strong>Pan/Zoom precedente</strong>, <strong>Pan/Zoom successivo</strong> e <strong>Proprietà</strong>. È lo stesso nelle piante, nelle sezioni, nei prospetti, nelle viste 3D e sulle tavole. In un disegno le sostituzioni valgono in ogni vista, anche <strong>Centro</strong> e <strong>Perpendicolare</strong>. Con il menu aperto, <span class="keys"><kbd class="key-escape">Esc</kbd></span> o un clic nella vista lo chiudono soltanto.</p>
+<p>Mentre uno strumento è attivo, un clic destro apre invece il menu dello strumento, e il passaggio in corso resta: <strong>Annulla</strong> (ciò che fa <span class="keys"><kbd class="key-escape">Esc</kbd></span>, che annulla ancora il passaggio), <strong>Ripeti [comando]</strong>, <strong>Sostituzioni di snap ▸</strong> (lo snap del prossimo punto, come i tasti a due lettere; in ogni vista, vedi <a href="#snaps">Snap</a>), <strong>Zoom su regione</strong>, <strong>Zoom indietro (2x)</strong>, <strong>Adatta alla finestra</strong>, <strong>Pan/Zoom precedente</strong>, <strong>Pan/Zoom successivo</strong> e <strong>Proprietà</strong>. È lo stesso nelle piante, nelle sezioni, nei prospetti, nelle viste 3D e sulle tavole. Con il menu aperto, <span class="keys"><kbd class="key-escape">Esc</kbd></span> o un clic nella vista lo chiudono soltanto.</p>
+<h3 id="snaps">Snap</h3>
+<p><strong>Impostazioni aggiuntive ▸ Snap…</strong> (nello stile BIMopen il comando <strong>Snap…</strong>) apre la finestra
+<strong>Snap</strong>, la stessa nei due stili:</p>
+<ul>
+<li><strong>Snap disattivati</strong> spegne tutto (come l'interruttore <strong>Snap</strong> della barra di stato, che resta
+  com'era alla riapertura del programma).</li>
+<li><strong>Incrementi di aggancio per quote lineari</strong> e <strong>per quote angolari</strong>, ciascuno con la sua
+  casella: valori separati da punto e virgola (per impostazione 1000; 100; 10 mm e 90°; 45°; 15°;
+  5°; 1°). Lo zoom sceglie il passo: con lo zoom avanti passi più fini.</li>
+<li><strong>Snap ad oggetto</strong>: una casella per <strong>Punto finale</strong>, <strong>Punto medio</strong>, <strong>Vicino</strong>, <strong>Griglia del
+  piano di lavoro</strong>, <strong>Quadrante</strong>, <strong>Intersezione</strong>, <strong>Centro</strong>, <strong>Perpendicolare</strong>, <strong>Tangente</strong> e
+  <strong>Oggetti remoti</strong>, con le loro due lettere; <strong>Seleziona tutto</strong> e <strong>Deseleziona tutto</strong>. Con
+  <strong>Vicino</strong> spento, sulla linea sotto il cursore restano gli snap ai suoi estremi e al suo punto
+  medio anche se lontani. <strong>Oggetti remoti</strong> (spento all'inizio) allinea il punto, in orizzontale o in verticale, agli
+  estremi di linee lontane, con una guida tratteggiata.</li>
+<li><strong>Sostituzioni temporanee</strong>: l'elenco delle due lettere che valgono per un punto.</li>
+<li><strong>Ripristina predefiniti</strong> rimette tutto com'era all'inizio.</li>
+</ul>
+<p>Le impostazioni sono del programma, non del progetto: restano tra una sessione e l'altra.</p>
+<p>Mentre si disegna da un punto (muri, linee, griglie, piani di riferimento, schizzi, e il secondo
+raggio di <strong>Ruota</strong>) il segmento aggancia la sua direzione allo stesso modo in ogni vista: in
+orizzontale o in verticale, parallelo o perpendicolare a una linea vicina, oppure a un multiplo
+dell'incremento angolare che lo zoom dà; solo quando il cursore è a pochi pixel da quella
+direzione, altrimenti l'angolo resta libero. Una guida tratteggiata segue la direzione, un arco con
+il valore mostra l'angolo, e la barra di stato dice ad esempio <em>Snap: Angolo 30° · passo 15°</em>. La
+lunghezza si arrotonda all'incremento lineare. <strong>Angolo misurato da</strong>, sulla barra delle opzioni,
+conta gli angoli dall'<strong>Asse orizzontale</strong> della vista oppure dal <strong>Segmento precedente</strong>. Nella
+vista 3D tutto si misura sul piano di lavoro (il piano del livello). Dalla riga di comando
+<code>snap {"angles":[45,15],"objects":{"quadrant":false}}</code> cambia le impostazioni e <code>snap</code> da solo le
+mostra.</p>
+<p>Il comando <code>anglesnap 0,0 3,0.02</code> (anche via MCP, e <code>snap</code> con due punti) restituisce la
+direzione in cui un segmento aggancia, con le stesse regole di ogni vista.</p>
 <p>In cima al menu, <strong>Ripeti [comando]</strong> riavvia l'ultimo strumento usato; <span class="keys"><kbd class="key-enter">Enter</kbd></span> fa lo stesso quando nessuno strumento è attivo e la riga di comando è vuota. Il menu è lo stesso in piante, sezioni e viste 3D.</p>
 <h2 id="command-line">Ricerca dei comandi e riga di comando</h2>
 <p><img alt="La ricerca dei comandi: comandi, elementi e viste che corrispondono a ciò che si scrive" src="../assets/screens/bimopen-search.png"/></p>
@@ -2006,5 +2099,6 @@ touch</a>.</p>
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.footer", "navigation.tracking", "toc.follow", "content.code.copy", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiato", "clipboard.copy": "Copia", "search.result.more.one": "1 altro in questa pagina", "search.result.more.other": "# altri in questa pagina", "search.result.none": "Nessun documento trovato", "search.result.one": "1 documento trovato", "search.result.other": "# documenti trovati", "search.result.placeholder": "Scrivi per iniziare a cercare", "search.result.term.missing": "Non presente", "select.version": "Seleziona la versione"}}</script>
 <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+<script src="../assets/js/zoom.js"></script>
 </body>
 </html>

@@ -846,8 +846,24 @@ Material</strong> colours it. Its railings, <strong>Edit Sketch</strong> and <st
    drawn on it climbs with the stair.</li>
 <li>Click <strong>Finish Edit Mode</strong>.</li>
 </ol>
-<p><strong>Edit Path</strong> reopens the path of a railing. The railing's <strong>Type Parameters</strong> has its <strong>Railing
-Height</strong> and <strong>Baluster Spacing</strong>: changing them changes every railing of that type.</p>
+<p><strong>Edit Path</strong> reopens a railing's path. <strong>Create ▸ Vertical Links ▸ Railing ▸ Place on a host</strong> puts
+a railing on each side of the stair or ramp you click: on the options bar <strong>Position</strong> chooses <strong>On
+treads</strong> (on the stair's edge) or <strong>On stringer</strong> (over the stringer, where the stair has one),
+<strong>Offset from Path</strong> moves it towards the inside of the stair and <strong>Invert</strong> switches between the
+two positions. The same two values are in the <strong>Properties</strong> of a stair's railing.</p>
+<p>The railing's <strong>Type Parameters</strong> hold for every railing of that type: <strong>Railing Height</strong> (that of
+the top rail), <strong>Baluster Spacing</strong>, <strong>Baluster Offset</strong> (balusters and posts moved sideways) and
+the identity data; the preview shows the railing on a sample stair, seen from the side. <strong>Rail
+Structure (Non-Continuous) ▸ Edit…</strong> opens the list of the rails below the top one (<strong>Name</strong>,
+<strong>Height</strong> above the walking surface, <strong>Offset</strong> sideways, a square or round <strong>Profile</strong>) with
+<strong>Insert</strong>, <strong>Delete</strong>, <strong>Up</strong> and <strong>Down</strong>. <strong>Baluster Placement ▸ Edit…</strong> opens the <strong>Main
+pattern</strong>: the baluster or <strong>None</strong>, where it starts and ends (<strong>Host</strong>, <strong>Top rail</strong> or one of the
+rails) with their offsets, the distance between balusters, <strong>Break pattern at</strong> (at the end of each
+segment, at angles greater than a value, or never), <strong>Justify</strong>, <strong>Excess length fill</strong> and <strong>Use
+baluster per tread</strong> with how many on each tread; and the start, corner and end <strong>Posts</strong> (the post
+or <strong>None</strong>, its offsets, <strong>Space</strong> along the path, <strong>Offset</strong> sideways) with <strong>Corner posts at</strong>.
+The changes in these two windows apply with <strong>OK</strong> and are undone with a single <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span>. The
+<strong>Top rail</strong>, <strong>Handrail 1</strong> and <strong>Handrail 2</strong> rows are greyed: not available yet.</p>
 <p>The railings of a stair run on over its landings as one rail, at their height above the line of
 the nosings and above the landings. Where a run leaves a landing one riser higher, the type's
 <strong>Tangent Joins</strong> (the rail goes straight on) and <strong>Angled Joins</strong> (it turns) decide the join:
@@ -859,6 +875,11 @@ gap.</p>
 joint's vertical plane. A post stands at the start and the end of
 each railing and at every change of direction in plan and wherever the slope changes, as where a run meets a landing. <strong>Use Landing Height Adjustment</strong> with <strong>Landing Height
 Adjustment</strong> raises (or lowers) the rail over the landings by that much.</p>
+<p>A stair railing's path follows the stair's outline. Every post stands whole on the tread, landing or
+floor under it: where it would fall on a riser's line it moves by half its section, so no post sinks
+into the steps or hangs in front of the first one. Between two posts the balusters are evenly
+spaced, never wider apart than the spacing.</p>
+<p><strong>Place on a host</strong> works in plans and in the 3D view: the stair under the cursor shows where the two railings go. <strong>On stringer</strong> can be chosen only for a stair that has a stringer: on a monolithic stair it is greyed, on the options bar and in <strong>Properties</strong>. A new railing type has both <strong>Angled Joins</strong> and <strong>Tangent Joins</strong> set to <strong>Add Vertical/Horizontal Segments</strong>, <strong>Weld</strong>, no landing height adjustment, a bottom rail at 0.100 m (30×30), 20×20 balusters from the bottom rail to the top rail every 0.120 m, broken at the end of each segment and fitted to its length, and 50×50 posts standing on the host: where a run meets a landing the post stands on the landing at the riser's line, with the upright piece of the rail, and nothing runs over the treads. Where the rail rises upright at the start of a run, a low rail stays on the landing without entering the first tread. <strong>Edit Joins</strong> (one join at a time) is greyed: not available yet.</p>
 <h2 id="components">Components</h2>
 <ol>
 <li>Click <strong>Create ▸ Build ▸ Component</strong>. The type selector lists the components loaded in the
@@ -933,5 +954,6 @@ and soffits come after this chapter's realignment.</p>
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.footer", "navigation.tracking", "toc.follow", "content.code.copy", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
 <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+<script src="../assets/js/zoom.js"></script>
 </body>
 </html>

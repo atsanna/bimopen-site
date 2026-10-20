@@ -89,3 +89,15 @@
     font-weight: 700;
     letter-spacing: -.01em;
 }
+
+/* A picture opens large on a click (assets/js/zoom.js) */
+.md-content img[data-zoom] { cursor: zoom-in; }
+.md-content img[data-zoom]:focus-visible { outline: 2px solid var(--md-accent-fg-color); outline-offset: 2px; }
+.bo-zoom { position: fixed; inset: 0; z-index: 1000; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: .6rem; padding: 2rem 1rem; background: rgba(10, 14, 20, .88); cursor: zoom-out; }
+.bo-zoom img { max-width: 100%; max-height: calc(100% - 3rem); object-fit: contain; border-radius: 4px; box-shadow: 0 8px 40px rgba(0,0,0,.5); }
+.bo-zoom p { margin: 0; color: #e8edf3; font-size: .8rem; text-align: center; max-width: 60rem; }
+.bo-zoom-close { position: absolute; top: .6rem; right: .8rem; width: 2.2rem; height: 2.2rem; border: 0; border-radius: 50%;
+  background: rgba(255,255,255,.12); color: #fff; font-size: 1.4rem; line-height: 1; cursor: pointer; }
+[dir="rtl"] .bo-zoom-close { right: auto; left: .8rem; }
+@media print { .bo-zoom { display: none; } }

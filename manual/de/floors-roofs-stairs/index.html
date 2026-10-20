@@ -871,9 +871,27 @@ wie bei Treppen.</p>
    wählen</strong> und dann auf die Treppe: Der darauf gezeichnete Pfad steigt mit der Treppe.</li>
 <li>Klicken Sie auf <strong>Bearbeitungsmodus beenden</strong>.</li>
 </ol>
-<p><strong>Pfad bearbeiten</strong> öffnet den Pfad eines Geländers wieder. Die <strong>Typparameter</strong> des
-Geländers haben die <strong>Geländerhöhe</strong> und den <strong>Abstand der Geländerstäbe</strong>: Sie zu ändern ändert
-alle Geländer dieses Typs.</p>
+<p><strong>Pfad bearbeiten</strong> öffnet den Pfad eines Geländers wieder. <strong>Erzeugen ▸ Vertikale Verbindungen ▸
+Geländer ▸ Auf Träger platzieren</strong> setzt ein Geländer auf jede Seite der angeklickten Treppe oder
+Rampe: In der Optionsleiste wählt <strong>Position</strong> <strong>Auf Auftritten</strong> (an der Treppenkante) oder <strong>Auf
+Wange</strong> (über der Wange, wo die Treppe eine hat), <strong>Versatz vom Pfad</strong> rückt es zur Innenseite der
+Treppe und <strong>Umkehren</strong> wechselt zwischen beiden Positionen. Dieselben zwei Werte stehen in den
+<strong>Eigenschaften</strong> eines Treppengeländers.</p>
+<p>Die <strong>Typparameter</strong> des Geländers gelten für alle Geländer dieses Typs: <strong>Geländerhöhe</strong> (die des
+oberen Handlaufs), <strong>Abstand der Geländerstäbe</strong>, <strong>Versatz der Geländerstäbe</strong> (Stäbe und Pfosten
+seitlich verschoben) und die Identitätsdaten; die Vorschau zeigt das Geländer auf einer
+Beispieltreppe von der Seite. <strong>Handlaufstruktur (nicht durchgehend) ▸ Bearbeiten…</strong> öffnet die
+Liste der Handläufe unter dem oberen (<strong>Name</strong>, <strong>Höhe</strong> über der Gehfläche, <strong>Versatz</strong> zur Seite,
+quadratischer oder runder <strong>Querschnitt</strong>) mit <strong>Einfügen</strong>, <strong>Löschen</strong>, <strong>Nach oben</strong> und <strong>Nach
+unten</strong>. <strong>Platzierung der Geländerstäbe ▸ Bearbeiten…</strong> öffnet das <strong>Hauptmuster</strong>: der Stab oder
+<strong>Keine</strong>, wo er beginnt und endet (<strong>Basisbauteil</strong>, <strong>Oberer Handlauf</strong> oder einer der Handläufe)
+mit ihren Versätzen, der Abstand der Stäbe, <strong>Muster unterbrechen bei</strong> (am Ende jedes Segments, bei
+Winkeln größer als ein Wert oder nie), <strong>Ausrichten</strong>, <strong>Restlänge füllen</strong> und <strong>Geländerstab je
+Auftritt</strong> mit der Anzahl je Auftritt; und die <strong>Pfosten</strong> am Anfang, an den Ecken und am Ende (der
+Pfosten oder <strong>Keiner</strong>, seine Versätze, <strong>Lücke</strong> entlang des Pfads, <strong>Versatz</strong> zur Seite) mit
+<strong>Eckpfosten bei</strong>. Die Änderungen in diesen beiden Fenstern gelten mit <strong>OK</strong> und werden mit einem
+einzigen <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span> rückgängig gemacht. Die Zeilen <strong>Oberer Handlauf</strong>, <strong>Handlauf 1</strong> und
+<strong>Handlauf 2</strong> sind grau: noch nicht verfügbar.</p>
 <p>Die Geländer einer Treppe laufen als ein Handlauf über die Podeste weiter, in ihrer Höhe über der
 Linie der Stufenvorderkanten und über den Podesten. Wo ein Lauf ein Podest eine Steigung höher
 verlässt, entscheiden die <strong>Tangentiale Verbindungen</strong> (der Handlauf geht gerade weiter) und die
@@ -887,6 +905,11 @@ die Neigung ändert: mit <strong>Handlaufverbindungen</strong> <strong>Schweiße
 und am Ende jedes Geländers und an jeder Richtungsänderung im Grundriss und wo sich die Neigung ändert, etwa wo ein Lauf auf ein Podest trifft. <strong>Höhenanpassung
 Podest verwenden</strong> mit <strong>Höhenanpassung Podest</strong> hebt (oder senkt) den Handlauf über den Podesten
 um diesen Wert.</p>
+<p>Der Pfad eines Treppengeländers folgt dem Umriss der Treppe. Jeder Pfosten steht ganz auf dem
+Auftritt, dem Podest oder dem Boden darunter: Wo er auf die Linie einer Setzstufe fiele, rückt er um
+eine halbe Querschnittsbreite, so dass kein Pfosten in die Stufen ragt oder vor der ersten schwebt.
+Zwischen zwei Pfosten haben die Geländerstäbe gleichen Abstand, nie größer als der eingestellte.</p>
+<p><strong>Auf Träger platzieren</strong> funktioniert in Grundrissen und in der 3D-Ansicht: Die Treppe unter dem Cursor zeigt, wo die beiden Geländer hinkommen. <strong>Auf Wange</strong> lässt sich nur für eine Treppe mit Wange wählen: Bei einer monolithischen Treppe ist es grau, in der Optionsleiste und in den <strong>Eigenschaften</strong>. Ein neuer Geländertyp hat <strong>Winkelverbindungen</strong> und <strong>Tangentiale Verbindungen</strong> auf <strong>Vertikale/horizontale Segmente hinzufügen</strong>, <strong>Schweißen</strong>, keine Podesthöhenanpassung, einen unteren Handlauf auf 0,100 m (30×30), Geländerstäbe 20×20 vom unteren bis zum oberen Handlauf alle 0,120 m, am Ende jedes Segments unterbrochen und an seine Länge angepasst, und Pfosten 50×50 auf dem Basisbauteil: Wo ein Lauf auf ein Podest trifft, steht der Pfosten auf dem Podest an der Setzstufenlinie, mit dem senkrechten Stück des Handlaufs, und nichts verläuft über den Stufen. Wo der Handlauf am Anfang eines Laufs senkrecht steigt, bleibt ein niedriger Handlauf auf dem Podest, ohne in die erste Stufe einzudringen. <strong>Verbindungen bearbeiten</strong> (eine Verbindung nach der anderen) ist grau: noch nicht verfügbar.</p>
 <h2 id="components">Bauteile</h2>
 <ol>
 <li>Klicken Sie auf <strong>Erzeugen ▸ Erstellen ▸ Bauteil</strong>. Die Typenauswahl listet die im Projekt
@@ -963,5 +986,6 @@ Dachrinnen, Traufbretter und Dachuntersichten kommen nach der Neuausrichtung die
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.footer", "navigation.tracking", "toc.follow", "content.code.copy", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}}</script>
 <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+<script src="../assets/js/zoom.js"></script>
 </body>
 </html>

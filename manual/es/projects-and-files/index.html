@@ -584,9 +584,15 @@ archivo (<code>house.0001.bimopen</code>, <code>house.0002.bimopen</code>…), e
 <p>Cuando un proyecto cambiado sigue sin guardar durante el intervalo fijado en
 <strong>Opciones ➤ General</strong> (<strong>Intervalo de recordatorio de guardado</strong>, 30 minutos al principio),
 <strong>Recordatorio de guardado</strong> ofrece guardarlo, no guardarlo o cambiar el intervalo.</p>
-<p>Antes de <strong>Nuevo</strong>, <strong>Abrir…</strong>, un documento reciente, el proyecto de ejemplo o cerrar la
-ventana, un proyecto cambiado pregunta <strong>¿Guardar los cambios en …?</strong>: <strong>Sí</strong> lo guarda, <strong>No</strong>
-descarta los cambios, <strong>Cancelar</strong> lo mantiene abierto.</p>
+<p>Hay un proyecto abierto a la vez: el proyecto abierto ocupa el lugar del anterior, cuyas vistas
+se cierran con él. Abrir el proyecto ya abierto lo deja como está,
+si no tiene cambios sin guardar; con cambios, responder <strong>No</strong> a la pregunta de guardarlos los
+descarta y vuelve a abrir el archivo como se guardó por última vez, como cerrarlo sin guardar y
+volver a abrirlo.</p>
+<p>Antes de <strong>Nuevo</strong>, <strong>Abrir…</strong>, un documento reciente, un archivo arrastrado, <code>open</code> en la línea
+de comandos, el proyecto de ejemplo o cerrar la ventana, un proyecto cambiado pregunta
+<strong>¿Guardar los cambios en …?</strong>: <strong>Sí</strong> lo guarda, <strong>No</strong> descarta los cambios, <strong>Cancelar</strong> lo
+mantiene abierto.</p>
 <p>En el navegador, <strong>Abrir…</strong> usa el selector de archivos del navegador, y <strong>Guardar</strong> descarga el
 archivo; las copias de seguridad, la recuperación tras un bloqueo y la apertura en solo lectura
 necesitan un archivo en disco y solo existen en el escritorio.</p>
@@ -727,5 +733,6 @@ línea de comandos (véase <a href="../command-line-and-mcp/">Línea de comandos
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.footer", "navigation.tracking", "toc.follow", "content.code.copy", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
 <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+<script src="../assets/js/zoom.js"></script>
 </body>
 </html>

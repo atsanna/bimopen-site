@@ -582,9 +582,13 @@ versions beside the file (<code>house.0001.bimopen</code>, <code>house.0002.bimo
 <p>When a changed project stays unsaved for the interval set in <strong>Options ➤ General</strong>
 (<strong>Save reminder interval</strong>, 30 minutes to start with), <strong>Save Reminder</strong> offers to save it, not to
 save it, or to change the interval.</p>
-<p>Before <strong>New</strong>, <strong>Open…</strong>, a recent document, the sample project, or closing the window, a
-changed project asks <strong>Save changes to …?</strong>: <strong>Yes</strong> saves it, <strong>No</strong> drops the changes,
-<strong>Cancel</strong> keeps it open.</p>
+<p>One project is open at a time: the project opened takes the place of the one open, and the
+views of that one close with it. Opening the project already open leaves it as it is,
+when it has no unsaved changes; with changes, answering <strong>No</strong> to the question to save them drops
+them and opens the file again as last saved, as closing it without saving and reopening it.</p>
+<p>Before <strong>New</strong>, <strong>Open…</strong>, a recent document, a dropped file, <code>open</code> at the command line, the
+sample project, or closing the window, a changed project asks <strong>Save changes to …?</strong>: <strong>Yes</strong>
+saves it, <strong>No</strong> drops the changes, <strong>Cancel</strong> keeps it open.</p>
 <p>In the browser, <strong>Open…</strong> uses the browser's file chooser, and <strong>Save</strong> downloads the file; backups,
 crash recovery and read-only opening need a file on disk and are desktop-only.</p>
 <h2 id="project-settings">Project settings</h2>
@@ -716,5 +720,6 @@ same chapter. <code>bimopen-cli convert</code> exports from the command line (se
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.footer", "navigation.tracking", "toc.follow", "content.code.copy", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
 <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+<script src="../assets/js/zoom.js"></script>
 </body>
 </html>

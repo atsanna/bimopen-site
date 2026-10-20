@@ -861,9 +861,27 @@ escaleras.</p>
    y luego en la escalera: el camino dibujado sobre ella sube con la escalera.</li>
 <li>Haz clic en <strong>Finalizar modo de edición</strong>.</li>
 </ol>
-<p><strong>Editar camino</strong> vuelve a abrir el camino de una barandilla. Las <strong>Parámetros de tipo</strong> de la
-barandilla tienen la <strong>Altura de barandilla</strong> y la <strong>Separación de balaustres</strong>: cambiarlas cambia
-todas las barandillas de ese tipo.</p>
+<p><strong>Editar camino</strong> vuelve a abrir el camino de una barandilla. <strong>Crear ▸ Conexiones verticales ▸
+Barandilla ▸ Colocar sobre anfitrión</strong> pone una barandilla en cada lado de la escalera o rampa que
+pulsas: en la barra de opciones <strong>Posición</strong> elige <strong>Sobre huellas</strong> (en el borde de la escalera) o
+<strong>Sobre zanca</strong> (sobre la zanca, donde la escalera tiene una), <strong>Desfase desde el camino</strong> la
+desplaza hacia el interior de la escalera e <strong>Invertir</strong> pasa de una posición a la otra. Los mismos
+dos valores están en las <strong>Propiedades</strong> de una barandilla de escalera.</p>
+<p>Los <strong>Parámetros de tipo</strong> de la barandilla valen para todas las barandillas de ese tipo: <strong>Altura
+de barandilla</strong> (la del barandal superior), <strong>Separación de balaustres</strong>, <strong>Desfase de balaustre</strong>
+(balaustres y postes desplazados de lado) y los datos de identidad; la vista previa muestra la
+barandilla sobre una escalera de ejemplo, vista de lado. <strong>Estructura de barandal (no continuo) ▸
+Editar…</strong> abre la lista de los barandales bajo el superior (<strong>Nombre</strong>, <strong>Altura</strong> sobre la
+superficie de paso, <strong>Desfase</strong> de lado, <strong>Perfil</strong> cuadrado o redondo) con <strong>Insertar</strong>,
+<strong>Eliminar</strong>, <strong>Arriba</strong> y <strong>Abajo</strong>. <strong>Colocación de balaustres ▸ Editar…</strong> abre el <strong>Patrón
+principal</strong>: el balaustre o <strong>Ninguna</strong>, dónde empieza y dónde termina (<strong>Anfitrión</strong>, <strong>Barandal
+superior</strong> o uno de los barandales) con sus desfases, la distancia entre balaustres, <strong>Interrumpir
+patrón en</strong> (al final de cada segmento, en ángulos mayores que un valor o nunca), <strong>Justificar</strong>,
+<strong>Relleno de longitud sobrante</strong> y <strong>Usar balaustre por huella</strong> con cuántos en cada huella; y los
+<strong>Postes</strong> inicial, de esquina y final (el poste o <strong>Ninguno</strong>, sus desfases, <strong>Espacio</strong> a lo largo
+del camino, <strong>Desfase</strong> de lado) con <strong>Postes de esquina en</strong>. Los cambios de estas dos ventanas se
+aplican con <strong>Aceptar</strong> y se deshacen con un solo <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span>. Las filas <strong>Barandal superior</strong>,
+<strong>Pasamanos 1</strong> y <strong>Pasamanos 2</strong> están en gris: aún no disponibles.</p>
 <p>Las barandillas de una escalera siguen sobre sus descansillos como un único barandal, a su altura
 sobre la línea de las narices de los peldaños y sobre los descansillos. Donde un tramo sale de un
 descansillo una contrahuella más arriba, las <strong>Uniones tangentes</strong> (el barandal sigue recto) y las
@@ -877,6 +895,12 @@ pendiente: con <strong>Conexiones de barandal</strong> <strong>Soldadura</strong
 final de cada barandilla y en cada cambio de dirección en planta y donde cambia la pendiente, como donde un tramo llega a un descansillo. <strong>Usar
 ajuste de altura de descansillo</strong> con <strong>Ajuste de altura de descansillo</strong> sube (o baja) el
 barandal sobre los descansillos esa medida.</p>
+<p>El camino de una barandilla de escalera sigue el contorno de la escalera. Cada poste se apoya por
+completo en la huella, el descansillo o el suelo que tiene debajo: donde caería sobre la línea de
+una contrahuella se desplaza media sección, así ningún poste entra en los peldaños ni queda
+suspendido delante del primero. Entre dos postes los balaustres tienen un paso uniforme, nunca mayor
+que la separación.</p>
+<p><strong>Colocar sobre anfitrión</strong> funciona en planta y en la vista 3D: la escalera bajo el cursor muestra dónde van las dos barandillas. <strong>Sobre zanca</strong> solo se elige para una escalera que tiene zanca: en una escalera monolítica está en gris, en la barra de opciones y en las <strong>Propiedades</strong>. Un tipo de barandilla nuevo tiene las <strong>Uniones angulares</strong> y las <strong>Uniones tangentes</strong> en <strong>Añadir segmentos verticales/horizontales</strong>, <strong>Soldadura</strong>, sin ajuste de altura del descansillo, un barandal inferior a 0,100 m (30×30), balaustres 20×20 del barandal inferior al superior cada 0,120 m, interrumpidos al final de cada segmento y ajustados a su longitud, y postes 50×50 sobre el anfitrión: donde un tramo encuentra un descansillo el poste queda sobre el descansillo en la línea de contrahuella, con el segmento vertical del barandal, y nada pasa sobre las huellas. Donde el barandal sube en vertical al inicio de un tramo, un barandal bajo se queda en el descansillo sin entrar en el primer peldaño. <strong>Editar uniones</strong> (una unión cada vez) está en gris: aún no disponible.</p>
 <h2 id="components">Componentes</h2>
 <ol>
 <li>Haz clic en <strong>Crear ▸ Construir ▸ Componente</strong>. El selector de tipo lista los componentes
@@ -954,5 +978,6 @@ aberturas verticales, los bordes de losa, las impostas, los canalones y los plaf
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.footer", "navigation.tracking", "toc.follow", "content.code.copy", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
 <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+<script src="../assets/js/zoom.js"></script>
 </body>
 </html>

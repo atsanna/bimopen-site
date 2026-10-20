@@ -297,6 +297,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#dialogs">
+<span class="md-ellipsis">
+      Cuadros de diálogo
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#drawing-area-and-view-windows">
 <span class="md-ellipsis">
       Área de dibujo y ventanas de vista
@@ -343,6 +350,13 @@
 <a class="md-nav__link" href="#the-context-menu-of-a-view">
 <span class="md-ellipsis">
       El menú contextual de una vista
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#snaps">
+<span class="md-ellipsis">
+      Forzado
     </span>
 </a>
 </li>
@@ -590,6 +604,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#dialogs">
+<span class="md-ellipsis">
+      Cuadros de diálogo
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#drawing-area-and-view-windows">
 <span class="md-ellipsis">
       Área de dibujo y ventanas de vista
@@ -636,6 +657,13 @@
 <a class="md-nav__link" href="#the-context-menu-of-a-view">
 <span class="md-ellipsis">
       El menú contextual de una vista
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#snaps">
+<span class="md-ellipsis">
+      Forzado
     </span>
 </a>
 </li>
@@ -963,12 +991,6 @@ que BIMopen aún no ejecuta están en gris, y su información dice «Todavía no
 <tr>
 <td></td>
 <td></td>
-<td><strong>Armaduras</strong></td>
-<td><em>Armadura</em>, <em>Armadura por área</em>, <em>Armadura a lo largo de un recorrido</em>, <em>Malla por área</em>, <em>Malla individual</em>, <em>Recubrimiento</em>, <em>Manguito</em>, <em>Armadura adaptable</em>, <em>Opciones de recubrimiento</em>, <em>Opciones de armadura</em></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
 <td><strong>Elementos 3D</strong></td>
 <td><strong>Objeto ▾</strong>, <em>Texto 3D</em>, <em>Línea 3D</em>, <em>Grupo ▾</em></td>
 </tr>
@@ -1025,6 +1047,24 @@ que BIMopen aún no ejecuta están en gris, y su información dice «Todavía no
 <td></td>
 <td><strong>Otras instalaciones</strong></td>
 <td><em>Fontanería ▾</em>, <em>Electricidad ▾</em>, <em>Modelado ▾</em>, <strong>Plano de trabajo ▾</strong></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Hormigón armado</strong></td>
+<td><strong>Armaduras</strong></td>
+<td><em>Armadura</em>, <em>Armadura a lo largo de un recorrido</em>, <em>Armadura adaptable</em>, <em>Armadura por área</em>, <em>Malla por área</em>, <em>Malla individual</em>, <em>Recubrimiento</em>, <em>Manguito</em></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><strong>Configuración</strong></td>
+<td><em>Opciones de recubrimiento</em>, <em>Opciones de armadura</em></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><strong>Plano de trabajo</strong></td>
+<td><strong>Definir</strong>, <strong>Visualizar</strong>, <strong>Plano guía</strong>, <em>Vista del plano</em></td>
 </tr>
 <tr>
 <td></td>
@@ -1388,6 +1428,8 @@ están atenuados, y su información de herramienta indica que primero hay que ab
 <p><strong>Guardar vista</strong> solo funciona mientras hay una vista 3D abierta, y <strong>Duplicar con detalles</strong> solo
 para vistas que no son 3D. Bajo las herramientas, la tarjeta <strong>Índice del proyecto</strong> contiene todo
 el árbol del proyecto.</p>
+<p>Cada menú ▾ enumera también, atenuadas, las entradas aún no disponibles; la búsqueda de comandos
+las encuentra todas.</p>
 <h3 id="the-manage-tab">Las herramientas de Configuración</h3>
 <table>
 <thead>
@@ -1409,10 +1451,8 @@ el árbol del proyecto.</p>
 </table>
 <p><strong>Forzado</strong> activa y desactiva el forzado de cursor para todo el programa: aparece resaltado
 mientras está activo, como el interruptor <strong>Forzado</strong> de la barra de estado.
-<strong>Parámetros adicionales ▸ Forzados de cursor…</strong> tiene <strong>Forzados desactivados</strong> y los
-<strong>Incrementos de forzado de cotas de longitud</strong> (longitudes separadas por punto y coma, por defecto
-1000; 100; 10 mm): donde ningún elemento fuerza el cursor, este avanza en pasos del mayor de ellos
-que no supera un píxel con el zoom actual.</p>
+<strong>Parámetros adicionales ▸ Forzados de cursor…</strong> abre la ventana <strong>Forzado</strong>: los incrementos de
+longitud y angulares, los forzados a objetos y las modificaciones (ver <a href="#snaps">Forzado</a>).</p>
 <h3 id="the-contextual-tab">La tarjeta contextual</h3>
 <p><img alt="La herramienta muro en acción: la tarjeta contextual encima del panel de herramientas y la franja de opciones sobre la vista" src="../assets/screens/bimopen-wall.png"/></p>
 <p>Cuando inicias una herramienta o seleccionas algo, aparece una tarjeta encima del panel de
@@ -1511,7 +1551,15 @@ elementos que coloques.</p>
 <tbody>
 <tr>
 <td><strong>Muro</strong></td>
-<td><strong>Altura</strong> o <strong>Profundidad</strong>; el nivel al que llega el muro, o <strong>Sin conexión</strong> con su valor; <strong>Alineación</strong>; <strong>Continuar</strong>; <strong>Desfase</strong>; <strong>Radio</strong> (atenuado: los muros curvos aún no están disponibles); <strong>Exterior a la izquierda</strong> o <strong>Exterior a la derecha</strong> (la barra espaciadora los intercambia)</td>
+<td><strong>Altura</strong> o <strong>Profundidad</strong>; el nivel al que llega el muro, o <strong>Sin conexión</strong> con su valor; <strong>Alineación</strong>; <strong>Continuar</strong>; <strong>Desfase</strong>; <strong>Radio</strong> (atenuado: los muros curvos aún no están disponibles); <strong>Unión en los extremos</strong> y <strong>Unión automática</strong> (atenuadas); <strong>Exterior a la izquierda</strong> o <strong>Exterior a la derecha</strong> (la barra espaciadora los intercambia)</td>
+</tr>
+<tr>
+<td><strong>Puerta</strong>, <strong>Ventana</strong></td>
+<td><strong>Cargar familia</strong>; <strong>Modelar en sitio</strong> (atenuado); <strong>Etiquetar al colocar</strong> con <strong>Horizontal</strong> o <strong>Vertical</strong>, <strong>Directriz</strong> y su longitud; <strong>Etiquetas cargadas…</strong> (atenuado)</td>
+</tr>
+<tr>
+<td><strong>Objeto</strong></td>
+<td><strong>Cargar familia</strong>; <strong>Modelar en sitio</strong> (atenuado); <strong>Girar tras insertar</strong>: el objeto colocado queda seleccionado y empieza <strong>Girar</strong></td>
 </tr>
 <tr>
 <td><strong>Cubierta</strong></td>
@@ -1708,6 +1756,18 @@ siguientes.</p>
 <p>Mientras arrastras un panel solo se dibujan los sitios donde se acopla de verdad, cada uno como el
 panel que será. El sitio bajo el puntero se dibuja marcado, los demás apenas. En otro lugar no se
 dibuja nada, y el panel queda flotante donde lo sueltes.</p>
+<h2 id="dialogs">Cuadros de diálogo</h2>
+<p>Cada cuadro de diálogo se abre en el centro de la pantalla, cada vez que se abre, aunque la última
+vez se hubiera movido o la ventana haya cambiado de tamaño. Una vez abierto, se queda donde está:
+arrástralo por su barra de título para moverlo. Un cambio dentro de él, como el interruptor <strong>Vista
+preliminar</strong>, no lo mueve.</p>
+<p>Cada cuadro de diálogo tiene un tamaño fijo, que no cambia con su contenido. La excepción son los
+cuadros construidos alrededor de una lista o una tabla largas (materiales, visibilidad/gráficos,
+estilos de objeto, filtros, estilos y patrones de línea, patrones de relleno, grosores de línea,
+propiedades de tabla, parámetros de proyecto y compartidos, métodos abreviados de teclado, limpiar
+no utilizados, clases de exportación IFC, plantillas de vista): arrastrando uno de sus bordes se
+agrandan, nunca más pequeños que la primera vez que se abren ni más grandes que la pantalla, y la
+lista crece con ellos. Se vuelven a abrir en el centro con el último tamaño dado.</p>
 <h2 id="drawing-area-and-view-windows">Área de dibujo y ventanas de vista</h2>
 <p>Cada vista que abres es una ventana en el área de dibujo. Una vista que se vuelve a abrir pasa al
 frente; siempre queda abierta al menos una ventana. Arriba a la izquierda de la vista, el
@@ -1909,7 +1969,38 @@ menú tiene, con una selección, primero los comandos de modificación (<strong>
   categorías de la selección;</li>
 <li><strong>Visibilidad y gráficos…</strong>.</li>
 </ul>
-<p>Mientras hay una herramienta activa, un clic con el botón derecho abre en cambio el menú de la herramienta, y el paso en curso se mantiene: <strong>Cancelar</strong> (lo que hace <span class="keys"><kbd class="key-escape">Esc</kbd></span>, que sigue cancelando el paso), <strong>Repetir [comando]</strong>, <strong>Modificaciones de forzado ▸</strong> (el forzado del siguiente punto, como las teclas <code>SE</code>, <code>SM</code>, <code>SN</code>, <code>SI</code> y <code>SO</code>; solo en plantas y vistas 2D libres), <strong>Zoom en región</strong>, <strong>Alejar (2x)</strong>, <strong>Ajustar a la ventana</strong>, <strong>Encuadre/zoom anterior</strong>, <strong>Encuadre/zoom siguiente</strong> y <strong>Propiedades</strong>. Es el mismo en plantas, secciones, alzados, vistas 3D y en los planos. En un boceto las modificaciones valen en todas las vistas, también <strong>Centro</strong> y <strong>Perpendicular</strong>. Con el menú abierto, <span class="keys"><kbd class="key-escape">Esc</kbd></span> o un clic en la vista solo lo cierran.</p>
+<p>Mientras hay una herramienta activa, un clic con el botón derecho abre en cambio el menú de la herramienta, y el paso en curso se mantiene: <strong>Cancelar</strong> (lo que hace <span class="keys"><kbd class="key-escape">Esc</kbd></span>, que sigue cancelando el paso), <strong>Repetir [comando]</strong>, <strong>Modificaciones de forzado ▸</strong> (el forzado del siguiente punto, como las teclas de dos letras; en todas las vistas, ver <a href="#snaps">Forzado</a>), <strong>Zoom en región</strong>, <strong>Alejar (2x)</strong>, <strong>Ajustar a la ventana</strong>, <strong>Encuadre/zoom anterior</strong>, <strong>Encuadre/zoom siguiente</strong> y <strong>Propiedades</strong>. Es el mismo en plantas, secciones, alzados, vistas 3D y en los planos. Con el menú abierto, <span class="keys"><kbd class="key-escape">Esc</kbd></span> o un clic en la vista solo lo cierran.</p>
+<h3 id="snaps">Forzado</h3>
+<p><strong>Parámetros adicionales ▸ Forzados de cursor…</strong> (en el estilo BIMopen el comando <strong>Forzados de
+cursor…</strong>) abre la ventana <strong>Forzado</strong>, la misma en los dos estilos:</p>
+<ul>
+<li><strong>Forzados desactivados</strong> lo apaga todo (como el interruptor <strong>Forzado</strong> de la barra de estado,
+  que queda igual al volver a abrir el programa).</li>
+<li><strong>Incrementos de forzado de cotas de longitud</strong> y <strong>de cotas angulares</strong>, cada uno con su
+  casilla: valores separados por punto y coma (por defecto 1000; 100; 10 mm y 90°; 45°; 15°; 5°;
+  1°). El zoom elige el paso: con el zoom cercano, pasos más finos.</li>
+<li><strong>Forzados de objetos</strong>: una casilla para <strong>Punto final</strong>, <strong>Punto medio</strong>, <strong>Cercano</strong>,
+  <strong>Rejilla de plano de trabajo</strong>, <strong>Cuadrante</strong>, <strong>Intersección</strong>, <strong>Centro</strong>, <strong>Perpendicular</strong>,
+  <strong>Tangente</strong> y <strong>Objetos remotos</strong>, con sus dos letras; <strong>Marcar todo</strong> y <strong>Desmarcar todo</strong>. Con
+  <strong>Cercano</strong> apagado, la línea bajo el cursor sigue ofreciendo sus extremos y su punto medio,
+  aunque estén lejos. <strong>Objetos remotos</strong> (apagado al principio) alinea el punto, en horizontal o en vertical, con los
+  extremos de líneas lejanas, con una guía discontinua.</li>
+<li><strong>Modificaciones temporales</strong>: la lista de las dos letras que valen para un punto.</li>
+<li><strong>Restablecer valores por defecto</strong> lo deja todo como al principio.</li>
+</ul>
+<p>Los ajustes son del programa, no del proyecto: se mantienen entre sesiones.</p>
+<p>Al dibujar desde un punto (muros, líneas, rejillas, planos de referencia, bocetos y el segundo
+rayo de <strong>Girar</strong>) el segmento fuerza su dirección del mismo modo en todas las vistas: horizontal
+o vertical, paralela o perpendicular a una línea cercana, o un múltiplo del incremento angular que
+da el zoom; solo cuando el cursor está a pocos píxeles de esa dirección, si no el ángulo queda
+libre. Una guía discontinua sigue la dirección, un arco con el valor muestra el ángulo, y la barra
+de estado dice por ejemplo <em>Forzado: Ángulo 30° · paso 15°</em>. La longitud se redondea al incremento
+de longitud. <strong>Ángulo medido desde</strong>, en la barra de opciones, cuenta los ángulos desde el <strong>Eje
+horizontal</strong> de la vista o desde el <strong>Segmento anterior</strong>. En la vista 3D todo se mide sobre el
+plano de trabajo (el plano del nivel). En la línea de comandos
+<code>snap {"angles":[45,15],"objects":{"quadrant":false}}</code> cambia los ajustes y <code>snap</code> solo los muestra.</p>
+<p>El comando <code>anglesnap 0,0 3,0.02</code> (también por MCP, y <code>snap</code> con dos puntos) devuelve la
+dirección a la que se fuerza un segmento, con las mismas reglas que todas las vistas.</p>
 <p>En la parte superior del menú, <strong>Repetir [comando]</strong> vuelve a iniciar la última herramienta usada; <span class="keys"><kbd class="key-enter">Enter</kbd></span> hace lo mismo cuando no hay ninguna herramienta activa y la línea de comandos está vacía. El menú es el mismo en plantas, secciones y vistas 3D.</p>
 <h2 id="command-line">Búsqueda de comandos y línea de comandos</h2>
 <p><img alt="La búsqueda de comandos: comandos, elementos y vistas que coinciden con lo escrito" src="../assets/screens/bimopen-search.png"/></p>
@@ -2010,5 +2101,6 @@ táctil</a>.</p>
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.footer", "navigation.tracking", "toc.follow", "content.code.copy", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
 <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+<script src="../assets/js/zoom.js"></script>
 </body>
 </html>

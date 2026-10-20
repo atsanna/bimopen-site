@@ -597,12 +597,29 @@ Papiers, in den schattierten Stilen dunkelt er die Farben der Materialien ab. Vo
 geschnittene Flächen bleiben im Licht.</p>
 <p><strong>Die Sonnenbahn</strong> ist ein Ring um das Modell mit den Himmelsrichtungen nach geografischem Norden,
 dem Bogen des Tages mit seinen Stunden, dem Analemma (wo die Sonne zu dieser Uhrzeit im Lauf des
-Jahres steht), dem Teil, den eine Studie durchläuft, und der Sonne mit Uhrzeit und Datum. In
-Grundrissen, Schnitten und Ansichten lässt sich die Sonne ziehen: entlang des Tages rastet sie auf
-Viertelstunden ein, entlang des Analemmas auf den 1. jedes Monats; mit <span class="keys"><kbd class="key-shift">Shift</kbd></span> bleibt sie auf dem
-Tag, mit <span class="keys"><kbd class="key-control">Ctrl</kbd></span> auf dem Analemma. Mit der Ansicht unter dem Cursor (und nichts ausgewählt, oder
-nach einem Klick auf die Sonne) verschieben <span class="keys"><kbd class="key-arrow-left">Left</kbd></span> und <span class="keys"><kbd class="key-arrow-right">Right</kbd></span> die Uhrzeit, <span class="keys"><kbd class="key-arrow-up">Up</kbd></span> und
-<span class="keys"><kbd class="key-arrow-down">Down</kbd></span> das Datum. Mit <strong>Beleuchtung</strong> steht die Sonne still und hat keine Bahn.</p>
+Jahres steht: eine durchgehende Acht, jeden Tag zur Uhrzeit des gewählten Datums), dem Teil, den eine
+Studie durchläuft, und der Sonne mit Uhrzeit und Datum; in einer 3D-Ansicht ist sie eine Kuppel
+über dem Ring. In Grundrissen, Schnitten, Ansichten und 3D-Ansichten lässt sich die Sonne ziehen:
+entlang des Tages rastet sie auf Viertelstunden ein, entlang des Jahres folgt sie dem Analemma Tag
+für Tag (bei der Zeitumstellung verschiebt sich die Uhr um die Umstellung, so springt die Sonne
+nicht); <span class="keys"><kbd class="key-shift">Shift</kbd></span> beim Ziehen nimmt das andere, und <strong>Entlang des Tages</strong> / <strong>Entlang des Jahres</strong>
+im Menü der Sonnenbahn wählen, was zuerst kommt. Die Schatten folgen dem Ziehen: In
+Grundrissen, Schnitten und Ansichten sind sie, während sich die Sonne bewegt, ein gröberer Entwurf,
+jede Ansicht zeigt ihre letzten Schatten, bis die neuen fertig sind, und beim Loslassen der Sonne
+werden sie vollständig gezeichnet. Mit der Ansicht
+unter dem Cursor (und nichts ausgewählt, oder nach einem Klick auf die Sonne) verschieben <span class="keys"><kbd class="key-arrow-left">Left</kbd></span>
+und <span class="keys"><kbd class="key-arrow-right">Right</kbd></span> die Uhrzeit, <span class="keys"><kbd class="key-arrow-up">Up</kbd></span> und <span class="keys"><kbd class="key-arrow-down">Down</kbd></span> das Datum. Mit <strong>Beleuchtung</strong> steht die Sonne still
+und hat keine Bahn.</p>
+<p>Das Menü der Sonnenbahn (in der Ansichtsleiste, im Menü der Ansicht und im Touch-Modus) hat auch
+<strong>Visuelle Hilfen</strong> zum Lesen: <strong>Senkrechte Stundenlinien</strong> (von jeder geraden Stunde eine gestrichelte Linie
+zum Boden und zum Ring, mit der Stunde dort; im Grundriss ein Punkt auf dem Ring), <strong>Bogen auf den
+Boden projiziert</strong>, <strong>Sonnenmittag</strong> (der höchste Punkt des Bogens mit seiner Uhrzeit, und die
+Nord-Süd-Linie), <strong>Jahresband</strong> (der Himmel, den die Sonne im Jahr durchquert, in hellem Gelb, die
+Bögen der Sonnenwenden und der Tagundnachtgleiche, die Analemmas der geraden Stunden),
+<strong>Sonnenaufgang und -untergang</strong> (Marken auf dem Ring mit ihren Uhrzeiten; die Ansichtsleiste zeigt
+sie mit der Tageslänge) und <strong>Analemma</strong>; alle außer der Projektion sind anfangs aktiv. In einer
+3D-Ansicht verdeckt das Modell, was dahinter liegt. Die <strong>Sonneneinstellungen</strong> zeigen die Auf- und
+Untergänge des Jahres auch als Diagramm: ein Klick oder Ziehen darauf wählt den Tag.</p>
 <p><strong>Gemeinsame Sonne</strong>: die Ansichten teilen die Sonne des Projekts, außer sie haben eine eigene (die
 Eigenschaft <strong>Gemeinsame Sonne</strong>). Die gemeinsame Sonne in einer Ansicht zu bewegen, bewegt sie in
 jeder Ansicht, die sie teilt; eine Ansicht mit eigener Sonne bleibt, wie sie ist. <strong>Eine Sonne für
@@ -647,8 +664,11 @@ Sonne in der Kopfzeile:</p>
 </tbody>
 </table>
 <p>Dann der <strong>Standort</strong> des Projekts (eine Stadt, oder <strong>Benutzerdefiniert</strong> mit Breite und Länge:
-  einer für das ganze Projekt) mit <strong>Sommerzeit</strong>, und <strong>Schatten auf der Ebene</strong> mit ihrer
-  <strong>Geländeebene</strong>;
+  einer für das ganze Projekt; ein benutzerdefinierter Ort übernimmt die Zeitzone der nächsten
+  Stadt; ein neues Projekt beginnt in <strong>Rom</strong>, das Beispielhaus steht in <strong>Cagliari</strong>) mit <strong>Sommerzeit</strong>, die automatisch ist: die Regel des Ortes (Europa, Nordamerika, Chile,
+  Südostaustralien, Neuseeland, Ägypten oder keine) und der genaue Sonntag im <strong>Jahr</strong> der Sonne,
+  sodass die Uhrzeiten auf der Sonnenbahn und in den Studien die der Uhr sind; die Regel lässt sich
+  ändern. Dann <strong>Schatten auf der Ebene</strong> mit ihrer <strong>Geländeebene</strong>;
 - rechts die Vorschau: der Himmel von oben, mit der Bahn des Tages, dem Analemma und der Sonne. <strong>Vorschau</strong> in
   der Kopfzeile, rechts der Werte, ist ein Schalter, der sie aus- und einblendet; das Dialogfeld
   behält seine Größe, und ohne Vorschau nehmen die Einstellungen ihren Platz ein.</p>
@@ -715,7 +735,7 @@ Grafikstil, und Sonne und Schatten als <strong>Sonne und Schatten</strong>.</p>
 <li>Bei kleinerem Maßstab wird das Modell auf dem Papier kleiner gezeichnet, während Texte, Tags und Symbole ihre Größe auf dem Papier behalten: Bei 1:200 deckt ein Text doppelt so viel vom Modell ab wie bei 1:100.</li>
 <li>Bei <strong>Grob</strong> ist eine geschnittene Wand eine einzige Füllung; bei <strong>Mittel</strong> und <strong>Fein</strong> werden ihre Schichten sichtbar, jede mit ihrem Material.</li>
 </ul>
-<p>Schnitte schneiden das Modell auf dieselbe Weise. Wände, Geschossdecken und Dächer, die sich im Schnitt treffen, werden als Ganzes gezeichnet: eine dicke Umrisslinie um sie herum, eine dünne Linie nur dort, wo zwei Materialien aufeinandertreffen, keine zwischen Teilen desselben Materials; an ein Dach angehängte Wände enden unter ihm. Jede geschnittene Schicht hat das Schnittmuster ihres Materials (bei <strong>Grob</strong> das <strong>Füllmuster für grobe Darstellung</strong> des Typs in seiner <strong>Füllfarbe für grobe Darstellung</strong>, einstellbar bei Wand-, Geschossdecken- und Dachtypen; sonst nur der Umriss). Möbel und Sanitärinstallationen werden nie geschnitten: Sie sind ganz zu sehen. Ein Fenster wird mit seinem Rahmen in der dicken Schnittlinie und seinem Glas in dünnen Linien geschnitten; was hinter dem Schnitt liegt, wird mit den dünneren Projektionslinien gezeichnet.</p>
+<p>Schnitte schneiden das Modell auf dieselbe Weise. Wände, Geschossdecken und Dächer, die sich im Schnitt treffen, werden als Ganzes gezeichnet: eine dicke Umrisslinie um sie herum, eine dünne Linie nur dort, wo zwei Materialien aufeinandertreffen, keine zwischen Teilen desselben Materials; an ein Dach angehängte Wände enden unter ihm. Jede geschnittene Schicht hat das Schnittmuster ihres Materials (bei <strong>Grob</strong> das <strong>Füllmuster für grobe Darstellung</strong> des Typs in seiner <strong>Füllfarbe für grobe Darstellung</strong>, einstellbar bei Wand-, Geschossdecken- und Dachtypen; sonst nur der Umriss). Möbel und Sanitärinstallationen werden nie geschnitten: Sie sind ganz zu sehen. Ein Fenster wird mit seinem Rahmen in der dicken Schnittlinie und seinem Glas in dünnen Linien geschnitten; was hinter dem Schnitt liegt, wird mit den dünneren Projektionslinien gezeichnet. Hinter dem Schnitt und in Ansichten verdeckt eine vordere Fläche, was hinter ihr liegt, und das Glas eines Fensters ist undurchsichtig: Jedes Fenster zeigt seinen Rahmen und sein Glas, nicht die Räume dahinter.</p>
 <p><strong>Ansicht zuschneiden</strong> beschneidet die Ansicht auf ihren Zuschneidebereich, <strong>Zuschneidebereich anzeigen</strong> zeichnet den Bereich; ziehen Sie an seinen Kanten, um die Größe zu ändern. Um die Größe einzugeben: <strong>Eigenschaften ▸ Zuschnittgröße ▸ Bearbeiten…</strong>, dann <strong>Breite</strong> und <strong>Höhe</strong>; der Bereich behält seine Mitte.</p>
 <h2 id="hiding-and-isolating">Ausblenden und Isolieren</h2>
 <p><strong>Vorübergehend isolieren</strong> (die Brille in der Ansichtssteuerungsleiste) wirkt auf die gewählten Elemente, nur in der aktiven Ansicht, und ändert das Projekt nicht:</p>
@@ -831,5 +851,6 @@ Grafikstil, und Sonne und Schatten als <strong>Sonne und Schatten</strong>.</p>
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.footer", "navigation.tracking", "toc.follow", "content.code.copy", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}}</script>
 <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+<script src="../assets/js/zoom.js"></script>
 </body>
 </html>

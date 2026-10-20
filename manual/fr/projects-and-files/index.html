@@ -586,9 +586,15 @@ enregistrement.</p>
 <strong>Options ➤ Général</strong> (<strong>Intervalle de rappel d'enregistrement</strong>, 30 minutes au départ),
 <strong>Rappel d'enregistrement</strong> propose de l'enregistrer, de ne pas l'enregistrer, ou de changer
 l'intervalle.</p>
-<p>Avant <strong>Nouveau</strong>, <strong>Ouvrir…</strong>, un document récent, le projet d'exemple, ou la fermeture de la
-fenêtre, un projet modifié demande <strong>Enregistrer les modifications de … ?</strong> : <strong>Oui</strong>
-l'enregistre, <strong>Non</strong> abandonne les modifications, <strong>Annuler</strong> le garde ouvert.</p>
+<p>Un seul projet est ouvert à la fois : le projet ouvert prend la place du précédent, dont les
+vues se ferment avec lui. Ouvrir le projet déjà ouvert le laisse tel quel,
+s'il n'a pas de modifications non enregistrées ; avec des modifications, répondre <strong>Non</strong> à la
+question de les enregistrer les abandonne et rouvre le fichier tel qu'enregistré la dernière fois,
+comme le fermer sans enregistrer puis le rouvrir.</p>
+<p>Avant <strong>Nouveau</strong>, <strong>Ouvrir…</strong>, un document récent, un fichier déposé, <code>open</code> dans la ligne de
+commande, le projet d'exemple, ou la fermeture de la fenêtre, un projet modifié demande
+<strong>Enregistrer les modifications de … ?</strong> : <strong>Oui</strong> l'enregistre, <strong>Non</strong> abandonne les
+modifications, <strong>Annuler</strong> le garde ouvert.</p>
 <p>Dans le navigateur, <strong>Ouvrir…</strong> utilise le sélecteur de fichiers du navigateur, et
 <strong>Enregistrer</strong> télécharge le fichier ; les sauvegardes, la récupération après plantage et
 l'ouverture en lecture seule demandent un fichier sur disque et n'existent que sur le poste de
@@ -730,5 +736,6 @@ délimité depuis le même chapitre. <code>bimopen-cli convert</code> exporte de
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.footer", "navigation.tracking", "toc.follow", "content.code.copy", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
 <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+<script src="../assets/js/zoom.js"></script>
 </body>
 </html>

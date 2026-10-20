@@ -18,10 +18,10 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="BIMopen: vista 3D e pianta di una casa a due piani">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="favicon.ico" sizes="any">
-<link rel="icon" href="assets/favicon.svg?v=a8140611" type="image/svg+xml">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=44b8f81c">
-<meta name="theme-color" content="#0d1724">
+<link rel="icon" href="favicon.ico?v=0fba0888" sizes="any">
+<link rel="icon" href="assets/favicon.svg?v=74b5de74" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=6406f785">
+<meta name="theme-color" content="#0D1319">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -46,43 +46,55 @@
    "image": "https://bimopen.it/assets/og-bimopen.jpg",
    "isAccessibleForFree": true,
    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
-   "featureList": ["Export IFC4", "Import .rvt (2023-2025)", "Piante, sezioni, prospetti e viste 3D", "Abachi configurabili collegati al modello e computo dei materiali", "Tavole con cartiglio e stampa in PDF vettoriale", "File di progetto a database con recupero dopo un arresto e copie di backup", "Manuale utente in sei lingue", "Riga di comando e server MCP"]
+   "featureList": ["Export IFC4", "Import .rvt sperimentale (nome del progetto e nomi dei livelli)", "Piante, sezioni, prospetti e viste 3D", "Abachi configurabili collegati al modello e computo dei materiali", "Tavole con cartiglio e stampa in PDF vettoriale", "File di progetto a database con recupero dopo un arresto e copie di backup", "Manuale utente in sei lingue", "Riga di comando e server MCP"]
   }
  ]
 }
 </script>
 <script>
   // tema scelto in precedenza, applicato prima del disegno della pagina (nessun lampo di colore)
-  var t = null; try { t = localStorage.getItem('theme'); } catch (e) {} document.documentElement.dataset.theme = t || 'dark';
+  var t = null; try { t = localStorage.getItem('theme'); } catch (e) {} document.documentElement.dataset.theme = t || 'dark'; var tc = document.querySelector('meta[name="theme-color"]'); if (tc && t === 'light') tc.content = '#EEF2F5';
 </script>
 <style>
   :root {
-    --ink: #0f2742; --ink-soft: #3c4f66; --muted: #66768a; --paper: #f7f6f2; --card: #ffffff;
-    --line: #dfe3e8; --blue: #1d5fbf; --blue-soft: #e7effa; --terra: #c4553a; --on-blue: #ffffff;
-    --render-bg: #eceff4; --code-bg: #0f2742; --code-ink: #e6edf5;
-    --shadow: 0 1px 2px rgba(15,39,66,.06), 0 8px 24px rgba(15,39,66,.08);
-    --radius: 14px;
+    --paper: #EEF2F5; --card: #FFFFFF; --field: #F8FAFB; --line: #E2E7EC;
+    --ink: #172133; --ink-soft: #3D4A5C; --muted: #5E6A78;
+    --accent: #08AABA; --accent-text: #06788A; --accent-hover: #2DB7C4; --on-accent: #093440;
+    --accent-soft: #8CECF2; --accent-soft-ink: #093440; --logo: #08AABA;
+    --second: #E6961E; --on-second: #172133; --ok: #1B8A55; --on-ok: #FFFFFF;
+    --warn-bg: #FCF1DD; --warn-line: #E6961E; --warn-ink: #172133; --warn-icon: #A86200;
+    --render-bg: #EEF2F5; --code-bg: #1C262E; --code-ink: #E8EEF2; --code-c: #8A98A6; --code-k: #14BECC; --code-p: #E6961E;
+    --shadow: 0 2px 14px rgba(0,0,0,.086);
+    --radius: 12px; --radius-btn: 8px;
     --font: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", "Helvetica Neue", Arial, sans-serif;
     --mono: ui-monospace, "SFMono-Regular", "Cascadia Mono", "Ubuntu Mono", Menlo, Consolas, monospace;
     color-scheme: light;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --ink: #e8eef5; --ink-soft: #bccadb; --muted: #93a3b6; --paper: #0d1724; --card: #142235;
-      --line: #22344b; --blue: #6ea4ff; --blue-soft: #16294a; --terra: #ea8a70; --on-blue: #08111c;
-      --code-bg: #08111c; --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.3); color-scheme: dark;
+      --paper: #0D1319; --card: #182129; --field: #1F2A33; --line: #28343E;
+      --ink: #E4EBF1; --ink-soft: #B7C3CE; --muted: #8A98A6;
+      --accent: #14BECC; --accent-text: #14BECC; --accent-hover: #3FD0DB; --on-accent: #0D1319;
+      --accent-soft: #0E525E; --accent-soft-ink: #A0F0F6; --logo: #14BECC;
+      --on-second: #0D1319; --ok: #22B46E; --on-ok: #0D1319;
+      --warn-bg: #2A2A20; --warn-ink: #E4EBF1; --warn-icon: #E6961E;
+      --code-bg: #141C23; --shadow: 0 2px 14px rgba(0,0,0,.35); color-scheme: dark;
     }
   }
   :root[data-theme="dark"] {
-    --ink: #e8eef5; --ink-soft: #bccadb; --muted: #93a3b6; --paper: #0d1724; --card: #142235;
-    --line: #22344b; --blue: #6ea4ff; --blue-soft: #16294a; --terra: #ea8a70; --on-blue: #08111c;
-    --code-bg: #08111c; --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.3); color-scheme: dark;
+    --paper: #0D1319; --card: #182129; --field: #1F2A33; --line: #28343E;
+    --ink: #E4EBF1; --ink-soft: #B7C3CE; --muted: #8A98A6;
+    --accent: #14BECC; --accent-text: #14BECC; --accent-hover: #3FD0DB; --on-accent: #0D1319;
+    --accent-soft: #0E525E; --accent-soft-ink: #A0F0F6; --logo: #14BECC;
+    --on-second: #0D1319; --ok: #22B46E; --on-ok: #0D1319;
+    --warn-bg: #2A2A20; --warn-ink: #E4EBF1; --warn-icon: #E6961E;
+    --code-bg: #141C23; --shadow: 0 2px 14px rgba(0,0,0,.35); color-scheme: dark;
   }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body { margin: 0; background: var(--paper); color: var(--ink); font: 17px/1.6 var(--font); -webkit-font-smoothing: antialiased; }
   img { max-width: 100%; display: block; }
-  a { color: var(--blue); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a { color: var(--accent-text); text-decoration-thickness: 1px; text-underline-offset: 3px; }
   .wrap { width: min(1160px, 100% - 32px); margin-inline: auto; }
   .skip { position: absolute; inset-inline-start: -999px; }
   .skip:focus { inset-inline-start: 16px; top: 16px; background: var(--card); padding: 8px 12px; z-index: 10; }
@@ -90,16 +102,16 @@
   header.top { position: sticky; top: 0; z-index: 5; background: color-mix(in srgb, var(--paper) 88%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
   .bar { display: flex; align-items: center; gap: 20px; height: 64px; }
   .brand { display: flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font-weight: 700; font-size: 20px; letter-spacing: -.01em; direction: ltr; }
-  .brand b { color: var(--blue); font-weight: 700; }
+  .brand b { color: var(--logo); font-weight: 400; }
   nav.links { display: none; gap: 20px; margin-inline-start: auto; }
   nav.links a { color: var(--ink-soft); text-decoration: none; font-size: 15px; }
-  nav.links a:hover { color: var(--blue); }
+  nav.links a:hover { color: var(--accent-text); }
   .bar-right { display: flex; align-items: center; gap: 10px; margin-inline-start: auto; }
   @media (min-width: 1240px) { nav.links { display: flex; } .bar-right { margin-inline-start: 0; } }
   .lang-pick { display: flex; align-items: center; gap: 6px; color: var(--muted); font-size: 14px; }
   .lang-pick svg { width: 16px; height: 16px; flex: none; }
-  .lang-pick select { font: inherit; color: var(--ink); background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 6px 8px; cursor: pointer; }
-  .theme-toggle { width: 36px; height: 36px; border-radius: 8px; border: 1px solid var(--line); background: var(--card); color: var(--ink); cursor: pointer; display: grid; place-items: center; }
+  .lang-pick select { font: inherit; color: var(--ink); background: var(--card); border: 1px solid var(--line); border-radius: var(--radius-btn); padding: 6px 8px; cursor: pointer; }
+  .theme-toggle { width: 36px; height: 36px; border-radius: var(--radius-btn); border: 1px solid var(--line); background: var(--card); color: var(--ink); cursor: pointer; display: grid; place-items: center; }
   .theme-toggle svg { width: 18px; height: 18px; }
   .theme-toggle .moon { display: none; }
   :root[data-theme="dark"] .theme-toggle .sun { display: none; }
@@ -108,10 +120,11 @@
     :root:not([data-theme="light"]) .theme-toggle .sun { display: none; }
     :root:not([data-theme="light"]) .theme-toggle .moon { display: block; }
   }
-  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 11px 18px; border-radius: 10px; font-weight: 600; font-size: 15px; text-decoration: none; border: 1px solid transparent; transition: transform .12s; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 11px 18px; border-radius: var(--radius-btn); font-weight: 600; font-size: 15px; text-decoration: none; border: 1px solid transparent; transition: transform .12s, background-color .12s; }
   .btn:hover { transform: translateY(-1px); }
-  .btn-primary { background: var(--blue); color: var(--on-blue); }
-  .btn-lg { padding: 16px 28px; font-size: 18px; border-radius: 12px; box-shadow: var(--shadow); }
+  .btn-primary { background: var(--accent); color: var(--on-accent); }
+  .btn-primary:hover { background: var(--accent-hover); }
+  .btn-lg { padding: 16px 28px; font-size: 18px; border-radius: calc(var(--radius-btn) + 2px); box-shadow: var(--shadow); }
   .rm-cta { margin-top: 28px; }
   [dir="rtl"] .btn .arrow { transform: scaleX(-1); }
   .ui-shot { margin: 28px 0 0; }
@@ -120,11 +133,11 @@
   .ui-shot figcaption { margin-top: 10px; color: var(--muted); font-size: 15px; }
   .ui-pair { margin-top: 4px; }
   .lightbox { border: 0; padding: 0; background: transparent; max-width: 96vw; max-height: 94vh; overflow: visible; }
-  .lightbox::backdrop { background: rgba(8, 17, 28, .82); }
+  .lightbox::backdrop { background: rgba(13, 19, 25, .82); }
   .lightbox img { display: block; max-width: 96vw; max-height: 90vh; width: auto; height: auto; border-radius: var(--radius); box-shadow: 0 10px 40px rgba(0,0,0,.45); }
-  .lightbox .lb-cap { color: #e8eef5; font-size: 15px; text-align: center; margin-top: 10px; }
-  .lightbox .lb-close { position: absolute; top: -14px; inset-inline-end: -14px; width: 40px; height: 40px; border-radius: 50%; border: 0; background: #fff; color: #0f2742; font-size: 26px; line-height: 40px; cursor: pointer; box-shadow: 0 2px 10px rgba(0,0,0,.35); }
-  .lightbox .lb-close:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; }
+  .lightbox .lb-cap { color: #E4EBF1; font-size: 15px; text-align: center; margin-top: 10px; }
+  .lightbox .lb-close { position: absolute; top: -14px; inset-inline-end: -14px; width: 40px; height: 40px; border-radius: 50%; border: 0; background: #fff; color: #172133; font-size: 26px; line-height: 40px; cursor: pointer; box-shadow: 0 2px 10px rgba(0,0,0,.35); }
+  .lightbox .lb-close:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
   .ui-shot a { cursor: zoom-in; }
   .ui-h3 { margin: 48px 0 6px; font-size: clamp(20px, 2.2vw, 26px); }
   .btn-ghost { border-color: var(--line); color: var(--ink); background: var(--card); }
@@ -133,14 +146,14 @@
   .hero { position: relative; overflow: hidden; padding: 72px 0 56px; }
   .hero::before { content: ""; position: absolute; inset: 0; background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px); background-size: 32px 32px; mask-image: radial-gradient(ellipse at 70% 40%, #000 0%, transparent 70%); opacity: .7; pointer-events: none; }
   .hero .wrap { position: relative; display: grid; grid-template-columns: 1.02fr 1fr; gap: 48px; align-items: center; }
-  .eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--terra); }
+  .eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--accent-text); }
   .eyebrow::before { content: ""; width: 18px; height: 2px; background: currentColor; }
   h1 { font-size: clamp(36px, 5.2vw, 60px); line-height: 1.06; letter-spacing: -.025em; margin: 14px 0 18px; }
-  h1 em { font-style: normal; color: var(--blue); }
+  h1 em { font-style: normal; color: var(--accent-text); }
   .lead { font-size: 19px; color: var(--ink-soft); max-width: 34em; margin: 0 0 28px; }
   .cta { display: flex; flex-wrap: wrap; gap: 12px; }
   .facts { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 28px 0 0; padding: 0; list-style: none; color: var(--muted); font-size: 14px; }
-  .facts li::before { content: "✓"; color: var(--blue); font-weight: 700; margin-inline-end: 6px; }
+  .facts li::before { content: "✓"; color: var(--accent-text); font-weight: 700; margin-inline-end: 6px; }
   .stage { position: relative; aspect-ratio: 5 / 4; direction: ltr; }
   .stage .shot { position: absolute; border-radius: var(--radius); box-shadow: var(--shadow); border: 1px solid var(--line); overflow: hidden; background: var(--render-bg); }
   .stage .shot img { width: 100%; height: 100%; object-fit: cover; }
@@ -162,32 +175,32 @@
   section.alt .card { background: var(--paper); }
   .card h3 { margin: 12px 0 6px; font-size: 19px; letter-spacing: -.01em; }
   .card p { margin: 0; color: var(--ink-soft); font-size: 15.5px; }
-  .ico { width: 40px; height: 40px; border-radius: 10px; background: var(--blue-soft); display: grid; place-items: center; color: var(--blue); }
+  .ico { width: 40px; height: 40px; border-radius: 10px; background: var(--accent-soft); display: grid; place-items: center; color: var(--accent-soft-ink); }
   .ico svg { width: 22px; height: 22px; }
   .view { padding: 0; overflow: hidden; }
   .view figure { margin: 0; background: var(--render-bg); aspect-ratio: 4 / 3; display: grid; place-items: center; border-bottom: 1px solid var(--line); }
   .view figure.white { background: #fff; }
   .view figure img { width: 100%; height: 100%; object-fit: contain; padding: 10px; }
   .view .body { padding: 20px 22px 24px; }
-  .table { width: 100%; border-collapse: collapse; font-size: 13.5px; background: #fff; color: #0f2742; }
-  .table th, .table td { padding: 7px 10px; border-bottom: 1px solid #e4e8ee; text-align: start; white-space: nowrap; }
-  .table th { background: #f1f4f8; font-weight: 600; }
+  .table { width: 100%; border-collapse: collapse; font-size: 13.5px; background: #fff; color: #172133; }
+  .table th, .table td { padding: 7px 10px; border-bottom: 1px solid #E2E7EC; text-align: start; white-space: nowrap; }
+  .table th { background: #EEF2F5; font-weight: 600; }
   .table td.n, .table th.n { text-align: end; font-variant-numeric: tabular-nums; }
-  .table tr.tot td { font-weight: 700; border-top: 2px solid #0f2742; }
+  .table tr.tot td { font-weight: 700; border-top: 2px solid currentColor; }
 
   .fmt { display: flex; gap: 16px; align-items: flex-start; }
-  .badge { flex: none; font: 700 13px/1 var(--mono); padding: 10px; border-radius: 8px; background: var(--ink); color: var(--paper); min-width: 74px; text-align: center; direction: ltr; }
-  .badge.terra { background: var(--terra); color: #fff; }
+  .badge { flex: none; font: 700 13px/1 var(--mono); padding: 10px; border-radius: var(--radius-btn); background: var(--ink); color: var(--paper); min-width: 74px; text-align: center; direction: ltr; }
+  .badge.terra { background: var(--second); color: var(--on-second); }
   .fmt h3 { margin: 0 0 4px; }
   .note { font-size: 13.5px; color: var(--muted); margin-top: 8px !important; }
 
   pre { margin: 0; background: var(--code-bg); color: var(--code-ink); border-radius: var(--radius); padding: 22px 24px; overflow-x: auto; font: 14.5px/1.65 var(--mono); direction: ltr; text-align: left; }
-  pre .c { color: #7f95ad; } pre .k { color: #8cc4ff; } pre .p { color: #f2b38f; }
+  pre .c { color: var(--code-c); } pre .k { color: var(--code-k); } pre .p { color: var(--code-p); }
   .split { display: grid; grid-template-columns: 1fr 1.1fr; gap: 40px; align-items: center; }
   .checks { list-style: none; padding: 0; margin: 20px 0 0; display: grid; gap: 10px; }
   .checks li { padding-inline-start: 28px; position: relative; color: var(--ink-soft); }
-  .checks li::before { content: ""; position: absolute; inset-inline-start: 0; top: .45em; width: 14px; height: 14px; background: var(--blue); mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3 8.5l3 3 7-7' fill='none' stroke='black' stroke-width='2.4'/%3E%3C/svg%3E") center / contain no-repeat; }
-  code { font-family: var(--mono); font-size: .9em; background: var(--blue-soft); padding: 1px 5px; border-radius: 5px; direction: ltr; unicode-bidi: isolate; }
+  .checks li::before { content: ""; position: absolute; inset-inline-start: 0; top: .45em; width: 14px; height: 14px; background: var(--accent-text); mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3 8.5l3 3 7-7' fill='none' stroke='black' stroke-width='2.4'/%3E%3C/svg%3E") center / contain no-repeat; }
+  code { font-family: var(--mono); font-size: .9em; background: var(--field); border: 1px solid var(--line); padding: 0 5px; border-radius: 5px; direction: ltr; unicode-bidi: isolate; }
 
   .road { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
   .road .card h3 { display: flex; align-items: center; gap: 8px; margin-top: 0; }
@@ -198,7 +211,7 @@
   details { border-bottom: 1px solid var(--line); padding: 16px 0; }
   details summary { cursor: pointer; font-weight: 600; font-size: 17.5px; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
   details summary::-webkit-details-marker { display: none; }
-  details summary::after { content: "+"; color: var(--blue); font-size: 22px; line-height: 1; }
+  details summary::after { content: "+"; color: var(--accent-text); font-size: 22px; line-height: 1; }
   details[open] summary::after { content: "–"; }
   details p { color: var(--ink-soft); margin: 10px 0 0; max-width: 52em; }
 
@@ -210,7 +223,7 @@
 
   .to-top { position: fixed; bottom: 24px; inset-inline-end: 24px; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line); background: var(--card); color: var(--ink); display: grid; place-items: center; cursor: pointer; box-shadow: var(--shadow); opacity: 0; visibility: hidden; transform: translateY(8px); transition: opacity .2s, transform .2s, visibility .2s; z-index: 6; }
   .to-top svg { width: 20px; height: 20px; }
-  .to-top:hover { border-color: var(--blue); }
+  .to-top:hover { border-color: var(--accent); }
   .to-top.on { opacity: 1; visibility: visible; transform: none; }
 
   :root[lang="ar"] * { letter-spacing: 0 !important; }
@@ -241,11 +254,7 @@
 <header class="top">
   <div class="wrap bar">
     <a class="brand" href="#top" aria-label="BIMopen">
-      <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true">
-        <path d="M16 3 29 10 16 17 3 10z" fill="#1d5fbf"/>
-        <path d="M3 15.5 16 22.5 29 15.5" fill="none" stroke="#1d5fbf" stroke-width="2.4" stroke-linejoin="round" opacity=".7"/>
-        <path d="M3 21 16 28 29 21" fill="none" stroke="#c4553a" stroke-width="2.4" stroke-linejoin="round"/>
-      </svg>
+      <svg width="24" height="32" viewBox="5 0 100 140" aria-hidden="true"><g fill="none" stroke="var(--logo)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M15 58 54 35 93 58V105L54 128 15 105Z"/><path d="M15 58 54 81 93 58M54 81V128"/><path d="M54 35V10H82"/></g></svg>
       <span>BIM<b>open</b></span>
     </a>
     <nav class="links" aria-label="Sezioni" data-i18n-attr="aria-label:ui.sezioni">
@@ -274,7 +283,7 @@
         <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
         <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
       </button>
-      <a class="btn btn-primary" href="app/" data-app="e9e59efc" data-i18n="cta.prova">Provalo nel browser</a>
+      <a class="btn btn-primary" href="app/" data-app="b1768c96" data-i18n="cta.prova">Provalo nel browser</a>
     </div>
   </div>
 </header>
@@ -287,7 +296,7 @@
         <h1 id="titolo" data-i18n="hero.h1">Disegni l'edificio,<br><em>il progetto si scrive da sé.</em></h1>
         <p class="lead" data-i18n="hero.lead">BIMopen è un software BIM gratuito, che sarà rilasciato come open source (MIT/Apache). Modelli muri, porte, finestre e solai una volta sola: piante, vista 3D, abachi e file IFC nascono dallo stesso modello e restano sempre allineati.</p>
         <div class="cta">
-          <a class="btn btn-primary" href="app/" data-app="e9e59efc">
+          <a class="btn btn-primary" href="app/" data-app="b1768c96">
             <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11L13 8z" fill="currentColor"/></svg>
             <span data-i18n="cta.prova">Provalo nel browser</span>
           </a>
@@ -299,7 +308,7 @@
         <ul class="facts">
           <li data-i18n="fact.1">Nessun account né abbonamento</li>
           <li data-i18n="fact.2">Export IFC4</li>
-          <li data-i18n="fact.3">Import dei file .rvt</li>
+          <li data-i18n="fact.3">Import .rvt sperimentale</li>
           <li data-i18n="fact.4">Browser, Windows e Linux · macOS in arrivo</li>
         </ul>
       </div>
@@ -318,9 +327,9 @@
       <h2 id="interfaccia-t" data-i18n="ui.h2">Un'interfaccia moderna, in chiaro e in scuro</h2>
       <p class="sub" data-i18n="ui.p">Barra laterale, ricerca dei comandi con Ctrl+K, strumenti a schede, pannello dell'elemento e miniature delle viste, in chiaro e in scuro. Chi preferisce la barra multifunzione può scegliere lo stile Classica in Opzioni: i comandi sono gli stessi. Le immagini mostrano l'interfaccia nella lingua che hai scelto.</p>
       <div class="grid2 ui-pair">
-        <figure class="ui-shot"><a href="assets/ui/it/bimopen-3d-light.webp?v=5348017d" data-ui-link><img src="assets/ui/it/bimopen-3d-light.webp?v=5348017d" data-ui alt="Lo stile BIMopen in chiaro: barra laterale, strumenti a schede, vista 3D e pannello dell'elemento" data-i18n-attr="alt:ui.b.alt1" width="1586" height="992" loading="lazy"></a>
+        <figure class="ui-shot"><a href="assets/ui/it/bimopen-3d-light.webp?v=54678d0a" data-ui-link><img src="assets/ui/it/bimopen-3d-light.webp?v=54678d0a" data-ui alt="Lo stile BIMopen in chiaro: barra laterale, strumenti a schede, vista 3D e pannello dell'elemento" data-i18n-attr="alt:ui.b.alt1" width="1586" height="992" loading="lazy"></a>
           <figcaption data-i18n="ui.b.c1">Stile BIMopen, tema chiaro: la casa di esempio in 3D.</figcaption></figure>
-        <figure class="ui-shot"><a href="assets/ui/it/bimopen-plan-dark.webp?v=36ab0709" data-ui-link><img src="assets/ui/it/bimopen-plan-dark.webp?v=36ab0709" data-ui alt="Lo stile BIMopen in scuro: la pianta del piano terra con le proprietà della vista" data-i18n-attr="alt:ui.b.alt2" width="1586" height="992" loading="lazy"></a>
+        <figure class="ui-shot"><a href="assets/ui/it/bimopen-plan-dark.webp?v=759c27c2" data-ui-link><img src="assets/ui/it/bimopen-plan-dark.webp?v=759c27c2" data-ui alt="Lo stile BIMopen in scuro: la pianta del piano terra con le proprietà della vista" data-i18n-attr="alt:ui.b.alt2" width="1586" height="992" loading="lazy"></a>
           <figcaption data-i18n="ui.b.c2">Stile BIMopen, tema scuro: la pianta del piano terra.</figcaption></figure>
       </div>
     </div>
@@ -425,9 +434,9 @@
         <article class="card fmt">
           <span class="badge terra">.rvt</span>
           <div>
-            <h3 data-i18n="fmt2.h3">Import dei file .rvt</h3>
-            <p data-i18n="fmt2.p">Apre in sola lettura i file .rvt delle versioni 2023, 2024 e 2025: livelli, muri, porte, finestre e solai. Usa <a href="https://github.com/DrunkOnJava/rvt-rs">rvt-rs</a>, il lettore open source di Griffin Long (licenza Apache 2.0).</p>
-            <p class="note" data-i18n="fmt2.nota">Alcuni dati, come vincoli superiori e versi di apertura, non sono ancora letti e vengono approssimati.</p>
+            <h3 data-i18n="fmt2.h3">Import dei file .rvt: sperimentale</h3>
+            <p data-i18n="fmt2.p">Oggi legge solo il nome del progetto e i nomi dei livelli. Per scambiare i modelli usa IFC4. Il lettore è la libreria open source rvt (licenza Apache 2.0).</p>
+            <p class="note" data-i18n="fmt2.nota">Muri, porte, finestre e solai dei file .rvt non sono ancora letti.</p>
           </div>
         </article>
         <article class="card fmt">
@@ -492,7 +501,7 @@ $ bimopen-cli mcp</pre>
         <article class="card">
           <h3 data-i18n="dl1.h3">Nel browser</h3>
           <p data-i18n="dl1.p">Nessuna installazione: serve un browser recente (Chrome, Edge, Firefox o Safari) con WebGPU o WebGL2. BIMopen si apre nella lingua scelta su questo sito, e i file restano sul tuo computer.</p>
-          <p style="margin-top:16px"><a class="btn btn-primary" href="app/" data-app="e9e59efc" data-i18n="dl1.btn">Apri BIMopen</a></p>
+          <p style="margin-top:16px"><a class="btn btn-primary" href="app/" data-app="b1768c96" data-i18n="dl1.btn">Apri BIMopen</a></p>
         </article>
         <article class="card">
           <h3 data-i18n="dl2.h3">Per il computer</h3>
@@ -513,7 +522,7 @@ $ bimopen-cli mcp</pre>
       <span class="eyebrow" data-i18n="faq.kicker">Domande frequenti</span>
       <h2 id="faq-t" data-i18n="faq.h2">Domande frequenti</h2>
       <details><summary data-i18n="faq1.q">Quanto costa?</summary><p data-i18n="faq1.a">Niente. BIMopen è gratuito e sarà rilasciato come open source (MIT/Apache): non ha licenze a pagamento, abbonamenti né account, neanche per l'uso professionale.</p></details>
-      <details><summary data-i18n="faq2.q">Apre i file .rvt?</summary><p data-i18n="faq2.a">In parte. BIMopen apre in sola lettura i file .rvt delle versioni 2023–2025 e scambia i modelli tramite IFC4, lo standard aperto che gli altri software BIM sanno importare. Non salva in formato .rvt, che è un formato chiuso.</p></details>
+      <details><summary data-i18n="faq2.q">Apre i file .rvt?</summary><p data-i18n="faq2.a">Non ancora in modo utile: l'import dei file .rvt è sperimentale e oggi legge solo il nome del progetto e i nomi dei livelli. Per scambiare i modelli con gli altri software BIM usa IFC4, lo standard aperto. BIMopen non salva in formato .rvt, che è un formato chiuso.</p></details>
       <details><summary data-i18n="faq3.q">Dove finiscono i miei progetti?</summary><p data-i18n="faq3.a">Sul tuo computer. Anche nella versione per browser il modello resta nella pagina, e quando salvi viene scaricato come file. Questo sito non usa cookie né strumenti di tracciamento.</p></details>
       <details><summary data-i18n="faq4.q">Posso usarlo per un progetto reale?</summary><p data-i18n="faq4.a">Per studi e modelli semplici sì: modelli muri, solai, tetti, scale e facciate continue, impagini le viste su tavole con cartiglio e le stampi in PDF, e il file di progetto recupera il lavoro dopo un arresto. Mancano ancora controsoffitti, fasi, famiglie caricabili ed export DWG: puoi seguirne lo sviluppo nella roadmap.</p></details>
       <details><summary data-i18n="faq5.q">In che lingua è il programma?</summary><p data-i18n="faq5.a">In italiano, inglese, tedesco, francese, spagnolo e arabo, da destra a sinistra. Al primo avvio usa la lingua del sistema o del browser; si cambia dal menu 🌐 in alto. Anche questo sito è disponibile nelle stesse sei lingue.</p></details>
@@ -526,7 +535,7 @@ $ bimopen-cli mcp</pre>
       <h2 id="final-t" data-i18n="fin.h2">Il tuo prossimo progetto, in BIM aperto.</h2>
       <p class="sub" style="margin-inline:auto" data-i18n="fin.p">Apri la casa di esempio, sposta un muro e guarda pianta, 3D e computo aggiornarsi insieme.</p>
       <div class="cta">
-        <a class="btn btn-primary" href="app/" data-app="e9e59efc" data-i18n="cta.prova">Provalo nel browser</a>
+        <a class="btn btn-primary" href="app/" data-app="b1768c96" data-i18n="cta.prova">Provalo nel browser</a>
         <a class="btn btn-ghost" href="#scarica" data-i18n="fin.altre">Altre opzioni</a>
       </div>
     </div>
@@ -578,7 +587,7 @@ $ bimopen-cli mcp</pre>
     d.addEventListener('close', function () { img.removeAttribute('src'); });
   })();
 </script>
-<script src="lingua.js?v=b922a920"></script>
+<script src="lingua.js?v=769338d6"></script>
 <script>
   // tema: scuro finché non si sceglie; poi chiaro o scuro, ricordato in questo browser
   (function () {
@@ -587,6 +596,7 @@ $ bimopen-cli mcp</pre>
       var dark = root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
       root.dataset.theme = dark ? 'light' : 'dark';
       try { localStorage.setItem('theme', root.dataset.theme); } catch (e) {}
+      var tc = document.querySelector('meta[name="theme-color"]'); if (tc) tc.content = dark ? '#EEF2F5' : '#0D1319';
     });
   })();
 </script>

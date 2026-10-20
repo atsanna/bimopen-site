@@ -5,20 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title data-i18n="e404.title">Pagina non trovata — BIMopen</title>
 <meta name="robots" content="noindex">
-<link rel="icon" href="/bimopen-site/favicon.ico" sizes="any">
-<link rel="icon" href="/bimopen-site/assets/favicon.svg?v=a8140611" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/bimopen-site/assets/apple-touch-icon.png?v=44b8f81c">
-<script>var t = null; try { t = localStorage.getItem('theme'); } catch (e) {} document.documentElement.dataset.theme = t || 'dark';</script>
+<meta name="theme-color" content="#0D1319">
+<link rel="icon" href="/bimopen-site/favicon.ico?v=0fba0888" sizes="any">
+<link rel="icon" href="/bimopen-site/assets/favicon.svg?v=74b5de74" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/bimopen-site/assets/apple-touch-icon.png?v=6406f785">
+<script>var t = null; try { t = localStorage.getItem('theme'); } catch (e) {} document.documentElement.dataset.theme = t || 'dark'; var tc = document.querySelector('meta[name="theme-color"]'); if (tc && t === 'light') tc.content = '#EEF2F5';</script>
 <style>
-  :root { --font: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", "Helvetica Neue", Arial, sans-serif; --ink: #0f2742; --muted: #66768a; --paper: #f7f6f2; --line: #dfe3e8; --blue: #1d5fbf; --on-blue: #fff; color-scheme: light;
+  :root { --font: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", "Helvetica Neue", Arial, sans-serif; --ink: #172133; --muted: #5E6A78; --paper: #EEF2F5; --line: #E2E7EC; --accent: #08AABA; --accent-text: #06788A; --accent-hover: #2DB7C4; --on-accent: #093440; color-scheme: light;
     --font: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, "Noto Sans", Arial, sans-serif; }
-  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --ink: #e8eef5; --muted: #93a3b6; --paper: #0d1724; --line: #22344b; --blue: #6ea4ff; --on-blue: #08111c; color-scheme: dark; } }
-  :root[data-theme="dark"] { --ink: #e8eef5; --muted: #93a3b6; --paper: #0d1724; --line: #22344b; --blue: #6ea4ff; --on-blue: #08111c; color-scheme: dark; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --ink: #E4EBF1; --muted: #8A98A6; --paper: #0D1319; --line: #28343E; --accent: #14BECC; --accent-text: #14BECC; --accent-hover: #3FD0DB; --on-accent: #0D1319; color-scheme: dark; } }
+  :root[data-theme="dark"] { --ink: #E4EBF1; --muted: #8A98A6; --paper: #0D1319; --line: #28343E; --accent: #14BECC; --accent-text: #14BECC; --accent-hover: #3FD0DB; --on-accent: #0D1319; color-scheme: dark; }
   body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: var(--paper); color: var(--ink); font: 17px/1.6 var(--font); text-align: center; padding: 24px; box-sizing: border-box; }
-  .code { font-size: 96px; font-weight: 800; letter-spacing: -.04em; color: var(--blue); line-height: 1; }
+  .code { font-size: 96px; font-weight: 800; letter-spacing: -.04em; color: var(--accent-text); line-height: 1; }
   h1 { font-size: 26px; margin: 12px 0 8px; }
   p { color: var(--muted); margin: 0 0 24px; }
-  a.btn { display: inline-block; padding: 11px 18px; border-radius: 10px; background: var(--blue); color: var(--on-blue); font-weight: 600; text-decoration: none; }
+  a.btn { display: inline-block; padding: 11px 18px; border-radius: 8px; background: var(--accent); color: var(--on-accent); font-weight: 600; text-decoration: none; }
+  a.btn:hover { background: var(--accent-hover); }
 </style>
 </head>
 <body>
@@ -28,6 +30,6 @@
     <p data-i18n="e404.p">L'indirizzo è sbagliato oppure la pagina è stata spostata.</p>
     <a class="btn" href="/bimopen-site/" data-con-lingua="/bimopen-site/" data-i18n="e404.btn">Torna a BIMopen</a>
   </main>
-  <script src="/bimopen-site/lingua.js?v=b922a920"></script>
+  <script src="/bimopen-site/lingua.js?v=769338d6"></script>
 </body>
 </html>

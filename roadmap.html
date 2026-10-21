@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="it" data-build="b24323ba">
+<html lang="it" data-build="1e4634cb">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -97,7 +97,7 @@
   .eyebrow::before { content: ""; width: 18px; height: 2px; background: currentColor; }
   h1 { font-size: clamp(36px, 5.2vw, 60px); line-height: 1.06; letter-spacing: -.025em; margin: 14px 0 18px; }
   h1 em { font-style: normal; color: var(--accent-text); }
-  .lead { font-size: 19px; color: var(--ink-soft); max-width: 34em; margin: 0 0 28px; }
+  .lead { font-size: 19px; color: var(--ink-soft); margin: 0 0 28px; }
   .cta { display: flex; flex-wrap: wrap; gap: 12px; }
   .facts { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 28px 0 0; padding: 0; list-style: none; color: var(--muted); font-size: 14px; }
   .facts li::before { content: "✓"; color: var(--accent-text); font-weight: 700; margin-inline-end: 6px; }
@@ -114,7 +114,7 @@
   section { padding: 72px 0; }
   section.alt { background: var(--card); border-block: 1px solid var(--line); }
   h2 { font-size: clamp(28px, 3.4vw, 40px); line-height: 1.12; letter-spacing: -.02em; margin: 10px 0 14px; }
-  .sub { color: var(--ink-soft); max-width: 46em; margin: 0 0 36px; font-size: 18px; }
+  .sub { color: var(--ink-soft); margin: 0 0 36px; font-size: 18px; }
   .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
   .grid2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
   .grid3 > *, .grid2 > *, .road > *, .split > * { min-width: 0; }
@@ -160,7 +160,7 @@
   details summary::-webkit-details-marker { display: none; }
   details summary::after { content: "+"; color: var(--accent-text); font-size: 22px; line-height: 1; }
   details[open] summary::after { content: "–"; }
-  details p { color: var(--ink-soft); margin: 10px 0 0; max-width: 52em; }
+  details p { color: var(--ink-soft); margin: 10px 0 0; }
 
   .final { text-align: center; }
   .final .cta { justify-content: center; }
@@ -231,7 +231,7 @@
   section.alt .step { background: var(--paper); }
   .step .n { font: 700 13px/1 var(--mono); color: var(--muted); background: var(--field); border: 1px solid var(--line); border-radius: var(--radius-btn); padding: 7px 0; width: 36px; text-align: center; direction: ltr; }
   .step > div { min-width: 0; }
-  .step h4, .step p { hyphens: auto; overflow-wrap: break-word; }
+  .step h4, .step p { overflow-wrap: break-word; }
   .step h4 { margin: 0 0 4px; font-size: 16.5px; line-height: 1.3; }
   .step p { margin: 0; color: var(--ink-soft); font-size: 14.5px; line-height: 1.5; }
   .step p.have { margin-top: 6px; color: var(--muted); font-size: 13.5px; }
@@ -257,11 +257,13 @@
   .outs li { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px 14px 44px; position: relative; color: var(--ink-soft); font-size: 15px; }
   :root[dir="rtl"] .outs li { padding: 14px 44px 14px 16px; }
   .outs li::before { content: "×"; position: absolute; inset-inline-start: 16px; top: 11px; color: var(--muted); font-size: 20px; line-height: 1; }
+  /* on a phone the number and the state share the first row, so the step's text gets the card's full width and long words never break */
+  @media (max-width: 560px) { .step { grid-template-columns: auto 1fr; gap: 10px 14px; } .step > div { grid-column: 1 / -1; grid-row: 2; } .step .pill { grid-row: 1; grid-column: 2; justify-self: end; align-self: center; } }
   @media (max-width: 920px) { .stats { grid-template-columns: repeat(2, 1fr); } .steps, .outs { grid-template-columns: 1fr; } .bars li { grid-template-columns: 1fr 4em; } .bars .track { grid-column: 1 / -1; grid-row: 2; } }
   @media (max-width: 560px) { .phase-head { flex-wrap: wrap; } .phase-head .count { margin-inline-start: 0; } }
 </style>
 <link rel="stylesheet" href="assets/menu.css?v=11b1857a">
-<link rel="stylesheet" href="assets/effetti.css?v=b1cdd580">
+<link rel="stylesheet" href="assets/effetti.css?v=6a95309b">
 </head>
 <body>
 <a class="skip" href="#main" data-i18n="ui.skip">Vai al contenuto</a>

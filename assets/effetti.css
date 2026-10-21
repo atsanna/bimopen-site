@@ -8,7 +8,9 @@
      page loads (.rv), so nothing is hidden without JavaScript and nothing on the first screen
      waits; opacity and transform only, so the layout never moves.
    - The hero only fades in on load.
-   With prefers-reduced-motion nothing moves: no reveal, no lift, no fade. */
+   With prefers-reduced-motion nothing moves: no reveal, no lift, no fade.
+   It also sets how text breaks on these pages: never a hyphen inside a word, headings balance
+   their lines, paragraphs avoid a lone word on their last line, buttons and chips never wrap. */
 :root {
   --fx-ease: cubic-bezier(.2, .7, .2, 1);
   --fx-edge: color-mix(in srgb, var(--accent) 60%, var(--line));
@@ -65,3 +67,12 @@
   .rv:not(.in), .rv.in { opacity: 1; transform: none; transition: none; }
 }
 @media print { .rv:not(.in) { opacity: 1; transform: none; } }
+
+/* text: no automatic hyphenation anywhere (a long word moves to the next line whole); page and
+   section titles spread their words over balanced lines; card titles, paragraphs, list items and
+   captions fill their lines and avoid a single word alone on the last one; a button, a chip or a
+   pill never breaks its label */
+body { hyphens: manual; }
+h1, h2, .h2-alt, .eyebrow, .word, .four { text-wrap: balance; }
+h3, h4, p, li, dd, figcaption, summary, .lead, .sub, .car-txt { text-wrap: pretty; }
+.btn, .btn-soon, .pill, .chip, .toc a, .car-tabs [role="tab"] { white-space: nowrap; }

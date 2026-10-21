@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="it" data-build="5dd102a6">
+<html lang="it" data-build="7fd0abdc">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -103,7 +103,7 @@
   .bar { display: flex; align-items: center; gap: 20px; height: 64px; }
   .brand { display: flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font-weight: 700; font-size: 20px; letter-spacing: -.01em; direction: ltr; }
   .brand b { color: var(--logo); font-weight: 400; }
-  nav.links { display: none; gap: 20px; margin-inline-start: auto; }
+  nav.links { display: none; gap: 18px; margin-inline-start: auto; }
   nav.links a { color: var(--ink-soft); text-decoration: none; font-size: 15px; }
   nav.links a:hover { color: var(--accent-text); }
   .bar-right { display: flex; align-items: center; gap: 10px; margin-inline-start: auto; }
@@ -120,32 +120,16 @@
     :root:not([data-theme="light"]) .theme-toggle .sun { display: none; }
     :root:not([data-theme="light"]) .theme-toggle .moon { display: block; }
   }
-  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 11px 18px; border-radius: var(--radius-btn); font-weight: 600; font-size: 15px; text-decoration: none; border: 1px solid transparent; transition: transform .12s, background-color .12s; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; padding: 11px 18px; border-radius: var(--radius-btn); font-weight: 600; font-size: 15px; text-decoration: none; border: 1px solid transparent; transition: transform .12s, background-color .12s; }
   .btn:hover { transform: translateY(-1px); }
   .btn-primary { background: var(--accent); color: var(--on-accent); }
   .btn-primary:hover { background: var(--accent-hover); }
   .btn-lg { padding: 16px 28px; font-size: 18px; border-radius: calc(var(--radius-btn) + 2px); box-shadow: var(--shadow); }
   .rm-cta { margin-top: 28px; }
   [dir="rtl"] .btn .arrow { transform: scaleX(-1); }
-  .ui-shot { margin: 28px 0 0; }
-  .ui-shot a { display: block; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); box-shadow: var(--shadow); background: var(--card); }
-  .ui-shot img { width: 100%; height: auto; }
-  .ui-shot figcaption { margin-top: 10px; color: var(--muted); font-size: 15px; }
-  .ui-pair { margin-top: 4px; }
-  .lightbox { border: 0; padding: 0; background: transparent; max-width: 96vw; max-height: 94vh; overflow: visible; }
-  .lightbox::backdrop { background: rgba(13, 19, 25, .82); }
-  .lightbox img { display: block; max-width: 96vw; max-height: 90vh; width: auto; height: auto; border-radius: var(--radius); box-shadow: 0 10px 40px rgba(0,0,0,.45); }
-  .lightbox .lb-cap { color: #E4EBF1; font-size: 15px; text-align: center; margin-top: 10px; }
-  .lightbox .lb-close { position: absolute; top: -14px; inset-inline-end: -14px; width: 40px; height: 40px; border-radius: 50%; border: 0; background: #fff; color: #172133; font-size: 26px; line-height: 40px; cursor: pointer; box-shadow: 0 2px 10px rgba(0,0,0,.35); }
-  .lightbox .lb-close:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
-  .ui-shot a { cursor: zoom-in; }
-  .ui-h3 { margin: 48px 0 6px; font-size: clamp(20px, 2.2vw, 26px); }
   .btn-ghost { border-color: var(--line); color: var(--ink); background: var(--card); }
-  .bar .btn { padding: 8px 14px; }
+  .bar .btn { padding: 8px 14px; white-space: normal; line-height: 1.2; text-align: center; }
 
-  .hero { position: relative; overflow: hidden; padding: 72px 0 56px; }
-  .hero::before { content: ""; position: absolute; inset: 0; background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px); background-size: 32px 32px; mask-image: radial-gradient(ellipse at 70% 40%, #000 0%, transparent 70%); opacity: .7; pointer-events: none; }
-  .hero .wrap { position: relative; display: grid; grid-template-columns: 1.02fr 1fr; gap: 48px; align-items: center; }
   .eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--accent-text); }
   .eyebrow::before { content: ""; width: 18px; height: 2px; background: currentColor; }
   h1 { font-size: clamp(36px, 5.2vw, 60px); line-height: 1.06; letter-spacing: -.025em; margin: 14px 0 18px; }
@@ -154,16 +138,6 @@
   .cta { display: flex; flex-wrap: wrap; gap: 12px; }
   .facts { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 28px 0 0; padding: 0; list-style: none; color: var(--muted); font-size: 14px; }
   .facts li::before { content: "✓"; color: var(--accent-text); font-weight: 700; margin-inline-end: 6px; }
-  .stage { position: relative; aspect-ratio: 5 / 4; direction: ltr; }
-  .stage .shot { position: absolute; border-radius: var(--radius); box-shadow: var(--shadow); border: 1px solid var(--line); overflow: hidden; background: var(--render-bg); }
-  .stage .shot img { width: 100%; height: 100%; object-fit: cover; }
-  .stage .s3d { inset: 0 0 18% 12%; }
-  .stage .splan { width: 46%; aspect-ratio: 1.2; left: 0; bottom: 0; background: #fff; padding: 6px; }
-  .stage .splan img { object-fit: contain; }
-  .tag { position: absolute; font: 600 12px/1 var(--font); background: var(--card); color: var(--ink-soft); border: 1px solid var(--line); border-radius: 999px; padding: 6px 10px; box-shadow: var(--shadow); }
-  .tag.t3d { right: 6%; top: 4%; }
-  .tag.tplan { left: 3%; bottom: calc(46% / 1.2 + 10px); }
-
   section { padding: 72px 0; }
   section.alt { background: var(--card); border-block: 1px solid var(--line); }
   h2 { font-size: clamp(28px, 3.4vw, 40px); line-height: 1.12; letter-spacing: -.02em; margin: 10px 0 14px; }
@@ -217,6 +191,17 @@
 
   .final { text-align: center; }
   .final .cta { justify-content: center; }
+  /* the video channel: written by i18n/video.py only when "canale" is true in i18n/video.json */
+  .ext { width: 13px; height: 13px; flex: none; opacity: .75; }
+  .theme-toggle.chan { text-decoration: none; }
+  /* one more menu item and the icon: the header stays on one line in the longer languages */
+  nav.links:has(> a[href$="#video"]) { gap: 12px; }
+  nav.links:has(> a[href$="#video"]) a { font-size: 14px; }
+  .bar:has(.chan) { gap: 14px; }
+  .theme-toggle.chan svg { width: 19px; height: 19px; }
+  .theme-toggle.chan:hover { color: var(--accent-text); border-color: var(--accent); }
+  footer .chan-f { display: inline-flex; align-items: center; gap: 5px; vertical-align: bottom; }
+  footer .chan-f svg { width: 17px; height: 17px; }
   footer { border-top: 1px solid var(--line); padding: 36px 0 48px; color: var(--muted); font-size: 14px; }
   footer .row { display: flex; flex-wrap: wrap; gap: 12px 28px; justify-content: space-between; align-items: center; }
   footer small { display: block; margin-top: 20px; line-height: 1.5; max-width: 60em; }
@@ -226,14 +211,165 @@
   .to-top:hover { border-color: var(--accent); }
   .to-top.on { opacity: 1; visibility: visible; transform: none; }
 
+  /* hero: the cube and the name over the building of the channel banner, night in both themes */
+  .hero-c { --night: #0B141C; --night-ink: #E4EBF1; --night-soft: #B7C3CE; --night-muted: #8A98A6; --night-teal: #14BECC;
+    position: relative; overflow: hidden; padding: 0; background: var(--night); color: var(--night-ink); isolation: isolate; }
+  .hero-c .bg { position: absolute; inset: 0 0 0 auto; width: 64%; height: 100%; z-index: -1; }
+  .hero-c .bg img { width: 100%; height: 100%; object-fit: cover; object-position: 30% 60%;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.55) 22%, #000 48%); mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.55) 22%, #000 48%); }
+  [dir="rtl"] .hero-c .bg { inset: 0 auto 0 0; }
+  [dir="rtl"] .hero-c .bg img { transform: scaleX(-1); }
+  .hero-c .wrap { padding: 88px 0 80px; }
+  .hero-c .txt { max-width: 600px; }
+  .hero-c .mark { display: flex; align-items: center; gap: 22px; direction: ltr; }
+  [dir="rtl"] .hero-c .mark { justify-content: flex-end; }
+  .hero-c .mark svg { width: 74px; height: 104px; flex: none; }
+  .hero-c .word { font-size: clamp(54px, 7vw, 84px); line-height: 1; letter-spacing: -.03em; font-weight: 700; margin: 0; color: #fff; }
+  .hero-c .word b { font-weight: 400; color: var(--night-teal); }
+  .hero-c .motto { margin: 16px 0 0; margin-inline-start: 96px; font-size: 14px; letter-spacing: .32em !important; text-transform: uppercase; color: var(--night-soft); font-weight: 500; direction: ltr; }
+  [dir="rtl"] .hero-c .motto { text-align: end; margin-inline-start: 0; }
+  .hero-c .four { margin: 34px 0 6px; font-size: clamp(21px, 2.3vw, 27px); font-weight: 500; letter-spacing: -.01em; color: #fff; }
+  .hero-c .handle { display: flex; align-items: center; gap: 16px; margin: 6px 0 26px; }
+  .hero-c .handle::before { content: ""; width: 150px; height: 3px; background: var(--night-teal); border-radius: 2px; }
+  .hero-c .handle a { color: var(--night-ink); font-weight: 600; text-decoration: none; display: inline-flex; gap: 6px; align-items: center; }
+  .hero-c .handle a:hover { color: var(--night-teal); }
+  .hero-c .lead { color: var(--night-soft); font-size: 17.5px; margin: 0 0 26px; max-width: 34em; }
+  .hero-c .btn-primary { background: var(--night-teal); color: #0D1319; }
+  .hero-c .btn-ghost { background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.28); color: #fff; }
+  .hero-c .facts { color: var(--night-muted); }
+  .hero-c .facts li::before { color: var(--night-teal); }
+  .hero-c .ai-tag { position: absolute; inset-inline-end: 16px; bottom: 14px; z-index: 1; font: 500 12px/1 var(--font); color: rgba(228,235,241,.82); background: rgba(8,14,20,.55); border: 1px solid rgba(255,255,255,.12); padding: 6px 10px; border-radius: 999px; backdrop-filter: blur(4px); pointer-events: none; }
+
+  /* Interfaccia: the title, then the carousel of every interface */
+  .intro h2 em { font-style: normal; color: var(--accent-text); }
+  .intro .sub { margin-bottom: 28px; }
+  .car { --ar: 62.5cqw; }
+  .car-tabs { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; padding: 2px 2px 14px; margin: 0 -2px; }
+  .car-tabs::-webkit-scrollbar { display: none; }
+  .car-tabs [role="tab"] { flex: none; font: 600 14px var(--font); color: var(--ink-soft); background: var(--card); border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px; cursor: pointer; white-space: nowrap; }
+  .car-tabs [role="tab"]:hover { border-color: var(--accent); color: var(--ink); }
+  .car-tabs [role="tab"][aria-selected="true"] { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+  .car-tabs [role="tab"]:focus-visible, .car-arrow:focus-visible, .car-dots .dot:focus-visible, .fr:focus-visible, [data-zoom]:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+  .car-stage { position: relative; container-type: inline-size; aspect-ratio: 16 / 10; border-radius: var(--radius); background: color-mix(in srgb, var(--card) 60%, var(--paper)); border: 1px solid var(--line); overflow: hidden; }
+  .car-slide { position: absolute; inset: 0; display: grid; place-items: center; padding: 18px 64px; }
+  .car-slide[hidden] { display: none; }
+  .fr { display: block; cursor: zoom-in; max-width: 100%; }
+  .fr img { display: block; width: auto; height: auto; max-width: 100%; }
+  .fr-desk img { max-height: calc(var(--ar) - 36px); border-radius: 10px; border: 1px solid var(--line); box-shadow: var(--shadow); }
+  .fr-tablet, .fr-phone { background: #0b0f14; box-shadow: 0 10px 30px rgba(0,0,0,.28), inset 0 0 0 1px #2a3440; }
+  .fr-tablet { padding: 12px; border-radius: 22px; }
+  .fr-tablet img { max-height: calc(var(--ar) - 36px - 24px); border-radius: 8px; }
+  .fr-phone { padding: 9px; border-radius: 30px; }
+  .fr-phone img { max-height: calc(var(--ar) - 36px - 18px); border-radius: 22px; }
+  .fr-browser { border-radius: 12px; overflow: hidden; border: 1px solid var(--line); box-shadow: var(--shadow); background: var(--card); text-decoration: none; }
+  .fr-browser .bb { display: flex; align-items: center; gap: 6px; height: 30px; padding: 0 12px; background: var(--field); border-bottom: 1px solid var(--line); direction: ltr; }
+  .fr-browser .bb i { width: 9px; height: 9px; border-radius: 50%; background: var(--line); }
+  .fr-browser .bb span { margin-inline-start: 10px; flex: 1; max-width: 340px; font: 12px var(--mono); color: var(--muted); background: var(--card); border: 1px solid var(--line); border-radius: 999px; padding: 2px 12px; }
+  .fr-browser img { max-height: calc(var(--ar) - 36px - 31px); }
+  .car-arrow { position: absolute; top: 50%; transform: translateY(-50%); width: 42px; height: 42px; border-radius: 50%; border: 1px solid var(--line); background: var(--card); color: var(--ink); display: grid; place-items: center; cursor: pointer; box-shadow: var(--shadow); z-index: 2; }
+  .car-arrow svg { width: 20px; height: 20px; }
+  .car-arrow:hover { border-color: var(--accent); color: var(--accent-text); }
+  .car-arrow.prev { inset-inline-start: 12px; }
+  .car-arrow.next { inset-inline-end: 12px; }
+  .car-arrow.next svg, [dir="rtl"] .car-arrow.prev svg { transform: scaleX(-1); }
+  [dir="rtl"] .car-arrow.next svg { transform: none; }
+  .car-foot { display: flex; gap: 12px 24px; align-items: flex-start; justify-content: space-between; margin-top: 14px; }
+  .car-cap { margin: 0; color: var(--ink-soft); font-size: 15.5px; max-width: 52em; min-height: 3.2em; }
+  .car-cap .car-n { font: 700 13px var(--mono); color: var(--accent-text); margin-inline-end: 6px; direction: ltr; unicode-bidi: isolate; }
+  .car-cap b:not(.car-n) { color: var(--ink); font-weight: 600; }
+  .car-dots { display: flex; gap: 6px; flex: none; padding-top: 6px; }
+  .car-dots .dot { width: 9px; height: 9px; border-radius: 50%; border: 0; padding: 0; background: var(--line); cursor: pointer; }
+  .car-dots .dot[aria-current="true"] { background: var(--accent); width: 22px; border-radius: 5px; }
+  .view figure > a { display: block; width: 100%; height: 100%; cursor: zoom-in; }
+
+  /* every image opens enlarged over the page */
+  .lightbox { border: 0; padding: 0; background: transparent; max-width: 96vw; max-height: 94vh; overflow: visible; }
+  .lightbox::backdrop { background: rgba(13, 19, 25, .94); }
+  .lightbox img { display: block; max-width: 96vw; max-height: 86vh; width: auto; height: auto; border-radius: var(--radius); box-shadow: 0 10px 40px rgba(0,0,0,.45); background: #fff; }
+  .lightbox .lb-cap { color: #E4EBF1; font-size: 15px; text-align: center; margin: 10px auto 0; max-width: 60em; }
+  .lightbox .lb-cap b { color: #fff; }
+  .lightbox .lb-n { font: 700 13px var(--mono); color: #14BECC; margin-inline-end: 8px; direction: ltr; unicode-bidi: isolate; }
+  .lightbox .lb-close { position: absolute; top: -14px; inset-inline-end: -14px; width: 40px; height: 40px; border-radius: 50%; border: 0; background: #fff; color: #172133; font-size: 26px; line-height: 40px; cursor: pointer; box-shadow: 0 2px 10px rgba(0,0,0,.35); z-index: 2; }
+  .lightbox .lb-nav { position: absolute; top: calc(50% - 22px); width: 44px; height: 44px; border-radius: 50%; border: 0; background: rgba(255,255,255,.92); color: #172133; display: grid; place-items: center; cursor: pointer; box-shadow: 0 2px 10px rgba(0,0,0,.35); z-index: 2; }
+  .lightbox .lb-nav[hidden] { display: none; }
+  .lightbox .lb-nav svg { width: 22px; height: 22px; }
+  .lightbox .lb-prev { inset-inline-start: 10px; }
+  .lightbox .lb-next { inset-inline-end: 10px; }
+  .lightbox .lb-next svg, [dir="rtl"] .lightbox .lb-prev svg { transform: scaleX(-1); }
+  [dir="rtl"] .lightbox .lb-next svg { transform: none; }
+  .lightbox .lb-close:focus-visible, .lightbox .lb-nav:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+
+  /* Video (written by i18n/video.py only when "canale" is true) */
+  .h2-alt { color: var(--muted); font-size: clamp(18px, 2vw, 22px); margin: 0 0 14px; }
+  .pl { display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: center; margin-bottom: 40px; }
+  .pl > * { min-width: 0; }
+  .pl .cover { display: block; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); box-shadow: var(--shadow); position: relative; }
+  .pl .cover img { width: 100%; height: auto; aspect-ratio: 16/9; object-fit: cover; }
+  .pl .count { position: absolute; inset: auto 0 0 auto; background: rgba(11,20,28,.86); color: #fff; font-size: 13px; font-weight: 600; padding: 6px 12px; border-top-left-radius: 10px; display: flex; gap: 6px; align-items: center; }
+  .pl .count[hidden], .pl .count [hidden], .eps[hidden], .coming[hidden] { display: none; }
+  .pl .sub { margin-bottom: 20px; }
+  .privacy { display: flex; gap: 8px; color: var(--muted); font-size: 13.5px; margin: 16px 0 0; line-height: 1.5; }
+  .privacy svg { width: 16px; height: 16px; flex: none; margin-top: 2px; color: var(--accent-text); }
+  .eps { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; list-style: none; margin: 0; padding: 0; }
+  .ep { display: block; height: 100%; text-decoration: none; color: var(--ink); background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; transition: transform .12s, border-color .12s; }
+  section:not(.alt) .ep { background: var(--card); }
+  .ep:hover { transform: translateY(-2px); border-color: var(--accent); }
+  .ep:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+  .ep .th { position: relative; }
+  .ep .th img { width: 100%; height: auto; aspect-ratio: 16/9; object-fit: cover; }
+  .ep .play { position: absolute; inset: 0; display: grid; place-items: center; opacity: 0; transition: opacity .12s; background: rgba(11,20,28,.35); }
+  .ep:hover .play { opacity: 1; }
+  .ep .play > span { width: 52px; height: 52px; border-radius: 50%; background: #14BECC; display: grid; place-items: center; }
+  .ep .play svg { width: 20px; height: 20px; margin-left: 3px; }
+  .ep .meta { padding: 12px 14px 14px; display: grid; gap: 2px; }
+  .ep .n { font: 700 12.5px/1 var(--mono); color: var(--accent-text); }
+  .ep .t1 { font-weight: 650; font-size: 16px; line-height: 1.3; margin-top: 4px; }
+  .ep .t2 { color: var(--muted); font-size: 14px; line-height: 1.3; }
+  .ep .go { display: flex; align-items: center; gap: 5px; margin-top: 8px; color: var(--muted); font-size: 12.5px; }
+  .coming { margin: 22px 0 0; text-align: center; color: var(--muted); font-size: 14.5px; font-style: italic; }
+  .more { margin: 28px 0 0; display: flex; justify-content: center; }
+  .more .btn svg { width: 18px; height: 18px; }
+
+  @media (max-width: 920px) {
+    .pl { grid-template-columns: 1fr; gap: 24px; }
+    .hero-c .bg { width: 100%; opacity: .55; }
+    .hero-c .bg img { -webkit-mask-image: linear-gradient(0deg, transparent 0%, #000 40%); mask-image: linear-gradient(0deg, transparent 0%, #000 40%); object-position: 62% 40%; }
+    .hero-c::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(11,20,28,.55) 0%, rgba(11,20,28,.35) 35%, rgba(11,20,28,.92) 70%); }
+  }
+  @media (max-width: 560px) {
+    .car { --ar: 100cqw; }
+    .car-stage { aspect-ratio: 1 / 1; }
+    .car-slide { padding: 14px 10px 58px; }
+    .car-arrow { top: auto; bottom: 10px; transform: none; width: 38px; height: 38px; }
+    .car-foot { flex-direction: column-reverse; align-items: center; }
+    .car-cap { font-size: 15px; min-height: 6.2em; }
+    .fr-desk img, .fr-browser img { max-height: calc(var(--ar) - 72px - 40px); }
+    .hero-c .wrap { padding: 52px 0 48px; }
+    .hero-c .mark { gap: 14px; }
+    .hero-c .mark svg { width: 50px; height: 70px; }
+    .hero-c .word { font-size: 52px; }
+    .hero-c .motto { margin-inline-start: 0; font-size: 11.5px; letter-spacing: .22em !important; }
+    .hero-c .handle::before { width: 70px; }
+    .hero-c .four { margin-top: 26px; }
+    .hero-c .cta .btn { flex: 1 1 auto; justify-content: center; }
+    .hero-c .ai-tag { display: none; } /* on phones the image is only a veiled background */
+    .lightbox .lb-nav { top: auto; bottom: -56px; }
+    .lightbox .lb-close { top: 6px; inset-inline-end: 6px; }
+    .lightbox .lb-cap { margin-bottom: 56px; }
+    .eps { grid-template-columns: 1fr; gap: 14px; }
+    .ep { display: grid; grid-template-columns: 136px 1fr; }
+    .ep .th img { height: 100%; aspect-ratio: auto; }
+    .ep .meta { padding: 10px 12px; align-content: center; }
+    .ep .t1 { font-size: 15px; }
+    .ep .go { display: none; }
+  }
+
   :root[lang="ar"] * { letter-spacing: 0 !important; }
   :root[lang="ar"] .eyebrow { text-transform: none; }
 
   @media (max-width: 920px) {
-    .hero .wrap, .split { grid-template-columns: 1fr; }
-    .hero { padding-top: 44px; }
+    .split { grid-template-columns: 1fr; }
     .grid3, .road, .grid2 { grid-template-columns: 1fr; }
-    .stage { max-width: 560px; }
   }
   @media (max-width: 560px) {
     body { font-size: 16px; }
@@ -244,7 +380,7 @@
     .table { font-size: 12px; }
     .to-top { bottom: 16px; inset-inline-end: 16px; }
   }
-  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn, .to-top { transition: none; } }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn, .to-top, .ep { transition: none; } }
   @media print { .to-top, .lang-pick, .theme-toggle { display: none !important; } }
 </style>
 </head>
@@ -258,6 +394,7 @@
       <span>BIM<b>open</b></span>
     </a>
     <nav class="links" aria-label="Sezioni" data-i18n-attr="aria-label:ui.sezioni">
+      <!-- canale:menu --><!-- /canale:menu -->
       <a href="#viste" data-i18n="nav.viste">Viste</a>
       <a href="#funzioni" data-i18n="nav.funzioni">Funzioni</a>
       <a href="#formati" data-i18n="nav.formati">Formati</a>
@@ -279,6 +416,7 @@
           <option value="ar" lang="ar" dir="rtl">العربية</option>
         </select>
       </label>
+      <!-- canale:icona --><!-- /canale:icona -->
       <button class="theme-toggle" id="themeToggle" type="button" aria-label="Cambia tema" data-i18n-attr="aria-label:ui.tema">
         <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
         <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
@@ -289,11 +427,15 @@
 </header>
 
 <main id="top">
-  <section class="hero" aria-labelledby="titolo">
+  <section class="hero-c" aria-labelledby="titolo">
+    <div class="bg"><img src="assets/hero-edificio.webp?v=7ffc898e" alt="" width="1100" height="1050" fetchpriority="high"></div>
+    <span class="ai-tag" data-i18n="hero.ai">Immagine generata con l'IA</span>
     <div class="wrap" id="main">
-      <div>
-        <span class="eyebrow" data-i18n="hero.kicker">Gratuito · multilingue · presto open source</span>
-        <h1 id="titolo" data-i18n="hero.h1">Disegni l'edificio,<br><em>il progetto si scrive da sé.</em></h1>
+      <div class="txt">
+        <div class="mark"><svg viewBox="5 0 100 140" aria-hidden="true"><g fill="none" stroke="#14BECC" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 58 54 35 93 58V105L54 128 15 105Z"/><path d="M15 58 54 81 93 58M54 81V128"/><path d="M54 35V10H82"/></g></svg><h1 class="word" id="titolo">BIM<b>open</b></h1></div>
+        <p class="motto" lang="en">One model. Open possibilities.</p>
+        <p class="four" data-i18n="hero.four">Progetta. Coordina. Verifica. Documenta.</p>
+        <p class="handle"><!-- canale:handle --><!-- /canale:handle --></p>
         <p class="lead" data-i18n="hero.lead">BIMopen è un software BIM gratuito, che sarà rilasciato come open source (MIT/Apache). Modelli muri, porte, finestre e solai una volta sola: piante, vista 3D, abachi e file IFC nascono dallo stesso modello e restano sempre allineati.</p>
         <div class="cta">
           <a class="btn btn-primary" href="app/" data-app="b1768c96">
@@ -312,28 +454,55 @@
           <li data-i18n="fact.4">Browser, Windows e Linux · macOS in arrivo</li>
         </ul>
       </div>
-      <div class="stage" role="img" aria-label="La casa di esempio di BIMopen: vista 3D a due piani e pianta del piano terra" data-i18n-attr="aria-label:hero.img">
-        <div class="shot s3d"><img src="assets/hero-3d.webp?v=ba8e74e6" alt="" width="1171" height="961" fetchpriority="high"></div>
-        <div class="shot splan"><img src="assets/pianta.webp?v=6b04d10c" alt="" width="1600" height="1329" loading="lazy"></div>
-        <span class="tag t3d" data-i18n="hero.tag3d">Vista 3D</span>
-        <span class="tag tplan" data-i18n="hero.tagpianta">Pianta piano terra</span>
-      </div>
     </div>
   </section>
 
   <section id="interfaccia" aria-labelledby="interfaccia-t">
     <div class="wrap">
-      <span class="eyebrow" data-i18n="ui.kicker">L'interfaccia</span>
-      <h2 id="interfaccia-t" data-i18n="ui.h2">Un'interfaccia moderna, in chiaro e in scuro</h2>
-      <p class="sub" data-i18n="ui.p">Barra laterale, ricerca dei comandi con Ctrl+K, strumenti a schede, pannello dell'elemento e miniature delle viste, in chiaro e in scuro. Chi preferisce la barra multifunzione può scegliere lo stile Classica in Opzioni: i comandi sono gli stessi. Le immagini mostrano l'interfaccia nella lingua che hai scelto.</p>
-      <div class="grid2 ui-pair">
-        <figure class="ui-shot"><a href="assets/ui/it/bimopen-3d-light.webp?v=54678d0a" data-ui-link><img src="assets/ui/it/bimopen-3d-light.webp?v=54678d0a" data-ui alt="Lo stile BIMopen in chiaro: barra laterale, strumenti a schede, vista 3D e pannello dell'elemento" data-i18n-attr="alt:ui.b.alt1" width="1586" height="992" loading="lazy"></a>
-          <figcaption data-i18n="ui.b.c1">Stile BIMopen, tema chiaro: la casa di esempio in 3D.</figcaption></figure>
-        <figure class="ui-shot"><a href="assets/ui/it/bimopen-plan-dark.webp?v=759c27c2" data-ui-link><img src="assets/ui/it/bimopen-plan-dark.webp?v=759c27c2" data-ui alt="Lo stile BIMopen in scuro: la pianta del piano terra con le proprietà della vista" data-i18n-attr="alt:ui.b.alt2" width="1586" height="992" loading="lazy"></a>
-          <figcaption data-i18n="ui.b.c2">Stile BIMopen, tema scuro: la pianta del piano terra.</figcaption></figure>
+      <div class="intro">
+        <span class="eyebrow" data-i18n="hero.kicker">Gratuito · multilingue · presto open source</span>
+        <h2 id="interfaccia-t" data-i18n="hero.h1">Disegni l'edificio,<br><em>il progetto si scrive da sé.</em></h2>
+        <p class="sub" data-i18n="ui.p">Barra laterale, ricerca dei comandi con Ctrl+K, strumenti a schede, pannello dell'elemento e miniature delle viste, in chiaro e in scuro. Chi preferisce la barra multifunzione può scegliere lo stile Classica in Opzioni: i comandi sono gli stessi. Le immagini mostrano l'interfaccia nella lingua che hai scelto.</p>
+      </div>
+      <div class="car" id="car" role="region" aria-roledescription="carousel" aria-label="Le interfacce di BIMopen" data-i18n-attr="aria-label:car.label">
+        <div class="car-tabs" role="tablist" aria-label="Le interfacce di BIMopen" data-i18n-attr="aria-label:car.label">
+          <button type="button" role="tab" id="car-t1" aria-controls="car-s1" aria-selected="true" tabindex="0" data-i18n="car.1.t">BIMopen scuro</button>
+          <button type="button" role="tab" id="car-t2" aria-controls="car-s2" aria-selected="false" tabindex="-1" data-i18n="car.2.t">BIMopen chiaro</button>
+          <button type="button" role="tab" id="car-t3" aria-controls="car-s3" aria-selected="false" tabindex="-1" data-i18n="car.3.t">Classica</button>
+          <button type="button" role="tab" id="car-t4" aria-controls="car-s4" aria-selected="false" tabindex="-1" data-i18n="car.4.t">Touch PC</button>
+          <button type="button" role="tab" id="car-t5" aria-controls="car-s5" aria-selected="false" tabindex="-1" data-i18n="car.5.t">Tablet orizzontale</button>
+          <button type="button" role="tab" id="car-t6" aria-controls="car-s6" aria-selected="false" tabindex="-1" data-i18n="car.6.t">Tablet verticale</button>
+          <button type="button" role="tab" id="car-t7" aria-controls="car-s7" aria-selected="false" tabindex="-1" data-i18n="car.7.t">Telefono</button>
+          <button type="button" role="tab" id="car-t8" aria-controls="car-s8" aria-selected="false" tabindex="-1" data-i18n="car.8.t">Browser</button>
+        </div>
+        <div class="car-stage">
+          <div class="car-slide" role="tabpanel" id="car-s1" aria-labelledby="car-t1" aria-roledescription="slide"><a class="fr fr-desk" href="assets/ui/it/interface-bimopen-dark.webp?v=69f41e20" data-ui-link data-zoom="car" data-zoom-cap="car-c1"><img src="assets/ui/it/interface-bimopen-dark.webp?v=69f41e20" alt="BIMopen scuro" data-i18n-attr="alt:car.1.t" data-ui width="1586" height="992"></a></div>
+          <div class="car-slide" role="tabpanel" id="car-s2" aria-labelledby="car-t2" aria-roledescription="slide" hidden><a class="fr fr-desk" href="assets/ui/it/interface-bimopen.webp?v=54678d0a" data-ui-link data-zoom="car" data-zoom-cap="car-c2"><img data-src="assets/ui/it/interface-bimopen.webp?v=54678d0a" alt="BIMopen chiaro" data-i18n-attr="alt:car.2.t" data-ui width="1586" height="992"></a></div>
+          <div class="car-slide" role="tabpanel" id="car-s3" aria-labelledby="car-t3" aria-roledescription="slide" hidden><a class="fr fr-desk" href="assets/ui/it/style-classic.webp?v=12975365" data-ui-link data-zoom="car" data-zoom-cap="car-c3"><img data-src="assets/ui/it/style-classic.webp?v=12975365" alt="Classica" data-i18n-attr="alt:car.3.t" data-ui width="1586" height="992"></a></div>
+          <div class="car-slide" role="tabpanel" id="car-s4" aria-labelledby="car-t4" aria-roledescription="slide" hidden><a class="fr fr-desk" href="assets/ui/it/touch-pc.webp?v=06128452" data-ui-link data-zoom="car" data-zoom-cap="car-c4"><img data-src="assets/ui/it/touch-pc.webp?v=06128452" alt="Touch PC" data-i18n-attr="alt:car.4.t" data-ui width="1600" height="900"></a></div>
+          <div class="car-slide" role="tabpanel" id="car-s5" aria-labelledby="car-t5" aria-roledescription="slide" hidden><a class="fr fr-tablet" href="assets/ui/it/touch-tablet-landscape.webp?v=4299e87a" data-ui-link data-zoom="car" data-zoom-cap="car-c5"><img data-src="assets/ui/it/touch-tablet-landscape.webp?v=4299e87a" alt="Tablet orizzontale" data-i18n-attr="alt:car.5.t" data-ui width="1280" height="800"></a></div>
+          <div class="car-slide" role="tabpanel" id="car-s6" aria-labelledby="car-t6" aria-roledescription="slide" hidden><a class="fr fr-tablet" href="assets/ui/it/touch-tablet-portrait.webp?v=c4d74613" data-ui-link data-zoom="car" data-zoom-cap="car-c6"><img data-src="assets/ui/it/touch-tablet-portrait.webp?v=c4d74613" alt="Tablet verticale" data-i18n-attr="alt:car.6.t" data-ui width="688" height="1100"></a></div>
+          <div class="car-slide" role="tabpanel" id="car-s7" aria-labelledby="car-t7" aria-roledescription="slide" hidden><a class="fr fr-phone" href="assets/ui/it/touch-phone-portrait.webp?v=cc0aa5da" data-ui-link data-zoom="car" data-zoom-cap="car-c7"><img data-src="assets/ui/it/touch-phone-portrait.webp?v=cc0aa5da" alt="Telefono" data-i18n-attr="alt:car.7.t" data-ui width="412" height="915"></a></div>
+          <div class="car-slide" role="tabpanel" id="car-s8" aria-labelledby="car-t8" aria-roledescription="slide" hidden><a class="fr fr-browser" href="assets/ui/it/browser.webp?v=3eb38b34" data-ui-link data-zoom="car" data-zoom-cap="car-c8"><span class="bb" aria-hidden="true"><i></i><i></i><i></i><span>atsanna.github.io/bimopen-site/app/</span></span><img data-src="assets/ui/it/browser.webp?v=3eb38b34" alt="Browser" data-i18n-attr="alt:car.8.t" data-ui width="1586" height="992"></a></div>
+          <button type="button" class="car-arrow prev" aria-label="Interfaccia precedente" data-i18n-attr="aria-label:car.prev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+          <button type="button" class="car-arrow next" aria-label="Interfaccia successiva" data-i18n-attr="aria-label:car.next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+        </div>
+        <div class="car-foot">
+          <p class="car-cap" aria-live="polite"><b class="car-n">1 / 8</b> <span class="car-txt">Lo stile predefinito: barra laterale, pannello degli strumenti, ricerca dei comandi e striscia delle viste. Il tema si sceglie in <b>Opzioni › Interfaccia utente › Tema</b> o con la luna nella barra in alto.</span></p>
+          <div class="car-dots" aria-hidden="true"><button type="button" class="dot" tabindex="-1" data-i="1" aria-current="true"></button><button type="button" class="dot" tabindex="-1" data-i="2"></button><button type="button" class="dot" tabindex="-1" data-i="3"></button><button type="button" class="dot" tabindex="-1" data-i="4"></button><button type="button" class="dot" tabindex="-1" data-i="5"></button><button type="button" class="dot" tabindex="-1" data-i="6"></button><button type="button" class="dot" tabindex="-1" data-i="7"></button><button type="button" class="dot" tabindex="-1" data-i="8"></button></div>
+          <span class="cap-src" id="car-c1" data-i18n="car.1.c" hidden>Lo stile predefinito: barra laterale, pannello degli strumenti, ricerca dei comandi e striscia delle viste. Il tema si sceglie in <b>Opzioni › Interfaccia utente › Tema</b> o con la luna nella barra in alto.</span>
+          <span class="cap-src" id="car-c2" data-i18n="car.2.c" hidden>Lo stesso stile nel tema chiaro: si passa dall'uno all'altro con il sole o la luna nella barra in alto. Comandi e scorciatoie restano gli stessi.</span>
+          <span class="cap-src" id="car-c3" data-i18n="car.3.c" hidden>Barra multifunzione a schede, barra delle opzioni, tavolozza Proprietà e Indice del progetto, per chi è abituato a lavorare così. <b>Opzioni › Interfaccia utente › Interfaccia › Classica</b>.</span>
+          <span class="cap-src" id="car-c4" data-i18n="car.4.c" hidden>Per monitor touch e penne: tavolozze per categoria e comandi grandi abbastanza per un dito. <b>Opzioni › Interfaccia utente › Modalità touch › Sempre</b>.</span>
+          <span class="cap-src" id="car-c5" data-i18n="car.5.c" hidden>La modalità touch su un tablet in orizzontale. Si attiva da sola su Android e nei browser usati con il dito: <b>Modalità touch › Automatica</b>.</span>
+          <span class="cap-src" id="car-c6" data-i18n="car.6.c" hidden>Su un tablet in verticale le proprietà si mettono da parte per lasciare spazio al disegno; <b>Proprietà</b> nella barra in alto le riporta.</span>
+          <span class="cap-src" id="car-c7" data-i18n="car.7.c" hidden>Sul telefono il disegno occupa tutta la larghezza e cinque pulsanti in basso aprono viste, famiglie, strumenti, proprietà e comandi. Automatica su Android e nei browser stretti.</span>
+          <span class="cap-src" id="car-c8" data-i18n="car.8.c" hidden>La stessa applicazione nel browser, senza installare nulla (WebGPU o WebGL2): <b>Provalo nel browser</b>. I file restano sul tuo computer.</span>
+        </div>
       </div>
     </div>
   </section>
+  <!-- canale:video --><!-- /canale:video -->
 
   <section id="viste" class="alt" aria-labelledby="viste-t">
     <div class="wrap">
@@ -342,14 +511,14 @@
       <p class="sub" data-i18n="viste.p">In BIMopen non si disegnano linee ma elementi edilizi con le loro proprietà. Le viste sono letture diverse dello stesso modello, per cui non vanno mai riallineate a mano.</p>
       <div class="grid3">
         <article class="card view">
-          <figure class="white"><img src="assets/pianta.webp?v=6b04d10c" alt="Pianta del piano terra con muri in sezione campiti, porte con il loro verso di apertura, finestre e griglie; locali colorati per destinazione, con la legenda" data-i18n-attr="alt:viste.alt1" loading="lazy" width="1600" height="1329"></figure>
+          <figure class="white"><a href="assets/pianta.webp?v=6b04d10c" data-zoom="viste"><img src="assets/pianta.webp?v=6b04d10c" alt="Pianta del piano terra con muri in sezione campiti, porte con il loro verso di apertura, finestre e griglie; locali colorati per destinazione, con la legenda" data-i18n-attr="alt:viste.alt1" loading="lazy" width="1600" height="1329"></a></figure>
           <div class="body">
             <h3 data-i18n="viste.h3a">Piante, sezioni e prospetti</h3>
             <p data-i18n="viste.pa">Muri tagliati con campitura, simboli di porte e finestre, livelli e griglie con bolle. Per ogni livello e ogni sezione, esportabili in SVG e PNG.</p>
           </div>
         </article>
         <article class="card view">
-          <figure><img src="assets/vista-3d.webp?v=0ba0385b" alt="Vista 3D della casa di esempio con il tetto a due falde e i timpani" data-i18n-attr="alt:viste.alt2" loading="lazy" width="1575" height="1315"></figure>
+          <figure><a href="assets/vista-3d.webp?v=0ba0385b" data-zoom="viste"><img src="assets/vista-3d.webp?v=0ba0385b" alt="Vista 3D della casa di esempio con il tetto a due falde e i timpani" data-i18n-attr="alt:viste.alt2" loading="lazy" width="1575" height="1315"></a></figure>
           <div class="body">
             <h3 data-i18n="viste.h3b">Vista 3D</h3>
             <p data-i18n="viste.pb">Navigazione in tempo reale accelerata dalla GPU: orbita attorno alla selezione e zoom verso il cursore, vetri trasparenti, selezione degli elementi con un clic.</p>
@@ -546,48 +715,136 @@ $ bimopen-cli mcp</pre>
   <div class="wrap">
     <div class="row">
       <span>© <span id="year">2026</span> BIMopen · <span data-i18n="foot.lic">Sarà rilasciato come open source (MIT/Apache)</span> · <span data-i18n="foot.claude">Sviluppato con</span> <a href="https://claude.com/claude-code" rel="noopener">Claude Code</a></span>
-      <span><a href="#formati" data-i18n="nav.formati">Formati</a> · <a href="roadmap.html" data-con-lingua="roadmap.html" data-i18n="nav.roadmap">Roadmap</a> · <a href="download.html" data-con-lingua="download.html" data-i18n="nav.scarica">Scarica</a> · <a href="manual/it/" data-manuale data-i18n="nav.manuale">Manuale</a> · <span data-i18n="foot.codice">Codice sorgente in arrivo</span></span>
+      <span><a href="#formati" data-i18n="nav.formati">Formati</a> · <a href="roadmap.html" data-con-lingua="roadmap.html" data-i18n="nav.roadmap">Roadmap</a> · <a href="download.html" data-con-lingua="download.html" data-i18n="nav.scarica">Scarica</a> · <a href="manual/it/" data-manuale data-i18n="nav.manuale">Manuale</a><!-- canale:piede --><!-- /canale:piede --> · <span data-i18n="foot.codice">Codice sorgente in arrivo</span></span>
     </div>
     <small data-i18n="foot.marchi">Autodesk® e Revit® sono marchi o marchi registrati di Autodesk, Inc. BIMopen è un progetto indipendente, non affiliato, sponsorizzato né approvato da Autodesk®; i nomi sono usati solo per indicare i formati e i flussi di lavoro con cui BIMopen è compatibile. IFC è uno standard di buildingSMART International.</small>
   </div>
 </footer>
 
 <button class="to-top" id="to-top" type="button" aria-label="Torna all'inizio" data-i18n-attr="aria-label:ui.top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
-<script>
-  // the screenshots of the interface follow the language chosen on the site
-  document.addEventListener('lingua', function (e) {
-    var l = e.detail;
-    document.querySelectorAll('img[data-ui], a[data-ui-link]').forEach(function (x) {
-      var a = x.tagName === 'A' ? 'href' : 'src';
-      x.setAttribute(a, x.getAttribute(a).replace(/assets\/ui\/[a-z]{2}\//, 'assets/ui/' + l + '/'));
-    });
-  });
-</script>
 <dialog class="lightbox" id="lightbox" aria-label="Immagine ingrandita" data-i18n-attr="aria-label:lb.label">
   <button class="lb-close" type="button" aria-label="Chiudi" title="Chiudi" data-i18n-attr="aria-label:lb.close;title:lb.close">×</button>
+  <button class="lb-nav lb-prev" type="button" aria-label="Immagine precedente" data-i18n-attr="aria-label:lb.prev" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+  <button class="lb-nav lb-next" type="button" aria-label="Immagine successiva" data-i18n-attr="aria-label:lb.next" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
   <img alt="">
   <p class="lb-cap"></p>
 </dialog>
 <script>
-  // the screenshots open enlarged over the page: × , Esc or a click outside close them
+  // The screens follow the language chosen on the site (every language has the same files).
+  document.addEventListener('lingua', function (e) {
+    var l = e.detail;
+    document.querySelectorAll('img[data-ui], a[data-ui-link]').forEach(function (x) {
+      ['src', 'data-src', 'href'].forEach(function (a) {
+        var v = x.getAttribute(a); if (v) x.setAttribute(a, v.replace(/assets\/ui\/[a-z]{2}\//, 'assets/ui/' + l + '/'));
+      });
+    });
+  });
+
+  // Carousel of the interfaces: tabs, arrows, dots, arrow keys, swipe; it never moves by itself.
+  // Only the shown screen and its neighbours are loaded.
+  (function () {
+    var car = document.getElementById('car'); if (!car) return;
+    var tabs = [].slice.call(car.querySelectorAll('[role="tab"]'));
+    var slides = [].slice.call(car.querySelectorAll('.car-slide'));
+    var dots = [].slice.call(car.querySelectorAll('.car-dots .dot'));
+    var txt = car.querySelector('.car-txt'), num = car.querySelector('.car-n'), cur = 0;
+    function load(i) {
+      [i, (i + 1) % slides.length, (i + slides.length - 1) % slides.length].forEach(function (k) {
+        var img = slides[k].querySelector('img[data-src]');
+        if (img) { img.setAttribute('src', img.getAttribute('data-src')); img.removeAttribute('data-src'); }
+      });
+    }
+    function caption() { txt.innerHTML = document.getElementById('car-c' + (cur + 1)).innerHTML; }
+    function show(i, focus) {
+      cur = (i + slides.length) % slides.length;
+      slides.forEach(function (s, k) { s.hidden = k !== cur; });
+      tabs.forEach(function (t, k) { t.setAttribute('aria-selected', k === cur); t.tabIndex = k === cur ? 0 : -1; });
+      dots.forEach(function (d, k) { if (k === cur) d.setAttribute('aria-current', 'true'); else d.removeAttribute('aria-current'); });
+      num.textContent = (cur + 1) + ' / ' + slides.length;
+      caption();
+      var tl = tabs[cur].parentNode, t = tabs[cur];
+      tl.scrollLeft += (t.getBoundingClientRect().left - tl.getBoundingClientRect().left) - (tl.clientWidth - t.offsetWidth) / 2;
+      if (focus) t.focus();
+      load(cur);
+    }
+    tabs.forEach(function (t, k) { t.addEventListener('click', function () { show(k); }); });
+    dots.forEach(function (d, k) { d.addEventListener('click', function () { show(k); }); });
+    car.querySelector('.prev').addEventListener('click', function () { show(cur - 1); });
+    car.querySelector('.next').addEventListener('click', function () { show(cur + 1); });
+    car.addEventListener('keydown', function (e) {
+      var rtl = document.documentElement.dir === 'rtl', f = e.target.getAttribute('role') === 'tab';
+      if (e.key === 'ArrowRight') { e.preventDefault(); show(cur + (rtl ? -1 : 1), f); }
+      else if (e.key === 'ArrowLeft') { e.preventDefault(); show(cur + (rtl ? 1 : -1), f); }
+      else if (e.key === 'Home' && f) { e.preventDefault(); show(0, true); }
+      else if (e.key === 'End' && f) { e.preventDefault(); show(slides.length - 1, true); }
+    });
+    var x0 = null, stage = car.querySelector('.car-stage');
+    stage.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+    stage.addEventListener('touchend', function (e) {
+      if (x0 === null) return;
+      var dx = e.changedTouches[0].clientX - x0, rtl = document.documentElement.dir === 'rtl'; x0 = null;
+      if (Math.abs(dx) > 40) show(cur + ((dx < 0) !== rtl ? 1 : -1));
+    });
+    // the lightbox moves through the same screens: the carousel follows it
+    document.addEventListener('zoom', function (e) { if (e.detail.group === 'car') show(e.detail.index); });
+    document.addEventListener('lingua', caption);
+    load(0);
+  })();
+
+  // Every image opens enlarged over the page: ×, Esc or a click outside close it, and focus goes
+  // back to the image. Images of one group (data-zoom) have arrows, arrow keys and swipe.
   (function () {
     var d = document.getElementById('lightbox'); if (!d || !d.showModal) return;
     var img = d.querySelector('img'), cap = d.querySelector('.lb-cap');
-    document.querySelectorAll('.ui-shot a').forEach(function (a) {
+    var prev = d.querySelector('.lb-prev'), next = d.querySelector('.lb-next');
+    var group = [], at = 0, opener = null;
+    function show(i) {
+      at = (i + group.length) % group.length;
+      var a = group[at], im = a.querySelector('img'), c = a.getAttribute('data-zoom-cap');
+      img.src = a.getAttribute('href'); img.alt = im ? im.alt : '';
+      cap.innerHTML = '';
+      if (group.length > 1) { var n = document.createElement('span'); n.className = 'lb-n'; n.textContent = (at + 1) + ' / ' + group.length; cap.appendChild(n); }
+      var t = document.createElement('span');
+      if (c) t.innerHTML = document.getElementById(c).innerHTML; else t.textContent = im ? im.alt : '';
+      cap.appendChild(t);
+      prev.hidden = next.hidden = group.length < 2;
+      try { document.dispatchEvent(new CustomEvent('zoom', { detail: { group: a.getAttribute('data-zoom'), index: at } })); } catch (e) {}
+    }
+    document.querySelectorAll('a[data-zoom]').forEach(function (a) {
       a.addEventListener('click', function (e) {
         e.preventDefault();
-        var i = a.querySelector('img'), f = a.closest('figure'), c = f && f.querySelector('figcaption');
-        img.src = a.getAttribute('href'); img.alt = i ? i.alt : '';
-        cap.textContent = c ? c.textContent : '';
+        opener = a;
+        group = [].slice.call(document.querySelectorAll('a[data-zoom="' + a.getAttribute('data-zoom') + '"]'));
         d.showModal();
+        show(group.indexOf(a));
       });
+    });
+    function step(k) { if (group.length > 1) show(at + k); }
+    prev.addEventListener('click', function () { step(-1); });
+    next.addEventListener('click', function () { step(1); });
+    d.addEventListener('keydown', function (e) {
+      var rtl = document.documentElement.dir === 'rtl';
+      if (e.key === 'ArrowRight') { e.preventDefault(); step(rtl ? -1 : 1); }
+      else if (e.key === 'ArrowLeft') { e.preventDefault(); step(rtl ? 1 : -1); }
+    });
+    var x0 = null;
+    d.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+    d.addEventListener('touchend', function (e) {
+      if (x0 === null) return;
+      var dx = e.changedTouches[0].clientX - x0, rtl = document.documentElement.dir === 'rtl'; x0 = null;
+      if (Math.abs(dx) > 40) step((dx < 0) !== rtl ? 1 : -1);
     });
     d.querySelector('.lb-close').addEventListener('click', function () { d.close(); });
     d.addEventListener('click', function (e) { if (e.target === d) d.close(); });
-    d.addEventListener('close', function () { img.removeAttribute('src'); });
+    d.addEventListener('close', function () {
+      img.removeAttribute('src');
+      // back to the image now shown (the carousel may have moved with the lightbox)
+      var back = group[at] && group[at].offsetParent ? group[at] : opener;
+      if (back) back.focus();
+    });
   })();
 </script>
-<script src="lingua.js?v=1b91b17f"></script>
+<script src="lingua.js?v=fd601e11"></script>
 <script>
   // tema: scuro finché non si sceglie; poi chiaro o scuro, ricordato in questo browser
   (function () {

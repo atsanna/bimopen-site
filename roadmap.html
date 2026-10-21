@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="it" data-build="5dd102a6">
+<html lang="it" data-build="7fd0abdc">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -71,7 +71,7 @@
   .bar { display: flex; align-items: center; gap: 20px; height: 64px; }
   .brand { display: flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font-weight: 700; font-size: 20px; letter-spacing: -.01em; direction: ltr; }
   .brand b { color: var(--logo); font-weight: 400; }
-  nav.links { display: none; gap: 20px; margin-inline-start: auto; }
+  nav.links { display: none; gap: 18px; margin-inline-start: auto; }
   nav.links a { color: var(--ink-soft); text-decoration: none; font-size: 15px; }
   nav.links a:hover { color: var(--accent-text); }
   .bar-right { display: flex; align-items: center; gap: 10px; margin-inline-start: auto; }
@@ -88,12 +88,12 @@
     :root:not([data-theme="light"]) .theme-toggle .sun { display: none; }
     :root:not([data-theme="light"]) .theme-toggle .moon { display: block; }
   }
-  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 11px 18px; border-radius: var(--radius-btn); font-weight: 600; font-size: 15px; text-decoration: none; border: 1px solid transparent; transition: transform .12s, background-color .12s; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; padding: 11px 18px; border-radius: var(--radius-btn); font-weight: 600; font-size: 15px; text-decoration: none; border: 1px solid transparent; transition: transform .12s, background-color .12s; }
   .btn:hover { transform: translateY(-1px); }
   .btn-primary { background: var(--accent); color: var(--on-accent); }
   .btn-primary:hover { background: var(--accent-hover); }
   .btn-ghost { border-color: var(--line); color: var(--ink); background: var(--card); }
-  .bar .btn { padding: 8px 14px; }
+  .bar .btn { padding: 8px 14px; white-space: normal; line-height: 1.2; text-align: center; }
 
   .hero { position: relative; overflow: hidden; padding: 72px 0 56px; }
   .hero::before { content: ""; position: absolute; inset: 0; background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px); background-size: 32px 32px; mask-image: radial-gradient(ellipse at 70% 40%, #000 0%, transparent 70%); opacity: .7; pointer-events: none; }
@@ -169,6 +169,17 @@
 
   .final { text-align: center; }
   .final .cta { justify-content: center; }
+  /* the video channel: written by i18n/video.py only when "canale" is true in i18n/video.json */
+  .ext { width: 13px; height: 13px; flex: none; opacity: .75; }
+  .theme-toggle.chan { text-decoration: none; }
+  /* one more menu item and the icon: the header stays on one line in the longer languages */
+  nav.links:has(> a[href$="#video"]) { gap: 12px; }
+  nav.links:has(> a[href$="#video"]) a { font-size: 14px; }
+  .bar:has(.chan) { gap: 14px; }
+  .theme-toggle.chan svg { width: 19px; height: 19px; }
+  .theme-toggle.chan:hover { color: var(--accent-text); border-color: var(--accent); }
+  footer .chan-f { display: inline-flex; align-items: center; gap: 5px; vertical-align: bottom; }
+  footer .chan-f svg { width: 17px; height: 17px; }
   footer { border-top: 1px solid var(--line); padding: 36px 0 48px; color: var(--muted); font-size: 14px; }
   footer .row { display: flex; flex-wrap: wrap; gap: 12px 28px; justify-content: space-between; align-items: center; }
   footer small { display: block; margin-top: 20px; line-height: 1.5; max-width: 60em; }
@@ -266,6 +277,7 @@
       <span>BIM<b>open</b></span>
     </a>
     <nav class="links" aria-label="Sezioni" data-i18n-attr="aria-label:ui.sezioni">
+      <!-- canale:menu --><!-- /canale:menu -->
       <a href="./#viste" data-con-lingua="./#viste" data-i18n="nav.viste">Viste</a>
       <a href="./#funzioni" data-con-lingua="./#funzioni" data-i18n="nav.funzioni">Funzioni</a>
       <a href="./#formati" data-con-lingua="./#formati" data-i18n="nav.formati">Formati</a>
@@ -287,6 +299,7 @@
           <option value="ar" lang="ar" dir="rtl">العربية</option>
         </select>
       </label>
+      <!-- canale:icona --><!-- /canale:icona -->
       <button class="theme-toggle" id="themeToggle" type="button" aria-label="Cambia tema" data-i18n-attr="aria-label:ui.tema">
         <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
         <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
@@ -457,7 +470,7 @@
     <div class="wrap">
       <span class="eyebrow" data-i18n="rp.cov.kicker">Comandi per scheda</span>
       <h2 id="copertura-t" data-i18n="rp.cov.h2">Quanti comandi funzionano già</h2>
-      <p class="sub" data-i18n="rp.cov.p">Per ogni scheda della barra multifunzione, i comandi già attivi sul totale. Gli altri sono già al loro posto, in grigio, finché non funzionano. Ultimo calcolo: 20 ottobre 2026.</p>
+      <p class="sub" data-i18n="rp.cov.p">Per ogni scheda della barra multifunzione, i comandi già attivi sul totale. Gli altri sono già al loro posto, in grigio, finché non funzionano. Ultimo calcolo: 21 ottobre 2026.</p>
       <ul class="bars">
       <li><span class="name" data-i18n="tab.viste">Viste</span><span class="track" role="img" aria-label="81 %"><span class="d" style="width:81.5%"></span></span><span class="pct">81 % <small>(22 / 27)</small></span></li>
       <li><span class="name" data-i18n="tab.modella">Modella</span><span class="track" role="img" aria-label="69 %"><span class="d" style="width:68.6%"></span></span><span class="pct">69 % <small>(24 / 35)</small></span></li>
@@ -502,14 +515,14 @@
   <div class="wrap">
     <div class="row">
       <span>© <span id="year">2026</span> BIMopen · <span data-i18n="foot.lic">Sarà rilasciato come open source (MIT/Apache)</span> · <span data-i18n="foot.claude">Sviluppato con</span> <a href="https://claude.com/claude-code" rel="noopener">Claude Code</a></span>
-      <span><a href="./#formati" data-con-lingua="./#formati" data-i18n="nav.formati">Formati</a> · <a href="roadmap.html" data-con-lingua="roadmap.html" data-i18n="nav.roadmap">Roadmap</a> · <a href="download.html" data-con-lingua="download.html" data-i18n="nav.scarica">Scarica</a> · <a href="manual/it/" data-manuale data-i18n="nav.manuale">Manuale</a> · <span data-i18n="foot.codice">Codice sorgente in arrivo</span></span>
+      <span><a href="./#formati" data-con-lingua="./#formati" data-i18n="nav.formati">Formati</a> · <a href="roadmap.html" data-con-lingua="roadmap.html" data-i18n="nav.roadmap">Roadmap</a> · <a href="download.html" data-con-lingua="download.html" data-i18n="nav.scarica">Scarica</a> · <a href="manual/it/" data-manuale data-i18n="nav.manuale">Manuale</a><!-- canale:piede --><!-- /canale:piede --> · <span data-i18n="foot.codice">Codice sorgente in arrivo</span></span>
     </div>
     <small data-i18n="foot.marchi">Autodesk® e Revit® sono marchi o marchi registrati di Autodesk, Inc. BIMopen è un progetto indipendente, non affiliato, sponsorizzato né approvato da Autodesk®; i nomi sono usati solo per indicare i formati e i flussi di lavoro con cui BIMopen è compatibile. IFC è uno standard di buildingSMART International.</small>
   </div>
 </footer>
 
 <button class="to-top" id="to-top" type="button" aria-label="Torna all'inizio" data-i18n-attr="aria-label:ui.top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
-<script src="lingua.js?v=1b91b17f"></script>
+<script src="lingua.js?v=fd601e11"></script>
 <script>
   // tema: scuro finché non si sceglie; poi chiaro o scuro, ricordato in questo browser
   (function () {

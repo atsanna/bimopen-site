@@ -596,6 +596,10 @@ erstellen</strong>, <strong>Geländerpfad erstellen</strong>) und enthält:</p>
 <li>die Gruppe <strong>Zeichnen</strong> mit den Zeichenwerkzeugen des Elements;</li>
 <li>bei Treppen und Geländern die Gruppe <strong>Werkzeuge</strong>.</li>
 </ul>
+<figure>
+<img alt="Das BIMopen-Fenster im Skizzenmodus einer Geschossdecke: die Kontextkarte mit den Gruppen Modus und Zeichnen oben im Werkzeugbereich, die Optionsleiste über der Ansicht und die magentafarbenen Skizzenlinien entlang der Wände" src="../assets/screens/fr-sketch-mode.webp"/>
+<figcaption>Skizzenmodus: die Kontextkarte und die Magenta-Linien</figcaption>
+</figure>
 <p>Beim Skizzieren entsteht nichts: Die Linien sind magenta, und das Modell ändert sich erst mit
 <strong>Bearbeitungsmodus beenden</strong>. Das ganze Element ist dann ein einziger Schritt im Verlauf: ein
 <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span> entfernt es.</p>
@@ -686,6 +690,10 @@ offen.</p>
    eine Öffnung.</li>
 <li>Klicken Sie auf <strong>Bearbeitungsmodus beenden</strong>.</li>
 </ol>
+<figure>
+<img alt="Drei Schritte einer Geschossdecke mit Wände wählen: TAB über einer Wand hebt die ganze Kette hervor, ein Klick ergibt die Skizzenlinien an den Innenseiten, Bearbeitungsmodus beenden erstellt die Decke" src="../assets/screens/fr-floor.webp"/>
+<figcaption>Eine Geschossdecke: TAB auf den Wänden, Klick, Bearbeitungsmodus beenden</figcaption>
+</figure>
 <p>Im Optionsstreifen legt <strong>In Wand verlängern (bis Kern)</strong> die gewählten Linien in die Wand bis
 zur Fläche ihres Kerns, und <strong>Versatz</strong> verschiebt sie (ein negativer Versatz rückt sie von den
 Wänden ab). Der Typ der neuen Geschossdecke ist der in der Typenauswahl oben in <strong>Eigenschaften</strong>.</p>
@@ -736,6 +744,10 @@ weiter, und durch die Öffnungen der Decke laufen die Wände hindurch.</p>
 </tr>
 </tbody>
 </table>
+<figure>
+<img alt="Der Elementbereich der neuen Geschossdecke: ihr Typ, Typparameter und die Eigenschaften Ebene, Höhenversatz, Neigungswinkel, Dicke, Umfang und Fläche" src="../assets/screens/fr-floor-props.webp"/>
+<figcaption>Die Eigenschaften einer Geschossdecke</figcaption>
+</figure>
 <p><strong>Typparameter</strong> enthält das <strong>Tragwerk</strong> der Geschossdecke (ihre Schichten) und ihre
 Standarddicke.</p>
 <h2 id="roofs">Dächer</h2>
@@ -750,6 +762,10 @@ Standarddicke.</p>
    eine Öffnung.</li>
 <li>Klicken Sie auf <strong>Bearbeitungsmodus beenden</strong>.</li>
 </ol>
+<figure>
+<img alt="Zwei Schritte eines Dachs auf den Wänden des Obergeschosses: der Grundriss an den Außenseiten mit Überstand skizziert, jede Linie mit 30° Neigung, dann das Walmdach mit First und Graten im Grundriss" src="../assets/screens/fr-roof.webp"/>
+<figcaption>Ein Dach: der Grundriss, dann das Dach</figcaption>
+</figure>
 <p>Jede Linie mit <strong>Definiert Neigung</strong> steigt mit ihrer <strong>Neigung</strong> (standardmäßig 30°) nach innen
 an; daneben ist ein kleines Dreieck mit der Neigung gezeichnet. Die Form ergibt sich aus diesen
 Linien:</p>
@@ -760,6 +776,10 @@ Linien:</p>
 <li>keine Linie definiert die Neigung: ein <strong>Flachdach</strong>, oder ein entlang eines <strong>Neigungspfeils</strong>
   geneigtes Dach (dann darf keine Linie eine Neigung definieren).</li>
 </ul>
+<figure>
+<img alt="Das Beispielhaus in 3D mit drei Dächern auf denselben Wänden: Walmdach, Satteldach mit bis zum First reichenden Wänden und Flachdach" src="../assets/screens/fr-roof-shapes.webp"/>
+<figcaption>Walm-, Sattel- und Flachdach</figcaption>
+</figure>
 <p>Um eine Linie zu ändern, drücken Sie zweimal <span class="keys"><kbd class="key-escape">Esc</kbd></span>, klicken Sie auf die Linie und ändern Sie in
 <strong>Eigenschaften</strong> <strong>Definiert Dachneigung</strong>, <strong>Neigung</strong> oder (bei aus Wänden gewählten Linien)
 <strong>Überstand</strong>.</p>
@@ -806,6 +826,10 @@ erklärt mehr).</p>
    begrenzt, seine äußere Ecke dort, wo sich ihre Außenseiten treffen.</li>
 <li>Sind alle Setzstufen platziert, klicken Sie auf <strong>Bearbeitungsmodus beenden</strong>.</li>
 </ol>
+<figure>
+<img alt="Drei Schritte einer U-Treppe: der erste Lauf mit 9 erstellten und 8 verbleibenden Steigungen, der zweite mit allen 17, die fertige Treppe, deren oberer Lauf jenseits der Schnittlinie liegt" src="../assets/screens/fr-stair.webp"/>
+<figcaption>Eine Treppe aus Läufen: die Zahl der erstellten und verbleibenden Steigungen</figcaption>
+</figure>
 <p>Gestrichelte Hilfslinien zeigen, wo der nächste Lauf beginnen kann: die Verlängerung des letzten Laufs über sein Ende hinaus und die Linien seiner ersten und letzten Setzstufe. Ein Klick in ihrer Nähe rastet auf ihnen ein. In einer 3D-Ansicht wird die Treppe genauso gezeichnet, auf der Ebene der aktiven Ebene.</p>
 <p>Ein gebogener Lauf (eine Wendeltreppe): Klicken Sie bei aktivem <strong>Lauf</strong> auf <strong>Bogen mit Mittelpunkt und Endpunkten</strong>, dann auf den Mittelpunkt, den Anfang der Lauflinie (ihr Abstand vom Mittelpunkt ist der Radius der Lauflinie) und das Ende, bei Bedarf über eine halbe Drehung hinaus, aber unter einer ganzen (darüber hinaus endet der Lauf vorher und die Statusleiste warnt, dass sich die Läufe überlappen würden). Die Setzstufen gehen strahlenförmig vom Mittelpunkt aus, einen Auftritt voneinander auf der Lauflinie; strahlenförmig gezeichnete Setzstufenlinien ergeben ebenfalls einen gebogenen Lauf. Ein zweiter gebogener Lauf um denselben Mittelpunkt auf derselben Lauflinie (ein Klick in der Nähe übernimmt sie) wird mit dem ersten durch ein Podest entlang des Bogens verbunden.</p>
 <p>Eine Treppe kann auch nach ihren Linien gezeichnet werden. Klicken Sie in ihrer Skizze auf <strong>Zeichnen ▸ Begrenzung</strong> und zeichnen Sie die linke und rechte Kante (grün), dann auf <strong>Setzstufe</strong> und zeichnen Sie die Setzstufenlinien (schwarz) dazwischen, mit <strong>Linie</strong> oder <strong>Linien wählen</strong>. Parallele, gleichmäßig verteilte Setzstufen bilden einen Lauf, so breit wie die Setzstufen; ein Podest verbindet zwei Läufe bis zu den Begrenzungslinien. Jede Setzstufe ist so hoch wie das Geschoss geteilt durch die gewünschte Zahl der Setzstufen; mit weniger Setzstufenlinien endet die Treppe unter der oberen Ebene (<strong>Eigenschaften</strong> zeigt die tatsächliche Zahl). <strong>Skizze bearbeiten</strong> gibt dieselben Linien zurück. Jeder mit <strong>Lauf</strong> gezeichnete Lauf wird sofort zu solchen Begrenzungs- und Setzstufenlinien: Sie lassen sich wie die anderen verschieben oder löschen. Ein Podest folgt seinen Begrenzungslinien: Teilen Sie seine äußere Kante mit <strong>Element teilen</strong> und ziehen Sie ein Stück für eine Einbuchtung, oder zeichnen Sie es breiter als die Läufe.</p>
@@ -819,6 +843,10 @@ Setzstufenlinien wieder: ändern oder löschen (anklicken, <span class="keys"><k
 <p>Im Grundriss zeigt die Treppe ihre Auftritte bis zur Schnittlinie, die Bruchlinie, den Pfeil und
 den Text <strong>AUF</strong>/<strong>AB</strong>; in 3D Auftritte und Setzstufen, oder eine monolithische Platte, die
 Podeste und die Geländer.</p>
+<figure>
+<img alt="Die Treppe des Beispiels im Erdgeschossgrundriss: die Auftritte bis zur Schnittlinie, die Bruchlinie, der Pfeil und der Text AUF" src="../assets/screens/fr-stair-plan.webp"/>
+<figcaption>Eine Treppe im Grundriss</figcaption>
+</figure>
 <h3 id="how-a-stair-is-built">Wie eine Treppe aufgebaut ist</h3>
 <p>Die <strong>Typparameter</strong> der Treppe bestimmen ihren Aufbau:</p>
 <ul>
@@ -842,6 +870,10 @@ Podeste und die Geländer.</p>
   <strong>Material Setzstufe</strong>, <strong>Material Wange</strong> und <strong>Material monolithische Treppe</strong> färben die Teile;
   <strong>Bruchsymbol im Grundriss</strong> und <strong>Textgröße</strong> steuern das Symbol im Grundriss.</li>
 </ul>
+<figure>
+<img alt="Typparameter der monolithischen Stahlbetontreppe des Beispiels: Konstruktion, Grafik, Berechnungsregeln und Materialien" src="../assets/screens/fr-stair-type.webp"/>
+<figcaption>Die Typparameter einer Treppe</figcaption>
+</figure>
 <p>Das Podest endet hinter der letzten Setzstufe des ankommenden Laufs und folgt ihrer Rückseite; bei einer monolithischen Treppe beginnt es an der Vorderseite der Setzstufe. Bei einer monolithischen Treppe, deren obere Decke ihre Kante an der letzten Setzstufe hat, läuft die Unterseite des Laufs unter dieser Decke weiter, bis sie deren Unterseite trifft, wie unter einem Podest.</p>
 <p>Ein Schnitt durch die Treppe zeigt sie mit ihrer Platte geschnitten. <strong>Volumen</strong> in
 <strong>Eigenschaften</strong> und in der Bauteilliste der Treppen ist das Volumen ihrer Körper.</p>
@@ -892,6 +924,10 @@ Pfosten oder <strong>Keiner</strong>, seine Versätze, <strong>Lücke</strong> e
 <strong>Eckpfosten bei</strong>. Die Änderungen in diesen beiden Fenstern gelten mit <strong>OK</strong> und werden mit einem
 einzigen <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span> rückgängig gemacht. Die Zeilen <strong>Oberer Handlauf</strong>, <strong>Handlauf 1</strong> und
 <strong>Handlauf 2</strong> sind grau: noch nicht verfügbar.</p>
+<figure>
+<img alt="Typparameter eines Geländertyps: Geländerhöhe, Handlaufstruktur und Platzierung der Geländerstäbe mit Bearbeiten…, Abstand, Verbindungen und die Vorschau des Geländers an einer Mustertreppe" src="../assets/screens/fr-railing-type.webp"/>
+<figcaption>Die Typparameter eines Geländers mit der Vorschau</figcaption>
+</figure>
 <p>Die Geländer einer Treppe laufen als ein Handlauf über die Podeste weiter, in ihrer Höhe über der
 Linie der Stufenvorderkanten und über den Podesten. Wo ein Lauf ein Podest eine Steigung höher
 verlässt, entscheiden die <strong>Tangentiale Verbindungen</strong> (der Handlauf geht gerade weiter) und die
@@ -917,8 +953,16 @@ Zwischen zwei Pfosten haben die Geländerstäbe gleichen Abstand, nie größer a
 <li>Drücken Sie die <span class="keys"><kbd class="key-space">Space</kbd></span>, um die Vorschau um 90° zu drehen.</li>
 <li>Klicken Sie, um das Bauteil auf der Ebene des Grundrisses zu platzieren.</li>
 </ol>
+<figure>
+<img alt="Das Bauteilwerkzeug in einem Schlafzimmer des Grundrisses: die Vorschau des Bauteils folgt dem Cursor, mit temporären Bemaßungen zu den nächsten Wänden" src="../assets/screens/fr-component.webp"/>
+<figcaption>Ein Bauteil folgt dem Cursor vor dem Klick</figcaption>
+</figure>
 <p><strong>Modus ▸ Familie laden</strong> öffnet die Bibliothek, nach Ordnern (<strong>Möbel</strong>, <strong>Sanitärobjekte</strong>):
 Wählen Sie eine Familie und klicken Sie auf <strong>Öffnen</strong>, um ihre Typen dem Projekt hinzuzufügen.</p>
+<figure>
+<img alt="Familie laden: die Bibliothek nach Ordnern, Möbel und Sanitärinstallationen, die bereits geladenen Familien markiert" src="../assets/screens/fr-load-family.webp"/>
+<figcaption>Familie laden</figcaption>
+</figure>
 <p>Wählen Sie ein Bauteil und klicken Sie auf <strong>Basisbauteil ▸ Neues Basisbauteil wählen</strong>, dann auf
 eine Geschossdecke: Das Bauteil wandert auf die Geschossdecke und bleibt auf ihrer Oberseite
 (ein Klick auf einen leeren Punkt setzt es zurück auf die Ebene). Seine Eigenschaften sind

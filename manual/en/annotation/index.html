@@ -596,6 +596,10 @@ and with it every dimension of that type.</p>
   dimensioning options: <strong>Openings</strong> with their <strong>Centers</strong> or both <strong>Widths</strong>, <strong>Intersecting
   Walls</strong> and <strong>Intersecting Grids</strong>. A grid that falls on a wall end adds no witness line.</li>
 </ul>
+<figure>
+<img alt="Three steps of an aligned dimension in the ground floor plan: the first wall picked and the cursor on the partition, the dimension following the cursor, the dimension of 6000 placed" src="../assets/screens/an-aligned.webp"/>
+<figcaption>Aligned: pick two references, then place the line</figcaption>
+</figure>
 <p><strong>Linear</strong> measures along the horizontal or the vertical of the view, between points such as wall
 ends: where you place the line decides which, and the <strong>space bar</strong> switches between the two.</p>
 <p><strong>Angular</strong> measures the angle between two walls, grids or lines that meet; more lines through
@@ -623,6 +627,10 @@ Visibility</strong>, the <strong>Origin Marker</strong> (<strong>Zero value</str
   press Enter, and the element moves: a wall, a grid, a door or window (along its wall)
   or a detail line.</li>
 </ul>
+<figure>
+<img alt="The Dimension Text dialog: Use Actual Value or Replace with text, and the text fields above, prefix, suffix and below" src="../assets/screens/an-dim-text.webp"/>
+<figcaption>Dimension Text</figcaption>
+</figure>
 <p>The type sets the tick (diagonal, filled arrow or dot), the extensions of the dimension and
 witness lines (<strong>Witness line control</strong>: a gap to the element, or <strong>Fixed to Dimension Line</strong> with
 its <strong>Witness Line Length</strong>), the <strong>Dimension Line Snap Distance</strong> (while placing, the line
@@ -647,6 +655,10 @@ parallel to it: walls, grids, levels, reference planes, floor edges, room separa
 detail lines. They show for every category in every view the element is drawn in: plans,
 sections, elevations and 3D views, where they lie on the element's level. A selected level shows
 its distances to the levels above and below it, in a section or an elevation.</p>
+<figure>
+<img alt="The partition between the rooms selected in the plan: temporary dimensions to the nearest walls on each side, each with the symbol that makes it permanent, and the controls of the wall" src="../assets/screens/an-tempdims.webp"/>
+<figcaption>Temporary dimensions of a selected wall</figcaption>
+</figure>
 <p>Click a value, type a new one and press Enter to move the element: a length takes a unit of its
 own (<code>2.5 m</code>), and a formula starts with <code>=</code> (<code>=8000/2</code>). Click the dimension symbol beside it to
 make it permanent.</p>
@@ -670,6 +682,10 @@ typed turns the selection.</p>
 temporary dimension, for the application: from 8 to 20 pt (8 at first), on a transparent or an
 opaque background. Beside the settings a preview shows three walls measured as chosen; the <strong>Preview</strong>
 switch in the dialog's header hides it, the dialog keeping its size, and the choice is kept.</p>
+<figure>
+<img alt="The Temporary Dimensions dialog: where walls and doors and windows are measured from, the text appearance and size, and the preview with three walls" src="../assets/screens/an-tempdim-settings.webp"/>
+<figcaption>Temporary Dimensions settings</figcaption>
+</figure>
 <h3 id="constraints">Constraints</h3>
 <p>Select a dimension: a padlock is shown on each segment. Click it to lock the segment: the
 distance then holds when either element moves, and a move that would break it is refused. Click
@@ -677,6 +693,10 @@ it again, or right-click it ▸ <strong>Toggle Lock</strong>, to unlock; right-c
 the two elements the lock ties. A string of two segments or more shows
 <strong>EQ</strong>: click it and the references become equally spaced, and stay so when one of them moves.
 <strong>Equality display</strong> in the properties shows the values instead of <strong>EQ</strong>.</p>
+<figure>
+<img alt="A dimension string selected beside the east wall: a padlock on each segment, one of them closed, and the EQ symbol" src="../assets/screens/an-constraints.webp"/>
+<figcaption>Padlocks and EQ on a selected dimension</figcaption>
+</figure>
 <p>Selecting an element a constraint holds shows the constraint as blue dashed lines, unless the
 category <strong>Constraints</strong> is hidden in <strong>Visibility and Graphics</strong>. Deleting a dimension that holds a
 constraint asks what to do: <strong>OK</strong> deletes the dimension and keeps the constraint; <strong>Delete
@@ -689,6 +709,10 @@ Elements</strong> deletes both. <strong>Modify ▸ Align</strong> with its padlo
 <li><strong>Spot Slope</strong>: the slope of a roof pitch in a plan, or of a sloped line in a section, with an
   arrow pointing down.</li>
 </ul>
+<figure>
+<img alt="Section A with two spot elevations on the east wall, with leader and shoulder: 0.00 at the ground floor and +3.00 at the first floor" src="../assets/screens/an-spot.webp"/>
+<figcaption>Spot elevations in a section</figcaption>
+</figure>
 <p>The options bar offers <strong>Leader</strong> and, with a leader, <strong>Shoulder</strong>: with no leader one click
 places the spot; with a leader, click the point and then the text; with a shoulder, the point,
 the bend and the text. While you hover, the value shows at the cursor. For spot elevations it
@@ -733,12 +757,20 @@ border and leaders), the background (<strong>Opaque</strong> masks what is behin
 offset, the leader arrowhead, the <strong>Line Weight</strong> of the border and leaders, the size, the <strong>Tab
 Size</strong> (12.7 mm), bold, italic and underline. The small <strong>Text Types</strong> button of the <strong>Text</strong> panel
 opens <strong>Type Parameters</strong>, where <strong>Duplicate…</strong> makes a new text type.</p>
+<figure>
+<img alt="A text note with a leader to the exterior wall, selected: the cross that moves it, the round side controls of its width, the rotation control and the grip in the middle of the leader" src="../assets/screens/an-text.webp"/>
+<figcaption>A selected note with its leader and controls</figcaption>
+</figure>
 <p><strong>Annotations ▸ Text ▸ Find/Replace</strong> finds words in the notes of the current selection, the current
 view or the whole project (<strong>Scope:</strong>), with options for case and whole words. <strong>Find All</strong> lists
 the matches with the view they are in; <strong>Find Next</strong>, or a click on a row, selects that note and
 shows its whole text under <strong>Context</strong>. <strong>Replace</strong> changes the match highlighted (the first when
 none is), <strong>Replace All</strong> every one, and <strong>Close</strong> closes the dialog. On selected notes it is also
 under <strong>Tools</strong> of their tab.</p>
+<figure>
+<img alt="The Find/Replace dialog after Find All: the word searched, the scope Current view and the match found with the view it is in" src="../assets/screens/an-find-replace.webp"/>
+<figcaption>Find/Replace</figcaption>
+</figure>
 <h2 id="symbols">Symbols</h2>
 <p><strong>Annotations ▸ Symbol ▸ Symbol</strong> (<code>SY</code>) places a 2D annotation symbol in a plan, a section, a
 free 2D view or a legend: a <strong>North Arrow</strong>, a <strong>Centerline Symbol</strong>, a <strong>Flow Arrow</strong>, a
@@ -752,9 +784,17 @@ arrowhead; <strong>Duplicate…</strong> in <strong>Type Parameters</strong> mak
 and click to tag it. The options bar sets <strong>Horizontal</strong> or <strong>Vertical</strong>, the <strong>Leader</strong> and its
 length; the <strong>space bar</strong> switches the orientation, while placing or on a selected tag. Door and
 window tools have <strong>Tag on Placement</strong>, so each new door or window comes with its tag.</p>
+<figure>
+<img alt="Two steps of Tag by Category: the window of the east wall highlighted with the preview of its tag, then the tag placed with the window's mark" src="../assets/screens/an-tags.webp"/>
+<figcaption>Tag by Category: the preview, then the tag</figcaption>
+</figure>
 <p><strong>Tag All</strong> opens <strong>Tag All Not Tagged</strong>: tick the categories, the tag type of each, the leader and
 the orientation, for all the elements of the view or only the selected ones; only elements with
 no tag get one.</p>
+<figure>
+<img alt="The Tag All Not Tagged dialog: all the objects of the view or only the selected ones, the categories with their tag types, the leader with its length and the orientation" src="../assets/screens/an-tag-all.webp"/>
+<figcaption>Tag All</figcaption>
+</figure>
 <p>With a leader, <strong>Attached End</strong> ends it on the element; <strong>Free End</strong> ends it where you clicked,
 and a selected tag shows a grip to drag that end anywhere (<strong>Leader End</strong> in the properties
 switches between the two). A tag lines up with the other tags of its kind while you place it or
@@ -779,6 +819,10 @@ separators: the room fills it, around free-standing walls too. In the options ba
 <li><strong>Highlight Boundaries</strong>: walls and separators that bound rooms turn orange, and the warning lists
   them.</li>
 </ul>
+<figure>
+<img alt="Two steps of the Room tool: the region the room would fill outlined under the cursor, then the room placed, filled by the colour scheme, with its tag" src="../assets/screens/an-room.webp"/>
+<figcaption>Room: the region it fills, then the room and its tag</figcaption>
+</figure>
 <p>A room placed in open space is kept with a warning, and takes its shape once the space is closed;
 a second room in a region already taken is marked <strong>Redundant Room</strong> and not counted twice. A
 number another room already has, a room lower than the computation height (1200 mm) and a base
@@ -820,9 +864,17 @@ off. <strong>Settings ▸ Color Schemes</strong> (<strong>Edit Color Scheme</str
 the title, the parameter, the values with their colour and visibility, their order and the ranges. <strong>Apply</strong> keeps the changes and sets the scheme of the view with the dialog open.
 <strong>Color scheme location</strong>, a view property, draws the fills in the <strong>Background</strong> (under the
 model) or in the <strong>Foreground</strong> (over the model, under the annotations).</p>
+<figure>
+<img alt="The Edit Color Scheme dialog: the schemes of the Rooms category, and the definition of the sample's scheme by name, each value with its visibility, colour and use" src="../assets/screens/an-color-scheme.webp"/>
+<figcaption>Edit Color Scheme</figcaption>
+</figure>
 <p><strong>Rooms and Areas ▸ Legend</strong> places the legend of the plan's scheme: a swatch and a label for each value.
 Its <strong>Values displayed</strong> are <strong>By view</strong> (those in the plan) or <strong>All</strong>, and <strong>Columns</strong> flows the
 swatches into several columns. A plan can have several legends; deleting one leaves the scheme.</p>
+<figure>
+<img alt="The ground floor plan with its rooms filled by name and, beside it, the legend of the colour scheme with a swatch for each value" src="../assets/screens/an-color-legend.webp"/>
+<figcaption>Rooms by colour, and the legend</figcaption>
+</figure>
 <h2 id="legend-views">Legend views</h2>
 <p><strong>Views ▸ Legends ▸ Legend</strong> opens <strong>New Legend View</strong>: a name and a scale. The legend opens and is
 listed under <strong>Legends</strong> in the Project Index. <strong>Annotations ▸ Component ▸ Legend Component</strong> places
@@ -832,6 +884,10 @@ and the <strong>Host Length</strong>, the piece of wall a door or window sits in
 legend's detail, can be moved and dimensioned (the edges of doors, windows and components;
 walls, floors and roofs are not), and are not counted by schedules. Text, detail lines and regions
 work as in a free 2D view. A legend can be placed on several sheets.</p>
+<figure>
+<img alt="A legend view with legend components: a door and a window seen from the front, a wall in section, and the same door and window in plan" src="../assets/screens/an-legend-view.webp"/>
+<figcaption>A legend view</figcaption>
+</figure>
 <p>A type dragged from <strong>Families</strong> in the Project Index into a legend becomes its legend component
 where it is dropped; a type of <strong>Families ▸ Symbols</strong> places that annotation symbol. <strong>Create Same</strong>, in the context menu of a selected element, starts the tool
 that places it with its type: for a legend component, with its view and host length too.</p>
@@ -841,6 +897,10 @@ the <strong>Line style</strong> panel. The <strong>Draw</strong> panel offers <s
 <strong>Circumscribed Polygon</strong>, <strong>Circle</strong>, <strong>Start-End-Radius Arc</strong>, <strong>Center-ends Arc</strong>, <strong>Tangent
 End Arc</strong>, <strong>Spline</strong>, <strong>Ellipse</strong>, <strong>Partial Ellipse</strong> and <strong>Fillet Arc</strong>. The options bar shows
 what the shape takes:</p>
+<figure>
+<img alt="The Draw group of the Detail line tool: Line, Rectangle, Inscribed Polygon, Circumscribed Polygon, Circle and the arcs" src="../assets/screens/an-detail-line.webp"/>
+<figcaption>The Draw group</figcaption>
+</figure>
 <table>
 <thead>
 <tr>
@@ -891,6 +951,10 @@ again. The type sets its fill pattern, colour and background
 (<strong>Opaque</strong> hides what is behind). <strong>Filled region ▸ Masking Region</strong> makes a region in the paper colour
 that hides what is beneath it. A region shows its <strong>Area</strong> and has <strong>Comments</strong>. A selected region
 has a grip at each vertex: drag one to change its shape.</p>
+<figure>
+<img alt="2D details in the ground floor plan: a crosshatched and a solid filled region, a wide detail line, a dashed circle and a masking region that hides part of a room" src="../assets/screens/an-detail.webp"/>
+<figcaption>Filled regions, detail lines and a masking region</figcaption>
+</figure>
 <h2 id="detail-components-repeating-details-and-insulation">Detail components, repeating details and insulation</h2>
 <ul>
 <li><strong>Component ▸ Detail component</strong>: a 2D symbol (brick, block, timber, steel section, insulation
@@ -905,6 +969,10 @@ has a grip at each vertex: drag one to change its shape.</p>
   or a wall draws it along that line. The insulation width and the bulge ratio in its
   properties. Selected insulation, and a selected repeating detail, have a grip at each end.</li>
 </ul>
+<figure>
+<img alt="The sample's free 2D view of the exterior wall at its foot: repeating brick blocks, insulation, the slab's filled region, break lines and text notes, with a break line selected" src="../assets/screens/an-drafting.webp"/>
+<figcaption>A wall detail in a free 2D view</figcaption>
+</figure>
 <h2 id="draw-order">Draw order</h2>
 <p>Select detail items only: <strong>Arrange</strong> offers <strong>Bring to Front</strong>, <strong>Bring Forward</strong>, <strong>Send to Back</strong>
 and <strong>Send Backward</strong>. Detail items always draw over the model, and a new one goes on top. <strong>Undo</strong>

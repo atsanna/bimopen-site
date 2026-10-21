@@ -596,6 +596,10 @@ barandilla</strong>) y contiene:</p>
 <li>el grupo <strong>Dibujar</strong>, con las herramientas de dibujo del elemento;</li>
 <li>para escaleras y barandillas, el grupo <strong>Herramientas</strong>.</li>
 </ul>
+<figure>
+<img alt="La ventana de BIMopen en modo boceto de un suelo: la tarjeta contextual con sus grupos Modo y Dibujar en lo alto del panel de herramientas, la franja de opciones sobre la vista y las líneas de boceto magenta a lo largo de los muros" src="../assets/screens/fr-sketch-mode.webp"/>
+<figcaption>Modo boceto: la tarjeta contextual y las líneas magenta</figcaption>
+</figure>
 <p>Mientras se dibuja no se crea nada: las líneas son magenta, y el modelo cambia solo con
 <strong>Finalizar modo de edición</strong>. Todo el elemento es entonces un único paso del historial: un
 <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span> lo quita.</p>
@@ -682,6 +686,10 @@ elemento, <strong>Cancelar modo de edición</strong> lo deja sin cambios.</p>
    abertura.</li>
 <li>Haz clic en <strong>Finalizar modo de edición</strong>.</li>
 </ol>
+<figure>
+<img alt="Tres pasos de un suelo con Seleccionar muros: TAB sobre un muro resalta toda la cadena, un clic da las líneas de boceto en las caras interiores, Finalizar modo de edición crea el suelo" src="../assets/screens/fr-floor.webp"/>
+<figcaption>Un suelo: TAB sobre los muros, clic, Finalizar modo de edición</figcaption>
+</figure>
 <p>En la franja de opciones, <strong>Extender en muro (hasta núcleo)</strong> lleva las líneas designadas dentro del
 muro hasta la cara de su núcleo, y <strong>Desfase</strong> las desplaza (un desfase negativo las aleja de los
 muros). El tipo del nuevo suelo es el del selector de tipo arriba en <strong>Propiedades</strong>.</p>
@@ -731,6 +739,10 @@ suelo y sigue por encima, y los muros pasan por las aberturas del suelo.</p>
 </tr>
 </tbody>
 </table>
+<figure>
+<img alt="El panel del elemento del suelo nuevo: su tipo, Parámetros de tipo y las propiedades Nivel, Desfase de altura, Ángulo de inclinación, Espesor, Perímetro y Área" src="../assets/screens/fr-floor-props.webp"/>
+<figcaption>Las propiedades de un suelo</figcaption>
+</figure>
 <p><strong>Parámetros de tipo</strong> contiene la <strong>Estructura</strong> del suelo (sus capas) y su grosor por defecto.</p>
 <h2 id="roofs">Cubiertas</h2>
 <ol>
@@ -743,6 +755,10 @@ suelo y sigue por encima, y los muros pasan por las aberturas del suelo.</p>
 <li>O dibuja la huella con <strong>Línea</strong> o <strong>Rectángulo</strong>; un contorno interior es una abertura.</li>
 <li>Haz clic en <strong>Finalizar modo de edición</strong>.</li>
 </ol>
+<figure>
+<img alt="Dos pasos de una cubierta sobre los muros de la planta primera: la huella dibujada en las caras exteriores con el voladizo, cada línea con su pendiente de 30°, luego la cubierta a cuatro aguas con cumbrera y limatesas en planta" src="../assets/screens/fr-roof.webp"/>
+<figcaption>Una cubierta: la huella y luego la cubierta</figcaption>
+</figure>
 <p>Cada línea con <strong>Define pendiente</strong> sube hacia dentro con su <strong>Pendiente</strong> (30° por defecto); junto
 a ella se dibuja un pequeño triángulo con la pendiente. La forma sale de esas líneas:</p>
 <ul>
@@ -752,6 +768,10 @@ a ella se dibuja un pequeño triángulo con la pendiente. La forma sale de esas 
 <li>ninguna línea define la pendiente: una cubierta <strong>plana</strong>, o una cubierta inclinada a lo largo de
   una <strong>Flecha de pendiente</strong> (entonces ninguna línea puede definir pendiente).</li>
 </ul>
+<figure>
+<img alt="La casa de ejemplo en 3D con tres cubiertas sobre los mismos muros: a cuatro aguas, a dos aguas con los muros subiendo hasta la cumbrera, y plana" src="../assets/screens/fr-roof-shapes.webp"/>
+<figcaption>A cuatro aguas, a dos aguas y plana</figcaption>
+</figure>
 <p>Para cambiar una línea, pulsa dos veces <span class="keys"><kbd class="key-escape">Esc</kbd></span>, haz clic en la línea y cambia en <strong>Propiedades</strong>
 <strong>Define pendiente del tejado</strong>, <strong>Pendiente</strong> o (líneas tomadas de muros) <strong>Voladizo</strong>.</p>
 <p>Selecciona muros, haz clic en <strong>Modificar muro ▸ Unir arriba/abajo</strong> y luego en la
@@ -797,6 +817,10 @@ voladizos y capas.</p>
    tramos, con su esquina exterior donde se encuentran sus lados exteriores.</li>
 <li>Cuando todas las contrahuellas están colocadas, haz clic en <strong>Finalizar modo de edición</strong>.</li>
 </ol>
+<figure>
+<img alt="Tres pasos de una escalera en U: el primer tramo con 9 contrahuellas creadas y 8 restantes, el segundo con las 17, la escalera creada, con su tramo superior más allá de la línea de corte" src="../assets/screens/fr-stair.webp"/>
+<figcaption>Una escalera por tramos: la cuenta de contrahuellas hechas y restantes</figcaption>
+</figure>
 <p>Unas guías discontinuas muestran dónde puede empezar el tramo siguiente: la prolongación del último tramo más allá de su final y las líneas de su primera y última contrahuella. Un clic cerca de ellas se ajusta a ellas. En una vista 3D la escalera se dibuja de la misma forma, en el plano del nivel activo.</p>
 <p>Un tramo curvo (una escalera de caracol): con <strong>Tramo</strong> activo, haz clic en <strong>Arco por centro y extremos</strong>, luego en el centro, en el inicio de la línea de tramo (su distancia al centro es el radio de la línea de recorrido) y en el final, dando más de media vuelta si hace falta, pero menos de una vuelta (más allá, el tramo se detiene antes y la barra de estado avisa de que los tramos se superpondrían). Las contrahuellas salen del centro a una huella de distancia sobre la línea de tramo; líneas de contrahuella dibujadas en abanico desde un centro también forman un tramo curvo. Un segundo tramo curvo alrededor del mismo centro y sobre la misma línea de tramo (un clic cerca los toma) se une al primero con un descansillo en arco.</p>
 <p>Una escalera también se puede dibujar por sus líneas. En su boceto, haz clic en <strong>Dibujar ▸ Contorno</strong> y dibuja los bordes izquierdo y derecho (verdes), luego en <strong>Contrahuella</strong> y dibuja las líneas de contrahuella (negras) entre ellos, con <strong>Línea</strong> o <strong>Seleccionar líneas</strong>. Las contrahuellas paralelas y a paso regular forman un tramo, tan ancho como las contrahuellas; un descansillo une dos tramos hasta las líneas de contorno. Cada contrahuella es tan alta como la planta dividida por el número de contrahuellas deseado; con menos líneas de contrahuella la escalera se queda por debajo del nivel superior (<strong>Propiedades</strong> muestra el número real). <strong>Editar boceto</strong> devuelve las mismas líneas. Cada tramo dibujado con <strong>Tramo</strong> se convierte enseguida en líneas de contorno y de contrahuella como estas: se pueden mover o borrar como las demás. Un descansillo sigue sus líneas de contorno: divide su borde exterior con <strong>Dividir elemento</strong> y arrastra un trozo para hacer una muesca, o dibújalo más ancho que los tramos.</p>
@@ -810,6 +834,10 @@ contrahuella: cámbialas o bórralas (clic, <span class="keys"><kbd class="key-d
 <p>En planta la escalera muestra sus huellas hasta la línea de corte, la línea de rotura, la flecha y
 el texto <strong>SUBE</strong>/<strong>BAJA</strong>; en 3D sus huellas y contrahuellas, o una losa monolítica, sus
 descansillos y barandillas.</p>
+<figure>
+<img alt="La escalera del ejemplo en la planta baja: las huellas hasta la línea de corte, la línea de corte, la flecha y el texto SUBE" src="../assets/screens/fr-stair-plan.webp"/>
+<figcaption>Una escalera en planta</figcaption>
+</figure>
 <h3 id="how-a-stair-is-built">Cómo está construida una escalera</h3>
 <p>Las <strong>Parámetros de tipo</strong> de la escalera deciden su construcción:</p>
 <ul>
@@ -833,6 +861,10 @@ descansillos y barandillas.</p>
   <strong>Material de contrahuella</strong>, <strong>Material de zanca</strong> y <strong>Material de escalera monolítica</strong> colorean
   las partes; <strong>Símbolo de rotura en planta</strong> y <strong>Tamaño de texto</strong> controlan el símbolo en planta.</li>
 </ul>
+<figure>
+<img alt="Parámetros de tipo de la escalera monolítica de hormigón armado del ejemplo: construcción, gráficos, reglas de cálculo y materiales" src="../assets/screens/fr-stair-type.webp"/>
+<figcaption>Los parámetros de tipo de una escalera</figcaption>
+</figure>
 <p>El descansillo se detiene detrás de la última contrahuella del tramo que llega, siguiendo su cara posterior; en una escalera monolítica empieza en la cara de la contrahuella. En una escalera monolítica cuyo forjado superior tiene el borde en la última contrahuella, la cara inferior del tramo sigue bajo ese forjado hasta encontrar su cara inferior, como bajo un descansillo.</p>
 <p>Una sección a través de la escalera la muestra cortada con su losa. <strong>Volumen</strong> en
 <strong>Propiedades</strong> y en la tabla de planificación de escaleras es el volumen de sus sólidos.</p>
@@ -882,6 +914,10 @@ patrón en</strong> (al final de cada segmento, en ángulos mayores que un valor
 del camino, <strong>Desfase</strong> de lado) con <strong>Postes de esquina en</strong>. Los cambios de estas dos ventanas se
 aplican con <strong>Aceptar</strong> y se deshacen con un solo <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span>. Las filas <strong>Barandal superior</strong>,
 <strong>Pasamanos 1</strong> y <strong>Pasamanos 2</strong> están en gris: aún no disponibles.</p>
+<figure>
+<img alt="Parámetros de tipo de una barandilla: altura, estructura de pasamanos y colocación de balaustres con Editar…, separación, uniones y la vista previa de la barandilla en una escalera de muestra" src="../assets/screens/fr-railing-type.webp"/>
+<figcaption>Los parámetros de tipo de una barandilla, con la vista previa</figcaption>
+</figure>
 <p>Las barandillas de una escalera siguen sobre sus descansillos como un único barandal, a su altura
 sobre la línea de las narices de los peldaños y sobre los descansillos. Donde un tramo sale de un
 descansillo una contrahuella más arriba, las <strong>Uniones tangentes</strong> (el barandal sigue recto) y las
@@ -908,8 +944,16 @@ que la separación.</p>
 <li>Pulsa la <span class="keys"><kbd class="key-space">Space</kbd></span> para girar la vista previa 90°.</li>
 <li>Haz clic para colocar el componente en el nivel de la planta.</li>
 </ol>
+<figure>
+<img alt="La herramienta de componente en un dormitorio de la planta: la vista previa del componente que sigue al cursor, con cotas temporales a los muros más cercanos" src="../assets/screens/fr-component.webp"/>
+<figcaption>Un componente sigue al cursor antes del clic</figcaption>
+</figure>
 <p><strong>Modo ▸ Cargar familia</strong> abre la biblioteca, por carpetas (<strong>Mobiliario</strong>, <strong>Aparatos
 sanitarios</strong>): elige una familia y haz clic en <strong>Abrir</strong> para añadir sus tipos al proyecto.</p>
+<figure>
+<img alt="Cargar familia: la biblioteca por carpeta, Mobiliario y Aparatos sanitarios, con las familias ya cargadas marcadas" src="../assets/screens/fr-load-family.webp"/>
+<figcaption>Cargar familia</figcaption>
+</figure>
 <p>Selecciona un componente y haz clic en <strong>Anfitrión ▸ Elegir nuevo anfitrión</strong>, y luego en un
 suelo: el componente pasa al suelo y se queda sobre su cara superior (haz clic en un punto vacío
 para devolverlo al nivel). Sus propiedades son <strong>Nivel</strong>, <strong>Anfitrión</strong>, <strong>Desfase desde nivel</strong>,

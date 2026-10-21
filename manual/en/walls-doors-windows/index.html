@@ -775,6 +775,10 @@ shows the <strong>Draw</strong> group, and the options strip shows:</p>
 </tr>
 </tbody>
 </table>
+<figure>
+<img alt="The options strip of the wall tool: Height, the top level, the unconnected height, Alignment and the other options" src="../assets/screens/wa-options.webp"/>
+<figcaption>The options strip of the wall tool</figcaption>
+</figure>
 <p>In the 3D view the wall being drawn follows the cursor as a solid, with its thickness and its height up to the top level (or the height typed), on the plane of the level, with its length and angle as a temporary dimension; <strong>Shift</strong> keeps it square and <strong>Esc</strong> takes it away. <strong>Rectangle</strong>, the polygons and <strong>Pick Lines</strong> work there too: the walls of the whole shape follow the cursor, and the line of the level under the cursor is picked as in plan.</p>
 <p>While drawing:</p>
 <ul>
@@ -786,6 +790,10 @@ shows the <strong>Draw</strong> group, and the options strip shows:</p>
   outlines, sections and elevations take a typed length the same way);</li>
 <li><strong>Esc</strong> ends the chain; <strong>Esc</strong> again, or <strong>Modify</strong>, ends the tool.</li>
 </ul>
+<figure>
+<img alt="Three steps of the wall tool beside the house: the first wall following the cursor with its length and angle, the second wall from the end of the first, the two walls joined at the corner" src="../assets/screens/wa-draw.webp"/>
+<figcaption>Drawing a chain of walls</figcaption>
+</figure>
 <p>The <strong>Draw</strong> group picks the shape:</p>
 <table>
 <thead>
@@ -823,6 +831,10 @@ side. Clicking the arrows turns the wall over about its alignment line: the firs
 layers swap, and the doors and windows keep their orientation. Changing <strong>Alignment</strong> of a
 placed wall does not move it; the next flip turns it about the new plane. Changing the type of a
 wall, or its layers, keeps its alignment line where it was.</p>
+<figure>
+<img alt="The north wall selected: the blue dots at the ends of its alignment line and the flip arrows on its exterior side" src="../assets/screens/wa-flip.webp"/>
+<figcaption>A selected wall: ends and flip arrows</figcaption>
+</figure>
 <h2 id="attaching-walls-to-roofs-and-floors">Attaching walls to roofs and floors</h2>
 <p>A wall can follow a roof or a floor instead of a fixed height.</p>
 <ol>
@@ -903,7 +915,10 @@ again.</p>
 <p><strong>Type Parameters</strong> (the tile of the tool panel while a wall is selected, the button under the type selector of <strong>Properties</strong>, or a type's menu in the
 Project Browser) shows the parameters of a wall type; a change applies to every wall of that type.</p>
 <h3 id="wall-type-parameters">Type parameters</h3>
-<p><img alt="The Type Parameters of a wall type, with its section" src="../assets/screens/wall-type-parameters.png"/></p>
+<figure>
+<img alt="The Type Parameters of a wall type, with its section" src="../assets/screens/wall-type-parameters.png"/>
+<figcaption>The Type Parameters of a wall type, with its section</figcaption>
+</figure>
 <p>At the top are the family and the type and, for a type with layers, the three figures of <strong>Type
 layers</strong>: <strong>Total thickness</strong>, <strong>Resistance R</strong> and <strong>Mass per area</strong>. Below, <strong>Family</strong> with
 <strong>Load…</strong> (a family from the library; greyed for walls and the other system families, which are
@@ -944,6 +959,10 @@ thickness</strong> (in metres), <strong>Resistance R</strong> (m²K/W: the sum o
 layers, plus 0.17 for the two surfaces) and <strong>Mass per area</strong> (kg/m²: the sum of thickness ×
 density). R and mass show when every material has its <strong>Thermal conductivity</strong> and <strong>Density</strong> (the
 template's materials have them, others are completed in <strong>Materials</strong>); otherwise they show «—».</p>
+<figure>
+<img alt="Type layers of the exterior wall: the layers from the exterior side with function, material, thickness and wraps, the core boundaries, the figures in the header and the section preview" src="../assets/screens/wa-assembly.webp"/>
+<figcaption>Type layers</figcaption>
+</figure>
 <p>On the left is the list of the layers, from the <strong>EXTERIOR SIDE</strong> at the top to the <strong>INTERIOR
 SIDE</strong> at the bottom. Each layer is a card with its number, a sample of its material (colour and cut
 pattern), its <strong>Function</strong> (<strong>Structure</strong>, <strong>Substrate</strong>, <strong>Thermal insulation</strong>, <strong>Air space</strong>,
@@ -990,7 +1009,10 @@ layers line the jambs, the head and the sill of doors and windows, the sides of 
 edited boundary (see <a href="#editing-a-walls-profile">Editing a wall's boundary</a>) and the free ends. A
 door or window type overrides the wall's wrapping with its <strong>Wall Closure</strong>.</p>
 <h2 id="wall-properties">Wall properties</h2>
-<p><img alt="A wall selected, with its Properties" src="../assets/screens/wall-properties.png"/></p>
+<figure>
+<img alt="A wall selected, with its Properties" src="../assets/screens/wall-properties.png"/>
+<figcaption>A wall selected, with its Properties</figcaption>
+</figure>
 <p>With a wall selected, <strong>Properties</strong> shows at the top the type selector: the picture of the type,
 its family and its name. A click opens the list of the types grouped by family (<strong>Basic Wall</strong>,
 <strong>Curtain Wall</strong>), each with a small picture — a wall's layers side by side in their materials'
@@ -1033,6 +1055,10 @@ its centre line to the centre lines of the nearest walls across the host on each
 swings to the side of the wall the cursor is on; the <strong>space bar</strong> puts its hinge on the other
 jamb. Click to place it: the wall is cut in every view. A window takes its type's <strong>Default Sill
 Height</strong>.</p>
+<figure>
+<img alt="Two steps of the door tool on the partition: the door following the cursor along the wall with its temporary dimensions, then the door placed and the wall cut" src="../assets/screens/wa-door.webp"/>
+<figcaption>A door: along the wall, then placed</figcaption>
+</figure>
 <p>Doors and windows get a <strong>Mark</strong> that counts up by category (1, 2, 3…), from the highest.</p>
 <h2 id="tags">Tags</h2>
 <p><strong>Tag on Placement</strong>, on the options strip of the door and window tools, tags each opening as it
@@ -1043,6 +1069,10 @@ length. A door's tag shows its <strong>Mark</strong>; a window's tag shows its t
 <p>Select a door or window in a plan: arrows across the wall, on the side it opens to, turn its swing
 over; arrows beside it, along the wall, put its hinge on the other jamb. The context menu does the
 same: <strong>Flip Hand</strong> (the hinge) and <strong>Flip Facing</strong> (the swing).</p>
+<figure>
+<img alt="A door selected in plan with its controls: the flip arrows across the wall and beside it, the temporary dimensions and the move arrows" src="../assets/screens/wa-door-flip.webp"/>
+<figcaption>A selected door and its flip arrows</figcaption>
+</figure>
 <h2 id="moving-a-door-or-window-to-another-wall">Moving a door or window to another wall</h2>
 <p>Select it, <strong>Selection: Doors ▸ Host ▸ Pick New Host</strong> (or <strong>Selection: Windows</strong>), then click another
 wall: the opening moves there, where you clicked, with its type and sill. It stays selected.</p>
@@ -1051,6 +1081,10 @@ wall: the opening moves there, where you clicked, with its type and sill. It sta
 <p>Instance: <strong>Level</strong>, <strong>Sill Height</strong>, <strong>Width</strong> and <strong>Height</strong> (of the type), <strong>Head Height</strong>,
 <strong>Comments</strong>, <strong>Mark</strong>. Changing <strong>Sill Height</strong> or <strong>Head Height</strong> moves the opening up or
 down; its size stays.</p>
+<figure>
+<img alt="The element panel of a door: its type, the host wall, the position along it, the sill height, the width and the height" src="../assets/screens/wa-door-props.webp"/>
+<figcaption>The properties of a door</figcaption>
+</figure>
 <p>Type: <strong>Wall Closure</strong> (<strong>By host</strong>, or a wrapping of its own), <strong>Function</strong> (<strong>Interior</strong> or
 <strong>Exterior</strong>), <strong>Door Material</strong> (<strong>Glass Material</strong> for windows) and <strong>Frame Material</strong>, <strong>Trim
 Width</strong>, <strong>Thickness</strong> (of a door's leaf, or the depth of a window's frame), <strong>Default Sill
@@ -1099,6 +1133,10 @@ Wall</strong> (one glass panel the length of the wall), <strong>Exterior Glazing
 or in 3D, with <strong>Continue</strong> and the <strong>Draw</strong> shapes. A basic wall changes into a curtain wall by
 picking a curtain wall type in the type selector; the doors and windows it hosts are deleted,
 because a curtain wall does not host them, and a message says so (undo brings them back).</p>
+<figure>
+<img alt="The south elevation of the sample house: on the right the storefront embedded in the exterior wall, with its grid lines and mullions" src="../assets/screens/wa-curtain.webp"/>
+<figcaption>A storefront in the south elevation</figcaption>
+</figure>
 <p>In plan each glass panel is drawn with its thickness and the mullions are cut. A type with
 <strong>Automatically Embed</strong> ticked (the <strong>Storefront</strong>) drawn along a wall cuts its own hole in it,
 in plan, sections, 3D and IFC. The wall stays one wall: beside and above the hole it goes on with
@@ -1133,7 +1171,10 @@ plates and members.</p>
   changes its type.</li>
 </ul>
 <h2 id="stacked-walls">Stacked walls</h2>
-<p><img alt="A stacked wall selected, with its Properties" src="../assets/screens/stacked-wall.png"/></p>
+<figure>
+<img alt="A stacked wall selected, with its Properties" src="../assets/screens/stacked-wall.png"/>
+<figcaption>A stacked wall selected, with its Properties</figcaption>
+</figure>
 <p>A <strong>stacked wall</strong> is made of sub-walls one above the other: a rendered wall over a stone plinth,
 for instance. Each sub-wall is a basic wall type, with its own layers and materials. The template
 has one, <strong>Stacked wall - Render over stone plinth</strong> (the exterior wall over a 0.9 m stone
@@ -1156,7 +1197,10 @@ up into single walls</strong>, in the context menu and with the wall selected, m
 independent basic wall where it stands; they do not go back together (Ctrl+Z undoes it). The
 boundary of a stacked wall or of a sub-wall cannot be edited yet.</p>
 <h3 id="the-sub-walls-of-the-type">The sub-walls of the type</h3>
-<p><img alt="The Type sub-walls of the sample stacked type" src="../assets/screens/stacked-wall-sub-walls.png"/></p>
+<figure>
+<img alt="The Type sub-walls of the sample stacked type" src="../assets/screens/stacked-wall-sub-walls.png"/>
+<figcaption>The Type sub-walls of the sample stacked type</figcaption>
+</figure>
 <p><strong>Type Parameters</strong> of a stacked wall type shows <strong>Sub-walls</strong> with <strong>Edit…</strong>, which opens <strong>Type
 sub-walls</strong>. At the top are the type and three figures: how many sub-walls, the sum of the fixed
 heights and the greatest thickness. The table lists the sub-walls from <strong>TOP</strong> to <strong>BOTTOM</strong>,
@@ -1192,6 +1236,10 @@ view.</p>
 <h3 id="setting-the-work-plane">Setting the work plane</h3>
 <p><strong>Create ▸ Work Plane ▸ Define</strong> opens the <strong>Work Plane</strong> dialog. <strong>Current Work Plane</strong> shows the
 plane the view uses now. Under <strong>Specify a new Work Plane</strong>:</p>
+<figure>
+<img alt="The Work Plane dialog: the current work plane, and a new one by name, by picking a plane or by picking a line" src="../assets/screens/wa-workplane.webp"/>
+<figcaption>Work Plane</figcaption>
+</figure>
 <ul>
 <li><strong>Name</strong>: pick a level, a grid or a named reference plane in the list (picking one selects
   <strong>Name</strong>), then <strong>OK</strong>;</li>

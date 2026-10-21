@@ -532,6 +532,10 @@
 <p>Dieses Kapitel beschreibt die Ansichten des Modells, wie jede einzelne gezeichnet wird und wie sich ändern lässt, was eine Ansicht zeigt und wie: Grafikstile, Maßstab und Detail, die Schnitthöhen eines Grundrisses, Zuschneidebereiche, Ausblenden und Isolieren, <strong>Sichtbarkeit und Grafik</strong>, Filter und Ansichtsvorlagen. Linienstärken, Linienmuster und die Stile nach Kategorie werden in denselben Begriffen von den Dialogen unter <strong>Einstellungen</strong> in der Seitenleiste beschrieben.</p>
 <h2 id="3d-views">3D-Ansichten</h2>
 <p><strong>Ansichten ▸ Erzeugen ▸ 3D-Ansicht ▸ Standard-3D-Ansicht</strong> öffnet die Standard-3D-Ansicht, <strong>{3D}</strong>, die das gesamte Modell einfasst; erneut geöffnet, zeigt sie das Modell so, wie es verlassen wurde. Ziehen Sie, um zu orbiten (oder <strong>Umschalt</strong> und die mittlere Maustaste), ziehen Sie mit der mittleren Maustaste, um zu schwenken, und drehen Sie das Rad, um am Cursor zu zoomen; siehe <a href="../interface/">Die Benutzeroberfläche</a>.</p>
+<figure>
+<img alt="Die Standard-3D-Ansicht des Beispielhauses, mit dem Orientierungswürfel oben rechts und der schwebenden Leiste der Ansicht unten" src="../assets/screens/vg-3d.webp"/>
+<figcaption>Die Standard-3D-Ansicht, {3D}</figcaption>
+</figure>
 <p>Um einen Ausschnitt zu behalten, wählen Sie <strong>Ansichten ▸ Erzeugen ▸ 3D-Ansicht ▸ Ansicht speichern</strong>: Geben Sie einen Namen ein und drücken Sie die Eingabetaste. Die neue Ansicht erscheint unter <strong>3D-Ansichten</strong> im <strong>Projektindex</strong> und öffnet sich sofort; sie behält den Ausschnitt, mit dem sie verlassen wird. Dasselbe bewirkt das Umbenennen von <strong>{3D}</strong> im <strong>Projektindex</strong> (Rechtsklick ▸ <strong>Umbenennen…</strong>): <strong>{3D}</strong> wird zu einer benannten Ansicht, und die nächste Standard-3D-Ansicht ist eine neue <strong>{3D}</strong>.</p>
 <p>Ein gewähltes Element wird blau überlagert und halb durchsichtig dargestellt, seine Kanten blau: Was dahinter liegt, bleibt sichtbar.</p>
 <p>Geschossdecken schneiden die Wände, die sie durchqueren: Wo eine Decke eine Wand kreuzt, endet die Wand darunter und setzt sich darüber fort, sodass Deckenkante und Wandfläche eine einzige Fläche bilden.</p>
@@ -567,9 +571,17 @@
 </tr>
 </tbody>
 </table>
+<figure>
+<img alt="Dieselbe 3D-Ansicht in drei Grafikstilen: Drahtmodell mit allen Kanten; Linien mit weißen Flächen und den vorderen Kanten; Schattiert mit Kanten in den Farben der Materialien" src="../assets/screens/vg-styles.webp"/>
+<figcaption>Drahtmodell, Linien und Schattiert mit Kanten</figcaption>
+</figure>
 <p>Der Stil gehört zur Ansicht und lässt sich rückgängig machen. Die Tastaturkürzel <code>WF</code>, <code>HL</code> und <code>SD</code> wählen <strong>Drahtmodell</strong>, <strong>Linien</strong> und <strong>Schattiert</strong>.</p>
 <p>Die Kanten sind die tatsächlichen: dort, wo zwei Flächen im Winkel aufeinandertreffen, sowie der Umriss jeder Fläche und jeder Öffnung. Eine Wand mit einem Fenster zeigt ihren eigenen Umriss und den des Fensters, aber keine Linie dort, wo die Teile der Wand aneinanderstoßen.</p>
 <p>Auch Grundrisse, Schnitte und Gebäudeansichten haben einen Grafikstil. Ein Grundriss wird in <strong>Linien</strong> gezeichnet, bis ein anderer Stil gewählt wird. In <strong>Linien</strong> sind die Oberflächen, geschnitten oder gesehen, nicht eingefärbt: Geschnittenes zeigt das Schnittmuster seines Materials; bei der Detailstufe <strong>Grob</strong> das Füllmuster für grobe Darstellung des Typs, sonst nur seinen Umriss. In <strong>Schattiert</strong>, <strong>Schattiert mit Kanten</strong> und <strong>Volle Farben</strong> wird jedes gesehene oder geschnittene Element mit der Schattierungsfarbe seines Materials gefüllt (ein Teil ohne Material nimmt das seiner Kategorie aus <strong>Stile nach Kategorie</strong>, sonst die Standardfarbe der Kategorie; die 3D-Ansicht folgt derselben Regel): Wände (jede Schicht, wo sie geschnitten ist), Geschossdecken, Dächer, Türen, Fenster, Möbel und Komponenten, Treppen und Geländer. Grundrisse sind flach; in Schnitten und Gebäudeansichten dunkelt <strong>Schattiert</strong> die vom Betrachter abgewandten Flächen etwas ab, etwa die Dachflächen, während <strong>Volle Farben</strong> sie alle gleich lässt. Bei den Detailstufen <strong>Mittel</strong> und <strong>Fein</strong> bleiben die Schnittmuster über der Farbe. Pläne, Ausdrucke und exportierte Zeichnungen zeigen die Ansichten wie der Bildschirm.</p>
+<figure>
+<img alt="Ausschnitt des Erdgeschossgrundrisses im Maßstab 1 : 50, in Linien (Schnittmuster, keine Farbe) und Schattiert (jedes Element in der Farbe seines Materials)" src="../assets/screens/vg-plan-styles.webp"/>
+<figcaption>Ein Grundriss in Linien und Schattiert</figcaption>
+</figure>
 <p>Das Farbschema der Räume ist in jedem Stil zu sehen. Mit <strong>Position des Farbschemas</strong> auf <strong>Hintergrund</strong> liegt es unter den Linien des Modells: im Grundriss über den Geschossdecken und unter den Möbeln, im Schnitt über den Oberflächen, die durch jeden geschnittenen Raum zu sehen sind. Auf <strong>Vordergrund</strong> deckt es das Modell ab, unter den Beschriftungen.</p>
 <h2 id="sun-and-shadows">Sonne und Schatten</h2>
 <p>Grundrisse, Schnitte, Ansichten und 3D-Ansichten zeigen die Sonne (Zeichenansichten, Legenden,
@@ -610,6 +622,10 @@ werden sie vollständig gezeichnet. Mit der Ansicht
 unter dem Cursor (und nichts ausgewählt, oder nach einem Klick auf die Sonne) verschieben <span class="keys"><kbd class="key-arrow-left">Left</kbd></span>
 und <span class="keys"><kbd class="key-arrow-right">Right</kbd></span> die Uhrzeit, <span class="keys"><kbd class="key-arrow-up">Up</kbd></span> und <span class="keys"><kbd class="key-arrow-down">Down</kbd></span> das Datum. Mit <strong>Beleuchtung</strong> steht die Sonne still
 und hat keine Bahn.</p>
+<figure>
+<img alt="Die 3D-Ansicht mit Sonnenbahn und Schatten: die Kuppel über dem Kompassring, der Tagesbogen mit den Stunden, Sonnenaufgang, Sonnenuntergang und Sonnenmittag, das Jahresband und die Sonne am 21. Juni um 10:00" src="../assets/screens/vg-sun-path.webp"/>
+<figcaption>Sonnenbahn und Schatten in der 3D-Ansicht</figcaption>
+</figure>
 <p>Das Menü der Sonnenbahn (in der Ansichtsleiste, im Menü der Ansicht und im Touch-Modus) hat auch
 <strong>Visuelle Hilfen</strong> zum Lesen: <strong>Senkrechte Stundenlinien</strong> (von jeder geraden Stunde eine gestrichelte Linie
 zum Boden und zum Ring, mit der Stunde dort; im Grundriss ein Punkt auf dem Ring), <strong>Bogen auf den
@@ -676,6 +692,10 @@ Sonne in der Kopfzeile:</p>
 schließt es, <strong>Abbrechen</strong> ändert nichts. Projekte von vor dem Standort des Projekts behalten Ort
 und Datum jeder Ansicht: die erste Ansicht, deren Sonne geändert war, gibt dem Projekt seinen
 Standort, und die Ansichten, deren Sonne geändert war, behalten ihre als eigene.</p>
+<figure>
+<img alt="Sonneneinstellungen: links die Voreinstellungen, in der Mitte der Modus Standbild mit Datum, Jahr, Uhrzeit, Standort und Sommerzeit, die Sonnenauf- und -untergänge des Jahres und rechts der Himmel von oben" src="../assets/screens/vg-sun-settings.webp"/>
+<figcaption>Sonneneinstellungen</figcaption>
+</figure>
 <h3 id="sun-study">Sonnenstudie</h3>
 <p><strong>Vorschau der Sonnenstudie</strong> (im Menü <strong>Schatten</strong>) zeigt über der Ansicht die Leiste der Studie:
 <strong>⏮ −10</strong>, <strong>⏴</strong>, <strong>⏵ Abspielen</strong> / <strong>⏸ Pause</strong>, <strong>⏵</strong>, <strong>+10 ⏭</strong> und <strong>Bild n von N</strong>. Eine Sonne
@@ -693,6 +713,10 @@ Modells), <strong>Schlagschatten</strong>, <strong>Umgebungsschatten</strong> (E
 <strong>Verlauf</strong>). Die Vorschau zeichnet die Ansicht mit den gewählten Optionen; der Schalter <strong>Vorschau</strong> in der
 Kopfzeile blendet sie aus und ein, wie in den Sonneneinstellungen. Ansichtsvorlagen übernehmen diese Optionen mit dem
 Grafikstil, und Sonne und Schatten als <strong>Sonne und Schatten</strong>.</p>
+<figure>
+<img alt="Grafische Darstellungsoptionen der 3D-Ansicht: Grafikstil, Silhouettenkanten, Schatten, Beleuchtung mit Sonne, Umgebungslicht und Schattenintensität, der Hintergrund und rechts die Vorschau" src="../assets/screens/vg-graphic-display.webp"/>
+<figcaption>Grafische Darstellungsoptionen</figcaption>
+</figure>
 <h2 id="plans-and-their-view-range">Grundrisse und ihre Schnitthöhen</h2>
 <p><strong>Ansichten ▸ Erzeugen ▸ Grundriss ▸ Grundriss</strong> öffnet <strong>Neuer Grundriss</strong>: Wählen Sie die Ebenen und den Maßstab, dann <strong>OK</strong>. Ist <strong>Vorhandene Ansichten nicht duplizieren</strong> eingeschaltet, werden die Ebenen übergangen, die bereits einen Grundriss haben; schalten Sie es aus, um einen zweiten Grundriss einer Ebene zu erstellen.</p>
 <p>Ein Grundriss ist ein horizontaler Schnitt durch das Modell auf der <strong>Schnittebene</strong> seiner Schnitthöhen. Wände, die die Schnittebene kreuzen, werden geschnitten gezeichnet, mit den Schnittmustern der Materialien ihrer Schichten mit <strong>Detail</strong> auf <strong>Mittel</strong> und <strong>Fein</strong>; tiefer liegende Wände und die Geschossdecken der Ebene sind von oben zu sehen.</p>
@@ -723,9 +747,17 @@ Grafikstil, und Sonne und Schatten als <strong>Sonne und Schatten</strong>.</p>
 </tr>
 </tbody>
 </table>
+<figure>
+<img alt="Schnitthöhen des Erdgeschossgrundrisses: Oben, Schnittebene, Unten und Ansichtstiefe, jeweils mit Ebene und Versatz" src="../assets/screens/vg-view-range.webp"/>
+<figcaption>Schnitthöhen</figcaption>
+</figure>
 <p><strong>OK</strong> setzt die vier Ebenen gemeinsam, als eine einzige Änderung. Sie müssen in der Reihenfolge von oben nach unten bleiben (oben, Schnittebene, unten, Ansichtstiefe): Andernfalls erklärt das Fenster, was nicht stimmt, und bleibt geöffnet. Geschossdecken unterhalb von Unten, bis zur Ansichtstiefe, werden <em>dahinter</em> in dünnen Linien gezeichnet; ebenso Geschossdecken, die ein wenig unter Unten liegen, etwa eine abgesenkte Decke, auch wenn die Ansichtstiefe auf Unten liegt.</p>
 <h2 id="light-and-dark-background">Heller und dunkler Hintergrund</h2>
 <p><strong>Optionen ▸ Design ▸ Dunkel</strong> (oder <strong>Hintergrundfarbe umkehren</strong>) macht den Zeichenbereich dunkel. Wie bei einem umgekehrten Hintergrund werden schwarze Linien, Texte und Muster hell gezeichnet, Farben behalten ihren Farbton, und Farbfüllungen wie die der Räume werden abgedunkelt, damit der Text darüber lesbar bleibt. <strong>Optionen ▸ Größe der Benutzeroberfläche</strong> vergrößert die gesamte Benutzeroberfläche von 100 % bis 250 %, zusätzlich zur Skalierung des Bildschirms selbst: nützlich bei Bildschirmen mit vielen Pixeln. Die Einstellung bleibt für den nächsten Start erhalten.</p>
+<figure>
+<img alt="Der Erdgeschossgrundriss auf dunklem Hintergrund: Linien und Text hell, die Farbfüllungen der Räume abgedunkelt" src="../assets/screens/vg-dark.webp"/>
+<figcaption>Ein Grundriss auf dunklem Hintergrund</figcaption>
+</figure>
 <h2 id="opening-a-view-from-its-symbol">Eine Ansicht über ihr Symbol öffnen</h2>
 <p>Doppelklicken Sie auf das Symbol einer Ansicht, um sie zu öffnen: eine Schnittlinie oder ihren Kopf, ein Gebäudeansichtssymbol, die Begrenzung eines Ausschnitts (ein Verweisausschnitt öffnet die Ansicht, auf die er verweist), die Linie einer Ebene in einem Schnitt oder einer Gebäudeansicht (ihr Grundriss wird geöffnet) oder eine auf einem Plan platzierte Ansicht. Das Fenster der Ansicht wird zum aktiven.</p>
 <p><strong>Ansichten ▸ Erzeugen ▸ Gebäudeansicht ▾ ▸ Rahmenansicht</strong> erzeugt eine Ansicht einer Rasterlinie: Klicken Sie neben die Rasterlinie, auf der Seite, von der aus geblickt wird (vor dem Klick zeigen eine Linie und ein Pfeil die Ansicht). Die Ansicht blickt auf die nächste Rasterlinie, so breit wie das Feld zwischen den Rasterlinien, die sie kreuzen, und so tief wie die nächste parallele Rasterlinie.</p>
@@ -735,7 +767,15 @@ Grafikstil, und Sonne und Schatten als <strong>Sonne und Schatten</strong>.</p>
 <li>Bei kleinerem Maßstab wird das Modell auf dem Papier kleiner gezeichnet, während Texte, Tags und Symbole ihre Größe auf dem Papier behalten: Bei 1:200 deckt ein Text doppelt so viel vom Modell ab wie bei 1:100.</li>
 <li>Bei <strong>Grob</strong> ist eine geschnittene Wand eine einzige Füllung; bei <strong>Mittel</strong> und <strong>Fein</strong> werden ihre Schichten sichtbar, jede mit ihrem Material.</li>
 </ul>
+<figure>
+<img alt="Eine Ecke der Außenwände im Grundriss 1 : 20: bei Detailgrad Grob nur der Umriss, bei Fein jede Schicht mit dem Schnittmuster ihres Materials" src="../assets/screens/vg-detail.webp"/>
+<figcaption>Dieselbe Ecke bei Detailgrad Grob und Fein</figcaption>
+</figure>
 <p>Schnitte schneiden das Modell auf dieselbe Weise. Wände, Geschossdecken und Dächer, die sich im Schnitt treffen, werden als Ganzes gezeichnet: eine dicke Umrisslinie um sie herum, eine dünne Linie nur dort, wo zwei Materialien aufeinandertreffen, keine zwischen Teilen desselben Materials; an ein Dach angehängte Wände enden unter ihm. Jede geschnittene Schicht hat das Schnittmuster ihres Materials (bei <strong>Grob</strong> das <strong>Füllmuster für grobe Darstellung</strong> des Typs in seiner <strong>Füllfarbe für grobe Darstellung</strong>, einstellbar bei Wand-, Geschossdecken- und Dachtypen; sonst nur der Umriss). Möbel und Sanitärinstallationen werden nie geschnitten: Sie sind ganz zu sehen. Ein Fenster wird mit seinem Rahmen in der dicken Schnittlinie und seinem Glas in dünnen Linien geschnitten; was hinter dem Schnitt liegt, wird mit den dünneren Projektionslinien gezeichnet. Hinter dem Schnitt und in Ansichten verdeckt eine vordere Fläche, was hinter ihr liegt, und das Glas eines Fensters ist undurchsichtig: Jedes Fenster zeigt seinen Rahmen und sein Glas, nicht die Räume dahinter.</p>
+<figure>
+<img alt="Schnitt A des Beispielhauses bei Detailgrad Fein: Wände, Decken und Dach mit ihren Schichten geschnitten, Treppe und Möbel dahinter, Raster und Ebenen" src="../assets/screens/vg-section.webp"/>
+<figcaption>Ein Schnitt: was geschnitten ist und was dahinter zu sehen ist</figcaption>
+</figure>
 <p><strong>Ansicht zuschneiden</strong> beschneidet die Ansicht auf ihren Zuschneidebereich, <strong>Zuschneidebereich anzeigen</strong> zeichnet den Bereich; ziehen Sie an seinen Kanten, um die Größe zu ändern. Um die Größe einzugeben: <strong>Eigenschaften ▸ Zuschnittgröße ▸ Bearbeiten…</strong>, dann <strong>Breite</strong> und <strong>Höhe</strong>; der Bereich behält seine Mitte.</p>
 <h2 id="hiding-and-isolating">Ausblenden und Isolieren</h2>
 <p><strong>Vorübergehend isolieren</strong> (die Brille in der Ansichtssteuerungsleiste) wirkt auf die gewählten Elemente, nur in der aktiven Ansicht, und ändert das Projekt nicht:</p>
@@ -770,6 +810,10 @@ Grafikstil, und Sonne und Schatten als <strong>Sonne und Schatten</strong>.</p>
 </tr>
 </tbody>
 </table>
+<figure>
+<img alt="Der Erdgeschossgrundriss nach Kategorie isolieren auf einem Möbelstück: nur die Möbel sind zu sehen, und die Ansicht hat einen farbigen Rand" src="../assets/screens/vg-isolate.webp"/>
+<figcaption>Kategorie isolieren: nur die Möbel, ein farbiger Rand</figcaption>
+</figure>
 <p>Die Ansicht erhält einen farbigen Rahmen. Jede Anwendung schränkt das Gezeigte weiter ein: Wird ein Element und danach ein weiteres ausgeblendet, sind beide ausgeblendet. <strong>Vorübergehendes Isolieren zurücksetzen</strong> (<code>HR</code>) zeigt wieder alles; <strong>Ausblenden/Isolieren auf Ansicht anwenden</strong> blendet dauerhaft aus, was vorübergehend ausgeblendet war.</p>
 <p>Um in der Ansicht dauerhaft auszublenden, wählen Sie die Elemente und dann Rechtsklick ▸ <strong>In Ansicht ausblenden ▸ Elemente</strong> oder <strong>Kategorie</strong>, oder <strong>Ansicht ▸ In Ansicht ausblenden</strong> in der kontextabhängigen Karte, oder geben Sie <code>EH</code> (Elemente) beziehungsweise <code>VH</code> (Kategorie) ein.</p>
 <p><strong>Verborgene zeigen</strong> (die Glühbirne in der Ansichtssteuerungsleiste, oder <code>RH</code>) umrahmt die Ansicht magentafarben und zeigt das Ausgeblendete in Magenta, den Rest im Halbton. Ein ausgeblendetes Element lässt sich dann wählen und wieder einblenden: Rechtsklick ▸ <strong>In Ansicht einblenden ▸ Elemente</strong> (oder <strong>Kategorie</strong>). Klicken Sie erneut auf die Glühbirne oder geben Sie <code>RH</code> ein, um den Modus zu verlassen.</p>
@@ -783,13 +827,25 @@ Grafikstil, und Sonne und Schatten als <strong>Sonne und Schatten</strong>.</p>
 <li><strong>Transparent</strong> macht die Oberflächen in der 3D-Ansicht durchsichtig;</li>
 <li><strong>Detail</strong> zeichnet die Kategorie mit einem anderen Grad als die Ansicht.</li>
 </ul>
+<figure>
+<img alt="Sichtbarkeit und Grafik des Erdgeschossgrundrisses: eine Zeile je Modellkategorie, mit Sichtbarkeit, Projektions- und Schnittlinien, Oberflächen- und Schnittmustern, Halbton, Transparenz und Detailgrad" src="../assets/screens/vg-visibility.webp"/>
+<figcaption>Sichtbarkeit und Grafik</figcaption>
+</figure>
 <p><strong>Überschreibungen löschen</strong> setzt die gewählten Zeilen auf die Stile nach Kategorie zurück. Änderungen sind sofort zu sehen: <strong>Anwenden</strong> behält sie und lässt das Fenster offen, <strong>Abbrechen</strong> (oder das × des Fensters) nimmt zurück, was nicht angewendet wurde, <strong>OK</strong> behält sie und schließt.</p>
 <p>Ein einzelnes Element kann in einer Ansicht eigene Grafik haben: Wählen Sie es und dann Rechtsklick ▸ <strong>Benutzerdefinierte Grafik ▸ Nach Element…</strong> (oder die Gruppe <strong>Ansicht</strong> der kontextabhängigen Karte). <strong>Ansichtsspezifische Elementgrafiken</strong> bietet <strong>Sichtbar</strong>, <strong>Halbton</strong>, <strong>Transparent</strong>, die Oberflächen- und Schnittmuster sowie die Projektions- und Schnittlinien. Sie gelten nur in dieser Ansicht, über denen der Kategorie und der Filter.</p>
 <h2 id="filters">Filter</h2>
 <p><strong>Ansichten ▸ Grafik ▸ Filter</strong> listet die Filter des Projekts auf: <strong>Neu</strong>, <strong>Duplizieren</strong>, <strong>Umbenennen</strong>, <strong>Löschen</strong>. Ein Filter hat Kategorien und bis zu vier Regeln für deren Parameter, die ein Element alle erfüllen muss.</p>
+<figure>
+<img alt="Das Dialogfeld Filter mit einem Filter für dicke Wände: seine Kategorie, Wände, und seine Regel, Dicke größer als 300" src="../assets/screens/vg-filters.webp"/>
+<figcaption>Ein Filter: Kategorien und Regeln</figcaption>
+</figure>
 <p>In <strong>Sichtbarkeit und Grafik ▸ Filter</strong> wendet <strong>Hinzufügen</strong> einen Filter auf die Ansicht an; seine Zeile legt dann Sichtbarkeit, Linien, <strong>Halbton</strong> und <strong>Transparent</strong> für die Elemente fest, die ihn erfüllen. Wo Filter sich widersprechen, gewinnt der weiter oben in der Liste: <strong>Nach oben</strong> und <strong>Nach unten</strong> verschieben den gewählten Filter.</p>
 <h2 id="view-templates">Ansichtsvorlagen</h2>
 <p><strong>Ansichten ▸ Grafik ▸ Ansichtsvorlagen ▸ Vorlage aus aktueller Ansicht erstellen</strong> speichert Maßstab, Detail, Grafikstil, Schnitthöhen und Grafik der Ansicht unter einem Namen als Vorlage. <strong>Ansichtsvorlagen ▸ Vorlage auf aktuelle Ansicht anwenden</strong> überträgt sie auf eine andere Ansicht derselben Art: einen Grundriss (auch einen zweiten Grundriss einer Ebene), einen Schnitt oder eine Gebäudeansicht oder eine 3D-Ansicht. Eine Ansicht folgt späteren Änderungen ihrer Vorlage nicht, bis diese erneut angewendet wird, und die Grafik einzelner Elemente ist nie Teil einer Vorlage.</p>
+<figure>
+<img alt="Ansichtsvorlagen: eine Grundrissvorlage mit den Parametern, die sie überträgt, jeweils mit Wert und ob er einbezogen ist" src="../assets/screens/vg-templates.webp"/>
+<figcaption>Ansichtsvorlagen</figcaption>
+</figure>
 <h2 id="managing-views">Ansichten verwalten</h2>
 <p>Klicken Sie im <strong>Projektindex</strong> mit der rechten Maustaste auf eine Ansicht:</p>
 <ul>
@@ -797,6 +853,10 @@ Grafikstil, und Sonne und Schatten als <strong>Sonne und Schatten</strong>.</p>
 <li><strong>Umbenennen…</strong> fragt nach dem neuen Namen (<strong>Ansicht umbenennen</strong>); Namen bleiben unter den Ansichten eindeutig.</li>
 </ul>
 <p><strong>Ansichten ▸ Fenster ▸ Nebeneinander</strong> zeigt alle geöffneten Ansichten nebeneinander und füllt den Zeichenbereich: Bei drei Fenstern liegt das aktive links in voller Höhe und zwei sind rechts übereinander angeordnet.</p>
+<figure>
+<img alt="Drei Ansichten nebeneinander im Zeichenbereich: links der Erdgeschossgrundriss in voller Höhe, rechts Schnitt A und die 3D-Ansicht übereinander" src="../assets/screens/vg-tile.webp"/>
+<figcaption>Nebeneinander: drei geöffnete Ansichten</figcaption>
+</figure>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

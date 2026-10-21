@@ -634,11 +634,18 @@ placed on them, revisions, schedules, printed drawings and exported images.</p>
 <h2 id="sheets">Sheets</h2>
 <p>A sheet is a drawing to print: a title block and the views placed on it. Sheets are listed under
 <strong>Sheets (all)</strong> in the Project Index, by number.</p>
-<p><img alt="A sheet with both floor plans, and the Document tools on the rail" src="../assets/screens/bimopen-sheet.png"/></p>
+<figure>
+<img alt="A sheet with both floor plans, and the Document tools on the rail" src="../assets/screens/bimopen-sheet.png"/>
+<figcaption>A sheet with both floor plans, and the Document tools on the rail</figcaption>
+</figure>
 <h3 id="creating-a-sheet">Creating a sheet</h3>
 <p><strong>Document ➤ Sheets ➤ Sheet</strong> opens <strong>New Sheet</strong>: choose a title block (its paper size is
 shown), <strong>None</strong>, or one of the placeholder sheets of the sheet list. <strong>OK</strong> creates the sheet with
 the next free number (<strong>A101</strong>, <strong>A102</strong>…) and opens it.</p>
+<figure>
+<img alt="The New Sheet dialog: the title blocks with their paper sizes, from A0 to A3, None, and the placeholder sheets" src="../assets/screens/do-new-sheet.webp"/>
+<figcaption>New Sheet</figcaption>
+</figure>
 <p>Right-click a sheet in the Project Index ➤ <strong>Rename…</strong> to change its number and name in
 <strong>Sheet Title</strong>. The other parameters of the sheet are in the element panel:
 <strong>Sheet Number</strong>, <strong>Sheet Name</strong>, <strong>Sheet Issue Date</strong>, <strong>Drawn By</strong>, <strong>Checked By</strong>,
@@ -682,6 +689,10 @@ places it as a viewport. A view goes on one sheet only; a schedule on several.</
   colour and pattern of the line);</li>
 <li>leaves the sheet with <span class="keys"><kbd class="key-delete">Del</kbd></span>; the view stays in the project.</li>
 </ul>
+<figure>
+<img alt="Sheet A101 with both floor plans placed: the ground floor viewport picked, with its title line and the end of the line to drag" src="../assets/screens/do-viewport.webp"/>
+<figcaption>A viewport picked on a sheet</figcaption>
+</figure>
 <p><strong>Activate View</strong> (on the <strong>Selection: Viewports</strong> card or the right button) edits the view where it is
 on the sheet, the rest of the sheet in halftone; <strong>Deactivate View</strong> goes back to the sheet. A
 view turned on its sheet cannot be activated: take its rotation off first. A double click on a
@@ -718,6 +729,10 @@ them but does not draw them, or hides them.</p>
 window of the drawing area, is tiled, cascaded and switched with plans, sections and 3D views, and
 is listed under <strong>Schedules/Quantities</strong> in the Project Index. It follows every change of the
 model at once, and every change made in it changes the model.</p>
+<figure>
+<img alt="The ground floor plan tiled with a wall schedule grouped by type and a door schedule; a door picked in the schedule is selected in the plan too" src="../assets/screens/do-schedule.webp"/>
+<figcaption>Schedules beside the plan, selected together</figcaption>
+</figure>
 <h3 id="creating-a-schedule">Creating a schedule</h3>
 <p><strong>Views ➤ Create ➤ Schedules ➤ Schedule/Quantities</strong> opens <strong>New Schedule</strong>: choose a category,
 a name (the default follows the category until one is typed) and <strong>Schedule building components</strong>
@@ -774,6 +789,10 @@ segment moves it (dropped on the segment beside it, the two join), the dot at th
 segment moves its last row, and the triangles at the top of the columns set their widths. A
 double click, or <strong>Edit Schedule</strong> on the right button, opens the schedule view. The same
 schedule can go on several sheets.</p>
+<figure>
+<img alt="A door schedule grouped by level on an A3 sheet, selected: the triangles over the columns, and the Z on the right edge that splits it" src="../assets/screens/do-schedule-sheet.webp"/>
+<figcaption>A schedule on a sheet, with its controls</figcaption>
+</figure>
 <h3 id="key-schedules-and-material-takeoffs">Key schedules and material takeoffs</h3>
 <p>A key schedule (<strong>Schedule keys</strong> in <strong>New Schedule</strong>) defines named sets of values, one row per
 key, added and deleted with <strong>Rows</strong>. Its <strong>Key Name</strong> becomes a parameter of the category:
@@ -814,6 +833,10 @@ are downloaded.</p>
 <li><strong>Reverse print order</strong> prints the last page first.</li>
 <li><strong>Settings</strong>: the print settings in use, changed with <strong>Settings…</strong>; <strong>Preview</strong> shows the pages.</li>
 </ul>
+<figure>
+<img alt="The Print dialog: the PDF printer, the file name, the print range, reverse print order, the print settings with Settings…, and Preview" src="../assets/screens/do-print.webp"/>
+<figcaption>Print</figcaption>
+</figure>
 <p>Plans, sections, elevations, free 2D views and sheets print as drawings; the 3D window prints as
 an image of the view; a schedule prints its table on a page. The page is always white, elements
 hidden temporarily in a window are printed, and each printed sheet carries the date and time of
@@ -859,6 +882,10 @@ picks one again.</p>
 </tr>
 </tbody>
 </table>
+<figure>
+<img alt="The Print Setup dialog: saved settings, paper size and orientation, paper placement, hidden line views, zoom, colours and the options" src="../assets/screens/do-print-setup.webp"/>
+<figcaption>Print Setup</figcaption>
+</figure>
 <p>Settings are saved by name with <strong>Save As…</strong>, and kept in the project. Closing the dialog after
 changing saved settings asks whether to save the changes; <strong>No</strong> keeps them for this session
 only.</p>

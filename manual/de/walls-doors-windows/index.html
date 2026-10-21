@@ -777,6 +777,10 @@ der Optionsstreifen zeigt:</p>
 </tr>
 </tbody>
 </table>
+<figure>
+<img alt="Die Optionsleiste des Wandwerkzeugs: Höhe, die obere Ebene, die nicht verbundene Höhe, Ausrichtung und die weiteren Optionen" src="../assets/screens/wa-options.webp"/>
+<figcaption>Die Optionsleiste des Wandwerkzeugs</figcaption>
+</figure>
 <p>In der 3D-Ansicht folgt die gezeichnete Wand dem Cursor als Volumen, mit ihrer Dicke und ihrer Höhe bis zur oberen Ebene (oder der eingegebenen Höhe), auf der Ebene des Geschosses, mit Länge und Winkel als temporärer Bemaßung; <strong>Umschalt</strong> hält sie rechtwinklig, <strong>Esc</strong> entfernt sie. Auch <strong>Rechteck</strong>, die Polygone und <strong>Linien wählen</strong> funktionieren dort: die Wände der ganzen Form folgen dem Cursor, und die Linie der Ebene unter dem Cursor wird wie im Grundriss gewählt.</p>
 <p>Beim Zeichnen:</p>
 <ul>
@@ -788,6 +792,10 @@ der Optionsstreifen zeigt:</p>
   Flächenumrisse, Schnitte und Ansichten nehmen eine eingegebene Länge ebenso an);</li>
 <li><strong>Esc</strong> beendet die Kette; nochmals <strong>Esc</strong>, oder <strong>Ändern</strong>, beendet das Werkzeug.</li>
 </ul>
+<figure>
+<img alt="Drei Schritte des Wandwerkzeugs neben dem Haus: die erste Wand folgt dem Cursor mit Länge und Winkel, die zweite vom Ende der ersten, die beiden an der Ecke verbunden" src="../assets/screens/wa-draw.webp"/>
+<figcaption>Eine Wandkette zeichnen</figcaption>
+</figure>
 <p>Die Gruppe <strong>Zeichnen</strong> wählt die Form:</p>
 <table>
 <thead>
@@ -825,6 +833,10 @@ ihrer Außenseite. Ein Klick auf die Pfeile kehrt die Wand um ihre Ausrichtungsl
 letzte Schicht tauschen, Türen und Fenster behalten ihre Ausrichtung. Das Ändern der <strong>Ausrichtung</strong>
 einer platzierten Wand verschiebt sie nicht; das nächste Umkehren dreht sie um die neue Ebene. Das
 Ändern des Typs einer Wand oder ihrer Schichten lässt die Ausrichtungslinie, wo sie war.</p>
+<figure>
+<img alt="Die Nordwand ausgewählt: die blauen Punkte an den Enden der Ausrichtungslinie und die Umkehrpfeile auf der Außenseite" src="../assets/screens/wa-flip.webp"/>
+<figcaption>Eine gewählte Wand: Enden und Umkehrpfeile</figcaption>
+</figure>
 <h2 id="attaching-walls-to-roofs-and-floors">Wände an Dächern und Geschossdecken fixieren</h2>
 <p>Eine Wand kann einem Dach oder einer Geschossdecke folgen, statt eine feste Höhe zu haben.</p>
 <ol>
@@ -913,7 +925,10 @@ wieder zu verbinden.</p>
 Typs im Projektbrowser) zeigt die Parameter eines Wandtyps; eine Änderung gilt für alle Wände
 dieses Typs.</p>
 <h3 id="wall-type-parameters">Typparameter</h3>
-<p><img alt="Die Typparameter eines Wandtyps mit seinem Schnitt" src="../assets/screens/wall-type-parameters.png"/></p>
+<figure>
+<img alt="Die Typparameter eines Wandtyps mit seinem Schnitt" src="../assets/screens/wall-type-parameters.png"/>
+<figcaption>Die Typparameter eines Wandtyps mit seinem Schnitt</figcaption>
+</figure>
 <p>Oben stehen Familie und Typ und, bei einem Typ mit Schichten, die drei Werte der <strong>Typschichten</strong>:
 <strong>Gesamtdicke</strong>, <strong>Widerstand R</strong> und <strong>Flächenmasse</strong>. Darunter <strong>Familie</strong> mit <strong>Laden…</strong> (eine
 Familie aus der Bibliothek; grau für Wände und die anderen Systemfamilien, die dupliziert statt
@@ -956,6 +971,10 @@ Wärmeleitfähigkeit der Schichten plus 0,17 für die beiden Oberflächen) und <
 (kg/m²: die Summe aus Dicke × Dichte). R und Masse erscheinen, wenn jedes Material seine
 <strong>Wärmeleitfähigkeit</strong> und <strong>Dichte</strong> hat (die Materialien der Vorlage haben sie, andere werden in
 <strong>Materialien</strong> ergänzt); sonst zeigen sie «—».</p>
+<figure>
+<img alt="Typschichten der Außenwand: die Schichten von der Außenseite mit Funktion, Material, Dicke und Umschlag, die Kerngrenzen, die Werte in der Kopfzeile und die Schnittvorschau" src="../assets/screens/wa-assembly.webp"/>
+<figcaption>Typschichten</figcaption>
+</figure>
 <p>Links steht die Liste der Schichten, von der <strong>AUSSENSEITE</strong> oben bis zur <strong>INNENSEITE</strong> unten.
 Jede Schicht ist eine Karte mit ihrer Nummer, einem Muster ihres Materials (Farbe und
 Schnittmuster), ihrer <strong>Funktion</strong> (<strong>Tragwerk</strong>, <strong>Trägerschicht</strong>, <strong>Wärmedämmung</strong>,
@@ -1007,7 +1026,10 @@ Fenstern aus, die Seiten der Löcher einer bearbeiteten Begrenzung (siehe
 <a href="#editing-a-walls-profile">Die Begrenzung einer Wand bearbeiten</a>) und die freien Enden. Ein Tür- oder
 Fenstertyp ersetzt die Umschließung der Wand durch seinen <strong>Wandabschluss</strong>.</p>
 <h2 id="wall-properties">Wandeigenschaften</h2>
-<p><img alt="Eine ausgewählte Wand mit ihren Eigenschaften" src="../assets/screens/wall-properties.png"/></p>
+<figure>
+<img alt="Eine ausgewählte Wand mit ihren Eigenschaften" src="../assets/screens/wall-properties.png"/>
+<figcaption>Eine ausgewählte Wand mit ihren Eigenschaften</figcaption>
+</figure>
 <p>Ist eine Wand gewählt, zeigen die <strong>Eigenschaften</strong> oben die Typauswahl: das Bild des Typs, seine
 Familie und seinen Namen. Ein Klick öffnet die Liste der Typen, nach Familie gruppiert
 (<strong>Basiswand</strong>, <strong>Vorhangfassade</strong>), jeder mit einem kleinen Bild — die Schichten einer Wand
@@ -1055,6 +1077,10 @@ Basiswand, auf jeder Seite. Eine Tür schlägt zu der Seite der Wand auf, auf de
 die <strong>Leertaste</strong> legt ihren Anschlag auf die andere Laibung. Klicken, um sie einzusetzen: die Wand
 wird in jeder Ansicht geschnitten. Ein Fenster übernimmt die <strong>Standard-Brüstungshöhe</strong> seines
 Typs.</p>
+<figure>
+<img alt="Zwei Schritte des Türwerkzeugs an der Trennwand: die Tür folgt dem Cursor entlang der Wand mit temporären Bemaßungen, dann die platzierte Tür und die geschnittene Wand" src="../assets/screens/wa-door.webp"/>
+<figcaption>Eine Tür: entlang der Wand, dann platziert</figcaption>
+</figure>
 <p>Türen und Fenster erhalten ein <strong>Kennzeichen</strong>, das nach Kategorie hochzählt (1, 2, 3…), ab dem
 höchsten.</p>
 <h2 id="tags">Beschriftungen</h2>
@@ -1068,6 +1094,10 @@ beschriften</strong> beschriftet die noch nicht beschrifteten Öffnungen.</p>
 öffnet, kehren den Aufschlag um; Pfeile daneben, entlang der Wand, legen den Anschlag auf die
 andere Laibung. Das Kontextmenü tut dasselbe: <strong>Seite umkehren</strong> (der Anschlag) und <strong>Ausrichtung
 umkehren</strong> (der Aufschlag).</p>
+<figure>
+<img alt="Eine im Grundriss ausgewählte Tür mit ihren Griffen: die Umkehrpfeile quer zur Wand und daneben, die temporären Bemaßungen und die Verschiebepfeile" src="../assets/screens/wa-door-flip.webp"/>
+<figcaption>Eine gewählte Tür und ihre Umkehrpfeile</figcaption>
+</figure>
 <h2 id="moving-a-door-or-window-to-another-wall">Eine Tür oder ein Fenster in eine andere Wand verschieben</h2>
 <p>Wählen Sie sie, <strong>Auswahl: Türen ▸ Basisbauteil ▸ Neues Basisbauteil wählen</strong> (oder
 <strong>Auswahl: Fenster</strong>), dann eine andere Wand anklicken: die Öffnung wandert dorthin, an die
@@ -1077,6 +1107,10 @@ angeklickte Stelle, mit ihrem Typ und ihrer Brüstung. Sie bleibt gewählt.</p>
 <p>Exemplar: <strong>Ebene</strong>, <strong>Brüstungshöhe</strong>, <strong>Breite</strong> und <strong>Höhe</strong> (des Typs), <strong>Sturzhöhe</strong>,
 <strong>Kommentare</strong>, <strong>Kennzeichen</strong>. Das Ändern von <strong>Brüstungshöhe</strong> oder <strong>Sturzhöhe</strong> verschiebt die
 Öffnung nach oben oder unten; ihre Größe bleibt.</p>
+<figure>
+<img alt="Der Elementbereich einer Tür: ihr Typ, die Wirtswand, die Position entlang der Wand, die Brüstungshöhe, die Breite und die Höhe" src="../assets/screens/wa-door-props.webp"/>
+<figcaption>Die Eigenschaften einer Tür</figcaption>
+</figure>
 <p>Typ: <strong>Wandabschluss</strong> (<strong>Nach Basisbauteil</strong>, oder eine eigene Umschließung), <strong>Funktion</strong>
 (<strong>Innen</strong> oder <strong>Außen</strong>), <strong>Türmaterial</strong> (<strong>Glasmaterial</strong> bei Fenstern) und
 <strong>Rahmenmaterial</strong>, <strong>Breite der Verkleidung</strong>, <strong>Dicke</strong> (des Türblatts oder die Tiefe des
@@ -1127,6 +1161,10 @@ der Typenauswahl und zeichnen Sie wie jede Wand, im Grundriss oder in 3D, mit <s
 Formen von <strong>Zeichnen</strong>. Eine Basiswand wird zur Vorhangfassade, indem man in der Typenauswahl
 einen Vorhangfassadentyp wählt; die Türen und Fenster darin werden gelöscht, weil eine
 Vorhangfassade sie nicht aufnimmt, und eine Meldung sagt es (Rückgängig bringt sie zurück).</p>
+<figure>
+<img alt="Die Südansicht des Beispielhauses: rechts die in die Außenwand eingebettete Ladenfront mit Rasterlinien und Pfosten" src="../assets/screens/wa-curtain.webp"/>
+<figcaption>Eine Ladenfront in der Südansicht</figcaption>
+</figure>
 <p>Im Grundriss wird jedes Glaspaneel mit seiner Dicke gezeichnet, die Pfosten werden geschnitten.
 Ein Typ mit <strong>Automatisch einbetten</strong> (die <strong>Ladenfront</strong>), entlang einer Wand gezeichnet,
 schneidet seine Öffnung in diese, im Grundriss, in Schnitten, in 3D und in IFC. Die Wand bleibt
@@ -1162,7 +1200,10 @@ ihren Platten und Gliedern.</p>
   Typenauswahl ändert seinen Typ.</li>
 </ul>
 <h2 id="stacked-walls">Gestapelte Wände</h2>
-<p><img alt="Eine ausgewählte gestapelte Wand mit ihren Eigenschaften" src="../assets/screens/stacked-wall.png"/></p>
+<figure>
+<img alt="Eine ausgewählte gestapelte Wand mit ihren Eigenschaften" src="../assets/screens/stacked-wall.png"/>
+<figcaption>Eine ausgewählte gestapelte Wand mit ihren Eigenschaften</figcaption>
+</figure>
 <p>Eine <strong>gestapelte Wand</strong> besteht aus Unterwänden übereinander: zum Beispiel eine verputzte Wand
 über einem Steinsockel. Jede Unterwand ist ein Basiswandtyp mit eigenen Schichten und Materialien.
 Die Vorlage enthält eine, <strong>Gestapelte Wand - Putz über Steinsockel</strong> (die Außenwand über einem
@@ -1188,7 +1229,10 @@ zerlegen</strong>, im Kontextmenü und bei ausgewählter Wand, macht jede Unterw
 Basiswand an ihrer Stelle; sie werden nicht wieder zusammengesetzt (Strg+Z macht es rückgängig). Die
 Kontur einer gestapelten Wand oder einer Unterwand lässt sich noch nicht bearbeiten.</p>
 <h3 id="the-sub-walls-of-the-type">Die Unterwände des Typs</h3>
-<p><img alt="Die Typ-Unterwände der gestapelten Wand der Vorlage" src="../assets/screens/stacked-wall-sub-walls.png"/></p>
+<figure>
+<img alt="Die Typ-Unterwände der gestapelten Wand der Vorlage" src="../assets/screens/stacked-wall-sub-walls.png"/>
+<figcaption>Die Typ-Unterwände der gestapelten Wand der Vorlage</figcaption>
+</figure>
 <p>Die <strong>Typparameter</strong> eines gestapelten Wandtyps zeigen <strong>Unterwände</strong> mit <strong>Bearbeiten…</strong>, das
 <strong>Typ-Unterwände</strong> öffnet. Oben stehen der Typ und drei Werte: die Anzahl der Unterwände, die Summe
 der festen Höhen und die größte Dicke. Die Tabelle führt die Unterwände von <strong>OBEN</strong> bis <strong>UNTEN</strong>
@@ -1228,6 +1272,10 @@ festgelegt wird. Die Ebene bleibt bei der Ansicht.</p>
 <p><strong>Erzeugen ▸ Arbeitsebene ▸ Festlegen</strong> öffnet das Fenster <strong>Arbeitsebene</strong>. <strong>Aktuelle
 Arbeitsebene</strong> zeigt die Ebene, die die Ansicht jetzt verwendet. Unter <strong>Neue Arbeitsebene
 angeben</strong>:</p>
+<figure>
+<img alt="Das Dialogfeld Arbeitsebene: die aktuelle Arbeitsebene und eine neue nach Name, durch Wahl einer Ebene oder einer Linie" src="../assets/screens/wa-workplane.webp"/>
+<figcaption>Arbeitsebene</figcaption>
+</figure>
 <ul>
 <li><strong>Name</strong>: eine Ebene, ein Raster oder eine benannte Referenzebene in der Liste wählen (das
   wählt <strong>Name</strong> aus), dann <strong>OK</strong>;</li>

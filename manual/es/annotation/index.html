@@ -597,6 +597,10 @@ todas las cotas de ese tipo.</p>
   <strong>Huecos</strong> con sus <strong>Centros</strong> o ambas <strong>Anchuras</strong>, <strong>Muros que se cortan</strong> y <strong>Rejillas que se cortan</strong>. Una
   rejilla que cae en el extremo de un muro no añade línea de referencia.</li>
 </ul>
+<figure>
+<img alt="Tres pasos de una cota alineada en la planta baja: el primer muro elegido y el cursor sobre el tabique, la cota que sigue al cursor, la cota de 6000 colocada" src="../assets/screens/an-aligned.webp"/>
+<figcaption>Alineada: dos referencias y luego la posición de la línea</figcaption>
+</figure>
 <p><strong>Lineal</strong> mide en horizontal o en vertical de la vista, entre puntos como los extremos de un muro: el lugar donde
 se coloca la línea decide cuál, y la <strong>barra espaciadora</strong> alterna entre las dos.</p>
 <p><strong>Angular</strong> mide el ángulo entre dos muros, rejillas o líneas que se encuentran; varias líneas por el mismo punto dan una cadena de ángulos, cada uno con su valor; el último clic elige el sector.
@@ -619,6 +623,10 @@ se coloca la línea decide cuál, y la <strong>barra espaciadora</strong> altern
   Intro, y el elemento se mueve: un muro, una rejilla, una puerta o
   una ventana (a lo largo de su muro) o una línea de detalle.</li>
 </ul>
+<figure>
+<img alt="El cuadro Texto de cota: Usar valor real o Sustituir por texto, y los campos de texto encima, prefijo, sufijo y debajo" src="../assets/screens/an-dim-text.webp"/>
+<figcaption>Texto de cota</figcaption>
+</figure>
 <p>El tipo define la marca (diagonal, flecha rellena o punto), las extensiones de la línea de cota y de las líneas de
 referencia (<strong>Control de línea de referencia</strong>: una separación respecto al elemento, o <strong>Fijo a línea de cota</strong> con su
 <strong>Longitud de línea de referencia</strong>), la <strong>Distancia de forzado de línea de cota</strong> (al colocarla, la
@@ -648,6 +656,10 @@ separación de habitación y líneas de detalle. Aparecen para cada categoría e
 se dibuja el elemento: plantas, secciones, alzados y vistas 3D, donde quedan sobre el nivel del
 elemento. Un nivel seleccionado muestra, en una sección o un alzado, sus distancias a los niveles
 de encima y de debajo.</p>
+<figure>
+<img alt="El tabique entre los locales seleccionado en planta: cotas temporales a los muros más cercanos a cada lado, cada una con el símbolo que la hace permanente, y los controles del muro" src="../assets/screens/an-tempdims.webp"/>
+<figcaption>Cotas temporales de un muro seleccionado</figcaption>
+</figure>
 <p>Haga clic en un valor, escriba uno nuevo y pulse Intro para mover el elemento: una longitud puede
 llevar su propia unidad (<code>2.5 m</code>), y una fórmula empieza por <code>=</code> (<code>=8000/2</code>). Haga clic en el
 símbolo de cota de al lado para hacerla permanente.</p>
@@ -670,12 +682,20 @@ angular, y un ángulo escrito gira la selección.</p>
 todas las cotas temporales, para la aplicación: de 8 a 20 pt (8 al principio), sobre un fondo
 transparente u opaco. Junto a los ajustes, una vista previa muestra tres muros acotados como se ha elegido;
 el interruptor <strong>Vista previa</strong> del encabezado la oculta, el cuadro conserva su tamaño, y la elección se conserva.</p>
+<figure>
+<img alt="El cuadro Cotas temporales: desde dónde se miden muros, puertas y ventanas, el aspecto y el tamaño del texto, y la vista previa con tres muros" src="../assets/screens/an-tempdim-settings.webp"/>
+<figcaption>Ajustes de las cotas temporales</figcaption>
+</figure>
 <h3 id="constraints">Restricciones</h3>
 <p>Seleccione una cota: se muestra un candado en cada segmento. Haga clic en él para bloquear el segmento: la distancia
 se mantiene entonces cuando se mueve cualquiera de los elementos, y se rechaza un movimiento que la rompería. Haga
 clic de nuevo, o clic derecho en él ▸ <strong>Activar/desactivar bloqueo</strong>, para desbloquear; clic derecho ▸ <strong>Mostrar relacionados</strong> selecciona los dos elementos que une el bloqueo. Una cadena de dos segmentos o más
 muestra <strong>EQ</strong>: haga clic en ella y las referencias quedan equidistantes, y siguen así cuando una de ellas se mueve.
 <strong>Visualización de igualdad</strong> en las propiedades muestra los valores en lugar de <strong>EQ</strong>.</p>
+<figure>
+<img alt="Una cadena de cotas seleccionada junto al muro este: un candado en cada segmento, uno cerrado, y el símbolo EQ" src="../assets/screens/an-constraints.webp"/>
+<figcaption>Candados y EQ en una cota seleccionada</figcaption>
+</figure>
 <p>Al seleccionar un elemento que mantiene una restricción, esta se muestra como líneas azules discontinuas, salvo que
 la categoría <strong>Restricciones</strong> esté oculta en <strong>Visibilidad y gráficos</strong>. Eliminar una cota que mantiene una
 restricción pregunta qué hacer: <strong>Aceptar</strong> elimina la cota y conserva la restricción; <strong>Eliminar elementos</strong>
@@ -688,6 +708,10 @@ elimina ambas. <strong>Alinear</strong> de Modificar con su candado cerrado tamb
 <li><strong>Pendiente de punto</strong>: la pendiente de un faldón de cubierta en una planta, o de una línea inclinada en una
   sección, con una flecha que apunta hacia abajo.</li>
 </ul>
+<figure>
+<img alt="La sección A con dos cotas de elevación en el muro este, con directriz y hombro: 0.00 en la planta baja y +3.00 en la planta primera" src="../assets/screens/an-spot.webp"/>
+<figcaption>Cotas de elevación en una sección</figcaption>
+</figure>
 <p>La franja de opciones ofrece <strong>Directriz</strong> y, con directriz, <strong>Codo</strong>: sin directriz un clic coloca la cota de punto;
 con directriz, haga clic en el punto y luego en el texto; con codo, en el punto, el quiebro y el texto. Mientras
 pasa el cursor, el valor se muestra junto a él. Para las cotas de elevación de punto ofrece además <strong>Base relativa:</strong> (para un tipo cuyo
@@ -728,11 +752,19 @@ palabras. Sus propiedades incluyen <strong>Directrices de arco</strong>, <strong
 desfase, la punta de flecha de la directriz, el <strong>Grosor de línea</strong> del borde y de las directrices, el tamaño, el
 <strong>Tamaño de tabulación</strong> (12,7 mm), la negrita, la cursiva y el subrayado. El botón pequeño <strong>Tipos de texto</strong> del grupo
 <strong>Texto</strong> abre <strong>Parámetros de tipo</strong>, donde <strong>Duplicar…</strong> crea un nuevo tipo de texto.</p>
+<figure>
+<img alt="Una nota de texto con directriz hacia el muro exterior, seleccionada: la cruz que la mueve, los controles redondos del ancho, el control de giro y el pinzamiento en medio de la directriz" src="../assets/screens/an-text.webp"/>
+<figcaption>Una nota seleccionada con su directriz y sus controles</figcaption>
+</figure>
 <p><strong>Documentar ▸ Texto ▸ Buscar/Reemplazar</strong> busca palabras en las notas de la selección actual, de la vista actual o de
 todo el proyecto (<strong>Ámbito:</strong>), con opciones para mayúsculas y palabras completas. <strong>Buscar todo</strong> lista las
 coincidencias con la vista en la que están; <strong>Buscar siguiente</strong>, o un clic en una fila, selecciona esa nota y
 muestra su texto completo en <strong>Contexto</strong>. <strong>Reemplazar</strong> cambia la coincidencia resaltada (la primera si no hay ninguna), <strong>Reemplazar todo</strong> todas, y <strong>Cerrar</strong>
 cierra el cuadro de diálogo. En las notas seleccionadas también está en <strong>Herramientas</strong> de su tarjeta.</p>
+<figure>
+<img alt="El cuadro Buscar/Reemplazar tras Buscar todo: la palabra buscada, el ámbito Vista actual y la coincidencia encontrada con su vista" src="../assets/screens/an-find-replace.webp"/>
+<figcaption>Buscar/Reemplazar</figcaption>
+</figure>
 <h2 id="symbols">Símbolos</h2>
 <p><strong>Documentar ▸ Símbolo ▸ Símbolo</strong> (<code>SY</code>) coloca un símbolo de anotación 2D en una planta, una sección, una vista 2D
 libre o una leyenda: una <strong>Flecha norte</strong>, un <strong>Símbolo de eje</strong>, una <strong>Flecha de flujo</strong>, una <strong>Diana</strong> o un
@@ -747,9 +779,17 @@ muro, habitación o área) y haga clic para etiquetarlo. La franja de opciones d
 la <strong>Directriz</strong> y su longitud; la <strong>barra espaciadora</strong> alterna la orientación, al colocar o en una etiqueta
 seleccionada. Las herramientas de puerta y ventana tienen <strong>Etiquetar al colocar</strong>, de modo que cada nueva puerta
 o ventana llega con su etiqueta.</p>
+<figure>
+<img alt="Dos pasos de Etiquetar por categoría: la ventana del muro este resaltada con la vista previa de la etiqueta, luego la etiqueta colocada con la marca de la ventana" src="../assets/screens/an-tags.webp"/>
+<figcaption>Etiquetar por categoría: la vista previa y luego la etiqueta</figcaption>
+</figure>
 <p><strong>Etiquetar todo</strong> abre <strong>Etiquetar todos los no etiquetados</strong>: marque las categorías, el tipo de etiqueta de cada
 una, la directriz y la orientación, para todos los elementos de la vista o solo los seleccionados; solo los
 elementos sin etiqueta reciben una.</p>
+<figure>
+<img alt="El cuadro para etiquetar los elementos sin etiqueta: todos los objetos de la vista o solo los seleccionados, las categorías con sus tipos de etiqueta, la directriz con su longitud y la orientación" src="../assets/screens/an-tag-all.webp"/>
+<figcaption>Etiquetar todo</figcaption>
+</figure>
 <p>Con directriz, <strong>Extremo fijado</strong> la termina en el elemento; <strong>Extremo libre</strong> la termina donde se hizo clic, y una
 etiqueta seleccionada muestra un tirador para arrastrar ese extremo a cualquier sitio (<strong>Extremo de directriz</strong> en
 las propiedades alterna entre los dos). Una etiqueta se alinea con las demás etiquetas de
@@ -774,6 +814,10 @@ separadores de espacios: la habitación la rellena, también alrededor de muros 
 <li><strong>Resaltar contornos</strong>: los muros y separadores que delimitan habitaciones se vuelven naranjas, y el aviso los
   lista.</li>
 </ul>
+<figure>
+<img alt="Dos pasos de la herramienta Espacio: la región que llenaría el local resaltada bajo el cursor, luego el local colocado, coloreado por el esquema de color, con su etiqueta" src="../assets/screens/an-room.webp"/>
+<figcaption>Espacio: la región que llena y luego el local con su etiqueta</figcaption>
+</figure>
 <p>Una habitación colocada en un espacio abierto se conserva con un aviso y toma su forma cuando el espacio se cierra;
 una segunda habitación en una región ya ocupada se marca como <strong>Habitación redundante</strong> y no se cuenta dos veces. También se avisa de un número que otra habitación ya tiene, de una habitación más baja que la
 altura de cálculo (1200 mm), de una base por encima de ella y de un separador de espacios dibujado sobre otro.</p>
@@ -813,9 +857,17 @@ desactiva. <strong>Configuración ▸ Esquemas de color</strong> (<strong>Editar
 título, el parámetro, los valores con su color y visibilidad, su orden y los rangos. <strong>Aplicar</strong> conserva los cambios y asigna el esquema a la vista con el cuadro de diálogo abierto. <strong>Ubicación de la combinación
 de colores</strong>, una propiedad de la vista, dibuja los rellenos en el <strong>Fondo</strong> (bajo el modelo) o en el <strong>Primer
 plano</strong> (sobre el modelo, bajo las anotaciones).</p>
+<figure>
+<img alt="El cuadro Editar esquema de color: los esquemas de la categoría Habitaciones y la definición del esquema del ejemplo por nombre, cada valor con su visibilidad, color y uso" src="../assets/screens/an-color-scheme.webp"/>
+<figcaption>Editar esquema de color</figcaption>
+</figure>
 <p><strong>Espacios y superficies ▸ Leyenda</strong> coloca la leyenda del esquema de la planta: una muestra y una etiqueta para cada
 valor. Sus <strong>Valores mostrados</strong> son <strong>Según la vista</strong> (los de la planta) o <strong>Todo</strong>, y <strong>Columnas</strong> reparte las
 muestras en varias columnas. Una planta puede tener varias leyendas; eliminar una deja el esquema.</p>
+<figure>
+<img alt="La planta baja con los locales coloreados por nombre y, al lado, la leyenda del esquema de color con una muestra por valor" src="../assets/screens/an-color-legend.webp"/>
+<figcaption>Los locales en colores y la leyenda</figcaption>
+</figure>
 <h2 id="legend-views">Vistas de leyenda</h2>
 <p><strong>Vistas ▸ Crear ▸ Leyendas ▸ Leyenda</strong> abre <strong>Nueva vista de leyenda</strong>: un nombre y una escala. La leyenda se abre y se
 lista en <strong>Leyendas</strong> en el Índice del proyecto. <strong>Documentar ▸ Componente ▸ Componente de leyenda</strong> coloca el
@@ -825,6 +877,10 @@ un suelo o cubierta en sección o planta; una puerta, ventana o componente en pl
 dibujan con el <strong>Detalle</strong> de la leyenda, se pueden mover y acotar (los bordes de puertas, ventanas y
 componentes; los muros, suelos y cubiertas no) y las tablas de planificación no los cuentan. Texto, líneas de
 detalle y regiones funcionan como en una vista 2D libre. Una leyenda puede colocarse en varias hojas.</p>
+<figure>
+<img alt="Una vista de leyenda con componentes de leyenda: una puerta y una ventana vistas de frente, un muro en sección, y la misma puerta y ventana en planta" src="../assets/screens/an-legend-view.webp"/>
+<figcaption>Una vista de leyenda</figcaption>
+</figure>
 <p>Un tipo arrastrado desde <strong>Familias</strong> en el Índice del proyecto hasta una leyenda se convierte en su componente de
 leyenda donde se suelta; un tipo de <strong>Familias ▸ Símbolos</strong> coloca ese símbolo de anotación. <strong>Crear igual</strong>, en el menú contextual de un elemento seleccionado, inicia la herramienta
 que lo coloca con su tipo: para un componente de leyenda, también con su vista y su longitud de anfitrión.</p>
@@ -833,6 +889,10 @@ que lo coloca con su tipo: para un componente de leyenda, también con su vista 
 grupo <strong>Estilo de línea</strong>. El grupo <strong>Dibujar</strong> ofrece <strong>Línea</strong>, <strong>Rectángulo</strong>, <strong>Polígono inscrito</strong>,
 <strong>Polígono circunscrito</strong>, <strong>Círculo</strong>, <strong>Arco inicio-fin-radio</strong>, <strong>Arco por centro y extremos</strong>, <strong>Arco tangente</strong>,
 <strong>Spline</strong>, <strong>Elipse</strong>, <strong>Elipse parcial</strong> y <strong>Arco de empalme</strong>. La franja de opciones muestra lo que admite cada forma:</p>
+<figure>
+<img alt="El grupo Dibujar de la herramienta Línea de detalle: Línea, Rectángulo, Polígono inscrito, Polígono circunscrito, Círculo y los arcos" src="../assets/screens/an-detail-line.webp"/>
+<figcaption>El grupo Dibujar</figcaption>
+</figure>
 <table>
 <thead>
 <tr>
@@ -883,6 +943,10 @@ nuevo su boceto. El tipo define su patrón de relleno, su color y su fondo (<str
 hay detrás). <strong>Región rellenada ▸ Región de máscara</strong> crea una región del color del papel que oculta lo que hay debajo. Una
 región muestra su <strong>Área</strong> y tiene <strong>Comentarios</strong>. Una región seleccionada tiene un tirador en cada vértice:
 arrastre uno para cambiar su forma.</p>
+<figure>
+<img alt="Detalles 2D en la planta baja: una región rellena con trama cruzada y otra sólida, una línea de detalle gruesa, un círculo discontinuo y una región de máscara que oculta parte de un local" src="../assets/screens/an-detail.webp"/>
+<figcaption>Regiones rellenas, líneas de detalle y una región de máscara</figcaption>
+</figure>
 <h2 id="detail-components-repeating-details-and-insulation">Componentes de detalle, detalles repetidos y aislamiento</h2>
 <ul>
 <li><strong>Componente ▸ Componente de detalle</strong>: un símbolo 2D (ladrillo, bloque, madera, perfil de acero, panel
@@ -897,6 +961,10 @@ arrastre uno para cambiar su forma.</p>
   o en un muro lo dibuja a lo largo de esa línea. La anchura del aislamiento y la relación de abombamiento en sus
   propiedades. Un aislamiento seleccionado, y un detalle repetido seleccionado, tienen un tirador en cada extremo.</li>
 </ul>
+<figure>
+<img alt="La vista 2D libre del ejemplo con el pie del muro exterior: bloques de ladrillo repetidos, aislamiento, la región rellena de la losa, líneas de corte y notas de texto, con una línea de corte seleccionada" src="../assets/screens/an-drafting.webp"/>
+<figcaption>Un detalle de muro en una vista 2D libre</figcaption>
+</figure>
 <h2 id="draw-order">Orden de dibujo</h2>
 <p>Seleccione solo elementos de detalle: <strong>Organizar</strong> ofrece <strong>Traer al frente</strong>, <strong>Traer adelante</strong>, <strong>Enviar al
 fondo</strong> y <strong>Enviar atrás</strong>. Los elementos de detalle siempre se dibujan sobre el modelo, y uno nuevo queda encima.

@@ -776,6 +776,10 @@ Choisissez le type de mur dans le sélecteur de type en haut du panneau de l'él
 </tr>
 </tbody>
 </table>
+<figure>
+<img alt="La bande des options de l'outil mur : Hauteur, le niveau supérieur, la hauteur non liée, Alignement et les autres options" src="../assets/screens/wa-options.webp"/>
+<figcaption>La bande des options de l'outil mur</figcaption>
+</figure>
 <p>Dans la vue 3D, le mur en cours de dessin suit le curseur sous forme de solide, avec son épaisseur et sa hauteur jusqu'au niveau supérieur (ou la hauteur saisie), sur le plan du niveau, avec sa longueur et son angle en cote temporaire ; <strong>Maj</strong> le garde orthogonal et <strong>Échap</strong> le retire. <strong>Rectangle</strong>, les polygones et <strong>Choisir des lignes</strong> y fonctionnent aussi : les murs de toute la forme suivent le curseur, et la ligne du niveau sous le curseur se choisit comme en plan.</p>
 <p>Pendant le dessin :</p>
 <ul>
@@ -788,6 +792,10 @@ Choisissez le type de mur dans le sélecteur de type en haut du panneau de l'él
   acceptent de même une longueur tapée) ;</li>
 <li><strong>Échap</strong> termine la chaîne ; encore <strong>Échap</strong>, ou <strong>Modifier</strong>, ferme l'outil.</li>
 </ul>
+<figure>
+<img alt="Trois étapes de l'outil mur à côté de la maison : le premier mur qui suit le curseur avec sa longueur et son angle, le second depuis la fin du premier, les deux murs joints à l'angle" src="../assets/screens/wa-draw.webp"/>
+<figcaption>Dessiner une chaîne de murs</figcaption>
+</figure>
 <p>Le groupe <strong>Dessiner</strong> choisit la forme :</p>
 <table>
 <thead>
@@ -826,6 +834,10 @@ sa ligne d'alignement : la première et la dernière couche s'échangent, les po
 fenêtres gardent leur orientation. Changer l'<strong>Alignement</strong> d'un mur placé ne le
 déplace pas ; l'inversion suivante le tourne autour du nouveau plan. Changer le type d'un mur, ou
 ses couches, laisse sa ligne d'alignement où elle était.</p>
+<figure>
+<img alt="Le mur nord sélectionné : les points bleus aux extrémités de sa ligne d'alignement et les flèches d'inversion du côté extérieur" src="../assets/screens/wa-flip.webp"/>
+<figcaption>Un mur sélectionné : extrémités et flèches d'inversion</figcaption>
+</figure>
 <h2 id="attaching-walls-to-roofs-and-floors">Lier les murs aux toits et aux sols</h2>
 <p>Un mur peut suivre un toit ou un sol au lieu d'une hauteur fixe.</p>
 <ol>
@@ -912,7 +924,10 @@ la jonction</strong>, pour la joindre à nouveau.</p>
 dans l'arborescence du projet) montre les paramètres d'un type de mur ; une modification vaut pour
 tous les murs de ce type.</p>
 <h3 id="wall-type-parameters">Paramètres du type</h3>
-<p><img alt="Les Paramètres du type d'un type de mur, avec sa coupe" src="../assets/screens/wall-type-parameters.png"/></p>
+<figure>
+<img alt="Les Paramètres du type d'un type de mur, avec sa coupe" src="../assets/screens/wall-type-parameters.png"/>
+<figcaption>Les Paramètres du type d'un type de mur, avec sa coupe</figcaption>
+</figure>
 <p>En haut figurent la famille et le type et, pour un type à couches, les trois valeurs de <strong>Couches
 du type</strong> : <strong>Épaisseur totale</strong>, <strong>Résistance R</strong> et <strong>Masse surfacique</strong>. Dessous, <strong>Famille</strong>
 avec <strong>Charger…</strong> (une famille de la bibliothèque ; grisé pour les murs et les autres familles système,
@@ -957,6 +972,10 @@ sols, les toits et les plafonds. En haut se trouvent la famille et le type, et t
 surfacique</strong> (kg/m² : la somme épaisseur × masse volumique). R et la masse s'affichent quand chaque
 matériau a sa <strong>Conductivité thermique</strong> et sa <strong>Masse volumique</strong> (les matériaux du gabarit les
 ont, les autres se complètent dans <strong>Matériaux</strong>) ; sinon elles affichent «—».</p>
+<figure>
+<img alt="Couches du type du mur extérieur : les couches depuis l'extérieur avec fonction, matériau, épaisseur et retours, les limites du noyau, les valeurs de l'en-tête et l'aperçu en coupe" src="../assets/screens/wa-assembly.webp"/>
+<figcaption>Couches du type</figcaption>
+</figure>
 <p>À gauche se trouve la liste des couches, du <strong>CÔTÉ EXTÉRIEUR</strong> en haut au <strong>CÔTÉ INTÉRIEUR</strong> en
 bas. Chaque couche est une carte avec son numéro, un échantillon de son matériau (couleur et motif
 de coupe), sa <strong>Fonction</strong> (<strong>Structure</strong>, <strong>Support</strong>, <strong>Isolant thermique</strong>, <strong>Lame d'air</strong>,
@@ -1008,7 +1027,10 @@ fenêtres, les côtés des trous d'un contour modifié (voir
 <a href="#editing-a-walls-profile">Modifier le contour d'un mur</a>) et les extrémités libres. Un type de porte
 ou de fenêtre remplace le retournement du mur par sa <strong>Fermeture du mur</strong>.</p>
 <h2 id="wall-properties">Propriétés des murs</h2>
-<p><img alt="Un mur sélectionné, avec ses Propriétés" src="../assets/screens/wall-properties.png"/></p>
+<figure>
+<img alt="Un mur sélectionné, avec ses Propriétés" src="../assets/screens/wall-properties.png"/>
+<figcaption>Un mur sélectionné, avec ses Propriétés</figcaption>
+</figure>
 <p>Quand un mur est sélectionné, les <strong>Propriétés</strong> montrent en haut le sélecteur de type : l'image du
 type, sa famille et son nom. Un clic ouvre la liste des types groupés par famille (<strong>Mur de base</strong>,
 <strong>Mur-rideau</strong>), chacun avec une petite image — les couches d'un mur côte à côte dans les couleurs
@@ -1055,6 +1077,10 @@ temporaires mesurent depuis son axe jusqu'aux axes des murs les plus proches qui
 de chaque côté. Une porte s'ouvre du côté du mur où se trouve le curseur ; la <strong>barre d'espace</strong>
 met sa charnière sur l'autre tableau. Cliquez pour la placer : le mur est coupé dans chaque vue.
 Une fenêtre prend la <strong>Hauteur d'allège par défaut</strong> de son type.</p>
+<figure>
+<img alt="Deux étapes de l'outil porte sur la cloison : la porte qui suit le curseur le long du mur avec ses cotes temporaires, puis la porte posée et le mur coupé" src="../assets/screens/wa-door.webp"/>
+<figcaption>Une porte : le long du mur, puis posée</figcaption>
+</figure>
 <p>Les portes et les fenêtres reçoivent une <strong>Marque</strong> qui compte par catégorie (1, 2, 3…), à partir
 de la plus haute.</p>
 <h2 id="tags">Étiquettes</h2>
@@ -1068,6 +1094,10 @@ tout</strong> étiquette les ouvertures qui ne le sont pas encore.</p>
 s'ouvre, retournent son ouverture ; des flèches à côté, le long du mur, mettent sa charnière sur
 l'autre tableau. Le menu contextuel fait de même : <strong>Inverser le sens</strong> (la charnière) et
 <strong>Inverser l'orientation</strong> (l'ouverture).</p>
+<figure>
+<img alt="Une porte sélectionnée en plan avec ses contrôles : les flèches d'inversion à travers le mur et à côté, les cotes temporaires et les flèches de déplacement" src="../assets/screens/wa-door-flip.webp"/>
+<figcaption>Une porte sélectionnée et ses flèches d'inversion</figcaption>
+</figure>
 <h2 id="moving-a-door-or-window-to-another-wall">Déplacer une porte ou une fenêtre dans un autre mur</h2>
 <p>Sélectionnez-la, <strong>Sélection : portes ▸ Hôte ▸ Choisir un nouvel hôte</strong> (ou <strong>Sélection : fenêtres</strong>),
 puis cliquez un autre mur : l'ouverture s'y déplace, à l'endroit cliqué, avec son type et son
@@ -1077,6 +1107,10 @@ allège. Elle reste sélectionnée.</p>
 <p>Occurrence : <strong>Niveau</strong>, <strong>Hauteur d'allège</strong>, <strong>Largeur</strong> et <strong>Hauteur</strong> (du type), <strong>Hauteur de
 linteau</strong>, <strong>Commentaires</strong>, <strong>Marque</strong>. Changer <strong>Hauteur d'allège</strong> ou <strong>Hauteur de linteau</strong>
 déplace l'ouverture vers le haut ou vers le bas ; sa taille reste.</p>
+<figure>
+<img alt="Le panneau de l'élément d'une porte : son type, le mur hôte, la position le long du mur, la hauteur d'allège, la largeur et la hauteur" src="../assets/screens/wa-door-props.webp"/>
+<figcaption>Les propriétés d'une porte</figcaption>
+</figure>
 <p>Type : <strong>Fermeture du mur</strong> (<strong>Par hôte</strong>, ou un retournement propre), <strong>Fonction</strong> (<strong>Intérieur</strong>
 ou <strong>Extérieur</strong>), <strong>Matériau de la porte</strong> (<strong>Matériau du vitrage</strong> pour les fenêtres) et
 <strong>Matériau du cadre</strong>, <strong>Largeur de l'habillage</strong>, <strong>Épaisseur</strong> (du vantail d'une porte, ou la
@@ -1127,6 +1161,10 @@ type, puis dessinez comme tout mur, en plan ou en 3D, avec <strong>Continuer</st
 <strong>Dessiner</strong>. Un mur de base devient mur-rideau en choisissant un type de mur-rideau dans le
 sélecteur de type ; les portes et fenêtres qu'il accueille sont supprimées, car un mur-rideau ne
 les accueille pas, et un message l'indique (annuler les ramène).</p>
+<figure>
+<img alt="L'élévation sud de la maison d'exemple : à droite la vitrine incorporée dans le mur extérieur, avec ses lignes de quadrillage et ses meneaux" src="../assets/screens/wa-curtain.webp"/>
+<figcaption>Une vitrine dans l'élévation sud</figcaption>
+</figure>
 <p>En plan, chaque panneau de verre est dessiné avec son épaisseur et les meneaux sont coupés. Un type
 avec <strong>Incorporer automatiquement</strong> coché (la <strong>Devanture</strong>) dessiné le long d'un mur y découpe son
 ouverture, en plan, en coupe, en 3D et en IFC. Le mur reste un seul mur : à côté et au-dessus de
@@ -1163,7 +1201,10 @@ et ses éléments.</p>
   sélecteur de type en change le type.</li>
 </ul>
 <h2 id="stacked-walls">Murs empilés</h2>
-<p><img alt="Un mur empilé sélectionné, avec ses Propriétés" src="../assets/screens/stacked-wall.png"/></p>
+<figure>
+<img alt="Un mur empilé sélectionné, avec ses Propriétés" src="../assets/screens/stacked-wall.png"/>
+<figcaption>Un mur empilé sélectionné, avec ses Propriétés</figcaption>
+</figure>
 <p>Un <strong>mur empilé</strong> est fait de sous-murs l'un au-dessus de l'autre : par exemple un mur enduit sur
 un soubassement en pierre. Chaque sous-mur est un type de mur de base, avec ses couches et ses
 matériaux. Le gabarit en a un, <strong>Mur empilé - Enduit sur soubassement en pierre</strong> (le mur
@@ -1188,7 +1229,10 @@ avec le mur sélectionné, fait de chaque sous-mur un mur de base indépendant �
 recomposent pas (Ctrl+Z annule). Le contour d'un mur empilé ou d'un sous-mur ne se modifie pas
 encore.</p>
 <h3 id="the-sub-walls-of-the-type">Les sous-murs du type</h3>
-<p><img alt="Les Sous-murs du type du mur empilé du gabarit" src="../assets/screens/stacked-wall-sub-walls.png"/></p>
+<figure>
+<img alt="Les Sous-murs du type du mur empilé du gabarit" src="../assets/screens/stacked-wall-sub-walls.png"/>
+<figcaption>Les Sous-murs du type du mur empilé du gabarit</figcaption>
+</figure>
 <p>Les <strong>Paramètres du type</strong> d'un type de mur empilé montrent <strong>Sous-murs</strong> avec <strong>Modifier…</strong>, qui
 ouvre <strong>Sous-murs du type</strong>. En haut, le type et trois valeurs : le nombre de sous-murs, la somme
 des hauteurs fixes et l'épaisseur maximale. Le tableau liste les sous-murs de <strong>EN HAUT</strong> à <strong>EN
@@ -1227,6 +1271,10 @@ définit pas un. Le plan reste avec la vue.</p>
 <p><strong>Créer ▸ Plan de construction ▸ Définir</strong> ouvre la fenêtre <strong>Plan de construction</strong>. <strong>Plan de
 construction courant</strong> montre le plan que la vue utilise. Sous <strong>Spécifier un nouveau plan de
 construction</strong> :</p>
+<figure>
+<img alt="La boîte Plan de construction : le plan courant, et un nouveau par nom, en choisissant un plan ou une ligne" src="../assets/screens/wa-workplane.webp"/>
+<figcaption>Plan de construction</figcaption>
+</figure>
 <ul>
 <li><strong>Nom</strong> : choisir dans la liste un niveau, une grille ou un plan de référence nommé (le choisir
   sélectionne <strong>Nom</strong>), puis <strong>OK</strong> ;</li>

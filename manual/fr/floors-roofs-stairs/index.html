@@ -596,6 +596,10 @@ du garde-corps</strong>) et contient :</p>
 <li>le groupe <strong>Dessiner</strong>, avec les outils de dessin de l'élément ;</li>
 <li>pour les escaliers et les garde-corps, le groupe <strong>Outils</strong>.</li>
 </ul>
+<figure>
+<img alt="La fenêtre de BIMopen en mode esquisse d'un sol : la carte contextuelle avec ses groupes Mode et Dessiner en haut du panneau d'outils, la bande des options au-dessus de la vue et les lignes d'esquisse magenta le long des murs" src="../assets/screens/fr-sketch-mode.webp"/>
+<figcaption>Mode esquisse : la carte contextuelle et les lignes magenta</figcaption>
+</figure>
 <p>Rien n'est créé pendant l'esquisse : les lignes sont magenta, et le modèle ne change qu'avec
 <strong>Terminer le mode d'édition</strong>. L'élément entier est alors une seule étape de l'historique : un
 <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span> le retire.</p>
@@ -685,6 +689,10 @@ l'élément (le dessus du sol, la base du toit) et la vue 3D reste ouverte.</p>
    une ouverture.</li>
 <li>Cliquez sur <strong>Terminer le mode d'édition</strong>.</li>
 </ol>
+<figure>
+<img alt="Trois étapes d'un sol par Choisir des murs : TAB sur un mur met en surbrillance toute la chaîne, un clic donne les lignes d'esquisse sur les faces intérieures, Terminer le mode d'édition crée le sol" src="../assets/screens/fr-floor.webp"/>
+<figcaption>Un sol : TAB sur les murs, clic, Terminer le mode d'édition</figcaption>
+</figure>
 <p>Dans le bandeau des options, <strong>Prolonger dans le mur (jusqu'au noyau)</strong> porte les lignes choisies
 dans le mur jusqu'à la face de son noyau, et <strong>Décalage</strong> les déplace (un décalage négatif les
 éloigne des murs). Le type du nouveau sol est celui du sélecteur de type en haut de <strong>Propriétés</strong>.</p>
@@ -735,6 +743,10 @@ continue au-dessus, et les murs passent dans les ouvertures du sol.</p>
 </tr>
 </tbody>
 </table>
+<figure>
+<img alt="Le panneau de l'élément du nouveau sol : son type, Paramètres du type et les propriétés Niveau, Décalage de hauteur, Angle de pente, Épaisseur, Périmètre et Surface" src="../assets/screens/fr-floor-props.webp"/>
+<figcaption>Les propriétés d'un sol</figcaption>
+</figure>
 <p><strong>Paramètres du type</strong> contient la <strong>Structure</strong> du sol (ses couches) et son épaisseur par défaut.</p>
 <h2 id="roofs">Toits</h2>
 <ol>
@@ -748,6 +760,10 @@ continue au-dessus, et les murs passent dans les ouvertures du sol.</p>
    ouverture.</li>
 <li>Cliquez sur <strong>Terminer le mode d'édition</strong>.</li>
 </ol>
+<figure>
+<img alt="Deux étapes d'un toit sur les murs de l'étage : l'emprise esquissée sur les faces extérieures avec le débord, chaque ligne avec sa pente de 30°, puis le toit en croupe avec son faîtage et ses arêtiers en plan" src="../assets/screens/fr-roof.webp"/>
+<figcaption>Un toit : l'emprise, puis le toit</figcaption>
+</figure>
 <p>Chaque ligne avec <strong>Définit l'inclinaison</strong> monte vers l'intérieur selon sa <strong>Pente</strong> (30° par
 défaut) ; un petit triangle avec la pente est dessiné à côté. La forme vient de ces lignes :</p>
 <ul>
@@ -757,6 +773,10 @@ défaut) ; un petit triangle avec la pente est dessiné à côté. La forme vien
 <li>aucune ligne ne définit l'inclinaison : un toit <strong>plat</strong>, ou un toit incliné le long d'une
   <strong>Flèche d'inclinaison</strong> (aucune ligne ne peut alors définir d'inclinaison).</li>
 </ul>
+<figure>
+<img alt="La maison d'exemple en 3D avec trois toits sur les mêmes murs : en croupe, à deux pans avec les murs montant jusqu'au faîtage, et plat" src="../assets/screens/fr-roof-shapes.webp"/>
+<figcaption>En croupe, à deux pans et plat</figcaption>
+</figure>
 <p>Pour changer une ligne, appuyez deux fois sur <span class="keys"><kbd class="key-escape">Esc</kbd></span>, cliquez la ligne et changez dans
 <strong>Propriétés</strong> <strong>Définit l'inclinaison du toit</strong>, <strong>Pente</strong> ou (lignes prises sur des murs)
 <strong>Débord</strong>.</p>
@@ -803,6 +823,10 @@ et ses couches.</p>
    volées, son angle extérieur là où leurs côtés extérieurs se rencontrent.</li>
 <li>Quand toutes les contremarches sont placées, cliquez sur <strong>Terminer le mode d'édition</strong>.</li>
 </ol>
+<figure>
+<img alt="Trois étapes d'un escalier en U : la première volée avec 9 contremarches créées et 8 restantes, la seconde avec les 17, l'escalier créé, sa volée supérieure au-delà de la ligne de coupe" src="../assets/screens/fr-stair.webp"/>
+<figcaption>Un escalier par volées : le compte des contremarches faites et restantes</figcaption>
+</figure>
 <p>Des lignes guides en pointillé montrent où la volée suivante peut commencer : le prolongement de la dernière volée au-delà de sa fin et les lignes de sa première et de sa dernière contremarche. Un clic à proximité s'y accroche. Dans une vue 3D, l'escalier se dessine de la même façon, sur le plan du niveau actif.</p>
 <p>Une volée courbe (un escalier hélicoïdal) : avec <strong>Volée</strong> active, cliquez sur <strong>Arc par centre et extrémités</strong>, puis sur le centre, le début de la ligne de volée (sa distance au centre est le rayon de la ligne de foulée) et la fin, en dépassant le demi-tour si besoin, mais sans faire un tour complet (au-delà, la volée s'arrête avant et la barre d'état avertit que les volées se chevaucheraient). Les contremarches rayonnent depuis le centre, à un giron l'une de l'autre sur la ligne de volée ; des lignes de contremarche dessinées en rayons depuis un centre font aussi une volée courbe. Une seconde volée courbe autour du même centre et sur la même ligne de volée (un clic à proximité les reprend) est reliée à la première par un palier en arc.</p>
 <p>Un escalier peut aussi se dessiner par ses lignes. Dans son esquisse, cliquez sur <strong>Dessiner ▸ Contour</strong> et dessinez les bords gauche et droit (verts), puis sur <strong>Contremarche</strong> et dessinez les lignes de contremarche (noires) entre eux, avec <strong>Ligne</strong> ou <strong>Choisir des lignes</strong>. Des contremarches parallèles et régulièrement espacées forment une volée, aussi large que les contremarches ; un palier relie deux volées jusqu'aux lignes de contour. Chaque contremarche est aussi haute que l'étage divisé par le nombre de contremarches souhaité ; avec moins de lignes de contremarche, l'escalier s'arrête sous le niveau supérieur (<strong>Propriétés</strong> montre le nombre réel). <strong>Modifier l'esquisse</strong> rend les mêmes lignes. Chaque volée dessinée avec <strong>Volée</strong> devient aussitôt des lignes de contour et de contremarche comme celles-ci : on peut les déplacer ou les supprimer comme les autres. Un palier suit ses lignes de contour : scindez son bord extérieur avec <strong>Scinder l'élément</strong> et faites glisser un morceau pour l'échancrer, ou dessinez-le plus large que les volées.</p>
@@ -817,6 +841,10 @@ suivent. <strong>Niveau supérieur multiétage</strong> répète l'escalier, ave
 <p>En plan, l'escalier montre ses girons jusqu'à la ligne de coupe, la ligne de rupture, la flèche et
 le texte <strong>MONTE</strong>/<strong>DESCEND</strong> ; en 3D ses marches et contremarches, ou une dalle monolithique, ses
 paliers et ses garde-corps.</p>
+<figure>
+<img alt="L'escalier de l'exemple dans le plan du rez-de-chaussée : les marches jusqu'à la ligne de coupe, la ligne de coupure, la flèche et le texte MONTE" src="../assets/screens/fr-stair-plan.webp"/>
+<figcaption>Un escalier en plan</figcaption>
+</figure>
 <h3 id="how-a-stair-is-built">Comment un escalier est construit</h3>
 <p>Les <strong>Paramètres du type</strong> de l'escalier décident de sa construction :</p>
 <ul>
@@ -841,6 +869,10 @@ paliers et ses garde-corps.</p>
   colorent les parties ; <strong>Symbole de rupture en plan</strong> et <strong>Taille du texte</strong> règlent le symbole en
   plan.</li>
 </ul>
+<figure>
+<img alt="Paramètres du type de l'escalier monolithique en béton armé de l'exemple : construction, graphisme, règles de calcul et matériaux" src="../assets/screens/fr-stair-type.webp"/>
+<figcaption>Les paramètres du type d'un escalier</figcaption>
+</figure>
 <p>Le palier s'arrête derrière la dernière contremarche de la volée qui y arrive, en suivant sa face arrière ; dans un escalier monolithique il commence à la face de la contremarche. Dans un escalier monolithique dont le plancher supérieur a son bord sur la dernière contremarche, la sous-face de la volée continue sous ce plancher jusqu'à rencontrer sa sous-face, comme sous un palier.</p>
 <p>Une coupe à travers l'escalier le montre coupé avec sa dalle. <strong>Volume</strong> dans <strong>Propriétés</strong> et
 dans la nomenclature des escaliers est le volume de ses solides.</p>
@@ -891,6 +923,10 @@ marche ; et les <strong>Poteaux</strong> de départ, d'angle et de fin (le potea
 modifications de ces deux fenêtres s'appliquent avec <strong>OK</strong> et s'annulent d'un seul <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span>. Les
 lignes <strong>Lisse supérieure</strong>, <strong>Main courante 1</strong> et <strong>Main courante 2</strong> sont grisées : pas encore
 disponibles.</p>
+<figure>
+<img alt="Paramètres du type d'un garde-corps : hauteur, structure des lisses et placement des barreaux avec Modifier…, espacement, raccords et la prévisualisation du garde-corps sur un escalier d'essai" src="../assets/screens/fr-railing-type.webp"/>
+<figcaption>Les paramètres du type d'un garde-corps, avec l'aperçu</figcaption>
+</figure>
 <p>Les garde-corps d'un escalier continuent sur ses paliers en une seule lisse, à leur hauteur
 au-dessus de la ligne des nez de marche et au-dessus des paliers. Là où une volée part d'un palier
 une contremarche plus haut, les <strong>Joints tangents</strong> (la lisse continue tout droit) et les
@@ -917,8 +953,16 @@ jamais plus que l'espacement.</p>
 <li>Appuyez sur la <span class="keys"><kbd class="key-space">Space</kbd></span> pour tourner l'aperçu de 90°.</li>
 <li>Cliquez pour placer le composant sur le niveau du plan.</li>
 </ol>
+<figure>
+<img alt="L'outil composant dans une chambre du plan : l'aperçu du composant qui suit le curseur, avec les cotes temporaires vers les murs les plus proches" src="../assets/screens/fr-component.webp"/>
+<figcaption>Un composant suit le curseur avant le clic</figcaption>
+</figure>
 <p><strong>Mode ▸ Charger la famille</strong> ouvre la bibliothèque, par dossier (<strong>Mobilier</strong>, <strong>Appareils
 sanitaires</strong>) : choisissez une famille et cliquez sur <strong>Ouvrir</strong> pour ajouter ses types au projet.</p>
+<figure>
+<img alt="Charger une famille : la bibliothèque par dossier, Mobilier et Appareils sanitaires, les familles déjà chargées signalées" src="../assets/screens/fr-load-family.webp"/>
+<figcaption>Charger une famille</figcaption>
+</figure>
 <p>Sélectionnez un composant et cliquez sur <strong>Hôte ▸ Choisir un nouvel hôte</strong>, puis sur un sol : le
 composant passe sur le sol et reste sur sa face supérieure (cliquez un point vide pour le remettre
 sur le niveau). Ses propriétés sont <strong>Niveau</strong>, <strong>Hôte</strong>, <strong>Hauteur de décalage par rapport au

@@ -595,6 +595,10 @@ Roof Footprint</strong>, <strong>Create Stairs Sketch</strong>, <strong>Create R
 <li>the <strong>Draw</strong> group, with the drawing tools of the element;</li>
 <li>for stairs and railings, the <strong>Tools</strong> group.</li>
 </ul>
+<figure>
+<img alt="The BIMopen window in sketch mode for a floor: the contextual card with its Mode and Draw groups on top of the tool panel, the options strip over the view and the magenta sketch lines along the walls" src="../assets/screens/fr-sketch-mode.webp"/>
+<figcaption>Sketch mode: the contextual card and the magenta lines</figcaption>
+</figure>
 <p>Nothing is made while sketching: the lines are magenta, and the model changes only with
 <strong>Finish Edit Mode</strong>. The whole element is then one step of the undo history: one <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span>
 takes it away.</p>
@@ -675,6 +679,10 @@ Mode</strong> changes the same element, <strong>Cancel Edit Mode</strong> leaves
 <li>Or draw the boundary with <strong>Line</strong> or <strong>Rectangle</strong>; draw a loop inside it for an opening.</li>
 <li>Click <strong>Finish Edit Mode</strong>.</li>
 </ol>
+<figure>
+<img alt="Three steps of a floor by Pick Walls: TAB over a wall highlights the whole chain, a click gives the sketch lines on the interior faces, Finish Edit Mode makes the floor" src="../assets/screens/fr-floor.webp"/>
+<figcaption>A floor: TAB on the walls, click, Finish Edit Mode</figcaption>
+</figure>
 <p>On the options strip, <strong>Extend into wall (to core)</strong> puts picked lines into the wall up to the face
 of its core, and <strong>Offset</strong> moves them (a negative offset moves them away from the walls). The
 type of the new floor is the one in the type selector at the top of <strong>Properties</strong>.</p>
@@ -724,6 +732,10 @@ walls go on through the floor's openings.</p>
 </tr>
 </tbody>
 </table>
+<figure>
+<img alt="The element panel of the new floor: its type, Type Parameters, and the properties Level, Height Offset From Level, Slope Angle, Thickness, Perimeter and Area" src="../assets/screens/fr-floor-props.webp"/>
+<figcaption>The properties of a floor</figcaption>
+</figure>
 <p><strong>Type Parameters</strong> has the floor's <strong>Structure</strong> (its layers) and its default thickness.</p>
 <h2 id="roofs">Roofs</h2>
 <ol>
@@ -735,6 +747,10 @@ walls go on through the floor's openings.</p>
 <li>Or draw the footprint with <strong>Line</strong> or <strong>Rectangle</strong>; a loop inside is an opening.</li>
 <li>Click <strong>Finish Edit Mode</strong>.</li>
 </ol>
+<figure>
+<img alt="Two steps of a roof on the first floor walls: the footprint sketched on the exterior faces with the overhang, each line with its 30° slope, then the hip roof made, with its ridge and hips in plan" src="../assets/screens/fr-roof.webp"/>
+<figcaption>A roof: the footprint, then the roof</figcaption>
+</figure>
 <p>Every line with <strong>Defines Slope</strong> rises inwards at its <strong>Slope</strong> (30° by default); a small
 triangle with the slope is drawn beside it. The shape comes from those lines:</p>
 <ul>
@@ -744,6 +760,10 @@ triangle with the slope is drawn beside it. The shape comes from those lines:</p
 <li>no line defines the slope: a <strong>flat</strong> roof, or a roof sloping along a <strong>Slope Arrow</strong> (then no
   line may define a slope).</li>
 </ul>
+<figure>
+<img alt="The sample house in 3D with three roofs on the same walls: hip, gable with the walls rising to the ridge, and flat" src="../assets/screens/fr-roof-shapes.webp"/>
+<figcaption>Hip, gable and flat</figcaption>
+</figure>
 <p>To change one line, press <span class="keys"><kbd class="key-escape">Esc</kbd></span> twice, click the line and change <strong>Defines Roof Slope</strong>,
 <strong>Slope</strong> or (lines picked from walls) <strong>Overhang</strong> in <strong>Properties</strong>.</p>
 <p>Select walls, click <strong>Modify Wall ▸ Link Top/Base</strong>, then the roof: they rise to its underside,
@@ -786,6 +806,10 @@ gables included (<a href="../walls-doors-windows/">Walls, doors and windows</a> 
    outer sides meet.</li>
 <li>When every riser is placed, click <strong>Finish Edit Mode</strong>.</li>
 </ol>
+<figure>
+<img alt="Three steps of a U-shaped stair: the first run with 9 risers created and 8 remaining, the second run with all 17 created, the stair made, its upper run beyond the cut line" src="../assets/screens/fr-stair.webp"/>
+<figcaption>A stair by runs: the count of risers made and left</figcaption>
+</figure>
 <p>Dashed guides show where the next run can start: the last run's extension beyond its end and the lines of its first and last risers. A click near them snaps onto them. In a 3D view the stair is drawn the same way, on the plane of the active level.</p>
 <p>A curved run (a spiral stair): with <strong>Run</strong> active, click <strong>Center-ends arc</strong>, then the centre, the start of the run line (its distance from the centre is the radius of the walking line) and the end, going round past half a turn if needed, but under one turn (further, the run stops short and the status bar warns that the runs would overlap). The risers radiate from the centre a tread apart on the run line; riser lines drawn radiating from a centre make a curved run too. A second curved run round the same centre and on the same run line (a click near them takes them) is joined to the first by a landing along the arc.</p>
 <p>A stair can also be drawn by its lines. In its sketch, click <strong>Draw ▸ Boundary</strong> and draw the left and right edges (green), then <strong>Riser</strong> and draw the riser lines (black) between them, with <strong>Line</strong> or <strong>Pick Lines</strong>. Parallel, evenly spaced risers make a run, as wide as the risers; a landing joins two runs out to the boundary lines. Each riser is as high as the storey divided by the desired number of risers; with fewer riser lines the stair stops short of the top (<strong>Properties</strong> shows the actual number). <strong>Edit Sketch</strong> gives the same lines back. Each run drawn with <strong>Run</strong> is at once boundary and riser lines like these: they can be moved or deleted like the others. A landing follows its boundary lines: split its far edge with <strong>Split Element</strong> and drag a piece to notch it, or draw it wider than the runs.</p>
@@ -798,6 +822,10 @@ offsets) and the type's <strong>Maximum Riser Height</strong>; changing a level 
 or delete them (click, <span class="keys"><kbd class="key-delete">Del</kbd></span>) and draw runs again; the railings of the stair follow. <strong>Multistory Top Level</strong> repeats the stair, with its railings, storey by storey up to that level; a storey whose height is not the stair's gets no copy, and a warning names it. With the stair selected, the blue flip arrows beside its first riser make it go up from the other end; <strong>Up Label</strong>, <strong>Up Arrow</strong>, <strong>Down Label</strong> and <strong>Down Arrow</strong> in <strong>Properties</strong> show or hide the plan symbol's parts. The square grip under the <strong>UP</strong> text drags it elsewhere.</p>
 <p>In plan the stair shows its treads up to the cut line, the break line, the arrow and the
 <strong>UP</strong>/<strong>DN</strong> text; in 3D its treads and risers, or a monolithic slab, its landings and railings.</p>
+<figure>
+<img alt="The sample's stair in the ground floor plan: the treads up to the cut line, the break line, the arrow and the UP text" src="../assets/screens/fr-stair-plan.webp"/>
+<figcaption>A stair in plan</figcaption>
+</figure>
 <h3 id="how-a-stair-is-built">How a stair is built</h3>
 <p><strong>Type Parameters</strong> of the stair decide its construction:</p>
 <ul>
@@ -820,6 +848,10 @@ or delete them (click, <span class="keys"><kbd class="key-delete">Del</kbd></spa
   <strong>Stringer Material</strong> and <strong>Monolithic Material</strong> colour the parts; <strong>Break Symbol in Plan</strong> and
   <strong>Text Size</strong> control the plan symbol.</li>
 </ul>
+<figure>
+<img alt="Type Parameters of the sample's monolithic concrete stair: construction, graphics, calculation rules and materials" src="../assets/screens/fr-stair-type.webp"/>
+<figcaption>The type parameters of a stair</figcaption>
+</figure>
 <p>The landing stops behind the last riser of the run that reaches it, following its back face; in a monolithic stair it starts at the riser's face. In a monolithic stair whose top floor has its edge on the last riser, the run's underside goes on under that floor until it meets the floor's underside, as under a landing.</p>
 <p>A section across the stair shows it cut with its slab. <strong>Volume</strong> in <strong>Properties</strong> and in the
 schedule of stairs is the volume of its solids.</p>
@@ -864,6 +896,10 @@ baluster per tread</strong> with how many on each tread; and the start, corner a
 or <strong>None</strong>, its offsets, <strong>Space</strong> along the path, <strong>Offset</strong> sideways) with <strong>Corner posts at</strong>.
 The changes in these two windows apply with <strong>OK</strong> and are undone with a single <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span>. The
 <strong>Top rail</strong>, <strong>Handrail 1</strong> and <strong>Handrail 2</strong> rows are greyed: not available yet.</p>
+<figure>
+<img alt="Type Parameters of a railing type: railing height, rail structure and baluster placement with Edit…, baluster spacing, joins and rail connections, and the preview of the railing on a sample stair" src="../assets/screens/fr-railing-type.webp"/>
+<figcaption>The type parameters of a railing, with the preview</figcaption>
+</figure>
 <p>The railings of a stair run on over its landings as one rail, at their height above the line of
 the nosings and above the landings. Where a run leaves a landing one riser higher, the type's
 <strong>Tangent Joins</strong> (the rail goes straight on) and <strong>Angled Joins</strong> (it turns) decide the join:
@@ -887,8 +923,16 @@ spaced, never wider apart than the spacing.</p>
 <li>Press <span class="keys"><kbd class="key-space">Space</kbd></span> to turn the preview by 90°.</li>
 <li>Click to place the component on the level of the plan.</li>
 </ol>
+<figure>
+<img alt="The component tool in a bedroom of the plan: the preview of the component following the cursor, with temporary dimensions to the nearest walls" src="../assets/screens/fr-component.webp"/>
+<figcaption>A component follows the cursor before the click</figcaption>
+</figure>
 <p><strong>Mode ▸ Load Family</strong> opens the library, by folder (<strong>Furniture</strong>, <strong>Plumbing Fixtures</strong>):
 choose a family and click <strong>Open</strong> to add its types to the project.</p>
+<figure>
+<img alt="Load Family: the library by folder, Furniture and Plumbing Fixtures, with the families already loaded marked" src="../assets/screens/fr-load-family.webp"/>
+<figcaption>Load Family</figcaption>
+</figure>
 <p>Select a component and click <strong>Host ▸ Pick New Host</strong>, then a floor: the component moves onto
 the floor and stays on its top (click an empty point to put it back on the level). Its properties
 are <strong>Level</strong>, <strong>Host</strong>, <strong>Offset from Level</strong>, <strong>Rotation</strong>, <strong>Mark</strong> and <strong>Comments</strong>; <strong>Type Parameters</strong> has its width, depth, height and material.</p>

@@ -617,7 +617,10 @@
 comment les éléments sont mis en évidence et sélectionnés, comment on affine une sélection,
 comment on fait glisser les éléments sélectionnés, et les outils du groupe <strong>Modifier</strong>. Tout
 fonctionne de la même manière dans l'application de bureau et dans le navigateur.</p>
-<p><img alt="Un mur sélectionné dans le plan : sa carte contextuelle à gauche, ses propriétés dans le panneau de l'élément à droite" src="../assets/screens/bimopen-plan.png"/></p>
+<figure>
+<img alt="Un mur sélectionné dans le plan : sa carte contextuelle à gauche, ses propriétés dans le panneau de l'élément à droite" src="../assets/screens/bimopen-plan.png"/>
+<figcaption>Un mur sélectionné dans le plan : sa carte contextuelle à gauche, ses propriétés dans le panneau de l'élément à droite</figcaption>
+</figure>
 <h2 id="highlighting-and-selecting">Mettre en évidence et sélectionner</h2>
 <p>Placez le curseur sur un élément : ses lignes sont dessinées plus épaisses, la barre d'état en bas
 de la fenêtre le nomme (catégorie et type, comme <strong>Murs : Mur extérieur…</strong>), et après un instant
@@ -660,6 +663,10 @@ un endroit vide, efface la sélection.</p>
 </tr>
 </tbody>
 </table>
+<figure>
+<img alt="Deux étapes d'une fenêtre tirée de droite à gauche : la fenêtre en tirets qui touche les murs de la chambre, puis tout ce qu'elle touchait sélectionné" src="../assets/screens/sel-window.webp"/>
+<figcaption>Une fenêtre de droite à gauche sélectionne ce qu'elle touche</figcaption>
+</figure>
 <p>Les fenêtres fonctionnent dans les plans, les coupes, les feuilles et les vues 3D. Dans une vue 3D
 le bouton gauche sélectionne ; le bouton droit fait orbiter et le bouton central effectue un
 panoramique (voir <a href="../interface/">L'interface</a>).</p>
@@ -677,6 +684,10 @@ surface ; les lignes de détail forment des chaînes avec les lignes de détail 
 trois éléments ou plus se rejoignent, la chaîne continue le long de celui qui forme le plus petit
 angle avec le dernier ; un mur qui s'arrête contre un autre entre ses extrémités prolonge la chaîne
 le long de ce mur.</p>
+<figure>
+<img alt="Les murs extérieurs du rez-de-chaussée en surbrillance ensemble après TAB sur l'un d'eux" src="../assets/screens/sel-chain.webp"/>
+<figcaption>TAB : toute la chaîne de murs</figcaption>
+</figure>
 <p><strong>Une partie de chaîne.</strong> Sélectionnez le premier élément de la partie, placez le curseur sur le
 dernier et appuyez sur <span class="keys"><kbd class="key-tab">Tab</kbd></span> : les éléments compris entre eux sont mis en évidence. Un deuxième
 <span class="keys"><kbd class="key-tab">Tab</kbd></span> met en évidence toute la chaîne, un troisième le dernier élément seul. Cliquez pour
@@ -697,6 +708,10 @@ verticalement ; faites-la glisser avec <span class="keys"><kbd class="key-contro
 Décochez une catégorie pour en écarter les éléments : la sélection et le nombre dans la barre
 d'état suivent aussitôt. <strong>Tout sélectionner</strong> et <strong>Tout désélectionner</strong> cochent ou décochent
 toutes les catégories. <strong>OK</strong> garde la sélection, <strong>Annuler</strong> rétablit celle du départ.</p>
+<figure>
+<img alt="La boîte Filtre : les catégories de la sélection avec le nombre d'éléments de chacune, le total, Tout cocher et Tout décocher" src="../assets/screens/sel-filter.webp"/>
+<figcaption>Filtre</figcaption>
+</figure>
 <h2 id="select-all-instances">Sélectionner toutes les occurrences</h2>
 <p>Clic droit sur un élément ▸ <strong>Sélectionner toutes les occurrences</strong>, puis <strong>Visibles dans la vue</strong>
 (les éléments du même type affichés dans la vue active) ou <strong>Dans tout le projet</strong>. Taper <code>SA</code> puis
@@ -744,6 +759,10 @@ curseur, alignée sur la référence), qui suit le curseur, avec la distance ou 
 <h3 id="move">Déplacer</h3>
 <p>Cliquez sur un point de base, puis sur la destination. L'outil se termine et les éléments restent
 sélectionnés. Options :</p>
+<figure>
+<img alt="Deux étapes de Déplacer sur la table de la cuisine : la table dessinée là où elle irait, avec la distance, puis la table déplacée et toujours sélectionnée" src="../assets/screens/sel-move.webp"/>
+<figcaption>Déplacer : l'aperçu, puis le résultat</figcaption>
+</figure>
 <ul>
 <li><strong>Contraindre</strong> : le déplacement se fait le long du mur sélectionné ou perpendiculairement à lui
   (horizontal ou vertical pour les autres éléments) ;</li>
@@ -762,6 +781,10 @@ eux, montré par une cote angulaire temporaire. Au lieu du second rayon, tapez l
 sur <span class="keys"><kbd class="key-enter">Enter</kbd></span>, ou tapez-le dans <strong>Angle</strong> du bandeau des options et appuyez sur <span class="keys"><kbd class="key-enter">Enter</kbd></span>.
 <strong>Copier</strong> fait pivoter une copie ; sans <strong>Disjoindre</strong>, les murs joints à ceux qui tournent
 suivent.</p>
+<figure>
+<img alt="Rotation sur la table de la cuisine : le centre de rotation, le premier rayon et la table dessinée tournée avec son angle" src="../assets/screens/sel-rotate.webp"/>
+<figcaption>Rotation : l'angle avant le second clic</figcaption>
+</figure>
 <h3 id="mirror">Symétrie</h3>
 <p><strong>Symétrie par axe</strong> : cliquez sur un mur, une grille ou une ligne comme axe. <strong>Symétrie par ligne</strong> : cliquez sur deux points. <strong>Copier</strong> est coché : une copie symétrique est placée ;
 décochez-le pour appliquer la symétrie aux éléments eux-mêmes.</p>

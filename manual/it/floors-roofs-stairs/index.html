@@ -596,6 +596,10 @@ contiene:</p>
 <li>il gruppo <strong>Disegna</strong>, con gli strumenti di disegno dell'elemento;</li>
 <li>per scale e ringhiere, il gruppo <strong>Strumenti</strong>.</li>
 </ul>
+<figure>
+<img alt="La finestra di BIMopen in modalità disegno di un pavimento: la scheda contestuale con i gruppi Modalità e Disegna in cima al pannello strumenti, la striscia delle opzioni sopra la vista e le linee di disegno magenta lungo i muri" src="../assets/screens/fr-sketch-mode.webp"/>
+<figcaption>Modalità disegno: la scheda contestuale e le linee magenta</figcaption>
+</figure>
 <p>Durante il disegno non si crea nulla: le linee sono magenta e il modello cambia solo con
 <strong>Termina modalità di modifica</strong>. L'intero elemento è poi un solo passo della cronologia: un
 <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span> lo toglie.</p>
@@ -683,6 +687,10 @@ faccia superiore del pavimento, la base del tetto) e la vista 3D resta aperta.</
    per un'apertura.</li>
 <li>Fai clic su <strong>Termina modalità di modifica</strong>.</li>
 </ol>
+<figure>
+<img alt="Tre passi di un pavimento con Seleziona muri: TAB su un muro evidenzia tutta la catena, un clic dà le linee di disegno sulle facce interne, Termina modalità di modifica crea il pavimento" src="../assets/screens/fr-floor.webp"/>
+<figcaption>Un pavimento: TAB sui muri, clic, Termina modalità di modifica</figcaption>
+</figure>
 <p>Nella striscia delle opzioni, <strong>Prolunga nel muro (al nucleo)</strong> porta le linee selezionate dentro il
 muro fino alla faccia del suo nucleo, e <strong>Offset</strong> le sposta (un offset negativo le allontana dai
 muri). Il tipo del nuovo pavimento è quello del selettore di tipo in cima a <strong>Proprietà</strong>.</p>
@@ -733,6 +741,10 @@ il pavimento e prosegue sopra, e nelle aperture del pavimento i muri passano.</p
 </tr>
 </tbody>
 </table>
+<figure>
+<img alt="Il pannello dell'elemento del nuovo pavimento: il tipo, Parametri del tipo e le proprietà Livello, Offset di altezza, Angolo di inclinazione, Spessore, Perimetro e Area" src="../assets/screens/fr-floor-props.webp"/>
+<figcaption>Le proprietà di un pavimento</figcaption>
+</figure>
 <p><strong>Parametri del tipo</strong> contiene la <strong>Struttura</strong> del pavimento (i suoi strati) e lo spessore di
 default.</p>
 <h2 id="roofs">Tetti</h2>
@@ -747,6 +759,10 @@ default.</p>
    un'apertura.</li>
 <li>Fai clic su <strong>Termina modalità di modifica</strong>.</li>
 </ol>
+<figure>
+<img alt="Due passi di un tetto sui muri del piano primo: l'impronta disegnata sulle facce esterne con la sporgenza, ogni linea con la sua pendenza di 30°, poi il tetto a padiglione con colmo e displuvi in pianta" src="../assets/screens/fr-roof.webp"/>
+<figcaption>Un tetto: l'impronta, poi il tetto</figcaption>
+</figure>
 <p>Ogni linea con <strong>Definisce l'inclinazione</strong> sale verso l'interno con la sua <strong>Inclinazione</strong> (30°
 come predefinito); accanto è disegnato un piccolo triangolo con l'inclinazione. La forma deriva da
 quelle linee:</p>
@@ -757,6 +773,10 @@ quelle linee:</p>
 <li>nessuna linea definisce l'inclinazione: un tetto <strong>piano</strong>, oppure un tetto inclinato lungo una
   <strong>Freccia di inclinazione</strong> (allora nessuna linea può definire un'inclinazione).</li>
 </ul>
+<figure>
+<img alt="La casa di esempio in 3D con tre tetti sugli stessi muri: a padiglione, a due falde con i muri che salgono fino al colmo, e piano" src="../assets/screens/fr-roof-shapes.webp"/>
+<figcaption>A padiglione, a due falde e piano</figcaption>
+</figure>
 <p>Per cambiare una linea, premi due volte <span class="keys"><kbd class="key-escape">Esc</kbd></span>, fai clic sulla linea e cambia in <strong>Proprietà</strong>
 <strong>Definisce l'inclinazione del tetto</strong>, <strong>Inclinazione</strong> o (per le linee prese dai muri)
 <strong>Sporgenza</strong>.</p>
@@ -804,6 +824,10 @@ strati.</p>
    con l'angolo esterno dove si incontrano i loro lati esterni.</li>
 <li>Quando tutte le alzate sono posizionate, fai clic su <strong>Termina modalità di modifica</strong>.</li>
 </ol>
+<figure>
+<img alt="Tre passi di una scala a U: la prima rampa con 9 alzate create e 8 rimanenti, la seconda con tutte le 17 create, la scala fatta, con la rampa superiore oltre la linea di taglio" src="../assets/screens/fr-stair.webp"/>
+<figcaption>Una scala per rampe: il conto delle alzate fatte e rimaste</figcaption>
+</figure>
 <p>Linee guida tratteggiate mostrano dove può iniziare la rampa successiva: il prolungamento dell'ultima rampa oltre la sua fine e le linee della sua prima e ultima alzata. Un clic vicino a esse vi si aggancia. In una vista 3D la scala si disegna allo stesso modo, sul piano del livello attivo.</p>
 <p>Una rampa curva (una scala a chiocciola): con <strong>Rampa</strong> attiva fai clic su <strong>Arco da centro ed estremità</strong>, poi sul centro, sull'inizio della linea di rampa (la sua distanza dal centro è il raggio della linea di percorrenza) e sulla fine, girando oltre il mezzo giro se serve, ma meno di un giro (oltre, la rampa si ferma prima e la barra di stato avvisa che le rampe si sovrapporrebbero). Le alzate partono dal centro a una pedata l'una dall'altra sulla linea di rampa; anche linee di alzata disegnate a raggiera da un centro fanno una rampa curva. Una seconda rampa curva attorno allo stesso centro e sulla stessa linea di rampa (un clic vicino li prende) si unisce alla prima con un pianerottolo ad arco.</p>
 <p>Una scala si può anche disegnare per linee. Nel suo disegno fai clic su <strong>Disegna ▸ Contorno</strong> e disegna i bordi sinistro e destro (verdi), poi su <strong>Alzata</strong> e disegna le linee delle alzate (nere) fra di essi, con <strong>Linea</strong> o <strong>Seleziona linee</strong>. Alzate parallele e a passo regolare formano una rampa, larga quanto le alzate; un pianerottolo unisce due rampe fino alle linee di contorno. Ogni alzata è alta quanto il piano diviso per il numero di alzate desiderato; con meno linee di alzata la scala si ferma prima del livello superiore (<strong>Proprietà</strong> mostra il numero effettivo). <strong>Modifica disegno</strong> restituisce le stesse linee. Ogni rampa disegnata con <strong>Rampa</strong> diventa subito linee di contorno e di alzata come queste: si possono spostare o eliminare come le altre. Un pianerottolo segue le sue linee di contorno: dividi il bordo esterno con <strong>Dividi elemento</strong> e trascina un pezzo per fare una rientranza, oppure disegnalo più largo delle rampe.</p>
@@ -817,6 +841,10 @@ cambiale o eliminale (clic, <span class="keys"><kbd class="key-delete">Del</kbd>
 <p>In pianta la scala mostra le pedate fino alla linea di taglio, la linea di interruzione, la
 freccia e il testo <strong>SU</strong>/<strong>GIÙ</strong>; in 3D pedate e alzate, oppure una soletta monolitica, i
 pianerottoli e le ringhiere.</p>
+<figure>
+<img alt="La scala dell'esempio nella pianta del piano terra: le pedate fino alla linea di taglio, la linea di interruzione, la freccia e il testo SU" src="../assets/screens/fr-stair-plan.webp"/>
+<figcaption>Una scala in pianta</figcaption>
+</figure>
 <h3 id="how-a-stair-is-built">Come è costruita una scala</h3>
 <p>Le <strong>Parametri del tipo</strong> della scala ne decidono la costruzione:</p>
 <ul>
@@ -841,6 +869,10 @@ pianerottoli e le ringhiere.</p>
   le parti; <strong>Simbolo di interruzione in pianta</strong> e <strong>Dimensione del testo</strong> regolano il simbolo in
   pianta.</li>
 </ul>
+<figure>
+<img alt="Parametri del tipo della scala monolitica in c.a. dell'esempio: costruzione, grafica, regole di calcolo e materiali" src="../assets/screens/fr-stair-type.webp"/>
+<figcaption>I parametri del tipo di una scala</figcaption>
+</figure>
 <p>Il pianerottolo si ferma dietro l'ultima alzata della rampa che vi arriva, seguendone la faccia posteriore; in una scala monolitica comincia sulla faccia dell'alzata. In una scala monolitica il cui solaio superiore ha il bordo sull'ultima alzata, l'intradosso della rampa prosegue sotto quel solaio fino a incontrarne l'intradosso, come sotto un pianerottolo.</p>
 <p>Una sezione attraverso la scala la mostra tagliata con la sua soletta. <strong>Volume</strong> in <strong>Proprietà</strong>
 e nell'abaco delle scale è il volume dei suoi solidi.</p>
@@ -892,6 +924,10 @@ quante balaustre su ogni pedata; e i <strong>Montanti</strong> iniziale, d'angol
 angoli a</strong>. Le modifiche di queste due finestre si applicano con <strong>OK</strong> e si annullano con un solo
 <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span>. Le righe <strong>Corrente superiore</strong>, <strong>Corrimano 1</strong> e <strong>Corrimano 2</strong> sono in grigio: non
 ancora disponibili.</p>
+<figure>
+<img alt="Parametri del tipo di una ringhiera: altezza, struttura dei correnti e posizionamento delle balaustre con Modifica…, spaziatura, giunti e connessioni dei correnti, e l'anteprima della ringhiera su una scala di prova" src="../assets/screens/fr-railing-type.webp"/>
+<figcaption>I parametri del tipo di una ringhiera, con l'anteprima</figcaption>
+</figure>
 <p>Le ringhiere di una scala proseguono sui pianerottoli come un unico corrente, alla loro altezza
 sopra la linea dei bordi dei gradini e sopra i pianerottoli. Dove una rampa parte da un
 pianerottolo un'alzata più in alto, i <strong>Giunti tangenti</strong> (il corrente prosegue diritto) e i
@@ -917,8 +953,16 @@ al primo. Fra due montanti le balaustre hanno passo uniforme, mai più largo del
 <li>Premi la <span class="keys"><kbd class="key-space">Space</kbd></span> per ruotare l'anteprima di 90°.</li>
 <li>Fai clic per posizionare il componente sul livello della pianta.</li>
 </ol>
+<figure>
+<img alt="Lo strumento componente in una camera della pianta: l'anteprima del componente che segue il cursore, con le quote temporanee ai muri più vicini" src="../assets/screens/fr-component.webp"/>
+<figcaption>Un componente segue il cursore prima del clic</figcaption>
+</figure>
 <p><strong>Modalità ▸ Carica famiglia</strong> apre la libreria, per cartella (<strong>Arredi</strong>, <strong>Sanitari</strong>): scegli
 una famiglia e fai clic su <strong>Apri</strong> per aggiungere i suoi tipi al progetto.</p>
+<figure>
+<img alt="Carica famiglia: la libreria per cartella, Arredi e Sanitari, con le famiglie già caricate segnate" src="../assets/screens/fr-load-family.webp"/>
+<figcaption>Carica famiglia</figcaption>
+</figure>
 <p>Seleziona un componente e fai clic su <strong>Host ▸ Seleziona nuovo host</strong>, poi su un pavimento: il
 componente si sposta sul pavimento e resta sulla sua faccia superiore (fai clic in un punto vuoto
 per riportarlo sul livello). Le sue proprietà sono <strong>Livello</strong>, <strong>Host</strong>, <strong>Offset dal livello</strong>,

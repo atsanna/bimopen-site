@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="it" data-build="a728dbdb">
+<html lang="it" data-build="ff460d87">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -70,11 +70,7 @@
   .bar { display: flex; align-items: center; gap: 20px; height: 64px; }
   .brand { display: flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font-weight: 700; font-size: 20px; letter-spacing: -.01em; direction: ltr; }
   .brand b { color: var(--logo); font-weight: 400; }
-  nav.links { display: none; gap: 18px; margin-inline-start: auto; }
-  nav.links a { color: var(--ink-soft); text-decoration: none; font-size: 15px; }
-  nav.links a:hover { color: var(--accent-text); }
   .bar-right { display: flex; align-items: center; gap: 10px; margin-inline-start: auto; }
-  @media (min-width: 1240px) { nav.links { display: flex; } .bar-right { margin-inline-start: 0; } }
   .lang-pick { display: flex; align-items: center; gap: 6px; color: var(--muted); font-size: 14px; }
   .lang-pick svg { width: 16px; height: 16px; flex: none; }
   .lang-pick select { font: inherit; color: var(--ink); background: var(--card); border: 1px solid var(--line); border-radius: var(--radius-btn); padding: 6px 8px; cursor: pointer; }
@@ -92,7 +88,6 @@
   .btn-primary { background: var(--accent); color: var(--on-accent); }
   .btn-primary:hover { background: var(--accent-hover); }
   .btn-ghost { border-color: var(--line); color: var(--ink); background: var(--card); }
-  .bar .btn { padding: 8px 14px; white-space: normal; line-height: 1.2; text-align: center; }
 
   .eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--accent-text); }
   .eyebrow::before { content: ""; width: 18px; height: 2px; background: currentColor; }
@@ -122,9 +117,6 @@
   /* the video channel: written by i18n/video.py only when "canale" is true in i18n/video.json */
   .ext { width: 13px; height: 13px; flex: none; opacity: .75; }
   .theme-toggle.chan { text-decoration: none; }
-  /* one more menu item and the icon: the header stays on one line in the longer languages */
-  nav.links:has(> a[href$="#video"]) { gap: 12px; }
-  nav.links:has(> a[href$="#video"]) a { font-size: 14px; }
   .bar:has(.chan) { gap: 14px; }
   .theme-toggle.chan svg { width: 19px; height: 19px; }
   .theme-toggle.chan:hover { color: var(--accent-text); border-color: var(--accent); }
@@ -163,7 +155,6 @@
     .to-top { bottom: 16px; inset-inline-end: 16px; }
   }
 
-  nav.links a[aria-current="page"] { color: var(--accent-text); font-weight: 600; }
   .dw-hero { position: relative; overflow: hidden; padding: 64px 0 8px; }
   .dw-hero::before { content: ""; position: absolute; inset: 0; background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px); background-size: 32px 32px; mask-image: radial-gradient(ellipse at 80% 20%, #000 0%, transparent 65%); opacity: .7; pointer-events: none; }
   .dw-hero .wrap { position: relative; }
@@ -203,6 +194,7 @@
   .rel ul { margin: 0; padding-inline-start: 20px; color: var(--ink-soft); font-size: 15.5px; }
   .rel li { margin: 4px 0; }
 </style>
+<link rel="stylesheet" href="assets/menu.css?v=61441936">
 </head>
 <body>
 <a class="skip" href="#main" data-i18n="ui.skip">Vai al contenuto</a>
@@ -214,15 +206,20 @@
       <span>BIM<b>open</b></span>
     </a>
     <nav class="links" aria-label="Sezioni" data-i18n-attr="aria-label:ui.sezioni">
-      <!-- canale:menu --><!-- /canale:menu -->
-      <a href="./#viste" data-con-lingua="./#viste" data-i18n="nav.viste">Viste</a>
-      <a href="./#funzioni" data-con-lingua="./#funzioni" data-i18n="nav.funzioni">Funzioni</a>
-      <a href="./#formati" data-con-lingua="./#formati" data-i18n="nav.formati">Formati</a>
-      <a href="./#agenti" data-con-lingua="./#agenti" data-i18n="nav.agenti">Automazione</a>
+      <div class="dd">
+        <button type="button" class="dd-btn" aria-expanded="false" aria-controls="dd-fun"><span data-i18n="nav.funzioni">Funzioni</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="dd-menu" id="dd-fun">
+          <a href="./#funzioni" data-con-lingua="./#funzioni" data-i18n="nav.funzioni">Funzioni</a>
+          <a href="./#viste" data-con-lingua="./#viste" data-i18n="nav.viste">Viste</a>
+          <a href="./#formati" data-con-lingua="./#formati" data-i18n="nav.formati">Formati</a>
+          <a href="./#agenti" data-con-lingua="./#agenti" data-i18n="nav.agenti">Automazione</a>
+          <!-- canale:menu --><!-- /canale:menu -->
+        </div>
+      </div>
       <a href="roadmap.html" data-con-lingua="roadmap.html" data-i18n="nav.roadmap">Roadmap</a>
-      <a href="download.html" data-con-lingua="download.html" data-i18n="nav.scarica" aria-current="page">Scarica</a>
+      <a href="filosofia.html" data-con-lingua="filosofia.html" data-i18n="nav.filosofia">Filosofia</a>
       <a href="manual/it/" data-manuale data-i18n="nav.manuale">Manuale</a>
-      <a href="./#faq" data-con-lingua="./#faq" data-i18n="nav.faq">Domande</a>
+      <a href="download.html" data-con-lingua="download.html" data-i18n="nav.scarica" aria-current="page">Scarica</a>
     </nav>
     <div class="bar-right">
       <label class="lang-pick">
@@ -241,10 +238,33 @@
         <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
         <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
       </button>
-      <a class="btn btn-primary" href="app/" data-app="b1768c96" data-i18n="cta.prova">Provalo nel browser</a>
+      <a class="btn btn-primary cta-top" href="app/" data-app="b1768c96"><span class="cta-long" data-i18n="cta.prova">Provalo nel browser</span><span class="cta-short" data-i18n="dl1.btn">Apri BIMopen</span></a>
+      <button type="button" class="theme-toggle menu-btn" id="menuBtn" aria-expanded="false" aria-controls="drawer" aria-label="Menu" data-i18n-attr="aria-label:ui.menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
     </div>
   </div>
 </header>
+<div class="drawer-veil" id="drawerVeil" hidden></div>
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Menu" data-i18n-attr="aria-label:ui.menu">
+  <div class="drawer-head">
+    <span class="brand"><svg width="20" height="27" viewBox="5 0 100 140" aria-hidden="true"><g fill="none" stroke="var(--logo)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M15 58 54 35 93 58V105L54 128 15 105Z"/><path d="M15 58 54 81 93 58M54 81V128"/><path d="M54 35V10H82"/></g></svg><span>BIM<b>open</b></span></span>
+    <button type="button" class="theme-toggle" id="drawerClose" aria-label="Chiudi" data-i18n-attr="aria-label:lb.close">×</button>
+  </div>
+  <nav class="drawer-nav" aria-label="Sezioni" data-i18n-attr="aria-label:ui.sezioni">
+    <a href="./#funzioni" data-con-lingua="./#funzioni" data-i18n="nav.funzioni">Funzioni</a>
+    <div class="drawer-sub">
+      <a href="./#viste" data-con-lingua="./#viste" data-i18n="nav.viste">Viste</a>
+      <a href="./#formati" data-con-lingua="./#formati" data-i18n="nav.formati">Formati</a>
+      <a href="./#agenti" data-con-lingua="./#agenti" data-i18n="nav.agenti">Automazione</a>
+      <!-- canale:menu --><!-- /canale:menu -->
+    </div>
+    <a href="roadmap.html" data-con-lingua="roadmap.html" data-i18n="nav.roadmap">Roadmap</a>
+    <a href="filosofia.html" data-con-lingua="filosofia.html" data-i18n="nav.filosofia">Filosofia</a>
+    <a href="manual/it/" data-manuale data-i18n="nav.manuale">Manuale</a>
+    <a href="download.html" data-con-lingua="download.html" data-i18n="nav.scarica" aria-current="page">Scarica</a>
+    <a href="./#faq" data-con-lingua="./#faq" data-i18n="nav.faq">Domande</a>
+  </nav>
+  <a class="btn btn-primary drawer-cta" href="app/" data-app="b1768c96"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11L13 8z" fill="currentColor"/></svg><span data-i18n="cta.prova">Provalo nel browser</span></a>
+</div>
 
 <main id="main">
   <section class="dw-hero" aria-labelledby="titolo">
@@ -432,9 +452,10 @@
 <footer>
   <div class="wrap">
     <div class="row">
-      <span>© <span id="year">2026</span> BIMopen · <span data-i18n="foot.lic">Sarà rilasciato come open source (MIT/Apache)</span> · <span data-i18n="foot.claude">Sviluppato con</span> <a href="https://claude.com/claude-code" rel="noopener">Claude Code</a></span>
-      <span><a href="./#formati" data-con-lingua="./#formati" data-i18n="nav.formati">Formati</a> · <a href="roadmap.html" data-con-lingua="roadmap.html" data-i18n="nav.roadmap">Roadmap</a> · <a href="download.html" data-con-lingua="download.html" data-i18n="nav.scarica">Scarica</a> · <a href="manual/it/" data-manuale data-i18n="nav.manuale">Manuale</a><!-- canale:piede --><!-- /canale:piede --> · <span data-i18n="foot.codice">Codice sorgente in arrivo</span></span>
+      <span>© <span id="year">2026</span> BIMopen · <span data-i18n="foot.lic">Software gratuito</span> · <span data-i18n="foot.claude">Sviluppato con</span> <a href="https://claude.com/claude-code" rel="noopener">Claude Code</a></span>
+      <span><a href="./#formati" data-con-lingua="./#formati" data-i18n="nav.formati">Formati</a> · <a href="filosofia.html" data-con-lingua="filosofia.html" data-i18n="nav.filosofia">Filosofia</a> · <a href="roadmap.html" data-con-lingua="roadmap.html" data-i18n="nav.roadmap">Roadmap</a> · <a href="download.html" data-con-lingua="download.html" data-i18n="nav.scarica">Scarica</a> · <a href="manual/it/" data-manuale data-i18n="nav.manuale">Manuale</a> · <a href="./#faq" data-con-lingua="./#faq" data-i18n="nav.faq">Domande</a><!-- canale:piede --><!-- /canale:piede --> · <span data-i18n="foot.codice">Codice sorgente: non ancora pubblico</span></span>
     </div>
+    <p class="made"><span class="tric" aria-hidden="true"><i></i><i></i><i></i></span><b lang="en" dir="ltr">Made in Italy</b><span aria-hidden="true">·</span><span data-i18n="foot.italia">Progettato e sviluppato in Italia</span></p>
     <small data-i18n="foot.marchi">Autodesk® e Revit® sono marchi o marchi registrati di Autodesk, Inc. BIMopen è un progetto indipendente, non affiliato, sponsorizzato né approvato da Autodesk®; i nomi sono usati solo per indicare i formati e i flussi di lavoro con cui BIMopen è compatibile. IFC è uno standard di buildingSMART International.</small>
   </div>
 </footer>
@@ -476,7 +497,8 @@
     });
   });
 </script>
-<script src="lingua.js?v=a293a4ca"></script>
+<script src="lingua.js?v=df04827d"></script>
+<script src="assets/menu.js?v=12f6671b"></script>
 <script>
   // tema: scuro finché non si sceglie; poi chiaro o scuro, ricordato in questo browser
   (function () {

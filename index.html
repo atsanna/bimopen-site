@@ -1,17 +1,17 @@
 <!doctype html>
-<html lang="it" data-build="a728dbdb">
+<html lang="it" data-build="ff460d87">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title data-i18n="meta.title">BIMopen — Modellazione BIM gratuita</title>
-<meta name="keywords" content="BIM, BIM open source, software BIM gratuito, IFC, IFC4, BIMopen, Rust">
-<meta name="description" data-i18n-attr="content:meta.desc" content="BIMopen è un software BIM gratuito, che sarà rilasciato come open source (MIT/Apache): muri, porte, finestre, solai, tetti e scale in un unico modello, con piante, sezioni, 3D, abachi, tavole in PDF ed export IFC4. Nel browser e sul computer.">
+<meta name="keywords" content="BIM, software BIM gratuito, IFC, IFC4, BIMopen, Rust">
+<meta name="description" data-i18n-attr="content:meta.desc" content="BIMopen è un software BIM gratuito, senza account né abbonamento: muri, porte, finestre, solai, tetti e scale in un unico modello, con piante, sezioni, 3D, abachi, tavole in PDF ed export IFC4. Nel browser e sul computer.">
 <link rel="canonical" href="https://bimopen.it/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="BIMopen">
 <meta property="og:locale" content="it_IT">
 <meta property="og:title" content="BIMopen — Modellazione BIM gratuita">
-<meta property="og:description" content="Un modello, tutte le viste: piante, 3D, abachi e IFC4. Gratuito; sarà rilasciato come open source (MIT/Apache).">
+<meta property="og:description" content="Un modello, tutte le viste: piante, 3D, abachi e IFC4. Gratuito, senza account né abbonamento.">
 <meta property="og:url" content="https://bimopen.it/">
 <meta property="og:image" content="https://bimopen.it/assets/og-bimopen.jpg">
 <meta property="og:image:width" content="1200">
@@ -38,10 +38,10 @@
    "@id": "https://bimopen.it/#software",
    "name": "BIMopen",
    "url": "https://bimopen.it/",
-   "description": "Software BIM gratuito, che sarà rilasciato come open source (MIT/Apache): muri, porte, finestre, solai, tetti e scale in un unico modello, con piante, sezioni, 3D, abachi, tavole in PDF ed export IFC4.",
+   "description": "Software BIM gratuito, senza account né abbonamento: muri, porte, finestre, solai, tetti e scale in un unico modello, con piante, sezioni, 3D, abachi, tavole in PDF ed export IFC4.",
    "applicationCategory": "DesignApplication",
    "applicationSubCategory": "Building Information Modeling",
-   "keywords": "BIM, BIM open source, software BIM gratuito, IFC, IFC4, BIMopen, Rust",
+   "keywords": "BIM, software BIM gratuito, IFC, IFC4, BIMopen, Rust",
    "operatingSystem": "Web, Linux, Windows",
    "image": "https://bimopen.it/assets/og-bimopen.jpg",
    "isAccessibleForFree": true,
@@ -103,11 +103,7 @@
   .bar { display: flex; align-items: center; gap: 20px; height: 64px; }
   .brand { display: flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font-weight: 700; font-size: 20px; letter-spacing: -.01em; direction: ltr; }
   .brand b { color: var(--logo); font-weight: 400; }
-  nav.links { display: none; gap: 18px; margin-inline-start: auto; }
-  nav.links a { color: var(--ink-soft); text-decoration: none; font-size: 15px; }
-  nav.links a:hover { color: var(--accent-text); }
   .bar-right { display: flex; align-items: center; gap: 10px; margin-inline-start: auto; }
-  @media (min-width: 1240px) { nav.links { display: flex; } .bar-right { margin-inline-start: 0; } }
   .lang-pick { display: flex; align-items: center; gap: 6px; color: var(--muted); font-size: 14px; }
   .lang-pick svg { width: 16px; height: 16px; flex: none; }
   .lang-pick select { font: inherit; color: var(--ink); background: var(--card); border: 1px solid var(--line); border-radius: var(--radius-btn); padding: 6px 8px; cursor: pointer; }
@@ -128,7 +124,6 @@
   .rm-cta { margin-top: 28px; }
   [dir="rtl"] .btn .arrow { transform: scaleX(-1); }
   .btn-ghost { border-color: var(--line); color: var(--ink); background: var(--card); }
-  .bar .btn { padding: 8px 14px; white-space: normal; line-height: 1.2; text-align: center; }
 
   .eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--accent-text); }
   .eyebrow::before { content: ""; width: 18px; height: 2px; background: currentColor; }
@@ -172,6 +167,7 @@
   .badge { flex: none; font: 700 13px/1 var(--mono); padding: 10px; border-radius: var(--radius-btn); background: var(--ink); color: var(--paper); min-width: 74px; text-align: center; direction: ltr; }
   .badge.terra { background: var(--second); color: var(--on-second); }
   .fmt h3 { margin: 0 0 4px; }
+  .fmt > div { min-width: 0; overflow-wrap: break-word; hyphens: auto; }
   .note { font-size: 13.5px; color: var(--muted); margin-top: 8px !important; }
 
   pre { margin: 0; background: var(--code-bg); color: var(--code-ink); border-radius: var(--radius); padding: 22px 24px; overflow-x: auto; font: 14.5px/1.65 var(--mono); direction: ltr; text-align: left; }
@@ -211,9 +207,6 @@
   /* the video channel: written by i18n/video.py only when "canale" is true in i18n/video.json */
   .ext { width: 13px; height: 13px; flex: none; opacity: .75; }
   .theme-toggle.chan { text-decoration: none; }
-  /* one more menu item and the icon: the header stays on one line in the longer languages */
-  nav.links:has(> a[href$="#video"]) { gap: 12px; }
-  nav.links:has(> a[href$="#video"]) a { font-size: 14px; }
   .bar:has(.chan) { gap: 14px; }
   .theme-toggle.chan svg { width: 19px; height: 19px; }
   .theme-toggle.chan:hover { color: var(--accent-text); border-color: var(--accent); }
@@ -390,8 +383,10 @@
 
   @media (max-width: 920px) {
     .split { grid-template-columns: 1fr; }
-    .grid3, .road, .grid2 { grid-template-columns: 1fr; }
+    .road, .grid2 { grid-template-columns: 1fr; }
   }
+  /* three cards side by side need room for the schedule table and the GitHub button */
+  @media (max-width: 960px) { .grid3 { grid-template-columns: 1fr; } }
   @media (max-width: 560px) {
     body { font-size: 16px; }
     .bar { gap: 10px; }
@@ -400,10 +395,21 @@
     section { padding: 52px 0; }
     .table { font-size: 12px; }
     .to-top { bottom: 16px; inset-inline-end: 16px; }
+    .btn-lg { padding: 14px 20px; font-size: 17px; }
+  }
+  /* the narrowest phones: the cards' buttons and the schedule table keep inside their card */
+  @media (max-width: 400px) {
+    .card { padding: 20px 18px; }
+    .card .btn { padding: 10px 14px; font-size: 14px; }
+    .card .btn-soon svg { display: none; }
+    .fmt { flex-direction: column; gap: 12px; }
+    .table th, .table td { padding: 6px 7px; }
+    .table td:first-child { white-space: normal; }
   }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn, .to-top, .ep { transition: none; } }
   @media print { .to-top, .lang-pick, .theme-toggle { display: none !important; } }
 </style>
+<link rel="stylesheet" href="assets/menu.css?v=61441936">
 </head>
 <body>
 <a class="skip" href="#main" data-i18n="ui.skip">Vai al contenuto</a>
@@ -415,15 +421,20 @@
       <span>BIM<b>open</b></span>
     </a>
     <nav class="links" aria-label="Sezioni" data-i18n-attr="aria-label:ui.sezioni">
-      <!-- canale:menu --><!-- /canale:menu -->
-      <a href="#viste" data-i18n="nav.viste">Viste</a>
-      <a href="#funzioni" data-i18n="nav.funzioni">Funzioni</a>
-      <a href="#formati" data-i18n="nav.formati">Formati</a>
-      <a href="#agenti" data-i18n="nav.agenti">Automazione</a>
+      <div class="dd">
+        <button type="button" class="dd-btn" aria-expanded="false" aria-controls="dd-fun"><span data-i18n="nav.funzioni">Funzioni</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="dd-menu" id="dd-fun">
+          <a href="#funzioni" data-i18n="nav.funzioni">Funzioni</a>
+          <a href="#viste" data-i18n="nav.viste">Viste</a>
+          <a href="#formati" data-i18n="nav.formati">Formati</a>
+          <a href="#agenti" data-i18n="nav.agenti">Automazione</a>
+          <!-- canale:menu --><!-- /canale:menu -->
+        </div>
+      </div>
       <a href="roadmap.html" data-con-lingua="roadmap.html" data-i18n="nav.roadmap">Roadmap</a>
-      <a href="download.html" data-con-lingua="download.html" data-i18n="nav.scarica">Scarica</a>
+      <a href="filosofia.html" data-con-lingua="filosofia.html" data-i18n="nav.filosofia">Filosofia</a>
       <a href="manual/it/" data-manuale data-i18n="nav.manuale">Manuale</a>
-      <a href="#faq" data-i18n="nav.faq">Domande</a>
+      <a href="download.html" data-con-lingua="download.html" data-i18n="nav.scarica">Scarica</a>
     </nav>
     <div class="bar-right">
       <label class="lang-pick">
@@ -442,10 +453,33 @@
         <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
         <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
       </button>
-      <a class="btn btn-primary" href="app/" data-app="b1768c96" data-i18n="cta.prova">Provalo nel browser</a>
+      <a class="btn btn-primary cta-top" href="app/" data-app="b1768c96"><span class="cta-long" data-i18n="cta.prova">Provalo nel browser</span><span class="cta-short" data-i18n="dl1.btn">Apri BIMopen</span></a>
+      <button type="button" class="theme-toggle menu-btn" id="menuBtn" aria-expanded="false" aria-controls="drawer" aria-label="Menu" data-i18n-attr="aria-label:ui.menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
     </div>
   </div>
 </header>
+<div class="drawer-veil" id="drawerVeil" hidden></div>
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Menu" data-i18n-attr="aria-label:ui.menu">
+  <div class="drawer-head">
+    <span class="brand"><svg width="20" height="27" viewBox="5 0 100 140" aria-hidden="true"><g fill="none" stroke="var(--logo)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M15 58 54 35 93 58V105L54 128 15 105Z"/><path d="M15 58 54 81 93 58M54 81V128"/><path d="M54 35V10H82"/></g></svg><span>BIM<b>open</b></span></span>
+    <button type="button" class="theme-toggle" id="drawerClose" aria-label="Chiudi" data-i18n-attr="aria-label:lb.close">×</button>
+  </div>
+  <nav class="drawer-nav" aria-label="Sezioni" data-i18n-attr="aria-label:ui.sezioni">
+    <a href="#funzioni" data-i18n="nav.funzioni">Funzioni</a>
+    <div class="drawer-sub">
+      <a href="#viste" data-i18n="nav.viste">Viste</a>
+      <a href="#formati" data-i18n="nav.formati">Formati</a>
+      <a href="#agenti" data-i18n="nav.agenti">Automazione</a>
+      <!-- canale:menu --><!-- /canale:menu -->
+    </div>
+    <a href="roadmap.html" data-con-lingua="roadmap.html" data-i18n="nav.roadmap">Roadmap</a>
+    <a href="filosofia.html" data-con-lingua="filosofia.html" data-i18n="nav.filosofia">Filosofia</a>
+    <a href="manual/it/" data-manuale data-i18n="nav.manuale">Manuale</a>
+    <a href="download.html" data-con-lingua="download.html" data-i18n="nav.scarica">Scarica</a>
+    <a href="#faq" data-i18n="nav.faq">Domande</a>
+  </nav>
+  <a class="btn btn-primary drawer-cta" href="app/" data-app="b1768c96"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11L13 8z" fill="currentColor"/></svg><span data-i18n="cta.prova">Provalo nel browser</span></a>
+</div>
 
 <main id="top">
   <section class="hero-c" aria-labelledby="titolo">
@@ -456,7 +490,7 @@
         <p class="motto" lang="en">One model. Open possibilities.</p>
         <p class="four" data-i18n="hero.four">Progetta. Coordina. Verifica. Documenta.</p>
         <p class="handle"><!-- canale:handle --><!-- /canale:handle --></p>
-        <p class="lead" data-i18n="hero.lead">BIMopen è un software BIM gratuito, che sarà rilasciato come open source (MIT/Apache). Modelli muri, porte, finestre e solai una volta sola: piante, vista 3D, abachi e file IFC nascono dallo stesso modello e restano sempre allineati.</p>
+        <p class="lead" data-i18n="hero.lead">BIMopen è un software BIM gratuito; il codice potrebbe essere aperto in futuro con una licenza libera. Modelli muri, porte, finestre e solai una volta sola: piante, vista 3D, abachi e file IFC nascono dallo stesso modello e restano sempre allineati.</p>
         <div class="cta">
           <a class="btn btn-primary" href="app/" data-app="b1768c96">
             <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11L13 8z" fill="currentColor"/></svg>
@@ -481,7 +515,7 @@
     <div class="wrap follow-in">
       <div>
         <span class="eyebrow" data-i18n="fol.kicker">Segui il progetto</span>
-        <p id="follow-t" class="follow-t" data-i18n="fol.p">Video tutorial sul canale e, più avanti, il codice sorgente.</p>
+        <p id="follow-t" class="follow-t" data-i18n="fol.p">Video tutorial sul canale. Il codice sorgente non è ancora pubblico.</p>
       </div>
       <div class="cta">
         <!-- link-canale -->
@@ -495,7 +529,7 @@
   <section id="interfaccia" aria-labelledby="interfaccia-t">
     <div class="wrap">
       <div class="intro">
-        <span class="eyebrow" data-i18n="hero.kicker">Gratuito · multilingue · presto open source</span>
+        <span class="eyebrow" data-i18n="hero.kicker">Gratuito · multilingue · senza account</span>
         <h2 id="interfaccia-t" data-i18n="hero.h1">Disegni l'edificio,<br><em>il progetto si scrive da sé.</em></h2>
         <p class="sub" data-i18n="ui.p">Barra laterale, ricerca dei comandi con Ctrl+K, strumenti a schede, pannello dell'elemento e miniature delle viste, in chiaro e in scuro. Chi preferisce la barra multifunzione può scegliere lo stile Classica in Opzioni: i comandi sono gli stessi. Le immagini mostrano l'interfaccia nella lingua che hai scelto.</p>
       </div>
@@ -714,7 +748,7 @@ $ bimopen-cli mcp</pre>
         </article>
         <article class="card">
           <h3 data-i18n="dl3.h3">Codice sorgente</h3>
-          <p data-i18n="dl3.p">Il codice sarà pubblicato con licenza MIT oppure Apache 2.0, a scelta: si potrà usare, studiare, modificare e redistribuire, anche per lavoro. Ci stiamo lavorando.</p>
+          <p data-i18n="dl3.p">Il codice per ora non è pubblico. Se verrà aperto, sarà con una licenza libera che permetta di usarlo, studiarlo, modificarlo e redistribuirlo, anche per lavoro.</p>
           <p style="margin-top:16px"><span class="btn btn-ghost btn-soon" aria-disabled="true"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg> <span data-i18n="hero.gh">GitHub · non ancora pubblico</span></span></p>
         </article>
       </div>
@@ -725,12 +759,12 @@ $ bimopen-cli mcp</pre>
     <div class="wrap">
       <span class="eyebrow" data-i18n="faq.kicker">Domande frequenti</span>
       <h2 id="faq-t" data-i18n="faq.h2">Domande frequenti</h2>
-      <details><summary data-i18n="faq1.q">Quanto costa?</summary><p data-i18n="faq1.a">Niente. BIMopen è gratuito e sarà rilasciato come open source (MIT/Apache): non ha licenze a pagamento, abbonamenti né account, neanche per l'uso professionale.</p></details>
+      <details><summary data-i18n="faq1.q">Quanto costa?</summary><p data-i18n="faq1.a">Niente. BIMopen è gratuito: non ha licenze a pagamento, abbonamenti né account, neanche per l'uso professionale.</p></details>
       <details><summary data-i18n="faq2.q">Apre i file .rvt?</summary><p data-i18n="faq2.a">Non ancora in modo utile: l'import dei file .rvt è sperimentale e oggi legge solo il nome del progetto e i nomi dei livelli. Per scambiare i modelli con gli altri software BIM usa IFC4, lo standard aperto. BIMopen non salva in formato .rvt, che è un formato chiuso.</p></details>
       <details><summary data-i18n="faq3.q">Dove finiscono i miei progetti?</summary><p data-i18n="faq3.a">Sul tuo computer. Anche nella versione per browser il modello resta nella pagina, e quando salvi viene scaricato come file. Questo sito non usa cookie né strumenti di tracciamento.</p></details>
       <details><summary data-i18n="faq4.q">Posso usarlo per un progetto reale?</summary><p data-i18n="faq4.a">Per studi e modelli semplici sì: modelli muri, solai, tetti, scale e facciate continue, impagini le viste su tavole con cartiglio e le stampi in PDF, e il file di progetto recupera il lavoro dopo un arresto. Mancano ancora controsoffitti, fasi, famiglie caricabili ed export DWG: puoi seguirne lo sviluppo nella roadmap.</p></details>
       <details><summary data-i18n="faq5.q">In che lingua è il programma?</summary><p data-i18n="faq5.a">In italiano, inglese, tedesco, francese, spagnolo e arabo, da destra a sinistra. Al primo avvio usa la lingua del sistema o del browser; si cambia dal menu 🌐 in alto. Anche questo sito è disponibile nelle stesse sei lingue.</p></details>
-      <details><summary data-i18n="faq6.q">Come posso contribuire?</summary><p data-i18n="faq6.a">Provandolo e segnalando problemi e richieste, oppure contribuendo al codice in Rust. Sono utili anche le traduzioni dei termini e i modelli di prova.</p></details>
+      <details><summary data-i18n="faq6.q">Come posso contribuire?</summary><p data-i18n="faq6.a">Provandolo e segnalando problemi e richieste. Sono utili anche le traduzioni dei termini e i modelli di prova. Il codice sorgente non è ancora pubblico, quindi per ora non si possono proporre modifiche al codice.</p></details>
     </div>
   </section>
 
@@ -751,9 +785,10 @@ $ bimopen-cli mcp</pre>
 <footer>
   <div class="wrap">
     <div class="row">
-      <span>© <span id="year">2026</span> BIMopen · <span data-i18n="foot.lic">Sarà rilasciato come open source (MIT/Apache)</span> · <span data-i18n="foot.claude">Sviluppato con</span> <a href="https://claude.com/claude-code" rel="noopener">Claude Code</a></span>
-      <span><a href="#formati" data-i18n="nav.formati">Formati</a> · <a href="roadmap.html" data-con-lingua="roadmap.html" data-i18n="nav.roadmap">Roadmap</a> · <a href="download.html" data-con-lingua="download.html" data-i18n="nav.scarica">Scarica</a> · <a href="manual/it/" data-manuale data-i18n="nav.manuale">Manuale</a><!-- canale:piede --><!-- /canale:piede --> · <span data-i18n="foot.codice">Codice sorgente in arrivo</span></span>
+      <span>© <span id="year">2026</span> BIMopen · <span data-i18n="foot.lic">Software gratuito</span> · <span data-i18n="foot.claude">Sviluppato con</span> <a href="https://claude.com/claude-code" rel="noopener">Claude Code</a></span>
+      <span><a href="#formati" data-i18n="nav.formati">Formati</a> · <a href="filosofia.html" data-con-lingua="filosofia.html" data-i18n="nav.filosofia">Filosofia</a> · <a href="roadmap.html" data-con-lingua="roadmap.html" data-i18n="nav.roadmap">Roadmap</a> · <a href="download.html" data-con-lingua="download.html" data-i18n="nav.scarica">Scarica</a> · <a href="manual/it/" data-manuale data-i18n="nav.manuale">Manuale</a> · <a href="#faq" data-i18n="nav.faq">Domande</a><!-- canale:piede --><!-- /canale:piede --> · <span data-i18n="foot.codice">Codice sorgente: non ancora pubblico</span></span>
     </div>
+    <p class="made"><span class="tric" aria-hidden="true"><i></i><i></i><i></i></span><b lang="en" dir="ltr">Made in Italy</b><span aria-hidden="true">·</span><span data-i18n="foot.italia">Progettato e sviluppato in Italia</span></p>
     <small data-i18n="foot.marchi">Autodesk® e Revit® sono marchi o marchi registrati di Autodesk, Inc. BIMopen è un progetto indipendente, non affiliato, sponsorizzato né approvato da Autodesk®; i nomi sono usati solo per indicare i formati e i flussi di lavoro con cui BIMopen è compatibile. IFC è uno standard di buildingSMART International.</small>
   </div>
 </footer>
@@ -881,7 +916,8 @@ $ bimopen-cli mcp</pre>
     });
   })();
 </script>
-<script src="lingua.js?v=a293a4ca"></script>
+<script src="lingua.js?v=df04827d"></script>
+<script src="assets/menu.js?v=12f6671b"></script>
 <script>
   // tema: scuro finché non si sceglie; poi chiaro o scuro, ricordato in questo browser
   (function () {

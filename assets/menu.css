@@ -1,5 +1,6 @@
 /* The header menu of every page (index, roadmap, download, filosofia) and the text rules they share.
-   From 1080 px: «Funzioni ▾» (a disclosure with the sections of the home page), Roadmap, Filosofia,
+   From 1080 px: «Funzioni ▾» (a disclosure with the sections of the home page, in the order they
+   appear on it, so a click never jumps back up), Roadmap, Filosofia,
    Manuale, Scarica. The call to action shows its short label below 1340 px. Below 1080 px the ☰
    button opens the drawer with every item and the full call to action. i18n/misura_header.py
    checks, headless, that nothing wraps or overflows in the six languages from 320 to 1920 px. */
@@ -25,7 +26,6 @@ nav.links a[aria-current="page"] { color: var(--accent-text); font-weight: 600; 
 .dd-btn[aria-expanded="true"] + .dd-menu { display: grid; }
 .dd-menu a { padding: 8px 12px; border-radius: 8px; color: var(--ink); text-decoration: none; font-size: 15px; white-space: nowrap; }
 .dd-menu a:hover { background: var(--field); color: var(--accent-text); }
-.dd-menu a:first-child { font-weight: 600; border-bottom: 1px solid var(--line); border-radius: 8px 8px 0 0; margin-bottom: 4px; }
 
 /* the drawer, below 1080 px */
 .drawer { position: fixed; top: 0; bottom: 0; inset-inline-end: 0; width: min(340px, 86vw); z-index: 30; background: var(--card); border-inline-start: 1px solid var(--line); box-shadow: 0 0 40px rgba(0,0,0,.35); display: flex; flex-direction: column; padding: 14px 16px 20px; transform: translateX(105%); visibility: hidden; transition: transform .2s, visibility .2s; }
@@ -41,8 +41,8 @@ nav.links a[aria-current="page"] { color: var(--accent-text); font-weight: 600; 
 .drawer-nav a { color: var(--ink); text-decoration: none; font-size: 17px; line-height: 1.35; padding: 10px 12px; border-radius: 8px; }
 .drawer-nav a:hover { background: var(--field); }
 .drawer-nav a[aria-current="page"] { color: var(--accent-text); font-weight: 600; background: color-mix(in srgb, var(--accent) 12%, transparent); }
-.drawer-sub { display: grid; gap: 2px; }
-.drawer-sub a { padding-inline-start: 26px; font-size: 16px; color: var(--ink-soft); }
+/* the sections of the home page, in the order they appear on it, then the other pages */
+.drawer-sub { display: grid; gap: 2px; padding-bottom: 8px; margin-bottom: 6px; border-bottom: 1px solid var(--line); }
 .drawer-cta { margin-top: auto; justify-content: center; flex: none; }
 .drawer-cta svg { flex: none; }
 @media (min-width: 1080px) { .drawer, .drawer-veil { display: none; } }

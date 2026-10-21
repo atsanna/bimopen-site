@@ -1,0 +1,67 @@
+/* The motion of every page with a header (index, roadmap, download, filosofia), with assets/effetti.js.
+   - Cards (features, views, formats, download cards, principles, roadmap steps, videos) lift a
+     little on hover with a softer, larger shadow and a teal edge; their icon grows a touch. The
+     same happens when a control inside them has the keyboard focus. Only devices that really
+     hover get the hover state, so a tap on a phone never leaves a card lifted.
+   - Section titles, paragraphs, cards, images and the carousel fade in and rise 16 px once, when
+     they first scroll into view. effetti.js marks only what is still below the window when the
+     page loads (.rv), so nothing is hidden without JavaScript and nothing on the first screen
+     waits; opacity and transform only, so the layout never moves.
+   - The hero only fades in on load.
+   With prefers-reduced-motion nothing moves: no reveal, no lift, no fade. */
+:root {
+  --fx-ease: cubic-bezier(.2, .7, .2, 1);
+  --fx-edge: color-mix(in srgb, var(--accent) 60%, var(--line));
+  --fx-lift: 0 16px 34px -16px rgba(23, 33, 51, .30), 0 0 0 1px color-mix(in srgb, var(--accent) 30%, transparent), 0 0 26px -10px color-mix(in srgb, var(--accent) 55%, transparent);
+  --fx-light: color-mix(in srgb, var(--accent) 7%, transparent);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --fx-lift: 0 18px 40px -16px rgba(0, 0, 0, .75), 0 0 0 1px color-mix(in srgb, var(--accent) 40%, transparent), 0 0 30px -8px color-mix(in srgb, var(--accent) 38%, transparent);
+    --fx-light: color-mix(in srgb, var(--accent) 9%, transparent);
+  }
+}
+:root[data-theme="dark"] {
+  --fx-lift: 0 18px 40px -16px rgba(0, 0, 0, .75), 0 0 0 1px color-mix(in srgb, var(--accent) 40%, transparent), 0 0 30px -8px color-mix(in srgb, var(--accent) 38%, transparent);
+  --fx-light: color-mix(in srgb, var(--accent) 9%, transparent);
+}
+
+/* cards */
+.card, .step, .ep { transition: transform .22s var(--fx-ease), box-shadow .22s ease, border-color .22s ease; }
+.card .ico, .card .badge, .step .n, .ep .th img, .view figure img { transition: transform .25s var(--fx-ease); }
+.ep .th { overflow: hidden; }
+@media (hover: hover) {
+  .card:hover, .ep:hover { transform: translateY(-4px); box-shadow: var(--fx-lift); border-color: var(--fx-edge); }
+  .step:hover { transform: translateY(-3px); box-shadow: var(--fx-lift); border-color: var(--fx-edge); }
+  .card:hover .ico, .card:hover .badge { transform: translateY(-2px) scale(1.07); }
+  .step:hover .n { transform: scale(1.06); }
+  .ep:hover .th img, .view:hover figure img { transform: scale(1.03); }
+}
+/* the keyboard gets the same: a focused link or button inside a card lifts its card */
+.card:has(:focus-visible), .ep:focus-visible { transform: translateY(-4px); box-shadow: var(--fx-lift); border-color: var(--fx-edge); }
+.card:has(:focus-visible) .ico, .card:has(:focus-visible) .badge { transform: translateY(-2px) scale(1.07); }
+/* the system's card on the download page keeps its green edge */
+.os.mine:hover, .os.mine:has(:focus-visible) { border-color: var(--ok); }
+/* a soft light follows the pointer on the card under it (effetti.js sets --fx-x and --fx-y) */
+@media (hover: hover) and (pointer: fine) {
+  .card:hover, .step:hover { background-image: radial-gradient(380px circle at var(--fx-x, 50%) var(--fx-y, 0%), var(--fx-light), transparent 65%); }
+}
+
+/* the hero: a light fade on load, nothing else above the fold */
+@keyframes fx-fade { from { opacity: 0; } }
+.hero-c .txt, .rp-hero .wrap, .dw-hero .wrap { animation: fx-fade .5s ease-out; }
+.hero-c .bg { animation: fx-fade .8s ease-out; }
+
+/* reveal on scroll: last, so a hidden card does not take the hover lift */
+.rv:not(.in) { opacity: 0; transform: translateY(16px); }
+.rv.in { opacity: 1; transform: none; transition: opacity .52s var(--fx-ease) var(--fx-d, 0ms), transform .52s var(--fx-ease) var(--fx-d, 0ms); }
+
+@media (prefers-reduced-motion: reduce) {
+  .card, .step, .ep, .card .ico, .card .badge, .step .n, .ep .th img, .view figure img { transition: none; }
+  .card:hover, .step:hover, .ep:hover, .card:has(:focus-visible), .ep:focus-visible,
+  .card:hover .ico, .card:hover .badge, .card:has(:focus-visible) .ico, .card:has(:focus-visible) .badge,
+  .step:hover .n, .ep:hover .th img, .view:hover figure img { transform: none; }
+  .hero-c .txt, .hero-c .bg, .rp-hero .wrap, .dw-hero .wrap { animation: none; }
+  .rv:not(.in), .rv.in { opacity: 1; transform: none; transition: none; }
+}
+@media print { .rv:not(.in) { opacity: 1; transform: none; } }

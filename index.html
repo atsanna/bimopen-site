@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="it" data-build="7fd0abdc">
+<html lang="it" data-build="faa5cc0a">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -190,6 +190,17 @@
   details p { color: var(--ink-soft); margin: 10px 0 0; max-width: 52em; }
 
   .final { text-align: center; }
+  /* the closing call to action sits on the hero's image, cut to the content width */
+  .fin-card { position: relative; overflow: hidden; isolation: isolate; border-radius: 18px; padding: 76px 24px 72px; color: #E4EBF1; }
+  .fin-card .fin-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 55%; z-index: -2; }
+  [dir="rtl"] .fin-card .fin-bg { transform: scaleX(-1); }
+  .fin-card::before { content: ""; position: absolute; inset: 0; z-index: -1; background: radial-gradient(120% 90% at 50% 45%, rgba(11,20,28,.62) 0%, rgba(11,20,28,.86) 70%); }
+  .fin-card h2 { color: #fff; }
+  .fin-card .sub { color: #B7C3CE; }
+  .fin-card .btn-primary { background: #14BECC; color: #0D1319; }
+  .fin-card .btn-ghost { background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.28); color: #fff; }
+  .fin-card .ai-tag { position: absolute; inset-inline-end: 14px; bottom: 12px; font: 500 12px/1 var(--font); color: rgba(228,235,241,.82); background: rgba(8,14,20,.55); border: 1px solid rgba(255,255,255,.12); padding: 6px 10px; border-radius: 999px; pointer-events: none; }
+  @media (max-width: 560px) { .fin-card { padding: 52px 18px 56px; border-radius: 14px; } .fin-card .ai-tag { display: none; } }
   .final .cta { justify-content: center; }
   /* the video channel: written by i18n/video.py only when "canale" is true in i18n/video.json */
   .ext { width: 13px; height: 13px; flex: none; opacity: .75; }
@@ -214,13 +225,14 @@
   /* hero: the cube and the name over the building of the channel banner, night in both themes */
   .hero-c { --night: #0B141C; --night-ink: #E4EBF1; --night-soft: #B7C3CE; --night-muted: #8A98A6; --night-teal: #14BECC;
     position: relative; overflow: hidden; padding: 0; background: var(--night); color: var(--night-ink); isolation: isolate; }
-  .hero-c .bg { position: absolute; inset: 0 0 0 auto; width: 64%; height: 100%; z-index: -1; }
+  /* the image ends where the content ends: its outer edge on the same line as the header, the sections and the carousel */
+  .hero-c .bg { position: absolute; top: 0; bottom: 0; inset-inline-end: max(16px, calc((100% - 1160px) / 2)); width: calc(min(1160px, 100% - 32px) * .62); z-index: -1; }
   .hero-c .bg img { width: 100%; height: 100%; object-fit: cover; object-position: 30% 60%;
     -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.55) 22%, #000 48%); mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.55) 22%, #000 48%); }
-  [dir="rtl"] .hero-c .bg { inset: 0 auto 0 0; }
   [dir="rtl"] .hero-c .bg img { transform: scaleX(-1); }
   .hero-c .wrap { padding: 88px 0 80px; }
   .hero-c .txt { max-width: 600px; }
+  .hero-c .cta { width: max-content; max-width: min(720px, calc(100vw - 32px)); } /* the three buttons stay on one row in every language */
   .hero-c .mark { display: flex; align-items: center; gap: 22px; direction: ltr; }
   [dir="rtl"] .hero-c .mark { justify-content: flex-end; }
   .hero-c .mark svg { width: 74px; height: 104px; flex: none; }
@@ -235,6 +247,9 @@
   .hero-c .handle a:hover { color: var(--night-teal); }
   .hero-c .lead { color: var(--night-soft); font-size: 17.5px; margin: 0 0 26px; max-width: 34em; }
   .hero-c .btn-primary { background: var(--night-teal); color: #0D1319; }
+  .btn-soon { cursor: default; opacity: .72; }
+  .cta .btn, .btn-soon { white-space: nowrap; } /* a button never breaks its label: the row wraps instead */
+  .btn-soon:hover { transform: none; }
   .hero-c .btn-ghost { background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.28); color: #fff; }
   .hero-c .facts { color: var(--night-muted); }
   .hero-c .facts li::before { color: var(--night-teal); }
@@ -332,7 +347,7 @@
 
   @media (max-width: 920px) {
     .pl { grid-template-columns: 1fr; gap: 24px; }
-    .hero-c .bg { width: 100%; opacity: .55; }
+    .hero-c .bg { inset-inline-end: 0; width: 100%; opacity: .55; }
     .hero-c .bg img { -webkit-mask-image: linear-gradient(0deg, transparent 0%, #000 40%); mask-image: linear-gradient(0deg, transparent 0%, #000 40%); object-position: 62% 40%; }
     .hero-c::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(11,20,28,.55) 0%, rgba(11,20,28,.35) 35%, rgba(11,20,28,.92) 70%); }
   }
@@ -428,8 +443,7 @@
 
 <main id="top">
   <section class="hero-c" aria-labelledby="titolo">
-    <div class="bg"><img src="assets/hero-edificio.webp?v=7ffc898e" alt="" width="1100" height="1050" fetchpriority="high"></div>
-    <span class="ai-tag" data-i18n="hero.ai">Immagine generata con l'IA</span>
+    <div class="bg"><img src="assets/hero-edificio.webp?v=7ffc898e" alt="" width="1100" height="1050" fetchpriority="high"><span class="ai-tag" data-i18n="hero.ai">Immagine generata con l'IA</span></div>
     <div class="wrap" id="main">
       <div class="txt">
         <div class="mark"><svg viewBox="5 0 100 140" aria-hidden="true"><g fill="none" stroke="#14BECC" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 58 54 35 93 58V105L54 128 15 105Z"/><path d="M15 58 54 81 93 58M54 81V128"/><path d="M54 35V10H82"/></g></svg><h1 class="word" id="titolo">BIM<b>open</b></h1></div>
@@ -446,6 +460,10 @@
             <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v8M4.5 6.5 8 10l3.5-3.5M3 13h10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
             <span data-i18n="nav.scarica">Scarica</span>
           </a>
+          <span class="btn btn-ghost btn-soon" aria-disabled="true" title="GitHub">
+            <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            <span data-i18n="hero.gh">GitHub · non ancora pubblico</span>
+          </span>
         </div>
         <ul class="facts">
           <li data-i18n="fact.1">Nessun account né abbonamento</li>
@@ -680,7 +698,7 @@ $ bimopen-cli mcp</pre>
         <article class="card">
           <h3 data-i18n="dl3.h3">Codice sorgente</h3>
           <p data-i18n="dl3.p">Il codice sarà pubblicato con licenza MIT oppure Apache 2.0, a scelta: si potrà usare, studiare, modificare e redistribuire, anche per lavoro. Ci stiamo lavorando.</p>
-          <p style="margin-top:16px"><span class="btn btn-ghost" aria-disabled="true" data-i18n="dl3.btn">In arrivo</span></p>
+          <p style="margin-top:16px"><span class="btn btn-ghost btn-soon" aria-disabled="true"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg> <span data-i18n="hero.gh">GitHub · non ancora pubblico</span></span></p>
         </article>
       </div>
     </div>
@@ -700,7 +718,9 @@ $ bimopen-cli mcp</pre>
   </section>
 
   <section class="final" aria-labelledby="final-t">
-    <div class="wrap">
+    <div class="wrap fin-card">
+      <img class="fin-bg" src="assets/hero-edificio.webp?v=7ffc898e" alt="" width="1100" height="1050" loading="lazy">
+      <span class="ai-tag" data-i18n="hero.ai">Immagine generata con l'IA</span>
       <h2 id="final-t" data-i18n="fin.h2">Il tuo prossimo progetto, in BIM aperto.</h2>
       <p class="sub" style="margin-inline:auto" data-i18n="fin.p">Apri la casa di esempio, sposta un muro e guarda pianta, 3D e computo aggiornarsi insieme.</p>
       <div class="cta">
@@ -844,7 +864,7 @@ $ bimopen-cli mcp</pre>
     });
   })();
 </script>
-<script src="lingua.js?v=fd601e11"></script>
+<script src="lingua.js?v=32dff936"></script>
 <script>
   // tema: scuro finché non si sceglie; poi chiaro o scuro, ricordato in questo browser
   (function () {

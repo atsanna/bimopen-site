@@ -9,7 +9,7 @@
 <meta content="BIMopen" name="author"/>
 <link href="https://atsanna.github.io/bimopen-site/manual/en/projects-and-files/" rel="canonical"/>
 <link href="../interface-styles/" rel="prev"/>
-<link href="../selection-and-modify/" rel="next"/>
+<link href="../import-and-conversion/" rel="next"/>
 <link href="../assets/images/bimopen-cube.svg" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.9" name="generator"/>
 <title>Projects and files - BIMopen user manual</title>
@@ -261,6 +261,20 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#imperial-units">
+<span class="md-ellipsis">
+      Imperial units
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#typing-lengths">
+<span class="md-ellipsis">
+      Typing lengths
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#sun-settings">
 <span class="md-ellipsis">
       Sun Settings
@@ -307,13 +321,6 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#revit-projects">
-<span class="md-ellipsis">
-      .rvt files
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#other-exports">
 <span class="md-ellipsis">
       Other exports
@@ -325,6 +332,14 @@
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../import-and-conversion/">
+<span class="md-ellipsis">
+    Importing and converting
+    
+  </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../selection-and-modify/">
@@ -475,6 +490,20 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#imperial-units">
+<span class="md-ellipsis">
+      Imperial units
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#typing-lengths">
+<span class="md-ellipsis">
+      Typing lengths
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#sun-settings">
 <span class="md-ellipsis">
       Sun Settings
@@ -521,13 +550,6 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#revit-projects">
-<span class="md-ellipsis">
-      .rvt files
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#other-exports">
 <span class="md-ellipsis">
       Other exports
@@ -555,8 +577,9 @@ its settings and the options of BIMopen itself.</p>
 <p><strong>application menu ➤ New ➤ Project…</strong> opens <strong>New project</strong>:</p>
 <ul>
 <li><strong>Template file</strong>: BIMopen's default template, or the one set in <strong>Options ➤ File Locations</strong>;
-  a template file chosen with <strong>Browse…</strong>; or <strong>None</strong>, which starts from two levels and one type
-  of each kind.</li>
+  the <strong>BIMopen imperial template</strong> (see <a href="#imperial-units">Imperial units</a>); a template file
+  chosen with <strong>Browse…</strong>; or <strong>None</strong>, which starts from two levels and one type of each kind
+  and asks for the system of measurement: <strong>Imperial</strong> or <strong>Metric</strong>.</li>
 <li><strong>Create new</strong>: <strong>Project</strong> or <strong>Project Template</strong>.</li>
 </ul>
 <figure>
@@ -613,6 +636,182 @@ sign for positive values and digit grouping.</p>
 <img alt="Two steps: the Project units dialog with the quantities and a sample of each, then the Format of the length with its unit, rounding, unit symbol and options" src="../assets/screens/pf-units.webp"/>
 <figcaption>Project units, then Format… of a quantity</figcaption>
 </figure>
+<h3 id="imperial-units">Imperial units</h3>
+<p>In <strong>Format…</strong> the units of a length are in two groups, <strong>Metric</strong> and <strong>Imperial</strong>:
+<strong>Feet and fractional inches</strong> (<code>5' - 6 1/2"</code>), <strong>Fractional inches</strong> (<code>66 1/2"</code>), <strong>Decimal feet</strong>
+and <strong>Decimal inches</strong>. Areas can be in <strong>Square feet</strong>, <strong>Square inches</strong> or <strong>Acres</strong>, volumes in
+<strong>Cubic feet</strong>, <strong>Cubic inches</strong> or <strong>Cubic yards</strong>, slopes as <strong>Rise/12"</strong> or as a ratio. With
+fractions, <strong>Rounding</strong> is to the nearest inch or to the nearest 1/2" to 1/256"; a value that
+rounds up to 12" is carried into the feet: at 1/16", <code>11 63/64"</code> reads <code>1' - 0"</code>.
+<strong>Suppress 0 feet</strong> writes <code>4"</code> for <code>0' - 4"</code>, <strong>Remove spaces</strong> writes <code>1'-2"</code> for <code>1' - 2"</code>, and
+<strong>Unit symbol</strong> chooses between <code>'</code> and <code>ft</code>, or <code>ft²</code> and <code>SF</code>. <strong>Other values</strong> shows the format
+on a few more values.</p>
+<p>A schedule field's <strong>Field Format…</strong> and a dimension type's <strong>Units Format</strong> have the same
+fields, besides <strong>Use project settings</strong>: a takeoff can give volumes in cubic yards in a project
+in cubic feet, and a dimension type for details can round to 1/32" where the plans round to
+1/16".</p>
+<p>The model is kept in metres: changing the units changes how values are shown and typed, never
+the geometry. Switching a project from metric to imperial and back leaves every element where it
+was.</p>
+<figure>
+<img alt='Two steps: Project units in feet and inches, then the Format of the length with Feet and fractional inches, rounded to the nearest 1/32", with Suppress 0 feet and Remove spaces' src="../assets/screens/pf-imperial.webp"/>
+<figcaption>Project units in feet and inches</figcaption>
+</figure>
+<p>In a project in feet and inches the view scales are the architectural ones, from
+<code>12" = 1'-0"</code> to <code>3/64" = 1'-0"</code>, and the engineering ones, from <code>1" = 10'-0"</code> to
+<code>1" = 100'-0"</code>: in the view bar, in the Properties and on sheets. A scale that is neither shows
+as a ratio.</p>
+<table>
+<thead>
+<tr>
+<th>Scale</th>
+<th>Ratio</th>
+<th>Typical use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>12" = 1'-0"</code></td>
+<td>1:1</td>
+<td>full-size details</td>
+</tr>
+<tr>
+<td><code>6" = 1'-0"</code></td>
+<td>1:2</td>
+<td>complex joints and nodes</td>
+</tr>
+<tr>
+<td><code>3" = 1'-0"</code></td>
+<td>1:4</td>
+<td>masonry and joinery details</td>
+</tr>
+<tr>
+<td><code>1 1/2" = 1'-0"</code></td>
+<td>1:8</td>
+<td>component and window details</td>
+</tr>
+<tr>
+<td><code>1" = 1'-0"</code></td>
+<td>1:12</td>
+<td>standard construction details</td>
+</tr>
+<tr>
+<td><code>3/4" = 1'-0"</code></td>
+<td>1:16</td>
+<td>structural nodes</td>
+</tr>
+<tr>
+<td><code>1/2" = 1'-0"</code></td>
+<td>1:24</td>
+<td>wall sections and partial elevations</td>
+</tr>
+<tr>
+<td><code>3/8" = 1'-0"</code></td>
+<td>1:32</td>
+<td>kitchen and bathroom plans, enlarged details</td>
+</tr>
+<tr>
+<td><code>1/4" = 1'-0"</code></td>
+<td>1:48</td>
+<td>the architectural standard for plans and sections</td>
+</tr>
+<tr>
+<td><code>1/8" = 1'-0"</code></td>
+<td>1:96</td>
+<td>the engineering and MEP standard, general plans</td>
+</tr>
+<tr>
+<td><code>3/32" = 1'-0"</code></td>
+<td>1:128</td>
+<td>large commercial plans</td>
+</tr>
+<tr>
+<td><code>1/16" = 1'-0"</code></td>
+<td>1:192</td>
+<td>key plans and general layouts</td>
+</tr>
+<tr>
+<td><code>3/64" = 1'-0"</code></td>
+<td>1:256</td>
+<td>very large site plans</td>
+</tr>
+<tr>
+<td><code>1" = 10'-0"</code></td>
+<td>1:120</td>
+<td>civil engineering and site plans</td>
+</tr>
+<tr>
+<td><code>1" = 20'-0"</code></td>
+<td>1:240</td>
+<td>subdivision plans</td>
+</tr>
+<tr>
+<td><code>1" = 30'-0"</code></td>
+<td>1:360</td>
+<td>civil works and utilities</td>
+</tr>
+<tr>
+<td><code>1" = 40'-0"</code></td>
+<td>1:480</td>
+<td>topography and road surveys</td>
+</tr>
+<tr>
+<td><code>1" = 50'-0"</code></td>
+<td>1:600</td>
+<td>urban planning and context plans</td>
+</tr>
+<tr>
+<td><code>1" = 60'-0"</code></td>
+<td>1:720</td>
+<td>territorial surveys</td>
+</tr>
+<tr>
+<td><code>1" = 100'-0"</code></td>
+<td>1:1200</td>
+<td>cadastral maps</td>
+</tr>
+</tbody>
+</table>
+<figure>
+<img alt="The plan of the sample house at 1/4&quot; = 1'-0&quot;, with its dimensions in feet and inches" src="../assets/screens/pf-imperial-plan.webp"/>
+<figcaption>A plan at 1/4" = 1'-0", dimensioned to 1/16"</figcaption>
+</figure>
+<figure>
+<img alt="A schedule of walls with lengths and heights in feet and inches, areas in square feet and volumes in cubic feet" src="../assets/screens/pf-imperial-schedule.webp"/>
+<figcaption>A schedule in feet and inches</figcaption>
+</figure>
+<p>The <strong>BIMopen imperial template</strong> has the same set of types as the metric one, in US trade
+sizes: walls of 2x4 and 2x6 wood studs, of 8" blocks and brick, of metal studs; doors from 30"
+to 36" x 80"; windows with a 3'-0" sill; stairs with risers of at most 7 3/4" and treads of at
+least 10"; railings 36" and 42" high. Lengths and dimensions are rounded to 1/32",
+the length dimension snap increments are 4', 1', 6" and 1", the work plane grid is 4', plans are
+at 1/8" = 1'-0" and text is 3/32" and 1/8" high. These are starting points: each one can be
+changed in the project. Changing the units of a project does not rename its types.</p>
+<p>Tip: to keep drawings readable on site, give the dimension types a coarser rounding: in a
+dimension type's <strong>Type Parameters</strong>, <strong>Units Format</strong> opens <strong>Format</strong>; untick
+<strong>Use project settings</strong> and round to 1/16" or 1/8".</p>
+<figure>
+<img alt="The dialog System of measurement not set, with the buttons Imperial and Metric" src="../assets/screens/pf-new-units.webp"/>
+<figcaption>A new project from no template asks for the system of measurement</figcaption>
+</figure>
+<h3 id="typing-lengths">Typing lengths</h3>
+<p>A length typed in the Properties, on a temporary dimension, in the options strip, in a dialog or
+at the command line is read this way:</p>
+<ul>
+<li>with a unit, in that unit, in any project: <code>300mm</code>, <code>1.2 m</code>, <code>1 m 20 cm</code>, <code>6"</code>, <code>5.5'</code>,
+  <code>5.5 ft</code>;</li>
+<li>feet and inches: <code>5'6"</code>, <code>5' 6 1/2"</code>, <code>5'-6 1/2"</code>; after the feet the last <code>"</code> can be left out
+  (<code>5'6</code>), and inches from 12 up are carried into the feet (<code>5' 14"</code> is <code>6'-2"</code>);</li>
+<li>a number without a unit is in the project's unit of length; in a project in feet, two
+  numbers are feet and inches: <code>8 6</code> is <code>8'-6"</code>, <code>8 6 1/2</code> is <code>8'-6 1/2"</code>;</li>
+<li>fractions are of an inch; a fraction of a foot is written as a decimal (<code>5.5'</code>);</li>
+<li>after <code>=</code>, a formula: <code>=10' + 6"</code>, <code>=12'/5</code>, <code>=3000mm/2</code>; its numbers without a unit are in
+  the project's unit.</li>
+</ul>
+<p>The decimal symbol is the project's. While a value is being edited it is shown at full
+precision (to 1/256" in feet and inches), so confirming it unchanged changes nothing. At the
+command line a number without a unit is in metres in a metric project and in feet in a project
+in feet and inches; a length can always carry its unit: <code>wall 0,0 20',0</code>.</p>
 <h3 id="sun-settings">Sun Settings</h3>
 <p><strong>Settings ➤ Additional settings ➤ Sun Settings</strong> opens the sun settings of the active view, the
 same as the sun button of the view control bar (see <a href="../views-and-graphics/">Views and graphics</a>).</p>
@@ -678,10 +877,8 @@ their body), slabs become floors, doors and windows go in the walls their openin
 become rooms. The messages count what was not read.</p>
 <p><strong>Open ➤ IFC Options…</strong> opens <strong>Import IFC Options</strong>: what each IFC class becomes (walls, floors,
 doors, windows, rooms or <strong>Not Imported</strong>), and <strong>Default</strong>. The choices are kept between sessions.</p>
-<h3 id="revit-projects">.rvt files</h3>
-<p>Opening a <code>.rvt</code> file is experimental: today it reads only the project name and the level
-names, so the new project has its levels and no walls, doors, windows or floors. The messages say
-so after the import. To exchange models with other BIM software, use IFC4.</p>
+<p>Objects with a shape that are not walls, floors, doors, windows or spaces are kept as imported
+objects, to convert: see <a href="../import-and-conversion/">Importing and converting</a>.</p>
 <h3 id="other-exports">Other exports</h3>
 <p>Printing to PDF and exporting images are described in
 <a href="../documentation/">Sheets, schedules and printing</a>; schedules export as delimited text from the
@@ -711,13 +908,13 @@ same chapter. <code>bimopen-cli convert</code> exports from the command line (se
               </div>
 </div>
 </a>
-<a aria-label="Next: Selecting and modifying" class="md-footer__link md-footer__link--next" href="../selection-and-modify/">
+<a aria-label="Next: Importing and converting" class="md-footer__link md-footer__link--next" href="../import-and-conversion/">
 <div class="md-footer__title">
 <span class="md-footer__direction">
                 Next
               </span>
 <div class="md-ellipsis">
-                Selecting and modifying
+                Importing and converting
               </div>
 </div>
 <div class="md-footer__button md-icon">

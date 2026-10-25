@@ -226,14 +226,14 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#the-home-tab">
 <span class="md-ellipsis">
-      The Create tools
+      The Model tools
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#the-annotate-tab">
 <span class="md-ellipsis">
-      The Document tools
+      The Annotations tools
     </span>
 </a>
 </li>
@@ -247,14 +247,14 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#the-manage-tab">
 <span class="md-ellipsis">
-      The Settings tools
+      The Project tools
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#the-contextual-tab">
 <span class="md-ellipsis">
-      The contextual card
+      The contextual tab Edit
     </span>
 </a>
 </li>
@@ -404,6 +404,14 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../import-and-conversion/">
+<span class="md-ellipsis">
+    Importing and converting
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../selection-and-modify/">
 <span class="md-ellipsis">
     Selecting and modifying
@@ -533,14 +541,14 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#the-home-tab">
 <span class="md-ellipsis">
-      The Create tools
+      The Model tools
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#the-annotate-tab">
 <span class="md-ellipsis">
-      The Document tools
+      The Annotations tools
     </span>
 </a>
 </li>
@@ -554,14 +562,14 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#the-manage-tab">
 <span class="md-ellipsis">
-      The Settings tools
+      The Project tools
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#the-contextual-tab">
 <span class="md-ellipsis">
-      The contextual card
+      The contextual tab Edit
     </span>
 </a>
 </li>
@@ -710,22 +718,27 @@ shows them and tells how to switch.</p>
 <p>The window has these parts:</p>
 <ol>
 <li>the <strong>rail</strong>, on the left edge: BIMopen's mark, which opens the application menu, then
-   <strong>Home</strong>, <strong>Create</strong>, <strong>Document</strong>, <strong>Views</strong> and <strong>Coordinate</strong>, and at the bottom the open
-   project and <strong>Settings</strong>;</li>
-<li>the <strong>tool panel</strong>, beside the rail: the tools of the rail entry chosen, as cards of tiles;</li>
+   <strong>Home</strong>, the contextual tab <strong>Edit</strong>, the tabs <strong>Model</strong>, <strong>Structure</strong>, <strong>Reinforced
+   concrete</strong>, <strong>Metal</strong>, <strong>Prefabrication</strong>, <strong>MEP</strong>, <strong>Link and import</strong>, <strong>Annotations</strong>,
+   <strong>Check</strong>, <strong>Massing &amp; site</strong>, <strong>Collaborate</strong>, <strong>Views</strong> and <strong>Project</strong>, and at the bottom
+   <strong>Settings</strong>;</li>
+<li>the <strong>tool panel</strong>, beside the rail: the groups of the tab chosen on the rail, as framed
+   blocks of tiles;</li>
 <li>the <strong>top bar</strong>: the project and the active view, the command search, which is also the
    command line, the save state, <strong>Undo</strong> and <strong>Redo</strong>, the quick access tools, the light or dark
    theme, the <strong>?</strong> menu and <strong>Options</strong>;</li>
 <li>the <strong>drawing area</strong>, in the middle: the views, each with its view selector at the top and
    the view bar at the bottom; while a tool works, the <strong>options strip</strong> runs over it;</li>
 <li>the <strong>element panel</strong>, on the right: the properties of the selection, or of the active view;</li>
-<li>the <strong>views and families strip</strong>, under the drawing area;</li>
+<li>the <strong>views and families strip</strong>, under the drawing area, which you can put away (<span class="keys"><kbd class="key-f9">F9</kbd></span>);</li>
 <li>the <strong>status bar</strong>, along the bottom.</li>
 </ol>
 <p>The panels keep their width whatever they show: a long name is cut with «…» and its tooltip
 shows it whole. Drag the edge of the tool panel or of the element panel to make it wider or
-narrower; BIMopen remembers it for the next session. A click on the rail entry already chosen
-folds the tool panel, and a second click opens it again.</p>
+narrower; BIMopen remembers it for the next session. A click on the tab already chosen on the
+rail folds the tool panel, and a second click opens it again. Without touch the interface is
+compact, to leave the drawing area as much room as possible; in touch mode the buttons stay big
+(see <a href="../interface-styles/#touch-mode">Interface styles</a>).</p>
 <p>In Arabic the whole window is mirrored: the rail and the tool panel are on the right, the
 element panel on the left, and the strips read from right to left.</p>
 <h2 id="application-menu">Application menu</h2>
@@ -746,7 +759,7 @@ sheets and schedules, and reminds you that the file commands are in this menu.</
 </tr>
 <tr>
 <td><strong>Open…</strong></td>
-<td>Opens a <code>.bimopen</code> project, or imports an <code>.rvt</code> file (experimental: only the project name and the level names), chosen in a file dialog. In the browser, drag the file into the page instead</td>
+<td>Opens a <code>.bimopen</code> project, or opens an <code>.ifc</code> file as a new project, chosen in a file dialog. In the browser, drag the file into the page instead</td>
 </tr>
 <tr>
 <td><strong>Sample project</strong></td>
@@ -802,8 +815,8 @@ first if you want to keep it.</p>
 bar says <strong>Unsaved changes</strong> while there are changes to save.</p>
 </div>
 <h3 id="options">Options</h3>
-<p>The gear at the right end of the top bar, or <strong>Application menu ▸ Options</strong>, opens <strong>Options</strong>.
-It has, among others, these settings:</p>
+<p>The gear at the right end of the top bar, <strong>Settings</strong> at the bottom of the rail, or
+<strong>Application menu ▸ Options</strong>, opens <strong>Options</strong>. It has, among others, these settings:</p>
 <table>
 <thead>
 <tr>
@@ -922,329 +935,316 @@ Hidden</strong>, <strong>Switch View</strong>): tick one to show it, untick it t
 opens the page of what you are doing: the open dialog, the tile under the mouse (its tip ends
 with <strong>Press F1 for more information</strong>) or the active tool.</p>
 <h2 id="ribbon">Rail and tool panel</h2>
-<p>Each entry of the rail shows its tools in the tool panel, as cards: a card has a title, its
-groups, and in each group big tiles with an icon and a name. A tile with a small ▾ mark has a
-menu: a click on the tile starts the command, a click on the mark opens the menu with its
-variants. Resting the mouse on a tile shows what it does and, in brackets, the shortcut you can
-type to start it. The commands BIMopen does not run yet are greyed, and their tip says «Not
-available yet»; <strong>Level</strong>, <strong>Grid</strong> and <strong>Guide plane</strong> are greyed in a 3D view («Not available
-in the 3D view»).</p>
+<p>The rail lists the tabs of the ribbon of the <strong>Classic</strong> style, with the same names and in the
+same order. Click a tab: the tool panel shows its groups as framed blocks, each with its name at
+the bottom, and in each block its commands in the ribbon's order, three to a row, as tiles with
+an icon and a name. A long name goes on up to three lines, broken between words or at a syllable
+with a hyphen. A tile with a small ▾ mark in its corner has a menu: a click on the tile starts
+the command, a click on the mark opens the menu with its variants. Resting the mouse on a tile
+shows what it does and, in brackets, the shortcut you can type to start it. The commands BIMopen
+does not run yet are greyed, and their tip says «Not available yet»; <strong>Level</strong>, <strong>Grid</strong> and
+<strong>Guide plane</strong> are greyed in a 3D view («Not available in the 3D view»). When a tab has more
+commands than the panel shows at once (<strong>Model</strong>, <strong>Structure</strong>), the panel scrolls. <strong>Settings</strong>,
+at the bottom of the rail, opens <strong>Options</strong>.</p>
 <figure>
-<img alt="The rail and the tool panel with Create open: the Modelling card with Architecture, Structure and Systems, and the groups Build, Vertical links, 3D elements and Rooms and areas" src="../assets/screens/if-rail-create.webp"/>
-<figcaption>The rail and the Create tools</figcaption>
+<img alt="The rail and the tool panel with Model open: the blocks Build, Vertical Links, 3D elements and Rooms and Areas, three tiles to a row, each block with its name at the bottom" src="../assets/screens/if-rail-create.webp"/>
+<figcaption>The rail and the Model tab</figcaption>
 </figure>
 <table>
 <thead>
 <tr>
-<th>Rail</th>
-<th>Card</th>
+<th>Tab</th>
 <th>Group</th>
 <th>Commands</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Create</strong></td>
-<td><strong>Modelling ▸ Architecture</strong></td>
+<td><strong>Model</strong></td>
 <td><strong>Build</strong></td>
 <td><strong>Wall ▾</strong>, <strong>Door</strong>, <strong>Window</strong>, <strong>Object ▾</strong>, <em>Column ▾</em>, <strong>Roof ▾</strong>, <em>Ceiling</em>, <strong>Flooring ▾</strong>, <strong>Curtain Wall</strong>, <strong>Curtain grid</strong>, <strong>Mullion</strong></td>
 </tr>
 <tr>
-<td></td>
 <td></td>
 <td><strong>Vertical Links</strong></td>
 <td><strong>Railing ▾</strong>, <strong>Ramp</strong>, <strong>Stair</strong></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>3D elements</strong></td>
 <td><em>3D text</em>, <em>3D line</em>, <em>Group ▾</em></td>
 </tr>
 <tr>
-<td></td>
 <td></td>
 <td><strong>Rooms and Areas</strong></td>
 <td><strong>Room</strong>, <strong>Room Separator</strong>, <strong>Room Label ▾</strong>, <strong>Area ▾</strong>, <strong>Area Outline</strong>, <strong>Area Label ▾</strong></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Openings</strong></td>
 <td><em>By face</em>, <em>Shaft</em>, <em>In a wall</em>, <em>Vertical opening</em>, <em>Dormer</em></td>
 </tr>
 <tr>
-<td></td>
 <td></td>
 <td><strong>References</strong></td>
 <td><strong>Level</strong>, <strong>Grid</strong></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Work Plane</strong></td>
 <td><strong>Define</strong>, <strong>Display</strong>, <strong>Guide plane</strong>, <em>Plane viewer</em></td>
 </tr>
 <tr>
-<td></td>
-<td><strong>Modelling ▸ Structure</strong></td>
+<td><strong>Structure</strong></td>
 <td><strong>Structural elements</strong></td>
 <td><em>Beam</em>, <em>Structural wall ▾</em>, <em>Structural column</em>, <em>Structural floor ▾</em>, <em>Truss</em>, <em>Brace</em>, <em>Beam layout</em></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Connections</strong></td>
 <td><em>Connection ▾</em>, <em>Automatic joints</em></td>
 </tr>
 <tr>
-<td></td>
 <td></td>
 <td><strong>Foundations</strong></td>
 <td><em>Pad footing</em>, <em>Strip footing</em>, <em>Raft foundation ▾</em></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>3D elements</strong></td>
 <td><strong>Object ▾</strong>, <em>3D text</em>, <em>3D line</em>, <em>Group ▾</em></td>
 </tr>
 <tr>
-<td></td>
 <td></td>
 <td><strong>Openings</strong></td>
 <td><em>Normal to a face</em>, <em>Shaft</em>, <em>In a wall</em>, <em>Vertical opening</em>, <em>Dormer</em></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>References</strong></td>
 <td><strong>Level</strong>, <strong>Grid</strong></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Work Plane</strong></td>
 <td><strong>Define</strong>, <strong>Display</strong>, <strong>Guide plane</strong>, <em>Plane viewer</em></td>
 </tr>
 <tr>
-<td></td>
-<td><strong>Modelling ▸ MEP</strong></td>
-<td><strong>Air</strong></td>
-<td><em>Duct</em>, <em>Duct from a path</em>, <em>Duct fitting</em>, <em>Duct accessory</em>, <em>Duct insulation</em>, <em>Flexible duct</em>, <em>Air outlet</em></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><strong>Prefabricated parts</strong></td>
-<td><em>Prefabricated part</em>, <em>Multi-point route</em></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><strong>System details</strong></td>
-<td><em>Duct bracing</em></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><strong>P&amp;ID diagrams</strong></td>
-<td><em>P&amp;ID editor</em></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><strong>Mechanical</strong></td>
-<td><em>Mechanical equipment</em>, <em>Control device</em></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><strong>Other systems</strong></td>
-<td><em>Plumbing ▾</em>, <em>Electrical ▾</em>, <em>Modelling ▾</em>, <strong>Work Plane ▾</strong></td>
-</tr>
-<tr>
-<td></td>
 <td><strong>Reinforced concrete</strong></td>
 <td><strong>Reinforcement</strong></td>
 <td><em>Rebar</em>, <em>Reinforcement along a path</em>, <em>Adaptive rebar</em>, <em>Reinforcement over an area</em>, <em>Mesh over an area</em>, <em>Single mesh</em>, <em>Concrete cover</em>, <em>Coupler</em></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Settings</strong></td>
 <td><em>Cover options</em>, <em>Rebar options</em></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Work Plane</strong></td>
 <td><strong>Define</strong>, <strong>Display</strong>, <strong>Guide plane</strong>, <em>Plane viewer</em></td>
 </tr>
 <tr>
-<td></td>
 <td><strong>Metal</strong></td>
 <td><strong>Connections</strong></td>
 <td><em>Connection ▾</em>, <em>Automatic joints</em></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Steelwork parts</strong></td>
 <td><em>Plate</em>, <em>Bolts ▾</em>, <em>Weld</em></td>
 </tr>
 <tr>
-<td></td>
 <td></td>
 <td><strong>Fabrication</strong></td>
 <td><em>Cope</em>, <em>Skewed cut</em>, <em>Shorten</em>, <em>Shaped cut</em></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Automatic cuts</strong></td>
 <td><em>End cut</em>, <em>Corner joint ▾</em>, <em>Intersection</em>, <em>Cut with</em></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Work Plane</strong></td>
 <td><strong>Define</strong>, <strong>Display</strong>, <strong>Guide plane</strong>, <em>Plane viewer</em></td>
 </tr>
 <tr>
-<td></td>
 <td><strong>Prefabrication</strong></td>
 <td><strong>Division</strong></td>
 <td><em>Divide</em></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Joints</strong></td>
 <td><em>Assembly parts</em></td>
 </tr>
 <tr>
-<td></td>
 <td></td>
 <td><strong>Reinforcement</strong></td>
 <td><em>Rebar</em>, <em>Custom mesh</em></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Production</strong></td>
 <td><em>Workshop drawings</em>, <em>Export for CAM</em></td>
 </tr>
 <tr>
-<td></td>
 <td></td>
 <td><strong>Settings</strong></td>
 <td><em>Prefabrication settings</em>, <em>Cold-formed profiles</em></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Automatic update</strong></td>
 <td><em>Suspend ▾</em></td>
 </tr>
 <tr>
+<td><strong>MEP</strong></td>
+<td><strong>Air</strong></td>
+<td><em>Duct</em>, <em>Duct from a path</em>, <em>Duct fitting</em>, <em>Duct accessory</em>, <em>Duct insulation</em>, <em>Flexible duct</em>, <em>Air outlet</em></td>
+</tr>
+<tr>
 <td></td>
+<td><strong>Prefabricated parts</strong></td>
+<td><em>Prefabricated part</em>, <em>Multi-point route</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>System details</strong></td>
+<td><em>Duct bracing</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>P&amp;ID diagrams</strong></td>
+<td><em>P&amp;ID editor</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Mechanical</strong></td>
+<td><em>Mechanical equipment</em>, <em>Control device</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Other systems</strong></td>
+<td><em>Plumbing ▾</em>, <em>Electrical ▾</em>, <em>Modelling ▾</em>, <strong>Work Plane ▾</strong></td>
+</tr>
+<tr>
 <td><strong>Link and import</strong></td>
 <td><strong>Link</strong></td>
 <td><em>Link project</em>, <em>Link IFC</em>, <em>Link CAD</em>, <em>Link topography</em>, <em>Decal ▾</em>, <em>Point cloud</em>, <em>Manage links</em>, <em>Link PDF</em>, <em>Link image</em>, <em>Federated model ▾</em></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Import</strong></td>
 <td><em>Import CAD</em>, <em>Import gbXML</em>, <em>Import PDF</em>, <em>Import image</em></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Load from library</strong></td>
 <td><strong>Load Family</strong>, <em>Load as group</em>, <strong>Insert from File ▾</strong></td>
 </tr>
 <tr>
-<td></td>
-<td><strong>Massing &amp; site</strong></td>
-<td><strong>Massing</strong></td>
-<td><em>Display masses ▾</em>, <em>New mass</em>, <em>Place a mass</em>, <em>Draw in 3D</em></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><strong>From mass faces</strong></td>
-<td><em>Curtain Wall</em>, <em>Roof</em>, <em>Wall</em>, <em>Slab</em>, <em>Terrain from face</em></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><strong>Site</strong></td>
-<td><em>Terrain</em>, <em>Site element</em>, <em>Parking</em>, <em>Building pad</em>, <em>Surrounding context</em></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><strong>Edit site</strong></td>
-<td><em>Divide terrain</em>, <em>Merge terrains</em>, <em>Sub-area</em>, <em>Property line</em>, <em>Grading</em>, <em>Contour labels</em></td>
-</tr>
-<tr>
-<td><strong>Document</strong></td>
-<td><strong>Document</strong></td>
-<td><strong>Sheets</strong></td>
-<td><strong>Sheet</strong>, <strong>View</strong>, <strong>Title Block</strong>, <strong>Revisions</strong>, <strong>Guide Grid</strong>, <strong>Deactivate View</strong></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
+<td><strong>Annotations</strong></td>
 <td><strong>Dimension</strong></td>
 <td><strong>Aligned</strong>, <strong>Linear</strong>, <strong>Angular</strong>, <strong>Radial</strong>, <em>Diameter</em>, <strong>Arc length</strong>, <strong>Spot dimension ▾</strong></td>
 </tr>
 <tr>
-<td></td>
 <td></td>
 <td><strong>Detail</strong></td>
 <td><strong>Detail line</strong>, <strong>Filled region ▾</strong>, <strong>Detail symbol ▾</strong>, <strong>Revision Cloud</strong>, <em>2D group ▾</em></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Text</strong></td>
 <td><strong>Text</strong>, <em>Spell checker</em></td>
 </tr>
 <tr>
-<td></td>
 <td></td>
 <td><strong>Tag</strong></td>
 <td><strong>Tag</strong>, <strong>Tag all</strong>, <em>Material</em>, <strong>Color legend</strong>, <em>Beam tags</em>, <em>Multi-category tag</em>, <em>View reference</em>, <em>Tread numbers</em>, <em>Rebar tag ▾</em>, <em>Coded note ▾</em>, <em>Duct legend</em>, <em>Pipe legend</em></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Symbol</strong></td>
 <td><strong>Symbol</strong>, <em>Span direction</em>, <em>Rebar symbol</em>, <em>Stair path</em></td>
 </tr>
 <tr>
-<td><strong>Views</strong></td>
+<td><strong>Check</strong></td>
+<td><strong>Energy</strong></td>
+<td><em>Energy analysis</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Check</strong></td>
+<td><em>Check clashes</em>, <em>Show loads</em>, <em>Disconnected connections</em>, <em>Electrical loads</em>, <em>Escape route</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Analytical model</strong></td>
+<td><em>Analytical member</em>, <em>Analytical panel</em>, <em>Analytical node</em>, <em>Supports and restraints</em>, <em>Automatic analytical model</em>, <em>Analysis results</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Spaces and zones</strong></td>
+<td><em>Space</em>, <em>Space separator</em>, <em>Space tag</em>, <em>Space names</em>, <em>Drawn zone</em>, <em>Zone from spaces</em></td>
+</tr>
+<tr>
+<td><strong>Massing &amp; site</strong></td>
+<td><strong>Massing</strong></td>
+<td><em>Display masses ▾</em>, <em>New mass</em>, <em>Place a mass</em>, <em>Draw in 3D</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>From mass faces</strong></td>
+<td><em>Curtain Wall</em>, <em>Roof</em>, <em>Wall</em>, <em>Slab</em>, <em>Terrain from face</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Site</strong></td>
+<td><em>Terrain</em>, <em>Site element</em>, <em>Parking</em>, <em>Building pad</em>, <em>Surrounding context</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Edit site</strong></td>
+<td><em>Divide terrain</em>, <em>Merge terrains</em>, <em>Sub-area</em>, <em>Property line</em>, <em>Grading</em>, <em>Contour labels</em></td>
+</tr>
+<tr>
+<td><strong>Collaborate</strong></td>
+<td><strong>Shared work</strong></td>
+<td><em>Worksets</em>, <em>Synchronize</em>, <em>Show history</em>, <em>Enable sharing</em>, <em>Active workset</em>, <em>Dim other worksets</em>, <em>Reload changes</em>, <em>Release elements</em>, <em>Permission requests</em>, <em>Sharing status</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Archive</strong></td>
+<td><em>Restore backup</em>, <em>Publishing options</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Coordination</strong></td>
+<td><em>Copy and monitor ▾</em>, <em>Coordination review ▾</em>, <em>Coordination options</em>, <em>Realign hosts</em>, <em>Federated model changes</em></td>
+</tr>
+<tr>
 <td><strong>Views</strong></td>
 <td><strong>Graphics</strong></td>
 <td><strong>View presets ▾</strong>, <strong>Visibility and Graphics</strong>, <strong>Filters</strong>, <strong>Thin lines</strong>, <em>Show hidden lines</em>, <em>Remove hidden lines</em>, <em>Cut outline ▾</em></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Presentation</strong></td>
 <td><em>Realistic image</em></td>
 </tr>
 <tr>
-<td></td>
 <td></td>
 <td><strong>Create</strong></td>
 <td><strong>3D View ▾</strong>, <strong>Section</strong>, <strong>Enlarged detail ▾</strong>, <strong>Plan ▾</strong>, <strong>Elevation ▾</strong>, <strong>Free 2D View</strong>, <strong>Duplicate View ▾</strong>, <strong>Legends ▾</strong>, <strong>Schedules ▾</strong>, <em>Extent box</em></td>
 </tr>
 <tr>
 <td></td>
+<td><strong>Sheets</strong></td>
+<td><strong>Sheet</strong>, <strong>View</strong>, <strong>Title Block</strong>, <strong>Revisions</strong>, <strong>Guide Grid</strong>, <strong>Deactivate View</strong></td>
+</tr>
+<tr>
 <td></td>
 <td><strong>Windows</strong></td>
 <td><strong>Switch View ▾</strong>, <strong>Close others</strong>, <strong>Tile</strong>, <strong>Cascade</strong>, <strong>Replicate</strong>, <strong>Maximize</strong>, <strong>Panels ▾</strong></td>
@@ -1252,95 +1252,44 @@ in the 3D view»).</p>
 <tr>
 <td></td>
 <td><strong>Project Index</strong></td>
-<td></td>
 <td>The tree of the project's views, schedules, sheets and families</td>
 </tr>
 <tr>
-<td><strong>Coordinate</strong></td>
-<td><strong>Coordinate</strong></td>
-<td><strong>Energy</strong></td>
-<td><em>Energy analysis</em></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><strong>Check</strong></td>
-<td><em>Check clashes</em>, <em>Show loads</em>, <em>Disconnected connections</em>, <em>Electrical loads</em>, <em>Escape route</em></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><strong>Analytical model</strong></td>
-<td><em>Analytical member</em>, <em>Analytical panel</em>, <em>Analytical node</em>, <em>Supports and restraints</em>, <em>Automatic analytical model</em>, <em>Analysis results</em></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><strong>Spaces and zones</strong></td>
-<td><em>Space</em>, <em>Space separator</em>, <em>Space tag</em>, <em>Space names</em>, <em>Drawn zone</em>, <em>Zone from spaces</em></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><strong>Shared work</strong></td>
-<td><em>Worksets</em>, <em>Synchronize</em>, <em>Show history</em>, <em>Enable sharing</em>, <em>Active workset</em>, <em>Dim other worksets</em>, <em>Reload changes</em>, <em>Release elements</em>, <em>Permission requests</em>, <em>Sharing status</em></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><strong>Archive</strong></td>
-<td><em>Restore backup</em>, <em>Publishing options</em></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><strong>Coordination</strong></td>
-<td><em>Copy and monitor ▾</em>, <em>Coordination review ▾</em>, <em>Coordination options</em>, <em>Realign hosts</em>, <em>Federated model changes</em></td>
-</tr>
-<tr>
-<td><strong>Settings</strong></td>
-<td><strong>Settings</strong></td>
+<td><strong>Project</strong></td>
 <td><strong>Settings</strong></td>
 <td><strong>Materials</strong>, <strong>Styles by Category</strong>, <strong>Snap</strong>, <strong>Project information</strong>, <strong>Project parameters</strong>, <strong>Project units</strong>, <strong>Copy Settings from Project</strong>, <em>General parameters</em></td>
 </tr>
 <tr>
-<td></td>
 <td></td>
 <td><strong>Phases</strong></td>
 <td><em>Phases</em></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Options</strong></td>
 <td><em>Design options</em>, <em>Main version</em></td>
 </tr>
 <tr>
-<td></td>
 <td></td>
 <td><strong>Numbering</strong></td>
 <td><em>Renumber</em></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Position</strong></td>
 <td><em>Shared coordinates ▾</em>, <em>Move project ▾</em></td>
 </tr>
 <tr>
-<td></td>
 <td></td>
 <td><strong>Project management</strong></td>
 <td><em>Project images</em>, <em>Opening view</em></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Selections</strong></td>
 <td><em>Save selection</em>, <em>Load selection</em>, <em>Edit selection</em></td>
 </tr>
 <tr>
-<td></td>
 <td></td>
 <td><strong>Inquiry</strong></td>
 <td><em>Select by number</em>, <em>Selection numbers</em>, <em>Warnings</em></td>
@@ -1348,12 +1297,12 @@ in the 3D view»).</p>
 </tbody>
 </table>
 <p>In italics the commands BIMopen does not run yet; ▾ marks a menu.</p>
-<p>Press and release <span class="keys"><kbd class="key-alt">Alt</kbd></span>, or press <span class="keys"><kbd class="key-f10">F10</kbd></span>, to show the key tips: a letter on each rail entry
-and, on the tiles of the open card, their tool's shortcut. Type an entry's letter to open it,
+<p>Press and release <span class="keys"><kbd class="key-alt">Alt</kbd></span>, or press <span class="keys"><kbd class="key-f10">F10</kbd></span>, to show the key tips: a letter on each tab of the
+rail and, on the tiles of the open tab, their tool's shortcut. Type a tab's letter to open it,
 then a tile's letters to start its tool; <span class="keys"><kbd class="key-escape">Esc</kbd></span> hides the tips. While they show, what you type
 does not go to the command line.</p>
-<h3 id="the-home-tab">The Create tools</h3>
-<p>The tools you use most to model are in <strong>Create ▸ Modelling ▸ Architecture</strong>:</p>
+<h3 id="the-home-tab">The Model tools</h3>
+<p>The tools you use most to model are in <strong>Model</strong>:</p>
 <table>
 <thead>
 <tr>
@@ -1382,7 +1331,7 @@ does not go to the command line.</p>
 </table>
 <p><strong>Area Outline</strong> and <strong>Area</strong> work in an area plan: until one is open they are greyed, and
 their tip says to open an area plan first.</p>
-<h3 id="the-annotate-tab">The Document tools</h3>
+<h3 id="the-annotate-tab">The Annotations tools</h3>
 <table>
 <thead>
 <tr>
@@ -1391,10 +1340,6 @@ their tip says to open an area plan first.</p>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><strong>Sheets</strong></td>
-<td><strong>Sheet</strong>: a new sheet with the title block you choose; <strong>View</strong>: places a view on the open sheet</td>
-</tr>
 <tr>
 <td><strong>Dimension</strong></td>
 <td><strong>Aligned</strong> <code>DI</code>, <strong>Linear</strong> <code>DL</code>, <strong>Angular</strong> <code>DA</code></td>
@@ -1413,10 +1358,9 @@ their tip says to open an area plan first.</p>
 </tr>
 </tbody>
 </table>
-<p><strong>Sheets ▸ View</strong> works only while a sheet is open.</p>
 <figure>
-<img alt="The Document tools: the Sheets group, then Dimension, Detail and Text with their tiles" src="../assets/screens/if-document-tools.webp"/>
-<figcaption>The Document tools</figcaption>
+<img alt="The Annotations tools: Dimension, Detail, Text, Tag and Symbol with their tiles" src="../assets/screens/if-document-tools.webp"/>
+<figcaption>The Annotations tools</figcaption>
 </figure>
 <h3 id="the-view-tab">The Views tools</h3>
 <figure>
@@ -1436,6 +1380,10 @@ their tip says to open an area plan first.</p>
 <td><strong>3D View ▾</strong> (<strong>Default 3D View</strong>, <strong>Save View</strong>), <strong>Plan ▾</strong> (<strong>Floor Plan</strong>, <strong>Area Plan</strong>), <strong>Duplicate View ▾</strong> (<strong>Duplicate</strong>, <strong>Duplicate with Detailing</strong>), <strong>Section</strong> <code>SE</code>, <strong>Elevation ▾</strong> (<strong>Elevation</strong> <code>EL</code>, <strong>Framing Elevation</strong>), <strong>Enlarged detail</strong> <code>DT</code> (a callout), <strong>Free 2D View</strong> <code>VD</code>, <strong>Schedules ▾</strong> (<strong>Schedule/Quantities</strong>, <strong>Material Takeoff</strong>, <strong>Sheet List</strong>, <strong>Note Block</strong>, <strong>Predefined schedules</strong>)</td>
 </tr>
 <tr>
+<td><strong>Sheets</strong></td>
+<td><strong>Sheet</strong>: a new sheet with the title block you choose; <strong>View</strong>: places a view on the open sheet</td>
+</tr>
+<tr>
 <td><strong>Graphics</strong></td>
 <td><strong>Visibility and Graphics</strong> <code>VG</code>, <strong>Filters</strong>, <strong>View templates</strong>, <strong>Apply template to current view</strong>, <strong>Create template from current view</strong></td>
 </tr>
@@ -1445,12 +1393,13 @@ their tip says to open an area plan first.</p>
 </tr>
 </tbody>
 </table>
+<p><strong>Sheets ▸ View</strong> works only while a sheet is open.</p>
 <p><strong>Save View</strong> works only while a 3D view is open, and <strong>Duplicate with Detailing</strong> only for
 views that are not 3D. Under the tools, the <strong>Project Index</strong> card holds the whole tree of the
 project.</p>
 <p>Every ▾ menu also lists, greyed, the entries not available yet; the command search finds them
 all.</p>
-<h3 id="the-manage-tab">The Settings tools</h3>
+<h3 id="the-manage-tab">The Project tools</h3>
 <table>
 <thead>
 <tr>
@@ -1473,19 +1422,21 @@ all.</p>
 <strong>Snap</strong> switch of the status bar. <strong>Additional settings ▸ Snaps…</strong> opens the <strong>Snap</strong> window:
 the length and angular increments, the object snaps and the overrides (see <a href="#snaps">Snap</a>).</p>
 <figure>
-<img alt="The Settings tools: Materials, Styles by category, Snap, Project information, Project units, the parameters, Purge Unused and Additional settings" src="../assets/screens/if-settings-tools.webp"/>
-<figcaption>The Settings tools</figcaption>
+<img alt="The Project tools: Materials, Styles by category, Snap, Project information, Project units, the parameters, Purge Unused and Additional settings" src="../assets/screens/if-settings-tools.webp"/>
+<figcaption>The Project tools</figcaption>
 </figure>
-<h3 id="the-contextual-tab">The contextual card</h3>
+<h3 id="the-contextual-tab">The contextual tab Edit</h3>
 <figure>
-<img alt="The wall tool at work: the contextual card on top of the tool panel and the options strip over the view" src="../assets/screens/bimopen-wall.png"/>
-<figcaption>The wall tool at work: the contextual card on top of the tool panel and the options strip over the view</figcaption>
+<img alt="The wall tool at work: the contextual tab Edit in the tool panel and the options strip over the view" src="../assets/screens/bimopen-wall.png"/>
+<figcaption>The wall tool at work: the contextual tab Edit in the tool panel and the options strip over the view</figcaption>
 </figure>
-<p>When you start a tool or select something, a card comes on top of the tool panel, whatever rail
-entry is open, with the name of what you are doing in the accent colour: <strong>Draw Wall</strong> while
-drawing walls, <strong>Selection: Walls</strong> with walls selected, <strong>Multi-Select</strong> with elements of
-different categories, <strong>Edit | …</strong> in the other modes. When the tool ends, or the selection is
-cleared, the card goes away; <span class="keys"><kbd class="key-escape">Esc</kbd></span> or a click on empty space does the same.</p>
+<p>When you start a tool or select something, the rail chooses by itself the contextual tab
+<strong>Edit</strong>, drawn with a dashed outline, and the tool panel shows its groups under the name of
+what you are doing, in the accent colour: <strong>Draw Wall</strong> while drawing walls, <strong>Selection:
+Walls</strong> with walls selected, <strong>Multi-Select</strong> with elements of different categories, <strong>Edit |
+…</strong> in the other modes. When the tool ends, or the selection is cleared, the tool panel goes
+back to the tab you were on; <span class="keys"><kbd class="key-escape">Esc</kbd></span> or a click on empty space does the same. A click on
+<strong>Edit</strong> shows its groups at any time.</p>
 <p>It always has these groups:</p>
 <table>
 <thead>
@@ -1563,8 +1514,8 @@ chapter</a> describes the Modify tools.</p>
 </tbody>
 </table>
 <figure>
-<img alt="The contextual card of a selected wall, on top of the tool panel: its name in the accent colour, Properties, Selection with Filter, Clipboard and Shapes" src="../assets/screens/if-contextual.webp"/>
-<figcaption>The contextual card of a selection</figcaption>
+<img alt="The contextual tab Edit of a selected wall: its name in the accent colour, Properties, Selection with Filter, Clipboard and Shapes" src="../assets/screens/if-contextual.webp"/>
+<figcaption>The contextual tab of a selection</figcaption>
 </figure>
 <h2 id="options-bar">Options strip</h2>
 <p>While a tool works, a strip runs over the top of the view: the name of what you are doing, then
@@ -1621,9 +1572,11 @@ intersections. With <strong>Ortho</strong> off, holding <span class="keys"><kbd 
 with it on, <span class="keys"><kbd class="key-shift">Shift</kbd></span> releases it.</p>
 <h2 id="properties">Element panel</h2>
 <p>The element panel, on the right, shows and changes the parameters of what you are working on.
-Its header has the category and the name of what it shows, <strong>Close</strong> (which clears the
-selection) and <strong>More actions</strong> (<strong>⋯</strong>: <strong>Type Parameters</strong> and the actions of the contextual
-card). Under the header, its tabs:</p>
+Its header is one line: the type with its menu, and under it the family, the count of what is
+selected, as <strong>Walls (1)</strong>, and <strong>Type Parameters</strong>, which opens the parameters of the type. On
+its right, <strong>Close</strong> (which clears the selection) and <strong>More actions</strong> (<strong>⋯</strong>: <strong>Type
+Parameters</strong> and the actions of the contextual tab). Under the header, its tabs; the rows of the
+parameters are low, with a wide column for the values:</p>
 <figure>
 <img alt="The element panel with nothing selected: the properties of the ground floor plan, with Graphics, Extents and Identity Data" src="../assets/screens/if-element-panel.webp"/>
 <figcaption>The element panel: the properties of the view</figcaption>
@@ -1654,11 +1607,12 @@ card). Under the header, its tabs:</p>
 </tr>
 </tbody>
 </table>
-<p>The <strong>type selector</strong> shows the family in small letters, the type underneath, and a preview of
-the type: walls, floors and roofs as their layers, doors, windows and components as a small
-picture. Click it to choose another type: the selected elements change type, or, while a tool is
-active, the next element gets that type. Open it to search the types by name; they are grouped
-by family, each with its preview. The arrow keys move, <span class="keys"><kbd class="key-enter">Enter</kbd></span> picks, <span class="keys"><kbd class="key-escape">Esc</kbd></span> closes the list.</p>
+<p>The <strong>type selector</strong> is the header of the panel: a small preview of the type (walls, floors
+and roofs as their layers, doors, windows and components as a picture), the name of the type
+with ▾, and the family under it. Click it to choose another type: the selected elements change
+type, or, while a tool is active, the next element gets that type. The list opens over the
+rows: search the types by name; they are grouped by family, each with its preview. The arrow
+keys move, <span class="keys"><kbd class="key-enter">Enter</kbd></span> picks, <span class="keys"><kbd class="key-escape">Esc</kbd></span> closes the list.</p>
 <figure>
 <img alt="The type selector of a selected wall, open: the search box and the wall types grouped by family, each with its preview" src="../assets/screens/if-type-selector.webp"/>
 <figcaption>The type selector</figcaption>
@@ -1796,6 +1750,9 @@ three buttons set the size: <strong>Previews</strong>, <strong>Compact</strong> 
 <img alt="The strip in Families mode: a preview of each type, the walls first, ready to be clicked or dragged into a plan" src="../assets/screens/if-strip-families.webp"/>
 <figcaption>The strip in Families mode</figcaption>
 </figure>
+<p>When the groups do not fit beside the modes, they fold into one menu, as <strong>All ▾</strong>. To give
+the room of the strip to the drawing area, put it away with <strong>Views strip</strong>, the last button of
+the status bar, or with <span class="keys"><kbd class="key-f9">F9</kbd></span>; the same button or key brings it back.</p>
 <h2 id="panels">Panels</h2>
 <p>The element panel can move. Drag it by its header: it docks on the left or on the right of the
 drawing area, or floats where you let it go. The buttons at the top right of the panel dock it
@@ -2098,7 +2055,8 @@ mode of the strip. The <a href="../command-line-and-mcp/">command line chapter</
 <p>On the right: the coordinates of the cursor (<strong>X</strong>, <strong>Y</strong>, <strong>Z</strong>) in metres; the active level,
 whose menu opens the plan of another level; the number of selected elements, which opens
 <strong>Filter</strong>; the switches <strong>Select and Drag</strong> (drag elements without selecting them first),
-<strong>Snap</strong>, <strong>Grid</strong> and <strong>Ortho</strong>; the scale of the view; and <strong>Command log</strong>.</p>
+<strong>Snap</strong>, <strong>Grid</strong> and <strong>Ortho</strong>; the scale of the view; <strong>Command log</strong>; and <strong>Views strip</strong>
+(<span class="keys"><kbd class="key-f9">F9</kbd></span>), which puts the views strip away or shows it again.</p>
 <h2 id="selecting-in-short">Selecting, in short</h2>
 <p>The <a href="../selection-and-modify/">selecting and modifying chapter</a> describes selection in full. The
 essentials:</p>

@@ -194,6 +194,14 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../import-and-conversion/">
+<span class="md-ellipsis">
+    Importación y conversión
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../selection-and-modify/">
 <span class="md-ellipsis">
     Selección y modificación
@@ -253,6 +261,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#realistic-style">
+<span class="md-ellipsis">
+      Estilo Realista
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#sun-and-shadows">
 <span class="md-ellipsis">
       Sol y sombras
@@ -278,6 +293,13 @@
 <a class="md-nav__link" href="#graphic-display-options">
 <span class="md-ellipsis">
       Opciones de visualización gráfica
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sketchy-lines">
+<span class="md-ellipsis">
+      Líneas de boceto
     </span>
 </a>
 </li>
@@ -427,6 +449,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#realistic-style">
+<span class="md-ellipsis">
+      Estilo Realista
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#sun-and-shadows">
 <span class="md-ellipsis">
       Sol y sombras
@@ -452,6 +481,13 @@
 <a class="md-nav__link" href="#graphic-display-options">
 <span class="md-ellipsis">
       Opciones de visualización gráfica
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sketchy-lines">
+<span class="md-ellipsis">
+      Líneas de boceto
     </span>
 </a>
 </li>
@@ -584,6 +620,10 @@ ventana de vista, ofrece:</p>
 <td><strong>Colores planos</strong></td>
 <td>Las caras en el color de su material, igual con cualquier luz</td>
 </tr>
+<tr>
+<td><strong>Realista</strong></td>
+<td>Las caras como en una fotografía: la luz del sol y del cielo del proyecto, los reflejos, las sombras ambientales, el vidrio transparente, la bruma</td>
+</tr>
 </tbody>
 </table>
 <figure>
@@ -616,6 +656,60 @@ pantalla.</p>
 combinación de colores</strong> en <strong>Fondo</strong> queda bajo las líneas del modelo: en planta encima de los
 suelos y debajo del mobiliario, en sección encima de las superficies vistas a través de cada
 habitación cortada. En <strong>Primer plano</strong> cubre el modelo, debajo de las anotaciones.</p>
+<h2 id="realistic-style">Estilo Realista</h2>
+<p><strong>Realista</strong> dibuja la vista 3D como una fotografía, en tiempo real, con la tarjeta gráfica, y la
+vista sigue siendo editable como en los demás estilos.</p>
+<ul>
+<li><strong>Luz del sol y del cielo.</strong> La luz es la del sol del proyecto (lugar, fecha y hora de la
+  <strong>Configuración del sol</strong>) y del cielo que ese sol da: azul de día, más cálido y oscuro al
+  atardecer. El sol ilumina incluso con las sombras apagadas; con <strong>Proyectar sombras</strong> sus sombras
+  son las de los demás estilos. Lo que queda en sombra sigue iluminado por el cielo y el suelo.
+  El disco del sol aparece cuando entra en el encuadre, con un halo, y el modelo lo oculta. Hacia
+  el atardecer la luz del sol se vuelve cálida y más débil y las sombras se alargan; tras la puesta
+  solo queda el cielo, que se apaga en un crepúsculo azul violáceo con una franja rosada sobre el
+  horizonte del lado del sol; de noche el cielo es azul oscuro y la escena casi a oscuras (las
+  superficies autoiluminadas siguen visibles). Al arrastrar el sol o seguir un estudio solar la
+  luz cambia de forma continua.</li>
+<li><strong>Luna y estrellas.</strong> La luna está donde se encuentra en el lugar, la fecha y la hora del
+  proyecto, en su fase: iluminada por el lado que mira al sol, el resto apenas gris (luz
+  cenicienta), más roja cerca del horizonte. De noche es ella la luz: con <strong>Proyectar sombras</strong> el
+  modelo arroja las sombras de la luna; la luna llena ilumina la escena suavemente y la luna nueva
+  la deja casi a oscuras. Puesto el sol aparecen las estrellas más brillantes en su sitio, tantas
+  más cuanto más oscuro está el cielo.</li>
+<li><strong>Materiales.</strong> Las superficies toman el aspecto de su material (pestaña <strong>Aspecto</strong> de
+  <strong>Materiales</strong>): la imagen de textura a su tamaño real, la rugosidad y su mapa, el relieve, el
+  metal, el vidrio y el agua, la autoiluminación (se ve, no ilumina lo demás). Un material sin
+  aspecto propio lo deriva de su color y su transparencia; una parte sin material toma el color de
+  su categoría. En la web las imágenes llegan después: mientras tanto se ve el color. La vista previa de la pestaña <strong>Aspecto</strong> la dibuja el mismo motor, sobre una esfera, un cubo
+  o un muro de 2 × 2 m (sin tarjeta gráfica, con una imagen calculada aparte).</li>
+<li><strong>Vidrio.</strong> El vidrio deja ver lo que hay detrás y refleja el cielo y el sol, más cuando se mira
+  de refilón. Los vidrios se dibujan del más lejano al más cercano.</li>
+<li><strong>Sombras ambientales.</strong> Con <strong>Sombras ambientales</strong> los rincones y huecos, que reciben menos luz
+  del cielo, son más oscuros.</li>
+<li><strong>Bruma.</strong> A lo lejos el aire vela el modelo: <strong>Bruma en la distancia</strong> regula cuánto y cuán
+  limpio está el cielo.</li>
+<li><strong>Exposición.</strong> <strong>Automático</strong> sigue la luz de la escena y se adapta en medio segundo más o menos
+  cuando cambia (la cámara del cielo a la sombra, otra hora). <strong>Manual</strong> usa el <strong>Valor (EV)</strong>: más
+  alto es más oscuro, unos 15 bajo el sol del mediodía.</li>
+</ul>
+<p>En el grupo <strong>Realista</strong> de las <a href="#graphic-display-options">Opciones de visualización gráfica</a>:
+<strong>Exposición</strong> y <strong>Valor (EV)</strong>, <strong>Punto blanco</strong> (la luz mostrada blanca: 6500 K es la luz del día
+tal cual, un valor más bajo enfría la imagen, uno más alto la calienta), <strong>Saturación</strong>, <strong>Altas
+luces</strong> y <strong>Sombras</strong> (bajan o suben los tonos más claros y más oscuros) y <strong>Bruma en la
+distancia</strong>. <strong>Mostrar aristas en Realista</strong> dibuja las aristas sobre las caras. El <strong>Esquema</strong> de
+iluminación es por ahora siempre <strong>Exterior: sol</strong>. <strong>Sol</strong>, <strong>Luz ambiental</strong> e <strong>Intensidad de
+las sombras</strong> regulan la luz del sol, la del cielo y lo oscuras que son las sombras del sol.</p>
+<p>El <strong>Fondo</strong> <strong>Cielo físico (hora y lugar)</strong> muestra detrás del modelo el mismo cielo que lo ilumina,
+con el disco del sol; con <strong>Ninguno</strong>, <strong>Cielo</strong> o <strong>Degradado</strong> el fondo queda como se eligió y el
+cielo ilumina igualmente el modelo. Al pasar a <strong>Realista</strong>, una vista con el fondo <strong>Ninguno</strong> toma
+<strong>Cielo físico (hora y lugar)</strong>. Los elementos seleccionados y la trayectoria del sol se ven
+como en los demás estilos.</p>
+<p>En la web sin WebGPU (con WebGL2) <strong>Realista</strong> funciona sin sombras ambientales y la exposición
+automática se ajusta según el cielo en lugar de la imagen. En la web y en Android, mientras la
+cámara se mueve, la vista puede dibujarse más pequeña para seguir fluida, y vuelve a ser nítida al
+detenerse. Sin tarjeta gráfica <strong>Realista</strong> se muestra como <strong>Sombreado</strong> y la barra de estado lo
+indica. Las plantas, secciones y alzados en <strong>Realista</strong> se dibujan por ahora como en
+<strong>Sombreado</strong>; los planos, impresiones e imágenes exportadas aún no muestran el <strong>Realista</strong>.</p>
 <h2 id="sun-and-shadows">Sol y sombras</h2>
 <p>Las plantas, secciones, alzados y vistas 3D muestran el sol (las vistas de dibujo, leyendas,
 planos y tablas no). La barra de control de la vista tiene dos botones, cada uno con una flecha
@@ -745,9 +839,33 @@ oscurecidos), el sol (su botón abre la <strong>Configuración del sol</strong>)
 <strong>Degradado</strong>). La vista previa dibuja la vista con las opciones elegidas; el interruptor <strong>Vista preliminar</strong> de la cabecera la oculta y la
 muestra, como en la configuración del sol. Las plantillas de vista llevan estas opciones con el
 estilo gráfico, y el sol y las sombras como <strong>Sol y sombras</strong>.</p>
+<p>El grupo <strong>Realista</strong> y <strong>Mostrar aristas en Realista</strong> valen para el estilo <strong>Realista</strong> (véase
+<a href="#realistic-style">Estilo Realista</a>); <strong>Fondo</strong> ofrece también <strong>Cielo físico (hora y lugar)</strong>. En
+el estilo <strong>Realista</strong> la vista previa la dibuja la tarjeta gráfica, como la vista.</p>
 <figure>
 <img alt="Opciones de visualización gráfica de la vista 3D: estilo gráfico, siluetas, sombras, iluminación con sol, luz ambiental e intensidad de las sombras, el fondo y la vista previa a la derecha" src="../assets/screens/vg-graphic-display.webp"/>
 <figcaption>Opciones de visualización gráfica</figcaption>
+</figure>
+<h3 id="sketchy-lines">Líneas de boceto</h3>
+<p>El grupo <strong>Líneas de boceto</strong> de <strong>Opciones de visualización gráfica…</strong> dibuja las líneas de la
+vista como a mano. <strong>Activar líneas de boceto</strong> las enciende para la vista activa;
+<strong>Inestabilidad</strong> (0–10) fija cuánto ondula cada línea y cuántas veces se repasa (0 recta, dos
+veces desde 4, tres veces desde 8); las líneas largas ondulan más que las cortas. <strong>Extensión</strong>
+(0–10) fija cuánto sobrepasan las líneas sus extremos, más allá de las esquinas donde se encuentran
+(0 las detiene allí). Empiezan en 5 y 4. El botón <strong>✎</strong> de la barra de la vista (en cada estilo de la interfaz; en modo táctil, en el panel de la vista) las enciende y las apaga para la vista activa: <strong>Activar líneas de boceto</strong> / <strong>Desactivar líneas de boceto</strong>.</p>
+<p>Valen en todas las vistas (plantas, secciones, alzados, vistas de dibujo, vistas 3D, vistas en los
+planos) y en todos los estilos gráficos: para las líneas del modelo, de los componentes de detalle
+y de los patrones de relleno. Las anotaciones siguen rectas: cotas, textos, niveles, rejillas,
+planos de referencia, etiquetas, símbolos y marcas de vista. Una vista dibuja las mismas líneas en
+cada redibujado y tras una órbita que vuelve, y se imprime y se exporta exactamente como la muestra
+la ventana: PDF y SVG mantienen las líneas vectoriales, una sección o un alzado impresos solo dejan
+fuera las partes que ocultan superficies más cercanas. La selección y el forzado de cursor siguen
+usando las líneas rectas. Las plantillas de vista llevan el ajuste con las demás opciones de
+visualización gráfica. En la línea de comandos:
+<code>graphicoptions {"sketchy":true,"instability":5,"extension":4}</code>.</p>
+<figure>
+<img alt="La planta baja de la casa de ejemplo con líneas de boceto: muros, puertas, ventanas y mobiliario dibujados como a mano, cotas y textos rectos" src="../assets/screens/vg-sketchy.webp"/>
+<figcaption>Líneas de boceto</figcaption>
 </figure>
 <h2 id="plans-and-their-view-range">Plantas y sus alturas de corte</h2>
 <p><strong>Vistas ▸ Crear ▸ Planta ▸ Plano de planta</strong> abre <strong>Nueva planta</strong>: elige los niveles y

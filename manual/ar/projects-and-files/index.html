@@ -9,7 +9,7 @@
 <meta content="BIMopen" name="author"/>
 <link href="https://atsanna.github.io/bimopen-site/manual/ar/projects-and-files/" rel="canonical"/>
 <link href="../interface-styles/" rel="prev"/>
-<link href="../selection-and-modify/" rel="next"/>
+<link href="../import-and-conversion/" rel="next"/>
 <link href="../assets/images/bimopen-cube.svg" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.9" name="generator"/>
 <title>المشاريع والملفات - دليل مستخدم BIMopen</title>
@@ -261,6 +261,20 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#imperial-units">
+<span class="md-ellipsis">
+      الوحدات الإمبراطورية
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#typing-lengths">
+<span class="md-ellipsis">
+      كتابة الأطوال
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#sun-settings">
 <span class="md-ellipsis">
       إعدادات الشمس
@@ -307,13 +321,6 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#revit-projects">
-<span class="md-ellipsis">
-      ملفات .rvt
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#other-exports">
 <span class="md-ellipsis">
       تصديرات أخرى
@@ -325,6 +332,14 @@
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../import-and-conversion/">
+<span class="md-ellipsis">
+    الاستيراد والتحويل
+    
+  </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../selection-and-modify/">
@@ -475,6 +490,20 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#imperial-units">
+<span class="md-ellipsis">
+      الوحدات الإمبراطورية
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#typing-lengths">
+<span class="md-ellipsis">
+      كتابة الأطوال
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#sun-settings">
 <span class="md-ellipsis">
       إعدادات الشمس
@@ -521,13 +550,6 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#revit-projects">
-<span class="md-ellipsis">
-      ملفات .rvt
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#other-exports">
 <span class="md-ellipsis">
       تصديرات أخرى
@@ -555,7 +577,9 @@ BIMopen نفسه.</p>
 <p>يفتح <strong>قائمة التطبيق ➤ جديد ➤ مشروع…</strong> نافذة <strong>مشروع جديد</strong>:</p>
 <ul>
 <li><strong>ملف القالب</strong>: القالب الافتراضي لـ BIMopen، أو القالب المحدد في <strong>خيارات ➤ مواقع الملفات</strong>؛
-  أو ملف قالب يُختار بـ <strong>استعراض…</strong>؛ أو <strong>بدون</strong>، الذي يبدأ بمنسوبين ونوع واحد من كل صنف.</li>
+  أو <strong>قالب BIMopen الإمبراطوري</strong> (انظر <a href="#imperial-units">الوحدات الإمبراطورية</a>)؛ أو ملف قالب
+  يُختار بـ <strong>استعراض…</strong>؛ أو <strong>بدون</strong>، الذي يبدأ بمنسوبين ونوع واحد من كل صنف ويسأل عن نظام
+  القياس: <strong>إمبراطوري</strong> أو <strong>متري</strong>.</li>
 <li><strong>إنشاء جديد</strong>: <strong>المشروع</strong> أو <strong>قالب المشروع</strong>.</li>
 </ul>
 <figure>
@@ -608,6 +632,174 @@ BIMopen نفسه.</p>
 <img alt="خطوتان: نافذة وحدات المشروع بالكميات ومثال لكل منها، ثم تنسيق الطول بوحدته وتقريبه ورمزه وخياراته" src="../assets/screens/pf-units.webp"/>
 <figcaption>وحدات المشروع، ثم تنسيق كمية</figcaption>
 </figure>
+<h3 id="imperial-units">الوحدات الإمبراطورية</h3>
+<p>في <strong>التنسيق…</strong> تأتي وحدات الطول في مجموعتين، <strong>متري</strong> و<strong>إمبراطوري</strong>: <strong>أقدام وبوصات كسرية</strong>
+(<code>5' - 6 1/2"</code>)، و<strong>بوصات كسرية</strong> (<code>66 1/2"</code>)، و<strong>أقدام عشرية</strong> و<strong>بوصات عشرية</strong>. ويمكن أن تكون
+المساحات بـ <strong>قدم مربع</strong> أو <strong>بوصة مربعة</strong> أو <strong>أكر</strong>، والأحجام بـ <strong>قدم مكعب</strong> أو <strong>بوصة مكعبة</strong>
+أو <strong>ياردة مكعبة</strong>، والميول بصيغة <strong>الارتفاع/12"</strong> أو بنسبة. ومع الكسور يكون <strong>التقريب</strong> إلى أقرب
+بوصة أو إلى أقرب 1/2" حتى 1/256"؛ والقيمة التي تصل بالتقريب إلى 12" تنتقل إلى الأقدام: عند 1/16"
+تُقرأ <code>11 63/64"</code> على أنها <code>1' - 0"</code>. ويكتب <strong>إخفاء 0 قدم</strong> <code>4"</code> بدل <code>0' - 4"</code>، ويكتب <strong>حذف
+المسافات</strong> <code>1'-2"</code> بدل <code>1' - 2"</code>، ويختار <strong>رمز الوحدة</strong> بين <code>'</code> و<code>ft</code> أو بين <code>ft²</code> و<code>SF</code>. وتعرض
+<strong>قيم أخرى</strong> التنسيق على بضع قيم إضافية.</p>
+<p>ولـ <strong>تنسيق الحقل…</strong> في حقل جدول الكميات و<strong>تنسيق الوحدات</strong> في نوع البُعد الحقول نفسها، إضافة إلى
+<strong>استخدام إعدادات المشروع</strong>: فيمكن لحصر المواد أن يعطي الأحجام بالياردة المكعبة في مشروع بالقدم
+المكعب، ويمكن لنوع بُعد للتفاصيل أن يقرّب إلى 1/32" حيث تقرّب المساقط إلى 1/16".</p>
+<p>يبقى النموذج بالمتر: تغيير الوحدات يغيّر طريقة عرض القيم وكتابتها، ولا يغيّر الهندسة أبداً. ونقل
+مشروع من المتري إلى الإمبراطوري ثم العودة يترك كل عنصر حيث كان.</p>
+<figure>
+<img alt='خطوتان: وحدات المشروع بالأقدام والبوصات، ثم تنسيق الطول بأقدام وبوصات كسرية مقرّبة إلى أقرب 1/32"، مع إخفاء 0 قدم وحذف المسافات' src="../assets/screens/pf-imperial.webp"/>
+<figcaption>وحدات المشروع بالأقدام والبوصات</figcaption>
+</figure>
+<p>في مشروع بالأقدام والبوصات تكون مقاييس العروض هي المقاييس المعمارية، من <code>12" = 1'-0"</code> إلى
+<code>3/64" = 1'-0"</code>، والمقاييس الهندسية، من <code>1" = 10'-0"</code> إلى <code>1" = 100'-0"</code>: في شريط العرض وفي
+الخصائص وعلى اللوحات. والمقياس الذي ليس من هذه ولا من تلك يظهر كنسبة.</p>
+<table>
+<thead>
+<tr>
+<th>المقياس</th>
+<th>النسبة</th>
+<th>الاستخدام المعتاد</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>12" = 1'-0"</code></td>
+<td>1:1</td>
+<td>تفاصيل بالحجم الطبيعي</td>
+</tr>
+<tr>
+<td><code>6" = 1'-0"</code></td>
+<td>1:2</td>
+<td>وصلات وعُقد معقدة</td>
+</tr>
+<tr>
+<td><code>3" = 1'-0"</code></td>
+<td>1:4</td>
+<td>تفاصيل البناء والنجارة</td>
+</tr>
+<tr>
+<td><code>1 1/2" = 1'-0"</code></td>
+<td>1:8</td>
+<td>تفاصيل المكونات والنوافذ</td>
+</tr>
+<tr>
+<td><code>1" = 1'-0"</code></td>
+<td>1:12</td>
+<td>تفاصيل إنشائية قياسية</td>
+</tr>
+<tr>
+<td><code>3/4" = 1'-0"</code></td>
+<td>1:16</td>
+<td>عُقد إنشائية</td>
+</tr>
+<tr>
+<td><code>1/2" = 1'-0"</code></td>
+<td>1:24</td>
+<td>مقاطع الجدران وواجهات جزئية</td>
+</tr>
+<tr>
+<td><code>3/8" = 1'-0"</code></td>
+<td>1:32</td>
+<td>مساقط المطابخ والحمامات وتفاصيل مكبّرة</td>
+</tr>
+<tr>
+<td><code>1/4" = 1'-0"</code></td>
+<td>1:48</td>
+<td>المعيار المعماري للمساقط والمقاطع</td>
+</tr>
+<tr>
+<td><code>1/8" = 1'-0"</code></td>
+<td>1:96</td>
+<td>معيار الهندسة والأنظمة الميكانيكية والكهربائية، مساقط عامة</td>
+</tr>
+<tr>
+<td><code>3/32" = 1'-0"</code></td>
+<td>1:128</td>
+<td>مساقط المباني التجارية الكبيرة</td>
+</tr>
+<tr>
+<td><code>1/16" = 1'-0"</code></td>
+<td>1:192</td>
+<td>مساقط مفتاحية ومخططات عامة</td>
+</tr>
+<tr>
+<td><code>3/64" = 1'-0"</code></td>
+<td>1:256</td>
+<td>مخططات مواقع كبيرة جداً</td>
+</tr>
+<tr>
+<td><code>1" = 10'-0"</code></td>
+<td>1:120</td>
+<td>مخططات الهندسة المدنية والموقع</td>
+</tr>
+<tr>
+<td><code>1" = 20'-0"</code></td>
+<td>1:240</td>
+<td>مخططات التقسيم</td>
+</tr>
+<tr>
+<td><code>1" = 30'-0"</code></td>
+<td>1:360</td>
+<td>الأعمال المدنية وشبكات المرافق</td>
+</tr>
+<tr>
+<td><code>1" = 40'-0"</code></td>
+<td>1:480</td>
+<td>المسوحات الطبوغرافية ومسوحات الطرق</td>
+</tr>
+<tr>
+<td><code>1" = 50'-0"</code></td>
+<td>1:600</td>
+<td>التخطيط العمراني ومخططات المحيط</td>
+</tr>
+<tr>
+<td><code>1" = 60'-0"</code></td>
+<td>1:720</td>
+<td>المسوحات الإقليمية</td>
+</tr>
+<tr>
+<td><code>1" = 100'-0"</code></td>
+<td>1:1200</td>
+<td>الخرائط المساحية</td>
+</tr>
+</tbody>
+</table>
+<figure>
+<img alt="مسقط البيت النموذجي بمقياس 1/4&quot; = 1'-0&quot;، مع أبعاده بالأقدام والبوصات" src="../assets/screens/pf-imperial-plan.webp"/>
+<figcaption>مسقط بمقياس 1/4" = 1'-0"، بأبعاد مقرّبة إلى 1/16"</figcaption>
+</figure>
+<figure>
+<img alt="جدول جدران بأطوال وارتفاعات بالأقدام والبوصات، ومساحات بالقدم المربع وأحجام بالقدم المكعب" src="../assets/screens/pf-imperial-schedule.webp"/>
+<figcaption>جدول بالأقدام والبوصات</figcaption>
+</figure>
+<p>لـ <strong>قالب BIMopen الإمبراطوري</strong> الأنواع نفسها التي في القالب المتري، بالمقاسات التجارية الأمريكية:
+جدران بقوائم خشبية 2x4 و2x6، وببلوك 8" وطوب، وبقوائم معدنية؛ وأبواب من 30" إلى 36" x 80"؛
+ونوافذ بجلسة على 3'-0"؛ وأدراج بقوائم لا تتجاوز 7 3/4" ونوائم لا تقل عن 10"؛ ودرابزين بارتفاع
+36" و42". وتُقرَّب الأطوال والأبعاد إلى 1/32"، وزيادات التقاط أبعاد الطول هي 4' و1' و6"
+و1"، وشبكة مستوى العمل 4'، والمساقط بمقياس 1/8" = 1'-0"، والنصوص بارتفاع 3/32" و1/8". هذه نقاط
+بداية: يمكن تغيير كل منها في المشروع. وتغيير وحدات مشروع لا يعيد تسمية أنواعه.</p>
+<p>نصيحة: لتبقى الرسومات مقروءة في الموقع، أعطِ أنواع الأبعاد تقريباً أوسع: في <strong>معلمات النوع</strong> لنوع
+بُعد، يفتح <strong>تنسيق الوحدات</strong> نافذة <strong>التنسيق</strong>؛ ألغِ تحديد <strong>استخدام إعدادات المشروع</strong> وقرّب إلى
+1/16" أو 1/8".</p>
+<figure>
+<img alt="نافذة نظام القياس غير محدد، مع زرّي إمبراطوري ومتري" src="../assets/screens/pf-new-units.webp"/>
+<figcaption>مشروع جديد بلا قالب يسأل عن نظام القياس</figcaption>
+</figure>
+<h3 id="typing-lengths">كتابة الأطوال</h3>
+<p>يُقرأ الطول المكتوب في الخصائص، أو على بُعد مؤقت، أو في شريط الخيارات، أو في نافذة حوار، أو في
+سطر الأوامر على هذا النحو:</p>
+<ul>
+<li>مع وحدة، بتلك الوحدة، في أي مشروع: <code>300mm</code>، <code>1.2 m</code>، <code>1 m 20 cm</code>، <code>6"</code>، <code>5.5'</code>، <code>5.5 ft</code>؛</li>
+<li>أقدام وبوصات: <code>5'6"</code>، <code>5' 6 1/2"</code>، <code>5'-6 1/2"</code>؛ وبعد الأقدام يمكن حذف <code>"</code> الأخيرة (<code>5'6</code>)،
+  والبوصات من 12 فما فوق تنتقل إلى الأقدام (<code>5' 14"</code> تساوي <code>6'-2"</code>)؛</li>
+<li>الرقم بلا وحدة يكون بوحدة طول المشروع؛ وفي مشروع بالأقدام يكون الرقمان أقداماً وبوصات: <code>8 6</code>
+  تساوي <code>8'-6"</code>، و<code>8 6 1/2</code> تساوي <code>8'-6 1/2"</code>؛</li>
+<li>الكسور كسور بوصة؛ وكسر القدم يُكتب عشرياً (<code>5.5'</code>)؛</li>
+<li>بعد <code>=</code> صيغة: <code>=10' + 6"</code>، <code>=12'/5</code>، <code>=3000mm/2</code>؛ وأرقامها بلا وحدة تكون بوحدة المشروع.</li>
+</ul>
+<p>الرمز العشري هو رمز المشروع. وأثناء تعديل قيمة تظهر بدقة كاملة (حتى 1/256" بالأقدام والبوصات)،
+فتأكيدها دون تغيير لا يغيّر شيئاً. وفي سطر الأوامر يكون الرقم بلا وحدة بالمتر في مشروع متري
+وبالقدم في مشروع بالأقدام والبوصات؛ ويمكن للطول دائماً أن يحمل وحدته: <code>wall 0,0 20',0</code>.</p>
 <h3 id="sun-settings">إعدادات الشمس</h3>
 <p>يفتح <strong>الإعدادات ➤ إعدادات إضافية ➤ إعدادات الشمس</strong> إعدادات الشمس لطريقة العرض النشطة، مثل زر الشمس
 في شريط التحكم بالعرض (انظر <a href="../views-and-graphics/">المناظر والرسومات</a>).</p>
@@ -671,10 +863,8 @@ BIMopen نفسه.</p>
 وتعدّ الرسائل ما لم يُقرأ.</p>
 <p>يفتح <strong>فتح ➤ خيارات IFC…</strong> نافذة <strong>استيراد خيارات IFC</strong>: ما تصبح عليه كل فئة IFC (جدران أو أرضيات
 أو أبواب أو نوافذ أو غرف أو <strong>غير مستورد</strong>)، و<strong>قياسي</strong>. وتُحفظ الاختيارات بين الجلسات.</p>
-<h3 id="revit-projects">ملفات .rvt</h3>
-<p>فتح ملف <code>.rvt</code> تجريبي: يُقرأ منه اليوم اسم المشروع وأسماء المنسوبات فقط، فيكون للمشروع الجديد
-منسوباته ولا جدران ولا أبواب ولا نوافذ ولا أرضيات. وتذكر الرسائل ذلك بعد الاستيراد. ولتبادل النماذج
-مع برامج BIM الأخرى استخدم IFC4.</p>
+<p>الكائنات ذات الشكل التي ليست جدرانًا أو أرضيات أو أبوابًا أو نوافذ أو فراغات تبقى كائنات
+مستوردة بانتظار التحويل: انظر <a href="../import-and-conversion/">الاستيراد والتحويل</a>.</p>
 <h3 id="other-exports">تصديرات أخرى</h3>
 <p>الطباعة بصيغة PDF وتصدير الصور موصوفان في <a href="../documentation/">اللوحات والجداول والطباعة</a>؛ وتُصدَّر
 الجداول نصًا محدَّدًا من الفصل نفسه. ويصدّر <code>bimopen-cli convert</code> من سطر الأوامر (انظر
@@ -703,13 +893,13 @@ BIMopen نفسه.</p>
               </div>
 </div>
 </a>
-<a aria-label="التالية: التحديد والتعديل" class="md-footer__link md-footer__link--next" href="../selection-and-modify/">
+<a aria-label="التالية: الاستيراد والتحويل" class="md-footer__link md-footer__link--next" href="../import-and-conversion/">
 <div class="md-footer__title">
 <span class="md-footer__direction">
                 التالية
               </span>
 <div class="md-ellipsis">
-                التحديد والتعديل
+                الاستيراد والتحويل
               </div>
 </div>
 <div class="md-footer__button md-icon">

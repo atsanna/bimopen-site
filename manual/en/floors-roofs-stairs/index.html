@@ -194,6 +194,14 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../import-and-conversion/">
+<span class="md-ellipsis">
+    Importing and converting
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../selection-and-modify/">
 <span class="md-ellipsis">
     Selecting and modifying
@@ -813,6 +821,7 @@ gables included (<a href="../walls-doors-windows/">Walls, doors and windows</a> 
 <p>Dashed guides show where the next run can start: the last run's extension beyond its end and the lines of its first and last risers. A click near them snaps onto them. In a 3D view the stair is drawn the same way, on the plane of the active level.</p>
 <p>A curved run (a spiral stair): with <strong>Run</strong> active, click <strong>Center-ends arc</strong>, then the centre, the start of the run line (its distance from the centre is the radius of the walking line) and the end, going round past half a turn if needed, but under one turn (further, the run stops short and the status bar warns that the runs would overlap). The risers radiate from the centre a tread apart on the run line; riser lines drawn radiating from a centre make a curved run too. A second curved run round the same centre and on the same run line (a click near them takes them) is joined to the first by a landing along the arc.</p>
 <p>A stair can also be drawn by its lines. In its sketch, click <strong>Draw ▸ Boundary</strong> and draw the left and right edges (green), then <strong>Riser</strong> and draw the riser lines (black) between them, with <strong>Line</strong> or <strong>Pick Lines</strong>. Parallel, evenly spaced risers make a run, as wide as the risers; a landing joins two runs out to the boundary lines. Each riser is as high as the storey divided by the desired number of risers; with fewer riser lines the stair stops short of the top (<strong>Properties</strong> shows the actual number). <strong>Edit Sketch</strong> gives the same lines back. Each run drawn with <strong>Run</strong> is at once boundary and riser lines like these: they can be moved or deleted like the others. A landing follows its boundary lines: split its far edge with <strong>Split Element</strong> and drag a piece to notch it, or draw it wider than the runs.</p>
+<p>Riser lines need not be straight or parallel: draw them with any drawing tool, an arc too, or slant one. Each tread is then the area between a riser line and the next one of its run, bounded by the boundary lines, and the landing the area between the last riser of one run and the first of the next; the stair is built that way in plan, section, elevation and 3D (a monolithic stair as one slab under its treads), and its railings follow the boundary lines over those treads. A riser line running past a boundary is cut there. A riser line that does not touch both boundaries, or more or fewer riser lines than the stair's height needs, gives a warning; the stair is made all the same. A stair drawn this way keeps its lines when <strong>Width</strong> or <strong>Actual Tread Depth</strong> changes: change them in <strong>Edit Sketch</strong>. The risers follow one another as the boundaries join them, whichever line was drawn first: the stair starts at the riser the first boundary line starts on, otherwise at the first riser drawn; a tread drawn deeper than the others (short of a landing) stays in its run. The type's <strong>Nosing Length</strong> and <strong>Nosing Profile</strong> run along each riser line, and along the edge of a landing over the riser that reaches it (in plan, a line in front of each riser); its <strong>Middle Stringers</strong> run under the treads from riser line to riser line, following them where the boundaries turn; a monolithic stair's <strong>Underside of Stringer</strong> is <strong>Smooth</strong> or <strong>Stepped</strong> here too.</p>
 <p>The <strong>Width</strong> on the options strip is that of the new stair (by default the type's).
 <strong>Tools ▸ Railing Type</strong> chooses the railings of the new stair: a railing type, put on both sides,
 or <strong>None</strong>.</p>

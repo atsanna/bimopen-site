@@ -194,6 +194,14 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../import-and-conversion/">
+<span class="md-ellipsis">
+    Importation et conversion
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../selection-and-modify/">
 <span class="md-ellipsis">
     Sélection et modification
@@ -253,6 +261,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#realistic-style">
+<span class="md-ellipsis">
+      Style Réaliste
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#sun-and-shadows">
 <span class="md-ellipsis">
       Soleil et ombres
@@ -278,6 +293,13 @@
 <a class="md-nav__link" href="#graphic-display-options">
 <span class="md-ellipsis">
       Options d'affichage graphique
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sketchy-lines">
+<span class="md-ellipsis">
+      Lignes d'esquisse
     </span>
 </a>
 </li>
@@ -427,6 +449,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#realistic-style">
+<span class="md-ellipsis">
+      Style Réaliste
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#sun-and-shadows">
 <span class="md-ellipsis">
       Soleil et ombres
@@ -452,6 +481,13 @@
 <a class="md-nav__link" href="#graphic-display-options">
 <span class="md-ellipsis">
       Options d'affichage graphique
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sketchy-lines">
+<span class="md-ellipsis">
+      Lignes d'esquisse
     </span>
 </a>
 </li>
@@ -585,6 +621,10 @@ propose :</p>
 <td><strong>Couleurs pleines</strong></td>
 <td>Les faces dans la couleur de leur matériau, la même quel que soit l'éclairage</td>
 </tr>
+<tr>
+<td><strong>Réaliste</strong></td>
+<td>Les faces comme sur une photographie : la lumière du soleil et du ciel du projet, les reflets, les ombres ambiantes, le verre transparent, la brume</td>
+</tr>
 </tbody>
 </table>
 <figure>
@@ -617,6 +657,62 @@ montrent les vues comme l'écran.</p>
 couleurs</strong> sur <strong>Arrière-plan</strong>, il se trouve sous les lignes du modèle : en plan au-dessus des
 planchers et sous le mobilier, en coupe au-dessus des surfaces vues à travers chaque pièce coupée.
 Sur <strong>Premier plan</strong>, il recouvre le modèle, sous les annotations.</p>
+<h2 id="realistic-style">Style Réaliste</h2>
+<p><strong>Réaliste</strong> dessine la vue 3D comme une photographie, en temps réel, avec la carte graphique, et la
+vue reste modifiable comme dans les autres styles.</p>
+<ul>
+<li><strong>Lumière du soleil et du ciel.</strong> La lumière est celle du soleil du projet (lieu, date et heure des
+  <strong>Paramètres du soleil</strong>) et du ciel que ce soleil donne : bleu le jour, plus chaud et plus sombre
+  au coucher. Le soleil éclaire même ombres désactivées ; avec <strong>Projeter les ombres</strong>, ses ombres
+  sont celles des autres styles. Ce qui est à l'ombre reste éclairé par le ciel et le sol.
+  Le disque du soleil apparaît quand il entre dans le cadre, avec un halo, et le modèle le cache.
+  Vers le coucher, la lumière du soleil devient chaude et plus faible et les ombres s'allongent ;
+  après le coucher il ne reste que le ciel, qui s'éteint dans un crépuscule bleu-violet avec une
+  bande rosée sur l'horizon du côté du soleil ; la nuit le ciel est bleu sombre et la scène presque
+  obscure (les surfaces auto-illuminées restent visibles). En faisant glisser le soleil ou en
+  suivant une étude d'ensoleillement, la lumière change continûment.</li>
+<li><strong>Lune et étoiles.</strong> La lune est là où elle se trouve au lieu, à la date et à l'heure du projet,
+  dans sa phase : éclairée du côté tourné vers le soleil, le reste faiblement gris (lumière
+  cendrée), plus rouge près de l'horizon. La nuit, c'est elle la lumière : avec <strong>Ombres portées</strong>
+  le modèle porte les ombres de la lune ; la pleine lune éclaire doucement la scène, la
+  nouvelle lune la laisse presque sombre. Une fois le soleil couché, les étoiles les plus
+  brillantes apparaissent à leur place, d'autant plus nombreuses que le ciel est sombre.</li>
+<li><strong>Matériaux.</strong> Les surfaces prennent l'aspect de leur matériau (onglet <strong>Apparence</strong> de
+  <strong>Matériaux</strong>) : l'image de texture à sa taille réelle, la rugosité et sa carte, le relief, le
+  métal, le verre et l'eau, l'auto-illumination (visible, sans éclairer le reste). Un matériau sans
+  aspect propre le tire de sa couleur et de sa transparence ; une partie sans matériau prend la
+  couleur de sa catégorie. Sur le web les images arrivent ensuite : en attendant, la couleur
+  s'affiche. L'aperçu de l'onglet <strong>Apparence</strong> est dessiné par le même moteur, sur une sphère, un cube ou
+  un mur de 2 × 2 m (sans carte graphique, par une image calculée à part).</li>
+<li><strong>Verre.</strong> Le verre laisse voir ce qui est derrière et reflète le ciel et le soleil, davantage
+  sous un angle rasant. Les vitres sont dessinées de la plus lointaine à la plus proche.</li>
+<li><strong>Ombres ambiantes.</strong> Avec <strong>Ombres ambiantes</strong>, les angles et les creux, qui reçoivent moins de
+  lumière du ciel, sont plus sombres.</li>
+<li><strong>Brume.</strong> Au loin, l'air voile le modèle : <strong>Brume au loin</strong> en règle la quantité et la limpidité
+  du ciel.</li>
+<li><strong>Exposition.</strong> <strong>Automatique</strong> suit la lumière de la scène et s'adapte en une demi-seconde environ
+  quand elle change (caméra du ciel vers l'ombre, autre heure). <strong>Manuelle</strong> utilise la <strong>Valeur
+  (EV)</strong> : plus haute, plus sombre, environ 15 sous le soleil de midi.</li>
+</ul>
+<p>Dans le groupe <strong>Réaliste</strong> des <a href="#graphic-display-options">Options d'affichage graphique</a> :
+<strong>Exposition</strong> et <strong>Valeur (EV)</strong>, <strong>Point blanc</strong> (la lumière montrée blanche : 6500 K est la
+lumière du jour telle quelle, une valeur plus basse refroidit l'image, une plus haute la
+réchauffe), <strong>Saturation</strong>, <strong>Hautes lumières</strong> et <strong>Tons sombres</strong> (baissent ou relèvent les tons
+les plus clairs et les plus sombres) et <strong>Brume au loin</strong>. <strong>Afficher les arêtes en Réaliste</strong>
+dessine les arêtes sur les faces. Le <strong>Schéma</strong> d'éclairage est pour l'instant toujours
+<strong>Extérieur : soleil</strong>. <strong>Soleil</strong>, <strong>Lumière ambiante</strong> et <strong>Intensité des ombres</strong> règlent la
+lumière du soleil, celle du ciel et l'obscurité des ombres du soleil.</p>
+<p>L'<strong>Arrière-plan</strong> <strong>Ciel physique (heure et lieu)</strong> montre derrière le modèle le ciel même qui
+l'éclaire, avec le disque du soleil ; avec <strong>Aucun</strong>, <strong>Ciel</strong> ou <strong>Dégradé</strong>, l'arrière-plan
+reste celui choisi et le ciel éclaire tout de même le modèle. En passant à <strong>Réaliste</strong>, une vue dont l'arrière-plan est <strong>Aucun</strong>
+prend <strong>Ciel physique (heure et lieu)</strong>. Les éléments sélectionnés et la
+trajectoire du soleil s'affichent comme dans les autres styles.</p>
+<p>Sur le web sans WebGPU (avec WebGL2), <strong>Réaliste</strong> fonctionne sans ombres ambiantes et l'exposition
+automatique se règle sur le ciel plutôt que sur l'image. Sur le web et sur Android, pendant que la
+caméra bouge, la vue peut être dessinée plus petite pour rester fluide, et redevient nette à
+l'arrêt. Sans carte graphique, <strong>Réaliste</strong> s'affiche comme <strong>Ombré</strong> et la barre d'état le
+signale. Les plans, coupes et élévations en <strong>Réaliste</strong> sont pour l'instant dessinés comme en
+<strong>Ombré</strong> ; les feuilles, impressions et images exportées ne montrent pas encore le <strong>Réaliste</strong>.</p>
 <h2 id="sun-and-shadows">Soleil et ombres</h2>
 <p>Les plans, les coupes, les élévations et les vues 3D montrent le soleil (pas les vues de dessin,
 les légendes, les feuilles ni les nomenclatures). La barre de contrôle de la vue a deux boutons,
@@ -749,9 +845,33 @@ soleil (son bouton ouvre les <strong>Paramètres du soleil</strong>), <strong>So
 <strong>Dégradé</strong>). L'aperçu dessine la vue avec les options choisies ; l'interrupteur <strong>Aperçu</strong> de l'en-tête le masque et l'affiche,
 comme dans les paramètres du soleil. Les gabarits de vue emportent ces options avec le style
 graphique, et le soleil et les ombres comme <strong>Soleil et ombres</strong>.</p>
+<p>Le groupe <strong>Réaliste</strong> et <strong>Afficher les arêtes en Réaliste</strong> valent pour le style <strong>Réaliste</strong>
+(voir <a href="#realistic-style">Style Réaliste</a>) ; <strong>Arrière-plan</strong> propose aussi <strong>Ciel physique (heure
+et lieu)</strong>. En style <strong>Réaliste</strong>, l'aperçu est dessiné par la carte graphique, comme la vue.</p>
 <figure>
 <img alt="Options d'affichage graphique de la vue 3D : style graphique, contours, ombres, éclairage avec soleil, lumière ambiante et intensité des ombres, l'arrière-plan et l'aperçu à droite" src="../assets/screens/vg-graphic-display.webp"/>
 <figcaption>Options d'affichage graphique</figcaption>
+</figure>
+<h3 id="sketchy-lines">Lignes d'esquisse</h3>
+<p>Le groupe <strong>Lignes d'esquisse</strong> des <strong>Options d'affichage graphique…</strong> dessine les lignes de la vue
+comme à la main. <strong>Activer les lignes d'esquisse</strong> les allume pour la vue active ; <strong>Instabilité</strong>
+(0–10) règle combien chaque ligne ondule et combien de fois elle est repassée (0 droite, deux fois
+à partir de 4, trois fois à partir de 8) ; les lignes longues ondulent plus que les courtes.
+<strong>Prolongement</strong> (0–10) règle jusqu'où les lignes dépassent leurs extrémités, au-delà des angles où
+elles se rencontrent (0 les arrête là). Elles partent de 5 et 4. Le bouton <strong>✎</strong> de la barre de la vue (dans chaque style d'interface ; en mode tactile, dans le panneau de la vue) les allume et les éteint pour la vue active : <strong>Activer les lignes d'esquisse</strong> / <strong>Désactiver les lignes d'esquisse</strong>.</p>
+<p>Elles valent dans toutes les vues (plans, coupes, élévations, vues de dessin, vues 3D, vues sur les
+feuilles) et tous les styles graphiques : pour les lignes du modèle, des composants de détail et
+des motifs de remplissage. Les annotations restent droites : cotes, textes, niveaux, quadrillages,
+plans de référence, étiquettes, symboles et repères de vue. Une vue dessine les mêmes lignes à
+chaque rafraîchissement et après une orbite qui revient, et s'imprime et s'exporte exactement comme
+la fenêtre la montre : PDF et SVG gardent les lignes vectorielles, une coupe ou une élévation
+imprimée ne laisse de côté que les parties cachées par des surfaces plus proches. La sélection et
+l'accrochage utilisent toujours les lignes droites. Les gabarits de vue emportent le réglage avec
+les autres options d'affichage graphique. En ligne de commande :
+<code>graphicoptions {"sketchy":true,"instability":5,"extension":4}</code>.</p>
+<figure>
+<img alt="Le plan du rez-de-chaussée de la maison d'exemple avec les lignes d'esquisse : murs, portes, fenêtres et mobilier tracés comme à la main, cotes et textes droits" src="../assets/screens/vg-sketchy.webp"/>
+<figcaption>Lignes d'esquisse</figcaption>
 </figure>
 <h2 id="plans-and-their-view-range">Plans et hauteurs de coupe</h2>
 <p><strong>Vues ▸ Créer ▸ Plan ▸ Plan d'étage</strong> ouvre <strong>Nouveau plan</strong> : choisissez les niveaux et

@@ -194,6 +194,14 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../import-and-conversion/">
+<span class="md-ellipsis">
+    Importing and converting
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../selection-and-modify/">
 <span class="md-ellipsis">
     Selecting and modifying
@@ -253,6 +261,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#realistic-style">
+<span class="md-ellipsis">
+      Realistic style
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#sun-and-shadows">
 <span class="md-ellipsis">
       Sun and shadows
@@ -278,6 +293,13 @@
 <a class="md-nav__link" href="#graphic-display-options">
 <span class="md-ellipsis">
       Graphic display options
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sketchy-lines">
+<span class="md-ellipsis">
+      Sketchy lines
     </span>
 </a>
 </li>
@@ -427,6 +449,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#realistic-style">
+<span class="md-ellipsis">
+      Realistic style
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#sun-and-shadows">
 <span class="md-ellipsis">
       Sun and shadows
@@ -452,6 +481,13 @@
 <a class="md-nav__link" href="#graphic-display-options">
 <span class="md-ellipsis">
       Graphic display options
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sketchy-lines">
+<span class="md-ellipsis">
+      Sketchy lines
     </span>
 </a>
 </li>
@@ -581,6 +617,10 @@ goes on above it, so the slab's edge and the wall's face are one surface.</p>
 <td><strong>Flat Colors</strong></td>
 <td>Faces in the colour of their material, the same whatever the light</td>
 </tr>
+<tr>
+<td><strong>Realistic</strong></td>
+<td>Faces as in a photograph: the light of the project’s sun and sky, reflections, ambient shadows, see-through glass, haze</td>
+</tr>
 </tbody>
 </table>
 <figure>
@@ -611,6 +651,57 @@ colour. Sheets, prints and exported drawings show the views as the screen does.<
 it lies under the model's lines: in a plan over the floors and under the furniture, in a section
 over the surfaces seen through each room it cuts. At <strong>Foreground</strong> it covers the model, under
 the annotations.</p>
+<h2 id="realistic-style">Realistic style</h2>
+<p><strong>Realistic</strong> draws the 3D view like a photograph, in real time, on the graphics card, and the view
+stays editable as in the other styles.</p>
+<ul>
+<li><strong>Light of the sun and the sky.</strong> The light is that of the project’s sun (place, date and time in
+  <strong>Sun settings</strong>) and of the sky that sun gives: blue by day, warmer and darker at sunset. The
+  sun lights the model even with shadows off; with <strong>Cast shadows</strong> its shadows are those of the
+  other styles. What is in shadow stays lit by the sky and the ground.
+  The sun's disc appears when it comes into the frame, with a glow, and the model hides it.
+  Towards sunset the sun's light turns warm and weaker and the shadows lengthen; after sunset only
+  the sky is left, fading into a blue-violet twilight with a pink band on the horizon on the
+  sun's side; at night the sky is dark blue and the scene almost dark (self-illuminated surfaces
+  stay visible). Dragging the sun or following a sun study changes the light continuously.</li>
+<li><strong>Moon and stars.</strong> The moon is where it is at the project's place, date and time, in its
+  phase: lit on the side facing the sun, the rest faintly grey (earthshine), redder near the
+  horizon. At night it is the light: with <strong>Cast shadows</strong> the model casts moonlight shadows, and
+  a full moon lights the scene softly where a new moon leaves it almost dark. Once the sun is
+  down the brighter stars come out in their places, more of them the darker the sky.</li>
+<li><strong>Materials.</strong> Surfaces take the look of their material (the <strong>Appearance</strong> tab of
+  <strong>Materials</strong>): the texture image at its real size, the roughness and its map, the relief, metal,
+  glass and water, self-illumination (seen, not lighting others). A material without a look of its
+  own derives it from its colour and transparency; a part without a material takes its
+  category’s colour. On the web the images arrive later: until then the colour shows. The preview of the <strong>Appearance</strong> tab is drawn by the same renderer, on a sphere, a cube or a
+  2 × 2 m wall (without a graphics card, by an image computed apart).</li>
+<li><strong>Glass.</strong> Glass shows what is behind it and reflects the sky and the sun, more when seen at a
+  grazing angle. Panes are drawn from the farthest to the nearest.</li>
+<li><strong>Ambient shadows.</strong> With <strong>Ambient shadows</strong> corners and recesses, which get less light from the
+  sky, are darker.</li>
+<li><strong>Haze.</strong> In the distance the air veils the model: <strong>Distance haze</strong> sets how much, and how clear
+  the sky is.</li>
+<li><strong>Exposure.</strong> <strong>Automatic</strong> follows the light of the scene and adapts in about half a second when
+  it changes (turning the camera from the sky to the shade, or changing the time). <strong>Manual</strong> uses
+  the <strong>Value (EV)</strong>: higher is darker, about 15 under the midday sun.</li>
+</ul>
+<p>In the <strong>Realistic</strong> group of the <a href="#graphic-display-options">Graphic display options</a>:
+<strong>Exposure</strong> and <strong>Value (EV)</strong>, <strong>White point</strong> (the light shown as white: 6500 K is daylight as
+it is, a lower value cools the image, a higher one warms it), <strong>Saturation</strong>, <strong>Highlights</strong> and
+<strong>Shadows</strong> (lower or raise the lightest and darkest tones) and <strong>Distance haze</strong>. <strong>Show edges in
+Realistic</strong> draws the edges over the faces. The lighting <strong>Scheme</strong> is for now always
+<strong>Exterior: sun</strong>. <strong>Sun</strong>, <strong>Ambient light</strong> and <strong>Shadow intensity</strong> set the sun’s light, the
+sky’s and how dark the sun’s shadows are.</p>
+<p>The <strong>Physical sky (time and place)</strong> <strong>Background</strong> shows behind the model the same sky that lights
+it, with the sun’s disc; with <strong>None</strong>, <strong>Sky</strong> or <strong>Gradient</strong> the background stays as chosen and
+the sky still lights the model. Switching to <strong>Realistic</strong>, a view whose background is <strong>None</strong> gets
+<strong>Physical sky (time and place)</strong>. Selected elements and the sun path look as in the other styles.</p>
+<p>On the web without WebGPU (with WebGL2) <strong>Realistic</strong> works without ambient shadows, and the
+automatic exposure is set from the sky instead of from the image. On the web and on Android, while
+the camera moves, the view may be drawn smaller to stay smooth, and turns sharp again when it
+stops. Without a graphics card <strong>Realistic</strong> is shown as <strong>Shaded</strong> and the status bar says so.
+Plans, sections and elevations in <strong>Realistic</strong> are for now drawn as in <strong>Shaded</strong>; sheets,
+prints and exported images do not show <strong>Realistic</strong> yet.</p>
 <h2 id="sun-and-shadows">Sun and shadows</h2>
 <p>Plans, sections, elevations and 3D views show the sun (drafting views, legends, sheets and
 schedules do not). The view control bar has two buttons, each with a small arrow for its menu (the
@@ -732,9 +823,30 @@ Settings</strong>), <strong>Sun</strong>, <strong>Ambient Light</strong> and <st
 <strong>Background</strong> (<strong>None</strong>, <strong>Sky</strong>, <strong>Gradient</strong>). The preview draws the view with the options
 chosen; the <strong>Preview</strong> switch in the header hides and shows it, as in the sun settings. View templates carry these options
 with the graphic style, and the sun and the shadows as <strong>Sun and shadows</strong>.</p>
+<p>The <strong>Realistic</strong> group and <strong>Show edges in Realistic</strong> apply to the <strong>Realistic</strong> style (see
+<a href="#realistic-style">Realistic style</a>); <strong>Background</strong> also offers <strong>Physical sky (time and place)</strong>.
+In the <strong>Realistic</strong> style the preview is drawn by the graphics card, as the view is.</p>
 <figure>
 <img alt="Graphic Display Options of the 3D view: graphic style, silhouette edges, shadows, lighting with sun, ambient light and shadow intensity, the background, and the preview on the right" src="../assets/screens/vg-graphic-display.webp"/>
 <figcaption>Graphic Display Options</figcaption>
+</figure>
+<h3 id="sketchy-lines">Sketchy lines</h3>
+<p>The <strong>Sketchy Lines</strong> group of <strong>Graphic Display Options…</strong> draws the view's lines as by hand.
+<strong>Enable Sketchy Lines</strong> turns it on for the active view; <strong>Jitter</strong> (0–10) sets how much each line
+wavers and how many times it is traced over (0 straight, twice from 4, three times from 8); long
+lines waver more than short ones. <strong>Extension</strong> (0–10) sets how far the lines run past their ends,
+past the corners where they meet (0 stops them there). Both start at 5 and 4. The <strong>✎</strong> button of the view bar (in every interface style; in touch mode, in the view's sheet) turns them on and off for the active view: <strong>Enable Sketchy Lines</strong> / <strong>Disable Sketchy Lines</strong>.</p>
+<p>They apply in every view (plans, sections, elevations, drafting views, 3D views, views on sheets)
+and in every visual style: to the lines of the model, of detail items and of fill patterns.
+Annotations stay straight: dimensions, text, levels, grids, reference planes, tags, symbols and
+view marks. A view draws the same lines at every redraw and after orbiting back, and prints and
+exports exactly as the window shows it: PDF and SVG keep the lines as vectors, a printed section
+or elevation leaves out only the parts nearer surfaces hide. Selecting and snapping still use the
+straight lines. View templates carry the setting with the other graphic display options. On the
+command line: <code>graphicoptions {"sketchy":true,"instability":5,"extension":4}</code>.</p>
+<figure>
+<img alt="The sample house's ground floor plan with sketchy lines: walls, doors, windows and furniture drawn as by hand, dimensions and text straight" src="../assets/screens/vg-sketchy.webp"/>
+<figcaption>Sketchy Lines</figcaption>
 </figure>
 <h2 id="plans-and-their-view-range">Plans and their cut heights</h2>
 <p><strong>Views ▸ Create ▸ Plan ▸ Floor Plan</strong> opens <strong>New Plan</strong>: pick the levels and the scale,

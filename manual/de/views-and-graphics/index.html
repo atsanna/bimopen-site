@@ -194,6 +194,14 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../import-and-conversion/">
+<span class="md-ellipsis">
+    Importieren und Konvertieren
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../selection-and-modify/">
 <span class="md-ellipsis">
     Auswählen und Ändern
@@ -253,6 +261,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#realistic-style">
+<span class="md-ellipsis">
+      Stil Realistisch
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#sun-and-shadows">
 <span class="md-ellipsis">
       Sonne und Schatten
@@ -278,6 +293,13 @@
 <a class="md-nav__link" href="#graphic-display-options">
 <span class="md-ellipsis">
       Grafische Darstellungsoptionen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sketchy-lines">
+<span class="md-ellipsis">
+      Skizzenhafte Linien
     </span>
 </a>
 </li>
@@ -427,6 +449,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#realistic-style">
+<span class="md-ellipsis">
+      Stil Realistisch
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#sun-and-shadows">
 <span class="md-ellipsis">
       Sonne und Schatten
@@ -452,6 +481,13 @@
 <a class="md-nav__link" href="#graphic-display-options">
 <span class="md-ellipsis">
       Grafische Darstellungsoptionen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sketchy-lines">
+<span class="md-ellipsis">
+      Skizzenhafte Linien
     </span>
 </a>
 </li>
@@ -569,6 +605,10 @@
 <td><strong>Volle Farben</strong></td>
 <td>Flächen in der Farbe ihres Materials, unabhängig vom Licht stets gleich</td>
 </tr>
+<tr>
+<td><strong>Realistisch</strong></td>
+<td>Flächen wie auf einem Foto: das Licht von Sonne und Himmel des Projekts, Spiegelungen, Umgebungsschatten, durchsichtiges Glas, Dunst</td>
+</tr>
 </tbody>
 </table>
 <figure>
@@ -583,6 +623,63 @@
 <figcaption>Ein Grundriss in Linien und Schattiert</figcaption>
 </figure>
 <p>Das Farbschema der Räume ist in jedem Stil zu sehen. Mit <strong>Position des Farbschemas</strong> auf <strong>Hintergrund</strong> liegt es unter den Linien des Modells: im Grundriss über den Geschossdecken und unter den Möbeln, im Schnitt über den Oberflächen, die durch jeden geschnittenen Raum zu sehen sind. Auf <strong>Vordergrund</strong> deckt es das Modell ab, unter den Beschriftungen.</p>
+<h2 id="realistic-style">Stil Realistisch</h2>
+<p><strong>Realistisch</strong> zeichnet die 3D-Ansicht wie ein Foto, in Echtzeit, auf der Grafikkarte, und die
+Ansicht bleibt bearbeitbar wie in den anderen Stilen.</p>
+<ul>
+<li><strong>Licht von Sonne und Himmel.</strong> Das Licht ist das der Projektsonne (Ort, Datum und Uhrzeit der
+  <strong>Sonneneinstellungen</strong>) und des Himmels, den diese Sonne ergibt: blau am Tag, wärmer und dunkler
+  bei Sonnenuntergang. Die Sonne beleuchtet das Modell auch bei ausgeschalteten Schatten; mit
+  <strong>Schatten werfen</strong> sind ihre Schatten die der anderen Stile. Was im Schatten liegt, bleibt vom
+  Himmel und vom Boden beleuchtet.
+  Die Sonnenscheibe erscheint, sobald sie ins Bild kommt, mit einem Schein, und das Modell
+  verdeckt sie. Gegen Sonnenuntergang wird das Sonnenlicht warm und schwächer, die Schatten werden
+  länger; nach Sonnenuntergang bleibt nur der Himmel, der in eine blauviolette Dämmerung mit einem
+  rosa Band am Horizont auf der Sonnenseite übergeht; nachts ist der Himmel dunkelblau und die
+  Szene fast dunkel (selbstleuchtende Flächen bleiben sichtbar). Beim Ziehen der Sonne oder in
+  einer Sonnenstudie ändert sich das Licht stufenlos.</li>
+<li><strong>Mond und Sterne.</strong> Der Mond steht dort, wo er an Ort, Datum und Uhrzeit des Projekts steht,
+  in seiner Phase: auf der der Sonne zugewandten Seite beleuchtet, der Rest schwach grau
+  (Erdschein), nahe dem Horizont röter. Nachts ist er das Licht: Mit <strong>Schlagschatten</strong> wirft das
+  Modell Mondschatten, der Vollmond beleuchtet die Szene sanft, der Neumond lässt sie fast dunkel.
+  Nach Sonnenuntergang erscheinen die hellsten Sterne an ihrem Ort, umso mehr, je dunkler der
+  Himmel ist.</li>
+<li><strong>Materialien.</strong> Die Oberflächen haben das Aussehen ihres Materials (Registerkarte
+  <strong>Darstellung</strong> von <strong>Materialien</strong>): das Texturbild in seiner wirklichen Größe, die Rauheit und
+  ihre Map, das Relief, Metall, Glas und Wasser, die Selbstleuchtkraft (sichtbar, ohne andere zu
+  beleuchten). Ein Material ohne eigenes Aussehen leitet es aus Farbe und Transparenz ab; ein Teil
+  ohne Material nimmt die Farbe seiner Kategorie. Im Web kommen die Bilder später: bis dahin ist
+  die Farbe zu sehen. Die Vorschau der Registerkarte <strong>Darstellung</strong> zeichnet derselbe Renderer, auf einer Kugel,
+  einem Würfel oder einer Wand von 2 × 2 m (ohne Grafikkarte als eigens berechnetes Bild).</li>
+<li><strong>Glas.</strong> Glas lässt sehen, was dahinter liegt, und spiegelt Himmel und Sonne, stärker bei
+  streifendem Blick. Die Scheiben werden von der fernsten zur nächsten gezeichnet.</li>
+<li><strong>Umgebungsschatten.</strong> Mit <strong>Umgebungsschatten</strong> sind Ecken und Nischen, die weniger Himmelslicht
+  erhalten, dunkler.</li>
+<li><strong>Dunst.</strong> In der Ferne verschleiert die Luft das Modell: <strong>Dunst in der Ferne</strong> regelt, wie stark,
+  und wie klar der Himmel ist.</li>
+<li><strong>Belichtung.</strong> <strong>Automatisch</strong> folgt dem Licht der Szene und passt sich in etwa einer halben
+  Sekunde an, wenn es sich ändert (Kamera vom Himmel in den Schatten, andere Uhrzeit). <strong>Manuell</strong>
+  nutzt den <strong>Wert (EV)</strong>: höher ist dunkler, etwa 15 unter der Mittagssonne.</li>
+</ul>
+<p>In der Gruppe <strong>Realistisch</strong> der <a href="#graphic-display-options">Grafischen Darstellungsoptionen</a>:
+<strong>Belichtung</strong> und <strong>Wert (EV)</strong>, <strong>Weißpunkt</strong> (das als Weiß gezeigte Licht: 6500 K ist Tageslicht,
+wie es ist, ein niedrigerer Wert kühlt das Bild, ein höherer wärmt es), <strong>Sättigung</strong>, <strong>Lichter</strong>
+und <strong>Tiefen</strong> (senken oder heben die hellsten und dunkelsten Töne) und <strong>Dunst in der Ferne</strong>.
+<strong>Kanten in Realistisch anzeigen</strong> zeichnet die Kanten über die Flächen. Das Beleuchtungs-<strong>Schema</strong>
+ist vorerst immer <strong>Außen: Sonne</strong>. <strong>Sonne</strong>, <strong>Umgebungslicht</strong> und <strong>Schattenintensität</strong>
+regeln das Licht der Sonne, das des Himmels und wie dunkel die Sonnenschatten sind.</p>
+<p>Der <strong>Hintergrund</strong> <strong>Physikalischer Himmel (Zeit und Ort)</strong> zeigt hinter dem Modell denselben
+Himmel, der es beleuchtet, mit der Sonnenscheibe; mit <strong>Keiner</strong>, <strong>Himmel</strong> oder <strong>Verlauf</strong>
+bleibt der gewählte Hintergrund, und der Himmel beleuchtet das Modell trotzdem. Beim Wechsel zu <strong>Realistisch</strong> erhält eine Ansicht mit dem Hintergrund
+<strong>Keiner</strong> den <strong>Physikalischen Himmel (Zeit und Ort)</strong>. Ausgewählte
+Elemente und die Sonnenbahn sehen aus wie in den anderen Stilen.</p>
+<p>Im Web ohne WebGPU (mit WebGL2) funktioniert <strong>Realistisch</strong> ohne Umgebungsschatten, und die
+automatische Belichtung richtet sich nach dem Himmel statt nach dem Bild. Im Web und auf Android
+kann die Ansicht, während sich die Kamera bewegt, kleiner gezeichnet werden, um flüssig zu bleiben,
+und wird wieder scharf, sobald sie anhält. Ohne Grafikkarte wird <strong>Realistisch</strong> als
+<strong>Schattiert</strong> gezeigt, und die Statusleiste sagt es. Grundrisse, Schnitte und Ansichten in
+<strong>Realistisch</strong> werden vorerst wie in <strong>Schattiert</strong> gezeichnet; Pläne, Ausdrucke und exportierte
+Bilder zeigen <strong>Realistisch</strong> noch nicht.</p>
 <h2 id="sun-and-shadows">Sonne und Schatten</h2>
 <p>Grundrisse, Schnitte, Ansichten und 3D-Ansichten zeigen die Sonne (Zeichenansichten, Legenden,
 Pläne und Bauteillisten nicht). Die Ansichtssteuerungsleiste hat zwei Schaltflächen, jede mit
@@ -713,9 +810,34 @@ Modells), <strong>Schlagschatten</strong>, <strong>Umgebungsschatten</strong> (E
 <strong>Verlauf</strong>). Die Vorschau zeichnet die Ansicht mit den gewählten Optionen; der Schalter <strong>Vorschau</strong> in der
 Kopfzeile blendet sie aus und ein, wie in den Sonneneinstellungen. Ansichtsvorlagen übernehmen diese Optionen mit dem
 Grafikstil, und Sonne und Schatten als <strong>Sonne und Schatten</strong>.</p>
+<p>Die Gruppe <strong>Realistisch</strong> und <strong>Kanten in Realistisch anzeigen</strong> gelten für den Stil
+<strong>Realistisch</strong> (siehe <a href="#realistic-style">Stil Realistisch</a>); <strong>Hintergrund</strong> bietet auch
+<strong>Physikalischer Himmel (Zeit und Ort)</strong>. Im Stil <strong>Realistisch</strong> zeichnet die Grafikkarte die
+Vorschau, wie die Ansicht.</p>
 <figure>
 <img alt="Grafische Darstellungsoptionen der 3D-Ansicht: Grafikstil, Silhouettenkanten, Schatten, Beleuchtung mit Sonne, Umgebungslicht und Schattenintensität, der Hintergrund und rechts die Vorschau" src="../assets/screens/vg-graphic-display.webp"/>
 <figcaption>Grafische Darstellungsoptionen</figcaption>
+</figure>
+<h3 id="sketchy-lines">Skizzenhafte Linien</h3>
+<p>Die Gruppe <strong>Skizzenhafte Linien</strong> der <strong>Grafischen Darstellungsoptionen…</strong> zeichnet die Linien der
+Ansicht wie von Hand. <strong>Skizzenhafte Linien aktivieren</strong> schaltet sie für die aktive Ansicht ein;
+<strong>Zittern</strong> (0–10) legt fest, wie stark jede Linie zittert und wie oft sie nachgezogen wird (0
+gerade, zweimal ab 4, dreimal ab 8); lange Linien zittern mehr als kurze. <strong>Verlängerung</strong> (0–10)
+legt fest, wie weit die Linien über ihre Enden hinauslaufen, über die Ecken, an denen sie sich
+treffen (0 lässt sie dort enden). Beide beginnen bei 5 und 4. Die Schaltfläche <strong>✎</strong> der Ansichtsleiste (in jedem Oberflächenstil; im Touch-Modus im Ansichtsbereich) schaltet sie für die aktive Ansicht ein und aus: <strong>Skizzenhafte Linien aktivieren</strong> / <strong>Skizzenhafte Linien deaktivieren</strong>.</p>
+<p>Sie gelten in jeder Ansicht (Grundrisse, Schnitte, Ansichten, Zeichenansichten, 3D-Ansichten,
+Ansichten auf Plänen) und in jedem Grafikstil: für die Linien des Modells, der Detailbauteile und
+der Füllmuster. Beschriftungen bleiben gerade: Bemaßungen, Texte, Ebenen, Raster,
+Referenzebenen, Beschriftungsmarken, Symbole und Ansichtsmarken. Eine Ansicht zeichnet bei jedem
+Neuzeichnen und nach einem Orbit zurück dieselben Linien und wird genau so gedruckt und exportiert,
+wie das Fenster sie zeigt: PDF und SVG behalten die Linien als Vektoren, ein gedruckter Schnitt oder
+eine gedruckte Ansicht lässt nur die Teile weg, die nähere Flächen verdecken. Auswahl und Fang
+verwenden weiterhin die geraden Linien. Ansichtsvorlagen übernehmen die Einstellung mit den
+anderen grafischen Darstellungsoptionen. In der Befehlszeile:
+<code>graphicoptions {"sketchy":true,"instability":5,"extension":4}</code>.</p>
+<figure>
+<img alt="Der Grundriss des Erdgeschosses des Beispielhauses mit skizzenhaften Linien: Wände, Türen, Fenster und Möbel wie von Hand gezeichnet, Bemaßungen und Texte gerade" src="../assets/screens/vg-sketchy.webp"/>
+<figcaption>Skizzenhafte Linien</figcaption>
 </figure>
 <h2 id="plans-and-their-view-range">Grundrisse und ihre Schnitthöhen</h2>
 <p><strong>Ansichten ▸ Erzeugen ▸ Grundriss ▸ Grundriss</strong> öffnet <strong>Neuer Grundriss</strong>: Wählen Sie die Ebenen und den Maßstab, dann <strong>OK</strong>. Ist <strong>Vorhandene Ansichten nicht duplizieren</strong> eingeschaltet, werden die Ebenen übergangen, die bereits einen Grundriss haben; schalten Sie es aus, um einen zweiten Grundriss einer Ebene zu erstellen.</p>

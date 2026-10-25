@@ -194,6 +194,14 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../import-and-conversion/">
+<span class="md-ellipsis">
+    Importazione e conversione
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../selection-and-modify/">
 <span class="md-ellipsis">
     Selezione e modifica
@@ -583,7 +591,7 @@ uno script, per verificare un modello o per servire agenti tramite MCP. Si compi
 </tr>
 <tr>
 <td><code>convert &lt;in&gt; &lt;out&gt;</code></td>
-<td>Apre <code>&lt;in&gt;</code> (<code>.bimopen</code> o <code>.rvt</code>) e scrive <code>&lt;out&gt;</code>: <code>.ifc</code>, <code>.svg</code> o <code>.png</code> di una pianta (il livello più basso, o <code>--level</code>), <code>.png</code> della vista 3D (<code>--view 3d</code>), <code>.csv</code> di un abaco (<code>--schedule</code>), oppure <code>.bimopen</code></td>
+<td>Apre <code>&lt;in&gt;</code> (<code>.bimopen</code> o <code>.ifc</code>) e scrive <code>&lt;out&gt;</code>: <code>.ifc</code>, <code>.svg</code> o <code>.png</code> di una pianta (il livello più basso, o <code>--level</code>), <code>.png</code> della vista 3D (<code>--view 3d</code>), <code>.csv</code> di un abaco (<code>--schedule</code>), oppure <code>.bimopen</code></td>
 </tr>
 <tr>
 <td><code>run</code></td>
@@ -613,7 +621,7 @@ quando gli argomenti sono errati (stampa l'utilizzo).</p>
 <a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>bimopen-cli<span class="w"> </span>convert<span class="w"> </span>house.bimopen<span class="w"> </span>doors.csv<span class="w"> </span>--schedule<span class="w"> </span>doors
 <a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a>bimopen-cli<span class="w"> </span>convert<span class="w"> </span>house.bimopen<span class="w"> </span>first.png<span class="w"> </span>--level<span class="w"> </span><span class="s2">"First Floor"</span>
 <a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a>bimopen-cli<span class="w"> </span>convert<span class="w"> </span>house.bimopen<span class="w"> </span>house-3d.png<span class="w"> </span>--view<span class="w"> </span>3d
-<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a>bimopen-cli<span class="w"> </span>convert<span class="w"> </span>project.rvt<span class="w"> </span>project.bimopen
+<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a>bimopen-cli<span class="w"> </span>convert<span class="w"> </span>model.ifc<span class="w"> </span>model.bimopen
 </code></pre></div>
 <p>Uno script è un file di testo con un comando per riga, esattamente come si digita alla riga di
 comando:</p>

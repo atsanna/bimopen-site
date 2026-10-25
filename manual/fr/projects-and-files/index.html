@@ -9,7 +9,7 @@
 <meta content="BIMopen" name="author"/>
 <link href="https://atsanna.github.io/bimopen-site/manual/fr/projects-and-files/" rel="canonical"/>
 <link href="../interface-styles/" rel="prev"/>
-<link href="../selection-and-modify/" rel="next"/>
+<link href="../import-and-conversion/" rel="next"/>
 <link href="../assets/images/bimopen-cube.svg" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.9" name="generator"/>
 <title>Projets et fichiers - Manuel utilisateur de BIMopen</title>
@@ -261,6 +261,20 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#imperial-units">
+<span class="md-ellipsis">
+      Unités impériales
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#typing-lengths">
+<span class="md-ellipsis">
+      Saisir des longueurs
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#sun-settings">
 <span class="md-ellipsis">
       Paramètres du soleil
@@ -307,13 +321,6 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#revit-projects">
-<span class="md-ellipsis">
-      Fichiers .rvt
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#other-exports">
 <span class="md-ellipsis">
       Autres exportations
@@ -325,6 +332,14 @@
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../import-and-conversion/">
+<span class="md-ellipsis">
+    Importation et conversion
+    
+  </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../selection-and-modify/">
@@ -475,6 +490,20 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#imperial-units">
+<span class="md-ellipsis">
+      Unités impériales
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#typing-lengths">
+<span class="md-ellipsis">
+      Saisir des longueurs
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#sun-settings">
 <span class="md-ellipsis">
       Paramètres du soleil
@@ -521,13 +550,6 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#revit-projects">
-<span class="md-ellipsis">
-      Fichiers .rvt
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#other-exports">
 <span class="md-ellipsis">
       Autres exportations
@@ -555,8 +577,10 @@ programmes, ses paramètres et les options de BIMopen lui-même.</p>
 <p><strong>menu de l'application ➤ Nouveau ➤ Projet…</strong> ouvre <strong>Nouveau projet</strong> :</p>
 <ul>
 <li><strong>Fichier gabarit</strong> : le gabarit par défaut de BIMopen, ou celui défini dans
-  <strong>Options ➤ Emplacements des fichiers</strong> ; un fichier gabarit choisi avec <strong>Parcourir…</strong> ; ou
-  <strong>Aucun</strong>, qui part de deux niveaux et d'un type de chaque sorte.</li>
+  <strong>Options ➤ Emplacements des fichiers</strong> ; le <strong>Gabarit impérial de BIMopen</strong> (voir
+  <a href="#imperial-units">Unités impériales</a>) ; un fichier gabarit choisi avec <strong>Parcourir…</strong> ; ou
+  <strong>Aucun</strong>, qui part de deux niveaux et d'un type de chaque sorte et demande le système de
+  mesure : <strong>Impérial</strong> ou <strong>Métrique</strong>.</li>
 <li><strong>Créer un nouveau</strong> : <strong>Projet</strong> ou <strong>Gabarit de projet</strong>.</li>
 </ul>
 <figure>
@@ -623,6 +647,184 @@ positives et le groupement des chiffres.</p>
 <img alt="Deux étapes : la boîte Unités du projet avec les grandeurs et un exemple de chacune, puis le Format de la longueur avec son unité, l'arrondi, le symbole et les options" src="../assets/screens/pf-units.webp"/>
 <figcaption>Unités du projet, puis Format… d'une grandeur</figcaption>
 </figure>
+<h3 id="imperial-units">Unités impériales</h3>
+<p>Dans <strong>Format…</strong>, les unités d'une longueur sont en deux groupes, <strong>Métrique</strong> et <strong>Impérial</strong> :
+<strong>Pieds et pouces fractionnaires</strong> (<code>5' - 6 1/2"</code>), <strong>Pouces fractionnaires</strong> (<code>66 1/2"</code>),
+<strong>Pieds décimaux</strong> et <strong>Pouces décimaux</strong>. Les surfaces peuvent être en <strong>Pieds carrés</strong>,
+<strong>Pouces carrés</strong> ou <strong>Acres</strong>, les volumes en <strong>Pieds cubes</strong>, <strong>Pouces cubes</strong> ou <strong>Yards
+cubes</strong>, les pentes en <strong>Hauteur/12"</strong> ou en rapport. Avec les fractions, l'<strong>Arrondi</strong> est au
+pouce le plus proche ou au 1/2" à 1/256" le plus proche ; une valeur qui, arrondie, atteint 12"
+passe dans les pieds : à 1/16", <code>11 63/64"</code> se lit <code>1' - 0"</code>. <strong>Supprimer 0 pied</strong> écrit <code>4"</code> au
+lieu de <code>0' - 4"</code>, <strong>Supprimer les espaces</strong> écrit <code>1'-2"</code> au lieu de <code>1' - 2"</code>, et le <strong>Symbole
+d'unité</strong> choisit entre <code>'</code> et <code>ft</code>, ou entre <code>ft²</code> et <code>SF</code>. <strong>Autres valeurs</strong> montre le format
+sur quelques valeurs de plus.</p>
+<p>Le <strong>Format du champ…</strong> d'un champ de nomenclature et le <strong>Format des unités</strong> d'un type de cote
+ont les mêmes champs, en plus de <strong>Utiliser les paramètres du projet</strong> : un métré peut donner des
+volumes en yards cubes dans un projet en pieds cubes, et un type de cote pour les détails peut
+arrondir à 1/32" là où les plans arrondissent à 1/16".</p>
+<p>Le modèle reste en mètres : changer les unités change la façon dont les valeurs s'affichent et se
+saisissent, jamais la géométrie. Passer un projet du métrique à l'impérial et retour laisse chaque
+élément là où il était.</p>
+<figure>
+<img alt='Deux étapes : les Unités du projet en pieds et pouces, puis le Format de la longueur en Pieds et pouces fractionnaires, arrondis au 1/32" le plus proche, avec Supprimer 0 pied et Supprimer les espaces' src="../assets/screens/pf-imperial.webp"/>
+<figcaption>Unités du projet en pieds et pouces</figcaption>
+</figure>
+<p>Dans un projet en pieds et pouces, les échelles des vues sont les échelles architecturales, de
+<code>12" = 1'-0"</code> à <code>3/64" = 1'-0"</code>, et les échelles d'ingénierie, de <code>1" = 10'-0"</code> à
+<code>1" = 100'-0"</code> : dans la barre de la vue, dans les Propriétés et sur les feuilles. Une échelle qui
+n'est ni l'une ni l'autre s'affiche comme un rapport.</p>
+<table>
+<thead>
+<tr>
+<th>Échelle</th>
+<th>Rapport</th>
+<th>Usage courant</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>12" = 1'-0"</code></td>
+<td>1:1</td>
+<td>détails grandeur nature</td>
+</tr>
+<tr>
+<td><code>6" = 1'-0"</code></td>
+<td>1:2</td>
+<td>assemblages et nœuds complexes</td>
+</tr>
+<tr>
+<td><code>3" = 1'-0"</code></td>
+<td>1:4</td>
+<td>détails de maçonnerie et de menuiserie</td>
+</tr>
+<tr>
+<td><code>1 1/2" = 1'-0"</code></td>
+<td>1:8</td>
+<td>détails de composants et de fenêtres</td>
+</tr>
+<tr>
+<td><code>1" = 1'-0"</code></td>
+<td>1:12</td>
+<td>détails de construction courants</td>
+</tr>
+<tr>
+<td><code>3/4" = 1'-0"</code></td>
+<td>1:16</td>
+<td>nœuds structurels</td>
+</tr>
+<tr>
+<td><code>1/2" = 1'-0"</code></td>
+<td>1:24</td>
+<td>coupes de mur et élévations partielles</td>
+</tr>
+<tr>
+<td><code>3/8" = 1'-0"</code></td>
+<td>1:32</td>
+<td>plans de cuisines et de salles de bains, détails agrandis</td>
+</tr>
+<tr>
+<td><code>1/4" = 1'-0"</code></td>
+<td>1:48</td>
+<td>le standard architectural pour plans et coupes</td>
+</tr>
+<tr>
+<td><code>1/8" = 1'-0"</code></td>
+<td>1:96</td>
+<td>le standard d'ingénierie et des fluides, plans généraux</td>
+</tr>
+<tr>
+<td><code>3/32" = 1'-0"</code></td>
+<td>1:128</td>
+<td>plans de grands bâtiments commerciaux</td>
+</tr>
+<tr>
+<td><code>1/16" = 1'-0"</code></td>
+<td>1:192</td>
+<td>plans de repérage et implantations générales</td>
+</tr>
+<tr>
+<td><code>3/64" = 1'-0"</code></td>
+<td>1:256</td>
+<td>plans de masse de très grands sites</td>
+</tr>
+<tr>
+<td><code>1" = 10'-0"</code></td>
+<td>1:120</td>
+<td>plans de génie civil et de site</td>
+</tr>
+<tr>
+<td><code>1" = 20'-0"</code></td>
+<td>1:240</td>
+<td>plans de lotissement</td>
+</tr>
+<tr>
+<td><code>1" = 30'-0"</code></td>
+<td>1:360</td>
+<td>travaux de génie civil et réseaux</td>
+</tr>
+<tr>
+<td><code>1" = 40'-0"</code></td>
+<td>1:480</td>
+<td>relevés topographiques et routiers</td>
+</tr>
+<tr>
+<td><code>1" = 50'-0"</code></td>
+<td>1:600</td>
+<td>urbanisme et plans de situation</td>
+</tr>
+<tr>
+<td><code>1" = 60'-0"</code></td>
+<td>1:720</td>
+<td>relevés territoriaux</td>
+</tr>
+<tr>
+<td><code>1" = 100'-0"</code></td>
+<td>1:1200</td>
+<td>plans cadastraux</td>
+</tr>
+</tbody>
+</table>
+<figure>
+<img alt="Le plan de la maison d'exemple au 1/4&quot; = 1'-0&quot;, avec ses cotes en pieds et pouces" src="../assets/screens/pf-imperial-plan.webp"/>
+<figcaption>Un plan au 1/4" = 1'-0", coté au 1/16"</figcaption>
+</figure>
+<figure>
+<img alt="Une nomenclature des murs avec longueurs et hauteurs en pieds et pouces, surfaces en pieds carrés et volumes en pieds cubes" src="../assets/screens/pf-imperial-schedule.webp"/>
+<figcaption>Une nomenclature en pieds et pouces</figcaption>
+</figure>
+<p>Le <strong>Gabarit impérial de BIMopen</strong> a les mêmes types que le gabarit métrique, aux dimensions
+commerciales des États-Unis : murs à montants bois 2x4 et 2x6, en blocs de 8" et briques, à
+montants métalliques ; portes de 30" à 36" x 80" ; fenêtres avec allège à 3'-0" ; escaliers avec
+des contremarches d'au plus 7 3/4" et des girons d'au moins 10" ; garde-corps de 36" et 42". Les
+longueurs et les cotes sont arrondies au 1/32", les incréments d'accrochage des cotes
+linéaires sont 4', 1', 6" et 1", la grille du plan de travail est de 4', les plans sont au
+1/8" = 1'-0" et les textes ont 3/32" et 1/8" de haut. Ce sont des points de départ : chacun se
+change dans le projet. Changer les unités d'un projet ne renomme pas ses types.</p>
+<p>Conseil : pour des plans lisibles sur le chantier, donnez aux types de cote un arrondi plus large :
+dans les <strong>Paramètres du type</strong> d'un type de cote, <strong>Format des unités</strong> ouvre <strong>Format</strong> ;
+décochez <strong>Utiliser les paramètres du projet</strong> et arrondissez au 1/16" ou au 1/8".</p>
+<figure>
+<img alt="La boîte Système de mesure non défini, avec les boutons Impérial et Métrique" src="../assets/screens/pf-new-units.webp"/>
+<figcaption>Un nouveau projet sans gabarit demande le système de mesure</figcaption>
+</figure>
+<h3 id="typing-lengths">Saisir des longueurs</h3>
+<p>Une longueur saisie dans les Propriétés, sur une cote temporaire, dans le bandeau des options,
+dans une boîte de dialogue ou à la ligne de commande se lit ainsi :</p>
+<ul>
+<li>avec une unité, dans cette unité, dans tout projet : <code>300mm</code>, <code>1.2 m</code>, <code>1 m 20 cm</code>, <code>6"</code>,
+  <code>5.5'</code>, <code>5.5 ft</code> ;</li>
+<li>pieds et pouces : <code>5'6"</code>, <code>5' 6 1/2"</code>, <code>5'-6 1/2"</code> ; après les pieds le dernier <code>"</code> peut être
+  omis (<code>5'6</code>), et les pouces à partir de 12 passent dans les pieds (<code>5' 14"</code> vaut <code>6'-2"</code>) ;</li>
+<li>un nombre sans unité est dans l'unité de longueur du projet ; dans un projet en pieds, deux
+  nombres sont des pieds et des pouces : <code>8 6</code> vaut <code>8'-6"</code>, <code>8 6 1/2</code> vaut <code>8'-6 1/2"</code> ;</li>
+<li>les fractions sont des fractions de pouce ; une fraction de pied s'écrit en décimal (<code>5.5'</code>) ;</li>
+<li>après <code>=</code>, une formule : <code>=10' + 6"</code>, <code>=12'/5</code>, <code>=3000mm/2</code> ; ses nombres sans unité sont dans
+  l'unité du projet.</li>
+</ul>
+<p>Le symbole décimal est celui du projet. Pendant qu'une valeur est modifiée, elle s'affiche en
+pleine précision (jusqu'au 1/256" en pieds et pouces) : la confirmer sans la changer ne change
+rien. À la ligne de commande, un nombre sans unité est en mètres dans un projet métrique et en pieds
+dans un projet en pieds et pouces ; une longueur peut toujours porter son unité : <code>wall 0,0 20',0</code>.</p>
 <h3 id="sun-settings">Paramètres du soleil</h3>
 <p><strong>Paramètres ➤ Paramètres supplémentaires ➤ Paramètres du soleil</strong> ouvre les paramètres du soleil de
 la vue active, comme le bouton du soleil de la barre de contrôle d'affichage (voir
@@ -694,11 +896,8 @@ pièces. Les messages comptent ce qui n'a pas été lu.</p>
 <p><strong>Ouvrir ➤ Options IFC…</strong> ouvre <strong>Options d'import IFC</strong> : ce que devient chaque classe IFC (murs,
 sols, portes, fenêtres, pièces ou <strong>Non importé</strong>), et <strong>Standard</strong>. Les choix sont conservés d'une
 session à l'autre.</p>
-<h3 id="revit-projects">Fichiers .rvt</h3>
-<p>Ouvrir un fichier <code>.rvt</code> est expérimental : aujourd'hui, seuls le nom du projet et les noms
-des niveaux sont lus, de sorte que le nouveau projet a ses niveaux et aucun mur, porte, fenêtre ou
-sol. Les messages le disent après l'import. Pour échanger des modèles avec les autres logiciels
-BIM, utilisez IFC4.</p>
+<p>Les objets ayant une forme qui ne sont ni murs, ni sols, ni portes, ni fenêtres, ni espaces
+restent des objets importés, à convertir : voir <a href="../import-and-conversion/">Importation et conversion</a>.</p>
 <h3 id="other-exports">Autres exportations</h3>
 <p>L'impression en PDF et l'exportation d'images sont décrites dans
 <a href="../documentation/">Feuilles, nomenclatures et impression</a> ; les nomenclatures s'exportent en texte
@@ -728,13 +927,13 @@ délimité depuis le même chapitre. <code>bimopen-cli convert</code> exporte de
               </div>
 </div>
 </a>
-<a aria-label="Suivant: Sélection et modification" class="md-footer__link md-footer__link--next" href="../selection-and-modify/">
+<a aria-label="Suivant: Importation et conversion" class="md-footer__link md-footer__link--next" href="../import-and-conversion/">
 <div class="md-footer__title">
 <span class="md-footer__direction">
                 Suivant
               </span>
 <div class="md-ellipsis">
-                Sélection et modification
+                Importation et conversion
               </div>
 </div>
 <div class="md-footer__button md-icon">

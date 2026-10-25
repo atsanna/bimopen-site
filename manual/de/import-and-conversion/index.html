@@ -1,0 +1,771 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="de">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Benutzerhandbuch von BIMopen, BIM-Modellierung als Open Source" name="description"/>
+<meta content="BIMopen" name="author"/>
+<link href="https://atsanna.github.io/bimopen-site/manual/de/import-and-conversion/" rel="canonical"/>
+<link href="../projects-and-files/" rel="prev"/>
+<link href="../selection-and-modify/" rel="next"/>
+<link href="../assets/images/bimopen-cube.svg" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.9" name="generator"/>
+<title>Importieren und Konvertieren - BIMopen Benutzerhandbuch</title>
+<link href="../assets/stylesheets/main.4af4bdda.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link href="../assets/css/theme.css" rel="stylesheet"/>
+<link href="../assets/css/theme_dark_mode.css" rel="stylesheet"/>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="slate" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#importing-and-converting">
+          Zum Inhalt
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Kopfzeile" class="md-header__inner md-grid">
+<a aria-label="BIMopen Benutzerhandbuch" class="md-header__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/?lang=de" title="BIMopen Benutzerhandbuch">
+<img alt="logo" src="../assets/images/bimopen-cube.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            BIMopen Benutzerhandbuch
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Importieren und Konvertieren
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Zum hellen Design wechseln" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Zum hellen Design wechseln">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Zum dunklen Design wechseln" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="bimopen" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Zum dunklen Design wechseln">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<div class="md-header__option">
+<div class="md-select">
+<button aria-label="Sprache wechseln" class="md-header__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"></path></svg>
+</button>
+<div class="md-select__inner">
+<ul class="md-select__list">
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/en/" hreflang="en">
+              English
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/it/" hreflang="it">
+              Italiano
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/de/" hreflang="de">
+              Deutsch
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/fr/" hreflang="fr">
+              Français
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/es/" hreflang="es">
+              Español
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/ar/" hreflang="ar">
+              العربية
+            </a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Suche" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Suche" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Suche" class="md-search__options">
+<button aria-label="Zurücksetzen" class="md-search__icon md-icon" tabindex="-1" title="Zurücksetzen" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Suche wird initialisiert
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="BIMopen Benutzerhandbuch" class="md-nav__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/?lang=de" title="BIMopen Benutzerhandbuch">
+<img alt="logo" src="../assets/images/bimopen-cube.svg"/>
+</a>
+    BIMopen Benutzerhandbuch
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
+<span class="md-ellipsis">
+    Startseite
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../getting-started/">
+<span class="md-ellipsis">
+    Erste Schritte
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../interface/">
+<span class="md-ellipsis">
+    Die Benutzeroberfläche
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../interface-styles/">
+<span class="md-ellipsis">
+    Oberflächenstile
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../projects-and-files/">
+<span class="md-ellipsis">
+    Projekte und Dateien
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Importieren und Konvertieren
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Importieren und Konvertieren
+    
+  </span>
+</a>
+<nav aria-label="Inhaltsverzeichnis" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#opening-an-ifc-file">
+<span class="md-ellipsis">
+      Eine IFC-Datei öffnen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#import-ifc-options">
+<span class="md-ellipsis">
+      IFC-Importoptionen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conversion-status">
+<span class="md-ellipsis">
+      Konvertierungsstatus
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#converting-an-imported-object">
+<span class="md-ellipsis">
+      Ein importiertes Objekt konvertieren
+    </span>
+</a>
+<nav aria-label="Ein importiertes Objekt konvertieren" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-three-ways">
+<span class="md-ellipsis">
+      Die drei Arten
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#components-from-imported-objects">
+<span class="md-ellipsis">
+      Bauteile aus importierten Objekten
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#identical-shapes">
+<span class="md-ellipsis">
+      Gleiche Formen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#selecting-imported-objects">
+<span class="md-ellipsis">
+      Importierte Objekte auswählen
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#imported-objects-in-the-project-index">
+<span class="md-ellipsis">
+      Importierte Objekte im Projektindex
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#restoring-the-originals">
+<span class="md-ellipsis">
+      Die Originale wiederherstellen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#coming-next">
+<span class="md-ellipsis">
+      Demnächst
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../selection-and-modify/">
+<span class="md-ellipsis">
+    Auswählen und Ändern
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../walls-doors-windows/">
+<span class="md-ellipsis">
+    Wände, Türen und Fenster
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../floors-roofs-stairs/">
+<span class="md-ellipsis">
+    Geschossdecken, Dächer, Treppen und Bauteile
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../views-and-graphics/">
+<span class="md-ellipsis">
+    Ansichten und Grafik
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../annotation/">
+<span class="md-ellipsis">
+    Beschriftung und 2D-Details
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../documentation/">
+<span class="md-ellipsis">
+    Pläne, Bauteillisten und Drucken
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../command-line-and-mcp/">
+<span class="md-ellipsis">
+    Befehlszeile und MCP
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../keyboard-shortcuts/">
+<span class="md-ellipsis">
+    Tastenkürzel
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../troubleshooting/">
+<span class="md-ellipsis">
+    Fehlerbehebung
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://atsanna.github.io/bimopen-site/manual/de/pdf/bimopen-manual-de.pdf">
+<span class="md-ellipsis">
+    PDF
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Inhaltsverzeichnis" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#opening-an-ifc-file">
+<span class="md-ellipsis">
+      Eine IFC-Datei öffnen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#import-ifc-options">
+<span class="md-ellipsis">
+      IFC-Importoptionen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conversion-status">
+<span class="md-ellipsis">
+      Konvertierungsstatus
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#converting-an-imported-object">
+<span class="md-ellipsis">
+      Ein importiertes Objekt konvertieren
+    </span>
+</a>
+<nav aria-label="Ein importiertes Objekt konvertieren" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-three-ways">
+<span class="md-ellipsis">
+      Die drei Arten
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#components-from-imported-objects">
+<span class="md-ellipsis">
+      Bauteile aus importierten Objekten
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#identical-shapes">
+<span class="md-ellipsis">
+      Gleiche Formen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#selecting-imported-objects">
+<span class="md-ellipsis">
+      Importierte Objekte auswählen
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#imported-objects-in-the-project-index">
+<span class="md-ellipsis">
+      Importierte Objekte im Projektindex
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#restoring-the-originals">
+<span class="md-ellipsis">
+      Die Originale wiederherstellen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#coming-next">
+<span class="md-ellipsis">
+      Demnächst
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset"><a class="md-content__icon pdf-download-btn" download href="../pdf/bimopen-manual-de.pdf" title="Download"><i class="fa fas fa-download"></i><small> PDF</small></a>
+<h1 id="importing-and-converting">Importieren und Konvertieren</h1>
+<p>Ein Modell aus einer anderen Software kommt als IFC-Datei. BIMopen liest ihre Wände, Decken,
+Türen, Fenster und Räume als eigene Elemente. Alles andere mit einer Form (Dächer, Träger,
+Stützen, Treppen, Geländer, Fassaden, Möbel, Sanitärobjekte) bleibt ein <strong>importiertes Objekt</strong>:
+seine Geometrie, wie sie gelesen wurde, als allgemeines Modell. <strong>Konvertieren</strong> macht dann aus
+jedem importierten Objekt ein BIMopen-Element beliebiger Kategorie, wann und so weit es nötig ist.</p>
+<h2 id="opening-an-ifc-file">Eine IFC-Datei öffnen</h2>
+<ol>
+<li>Öffnen Sie das Anwendungsmenü (das BIMopen-Zeichen oben in der Seitenleiste) und wählen Sie
+   <strong>Öffnen ➤ IFC…</strong>.</li>
+<li>Wählen Sie eine IFC2x3- oder IFC4-Datei.</li>
+</ol>
+<p>BIMopen erstellt ein neues Projekt: Geschosse werden Ebenen, Wände werden aus ihrer Achse neu
+aufgebaut, Platten werden Decken, Türen und Fenster kommen in die Wände, die ihre Öffnungen
+schneiden, IFC-Räume werden Räume. Jedes andere Objekt mit einer Form wird ein importiertes Objekt.
+Jedes behält:</p>
+<ul>
+<li>die Datei, aus der es stammt, und ihr Format (<code>casa.ifc · IFC4</code>);</li>
+<li>seine IFC-Klasse (<code>IfcRoof</code>, <code>IfcFurniture</code>…) und seine Kennung;</li>
+<li>das Objekt, dessen Teil es ist: die Läufe einer Treppe, die Paneele einer Fassade;</li>
+<li>seine Eigenschafts- und Mengensätze, in <strong>Eigenschaften</strong> unter <strong>IFC-Eigenschaften</strong>.</li>
+</ul>
+<p>Die Meldungen zählen, was gelesen, was angenähert und was ausgelassen wurde.</p>
+<h2 id="import-ifc-options">IFC-Importoptionen</h2>
+<p><strong>Koordinieren ▸ IFC-Optionen…</strong> öffnet <strong>IFC-Importoptionen</strong>: was jede IFC-Klasse beim Öffnen
+einer Datei wird.</p>
+<figure>
+<img alt="IFC-Importoptionen: die IFC-Klassen, die Kategorie jeder Klasse und was beim Öffnen geschieht" src="../assets/screens/ic-ifc-options.webp"/>
+<figcaption>Jede IFC-Klasse, ihre Kategorie und was beim Öffnen geschieht</figcaption>
+</figure>
+<ul>
+<li>Wände, Platten, Türen, Fenster und Räume werden als <strong>BIMopen-Element</strong> gelesen; jede dieser
+  Klassen lässt sich stattdessen als importiertes Objekt lesen (<strong>Allgemeine Modelle</strong>) oder
+  auslassen (<strong>Nicht importiert</strong>).</li>
+<li>Die übrigen Klassen werden als importierte Objekte gelesen. <strong>Kategorie</strong> ist die Kategorie,
+  die für jede Klasse beim Konvertieren vorgeschlagen wird: jede Kategorie von BIMopen.</li>
+<li><strong>Beim Öffnen</strong> sagt, was mit ihnen beim Öffnen der Datei geschieht: <strong>Zu konvertieren</strong> lässt
+  sie für später; <strong>Geometrie beibehalten</strong>, <strong>Als BIMopen-Element neu aufbauen</strong> oder <strong>Ein Bauteil erstellen</strong> konvertiert sie sofort (siehe unten).</li>
+<li><strong>Klasse hinzufügen</strong> fügt eine Klasse hinzu, die die Liste nicht hat.</li>
+<li><strong>Laden…</strong> liest eine Klassenzuordnungsdatei, <strong>Speichern unter…</strong> schreibt eine: eine
+  Textdatei, eine Klasse je Zeile. <strong>Standard</strong> stellt die Standardzuordnung wieder her.</li>
+</ul>
+<p>Die Optionen bleiben von einer Sitzung zur nächsten erhalten.</p>
+<h2 id="conversion-status">Konvertierungsstatus</h2>
+<p>Solange das Projekt noch zu konvertierende importierte Objekte enthält, zeigt die Ansichtsleiste
+<strong>Konvertierungsstatus</strong> mit ihrer Anzahl. Der Tooltip sagt, wie viele es sind und in wie vielen
+IFC-Klassen.</p>
+<figure>
+<img alt="Die Ansichtsleiste mit dem Schalter Konvertierungsstatus und seiner Anzahl" src="../assets/screens/ic-icon.webp"/>
+<figcaption>Konvertierungsstatus in der Ansichtsleiste</figcaption>
+</figure>
+<p>Ein Klick darauf: Die Ansicht zeigt jedes Objekt in der Farbe seines Status, in einem
+türkisfarbenen Rahmen.</p>
+<table>
+<thead>
+<tr>
+<th>Farbe</th>
+<th>Status</th>
+<th>Bedeutung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Orange</td>
+<td><strong>Zu konvertieren</strong></td>
+<td>importiert, noch allgemeines Modell</td>
+</tr>
+<tr>
+<td>Gelb</td>
+<td><strong>Kategorie zugewiesen</strong></td>
+<td>importierte Geometrie beibehalten, mit einer Kategorie</td>
+</tr>
+<tr>
+<td>Grün</td>
+<td><strong>Konvertiert</strong></td>
+<td>BIMopen-Element oder Bauteilexemplar</td>
+</tr>
+<tr>
+<td>Rot</td>
+<td><strong>Nicht erkannt</strong></td>
+<td>der Neuaufbau hat die Form nicht erkannt: nur Geometrie</td>
+</tr>
+<tr>
+<td>Grau</td>
+<td><strong>In BIMopen erstellt</strong></td>
+<td>nicht importiert</td>
+</tr>
+</tbody>
+</table>
+<figure>
+<img alt="Die 3D-Ansicht mit eingeschaltetem Konvertierungsstatus: das Dach und die Möbel orange, der Rest grau, das Paneel Konvertierungsstatus unter Eigenschaften" src="../assets/screens/ic-status.webp"/>
+<figcaption>Konvertierungsstatus in der 3D-Ansicht, mit seinem Paneel</figcaption>
+</figure>
+<p>Er funktioniert in Grundrissen, Schnitten, Ansichten und 3D-Ansichten und ändert nur das
+Fenster: das Modell und die anderen Ansichten bleiben, wie sie sind. Solange er eingeschaltet
+ist, lassen sich nur importierte Objekte auswählen.</p>
+<figure>
+<img alt="Ein Grundriss mit eingeschaltetem Konvertierungsstatus: Möbel orange, Wände halbtonig" src="../assets/screens/ic-status-plan.webp"/>
+<figcaption>Dasselbe im Grundriss</figcaption>
+</figure>
+<p>Das Paneel <strong>Konvertierungsstatus</strong> unter <strong>Eigenschaften</strong> enthält:</p>
+<ul>
+<li>die Legende mit der Anzahl jedes Status: ein Klick auf einen Status blendet ihn in der Ansicht
+  aus oder wieder ein;</li>
+<li>die IFC-Klassen mit noch zu konvertierenden Objekten, die für jede vorgeschlagene Kategorie und
+  wie viele übrig sind. Ein Klick auf eine Klasse wählt ihre zu konvertierenden Objekte aus und
+  öffnet <strong>Konvertieren…</strong>.</li>
+</ul>
+<p>Wenn nichts mehr zu konvertieren ist, sagt es das Paneel. Schalten Sie <strong>Konvertierungsstatus</strong>
+aus, und seine Schaltfläche verschwindet aus der Ansichtsleiste.</p>
+<p>Im Stil Klassisch ist das Paneel eine Registerkarte neben <strong>Eigenschaften</strong>; im Touch-Modus ist es
+ein Blatt, das aus den Einstellungen der Ansicht geöffnet wird.</p>
+<h2 id="converting-an-imported-object">Ein importiertes Objekt konvertieren</h2>
+<p>Wählen Sie ein oder mehrere importierte Objekte aus: Die kontextbezogene Karte
+<strong>Bearbeiten | Importierte Objekte</strong> öffnet sich. <strong>Konvertieren…</strong> öffnet <strong>Importiertes Objekt
+konvertieren</strong>.</p>
+<figure>
+<img alt="Importiertes Objekt konvertieren auf dem Dach: Kategorie Dach, Als BIMopen-Element neu aufbauen gewählt, ein neuer Typ aus dem Objekt, das Erkannte mit hoher Sicherheit, die Parameter und die Vorschau" src="../assets/screens/ic-convert-roof.webp"/>
+<figcaption>Das Dach, neu aufgebaut als BIMopen-Dach</figcaption>
+</figure>
+<ol>
+<li><strong>Kategorie</strong>: was das Objekt wird. Der Vorschlag der Klasse steht zuerst.</li>
+<li>Eine der drei Arten (unten). Eine Art, die für die Kategorie nicht gilt, ist grau.</li>
+<li><strong>Typ</strong>: einer der Typen der Kategorie oder ein neuer, aus dem Objekt erstellter Typ.</li>
+<li><strong>Erkannt</strong>: was BIMopen in der Form liest und wie sicher es ist.</li>
+<li><strong>Parameter</strong>: <strong>Kennzeichen</strong> und <strong>Kommentare</strong> sowie die IFC-Eigenschaften des Objekts.</li>
+<li><strong>Konvertieren</strong>.</li>
+</ol>
+<p>Die Vorschau zeigt, was das Objekt wird. Der Schalter <strong>Vorschau</strong> in der Kopfzeile blendet sie
+aus; der Dialog behält seine Größe.</p>
+<h3 id="the-three-ways">Die drei Arten</h3>
+<table>
+<thead>
+<tr>
+<th>Art</th>
+<th>Kategorien</th>
+<th>Was geschieht</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Geometrie beibehalten</strong></td>
+<td>alle</td>
+<td>Das Objekt erhält die Kategorie, einen Typ und Parameter. Es zählt in Bauteillisten, Filtern, Sichtbarkeit und IFC-Export als Element dieser Kategorie; seine Form bleibt die importierte. Es lässt sich verschieben, drehen und spiegeln.</td>
+</tr>
+<tr>
+<td><strong>Als BIMopen-Element neu aufbauen</strong></td>
+<td>Wände, Decken, Dächer, Türen, Fenster</td>
+<td>BIMopen liest die Form und erstellt das native Element, bearbeitbar wie ein gezeichnetes: Achse, Dicke und Höhe einer Wand; Umriss, Dicke und Oberkante einer Decke; Umriss, Neigungen, Dicke und Traufhöhe eines Dachs; eine Tür oder ein Fenster in der Wand, in der es steht, mit Breite, Höhe und Brüstung.</td>
+</tr>
+<tr>
+<td><strong>Ein Bauteil erstellen</strong></td>
+<td>Möbel, Sanitärobjekte, allgemeine Modelle, Türen, Fenster, Stützen, Träger</td>
+<td>Die Geometrie wird ein Bauteiltyp mit <strong>Breite</strong>, <strong>Tiefe</strong> und <strong>Höhe</strong> aus ihren Abmessungen; wer sie ändert, streckt die Form. Das Objekt wird sein Exemplar.</td>
+</tr>
+</tbody>
+</table>
+<p>Eine Form, die sich nicht als die gewählte Kategorie neu aufbauen lässt, wird rot
+(<strong>Nicht erkannt</strong>) und bleibt, wie sie war: Konvertieren Sie sie erneut und behalten Sie die
+Geometrie bei. Der Neuaufbau von Stützen, Trägern, Treppen und Geländern kommt in einer späteren
+Phase.</p>
+<p><strong>Kategorie</strong> in <strong>Eigenschaften</strong> tut dasselbe wie <strong>Geometrie beibehalten</strong>: Die Wahl einer
+Kategorie dort konvertiert das ausgewählte Objekt sofort.</p>
+<figure>
+<img alt="Die 3D-Ansicht mit eingeschaltetem Konvertierungsstatus nach dem Konvertieren des Dachs und der Stühle: beide grün, die übrigen importierten Objekte orange" src="../assets/screens/ic-converted.webp"/>
+<figcaption>Konvertierte Objekte werden grün</figcaption>
+</figure>
+<h3 id="components-from-imported-objects">Bauteile aus importierten Objekten</h3>
+<p><strong>Bauteil erstellen</strong> auf der kontextbezogenen Karte öffnet den Dialog mit gewählter Art
+<strong>Ein Bauteil erstellen</strong>.</p>
+<figure>
+<img alt="Importiertes Objekt konvertieren auf einem Stuhl: Kategorie Möbel, ein neues Bauteil aus dem Objekt, seine Abmessungen, vier gleiche Kopien und die 3D-Ansicht des Typs" src="../assets/screens/ic-convert-component.webp"/>
+<figcaption>Ein Stuhl wird ein Bauteil; seine drei Kopien werden seine Exemplare</figcaption>
+</figure>
+<p>Die IFC-Eigenschaften, die bei allen Kopien gleich sind, werden Typparameter; die abweichenden
+bleiben bei jedem Exemplar. Das Bauteil erscheint im Projektindex unter <strong>Importierte Objekte</strong>,
+und ihre <strong>Typparameter</strong> ändern alle Exemplare zugleich.</p>
+<h3 id="identical-shapes">Gleiche Formen</h3>
+<p>Kopien derselben Form, im Grundriss verschoben und gedreht, werden als gleich erkannt.
+<strong>Gleiche Formen auswählen</strong> wählt sie aus; im Dialog konvertiert <strong>Auch auf die N gleichen Formen
+im Projekt anwenden</strong> sie zusammen (beim Erstellen eines Bauteils standardmäßig eingeschaltet). Als
+Exemplare eines einzigen Bauteils brauchen sie weniger Speicher und werden in großen Modellen
+schneller gezeichnet.</p>
+<h3 id="selecting-imported-objects">Importierte Objekte auswählen</h3>
+<ul>
+<li><strong>Klasse auswählen</strong> wählt die importierten Objekte derselben IFC-Klasse aus.</li>
+<li>Eine Klasse im Paneel <strong>Konvertierungsstatus</strong> oder <strong>Alle konvertieren (N)…</strong> auf einer Klasse
+  im Projektindex wählt ihre zu konvertierenden Objekte aus und öffnet den Dialog.</li>
+<li>Ein Objekt, das Teil eines anderen ist (ein Lauf einer Treppe), geht mit ihm: Wer das Ganze
+  konvertiert, nimmt seine Teile mit.</li>
+</ul>
+<h2 id="imported-objects-in-the-project-index">Importierte Objekte im Projektindex</h2>
+<p><strong>Importierte Objekte</strong> im Projektindex listet jede gelesene Datei mit ihrem Format und der Zahl
+der noch zu konvertierenden Objekte; darunter die IFC-Klassen, unter jeder Klasse ihre Objekte,
+mit der Farbe ihres Status und, einmal konvertiert, der Kategorie, die sie geworden sind. Aus
+Teilen bestehende Objekte listen ihre Teile darunter.</p>
+<figure>
+<img alt="Der Projektindex: Importierte Objekte, die Datei casa.ifc, ihre Klassen, die Möbel mit vier in Möbel konvertierten Stühlen" src="../assets/screens/ic-index.webp"/>
+<figcaption>Importierte Objekte im Projektindex</figcaption>
+</figure>
+<ul>
+<li><strong>Nur zu konvertierende</strong> blendet aus, was bereits konvertiert ist.</li>
+<li>Ein Klick auf ein Objekt wählt es aus; ein Doppelklick zeigt es in einer Ansicht.</li>
+<li>Die rechte Maustaste auf einer Klasse: <strong>Alle konvertieren (N)…</strong>, <strong>Alle zu konvertierenden
+  auswählen (N)</strong>, <strong>Originale wiederherstellen (N)</strong>.</li>
+<li>Die rechte Maustaste auf einer Datei: dasselbe und <strong>Herkunftsverweise entfernen…</strong>.</li>
+<li>Die rechte Maustaste auf einem Objekt: <strong>Konvertieren…</strong>, <strong>Gleiche Formen auswählen</strong>,
+  <strong>In Ansicht zeigen</strong>, <strong>In Ansicht ausblenden</strong>, <strong>Original wiederherstellen</strong>.</li>
+</ul>
+<h2 id="restoring-the-originals">Die Originale wiederherstellen</h2>
+<p>Was eine Konvertierung ersetzt, bleibt im Projekt, in der <code>.bimopen</code>-Datei: das Originalobjekt
+mit den Teilen, die es mitgenommen hat. <strong>Original wiederherstellen</strong> (auf der kontextbezogenen
+Karte, im Projektindex oder im Menü der rechten Maustaste) stellt es wieder her, wie es importiert
+wurde, wieder orange.</p>
+<figure>
+<img alt="Original wiederherstellen: vier Objekte werden wieder importiert; sie waren zu einem Bauteil gemacht worden, und Änderungen an ihnen gehen verloren" src="../assets/screens/ic-restore.webp"/>
+<figcaption>Das Wiederherstellen fragt zuerst nach</figcaption>
+</figure>
+<p>Es fragt zuerst nach und sagt, was verloren geht: Änderungen an neu aufgebauten Elementen oder
+Bauteilen sowie Türen und Fenster in konvertierten Wänden. Ein durch die Konvertierung erstelltes Bauteil geht mit seinem letzten Exemplar. Rückgängig nimmt eine Konvertierung oder eine
+Wiederherstellung zurück wie jede andere Änderung.</p>
+<p>Die Geometrie der Originale wird für jedes gleiche Netz nur einmal gespeichert, daher kostet ihre
+Aufbewahrung wenig. Wenn die Konvertierungen endgültig sind, löscht <strong>Herkunftsverweise
+entfernen…</strong> auf der Datei im Projektindex die Originale: danach ist <strong>Original
+wiederherstellen</strong> nicht mehr möglich.</p>
+<h2 id="coming-next">Demnächst</h2>
+<ul>
+<li><strong>Aus Datei aktualisieren</strong>: die Quelldatei erneut lesen und ihre Objekte aktualisieren.</li>
+<li>Werkzeuge nach Fläche, um Wände, Decken und Dächer auf freie und gekrümmte Formen zu setzen.</li>
+<li>Der Neuaufbau von Stützen, Trägern, Treppen und Geländern.</li>
+<li>Das Konvertieren von Objekten aus OBJ- und glTF-Dateien mit demselben Dialog.</li>
+</ul>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Zurück zum Seitenanfang
+</button>
+</main>
+<footer class="md-footer">
+<nav aria-label="Fußzeile" class="md-footer__inner md-grid">
+<a aria-label="Zurück: Projekte und Dateien" class="md-footer__link md-footer__link--prev" href="../projects-and-files/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Zurück
+              </span>
+<div class="md-ellipsis">
+                Projekte und Dateien
+              </div>
+</div>
+</a>
+<a aria-label="Weiter: Auswählen und Ändern" class="md-footer__link md-footer__link--next" href="../selection-and-modify/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Weiter
+              </span>
+<div class="md-ellipsis">
+                Auswählen und Ändern
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Copyright © 2026 BIMopen
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.footer", "navigation.tracking", "toc.follow", "content.code.copy", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}}</script>
+<script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+<script src="../assets/js/zoom.js"></script>
+</body>
+</html>

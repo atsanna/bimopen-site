@@ -9,7 +9,7 @@
 <meta content="BIMopen" name="author"/>
 <link href="https://atsanna.github.io/bimopen-site/manual/es/projects-and-files/" rel="canonical"/>
 <link href="../interface-styles/" rel="prev"/>
-<link href="../selection-and-modify/" rel="next"/>
+<link href="../import-and-conversion/" rel="next"/>
 <link href="../assets/images/bimopen-cube.svg" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.9" name="generator"/>
 <title>Proyectos y archivos - Manual de usuario de BIMopen</title>
@@ -261,6 +261,20 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#imperial-units">
+<span class="md-ellipsis">
+      Unidades imperiales
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#typing-lengths">
+<span class="md-ellipsis">
+      Escribir longitudes
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#sun-settings">
 <span class="md-ellipsis">
       Parámetros de sol
@@ -307,13 +321,6 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#revit-projects">
-<span class="md-ellipsis">
-      Archivos .rvt
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#other-exports">
 <span class="md-ellipsis">
       Otras exportaciones
@@ -325,6 +332,14 @@
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../import-and-conversion/">
+<span class="md-ellipsis">
+    Importación y conversión
+    
+  </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../selection-and-modify/">
@@ -475,6 +490,20 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#imperial-units">
+<span class="md-ellipsis">
+      Unidades imperiales
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#typing-lengths">
+<span class="md-ellipsis">
+      Escribir longitudes
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#sun-settings">
 <span class="md-ellipsis">
       Parámetros de sol
@@ -521,13 +550,6 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#revit-projects">
-<span class="md-ellipsis">
-      Archivos .rvt
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#other-exports">
 <span class="md-ellipsis">
       Otras exportaciones
@@ -555,8 +577,10 @@ programas, su configuración y las opciones del propio BIMopen.</p>
 <p><strong>menú de la aplicación ➤ Nuevo ➤ Proyecto…</strong> abre <strong>Proyecto nuevo</strong>:</p>
 <ul>
 <li><strong>Archivo de plantilla</strong>: la plantilla por defecto de BIMopen, o la fijada en
-  <strong>Opciones ➤ Ubicaciones de archivos</strong>; un archivo de plantilla elegido con <strong>Examinar…</strong>; o
-  <strong>Ninguno</strong>, que parte de dos niveles y un tipo de cada clase.</li>
+  <strong>Opciones ➤ Ubicaciones de archivos</strong>; la <strong>Plantilla imperial de BIMopen</strong> (ver
+  <a href="#imperial-units">Unidades imperiales</a>); un archivo de plantilla elegido con <strong>Examinar…</strong>; o
+  <strong>Ninguno</strong>, que parte de dos niveles y un tipo de cada clase y pregunta el sistema de medida:
+  <strong>Imperial</strong> o <strong>Métrico</strong>.</li>
 <li><strong>Crear nuevo</strong>: <strong>Proyecto</strong> o <strong>Plantilla de proyecto</strong>.</li>
 </ul>
 <figure>
@@ -620,6 +644,184 @@ y la agrupación de dígitos.</p>
 <img alt="Dos pasos: el cuadro Unidades del proyecto con las magnitudes y un ejemplo de cada una, luego el Formato de la longitud con su unidad, redondeo, símbolo y opciones" src="../assets/screens/pf-units.webp"/>
 <figcaption>Unidades del proyecto, luego Formato… de una magnitud</figcaption>
 </figure>
+<h3 id="imperial-units">Unidades imperiales</h3>
+<p>En <strong>Formato…</strong> las unidades de una longitud están en dos grupos, <strong>Métrico</strong> e <strong>Imperial</strong>:
+<strong>Pies y pulgadas fraccionarias</strong> (<code>5' - 6 1/2"</code>), <strong>Pulgadas fraccionarias</strong> (<code>66 1/2"</code>), <strong>Pies
+decimales</strong> y <strong>Pulgadas decimales</strong>. Las áreas pueden estar en <strong>Pies cuadrados</strong>, <strong>Pulgadas
+cuadradas</strong> o <strong>Acres</strong>, los volúmenes en <strong>Pies cúbicos</strong>, <strong>Pulgadas cúbicas</strong> o <strong>Yardas
+cúbicas</strong>, las pendientes como <strong>Elevación/12"</strong> o como proporción. Con fracciones, el
+<strong>Redondeo</strong> es a la pulgada más cercana o al 1/2" a 1/256" más cercano; un valor que al
+redondearse llega a 12" pasa a los pies: a 1/16", <code>11 63/64"</code> se lee <code>1' - 0"</code>. <strong>Suprimir 0 pies</strong>
+escribe <code>4"</code> en lugar de <code>0' - 4"</code>, <strong>Eliminar espacios</strong> escribe <code>1'-2"</code> en lugar de <code>1' - 2"</code>, y
+el <strong>Símbolo de unidad</strong> elige entre <code>'</code> y <code>ft</code>, o entre <code>ft²</code> y <code>SF</code>. <strong>Otros valores</strong> muestra el
+formato con algunos valores más.</p>
+<p>El <strong>Formato de campo…</strong> de un campo de tabla de planificación y el <strong>Formato de unidades</strong> de un
+tipo de cota tienen los mismos campos, además de <strong>Usar parámetros de proyecto</strong>: una medición
+puede dar volúmenes en yardas cúbicas en un proyecto en pies cúbicos, y un tipo de cota para
+detalles puede redondear a 1/32" donde las plantas redondean a 1/16".</p>
+<p>El modelo se mantiene en metros: cambiar las unidades cambia cómo se muestran y se escriben los
+valores, nunca la geometría. Pasar un proyecto de métrico a imperial y volver deja cada elemento
+donde estaba.</p>
+<figure>
+<img alt='Dos pasos: Unidades del proyecto en pies y pulgadas, luego el Formato de la longitud en Pies y pulgadas fraccionarias, redondeadas al 1/32" más cercano, con Suprimir 0 pies y Eliminar espacios' src="../assets/screens/pf-imperial.webp"/>
+<figcaption>Unidades del proyecto en pies y pulgadas</figcaption>
+</figure>
+<p>En un proyecto en pies y pulgadas, las escalas de las vistas son las arquitectónicas, de
+<code>12" = 1'-0"</code> a <code>3/64" = 1'-0"</code>, y las de ingeniería, de <code>1" = 10'-0"</code> a <code>1" = 100'-0"</code>: en la
+barra de la vista, en las Propiedades y en los planos. Una escala que no es ni una ni otra se
+muestra como proporción.</p>
+<table>
+<thead>
+<tr>
+<th>Escala</th>
+<th>Proporción</th>
+<th>Uso típico</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>12" = 1'-0"</code></td>
+<td>1:1</td>
+<td>detalles a tamaño real</td>
+</tr>
+<tr>
+<td><code>6" = 1'-0"</code></td>
+<td>1:2</td>
+<td>uniones y nudos complejos</td>
+</tr>
+<tr>
+<td><code>3" = 1'-0"</code></td>
+<td>1:4</td>
+<td>detalles de albañilería y carpintería</td>
+</tr>
+<tr>
+<td><code>1 1/2" = 1'-0"</code></td>
+<td>1:8</td>
+<td>detalles de componentes y ventanas</td>
+</tr>
+<tr>
+<td><code>1" = 1'-0"</code></td>
+<td>1:12</td>
+<td>detalles constructivos estándar</td>
+</tr>
+<tr>
+<td><code>3/4" = 1'-0"</code></td>
+<td>1:16</td>
+<td>nudos estructurales</td>
+</tr>
+<tr>
+<td><code>1/2" = 1'-0"</code></td>
+<td>1:24</td>
+<td>secciones de muro y alzados parciales</td>
+</tr>
+<tr>
+<td><code>3/8" = 1'-0"</code></td>
+<td>1:32</td>
+<td>plantas de cocinas y baños, detalles ampliados</td>
+</tr>
+<tr>
+<td><code>1/4" = 1'-0"</code></td>
+<td>1:48</td>
+<td>el estándar arquitectónico para plantas y secciones</td>
+</tr>
+<tr>
+<td><code>1/8" = 1'-0"</code></td>
+<td>1:96</td>
+<td>el estándar de ingeniería e instalaciones, plantas generales</td>
+</tr>
+<tr>
+<td><code>3/32" = 1'-0"</code></td>
+<td>1:128</td>
+<td>plantas de grandes edificios comerciales</td>
+</tr>
+<tr>
+<td><code>1/16" = 1'-0"</code></td>
+<td>1:192</td>
+<td>plantas de situación y disposiciones generales</td>
+</tr>
+<tr>
+<td><code>3/64" = 1'-0"</code></td>
+<td>1:256</td>
+<td>planos de emplazamiento muy grandes</td>
+</tr>
+<tr>
+<td><code>1" = 10'-0"</code></td>
+<td>1:120</td>
+<td>planos de ingeniería civil y de emplazamiento</td>
+</tr>
+<tr>
+<td><code>1" = 20'-0"</code></td>
+<td>1:240</td>
+<td>planos de parcelación</td>
+</tr>
+<tr>
+<td><code>1" = 30'-0"</code></td>
+<td>1:360</td>
+<td>obras civiles y redes de servicios</td>
+</tr>
+<tr>
+<td><code>1" = 40'-0"</code></td>
+<td>1:480</td>
+<td>levantamientos topográficos y viales</td>
+</tr>
+<tr>
+<td><code>1" = 50'-0"</code></td>
+<td>1:600</td>
+<td>urbanismo y planos de contexto</td>
+</tr>
+<tr>
+<td><code>1" = 60'-0"</code></td>
+<td>1:720</td>
+<td>levantamientos territoriales</td>
+</tr>
+<tr>
+<td><code>1" = 100'-0"</code></td>
+<td>1:1200</td>
+<td>planos catastrales</td>
+</tr>
+</tbody>
+</table>
+<figure>
+<img alt="La planta de la casa de ejemplo a 1/4&quot; = 1'-0&quot;, con sus cotas en pies y pulgadas" src="../assets/screens/pf-imperial-plan.webp"/>
+<figcaption>Una planta a 1/4" = 1'-0", acotada a 1/16"</figcaption>
+</figure>
+<figure>
+<img alt="Una tabla de muros con longitudes y alturas en pies y pulgadas, áreas en pies cuadrados y volúmenes en pies cúbicos" src="../assets/screens/pf-imperial-schedule.webp"/>
+<figcaption>Una tabla en pies y pulgadas</figcaption>
+</figure>
+<p>La <strong>Plantilla imperial de BIMopen</strong> tiene los mismos tipos que la métrica, con medidas
+comerciales estadounidenses: muros de montantes de madera 2x4 y 2x6, de bloques de 8" y
+ladrillo, de montantes metálicos; puertas de 30" a 36" x 80"; ventanas con antepecho a 3'-0";
+escaleras con contrahuellas de 7 3/4" como máximo y huellas de al menos 10"; barandillas de 36" y
+42" de alto. Las longitudes y las cotas se redondean a 1/32", los incrementos de forzado
+de cotas de longitud son 4', 1', 6" y 1", la rejilla del plano de trabajo es de 4', las plantas
+están a 1/8" = 1'-0" y los textos miden 3/32" y 1/8". Son puntos de partida: cada uno se puede
+cambiar en el proyecto. Cambiar las unidades de un proyecto no cambia el nombre de sus tipos.</p>
+<p>Consejo: para planos legibles en obra, dé a los tipos de cota un redondeo más amplio: en los
+<strong>Parámetros de tipo</strong> de un tipo de cota, <strong>Formato de unidades</strong> abre <strong>Formato</strong>; desmarque
+<strong>Usar parámetros de proyecto</strong> y redondee a 1/16" o 1/8".</p>
+<figure>
+<img alt="El cuadro Sistema de medida no definido, con los botones Imperial y Métrico" src="../assets/screens/pf-new-units.webp"/>
+<figcaption>Un proyecto nuevo sin plantilla pregunta el sistema de medida</figcaption>
+</figure>
+<h3 id="typing-lengths">Escribir longitudes</h3>
+<p>Una longitud escrita en las Propiedades, en una cota temporal, en la franja de opciones, en un
+cuadro de diálogo o en la línea de comandos se lee así:</p>
+<ul>
+<li>con una unidad, en esa unidad, en cualquier proyecto: <code>300mm</code>, <code>1.2 m</code>, <code>1 m 20 cm</code>, <code>6"</code>,
+  <code>5.5'</code>, <code>5.5 ft</code>;</li>
+<li>pies y pulgadas: <code>5'6"</code>, <code>5' 6 1/2"</code>, <code>5'-6 1/2"</code>; tras los pies se puede omitir el último <code>"</code>
+  (<code>5'6</code>), y las pulgadas desde 12 pasan a los pies (<code>5' 14"</code> es <code>6'-2"</code>);</li>
+<li>un número sin unidad está en la unidad de longitud del proyecto; en un proyecto en pies, dos
+  números son pies y pulgadas: <code>8 6</code> es <code>8'-6"</code>, <code>8 6 1/2</code> es <code>8'-6 1/2"</code>;</li>
+<li>las fracciones son de pulgada; una fracción de pie se escribe como decimal (<code>5.5'</code>);</li>
+<li>tras <code>=</code>, una fórmula: <code>=10' + 6"</code>, <code>=12'/5</code>, <code>=3000mm/2</code>; sus números sin unidad están en la
+  unidad del proyecto.</li>
+</ul>
+<p>El símbolo decimal es el del proyecto. Mientras se edita un valor, se muestra con precisión
+completa (hasta 1/256" en pies y pulgadas), así que confirmarlo sin cambiarlo no cambia nada. En
+la línea de comandos un número sin unidad está en metros en un proyecto métrico y en pies en un
+proyecto en pies y pulgadas; una longitud siempre puede llevar su unidad: <code>wall 0,0 20',0</code>.</p>
 <h3 id="sun-settings">Parámetros de sol</h3>
 <p><strong>Configuración ➤ Parámetros adicionales ➤ Parámetros de sol</strong> abre los parámetros de sol de la
 vista activa, lo mismo que el botón del sol de la barra de controles de vista (véase
@@ -691,11 +893,8 @@ Los mensajes cuentan lo que no se ha leído.</p>
 <p><strong>Abrir ➤ Opciones IFC…</strong> abre <strong>Opciones de importación IFC</strong>: en qué se convierte cada clase IFC
 (muros, suelos, puertas, ventanas, habitaciones o <strong>No importado</strong>), y <strong>Estándar</strong>. Las
 elecciones se conservan entre sesiones.</p>
-<h3 id="revit-projects">Archivos .rvt</h3>
-<p>Abrir un archivo <code>.rvt</code> es experimental: hoy solo se leen el nombre del proyecto y los nombres
-de los niveles, por lo que el proyecto nuevo tiene sus niveles y ningún muro, puerta, ventana ni
-suelo. Los mensajes lo dicen tras la importación. Para intercambiar modelos con otros programas
-BIM, usa IFC4.</p>
+<p>Los objetos con forma que no son muros, suelos, puertas, ventanas ni espacios quedan como
+objetos importados, por convertir: véase <a href="../import-and-conversion/">Importación y conversión</a>.</p>
 <h3 id="other-exports">Otras exportaciones</h3>
 <p>La impresión a PDF y la exportación de imágenes se describen en
 <a href="../documentation/">Planos, tablas de planificación e impresión</a>; las tablas de planificación se
@@ -725,13 +924,13 @@ línea de comandos (véase <a href="../command-line-and-mcp/">Línea de comandos
               </div>
 </div>
 </a>
-<a aria-label="Siguiente: Selección y modificación" class="md-footer__link md-footer__link--next" href="../selection-and-modify/">
+<a aria-label="Siguiente: Importación y conversión" class="md-footer__link md-footer__link--next" href="../import-and-conversion/">
 <div class="md-footer__title">
 <span class="md-footer__direction">
                 Siguiente
               </span>
 <div class="md-ellipsis">
-                Selección y modificación
+                Importación y conversión
               </div>
 </div>
 <div class="md-footer__button md-icon">

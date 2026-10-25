@@ -9,7 +9,7 @@
 <meta content="BIMopen" name="author"/>
 <link href="https://atsanna.github.io/bimopen-site/manual/de/projects-and-files/" rel="canonical"/>
 <link href="../interface-styles/" rel="prev"/>
-<link href="../selection-and-modify/" rel="next"/>
+<link href="../import-and-conversion/" rel="next"/>
 <link href="../assets/images/bimopen-cube.svg" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.9" name="generator"/>
 <title>Projekte und Dateien - BIMopen Benutzerhandbuch</title>
@@ -261,6 +261,20 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#imperial-units">
+<span class="md-ellipsis">
+      Imperiale Einheiten
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#typing-lengths">
+<span class="md-ellipsis">
+      Längen eingeben
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#sun-settings">
 <span class="md-ellipsis">
       Sonnenstandeinstellungen
@@ -307,13 +321,6 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#revit-projects">
-<span class="md-ellipsis">
-      .rvt-Dateien
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#other-exports">
 <span class="md-ellipsis">
       Weitere Exporte
@@ -325,6 +332,14 @@
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../import-and-conversion/">
+<span class="md-ellipsis">
+    Importieren und Konvertieren
+    
+  </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../selection-and-modify/">
@@ -475,6 +490,20 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#imperial-units">
+<span class="md-ellipsis">
+      Imperiale Einheiten
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#typing-lengths">
+<span class="md-ellipsis">
+      Längen eingeben
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#sun-settings">
 <span class="md-ellipsis">
       Sonnenstandeinstellungen
@@ -521,13 +550,6 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#revit-projects">
-<span class="md-ellipsis">
-      .rvt-Dateien
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#other-exports">
 <span class="md-ellipsis">
       Weitere Exporte
@@ -555,8 +577,9 @@ Programmen ausgetauscht wird, seine Einstellungen und die Optionen von BIMopen s
 <p><strong>Anwendungsmenü ➤ Neu ➤ Projekt…</strong> öffnet <strong>Neues Projekt</strong>:</p>
 <ul>
 <li><strong>Vorlagendatei</strong>: die Standardvorlage von BIMopen oder die in <strong>Optionen ➤ Dateispeicherorte</strong>
-  festgelegte; eine mit <strong>Durchsuchen…</strong> gewählte Vorlagendatei; oder <strong>Keiner</strong>, das mit zwei
-  Ebenen und einem Typ jeder Art beginnt.</li>
+  festgelegte; die <strong>Imperiale BIMopen-Vorlage</strong> (siehe <a href="#imperial-units">Imperiale Einheiten</a>);
+  eine mit <strong>Durchsuchen…</strong> gewählte Vorlagendatei; oder <strong>Keiner</strong>, das mit zwei Ebenen und einem
+  Typ jeder Art beginnt und nach dem Maßsystem fragt: <strong>Imperial</strong> oder <strong>Metrisch</strong>.</li>
 <li><strong>Neu erstellen</strong>: <strong>Projekt</strong> oder <strong>Projektvorlage</strong>.</li>
 </ul>
 <figure>
@@ -620,6 +643,184 @@ die Zifferngruppierung.</p>
 <img alt="Zwei Schritte: das Dialogfeld Projekteinheiten mit den Größen und je einem Beispiel, dann das Format der Länge mit Einheit, Rundung, Einheitensymbol und Optionen" src="../assets/screens/pf-units.webp"/>
 <figcaption>Projekteinheiten, dann Format… einer Größe</figcaption>
 </figure>
+<h3 id="imperial-units">Imperiale Einheiten</h3>
+<p>In <strong>Format…</strong> stehen die Einheiten einer Länge in zwei Gruppen, <strong>Metrisch</strong> und <strong>Imperial</strong>:
+<strong>Fuß und Bruchteilzoll</strong> (<code>5' - 6 1/2"</code>), <strong>Bruchteilzoll</strong> (<code>66 1/2"</code>), <strong>Dezimalfuß</strong> und
+<strong>Dezimalzoll</strong>. Flächen können in <strong>Quadratfuß</strong>, <strong>Quadratzoll</strong> oder <strong>Acres</strong> stehen, Volumen
+in <strong>Kubikfuß</strong>, <strong>Kubikzoll</strong> oder <strong>Kubikyards</strong>, Neigungen als <strong>Steigung/12"</strong> oder als
+Verhältnis. Mit Brüchen rundet die <strong>Rundung</strong> auf ganze Zoll oder auf 1/2" bis 1/256"; ein Wert,
+der auf 12" aufgerundet wird, geht in die Fuß über: bei 1/16" wird <code>11 63/64"</code> zu <code>1' - 0"</code>.
+<strong>0 Fuß unterdrücken</strong> schreibt <code>4"</code> statt <code>0' - 4"</code>, <strong>Leerzeichen entfernen</strong> schreibt <code>1'-2"</code>
+statt <code>1' - 2"</code>, und das <strong>Einheitensymbol</strong> wählt zwischen <code>'</code> und <code>ft</code> oder zwischen <code>ft²</code> und
+<code>SF</code>. <strong>Weitere Werte</strong> zeigt das Format an einigen weiteren Werten.</p>
+<p>Das <strong>Feldformat…</strong> eines Bauteillistenfelds und das <strong>Einheitenformat</strong> eines Bemaßungstyps
+haben dieselben Felder, dazu <strong>Projekteinstellungen verwenden</strong>: eine Materialliste kann Volumen in
+Kubikyards angeben, wo das Projekt Kubikfuß verwendet, und ein Bemaßungstyp für Details kann auf
+1/32" runden, wo die Grundrisse auf 1/16" runden.</p>
+<p>Das Modell bleibt in Metern: andere Einheiten ändern, wie Werte angezeigt und eingegeben werden,
+nie die Geometrie. Ein Projekt von metrisch auf imperial und zurück umzustellen lässt jedes
+Element, wo es war.</p>
+<figure>
+<img alt='Zwei Schritte: Projekteinheiten in Fuß und Zoll, dann das Format der Länge mit Fuß und Bruchteilzoll, auf 1/32" gerundet, mit 0 Fuß unterdrücken und Leerzeichen entfernen' src="../assets/screens/pf-imperial.webp"/>
+<figcaption>Projekteinheiten in Fuß und Zoll</figcaption>
+</figure>
+<p>In einem Projekt in Fuß und Zoll sind die Ansichtsmaßstäbe die architektonischen, von
+<code>12" = 1'-0"</code> bis <code>3/64" = 1'-0"</code>, und die ingenieurtechnischen, von <code>1" = 10'-0"</code> bis
+<code>1" = 100'-0"</code>: in der Ansichtsleiste, in den Eigenschaften und auf den Plänen. Ein Maßstab, der
+keines von beiden ist, erscheint als Verhältnis.</p>
+<table>
+<thead>
+<tr>
+<th>Maßstab</th>
+<th>Verhältnis</th>
+<th>Typische Verwendung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>12" = 1'-0"</code></td>
+<td>1:1</td>
+<td>Details in Originalgröße</td>
+</tr>
+<tr>
+<td><code>6" = 1'-0"</code></td>
+<td>1:2</td>
+<td>komplexe Anschlüsse und Knoten</td>
+</tr>
+<tr>
+<td><code>3" = 1'-0"</code></td>
+<td>1:4</td>
+<td>Mauerwerks- und Tischlerdetails</td>
+</tr>
+<tr>
+<td><code>1 1/2" = 1'-0"</code></td>
+<td>1:8</td>
+<td>Bauteil- und Fensterdetails</td>
+</tr>
+<tr>
+<td><code>1" = 1'-0"</code></td>
+<td>1:12</td>
+<td>Standard-Konstruktionsdetails</td>
+</tr>
+<tr>
+<td><code>3/4" = 1'-0"</code></td>
+<td>1:16</td>
+<td>Tragwerksknoten</td>
+</tr>
+<tr>
+<td><code>1/2" = 1'-0"</code></td>
+<td>1:24</td>
+<td>Wandschnitte und Teilansichten</td>
+</tr>
+<tr>
+<td><code>3/8" = 1'-0"</code></td>
+<td>1:32</td>
+<td>Küchen- und Badgrundrisse, vergrößerte Details</td>
+</tr>
+<tr>
+<td><code>1/4" = 1'-0"</code></td>
+<td>1:48</td>
+<td>der Architekturstandard für Grundrisse und Schnitte</td>
+</tr>
+<tr>
+<td><code>1/8" = 1'-0"</code></td>
+<td>1:96</td>
+<td>der Standard für Ingenieurbau und TGA, Übersichtspläne</td>
+</tr>
+<tr>
+<td><code>3/32" = 1'-0"</code></td>
+<td>1:128</td>
+<td>Grundrisse großer Geschäftsbauten</td>
+</tr>
+<tr>
+<td><code>1/16" = 1'-0"</code></td>
+<td>1:192</td>
+<td>Schlüsselpläne und Gesamtanordnungen</td>
+</tr>
+<tr>
+<td><code>3/64" = 1'-0"</code></td>
+<td>1:256</td>
+<td>Lagepläne sehr großer Grundstücke</td>
+</tr>
+<tr>
+<td><code>1" = 10'-0"</code></td>
+<td>1:120</td>
+<td>Tiefbau- und Lagepläne</td>
+</tr>
+<tr>
+<td><code>1" = 20'-0"</code></td>
+<td>1:240</td>
+<td>Parzellierungspläne</td>
+</tr>
+<tr>
+<td><code>1" = 30'-0"</code></td>
+<td>1:360</td>
+<td>Tiefbauarbeiten und Versorgungsleitungen</td>
+</tr>
+<tr>
+<td><code>1" = 40'-0"</code></td>
+<td>1:480</td>
+<td>Topografie und Straßenvermessung</td>
+</tr>
+<tr>
+<td><code>1" = 50'-0"</code></td>
+<td>1:600</td>
+<td>Stadtplanung und Umgebungspläne</td>
+</tr>
+<tr>
+<td><code>1" = 60'-0"</code></td>
+<td>1:720</td>
+<td>Gebietsvermessungen</td>
+</tr>
+<tr>
+<td><code>1" = 100'-0"</code></td>
+<td>1:1200</td>
+<td>Katasterkarten</td>
+</tr>
+</tbody>
+</table>
+<figure>
+<img alt="Der Grundriss des Beispielhauses in 1/4&quot; = 1'-0&quot;, mit den Bemaßungen in Fuß und Zoll" src="../assets/screens/pf-imperial-plan.webp"/>
+<figcaption>Ein Grundriss in 1/4" = 1'-0", auf 1/16" bemaßt</figcaption>
+</figure>
+<figure>
+<img alt="Eine Wandliste mit Längen und Höhen in Fuß und Zoll, Flächen in Quadratfuß und Volumen in Kubikfuß" src="../assets/screens/pf-imperial-schedule.webp"/>
+<figcaption>Eine Bauteilliste in Fuß und Zoll</figcaption>
+</figure>
+<p>Die <strong>Imperiale BIMopen-Vorlage</strong> hat dieselben Typen wie die metrische, in US-Handelsmaßen:
+Wände aus Holzständern 2x4 und 2x6, aus 8"-Blocksteinen und Ziegeln, aus Metallständern; Türen
+von 30" bis 36" x 80"; Fenster mit 3'-0" Brüstung; Treppen mit Steigungen von höchstens 7 3/4"
+und Auftritten von mindestens 10"; Geländer 36" und 42" hoch. Längen und Bemaßungen werden auf 1/32"
+gerundet, die Fangschritte für Längenmaße sind 4', 1', 6" und 1", das Raster der
+Arbeitsebene ist 4', Grundrisse sind in 1/8" = 1'-0" und Texte 3/32" und 1/8" hoch. Das sind
+Ausgangswerte: jeder lässt sich im Projekt ändern. Andere Einheiten benennen die Typen eines
+Projekts nicht um.</p>
+<p>Tipp: Damit Pläne auf der Baustelle lesbar bleiben, erhalten die Bemaßungstypen eine gröbere
+Rundung: In den <strong>Typparameter</strong> eines Bemaßungstyps öffnet <strong>Einheitenformat</strong> das <strong>Format</strong>;
+<strong>Projekteinstellungen verwenden</strong> abwählen und auf 1/16" oder 1/8" runden.</p>
+<figure>
+<img alt="Das Dialogfeld Maßsystem nicht festgelegt mit den Schaltflächen Imperial und Metrisch" src="../assets/screens/pf-new-units.webp"/>
+<figcaption>Ein neues Projekt ohne Vorlage fragt nach dem Maßsystem</figcaption>
+</figure>
+<h3 id="typing-lengths">Längen eingeben</h3>
+<p>Eine Länge, die in den Eigenschaften, an einer temporären Bemaßung, im Optionsstreifen, in einem
+Dialogfeld oder in der Befehlszeile eingegeben wird, wird so gelesen:</p>
+<ul>
+<li>mit einer Einheit in dieser Einheit, in jedem Projekt: <code>300mm</code>, <code>1.2 m</code>, <code>1 m 20 cm</code>, <code>6"</code>,
+  <code>5.5'</code>, <code>5.5 ft</code>;</li>
+<li>Fuß und Zoll: <code>5'6"</code>, <code>5' 6 1/2"</code>, <code>5'-6 1/2"</code>; nach den Fuß darf das letzte <code>"</code> fehlen (<code>5'6</code>),
+  und Zoll ab 12 gehen in die Fuß über (<code>5' 14"</code> ist <code>6'-2"</code>);</li>
+<li>eine Zahl ohne Einheit ist in der Längeneinheit des Projekts; in einem Projekt in Fuß sind
+  zwei Zahlen Fuß und Zoll: <code>8 6</code> ist <code>8'-6"</code>, <code>8 6 1/2</code> ist <code>8'-6 1/2"</code>;</li>
+<li>Brüche sind Bruchteile eines Zolls; ein Bruchteil eines Fußes wird dezimal geschrieben
+  (<code>5.5'</code>);</li>
+<li>nach <code>=</code> eine Formel: <code>=10' + 6"</code>, <code>=12'/5</code>, <code>=3000mm/2</code>; ihre Zahlen ohne Einheit sind in der
+  Einheit des Projekts.</li>
+</ul>
+<p>Das Dezimaltrennzeichen ist das des Projekts. Während ein Wert bearbeitet wird, erscheint er mit
+voller Genauigkeit (bis 1/256" in Fuß und Zoll), sodass ihn unverändert zu bestätigen nichts
+ändert. In der Befehlszeile ist eine Zahl ohne Einheit in einem metrischen Projekt in Metern und in einem
+Projekt in Fuß und Zoll in Fuß; eine Länge kann immer ihre Einheit tragen: <code>wall 0,0 20',0</code>.</p>
 <h3 id="sun-settings">Sonnenstandeinstellungen</h3>
 <p><strong>Einstellungen ➤ Weitere Einstellungen ➤ Sonnenstandeinstellungen</strong> öffnet die Sonneneinstellungen
 der aktiven Ansicht, wie die Sonnenschaltfläche der Ansichtssteuerungsleiste (siehe
@@ -691,11 +892,8 @@ gelesen wurde.</p>
 <p><strong>Öffnen ➤ IFC-Optionen…</strong> öffnet <strong>IFC-Importoptionen</strong>: was aus jeder IFC-Klasse wird (Wände,
 Böden, Türen, Fenster, Räume oder <strong>Nicht importiert</strong>), und <strong>Standard</strong>. Die Auswahl bleibt
 zwischen den Sitzungen erhalten.</p>
-<h3 id="revit-projects">.rvt-Dateien</h3>
-<p>Das Öffnen einer <code>.rvt</code>-Datei ist experimentell: Derzeit werden nur der Projektname und die
-Namen der Ebenen gelesen, das neue Projekt hat also seine Ebenen und keine Wände, Türen, Fenster
-oder Böden. Die Meldungen sagen es nach dem Import. Für den Austausch von Modellen mit anderen
-BIM-Programmen verwenden Sie IFC4.</p>
+<p>Objekte mit einer Form, die keine Wände, Decken, Türen, Fenster oder Räume sind, bleiben
+importierte Objekte zum Konvertieren: siehe <a href="../import-and-conversion/">Importieren und Konvertieren</a>.</p>
 <h3 id="other-exports">Weitere Exporte</h3>
 <p>Drucken als PDF und Bilder exportieren sind in
 <a href="../documentation/">Pläne, Bauteillisten und Drucken</a> beschrieben; Bauteillisten werden im selben
@@ -725,13 +923,13 @@ Befehlszeile (siehe <a href="../command-line-and-mcp/">Befehlszeile und MCP</a>)
               </div>
 </div>
 </a>
-<a aria-label="Weiter: Auswählen und Ändern" class="md-footer__link md-footer__link--next" href="../selection-and-modify/">
+<a aria-label="Weiter: Importieren und Konvertieren" class="md-footer__link md-footer__link--next" href="../import-and-conversion/">
 <div class="md-footer__title">
 <span class="md-footer__direction">
                 Weiter
               </span>
 <div class="md-ellipsis">
-                Auswählen und Ändern
+                Importieren und Konvertieren
               </div>
 </div>
 <div class="md-footer__button md-icon">

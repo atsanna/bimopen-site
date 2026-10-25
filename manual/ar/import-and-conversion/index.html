@@ -1,0 +1,748 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="دليل مستخدم BIMopen، نمذجة BIM مفتوحة المصدر" name="description"/>
+<meta content="BIMopen" name="author"/>
+<link href="https://atsanna.github.io/bimopen-site/manual/ar/import-and-conversion/" rel="canonical"/>
+<link href="../projects-and-files/" rel="prev"/>
+<link href="../selection-and-modify/" rel="next"/>
+<link href="../assets/images/bimopen-cube.svg" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.9" name="generator"/>
+<title>الاستيراد والتحويل - دليل مستخدم BIMopen</title>
+<link href="../assets/stylesheets/main.4af4bdda.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link href="../assets/css/theme.css" rel="stylesheet"/>
+<link href="../assets/css/theme_dark_mode.css" rel="stylesheet"/>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="slate" dir="rtl">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#importing-and-converting">
+          انتقل إلى المحتوى
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="عنوان العارضة" class="md-header__inner md-grid">
+<a aria-label="دليل مستخدم BIMopen" class="md-header__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/?lang=ar" title="دليل مستخدم BIMopen">
+<img alt="logo" src="../assets/images/bimopen-cube.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            دليل مستخدم BIMopen
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              الاستيراد والتحويل
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="التبديل إلى الوضع الفاتح" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="التبديل إلى الوضع الفاتح">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="التبديل إلى الوضع الداكن" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="bimopen" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="التبديل إلى الوضع الداكن">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<div class="md-header__option">
+<div class="md-select">
+<button aria-label="إختر اللغة" class="md-header__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"></path></svg>
+</button>
+<div class="md-select__inner">
+<ul class="md-select__list">
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/en/" hreflang="en">
+              English
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/it/" hreflang="it">
+              Italiano
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/de/" hreflang="de">
+              Deutsch
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/fr/" hreflang="fr">
+              Français
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/es/" hreflang="es">
+              Español
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/ar/" hreflang="ar">
+              العربية
+            </a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="بحث" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="بحث" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="إبحث" class="md-search__options">
+<button aria-label="مسح كلي" class="md-search__icon md-icon" tabindex="-1" title="مسح كلي" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            بدء البحث
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="تصفح" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="دليل مستخدم BIMopen" class="md-nav__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/?lang=ar" title="دليل مستخدم BIMopen">
+<img alt="logo" src="../assets/images/bimopen-cube.svg"/>
+</a>
+    دليل مستخدم BIMopen
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
+<span class="md-ellipsis">
+    الرئيسية
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../getting-started/">
+<span class="md-ellipsis">
+    البدء
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../interface/">
+<span class="md-ellipsis">
+    الواجهة
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../interface-styles/">
+<span class="md-ellipsis">
+    أنماط الواجهة
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../projects-and-files/">
+<span class="md-ellipsis">
+    المشاريع والملفات
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    الاستيراد والتحويل
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    الاستيراد والتحويل
+    
+  </span>
+</a>
+<nav aria-label="جدول المحتويات" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      جدول المحتويات
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#opening-an-ifc-file">
+<span class="md-ellipsis">
+      فتح ملف IFC
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#import-ifc-options">
+<span class="md-ellipsis">
+      استيراد خيارات IFC
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conversion-status">
+<span class="md-ellipsis">
+      حالة التحويل
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#converting-an-imported-object">
+<span class="md-ellipsis">
+      تحويل كائن مستورد
+    </span>
+</a>
+<nav aria-label="تحويل كائن مستورد" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-three-ways">
+<span class="md-ellipsis">
+      الطرق الثلاث
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#components-from-imported-objects">
+<span class="md-ellipsis">
+      مكوّنات من كائنات مستوردة
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#identical-shapes">
+<span class="md-ellipsis">
+      الأشكال المطابقة
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#selecting-imported-objects">
+<span class="md-ellipsis">
+      تحديد الكائنات المستوردة
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#imported-objects-in-the-project-index">
+<span class="md-ellipsis">
+      الكائنات المستوردة في فهرس المشروع
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#restoring-the-originals">
+<span class="md-ellipsis">
+      استعادة الأصول
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#coming-next">
+<span class="md-ellipsis">
+      قريبًا
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../selection-and-modify/">
+<span class="md-ellipsis">
+    التحديد والتعديل
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../walls-doors-windows/">
+<span class="md-ellipsis">
+    الجدران والأبواب والنوافذ
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../floors-roofs-stairs/">
+<span class="md-ellipsis">
+    الأرضيات والأسقف والسلالم والمكونات
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../views-and-graphics/">
+<span class="md-ellipsis">
+    المناظر والرسومات
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../annotation/">
+<span class="md-ellipsis">
+    التعليقات التوضيحية والتفاصيل ثنائية الأبعاد
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../documentation/">
+<span class="md-ellipsis">
+    اللوحات والجداول والطباعة
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../command-line-and-mcp/">
+<span class="md-ellipsis">
+    سطر الأوامر و MCP
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../keyboard-shortcuts/">
+<span class="md-ellipsis">
+    اختصارات لوحة المفاتيح
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../troubleshooting/">
+<span class="md-ellipsis">
+    استكشاف الأخطاء وإصلاحها
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://atsanna.github.io/bimopen-site/manual/ar/pdf/bimopen-manual-ar.pdf">
+<span class="md-ellipsis">
+    PDF
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="جدول المحتويات" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      جدول المحتويات
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#opening-an-ifc-file">
+<span class="md-ellipsis">
+      فتح ملف IFC
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#import-ifc-options">
+<span class="md-ellipsis">
+      استيراد خيارات IFC
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conversion-status">
+<span class="md-ellipsis">
+      حالة التحويل
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#converting-an-imported-object">
+<span class="md-ellipsis">
+      تحويل كائن مستورد
+    </span>
+</a>
+<nav aria-label="تحويل كائن مستورد" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-three-ways">
+<span class="md-ellipsis">
+      الطرق الثلاث
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#components-from-imported-objects">
+<span class="md-ellipsis">
+      مكوّنات من كائنات مستوردة
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#identical-shapes">
+<span class="md-ellipsis">
+      الأشكال المطابقة
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#selecting-imported-objects">
+<span class="md-ellipsis">
+      تحديد الكائنات المستوردة
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#imported-objects-in-the-project-index">
+<span class="md-ellipsis">
+      الكائنات المستوردة في فهرس المشروع
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#restoring-the-originals">
+<span class="md-ellipsis">
+      استعادة الأصول
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#coming-next">
+<span class="md-ellipsis">
+      قريبًا
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset"><a class="md-content__icon pdf-download-btn" download href="../pdf/bimopen-manual-ar.pdf" title="Download"><i class="fa fas fa-download"></i><small> PDF</small></a>
+<h1 id="importing-and-converting">الاستيراد والتحويل</h1>
+<p>يصل النموذج المصنوع ببرنامج آخر كملف IFC. يقرأ BIMopen جدرانه وأرضياته وأبوابه ونوافذه وفراغاته
+كعناصر خاصة به. وكل ما سوى ذلك مما له شكل (الأسقف والجسور والأعمدة والسلالم والدرابزين والواجهات
+الستارية والأثاث والأدوات الصحية) يبقى <strong>كائنًا مستوردًا</strong>: هندسته كما قُرئت، كنموذج عام. ثم يجعل
+<strong>تحويل</strong> من كل كائن مستورد عنصرًا من BIMopen من أي فئة، متى احتجت ذلك وبالقدر الذي تحتاجه.</p>
+<h2 id="opening-an-ifc-file">فتح ملف IFC</h2>
+<ol>
+<li>افتح قائمة التطبيق (علامة BIMopen أعلى الشريط الجانبي) واختر <strong>فتح ➤ IFC…</strong>.</li>
+<li>اختر ملف IFC2x3 أو IFC4.</li>
+</ol>
+<p>ينشئ BIMopen مشروعًا جديدًا: تصبح الطوابق مستويات، وتُعاد بناء الجدران من محورها، وتصبح البلاطات
+أرضيات، وتدخل الأبواب والنوافذ في الجدران التي تقطعها فتحاتها، وتصبح الفراغات غرفًا. وكل كائن آخر له
+شكل يصبح كائنًا مستوردًا. ويحتفظ كل واحد منها بـ:</p>
+<ul>
+<li>الملف الذي جاء منه وصيغته (<code>casa.ifc · IFC4</code>)؛</li>
+<li>فئة IFC الخاصة به (<code>IfcRoof</code>، <code>IfcFurniture</code>…) ومعرّفه؛</li>
+<li>الكائن الذي هو جزء منه: قلبات السلم، وألواح الواجهة الستارية؛</li>
+<li>مجموعات خصائصه وكمياته، في <strong>الخصائص</strong> تحت <strong>خصائص IFC</strong>.</li>
+</ul>
+<p>تحصي الرسائل ما قُرئ وما قُرّب وما تُرك.</p>
+<h2 id="import-ifc-options">استيراد خيارات IFC</h2>
+<p>يفتح <strong>تنسيق ▸ خيارات IFC…</strong> نافذة <strong>استيراد خيارات IFC</strong>: ما تصبح عليه كل فئة IFC عند فتح ملف.</p>
+<figure>
+<img alt="استيراد خيارات IFC: فئات IFC وفئة كل منها وما يحدث عند الفتح" src="../assets/screens/ic-ifc-options.webp"/>
+<figcaption>كل فئة IFC وفئتها وما يحدث عند الفتح</figcaption>
+</figure>
+<ul>
+<li>تُقرأ الجدران والبلاطات والأبواب والنوافذ والفراغات كـ <strong>عنصر BIMopen</strong>؛ ويمكن قراءة أي منها بدلًا
+  من ذلك ككائن مستورد (<strong>نماذج عامة</strong>) أو تركه (<strong>غير مستورد</strong>).</li>
+<li>تُقرأ الفئات الأخرى ككائنات مستوردة. <strong>الفئة</strong> هي الفئة المقترحة لكل فئة IFC عند تحويلها: أي فئة
+  في BIMopen.</li>
+<li>يحدد <strong>عند الفتح</strong> ما يحدث لها عند فتح الملف: <strong>بانتظار التحويل</strong> يتركها لوقت لاحق؛ و<strong>الإبقاء على
+  الهندسة</strong> أو <strong>إعادة البناء كعنصر BIMopen</strong> أو <strong>إنشاء مكوّن بمعلمات</strong> يحوّلها فورًا (انظر أدناه).</li>
+<li>يضيف <strong>إضافة فئة</strong> فئة لا تتضمنها القائمة.</li>
+<li>يقرأ <strong>تحميل…</strong> ملف ربط فئات، ويكتب <strong>حفظ باسم…</strong> واحدًا: ملف نصي، فئة في كل سطر. ويعيد
+  <strong>قياسي</strong> الربط الافتراضي.</li>
+</ul>
+<p>تُحفظ الخيارات من جلسة إلى أخرى.</p>
+<h2 id="conversion-status">حالة التحويل</h2>
+<p>ما دام المشروع يحتوي على كائنات مستوردة بانتظار التحويل، يعرض شريط العرض <strong>حالة التحويل</strong> مع
+عددها. ويذكر التلميح عددها وعدد فئات IFC التي تنتمي إليها.</p>
+<figure>
+<img alt="شريط العرض مع مفتاح حالة التحويل وعدده" src="../assets/screens/ic-icon.webp"/>
+<figcaption>حالة التحويل في شريط العرض</figcaption>
+</figure>
+<p>انقر عليه: يعرض العرض كل كائن بلون حالته، داخل إطار أخضر مزرق.</p>
+<table>
+<thead>
+<tr>
+<th>اللون</th>
+<th>الحالة</th>
+<th>المعنى</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>برتقالي</td>
+<td><strong>بانتظار التحويل</strong></td>
+<td>مستورد، ولا يزال نموذجًا عامًا</td>
+</tr>
+<tr>
+<td>أصفر</td>
+<td><strong>فئة مُسندة</strong></td>
+<td>الهندسة المستوردة محفوظة، مع فئة</td>
+</tr>
+<tr>
+<td>أخضر</td>
+<td><strong>مُحوَّل</strong></td>
+<td>عنصر BIMopen أو نسخة من مكوّن</td>
+</tr>
+<tr>
+<td>أحمر</td>
+<td><strong>غير معروف</strong></td>
+<td>لم تتعرف إعادة البناء على الشكل: هندسة فقط</td>
+</tr>
+<tr>
+<td>رمادي</td>
+<td><strong>أُنشئ في BIMopen</strong></td>
+<td>غير مستورد</td>
+</tr>
+</tbody>
+</table>
+<figure>
+<img alt="العرض ثلاثي الأبعاد مع تفعيل حالة التحويل: السقف والأثاث بالبرتقالي، والباقي بالرمادي، ولوحة حالة التحويل تحت الخصائص" src="../assets/screens/ic-status.webp"/>
+<figcaption>حالة التحويل في العرض ثلاثي الأبعاد، مع لوحتها</figcaption>
+</figure>
+<p>تعمل في المساقط والمقاطع والواجهات والعروض ثلاثية الأبعاد، ولا تغيّر إلا النافذة: يبقى النموذج
+والعروض الأخرى كما هي. وما دامت مفعّلة لا يمكن تحديد إلا الكائنات المستوردة.</p>
+<figure>
+<img alt="مسقط مع تفعيل حالة التحويل: الأثاث بالبرتقالي والجدران بنصف درجة" src="../assets/screens/ic-status-plan.webp"/>
+<figcaption>الأمر نفسه في المسقط</figcaption>
+</figure>
+<p>تحتوي لوحة <strong>حالة التحويل</strong>، تحت <strong>الخصائص</strong>، على:</p>
+<ul>
+<li>مفتاح الألوان مع عدد كل حالة: النقر على حالة يخفيها في العرض أو يُظهرها من جديد؛</li>
+<li>فئات IFC التي فيها كائنات بانتظار التحويل، والفئة المقترحة لكل منها وعدد ما تبقى. النقر على فئة
+  يحدد كائناتها المطلوب تحويلها ويفتح <strong>تحويل…</strong>.</li>
+</ul>
+<p>عندما لا يتبقى شيء للتحويل، تقول اللوحة ذلك. أوقف <strong>حالة التحويل</strong> فيخرج زرها من شريط العرض.</p>
+<p>في النمط الكلاسيكي تكون اللوحة علامة تبويب بجانب <strong>الخصائص</strong>؛ وفي وضع اللمس تكون ورقة تُفتح من
+إعدادات العرض.</p>
+<h2 id="converting-an-imported-object">تحويل كائن مستورد</h2>
+<p>حدد كائنًا مستوردًا أو أكثر: تُفتح البطاقة السياقية <strong>تحرير | الكائنات المستوردة</strong>. ويفتح
+<strong>تحويل…</strong> نافذة <strong>تحويل كائن مستورد</strong>.</p>
+<figure>
+<img alt="تحويل كائن مستورد على السقف: الفئة سقف، واختيار إعادة البناء كعنصر BIMopen، ونوع جديد من الكائن، وما اكتُشف بموثوقية عالية، والمعلمات والمعاينة" src="../assets/screens/ic-convert-roof.webp"/>
+<figcaption>السقف، مُعاد بناؤه كسقف من BIMopen</figcaption>
+</figure>
+<ol>
+<li><strong>الفئة</strong>: ما يصبح عليه الكائن. يأتي اقتراح فئة IFC أولًا.</li>
+<li>إحدى الطرق الثلاث (أدناه). تظهر بالرمادي الطريقة التي لا تنطبق على الفئة.</li>
+<li><strong>النوع</strong>: أحد أنواع الفئة، أو نوع جديد مصنوع من الكائن.</li>
+<li><strong>المكتشَف</strong>: ما يقرؤه BIMopen في الشكل ومدى ثقته به.</li>
+<li><strong>المعاملات</strong>: <strong>العلامة</strong> و<strong>التعليقات</strong>، وخصائص IFC للكائن.</li>
+<li><strong>تحويل</strong>.</li>
+</ol>
+<p>تُظهر المعاينة ما سيصبح عليه الكائن. ويخفيها مفتاح <strong>معاينة</strong> في الترويسة؛ وتحتفظ النافذة
+بحجمها.</p>
+<h3 id="the-three-ways">الطرق الثلاث</h3>
+<table>
+<thead>
+<tr>
+<th>الطريقة</th>
+<th>الفئات</th>
+<th>ما يحدث</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>الإبقاء على الهندسة</strong></td>
+<td>كلها</td>
+<td>يأخذ الكائن الفئة ونوعًا ومعلمات. ويُحتسب في الجداول والمرشحات والرؤية وتصدير IFC كعنصر من تلك الفئة؛ ويبقى شكله المستورد. ويمكن نقله وتدويره وعكسه.</td>
+</tr>
+<tr>
+<td><strong>إعادة البناء كعنصر BIMopen</strong></td>
+<td>الجدران والأرضيات والأسقف والأبواب والنوافذ</td>
+<td>يقرأ BIMopen الشكل وينشئ العنصر الأصلي، القابل للتعديل كأنه مرسوم: محور الجدار وسماكته وارتفاعه؛ حدود الأرضية وسماكتها ومنسوب سطحها العلوي؛ حدود السقف وميوله وسماكته وارتفاع حافته؛ باب أو نافذة في الجدار الذي يقع فيه، بعرضه وارتفاعه وعتبته.</td>
+</tr>
+<tr>
+<td><strong>إنشاء مكوّن بمعلمات</strong></td>
+<td>الأثاث والأدوات الصحية والنماذج العامة والأبواب والنوافذ والأعمدة والجسور</td>
+<td>تصبح الهندسة نوع مكوّن بـ <strong>العرض</strong> و<strong>العمق</strong> و<strong>الارتفاع</strong> من أبعادها الكلية؛ وتغييرها يمطّ الشكل. ويصبح الكائن نسخة منه.</td>
+</tr>
+</tbody>
+</table>
+<p>الشكل الذي لا يمكن إعادة بنائه كالفئة المختارة يصبح أحمر (<strong>غير معروف</strong>) ويبقى كما كان: حوّله من
+جديد مع الإبقاء على هندسته. وتأتي إعادة بناء الأعمدة والجسور والسلالم والدرابزين في مرحلة لاحقة.</p>
+<p>تفعل <strong>الفئة</strong> في <strong>الخصائص</strong> ما تفعله <strong>الإبقاء على الهندسة</strong>: اختيار فئة هناك يحوّل الكائن المحدد
+فورًا.</p>
+<figure>
+<img alt="العرض ثلاثي الأبعاد مع تفعيل حالة التحويل بعد تحويل السقف والكراسي: كلاهما أخضر، وبقية الكائنات المستوردة برتقالية" src="../assets/screens/ic-converted.webp"/>
+<figcaption>تصبح الكائنات المحوّلة خضراء</figcaption>
+</figure>
+<h3 id="components-from-imported-objects">مكوّنات من كائنات مستوردة</h3>
+<p>يفتح <strong>إنشاء مكوّن</strong> في البطاقة السياقية النافذة مع اختيار <strong>إنشاء مكوّن بمعلمات</strong>.</p>
+<figure>
+<img alt="تحويل كائن مستورد على كرسي: الفئة أثاث، ومكوّن جديد من الكائن، وأبعاده الكلية، وأربع نسخ مطابقة، والعرض ثلاثي الأبعاد للنوع" src="../assets/screens/ic-convert-component.webp"/>
+<figcaption>يصبح الكرسي مكوّنًا؛ وتصبح نسخه الثلاث نسخًا منه</figcaption>
+</figure>
+<p>تصبح خصائص IFC المتطابقة في جميع النسخ معلمات للنوع؛ وتبقى المختلفة منها لكل نسخة. ويظهر المكوّن
+في فهرس المشروع تحت <strong>الكائنات المستوردة</strong>، وتغيّر <strong>معلمات النوع</strong> الخاصة بها جميع النسخ دفعة واحدة.</p>
+<h3 id="identical-shapes">الأشكال المطابقة</h3>
+<p>تُعرف نسخ الشكل الواحد، المنقولة والمدوّرة في المسقط، على أنها مطابقة. يحددها <strong>تحديد الأشكال
+المطابقة</strong>؛ وفي النافذة يحوّلها معًا <strong>طبّق أيضًا على N من الأشكال المطابقة في المشروع</strong> (مفعّل
+افتراضيًا عند إنشاء مكوّن). وكنسخ من مكوّن واحد تشغل ذاكرة أقل وتُرسم أسرع في النماذج الكبيرة.</p>
+<h3 id="selecting-imported-objects">تحديد الكائنات المستوردة</h3>
+<ul>
+<li>يحدد <strong>تحديد الفئة</strong> الكائنات المستوردة من فئة IFC نفسها.</li>
+<li>فئة في لوحة <strong>حالة التحويل</strong>، أو <strong>تحويل الكل (N)…</strong> على فئة في فهرس المشروع، تحدد كائناتها
+  المطلوب تحويلها وتفتح النافذة.</li>
+<li>الكائن الذي هو جزء من آخر (قلبة من سلم) يذهب معه: تحويل الكل يأخذ أجزاءه معه.</li>
+</ul>
+<h2 id="imported-objects-in-the-project-index">الكائنات المستوردة في فهرس المشروع</h2>
+<p>تسرد <strong>الكائنات المستوردة</strong> في فهرس المشروع كل ملف مقروء، بصيغته وعدد الكائنات المتبقية للتحويل؛
+وتحته فئات IFC، وتحت كل فئة كائناتها بلون حالتها، والفئة التي أصبحت عليها بعد تحويلها. والكائنات
+المكوّنة من أجزاء تسرد أجزاءها تحتها.</p>
+<figure>
+<img alt="فهرس المشروع: الكائنات المستوردة، والملف casa.ifc، وفئاته، والأثاث مع أربعة كراسٍ محوّلة إلى أثاث" src="../assets/screens/ic-index.webp"/>
+<figcaption>الكائنات المستوردة في فهرس المشروع</figcaption>
+</figure>
+<ul>
+<li>يخفي <strong>ما يجب تحويله فقط</strong> ما حُوِّل بالفعل.</li>
+<li>النقر على كائن يحدده؛ والنقر المزدوج يُظهره في عرض.</li>
+<li>الزر الأيمن على فئة: <strong>تحويل الكل (N)…</strong>، <strong>تحديد كل ما يجب تحويله (N)</strong>، <strong>استعادة الأصول (N)</strong>.</li>
+<li>الزر الأيمن على ملف: الأوامر نفسها، و<strong>إزالة مراجع المصدر…</strong>.</li>
+<li>الزر الأيمن على كائن: <strong>تحويل…</strong>، <strong>تحديد الأشكال المطابقة</strong>، <strong>إظهار في العرض</strong>، <strong>إخفاء في
+  العرض</strong>، <strong>استعادة الأصل</strong>.</li>
+</ul>
+<h2 id="restoring-the-originals">استعادة الأصول</h2>
+<p>ما يستبدله التحويل يبقى في المشروع، في ملف <code>.bimopen</code>: الكائن الأصلي، مع الأجزاء التي أخذها معه.
+ويعيده <strong>استعادة الأصل</strong> (في البطاقة السياقية، أو في فهرس المشروع، أو في قائمة الزر الأيمن) كما
+استُورد، برتقاليًا من جديد.</p>
+<figure>
+<img alt="استعادة الأصل: تعود أربعة كائنات مستوردة؛ كانت قد حُوّلت إلى مكوّن، وستُفقد التعديلات التي أُجريت عليها" src="../assets/screens/ic-restore.webp"/>
+<figcaption>تطلب الاستعادة التأكيد أولًا</figcaption>
+</figure>
+<p>تطلب التأكيد أولًا، وتذكر ما سيُفقد: التعديلات على العناصر المُعاد بناؤها أو المكوّنات، والأبواب
+والنوافذ في الجدران المحوّلة. والمكوّن الذي أنشأه التحويل يذهب مع آخر نسخة منه. ويتراجع أمر
+التراجع عن تحويل أو استعادة كأي تعديل آخر.</p>
+<p>تُخزَّن هندسة الأصول مرة واحدة لكل شبكة مطابقة، فلا يكلّف الاحتفاظ بها كثيرًا. وعندما تصبح التحويلات
+نهائية، يحذف <strong>إزالة مراجع المصدر…</strong> على الملف في فهرس المشروع الأصول: بعدها لا يعود <strong>استعادة الأصل</strong>
+ممكنًا.</p>
+<h2 id="coming-next">قريبًا</h2>
+<ul>
+<li><strong>تحديث من الملف</strong>: إعادة قراءة الملف المصدر وتحديث كائناته.</li>
+<li>أدوات حسب الوجه، لوضع الجدران والأرضيات والأسقف على الأشكال الحرة والمنحنية.</li>
+<li>إعادة بناء الأعمدة والجسور والسلالم والدرابزين.</li>
+<li>تحويل كائنات ملفات OBJ وglTF بالنافذة نفسها.</li>
+</ul>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  عد إلى الأعلى
+</button>
+</main>
+<footer class="md-footer">
+<nav aria-label="هامش سفلي" class="md-footer__inner md-grid">
+<a aria-label="السابقة: المشاريع والملفات" class="md-footer__link md-footer__link--prev" href="../projects-and-files/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                السابقة
+              </span>
+<div class="md-ellipsis">
+                المشاريع والملفات
+              </div>
+</div>
+</a>
+<a aria-label="التالية: التحديد والتعديل" class="md-footer__link md-footer__link--next" href="../selection-and-modify/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                التالية
+              </span>
+<div class="md-ellipsis">
+                التحديد والتعديل
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Copyright © 2026 BIMopen
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.footer", "navigation.tracking", "toc.follow", "content.code.copy", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u062a\u0645 \u0627\u0644\u0646\u0633\u062e \u0627\u0644\u0649 \u0627\u0644\u062d\u0627\u0641\u0638\u0629", "clipboard.copy": "\u0646\u0633\u062e \u0625\u0644\u0649 \u0627\u0644\u062d\u0627\u0641\u0638\u0629", "search.result.more.one": "\u0623\u0643\u062b\u0631 \u0645\u0646 1 \u0641\u064a \u0647\u0630\u0647 \u0627\u0644\u0635\u0641\u062d\u0629", "search.result.more.other": "\u0623\u0643\u062b\u0631 \u0645\u0646 # \u0641\u064a \u0647\u0630\u0647 \u0627\u0644\u0635\u0641\u062d\u0629", "search.result.none": "\u0644\u0627 \u062a\u0648\u062c\u062f \u0646\u062a\u0627\u0626\u062c", "search.result.one": "\u0646\u062a\u0627\u0626\u062c \u0627\u0644\u0628\u062d\u062b \u0645\u0633\u062a\u0646\u062f \u0648\u0627\u062d\u062f", "search.result.other": "\u0646\u062a\u0627\u0626\u062c \u0627\u0644\u0628\u062d\u062b # \u0645\u0633\u062a\u0646\u062f\u0627\u062a", "search.result.placeholder": "\u0627\u0643\u062a\u0628 \u0644\u0628\u062f\u0621 \u0627\u0644\u0628\u062d\u062b", "search.result.term.missing": "\u0645\u0641\u0642\u0648\u062f", "select.version": "\u0625\u062e\u062a\u0631 \u0627\u0644\u0625\u0635\u062f\u0627\u0631"}}</script>
+<script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+<script src="../assets/js/zoom.js"></script>
+</body>
+</html>

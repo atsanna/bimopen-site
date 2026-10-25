@@ -226,14 +226,14 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#the-home-tab">
 <span class="md-ellipsis">
-      Die Werkzeuge von Erzeugen
+      Die Werkzeuge von Modellieren
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#the-annotate-tab">
 <span class="md-ellipsis">
-      Die Werkzeuge von Dokumentieren
+      Die Werkzeuge von Beschriftungen
     </span>
 </a>
 </li>
@@ -247,14 +247,14 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#the-manage-tab">
 <span class="md-ellipsis">
-      Die Werkzeuge von Einstellungen
+      Die Werkzeuge von Projekt
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#the-contextual-tab">
 <span class="md-ellipsis">
-      Die kontextabhängige Karte
+      Die kontextabhängige Registerkarte Bearbeiten
     </span>
 </a>
 </li>
@@ -404,6 +404,14 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../import-and-conversion/">
+<span class="md-ellipsis">
+    Importieren und Konvertieren
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../selection-and-modify/">
 <span class="md-ellipsis">
     Auswählen und Ändern
@@ -533,14 +541,14 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#the-home-tab">
 <span class="md-ellipsis">
-      Die Werkzeuge von Erzeugen
+      Die Werkzeuge von Modellieren
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#the-annotate-tab">
 <span class="md-ellipsis">
-      Die Werkzeuge von Dokumentieren
+      Die Werkzeuge von Beschriftungen
     </span>
 </a>
 </li>
@@ -554,14 +562,14 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#the-manage-tab">
 <span class="md-ellipsis">
-      Die Werkzeuge von Einstellungen
+      Die Werkzeuge von Projekt
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#the-contextual-tab">
 <span class="md-ellipsis">
-      Die kontextabhängige Karte
+      Die kontextabhängige Registerkarte Bearbeiten
     </span>
 </a>
 </li>
@@ -710,24 +718,29 @@ für Tablets und Telefone, führen dieselben Befehle mit denselben Namen aus;
 <p>Das Fenster hat diese Teile:</p>
 <ol>
 <li>die <strong>Seitenleiste</strong> am linken Rand: das Zeichen von BIMopen, das das Anwendungsmenü öffnet,
-   dann <strong>Start</strong>, <strong>Erzeugen</strong>, <strong>Dokumentieren</strong>, <strong>Ansichten</strong> und <strong>Koordinieren</strong>, und unten
-   das geöffnete Projekt und <strong>Einstellungen</strong>;</li>
-<li>der <strong>Werkzeugbereich</strong> neben der Seitenleiste: die Werkzeuge des gewählten Eintrags der
-   Seitenleiste, als Karten mit Kacheln;</li>
+   dann <strong>Start</strong>, die kontextabhängige Registerkarte <strong>Bearbeiten</strong>, die Registerkarten
+   <strong>Modellieren</strong>, <strong>Tragwerk</strong>, <strong>Stahlbeton</strong>, <strong>Metall</strong>, <strong>Vorfertigung</strong>, <strong>TGA</strong>,
+   <strong>Verknüpfen und importieren</strong>, <strong>Beschriftungen</strong>, <strong>Prüfen</strong>, <strong>Körper &amp; Gelände</strong>,
+   <strong>Zusammenarbeit</strong>, <strong>Ansichten</strong> und <strong>Projekt</strong>, und unten <strong>Einstellungen</strong>;</li>
+<li>der <strong>Werkzeugbereich</strong> neben der Seitenleiste: die Gruppen der in der Seitenleiste gewählten
+   Registerkarte, als gerahmte Blöcke mit Kacheln;</li>
 <li>die <strong>obere Leiste</strong>: das Projekt und die aktive Ansicht, die Befehlssuche, die zugleich die
    Befehlszeile ist, der Speicherstatus, <strong>Rückgängig</strong> und <strong>Wiederholen</strong>, die
    Schnellzugriffswerkzeuge, das helle oder dunkle Design, das Menü <strong>?</strong> und <strong>Optionen</strong>;</li>
 <li>der <strong>Zeichenbereich</strong> in der Mitte: die Ansichten, jede mit ihrer Ansichtsauswahl oben und der
    Ansichtsleiste unten; solange ein Werkzeug arbeitet, läuft der <strong>Optionsstreifen</strong> darüber;</li>
 <li>der <strong>Elementbereich</strong> rechts: die Eigenschaften der Auswahl oder der aktiven Ansicht;</li>
-<li>der <strong>Ansichten- und Familienstreifen</strong> unter dem Zeichenbereich;</li>
+<li>der <strong>Ansichten- und Familienstreifen</strong> unter dem Zeichenbereich, den Sie ausblenden können
+   (<span class="keys"><kbd class="key-f9">F9</kbd></span>);</li>
 <li>die <strong>Statusleiste</strong> am unteren Rand.</li>
 </ol>
 <p>Die Bereiche behalten ihre Breite, was sie auch zeigen: ein langer Name wird mit «…» gekürzt, und
 sein Tooltip zeigt ihn ganz. Ziehen Sie den Rand des Werkzeugbereichs oder des Elementbereichs, um
 ihn breiter oder schmaler zu machen; BIMopen merkt es sich für die nächste Sitzung. Ein Klick auf
-den bereits gewählten Eintrag der Seitenleiste klappt den Werkzeugbereich ein, ein zweiter Klick
-öffnet ihn wieder.</p>
+die bereits gewählte Registerkarte der Seitenleiste klappt den Werkzeugbereich ein, ein zweiter
+Klick öffnet ihn wieder. Ohne Touch ist die Oberfläche kompakt, damit der Zeichenbereich so viel
+Platz wie möglich hat; im Touch-Modus bleiben die Schaltflächen groß (siehe
+<a href="../interface-styles/#touch-mode">Oberflächenstile</a>).</p>
 <p>Auf Arabisch ist das ganze Fenster gespiegelt: Die Seitenleiste und der Werkzeugbereich sind
 rechts, der Elementbereich links, und die Streifen lesen sich von rechts nach links.</p>
 <h2 id="application-menu">Anwendungsmenü</h2>
@@ -749,7 +762,7 @@ Menü stehen.</p>
 </tr>
 <tr>
 <td><strong>Öffnen…</strong></td>
-<td>Öffnet ein <code>.bimopen</code>-Projekt oder importiert eine <code>.rvt</code>-Datei (experimentell: nur Projektname und Namen der Ebenen), ausgewählt in einem Dateidialog. Im Browser ziehen Sie die Datei stattdessen in die Seite</td>
+<td>Öffnet ein <code>.bimopen</code>-Projekt oder öffnet eine <code>.ifc</code>-Datei als neues Projekt, ausgewählt in einem Dateidialog. Im Browser ziehen Sie die Datei stattdessen in die Seite</td>
 </tr>
 <tr>
 <td><strong>Beispielprojekt</strong></td>
@@ -806,8 +819,9 @@ wählen. Die obere Leiste zeigt <strong>Nicht gespeicherte Änderungen</strong>,
 speichern gibt.</p>
 </div>
 <h3 id="options">Optionen</h3>
-<p>Das Zahnrad am rechten Ende der oberen Leiste oder <strong>Anwendungsmenü ▸ Optionen</strong> öffnet
-<strong>Optionen</strong>. Der Dialog hat unter anderem diese Einstellungen:</p>
+<p>Das Zahnrad am rechten Ende der oberen Leiste, <strong>Einstellungen</strong> unten in der Seitenleiste oder
+<strong>Anwendungsmenü ▸ Optionen</strong> öffnet <strong>Optionen</strong>. Der Dialog hat unter anderem diese
+Einstellungen:</p>
 <table>
 <thead>
 <tr>
@@ -930,329 +944,318 @@ bleiben für die nächsten Sitzungen erhalten.</p>
 Maus (ihr Tooltip endet mit <strong>Drücken Sie F1, um weitere Informationen zu erhalten</strong>) oder zum
 aktiven Werkzeug.</p>
 <h2 id="ribbon">Seitenleiste und Werkzeugbereich</h2>
-<p>Jeder Eintrag der Seitenleiste zeigt seine Werkzeuge im Werkzeugbereich, als Karten: Eine Karte hat
-einen Titel, ihre Gruppen und in jeder Gruppe große Kacheln mit Symbol und Namen. Eine Kachel mit
-einer kleinen Marke ▾ hat ein Menü: Ein Klick auf die Kachel startet den Befehl, ein Klick auf die
-Marke öffnet das Menü mit seinen Varianten. Ruht die Maus auf einer Kachel, zeigt sie, was sie tut,
-und in Klammern das Kürzel, mit dem Sie sie per Tastatur starten. Befehle, die BIMopen noch nicht
-ausführt, sind ausgegraut, und ihr Tipp sagt „Noch nicht verfügbar“; <strong>Ebene</strong>, <strong>Raster</strong> und
-<strong>Führungsebene</strong> sind in einer 3D-Ansicht ausgegraut („In der 3D-Ansicht nicht verfügbar“).</p>
+<p>Die Seitenleiste listet die Registerkarten des Menübands des Stils <strong>Klassisch</strong> auf, mit
+denselben Namen und in derselben Reihenfolge. Klicken Sie auf eine Registerkarte: Der
+Werkzeugbereich zeigt ihre Gruppen als gerahmte Blöcke, jeder mit seinem Namen unten, und in jedem
+Block seine Befehle in der Reihenfolge des Menübands, drei pro Zeile, als Kacheln mit Symbol und
+Namen. Ein langer Name steht auf bis zu drei Zeilen, umbrochen zwischen Wörtern oder an einer
+Silbe mit Trennstrich. Eine Kachel mit einer kleinen Marke ▾ in der Ecke hat ein Menü: Ein Klick
+auf die Kachel startet den Befehl, ein Klick auf die Marke öffnet das Menü mit seinen Varianten.
+Ruht die Maus auf einer Kachel, zeigt sie, was sie tut, und in Klammern das Kürzel, mit dem Sie
+sie per Tastatur starten. Befehle, die BIMopen noch nicht ausführt, sind ausgegraut, und ihr Tipp
+sagt „Noch nicht verfügbar“; <strong>Ebene</strong>, <strong>Raster</strong> und <strong>Führungsebene</strong> sind in einer
+3D-Ansicht ausgegraut („In der 3D-Ansicht nicht verfügbar“). Hat eine Registerkarte mehr Befehle,
+als der Bereich auf einmal zeigt (<strong>Modellieren</strong>, <strong>Tragwerk</strong>), lässt er sich rollen.
+<strong>Einstellungen</strong> unten in der Seitenleiste öffnet <strong>Optionen</strong>.</p>
 <figure>
-<img alt="Die Leiste und der Werkzeugbereich mit geöffnetem Erzeugen: die Karte Modellierung mit Architektur, Tragwerk und Haustechnik und die Gruppen Bauen, Vertikale Verbindungen, 3D-Elemente und Räume und Flächen" src="../assets/screens/if-rail-create.webp"/>
-<figcaption>Die Leiste und die Werkzeuge von Erzeugen</figcaption>
+<img alt="Die Seitenleiste und der Werkzeugbereich mit geöffnetem Modellieren: die Blöcke Bauen, Vertikale Verbindungen, 3D-Elemente und Räume und Flächen, drei Kacheln pro Zeile, jeder Block mit seinem Namen unten" src="../assets/screens/if-rail-create.webp"/>
+<figcaption>Die Seitenleiste und die Registerkarte Modellieren</figcaption>
 </figure>
 <table>
 <thead>
 <tr>
-<th>Seitenleiste</th>
-<th>Karte</th>
+<th>Registerkarte</th>
 <th>Gruppe</th>
 <th>Befehle</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Erzeugen</strong></td>
-<td><strong>Modellierung ▸ Architektur</strong></td>
+<td><strong>Modellieren</strong></td>
 <td><strong>Erstellen</strong></td>
 <td><strong>Wand ▾</strong>, <strong>Tür</strong>, <strong>Fenster</strong>, <strong>Objekt ▾</strong>, <em>Spalte ▾</em>, <strong>Dach ▾</strong>, <em>Decke</em>, <strong>Bodenbelag ▾</strong>, <strong>Vorhangfassade</strong>, <strong>Fassadenraster</strong>, <strong>Pfosten</strong></td>
 </tr>
 <tr>
-<td></td>
 <td></td>
 <td><strong>Vertikale Verbindungen</strong></td>
 <td><strong>Geländer ▾</strong>, <strong>Rampe</strong>, <strong>Treppe</strong></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>3D-Elemente</strong></td>
 <td><em>3D-Text</em>, <em>3D-Linie</em>, <em>Gruppe ▾</em></td>
 </tr>
 <tr>
-<td></td>
 <td></td>
 <td><strong>Räume und Flächen</strong></td>
 <td><strong>Raum</strong>, <strong>Raumtrenner</strong>, <strong>Raumbeschriftung ▾</strong>, <strong>Fläche ▾</strong>, <strong>Flächenumriss</strong>, <strong>Flächenbeschriftung ▾</strong></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Öffnungen</strong></td>
 <td><em>Nach Fläche</em>, <em>Schacht</em>, <em>In der Wand</em>, <em>Vertikale Öffnung</em>, <em>Gaube</em></td>
 </tr>
 <tr>
-<td></td>
 <td></td>
 <td><strong>Referenzen</strong></td>
 <td><strong>Ebene</strong>, <strong>Raster</strong></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Arbeitsebene</strong></td>
 <td><strong>Festlegen</strong>, <strong>Anzeigen</strong>, <strong>Führungsebene</strong>, <em>Ebenenansicht</em></td>
 </tr>
 <tr>
-<td></td>
-<td><strong>Modellierung ▸ Tragwerk</strong></td>
+<td><strong>Tragwerk</strong></td>
 <td><strong>Tragwerkselemente</strong></td>
 <td><em>Träger</em>, <em>Tragende Wand ▾</em>, <em>Tragende Stütze</em>, <em>Tragende Geschossdecke ▾</em>, <em>Fachwerkträger</em>, <em>Aussteifung</em>, <em>Trägerlage</em></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Anschlüsse</strong></td>
 <td><em>Anschluss ▾</em>, <em>Automatische Verbindungen</em></td>
 </tr>
 <tr>
-<td></td>
 <td></td>
 <td><strong>Fundamente</strong></td>
 <td><em>Einzelfundament</em>, <em>Streifenfundament</em>, <em>Bodenplatte ▾</em></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>3D-Elemente</strong></td>
 <td><strong>Objekt ▾</strong>, <em>3D-Text</em>, <em>3D-Linie</em>, <em>Gruppe ▾</em></td>
 </tr>
 <tr>
-<td></td>
 <td></td>
 <td><strong>Öffnungen</strong></td>
 <td><em>Senkrecht zur Fläche</em>, <em>Schacht</em>, <em>In der Wand</em>, <em>Vertikale Öffnung</em>, <em>Gaube</em></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Referenzen</strong></td>
 <td><strong>Ebene</strong>, <strong>Raster</strong></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Arbeitsebene</strong></td>
 <td><strong>Festlegen</strong>, <strong>Anzeigen</strong>, <strong>Führungsebene</strong>, <em>Ebenenansicht</em></td>
 </tr>
 <tr>
-<td></td>
-<td><strong>Modellierung ▸ TGA</strong></td>
-<td><strong>Luft</strong></td>
-<td><em>Kanal</em>, <em>Kanal aus einem Pfad</em>, <em>Kanalformstück</em>, <em>Kanalzubehör</em>, <em>Kanaldämmung</em>, <em>Flexibler Kanal</em>, <em>Luftauslass</em></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><strong>Vorgefertigte Bauteile</strong></td>
-<td><em>Fertigteil</em>, <em>Mehrpunktroute</em></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><strong>Anlagendetails</strong></td>
-<td><em>Kanalaussteifung</em></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><strong>P&amp;ID-Schemata</strong></td>
-<td><em>P&amp;ID-Editor</em></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><strong>Mechanik</strong></td>
-<td><em>Mechanische Ausrüstung</em>, <em>Regelgerät</em></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><strong>Weitere Anlagen</strong></td>
-<td><em>Sanitär ▾</em>, <em>Elektro ▾</em>, <em>Modellierung ▾</em>, <strong>Arbeitsebene ▾</strong></td>
-</tr>
-<tr>
-<td></td>
 <td><strong>Stahlbeton</strong></td>
 <td><strong>Bewehrung</strong></td>
 <td><em>Bewehrung</em>, <em>Bewehrung entlang eines Pfads</em>, <em>Anpassbare Bewehrung</em>, <em>Flächenbewehrung</em>, <em>Flächenmatte</em>, <em>Einzelmatte</em>, <em>Betondeckung</em>, <em>Muffe</em></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Einstellungen</strong></td>
 <td><em>Betondeckungsoptionen</em>, <em>Bewehrungsoptionen</em></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Arbeitsebene</strong></td>
 <td><strong>Festlegen</strong>, <strong>Anzeigen</strong>, <strong>Führungsebene</strong>, <em>Ebenenansicht</em></td>
 </tr>
 <tr>
-<td></td>
 <td><strong>Metall</strong></td>
 <td><strong>Anschlüsse</strong></td>
 <td><em>Anschluss ▾</em>, <em>Automatische Verbindungen</em></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Stahlbauteile</strong></td>
 <td><em>Blech</em>, <em>Schrauben ▾</em>, <em>Schweißen</em></td>
 </tr>
 <tr>
-<td></td>
 <td></td>
 <td><strong>Bearbeitungen</strong></td>
 <td><em>Ausklinkung</em>, <em>Schrägschnitt</em>, <em>Kürzen</em>, <em>Konturschnitt</em></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Automatische Schnitte</strong></td>
 <td><em>Endschnitt</em>, <em>Eckverbindung ▾</em>, <em>Schnittpunkt</em>, <em>Schneiden mit</em></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Arbeitsebene</strong></td>
 <td><strong>Festlegen</strong>, <strong>Anzeigen</strong>, <strong>Führungsebene</strong>, <em>Ebenenansicht</em></td>
 </tr>
 <tr>
-<td></td>
 <td><strong>Vorfertigung</strong></td>
 <td><strong>Unterteilung</strong></td>
 <td><em>Unterteilen</em></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Fugen</strong></td>
 <td><em>Montageteile</em></td>
 </tr>
 <tr>
-<td></td>
 <td></td>
 <td><strong>Bewehrung</strong></td>
 <td><em>Bewehrung</em>, <em>Maßmatte</em></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Produktion</strong></td>
 <td><em>Werkstattzeichnungen</em>, <em>Für CAM exportieren</em></td>
 </tr>
 <tr>
-<td></td>
 <td></td>
 <td><strong>Einstellungen</strong></td>
 <td><em>Fertigteileinstellungen</em>, <em>Kaltprofile</em></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Automatische Aktualisierung</strong></td>
 <td><em>Aussetzen ▾</em></td>
 </tr>
 <tr>
+<td><strong>TGA</strong></td>
+<td><strong>Luft</strong></td>
+<td><em>Kanal</em>, <em>Kanal aus einem Pfad</em>, <em>Kanalformstück</em>, <em>Kanalzubehör</em>, <em>Kanaldämmung</em>, <em>Flexibler Kanal</em>, <em>Luftauslass</em></td>
+</tr>
+<tr>
 <td></td>
+<td><strong>Vorgefertigte Bauteile</strong></td>
+<td><em>Fertigteil</em>, <em>Mehrpunktroute</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Anlagendetails</strong></td>
+<td><em>Kanalaussteifung</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>P&amp;ID-Schemata</strong></td>
+<td><em>P&amp;ID-Editor</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Mechanik</strong></td>
+<td><em>Mechanische Ausrüstung</em>, <em>Regelgerät</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Weitere Anlagen</strong></td>
+<td><em>Sanitär ▾</em>, <em>Elektro ▾</em>, <em>Modellierung ▾</em>, <strong>Arbeitsebene ▾</strong></td>
+</tr>
+<tr>
 <td><strong>Verknüpfen und importieren</strong></td>
 <td><strong>Verknüpfen</strong></td>
 <td><em>Projekt verknüpfen</em>, <em>IFC verknüpfen</em>, <em>CAD verknüpfen</em>, <em>Topografie verknüpfen</em>, <em>Abziehbild ▾</em>, <em>Punktwolke</em>, <em>Verknüpfungen verwalten</em>, <em>PDF verknüpfen</em>, <em>Bild verknüpfen</em>, <em>Föderiertes Modell ▾</em></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Importieren</strong></td>
 <td><em>CAD importieren</em>, <em>gbXML importieren</em>, <em>PDF importieren</em>, <em>Bild importieren</em></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Aus Bibliothek laden</strong></td>
 <td><strong>Familie laden</strong>, <em>Als Gruppe laden</em>, <strong>Aus Datei einfügen ▾</strong></td>
 </tr>
 <tr>
-<td></td>
-<td><strong>Körper &amp; Gelände</strong></td>
-<td><strong>Körper</strong></td>
-<td><em>Volumen anzeigen ▾</em>, <em>Neuer Körper</em>, <em>Volumen platzieren</em>, <em>In 3D zeichnen</em></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><strong>Aus Körperflächen</strong></td>
-<td><em>Vorhangfassade</em>, <em>Dach</em>, <em>Wand</em>, <em>Decke</em>, <em>Gelände aus Fläche</em></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><strong>Gelände</strong></td>
-<td><em>Gelände</em>, <em>Geländeelement</em>, <em>Parkplatz</em>, <em>Bauplatz</em>, <em>Umgebung</em></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><strong>Gelände bearbeiten</strong></td>
-<td><em>Gelände teilen</em>, <em>Gelände zusammenführen</em>, <em>Teilbereich</em>, <em>Grundstücksgrenze</em>, <em>Geländemodellierung</em>, <em>Höhenlinienbeschriftung</em></td>
-</tr>
-<tr>
-<td><strong>Dokumentieren</strong></td>
-<td><strong>Dokumentieren</strong></td>
-<td><strong>Pläne</strong></td>
-<td><strong>Plan</strong>, <strong>Ansicht</strong>, <strong>Plankopf</strong>, <strong>Revisionen</strong>, <strong>Führungsraster</strong>, <strong>Ansicht deaktivieren</strong></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
+<td><strong>Beschriftungen</strong></td>
 <td><strong>Bemaßung</strong></td>
 <td><strong>Ausgerichtet</strong>, <strong>Linear</strong>, <strong>Winkel</strong>, <strong>Radial</strong>, <em>Durchmesser</em>, <strong>Bogenlänge</strong>, <strong>Punktbemaßung ▾</strong></td>
 </tr>
 <tr>
-<td></td>
 <td></td>
 <td><strong>Detail</strong></td>
 <td><strong>Detaillinie</strong>, <strong>Gefüllter Bereich ▾</strong>, <strong>Detailsymbol ▾</strong>, <strong>Revisionswolke</strong>, <em>2D-Gruppe ▾</em></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Text</strong></td>
 <td><strong>Text</strong>, <em>Rechtschreibprüfung</em></td>
 </tr>
 <tr>
-<td></td>
 <td></td>
 <td><strong>Beschriftung</strong></td>
 <td><strong>Beschriftung</strong>, <strong>Alle beschriften</strong>, <em>Material</em>, <strong>Farblegende</strong>, <em>Trägerbeschriftungen</em>, <em>Mehrkategorie-Beschriftung</em>, <em>Ansichtsverweis</em>, <em>Stufennummerierung</em>, <em>Bewehrungsbeschriftung ▾</em>, <em>Codierte Notiz ▾</em>, <em>Kanallegende</em>, <em>Rohrlegende</em></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Symbol</strong></td>
 <td><strong>Symbol</strong>, <em>Spannrichtung</em>, <em>Bewehrungssymbol</em>, <em>Treppenlauflinie</em></td>
 </tr>
 <tr>
-<td><strong>Ansichten</strong></td>
+<td><strong>Prüfen</strong></td>
+<td><strong>Energie</strong></td>
+<td><em>Energieanalyse</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Prüfen</strong></td>
+<td><em>Kollisionen prüfen</em>, <em>Lasten anzeigen</em>, <em>Offene Anschlüsse</em>, <em>Elektrische Lasten</em>, <em>Fluchtweg</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Berechnungsmodell</strong></td>
+<td><em>Berechnungsstab</em>, <em>Berechnungsfläche</em>, <em>Berechnungsknoten</em>, <em>Auflager und Lagerungen</em>, <em>Automatisches Berechnungsmodell</em>, <em>Berechnungsergebnisse</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Räume und Zonen</strong></td>
+<td><em>MEP-Raum</em>, <em>Raumtrennung</em>, <em>Raumbeschriftung</em>, <em>Raumnamen</em>, <em>Gezeichnete Zone</em>, <em>Zone aus Räumen</em></td>
+</tr>
+<tr>
+<td><strong>Körper &amp; Gelände</strong></td>
+<td><strong>Körper</strong></td>
+<td><em>Volumen anzeigen ▾</em>, <em>Neuer Körper</em>, <em>Volumen platzieren</em>, <em>In 3D zeichnen</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Aus Körperflächen</strong></td>
+<td><em>Vorhangfassade</em>, <em>Dach</em>, <em>Wand</em>, <em>Decke</em>, <em>Gelände aus Fläche</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Gelände</strong></td>
+<td><em>Gelände</em>, <em>Geländeelement</em>, <em>Parkplatz</em>, <em>Bauplatz</em>, <em>Umgebung</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Gelände bearbeiten</strong></td>
+<td><em>Gelände teilen</em>, <em>Gelände zusammenführen</em>, <em>Teilbereich</em>, <em>Grundstücksgrenze</em>, <em>Geländemodellierung</em>, <em>Höhenlinienbeschriftung</em></td>
+</tr>
+<tr>
+<td><strong>Zusammenarbeit</strong></td>
+<td><strong>Gemeinsames Arbeiten</strong></td>
+<td><em>Bearbeitungsbereiche</em>, <em>Synchronisieren</em>, <em>Verlauf anzeigen</em>, <em>Freigabe aktivieren</em>, <em>Aktives Bearbeitungsset</em>, <em>Andere Sets abblenden</em>, <em>Änderungen neu laden</em>, <em>Elemente freigeben</em>, <em>Berechtigungsanfragen</em>, <em>Freigabestatus</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Archiv</strong></td>
+<td><em>Sicherung wiederherstellen</em>, <em>Veröffentlichungsoptionen</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Koordination</strong></td>
+<td><em>Kopieren und überwachen ▾</em>, <em>Koordinationsprüfung ▾</em>, <em>Koordinationsoptionen</em>, <em>Hosts neu ausrichten</em>, <em>Änderungen des föderierten Modells</em></td>
+</tr>
+<tr>
 <td><strong>Ansichten</strong></td>
 <td><strong>Grafik</strong></td>
 <td><strong>Ansichtsvorgaben ▾</strong>, <strong>Sichtbarkeit und Grafik</strong>, <strong>Filter</strong>, <strong>Dünne Linien</strong>, <em>Verdeckte Linien anzeigen</em>, <em>Verdeckte Linien entfernen</em>, <em>Schnittkontur ▾</em></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Präsentation</strong></td>
 <td><em>Realistisches Bild</em></td>
 </tr>
 <tr>
-<td></td>
 <td></td>
 <td><strong>Erzeugen</strong></td>
 <td><strong>3D-Ansicht ▾</strong>, <strong>Schnitt</strong>, <strong>Vergrößertes Detail ▾</strong>, <strong>Grundriss ▾</strong>, <strong>Gebäudeansicht ▾</strong>, <strong>Freie 2D-Ansicht</strong>, <strong>Ansicht duplizieren ▾</strong>, <strong>Legenden ▾</strong>, <strong>Bauteillisten ▾</strong>, <em>Ausdehnungsrahmen</em></td>
 </tr>
 <tr>
 <td></td>
+<td><strong>Pläne</strong></td>
+<td><strong>Plan</strong>, <strong>Ansicht</strong>, <strong>Plankopf</strong>, <strong>Revisionen</strong>, <strong>Führungsraster</strong>, <strong>Ansicht deaktivieren</strong></td>
+</tr>
+<tr>
 <td></td>
 <td><strong>Fenster</strong></td>
 <td><strong>Ansicht wechseln ▾</strong>, <strong>Andere schließen</strong>, <strong>Nebeneinander</strong>, <strong>Überlappend</strong>, <strong>Duplizieren</strong>, <strong>Maximieren</strong>, <strong>Paneele ▾</strong></td>
@@ -1260,95 +1263,44 @@ ausführt, sind ausgegraut, und ihr Tipp sagt „Noch nicht verfügbar“; <stro
 <tr>
 <td></td>
 <td><strong>Projektindex</strong></td>
-<td></td>
 <td>Der Baum der Ansichten, Bauteillisten, Pläne und Familien des Projekts</td>
 </tr>
 <tr>
-<td><strong>Koordinieren</strong></td>
-<td><strong>Koordinieren</strong></td>
-<td><strong>Energie</strong></td>
-<td><em>Energieanalyse</em></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><strong>Prüfen</strong></td>
-<td><em>Kollisionen prüfen</em>, <em>Lasten anzeigen</em>, <em>Offene Anschlüsse</em>, <em>Elektrische Lasten</em>, <em>Fluchtweg</em></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><strong>Berechnungsmodell</strong></td>
-<td><em>Berechnungsstab</em>, <em>Berechnungsfläche</em>, <em>Berechnungsknoten</em>, <em>Auflager und Lagerungen</em>, <em>Automatisches Berechnungsmodell</em>, <em>Berechnungsergebnisse</em></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><strong>Räume und Zonen</strong></td>
-<td><em>MEP-Raum</em>, <em>Raumtrennung</em>, <em>Raumbeschriftung</em>, <em>Raumnamen</em>, <em>Gezeichnete Zone</em>, <em>Zone aus Räumen</em></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><strong>Gemeinsames Arbeiten</strong></td>
-<td><em>Bearbeitungsbereiche</em>, <em>Synchronisieren</em>, <em>Verlauf anzeigen</em>, <em>Freigabe aktivieren</em>, <em>Aktives Bearbeitungsset</em>, <em>Andere Sets abblenden</em>, <em>Änderungen neu laden</em>, <em>Elemente freigeben</em>, <em>Berechtigungsanfragen</em>, <em>Freigabestatus</em></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><strong>Archiv</strong></td>
-<td><em>Sicherung wiederherstellen</em>, <em>Veröffentlichungsoptionen</em></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><strong>Koordination</strong></td>
-<td><em>Kopieren und überwachen ▾</em>, <em>Koordinationsprüfung ▾</em>, <em>Koordinationsoptionen</em>, <em>Hosts neu ausrichten</em>, <em>Änderungen des föderierten Modells</em></td>
-</tr>
-<tr>
-<td><strong>Einstellungen</strong></td>
-<td><strong>Einstellungen</strong></td>
+<td><strong>Projekt</strong></td>
 <td><strong>Einstellungen</strong></td>
 <td><strong>Materialien</strong>, <strong>Stile nach Kategorie</strong>, <strong>Fang</strong>, <strong>Projektinformationen</strong>, <strong>Projektparameter</strong>, <strong>Projekteinheiten</strong>, <strong>Einstellungen aus Projekt kopieren</strong>, <em>Allgemeine Parameter</em></td>
 </tr>
 <tr>
-<td></td>
 <td></td>
 <td><strong>Phasen</strong></td>
 <td><em>Phasen</em></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Varianten</strong></td>
 <td><em>Entwurfsvarianten</em>, <em>Hauptversion</em></td>
 </tr>
 <tr>
-<td></td>
 <td></td>
 <td><strong>Nummerierung</strong></td>
 <td><em>Neu nummerieren</em></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Position</strong></td>
 <td><em>Gemeinsame Koordinaten ▾</em>, <em>Projekt verschieben ▾</em></td>
 </tr>
 <tr>
-<td></td>
 <td></td>
 <td><strong>Projektverwaltung</strong></td>
 <td><em>Projektbilder</em>, <em>Startansicht</em></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Auswahlen</strong></td>
 <td><em>Auswahl speichern</em>, <em>Auswahl laden</em>, <em>Auswahl bearbeiten</em></td>
 </tr>
 <tr>
-<td></td>
 <td></td>
 <td><strong>Abfrage</strong></td>
 <td><em>Nach Nummer auswählen</em>, <em>Nummern der Auswahl</em>, <em>Warnungen</em></td>
@@ -1357,13 +1309,12 @@ ausführt, sind ausgegraut, und ihr Tipp sagt „Noch nicht verfügbar“; <stro
 </table>
 <p>Kursiv die Befehle, die BIMopen noch nicht ausführt; ▾ markiert ein Menü.</p>
 <p>Drücken und lösen Sie <span class="keys"><kbd class="key-alt">Alt</kbd></span> oder drücken Sie <span class="keys"><kbd class="key-f10">F10</kbd></span>, um die Tastentipps zu zeigen: ein
-Buchstabe auf jedem Eintrag der Seitenleiste und auf den Kacheln der offenen Karte das Kürzel ihres
-Werkzeugs. Tippen Sie den Buchstaben eines Eintrags, um ihn zu öffnen, dann die Buchstaben einer
-Kachel, um ihr Werkzeug zu starten; <span class="keys"><kbd class="key-escape">Esc</kbd></span> blendet die Tipps aus. Solange sie sichtbar sind, geht
-das Getippte nicht in die Befehlszeile.</p>
-<h3 id="the-home-tab">Die Werkzeuge von Erzeugen</h3>
-<p>Die Werkzeuge, die Sie zum Modellieren am meisten brauchen, stehen in <strong>Erzeugen ▸ Modellierung ▸
-Architektur</strong>:</p>
+Buchstabe auf jeder Registerkarte der Seitenleiste und auf den Kacheln der offenen Registerkarte
+das Kürzel ihres Werkzeugs. Tippen Sie den Buchstaben einer Registerkarte, um sie zu öffnen, dann
+die Buchstaben einer Kachel, um ihr Werkzeug zu starten; <span class="keys"><kbd class="key-escape">Esc</kbd></span> blendet die Tipps aus. Solange
+sie sichtbar sind, geht das Getippte nicht in die Befehlszeile.</p>
+<h3 id="the-home-tab">Die Werkzeuge von Modellieren</h3>
+<p>Die Werkzeuge, die Sie zum Modellieren am meisten brauchen, stehen in <strong>Modellieren</strong>:</p>
 <table>
 <thead>
 <tr>
@@ -1393,7 +1344,7 @@ Architektur</strong>:</p>
 <p><strong>Flächenumriss</strong> und <strong>Fläche</strong> funktionieren in einem Flächenplan: Solange keiner
 geöffnet ist, sind sie ausgegraut, und ihre QuickInfo fordert dazu auf, zuerst einen Flächenplan zu
 öffnen.</p>
-<h3 id="the-annotate-tab">Die Werkzeuge von Dokumentieren</h3>
+<h3 id="the-annotate-tab">Die Werkzeuge von Beschriftungen</h3>
 <table>
 <thead>
 <tr>
@@ -1402,10 +1353,6 @@ geöffnet ist, sind sie ausgegraut, und ihre QuickInfo fordert dazu auf, zuerst 
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><strong>Pläne</strong></td>
-<td><strong>Plan</strong>: ein neuer Plan mit dem Plankopf Ihrer Wahl; <strong>Ansicht</strong>: platziert eine Ansicht auf dem geöffneten Plan</td>
-</tr>
 <tr>
 <td><strong>Bemaßung</strong></td>
 <td><strong>Ausgerichtet</strong> <code>DI</code>, <strong>Linear</strong> <code>DL</code>, <strong>Winkel</strong> <code>DA</code></td>
@@ -1424,10 +1371,9 @@ geöffnet ist, sind sie ausgegraut, und ihre QuickInfo fordert dazu auf, zuerst 
 </tr>
 </tbody>
 </table>
-<p><strong>Pläne ▸ Ansicht</strong> funktioniert nur, solange ein Plan geöffnet ist.</p>
 <figure>
-<img alt="Die Werkzeuge von Dokumentieren: die Gruppe Pläne, dann Bemaßung, Detail und Text mit ihren Kacheln" src="../assets/screens/if-document-tools.webp"/>
-<figcaption>Die Werkzeuge von Dokumentieren</figcaption>
+<img alt="Die Werkzeuge von Beschriftungen: Bemaßung, Detail, Text, Beschriftung und Symbol mit ihren Kacheln" src="../assets/screens/if-document-tools.webp"/>
+<figcaption>Die Werkzeuge von Beschriftungen</figcaption>
 </figure>
 <h3 id="the-view-tab">Die Werkzeuge von Ansichten</h3>
 <figure>
@@ -1447,6 +1393,10 @@ geöffnet ist, sind sie ausgegraut, und ihre QuickInfo fordert dazu auf, zuerst 
 <td><strong>3D-Ansicht ▾</strong> (<strong>Standard-3D-Ansicht</strong>, <strong>Ansicht speichern</strong>), <strong>Grundriss ▾</strong> (<strong>Grundriss</strong>, <strong>Flächenplan</strong>), <strong>Ansicht duplizieren ▾</strong> (<strong>Duplizieren</strong>, <strong>Mit Detaillierung duplizieren</strong>), <strong>Schnitt</strong> <code>SE</code>, <strong>Gebäudeansicht ▾</strong> (<strong>Gebäudeansicht</strong> <code>EL</code>, <strong>Rahmenansicht</strong>), <strong>Vergrößertes Detail</strong> <code>DT</code> (ein Detailausschnitt), <strong>Freie 2D-Ansicht</strong> <code>VD</code>, <strong>Bauteillisten ▾</strong> (<strong>Bauteilliste/Mengen</strong>, <strong>Materialliste</strong>, <strong>Planliste</strong>, <strong>Anmerkungsblock</strong>, <strong>Vordefinierte Bauteillisten</strong>)</td>
 </tr>
 <tr>
+<td><strong>Pläne</strong></td>
+<td><strong>Plan</strong>: ein neuer Plan mit dem Plankopf Ihrer Wahl; <strong>Ansicht</strong>: platziert eine Ansicht auf dem geöffneten Plan</td>
+</tr>
+<tr>
 <td><strong>Grafik</strong></td>
 <td><strong>Sichtbarkeit und Grafik</strong> <code>VG</code>, <strong>Filter</strong>, <strong>Ansichtsvorlagen</strong>, <strong>Vorlage auf aktuelle Ansicht anwenden</strong>, <strong>Vorlage aus aktueller Ansicht erstellen</strong></td>
 </tr>
@@ -1456,12 +1406,13 @@ geöffnet ist, sind sie ausgegraut, und ihre QuickInfo fordert dazu auf, zuerst 
 </tr>
 </tbody>
 </table>
+<p><strong>Pläne ▸ Ansicht</strong> funktioniert nur, solange ein Plan geöffnet ist.</p>
 <p><strong>Ansicht speichern</strong> funktioniert nur, solange eine 3D-Ansicht geöffnet ist, und <strong>Mit
 Detaillierung duplizieren</strong> nur für Ansichten, die keine 3D-Ansichten sind. Unter den Werkzeugen
 enthält die Karte <strong>Projektindex</strong> den ganzen Baum des Projekts.</p>
 <p>Jedes ▾-Menü listet ausgegraut auch die noch nicht verfügbaren Einträge auf; die Befehlssuche
 findet sie alle.</p>
-<h3 id="the-manage-tab">Die Werkzeuge von Einstellungen</h3>
+<h3 id="the-manage-tab">Die Werkzeuge von Projekt</h3>
 <table>
 <thead>
 <tr>
@@ -1485,20 +1436,22 @@ ist die Kachel hervorgehoben, wie der Schalter <strong>Fang</strong> der Statusl
 Fangen…</strong> öffnet das Fenster <strong>Fang</strong>: die Längen- und Winkelinkremente, die Objektfänge und die
 Überschreibungen (siehe <a href="#snaps">Fang</a>).</p>
 <figure>
-<img alt="Die Werkzeuge von Einstellungen: Materialien, Stile nach Kategorie, Fang, Projektinformationen, Projekteinheiten, die Parameter, Nicht verwendete löschen und Weitere Einstellungen" src="../assets/screens/if-settings-tools.webp"/>
-<figcaption>Die Werkzeuge von Einstellungen</figcaption>
+<img alt="Die Werkzeuge von Projekt: Materialien, Stile nach Kategorie, Fang, Projektinformationen, Projekteinheiten, die Parameter, Nicht verwendete löschen und Weitere Einstellungen" src="../assets/screens/if-settings-tools.webp"/>
+<figcaption>Die Werkzeuge von Projekt</figcaption>
 </figure>
-<h3 id="the-contextual-tab">Die kontextabhängige Karte</h3>
+<h3 id="the-contextual-tab">Die kontextabhängige Registerkarte Bearbeiten</h3>
 <figure>
-<img alt="Das Wandwerkzeug bei der Arbeit: die kontextabhängige Karte oben im Werkzeugbereich und der Optionsstreifen über der Ansicht" src="../assets/screens/bimopen-wall.png"/>
-<figcaption>Das Wandwerkzeug bei der Arbeit: die kontextabhängige Karte oben im Werkzeugbereich und der Optionsstreifen über der Ansicht</figcaption>
+<img alt="Das Wandwerkzeug bei der Arbeit: die kontextabhängige Registerkarte Bearbeiten im Werkzeugbereich und der Optionsstreifen über der Ansicht" src="../assets/screens/bimopen-wall.png"/>
+<figcaption>Das Wandwerkzeug bei der Arbeit: die kontextabhängige Registerkarte Bearbeiten im Werkzeugbereich und der Optionsstreifen über der Ansicht</figcaption>
 </figure>
-<p>Wenn Sie ein Werkzeug starten oder etwas auswählen, erscheint oben im Werkzeugbereich eine Karte,
-welcher Eintrag der Seitenleiste auch geöffnet ist, mit dem Namen dessen, was Sie gerade tun, in
-der Akzentfarbe: <strong>Wand zeichnen</strong> beim Zeichnen von Wänden, <strong>Auswahl: Wände</strong> bei ausgewählten
-Wänden, <strong>Mehrfachauswahl</strong> bei Elementen verschiedener Kategorien, <strong>Bearbeiten | …</strong> in den
-anderen Modi. Wenn das Werkzeug endet oder die Auswahl aufgehoben wird, verschwindet die Karte;
-<span class="keys"><kbd class="key-escape">Esc</kbd></span> oder ein Klick ins Leere bewirkt dasselbe.</p>
+<p>Wenn Sie ein Werkzeug starten oder etwas auswählen, wählt die Seitenleiste von selbst die
+kontextabhängige Registerkarte <strong>Bearbeiten</strong>, gestrichelt umrandet, und der Werkzeugbereich zeigt
+ihre Gruppen unter dem Namen dessen, was Sie gerade tun, in der Akzentfarbe: <strong>Wand zeichnen</strong> beim
+Zeichnen von Wänden, <strong>Auswahl: Wände</strong> bei ausgewählten Wänden, <strong>Mehrfachauswahl</strong> bei Elementen
+verschiedener Kategorien, <strong>Bearbeiten | …</strong> in den anderen Modi. Wenn das Werkzeug endet oder die
+Auswahl aufgehoben wird, kehrt der Werkzeugbereich zu der Registerkarte zurück, auf der Sie waren;
+<span class="keys"><kbd class="key-escape">Esc</kbd></span> oder ein Klick ins Leere bewirkt dasselbe. Ein Klick auf <strong>Bearbeiten</strong> zeigt ihre Gruppen
+jederzeit.</p>
 <p>Sie hat immer diese Gruppen:</p>
 <table>
 <thead>
@@ -1576,7 +1529,7 @@ anderen Modi. Wenn das Werkzeug endet oder die Auswahl aufgehoben wird, verschwi
 </tbody>
 </table>
 <figure>
-<img alt="Die Kontextkarte einer gewählten Wand oben im Werkzeugbereich: ihr Name in der Akzentfarbe, Eigenschaften, Auswahl mit Filter, Zwischenablage und Formen" src="../assets/screens/if-contextual.webp"/>
+<img alt="Die kontextabhängige Registerkarte Bearbeiten einer gewählten Wand: ihr Name in der Akzentfarbe, Eigenschaften, Auswahl mit Filter, Zwischenablage und Formen" src="../assets/screens/if-contextual.webp"/>
 <figcaption>Die Kontextkarte einer Auswahl</figcaption>
 </figure>
 <h2 id="options-bar">Optionsstreifen</h2>
@@ -1635,9 +1588,11 @@ Mittelpunkte und Schnittpunkte. Ist <strong>Ortho</strong> ausgeschaltet, erziel
 <span class="keys"><kbd class="key-shift">Shift</kbd></span> beim Zeichnen dieselbe Einschränkung; ist es eingeschaltet, hebt <span class="keys"><kbd class="key-shift">Shift</kbd></span> sie auf.</p>
 <h2 id="properties">Elementbereich</h2>
 <p>Der Elementbereich rechts zeigt und ändert die Parameter dessen, woran Sie gerade arbeiten. Seine
-Kopfzeile hat die Kategorie und den Namen dessen, was er zeigt, <strong>Schließen</strong> (hebt die Auswahl
-auf) und <strong>Weitere Aktionen</strong> (<strong>⋯</strong>: <strong>Typparameter</strong> und die Aktionen der kontextabhängigen
-Karte). Unter der Kopfzeile seine Registerkarten:</p>
+Kopfzeile ist eine einzige Zeile: der Typ mit seinem Menü und darunter die Familie, die Anzahl der
+gewählten Elemente, etwa <strong>Wände (1)</strong>, und <strong>Typparameter</strong>, das die Parameter des Typs öffnet.
+Rechts davon <strong>Schließen</strong> (hebt die Auswahl auf) und <strong>Weitere Aktionen</strong> (<strong>⋯</strong>:
+<strong>Typparameter</strong> und die Aktionen der kontextabhängigen Registerkarte). Unter der Kopfzeile seine
+Registerkarten; die Zeilen der Parameter sind niedrig, mit einer breiten Spalte für die Werte:</p>
 <figure>
 <img alt="Der Elementbereich ohne Auswahl: die Eigenschaften des Erdgeschossgrundrisses mit Grafik, Umfang und ID-Daten" src="../assets/screens/if-element-panel.webp"/>
 <figcaption>Der Elementbereich: die Eigenschaften der Ansicht</figcaption>
@@ -1668,12 +1623,12 @@ Karte). Unter der Kopfzeile seine Registerkarten:</p>
 </tr>
 </tbody>
 </table>
-<p>Die <strong>Typenauswahl</strong> zeigt die Familie in kleiner Schrift, darunter den Typ und eine Vorschau des
-Typs: Wände, Geschossdecken und Dächer mit ihren Schichten, Türen, Fenster und Bauteile als kleines
-Bild. Klicken Sie darauf, um einen anderen Typ zu wählen: Die ausgewählten Elemente wechseln den
-Typ, oder, solange ein Werkzeug aktiv ist, erhält das nächste Element diesen Typ. Geöffnet sucht
-sie die Typen nach Namen; sie sind nach Familie gruppiert, jeder mit seiner Vorschau. Die
-Pfeiltasten bewegen, <span class="keys"><kbd class="key-enter">Enter</kbd></span> wählt, <span class="keys"><kbd class="key-escape">Esc</kbd></span> schließt die Liste.</p>
+<p>Die <strong>Typauswahl</strong> ist die Kopfzeile des Bereichs: eine kleine Vorschau des Typs (Wände, Böden
+und Dächer als ihre Schichten, Türen, Fenster und Bauteile als Bild), der Name des Typs mit ▾ und
+darunter die Familie. Klicken Sie darauf, um einen anderen Typ zu wählen: Die gewählten Elemente
+ändern ihren Typ, oder bei aktivem Werkzeug erhält das nächste Element diesen Typ. Die Liste öffnet
+sich über den Zeilen: Suchen Sie die Typen nach Namen; sie sind nach Familie gruppiert, jeder mit
+seiner Vorschau. Die Pfeiltasten bewegen, <span class="keys"><kbd class="key-enter">Enter</kbd></span> wählt, <span class="keys"><kbd class="key-escape">Esc</kbd></span> schließt die Liste.</p>
 <figure>
 <img alt="Die geöffnete Typauswahl einer gewählten Wand: das Suchfeld und die nach Familie gruppierten Wandtypen, jeder mit seiner Vorschau" src="../assets/screens/if-type-selector.webp"/>
 <figcaption>Die Typauswahl</figcaption>
@@ -1814,6 +1769,10 @@ drei Schaltflächen wählen die Größe: <strong>Vorschauen</strong>, <strong>Ko
 <img alt="Die Leiste im Familienmodus: eine Vorschau je Typ, zuerst die Wände, zum Anklicken oder Ziehen in einen Grundriss" src="../assets/screens/if-strip-families.webp"/>
 <figcaption>Die Leiste im Familienmodus</figcaption>
 </figure>
+<p>Passen die Gruppen nicht neben die Modi, werden sie in einem Menü zusammengefasst, etwa <strong>Alle ▾</strong>.
+Um dem Zeichenbereich den Platz des Streifens zu geben, blenden Sie ihn mit <strong>Ansichtenleiste</strong>
+aus, der letzten Schaltfläche der Statusleiste, oder mit <span class="keys"><kbd class="key-f9">F9</kbd></span>; dieselbe Schaltfläche oder Taste
+holt ihn zurück.</p>
 <h2 id="panels">Bereiche</h2>
 <p>Der Elementbereich lässt sich verschieben. Ziehen Sie ihn an seiner Kopfzeile: Er dockt links oder
 rechts vom Zeichenbereich an oder schwebt dort, wo Sie ihn loslassen. Die Schaltflächen oben rechts
@@ -2122,10 +2081,11 @@ dessen, was getan wurde, die ausgeführten Befehle, ihre Ergebnisse und die Fehl
 <li>während Sie ziehen, die Länge der Verschiebung, als <strong>Verschieben: 1500</strong>;</li>
 <li>andernfalls die letzte Zeile des Befehlsprotokolls.</li>
 </ul>
-<p>Rechts: die Koordinaten des Cursors (<strong>X</strong>, <strong>Y</strong>, <strong>Z</strong>) in Metern; die aktive Ebene, deren Menü
-den Grundriss einer anderen Ebene öffnet; die Anzahl der ausgewählten Elemente, die <strong>Filter</strong>
-öffnet; die Schalter <strong>Auswählen und ziehen</strong> (Elemente ziehen, ohne sie vorher zu wählen),
-<strong>Fang</strong>, <strong>Raster</strong> und <strong>Ortho</strong>; der Maßstab der Ansicht; und das <strong>Befehlsprotokoll</strong>.</p>
+<p>Rechts: die Koordinaten des Cursors (<strong>X</strong>, <strong>Y</strong>, <strong>Z</strong>) in Metern; die aktive Ebene, deren
+Menü den Grundriss einer anderen Ebene öffnet; die Anzahl der gewählten Elemente, die <strong>Filter</strong>
+öffnet; die Schalter <strong>Auswählen und ziehen</strong> (Elemente ziehen, ohne sie vorher auszuwählen),
+<strong>Fang</strong>, <strong>Raster</strong> und <strong>Ortho</strong>; der Maßstab der Ansicht; <strong>Befehlsprotokoll</strong>; und
+<strong>Ansichtenleiste</strong> (<span class="keys"><kbd class="key-f9">F9</kbd></span>), die den Ansichtenstreifen aus- oder wieder einblendet.</p>
 <h2 id="selecting-in-short">Auswählen in Kürze</h2>
 <p>Das <a href="../selection-and-modify/">Kapitel zum Auswählen und Ändern</a> beschreibt das Auswählen
 vollständig. Das Wichtigste:</p>

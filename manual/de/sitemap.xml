@@ -2,58 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://atsanna.github.io/bimopen-site/manual/de/</loc>
-         <lastmod>2026-10-21</lastmod>
+         <lastmod>2026-10-25</lastmod>
     </url>
     <url>
          <loc>https://atsanna.github.io/bimopen-site/manual/de/annotation/</loc>
-         <lastmod>2026-10-21</lastmod>
+         <lastmod>2026-10-25</lastmod>
     </url>
     <url>
          <loc>https://atsanna.github.io/bimopen-site/manual/de/command-line-and-mcp/</loc>
-         <lastmod>2026-10-21</lastmod>
+         <lastmod>2026-10-25</lastmod>
     </url>
     <url>
          <loc>https://atsanna.github.io/bimopen-site/manual/de/documentation/</loc>
-         <lastmod>2026-10-21</lastmod>
+         <lastmod>2026-10-25</lastmod>
     </url>
     <url>
          <loc>https://atsanna.github.io/bimopen-site/manual/de/floors-roofs-stairs/</loc>
-         <lastmod>2026-10-21</lastmod>
+         <lastmod>2026-10-25</lastmod>
     </url>
     <url>
          <loc>https://atsanna.github.io/bimopen-site/manual/de/getting-started/</loc>
-         <lastmod>2026-10-21</lastmod>
+         <lastmod>2026-10-25</lastmod>
+    </url>
+    <url>
+         <loc>https://atsanna.github.io/bimopen-site/manual/de/import-and-conversion/</loc>
+         <lastmod>2026-10-25</lastmod>
     </url>
     <url>
          <loc>https://atsanna.github.io/bimopen-site/manual/de/interface-styles/</loc>
-         <lastmod>2026-10-21</lastmod>
+         <lastmod>2026-10-25</lastmod>
     </url>
     <url>
          <loc>https://atsanna.github.io/bimopen-site/manual/de/interface/</loc>
-         <lastmod>2026-10-21</lastmod>
+         <lastmod>2026-10-25</lastmod>
     </url>
     <url>
          <loc>https://atsanna.github.io/bimopen-site/manual/de/keyboard-shortcuts/</loc>
-         <lastmod>2026-10-21</lastmod>
+         <lastmod>2026-10-25</lastmod>
     </url>
     <url>
          <loc>https://atsanna.github.io/bimopen-site/manual/de/projects-and-files/</loc>
-         <lastmod>2026-10-21</lastmod>
+         <lastmod>2026-10-25</lastmod>
     </url>
     <url>
          <loc>https://atsanna.github.io/bimopen-site/manual/de/selection-and-modify/</loc>
-         <lastmod>2026-10-21</lastmod>
+         <lastmod>2026-10-25</lastmod>
     </url>
     <url>
          <loc>https://atsanna.github.io/bimopen-site/manual/de/troubleshooting/</loc>
-         <lastmod>2026-10-21</lastmod>
+         <lastmod>2026-10-25</lastmod>
     </url>
     <url>
          <loc>https://atsanna.github.io/bimopen-site/manual/de/views-and-graphics/</loc>
-         <lastmod>2026-10-21</lastmod>
+         <lastmod>2026-10-25</lastmod>
     </url>
     <url>
          <loc>https://atsanna.github.io/bimopen-site/manual/de/walls-doors-windows/</loc>
-         <lastmod>2026-10-21</lastmod>
+         <lastmod>2026-10-25</lastmod>
     </url>
 </urlset>

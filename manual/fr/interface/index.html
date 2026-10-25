@@ -226,14 +226,14 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#the-home-tab">
 <span class="md-ellipsis">
-      Les outils de Créer
+      Les outils de Modéliser
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#the-annotate-tab">
 <span class="md-ellipsis">
-      Les outils de Documenter
+      Les outils d'Annotations
     </span>
 </a>
 </li>
@@ -247,14 +247,14 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#the-manage-tab">
 <span class="md-ellipsis">
-      Les outils de Paramètres
+      Les outils de Projet
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#the-contextual-tab">
 <span class="md-ellipsis">
-      La carte contextuelle
+      L'onglet contextuel Édition
     </span>
 </a>
 </li>
@@ -404,6 +404,14 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../import-and-conversion/">
+<span class="md-ellipsis">
+    Importation et conversion
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../selection-and-modify/">
 <span class="md-ellipsis">
     Sélection et modification
@@ -533,14 +541,14 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#the-home-tab">
 <span class="md-ellipsis">
-      Les outils de Créer
+      Les outils de Modéliser
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#the-annotate-tab">
 <span class="md-ellipsis">
-      Les outils de Documenter
+      Les outils d'Annotations
     </span>
 </a>
 </li>
@@ -554,14 +562,14 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#the-manage-tab">
 <span class="md-ellipsis">
-      Les outils de Paramètres
+      Les outils de Projet
     </span>
 </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#the-contextual-tab">
 <span class="md-ellipsis">
-      La carte contextuelle
+      L'onglet contextuel Édition
     </span>
 </a>
 </li>
@@ -711,10 +719,12 @@ l'autre.</p>
 <p>La fenêtre comporte ces parties :</p>
 <ol>
 <li>la <strong>barre latérale</strong>, sur le bord gauche : la marque de BIMopen, qui ouvre le menu de
-   l'application, puis <strong>Accueil</strong>, <strong>Créer</strong>, <strong>Documenter</strong>, <strong>Vues</strong> et <strong>Coordonner</strong>, et en
-   bas le projet ouvert et <strong>Paramètres</strong> ;</li>
-<li>le <strong>panneau d'outils</strong>, à côté de la barre latérale : les outils de l'entrée choisie dans la
-   barre latérale, sous forme de cartes de tuiles ;</li>
+   l'application, puis <strong>Accueil</strong>, l'onglet contextuel <strong>Édition</strong>, les onglets <strong>Modéliser</strong>,
+   <strong>Structure</strong>, <strong>Béton armé</strong>, <strong>Métal</strong>, <strong>Préfabrication</strong>, <strong>MEP</strong>, <strong>Lier et importer</strong>,
+   <strong>Annotations</strong>, <strong>Vérifier</strong>, <strong>Volume et site</strong>, <strong>Collaborer</strong>, <strong>Vues</strong> et <strong>Projet</strong>, et en
+   bas <strong>Paramètres</strong> ;</li>
+<li>le <strong>panneau d'outils</strong>, à côté de la barre latérale : les groupes de l'onglet choisi dans la
+   barre latérale, sous forme de blocs encadrés de tuiles ;</li>
 <li>la <strong>barre supérieure</strong> : le projet et la vue active, la recherche de commandes, qui est aussi
    la ligne de commande, l'état d'enregistrement, <strong>Annuler</strong> et <strong>Rétablir</strong>, les outils d'accès
    rapide, le thème clair ou sombre, le menu <strong>?</strong> et <strong>Options</strong> ;</li>
@@ -722,14 +732,17 @@ l'autre.</p>
    barre de vue en bas ; pendant qu'un outil travaille, le <strong>bandeau des options</strong> passe
    par-dessus ;</li>
 <li>le <strong>panneau de l'élément</strong>, à droite : les propriétés de la sélection, ou de la vue active ;</li>
-<li>la <strong>barre des vues et des familles</strong>, sous la zone de dessin ;</li>
+<li>la <strong>barre des vues et des familles</strong>, sous la zone de dessin, que vous pouvez masquer
+   (<span class="keys"><kbd class="key-f9">F9</kbd></span>) ;</li>
 <li>la <strong>barre d'état</strong>, tout en bas.</li>
 </ol>
 <p>Les panneaux gardent leur largeur quoi qu'ils affichent : un nom long est raccourci par « … » et
 son info-bulle le montre en entier. Faites glisser le bord du panneau d'outils ou du panneau de
 l'élément pour l'élargir ou le rétrécir ; BIMopen le retient pour la session suivante. Un clic sur
-l'entrée de la barre latérale déjà choisie replie le panneau d'outils, et un second clic le
-rouvre.</p>
+l'onglet déjà choisi de la barre latérale replie le panneau d'outils, et un second clic le
+rouvre. Sans tactile, l'interface est compacte, pour laisser le plus de place possible à la zone
+de dessin ; en mode tactile, les boutons restent grands (voir <a href="../interface-styles/#touch-mode">Styles
+d'interface</a>).</p>
 <p>En arabe, toute la fenêtre est inversée en miroir : la barre latérale et le panneau d'outils sont
 à droite, le panneau de l'élément à gauche, et les barres se lisent de droite à gauche.</p>
 <h2 id="application-menu">Menu de l'application</h2>
@@ -751,7 +764,7 @@ fichier sont dans ce menu.</p>
 </tr>
 <tr>
 <td><strong>Ouvrir…</strong></td>
-<td>Ouvre un projet <code>.bimopen</code>, ou importe un fichier <code>.rvt</code> (expérimental : seulement le nom du projet et les noms des niveaux), choisi dans une boîte de dialogue de fichier. Dans le navigateur, faites plutôt glisser le fichier dans la page</td>
+<td>Ouvre un projet <code>.bimopen</code>, ou ouvre un fichier <code>.ifc</code> comme nouveau projet, choisi dans une boîte de dialogue de fichier. Dans le navigateur, faites plutôt glisser le fichier dans la page</td>
 </tr>
 <tr>
 <td><strong>Projet d'exemple</strong></td>
@@ -808,8 +821,9 @@ confirmation : enregistrez-le d'abord si vous souhaitez le conserver.</p>
 enregistrées</strong> tant qu'il y a des modifications à enregistrer.</p>
 </div>
 <h3 id="options">Options</h3>
-<p>L'engrenage à l'extrémité droite de la barre supérieure, ou <strong>Menu de l'application ▸ Options</strong>,
-ouvre <strong>Options</strong>. Elle comporte, entre autres, ces réglages :</p>
+<p>L'engrenage à l'extrémité droite de la barre supérieure, <strong>Paramètres</strong> en bas de la barre
+latérale, ou <strong>Menu de l'application ▸ Options</strong>, ouvre <strong>Options</strong>. Elle comporte, entre autres,
+ces réglages :</p>
 <table>
 <thead>
 <tr>
@@ -930,329 +944,317 @@ avec les outils dans l'ordre : <strong>Monter</strong> et <strong>Descendre</str
 ouvre la page de ce que vous faites : la boîte de dialogue ouverte, la tuile sous la souris (son
 info-bulle se termine par <strong>Appuyez sur F1 pour plus d'informations</strong>) ou l'outil actif.</p>
 <h2 id="ribbon">Barre latérale et panneau d'outils</h2>
-<p>Chaque entrée de la barre latérale montre ses outils dans le panneau d'outils, sous forme de
-cartes : une carte a un titre, ses groupes, et dans chaque groupe de grandes tuiles avec une icône
-et un nom. Une tuile avec une petite marque ▾ a un menu : un clic sur la tuile lance la commande,
-un clic sur la marque ouvre le menu de ses variantes. Poser la souris sur une tuile montre ce
-qu'elle fait et, entre parenthèses, le raccourci à taper pour la lancer. Les commandes que BIMopen
-n'exécute pas encore sont grisées, et leur info-bulle dit « Pas encore disponible » ; <strong>Niveau</strong>,
-<strong>Quadrillage</strong> et <strong>Plan guide</strong> sont grisés dans une vue 3D (« Non disponible dans la vue 3D »).</p>
+<p>La barre latérale liste les onglets du ruban du style <strong>Classique</strong>, avec les mêmes noms et dans
+le même ordre. Cliquez sur un onglet : le panneau d'outils montre ses groupes sous forme de blocs
+encadrés, chacun avec son nom en bas, et dans chaque bloc ses commandes dans l'ordre du ruban,
+trois par ligne, sous forme de tuiles avec une icône et un nom. Un nom long tient sur trois lignes
+au plus, coupé entre les mots ou à une syllabe avec un trait d'union. Une tuile avec une petite
+marque ▾ dans son coin a un menu : un clic sur la tuile lance la commande, un clic sur la marque
+ouvre le menu de ses variantes. Poser la souris sur une tuile montre ce qu'elle fait et, entre
+parenthèses, le raccourci à taper pour la lancer. Les commandes que BIMopen n'exécute pas encore
+sont grisées, et leur info-bulle dit « Pas encore disponible » ; <strong>Niveau</strong>, <strong>Quadrillage</strong> et
+<strong>Plan guide</strong> sont grisés dans une vue 3D (« Non disponible dans la vue 3D »). Quand un onglet a
+plus de commandes que le panneau n'en montre à la fois (<strong>Modéliser</strong>, <strong>Structure</strong>), le panneau
+défile. <strong>Paramètres</strong>, en bas de la barre latérale, ouvre <strong>Options</strong>.</p>
 <figure>
-<img alt="Le rail et le panneau d'outils avec Créer ouvert : la carte Modélisation avec Architecture, Structure et Réseaux, et les groupes Construire, Liaisons verticales, Éléments 3D et Pièces et surfaces" src="../assets/screens/if-rail-create.webp"/>
-<figcaption>Le rail et les outils de Créer</figcaption>
+<img alt="La barre latérale et le panneau d'outils avec Modéliser ouvert : les blocs Construire, Liaisons verticales, Éléments 3D et Pièces et surfaces, trois tuiles par ligne, chaque bloc avec son nom en bas" src="../assets/screens/if-rail-create.webp"/>
+<figcaption>La barre latérale et l'onglet Modéliser</figcaption>
 </figure>
 <table>
 <thead>
 <tr>
-<th>Barre latérale</th>
-<th>Carte</th>
+<th>Onglet</th>
 <th>Groupe</th>
 <th>Commandes</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Créer</strong></td>
-<td><strong>Modélisation ▸ Architecture</strong></td>
+<td><strong>Modéliser</strong></td>
 <td><strong>Construire</strong></td>
 <td><strong>Mur ▾</strong>, <strong>Porte</strong>, <strong>Fenêtre</strong>, <strong>Objet ▾</strong>, <em>Colonne ▾</em>, <strong>Toit ▾</strong>, <em>Faux plafond</em>, <strong>Revêtement de sol ▾</strong>, <strong>Mur-rideau</strong>, <strong>Quadrillage de façade</strong>, <strong>Meneau</strong></td>
 </tr>
 <tr>
-<td></td>
 <td></td>
 <td><strong>Liaisons verticales</strong></td>
 <td><strong>Garde-corps ▾</strong>, <strong>Rampe</strong>, <strong>Escalier</strong></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Éléments 3D</strong></td>
 <td><em>Texte 3D</em>, <em>Ligne 3D</em>, <em>Groupe ▾</em></td>
 </tr>
 <tr>
-<td></td>
 <td></td>
 <td><strong>Pièces et surfaces</strong></td>
 <td><strong>Pièce</strong>, <strong>Séparateur de pièces</strong>, <strong>Étiquette de pièce ▾</strong>, <strong>Surface ▾</strong>, <strong>Contour de surface</strong>, <strong>Étiquette de surface ▾</strong></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Ouvertures</strong></td>
 <td><em>Par face</em>, <em>Gaine</em>, <em>Dans un mur</em>, <em>Ouverture verticale</em>, <em>Lucarne</em></td>
 </tr>
 <tr>
-<td></td>
 <td></td>
 <td><strong>Références</strong></td>
 <td><strong>Niveau</strong>, <strong>Quadrillage</strong></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Plan de construction</strong></td>
 <td><strong>Définir</strong>, <strong>Afficher</strong>, <strong>Plan guide</strong>, <em>Vue du plan</em></td>
 </tr>
 <tr>
-<td></td>
-<td><strong>Modélisation ▸ Structure</strong></td>
+<td><strong>Structure</strong></td>
 <td><strong>Éléments structurels</strong></td>
 <td><em>Poutre</em>, <em>Mur porteur ▾</em>, <em>Poteau porteur</em>, <em>Plancher porteur ▾</em>, <em>Treillis</em>, <em>Contreventement</em>, <em>Trame de poutres</em></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Assemblages</strong></td>
 <td><em>Assemblage ▾</em>, <em>Assemblages automatiques</em></td>
 </tr>
 <tr>
-<td></td>
 <td></td>
 <td><strong>Fondations</strong></td>
 <td><em>Semelle isolée</em>, <em>Semelle filante</em>, <em>Radier ▾</em></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Éléments 3D</strong></td>
 <td><strong>Objet ▾</strong>, <em>Texte 3D</em>, <em>Ligne 3D</em>, <em>Groupe ▾</em></td>
 </tr>
 <tr>
-<td></td>
 <td></td>
 <td><strong>Ouvertures</strong></td>
 <td><em>Normale à la face</em>, <em>Gaine</em>, <em>Dans un mur</em>, <em>Ouverture verticale</em>, <em>Lucarne</em></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Références</strong></td>
 <td><strong>Niveau</strong>, <strong>Quadrillage</strong></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Plan de construction</strong></td>
 <td><strong>Définir</strong>, <strong>Afficher</strong>, <strong>Plan guide</strong>, <em>Vue du plan</em></td>
 </tr>
 <tr>
-<td></td>
-<td><strong>Modélisation ▸ MEP</strong></td>
-<td><strong>Air</strong></td>
-<td><em>Gaine</em>, <em>Gaine depuis un tracé</em>, <em>Raccord de gaine</em>, <em>Accessoire de gaine</em>, <em>Isolation de gaine</em>, <em>Gaine souple</em>, <em>Bouche d'air</em></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><strong>Composants préfabriqués</strong></td>
-<td><em>Élément préfabriqué</em>, <em>Tracé multipoint</em></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><strong>Détails des réseaux</strong></td>
-<td><em>Renfort de gaine</em></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><strong>Schémas P&amp;ID</strong></td>
-<td><em>Éditeur P&amp;ID</em></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><strong>Mécanique</strong></td>
-<td><em>Équipement mécanique</em>, <em>Dispositif de régulation</em></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><strong>Autres réseaux</strong></td>
-<td><em>Plomberie ▾</em>, <em>Électricité ▾</em>, <em>Modélisation ▾</em>, <strong>Plan de construction ▾</strong></td>
-</tr>
-<tr>
-<td></td>
 <td><strong>Béton armé</strong></td>
 <td><strong>Armatures</strong></td>
 <td><em>Armature</em>, <em>Armature le long d'un tracé</em>, <em>Armature adaptative</em>, <em>Armature sur une surface</em>, <em>Treillis sur une surface</em>, <em>Treillis unique</em>, <em>Enrobage</em>, <em>Manchon</em></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Paramètres</strong></td>
 <td><em>Options d'enrobage</em>, <em>Options d'armature</em></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Plan de construction</strong></td>
 <td><strong>Définir</strong>, <strong>Afficher</strong>, <strong>Plan guide</strong>, <em>Vue du plan</em></td>
 </tr>
 <tr>
-<td></td>
 <td><strong>Métal</strong></td>
 <td><strong>Assemblages</strong></td>
 <td><em>Assemblage ▾</em>, <em>Assemblages automatiques</em></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Éléments de charpente</strong></td>
 <td><em>Platine</em>, <em>Boulons ▾</em>, <em>Soudure</em></td>
 </tr>
 <tr>
-<td></td>
 <td></td>
 <td><strong>Usinages</strong></td>
 <td><em>Grugeage</em>, <em>Coupe biaise</em>, <em>Raccourcir</em>, <em>Coupe profilée</em></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Coupes automatiques</strong></td>
 <td><em>Coupe d'extrémité</em>, <em>Assemblage d'angle ▾</em>, <em>Intersection</em>, <em>Couper avec</em></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Plan de construction</strong></td>
 <td><strong>Définir</strong>, <strong>Afficher</strong>, <strong>Plan guide</strong>, <em>Vue du plan</em></td>
 </tr>
 <tr>
-<td></td>
 <td><strong>Préfabrication</strong></td>
 <td><strong>Subdivision</strong></td>
 <td><em>Subdiviser</em></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Jonctions</strong></td>
 <td><em>Pièces d'assemblage</em></td>
 </tr>
 <tr>
-<td></td>
 <td></td>
 <td><strong>Armatures</strong></td>
 <td><em>Armature</em>, <em>Treillis sur mesure</em></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Production</strong></td>
 <td><em>Plans d'atelier</em>, <em>Exporter pour la FAO</em></td>
 </tr>
 <tr>
-<td></td>
 <td></td>
 <td><strong>Paramètres</strong></td>
 <td><em>Réglages de préfabrication</em>, <em>Profilés formés à froid</em></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Mise à jour automatique</strong></td>
 <td><em>Suspendre ▾</em></td>
 </tr>
 <tr>
+<td><strong>MEP</strong></td>
+<td><strong>Air</strong></td>
+<td><em>Gaine</em>, <em>Gaine depuis un tracé</em>, <em>Raccord de gaine</em>, <em>Accessoire de gaine</em>, <em>Isolation de gaine</em>, <em>Gaine souple</em>, <em>Bouche d'air</em></td>
+</tr>
+<tr>
 <td></td>
+<td><strong>Composants préfabriqués</strong></td>
+<td><em>Élément préfabriqué</em>, <em>Tracé multipoint</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Détails des réseaux</strong></td>
+<td><em>Renfort de gaine</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Schémas P&amp;ID</strong></td>
+<td><em>Éditeur P&amp;ID</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Mécanique</strong></td>
+<td><em>Équipement mécanique</em>, <em>Dispositif de régulation</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Autres réseaux</strong></td>
+<td><em>Plomberie ▾</em>, <em>Électricité ▾</em>, <em>Modélisation ▾</em>, <strong>Plan de construction ▾</strong></td>
+</tr>
+<tr>
 <td><strong>Lier et importer</strong></td>
 <td><strong>Lier</strong></td>
 <td><em>Lier un projet</em>, <em>Lier un IFC</em>, <em>Lier un CAO</em>, <em>Lier une topographie</em>, <em>Décalque ▾</em>, <em>Nuage de points</em>, <em>Gérer les liens</em>, <em>Lier un PDF</em>, <em>Lier une image</em>, <em>Modèle fédéré ▾</em></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Importer</strong></td>
 <td><em>Importer un CAO</em>, <em>Importer un gbXML</em>, <em>Importer un PDF</em>, <em>Importer une image</em></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Charger depuis la bibliothèque</strong></td>
 <td><strong>Charger la famille</strong>, <em>Charger comme groupe</em>, <strong>Insérer à partir d'un fichier ▾</strong></td>
 </tr>
 <tr>
-<td></td>
-<td><strong>Volume et site</strong></td>
-<td><strong>Volumes</strong></td>
-<td><em>Afficher les volumes ▾</em>, <em>Nouveau volume</em>, <em>Placer un volume</em>, <em>Dessiner en 3D</em></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><strong>Depuis les faces de volume</strong></td>
-<td><em>Mur-rideau</em>, <em>Toit</em>, <em>Mur</em>, <em>Dalle</em>, <em>Terrain depuis une face</em></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><strong>Site</strong></td>
-<td><em>Terrain</em>, <em>Élément de site</em>, <em>Stationnement</em>, <em>Plateforme</em>, <em>Contexte environnant</em></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><strong>Modifier le site</strong></td>
-<td><em>Diviser le terrain</em>, <em>Fusionner les terrains</em>, <em>Sous-zone</em>, <em>Limite de propriété</em>, <em>Nivellement</em>, <em>Étiquettes des courbes de niveau</em></td>
-</tr>
-<tr>
-<td><strong>Documenter</strong></td>
-<td><strong>Documenter</strong></td>
-<td><strong>Feuilles</strong></td>
-<td><strong>Feuille</strong>, <strong>Vue</strong>, <strong>Cartouche</strong>, <strong>Révisions</strong>, <strong>Grille de guidage</strong>, <strong>Désactiver la vue</strong></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
+<td><strong>Annotations</strong></td>
 <td><strong>Cote</strong></td>
 <td><strong>Alignée</strong>, <strong>Linéaire</strong>, <strong>Angulaire</strong>, <strong>Radial</strong>, <em>Diamètre</em>, <strong>Longueur d'arc</strong>, <strong>Cote ponctuelle ▾</strong></td>
 </tr>
 <tr>
-<td></td>
 <td></td>
 <td><strong>Détail</strong></td>
 <td><strong>Ligne de détail</strong>, <strong>Région remplie ▾</strong>, <strong>Symbole de détail ▾</strong>, <strong>Nuage de révision</strong>, <em>Groupe 2D ▾</em></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Texte</strong></td>
 <td><strong>Texte</strong>, <em>Correcteur orthographique</em></td>
 </tr>
 <tr>
-<td></td>
 <td></td>
 <td><strong>Étiquette</strong></td>
 <td><strong>Étiquette</strong>, <strong>Étiqueter tout</strong>, <em>Matériau</em>, <strong>Légende de couleurs</strong>, <em>Étiquettes de poutres</em>, <em>Étiquette multicatégorie</em>, <em>Renvoi à une vue</em>, <em>Numérotation des marches</em>, <em>Étiquette d'armatures ▾</em>, <em>Note codifiée ▾</em>, <em>Légende des gaines</em>, <em>Légende des canalisations</em></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Symbole</strong></td>
 <td><strong>Symbole</strong>, <em>Sens de portée</em>, <em>Symbole d'armature</em>, <em>Ligne de foulée</em></td>
 </tr>
 <tr>
-<td><strong>Vues</strong></td>
+<td><strong>Vérifier</strong></td>
+<td><strong>Énergie</strong></td>
+<td><em>Analyse énergétique</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Vérifier</strong></td>
+<td><em>Vérifier les interférences</em>, <em>Afficher les charges</em>, <em>Connexions non raccordées</em>, <em>Charges électriques</em>, <em>Chemin d'évacuation</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Modèle de calcul</strong></td>
+<td><em>Barre de calcul</em>, <em>Panneau de calcul</em>, <em>Nœud de calcul</em>, <em>Appuis et liaisons</em>, <em>Modèle de calcul automatique</em>, <em>Résultats de calcul</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Espaces et zones</strong></td>
+<td><em>Espace</em>, <em>Séparateur d'espaces</em>, <em>Étiquette d'espace</em>, <em>Noms des espaces</em>, <em>Zone dessinée</em>, <em>Zone depuis les espaces</em></td>
+</tr>
+<tr>
+<td><strong>Volume et site</strong></td>
+<td><strong>Volumes</strong></td>
+<td><em>Afficher les volumes ▾</em>, <em>Nouveau volume</em>, <em>Placer un volume</em>, <em>Dessiner en 3D</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Depuis les faces de volume</strong></td>
+<td><em>Mur-rideau</em>, <em>Toit</em>, <em>Mur</em>, <em>Dalle</em>, <em>Terrain depuis une face</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Site</strong></td>
+<td><em>Terrain</em>, <em>Élément de site</em>, <em>Stationnement</em>, <em>Plateforme</em>, <em>Contexte environnant</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Modifier le site</strong></td>
+<td><em>Diviser le terrain</em>, <em>Fusionner les terrains</em>, <em>Sous-zone</em>, <em>Limite de propriété</em>, <em>Nivellement</em>, <em>Étiquettes des courbes de niveau</em></td>
+</tr>
+<tr>
+<td><strong>Collaborer</strong></td>
+<td><strong>Travail partagé</strong></td>
+<td><em>Sous-projets</em>, <em>Synchroniser</em>, <em>Afficher l'historique</em>, <em>Activer le partage</em>, <em>Groupe de travail actif</em>, <em>Atténuer les autres groupes</em>, <em>Recharger les modifications</em>, <em>Libérer les éléments</em>, <em>Demandes d'autorisation</em>, <em>État du partage</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Archive</strong></td>
+<td><em>Restaurer une sauvegarde</em>, <em>Options de publication</em></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Coordination</strong></td>
+<td><em>Copier et surveiller ▾</em>, <em>Revue de coordination ▾</em>, <em>Options de coordination</em>, <em>Réaligner les hôtes</em>, <em>Modifications du modèle fédéré</em></td>
+</tr>
+<tr>
 <td><strong>Vues</strong></td>
 <td><strong>Graphisme</strong></td>
 <td><strong>Préréglages de vue ▾</strong>, <strong>Visibilité et graphisme</strong>, <strong>Filtres</strong>, <strong>Lignes fines</strong>, <em>Afficher les lignes cachées</em>, <em>Supprimer les lignes cachées</em>, <em>Contour de coupe ▾</em></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Présentation</strong></td>
 <td><em>Image réaliste</em></td>
 </tr>
 <tr>
-<td></td>
 <td></td>
 <td><strong>Créer</strong></td>
 <td><strong>Vue 3D ▾</strong>, <strong>Coupe</strong>, <strong>Détail agrandi ▾</strong>, <strong>Plan ▾</strong>, <strong>Élévation ▾</strong>, <strong>Vue 2D libre</strong>, <strong>Dupliquer la vue ▾</strong>, <strong>Légendes ▾</strong>, <strong>Nomenclatures ▾</strong>, <em>Zone d'étendue</em></td>
 </tr>
 <tr>
 <td></td>
+<td><strong>Feuilles</strong></td>
+<td><strong>Feuille</strong>, <strong>Vue</strong>, <strong>Cartouche</strong>, <strong>Révisions</strong>, <strong>Grille de guidage</strong>, <strong>Désactiver la vue</strong></td>
+</tr>
+<tr>
 <td></td>
 <td><strong>Fenêtres</strong></td>
 <td><strong>Changer de vue ▾</strong>, <strong>Fermer les autres</strong>, <strong>Mosaïque</strong>, <strong>Cascade</strong>, <strong>Répliquer</strong>, <strong>Agrandir</strong>, <strong>Panneaux ▾</strong></td>
@@ -1260,95 +1262,44 @@ n'exécute pas encore sont grisées, et leur info-bulle dit « Pas encore dispon
 <tr>
 <td></td>
 <td><strong>Index du projet</strong></td>
-<td></td>
 <td>L'arborescence des vues, nomenclatures, feuilles et familles du projet</td>
 </tr>
 <tr>
-<td><strong>Coordonner</strong></td>
-<td><strong>Coordonner</strong></td>
-<td><strong>Énergie</strong></td>
-<td><em>Analyse énergétique</em></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><strong>Vérifier</strong></td>
-<td><em>Vérifier les interférences</em>, <em>Afficher les charges</em>, <em>Connexions non raccordées</em>, <em>Charges électriques</em>, <em>Chemin d'évacuation</em></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><strong>Modèle de calcul</strong></td>
-<td><em>Barre de calcul</em>, <em>Panneau de calcul</em>, <em>Nœud de calcul</em>, <em>Appuis et liaisons</em>, <em>Modèle de calcul automatique</em>, <em>Résultats de calcul</em></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><strong>Espaces et zones</strong></td>
-<td><em>Espace</em>, <em>Séparateur d'espaces</em>, <em>Étiquette d'espace</em>, <em>Noms des espaces</em>, <em>Zone dessinée</em>, <em>Zone depuis les espaces</em></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><strong>Travail partagé</strong></td>
-<td><em>Sous-projets</em>, <em>Synchroniser</em>, <em>Afficher l'historique</em>, <em>Activer le partage</em>, <em>Groupe de travail actif</em>, <em>Atténuer les autres groupes</em>, <em>Recharger les modifications</em>, <em>Libérer les éléments</em>, <em>Demandes d'autorisation</em>, <em>État du partage</em></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><strong>Archive</strong></td>
-<td><em>Restaurer une sauvegarde</em>, <em>Options de publication</em></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td><strong>Coordination</strong></td>
-<td><em>Copier et surveiller ▾</em>, <em>Revue de coordination ▾</em>, <em>Options de coordination</em>, <em>Réaligner les hôtes</em>, <em>Modifications du modèle fédéré</em></td>
-</tr>
-<tr>
-<td><strong>Paramètres</strong></td>
-<td><strong>Paramètres</strong></td>
+<td><strong>Projet</strong></td>
 <td><strong>Paramètres</strong></td>
 <td><strong>Matériaux</strong>, <strong>Styles par catégorie</strong>, <strong>Accrochage</strong>, <strong>Informations sur le projet</strong>, <strong>Paramètres du projet</strong>, <strong>Unités du projet</strong>, <strong>Copier les paramètres d'un projet</strong>, <em>Paramètres généraux</em></td>
 </tr>
 <tr>
-<td></td>
 <td></td>
 <td><strong>Phases</strong></td>
 <td><em>Phases</em></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Options</strong></td>
 <td><em>Variantes de conception</em>, <em>Version principale</em></td>
 </tr>
 <tr>
-<td></td>
 <td></td>
 <td><strong>Numérotation</strong></td>
 <td><em>Renuméroter</em></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Position</strong></td>
 <td><em>Coordonnées partagées ▾</em>, <em>Déplacer le projet ▾</em></td>
 </tr>
 <tr>
-<td></td>
 <td></td>
 <td><strong>Gestion du projet</strong></td>
 <td><em>Images du projet</em>, <em>Vue d'ouverture</em></td>
 </tr>
 <tr>
 <td></td>
-<td></td>
 <td><strong>Sélections</strong></td>
 <td><em>Enregistrer la sélection</em>, <em>Charger la sélection</em>, <em>Modifier la sélection</em></td>
 </tr>
 <tr>
-<td></td>
 <td></td>
 <td><strong>Requête</strong></td>
 <td><em>Sélectionner par numéro</em>, <em>Numéros de la sélection</em>, <em>Avertissements</em></td>
@@ -1357,12 +1308,12 @@ n'exécute pas encore sont grisées, et leur info-bulle dit « Pas encore dispon
 </table>
 <p>En italique les commandes que BIMopen n'exécute pas encore ; ▾ marque un menu.</p>
 <p>Appuyez sur <span class="keys"><kbd class="key-alt">Alt</kbd></span> puis relâchez-la, ou appuyez sur <span class="keys"><kbd class="key-f10">F10</kbd></span>, pour afficher les info-bulles des
-touches : une lettre sur chaque entrée de la barre latérale et, sur les tuiles de la carte
-ouverte, le raccourci de leur outil. Tapez la lettre d'une entrée pour l'ouvrir, puis les lettres
-d'une tuile pour lancer son outil ; <span class="keys"><kbd class="key-escape">Esc</kbd></span> masque les info-bulles. Tant qu'elles sont visibles,
-ce que vous tapez ne va pas à la ligne de commande.</p>
-<h3 id="the-home-tab">Les outils de Créer</h3>
-<p>Les outils les plus utilisés pour modéliser sont dans <strong>Créer ▸ Modélisation ▸ Architecture</strong> :</p>
+touches : une lettre sur chaque onglet de la barre latérale et, sur les tuiles de l'onglet ouvert,
+le raccourci de leur outil. Tapez la lettre d'un onglet pour l'ouvrir, puis les lettres d'une
+tuile pour lancer son outil ; <span class="keys"><kbd class="key-escape">Esc</kbd></span> masque les info-bulles. Tant qu'elles sont visibles, ce que
+vous tapez ne va pas à la ligne de commande.</p>
+<h3 id="the-home-tab">Les outils de Modéliser</h3>
+<p>Les outils les plus utilisés pour modéliser sont dans <strong>Modéliser</strong> :</p>
 <table>
 <thead>
 <tr>
@@ -1391,7 +1342,7 @@ ce que vous tapez ne va pas à la ligne de commande.</p>
 </table>
 <p><strong>Contour de surface</strong> et <strong>Surface</strong> fonctionnent dans un plan de surfaces : tant qu'aucun
 n'est ouvert, ils sont grisés, et leur info-bulle indique d'ouvrir d'abord un plan de surfaces.</p>
-<h3 id="the-annotate-tab">Les outils de Documenter</h3>
+<h3 id="the-annotate-tab">Les outils d'Annotations</h3>
 <table>
 <thead>
 <tr>
@@ -1400,10 +1351,6 @@ n'est ouvert, ils sont grisés, et leur info-bulle indique d'ouvrir d'abord un p
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><strong>Feuilles</strong></td>
-<td><strong>Feuille</strong> : une nouvelle feuille avec le cartouche de votre choix ; <strong>Vue</strong> : place une vue sur la feuille ouverte</td>
-</tr>
 <tr>
 <td><strong>Cote</strong></td>
 <td><strong>Alignée</strong> <code>DI</code>, <strong>Linéaire</strong> <code>DL</code>, <strong>Angulaire</strong> <code>DA</code></td>
@@ -1422,10 +1369,9 @@ n'est ouvert, ils sont grisés, et leur info-bulle indique d'ouvrir d'abord un p
 </tr>
 </tbody>
 </table>
-<p><strong>Feuilles ▸ Vue</strong> ne fonctionne que lorsqu'une feuille est ouverte.</p>
 <figure>
-<img alt="Les outils de Documenter : le groupe Feuilles, puis Cote, Détail et Texte avec leurs tuiles" src="../assets/screens/if-document-tools.webp"/>
-<figcaption>Les outils de Documenter</figcaption>
+<img alt="Les outils d'Annotations : Cote, Détail, Texte, Étiquette et Symbole avec leurs tuiles" src="../assets/screens/if-document-tools.webp"/>
+<figcaption>Les outils d'Annotations</figcaption>
 </figure>
 <h3 id="the-view-tab">Les outils de Vues</h3>
 <figure>
@@ -1445,6 +1391,10 @@ n'est ouvert, ils sont grisés, et leur info-bulle indique d'ouvrir d'abord un p
 <td><strong>Vue 3D ▾</strong> (<strong>Vue 3D par défaut</strong>, <strong>Enregistrer la vue</strong>), <strong>Plan ▾</strong> (<strong>Plan d'étage</strong>, <strong>Plan de surfaces</strong>), <strong>Dupliquer la vue ▾</strong> (<strong>Dupliquer</strong>, <strong>Dupliquer avec détails</strong>), <strong>Coupe</strong> <code>SE</code>, <strong>Élévation ▾</strong> (<strong>Élévation</strong> <code>EL</code>, <strong>Élévation de charpente</strong>), <strong>Détail agrandi</strong> <code>DT</code> (un repère), <strong>Vue 2D libre</strong> <code>VD</code>, <strong>Nomenclatures ▾</strong> (<strong>Nomenclature/Quantités</strong>, <strong>Métré des matériaux</strong>, <strong>Liste de feuilles</strong>, <strong>Bloc de notes</strong>, <strong>Nomenclatures prédéfinies</strong>)</td>
 </tr>
 <tr>
+<td><strong>Feuilles</strong></td>
+<td><strong>Feuille</strong> : une nouvelle feuille avec le cartouche de votre choix ; <strong>Vue</strong> : place une vue sur la feuille ouverte</td>
+</tr>
+<tr>
 <td><strong>Graphisme</strong></td>
 <td><strong>Visibilité et graphisme</strong> <code>VG</code>, <strong>Filtres</strong>, <strong>Gabarits de vue</strong>, <strong>Appliquer le gabarit à la vue courante</strong>, <strong>Créer un gabarit à partir de la vue courante</strong></td>
 </tr>
@@ -1454,12 +1404,13 @@ n'est ouvert, ils sont grisés, et leur info-bulle indique d'ouvrir d'abord un p
 </tr>
 </tbody>
 </table>
+<p><strong>Feuilles ▸ Vue</strong> ne fonctionne que lorsqu'une feuille est ouverte.</p>
 <p><strong>Enregistrer la vue</strong> ne fonctionne que lorsqu'une vue 3D est ouverte, et <strong>Dupliquer avec
 détails</strong> uniquement pour les vues qui ne sont pas en 3D. Sous les outils, la carte <strong>Index du
 projet</strong> contient toute l'arborescence du projet.</p>
 <p>Chaque menu ▾ liste aussi, grisées, les entrées pas encore disponibles ; la recherche des
 commandes les trouve toutes.</p>
-<h3 id="the-manage-tab">Les outils de Paramètres</h3>
+<h3 id="the-manage-tab">Les outils de Projet</h3>
 <table>
 <thead>
 <tr>
@@ -1483,20 +1434,22 @@ lorsqu'il est actif, comme l'interrupteur <strong>Accrochage</strong> de la barr
 <strong>Paramètres supplémentaires ▸ Accrochages…</strong> ouvre la fenêtre <strong>Accrochage</strong> : les incréments de
 longueur et d'angle, les accrochages aux objets et les remplacements (voir <a href="#snaps">Accrochage</a>).</p>
 <figure>
-<img alt="Les outils de Paramètres : Matériaux, Styles par catégorie, Accrochage, Informations sur le projet, Unités du projet, les paramètres, Purger et Paramètres supplémentaires" src="../assets/screens/if-settings-tools.webp"/>
-<figcaption>Les outils de Paramètres</figcaption>
+<img alt="Les outils de Projet : Matériaux, Styles par catégorie, Accrochage, Informations sur le projet, Unités du projet, les paramètres, Purger et Paramètres supplémentaires" src="../assets/screens/if-settings-tools.webp"/>
+<figcaption>Les outils de Projet</figcaption>
 </figure>
-<h3 id="the-contextual-tab">La carte contextuelle</h3>
+<h3 id="the-contextual-tab">L'onglet contextuel Édition</h3>
 <figure>
-<img alt="L'outil mur au travail : la carte contextuelle en haut du panneau d'outils et le bandeau des options au-dessus de la vue" src="../assets/screens/bimopen-wall.png"/>
-<figcaption>L'outil mur au travail : la carte contextuelle en haut du panneau d'outils et le bandeau des options au-dessus de la vue</figcaption>
+<img alt="L'outil mur au travail : l'onglet contextuel Édition dans le panneau d'outils et le bandeau des options au-dessus de la vue" src="../assets/screens/bimopen-wall.png"/>
+<figcaption>L'outil mur au travail : l'onglet contextuel Édition dans le panneau d'outils et le bandeau des options au-dessus de la vue</figcaption>
 </figure>
-<p>Lorsque vous lancez un outil ou sélectionnez quelque chose, une carte vient en haut du panneau
-d'outils, quelle que soit l'entrée de la barre latérale ouverte, avec le nom de ce que vous faites
-dans la couleur d'accent : <strong>Dessiner : mur</strong> pendant le dessin de murs, <strong>Sélection : murs</strong>
-lorsque des murs sont sélectionnés, <strong>Sélection multiple</strong> avec des éléments de catégories
-différentes, <strong>Édition | …</strong> dans les autres modes. Lorsque l'outil se termine, ou que la sélection
-est effacée, la carte disparaît ; <span class="keys"><kbd class="key-escape">Esc</kbd></span> ou un clic dans le vide font de même.</p>
+<p>Lorsque vous lancez un outil ou sélectionnez quelque chose, la barre latérale choisit d'elle-même
+l'onglet contextuel <strong>Édition</strong>, dessiné avec un contour pointillé, et le panneau d'outils montre
+ses groupes sous le nom de ce que vous faites, dans la couleur d'accent : <strong>Dessiner : mur</strong>
+pendant le dessin de murs, <strong>Sélection : murs</strong> lorsque des murs sont sélectionnés, <strong>Sélection
+multiple</strong> avec des éléments de catégories différentes, <strong>Édition | …</strong> dans les autres modes.
+Lorsque l'outil se termine, ou que la sélection est effacée, le panneau revient à l'onglet où vous
+étiez ; <span class="keys"><kbd class="key-escape">Esc</kbd></span> ou un clic dans le vide font de même. Un clic sur <strong>Édition</strong> montre ses groupes à
+tout moment.</p>
 <p>Elle comporte toujours ces groupes :</p>
 <table>
 <thead>
@@ -1574,7 +1527,7 @@ et la modification</a> décrit les outils de modification.</p>
 </tbody>
 </table>
 <figure>
-<img alt="La carte contextuelle d'un mur sélectionné, en haut du panneau d'outils : son nom dans la couleur d'accent, Propriétés, Sélection avec Filtre, Presse-papiers et Formes" src="../assets/screens/if-contextual.webp"/>
+<img alt="L'onglet contextuel Édition d'un mur sélectionné : son nom dans la couleur d'accent, Propriétés, Sélection avec Filtre, Presse-papiers et Formes" src="../assets/screens/if-contextual.webp"/>
 <figcaption>La carte contextuelle d'une sélection</figcaption>
 </figure>
 <h2 id="options-bar">Bandeau des options</h2>
@@ -1632,9 +1585,11 @@ les extrémités, les milieux et les intersections. Lorsque <strong>Ortho</stron
 <span class="keys"><kbd class="key-shift">Shift</kbd></span> pendant le dessin donne la même contrainte ; lorsqu'il est activé, <span class="keys"><kbd class="key-shift">Shift</kbd></span> la libère.</p>
 <h2 id="properties">Panneau de l'élément</h2>
 <p>Le panneau de l'élément, à droite, affiche et modifie les paramètres de ce sur quoi vous
-travaillez. Son en-tête porte la catégorie et le nom de ce qu'il montre, <strong>Fermer</strong> (qui efface la
-sélection) et <strong>Autres actions</strong> (<strong>⋯</strong> : <strong>Paramètres du type</strong> et les actions de la carte
-contextuelle). Sous l'en-tête, ses onglets :</p>
+travaillez. Son en-tête tient sur une ligne : le type avec son menu et, dessous, la famille, le
+nombre d'éléments sélectionnés, comme <strong>Murs (1)</strong>, et <strong>Paramètres du type</strong>, qui ouvre les
+paramètres du type. À sa droite, <strong>Fermer</strong> (qui efface la sélection) et <strong>Autres actions</strong> (<strong>⋯</strong> :
+<strong>Paramètres du type</strong> et les actions de l'onglet contextuel). Sous l'en-tête, ses onglets ; les
+lignes des paramètres sont basses, avec une large colonne pour les valeurs :</p>
 <figure>
 <img alt="Le panneau de l'élément sans sélection : les propriétés du plan du rez-de-chaussée, avec Graphisme, Étendue et Identification" src="../assets/screens/if-element-panel.webp"/>
 <figcaption>Le panneau de l'élément : les propriétés de la vue</figcaption>
@@ -1665,12 +1620,12 @@ contextuelle). Sous l'en-tête, ses onglets :</p>
 </tr>
 </tbody>
 </table>
-<p>Le <strong>sélecteur de type</strong> montre la famille en petits caractères, le type en dessous, et un aperçu
-du type : murs, sols et toits avec leurs couches, portes, fenêtres et composants en petite image.
-Cliquez dessus pour choisir un autre type : les éléments sélectionnés changent de type ou,
-lorsqu'un outil est actif, le prochain élément reçoit ce type. Ouvert, il cherche les types par
-nom ; ils sont groupés par famille, chacun avec son aperçu. Les flèches déplacent, <span class="keys"><kbd class="key-enter">Enter</kbd></span>
-choisit, <span class="keys"><kbd class="key-escape">Esc</kbd></span> ferme la liste.</p>
+<p>Le <strong>sélecteur de type</strong> est l'en-tête du panneau : un petit aperçu du type (murs, sols et toits
+selon leurs couches, portes, fenêtres et composants sous forme d'image), le nom du type avec ▾ et,
+dessous, la famille. Cliquez dessus pour choisir un autre type : les éléments sélectionnés changent
+de type ou, pendant qu'un outil est actif, l'élément suivant reçoit ce type. La liste s'ouvre
+par-dessus les lignes : cherchez les types par leur nom ; ils sont groupés par famille, chacun avec
+son aperçu. Les flèches déplacent, <span class="keys"><kbd class="key-enter">Enter</kbd></span> choisit, <span class="keys"><kbd class="key-escape">Esc</kbd></span> ferme la liste.</p>
 <figure>
 <img alt="Le sélecteur de type d'un mur sélectionné, ouvert : la zone de recherche et les types de mur groupés par famille, chacun avec son aperçu" src="../assets/screens/if-type-selector.webp"/>
 <figcaption>Le sélecteur de type</figcaption>
@@ -1810,6 +1765,10 @@ nom, et trois boutons choisissent la taille : <strong>Aperçus</strong>, <strong
 <img alt="La bande en mode familles : un aperçu par type, les murs d'abord, à cliquer ou à faire glisser dans un plan" src="../assets/screens/if-strip-families.webp"/>
 <figcaption>La bande en mode familles</figcaption>
 </figure>
+<p>Quand les groupes ne tiennent pas à côté des modes, ils se replient dans un seul menu, comme
+<strong>Toutes ▾</strong>. Pour donner la place de la barre à la zone de dessin, masquez-la avec <strong>Barre des
+vues</strong>, le dernier bouton de la barre d'état, ou avec <span class="keys"><kbd class="key-f9">F9</kbd></span> ; le même bouton ou la même touche la
+ramène.</p>
 <h2 id="panels">Panneaux</h2>
 <p>Le panneau de l'élément peut se déplacer. Faites-le glisser par son en-tête : il s'ancre à gauche
 ou à droite de la zone de dessin, ou flotte là où vous le lâchez. Les boutons en haut à droite du
@@ -2123,8 +2082,9 @@ décrit les commandes.</p>
 <p>À droite : les coordonnées du curseur (<strong>X</strong>, <strong>Y</strong>, <strong>Z</strong>) en mètres ; le niveau actif, dont le
 menu ouvre le plan d'un autre niveau ; le nombre d'éléments sélectionnés, qui ouvre <strong>Filtre</strong> ;
 les interrupteurs <strong>Sélectionner et faire glisser</strong> (faire glisser des éléments sans les
-sélectionner d'abord), <strong>Accrochage</strong>, <strong>Quadrillage</strong> et <strong>Ortho</strong> ; l'échelle de la vue ; et
-<strong>Journal des commandes</strong>.</p>
+sélectionner d'abord), <strong>Accrochage</strong>, <strong>Quadrillage</strong> et <strong>Ortho</strong> ; l'échelle de la vue ;
+<strong>Journal des commandes</strong> ; et <strong>Barre des vues</strong> (<span class="keys"><kbd class="key-f9">F9</kbd></span>), qui masque la barre des vues ou la
+montre de nouveau.</p>
 <h2 id="selecting-in-short">La sélection, en bref</h2>
 <p>Le <a href="../selection-and-modify/">chapitre sur la sélection et la modification</a> décrit la sélection en
 détail. L'essentiel :</p>

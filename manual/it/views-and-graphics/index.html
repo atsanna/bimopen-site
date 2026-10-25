@@ -194,6 +194,14 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../import-and-conversion/">
+<span class="md-ellipsis">
+    Importazione e conversione
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../selection-and-modify/">
 <span class="md-ellipsis">
     Selezione e modifica
@@ -253,6 +261,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#realistic-style">
+<span class="md-ellipsis">
+      Stile Realistico
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#sun-and-shadows">
 <span class="md-ellipsis">
       Sole e ombre
@@ -278,6 +293,13 @@
 <a class="md-nav__link" href="#graphic-display-options">
 <span class="md-ellipsis">
       Opzioni grafiche della vista
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sketchy-lines">
+<span class="md-ellipsis">
+      Linee di schizzo
     </span>
 </a>
 </li>
@@ -427,6 +449,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#realistic-style">
+<span class="md-ellipsis">
+      Stile Realistico
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#sun-and-shadows">
 <span class="md-ellipsis">
       Sole e ombre
@@ -452,6 +481,13 @@
 <a class="md-nav__link" href="#graphic-display-options">
 <span class="md-ellipsis">
       Opzioni grafiche della vista
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sketchy-lines">
+<span class="md-ellipsis">
+      Linee di schizzo
     </span>
 </a>
 </li>
@@ -584,6 +620,10 @@ finestra di vista, offre:</p>
 <td><strong>Colori pieni</strong></td>
 <td>Le facce nel colore del loro materiale, uguale con qualsiasi luce</td>
 </tr>
+<tr>
+<td><strong>Realistico</strong></td>
+<td>Le facce come in una fotografia: la luce del sole e del cielo del progetto, i riflessi, le ombre d’ambiente, il vetro trasparente, la foschia</td>
+</tr>
 </tbody>
 </table>
 <figure>
@@ -615,6 +655,62 @@ Tavole, stampe e disegni esportati mostrano le viste come lo schermo.</p>
 <strong>Sfondo</strong> sta sotto le linee del modello: in pianta sopra i pavimenti e sotto gli arredi, in
 sezione sopra le superfici viste attraverso ogni locale tagliato. Su <strong>Primo piano</strong> copre il
 modello, sotto le annotazioni.</p>
+<h2 id="realistic-style">Stile Realistico</h2>
+<p><strong>Realistico</strong> disegna la vista 3D come una fotografia, in tempo reale, con la scheda grafica, e la
+vista resta modificabile come negli altri stili.</p>
+<ul>
+<li><strong>Luce del sole e del cielo.</strong> La luce è quella del sole del progetto (luogo, data e ora delle
+  <strong>Impostazioni del sole</strong>) e del cielo che quel sole dà: azzurro di giorno, più caldo e più scuro
+  al tramonto. Il sole illumina anche con le ombre spente; con <strong>Proietta ombre</strong> le sue ombre sono
+  quelle degli altri stili. La parte in ombra resta illuminata dal cielo e dal terreno.
+  Il disco del sole compare quando entra nell'inquadratura, con un alone, e il modello lo
+  nasconde. Verso il tramonto la luce del sole si fa calda e più debole e le ombre si allungano;
+  dopo il tramonto resta solo il cielo, che si spegne in un crepuscolo blu-viola con una fascia
+  rosata sull'orizzonte dalla parte del sole; di notte il cielo è blu scuro e la scena quasi buia
+  (le superfici autoilluminate restano visibili). Trascinando il sole o seguendo uno studio del
+  soleggiamento la luce cambia con continuità.</li>
+<li><strong>Luna e stelle.</strong> La luna è dove si trova nel luogo, alla data e all'ora del progetto, nella sua
+  fase: illuminata sul lato rivolto al sole, il resto appena grigio (luce cinerea), più rossa
+  vicino all'orizzonte. Di notte è lei la luce: con <strong>Proietta ombre</strong> il modello fa le ombre della
+  luna, e la luna piena illumina la scena con dolcezza mentre la luna nuova la lascia quasi buia.
+  Tramontato il sole compaiono le stelle più luminose al loro posto, tanto più numerose quanto più
+  il cielo è scuro.</li>
+<li><strong>Materiali.</strong> Le superfici hanno l'aspetto del loro materiale (scheda <strong>Aspetto</strong> di
+  <strong>Materiali</strong>): l'immagine della trama alla sua dimensione reale, la ruvidità e la sua mappa, il
+  rilievo, il metallo, il vetro e l'acqua, l'autoilluminazione (si vede, non illumina gli altri).
+  Un materiale senza aspetto proprio lo ricava dal suo colore e dalla sua trasparenza; una parte
+  senza materiale prende il colore della sua categoria. Sul web le immagini arrivano dopo: finché
+  non ci sono si vede il colore. L'anteprima della scheda <strong>Aspetto</strong> è disegnata dallo stesso renderer, su una sfera, un
+  cubo o una parete di 2 × 2 m (senza scheda grafica, da un'immagine calcolata a parte).</li>
+<li><strong>Vetro.</strong> Il vetro lascia vedere ciò che c'è dietro e riflette il cielo e il sole, di più quando
+  lo si guarda di sbieco. I vetri sono disegnati dal più lontano al più vicino.</li>
+<li><strong>Ombre d'ambiente.</strong> Con <strong>Ombre d'ambiente</strong> gli angoli e gli incavi, dove arriva meno luce del
+  cielo, sono più scuri.</li>
+<li><strong>Foschia.</strong> In lontananza l'aria vela il modello: <strong>Foschia in lontananza</strong> ne regola la quantità
+  e rende il cielo più o meno limpido.</li>
+<li><strong>Esposizione.</strong> <strong>Automatica</strong> segue la luce della scena e si adatta in circa mezzo secondo
+  quando cambia (girando la camera dal cielo all'ombra, o cambiando l'ora). <strong>Manuale</strong> usa il
+  <strong>Valore (EV)</strong>: più alto è più scuro, circa 15 sotto il sole di mezzogiorno.</li>
+</ul>
+<p>Nel gruppo <strong>Realistico</strong> delle <a href="#graphic-display-options">Opzioni grafiche della vista</a>:
+<strong>Esposizione</strong> e <strong>Valore (EV)</strong>, <strong>Punto del bianco</strong> (la luce mostrata bianca: 6500 K è la luce
+del giorno così com'è, un valore più basso raffredda l'immagine, uno più alto la scalda),
+<strong>Saturazione</strong>, <strong>Alte luci</strong> e <strong>Toni scuri</strong> (abbassano o alzano i toni più chiari e più
+scuri) e <strong>Foschia in lontananza</strong>. <strong>Mostra bordi nel Realistico</strong> disegna i bordi sopra le
+facce. Lo <strong>Schema</strong> di illuminazione è per ora sempre <strong>Esterno: sole</strong>. <strong>Sole</strong>, <strong>Luce
+d'ambiente</strong> e <strong>Intensità delle ombre</strong> regolano la luce del sole, quella del cielo e quanto sono
+scure le ombre del sole.</p>
+<p>Lo <strong>Sfondo</strong> <strong>Cielo fisico (ora e luogo)</strong> mostra dietro al modello lo stesso cielo che lo
+illumina, con il disco del sole; con <strong>Nessuno</strong>, <strong>Cielo</strong> o <strong>Sfumatura</strong> lo sfondo resta quello
+scelto e il cielo illumina comunque il modello. Passando a <strong>Realistico</strong>, una vista con lo sfondo <strong>Nessuno</strong>
+prende <strong>Cielo fisico (ora e luogo)</strong>. Gli elementi selezionati e la traiettoria del sole
+si vedono come negli altri stili.</p>
+<p>Sul web senza WebGPU (con WebGL2) il <strong>Realistico</strong> funziona senza ombre d'ambiente e l'esposizione
+automatica si regola dal cielo invece che dall'immagine. Sul web e su Android, mentre la camera si
+muove, la vista può essere disegnata più piccola per restare fluida, e torna nitida quando si
+ferma. Senza scheda grafica il <strong>Realistico</strong> si vede come <strong>Ombreggiato</strong> e la barra di stato lo
+dice. Piante, sezioni e prospetti in <strong>Realistico</strong> sono per ora disegnati come in
+<strong>Ombreggiato</strong>; tavole, stampe e immagini esportate non mostrano ancora il <strong>Realistico</strong>.</p>
 <h2 id="sun-and-shadows">Sole e ombre</h2>
 <p>Piante, sezioni, prospetti e viste 3D mostrano il sole (le viste di disegno, le legende, le tavole
 e gli abachi no). La barra di controllo della vista ha due pulsanti, ciascuno con una piccola
@@ -743,9 +839,31 @@ ombre</strong> (0–100) e, per le viste 3D, lo <strong>Sfondo</strong> (<strong
 L'anteprima disegna la vista con le opzioni scelte; l'interruttore <strong>Anteprima</strong> nell'intestazione la nasconde e la mostra, come
 nelle impostazioni del sole. I modelli di vista portano queste opzioni con lo stile di
 visualizzazione, e il sole e le ombre come <strong>Sole e ombre</strong>.</p>
+<p>Il gruppo <strong>Realistico</strong> e <strong>Mostra bordi nel Realistico</strong> valgono per lo stile <strong>Realistico</strong>
+(vedi <a href="#realistic-style">Stile Realistico</a>); <strong>Sfondo</strong> offre anche <strong>Cielo fisico (ora e luogo)</strong>.
+Con lo stile <strong>Realistico</strong> l'anteprima è disegnata dalla scheda grafica, come la vista.</p>
 <figure>
 <img alt="Opzioni grafiche della vista 3D: stile grafico, contorno esterno, ombre, illuminazione con sole, luce d'ambiente e intensità delle ombre, lo sfondo e l'anteprima a destra" src="../assets/screens/vg-graphic-display.webp"/>
 <figcaption>Opzioni grafiche della vista</figcaption>
+</figure>
+<h3 id="sketchy-lines">Linee di schizzo</h3>
+<p>Il gruppo <strong>Linee di schizzo</strong> delle <strong>Opzioni grafiche della vista…</strong> disegna le linee della vista
+come a mano. <strong>Attiva linee di schizzo</strong> le accende per la vista attiva; <strong>Instabilità</strong> (0–10)
+dice quanto ondeggia ogni linea e quante volte è ripassata (0 dritta, due volte da 4, tre volte da
+8); le linee lunghe ondeggiano più delle corte. <strong>Estensione</strong> (0–10) dice quanto le linee
+oltrepassano i loro estremi, oltre gli spigoli dove si incontrano (0 le ferma lì). Partono da 5 e 4. Il pulsante <strong>✎</strong> della barra della vista (in ogni stile dell'interfaccia; in modalità touch, nel pannello della vista) le accende e le spegne per la vista attiva: <strong>Attiva linee di schizzo</strong> / <strong>Disattiva linee di schizzo</strong>.</p>
+<p>Valgono in ogni vista (piante, sezioni, prospetti, viste di disegno, viste 3D, viste sulle tavole)
+e in ogni stile di visualizzazione: per le linee del modello, dei componenti di dettaglio e dei
+motivi di riempimento. Le annotazioni restano dritte: quote, testi, livelli, griglie, piani di
+riferimento, etichette, simboli e contrassegni delle viste. Una vista disegna le stesse linee a ogni
+ridisegno e dopo un'orbita che torna indietro, e si stampa e si esporta esattamente come la mostra
+la finestra: PDF e SVG tengono le linee vettoriali, una sezione o un prospetto stampati lasciano
+fuori solo le parti che le superfici più vicine nascondono. Selezione e snap usano sempre le linee
+dritte. I modelli di vista portano l'impostazione con le altre opzioni grafiche. Dalla riga di
+comando: <code>graphicoptions {"sketchy":true,"instability":5,"extension":4}</code>.</p>
+<figure>
+<img alt="La pianta del piano terra della casa d'esempio con le linee di schizzo: muri, porte, finestre e arredi disegnati come a mano, quote e testi dritti" src="../assets/screens/vg-sketchy.webp"/>
+<figcaption>Linee di schizzo</figcaption>
 </figure>
 <h2 id="plans-and-their-view-range">Piante e altezze di taglio</h2>
 <p><strong>Viste ▸ Crea ▸ Pianta ▸ Pianta dei pavimenti</strong> apre <strong>Nuova pianta</strong>: scegli i livelli

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="it" data-build="1e4634cb">
+<html lang="it" data-build="d204915d">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -160,8 +160,14 @@
   .dw-hero::before { content: ""; position: absolute; inset: 0; background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px); background-size: 32px 32px; mask-image: radial-gradient(ellipse at 80% 20%, #000 0%, transparent 65%); opacity: .7; pointer-events: none; }
   .dw-hero .wrap { position: relative; }
   .latest { color: var(--muted); font-size: 16px; margin: 0; }
-  .latest b, .rel .ver { color: var(--ink); font-family: var(--mono); font-weight: 700; direction: ltr; unicode-bidi: isolate; }
-  .latest time, .rel time { direction: ltr; unicode-bidi: isolate; }
+  .latest-news { margin: 6px 0 0; font-size: 16px; }
+  .latest-news a { color: var(--accent-text); font-weight: 600; text-decoration: none; white-space: nowrap; }
+  .latest-news a:hover { text-decoration: underline; }
+  .arrow { display: inline-block; }
+  [dir="rtl"] .arrow { transform: scaleX(-1); }
+  .latest b { color: var(--ink); font-family: var(--mono); font-weight: 700; direction: ltr; unicode-bidi: isolate; }
+  .latest time { direction: ltr; unicode-bidi: isolate; }
+  :root[lang="ar"] .latest time { direction: rtl; }
   .warn { margin: 32px 0 0; background: var(--warn-bg); color: var(--warn-ink); border: 2px solid var(--warn-line); border-inline-start-width: 8px; border-radius: var(--radius); padding: 22px 26px; }
   .warn h2 { display: flex; align-items: center; gap: 12px; font-size: clamp(21px, 2.4vw, 26px); margin: 0 0 10px; color: var(--warn-ink); }
   .warn h2 svg { width: 28px; height: 28px; flex: none; color: var(--warn-icon); }
@@ -186,16 +192,8 @@
   .small { margin: 22px 0 0; color: var(--muted); font-size: 14px; line-height: 1.7; }
   .small > span { display: inline; }
   .small > span + span::before { content: " · "; }
-  .rels { display: grid; gap: 20px; }
-  .rel { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px 26px; }
-  .rel h3 { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; margin: 0; font-size: 20px; }
-  .rel h3 time { color: var(--muted); font-size: 15px; font-weight: 500; }
-  .rel h4 { margin: 16px 0 4px; font-size: 13px; text-transform: uppercase; letter-spacing: .05em; color: var(--accent-text); }
-  :root[lang="ar"] .rel h4 { text-transform: none; }
-  .rel ul { margin: 0; padding-inline-start: 20px; color: var(--ink-soft); font-size: 15.5px; }
-  .rel li { margin: 4px 0; }
 </style>
-<link rel="stylesheet" href="assets/menu.css?v=11b1857a">
+<link rel="stylesheet" href="assets/menu.css?v=439b367a">
 <link rel="stylesheet" href="assets/effetti.css?v=6a95309b">
 </head>
 <body>
@@ -219,9 +217,10 @@
         </div>
       </div>
       <a href="roadmap.html" data-con-lingua="roadmap.html" data-i18n="nav.roadmap">Roadmap</a>
-      <a href="filosofia.html" data-con-lingua="filosofia.html" data-i18n="nav.filosofia">Filosofia</a>
+      <a href="philosophy.html" data-con-lingua="philosophy.html" data-i18n="nav.filosofia">Filosofia</a>
       <a href="manual/it/" data-manuale data-i18n="nav.manuale">Manuale</a>
       <a href="download.html" data-con-lingua="download.html" data-i18n="nav.scarica" aria-current="page">Scarica</a>
+      <a href="news.html" data-con-lingua="news.html" data-i18n="nav.novita">Novità</a>
     </nav>
     <div class="bar-right">
       <label class="lang-pick">
@@ -240,7 +239,7 @@
         <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
         <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
       </button>
-      <a class="btn btn-primary cta-top" href="app/" data-app="b1768c96"><span class="cta-long" data-i18n="cta.prova">Provalo nel browser</span><span class="cta-short" data-i18n="dl1.btn">Apri BIMopen</span></a>
+      <a class="btn btn-primary cta-top" href="app/" data-app="846ad4b9"><span class="cta-long" data-i18n="cta.prova">Provalo nel browser</span><span class="cta-short" data-i18n="dl1.btn">Apri BIMopen</span></a>
       <button type="button" class="theme-toggle menu-btn" id="menuBtn" aria-expanded="false" aria-controls="drawer" aria-label="Menu" data-i18n-attr="aria-label:ui.menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
     </div>
   </div>
@@ -260,12 +259,13 @@
       <a href="./#agenti" data-con-lingua="./#agenti" data-i18n="nav.agenti">Automazione</a>
     </div>
     <a href="roadmap.html" data-con-lingua="roadmap.html" data-i18n="nav.roadmap">Roadmap</a>
-    <a href="filosofia.html" data-con-lingua="filosofia.html" data-i18n="nav.filosofia">Filosofia</a>
+    <a href="philosophy.html" data-con-lingua="philosophy.html" data-i18n="nav.filosofia">Filosofia</a>
     <a href="manual/it/" data-manuale data-i18n="nav.manuale">Manuale</a>
     <a href="download.html" data-con-lingua="download.html" data-i18n="nav.scarica" aria-current="page">Scarica</a>
+    <a href="news.html" data-con-lingua="news.html" data-i18n="nav.novita">Novità</a>
     <a href="./#faq" data-con-lingua="./#faq" data-i18n="nav.faq">Domande</a>
   </nav>
-  <a class="btn btn-primary drawer-cta" href="app/" data-app="b1768c96"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11L13 8z" fill="currentColor"/></svg><span data-i18n="cta.prova">Provalo nel browser</span></a>
+  <a class="btn btn-primary drawer-cta" href="app/" data-app="846ad4b9"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11L13 8z" fill="currentColor"/></svg><span data-i18n="cta.prova">Provalo nel browser</span></a>
 </div>
 
 <main id="main">
@@ -274,6 +274,7 @@
       <span class="eyebrow" data-i18n="dw.kicker">Versione alpha</span>
       <h1 id="titolo" data-i18n="dw.h1">Scarica BIMopen</h1>
       <p class="latest"><span data-i18n="dw.latest">Ultima versione:</span> <b data-ver>0.1.0-alpha.5</b> · <time data-ver-date datetime="2026-10-20">2026-10-20</time></p>
+      <p class="latest-news"><a href="news.html#v-0-1-0-alpha-5" data-con-lingua="news.html#v-0-1-0-alpha-5" data-ver-link><span data-i18n="dw.nw.link">Novità di questa versione</span> <span aria-hidden="true" class="arrow">→</span></a></p>
       <!-- canale:guarda --><!-- /canale:guarda -->
 
       <div class="warn" role="note" aria-labelledby="avviso-t">
@@ -324,7 +325,7 @@
           <h3 data-i18n="dl1.h3">Nel browser</h3>
           <span class="meta">WebGPU · WebGL2</span>
           <p data-i18n="dw.web.p">Si apre subito, senza installare niente: serve un browser recente. I file restano sul tuo computer.</p>
-          <p class="go"><a class="btn btn-ghost" href="app/" data-app="b1768c96" data-i18n="dl1.btn">Apri BIMopen</a></p>
+          <p class="go"><a class="btn btn-ghost" href="app/" data-app="846ad4b9" data-i18n="dl1.btn">Apri BIMopen</a></p>
         </article>
       </div>
       <p class="small">
@@ -337,129 +338,16 @@
     </div>
   </section>
 
-  <section id="novita" class="alt" aria-labelledby="novita-t">
-    <div class="wrap">
-      <span class="eyebrow" data-i18n="dw.nv.kicker">Registro delle modifiche</span>
-      <h2 id="novita-t" data-i18n="dw.nv.h2">Novità</h2>
-      <p class="sub" data-i18n="dw.nv.p">Le ultime versioni, dalla più recente.</p>
-      <div class="rels">
-      <!-- novita -->
-      <article class="rel">
-        <h3><span class="ver">0.1.0-alpha.5</span> <time datetime="2026-10-20">2026-10-20</time></h3>
-        <h4 data-i18n="nv.added">Aggiunto</h4>
-        <ul>
-          <li data-i18n="nv.v0_1_0_alpha_5.added.1">Una scheda «Cemento armato» della barra multifunzione tra Strutture e Metallo con i comandi delle armature, in entrambi gli stili dell'interfaccia e nella modalità touch.</li>
-          <li data-i18n="nv.v0_1_0_alpha_5.added.2">Aiuti per leggere la traiettoria del sole in ogni vista («Aiuti visivi»): linee delle ore, mezzogiorno solare, la fascia dell'anno tra i solstizi, analemmi, alba e tramonto con i loro orari; nelle viste 3D il modello nasconde la parte della traiettoria dietro di esso.</li>
-          <li data-i18n="nv.v0_1_0_alpha_5.added.3">Il sole trascinato nelle viste 3D come nelle piante, «Lungo la giornata» o «Lungo l'anno»; alba, tramonto e durata del giorno nella barra della vista; le albe e i tramonti dell'anno in un grafico in «Impostazioni del sole», dove un clic sceglie il giorno.</li>
-          <li data-i18n="nv.v0_1_0_alpha_5.added.4">L'ora legale segue da sola la regola di ogni luogo e l'anno del sole; Tokyo, San Paolo, Santiago, Sydney e Auckland entrano nell'elenco delle città.</li>
-          <li data-i18n="nv.v0_1_0_alpha_5.added.5">Tipi di ringhiera con «Struttura del corrente (non continuo)» e «Posizionamento balaustre» (trama principale, montanti all'inizio, agli angoli e alla fine), ciascuno con un'anteprima su una scala di esempio.</li>
-          <li data-i18n="nv.v0_1_0_alpha_5.added.6">«Ringhiera ▸ Posiziona su ospite» nelle piante e nelle viste 3D, con «Offset dal percorso» e «Su pedate» o «Su cosciale».</li>
-          <li data-i18n="nv.v0_1_0_alpha_5.added.7">La finestra «Snap» completa, uguale nei due stili: incrementi di lunghezza e angolari scelti dallo zoom, snap ad oggetto con le loro sostituzioni di due lettere, «Ripristina predefiniti»; le impostazioni restano con le preferenze.</li>
-          <li data-i18n="nv.v0_1_0_alpha_5.added.8">Snap angolari in ogni vista: un segmento si aggancia all'orizzontale, alla verticale, al parallelo, al perpendicolare o a un multiplo dell'incremento angolare, misurato dall'asse della vista o dal segmento precedente, con una guida e l'angolo mostrato; in piante, sezioni, prospetti, viste 3D e schizzi, anche per Ruota e le serie radiali.</li>
-          <li data-i18n="nv.v0_1_0_alpha_5.added.9">«Sostituzioni di snap» in ogni vista in cui uno strumento prende punti, digitate o dal menu del tasto destro; TAB e MAIUSC+TAB scorrono gli snap sotto il cursore; «Chiudi» (SZ) chiude una catena o il contorno di uno schizzo.</li>
-          <li data-i18n="nv.v0_1_0_alpha_5.added.10">Ogni menu a discesa della barra multifunzione elenca tutti i suoi modi, che si trovano anche con la ricerca dei comandi; i modi ancora da fare sono in grigio come «Non ancora disponibile».</li>
-          <li data-i18n="nv.v0_1_0_alpha_5.added.11">Barra delle opzioni: «Carica famiglia» per porte, finestre e componenti, «Etichetta al posizionamento» come casella di spunta, «Ruota dopo l'inserimento» per i componenti, l'offset del muro.</li>
-          <li data-i18n="nv.v0_1_0_alpha_5.added.12"><code>snap</code> e <code>anglesnap</code> dalla riga di comando e tramite MCP.</li>
-          <li data-i18n="nv.v0_1_0_alpha_5.added.13">Nel manuale utente le immagini si aprono grandi con un clic; il PDF ha una copertina.</li>
-          <li data-i18n="nv.v0_1_0_alpha_5.added.14">«Mantieni linee coincidenti» in «Impostazioni di stampa» stampa tutte le linee sovrapposte invece di fonderle.</li>
-        </ul>
-        <h4 data-i18n="nv.changed">Modificato</h4>
-        <ul>
-          <li data-i18n="nv.v0_1_0_alpha_5.changed.1">Trascinare il sole è fluido in ogni vista: piante, sezioni e prospetti mostrano un'ombra provvisoria mentre si muove e quella completa una volta rilasciato; uno studio solare si riproduce allo stesso modo.</li>
-          <li data-i18n="nv.v0_1_0_alpha_5.changed.2">Le ombre nelle viste 3D hanno bordi leggibili e sfumature morbide; lo stipite al sole di una finestra o di una porta è più chiaro di quello girato dall'altra parte.</li>
-          <li data-i18n="nv.v0_1_0_alpha_5.changed.3">Ogni finestra di dialogo si apre ogni volta al centro dello schermo e mantiene una sola dimensione mentre è aperta; ciò che non ci sta scorre al suo interno.</li>
-          <li data-i18n="nv.v0_1_0_alpha_5.changed.4">I nomi delle città della posizione del progetto compaiono nella lingua dell'interfaccia; i file mantengono la loro posizione.</li>
-          <li data-i18n="nv.v0_1_0_alpha_5.changed.5">Sezioni e prospetti stampati ed esportati (PDF, SVG, PNG, esportazione immagine) eliminano esattamente le linee nascoste.</li>
-          <li data-i18n="nv.v0_1_0_alpha_5.changed.6">Sezioni e prospetti dipingono le facce sovrapposte nel loro vero ordine di profondità, e il vetro delle finestre nasconde ciò che sta dietro.</li>
-          <li data-i18n="nv.v0_1_0_alpha_5.changed.7">«Su cosciale» si offre solo su una scala con un cosciale da quel lato; «Posiziona su ospite» aggiunge solo la ringhiera che manca su un lato.</li>
-          <li data-i18n="nv.v0_1_0_alpha_5.changed.8">La casa di esempio si trova a Cagliari, dove è il suo indirizzo; i nuovi progetti partono sempre da Roma.</li>
-          <li data-i18n="nv.v0_1_0_alpha_5.changed.9">Le finestre costruite attorno a lunghi elenchi (materiali, visibilità e grafica, stili oggetti, filtri, stili di linea, proprietà abaco, parametri, tasti rapidi…) si ridimensionano trascinando i bordi e si riaprono a quella misura; il contenuto non le ridimensiona mai.</li>
-          <li data-i18n="nv.v0_1_0_alpha_5.changed.10">Il piano terra della casa d'esempio è un muro unico con la facciata negozio incorporata, perché una facciata continua ritaglia il muro lungo cui corre.</li>
-        </ul>
-        <h4 data-i18n="nv.fixed">Corretto</h4>
-        <ul>
-          <li data-i18n="nv.v0_1_0_alpha_5.fixed.1">Un muro di base cambiato in un tipo sovrapposto mantiene la sua linea di ubicazione: la facciata non si sposta più di metà del suo spessore.</li>
-          <li data-i18n="nv.v0_1_0_alpha_5.fixed.2">Ogni sottomuro di un muro sovrapposto si unisce al muro accanto alla propria altezza, con gli strati chiusi attorno all'angolo.</li>
-          <li data-i18n="nv.v0_1_0_alpha_5.fixed.3">Aprire un progetto sopra un altro mostra il nuovo in ogni vista; ogni modo di aprire chiede di salvare le modifiche; salvare una vista 3D con un nuovo nome non sposta più la camera della vista aperta.</li>
-          <li data-i18n="nv.v0_1_0_alpha_5.fixed.4">Le ringhiere sulle scale corrono sul contorno della scala, i montanti poggiano interi sui gradini, le balaustre sono equidistanti e i correnti non affondano più nella prima pedata.</li>
-          <li data-i18n="nv.v0_1_0_alpha_5.fixed.5">I telai delle finestre non spariscono più nei prospetti dove il davanzale sta nel loro piano.</li>
-          <li data-i18n="nv.v0_1_0_alpha_5.fixed.6">Una faccia radente al sole è illuminata in modo uniforme, senza strisce scure nelle viste 3D e nei prospetti.</li>
-          <li data-i18n="nv.v0_1_0_alpha_5.fixed.7">L'analemma della traiettoria del sole è un unico anello regolare che passa per il sole, e in prospettiva le sue linee sono tagliate dietro l'occhio.</li>
-          <li data-i18n="nv.v0_1_0_alpha_5.fixed.8">Rispondere «No» al salvataggio e poi aprire lo stesso file lo ricarica com'era stato salvato.</li>
-          <li data-i18n="nv.v0_1_0_alpha_5.fixed.9">Nelle viste 3D la guida dello snap angolare sta sul muro che si sta disegnando.</li>
-          <li data-i18n="nv.v0_1_0_alpha_5.fixed.10">L'area di un muro, negli abachi, nel computo dei materiali e nelle quantità IFC, esclude il vano di una facciata continua incorporata.</li>
-        </ul>
-      </article>
-      <article class="rel">
-        <h3><span class="ver">0.1.0-alpha.4</span> <time datetime="2026-10-19">2026-10-19</time></h3>
-        <h4 data-i18n="nv.added">Aggiunto</h4>
-        <ul>
-          <li data-i18n="nv.v0_1_0_alpha_4.added.1">Una schermata di avvio mentre il programma si carica, con le fasi reali del caricamento, nella lingua salvata, altrimenti in quella del sistema, altrimenti in inglese; si disattiva in Opzioni.</li>
-          <li data-i18n="nv.v0_1_0_alpha_4.added.2">Muri sovrapposti: sottomuri disegnati in ogni vista con i loro strati, impostati in «Sottomuri del tipo», scelti uno per uno con Tab e separati con «Scomponi in muri singoli».</li>
-          <li data-i18n="nv.v0_1_0_alpha_4.added.3">Sole e ombre in piante, sezioni e prospetti come nelle viste 3D, con la traiettoria del sole, «Impostazioni del sole» e lo studio del soleggiamento; un sole per il progetto o uno per una vista.</li>
-          <li data-i18n="nv.v0_1_0_alpha_4.added.4">Quote temporanee su ogni elemento in ogni vista, 3D compreso, con le linee di riferimento agganciate a qualunque riferimento e ricordate, e le impostazioni «Quote temporanee».</li>
-          <li data-i18n="nv.v0_1_0_alpha_4.added.5">Modalità touch per schermi tattili e penne, con gesti a due dita e disposizioni per tablet e telefoni.</li>
-          <li data-i18n="nv.v0_1_0_alpha_4.added.6">Disegno nelle viste 3D: muri, pavimenti, tetti e schizzi con la stessa anteprima, le stesse guide e quote temporanee della pianta, e gli strumenti di modifica su linee di schizzo ed elementi.</li>
-          <li data-i18n="nv.v0_1_0_alpha_4.added.7">Piani di lavoro e piani di riferimento.</li>
-          <li data-i18n="nv.v0_1_0_alpha_4.added.8">«Strati del tipo»: gli strati di un tipo come schede, con spessore totale, resistenza termica, massa per unità di superficie e un'anteprima dal vivo.</li>
-          <li data-i18n="nv.v0_1_0_alpha_4.added.9">Ogni scheda della barra multifunzione completa: 75 comandi ancora da fare compaiono in grigio come «Non ancora disponibile», tra cui dieci nuovi gruppi.</li>
-          <li data-i18n="nv.v0_1_0_alpha_4.added.10">Una vista trascinata fuori dall'area di disegno si apre in una finestra propria, anche su un altro monitor.</li>
-          <li data-i18n="nv.v0_1_0_alpha_4.added.11">La striscia delle viste e delle famiglie con miniature dal vivo, e i pannelli Proprietà e Indice del progetto agganciabili, con un selettore dei tipi che mostra le anteprime.</li>
-        </ul>
-        <h4 data-i18n="nv.changed">Modificato</h4>
-        <ul>
-          <li data-i18n="nv.v0_1_0_alpha_4.changed.1">Il pannello Proprietà del muro e «Parametri del tipo» in gruppi, con i valori derivati in sola lettura e le righe in grigio quando un altro valore non le consente.</li>
-          <li data-i18n="nv.v0_1_0_alpha_4.changed.2">Ogni finestra di dialogo con un'anteprima ha un interruttore «Anteprima» nell'intestazione e mantiene una sola dimensione e posizione.</li>
-          <li data-i18n="nv.v0_1_0_alpha_4.changed.3">Lo stile Classica si sceglie in Opzioni accanto a quello BIMopen, senza un'opzione a parte per abilitarlo.</li>
-          <li data-i18n="nv.v0_1_0_alpha_4.changed.4">Lo stile Classica ha una nuova barra del titolo, una barra multifunzione che scorre invece di tagliare i pulsanti, una sola barra delle opzioni e nessuna barra di stato.</li>
-          <li data-i18n="nv.v0_1_0_alpha_4.changed.5">La finestra principale riempie lo schermo al primo avvio; in seguito si apre come è stata chiusa.</li>
-          <li data-i18n="nv.v0_1_0_alpha_4.changed.6">Il cubo di orientamento ha facce smussate e frecce attorno, e più contrasto su sfondi chiari e scuri.</li>
-          <li data-i18n="nv.v0_1_0_alpha_4.changed.7">Le linee nascoste mantengono facce bianche e linee scure in entrambi i temi; gli stili ombreggiati riempiono piante e sezioni con i colori dei materiali.</li>
-          <li data-i18n="nv.v0_1_0_alpha_4.changed.8">Colori e motivi vengono solo dal materiale, in ogni vista e in ogni anteprima.</li>
-          <li data-i18n="nv.v0_1_0_alpha_4.changed.9">Le ringhiere di scale e rampe seguono fin dall'inizio il contorno della scala su ogni lato; scale e corrimano curvi sono superfici lisce.</li>
-          <li data-i18n="nv.v0_1_0_alpha_4.changed.10">Le funzioni non ancora disponibili sono in grigio in entrambi gli stili di interfaccia.</li>
-          <li data-i18n="nv.v0_1_0_alpha_4.changed.11">Il manuale utente mostra lo stile BIMopen; il suo capitolo «Stili dell'interfaccia» mostra lo stile Classica e la modalità touch su monitor, tablet e telefono.</li>
-        </ul>
-        <h4 data-i18n="nv.fixed">Corretto</h4>
-        <ul>
-          <li data-i18n="nv.v0_1_0_alpha_4.fixed.1">La vista 3D disegna muri, pavimenti, tetti e telai senza crepe sottili.</li>
-          <li data-i18n="nv.v0_1_0_alpha_4.fixed.2">I telai di porte e finestre non si sovrappongono più agli angoli: nessuno sfarfallio in 3D, nessuna linea spuria in sezioni e prospetti.</li>
-          <li data-i18n="nv.v0_1_0_alpha_4.fixed.3">Il solaio del primo piano della casa di esempio si ferma al nucleo dei muri, dietro l'isolamento.</li>
-          <li data-i18n="nv.v0_1_0_alpha_4.fixed.4">Nessuna punta sugli spigoli del cubo di orientamento.</li>
-          <li data-i18n="nv.v0_1_0_alpha_4.fixed.5">Su Wayland la finestra principale non si chiude più dopo la schermata di avvio.</li>
-          <li data-i18n="nv.v0_1_0_alpha_4.fixed.6">Un pannello reso mobile non viene più disegnato due volte.</li>
-          <li data-i18n="nv.v0_1_0_alpha_4.fixed.7">Le aperture restano nel loro muro agli angoli e quando vengono copiate; un clic sul vetro di una finestra sceglie la finestra in sezioni, prospetti e 3D.</li>
-        </ul>
-      </article>
-      <article class="rel">
-        <h3><span class="ver">0.1.0-alpha.3</span> <time datetime="2026-10-15">2026-10-15</time></h3>
-        <h4 data-i18n="nv.changed">Modificato</h4>
-        <ul>
-          <li data-i18n="nv.v0_1_0_alpha_3.changed.1">Lo stile di interfaccia BIMopen al primo avvio; lo stile Classica resta una volta scelto in Opzioni.</li>
-          <li data-i18n="nv.v0_1_0_alpha_3.changed.2">In uno schizzo, l'estremo di una linea selezionata da sola si trascina da solo; con una catena selezionata (Tab) gli estremi in cui le sue linee si incontrano si trascinano insieme.</li>
-          <li data-i18n="nv.v0_1_0_alpha_3.changed.3">Le impostazioni di snap si aprono da entrambi gli stili di interfaccia; le sostituzioni di snap indicano dove si possono usare.</li>
-        </ul>
-        <h4 data-i18n="nv.fixed">Corretto</h4>
-        <ul>
-          <li data-i18n="nv.v0_1_0_alpha_3.fixed.1">Un arco smusso mantiene il tipo delle linee di schizzo che raccorda (un contorno resta un contorno, non un'alzata).</li>
-          <li data-i18n="nv.v0_1_0_alpha_3.fixed.2">Il valore digitato in una quota sposta solo muri, griglie, porte, finestre e linee di dettaglio.</li>
-        </ul>
-      </article>
-      <!-- /novita -->
-      </div>
-    </div>
-  </section>
 </main>
 
 <footer>
   <div class="wrap">
     <div class="row">
       <span>© <span id="year">2026</span> BIMopen · <span data-i18n="foot.lic">Software gratuito</span> · <span data-i18n="foot.claude">Sviluppato con</span> <a href="https://claude.com/claude-code" rel="noopener">Claude Code</a></span>
-      <span><a href="./#formati" data-con-lingua="./#formati" data-i18n="nav.formati">Formati</a> · <a href="filosofia.html" data-con-lingua="filosofia.html" data-i18n="nav.filosofia">Filosofia</a> · <a href="roadmap.html" data-con-lingua="roadmap.html" data-i18n="nav.roadmap">Roadmap</a> · <a href="download.html" data-con-lingua="download.html" data-i18n="nav.scarica">Scarica</a> · <a href="manual/it/" data-manuale data-i18n="nav.manuale">Manuale</a> · <a href="./#faq" data-con-lingua="./#faq" data-i18n="nav.faq">Domande</a><!-- canale:piede --><!-- /canale:piede --> · <span data-i18n="foot.codice">Codice sorgente: non ancora pubblico</span></span>
+      <span><a href="./#formati" data-con-lingua="./#formati" data-i18n="nav.formati">Formati</a> · <a href="philosophy.html" data-con-lingua="philosophy.html" data-i18n="nav.filosofia">Filosofia</a> · <a href="roadmap.html" data-con-lingua="roadmap.html" data-i18n="nav.roadmap">Roadmap</a> · <a href="download.html" data-con-lingua="download.html" data-i18n="nav.scarica">Scarica</a> · <a href="news.html" data-con-lingua="news.html" data-i18n="nav.novita">Novità</a> · <a href="manual/it/" data-manuale data-i18n="nav.manuale">Manuale</a> · <a href="./#faq" data-con-lingua="./#faq" data-i18n="nav.faq">Domande</a><!-- canale:piede --><!-- /canale:piede --> · <span data-i18n="foot.codice">Codice sorgente: non ancora pubblico</span></span>
     </div>
-    <p class="made"><span class="tric" aria-hidden="true"><i></i><i></i><i></i></span><b lang="en" dir="ltr">Made in Italy</b><span aria-hidden="true">·</span><span data-i18n="foot.italia">Progettato e sviluppato in Italia</span></p>
+    <p class="made"><span class="tric" aria-hidden="true"><i></i><i></i><i></i></span><span data-i18n="foot.italia">Progettato in Italia</span></p>
     <small class="privato" data-i18n="foot.privato">BIMopen è un progetto personale e non commerciale di un privato cittadino: non è un'attività d'impresa, non vende prodotti o servizi e non riceve pagamenti, per questo non ha partita IVA.</small>
-    <small data-i18n="foot.marchi">Autodesk® e Revit® sono marchi o marchi registrati di Autodesk, Inc. BIMopen è un progetto indipendente, non affiliato, sponsorizzato né approvato da Autodesk®; i nomi sono usati solo per indicare i formati e i flussi di lavoro con cui BIMopen è compatibile. IFC è uno standard di buildingSMART International.</small>
   </div>
 </footer>
 
@@ -500,8 +388,8 @@
     });
   });
 </script>
-<script src="lingua.js?v=009d9b5a"></script>
-<script src="assets/menu.js?v=12f6671b"></script>
+<script src="language.js?v=3b38c5f5"></script>
+<script src="assets/menu.js?v=2b43f1ee"></script>
 <script src="assets/effetti.js?v=3fe63441"></script>
 <script>
   // tema: scuro finché non si sceglie; poi chiaro o scuro, ricordato in questo browser

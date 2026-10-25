@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="it" data-build="1e4634cb">
+<html lang="it" data-build="d204915d">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -46,7 +46,7 @@
    "image": "https://bimopen.it/assets/og-bimopen.jpg",
    "isAccessibleForFree": true,
    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
-   "featureList": ["Export IFC4", "Import .rvt sperimentale (nome del progetto e nomi dei livelli)", "Piante, sezioni, prospetti e viste 3D", "Abachi configurabili collegati al modello e computo dei materiali", "Tavole con cartiglio e stampa in PDF vettoriale", "File di progetto a database con recupero dopo un arresto e copie di backup", "Manuale utente in sei lingue", "Riga di comando e server MCP"]
+   "featureList": ["Export IFC4", "Apertura dei file IFC", "Piante, sezioni, prospetti e viste 3D", "Abachi configurabili collegati al modello e computo dei materiali", "Tavole con cartiglio e stampa in PDF vettoriale", "File di progetto a database con recupero dopo un arresto e copie di backup", "Manuale utente in sei lingue", "Riga di comando e server MCP"]
   }
  ]
 }
@@ -410,7 +410,7 @@
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn, .to-top, .ep { transition: none; } }
   @media print { .to-top, .lang-pick, .theme-toggle { display: none !important; } }
 </style>
-<link rel="stylesheet" href="assets/menu.css?v=11b1857a">
+<link rel="stylesheet" href="assets/menu.css?v=439b367a">
 <link rel="stylesheet" href="assets/effetti.css?v=6a95309b">
 </head>
 <body>
@@ -434,9 +434,10 @@
         </div>
       </div>
       <a href="roadmap.html" data-con-lingua="roadmap.html" data-i18n="nav.roadmap">Roadmap</a>
-      <a href="filosofia.html" data-con-lingua="filosofia.html" data-i18n="nav.filosofia">Filosofia</a>
+      <a href="philosophy.html" data-con-lingua="philosophy.html" data-i18n="nav.filosofia">Filosofia</a>
       <a href="manual/it/" data-manuale data-i18n="nav.manuale">Manuale</a>
       <a href="download.html" data-con-lingua="download.html" data-i18n="nav.scarica">Scarica</a>
+      <a href="news.html" data-con-lingua="news.html" data-i18n="nav.novita">Novità</a>
     </nav>
     <div class="bar-right">
       <label class="lang-pick">
@@ -455,7 +456,7 @@
         <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
         <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
       </button>
-      <a class="btn btn-primary cta-top" href="app/" data-app="b1768c96"><span class="cta-long" data-i18n="cta.prova">Provalo nel browser</span><span class="cta-short" data-i18n="dl1.btn">Apri BIMopen</span></a>
+      <a class="btn btn-primary cta-top" href="app/" data-app="846ad4b9"><span class="cta-long" data-i18n="cta.prova">Provalo nel browser</span><span class="cta-short" data-i18n="dl1.btn">Apri BIMopen</span></a>
       <button type="button" class="theme-toggle menu-btn" id="menuBtn" aria-expanded="false" aria-controls="drawer" aria-label="Menu" data-i18n-attr="aria-label:ui.menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
     </div>
   </div>
@@ -475,12 +476,13 @@
       <a href="#agenti" data-i18n="nav.agenti">Automazione</a>
     </div>
     <a href="roadmap.html" data-con-lingua="roadmap.html" data-i18n="nav.roadmap">Roadmap</a>
-    <a href="filosofia.html" data-con-lingua="filosofia.html" data-i18n="nav.filosofia">Filosofia</a>
+    <a href="philosophy.html" data-con-lingua="philosophy.html" data-i18n="nav.filosofia">Filosofia</a>
     <a href="manual/it/" data-manuale data-i18n="nav.manuale">Manuale</a>
     <a href="download.html" data-con-lingua="download.html" data-i18n="nav.scarica">Scarica</a>
+    <a href="news.html" data-con-lingua="news.html" data-i18n="nav.novita">Novità</a>
     <a href="#faq" data-i18n="nav.faq">Domande</a>
   </nav>
-  <a class="btn btn-primary drawer-cta" href="app/" data-app="b1768c96"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11L13 8z" fill="currentColor"/></svg><span data-i18n="cta.prova">Provalo nel browser</span></a>
+  <a class="btn btn-primary drawer-cta" href="app/" data-app="846ad4b9"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11L13 8z" fill="currentColor"/></svg><span data-i18n="cta.prova">Provalo nel browser</span></a>
 </div>
 
 <main id="top">
@@ -494,7 +496,7 @@
         <p class="handle"><!-- canale:handle --><!-- /canale:handle --></p>
         <p class="lead" data-i18n="hero.lead">BIMopen è un software BIM gratuito; il codice potrebbe essere aperto in futuro con una licenza libera. Modelli muri, porte, finestre e solai una volta sola: piante, vista 3D, abachi e file IFC nascono dallo stesso modello e restano sempre allineati.</p>
         <div class="cta">
-          <a class="btn btn-primary" href="app/" data-app="b1768c96">
+          <a class="btn btn-primary" href="app/" data-app="846ad4b9">
             <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11L13 8z" fill="currentColor"/></svg>
             <span data-i18n="cta.prova">Provalo nel browser</span>
           </a>
@@ -506,7 +508,7 @@
         <ul class="facts">
           <li data-i18n="fact.1">Nessun account né abbonamento</li>
           <li data-i18n="fact.2">Export IFC4</li>
-          <li data-i18n="fact.3">Import .rvt sperimentale</li>
+          <li data-i18n="fact.3">Apre i file IFC</li>
           <li data-i18n="fact.4">Browser, Windows, Linux e Android</li>
         </ul>
       </div>
@@ -547,12 +549,12 @@
           <button type="button" role="tab" id="car-t8" aria-controls="car-s8" aria-selected="false" tabindex="-1" data-i18n="car.8.t">Browser</button>
         </div>
         <div class="car-stage">
-          <div class="car-slide" role="tabpanel" id="car-s1" aria-labelledby="car-t1" aria-roledescription="slide"><a class="fr fr-desk" href="assets/ui/it/interface-bimopen-dark.webp?v=69f41e20" data-ui-link data-zoom="car" data-zoom-cap="car-c1"><img src="assets/ui/it/interface-bimopen-dark.webp?v=69f41e20" alt="BIMopen scuro" data-i18n-attr="alt:car.1.t" data-ui width="1586" height="992"></a></div>
-          <div class="car-slide" role="tabpanel" id="car-s2" aria-labelledby="car-t2" aria-roledescription="slide" hidden><a class="fr fr-desk" href="assets/ui/it/interface-bimopen.webp?v=54678d0a" data-ui-link data-zoom="car" data-zoom-cap="car-c2"><img data-src="assets/ui/it/interface-bimopen.webp?v=54678d0a" alt="BIMopen chiaro" data-i18n-attr="alt:car.2.t" data-ui width="1586" height="992"></a></div>
-          <div class="car-slide" role="tabpanel" id="car-s3" aria-labelledby="car-t3" aria-roledescription="slide" hidden><a class="fr fr-desk" href="assets/ui/it/style-classic.webp?v=12975365" data-ui-link data-zoom="car" data-zoom-cap="car-c3"><img data-src="assets/ui/it/style-classic.webp?v=12975365" alt="Classica" data-i18n-attr="alt:car.3.t" data-ui width="1586" height="992"></a></div>
-          <div class="car-slide" role="tabpanel" id="car-s4" aria-labelledby="car-t4" aria-roledescription="slide" hidden><a class="fr fr-desk" href="assets/ui/it/touch-pc.webp?v=06128452" data-ui-link data-zoom="car" data-zoom-cap="car-c4"><img data-src="assets/ui/it/touch-pc.webp?v=06128452" alt="Touch PC" data-i18n-attr="alt:car.4.t" data-ui width="1600" height="900"></a></div>
-          <div class="car-slide" role="tabpanel" id="car-s5" aria-labelledby="car-t5" aria-roledescription="slide" hidden><a class="fr fr-tablet" href="assets/ui/it/touch-tablet-landscape.webp?v=4299e87a" data-ui-link data-zoom="car" data-zoom-cap="car-c5"><img data-src="assets/ui/it/touch-tablet-landscape.webp?v=4299e87a" alt="Tablet orizzontale" data-i18n-attr="alt:car.5.t" data-ui width="1280" height="800"></a></div>
-          <div class="car-slide" role="tabpanel" id="car-s6" aria-labelledby="car-t6" aria-roledescription="slide" hidden><a class="fr fr-tablet" href="assets/ui/it/touch-tablet-portrait.webp?v=c4d74613" data-ui-link data-zoom="car" data-zoom-cap="car-c6"><img data-src="assets/ui/it/touch-tablet-portrait.webp?v=c4d74613" alt="Tablet verticale" data-i18n-attr="alt:car.6.t" data-ui width="688" height="1100"></a></div>
+          <div class="car-slide" role="tabpanel" id="car-s1" aria-labelledby="car-t1" aria-roledescription="slide"><a class="fr fr-desk" href="assets/ui/it/interface-bimopen-dark.webp?v=67e48de5" data-ui-link data-zoom="car" data-zoom-cap="car-c1"><img src="assets/ui/it/interface-bimopen-dark.webp?v=67e48de5" alt="BIMopen scuro" data-i18n-attr="alt:car.1.t" data-ui width="1586" height="992"></a></div>
+          <div class="car-slide" role="tabpanel" id="car-s2" aria-labelledby="car-t2" aria-roledescription="slide" hidden><a class="fr fr-desk" href="assets/ui/it/interface-bimopen.webp?v=c19b4b5f" data-ui-link data-zoom="car" data-zoom-cap="car-c2"><img data-src="assets/ui/it/interface-bimopen.webp?v=c19b4b5f" alt="BIMopen chiaro" data-i18n-attr="alt:car.2.t" data-ui width="1586" height="992"></a></div>
+          <div class="car-slide" role="tabpanel" id="car-s3" aria-labelledby="car-t3" aria-roledescription="slide" hidden><a class="fr fr-desk" href="assets/ui/it/style-classic.webp?v=e2ba8489" data-ui-link data-zoom="car" data-zoom-cap="car-c3"><img data-src="assets/ui/it/style-classic.webp?v=e2ba8489" alt="Classica" data-i18n-attr="alt:car.3.t" data-ui width="1586" height="992"></a></div>
+          <div class="car-slide" role="tabpanel" id="car-s4" aria-labelledby="car-t4" aria-roledescription="slide" hidden><a class="fr fr-desk" href="assets/ui/it/touch-pc.webp?v=e70188ce" data-ui-link data-zoom="car" data-zoom-cap="car-c4"><img data-src="assets/ui/it/touch-pc.webp?v=e70188ce" alt="Touch PC" data-i18n-attr="alt:car.4.t" data-ui width="1600" height="900"></a></div>
+          <div class="car-slide" role="tabpanel" id="car-s5" aria-labelledby="car-t5" aria-roledescription="slide" hidden><a class="fr fr-tablet" href="assets/ui/it/touch-tablet-landscape.webp?v=b9353577" data-ui-link data-zoom="car" data-zoom-cap="car-c5"><img data-src="assets/ui/it/touch-tablet-landscape.webp?v=b9353577" alt="Tablet orizzontale" data-i18n-attr="alt:car.5.t" data-ui width="1280" height="800"></a></div>
+          <div class="car-slide" role="tabpanel" id="car-s6" aria-labelledby="car-t6" aria-roledescription="slide" hidden><a class="fr fr-tablet" href="assets/ui/it/touch-tablet-portrait.webp?v=3e339776" data-ui-link data-zoom="car" data-zoom-cap="car-c6"><img data-src="assets/ui/it/touch-tablet-portrait.webp?v=3e339776" alt="Tablet verticale" data-i18n-attr="alt:car.6.t" data-ui width="688" height="1100"></a></div>
           <div class="car-slide" role="tabpanel" id="car-s7" aria-labelledby="car-t7" aria-roledescription="slide" hidden><a class="fr fr-phone" href="assets/ui/it/touch-phone-portrait.webp?v=cc0aa5da" data-ui-link data-zoom="car" data-zoom-cap="car-c7"><img data-src="assets/ui/it/touch-phone-portrait.webp?v=cc0aa5da" alt="Telefono" data-i18n-attr="alt:car.7.t" data-ui width="412" height="915"></a></div>
           <div class="car-slide" role="tabpanel" id="car-s8" aria-labelledby="car-t8" aria-roledescription="slide" hidden><a class="fr fr-browser" href="assets/ui/it/browser.webp?v=3eb38b34" data-ui-link data-zoom="car" data-zoom-cap="car-c8"><span class="bb" aria-hidden="true"><i></i><i></i><i></i><span>atsanna.github.io/bimopen-site/app/</span></span><img data-src="assets/ui/it/browser.webp?v=3eb38b34" alt="Browser" data-i18n-attr="alt:car.8.t" data-ui width="1586" height="992"></a></div>
           <button type="button" class="car-arrow prev" aria-label="Interfaccia precedente" data-i18n-attr="aria-label:car.prev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
@@ -672,11 +674,10 @@
           </div>
         </article>
         <article class="card fmt">
-          <span class="badge terra">.rvt</span>
+          <span class="badge">IFC</span>
           <div>
-            <h3 data-i18n="fmt2.h3">Import dei file .rvt: sperimentale</h3>
-            <p data-i18n="fmt2.p">Oggi legge solo il nome del progetto e i nomi dei livelli. Per scambiare i modelli usa IFC4. Il lettore è la libreria open source rvt (licenza Apache 2.0).</p>
-            <p class="note" data-i18n="fmt2.nota">Muri, porte, finestre e solai dei file .rvt non sono ancora letti.</p>
+            <h3 data-i18n="fmt2.h3">Apertura dei file IFC</h3>
+            <p data-i18n="fmt2.p">Apre i file IFC2x3 e IFC4 come nuovi progetti: muri, solai, porte, finestre e locali diventano elementi di BIMopen, ogni altro oggetto con una forma entra come modello generico.</p>
           </div>
         </article>
         <article class="card fmt">
@@ -741,7 +742,7 @@ $ bimopen-cli mcp</pre>
         <article class="card">
           <h3 data-i18n="dl1.h3">Nel browser</h3>
           <p data-i18n="dl1.p">Nessuna installazione: serve un browser recente (Chrome, Edge, Firefox o Safari) con WebGPU o WebGL2. BIMopen si apre nella lingua scelta su questo sito, e i file restano sul tuo computer.</p>
-          <p style="margin-top:16px"><a class="btn btn-primary" href="app/" data-app="b1768c96" data-i18n="dl1.btn">Apri BIMopen</a></p>
+          <p style="margin-top:16px"><a class="btn btn-primary" href="app/" data-app="846ad4b9" data-i18n="dl1.btn">Apri BIMopen</a></p>
         </article>
         <article class="card">
           <h3 data-i18n="dl2.h3">Per il computer</h3>
@@ -762,7 +763,7 @@ $ bimopen-cli mcp</pre>
       <span class="eyebrow" data-i18n="faq.kicker">Domande frequenti</span>
       <h2 id="faq-t" data-i18n="faq.h2">Domande frequenti</h2>
       <details><summary data-i18n="faq1.q">Quanto costa?</summary><p data-i18n="faq1.a">Niente. BIMopen è gratuito: non ha licenze a pagamento, abbonamenti né account, neanche per l'uso professionale.</p></details>
-      <details><summary data-i18n="faq2.q">Apre i file .rvt?</summary><p data-i18n="faq2.a">Non ancora in modo utile: l'import dei file .rvt è sperimentale e oggi legge solo il nome del progetto e i nomi dei livelli. Per scambiare i modelli con gli altri software BIM usa IFC4, lo standard aperto. BIMopen non salva in formato .rvt, che è un formato chiuso.</p></details>
+      <details><summary data-i18n="faq2.q">Apre i file .rvt?</summary><p data-i18n="faq2.a">No. BIMopen scambia i modelli con gli altri software BIM tramite IFC, lo standard aperto: esporta un IFC dal tuo programma e aprilo in BIMopen.</p></details>
       <details><summary data-i18n="faq3.q">Dove finiscono i miei progetti?</summary><p data-i18n="faq3.a">Sul tuo computer. Anche nella versione per browser il modello resta nella pagina, e quando salvi viene scaricato come file. Questo sito non usa cookie né strumenti di tracciamento.</p></details>
       <details><summary data-i18n="faq4.q">Posso usarlo per un progetto reale?</summary><p data-i18n="faq4.a">Per studi e modelli semplici sì: modelli muri, solai, tetti, scale e facciate continue, impagini le viste su tavole con cartiglio e le stampi in PDF, e il file di progetto recupera il lavoro dopo un arresto. Mancano ancora controsoffitti, fasi, famiglie caricabili ed export DWG: puoi seguirne lo sviluppo nella roadmap.</p></details>
       <details><summary data-i18n="faq5.q">In che lingua è il programma?</summary><p data-i18n="faq5.a">In italiano, inglese, tedesco, francese, spagnolo e arabo, da destra a sinistra. Al primo avvio usa la lingua del sistema o del browser; si cambia dal menu 🌐 in alto. Anche questo sito è disponibile nelle stesse sei lingue.</p></details>
@@ -777,7 +778,7 @@ $ bimopen-cli mcp</pre>
       <h2 id="final-t" data-i18n="fin.h2">Il tuo prossimo progetto, in BIM aperto.</h2>
       <p class="sub" style="margin-inline:auto" data-i18n="fin.p">Apri la casa di esempio, sposta un muro e guarda pianta, 3D e computo aggiornarsi insieme.</p>
       <div class="cta">
-        <a class="btn btn-primary" href="app/" data-app="b1768c96" data-i18n="cta.prova">Provalo nel browser</a>
+        <a class="btn btn-primary" href="app/" data-app="846ad4b9" data-i18n="cta.prova">Provalo nel browser</a>
         <a class="btn btn-ghost" href="#scarica" data-i18n="fin.altre">Altre opzioni</a>
       </div>
     </div>
@@ -788,11 +789,10 @@ $ bimopen-cli mcp</pre>
   <div class="wrap">
     <div class="row">
       <span>© <span id="year">2026</span> BIMopen · <span data-i18n="foot.lic">Software gratuito</span> · <span data-i18n="foot.claude">Sviluppato con</span> <a href="https://claude.com/claude-code" rel="noopener">Claude Code</a></span>
-      <span><a href="#formati" data-i18n="nav.formati">Formati</a> · <a href="filosofia.html" data-con-lingua="filosofia.html" data-i18n="nav.filosofia">Filosofia</a> · <a href="roadmap.html" data-con-lingua="roadmap.html" data-i18n="nav.roadmap">Roadmap</a> · <a href="download.html" data-con-lingua="download.html" data-i18n="nav.scarica">Scarica</a> · <a href="manual/it/" data-manuale data-i18n="nav.manuale">Manuale</a> · <a href="#faq" data-i18n="nav.faq">Domande</a><!-- canale:piede --><!-- /canale:piede --> · <span data-i18n="foot.codice">Codice sorgente: non ancora pubblico</span></span>
+      <span><a href="#formati" data-i18n="nav.formati">Formati</a> · <a href="philosophy.html" data-con-lingua="philosophy.html" data-i18n="nav.filosofia">Filosofia</a> · <a href="roadmap.html" data-con-lingua="roadmap.html" data-i18n="nav.roadmap">Roadmap</a> · <a href="download.html" data-con-lingua="download.html" data-i18n="nav.scarica">Scarica</a> · <a href="news.html" data-con-lingua="news.html" data-i18n="nav.novita">Novità</a> · <a href="manual/it/" data-manuale data-i18n="nav.manuale">Manuale</a> · <a href="#faq" data-i18n="nav.faq">Domande</a><!-- canale:piede --><!-- /canale:piede --> · <span data-i18n="foot.codice">Codice sorgente: non ancora pubblico</span></span>
     </div>
-    <p class="made"><span class="tric" aria-hidden="true"><i></i><i></i><i></i></span><b lang="en" dir="ltr">Made in Italy</b><span aria-hidden="true">·</span><span data-i18n="foot.italia">Progettato e sviluppato in Italia</span></p>
+    <p class="made"><span class="tric" aria-hidden="true"><i></i><i></i><i></i></span><span data-i18n="foot.italia">Progettato in Italia</span></p>
     <small class="privato" data-i18n="foot.privato">BIMopen è un progetto personale e non commerciale di un privato cittadino: non è un'attività d'impresa, non vende prodotti o servizi e non riceve pagamenti, per questo non ha partita IVA.</small>
-    <small data-i18n="foot.marchi">Autodesk® e Revit® sono marchi o marchi registrati di Autodesk, Inc. BIMopen è un progetto indipendente, non affiliato, sponsorizzato né approvato da Autodesk®; i nomi sono usati solo per indicare i formati e i flussi di lavoro con cui BIMopen è compatibile. IFC è uno standard di buildingSMART International.</small>
   </div>
 </footer>
 
@@ -919,8 +919,8 @@ $ bimopen-cli mcp</pre>
     });
   })();
 </script>
-<script src="lingua.js?v=009d9b5a"></script>
-<script src="assets/menu.js?v=12f6671b"></script>
+<script src="language.js?v=3b38c5f5"></script>
+<script src="assets/menu.js?v=2b43f1ee"></script>
 <script src="assets/effetti.js?v=3fe63441"></script>
 <script>
   // tema: scuro finché non si sceglie; poi chiaro o scuro, ricordato in questo browser

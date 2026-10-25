@@ -1,4 +1,4 @@
-// The header menu of every page (assets/menu.css): the «Funzioni ▾» disclosure and, below 1080 px,
+// The header menu of every page (assets/menu.css): the «Funzioni ▾» disclosure and, below 1180 px,
 // the drawer. Esc, a click outside or leaving with Tab close the disclosure; ×, Esc or a click
 // outside close the drawer, whose focus stays inside while it is open and goes back to ☰ after.
 (function () {
@@ -50,7 +50,7 @@
     else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
   });
   // wider than the menu: the drawer is not needed any more
-  var wide = window.matchMedia('(min-width: 1080px)');
+  var wide = window.matchMedia('(min-width: 1180px)');
   var onWide = function () { if (wide.matches) closeDrawer(false); };
   if (wide.addEventListener) wide.addEventListener('change', onWide); else if (wide.addListener) wide.addListener(onWide);
 })();

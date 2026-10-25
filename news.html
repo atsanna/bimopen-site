@@ -1,0 +1,648 @@
+<!doctype html>
+<html lang="it" data-build="cb77e291">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="nw.meta.title">Novità di BIMopen — Le versioni dalla più recente</title>
+<meta name="description" data-i18n-attr="content:nw.meta.desc" content="Le novità di ogni versione di BIMopen, dalla più recente: i punti salienti con le immagini e l&#39;elenco completo delle modifiche.">
+<link rel="canonical" href="https://bimopen.it/news.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BIMopen">
+<meta property="og:locale" content="it_IT">
+<meta property="og:title" content="Novità di BIMopen — Le versioni dalla più recente">
+<meta property="og:description" content="Le novità di ogni versione di BIMopen, dalla più recente: i punti salienti con le immagini e l&#39;elenco completo delle modifiche.">
+<meta property="og:url" content="https://bimopen.it/news.html">
+<meta property="og:image" content="https://bimopen.it/assets/og-bimopen.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.ico?v=0fba0888" sizes="any">
+<link rel="icon" href="assets/favicon.svg?v=74b5de74" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=6406f785">
+<meta name="theme-color" content="#0D1319">
+<script>
+  // tema scelto in precedenza, applicato prima del disegno della pagina (nessun lampo di colore)
+  var t = null; try { t = localStorage.getItem('theme'); } catch (e) {} document.documentElement.dataset.theme = t || 'dark'; var tc = document.querySelector('meta[name="theme-color"]'); if (tc && t === 'light') tc.content = '#EEF2F5';
+</script>
+<style>
+  :root {
+    --paper: #EEF2F5; --card: #FFFFFF; --field: #F8FAFB; --line: #E2E7EC;
+    --ink: #172133; --ink-soft: #3D4A5C; --muted: #5E6A78;
+    --accent: #08AABA; --accent-text: #06788A; --accent-hover: #2DB7C4; --on-accent: #093440;
+    --accent-soft: #8CECF2; --accent-soft-ink: #093440; --logo: #08AABA;
+    --second: #E6961E; --on-second: #172133; --ok: #1B8A55; --on-ok: #FFFFFF;
+    --warn-bg: #FCF1DD; --warn-line: #E6961E; --warn-ink: #172133; --warn-icon: #A86200;
+    --render-bg: #EEF2F5; --code-bg: #1C262E; --code-ink: #E8EEF2; --code-c: #8A98A6; --code-k: #14BECC; --code-p: #E6961E;
+    --shadow: 0 2px 14px rgba(0,0,0,.086);
+    --radius: 12px; --radius-btn: 8px;
+    --font: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", "Helvetica Neue", Arial, sans-serif;
+    --mono: ui-monospace, "SFMono-Regular", "Cascadia Mono", "Ubuntu Mono", Menlo, Consolas, monospace;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #0D1319; --card: #182129; --field: #1F2A33; --line: #28343E;
+      --ink: #E4EBF1; --ink-soft: #B7C3CE; --muted: #8A98A6;
+      --accent: #14BECC; --accent-text: #14BECC; --accent-hover: #3FD0DB; --on-accent: #0D1319;
+      --accent-soft: #0E525E; --accent-soft-ink: #A0F0F6; --logo: #14BECC;
+      --on-second: #0D1319; --ok: #22B46E; --on-ok: #0D1319;
+      --warn-bg: #2A2A20; --warn-ink: #E4EBF1; --warn-icon: #E6961E;
+      --code-bg: #141C23; --shadow: 0 2px 14px rgba(0,0,0,.35); color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #0D1319; --card: #182129; --field: #1F2A33; --line: #28343E;
+    --ink: #E4EBF1; --ink-soft: #B7C3CE; --muted: #8A98A6;
+    --accent: #14BECC; --accent-text: #14BECC; --accent-hover: #3FD0DB; --on-accent: #0D1319;
+    --accent-soft: #0E525E; --accent-soft-ink: #A0F0F6; --logo: #14BECC;
+    --on-second: #0D1319; --ok: #22B46E; --on-ok: #0D1319;
+    --warn-bg: #2A2A20; --warn-ink: #E4EBF1; --warn-icon: #E6961E;
+    --code-bg: #141C23; --shadow: 0 2px 14px rgba(0,0,0,.35); color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font: 17px/1.6 var(--font); -webkit-font-smoothing: antialiased; }
+  img { max-width: 100%; display: block; }
+  a { color: var(--accent-text); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  .wrap { width: min(1160px, 100% - 32px); margin-inline: auto; }
+  .skip { position: absolute; inset-inline-start: -999px; }
+  .skip:focus { inset-inline-start: 16px; top: 16px; background: var(--card); padding: 8px 12px; z-index: 10; }
+
+  header.top { position: sticky; top: 0; z-index: 5; background: color-mix(in srgb, var(--paper) 88%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+  .bar { display: flex; align-items: center; gap: 20px; height: 64px; }
+  .brand { display: flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font-weight: 700; font-size: 20px; letter-spacing: -.01em; direction: ltr; }
+  .brand b { color: var(--logo); font-weight: 400; }
+  .bar-right { display: flex; align-items: center; gap: 10px; margin-inline-start: auto; }
+  .lang-pick { display: flex; align-items: center; gap: 6px; color: var(--muted); font-size: 14px; }
+  .lang-pick svg { width: 16px; height: 16px; flex: none; }
+  .lang-pick select { font: inherit; color: var(--ink); background: var(--card); border: 1px solid var(--line); border-radius: var(--radius-btn); padding: 6px 8px; cursor: pointer; }
+  .theme-toggle { width: 36px; height: 36px; border-radius: var(--radius-btn); border: 1px solid var(--line); background: var(--card); color: var(--ink); cursor: pointer; display: grid; place-items: center; }
+  .theme-toggle svg { width: 18px; height: 18px; }
+  .theme-toggle .moon { display: none; }
+  :root[data-theme="dark"] .theme-toggle .sun { display: none; }
+  :root[data-theme="dark"] .theme-toggle .moon { display: block; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .theme-toggle .sun { display: none; }
+    :root:not([data-theme="light"]) .theme-toggle .moon { display: block; }
+  }
+  .btn { display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; padding: 11px 18px; border-radius: var(--radius-btn); font-weight: 600; font-size: 15px; text-decoration: none; border: 1px solid transparent; transition: transform .12s, background-color .12s; }
+  .btn:hover { transform: translateY(-1px); }
+  .btn-primary { background: var(--accent); color: var(--on-accent); }
+  .btn-primary:hover { background: var(--accent-hover); }
+  .btn-ghost { border-color: var(--line); color: var(--ink); background: var(--card); }
+
+  .eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--accent-text); }
+  .eyebrow::before { content: ""; width: 18px; height: 2px; background: currentColor; }
+  h1 { font-size: clamp(36px, 5.2vw, 60px); line-height: 1.06; letter-spacing: -.025em; margin: 14px 0 18px; }
+  h1 em { font-style: normal; color: var(--accent-text); }
+  .lead { font-size: 19px; color: var(--ink-soft); margin: 0 0 28px; }
+  .cta { display: flex; flex-wrap: wrap; gap: 12px; }
+
+  section { padding: 72px 0; }
+  section.alt { background: var(--card); border-block: 1px solid var(--line); }
+  h2 { font-size: clamp(28px, 3.4vw, 40px); line-height: 1.12; letter-spacing: -.02em; margin: 10px 0 14px; }
+  .sub { color: var(--ink-soft); margin: 0 0 36px; font-size: 18px; }
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .grid3 > *, .grid2 > *, .road > *, .split > * { min-width: 0; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; }
+  section.alt .card { background: var(--paper); }
+  .card h3 { margin: 12px 0 6px; font-size: 19px; letter-spacing: -.01em; }
+  .card p { margin: 0; color: var(--ink-soft); font-size: 15.5px; }
+  .ico { width: 40px; height: 40px; border-radius: 10px; background: var(--accent-soft); display: grid; place-items: center; color: var(--accent-soft-ink); }
+  .ico svg { width: 22px; height: 22px; }
+
+
+  code { font-family: var(--mono); font-size: .9em; background: var(--field); border: 1px solid var(--line); padding: 0 5px; border-radius: 5px; direction: ltr; unicode-bidi: isolate; }
+
+
+
+  /* the video channel: written by i18n/video.py only when "canale" is true in i18n/video.json */
+  .ext { width: 13px; height: 13px; flex: none; opacity: .75; }
+  .theme-toggle.chan { text-decoration: none; }
+  .bar:has(.chan) { gap: 14px; }
+  .theme-toggle.chan svg { width: 19px; height: 19px; }
+  .theme-toggle.chan:hover { color: var(--accent-text); border-color: var(--accent); }
+  footer .chan-f { display: inline-flex; align-items: center; gap: 5px; vertical-align: bottom; }
+  footer .chan-f svg { width: 17px; height: 17px; }
+  .watch { display: inline-flex; align-items: center; gap: 10px; margin: 18px 0 4px; padding: 10px 14px 10px 10px; border-radius: 999px; background: var(--card); border: 1px solid var(--line); color: var(--ink); text-decoration: none; font-size: 15px; }
+  .watch:hover { border-color: var(--accent); }
+  .watch .pi { width: 30px; height: 30px; border-radius: 50%; background: var(--accent); color: var(--on-accent); display: grid; place-items: center; flex: none; }
+  .watch .pi svg { width: 13px; height: 13px; margin-inline-start: 2px; }
+  .watch b { color: var(--accent-text); }
+  .nw { white-space: nowrap; }
+  @media (max-width: 560px) { .watch { border-radius: 14px; align-items: flex-start; } }
+  footer { border-top: 1px solid var(--line); padding: 36px 0 48px; color: var(--muted); font-size: 14px; }
+  footer .row { display: flex; flex-wrap: wrap; gap: 12px 28px; justify-content: space-between; align-items: center; }
+  footer small { display: block; margin-top: 20px; line-height: 1.5; }
+  footer small.privato + small { margin-top: 8px; }
+
+  .to-top { position: fixed; bottom: 24px; inset-inline-end: 24px; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line); background: var(--card); color: var(--ink); display: grid; place-items: center; cursor: pointer; box-shadow: var(--shadow); opacity: 0; visibility: hidden; transform: translateY(8px); transition: opacity .2s, transform .2s, visibility .2s; z-index: 6; }
+  .to-top svg { width: 20px; height: 20px; }
+  .to-top:hover { border-color: var(--accent); }
+  .to-top.on { opacity: 1; visibility: visible; transform: none; }
+
+  :root[lang="ar"] * { letter-spacing: 0 !important; }
+  :root[lang="ar"] .eyebrow { text-transform: none; }
+
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn, .to-top { transition: none; } }
+  @media print { .to-top, .lang-pick, .theme-toggle { display: none !important; } }
+
+  .grid3 > * { min-width: 0; }
+  @media (max-width: 920px) { .grid3 { grid-template-columns: 1fr; } }
+  @media (max-width: 560px) {
+    body { font-size: 16px; }
+    .bar { gap: 10px; }
+    .bar .btn { display: none; }
+    .lang-pick svg { display: none; }
+    section { padding: 52px 0; }
+    .to-top { bottom: 16px; inset-inline-end: 16px; }
+  }
+
+  [data-zoom]:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+  .lightbox { border: 0; padding: 0; background: transparent; max-width: 96vw; max-height: 94vh; overflow: visible; }
+  .lightbox::backdrop { background: rgba(13, 19, 25, .94); }
+  .lightbox img { display: block; max-width: 96vw; max-height: 86vh; width: auto; height: auto; border-radius: var(--radius); box-shadow: 0 10px 40px rgba(0,0,0,.45); background: #fff; }
+  .lightbox .lb-cap { color: #E4EBF1; font-size: 15px; text-align: center; margin: 10px auto 0; max-width: 60em; }
+  .lightbox .lb-cap b { color: #fff; }
+  .lightbox .lb-n { font: 700 13px var(--mono); color: #14BECC; margin-inline-end: 8px; direction: ltr; unicode-bidi: isolate; }
+  .lightbox .lb-close { position: absolute; top: -14px; inset-inline-end: -14px; width: 40px; height: 40px; border-radius: 50%; border: 0; background: #fff; color: #172133; font-size: 26px; line-height: 40px; cursor: pointer; box-shadow: 0 2px 10px rgba(0,0,0,.35); z-index: 2; }
+  .lightbox .lb-nav { position: absolute; top: calc(50% - 22px); width: 44px; height: 44px; border-radius: 50%; border: 0; background: rgba(255,255,255,.92); color: #172133; display: grid; place-items: center; cursor: pointer; box-shadow: 0 2px 10px rgba(0,0,0,.35); z-index: 2; }
+  .lightbox .lb-nav[hidden] { display: none; }
+  .lightbox .lb-nav svg { width: 22px; height: 22px; }
+  .lightbox .lb-prev { inset-inline-start: 10px; }
+  .lightbox .lb-next { inset-inline-end: 10px; }
+  .lightbox .lb-next svg, [dir="rtl"] .lightbox .lb-prev svg { transform: scaleX(-1); }
+  .lightbox .lb-close:focus-visible, .lightbox .lb-nav:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+
+  /* «Novità»: the versions from CHANGELOG.md, written by i18n/novita.py */
+  h1, h2, h3, .hl b { text-wrap: balance; }
+  .sub, .hl span, .cp { text-wrap: pretty; }
+  .nw-hero { position: relative; overflow: hidden; padding: 64px 0 8px; }
+  .nw-hero::before { content: ""; position: absolute; inset: 0; background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px); background-size: 32px 32px; mask-image: radial-gradient(ellipse at 80% 20%, #000 0%, transparent 65%); opacity: .7; pointer-events: none; }
+  .nw-hero .wrap { position: relative; }
+  .nw-hero .sub { margin: 0; }
+  .arrow { display: inline-block; }
+  [dir="rtl"] .arrow { transform: scaleX(-1); }
+  .ver { font-family: var(--mono); font-weight: 700; direction: ltr; unicode-bidi: isolate; }
+  time { direction: ltr; unicode-bidi: isolate; }
+  :root[lang="ar"] time { direction: rtl; }
+  .next { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px; margin: 26px 0 0; padding: 18px 22px; border: 1px dashed var(--accent); border-radius: var(--radius); background: var(--card); }
+  .next .k { font-size: 13px; text-transform: uppercase; letter-spacing: .05em; color: var(--accent-text); font-weight: 700; }
+  .next p { margin: 2px 0 0; color: var(--ink-soft); }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 0; align-items: center; }
+  .chips .lbl { color: var(--muted); font-size: 14px; margin-inline-end: 4px; }
+  .chip { border: 1px solid var(--line); border-radius: 999px; padding: 4px 12px; font-size: 14px; text-decoration: none; color: var(--ink); background: var(--card); white-space: nowrap; }
+  .chip:hover { border-color: var(--accent); }
+  section.vers { padding: 28px 0 72px; }
+  .vers .wrap { display: grid; gap: 28px; }
+  .rel { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px 24px 18px; box-shadow: var(--shadow); scroll-margin-top: 80px; }
+  .rel-head { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; }
+  .rel-head h2 { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; margin: 0; font-size: 24px; letter-spacing: 0; }
+  .rel-head h2 time { color: var(--muted); font-size: 15px; font-weight: 500; }
+  .rel-head .btn { margin-inline-start: auto; padding: 8px 16px; font-size: 15px; }
+  .pill { background: var(--accent-soft); color: var(--accent-soft-ink); border-radius: 999px; padding: 2px 10px; font-size: 13px; font-weight: 700; white-space: nowrap; }
+  .hl-k { margin: 18px 0 10px; font-size: 13px; text-transform: uppercase; letter-spacing: .05em; color: var(--accent-text); }
+  .hls { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 16px; }
+  .hl { margin: 0; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+  .hl a { display: block; aspect-ratio: 16 / 10; border-radius: 8px; overflow: hidden; border: 1px solid var(--line); background: #fff; cursor: zoom-in; }
+  .hl img { width: 100%; height: 100%; object-fit: cover; object-position: top left; transition: transform .25s; }
+  [dir="rtl"] .hl img { object-position: top right; }
+  .hl a:hover img { transform: scale(1.03); }
+  .hl figcaption { display: flex; flex-direction: column; gap: 2px; }
+  .hl b { font-size: 16px; color: var(--ink); }
+  .hl span { font-size: 14.5px; color: var(--muted); }
+  details summary { cursor: pointer; }
+  .all { margin-top: 18px; border-top: 1px solid var(--line); padding-top: 12px; }
+  .all > summary { font-weight: 600; color: var(--accent-text); }
+  .n { display: inline-block; min-width: 22px; padding: 0 7px; border-radius: 999px; background: var(--paper); color: var(--muted); font-size: 13px; text-align: center; font-weight: 600; direction: ltr; }
+  .rel h4 { margin: 14px 0 4px; font-size: 13px; text-transform: uppercase; letter-spacing: .05em; color: var(--accent-text); }
+  .rel ul { margin: 0; padding-inline-start: 20px; color: var(--ink-soft); font-size: 15.5px; }
+  .rel li { margin: 4px 0; }
+  :root[lang="ar"] .next .k, :root[lang="ar"] .hl-k, :root[lang="ar"] .rel h4 { text-transform: none; }
+  .older h2 { font-size: 22px; margin: 4px 0 10px; }
+  .compact { padding: 12px 18px; box-shadow: none; margin: 0 0 10px; }
+  .compact > summary { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; list-style: none; }
+  .compact > summary::-webkit-details-marker { display: none; }
+  .compact > summary::before { content: "▸"; color: var(--accent-text); }
+  [dir="rtl"] .compact > summary::before { content: "◂"; }
+  .compact[open] > summary::before { content: "▾"; }
+  .compact time { color: var(--muted); font-size: 14.5px; }
+  .compact .cp { color: var(--ink-soft); flex: 1 1 260px; }
+  .compact .dl { font-size: 14.5px; font-weight: 600; white-space: nowrap; }
+  @media (max-width: 640px) {
+    .rel { padding: 18px 16px 14px; }
+    .hls { grid-template-columns: 1fr 1fr; gap: 12px; }
+    .hl b { font-size: 15px; }
+    .hl span { display: none; }
+  }
+</style>
+<link rel="stylesheet" href="assets/menu.css?v=439b367a">
+<link rel="stylesheet" href="assets/effetti.css?v=6a95309b">
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="ui.skip">Vai al contenuto</a>
+
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="./" data-con-lingua="./" aria-label="BIMopen">
+      <svg width="24" height="32" viewBox="5 0 100 140" aria-hidden="true"><g fill="none" stroke="var(--logo)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M15 58 54 35 93 58V105L54 128 15 105Z"/><path d="M15 58 54 81 93 58M54 81V128"/><path d="M54 35V10H82"/></g></svg>
+      <span>BIM<b>open</b></span>
+    </a>
+    <nav class="links" aria-label="Sezioni" data-i18n-attr="aria-label:ui.sezioni">
+      <div class="dd">
+        <button type="button" class="dd-btn" aria-expanded="false" aria-controls="dd-fun"><span data-i18n="nav.programma">Il programma</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="dd-menu" id="dd-fun">
+          <!-- canale:menu --><!-- /canale:menu -->
+          <a href="./#viste" data-con-lingua="./#viste" data-i18n="nav.viste">Viste</a>
+          <a href="./#funzioni" data-con-lingua="./#funzioni" data-i18n="nav.funzioni">Funzioni</a>
+          <a href="./#formati" data-con-lingua="./#formati" data-i18n="nav.formati">Formati</a>
+          <a href="./#agenti" data-con-lingua="./#agenti" data-i18n="nav.agenti">Automazione</a>
+        </div>
+      </div>
+      <a href="roadmap.html" data-con-lingua="roadmap.html" data-i18n="nav.roadmap">Roadmap</a>
+      <a href="philosophy.html" data-con-lingua="philosophy.html" data-i18n="nav.filosofia">Filosofia</a>
+      <a href="manual/it/" data-manuale data-i18n="nav.manuale">Manuale</a>
+      <a href="download.html" data-con-lingua="download.html" data-i18n="nav.scarica">Scarica</a>
+      <a href="news.html" data-con-lingua="news.html" data-i18n="nav.novita" aria-current="page">Novità</a>
+    </nav>
+    <div class="bar-right">
+      <label class="lang-pick">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg>
+        <select id="lang-select" aria-label="Lingua · Language · Sprache · Langue · Idioma · اللغة">
+          <option value="it" lang="it">Italiano</option>
+          <option value="en" lang="en">English</option>
+          <option value="de" lang="de">Deutsch</option>
+          <option value="fr" lang="fr">Français</option>
+          <option value="es" lang="es">Español</option>
+          <option value="ar" lang="ar" dir="rtl">العربية</option>
+        </select>
+      </label>
+      <!-- canale:icona --><!-- /canale:icona -->
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Cambia tema" data-i18n-attr="aria-label:ui.tema">
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+      <a class="btn btn-primary cta-top" href="app/" data-app="846ad4b9"><span class="cta-long" data-i18n="cta.prova">Provalo nel browser</span><span class="cta-short" data-i18n="dl1.btn">Apri BIMopen</span></a>
+      <button type="button" class="theme-toggle menu-btn" id="menuBtn" aria-expanded="false" aria-controls="drawer" aria-label="Menu" data-i18n-attr="aria-label:ui.menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+</header>
+<div class="drawer-veil" id="drawerVeil" hidden></div>
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Menu" data-i18n-attr="aria-label:ui.menu">
+  <div class="drawer-head">
+    <a class="brand" href="./" data-con-lingua="./" aria-label="BIMopen"><svg width="20" height="27" viewBox="5 0 100 140" aria-hidden="true"><g fill="none" stroke="var(--logo)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M15 58 54 35 93 58V105L54 128 15 105Z"/><path d="M15 58 54 81 93 58M54 81V128"/><path d="M54 35V10H82"/></g></svg><span>BIM<b>open</b></span></a>
+    <button type="button" class="theme-toggle" id="drawerClose" aria-label="Chiudi" data-i18n-attr="aria-label:lb.close">×</button>
+  </div>
+  <nav class="drawer-nav" aria-label="Sezioni" data-i18n-attr="aria-label:ui.sezioni">
+    <div class="drawer-sub">
+      <!-- canale:menu --><!-- /canale:menu -->
+      <a href="./#viste" data-con-lingua="./#viste" data-i18n="nav.viste">Viste</a>
+      <a href="./#funzioni" data-con-lingua="./#funzioni" data-i18n="nav.funzioni">Funzioni</a>
+      <a href="./#formati" data-con-lingua="./#formati" data-i18n="nav.formati">Formati</a>
+      <a href="./#agenti" data-con-lingua="./#agenti" data-i18n="nav.agenti">Automazione</a>
+    </div>
+    <a href="roadmap.html" data-con-lingua="roadmap.html" data-i18n="nav.roadmap">Roadmap</a>
+    <a href="philosophy.html" data-con-lingua="philosophy.html" data-i18n="nav.filosofia">Filosofia</a>
+    <a href="manual/it/" data-manuale data-i18n="nav.manuale">Manuale</a>
+    <a href="download.html" data-con-lingua="download.html" data-i18n="nav.scarica">Scarica</a>
+    <a href="news.html" data-con-lingua="news.html" data-i18n="nav.novita" aria-current="page">Novità</a>
+    <a href="./#faq" data-con-lingua="./#faq" data-i18n="nav.faq">Domande</a>
+  </nav>
+  <a class="btn btn-primary drawer-cta" href="app/" data-app="846ad4b9"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11L13 8z" fill="currentColor"/></svg><span data-i18n="cta.prova">Provalo nel browser</span></a>
+</div>
+
+<main id="main">
+  <section class="nw-hero" aria-labelledby="titolo">
+    <div class="wrap">
+      <span class="eyebrow" data-i18n="nw.kicker">Registro delle modifiche</span>
+      <h1 id="titolo" data-i18n="nw.h1">Novità</h1>
+      <p class="sub" data-i18n="nw.sub">Le versioni di BIMopen, dalla più recente.</p>
+      <div class="next" role="note">
+        <div><span class="k" data-i18n="nw.next.k">Prossima versione</span><p data-i18n="nw.next.p">È in preparazione: cosa entra lo dice la roadmap.</p></div>
+        <a class="btn btn-ghost" href="roadmap.html" data-con-lingua="roadmap.html"><span data-i18n="nw.next.btn">Vai alla roadmap</span> <span aria-hidden="true" class="arrow">→</span></a>
+      </div>
+      <!-- novita:indice -->
+      <nav class="chips" aria-label="Versioni" data-i18n-attr="aria-label:nw.jump"><span class="lbl" data-i18n="nw.jump">Versioni</span><a class="chip" href="#v-0-1-0-alpha-5"><span class="ver">0.1.0-alpha.5</span></a><a class="chip" href="#v-0-1-0-alpha-4"><span class="ver">0.1.0-alpha.4</span></a><a class="chip" href="#v-0-1-0-alpha-3"><span class="ver">0.1.0-alpha.3</span></a><a class="chip" href="#v-0-1-0-alpha-2"><span class="ver">0.1.0-alpha.2</span></a><a class="chip" href="#v-0-1-0-alpha-1"><span class="ver">0.1.0-alpha.1</span></a></nav>
+      <!-- /novita:indice -->
+    </div>
+  </section>
+  <section class="vers" aria-labelledby="titolo">
+    <div class="wrap">
+      <!-- novita:versioni -->
+      <article class="rel" id="v-0-1-0-alpha-5">
+        <header class="rel-head">
+          <h2><span class="ver">0.1.0-alpha.5</span> <time datetime="2026-10-20">2026-10-20</time></h2> <span class="pill" data-i18n="nw.latest">Ultima versione</span>
+          <a class="btn btn-primary" href="download.html" data-con-lingua="download.html" data-i18n="nw.dl">Scarica</a>
+        </header>
+        <h3 class="hl-k" data-i18n="nw.hl">In evidenza</h3>
+        <div class="hls">
+          <figure class="hl">
+            <a href="assets/novita/it/vg-sun-path.webp?v=e9c66c4a" data-ui-link data-zoom="v-0-1-0-alpha-5" data-zoom-cap="cap-v-0-1-0-alpha-5-1"><img src="assets/novita/it/vg-sun-path.webp?v=e9c66c4a" data-ui alt="Traiettoria del sole in ogni vista" data-i18n-attr="alt:nh.v0_1_0_alpha_5.1.t" width="890" height="669" loading="lazy"></a>
+            <figcaption id="cap-v-0-1-0-alpha-5-1"><b data-i18n="nh.v0_1_0_alpha_5.1.t">Traiettoria del sole in ogni vista</b><span data-i18n="nh.v0_1_0_alpha_5.1.p">Linee delle ore, solstizi, analemmi, alba e tramonto.</span></figcaption>
+          </figure>
+          <figure class="hl">
+            <a href="assets/novita/it/vg-sun-settings.webp?v=3f1708a4" data-ui-link data-zoom="v-0-1-0-alpha-5" data-zoom-cap="cap-v-0-1-0-alpha-5-2"><img src="assets/novita/it/vg-sun-settings.webp?v=3f1708a4" data-ui alt="Il sole lungo il giorno e l&#x27;anno" data-i18n-attr="alt:nh.v0_1_0_alpha_5.2.t" width="1128" height="668" loading="lazy"></a>
+            <figcaption id="cap-v-0-1-0-alpha-5-2"><b data-i18n="nh.v0_1_0_alpha_5.2.t">Il sole lungo il giorno e l'anno</b><span data-i18n="nh.v0_1_0_alpha_5.2.p">Si trascina in 3D; albe e tramonti in un grafico.</span></figcaption>
+          </figure>
+          <figure class="hl">
+            <a href="assets/novita/it/fr-railing-type.webp?v=dd1c4bf8" data-ui-link data-zoom="v-0-1-0-alpha-5" data-zoom-cap="cap-v-0-1-0-alpha-5-3"><img src="assets/novita/it/fr-railing-type.webp?v=dd1c4bf8" data-ui alt="Ringhiere su misura" data-i18n-attr="alt:nh.v0_1_0_alpha_5.3.t" width="1128" height="748" loading="lazy"></a>
+            <figcaption id="cap-v-0-1-0-alpha-5-3"><b data-i18n="nh.v0_1_0_alpha_5.3.t">Ringhiere su misura</b><span data-i18n="nh.v0_1_0_alpha_5.3.p">Correnti, balaustre e montanti, con anteprima.</span></figcaption>
+          </figure>
+          <figure class="hl">
+            <a href="assets/novita/it/if-snap.webp?v=895fc8be" data-ui-link data-zoom="v-0-1-0-alpha-5" data-zoom-cap="cap-v-0-1-0-alpha-5-4"><img src="assets/novita/it/if-snap.webp?v=895fc8be" data-ui alt="Snap completi" data-i18n-attr="alt:nh.v0_1_0_alpha_5.4.t" width="756" height="628" loading="lazy"></a>
+            <figcaption id="cap-v-0-1-0-alpha-5-4"><b data-i18n="nh.v0_1_0_alpha_5.4.t">Snap completi</b><span data-i18n="nh.v0_1_0_alpha_5.4.p">Snap angolari in ogni vista e la finestra Snap.</span></figcaption>
+          </figure>
+        </div>
+        <details class="all">
+          <summary><span data-i18n="nw.all">Tutte le modifiche</span> <span class="n">34</span></summary>
+          <h4 data-i18n="nv.added">Aggiunto</h4>
+          <ul>
+            <li data-i18n="nv.v0_1_0_alpha_5.added.1">Una scheda «Cemento armato» della barra multifunzione tra Strutture e Metallo con i comandi delle armature, in entrambi gli stili dell'interfaccia e nella modalità touch.</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.added.2">Aiuti per leggere la traiettoria del sole in ogni vista («Aiuti visivi»): linee delle ore, mezzogiorno solare, la fascia dell'anno tra i solstizi, analemmi, alba e tramonto con i loro orari; nelle viste 3D il modello nasconde la parte della traiettoria dietro di esso.</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.added.3">Il sole trascinato nelle viste 3D come nelle piante, «Lungo la giornata» o «Lungo l'anno»; alba, tramonto e durata del giorno nella barra della vista; le albe e i tramonti dell'anno in un grafico in «Impostazioni del sole», dove un clic sceglie il giorno.</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.added.4">L'ora legale segue da sola la regola di ogni luogo e l'anno del sole; Tokyo, San Paolo, Santiago, Sydney e Auckland entrano nell'elenco delle città.</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.added.5">Tipi di ringhiera con «Struttura del corrente (non continuo)» e «Posizionamento balaustre» (trama principale, montanti all'inizio, agli angoli e alla fine), ciascuno con un'anteprima su una scala di esempio.</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.added.6">«Ringhiera ▸ Posiziona su ospite» nelle piante e nelle viste 3D, con «Offset dal percorso» e «Su pedate» o «Su cosciale».</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.added.7">La finestra «Snap» completa, uguale nei due stili: incrementi di lunghezza e angolari scelti dallo zoom, snap ad oggetto con le loro sostituzioni di due lettere, «Ripristina predefiniti»; le impostazioni restano con le preferenze.</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.added.8">Snap angolari in ogni vista: un segmento si aggancia all'orizzontale, alla verticale, al parallelo, al perpendicolare o a un multiplo dell'incremento angolare, misurato dall'asse della vista o dal segmento precedente, con una guida e l'angolo mostrato; in piante, sezioni, prospetti, viste 3D e schizzi, anche per Ruota e le serie radiali.</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.added.9">«Sostituzioni di snap» in ogni vista in cui uno strumento prende punti, digitate o dal menu del tasto destro; TAB e MAIUSC+TAB scorrono gli snap sotto il cursore; «Chiudi» (SZ) chiude una catena o il contorno di uno schizzo.</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.added.10">Ogni menu a discesa della barra multifunzione elenca tutti i suoi modi, che si trovano anche con la ricerca dei comandi; i modi ancora da fare sono in grigio come «Non ancora disponibile».</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.added.11">Barra delle opzioni: «Carica componente» per porte, finestre e componenti, «Etichetta al posizionamento» come casella di spunta, «Ruota dopo l'inserimento» per i componenti, l'offset del muro.</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.added.12"><code>snap</code> e <code>anglesnap</code> dalla riga di comando e tramite MCP.</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.added.13">Nel manuale utente le immagini si aprono grandi con un clic; il PDF ha una copertina.</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.added.14">«Mantieni linee coincidenti» in «Impostazioni di stampa» stampa tutte le linee sovrapposte invece di fonderle.</li>
+          </ul>
+          <h4 data-i18n="nv.changed">Modificato</h4>
+          <ul>
+            <li data-i18n="nv.v0_1_0_alpha_5.changed.1">Trascinare il sole è fluido in ogni vista: piante, sezioni e prospetti mostrano un'ombra provvisoria mentre si muove e quella completa una volta rilasciato; uno studio solare si riproduce allo stesso modo.</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.changed.2">Le ombre nelle viste 3D hanno bordi leggibili e sfumature morbide; lo stipite al sole di una finestra o di una porta è più chiaro di quello girato dall'altra parte.</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.changed.3">Ogni finestra di dialogo si apre ogni volta al centro dello schermo e mantiene una sola dimensione mentre è aperta; ciò che non ci sta scorre al suo interno.</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.changed.4">I nomi delle città della posizione del progetto compaiono nella lingua dell'interfaccia; i file mantengono la loro posizione.</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.changed.5">Sezioni e prospetti stampati ed esportati (PDF, SVG, PNG, esportazione immagine) eliminano esattamente le linee nascoste.</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.changed.6">Sezioni e prospetti dipingono le facce sovrapposte nel loro vero ordine di profondità, e il vetro delle finestre nasconde ciò che sta dietro.</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.changed.7">«Su cosciale» si offre solo su una scala con un cosciale da quel lato; «Posiziona su ospite» aggiunge solo la ringhiera che manca su un lato.</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.changed.8">La casa di esempio si trova a Cagliari, dove è il suo indirizzo; i nuovi progetti partono sempre da Roma.</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.changed.9">Le finestre costruite attorno a lunghi elenchi (materiali, visibilità e grafica, stili oggetti, filtri, stili di linea, proprietà abaco, parametri, tasti rapidi…) si ridimensionano trascinando i bordi e si riaprono a quella misura; il contenuto non le ridimensiona mai.</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.changed.10">Il piano terra della casa d'esempio è un muro unico con la facciata negozio incorporata, perché una facciata continua ritaglia il muro lungo cui corre.</li>
+          </ul>
+          <h4 data-i18n="nv.fixed">Corretto</h4>
+          <ul>
+            <li data-i18n="nv.v0_1_0_alpha_5.fixed.1">Un muro di base cambiato in un tipo sovrapposto mantiene la sua linea di ubicazione: la facciata non si sposta più di metà del suo spessore.</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.fixed.2">Ogni sottomuro di un muro sovrapposto si unisce al muro accanto alla propria altezza, con gli strati chiusi attorno all'angolo.</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.fixed.3">Aprire un progetto sopra un altro mostra il nuovo in ogni vista; ogni modo di aprire chiede di salvare le modifiche; salvare una vista 3D con un nuovo nome non sposta più la camera della vista aperta.</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.fixed.4">Le ringhiere sulle scale corrono sul contorno della scala, i montanti poggiano interi sui gradini, le balaustre sono equidistanti e i correnti non affondano più nella prima pedata.</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.fixed.5">I telai delle finestre non spariscono più nei prospetti dove il davanzale sta nel loro piano.</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.fixed.6">Una faccia radente al sole è illuminata in modo uniforme, senza strisce scure nelle viste 3D e nei prospetti.</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.fixed.7">L'analemma della traiettoria del sole è un unico anello regolare che passa per il sole, e in prospettiva le sue linee sono tagliate dietro l'occhio.</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.fixed.8">Rispondere «No» al salvataggio e poi aprire lo stesso file lo ricarica com'era stato salvato.</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.fixed.9">Nelle viste 3D la guida dello snap angolare sta sul muro che si sta disegnando.</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.fixed.10">L'area di un muro, negli abachi, nel computo dei materiali e nelle quantità IFC, esclude il vano di una facciata continua incorporata.</li>
+          </ul>
+        </details>
+      </article>
+      <article class="rel" id="v-0-1-0-alpha-4">
+        <header class="rel-head">
+          <h2><span class="ver">0.1.0-alpha.4</span> <time datetime="2026-10-19">2026-10-19</time></h2>
+          <a class="btn btn-primary" href="download.html" data-con-lingua="download.html" data-i18n="nw.dl">Scarica</a>
+        </header>
+        <h3 class="hl-k" data-i18n="nw.hl">In evidenza</h3>
+        <div class="hls">
+          <figure class="hl">
+            <a href="assets/novita/it/stacked-wall.webp?v=fed583a2" data-ui-link data-zoom="v-0-1-0-alpha-4" data-zoom-cap="cap-v-0-1-0-alpha-4-1"><img src="assets/novita/it/stacked-wall.webp?v=fed583a2" data-ui alt="Muri sovrapposti" data-i18n-attr="alt:nh.v0_1_0_alpha_4.1.t" width="1440" height="820" loading="lazy"></a>
+            <figcaption id="cap-v-0-1-0-alpha-4-1"><b data-i18n="nh.v0_1_0_alpha_4.1.t">Muri sovrapposti</b><span data-i18n="nh.v0_1_0_alpha_4.1.p">Sottomuri con i loro strati, in ogni vista.</span></figcaption>
+          </figure>
+          <figure class="hl">
+            <a href="assets/novita/it/touch-tablet-landscape.webp?v=b9353577" data-ui-link data-zoom="v-0-1-0-alpha-4" data-zoom-cap="cap-v-0-1-0-alpha-4-2"><img src="assets/novita/it/touch-tablet-landscape.webp?v=b9353577" data-ui alt="Modalità touch" data-i18n-attr="alt:nh.v0_1_0_alpha_4.2.t" width="1280" height="800" loading="lazy"></a>
+            <figcaption id="cap-v-0-1-0-alpha-4-2"><b data-i18n="nh.v0_1_0_alpha_4.2.t">Modalità touch</b><span data-i18n="nh.v0_1_0_alpha_4.2.p">Gesti a due dita, layout per tablet e telefono.</span></figcaption>
+          </figure>
+          <figure class="hl">
+            <a href="assets/novita/it/an-tempdims.webp?v=cf41c7a7" data-ui-link data-zoom="v-0-1-0-alpha-4" data-zoom-cap="cap-v-0-1-0-alpha-4-3"><img src="assets/novita/it/an-tempdims.webp?v=cf41c7a7" data-ui alt="Quote temporanee" data-i18n-attr="alt:nh.v0_1_0_alpha_4.3.t" width="533" height="415" loading="lazy"></a>
+            <figcaption id="cap-v-0-1-0-alpha-4-3"><b data-i18n="nh.v0_1_0_alpha_4.3.t">Quote temporanee</b><span data-i18n="nh.v0_1_0_alpha_4.3.p">Su ogni elemento e in ogni vista, 3D compreso.</span></figcaption>
+          </figure>
+          <figure class="hl">
+            <a href="assets/novita/it/wa-assembly.webp?v=716b1278" data-ui-link data-zoom="v-0-1-0-alpha-4" data-zoom-cap="cap-v-0-1-0-alpha-4-4"><img src="assets/novita/it/wa-assembly.webp?v=716b1278" data-ui alt="Strati del tipo" data-i18n-attr="alt:nh.v0_1_0_alpha_4.4.t" width="1128" height="748" loading="lazy"></a>
+            <figcaption id="cap-v-0-1-0-alpha-4-4"><b data-i18n="nh.v0_1_0_alpha_4.4.t">Strati del tipo</b><span data-i18n="nh.v0_1_0_alpha_4.4.p">Spessore, resistenza termica e anteprima dal vivo.</span></figcaption>
+          </figure>
+          <figure class="hl">
+            <a href="assets/novita/it/wa-workplane.webp?v=2055962a" data-ui-link data-zoom="v-0-1-0-alpha-4" data-zoom-cap="cap-v-0-1-0-alpha-4-5"><img src="assets/novita/it/wa-workplane.webp?v=2055962a" data-ui alt="Piani di lavoro" data-i18n-attr="alt:nh.v0_1_0_alpha_4.5.t" width="346" height="329" loading="lazy"></a>
+            <figcaption id="cap-v-0-1-0-alpha-4-5"><b data-i18n="nh.v0_1_0_alpha_4.5.t">Piani di lavoro</b><span data-i18n="nh.v0_1_0_alpha_4.5.p">Piani di lavoro e piani di riferimento.</span></figcaption>
+          </figure>
+        </div>
+        <details class="all">
+          <summary><span data-i18n="nw.all">Tutte le modifiche</span> <span class="n">29</span></summary>
+          <h4 data-i18n="nv.added">Aggiunto</h4>
+          <ul>
+            <li data-i18n="nv.v0_1_0_alpha_4.added.1">Una schermata di avvio mentre il programma si carica, con le fasi reali del caricamento, nella lingua salvata, altrimenti in quella del sistema, altrimenti in inglese; si disattiva in Opzioni.</li>
+            <li data-i18n="nv.v0_1_0_alpha_4.added.2">Muri sovrapposti: sottomuri disegnati in ogni vista con i loro strati, impostati in «Sottomuri del tipo», scelti uno per uno con Tab e separati con «Scomponi in muri singoli».</li>
+            <li data-i18n="nv.v0_1_0_alpha_4.added.3">Sole e ombre in piante, sezioni e prospetti come nelle viste 3D, con la traiettoria del sole, «Impostazioni del sole» e lo studio del soleggiamento; un sole per il progetto o uno per una vista.</li>
+            <li data-i18n="nv.v0_1_0_alpha_4.added.4">Quote temporanee su ogni elemento in ogni vista, 3D compreso, con le linee di riferimento agganciate a qualunque riferimento e ricordate, e le impostazioni «Quote temporanee».</li>
+            <li data-i18n="nv.v0_1_0_alpha_4.added.5">Modalità touch per schermi tattili e penne, con gesti a due dita e disposizioni per tablet e telefoni.</li>
+            <li data-i18n="nv.v0_1_0_alpha_4.added.6">Disegno nelle viste 3D: muri, pavimenti, tetti e schizzi con la stessa anteprima, le stesse guide e quote temporanee della pianta, e gli strumenti di modifica su linee di schizzo ed elementi.</li>
+            <li data-i18n="nv.v0_1_0_alpha_4.added.7">Piani di lavoro e piani di riferimento.</li>
+            <li data-i18n="nv.v0_1_0_alpha_4.added.8">«Strati del tipo»: gli strati di un tipo come schede, con spessore totale, resistenza termica, massa per unità di superficie e un'anteprima dal vivo.</li>
+            <li data-i18n="nv.v0_1_0_alpha_4.added.9">Ogni scheda della barra multifunzione completa: 75 comandi ancora da fare compaiono in grigio come «Non ancora disponibile», tra cui dieci nuovi gruppi.</li>
+            <li data-i18n="nv.v0_1_0_alpha_4.added.10">Una vista trascinata fuori dall'area di disegno si apre in una finestra propria, anche su un altro monitor.</li>
+            <li data-i18n="nv.v0_1_0_alpha_4.added.11">La striscia delle viste e dei componenti con miniature dal vivo, e i pannelli Proprietà e Indice del progetto agganciabili, con un selettore dei tipi che mostra le anteprime.</li>
+          </ul>
+          <h4 data-i18n="nv.changed">Modificato</h4>
+          <ul>
+            <li data-i18n="nv.v0_1_0_alpha_4.changed.1">Il pannello Proprietà del muro e «Parametri del tipo» in gruppi, con i valori derivati in sola lettura e le righe in grigio quando un altro valore non le consente.</li>
+            <li data-i18n="nv.v0_1_0_alpha_4.changed.2">Ogni finestra di dialogo con un'anteprima ha un interruttore «Anteprima» nell'intestazione e mantiene una sola dimensione e posizione.</li>
+            <li data-i18n="nv.v0_1_0_alpha_4.changed.3">Lo stile Classica si sceglie in Opzioni accanto a quello BIMopen, senza un'opzione a parte per abilitarlo.</li>
+            <li data-i18n="nv.v0_1_0_alpha_4.changed.4">Lo stile Classica ha una nuova barra del titolo, una barra multifunzione che scorre invece di tagliare i pulsanti, una sola barra delle opzioni e nessuna barra di stato.</li>
+            <li data-i18n="nv.v0_1_0_alpha_4.changed.5">La finestra principale riempie lo schermo al primo avvio; in seguito si apre come è stata chiusa.</li>
+            <li data-i18n="nv.v0_1_0_alpha_4.changed.6">Il cubo di orientamento ha facce smussate e frecce attorno, e più contrasto su sfondi chiari e scuri.</li>
+            <li data-i18n="nv.v0_1_0_alpha_4.changed.7">Le linee nascoste mantengono facce bianche e linee scure in entrambi i temi; gli stili ombreggiati riempiono piante e sezioni con i colori dei materiali.</li>
+            <li data-i18n="nv.v0_1_0_alpha_4.changed.8">Colori e motivi vengono solo dal materiale, in ogni vista e in ogni anteprima.</li>
+            <li data-i18n="nv.v0_1_0_alpha_4.changed.9">Le ringhiere di scale e rampe seguono fin dall'inizio il contorno della scala su ogni lato; scale e corrimano curvi sono superfici lisce.</li>
+            <li data-i18n="nv.v0_1_0_alpha_4.changed.10">Le funzioni non ancora disponibili sono in grigio in entrambi gli stili di interfaccia.</li>
+            <li data-i18n="nv.v0_1_0_alpha_4.changed.11">Il manuale utente mostra lo stile BIMopen; il suo capitolo «Stili dell'interfaccia» mostra lo stile Classica e la modalità touch su monitor, tablet e telefono.</li>
+          </ul>
+          <h4 data-i18n="nv.fixed">Corretto</h4>
+          <ul>
+            <li data-i18n="nv.v0_1_0_alpha_4.fixed.1">La vista 3D disegna muri, pavimenti, tetti e telai senza crepe sottili.</li>
+            <li data-i18n="nv.v0_1_0_alpha_4.fixed.2">I telai di porte e finestre non si sovrappongono più agli angoli: nessuno sfarfallio in 3D, nessuna linea spuria in sezioni e prospetti.</li>
+            <li data-i18n="nv.v0_1_0_alpha_4.fixed.3">Il solaio del primo piano della casa di esempio si ferma al nucleo dei muri, dietro l'isolamento.</li>
+            <li data-i18n="nv.v0_1_0_alpha_4.fixed.4">Nessuna punta sugli spigoli del cubo di orientamento.</li>
+            <li data-i18n="nv.v0_1_0_alpha_4.fixed.5">Su Wayland la finestra principale non si chiude più dopo la schermata di avvio.</li>
+            <li data-i18n="nv.v0_1_0_alpha_4.fixed.6">Un pannello reso mobile non viene più disegnato due volte.</li>
+            <li data-i18n="nv.v0_1_0_alpha_4.fixed.7">Le aperture restano nel loro muro agli angoli e quando vengono copiate; un clic sul vetro di una finestra sceglie la finestra in sezioni, prospetti e 3D.</li>
+          </ul>
+        </details>
+      </article>
+      <div class="older">
+        <h2 data-i18n="nw.older">Versioni precedenti</h2>
+        <details class="rel compact" id="v-0-1-0-alpha-3">
+          <summary><span class="ver">0.1.0-alpha.3</span> <time datetime="2026-10-15">2026-10-15</time> <span class="cp" data-i18n="nc.v0_1_0_alpha_3">Lo stile BIMopen al primo avvio, schizzi più precisi e due correzioni.</span> <span class="n">5</span></summary>
+        <h4 data-i18n="nv.changed">Modificato</h4>
+        <ul>
+          <li data-i18n="nv.v0_1_0_alpha_3.changed.1">Lo stile di interfaccia BIMopen al primo avvio; lo stile Classica resta una volta scelto in Opzioni.</li>
+          <li data-i18n="nv.v0_1_0_alpha_3.changed.2">In uno schizzo, l'estremo di una linea selezionata da sola si trascina da solo; con una catena selezionata (Tab) gli estremi in cui le sue linee si incontrano si trascinano insieme.</li>
+          <li data-i18n="nv.v0_1_0_alpha_3.changed.3">Le impostazioni di snap si aprono da entrambi gli stili di interfaccia; le sostituzioni di snap indicano dove si possono usare.</li>
+        </ul>
+        <h4 data-i18n="nv.fixed">Corretto</h4>
+        <ul>
+          <li data-i18n="nv.v0_1_0_alpha_3.fixed.1">Un arco smusso mantiene il tipo delle linee di schizzo che raccorda (un contorno resta un contorno, non un'alzata).</li>
+          <li data-i18n="nv.v0_1_0_alpha_3.fixed.2">Il valore digitato in una quota sposta solo muri, griglie, porte, finestre e linee di dettaglio.</li>
+        </ul>
+          <p><a class="dl" href="download.html" data-con-lingua="download.html" data-i18n="nw.dl">Scarica</a></p>
+        </details>
+        <details class="rel compact" id="v-0-1-0-alpha-2">
+          <summary><span class="ver">0.1.0-alpha.2</span> <time datetime="2026-10-15">2026-10-15</time> <span class="cp" data-i18n="nc.v0_1_0_alpha_2">Archi veri negli schizzi, tema scuro al primo avvio e tre correzioni.</span> <span class="n">6</span></summary>
+        <h4 data-i18n="nv.added">Aggiunto</h4>
+        <ul>
+          <li data-i18n="nv.v0_1_0_alpha_2.added.1">Gli archi disegnati negli schizzi di solai, tetti, regioni, profili dei muri e scale restano archi veri e si agganciano allo stesso modo in pianta, in sezione e in 3D.</li>
+        </ul>
+        <h4 data-i18n="nv.changed">Modificato</h4>
+        <ul>
+          <li data-i18n="nv.v0_1_0_alpha_2.changed.1">Tema scuro al primo avvio; lo sfondo invertito delle viste viene ricordato.</li>
+          <li data-i18n="nv.v0_1_0_alpha_2.changed.2">La finestra Informazioni indica che si tratta di una versione di prova pre-alpha.</li>
+        </ul>
+        <h4 data-i18n="nv.fixed">Corretto</h4>
+        <ul>
+          <li data-i18n="nv.v0_1_0_alpha_2.fixed.1">Eliminare il livello superiore di una scala multipiano non elimina più la scala.</li>
+          <li data-i18n="nv.v0_1_0_alpha_2.fixed.2">Nello stile BIMopen la striscia delle viste elenca gli abachi, compresi quelli predefiniti.</li>
+          <li data-i18n="nv.v0_1_0_alpha_2.fixed.3">Il clic o il tasto Esc che chiude il menu dello strumento in corso non inserisce più un punto, in tutte le viste.</li>
+        </ul>
+          <p><a class="dl" href="download.html" data-con-lingua="download.html" data-i18n="nw.dl">Scarica</a></p>
+        </details>
+        <details class="rel compact" id="v-0-1-0-alpha-1">
+          <summary><span class="ver">0.1.0-alpha.1</span> <time datetime="2026-10-15">2026-10-15</time> <span class="cp" data-i18n="nc.v0_1_0_alpha_1">La prima versione di prova: modello, viste, tavole in PDF, IFC.</span> <span class="n">10</span></summary>
+        <h4 data-i18n="nv.added">Aggiunto</h4>
+        <ul>
+          <li data-i18n="nv.v0_1_0_alpha_1.added.1">Prime versioni di prova per Windows 10/11 (64 bit) e Linux (x86_64), accanto all'applicazione web.</li>
+          <li data-i18n="nv.v0_1_0_alpha_1.added.2">Modellazione di livelli, griglie, muri stratificati, porte, finestre, solai, tetti, scale, ringhiere, facciate continue e locali, con piante, sezioni, prospetti, viste 3D, abachi, tavole stampate in PDF ed export IFC4.</li>
+          <li data-i18n="nv.v0_1_0_alpha_1.added.3">Import IFC (IFC2x3 e IFC4): ogni elemento con un corpo viene mostrato, con le facce orientate correttamente, anche per i gusci aperti o con facce di verso misto.</li>
+          <li data-i18n="nv.v0_1_0_alpha_1.added.4">Cubo di orientamento con 26 zone cliccabili, la bussola ad anello alla base, le frecce quando una faccia è vista di fronte e un menu con le sue opzioni.</li>
+          <li data-i18n="nv.v0_1_0_alpha_1.added.5">Prospetti di intelaiatura.</li>
+          <li data-i18n="nv.v0_1_0_alpha_1.added.6">Abaco dei blocchi di annotazione: un abaco dei simboli di un componente.</li>
+          <li data-i18n="nv.v0_1_0_alpha_1.added.7">Le scorciatoie da tastiera di due lettere, come <code>WA</code> per il muro, agiscono appena digitate nell'area di disegno; le scorciatoie condivise si esportano e si importano in XML.</li>
+          <li data-i18n="nv.v0_1_0_alpha_1.added.8">Il tasto destro del mouse apre il menu dello strumento in uso, con le sostituzioni di snap; le sostituzioni si possono anche digitare per il punto successivo (<code>SE</code>, <code>SM</code>, <code>SI</code>, <code>SN</code>, <code>SO</code>).</li>
+        </ul>
+        <h4 data-i18n="nv.changed">Modificato</h4>
+        <ul>
+          <li data-i18n="nv.v0_1_0_alpha_1.changed.1">Un'unica orbita per ogni navigazione 3D: l'area di disegno, il cubo di orientamento e la rotellina del mouse ruotano la vista allo stesso modo.</li>
+        </ul>
+        <h4 data-i18n="nv.fixed">Corretto</h4>
+        <ul>
+          <li data-i18n="nv.v0_1_0_alpha_1.fixed.1">Le campiture di prospetti e sezioni sono disegnate dentro i loro contorni, senza punte né riempimenti sull'intera sagoma.</li>
+        </ul>
+          <p><a class="dl" href="download.html" data-con-lingua="download.html" data-i18n="nw.dl">Scarica</a></p>
+        </details>
+      </div>
+      <!-- /novita:versioni -->
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="row">
+      <span>© <span id="year">2026</span> BIMopen · <span data-i18n="foot.lic">Software gratuito</span> · <span data-i18n="foot.claude">Sviluppato con</span> <a href="https://claude.com/claude-code" rel="noopener">Claude Code</a></span>
+      <span><a href="./#formati" data-con-lingua="./#formati" data-i18n="nav.formati">Formati</a> · <a href="philosophy.html" data-con-lingua="philosophy.html" data-i18n="nav.filosofia">Filosofia</a> · <a href="roadmap.html" data-con-lingua="roadmap.html" data-i18n="nav.roadmap">Roadmap</a> · <a href="download.html" data-con-lingua="download.html" data-i18n="nav.scarica">Scarica</a> · <a href="news.html" data-con-lingua="news.html" data-i18n="nav.novita">Novità</a> · <a href="manual/it/" data-manuale data-i18n="nav.manuale">Manuale</a> · <a href="./#faq" data-con-lingua="./#faq" data-i18n="nav.faq">Domande</a><!-- canale:piede --><!-- /canale:piede --> · <span data-i18n="foot.codice">Codice sorgente: non ancora pubblico</span></span>
+    </div>
+    <p class="made"><span class="tric" aria-hidden="true"><i></i><i></i><i></i></span><span data-i18n="foot.italia">Progettato in Italia</span></p>
+    <small class="privato" data-i18n="foot.privato">BIMopen è un progetto personale e non commerciale di un privato cittadino: non è un'attività d'impresa, non vende prodotti o servizi e non riceve pagamenti, per questo non ha partita IVA.</small>
+  </div>
+</footer>
+
+<button class="to-top" id="to-top" type="button" aria-label="Torna all'inizio" data-i18n-attr="aria-label:ui.top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
+
+<dialog class="lightbox" id="lightbox" aria-label="Immagine ingrandita" data-i18n-attr="aria-label:lb.label">
+  <button class="lb-close" type="button" aria-label="Chiudi" title="Chiudi" data-i18n-attr="aria-label:lb.close;title:lb.close">×</button>
+  <button class="lb-nav lb-prev" type="button" aria-label="Immagine precedente" data-i18n-attr="aria-label:lb.prev" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+  <button class="lb-nav lb-next" type="button" aria-label="Immagine successiva" data-i18n-attr="aria-label:lb.next" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+  <img alt="">
+  <p class="lb-cap"></p>
+</dialog>
+<script>
+  // The screenshots follow the language chosen on the site (every language has the same files).
+  document.addEventListener('lingua', function (e) {
+    var l = e.detail;
+    document.querySelectorAll('img[data-ui], a[data-ui-link]').forEach(function (x) {
+      ['src', 'href'].forEach(function (a) {
+        var v = x.getAttribute(a); if (v) x.setAttribute(a, v.replace(/assets\/novita\/[a-z]{2}\//, 'assets/novita/' + l + '/'));
+      });
+    });
+  });
+  // dates in the language of the page (Latin digits in Arabic too, as in the rest of the site)
+  document.addEventListener('lingua', function (e) {
+    var loc = e.detail === 'ar' ? 'ar-u-nu-latn' : e.detail;
+    document.querySelectorAll('time[datetime]').forEach(function (t) {
+      try { t.textContent = new Date(t.getAttribute('datetime') + 'T12:00:00').toLocaleDateString(loc, { year: 'numeric', month: 'long', day: 'numeric' }); } catch (x) {}
+    });
+  });
+
+  // Every image opens enlarged over the page: ×, Esc or a click outside close it, and focus goes
+  // back to the image. Images of one group (data-zoom) have arrows, arrow keys and swipe.
+  (function () {
+    var d = document.getElementById('lightbox'); if (!d || !d.showModal) return;
+    var img = d.querySelector('img'), cap = d.querySelector('.lb-cap');
+    var prev = d.querySelector('.lb-prev'), next = d.querySelector('.lb-next');
+    var group = [], at = 0, opener = null;
+    function show(i) {
+      at = (i + group.length) % group.length;
+      var a = group[at], im = a.querySelector('img'), c = a.getAttribute('data-zoom-cap');
+      img.src = a.getAttribute('href'); img.alt = im ? im.alt : '';
+      cap.innerHTML = '';
+      if (group.length > 1) { var n = document.createElement('span'); n.className = 'lb-n'; n.textContent = (at + 1) + ' / ' + group.length; cap.appendChild(n); }
+      var t = document.createElement('span');
+      if (c) t.innerHTML = document.getElementById(c).innerHTML; else t.textContent = im ? im.alt : '';
+      cap.appendChild(t);
+      prev.hidden = next.hidden = group.length < 2;
+      try { document.dispatchEvent(new CustomEvent('zoom', { detail: { group: a.getAttribute('data-zoom'), index: at } })); } catch (e) {}
+    }
+    document.querySelectorAll('a[data-zoom]').forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        e.preventDefault();
+        opener = a;
+        group = [].slice.call(document.querySelectorAll('a[data-zoom="' + a.getAttribute('data-zoom') + '"]'));
+        d.showModal();
+        show(group.indexOf(a));
+      });
+    });
+    function step(k) { if (group.length > 1) show(at + k); }
+    prev.addEventListener('click', function () { step(-1); });
+    next.addEventListener('click', function () { step(1); });
+    d.addEventListener('keydown', function (e) {
+      var rtl = document.documentElement.dir === 'rtl';
+      if (e.key === 'ArrowRight') { e.preventDefault(); step(rtl ? -1 : 1); }
+      else if (e.key === 'ArrowLeft') { e.preventDefault(); step(rtl ? 1 : -1); }
+    });
+    var x0 = null;
+    d.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+    d.addEventListener('touchend', function (e) {
+      if (x0 === null) return;
+      var dx = e.changedTouches[0].clientX - x0, rtl = document.documentElement.dir === 'rtl'; x0 = null;
+      if (Math.abs(dx) > 40) step((dx < 0) !== rtl ? 1 : -1);
+    });
+    d.querySelector('.lb-close').addEventListener('click', function () { d.close(); });
+    d.addEventListener('click', function (e) { if (e.target === d) d.close(); });
+    d.addEventListener('close', function () {
+      img.removeAttribute('src');
+      // back to the image now shown (the carousel may have moved with the lightbox)
+      var back = group[at] && group[at].offsetParent ? group[at] : opener;
+      if (back) back.focus();
+    });
+  })();
+  // A version linked from download.html (news.html#v-…) opens its full list too.
+  (function () {
+    var t = location.hash && document.getElementById(location.hash.slice(1));
+    var all = t && t.querySelector('details'); if (all) all.open = true;
+  })();
+</script>
+<script src="language.js?v=3b38c5f5"></script>
+<script src="assets/menu.js?v=2b43f1ee"></script>
+<script src="assets/effetti.js?v=3fe63441"></script>
+<script>
+  // tema: scuro finché non si sceglie; poi chiaro o scuro, ricordato in questo browser
+  (function () {
+    var root = document.documentElement;
+    document.getElementById('themeToggle').addEventListener('click', function () {
+      var dark = root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+      root.dataset.theme = dark ? 'light' : 'dark';
+      try { localStorage.setItem('theme', root.dataset.theme); } catch (e) {}
+      var tc = document.querySelector('meta[name="theme-color"]'); if (tc) tc.content = dark ? '#EEF2F5' : '#0D1319';
+    });
+  })();
+</script>
+</body>
+</html>

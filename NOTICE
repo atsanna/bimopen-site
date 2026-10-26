@@ -2,17 +2,37 @@ BIMopen
 Copyright (c) 2026 Antonio Sanna and the BIMopen contributors
 Licensed under MIT OR Apache-2.0.
 
-This product depends on rvt by Griffin Long (https://github.com/DrunkOnJava/rvt-rs),
-a clean-room reader for Autodesk® Revit® files, licensed under Apache-2.0.
-crates/rvt/tests/architectural-2024.rvt is a fixture from that project.
-
-Autodesk® and Revit® are trademarks or registered trademarks of Autodesk, Inc.
-BIMopen is an independent project and is not affiliated with, sponsored by or
-endorsed by Autodesk, Inc.
-
 The «BIMopen» interface style bundles:
 - Inter 4.1 by The Inter Project Authors (https://github.com/rsms/inter), subset, licensed
   under the SIL Open Font License 1.1: crates/ui-egui/assets/fonts/inter/ (LICENSE.txt);
 - icons of Lucide (lucide-static 1.55.0, https://lucide.dev), licensed under the ISC License:
   the SVG sources in crates/ui-egui/assets/icons/lucide/ (LICENSE), converted to
   crates/ui-egui/src/style_bimopen/lucide.rs.
+
+Drawings and exported images write Arabic text with Noto Sans Arabic (Copyright 2010,
+2012-2020 Google Inc.; 2015-2020 Google LLC; The Noto Project Authors), licensed under the
+SIL Open Font License 1.1: crates/render/assets/fonts/ (OFL.txt).
+
+The textures of the materials (crates/render/assets/textures/) come from ambientCG
+(https://ambientcg.com) and are in the public domain under the Creative Commons CC0 1.0
+Universal dedication; every texture's source is listed in LICENSES.md in that folder.
+
+The «Realistico» visual style evaluates the analytic sky model of Lukas Hosek and Alexander
+Wilkie with the coefficients of their reference implementation (CIE XYZ datasets),
+Copyright (c) 2012 - 2013, Lukas Hosek and Alexander Wilkie, published under the 3-clause
+BSD license (reproduced in crates/ui-egui/src/realistic/hosek_data.rs).
+
+The moon of the «Realistico» sky (crates/ui-egui/assets/moon/moon-256x128.r8) is the colour map
+of the CGI Moon Kit of NASA's Scientific Visualization Studio (https://svs.gsfc.nasa.gov/4720,
+lroc_color_poles_1k.jpg, 2019; visualizer Ernie Wright, USRA; from the Lunar Reconnaissance
+Orbiter camera team's WAC mosaic), reduced to grey at 256 × 128. NASA's Scientific
+Visualization Studio publishes its content in the public domain unless otherwise noted
+(https://svs.gsfc.nasa.gov/help/) and asks for this credit: NASA's Scientific Visualization
+Studio. No NASA insignia or endorsement is implied.
+
+The stars of the «Realistico» sky (crates/model/src/stars.rs) are the 1,604 stars brighter
+than magnitude 5 of the Yale Bright Star Catalogue, 5th revised edition (D. Hoffleit and
+W. H. Warren Jr., Astronomical Data Center, NASA/NSSDC, 1991; CDS/VizieR catalogue V/50,
+DOI 10.26093/cds/vizier), keeping only position (J2000), visual magnitude and B−V colour.
+The catalogue's ReadMe carries no copyright notice; VizieR asks that the authors and the
+catalogue be cited, as here.

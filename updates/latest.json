@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-26",
+  "files": {
+    "android": {
+      "sha256": "be6068e2fddbc446941bf85a93926292e39843ae145b58f80b8396d06822a8d9",
+      "size": 29701617,
+      "url": "https://github.com/atsanna/bimopen-site/releases/download/v0.1.0-alpha.6/bimopen-android.apk"
+    },
+    "linux-x86_64": {
+      "sha256": "ce521ab4416e5426275da5ea92103d3b7ecc4cf125c9b59ad104ed428f31309f",
+      "size": 82788304,
+      "url": "https://github.com/atsanna/bimopen-site/releases/download/v0.1.0-alpha.6/bimopen-linux-x86_64"
+    },
+    "windows-x86_64": {
+      "sha256": "5364d713b1f12b75c42d8d42d10d1c84b698c1ec3573eebedbe3c2f943793053",
+      "size": 83334526,
+      "url": "https://github.com/atsanna/bimopen-site/releases/download/v0.1.0-alpha.6/bimopen-windows-x86_64.exe"
+    }
+  },
+  "highlights": {
+    "ar": [
+      "لوحة «ملف» وتنسيق 2027",
+      "الوحدات الإمبراطورية",
+      "واقعي، ليلًا أيضًا",
+      "نمط باستيل",
+      "استيراد IFC وتحويله",
+      "الخطوط التخطيطية"
+    ],
+    "de": [
+      "Bereich Datei und Format 2027",
+      "Imperiale Einheiten",
+      "Realistisch, auch nachts",
+      "Der Stil Pastell",
+      "IFC importieren und umwandeln",
+      "Skizzenhafte Linien"
+    ],
+    "en": [
+      "File panel and format 2027",
+      "Imperial units",
+      "Realistic, by night too",
+      "The Pastel style",
+      "Import and convert IFC",
+      "Sketchy lines"
+    ],
+    "es": [
+      "Panel Archivo y formato 2027",
+      "Unidades imperiales",
+      "Realista, también de noche",
+      "El estilo Pastel",
+      "Importar y convertir IFC",
+      "Líneas de boceto"
+    ],
+    "fr": [
+      "Panneau Fichier et format 2027",
+      "Unités impériales",
+      "Réaliste, la nuit aussi",
+      "Le style Pastel",
+      "Importer et convertir l'IFC",
+      "Lignes d'esquisse"
+    ],
+    "it": [
+      "Pannello File e formato 2027",
+      "Unità imperiali",
+      "Realistico, anche di notte",
+      "Lo stile Pastello",
+      "Importa e converti IFC",
+      "Linee di schizzo"
+    ]
+  },
+  "news": "https://atsanna.github.io/bimopen-site/news.html",
+  "schema": 1,
+  "version": "0.1.0-alpha.6"
+}

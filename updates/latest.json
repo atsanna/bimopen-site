@@ -1,73 +1,73 @@
 {
-  "date": "2026-10-26",
+  "date": "2026-11-01",
   "files": {
     "android": {
-      "sha256": "be6068e2fddbc446941bf85a93926292e39843ae145b58f80b8396d06822a8d9",
-      "size": 29701617,
-      "url": "https://github.com/atsanna/bimopen-site/releases/download/v0.1.0-alpha.6/bimopen-android.apk"
+      "sha256": "8c6f301a3405b013f26539aa53260540e9eeed88d434f96a1b0b4240b4cb9228",
+      "size": 38823409,
+      "url": "https://github.com/atsanna/bimopen-site/releases/download/v0.1.0-alpha.7/bimopen-android.apk"
     },
     "linux-x86_64": {
-      "sha256": "ce521ab4416e5426275da5ea92103d3b7ecc4cf125c9b59ad104ed428f31309f",
-      "size": 82788304,
-      "url": "https://github.com/atsanna/bimopen-site/releases/download/v0.1.0-alpha.6/bimopen-linux-x86_64"
+      "sha256": "e42fbb98ddb6bafb9b8c5eb4f6a5681f89dbc16d8ec6059a74520870ad246e40",
+      "size": 91210624,
+      "url": "https://github.com/atsanna/bimopen-site/releases/download/v0.1.0-alpha.7/bimopen-linux-x86_64"
     },
     "windows-x86_64": {
-      "sha256": "5364d713b1f12b75c42d8d42d10d1c84b698c1ec3573eebedbe3c2f943793053",
-      "size": 83334526,
-      "url": "https://github.com/atsanna/bimopen-site/releases/download/v0.1.0-alpha.6/bimopen-windows-x86_64.exe"
+      "sha256": "17e03e274fd6b96f5ff3a0b812ac56b869de1287cf0b382b7de6b784994adef8",
+      "size": 87667712,
+      "url": "https://github.com/atsanna/bimopen-site/releases/download/v0.1.0-alpha.7/bimopen-windows-x86_64.exe"
     }
   },
   "highlights": {
     "ar": [
-      "لوحة «ملف» وتنسيق 2027",
-      "الوحدات الإمبراطورية",
-      "واقعي، ليلًا أيضًا",
-      "نمط باستيل",
-      "استيراد IFC وتحويله",
-      "الخطوط التخطيطية"
+      "مخطط الموقع والأرض",
+      "المراحل والهدم",
+      "الفتحات والمناور",
+      "الإنشاء",
+      "الجدران المنحنية",
+      "الجولات ووضع المشي"
     ],
     "de": [
-      "Bereich Datei und Format 2027",
-      "Imperiale Einheiten",
-      "Realistisch, auch nachts",
-      "Der Stil Pastell",
-      "IFC importieren und umwandeln",
-      "Skizzenhafte Linien"
+      "Lageplan und Gelände",
+      "Phasen und Abbruch",
+      "Öffnungen und Schächte",
+      "Tragwerk",
+      "Gekrümmte Wände",
+      "Rundgänge und Gehmodus"
     ],
     "en": [
-      "File panel and format 2027",
-      "Imperial units",
-      "Realistic, by night too",
-      "The Pastel style",
-      "Import and convert IFC",
-      "Sketchy lines"
+      "Site and terrain",
+      "Phases and demolition",
+      "Openings and shafts",
+      "Structure",
+      "Curved walls",
+      "Walkthroughs and walk mode"
     ],
     "es": [
-      "Panel Archivo y formato 2027",
-      "Unidades imperiales",
-      "Realista, también de noche",
-      "El estilo Pastel",
-      "Importar y convertir IFC",
-      "Líneas de boceto"
+      "Emplazamiento y terreno",
+      "Fases y demoliciones",
+      "Huecos y patinillos",
+      "Estructura",
+      "Muros curvos",
+      "Itinerarios y paseo"
     ],
     "fr": [
-      "Panneau Fichier et format 2027",
-      "Unités impériales",
-      "Réaliste, la nuit aussi",
-      "Le style Pastel",
-      "Importer et convertir l'IFC",
-      "Lignes d'esquisse"
+      "Plan de masse et terrain",
+      "Phases et démolition",
+      "Ouvertures et cages",
+      "Structure",
+      "Murs courbes",
+      "Visites et marche"
     ],
     "it": [
-      "Pannello File e formato 2027",
-      "Unità imperiali",
-      "Realistico, anche di notte",
-      "Lo stile Pastello",
-      "Importa e converti IFC",
-      "Linee di schizzo"
+      "Planimetria e terreno",
+      "Fasi e demolizioni",
+      "Aperture e cavedi",
+      "Struttura",
+      "Muri curvi",
+      "Percorsi di visita e camminata"
     ]
   },
   "news": "https://atsanna.github.io/bimopen-site/news.html",
   "schema": 1,
-  "version": "0.1.0-alpha.6"
+  "version": "0.1.0-alpha.7"
 }

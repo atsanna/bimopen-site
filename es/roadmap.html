@@ -1,0 +1,595 @@
+<!doctype html>
+<html lang="es" data-lingua-pagina="es" data-pagina="roadmap.html" data-build="ddda3f09">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="rp.meta.title">Hoja de ruta de BIMopen — Estado y próximos pasos</title>
+<meta name="keywords" content="BIM, software BIM gratuito, IFC, IFC4, BIMopen, Rust">
+<meta name="description" data-i18n-attr="content:rp.meta.desc" content="La hoja de ruta completa de BIMopen: lo que funciona hoy, los pasos planificados por prioridad y cuánto de las funciones previstas ya está cubierto.">
+<link rel="canonical" href="https://bimopen.it/es/roadmap.html">
+<link rel="alternate" hreflang="it" href="https://bimopen.it/roadmap.html">
+<link rel="alternate" hreflang="en" href="https://bimopen.it/en/roadmap.html">
+<link rel="alternate" hreflang="de" href="https://bimopen.it/de/roadmap.html">
+<link rel="alternate" hreflang="fr" href="https://bimopen.it/fr/roadmap.html">
+<link rel="alternate" hreflang="es" href="https://bimopen.it/es/roadmap.html">
+<link rel="alternate" hreflang="ar" href="https://bimopen.it/ar/roadmap.html">
+<link rel="alternate" hreflang="x-default" href="https://bimopen.it/roadmap.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BIMopen">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Roadmap di BIMopen — Stato e prossimi passi">
+<meta property="og:description" content="La roadmap completa di BIMopen: cosa funziona oggi, i passi pianificati per priorità e quanta parte delle funzionalità previste è già coperta.">
+<meta property="og:url" content="https://bimopen.it/es/roadmap.html">
+<meta property="og:image" content="https://bimopen.it/assets/og-bimopen.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../favicon.ico?v=0fba0888" sizes="any">
+<link rel="icon" href="../assets/favicon.svg?v=74b5de74" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png?v=6406f785">
+<meta name="theme-color" content="#0D1319">
+<script>
+  // tema scelto in precedenza, applicato prima del disegno della pagina (nessun lampo di colore)
+  var t = null; try { t = localStorage.getItem('theme'); } catch (e) {} document.documentElement.dataset.theme = t || 'dark'; var tc = document.querySelector('meta[name="theme-color"]'); if (tc && t === 'light') tc.content = '#EEF2F5';
+</script>
+<style>
+  :root {
+    --paper: #EEF2F5; --card: #FFFFFF; --field: #F8FAFB; --line: #E2E7EC;
+    --ink: #172133; --ink-soft: #3D4A5C; --muted: #5E6A78;
+    --accent: #08AABA; --accent-text: #06788A; --accent-hover: #2DB7C4; --on-accent: #093440;
+    --accent-soft: #8CECF2; --accent-soft-ink: #093440; --logo: #08AABA;
+    --second: #E6961E; --on-second: #172133; --ok: #1B8A55; --on-ok: #FFFFFF;
+    --warn-bg: #FCF1DD; --warn-line: #E6961E; --warn-ink: #172133; --warn-icon: #A86200;
+    --render-bg: #EEF2F5; --code-bg: #1C262E; --code-ink: #E8EEF2; --code-c: #8A98A6; --code-k: #14BECC; --code-p: #E6961E;
+    --shadow: 0 2px 14px rgba(0,0,0,.086);
+    --radius: 12px; --radius-btn: 8px;
+    --font: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", "Helvetica Neue", Arial, sans-serif;
+    --mono: ui-monospace, "SFMono-Regular", "Cascadia Mono", "Ubuntu Mono", Menlo, Consolas, monospace;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #0D1319; --card: #182129; --field: #1F2A33; --line: #28343E;
+      --ink: #E4EBF1; --ink-soft: #B7C3CE; --muted: #8A98A6;
+      --accent: #14BECC; --accent-text: #14BECC; --accent-hover: #3FD0DB; --on-accent: #0D1319;
+      --accent-soft: #0E525E; --accent-soft-ink: #A0F0F6; --logo: #14BECC;
+      --on-second: #0D1319; --ok: #22B46E; --on-ok: #0D1319;
+      --warn-bg: #2A2A20; --warn-ink: #E4EBF1; --warn-icon: #E6961E;
+      --code-bg: #141C23; --shadow: 0 2px 14px rgba(0,0,0,.35); color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #0D1319; --card: #182129; --field: #1F2A33; --line: #28343E;
+    --ink: #E4EBF1; --ink-soft: #B7C3CE; --muted: #8A98A6;
+    --accent: #14BECC; --accent-text: #14BECC; --accent-hover: #3FD0DB; --on-accent: #0D1319;
+    --accent-soft: #0E525E; --accent-soft-ink: #A0F0F6; --logo: #14BECC;
+    --on-second: #0D1319; --ok: #22B46E; --on-ok: #0D1319;
+    --warn-bg: #2A2A20; --warn-ink: #E4EBF1; --warn-icon: #E6961E;
+    --code-bg: #141C23; --shadow: 0 2px 14px rgba(0,0,0,.35); color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font: 17px/1.6 var(--font); -webkit-font-smoothing: antialiased; }
+  img { max-width: 100%; display: block; }
+  a { color: var(--accent-text); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  .wrap { width: min(1160px, 100% - 32px); margin-inline: auto; }
+  .skip { position: absolute; inset-inline-start: -999px; }
+  .skip:focus { inset-inline-start: 16px; top: 16px; background: var(--card); padding: 8px 12px; z-index: 10; }
+
+  header.top { position: sticky; top: 0; z-index: 5; background: color-mix(in srgb, var(--paper) 88%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+  .bar { display: flex; align-items: center; gap: 20px; height: 64px; }
+  .brand { display: flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font-weight: 700; font-size: 20px; letter-spacing: -.01em; direction: ltr; }
+  .brand b { color: var(--logo); font-weight: 400; }
+  .bar-right { display: flex; align-items: center; gap: 10px; margin-inline-start: auto; }
+  .lang-pick { display: flex; align-items: center; gap: 6px; color: var(--muted); font-size: 14px; }
+  .lang-pick svg { width: 16px; height: 16px; flex: none; }
+  .lang-pick select { font: inherit; color: var(--ink); background: var(--card); border: 1px solid var(--line); border-radius: var(--radius-btn); padding: 6px 8px; cursor: pointer; }
+  .theme-toggle { width: 36px; height: 36px; border-radius: var(--radius-btn); border: 1px solid var(--line); background: var(--card); color: var(--ink); cursor: pointer; display: grid; place-items: center; }
+  .theme-toggle svg { width: 18px; height: 18px; }
+  .theme-toggle .moon { display: none; }
+  :root[data-theme="dark"] .theme-toggle .sun { display: none; }
+  :root[data-theme="dark"] .theme-toggle .moon { display: block; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .theme-toggle .sun { display: none; }
+    :root:not([data-theme="light"]) .theme-toggle .moon { display: block; }
+  }
+  .btn { display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; padding: 11px 18px; border-radius: var(--radius-btn); font-weight: 600; font-size: 15px; text-decoration: none; border: 1px solid transparent; transition: transform .12s, background-color .12s; }
+  .btn:hover { transform: translateY(-1px); }
+  .btn-primary { background: var(--accent); color: var(--on-accent); }
+  .btn-primary:hover { background: var(--accent-hover); }
+  .btn-ghost { border-color: var(--line); color: var(--ink); background: var(--card); }
+
+  .hero { position: relative; overflow: hidden; padding: 72px 0 56px; }
+  .hero::before { content: ""; position: absolute; inset: 0; background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px); background-size: 32px 32px; mask-image: radial-gradient(ellipse at 70% 40%, #000 0%, transparent 70%); opacity: .7; pointer-events: none; }
+  .hero .wrap { position: relative; display: grid; grid-template-columns: 1.02fr 1fr; gap: 48px; align-items: center; }
+  .eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--accent-text); }
+  .eyebrow::before { content: ""; width: 18px; height: 2px; background: currentColor; }
+  h1 { font-size: clamp(36px, 5.2vw, 60px); line-height: 1.06; letter-spacing: -.025em; margin: 14px 0 18px; }
+  h1 em { font-style: normal; color: var(--accent-text); }
+  .lead { font-size: 19px; color: var(--ink-soft); margin: 0 0 28px; }
+  .cta { display: flex; flex-wrap: wrap; gap: 12px; }
+  .facts { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 28px 0 0; padding: 0; list-style: none; color: var(--muted); font-size: 14px; }
+  .facts li::before { content: "✓"; color: var(--accent-text); font-weight: 700; margin-inline-end: 6px; }
+  .stage { position: relative; aspect-ratio: 5 / 4; direction: ltr; }
+  .stage .shot { position: absolute; border-radius: var(--radius); box-shadow: var(--shadow); border: 1px solid var(--line); overflow: hidden; background: var(--render-bg); }
+  .stage .shot img { width: 100%; height: 100%; object-fit: cover; }
+  .stage .s3d { inset: 0 0 18% 12%; }
+  .stage .splan { width: 46%; aspect-ratio: 1.2; left: 0; bottom: 0; background: #fff; padding: 6px; }
+  .stage .splan img { object-fit: contain; }
+  .tag { position: absolute; font: 600 12px/1 var(--font); background: var(--card); color: var(--ink-soft); border: 1px solid var(--line); border-radius: 999px; padding: 6px 10px; box-shadow: var(--shadow); }
+  .tag.t3d { right: 6%; top: 4%; }
+  .tag.tplan { left: 3%; bottom: calc(46% / 1.2 + 10px); }
+
+  section { padding: 72px 0; }
+  section.alt { background: var(--card); border-block: 1px solid var(--line); }
+  h2 { font-size: clamp(28px, 3.4vw, 40px); line-height: 1.12; letter-spacing: -.02em; margin: 10px 0 14px; }
+  .sub { color: var(--ink-soft); margin: 0 0 36px; font-size: 18px; }
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .grid2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .grid3 > *, .grid2 > *, .road > *, .split > * { min-width: 0; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; }
+  section.alt .card { background: var(--paper); }
+  .card h3 { margin: 12px 0 6px; font-size: 19px; letter-spacing: -.01em; }
+  .card p { margin: 0; color: var(--ink-soft); font-size: 15.5px; }
+  .ico { width: 40px; height: 40px; border-radius: 10px; background: var(--accent-soft); display: grid; place-items: center; color: var(--accent-soft-ink); }
+  .ico svg { width: 22px; height: 22px; }
+  .view { padding: 0; overflow: hidden; }
+  .view figure { margin: 0; background: var(--render-bg); aspect-ratio: 4 / 3; display: grid; place-items: center; border-bottom: 1px solid var(--line); }
+  .view figure.white { background: #fff; }
+  .view figure img { width: 100%; height: 100%; object-fit: contain; padding: 10px; }
+  .view .body { padding: 20px 22px 24px; }
+  .table { width: 100%; border-collapse: collapse; font-size: 13.5px; background: #fff; color: #172133; }
+  .table th, .table td { padding: 7px 10px; border-bottom: 1px solid #E2E7EC; text-align: start; white-space: nowrap; }
+  .table th { background: #EEF2F5; font-weight: 600; }
+  .table td.n, .table th.n { text-align: end; font-variant-numeric: tabular-nums; }
+  .table tr.tot td { font-weight: 700; border-top: 2px solid currentColor; }
+
+  .fmt { display: flex; gap: 16px; align-items: flex-start; }
+  .badge { flex: none; font: 700 13px/1 var(--mono); padding: 10px; border-radius: var(--radius-btn); background: var(--ink); color: var(--paper); min-width: 74px; text-align: center; direction: ltr; }
+  .badge.terra { background: var(--second); color: var(--on-second); }
+  .fmt h3 { margin: 0 0 4px; }
+  .note { font-size: 13.5px; color: var(--muted); margin-top: 8px !important; }
+
+  pre { margin: 0; background: var(--code-bg); color: var(--code-ink); border-radius: var(--radius); padding: 22px 24px; overflow-x: auto; font: 14.5px/1.65 var(--mono); direction: ltr; text-align: left; }
+  pre .c { color: var(--code-c); } pre .k { color: var(--code-k); } pre .p { color: var(--code-p); }
+  .split { display: grid; grid-template-columns: 1fr 1.1fr; gap: 40px; align-items: center; }
+  .checks { list-style: none; padding: 0; margin: 20px 0 0; display: grid; gap: 10px; }
+  .checks li { padding-inline-start: 28px; position: relative; color: var(--ink-soft); }
+  .checks li::before { content: ""; position: absolute; inset-inline-start: 0; top: .45em; width: 14px; height: 14px; background: var(--accent-text); mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3 8.5l3 3 7-7' fill='none' stroke='black' stroke-width='2.4'/%3E%3C/svg%3E") center / contain no-repeat; }
+  code { font-family: var(--mono); font-size: .9em; background: var(--field); border: 1px solid var(--line); padding: 0 5px; border-radius: 5px; direction: ltr; unicode-bidi: isolate; }
+
+  .road { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .road .card h3 { display: flex; align-items: center; gap: 8px; margin-top: 0; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; flex: none; }
+  .road ul { margin: 10px 0 0; padding-inline-start: 18px; color: var(--ink-soft); font-size: 15.5px; }
+  .road li { margin: 4px 0; }
+
+  details { border-bottom: 1px solid var(--line); padding: 16px 0; }
+  details summary { cursor: pointer; font-weight: 600; font-size: 17.5px; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+  details summary::-webkit-details-marker { display: none; }
+  details summary::after { content: "+"; color: var(--accent-text); font-size: 22px; line-height: 1; }
+  details[open] summary::after { content: "–"; }
+  details p { color: var(--ink-soft); margin: 10px 0 0; }
+
+  .final { text-align: center; }
+  .final .cta { justify-content: center; }
+  /* the video channel: written by i18n/video.py only when "canale" is true in i18n/video.json */
+  .ext { width: 13px; height: 13px; flex: none; opacity: .75; }
+  .theme-toggle.chan { text-decoration: none; }
+  .bar:has(.chan) { gap: 14px; }
+  .theme-toggle.chan svg { width: 19px; height: 19px; }
+  .theme-toggle.chan:hover { color: var(--accent-text); border-color: var(--accent); }
+  footer .chan-f { display: inline-flex; align-items: center; gap: 5px; vertical-align: bottom; }
+  footer .chan-f svg { width: 17px; height: 17px; }
+  footer { border-top: 1px solid var(--line); padding: 36px 0 48px; color: var(--muted); font-size: 14px; }
+  footer .row { display: flex; flex-wrap: wrap; gap: 12px 28px; justify-content: space-between; align-items: center; }
+  footer small { display: block; margin-top: 20px; line-height: 1.5; }
+  footer small.privato + small { margin-top: 8px; }
+
+  .to-top { position: fixed; bottom: 24px; inset-inline-end: 24px; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line); background: var(--card); color: var(--ink); display: grid; place-items: center; cursor: pointer; box-shadow: var(--shadow); opacity: 0; visibility: hidden; transform: translateY(8px); transition: opacity .2s, transform .2s, visibility .2s; z-index: 6; }
+  .to-top svg { width: 20px; height: 20px; }
+  .to-top:hover { border-color: var(--accent); }
+  .to-top.on { opacity: 1; visibility: visible; transform: none; }
+
+  :root[lang="ar"] * { letter-spacing: 0 !important; }
+  :root[lang="ar"] .eyebrow { text-transform: none; }
+
+  @media (max-width: 920px) {
+    .hero .wrap, .split { grid-template-columns: 1fr; }
+    .hero { padding-top: 44px; }
+    .grid3, .road, .grid2 { grid-template-columns: 1fr; }
+    .stage { max-width: 560px; }
+  }
+  @media (max-width: 560px) {
+    body { font-size: 16px; }
+    .bar { gap: 10px; }
+    .bar .btn { display: none; }
+    .lang-pick svg { display: none; }
+    section { padding: 52px 0; }
+    .table { font-size: 12px; }
+    .to-top { bottom: 16px; inset-inline-end: 16px; }
+  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn, .to-top { transition: none; } }
+  @media print { .to-top, .lang-pick, .theme-toggle { display: none !important; } }
+
+  .rp-hero { position: relative; overflow: hidden; padding: 64px 0 40px; }
+  .rp-hero::before { content: ""; position: absolute; inset: 0; background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px); background-size: 32px 32px; mask-image: radial-gradient(ellipse at 80% 20%, #000 0%, transparent 65%); opacity: .7; pointer-events: none; }
+  .rp-hero .wrap { position: relative; }
+  .rp-hero h1 { max-width: 15em; }
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 36px 0 0; padding: 0; list-style: none; }
+  .stats li { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 20px; box-shadow: var(--shadow); }
+  .stats b { display: block; font-size: clamp(28px, 3.6vw, 40px); line-height: 1.05; letter-spacing: -.02em; color: var(--ink); font-variant-numeric: tabular-nums; direction: ltr; unicode-bidi: isolate; }
+  .stats span { color: var(--muted); font-size: 14px; }
+  .toc { display: flex; flex-wrap: wrap; gap: 8px; margin: 22px 0 0; padding: 0; list-style: none; }
+  .toc a { display: inline-block; padding: 7px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--card); color: var(--ink-soft); text-decoration: none; font-size: 14px; }
+  .toc a:hover { border-color: var(--accent); color: var(--accent-text); }
+  .avail { columns: 2 320px; column-gap: 32px; list-style: none; padding: 0; margin: 0; }
+  .avail li { break-inside: avoid; padding: 8px 0 8px 30px; position: relative; color: var(--ink-soft); border-bottom: 1px dashed var(--line); }
+  :root[dir="rtl"] .avail li { padding: 8px 30px 8px 0; }
+  .avail li::before { content: ""; position: absolute; inset-inline-start: 0; top: 12px; width: 18px; height: 18px; border-radius: 50%; background: var(--ok); mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='8'/%3E%3C/svg%3E") center / contain no-repeat; }
+  .avail li::after { content: ""; position: absolute; inset-inline-start: 4px; top: 16px; width: 10px; height: 10px; background: var(--on-ok); mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M2.5 8.5l3.5 3.5 7.5-8' fill='none' stroke='black' stroke-width='3'/%3E%3C/svg%3E") center / contain no-repeat; }
+  .phase { margin-top: 44px; }
+  .phase-head { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+  .phase-head .prio { font: 700 14px/1 var(--mono); padding: 9px 12px; border-radius: 9px; color: #fff; direction: ltr; }
+  .phase-head h3 { margin: 0; font-size: 22px; letter-spacing: -.01em; }
+  .phase-head p { margin: 0; color: var(--muted); font-size: 15px; }
+  .phase-head .count { margin-inline-start: auto; color: var(--muted); font-size: 14px; font-variant-numeric: tabular-nums; direction: ltr; }
+  .pr .prio { background: #C0392B; } .p0 .prio { background: var(--ok); color: var(--on-ok); } .p1 .prio { background: var(--accent); color: var(--on-accent); } .p2 .prio { background: #7A5BD6; } .p3 .prio { background: var(--second); color: var(--on-second); }
+  .steps { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .step { display: grid; grid-template-columns: auto 1fr auto; gap: 14px; align-items: start; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; min-width: 0; }
+  section.alt .step { background: var(--paper); }
+  .step .n { font: 700 13px/1 var(--mono); color: var(--muted); background: var(--field); border: 1px solid var(--line); border-radius: var(--radius-btn); padding: 7px 0; width: 36px; text-align: center; direction: ltr; }
+  .step > div { min-width: 0; }
+  .step h4, .step p { overflow-wrap: break-word; }
+  .step h4 { margin: 0 0 4px; font-size: 16.5px; line-height: 1.3; }
+  .step p { margin: 0; color: var(--ink-soft); font-size: 14.5px; line-height: 1.5; }
+  .step p.have { margin-top: 6px; color: var(--muted); font-size: 13.5px; }
+  .pill { font-size: 12px; font-weight: 600; padding: 4px 10px; border-radius: 999px; white-space: nowrap; border: 1px solid var(--line); color: var(--muted); }
+  .step.done { border-color: color-mix(in srgb, var(--ok) 45%, var(--line)); }
+  .step.done .pill { background: var(--ok); border-color: var(--ok); color: var(--on-ok); }
+  .step.done .n { background: color-mix(in srgb, var(--ok) 18%, transparent); border-color: transparent; color: var(--ok); }
+  .step.wip .pill { background: var(--second); border-color: var(--second); color: var(--on-second); }
+  .bars { display: grid; gap: 14px; margin: 0; padding: 0; list-style: none; }
+  .bars li { display: grid; grid-template-columns: minmax(12em, 18em) 1fr 9em; gap: 16px; align-items: center; }
+  .bars .name { font-weight: 600; font-size: 15.5px; }
+  .bars .track { position: relative; height: 14px; border-radius: 999px; background: var(--line); overflow: hidden; display: flex; direction: ltr; }
+  :root[dir="rtl"] .bars .track { direction: rtl; }
+  .bars .d { background: var(--accent-text); height: 100%; }
+  .bars .p { background: color-mix(in srgb, var(--accent-text) 40%, transparent); height: 100%; }
+  .bars .pct small { font-weight: 400; color: var(--muted); }
+  .bars .pct { text-align: end; font-variant-numeric: tabular-nums; font-weight: 600; direction: ltr; }
+  .bars li.total { border-top: 1px solid var(--line); padding-top: 14px; }
+  .bars li.total .name { font-size: 17px; }
+  .legend { display: flex; gap: 18px; margin: 18px 0 0; color: var(--muted); font-size: 14px; }
+  .legend i { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-inline-end: 6px; vertical-align: -1px; }
+  .outs { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .outs li { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px 14px 44px; position: relative; color: var(--ink-soft); font-size: 15px; }
+  :root[dir="rtl"] .outs li { padding: 14px 44px 14px 16px; }
+  .outs li::before { content: "×"; position: absolute; inset-inline-start: 16px; top: 11px; color: var(--muted); font-size: 20px; line-height: 1; }
+  /* on a phone the number and the state share the first row, so the step's text gets the card's full width and long words never break */
+  @media (max-width: 560px) { .step { grid-template-columns: auto 1fr; gap: 10px 14px; } .step > div { grid-column: 1 / -1; grid-row: 2; } .step .pill { grid-row: 1; grid-column: 2; justify-self: end; align-self: center; } }
+  @media (max-width: 920px) { .stats { grid-template-columns: repeat(2, 1fr); } .steps, .outs { grid-template-columns: 1fr; } .bars li { grid-template-columns: 1fr 4em; } .bars .track { grid-column: 1 / -1; grid-row: 2; } }
+  @media (max-width: 560px) { .phase-head { flex-wrap: wrap; } .phase-head .count { margin-inline-start: 0; } }
+</style>
+<link rel="stylesheet" href="../assets/menu.css?v=439b367a">
+<link rel="stylesheet" href="../assets/effetti.css?v=6a95309b">
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="ui.skip">Ir al contenido</a>
+
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="./" data-con-lingua="./" aria-label="BIMopen">
+      <svg width="24" height="32" viewBox="5 0 100 140" aria-hidden="true"><g fill="none" stroke="var(--logo)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M15 58 54 35 93 58V105L54 128 15 105Z"/><path d="M15 58 54 81 93 58M54 81V128"/><path d="M54 35V10H82"/></g></svg>
+      <span>BIM<b>open</b></span>
+    </a>
+    <nav class="links" aria-label="Secciones" data-i18n-attr="aria-label:ui.sezioni">
+      <div class="dd">
+        <button type="button" class="dd-btn" aria-expanded="false" aria-controls="dd-fun"><span data-i18n="nav.programma">Programa</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="dd-menu" id="dd-fun">
+          <!-- canale:menu --><!-- /canale:menu -->
+          <a href="./#viste" data-con-lingua="./#viste" data-i18n="nav.viste">Vistas</a>
+          <a href="./#funzioni" data-con-lingua="./#funzioni" data-i18n="nav.funzioni">Funciones</a>
+          <a href="./#formati" data-con-lingua="./#formati" data-i18n="nav.formati">Formatos</a>
+          <a href="./#agenti" data-con-lingua="./#agenti" data-i18n="nav.agenti">Automatización</a>
+        </div>
+      </div>
+      <a href="roadmap.html" data-con-lingua="roadmap.html" data-i18n="nav.roadmap" aria-current="page">Hoja de ruta</a>
+      <a href="philosophy.html" data-con-lingua="philosophy.html" data-i18n="nav.filosofia">Filosofía</a>
+      <a href="../manual/es/" data-manuale data-i18n="nav.manuale">Manual</a>
+      <a href="download.html" data-con-lingua="download.html" data-i18n="nav.scarica">Descargar</a>
+      <a href="news.html" data-con-lingua="news.html" data-i18n="nav.novita">Novedades</a>
+    </nav>
+    <div class="bar-right">
+      <label class="lang-pick">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg>
+        <select id="lang-select" aria-label="Lingua · Language · Sprache · Langue · Idioma · اللغة">
+          <option value="it" lang="it">Italiano</option>
+          <option value="en" lang="en">English</option>
+          <option value="de" lang="de">Deutsch</option>
+          <option value="fr" lang="fr">Français</option>
+          <option value="es" lang="es">Español</option>
+          <option value="ar" lang="ar" dir="rtl">العربية</option>
+        </select>
+      </label>
+      <!-- canale:icona --><!-- /canale:icona -->
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Cambiar tema" data-i18n-attr="aria-label:ui.tema">
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+      <a class="btn btn-primary cta-top" href="../app/?lang=es&amp;v=e0bd31ab" data-app="e0bd31ab"><span class="cta-long" data-i18n="cta.prova">Pruébalo en el navegador</span><span class="cta-short" data-i18n="dl1.btn">Abrir BIMopen</span></a>
+      <button type="button" class="theme-toggle menu-btn" id="menuBtn" aria-expanded="false" aria-controls="drawer" aria-label="Menú" data-i18n-attr="aria-label:ui.menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+</header>
+<div class="drawer-veil" id="drawerVeil" hidden></div>
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Menú" data-i18n-attr="aria-label:ui.menu">
+  <div class="drawer-head">
+    <a class="brand" href="./" data-con-lingua="./" aria-label="BIMopen"><svg width="20" height="27" viewBox="5 0 100 140" aria-hidden="true"><g fill="none" stroke="var(--logo)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M15 58 54 35 93 58V105L54 128 15 105Z"/><path d="M15 58 54 81 93 58M54 81V128"/><path d="M54 35V10H82"/></g></svg><span>BIM<b>open</b></span></a>
+    <button type="button" class="theme-toggle" id="drawerClose" aria-label="Cerrar" data-i18n-attr="aria-label:lb.close">×</button>
+  </div>
+  <nav class="drawer-nav" aria-label="Secciones" data-i18n-attr="aria-label:ui.sezioni">
+    <div class="drawer-sub">
+      <!-- canale:menu --><!-- /canale:menu -->
+      <a href="./#viste" data-con-lingua="./#viste" data-i18n="nav.viste">Vistas</a>
+      <a href="./#funzioni" data-con-lingua="./#funzioni" data-i18n="nav.funzioni">Funciones</a>
+      <a href="./#formati" data-con-lingua="./#formati" data-i18n="nav.formati">Formatos</a>
+      <a href="./#agenti" data-con-lingua="./#agenti" data-i18n="nav.agenti">Automatización</a>
+    </div>
+    <a href="roadmap.html" data-con-lingua="roadmap.html" data-i18n="nav.roadmap" aria-current="page">Hoja de ruta</a>
+    <a href="philosophy.html" data-con-lingua="philosophy.html" data-i18n="nav.filosofia">Filosofía</a>
+    <a href="../manual/es/" data-manuale data-i18n="nav.manuale">Manual</a>
+    <a href="download.html" data-con-lingua="download.html" data-i18n="nav.scarica">Descargar</a>
+    <a href="news.html" data-con-lingua="news.html" data-i18n="nav.novita">Novedades</a>
+    <a href="./#faq" data-con-lingua="./#faq" data-i18n="nav.faq">Preguntas</a>
+  </nav>
+  <a class="btn btn-primary drawer-cta" href="../app/?lang=es&amp;v=e0bd31ab" data-app="e0bd31ab"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11L13 8z" fill="currentColor"/></svg><span data-i18n="cta.prova">Pruébalo en el navegador</span></a>
+</div>
+
+<main id="main">
+  <section class="rp-hero">
+    <div class="wrap">
+      <span class="eyebrow" data-i18n="rp.kicker">Hoja de ruta</span>
+      <h1 data-i18n="rp.h1">Dónde estamos, <em>adónde vamos</em></h1>
+      <p class="lead" data-i18n="rp.lead">BIMopen cubre, comando a comando, las funciones de un software BIM profesional para arquitectura. Cada función se comparó opción por opción con el comportamiento esperado: de ahí salen los pasos, por orden de prioridad, y los porcentajes de cobertura. Un paso cuenta como hecho solo cuando sus comandos se han probado en la interfaz, en el ordenador y en el navegador, tal como los usa quien proyecta, y están cubiertos por pruebas automáticas de la interfaz.</p>
+      <ul class="stats">
+        <li><b>53</b><span data-i18n="rp.stat.avail">funciones disponibles</span></li>
+        <li><b>78</b><span data-i18n="rp.stat.steps">pasos previstos</span></li>
+        <li><b>168 / 303</b><span data-i18n="rp.stat.cmds">comandos ya activos</span></li>
+        <li><b>6</b><span data-i18n="rp.stat.lang">idiomas, árabe incluido</span></li>
+      </ul>
+      <ul class="toc">
+        <li><a href="#attuale" data-i18n="rp.toc.cur">Última versión</a></li>
+        <li><a href="#prossima" data-i18n="rp.toc.next">Próxima versión</a></li>
+        <li><a href="#disponibile" data-i18n="rp.toc.avail">Disponible</a></li>
+        <li><a href="#passi" data-i18n="rp.toc.steps">Pasos</a></li>
+        <li><a href="#copertura" data-i18n="rp.toc.cov">Cobertura</a></li>
+        <li><a href="#fuori" data-i18n="rp.toc.out">Fuera de alcance</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="attuale" aria-labelledby="attuale-t">
+    <div class="wrap">
+      <span class="eyebrow" data-i18n="rp.cur.kicker">Última versión de prueba</span>
+      <h2 id="attuale-t" data-i18n="rp.cur.h2">0.1.0-alpha.8</h2>
+      <p class="sub" data-i18n="rp.cur.p">Las funciones de esta versión de prueba.</p>
+      <ol class="steps">
+      <li class="step done"><span class="n">1</span><div><h4 data-i18n="nx.spell">Corrector ortográfico para textos y notas</h4></div><span class="pill" data-i18n="st.done">Hecho</span></li>
+      <li class="step done"><span class="n">2</span><div><h4 data-i18n="nx.legends">Leyendas con muestras de los componentes y sus subcategorías</h4></div><span class="pill" data-i18n="st.done">Hecho</span></li>
+      <li class="step done"><span class="n">3</span><div><h4 data-i18n="nx.annotation">Cotas y anotaciones: estilos de flecha, fuentes, unidades alternativas, símbolos de cota de elevación</h4></div><span class="pill" data-i18n="st.done">Hecho</span></li>
+      <li class="step done"><span class="n">4</span><div><h4 data-i18n="nx.text">Texto con formato y directrices</h4></div><span class="pill" data-i18n="st.done">Hecho</span></li>
+      <li class="step done"><span class="n">5</span><div><h4 data-i18n="nx.draw">Dibujar: tangencias bloqueadas y muros elípticos</h4></div><span class="pill" data-i18n="st.done">Hecho</span></li>
+      <li class="step done"><span class="n">6</span><div><h4 data-i18n="nx.drafting">Vistas 2D libres: tipos Detalle y Esquema, elementos 2D insertados desde archivos</h4></div><span class="pill" data-i18n="st.done">Hecho</span></li>
+      <li class="step done"><span class="n">7</span><div><h4 data-i18n="nx.tags">Etiquetas: multicategoría por defecto, numeración automática</h4></div><span class="pill" data-i18n="st.done">Hecho</span></li>
+      <li class="step done"><span class="n">8</span><div><h4 data-i18n="nx.keynotes">Notas clave desde una tabla del proyecto o un archivo vinculado</h4></div><span class="pill" data-i18n="st.done">Hecho</span></li>
+      <li class="step done"><span class="n">9</span><div><h4 data-i18n="nx.stair">Calculadora de escaleras</h4></div><span class="pill" data-i18n="st.done">Hecho</span></li>
+      <li class="step done"><span class="n">10</span><div><h4 data-i18n="nx.graphic_schedule">Tabla gráfica por tipo de puertas, ventanas y muros cortina</h4></div><span class="pill" data-i18n="st.done">Hecho</span></li>
+      <li class="step done"><span class="n">11</span><div><h4 data-i18n="nx.views">Vistas: caja de sección, cubo con la vista ortogonal, tipos de sección y alzado, organización del Índice</h4></div><span class="pill" data-i18n="st.done">Hecho</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="prossima" aria-labelledby="prossima-t">
+    <div class="wrap">
+      <span class="eyebrow" data-i18n="rp.next.kicker">Próxima versión de prueba</span>
+      <h2 id="prossima-t" data-i18n="rp.next.h2">0.1.0-alpha.9</h2>
+      <p class="sub" data-i18n="rp.next.p">Las funciones previstas para la próxima versión de prueba: un plan, no una promesa.</p>
+      <ol class="steps">
+      <li class="step todo"><span class="n">1</span><div><h4 data-i18n="nx.refactor">Refactorización: reorganización interna del programa, sin funciones nuevas</h4></div><span class="pill" data-i18n="st.todo">Pendiente</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="disponibile" class="alt" aria-labelledby="disponibile-t">
+    <div class="wrap">
+      <span class="eyebrow" data-i18n="rp.av.kicker">Disponible hoy</span>
+      <h2 id="disponibile-t" data-i18n="rp.av.h2">Lo que ya funciona</h2>
+      <p class="sub" data-i18n="rp.av.p">Todo esto se prueba ya en el navegador, con una casa de ejemplo.</p>
+      <ul class="avail" data-i18n="rm1.ul"><li>Niveles, rejillas, muros, puertas, ventanas, forjados</li><li>Habitaciones, cotas, textos y etiquetas</li><li>Plantas, secciones, alzados, 3D, tablas, mediciones</li><li>Apertura y exportación IFC, SVG, PNG, PDF, CSV</li><li>Escritorio, navegador, línea de comandos, MCP</li><li>Interfaz en seis idiomas, árabe incluido</li><li>Varias ventanas de vista: mosaico, cascada, réplica</li><li>Escala de vista, alturas de corte, detalle, estilos gráficos 3D</li><li>Planos con cajetín, impresión en PDF vectorial</li><li>Cubiertas a cuatro aguas, a dos aguas y planas; muros enlazados a la cubierta</li><li>Región de recorte, ocultar y aislar elementos</li><li>Selección con TAB y cadenas de muros, filtro, Seleccionar todos los ejemplares; arrastrar en cada vista con los muros unidos que se alargan; mover, copiar, girar, alinear con candado, desfase, simetría, repetir en serie lineal y radial, recortar/alargar, dividir, escala, fijar</li><li>Componentes: mobiliario y aparatos sanitarios, en tablas y en IFC</li><li>Visibilidad y gráficos y estilos por categoría</li><li>Líneas de detalle, regiones rellenadas y regiones de máscara</li><li>Gestión de tipos: editar montaje de capas, limpiar no utilizados</li><li>Unidades del proyecto</li><li>Filtros de vista</li><li>Plantillas de vista</li><li>Secciones segmentadas con delimitación lejana ajustable; vistas de detalle</li><li>Cotas lineales y angulares, cotas temporales, restricciones EQ y bloqueo</li><li>Escaleras por tramo con descansillo, y barandillas, en planta, 3D, tablas e IFC</li><li>Planos de áreas y esquemas de color con leyenda</li><li>Componentes de detalle, detalles repetidos, aislamiento y vistas 2D libres</li><li>Muros cortina con rejillas, montantes y paneles, en planta, 3D, tablas e IFC</li><li>Varias plantas por nivel, vistas duplicadas (también con detalles) y renombradas, vistas 3D guardadas</li><li>Muros con alineación, altura o profundidad, continuar, desfase e inversión</li><li>Materiales y patrones de relleno del proyecto: color sombreado, patrones de superficie y de corte, por capa y por categoría</li><li>Tablas de planificación configurables como vistas: campos, filtros, ordenación y agrupación, totales, fórmulas, tablas de claves y cómputos de materiales, parámetros de proyecto y compartidos; en mosaico con las demás vistas, modifican el modelo y lo siguen; en los planos, en las plantillas de vista y entre proyectos</li><li>Formato de proyecto nativo: recupera el trabajo tras un cierre inesperado, copias de seguridad y recordatorios de guardado</li><li>Grosores de línea por escala de vista, patrones de línea editables, subcategorías de estilos por categoría y líneas finas</li><li>Navegación: zoom hacia el cursor, órbita alrededor de la selección, ventanas en mosaico por orden de uso, menús contextuales en cada vista, vistas arrastradas a los planos</li><li>Manual de usuario en seis idiomas, en la web y en PDF, abierto también desde el programa con F1</li><li>Cubo de orientación con brújula, menú y vista inicial, sugerencias de teclas con Alt, barra de acceso rápido y métodos abreviados personalizables, exportados e importados en XML</li><li>Ninguna herramienta cambia de vista por sí sola: donde no puede trabajar, «Ir a vista» pregunta qué vista abrir</li><li>Vista previa también en 3D: muros como sólidos con su cota temporal, suelos bocetados en su nivel, puertas, ventanas y componentes que siguen al cursor</li><li>Apertura de archivos IFC2x3 e IFC4: muros, suelos, puertas, ventanas y habitaciones se vuelven elementos nativos, el resto modelos genéricos</li><li>Alzados de encuadre en las rejillas y bloques de notas</li><li>Cada herramienta probada en planta, alzado, sección y 3D: simetría y matriz también en secciones y alzados, herramientas de muro cortina y Designar líneas también en 3D</li><li>Atajos de dos letras escritos en la vista, en ambos estilos; modificaciones de forzado para el punto siguiente, escritas o desde el botón derecho, con un mensaje donde no funcionan; una ventana «Forzados de cursor…» con incrementos que siguen el zoom</li><li>Un grupo «Dibujar» compartido por líneas de detalle, muros y bocetos: rectángulos, polígonos, círculos, arcos verdaderos, arco de empalme, splines, elipses, Seleccionar líneas, Desfase y Radio; el valor escrito mientras se dibuja</li><li>Estilo BIMopen y tema oscuro en el primer inicio, el fondo invertido se recuerda; el estilo Clásico se elige en Opciones junto al estilo BIMopen</li><li>Muros apilados con sus submuros, en cada vista</li><li>Sol y sombras en plantas, secciones, alzados y 3D, con la trayectoria solar y el estudio de soleamiento</li><li>Cotas temporales en cada elemento en cada vista, 3D incluida, con las referencias elegidas y recordadas</li><li>Pantalla de inicio en el idioma del usuario; la cinta de opciones completa, con los comandos aún por llegar en gris</li><li>Vista en vivo y paseo, vistas de cámara e itinerarios</li><li>Exportación USD y paquetes de proyecto; DWG y DXF exportados, importados y vinculados</li><li>Techos, pilares y muros curvos; vigas, sistemas de vigas, cerchas y cimentaciones</li><li>Fases y demoliciones, opciones de diseño</li><li>Huecos y patinillos; emplazamiento y terreno con plataformas, límites de propiedad y elementos de emplazamiento</li><li>Copiar, Cortar y Pegar, grupos, «Transferir tipo»; cada tabla modifica el modelo</li><li>Leyendas, notas clave, texto con formato y directrices y corrector ortográfico; tablas gráficas por tipo de puertas, ventanas y muros cortina; caja de sección en 3D y calculadora de escaleras</li></ul>
+    </div>
+  </section>
+
+  <section id="passi" aria-labelledby="passi-t">
+    <div class="wrap">
+      <span class="eyebrow" data-i18n="rp.steps.kicker">Próximos pasos</span>
+      <h2 id="passi-t" data-i18n="rp.steps.h2">78 pasos, por orden de prioridad</h2>
+      <p class="sub" data-i18n="rp.steps.p">Cada paso es un bloque completo: comandos, interfaz, pruebas, sitio y seis idiomas. El orden sigue la prioridad y las dependencias.</p>
+    <div class="phase pr">
+      <div class="phase-head"><span class="prio">R</span><div><h3 data-i18n="rp.pr.h3">Realineación de las funciones</h3><p data-i18n="rp.pr.p">Antes de las funciones nuevas, cada función ya hecha se vuelve a revisar punto por punto, se corrige y se prueba desde la interfaz.</p></div><span class="count">0/7</span></div>
+      <ol class="steps">
+      <li class="step wip"><span class="n">R1</span><div><h4 data-i18n="rr1.t">Interfaz y navegación</h4><p data-i18n="rr1.d">Alineados y probados: cinta de opciones con sugerencias de teclas (Alt), barra de acceso rápido con separadores y métodos abreviados personalizables, exportados e importados en XML, atajos de dos letras escritos en la vista, barra de opciones anclable, propiedades, Índice del proyecto también con el teclado con las vistas bajo cada plano, vistas arrastradas a los planos, ventanas en mosaico por orden de uso, zoom hacia el cursor, órbita alrededor de la selección, cubo de orientación con brújula y menú, y menús contextuales en cada vista; cada herramienta probada igual en planta, alzado, sección y 3D.</p><p class="have" data-i18n="rr1.s">Listos: Cambiar de vista, Cerrar las demás, Mosaico, Cascada, Replicar, Paneles, Tema del área de dibujo. Comportamientos verificados: 114 de 117.</p></div><span class="pill" data-i18n="st.wip">En curso</span></li>
+      <li class="step wip"><span class="n">R2</span><div><h4 data-i18n="rr2.t">Selección y modificación</h4><p data-i18n="rr2.d">TAB y cadenas de muros, filtro y Seleccionar todos los ejemplares, arrastrar en cada vista con los muros unidos que se alargan, Mover, Copiar, Girar, Simetría, Repetir en serie, Alinear, Desfase, Recortar/Alargar, Dividir, Escala y Fijar, cada uno con su vista previa antes del clic como puertas, ventanas, rejillas y niveles (en planta, sección, alzado y 3D), probados a través de la interfaz.</p><p class="have" data-i18n="rr2.s">Listos: Alinear, Desfase, Simetría sobre eje, Simetría sobre línea, Dividir elemento, Mover, Copiar, Girar, Acortar/Alargar, Acortar/Alargar un elemento, Acortar/Alargar varios elementos, Eliminar. Comportamientos verificados: 158 de 163.</p></div><span class="pill" data-i18n="st.wip">En curso</span></li>
+      <li class="step wip"><span class="n">R3</span><div><h4 data-i18n="rr3.t">Muros, puertas y ventanas</h4><p data-i18n="rr3.d">Uniones limpias en L, T y X con las capas que giran las esquinas, enlace y desenlace a cubiertas y suelos, la herramienta Uniones de muro, símbolos completos de puertas y ventanas en cada nivel de detalle. Planos de trabajo (Definir, Mostrar) y planos de referencia.</p><p class="have" data-i18n="rr3.s">Listos: Puerta, Ventana. Comportamientos verificados: 138 de 143.</p></div><span class="pill" data-i18n="st.wip">En curso</span></li>
+      <li class="step wip"><span class="n">R4</span><div><h4 data-i18n="rr4.t">Suelos, cubiertas, escaleras y muros cortina</h4><p data-i18n="rr4.d">Alineados y probados: el modo de boceto de suelos y cubiertas con designación de muros, aberturas, flechas y líneas de pendiente y edición del contorno; el perfil de muros y muros cortina dibujado en sección o alzado; escaleras por tramo (con guías para el tramo siguiente) o por líneas de contorno y de contrahuella, también de caracol, y rampas, barandillas y componentes de la biblioteca, con la vista previa que sigue al cursor. Los muros cortina se alinearon con R3. Los tramos monolíticos se unen a sus descansillos sin escalón en la cara inferior, y las barandillas siguen sobre los descansillos como un único barandal. Las escaleras de caracol y los barandales curvos son superficies lisas, sin líneas entre las facetas en 3D, en líneas ocultas, en sección y en alzado; las barandillas tienen un poste en cada esquina en planta y en cada cambio de pendiente, también en las rampas, y rodean los descansillos con ángulos agudos sin cruzarse. Las líneas de boceto se seleccionan y cambian como las demás líneas: extremos arrastrados, Mover, Desfase, Recortar/Alargar, cotas temporales. Las capas y los contornos del núcleo de los muros se eligen con TAB como referencias para Alinear y Seleccionar líneas.</p><p class="have" data-i18n="rr4.s">Listos: Escalera, Barandilla, Objeto. Comportamientos verificados: 237 de 251.</p></div><span class="pill" data-i18n="st.wip">En curso</span></li>
+      <li class="step wip"><span class="n">R5</span><div><h4 data-i18n="rr5.t">Vistas y gráficos</h4><p data-i18n="rr5.d">Selección semitransparente en 3D, solo las aristas reales en el estilo Líneas, forjados que cortan los muros sin parpadeo, ventanas en mosaico que llenan el área. Estilos gráficos en plantas y secciones, alturas de corte con niveles, gráficos por elemento, patrones y transparencia en Visibilidad y gráficos, revelar ocultos, plantillas de vista para cada vista. Sol y sombras en plantas, secciones, alzados y 3D, con la trayectoria solar y el estudio de soleamiento.</p><p class="have" data-i18n="rr5.s">Listos: Ajustes de vista, Visibilidad y gráficos, Filtros, Líneas finas, Sección, Detalle ampliado, Planta, Alzado. Comportamientos verificados: 195 de 219.</p></div><span class="pill" data-i18n="st.wip">En curso</span></li>
+      <li class="step wip"><span class="n">R6</span><div><h4 data-i18n="rr6.t">Anotaciones y 2D</h4><p data-i18n="rr6.d">Texto escrito sobre el dibujo con directrices y Buscar/Reemplazar, todo tipo de cotas con sus tipos, texto de cota, líneas de referencia, bloqueos, EQ y cotas de elevación, etiquetas por categoría y para todos, habitaciones con límites y cálculo de áreas y volúmenes, esquemas de color en primer plano y sus leyendas, vistas de leyenda, orden de dibujo de los detalles. El grupo «Dibujar» compartido por las líneas de detalle y los bocetos (polígonos, arcos verdaderos, arco de empalme, splines, elipses, Seleccionar líneas, Desfase y Radio); la ventana «Forzados de cursor…» en ambos estilos, con incrementos que siguen el zoom; las modificaciones de forzado dicen dónde funcionan; un valor escrito en una cota solo mueve muros, rejillas, puertas y ventanas y líneas de detalle; el extremo de una sola línea de boceto se arrastra solo, los de una cadena elegida con TAB juntos; «Arco de empalme» mantiene el tipo de las líneas que une.</p><p class="have" data-i18n="rr6.s">Comportamientos verificados: 594 de 790.</p></div><span class="pill" data-i18n="st.wip">En curso</span></li>
+      <li class="step wip"><span class="n">R7</span><div><h4 data-i18n="rr7.t">Documentación y archivos</h4><p data-i18n="rr7.d">Alineados y probados: planos con cajetines elegidos e insertados con una vista previa que sigue al cursor, ventanas gráficas con título, rotación y vista activada en el plano, rejillas de guía, lista de planos con planos de marcador de posición, revisiones y nubes de revisión; impresión en PDF con configuraciones guardadas, vista previa, conjuntos de vistas y planos, uno o varios archivos, también de la vista 3D y las tablas de planificación; exportación de imágenes e IFC con las clases; unidades, opciones con pestañas, plantillas de proyecto, transferencia de normas de proyecto y apertura de archivos IFC. Hechos antes: tablas como vistas vinculadas al modelo, apertura, guardado y copias de seguridad.</p><p class="have" data-i18n="rr7.s">Listos: Información del proyecto, Unidades del proyecto, Copiar ajustes de un proyecto. Comportamientos verificados: 191 de 193.</p></div><span class="pill" data-i18n="st.wip">En curso</span></li>
+      </ol>
+    </div>
+    <div class="phase p0">
+      <div class="phase-head"><span class="prio">B</span><div><h3 data-i18n="rp.p0.h3">Fundamentos y plataformas</h3><p data-i18n="rp.p0.p">Calidad, archivos, renderizado y todos los sistemas: la base sobre la que crecen los demás pasos.</p></div><span class="count">6/15</span></div>
+      <ol class="steps">
+      <li class="step done"><span class="n">B0</span><div><h4 data-i18n="rb0.t">Linux y navegador</h4><p data-i18n="rb0.d">Versión de escritorio para Linux y versión web que funciona en el navegador, compiladas a partir del mismo código y actualizadas en cada publicación.</p><p class="have" data-i18n="rb0.s">Listos: aplicación de escritorio para Linux, versión para el navegador.</p></div><span class="pill" data-i18n="st.done">Hecho</span></li>
+      <li class="step wip"><span class="n">B1</span><div><h4 data-i18n="rb1.t">Pruebas funcionales</h4><p data-i18n="rb1.d">Cada comando probado desde la interfaz, en escritorio y web, con pruebas automáticas; los errores encontrados, corregidos.</p><p class="have" data-i18n="rb1.s">Comportamientos verificados: 1747 de 2157.</p></div><span class="pill" data-i18n="st.wip">En curso</span></li>
+      <li class="step done"><span class="n">B2</span><div><h4 data-i18n="rb2.t">Calidad gráfica</h4><p data-i18n="rb2.d">Selección transparente, solo las aristas reales en líneas ocultas, sin parpadeo en los bordes de los forjados, huecos y uniones de muros completos en planta, órbita alrededor del objeto seleccionado y zoom hacia el cursor.</p><p class="have" data-i18n="rb2.s">Comportamientos verificados: 24 de 24.</p></div><span class="pill" data-i18n="st.done">Hecho</span></li>
+      <li class="step done"><span class="n">B3</span><div><h4 data-i18n="rb3.t">Formato de proyecto nativo</h4><p data-i18n="rb3.d">Un solo archivo por proyecto: el trabajo no guardado se recupera tras un cierre inesperado, con copias de seguridad, e incluso los proyectos muy grandes se abren rápido.</p><p class="have" data-i18n="rb3.s">Listos: formato de proyecto nativo. Comportamientos verificados: 4 de 4.</p></div><span class="pill" data-i18n="st.done">Hecho</span></li>
+      <li class="step todo"><span class="n">B4</span><div><h4 data-i18n="rb4.t">Componentes como archivos y biblioteca</h4><p data-i18n="rb4.d">Componentes cargables guardados en archivos propios, cargados en el proyecto y reunidos en una biblioteca.</p><p class="have" data-i18n="rb4.s">Comportamientos verificados: 0 de 17.</p></div><span class="pill" data-i18n="st.todo">Pendiente</span></li>
+      <li class="step wip"><span class="n">B5</span><div><h4 data-i18n="rb5.t">Motor de renderizado</h4><p data-i18n="rb5.d">Luces artificiales y sol, sombras, materiales con texturas, escenas y vistas guardadas, imágenes realistas.</p><p class="have" data-i18n="rb5.s">Listos: Vista en vivo, Recorrer; faltan: Imagen realista.</p></div><span class="pill" data-i18n="st.wip">En curso</span></li>
+      <li class="step done"><span class="n">B6</span><div><h4 data-i18n="rb6.t">Windows</h4><p data-i18n="rb6.d">Versión de escritorio para Windows.</p><p class="have" data-i18n="rb6.s">Listos: aplicación de escritorio para Windows.</p></div><span class="pill" data-i18n="st.done">Hecho</span></li>
+      <li class="step todo"><span class="n">B7</span><div><h4 data-i18n="rb7.t">macOS</h4><p data-i18n="rb7.d">Versión de escritorio para Mac.</p><p class="have" data-i18n="rb7.s">Faltan: aplicación de escritorio para macOS.</p></div><span class="pill" data-i18n="st.todo">Pendiente</span></li>
+      <li class="step done"><span class="n">B8</span><div><h4 data-i18n="rb8.t">Android</h4><p data-i18n="rb8.d">App para tabletas y teléfonos Android con el modo táctil: interfaz para dedo y lápiz, gestos con dos dedos, pantalla completa, menús y paneles adaptados a la pantalla. Probada en tableta y teléfono; el APK se descarga desde la página Descargar.</p><p class="have" data-i18n="rb8.s">Listos: app para Android.</p></div><span class="pill" data-i18n="st.done">Hecho</span></li>
+      <li class="step todo"><span class="n">B9</span><div><h4 data-i18n="rb9.t">iPad e iPhone</h4><p data-i18n="rb9.d">App para iPadOS e iOS, con la interfaz adaptada al tacto.</p><p class="have" data-i18n="rb9.s">Faltan: app para iPadOS e iOS.</p></div><span class="pill" data-i18n="st.todo">Pendiente</span></li>
+      <li class="step todo"><span class="n">B10</span><div><h4 data-i18n="rb10.t">App web instalable</h4><p data-i18n="rb10.d">La versión del navegador instalable con un icono, también en tableta y teléfono, y usable sin conexión.</p><p class="have" data-i18n="rb10.s">Faltan: aplicación web instalable.</p></div><span class="pill" data-i18n="st.todo">Pendiente</span></li>
+      <li class="step wip"><span class="n">B11</span><div><h4 data-i18n="rb11.t">Versiones para todas las plataformas</h4><p data-i18n="rb11.d">Paquetes listos para descargar para cada sistema, compilados y probados automáticamente en cada versión.</p><p class="have" data-i18n="rb11.s">Listos: paquetes para Linux, Windows y Android; faltan: publicación automática desde la CI.</p></div><span class="pill" data-i18n="st.wip">En curso</span></li>
+      <li class="step done"><span class="n">B12</span><div><h4 data-i18n="rb12.t">Manual de usuario</h4><p data-i18n="rb12.d">Un manual paso a paso en seis idiomas, en la web y en PDF, publicado automáticamente y abierto también desde el programa (? ▸ Ayuda, F1); cada capítulo se completa cuando su área se ha realineado y probado.</p><p class="have" data-i18n="rb12.s">Listos: manual en seis idiomas, publicación automática del manual.</p></div><span class="pill" data-i18n="st.done">Hecho</span></li>
+      <li class="step wip"><span class="n">B13</span><div><h4 data-i18n="rb13.t">Dos estilos de interfaz</h4><p data-i18n="rb13.d">En Opciones, en el ordenador y en el navegador, se elige el estilo «Clásica» o «BIMopen»; mismos comandos, mismos nombres y teclas, elección memorizada.</p><p class="have" data-i18n="rb13.s">Comportamientos verificados: 31 de 32.</p></div><span class="pill" data-i18n="st.wip">En curso</span></li>
+      <li class="step todo"><span class="n">B14</span><div><h4 data-i18n="rb14.t">Modelos grandes</h4><p data-i18n="rb14.d">De un edificio de unos cientos de elementos a proyectos reales, con vistas y cambios que siguen siendo rápidos.</p><p class="have" data-i18n="rb14.s">Comportamientos verificados: 0 de 5.</p></div><span class="pill" data-i18n="st.todo">Pendiente</span></li>
+      </ol>
+    </div>
+    <div class="phase p1">
+      <div class="phase-head"><span class="prio">P1</span><div><h3 data-i18n="rp.p1.h3">Esenciales</h3><p data-i18n="rp.p1.p">Para dibujar y documentar un proyecto real.</p></div><span class="count">14/20</span></div>
+      <ol class="steps">
+      <li class="step done"><span class="n">1</span><div><h4 data-i18n="rs1.t">Muro completo y barra de opciones</h4><p data-i18n="rs1.d">Alineación, altura, restricción, desfase y Continuar.</p><p class="have" data-i18n="rs1.s">Listos: Muro.</p></div><span class="pill" data-i18n="st.done">Hecho</span></li>
+      <li class="step wip"><span class="n">2</span><div><h4 data-i18n="rs2.t">Grupo Dibujar común</h4><p data-i18n="rs2.d">Rectángulo, polígonos, círculo, arcos, empalme, desfase y radio para muros, suelos, cubiertas y líneas.</p><p class="have" data-i18n="rs2.s">Comportamientos verificados: 60 de 65.</p></div><span class="pill" data-i18n="st.wip">En curso</span></li>
+      <li class="step done"><span class="n">3</span><div><h4 data-i18n="rs3.t">Selección completa</h4><p data-i18n="rs3.d">TAB, filtro de selección, controles de arrastre, «Seleccionar todos los ejemplares».</p><p class="have" data-i18n="rs3.s">Listos: Modificar.</p></div><span class="pill" data-i18n="st.done">Hecho</span></li>
+      <li class="step done"><span class="n">4</span><div><h4 data-i18n="rs4.t">Vistas como elementos propios</h4><p data-i18n="rs4.d">Varias plantas por nivel; duplicar, renombrar y borrar vistas desde el navegador.</p><p class="have" data-i18n="rs4.s">Listos: Vista 2D libre, Duplicar vista.</p></div><span class="pill" data-i18n="st.done">Hecho</span></li>
+      <li class="step done"><span class="n">5</span><div><h4 data-i18n="rs5.t">Contornos editables de suelos y cubiertas</h4><p data-i18n="rs5.d">Editar contorno, huecos, muros elegidos uno a uno con desfase.</p><p class="have" data-i18n="rs5.s">Listos: Pavimento, Cubierta.</p></div><span class="pill" data-i18n="st.done">Hecho</span></li>
+      <li class="step wip"><span class="n">6</span><div><h4 data-i18n="rs6.t">Materiales y gráficos del proyecto</h4><p data-i18n="rs6.d">Materiales, patrones de relleno, grosores de línea por escala, patrones de línea y subcategorías.</p><p class="have" data-i18n="rs6.s">Listos: Materiales, Estilos por categoría, Parámetros adicionales; faltan: Subdividir cara, Aplicar material.</p></div><span class="pill" data-i18n="st.wip">En curso</span></li>
+      <li class="step wip"><span class="n">7</span><div><h4 data-i18n="rs7.t">Componentes y tipos en el proyecto</h4><p data-i18n="rs7.d">Índice del proyecto por categoría, componente y tipo; tipo nuevo; igualar propiedades de tipo.</p><p class="have" data-i18n="rs7.s">Listos: Cargar componente, Transferir tipo, Limpiar no utilizados. Comportamientos verificados: 0 de 2.</p></div><span class="pill" data-i18n="st.wip">En curso</span></li>
+      <li class="step done"><span class="n">8</span><div><h4 data-i18n="rs8.t">Texto en todas las vistas y tipos de texto</h4><p data-i18n="rs8.d">Notas en secciones, detalles y planos; fuente, tamaño, directrices.</p><p class="have" data-i18n="rs8.s">Listos: Texto, Buscar/Reemplazar, Tipos de texto, Corrector ortográfico. Comportamientos verificados: 1 de 1.</p></div><span class="pill" data-i18n="st.done">Hecho</span></li>
+      <li class="step wip"><span class="n">9</span><div><h4 data-i18n="rs9.t">Etiquetas por categoría y símbolos</h4><p data-i18n="rs9.d">Etiquetas de habitaciones, muros, suelos, componentes, cubiertas y escaleras.</p><p class="have" data-i18n="rs9.s">Listos: Etiqueta, Etiquetar todo, Material, Etiquetas cargadas, Etiqueta multicategoría, Símbolo, Numeración de peldaños; faltan: Recorrido de escalera.</p></div><span class="pill" data-i18n="st.wip">En curso</span></li>
+      <li class="step done"><span class="n">10</span><div><h4 data-i18n="rs10.t">Tipos de cota y cotas de elevación</h4><p data-i18n="rs10.d">Tipos de cota con prefijo y sufijo; cotas de elevación y coordenadas.</p><p class="have" data-i18n="rs10.s">Listos: Alineada, Lineal, Angular, Radial, Diámetro, Longitud de arco, Cota de punto, Tipos de cota.</p></div><span class="pill" data-i18n="st.done">Hecho</span></li>
+      <li class="step done"><span class="n">11</span><div><h4 data-i18n="rs11.t">Detalles 2D completos</h4><p data-i18n="rs11.d">Orden de dibujo, regiones rellenadas con arcos y huecos, componentes, detalles repetidos y aislamiento.</p><p class="have" data-i18n="rs11.s">Listos: Línea de detalle, Región rellenada, Símbolo de detalle, Aislamiento.</p></div><span class="pill" data-i18n="st.done">Hecho</span></li>
+      <li class="step done"><span class="n">12</span><div><h4 data-i18n="rs12.t">Tablas configurables</h4><p data-i18n="rs12.d">Campos, filtros, ordenación, agrupación, formato y edición de valores.</p><p class="have" data-i18n="rs12.s">Listos: Tablas de planificación. Comportamientos verificados: 68 de 68.</p></div><span class="pill" data-i18n="st.done">Hecho</span></li>
+      <li class="step done"><span class="n">13</span><div><h4 data-i18n="rs13.t">Habitaciones completas</h4><p data-i18n="rs13.d">Límite superior, delimitación, reglas de cálculo de área, acabados y ocupación.</p><p class="have" data-i18n="rs13.s">Listos: Espacio, Separador de espacios, Etiqueta de espacio, Cálculos de área y volumen.</p></div><span class="pill" data-i18n="st.done">Hecho</span></li>
+      <li class="step done"><span class="n">14</span><div><h4 data-i18n="rs14.t">Fases y derribo</h4><p data-i18n="rs14.d">Fases del proyecto, filtros de fase, elementos existentes, derribados y nuevos.</p><p class="have" data-i18n="rs14.s">Listos: Fases, Demoler. Comportamientos verificados: 66 de 66.</p></div><span class="pill" data-i18n="st.done">Hecho</span></li>
+      <li class="step done"><span class="n">15</span><div><h4 data-i18n="rs15.t">Techos y plantas de techo</h4><p data-i18n="rs15.d">Techos automáticos o dibujados, por capas, con su propia vista.</p><p class="have" data-i18n="rs15.s">Listos: Falso techo. Comportamientos verificados: 1 de 1.</p></div><span class="pill" data-i18n="st.done">Hecho</span></li>
+      <li class="step done"><span class="n">16</span><div><h4 data-i18n="rs16.t">Pilares arquitectónicos</h4><p data-i18n="rs16.d">Tipos, niveles de base y superior, unión con los muros.</p><p class="have" data-i18n="rs16.s">Listos: Columna. Comportamientos verificados: 2 de 2.</p></div><span class="pill" data-i18n="st.done">Hecho</span></li>
+      <li class="step wip"><span class="n">17</span><div><h4 data-i18n="rs17.t">Herramientas de modificación y portapapeles</h4><p data-i18n="rs17.d">Escala, repetir en serie radial, fijar, crear igual, copiar y pegar alineado.</p><p class="have" data-i18n="rs17.s">Listos: Escala, Repetir en serie, Fijar, Liberar, Dividir con junta, Crear igual, Pegar, Cortar al portapapeles, Copiar al portapapeles; faltan: Medir.</p></div><span class="pill" data-i18n="st.wip">En curso</span></li>
+      <li class="step wip"><span class="n">18</span><div><h4 data-i18n="rs18.t">Grupos</h4><p data-i18n="rs18.d">Crear, editar y colocar grupos de modelo y de detalle.</p><p class="have" data-i18n="rs18.s">Listos: Grupo, Agrupar, Grupo 2D; faltan: Cargar como grupo. Comportamientos verificados: 0 de 1.</p></div><span class="pill" data-i18n="st.wip">En curso</span></li>
+      <li class="step done"><span class="n">19</span><div><h4 data-i18n="rs19.t">Vistas 3D guardables</h4><p data-i18n="rs19.d">Varias vistas 3D con nombre, cubo de orientación, perspectiva y caja de sección.</p><p class="have" data-i18n="rs19.s">Listos: Vista 3D. Comportamientos verificados: 16 de 16.</p></div><span class="pill" data-i18n="st.done">Hecho</span></li>
+      <li class="step done"><span class="n">20</span><div><h4 data-i18n="rs20.t">Planos completos</h4><p data-i18n="rs20.d">Tablas, vistas 3D y leyendas en los planos, ventanas gráficas y referencias de detalle.</p><p class="have" data-i18n="rs20.s">Listos: Plano, Vista, Cajetín, Rejilla de guía, Desactivar vista. Comportamientos verificados: 30 de 30.</p></div><span class="pill" data-i18n="st.done">Hecho</span></li>
+      </ol>
+    </div>
+    <div class="phase p2">
+      <div class="phase-head"><span class="prio">P2</span><div><h3 data-i18n="rp.p2.h3">Importantes</h3><p data-i18n="rp.p2.p">Para completar el trabajo diario.</p></div><span class="count">6/18</span></div>
+      <ol class="steps">
+      <li class="step wip"><span class="n">21</span><div><h4 data-i18n="rs21.t">Gráficos por elemento y elementos ocultos</h4><p data-i18n="rs21.d">Modificar gráficos por elemento; mostrar elementos ocultos.</p><p class="have" data-i18n="rs21.s">Listos: Ocultar en vista, Gráficos personalizados; faltan: Mostrar líneas ocultas, Quitar líneas ocultas, Contorno de corte, Retoque de líneas.</p></div><span class="pill" data-i18n="st.wip">En curso</span></li>
+      <li class="step wip"><span class="n">22</span><div><h4 data-i18n="rs22.t">Alturas de corte completas y subyacente</h4><p data-i18n="rs22.d">Cada plano con su nivel, líneas más allá del corte, subyacente.</p><p class="have" data-i18n="rs22.s">Comportamientos verificados: 7 de 8.</p></div><span class="pill" data-i18n="st.wip">En curso</span></li>
+      <li class="step done"><span class="n">23</span><div><h4 data-i18n="rs23.t">Propiedades de tipo y datos de identidad</h4><p data-i18n="rs23.d">Función del muro, patrón de relleno en bajo detalle, datos de identidad.</p><p class="have" data-i18n="rs23.s">Listos: Propiedades.</p></div><span class="pill" data-i18n="st.done">Hecho</span></li>
+      <li class="step wip"><span class="n">24</span><div><h4 data-i18n="rs24.t">Uniones y retorno de capas</h4><p data-i18n="rs24.d">Uniones de muros, prioridad de capas, estructura vertical.</p><p class="have" data-i18n="rs24.s">Faltan: Unir, Cortar, Separar. Comportamientos verificados: 12 de 12.</p></div><span class="pill" data-i18n="st.wip">En curso</span></li>
+      <li class="step done"><span class="n">25</span><div><h4 data-i18n="rs25.t">Superficies inclinadas y huecos</h4><p data-i18n="rs25.d">Flecha de pendiente, patinillos, huecos en muros y suelos.</p><p class="have" data-i18n="rs25.s">Listos: Por cara, Patinillo, En muro, Vertical. Comportamientos verificados: 4 de 4.</p></div><span class="pill" data-i18n="st.done">Hecho</span></li>
+      <li class="step wip"><span class="n">26</span><div><h4 data-i18n="rs26.t">Parámetros, fórmulas y referencias</h4><p data-i18n="rs26.d">Parámetros de proyecto, compartidos y globales, fórmulas en las tablas y en los tipos, el cuadro de diálogo de forzado y sus modificaciones.</p><p class="have" data-i18n="rs26.s">Listos: Forzado, Parámetros de proyecto, Parámetros compartidos; faltan: Parámetros generales.</p></div><span class="pill" data-i18n="st.wip">En curso</span></li>
+      <li class="step done"><span class="n">27</span><div><h4 data-i18n="rs27.t">Muros cortina</h4><p data-i18n="rs27.d">Rejillas, montantes y paneles, en planta, 3D, tablas e IFC.</p><p class="have" data-i18n="rs27.s">Listos: Muro cortina, Rejilla de muro cortina, Montante.</p></div><span class="pill" data-i18n="st.done">Hecho</span></li>
+      <li class="step done"><span class="n">28</span><div><h4 data-i18n="rs28.t">Áreas y esquemas de color</h4><p data-i18n="rs28.d">Planos de área, contornos desde muros, esquemas por valor o rango, leyenda.</p><p class="have" data-i18n="rs28.s">Listos: Superficie, Contorno de superficie, Etiqueta de superficie, Leyenda de colores, Esquemas de color.</p></div><span class="pill" data-i18n="st.done">Hecho</span></li>
+      <li class="step wip"><span class="n">29</span><div><h4 data-i18n="rs29.t">Niveles y rejillas completos</h4><p data-i18n="rs29.d">Tipos, burbujas, codos, extensiones 2D y 3D.</p><p class="have" data-i18n="rs29.s">Listos: Nivel, Rejilla; faltan: Cuadro de extensión. Comportamientos verificados: 17 de 24.</p></div><span class="pill" data-i18n="st.wip">En curso</span></li>
+      <li class="step wip"><span class="n">30</span><div><h4 data-i18n="rs30.t">Planos de referencia, norte y ubicación</h4><p data-i18n="rs30.d">Planos de referencia, plano de trabajo, norte real y de proyecto.</p><p class="have" data-i18n="rs30.s">Listos: Definir, Visualizar, Plano guía; faltan: Vista del plano, Coordenadas compartidas, Mover proyecto. Comportamientos verificados: 22 de 25.</p></div><span class="pill" data-i18n="st.wip">En curso</span></li>
+      <li class="step wip"><span class="n">31</span><div><h4 data-i18n="rs31.t">Archivos: plantillas, copias y recientes</h4><p data-i18n="rs31.d">Nuevo proyecto desde plantilla, guardar como plantilla, copias de seguridad, documentos recientes y recordatorios de guardado.</p><p class="have" data-i18n="rs31.s">Comportamientos verificados: 30 de 31.</p></div><span class="pill" data-i18n="st.wip">En curso</span></li>
+      <li class="step done"><span class="n">32</span><div><h4 data-i18n="rs32.t">Exportación DXF e impresión completa</h4><p data-i18n="rs32.d">DXF/DWG con capas por categoría; conjuntos de vistas y planos.</p><p class="have" data-i18n="rs32.s">Listos: exportación DXF/DWG. Comportamientos verificados: 17 de 17.</p></div><span class="pill" data-i18n="st.done">Hecho</span></li>
+      <li class="step wip"><span class="n">33</span><div><h4 data-i18n="rs33.t">Importar y vincular</h4><p data-i18n="rs33.d">Apertura de archivos IFC, DXF, PDF e imágenes como base, nubes de puntos y gestión de vínculos.</p><p class="have" data-i18n="rs33.s">Listos: Insertar desde archivo, Vincular CAD, Importar IFC, Importar CAD; faltan: Vincular PDF, Vincular imagen, Importar PDF, Importar imagen, Calcomanía, Nube de puntos, Importar gbXML. Comportamientos verificados: 4 de 4.</p></div><span class="pill" data-i18n="st.wip">En curso</span></li>
+      <li class="step wip"><span class="n">34</span><div><h4 data-i18n="rs34.t">Leyendas y vistas dependientes</h4><p data-i18n="rs34.d">Vistas de leyenda, componentes de leyenda, vistas dependientes y referencias a vista.</p><p class="have" data-i18n="rs34.s">Listos: Leyendas; faltan: Referencia a vista.</p></div><span class="pill" data-i18n="st.wip">En curso</span></li>
+      <li class="step done"><span class="n">35</span><div><h4 data-i18n="rs35.t">Revisiones y notas clave</h4><p data-i18n="rs35.d">Nubes de revisión, revisiones en el cajetín, notas clave desde archivo.</p><p class="have" data-i18n="rs35.s">Listos: Nube de revisión, Revisiones, Nota codificada. Comportamientos verificados: 15 de 15.</p></div><span class="pill" data-i18n="st.done">Hecho</span></li>
+      <li class="step wip"><span class="n">36</span><div><h4 data-i18n="rs36.t">Sol y sombras</h4><p data-i18n="rs36.d">Sombras, ajustes del sol y estudio de soleamiento en cada vista, estilo realista.</p><p class="have" data-i18n="rs36.s">Comportamientos verificados: 4 de 5.</p></div><span class="pill" data-i18n="st.wip">En curso</span></li>
+      <li class="step wip"><span class="n">37</span><div><h4 data-i18n="rs37.t">Rampas y edición de forma</h4><p data-i18n="rs37.d">Rampas inclinadas; puntos y líneas de división en suelos y cubiertas.</p><p class="have" data-i18n="rs37.s">Listos: Rampa. Comportamientos verificados: 0 de 4.</p></div><span class="pill" data-i18n="st.wip">En curso</span></li>
+      <li class="step todo"><span class="n">38</span><div><h4 data-i18n="rs38.t">Exportación 3D abierta</h4><p data-i18n="rs38.d">glTF/OBJ e IFC2x3 además de IFC4.</p><p class="have" data-i18n="rs38.s">Faltan: exportación glTF/OBJ, exportación IFC2x3.</p></div><span class="pill" data-i18n="st.todo">Pendiente</span></li>
+      </ol>
+    </div>
+    <div class="phase p3">
+      <div class="phase-head"><span class="prio">P3</span><div><h3 data-i18n="rp.p3.h3">Más adelante</h3><p data-i18n="rp.p3.p">Herramientas avanzadas o menos frecuentes.</p></div><span class="count">3/18</span></div>
+      <ol class="steps">
+      <li class="step wip"><span class="n">39</span><div><h4 data-i18n="rs39.t">Emplazamiento</h4><p data-i18n="rs39.d">Terreno, plataformas, límites de parcela, curvas de nivel.</p><p class="have" data-i18n="rs39.s">Listos: Terreno, Elemento de emplazamiento, Aparcamiento, Plataforma, Opciones de emplazamiento, Dividir terreno, Fusionar terrenos, Subárea, Límite de propiedad, Nivelación, Etiqueta de curvas de nivel; faltan: Vincular topografía, Terreno desde cara, Contexto circundante.</p></div><span class="pill" data-i18n="st.wip">En curso</span></li>
+      <li class="step todo"><span class="n">40</span><div><h4 data-i18n="rs40.t">Masas y modelado por cara</h4><p data-i18n="rs40.d">Masas, plantas de masa, muros y cubiertas por cara.</p><p class="have" data-i18n="rs40.s">Faltan: Visualizar masas, Nueva masa, Colocar masa, Dibujar en 3D, Muro cortina, Cubierta, Muro, Forjado.</p></div><span class="pill" data-i18n="st.todo">Pendiente</span></li>
+      <li class="step wip"><span class="n">41</span><div><h4 data-i18n="rs41.t">Cubiertas por extrusión y accesorios</h4><p data-i18n="rs41.d">Buhardillas, impostas, canalones, plafones.</p><p class="have" data-i18n="rs41.s">Listos: Buhardilla, Unir cubierta. Comportamientos verificados: 39 de 44.</p></div><span class="pill" data-i18n="st.wip">En curso</span></li>
+      <li class="step done"><span class="n">42</span><div><h4 data-i18n="rs42.t">Opciones de diseño</h4><p data-i18n="rs42.d">Conjuntos de opciones, opción principal, opciones por vista.</p><p class="have" data-i18n="rs42.s">Listos: Alternativas de diseño, Versión principal, Añadir al conjunto, Seleccionar para editar. Comportamientos verificados: 24 de 24.</p></div><span class="pill" data-i18n="st.done">Hecho</span></li>
+      <li class="step wip"><span class="n">43</span><div><h4 data-i18n="rs43.t">Modelos vinculados e interferencias</h4><p data-i18n="rs43.d">Vincular modelo, copiar/supervisar, comprobación de interferencias.</p><p class="have" data-i18n="rs43.s">Listos: Gestionar vínculos; faltan: Vincular proyecto, Vincular IFC, Modelo federado, Comprobar interferencias, Copiar y supervisar, Revisión de coordinación, Opciones de coordinación, Realinear anfitriones, Cambios del modelo federado.</p></div><span class="pill" data-i18n="st.wip">En curso</span></li>
+      <li class="step wip"><span class="n">44</span><div><h4 data-i18n="rs44.t">Personalización de la interfaz</h4><p data-i18n="rs44.d">Barra de acceso rápido, atajos de teclado con importación y exportación, colores de selección, cinta de opciones minimizada.</p><p class="have" data-i18n="rs44.s">Comportamientos verificados: 9 de 10.</p></div><span class="pill" data-i18n="st.wip">En curso</span></li>
+      <li class="step done"><span class="n">45</span><div><h4 data-i18n="rs45.t">Texto y líneas de modelo</h4><p data-i18n="rs45.d">Texto 3D y líneas de modelo en el plano de trabajo.</p><p class="have" data-i18n="rs45.s">Listos: Texto 3D, Línea 3D. Comportamientos verificados: 21 de 21.</p></div><span class="pill" data-i18n="st.done">Hecho</span></li>
+      <li class="step todo"><span class="n">46</span><div><h4 data-i18n="rs46.t">Editor de componentes</h4><p data-i18n="rs46.d">Componentes cargables paramétricos creados y editados en BIMopen.</p><p class="have" data-i18n="rs46.s">Comportamientos verificados: 0 de 11.</p></div><span class="pill" data-i18n="st.todo">Pendiente</span></li>
+      <li class="step todo"><span class="n">47</span><div><h4 data-i18n="rs47.t">Herramientas de gestión del proyecto</h4><p data-i18n="rs47.d">Renumeración, vista de inicio, imágenes del proyecto, selecciones guardadas, selección por número y advertencias.</p><p class="have" data-i18n="rs47.s">Faltan: Renumerar, Vista de apertura, Imágenes del proyecto, Guardar selección, Cargar selección, Editar selección, Seleccionar por número, Números de la selección, Advertencias.</p></div><span class="pill" data-i18n="st.todo">Pendiente</span></li>
+      <li class="step done"><span class="n">48</span><div><h4 data-i18n="rs48.t">Elementos estructurales y cimentaciones</h4><p data-i18n="rs48.d">Vigas, pilares, muros y losas estructurales, cerchas, arriostramientos, sistemas de vigas, zapatas aisladas, corridas y losas de cimentación, con sus etiquetas.</p><p class="have" data-i18n="rs48.s">Listos: Viga, Muro estructural, Pilar estructural, Forjado estructural, Cercha, Arriostramiento, Entramado de vigas, Zapata aislada, Zapata corrida, Losa de cimentación, Etiquetas de vigas, Dirección de luz, Uniones viga/pilar, Configuración estructural.</p></div><span class="pill" data-i18n="st.done">Hecho</span></li>
+      <li class="step wip"><span class="n">49</span><div><h4 data-i18n="rs49.t">Armaduras y hormigón armado</h4><p data-i18n="rs49.d">Armaduras sueltas, por área y por recorrido, mallas, recubrimiento, manguitos, armaduras adaptativas y sus símbolos y etiquetas.</p><p class="have" data-i18n="rs49.s">Listos: Opciones de recubrimiento; faltan: Armadura, Armadura por área, Armadura a lo largo de un recorrido, Malla por área, Malla individual, Recubrimiento, Manguito, Armadura adaptable, Opciones de armadura, Etiqueta de armaduras, Símbolo de armadura.</p></div><span class="pill" data-i18n="st.wip">En curso</span></li>
+      <li class="step todo"><span class="n">50</span><div><h4 data-i18n="rs50.t">Estructura metálica y uniones</h4><p data-i18n="rs50.d">Uniones individuales y automáticas, placas, pernos, soldaduras y mecanizados de los perfiles de acero.</p><p class="have" data-i18n="rs50.s">Faltan: Unión, Uniones automáticas, Placa, Pernos, Soldadura, Despunte, Corte inclinado, Acortar, Corte perfilado, Corte de extremo, Unión en esquina, Intersección, Cortar con.</p></div><span class="pill" data-i18n="st.todo">Pendiente</span></li>
+      <li class="step todo"><span class="n">51</span><div><h4 data-i18n="rs51.t">Piezas, ensamblajes y prefabricados</h4><p data-i18n="rs51.d">Piezas, ensamblajes, segmentación de prefabricados, mallas a medida, planos de taller y exportación para CAM.</p><p class="have" data-i18n="rs51.s">Faltan: Subdividir, Piezas de montaje, Malla a medida, Planos de taller, Exportar para CAM, Configuración de prefabricados, Perfiles conformados en frío, Suspender, Descomponer en partes, Crear ensamblaje.</p></div><span class="pill" data-i18n="st.todo">Pendiente</span></li>
+      <li class="step todo"><span class="n">52</span><div><h4 data-i18n="rs52.t">Conductos e instalaciones de aire</h4><p data-i18n="rs52.d">Conductos rígidos y flexibles, uniones, accesorios, aislamiento, rejillas, equipos mecánicos y leyendas de conductos.</p><p class="have" data-i18n="rs52.s">Faltan: Conducto, Conducto desde un trazado, Accesorio de unión de conducto, Accesorio de conducto, Aislamiento de conducto, Conducto flexible, Rejilla de aire, Elemento prefabricado, Trazado de varios puntos, Refuerzo de conducto, Equipo mecánico, Dispositivo de regulación, Leyenda de conductos.</p></div><span class="pill" data-i18n="st.todo">Pendiente</span></li>
+      <li class="step wip"><span class="n">53</span><div><h4 data-i18n="rs53.t">Fontanería y electricidad</h4><p data-i18n="rs53.d">Tuberías y aparatos sanitarios, instalación eléctrica y cargas, esquemas P&amp;ID, conexiones y leyendas de tuberías.</p><p class="have" data-i18n="rs53.s">Listos: Modelado, Plano de trabajo; faltan: Fontanería, Instalación eléctrica, Editor P&amp;ID, Conexiones desconectadas, Cargas eléctricas, Leyenda de tuberías.</p></div><span class="pill" data-i18n="st.wip">En curso</span></li>
+      <li class="step todo"><span class="n">54</span><div><h4 data-i18n="rs54.t">Modelo de cálculo estructural</h4><p data-i18n="rs54.d">Barras, paneles y nudos de cálculo, apoyos y condiciones de contorno, cargas, modelo de cálculo automático y lectura de resultados.</p><p class="have" data-i18n="rs54.s">Faltan: Mostrar cargas, Barra de cálculo, Panel de cálculo, Nudo de cálculo, Apoyos y vínculos, Modelo de cálculo automático, Resultados de cálculo.</p></div><span class="pill" data-i18n="st.todo">Pendiente</span></li>
+      <li class="step todo"><span class="n">55</span><div><h4 data-i18n="rs55.t">Espacios, zonas y análisis del edificio</h4><p data-i18n="rs55.d">Espacios y zonas de instalaciones con separadores, nombres y etiquetas, análisis energético y recorridos de evacuación.</p><p class="have" data-i18n="rs55.s">Faltan: Espacio, Separador de espacios, Etiqueta de espacio, Nombres de espacios, Zona dibujada, Zona desde espacios, Análisis energético, Ruta de evacuación.</p></div><span class="pill" data-i18n="st.todo">Pendiente</span></li>
+      <li class="step todo"><span class="n">56</span><div><h4 data-i18n="rs56.t">Trabajo compartido</h4><p data-i18n="rs56.d">Subproyectos, sincronización, historial, permisos sobre los elementos y copias de seguridad, para trabajar varias personas en el mismo proyecto.</p><p class="have" data-i18n="rs56.s">Faltan: Subproyectos, Sincronizar, Mostrar historial, Activar uso compartido, Grupo de trabajo activo, Atenuar los otros grupos, Recargar cambios, Liberar elementos, Solicitudes de permiso, Estado del uso compartido, Restaurar copia de seguridad, Opciones de publicación.</p></div><span class="pill" data-i18n="st.todo">Pendiente</span></li>
+      </ol>
+    </div>
+    </div>
+  </section>
+
+  <section id="copertura" class="alt" aria-labelledby="copertura-t">
+    <div class="wrap">
+      <span class="eyebrow" data-i18n="rp.cov.kicker">Comandos por pestaña</span>
+      <h2 id="copertura-t" data-i18n="rp.cov.h2">Cuántos comandos funcionan ya</h2>
+      <p class="sub" data-i18n="rp.cov.p">Para cada pestaña de la cinta, los comandos que ya funcionan sobre el total. Los demás ya están en su sitio, en gris, hasta que funcionen. Último cálculo: 9 de noviembre de 2026.</p>
+      <ul class="bars">
+      <li><span class="name" data-i18n="tab.modella">Modelar</span><span class="track" role="img" aria-label="97 %"><span class="d" style="width:97.3%"></span></span><span class="pct">97 % <small>(36 / 37)</small></span></li>
+      <li><span class="name" data-i18n="tab.strutture">Estructura</span><span class="track" role="img" aria-label="90 %"><span class="d" style="width:90.0%"></span></span><span class="pct">90 % <small>(27 / 30)</small></span></li>
+      <li><span class="name" data-i18n="tab.viste">Vistas</span><span class="track" role="img" aria-label="85 %"><span class="d" style="width:84.8%"></span></span><span class="pct">85 % <small>(28 / 33)</small></span></li>
+      <li><span class="name" data-i18n="tab.annotazioni">Anotaciones</span><span class="track" role="img" aria-label="83 %"><span class="d" style="width:82.9%"></span></span><span class="pct">83 % <small>(29 / 35)</small></span></li>
+      <li><span class="name" data-i18n="tab.modifica">Modificar</span><span class="track" role="img" aria-label="76 %"><span class="d" style="width:75.7%"></span></span><span class="pct">76 % <small>(28 / 37)</small></span></li>
+      <li><span class="name" data-i18n="tab.progetto">Proyecto</span><span class="track" role="img" aria-label="56 %"><span class="d" style="width:55.6%"></span></span><span class="pct">56 % <small>(15 / 27)</small></span></li>
+      <li><span class="name" data-i18n="tab.masse-e-sito">Masas y emplazamiento</span><span class="track" role="img" aria-label="55 %"><span class="d" style="width:54.5%"></span></span><span class="pct">55 % <small>(12 / 22)</small></span></li>
+      <li><span class="name" data-i18n="tab.collega-e-importa">Vincular e importar</span><span class="track" role="img" aria-label="37 %"><span class="d" style="width:36.8%"></span></span><span class="pct">37 % <small>(7 / 19)</small></span></li>
+      <li><span class="name" data-i18n="tab.cemento-armato">Hormigón armado</span><span class="track" role="img" aria-label="33 %"><span class="d" style="width:33.3%"></span></span><span class="pct">33 % <small>(5 / 15)</small></span></li>
+      <li><span class="name" data-i18n="tab.metallo">Metal</span><span class="track" role="img" aria-label="22 %"><span class="d" style="width:22.2%"></span></span><span class="pct">22 % <small>(4 / 18)</small></span></li>
+      <li><span class="name" data-i18n="tab.impianti">Instalaciones</span><span class="track" role="img" aria-label="17 %"><span class="d" style="width:16.7%"></span></span><span class="pct">17 % <small>(3 / 18)</small></span></li>
+      <li><span class="name" data-i18n="tab.prefabbricazione">Prefabricación</span><span class="track" role="img" aria-label="0 %"><span class="d" style="width:0.0%"></span></span><span class="pct">0 % <small>(0 / 9)</small></span></li>
+      <li><span class="name" data-i18n="tab.verifica">Comprobar</span><span class="track" role="img" aria-label="0 %"><span class="d" style="width:0.0%"></span></span><span class="pct">0 % <small>(0 / 18)</small></span></li>
+      <li><span class="name" data-i18n="tab.condividi">Colaborar</span><span class="track" role="img" aria-label="0 %"><span class="d" style="width:0.0%"></span></span><span class="pct">0 % <small>(0 / 17)</small></span></li>
+      <li class="total"><span class="name" data-i18n="rp.cov.total">Total</span><span class="track" role="img" aria-label="55 %"><span class="d" style="width:55.4%"></span></span><span class="pct">55 % <small>(168 / 303)</small></span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="fuori" aria-labelledby="fuori-t">
+    <div class="wrap">
+      <span class="eyebrow" data-i18n="rp.out.kicker">Fuera de alcance</span>
+      <h2 id="fuori-t" data-i18n="rp.out.h2">Lo que BIMopen no hará</h2>
+      <ul class="outs" data-i18n="rp.out.ul"><li>Gestión de licencias y servicios en línea propietarios</li><li>Bibliotecas de materiales y servicios de renderizado en la nube propietarios</li><li>Macros VSTA: en BIMopen la automatización pasa por comandos, línea de comandos y servidor MCP</li><li>Análisis energéticos y estructurales propietarios</li></ul>
+    </div>
+  </section>
+
+  <section class="alt final">
+    <div class="wrap">
+      <h2 data-i18n="rp.cta.h2">Pruébalo mientras crece</h2>
+      <p class="sub" style="margin-inline:auto" data-i18n="rp.cta.p">Cada paso terminado llega enseguida a la versión del navegador.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="../app/?lang=es&amp;v=e0bd31ab" data-app="e0bd31ab" data-i18n="cta.prova">Pruébalo en el navegador</a>
+        <a class="btn btn-ghost" href="./" data-con-lingua="./" data-i18n="rp.back">Volver a la página principal</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="row">
+      <span>© <span id="year">2026</span> BIMopen · <span data-i18n="foot.lic">Software gratuito</span> · <span data-i18n="foot.claude">Desarrollado con</span> <a href="https://claude.com/claude-code" rel="noopener">Claude Code</a></span>
+      <span><a href="./#formati" data-con-lingua="./#formati" data-i18n="nav.formati">Formatos</a> · <a href="philosophy.html" data-con-lingua="philosophy.html" data-i18n="nav.filosofia">Filosofía</a> · <a href="roadmap.html" data-con-lingua="roadmap.html" data-i18n="nav.roadmap">Hoja de ruta</a> · <a href="download.html" data-con-lingua="download.html" data-i18n="nav.scarica">Descargar</a> · <a href="news.html" data-con-lingua="news.html" data-i18n="nav.novita">Novedades</a> · <a href="../manual/es/" data-manuale data-i18n="nav.manuale">Manual</a> · <a href="./#faq" data-con-lingua="./#faq" data-i18n="nav.faq">Preguntas</a><!-- canale:piede --><!-- /canale:piede --> · <span data-i18n="foot.codice">Código fuente: pronto en <a href="https://github.com/bimopen" target="_blank" rel="noopener">GitHub</a></span></span>
+    </div>
+    <p class="made"><span class="tric" aria-hidden="true"><i></i><i></i><i></i></span><span data-i18n="foot.italia">Diseñado en Italia</span></p>
+    <small class="privato" data-i18n="foot.privato">BIMopen es un proyecto personal y no comercial de un particular: no es una empresa, no vende productos ni servicios y no recibe pagos, por eso no tiene número de IVA.</small>
+  </div>
+</footer>
+
+<button class="to-top" id="to-top" type="button" aria-label="Volver arriba" data-i18n-attr="aria-label:ui.top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
+<script src="../language.js?v=eeb05237"></script>
+<script src="../assets/menu.js?v=2b43f1ee"></script>
+<script src="../assets/effetti.js?v=3fe63441"></script>
+<script>
+  // tema: scuro finché non si sceglie; poi chiaro o scuro, ricordato in questo browser
+  (function () {
+    var root = document.documentElement;
+    document.getElementById('themeToggle').addEventListener('click', function () {
+      var dark = root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+      root.dataset.theme = dark ? 'light' : 'dark';
+      try { localStorage.setItem('theme', root.dataset.theme); } catch (e) {}
+      var tc = document.querySelector('meta[name="theme-color"]'); if (tc) tc.content = dark ? '#EEF2F5' : '#0D1319';
+    });
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,946 @@
+<!doctype html>
+<html lang="en" data-lingua-pagina="en" data-pagina="" data-build="ddda3f09">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="meta.title">BIMopen — Free BIM modelling</title>
+<meta name="keywords" content="BIM, software BIM gratuito, IFC, IFC4, BIMopen, Rust">
+<meta name="description" data-i18n-attr="content:meta.desc" content="BIMopen is free BIM software, with no account and no subscription: walls, doors, windows, floors, roofs and stairs in a single model, with plans, sections, 3D, schedules, PDF sheets and IFC4 export. In the browser and on your computer.">
+<link rel="canonical" href="https://bimopen.it/en/">
+<link rel="alternate" hreflang="it" href="https://bimopen.it/">
+<link rel="alternate" hreflang="en" href="https://bimopen.it/en/">
+<link rel="alternate" hreflang="de" href="https://bimopen.it/de/">
+<link rel="alternate" hreflang="fr" href="https://bimopen.it/fr/">
+<link rel="alternate" hreflang="es" href="https://bimopen.it/es/">
+<link rel="alternate" hreflang="ar" href="https://bimopen.it/ar/">
+<link rel="alternate" hreflang="x-default" href="https://bimopen.it/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BIMopen">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="BIMopen — Modellazione BIM gratuita">
+<meta property="og:description" content="Un modello, tutte le viste: piante, 3D, abachi e IFC4. Gratuito, senza account né abbonamento.">
+<meta property="og:url" content="https://bimopen.it/en/">
+<meta property="og:image" content="https://bimopen.it/assets/og-bimopen.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="BIMopen: vista 3D e pianta di una casa a due piani">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../favicon.ico?v=0fba0888" sizes="any">
+<link rel="icon" href="../assets/favicon.svg?v=74b5de74" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png?v=6406f785">
+<meta name="theme-color" content="#0D1319">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebSite",
+   "@id": "https://bimopen.it/#sito",
+   "url": "https://bimopen.it/",
+   "name": "BIMopen",
+   "inLanguage": ["it", "en", "de", "fr", "es", "ar"]
+  },
+  {
+   "@type": "SoftwareApplication",
+   "@id": "https://bimopen.it/#software",
+   "name": "BIMopen",
+   "url": "https://bimopen.it/",
+   "description": "Software BIM gratuito, senza account né abbonamento: muri, porte, finestre, solai, tetti e scale in un unico modello, con piante, sezioni, 3D, abachi, tavole in PDF ed export IFC4.",
+   "applicationCategory": "DesignApplication",
+   "applicationSubCategory": "Building Information Modeling",
+   "keywords": "BIM, software BIM gratuito, IFC, IFC4, BIMopen, Rust",
+   "operatingSystem": "Web, Linux, Windows",
+   "image": "https://bimopen.it/assets/og-bimopen.jpg",
+   "isAccessibleForFree": true,
+   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+   "featureList": ["Export IFC4", "Apertura dei file IFC", "Piante, sezioni, prospetti e viste 3D", "Abachi configurabili collegati al modello e computo dei materiali", "Tavole con cartiglio e stampa in PDF vettoriale", "Formato di progetto nativo con recupero dopo un arresto e copie di backup", "Manuale utente in sei lingue", "Riga di comando e server MCP"]
+  }
+ ]
+}
+</script>
+<script>
+  // tema scelto in precedenza, applicato prima del disegno della pagina (nessun lampo di colore)
+  var t = null; try { t = localStorage.getItem('theme'); } catch (e) {} document.documentElement.dataset.theme = t || 'dark'; var tc = document.querySelector('meta[name="theme-color"]'); if (tc && t === 'light') tc.content = '#EEF2F5';
+</script>
+<style>
+  :root {
+    --paper: #EEF2F5; --card: #FFFFFF; --field: #F8FAFB; --line: #E2E7EC;
+    --ink: #172133; --ink-soft: #3D4A5C; --muted: #5E6A78;
+    --accent: #08AABA; --accent-text: #06788A; --accent-hover: #2DB7C4; --on-accent: #093440;
+    --accent-soft: #8CECF2; --accent-soft-ink: #093440; --logo: #08AABA;
+    --second: #E6961E; --on-second: #172133; --ok: #1B8A55; --on-ok: #FFFFFF;
+    --warn-bg: #FCF1DD; --warn-line: #E6961E; --warn-ink: #172133; --warn-icon: #A86200;
+    --render-bg: #EEF2F5; --code-bg: #1C262E; --code-ink: #E8EEF2; --code-c: #8A98A6; --code-k: #14BECC; --code-p: #E6961E;
+    --shadow: 0 2px 14px rgba(0,0,0,.086);
+    --radius: 12px; --radius-btn: 8px;
+    --font: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", "Helvetica Neue", Arial, sans-serif;
+    --mono: ui-monospace, "SFMono-Regular", "Cascadia Mono", "Ubuntu Mono", Menlo, Consolas, monospace;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #0D1319; --card: #182129; --field: #1F2A33; --line: #28343E;
+      --ink: #E4EBF1; --ink-soft: #B7C3CE; --muted: #8A98A6;
+      --accent: #14BECC; --accent-text: #14BECC; --accent-hover: #3FD0DB; --on-accent: #0D1319;
+      --accent-soft: #0E525E; --accent-soft-ink: #A0F0F6; --logo: #14BECC;
+      --on-second: #0D1319; --ok: #22B46E; --on-ok: #0D1319;
+      --warn-bg: #2A2A20; --warn-ink: #E4EBF1; --warn-icon: #E6961E;
+      --code-bg: #141C23; --shadow: 0 2px 14px rgba(0,0,0,.35); color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #0D1319; --card: #182129; --field: #1F2A33; --line: #28343E;
+    --ink: #E4EBF1; --ink-soft: #B7C3CE; --muted: #8A98A6;
+    --accent: #14BECC; --accent-text: #14BECC; --accent-hover: #3FD0DB; --on-accent: #0D1319;
+    --accent-soft: #0E525E; --accent-soft-ink: #A0F0F6; --logo: #14BECC;
+    --on-second: #0D1319; --ok: #22B46E; --on-ok: #0D1319;
+    --warn-bg: #2A2A20; --warn-ink: #E4EBF1; --warn-icon: #E6961E;
+    --code-bg: #141C23; --shadow: 0 2px 14px rgba(0,0,0,.35); color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font: 17px/1.6 var(--font); -webkit-font-smoothing: antialiased; }
+  img { max-width: 100%; display: block; }
+  a { color: var(--accent-text); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  .wrap { width: min(1160px, 100% - 32px); margin-inline: auto; }
+  .skip { position: absolute; inset-inline-start: -999px; }
+  .skip:focus { inset-inline-start: 16px; top: 16px; background: var(--card); padding: 8px 12px; z-index: 10; }
+
+  header.top { position: sticky; top: 0; z-index: 5; background: color-mix(in srgb, var(--paper) 88%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+  .bar { display: flex; align-items: center; gap: 20px; height: 64px; }
+  .brand { display: flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font-weight: 700; font-size: 20px; letter-spacing: -.01em; direction: ltr; }
+  .brand b { color: var(--logo); font-weight: 400; }
+  .bar-right { display: flex; align-items: center; gap: 10px; margin-inline-start: auto; }
+  .lang-pick { display: flex; align-items: center; gap: 6px; color: var(--muted); font-size: 14px; }
+  .lang-pick svg { width: 16px; height: 16px; flex: none; }
+  .lang-pick select { font: inherit; color: var(--ink); background: var(--card); border: 1px solid var(--line); border-radius: var(--radius-btn); padding: 6px 8px; cursor: pointer; }
+  .theme-toggle { width: 36px; height: 36px; border-radius: var(--radius-btn); border: 1px solid var(--line); background: var(--card); color: var(--ink); cursor: pointer; display: grid; place-items: center; }
+  .theme-toggle svg { width: 18px; height: 18px; }
+  .theme-toggle .moon { display: none; }
+  :root[data-theme="dark"] .theme-toggle .sun { display: none; }
+  :root[data-theme="dark"] .theme-toggle .moon { display: block; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .theme-toggle .sun { display: none; }
+    :root:not([data-theme="light"]) .theme-toggle .moon { display: block; }
+  }
+  .btn { display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; padding: 11px 18px; border-radius: var(--radius-btn); font-weight: 600; font-size: 15px; text-decoration: none; border: 1px solid transparent; transition: transform .12s, background-color .12s; }
+  .btn:hover { transform: translateY(-1px); }
+  .btn-primary { background: var(--accent); color: var(--on-accent); }
+  .btn-primary:hover { background: var(--accent-hover); }
+  .btn-lg { padding: 16px 28px; font-size: 18px; border-radius: calc(var(--radius-btn) + 2px); box-shadow: var(--shadow); }
+  .rm-cta { margin-top: 28px; }
+  [dir="rtl"] .btn .arrow { transform: scaleX(-1); }
+  .btn-ghost { border-color: var(--line); color: var(--ink); background: var(--card); }
+
+  .eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--accent-text); }
+  .eyebrow::before { content: ""; width: 18px; height: 2px; background: currentColor; }
+  h1 { font-size: clamp(36px, 5.2vw, 60px); line-height: 1.06; letter-spacing: -.025em; margin: 14px 0 18px; }
+  h1 em { font-style: normal; color: var(--accent-text); }
+  .lead { font-size: 19px; color: var(--ink-soft); margin: 0 0 28px; }
+  .cta { display: flex; flex-wrap: wrap; gap: 12px; }
+  .facts { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 28px 0 0; padding: 0; list-style: none; color: var(--muted); font-size: 14px; }
+  .facts li::before { content: "✓"; color: var(--accent-text); font-weight: 700; margin-inline-end: 6px; }
+  section { padding: 72px 0; }
+  section.alt { background: var(--card); border-block: 1px solid var(--line); }
+  h2 { font-size: clamp(28px, 3.4vw, 40px); line-height: 1.12; letter-spacing: -.02em; margin: 10px 0 14px; }
+  .sub { color: var(--ink-soft); margin: 0 0 36px; font-size: 18px; }
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .grid2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .grid3 > *, .grid2 > *, .road > *, .split > * { min-width: 0; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; }
+  section.alt .card { background: var(--paper); }
+  /* the slim band under the hero: the channel and the source code */
+  section.follow { padding: 26px 0; }
+  .follow-in { display: flex; align-items: center; justify-content: space-between; gap: 18px 32px; flex-wrap: wrap; }
+  .follow .eyebrow { margin: 0 0 4px; }
+  .follow-t { margin: 0; color: var(--ink-soft); font-size: 16px; }
+  .follow .cta { margin: 0; }
+  .card h3 { margin: 12px 0 6px; font-size: 19px; letter-spacing: -.01em; }
+  .card p { margin: 0; color: var(--ink-soft); font-size: 15.5px; }
+  .ico { width: 40px; height: 40px; border-radius: 10px; background: var(--accent-soft); display: grid; place-items: center; color: var(--accent-soft-ink); }
+  .ico svg { width: 22px; height: 22px; }
+  .view { padding: 0; overflow: hidden; }
+  .view figure { margin: 0; background: var(--render-bg); aspect-ratio: 4 / 3; display: grid; place-items: center; border-bottom: 1px solid var(--line); }
+  .view figure.white { background: #fff; }
+  .view figure img { width: 100%; height: 100%; object-fit: contain; padding: 10px; }
+  .view .body { padding: 20px 22px 24px; }
+  .table { width: 100%; border-collapse: collapse; font-size: 13.5px; background: #fff; color: #172133; }
+  .table th, .table td { padding: 7px 10px; border-bottom: 1px solid #E2E7EC; text-align: start; white-space: nowrap; }
+  .table th { background: #EEF2F5; font-weight: 600; }
+  .table td.n, .table th.n { text-align: end; font-variant-numeric: tabular-nums; }
+  .table tr.tot td { font-weight: 700; border-top: 2px solid currentColor; }
+
+  .fmt { display: flex; gap: 16px; align-items: flex-start; }
+  .badge { flex: none; font: 700 13px/1 var(--mono); padding: 10px; border-radius: var(--radius-btn); background: var(--ink); color: var(--paper); min-width: 74px; text-align: center; direction: ltr; }
+  .badge.terra { background: var(--second); color: var(--on-second); }
+  .fmt h3 { margin: 0 0 4px; }
+  .fmt > div { min-width: 0; overflow-wrap: break-word; }
+  .note { font-size: 13.5px; color: var(--muted); margin-top: 8px !important; }
+
+  pre { margin: 0; background: var(--code-bg); color: var(--code-ink); border-radius: var(--radius); padding: 22px 24px; overflow-x: auto; font: 14.5px/1.65 var(--mono); direction: ltr; text-align: left; }
+  pre .c { color: var(--code-c); } pre .k { color: var(--code-k); } pre .p { color: var(--code-p); }
+  .split { display: grid; grid-template-columns: 1fr 1.1fr; gap: 40px; align-items: center; }
+  .checks { list-style: none; padding: 0; margin: 20px 0 0; display: grid; gap: 10px; }
+  .checks li { padding-inline-start: 28px; position: relative; color: var(--ink-soft); }
+  .checks li::before { content: ""; position: absolute; inset-inline-start: 0; top: .45em; width: 14px; height: 14px; background: var(--accent-text); mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3 8.5l3 3 7-7' fill='none' stroke='black' stroke-width='2.4'/%3E%3C/svg%3E") center / contain no-repeat; }
+  code { font-family: var(--mono); font-size: .9em; background: var(--field); border: 1px solid var(--line); padding: 0 5px; border-radius: 5px; direction: ltr; unicode-bidi: isolate; }
+
+  .road { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .road .card h3 { display: flex; align-items: center; gap: 8px; margin-top: 0; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; flex: none; }
+  .road ul { margin: 10px 0 0; padding-inline-start: 18px; color: var(--ink-soft); font-size: 15.5px; }
+  .road li { margin: 4px 0; }
+
+  details { border-bottom: 1px solid var(--line); padding: 16px 0; }
+  details summary { cursor: pointer; font-weight: 600; font-size: 17.5px; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+  details summary::-webkit-details-marker { display: none; }
+  details summary::after { content: "+"; color: var(--accent-text); font-size: 22px; line-height: 1; }
+  details[open] summary::after { content: "–"; }
+  details p { color: var(--ink-soft); margin: 10px 0 0; }
+
+  .final { text-align: center; }
+  /* the closing call to action sits on the hero's image, cut to the content width */
+  .fin-card { position: relative; overflow: hidden; isolation: isolate; border-radius: 18px; padding: 76px 24px 72px; color: #E4EBF1; }
+  .fin-card .fin-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 55%; z-index: -2; }
+  [dir="rtl"] .fin-card .fin-bg { transform: scaleX(-1); }
+  .fin-card::before { content: ""; position: absolute; inset: 0; z-index: -1; background: radial-gradient(120% 90% at 50% 45%, rgba(11,20,28,.62) 0%, rgba(11,20,28,.86) 70%); }
+  .fin-card h2 { color: #fff; }
+  .fin-card .sub { color: #B7C3CE; }
+  .fin-card .btn-primary { background: #14BECC; color: #0D1319; }
+  .fin-card .btn-ghost { background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.28); color: #fff; }
+  .fin-card .ai-tag { position: absolute; inset-inline-end: 14px; bottom: 12px; font: 500 12px/1 var(--font); color: rgba(228,235,241,.82); background: rgba(8,14,20,.55); border: 1px solid rgba(255,255,255,.12); padding: 6px 10px; border-radius: 999px; pointer-events: none; }
+  @media (max-width: 560px) { .fin-card { padding: 52px 18px 56px; border-radius: 14px; } .fin-card .ai-tag { display: none; } }
+  .final .cta { justify-content: center; }
+  /* the video channel: written by i18n/video.py only when "canale" is true in i18n/video.json */
+  .ext { width: 13px; height: 13px; flex: none; opacity: .75; }
+  .theme-toggle.chan { text-decoration: none; }
+  .bar:has(.chan) { gap: 14px; }
+  .theme-toggle.chan svg { width: 19px; height: 19px; }
+  .theme-toggle.chan:hover { color: var(--accent-text); border-color: var(--accent); }
+  footer .chan-f { display: inline-flex; align-items: center; gap: 5px; vertical-align: bottom; }
+  footer .chan-f svg { width: 17px; height: 17px; }
+  footer { border-top: 1px solid var(--line); padding: 36px 0 48px; color: var(--muted); font-size: 14px; }
+  footer .row { display: flex; flex-wrap: wrap; gap: 12px 28px; justify-content: space-between; align-items: center; }
+  footer small { display: block; margin-top: 20px; line-height: 1.5; }
+  footer small.privato + small { margin-top: 8px; }
+
+  .to-top { position: fixed; bottom: 24px; inset-inline-end: 24px; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line); background: var(--card); color: var(--ink); display: grid; place-items: center; cursor: pointer; box-shadow: var(--shadow); opacity: 0; visibility: hidden; transform: translateY(8px); transition: opacity .2s, transform .2s, visibility .2s; z-index: 6; }
+  .to-top svg { width: 20px; height: 20px; }
+  .to-top:hover { border-color: var(--accent); }
+  .to-top.on { opacity: 1; visibility: visible; transform: none; }
+
+  /* hero: the cube and the name over the building of the channel banner, night in both themes */
+  .hero-c { --night: #0B141C; --night-ink: #E4EBF1; --night-soft: #B7C3CE; --night-muted: #8A98A6; --night-teal: #14BECC;
+    position: relative; overflow: hidden; padding: 0; background: var(--night); color: var(--night-ink); isolation: isolate; }
+  /* the image ends where the content ends: its outer edge on the same line as the header, the sections and the carousel */
+  .hero-c .bg { position: absolute; top: 0; bottom: 0; inset-inline-end: max(16px, calc((100% - 1160px) / 2)); width: calc(min(1160px, 100% - 32px) * .62); z-index: -1; }
+  .hero-c .bg img { width: 100%; height: 100%; object-fit: cover; object-position: 30% 60%;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.55) 22%, #000 48%); mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.55) 22%, #000 48%); }
+  [dir="rtl"] .hero-c .bg img { transform: scaleX(-1); }
+  .hero-c .wrap { padding: 88px 0 80px; }
+  .hero-c .txt { max-width: 600px; }
+  .hero-c .cta { width: max-content; max-width: min(720px, calc(100vw - 32px)); } /* the buttons of a row stay on one row in every language */
+  .hero-c .mark { display: flex; align-items: center; gap: 22px; direction: ltr; }
+  [dir="rtl"] .hero-c .mark { justify-content: flex-end; }
+  .hero-c .mark svg { width: 74px; height: 104px; flex: none; }
+  .hero-c .word { font-size: clamp(54px, 7vw, 84px); line-height: 1; letter-spacing: -.03em; font-weight: 700; margin: 0; color: #fff; }
+  .hero-c .word b { font-weight: 400; color: var(--night-teal); }
+  .hero-c .motto { margin: 16px 0 0; margin-inline-start: 96px; font-size: 14px; letter-spacing: .32em !important; text-transform: uppercase; color: var(--night-soft); font-weight: 500; direction: ltr; }
+  [dir="rtl"] .hero-c .motto { text-align: end; margin-inline-start: 0; }
+  .hero-c .four { margin: 34px 0 6px; font-size: clamp(21px, 2.3vw, 27px); font-weight: 500; letter-spacing: -.01em; color: #fff; }
+  .hero-c .handle { display: flex; align-items: center; gap: 16px; margin: 6px 0 26px; }
+  .hero-c .handle::before { content: ""; width: 150px; height: 3px; background: var(--night-teal); border-radius: 2px; }
+  .hero-c .handle a { color: var(--night-ink); font-weight: 600; text-decoration: none; display: inline-flex; gap: 6px; align-items: center; }
+  .hero-c .handle a:hover { color: var(--night-teal); }
+  .hero-c .lead { color: var(--night-soft); font-size: 17.5px; margin: 0 0 26px; max-width: 34em; }
+  .hero-c .btn-primary { background: var(--night-teal); color: #0D1319; }
+  .btn-soon { cursor: default; opacity: .72; }
+  .cta .btn, .btn-soon { white-space: nowrap; } /* a button never breaks its label: the row wraps instead */
+  .btn-soon:hover { transform: none; }
+  .hero-c .btn-ghost { background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.28); color: #fff; }
+  .hero-c .facts { color: var(--night-muted); }
+  .hero-c .facts li::before { color: var(--night-teal); }
+  .hero-c .ai-tag { position: absolute; inset-inline-end: 16px; bottom: 14px; z-index: 1; font: 500 12px/1 var(--font); color: rgba(228,235,241,.82); background: rgba(8,14,20,.55); border: 1px solid rgba(255,255,255,.12); padding: 6px 10px; border-radius: 999px; backdrop-filter: blur(4px); pointer-events: none; }
+
+  /* Interfaccia: the title, then the carousel of every interface */
+  .intro h2 em { font-style: normal; color: var(--accent-text); }
+  .intro .sub { margin-bottom: 28px; }
+  .car { --ar: 62.5cqw; }
+  .car-tabs { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; padding: 2px 2px 14px; margin: 0 -2px; }
+  .car-tabs::-webkit-scrollbar { display: none; }
+  .car-tabs [role="tab"] { flex: none; font: 600 14px var(--font); color: var(--ink-soft); background: var(--card); border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px; cursor: pointer; white-space: nowrap; }
+  .car-tabs [role="tab"]:hover { border-color: var(--accent); color: var(--ink); }
+  .car-tabs [role="tab"][aria-selected="true"] { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+  .car-tabs [role="tab"]:focus-visible, .car-arrow:focus-visible, .car-dots .dot:focus-visible, .fr:focus-visible, [data-zoom]:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+  .car-stage { position: relative; container-type: inline-size; aspect-ratio: 16 / 10; border-radius: var(--radius); background: color-mix(in srgb, var(--card) 60%, var(--paper)); border: 1px solid var(--line); overflow: hidden; }
+  .car-slide { position: absolute; inset: 0; display: grid; place-items: center; padding: 18px 64px; }
+  .car-slide[hidden] { display: none; }
+  .fr { display: block; cursor: zoom-in; max-width: 100%; }
+  .fr img { display: block; width: auto; height: auto; max-width: 100%; }
+  .fr-desk img { max-height: calc(var(--ar) - 36px); border-radius: 10px; border: 1px solid var(--line); box-shadow: var(--shadow); }
+  .fr-tablet, .fr-phone { background: #0b0f14; box-shadow: 0 10px 30px rgba(0,0,0,.28), inset 0 0 0 1px #2a3440; }
+  .fr-tablet { padding: 12px; border-radius: 22px; }
+  .fr-tablet img { max-height: calc(var(--ar) - 36px - 24px); border-radius: 8px; }
+  .fr-phone { padding: 9px; border-radius: 30px; }
+  .fr-phone img { max-height: calc(var(--ar) - 36px - 18px); border-radius: 22px; }
+  .fr-browser { border-radius: 12px; overflow: hidden; border: 1px solid var(--line); box-shadow: var(--shadow); background: var(--card); text-decoration: none; }
+  .fr-browser .bb { display: flex; align-items: center; gap: 6px; height: 30px; padding: 0 12px; background: var(--field); border-bottom: 1px solid var(--line); direction: ltr; }
+  .fr-browser .bb i { width: 9px; height: 9px; border-radius: 50%; background: var(--line); }
+  .fr-browser .bb span { margin-inline-start: 10px; flex: 1; max-width: 340px; font: 12px var(--mono); color: var(--muted); background: var(--card); border: 1px solid var(--line); border-radius: 999px; padding: 2px 12px; }
+  .fr-browser img { max-height: calc(var(--ar) - 36px - 31px); }
+  .car-arrow { position: absolute; top: 50%; transform: translateY(-50%); width: 42px; height: 42px; border-radius: 50%; border: 1px solid var(--line); background: var(--card); color: var(--ink); display: grid; place-items: center; cursor: pointer; box-shadow: var(--shadow); z-index: 2; }
+  .car-arrow svg { width: 20px; height: 20px; }
+  .car-arrow:hover { border-color: var(--accent); color: var(--accent-text); }
+  .car-arrow.prev { inset-inline-start: 12px; }
+  .car-arrow.next { inset-inline-end: 12px; }
+  .car-arrow.next svg, [dir="rtl"] .car-arrow.prev svg { transform: scaleX(-1); }
+  [dir="rtl"] .car-arrow.next svg { transform: none; }
+  .car-foot { display: flex; gap: 12px 24px; align-items: flex-start; justify-content: space-between; margin-top: 14px; }
+  .car-cap { margin: 0; color: var(--ink-soft); font-size: 15.5px; flex: 1; min-width: 0; min-height: 3.2em; }
+  .car-cap .car-n { font: 700 13px var(--mono); color: var(--accent-text); margin-inline-end: 6px; direction: ltr; unicode-bidi: isolate; }
+  .car-cap b:not(.car-n) { color: var(--ink); font-weight: 600; }
+  .car-dots { display: flex; gap: 6px; flex: none; padding-top: 6px; }
+  .car-dots .dot { width: 9px; height: 9px; border-radius: 50%; border: 0; padding: 0; background: var(--line); cursor: pointer; }
+  .car-dots .dot[aria-current="true"] { background: var(--accent); width: 22px; border-radius: 5px; }
+  .view figure > a { display: block; width: 100%; height: 100%; cursor: zoom-in; }
+
+  /* every image opens enlarged over the page */
+  .lightbox { border: 0; padding: 0; background: transparent; max-width: 96vw; max-height: 94vh; overflow: visible; }
+  .lightbox::backdrop { background: rgba(13, 19, 25, .94); }
+  .lightbox img { display: block; max-width: 96vw; max-height: 86vh; width: auto; height: auto; border-radius: var(--radius); box-shadow: 0 10px 40px rgba(0,0,0,.45); background: #fff; }
+  .lightbox .lb-cap { color: #E4EBF1; font-size: 15px; text-align: center; margin: 10px auto 0; max-width: 60em; }
+  .lightbox .lb-cap b { color: #fff; }
+  .lightbox .lb-n { font: 700 13px var(--mono); color: #14BECC; margin-inline-end: 8px; direction: ltr; unicode-bidi: isolate; }
+  .lightbox .lb-close { position: absolute; top: -14px; inset-inline-end: -14px; width: 40px; height: 40px; border-radius: 50%; border: 0; background: #fff; color: #172133; font-size: 26px; line-height: 40px; cursor: pointer; box-shadow: 0 2px 10px rgba(0,0,0,.35); z-index: 2; }
+  .lightbox .lb-nav { position: absolute; top: calc(50% - 22px); width: 44px; height: 44px; border-radius: 50%; border: 0; background: rgba(255,255,255,.92); color: #172133; display: grid; place-items: center; cursor: pointer; box-shadow: 0 2px 10px rgba(0,0,0,.35); z-index: 2; }
+  .lightbox .lb-nav[hidden] { display: none; }
+  .lightbox .lb-nav svg { width: 22px; height: 22px; }
+  .lightbox .lb-prev { inset-inline-start: 10px; }
+  .lightbox .lb-next { inset-inline-end: 10px; }
+  .lightbox .lb-next svg, [dir="rtl"] .lightbox .lb-prev svg { transform: scaleX(-1); }
+  [dir="rtl"] .lightbox .lb-next svg { transform: none; }
+  .lightbox .lb-close:focus-visible, .lightbox .lb-nav:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+
+  /* Video (written by i18n/video.py only when "canale" is true) */
+  .h2-alt { color: var(--muted); font-size: clamp(18px, 2vw, 22px); margin: 0 0 14px; }
+  .pl { display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: center; margin-bottom: 40px; }
+  .pl > * { min-width: 0; }
+  .pl .cover { display: block; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); box-shadow: var(--shadow); position: relative; }
+  .pl .cover img { width: 100%; height: auto; aspect-ratio: 16/9; object-fit: cover; }
+  .pl .count { position: absolute; inset: auto 0 0 auto; background: rgba(11,20,28,.86); color: #fff; font-size: 13px; font-weight: 600; padding: 6px 12px; border-top-left-radius: 10px; display: flex; gap: 6px; align-items: center; }
+  .pl .count[hidden], .pl .count [hidden], .eps[hidden], .coming[hidden] { display: none; }
+  .pl .sub { margin-bottom: 20px; }
+  .privacy { display: flex; gap: 8px; color: var(--muted); font-size: 13.5px; margin: 16px 0 0; line-height: 1.5; }
+  .privacy svg { width: 16px; height: 16px; flex: none; margin-top: 2px; color: var(--accent-text); }
+  .eps { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; list-style: none; margin: 0; padding: 0; }
+  .ep { display: block; height: 100%; text-decoration: none; color: var(--ink); background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; transition: transform .12s, border-color .12s; }
+  section:not(.alt) .ep { background: var(--card); }
+  .ep:hover { transform: translateY(-2px); border-color: var(--accent); }
+  .ep:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+  .ep .th { position: relative; }
+  .ep .th img { width: 100%; height: auto; aspect-ratio: 16/9; object-fit: cover; }
+  .ep .play { position: absolute; inset: 0; display: grid; place-items: center; opacity: 0; transition: opacity .12s; background: rgba(11,20,28,.35); }
+  .ep:hover .play { opacity: 1; }
+  .ep .play > span { width: 52px; height: 52px; border-radius: 50%; background: #14BECC; display: grid; place-items: center; }
+  .ep .play svg { width: 20px; height: 20px; margin-left: 3px; }
+  .ep .meta { padding: 12px 14px 14px; display: grid; gap: 2px; }
+  .ep .n { font: 700 12.5px/1 var(--mono); color: var(--accent-text); }
+  .ep .t1 { font-weight: 650; font-size: 16px; line-height: 1.3; margin-top: 4px; }
+  .ep .t2 { color: var(--muted); font-size: 14px; line-height: 1.3; }
+  .ep .go { display: flex; align-items: center; gap: 5px; margin-top: 8px; color: var(--muted); font-size: 12.5px; }
+  .coming { margin: 22px 0 0; text-align: center; color: var(--muted); font-size: 14.5px; font-style: italic; }
+  .more { margin: 28px 0 0; display: flex; justify-content: center; }
+  .more .btn svg { width: 18px; height: 18px; }
+
+  @media (max-width: 920px) {
+    .pl { grid-template-columns: 1fr; gap: 24px; }
+    .hero-c .bg { inset-inline-end: 0; width: 100%; opacity: .55; }
+    .hero-c .bg img { -webkit-mask-image: linear-gradient(0deg, transparent 0%, #000 40%); mask-image: linear-gradient(0deg, transparent 0%, #000 40%); object-position: 62% 40%; }
+    .hero-c::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(11,20,28,.55) 0%, rgba(11,20,28,.35) 35%, rgba(11,20,28,.92) 70%); }
+  }
+  @media (max-width: 560px) {
+    .car { --ar: 100cqw; }
+    .car-stage { aspect-ratio: 1 / 1; }
+    .car-slide { padding: 14px 10px 58px; }
+    .car-arrow { top: auto; bottom: 10px; transform: none; width: 38px; height: 38px; }
+    .car-foot { flex-direction: column-reverse; align-items: center; }
+    .car-cap { font-size: 15px; min-height: 6.2em; }
+    .fr-desk img, .fr-browser img { max-height: calc(var(--ar) - 72px - 40px); }
+    .hero-c .wrap { padding: 52px 0 48px; }
+    .hero-c .mark { gap: 14px; }
+    .hero-c .mark svg { width: 50px; height: 70px; }
+    .hero-c .word { font-size: 52px; }
+    .hero-c .motto { margin-inline-start: 0; font-size: 11.5px; letter-spacing: .22em !important; }
+    .hero-c .handle::before { width: 70px; }
+    .hero-c .four { margin-top: 26px; }
+    .hero-c .cta .btn { flex: 1 1 auto; justify-content: center; }
+    .hero-c .ai-tag { display: none; } /* on phones the image is only a veiled background */
+    .lightbox .lb-nav { top: auto; bottom: -56px; }
+    .lightbox .lb-close { top: 6px; inset-inline-end: 6px; }
+    .lightbox .lb-cap { margin-bottom: 56px; }
+    .eps { grid-template-columns: 1fr; gap: 14px; }
+    .ep { display: grid; grid-template-columns: 136px 1fr; }
+    .ep .th img { height: 100%; aspect-ratio: auto; }
+    .ep .meta { padding: 10px 12px; align-content: center; }
+    .ep .t1 { font-size: 15px; }
+    .ep .go { display: none; }
+  }
+
+  :root[lang="ar"] * { letter-spacing: 0 !important; }
+  :root[lang="ar"] .eyebrow { text-transform: none; }
+
+  @media (max-width: 920px) {
+    .split { grid-template-columns: 1fr; }
+    .road, .grid2 { grid-template-columns: 1fr; }
+  }
+  /* three cards side by side need room for the schedule table and the GitHub button */
+  @media (max-width: 960px) { .grid3 { grid-template-columns: 1fr; } }
+  @media (max-width: 560px) {
+    body { font-size: 16px; }
+    .bar { gap: 10px; }
+    .bar .btn { display: none; }
+    .lang-pick svg { display: none; }
+    section { padding: 52px 0; }
+    .table { font-size: 12px; }
+    .to-top { bottom: 16px; inset-inline-end: 16px; }
+    .btn-lg { padding: 14px 20px; font-size: 17px; }
+  }
+  /* the narrowest phones: the cards' buttons and the schedule table keep inside their card */
+  @media (max-width: 400px) {
+    .card { padding: 20px 18px; }
+    .card .btn { padding: 10px 14px; font-size: 14px; }
+    .card .btn-soon svg { display: none; }
+    .fmt { flex-direction: column; gap: 12px; }
+    .table th, .table td { padding: 6px 7px; }
+    .table td:first-child { white-space: normal; }
+  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn, .to-top, .ep { transition: none; } }
+  @media print { .to-top, .lang-pick, .theme-toggle { display: none !important; } }
+</style>
+<link rel="stylesheet" href="../assets/menu.css?v=439b367a">
+<link rel="stylesheet" href="../assets/effetti.css?v=6a95309b">
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="ui.skip">Skip to content</a>
+
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="./" data-con-lingua="./" aria-label="BIMopen">
+      <svg width="24" height="32" viewBox="5 0 100 140" aria-hidden="true"><g fill="none" stroke="var(--logo)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M15 58 54 35 93 58V105L54 128 15 105Z"/><path d="M15 58 54 81 93 58M54 81V128"/><path d="M54 35V10H82"/></g></svg>
+      <span>BIM<b>open</b></span>
+    </a>
+    <nav class="links" aria-label="Sections" data-i18n-attr="aria-label:ui.sezioni">
+      <div class="dd">
+        <button type="button" class="dd-btn" aria-expanded="false" aria-controls="dd-fun"><span data-i18n="nav.programma">Software</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="dd-menu" id="dd-fun">
+          <!-- canale:menu --><!-- /canale:menu -->
+          <a href="#viste" data-i18n="nav.viste">Views</a>
+          <a href="#funzioni" data-i18n="nav.funzioni">Features</a>
+          <a href="#formati" data-i18n="nav.formati">Formats</a>
+          <a href="#agenti" data-i18n="nav.agenti">Automation</a>
+        </div>
+      </div>
+      <a href="roadmap.html" data-con-lingua="roadmap.html" data-i18n="nav.roadmap">Roadmap</a>
+      <a href="philosophy.html" data-con-lingua="philosophy.html" data-i18n="nav.filosofia">Philosophy</a>
+      <a href="../manual/en/" data-manuale data-i18n="nav.manuale">Manual</a>
+      <a href="download.html" data-con-lingua="download.html" data-i18n="nav.scarica">Download</a>
+      <a href="news.html" data-con-lingua="news.html" data-i18n="nav.novita">What's new</a>
+    </nav>
+    <div class="bar-right">
+      <label class="lang-pick">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg>
+        <select id="lang-select" aria-label="Lingua · Language · Sprache · Langue · Idioma · اللغة">
+          <option value="it" lang="it">Italiano</option>
+          <option value="en" lang="en">English</option>
+          <option value="de" lang="de">Deutsch</option>
+          <option value="fr" lang="fr">Français</option>
+          <option value="es" lang="es">Español</option>
+          <option value="ar" lang="ar" dir="rtl">العربية</option>
+        </select>
+      </label>
+      <!-- canale:icona --><!-- /canale:icona -->
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Change theme" data-i18n-attr="aria-label:ui.tema">
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+      <a class="btn btn-primary cta-top" href="../app/?lang=en&amp;v=e0bd31ab" data-app="e0bd31ab"><span class="cta-long" data-i18n="cta.prova">Try it in your browser</span><span class="cta-short" data-i18n="dl1.btn">Open BIMopen</span></a>
+      <button type="button" class="theme-toggle menu-btn" id="menuBtn" aria-expanded="false" aria-controls="drawer" aria-label="Menu" data-i18n-attr="aria-label:ui.menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+</header>
+<div class="drawer-veil" id="drawerVeil" hidden></div>
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Menu" data-i18n-attr="aria-label:ui.menu">
+  <div class="drawer-head">
+    <a class="brand" href="./" data-con-lingua="./" aria-label="BIMopen"><svg width="20" height="27" viewBox="5 0 100 140" aria-hidden="true"><g fill="none" stroke="var(--logo)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M15 58 54 35 93 58V105L54 128 15 105Z"/><path d="M15 58 54 81 93 58M54 81V128"/><path d="M54 35V10H82"/></g></svg><span>BIM<b>open</b></span></a>
+    <button type="button" class="theme-toggle" id="drawerClose" aria-label="Close" data-i18n-attr="aria-label:lb.close">×</button>
+  </div>
+  <nav class="drawer-nav" aria-label="Sections" data-i18n-attr="aria-label:ui.sezioni">
+    <div class="drawer-sub">
+      <!-- canale:menu --><!-- /canale:menu -->
+      <a href="#viste" data-i18n="nav.viste">Views</a>
+      <a href="#funzioni" data-i18n="nav.funzioni">Features</a>
+      <a href="#formati" data-i18n="nav.formati">Formats</a>
+      <a href="#agenti" data-i18n="nav.agenti">Automation</a>
+    </div>
+    <a href="roadmap.html" data-con-lingua="roadmap.html" data-i18n="nav.roadmap">Roadmap</a>
+    <a href="philosophy.html" data-con-lingua="philosophy.html" data-i18n="nav.filosofia">Philosophy</a>
+    <a href="../manual/en/" data-manuale data-i18n="nav.manuale">Manual</a>
+    <a href="download.html" data-con-lingua="download.html" data-i18n="nav.scarica">Download</a>
+    <a href="news.html" data-con-lingua="news.html" data-i18n="nav.novita">What's new</a>
+    <a href="#faq" data-i18n="nav.faq">FAQ</a>
+  </nav>
+  <a class="btn btn-primary drawer-cta" href="../app/?lang=en&amp;v=e0bd31ab" data-app="e0bd31ab"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11L13 8z" fill="currentColor"/></svg><span data-i18n="cta.prova">Try it in your browser</span></a>
+</div>
+
+<main id="top">
+  <section class="hero-c" aria-labelledby="titolo">
+    <div class="bg"><img src="../assets/hero-edificio.webp?v=7ffc898e" alt="" width="1100" height="1050" fetchpriority="high"><span class="ai-tag" data-i18n="hero.ai">AI-generated image</span></div>
+    <div class="wrap" id="main">
+      <div class="txt">
+        <div class="mark"><svg viewBox="5 0 100 140" aria-hidden="true"><g fill="none" stroke="#14BECC" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 58 54 35 93 58V105L54 128 15 105Z"/><path d="M15 58 54 81 93 58M54 81V128"/><path d="M54 35V10H82"/></g></svg><h1 class="word" id="titolo">BIM<b>open</b></h1></div>
+        <p class="motto" lang="en">One model. Open possibilities.</p>
+        <p class="four" data-i18n="hero.four">Design. Coordinate. Check. Document.</p>
+        <p class="handle"><!-- canale:handle --><!-- /canale:handle --></p>
+        <p class="lead" data-i18n="hero.lead">BIMopen is free BIM software and will be open source. Model walls, doors, windows and floors once: plans, 3D view, schedules and IFC files all come from the same model and always stay in sync.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="../app/?lang=en&amp;v=e0bd31ab" data-app="e0bd31ab">
+            <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11L13 8z" fill="currentColor"/></svg>
+            <span data-i18n="cta.prova">Try it in your browser</span>
+          </a>
+          <a class="btn btn-ghost" href="download.html" data-con-lingua="download.html">
+            <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v8M4.5 6.5 8 10l3.5-3.5M3 13h10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span data-i18n="nav.scarica">Download</span>
+          </a>
+        </div>
+        <ul class="facts">
+          <li data-i18n="fact.1">No account, no subscription</li>
+          <li data-i18n="fact.2">IFC4 export</li>
+          <li data-i18n="fact.3">Opens IFC files</li>
+          <li data-i18n="fact.4">Browser, Windows, Linux and Android</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt follow" aria-labelledby="follow-t">
+    <div class="wrap follow-in">
+      <div>
+        <span class="eyebrow" data-i18n="fol.kicker">Follow the project</span>
+        <p id="follow-t" class="follow-t" data-i18n="fol.p">Video tutorials on the channel. The source code will come to GitHub.</p>
+      </div>
+      <div class="cta">
+        <!-- link-canale -->
+        <a class="btn btn-primary" href="https://www.youtube.com/@bim-open" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg> <span data-i18n="fol.yt">Watch the videos · @bim-open</span></a>
+        <!-- /link-canale -->
+        <a class="btn btn-ghost" href="https://github.com/bimopen" target="_blank" rel="noopener"><svg width="17" height="17" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg> <span data-i18n="hero.gh">GitHub · bimopen</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="interfaccia" aria-labelledby="interfaccia-t">
+    <div class="wrap">
+      <div class="intro">
+        <span class="eyebrow" data-i18n="hero.kicker">Free · multilingual · no account</span>
+        <h2 id="interfaccia-t" data-i18n="hero.h1">You draw the building,<br><em>the project writes itself.</em></h2>
+        <p class="sub" data-i18n="ui.p">A side rail, command search with Ctrl+K, tool cards, the element panel and view thumbnails, light and dark. If you prefer a ribbon, choose the Classic style in Options: the commands are the same. The pictures show the interface in the language you chose.</p>
+      </div>
+      <div class="car" id="car" role="region" aria-roledescription="carousel" aria-label="The BIMopen interfaces" data-i18n-attr="aria-label:car.label">
+        <div class="car-tabs" role="tablist" aria-label="The BIMopen interfaces" data-i18n-attr="aria-label:car.label">
+          <button type="button" role="tab" id="car-t1" aria-controls="car-s1" aria-selected="true" tabindex="0" data-i18n="car.1.t">BIMopen dark</button>
+          <button type="button" role="tab" id="car-t2" aria-controls="car-s2" aria-selected="false" tabindex="-1" data-i18n="car.2.t">BIMopen light</button>
+          <button type="button" role="tab" id="car-t3" aria-controls="car-s3" aria-selected="false" tabindex="-1" data-i18n="car.3.t">Classic</button>
+          <button type="button" role="tab" id="car-t4" aria-controls="car-s4" aria-selected="false" tabindex="-1" data-i18n="car.4.t">Touch PC</button>
+          <button type="button" role="tab" id="car-t5" aria-controls="car-s5" aria-selected="false" tabindex="-1" data-i18n="car.5.t">Tablet landscape</button>
+          <button type="button" role="tab" id="car-t6" aria-controls="car-s6" aria-selected="false" tabindex="-1" data-i18n="car.6.t">Tablet portrait</button>
+          <button type="button" role="tab" id="car-t7" aria-controls="car-s7" aria-selected="false" tabindex="-1" data-i18n="car.7.t">Phone</button>
+          <button type="button" role="tab" id="car-t8" aria-controls="car-s8" aria-selected="false" tabindex="-1" data-i18n="car.8.t">Browser</button>
+        </div>
+        <div class="car-stage">
+          <div class="car-slide" role="tabpanel" id="car-s1" aria-labelledby="car-t1" aria-roledescription="slide"><a class="fr fr-desk" href="../assets/ui/en/interface-bimopen-dark.webp?v=b5fdef72" data-ui-link data-zoom="car" data-zoom-cap="car-c1"><img src="../assets/ui/en/interface-bimopen-dark.webp?v=b5fdef72" alt="BIMopen dark" data-i18n-attr="alt:car.1.t" data-ui width="1586" height="992"></a></div>
+          <div class="car-slide" role="tabpanel" id="car-s2" aria-labelledby="car-t2" aria-roledescription="slide" hidden><a class="fr fr-desk" href="../assets/ui/en/interface-bimopen.webp?v=d98584b9" data-ui-link data-zoom="car" data-zoom-cap="car-c2"><img data-src="../assets/ui/en/interface-bimopen.webp?v=d98584b9" alt="BIMopen light" data-i18n-attr="alt:car.2.t" data-ui width="1586" height="992"></a></div>
+          <div class="car-slide" role="tabpanel" id="car-s3" aria-labelledby="car-t3" aria-roledescription="slide" hidden><a class="fr fr-desk" href="../assets/ui/en/style-classic.webp?v=c55f7847" data-ui-link data-zoom="car" data-zoom-cap="car-c3"><img data-src="../assets/ui/en/style-classic.webp?v=c55f7847" alt="Classic" data-i18n-attr="alt:car.3.t" data-ui width="1586" height="992"></a></div>
+          <div class="car-slide" role="tabpanel" id="car-s4" aria-labelledby="car-t4" aria-roledescription="slide" hidden><a class="fr fr-desk" href="../assets/ui/en/touch-pc.webp?v=a82ca60d" data-ui-link data-zoom="car" data-zoom-cap="car-c4"><img data-src="../assets/ui/en/touch-pc.webp?v=a82ca60d" alt="Touch PC" data-i18n-attr="alt:car.4.t" data-ui width="1600" height="900"></a></div>
+          <div class="car-slide" role="tabpanel" id="car-s5" aria-labelledby="car-t5" aria-roledescription="slide" hidden><a class="fr fr-tablet" href="../assets/ui/en/touch-tablet-landscape.webp?v=a648389a" data-ui-link data-zoom="car" data-zoom-cap="car-c5"><img data-src="../assets/ui/en/touch-tablet-landscape.webp?v=a648389a" alt="Tablet landscape" data-i18n-attr="alt:car.5.t" data-ui width="1280" height="800"></a></div>
+          <div class="car-slide" role="tabpanel" id="car-s6" aria-labelledby="car-t6" aria-roledescription="slide" hidden><a class="fr fr-tablet" href="../assets/ui/en/touch-tablet-portrait.webp?v=6a9461ec" data-ui-link data-zoom="car" data-zoom-cap="car-c6"><img data-src="../assets/ui/en/touch-tablet-portrait.webp?v=6a9461ec" alt="Tablet portrait" data-i18n-attr="alt:car.6.t" data-ui width="688" height="1100"></a></div>
+          <div class="car-slide" role="tabpanel" id="car-s7" aria-labelledby="car-t7" aria-roledescription="slide" hidden><a class="fr fr-phone" href="../assets/ui/en/touch-phone-portrait.webp?v=d34df984" data-ui-link data-zoom="car" data-zoom-cap="car-c7"><img data-src="../assets/ui/en/touch-phone-portrait.webp?v=d34df984" alt="Phone" data-i18n-attr="alt:car.7.t" data-ui width="412" height="915"></a></div>
+          <div class="car-slide" role="tabpanel" id="car-s8" aria-labelledby="car-t8" aria-roledescription="slide" hidden><a class="fr fr-browser" href="../assets/ui/en/browser.webp?v=3eb38b34" data-ui-link data-zoom="car" data-zoom-cap="car-c8"><span class="bb" aria-hidden="true"><i></i><i></i><i></i><span>bimopen.it/app/</span></span><img data-src="../assets/ui/en/browser.webp?v=3eb38b34" alt="Browser" data-i18n-attr="alt:car.8.t" data-ui width="1586" height="992"></a></div>
+          <button type="button" class="car-arrow prev" aria-label="Previous interface" data-i18n-attr="aria-label:car.prev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+          <button type="button" class="car-arrow next" aria-label="Next interface" data-i18n-attr="aria-label:car.next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+        </div>
+        <div class="car-foot">
+          <p class="car-cap" aria-live="polite"><b class="car-n">1 / 8</b> <span class="car-txt">Lo stile predefinito: barra laterale, pannello degli strumenti, ricerca dei comandi e striscia delle viste. Il tema si sceglie in <b>Opzioni › Interfaccia utente › Tema</b> o con la luna nella barra in alto.</span></p>
+          <div class="car-dots" aria-hidden="true"><button type="button" class="dot" tabindex="-1" data-i="1" aria-current="true"></button><button type="button" class="dot" tabindex="-1" data-i="2"></button><button type="button" class="dot" tabindex="-1" data-i="3"></button><button type="button" class="dot" tabindex="-1" data-i="4"></button><button type="button" class="dot" tabindex="-1" data-i="5"></button><button type="button" class="dot" tabindex="-1" data-i="6"></button><button type="button" class="dot" tabindex="-1" data-i="7"></button><button type="button" class="dot" tabindex="-1" data-i="8"></button></div>
+          <span class="cap-src" id="car-c1" data-i18n="car.1.c" hidden>The default style: rail, tool panel, command search and strip of views. Pick the theme in <b>Options › User Interface › Theme</b> or with the moon in the top bar.</span>
+          <span class="cap-src" id="car-c2" data-i18n="car.2.c" hidden>The same style in the light theme: switch between the two with the sun or the moon in the top bar. Commands and shortcuts stay the same.</span>
+          <span class="cap-src" id="car-c3" data-i18n="car.3.c" hidden>Tabbed ribbon, options bar, Properties palette and Project Index, for those used to working this way. <b>Options › User Interface › Interface › Classic</b>.</span>
+          <span class="cap-src" id="car-c4" data-i18n="car.4.c" hidden>For touch monitors and pens: palettes by category and controls big enough for a finger. <b>Options › User Interface › Touch mode › Always</b>.</span>
+          <span class="cap-src" id="car-c5" data-i18n="car.5.c" hidden>Touch mode on a tablet in landscape. It turns on by itself on Android and in browsers used with a finger: <b>Touch mode › Automatic</b>.</span>
+          <span class="cap-src" id="car-c6" data-i18n="car.6.c" hidden>On a tablet in portrait the properties step aside to leave room for the drawing; <b>Properties</b> in the top bar brings them back.</span>
+          <span class="cap-src" id="car-c7" data-i18n="car.7.c" hidden>On a phone the drawing takes the full width and five buttons at the bottom open views, components, tools, properties and commands. Automatic on Android and in narrow browsers.</span>
+          <span class="cap-src" id="car-c8" data-i18n="car.8.c" hidden>The same application in the browser, nothing to install (WebGPU or WebGL2): <b>Try it in your browser</b>. Your files stay on your computer.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- canale:video --><!-- /canale:video -->
+
+  <section id="viste" class="alt" aria-labelledby="viste-t">
+    <div class="wrap">
+      <span class="eyebrow" data-i18n="viste.kicker">One model, every view</span>
+      <h2 id="viste-t" data-i18n="viste.h2">Change a wall: the plan, 3D and takeoff change too.</h2>
+      <p class="sub" data-i18n="viste.p">In BIMopen you don't draw lines but building elements with their own properties. Views are different readings of the same model, so they never need to be realigned by hand.</p>
+      <div class="grid3">
+        <article class="card view">
+          <figure class="white"><a href="../assets/pianta.webp?v=6b04d10c" data-zoom="viste"><img src="../assets/pianta.webp?v=6b04d10c" alt="Ground floor plan with hatched cut walls, doors with their swing, windows, grids, and rooms coloured by use with their legend" data-i18n-attr="alt:viste.alt1" loading="lazy" width="1600" height="1329"></a></figure>
+          <div class="body">
+            <h3 data-i18n="viste.h3a">Plans, sections and elevations</h3>
+            <p data-i18n="viste.pa">Cut walls with poché, door and window symbols, levels and grids with bubbles. For every level and every section, exportable as SVG and PNG.</p>
+          </div>
+        </article>
+        <article class="card view">
+          <figure><a href="../assets/vista-3d.webp?v=0ba0385b" data-zoom="viste"><img src="../assets/vista-3d.webp?v=0ba0385b" alt="3D view of the sample house with its gable roof" data-i18n-attr="alt:viste.alt2" loading="lazy" width="1575" height="1315"></a></figure>
+          <div class="body">
+            <h3 data-i18n="viste.h3b">3D view</h3>
+            <p data-i18n="viste.pb">Smooth real-time navigation: orbit around the selection and zoom towards the cursor, transparent glazing, one-click element selection.</p>
+          </div>
+        </article>
+        <article class="card view">
+          <figure class="white" style="padding:14px">
+            <table class="table" aria-label="Material takeoff of the sample house, the five largest materials by volume" data-i18n-attr="aria-label:viste.tab">
+              <thead><tr><th data-i18n="tab.mat">Material</th><th class="n">m²</th><th class="n">m³</th></tr></thead>
+              <tbody>
+                <tr><td data-i18n="tab.m1">Porous clay block</td><td class="n">287,38</td><td class="n">86,215</td></tr>
+                <tr><td data-i18n="tab.m2">Reinforced concrete</td><td class="n">117,21</td><td class="n">35,164</td></tr>
+                <tr><td data-i18n="tab.m4">EPS (external insulation)</td><td class="n">287,38</td><td class="n">28,738</td></tr>
+                <tr><td data-i18n="tab.m3">Hollow-block slab</td><td class="n">117,21</td><td class="n">28,132</td></tr>
+                <tr><td data-i18n="tab.m5">Wood fibre (roof)</td><td class="n">161,74</td><td class="n">25,879</td></tr>
+                <tr class="tot"><td data-i18n="tab.tot">Total (16 materials)</td><td></td><td class="n">262,273</td></tr>
+              </tbody>
+            </table>
+          </figure>
+          <div class="body">
+            <h3 data-i18n="viste.h3c">Schedules and takeoff</h3>
+            <p data-i18n="viste.pc">Configurable schedules for thirteen categories and a layer-by-layer material takeoff. They open as views beside plans and 3D, edit the model and follow it, go on sheets and export as CSV.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="funzioni" aria-labelledby="funzioni-t">
+    <div class="wrap">
+      <span class="eyebrow" data-i18n="fun.kicker">Features</span>
+      <h2 id="funzioni-t" data-i18n="fun.h2">The tools you need every day</h2>
+      <p class="sub" data-i18n="fun.p">The BIM design workflow: levels and grids, then envelope, partitions, openings and floors.</p>
+      <div class="grid3">
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9h18v6H3z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 9l-2 6M13 9l-2 6M18 9l-2 6" stroke="currentColor" stroke-width="1.4"/></svg></div>
+          <h3 data-i18n="f1.h3">Layered walls</h3>
+          <p data-i18n="f1.p">Wall types with finish, insulation and structure layers. L corners, T junctions and crossings resolve themselves.</p>
+        </article>
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20V5M5 5a14 14 0 0 1 14 14" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M2 20h20" stroke="currentColor" stroke-width="1.8"/></svg></div>
+          <h3 data-i18n="f2.h3">Hosted doors and windows</h3>
+          <p data-i18n="f2.p">They sit in the wall, cut it and follow it when it moves. Width, height, sill, leaves and swing direction are parameters.</p>
+        </article>
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 14l10-5 10 5-10 5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M2 14v2l10 5 10-5v-2" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg></div>
+          <h3 data-i18n="f3.h3">Floors from walls</h3>
+          <p data-i18n="f3.p">One click creates a floor on the outer perimeter of the level's walls, or you sketch it point by point.</p>
+        </article>
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16M4 10h16M4 15h10M4 20h7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+          <h3 data-i18n="f4.h3">Instance and type properties</h3>
+          <p data-i18n="f4.p">Constraints, dimensions and identity data for every element. Editing a type updates all its instances.</p>
+        </article>
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v5M12 17v5M2 12h5M17 12h5" stroke="currentColor" stroke-width="1.8"/></svg></div>
+          <h3 data-i18n="f5.h3">Snaps and temporary dimensions</h3>
+          <p data-i18n="f5.p">Snapping to endpoints, midpoints and intersections, ortho mode and lengths shown while you draw.</p>
+        </article>
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6l5 6-5 6M12 18h8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3 data-i18n="f6.h3">Command line</h3>
+          <p data-i18n="f6.p">Every action is also a command you can type, for example <code>WA</code> for a wall and <code>DR</code> for a door. Undo is unlimited.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="formati" class="alt" aria-labelledby="formati-t">
+    <div class="wrap">
+      <span class="eyebrow" data-i18n="fmt.kicker">Open formats</span>
+      <h2 id="formati-t" data-i18n="fmt.h2">Your projects stay yours</h2>
+      <p class="sub" data-i18n="fmt.p">BIMopen speaks the open BIM standard and is understood by other software, without locking you into a vendor.</p>
+      <div class="grid2">
+        <article class="card fmt">
+          <span class="badge">IFC4</span>
+          <div>
+            <h3 data-i18n="fmt1.h3">IFC4 export</h3>
+            <p data-i18n="fmt1.p">Walls with their material layers, openings cut into the walls, doors and windows filling them, floors, roofs, stairs, railings, curtain walls, rooms and furniture, with types, properties and quantities. The file opens in any BIM software that reads IFC.</p>
+          </div>
+        </article>
+        <article class="card fmt">
+          <span class="badge">IFC</span>
+          <div>
+            <h3 data-i18n="fmt2.h3">Opening IFC files</h3>
+            <p data-i18n="fmt2.p">Opens IFC2x3 and IFC4 files as new projects: walls, slabs, doors, windows and spaces become BIMopen elements, every other object with a shape comes in as a generic model.</p>
+          </div>
+        </article>
+        <article class="card fmt">
+          <span class="badge">.bpr · .bpt · .bco · .bct</span>
+          <div>
+            <h3 data-i18n="fmt3.h3">Native format 2027</h3>
+            <p data-i18n="fmt3.p">Projects, project templates, components and component templates in BIMopen's native format, with backup copies and save reminders, and unsaved work comes back after a crash. Every element has a permanent identifier, which becomes its GlobalId in IFC. The format is made so that every 2027 file also opens in later versions.</p>
+          </div>
+        </article>
+        <article class="card fmt">
+          <span class="badge">SVG · PNG · PDF · CSV</span>
+          <div>
+            <h3 data-i18n="fmt4.h3">Drawings and tables</h3>
+            <p data-i18n="fmt4.p">Plans as vector SVG at the chosen scale, images of plans and 3D, sheets printed to vector PDF, schedules and takeoffs as CSV.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="agenti" aria-labelledby="agenti-t">
+    <div class="wrap split">
+      <div>
+        <span class="eyebrow" data-i18n="ag.kicker">Automation and artificial intelligence</span>
+        <h2 id="agenti-t" data-i18n="ag.h2">You can drive it by typing, too</h2>
+        <p class="sub" style="margin-bottom:0" data-i18n="ag.p">Every button is a command, so BIMopen can be driven by repeatable scripts or by an AI assistant.</p>
+        <ul class="checks">
+          <li data-i18n="ag.l1">A command line at the bottom of the window: type from anywhere.</li>
+          <li data-i18n="ag.l2"><code>bimopen-cli</code> for conversions, scripts and exports without a user interface.</li>
+          <li data-i18n="ag.l3">An <abbr title="Model Context Protocol">MCP</abbr> server for AI agents, which can also render views to check their own work.</li>
+        </ul>
+      </div>
+      <pre aria-label="Example of BIMopen commands" data-i18n-attr="aria-label:ag.code"><span class="c"># 6 × 4 m</span>
+<span class="k">wall</span> <span class="p">0,0 6,0 6,4 0,4</span> c
+<span class="k">door</span> <span class="p">3,0</span>
+<span class="k">window</span> <span class="p">6,2</span>
+<span class="k">floor</span> walls
+
+<span class="k">select</span> walls
+<span class="k">set</span> Altezza non connessa <span class="p">2700mm</span>
+<span class="k">schedule</span> materials
+
+$ bimopen-cli convert casa.bpr casa.ifc
+$ bimopen-cli mcp</pre>
+    </div>
+  </section>
+
+  <section id="roadmap" class="alt" aria-labelledby="roadmap-t">
+    <div class="wrap">
+      <span class="eyebrow" data-i18n="rm.kicker">Project status</span>
+      <h2 id="roadmap-t" data-i18n="rm.h2">In development, in the open</h2>
+      <p class="sub" data-i18n="rm.p">BIMopen is young. It already works for modelling simple buildings; the road to full professional use is public.</p>
+      <p class="rm-cta"><a class="btn btn-primary btn-lg" href="roadmap.html" data-con-lingua="roadmap.html"><span data-i18n="rm.full">Full roadmap</span> <span aria-hidden="true" class="arrow">→</span></a> <a class="btn btn-ghost btn-lg" href="../manual/en/" data-manuale><span data-i18n="nav.manuale">Manual</span></a></p>
+    </div>
+  </section>
+
+  <section id="scarica" aria-labelledby="scarica-t">
+    <div class="wrap">
+      <span class="eyebrow" data-i18n="dl.kicker">Try it</span>
+      <h2 id="scarica-t" data-i18n="dl.h2">Get started now</h2>
+      <div class="grid3">
+        <article class="card">
+          <h3 data-i18n="dl1.h3">In the browser</h3>
+          <p data-i18n="dl1.p">Nothing to install: you need a recent browser (Chrome, Edge, Firefox or Safari) with WebGPU or WebGL2. BIMopen opens in the language chosen on this site, and your files stay on your computer.</p>
+          <p style="margin-top:16px"><a class="btn btn-primary" href="../app/?lang=en&amp;v=e0bd31ab" data-app="e0bd31ab" data-i18n="dl1.btn">Open BIMopen</a></p>
+        </article>
+        <article class="card">
+          <h3 data-i18n="dl2.h3">For your computer</h3>
+          <p data-i18n="dl2.p">Test builds for Windows 10/11, Linux and Android, to download: partial and not final, only for trying the program.</p>
+          <p style="margin-top:16px"><a class="btn btn-primary" href="download.html" data-con-lingua="download.html" data-i18n="nav.scarica">Download</a></p>
+        </article>
+        <article class="card">
+          <h3 data-i18n="dl3.h3">Source code</h3>
+          <p data-i18n="dl3.p">BIMopen will be open source: the code will be published in the bimopen organization on GitHub. Its licence, probably the AGPL, will keep it open for good: anyone will be able to use it, study it, change it and fork it, but no one will be able to close it.</p>
+          <p style="margin-top:16px"><a class="btn btn-ghost" href="https://github.com/bimopen" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg> <span data-i18n="hero.gh">GitHub · bimopen</span></a></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="alt" aria-labelledby="faq-t">
+    <div class="wrap">
+      <span class="eyebrow" data-i18n="faq.kicker">Frequently asked questions</span>
+      <h2 id="faq-t" data-i18n="faq.h2">Frequently asked questions</h2>
+      <details><summary data-i18n="faq1.q">How much does it cost?</summary><p data-i18n="faq1.a">Nothing. BIMopen is free of charge: no paid licences, no subscriptions and no accounts, even for professional use.</p></details>
+      <details><summary data-i18n="faq2.q">Does it open files from other BIM programs?</summary><p data-i18n="faq2.a">Yes, through IFC, the open standard: export an IFC from your program and open it in BIMopen, or import it into the open project.</p></details>
+      <details><summary data-i18n="faq7.q">What files does BIMopen save?</summary><p data-i18n="faq7.a">Files of format 2027: .bpr projects, .bpt project templates, .bco components and .bct component templates. To work with other programs, export and open IFC files.</p></details>
+      <details><summary data-i18n="faq3.q">Where do my projects go?</summary><p data-i18n="faq3.a">To your computer. Even in the browser version the model stays in the browser, which remembers the recent files, and saving downloads it as a file. This website uses no cookies and no tracking.</p></details>
+      <details><summary data-i18n="faq4.q">Can I use it for a real project?</summary><p data-i18n="faq4.a">For studies and simple models, yes: you model walls, floors, roofs, stairs, curtain walls and ceilings, phases included; you lay views out on sheets with a title block, print them to PDF and export them to DWG, and the project file recovers your work after a crash. The component editor, linked models with interference checking and building services are still missing: you can follow their progress on the roadmap.</p></details>
+      <details><summary data-i18n="faq5.q">What language is the program in?</summary><p data-i18n="faq5.a">In Italian, English, German, French, Spanish and Arabic, right to left. On first start it uses the system or browser language; you can change it from the 🌐 menu at the top. This website is available in the same six languages.</p></details>
+      <details><summary data-i18n="faq6.q">How can I contribute?</summary><p data-i18n="faq6.a">By trying it and reporting problems and requests. Translations of terms and test models are also welcome. The source code will be published on GitHub later; until then, changes to the code cannot be proposed.</p></details>
+    </div>
+  </section>
+
+  <section class="final" aria-labelledby="final-t">
+    <div class="wrap fin-card">
+      <img class="fin-bg" src="../assets/hero-edificio.webp?v=7ffc898e" alt="" width="1100" height="1050" loading="lazy">
+      <span class="ai-tag" data-i18n="hero.ai">AI-generated image</span>
+      <h2 id="final-t" data-i18n="fin.h2">Your next project, in open BIM.</h2>
+      <p class="sub" style="margin-inline:auto" data-i18n="fin.p">Open the sample house, move a wall and watch the plan, 3D and takeoff update together.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="../app/?lang=en&amp;v=e0bd31ab" data-app="e0bd31ab" data-i18n="cta.prova">Try it in your browser</a>
+        <a class="btn btn-ghost" href="#scarica" data-i18n="fin.altre">More options</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="row">
+      <span>© <span id="year">2026</span> BIMopen · <span data-i18n="foot.lic">Free of charge</span> · <span data-i18n="foot.claude">Built with</span> <a href="https://claude.com/claude-code" rel="noopener">Claude Code</a></span>
+      <span><a href="#formati" data-i18n="nav.formati">Formats</a> · <a href="philosophy.html" data-con-lingua="philosophy.html" data-i18n="nav.filosofia">Philosophy</a> · <a href="roadmap.html" data-con-lingua="roadmap.html" data-i18n="nav.roadmap">Roadmap</a> · <a href="download.html" data-con-lingua="download.html" data-i18n="nav.scarica">Download</a> · <a href="news.html" data-con-lingua="news.html" data-i18n="nav.novita">What's new</a> · <a href="../manual/en/" data-manuale data-i18n="nav.manuale">Manual</a> · <a href="#faq" data-i18n="nav.faq">FAQ</a><!-- canale:piede --><!-- /canale:piede --> · <span data-i18n="foot.codice">Source code: coming to <a href="https://github.com/bimopen" target="_blank" rel="noopener">GitHub</a></span></span>
+    </div>
+    <p class="made"><span class="tric" aria-hidden="true"><i></i><i></i><i></i></span><span data-i18n="foot.italia">Designed in Italy</span></p>
+    <small class="privato" data-i18n="foot.privato">BIMopen is a personal, non-commercial project by a private individual: it is not a business, it sells no products or services and receives no payments, so it has no VAT number.</small>
+  </div>
+</footer>
+
+<button class="to-top" id="to-top" type="button" aria-label="Back to top" data-i18n-attr="aria-label:ui.top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
+<dialog class="lightbox" id="lightbox" aria-label="Enlarged picture" data-i18n-attr="aria-label:lb.label">
+  <button class="lb-close" type="button" aria-label="Close" title="Close" data-i18n-attr="aria-label:lb.close;title:lb.close">×</button>
+  <button class="lb-nav lb-prev" type="button" aria-label="Previous picture" data-i18n-attr="aria-label:lb.prev" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+  <button class="lb-nav lb-next" type="button" aria-label="Next picture" data-i18n-attr="aria-label:lb.next" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+  <img alt="">
+  <p class="lb-cap"></p>
+</dialog>
+<script>
+  // The screens follow the language chosen on the site (every language has the same files).
+  document.addEventListener('lingua', function (e) {
+    var l = e.detail;
+    document.querySelectorAll('img[data-ui], a[data-ui-link]').forEach(function (x) {
+      ['src', 'data-src', 'href'].forEach(function (a) {
+        var v = x.getAttribute(a); if (v) x.setAttribute(a, v.replace(/assets\/ui\/[a-z]{2}\//, 'assets/ui/' + l + '/'));
+      });
+    });
+  });
+
+  // Carousel of the interfaces: tabs, arrows, dots, arrow keys, swipe; it never moves by itself.
+  // Only the shown screen and its neighbours are loaded.
+  (function () {
+    var car = document.getElementById('car'); if (!car) return;
+    var tabs = [].slice.call(car.querySelectorAll('[role="tab"]'));
+    var slides = [].slice.call(car.querySelectorAll('.car-slide'));
+    var dots = [].slice.call(car.querySelectorAll('.car-dots .dot'));
+    var txt = car.querySelector('.car-txt'), num = car.querySelector('.car-n'), cur = 0;
+    function load(i) {
+      [i, (i + 1) % slides.length, (i + slides.length - 1) % slides.length].forEach(function (k) {
+        var img = slides[k].querySelector('img[data-src]');
+        if (img) { img.setAttribute('src', img.getAttribute('data-src')); img.removeAttribute('data-src'); }
+      });
+    }
+    function caption() { txt.innerHTML = document.getElementById('car-c' + (cur + 1)).innerHTML; }
+    function show(i, focus) {
+      cur = (i + slides.length) % slides.length;
+      slides.forEach(function (s, k) { s.hidden = k !== cur; });
+      tabs.forEach(function (t, k) { t.setAttribute('aria-selected', k === cur); t.tabIndex = k === cur ? 0 : -1; });
+      dots.forEach(function (d, k) { if (k === cur) d.setAttribute('aria-current', 'true'); else d.removeAttribute('aria-current'); });
+      num.textContent = (cur + 1) + ' / ' + slides.length;
+      caption();
+      var tl = tabs[cur].parentNode, t = tabs[cur];
+      tl.scrollLeft += (t.getBoundingClientRect().left - tl.getBoundingClientRect().left) - (tl.clientWidth - t.offsetWidth) / 2;
+      if (focus) t.focus();
+      load(cur);
+    }
+    tabs.forEach(function (t, k) { t.addEventListener('click', function () { show(k); }); });
+    dots.forEach(function (d, k) { d.addEventListener('click', function () { show(k); }); });
+    car.querySelector('.prev').addEventListener('click', function () { show(cur - 1); });
+    car.querySelector('.next').addEventListener('click', function () { show(cur + 1); });
+    car.addEventListener('keydown', function (e) {
+      var rtl = document.documentElement.dir === 'rtl', f = e.target.getAttribute('role') === 'tab';
+      if (e.key === 'ArrowRight') { e.preventDefault(); show(cur + (rtl ? -1 : 1), f); }
+      else if (e.key === 'ArrowLeft') { e.preventDefault(); show(cur + (rtl ? 1 : -1), f); }
+      else if (e.key === 'Home' && f) { e.preventDefault(); show(0, true); }
+      else if (e.key === 'End' && f) { e.preventDefault(); show(slides.length - 1, true); }
+    });
+    var x0 = null, stage = car.querySelector('.car-stage');
+    stage.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+    stage.addEventListener('touchend', function (e) {
+      if (x0 === null) return;
+      var dx = e.changedTouches[0].clientX - x0, rtl = document.documentElement.dir === 'rtl'; x0 = null;
+      if (Math.abs(dx) > 40) show(cur + ((dx < 0) !== rtl ? 1 : -1));
+    });
+    // the lightbox moves through the same screens: the carousel follows it
+    document.addEventListener('zoom', function (e) { if (e.detail.group === 'car') show(e.detail.index); });
+    document.addEventListener('lingua', caption);
+    load(0);
+  })();
+
+  // Every image opens enlarged over the page: ×, Esc or a click outside close it, and focus goes
+  // back to the image. Images of one group (data-zoom) have arrows, arrow keys and swipe.
+  (function () {
+    var d = document.getElementById('lightbox'); if (!d || !d.showModal) return;
+    var img = d.querySelector('img'), cap = d.querySelector('.lb-cap');
+    var prev = d.querySelector('.lb-prev'), next = d.querySelector('.lb-next');
+    var group = [], at = 0, opener = null;
+    function show(i) {
+      at = (i + group.length) % group.length;
+      var a = group[at], im = a.querySelector('img'), c = a.getAttribute('data-zoom-cap');
+      img.src = a.getAttribute('href'); img.alt = im ? im.alt : '';
+      cap.innerHTML = '';
+      if (group.length > 1) { var n = document.createElement('span'); n.className = 'lb-n'; n.textContent = (at + 1) + ' / ' + group.length; cap.appendChild(n); }
+      var t = document.createElement('span');
+      if (c) t.innerHTML = document.getElementById(c).innerHTML; else t.textContent = im ? im.alt : '';
+      cap.appendChild(t);
+      prev.hidden = next.hidden = group.length < 2;
+      try { document.dispatchEvent(new CustomEvent('zoom', { detail: { group: a.getAttribute('data-zoom'), index: at } })); } catch (e) {}
+    }
+    document.querySelectorAll('a[data-zoom]').forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        e.preventDefault();
+        opener = a;
+        group = [].slice.call(document.querySelectorAll('a[data-zoom="' + a.getAttribute('data-zoom') + '"]'));
+        d.showModal();
+        show(group.indexOf(a));
+      });
+    });
+    function step(k) { if (group.length > 1) show(at + k); }
+    prev.addEventListener('click', function () { step(-1); });
+    next.addEventListener('click', function () { step(1); });
+    d.addEventListener('keydown', function (e) {
+      var rtl = document.documentElement.dir === 'rtl';
+      if (e.key === 'ArrowRight') { e.preventDefault(); step(rtl ? -1 : 1); }
+      else if (e.key === 'ArrowLeft') { e.preventDefault(); step(rtl ? 1 : -1); }
+    });
+    var x0 = null;
+    d.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+    d.addEventListener('touchend', function (e) {
+      if (x0 === null) return;
+      var dx = e.changedTouches[0].clientX - x0, rtl = document.documentElement.dir === 'rtl'; x0 = null;
+      if (Math.abs(dx) > 40) step((dx < 0) !== rtl ? 1 : -1);
+    });
+    d.querySelector('.lb-close').addEventListener('click', function () { d.close(); });
+    d.addEventListener('click', function (e) { if (e.target === d) d.close(); });
+    d.addEventListener('close', function () {
+      img.removeAttribute('src');
+      // back to the image now shown (the carousel may have moved with the lightbox)
+      var back = group[at] && group[at].offsetParent ? group[at] : opener;
+      if (back) back.focus();
+    });
+  })();
+</script>
+<script src="../language.js?v=eeb05237"></script>
+<script src="../assets/menu.js?v=2b43f1ee"></script>
+<script src="../assets/effetti.js?v=3fe63441"></script>
+<script>
+  // tema: scuro finché non si sceglie; poi chiaro o scuro, ricordato in questo browser
+  (function () {
+    var root = document.documentElement;
+    document.getElementById('themeToggle').addEventListener('click', function () {
+      var dark = root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+      root.dataset.theme = dark ? 'light' : 'dark';
+      try { localStorage.setItem('theme', root.dataset.theme); } catch (e) {}
+      var tc = document.querySelector('meta[name="theme-color"]'); if (tc) tc.content = dark ? '#EEF2F5' : '#0D1319';
+    });
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,853 @@
+<!doctype html>
+<html lang="de" data-lingua-pagina="de" data-pagina="news.html" data-build="ddda3f09">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="nw.meta.title">Neuigkeiten in BIMopen — Versionen, die neueste zuerst</title>
+<meta name="description" data-i18n-attr="content:nw.meta.desc" content="Die Neuerungen jeder Version von BIMopen, die neueste zuerst: die Höhepunkte mit Bildern und die vollständige Liste der Änderungen.">
+<link rel="canonical" href="https://bimopen.it/de/news.html">
+<link rel="alternate" hreflang="it" href="https://bimopen.it/news.html">
+<link rel="alternate" hreflang="en" href="https://bimopen.it/en/news.html">
+<link rel="alternate" hreflang="de" href="https://bimopen.it/de/news.html">
+<link rel="alternate" hreflang="fr" href="https://bimopen.it/fr/news.html">
+<link rel="alternate" hreflang="es" href="https://bimopen.it/es/news.html">
+<link rel="alternate" hreflang="ar" href="https://bimopen.it/ar/news.html">
+<link rel="alternate" hreflang="x-default" href="https://bimopen.it/news.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BIMopen">
+<meta property="og:locale" content="de_DE">
+<meta property="og:title" content="Novità di BIMopen — Le versioni dalla più recente">
+<meta property="og:description" content="Le novità di ogni versione di BIMopen, dalla più recente: i punti salienti con le immagini e l&#39;elenco completo delle modifiche.">
+<meta property="og:url" content="https://bimopen.it/de/news.html">
+<meta property="og:image" content="https://bimopen.it/assets/og-bimopen.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../favicon.ico?v=0fba0888" sizes="any">
+<link rel="icon" href="../assets/favicon.svg?v=74b5de74" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png?v=6406f785">
+<meta name="theme-color" content="#0D1319">
+<script>
+  // tema scelto in precedenza, applicato prima del disegno della pagina (nessun lampo di colore)
+  var t = null; try { t = localStorage.getItem('theme'); } catch (e) {} document.documentElement.dataset.theme = t || 'dark'; var tc = document.querySelector('meta[name="theme-color"]'); if (tc && t === 'light') tc.content = '#EEF2F5';
+</script>
+<style>
+  :root {
+    --paper: #EEF2F5; --card: #FFFFFF; --field: #F8FAFB; --line: #E2E7EC;
+    --ink: #172133; --ink-soft: #3D4A5C; --muted: #5E6A78;
+    --accent: #08AABA; --accent-text: #06788A; --accent-hover: #2DB7C4; --on-accent: #093440;
+    --accent-soft: #8CECF2; --accent-soft-ink: #093440; --logo: #08AABA;
+    --second: #E6961E; --on-second: #172133; --ok: #1B8A55; --on-ok: #FFFFFF;
+    --warn-bg: #FCF1DD; --warn-line: #E6961E; --warn-ink: #172133; --warn-icon: #A86200;
+    --render-bg: #EEF2F5; --code-bg: #1C262E; --code-ink: #E8EEF2; --code-c: #8A98A6; --code-k: #14BECC; --code-p: #E6961E;
+    --shadow: 0 2px 14px rgba(0,0,0,.086);
+    --radius: 12px; --radius-btn: 8px;
+    --font: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", "Helvetica Neue", Arial, sans-serif;
+    --mono: ui-monospace, "SFMono-Regular", "Cascadia Mono", "Ubuntu Mono", Menlo, Consolas, monospace;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #0D1319; --card: #182129; --field: #1F2A33; --line: #28343E;
+      --ink: #E4EBF1; --ink-soft: #B7C3CE; --muted: #8A98A6;
+      --accent: #14BECC; --accent-text: #14BECC; --accent-hover: #3FD0DB; --on-accent: #0D1319;
+      --accent-soft: #0E525E; --accent-soft-ink: #A0F0F6; --logo: #14BECC;
+      --on-second: #0D1319; --ok: #22B46E; --on-ok: #0D1319;
+      --warn-bg: #2A2A20; --warn-ink: #E4EBF1; --warn-icon: #E6961E;
+      --code-bg: #141C23; --shadow: 0 2px 14px rgba(0,0,0,.35); color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #0D1319; --card: #182129; --field: #1F2A33; --line: #28343E;
+    --ink: #E4EBF1; --ink-soft: #B7C3CE; --muted: #8A98A6;
+    --accent: #14BECC; --accent-text: #14BECC; --accent-hover: #3FD0DB; --on-accent: #0D1319;
+    --accent-soft: #0E525E; --accent-soft-ink: #A0F0F6; --logo: #14BECC;
+    --on-second: #0D1319; --ok: #22B46E; --on-ok: #0D1319;
+    --warn-bg: #2A2A20; --warn-ink: #E4EBF1; --warn-icon: #E6961E;
+    --code-bg: #141C23; --shadow: 0 2px 14px rgba(0,0,0,.35); color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font: 17px/1.6 var(--font); -webkit-font-smoothing: antialiased; }
+  img { max-width: 100%; display: block; }
+  a { color: var(--accent-text); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  .wrap { width: min(1160px, 100% - 32px); margin-inline: auto; }
+  .skip { position: absolute; inset-inline-start: -999px; }
+  .skip:focus { inset-inline-start: 16px; top: 16px; background: var(--card); padding: 8px 12px; z-index: 10; }
+
+  header.top { position: sticky; top: 0; z-index: 5; background: color-mix(in srgb, var(--paper) 88%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+  .bar { display: flex; align-items: center; gap: 20px; height: 64px; }
+  .brand { display: flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font-weight: 700; font-size: 20px; letter-spacing: -.01em; direction: ltr; }
+  .brand b { color: var(--logo); font-weight: 400; }
+  .bar-right { display: flex; align-items: center; gap: 10px; margin-inline-start: auto; }
+  .lang-pick { display: flex; align-items: center; gap: 6px; color: var(--muted); font-size: 14px; }
+  .lang-pick svg { width: 16px; height: 16px; flex: none; }
+  .lang-pick select { font: inherit; color: var(--ink); background: var(--card); border: 1px solid var(--line); border-radius: var(--radius-btn); padding: 6px 8px; cursor: pointer; }
+  .theme-toggle { width: 36px; height: 36px; border-radius: var(--radius-btn); border: 1px solid var(--line); background: var(--card); color: var(--ink); cursor: pointer; display: grid; place-items: center; }
+  .theme-toggle svg { width: 18px; height: 18px; }
+  .theme-toggle .moon { display: none; }
+  :root[data-theme="dark"] .theme-toggle .sun { display: none; }
+  :root[data-theme="dark"] .theme-toggle .moon { display: block; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .theme-toggle .sun { display: none; }
+    :root:not([data-theme="light"]) .theme-toggle .moon { display: block; }
+  }
+  .btn { display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; padding: 11px 18px; border-radius: var(--radius-btn); font-weight: 600; font-size: 15px; text-decoration: none; border: 1px solid transparent; transition: transform .12s, background-color .12s; }
+  .btn:hover { transform: translateY(-1px); }
+  .btn-primary { background: var(--accent); color: var(--on-accent); }
+  .btn-primary:hover { background: var(--accent-hover); }
+  .btn-ghost { border-color: var(--line); color: var(--ink); background: var(--card); }
+
+  .eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--accent-text); }
+  .eyebrow::before { content: ""; width: 18px; height: 2px; background: currentColor; }
+  h1 { font-size: clamp(36px, 5.2vw, 60px); line-height: 1.06; letter-spacing: -.025em; margin: 14px 0 18px; }
+  h1 em { font-style: normal; color: var(--accent-text); }
+  .lead { font-size: 19px; color: var(--ink-soft); margin: 0 0 28px; }
+  .cta { display: flex; flex-wrap: wrap; gap: 12px; }
+
+  section { padding: 72px 0; }
+  section.alt { background: var(--card); border-block: 1px solid var(--line); }
+  h2 { font-size: clamp(28px, 3.4vw, 40px); line-height: 1.12; letter-spacing: -.02em; margin: 10px 0 14px; }
+  .sub { color: var(--ink-soft); margin: 0 0 36px; font-size: 18px; }
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .grid3 > *, .grid2 > *, .road > *, .split > * { min-width: 0; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; }
+  section.alt .card { background: var(--paper); }
+  .card h3 { margin: 12px 0 6px; font-size: 19px; letter-spacing: -.01em; }
+  .card p { margin: 0; color: var(--ink-soft); font-size: 15.5px; }
+  .ico { width: 40px; height: 40px; border-radius: 10px; background: var(--accent-soft); display: grid; place-items: center; color: var(--accent-soft-ink); }
+  .ico svg { width: 22px; height: 22px; }
+
+
+  code { font-family: var(--mono); font-size: .9em; background: var(--field); border: 1px solid var(--line); padding: 0 5px; border-radius: 5px; direction: ltr; unicode-bidi: isolate; }
+
+
+
+  /* the video channel: written by i18n/video.py only when "canale" is true in i18n/video.json */
+  .ext { width: 13px; height: 13px; flex: none; opacity: .75; }
+  .theme-toggle.chan { text-decoration: none; }
+  .bar:has(.chan) { gap: 14px; }
+  .theme-toggle.chan svg { width: 19px; height: 19px; }
+  .theme-toggle.chan:hover { color: var(--accent-text); border-color: var(--accent); }
+  footer .chan-f { display: inline-flex; align-items: center; gap: 5px; vertical-align: bottom; }
+  footer .chan-f svg { width: 17px; height: 17px; }
+  .watch { display: inline-flex; align-items: center; gap: 10px; margin: 18px 0 4px; padding: 10px 14px 10px 10px; border-radius: 999px; background: var(--card); border: 1px solid var(--line); color: var(--ink); text-decoration: none; font-size: 15px; }
+  .watch:hover { border-color: var(--accent); }
+  .watch .pi { width: 30px; height: 30px; border-radius: 50%; background: var(--accent); color: var(--on-accent); display: grid; place-items: center; flex: none; }
+  .watch .pi svg { width: 13px; height: 13px; margin-inline-start: 2px; }
+  .watch b { color: var(--accent-text); }
+  .nw { white-space: nowrap; }
+  @media (max-width: 560px) { .watch { border-radius: 14px; align-items: flex-start; } }
+  footer { border-top: 1px solid var(--line); padding: 36px 0 48px; color: var(--muted); font-size: 14px; }
+  footer .row { display: flex; flex-wrap: wrap; gap: 12px 28px; justify-content: space-between; align-items: center; }
+  footer small { display: block; margin-top: 20px; line-height: 1.5; }
+  footer small.privato + small { margin-top: 8px; }
+
+  .to-top { position: fixed; bottom: 24px; inset-inline-end: 24px; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line); background: var(--card); color: var(--ink); display: grid; place-items: center; cursor: pointer; box-shadow: var(--shadow); opacity: 0; visibility: hidden; transform: translateY(8px); transition: opacity .2s, transform .2s, visibility .2s; z-index: 6; }
+  .to-top svg { width: 20px; height: 20px; }
+  .to-top:hover { border-color: var(--accent); }
+  .to-top.on { opacity: 1; visibility: visible; transform: none; }
+
+  :root[lang="ar"] * { letter-spacing: 0 !important; }
+  :root[lang="ar"] .eyebrow { text-transform: none; }
+
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn, .to-top { transition: none; } }
+  @media print { .to-top, .lang-pick, .theme-toggle { display: none !important; } }
+
+  .grid3 > * { min-width: 0; }
+  @media (max-width: 920px) { .grid3 { grid-template-columns: 1fr; } }
+  @media (max-width: 560px) {
+    body { font-size: 16px; }
+    .bar { gap: 10px; }
+    .bar .btn { display: none; }
+    .lang-pick svg { display: none; }
+    section { padding: 52px 0; }
+    .to-top { bottom: 16px; inset-inline-end: 16px; }
+  }
+
+  [data-zoom]:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+  .lightbox { border: 0; padding: 0; background: transparent; max-width: 96vw; max-height: 94vh; overflow: visible; }
+  .lightbox::backdrop { background: rgba(13, 19, 25, .94); }
+  .lightbox img { display: block; max-width: 96vw; max-height: 86vh; width: auto; height: auto; border-radius: var(--radius); box-shadow: 0 10px 40px rgba(0,0,0,.45); background: #fff; }
+  .lightbox .lb-cap { color: #E4EBF1; font-size: 15px; text-align: center; margin: 10px auto 0; max-width: 60em; }
+  .lightbox .lb-cap b { color: #fff; }
+  .lightbox .lb-n { font: 700 13px var(--mono); color: #14BECC; margin-inline-end: 8px; direction: ltr; unicode-bidi: isolate; }
+  .lightbox .lb-close { position: absolute; top: -14px; inset-inline-end: -14px; width: 40px; height: 40px; border-radius: 50%; border: 0; background: #fff; color: #172133; font-size: 26px; line-height: 40px; cursor: pointer; box-shadow: 0 2px 10px rgba(0,0,0,.35); z-index: 2; }
+  .lightbox .lb-nav { position: absolute; top: calc(50% - 22px); width: 44px; height: 44px; border-radius: 50%; border: 0; background: rgba(255,255,255,.92); color: #172133; display: grid; place-items: center; cursor: pointer; box-shadow: 0 2px 10px rgba(0,0,0,.35); z-index: 2; }
+  .lightbox .lb-nav[hidden] { display: none; }
+  .lightbox .lb-nav svg { width: 22px; height: 22px; }
+  .lightbox .lb-prev { inset-inline-start: 10px; }
+  .lightbox .lb-next { inset-inline-end: 10px; }
+  .lightbox .lb-next svg, [dir="rtl"] .lightbox .lb-prev svg { transform: scaleX(-1); }
+  .lightbox .lb-close:focus-visible, .lightbox .lb-nav:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+
+  /* «Novità»: the versions from CHANGELOG.md, written by i18n/novita.py */
+  h1, h2, h3, .hl b { text-wrap: balance; }
+  .sub, .hl span, .cp { text-wrap: pretty; }
+  .nw-hero { position: relative; overflow: hidden; padding: 64px 0 8px; }
+  .nw-hero::before { content: ""; position: absolute; inset: 0; background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px); background-size: 32px 32px; mask-image: radial-gradient(ellipse at 80% 20%, #000 0%, transparent 65%); opacity: .7; pointer-events: none; }
+  .nw-hero .wrap { position: relative; }
+  .nw-hero .sub { margin: 0; }
+  .arrow { display: inline-block; }
+  [dir="rtl"] .arrow { transform: scaleX(-1); }
+  .ver { font-family: var(--mono); font-weight: 700; direction: ltr; unicode-bidi: isolate; }
+  time { direction: ltr; unicode-bidi: isolate; }
+  :root[lang="ar"] time { direction: rtl; }
+  .next { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px; margin: 26px 0 0; padding: 18px 22px; border: 1px dashed var(--accent); border-radius: var(--radius); background: var(--card); }
+  .next .k { font-size: 13px; text-transform: uppercase; letter-spacing: .05em; color: var(--accent-text); font-weight: 700; }
+  .next p { margin: 2px 0 0; color: var(--ink-soft); }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 0; align-items: center; }
+  .chips .lbl { color: var(--muted); font-size: 14px; margin-inline-end: 4px; }
+  .chip { border: 1px solid var(--line); border-radius: 999px; padding: 4px 12px; font-size: 14px; text-decoration: none; color: var(--ink); background: var(--card); white-space: nowrap; }
+  .chip:hover { border-color: var(--accent); }
+  section.vers { padding: 28px 0 72px; }
+  .vers .wrap { display: grid; gap: 28px; }
+  .rel { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px 24px 18px; box-shadow: var(--shadow); scroll-margin-top: 80px; }
+  .rel-head { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; }
+  .rel-head h2 { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; margin: 0; font-size: 24px; letter-spacing: 0; }
+  .rel-head h2 time { color: var(--muted); font-size: 15px; font-weight: 500; }
+  .rel-head .btn { margin-inline-start: auto; padding: 8px 16px; font-size: 15px; }
+  .pill { background: var(--accent-soft); color: var(--accent-soft-ink); border-radius: 999px; padding: 2px 10px; font-size: 13px; font-weight: 700; white-space: nowrap; }
+  .pill.soon { background: transparent; color: var(--muted); box-shadow: inset 0 0 0 1px currentColor; }
+  .hl-k { margin: 18px 0 10px; font-size: 13px; text-transform: uppercase; letter-spacing: .05em; color: var(--accent-text); }
+  .hls { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 16px; }
+  .hls.six { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  @media (max-width: 640px) { .hls.six { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  .hl { margin: 0; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+  .hl a { display: block; aspect-ratio: 16 / 10; border-radius: 8px; overflow: hidden; border: 1px solid var(--line); background: #fff; cursor: zoom-in; }
+  .hl img { width: 100%; height: 100%; object-fit: cover; object-position: top left; transition: transform .25s; }
+  [dir="rtl"] .hl img { object-position: top right; }
+  .hl a:hover img { transform: scale(1.03); }
+  .hl figcaption { display: flex; flex-direction: column; gap: 2px; }
+  .hl b { font-size: 16px; color: var(--ink); }
+  .hl span { font-size: 14.5px; color: var(--muted); }
+  details summary { cursor: pointer; }
+  .all { margin-top: 18px; border-top: 1px solid var(--line); padding-top: 12px; }
+  .all > summary { font-weight: 600; color: var(--accent-text); }
+  .n { display: inline-block; min-width: 22px; padding: 0 7px; border-radius: 999px; background: var(--paper); color: var(--muted); font-size: 13px; text-align: center; font-weight: 600; direction: ltr; }
+  .rel h4 { margin: 14px 0 4px; font-size: 13px; text-transform: uppercase; letter-spacing: .05em; color: var(--accent-text); }
+  .rel ul { margin: 0; padding-inline-start: 20px; color: var(--ink-soft); font-size: 15.5px; }
+  .rel li { margin: 4px 0; }
+  :root[lang="ar"] .next .k, :root[lang="ar"] .hl-k, :root[lang="ar"] .rel h4 { text-transform: none; }
+  .older h2 { font-size: 22px; margin: 4px 0 10px; }
+  .compact { padding: 12px 18px; box-shadow: none; margin: 0 0 10px; }
+  .compact > summary { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; list-style: none; }
+  .compact > summary::-webkit-details-marker { display: none; }
+  .compact > summary::before { content: "▸"; color: var(--accent-text); }
+  [dir="rtl"] .compact > summary::before { content: "◂"; }
+  .compact[open] > summary::before { content: "▾"; }
+  .compact time { color: var(--muted); font-size: 14.5px; }
+  .compact .cp { color: var(--ink-soft); flex: 1 1 260px; }
+  .compact .dl { font-size: 14.5px; font-weight: 600; white-space: nowrap; }
+  @media (max-width: 640px) {
+    .rel { padding: 18px 16px 14px; }
+    .hls { grid-template-columns: 1fr 1fr; gap: 12px; }
+    .hl b { font-size: 15px; }
+    .hl span { display: none; }
+  }
+</style>
+<link rel="stylesheet" href="../assets/menu.css?v=439b367a">
+<link rel="stylesheet" href="../assets/effetti.css?v=6a95309b">
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="ui.skip">Zum Inhalt springen</a>
+
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="./" data-con-lingua="./" aria-label="BIMopen">
+      <svg width="24" height="32" viewBox="5 0 100 140" aria-hidden="true"><g fill="none" stroke="var(--logo)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M15 58 54 35 93 58V105L54 128 15 105Z"/><path d="M15 58 54 81 93 58M54 81V128"/><path d="M54 35V10H82"/></g></svg>
+      <span>BIM<b>open</b></span>
+    </a>
+    <nav class="links" aria-label="Abschnitte" data-i18n-attr="aria-label:ui.sezioni">
+      <div class="dd">
+        <button type="button" class="dd-btn" aria-expanded="false" aria-controls="dd-fun"><span data-i18n="nav.programma">Software</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="dd-menu" id="dd-fun">
+          <!-- canale:menu --><!-- /canale:menu -->
+          <a href="./#viste" data-con-lingua="./#viste" data-i18n="nav.viste">Ansichten</a>
+          <a href="./#funzioni" data-con-lingua="./#funzioni" data-i18n="nav.funzioni">Funktionen</a>
+          <a href="./#formati" data-con-lingua="./#formati" data-i18n="nav.formati">Formate</a>
+          <a href="./#agenti" data-con-lingua="./#agenti" data-i18n="nav.agenti">Automatisierung</a>
+        </div>
+      </div>
+      <a href="roadmap.html" data-con-lingua="roadmap.html" data-i18n="nav.roadmap">Roadmap</a>
+      <a href="philosophy.html" data-con-lingua="philosophy.html" data-i18n="nav.filosofia">Philosophie</a>
+      <a href="../manual/de/" data-manuale data-i18n="nav.manuale">Handbuch</a>
+      <a href="download.html" data-con-lingua="download.html" data-i18n="nav.scarica">Download</a>
+      <a href="news.html" data-con-lingua="news.html" data-i18n="nav.novita" aria-current="page">Neuigkeiten</a>
+    </nav>
+    <div class="bar-right">
+      <label class="lang-pick">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg>
+        <select id="lang-select" aria-label="Lingua · Language · Sprache · Langue · Idioma · اللغة">
+          <option value="it" lang="it">Italiano</option>
+          <option value="en" lang="en">English</option>
+          <option value="de" lang="de">Deutsch</option>
+          <option value="fr" lang="fr">Français</option>
+          <option value="es" lang="es">Español</option>
+          <option value="ar" lang="ar" dir="rtl">العربية</option>
+        </select>
+      </label>
+      <!-- canale:icona --><!-- /canale:icona -->
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Design wechseln" data-i18n-attr="aria-label:ui.tema">
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+      <a class="btn btn-primary cta-top" href="../app/?lang=de&amp;v=e0bd31ab" data-app="e0bd31ab"><span class="cta-long" data-i18n="cta.prova">Im Browser ausprobieren</span><span class="cta-short" data-i18n="dl1.btn">BIMopen öffnen</span></a>
+      <button type="button" class="theme-toggle menu-btn" id="menuBtn" aria-expanded="false" aria-controls="drawer" aria-label="Menü" data-i18n-attr="aria-label:ui.menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+</header>
+<div class="drawer-veil" id="drawerVeil" hidden></div>
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Menü" data-i18n-attr="aria-label:ui.menu">
+  <div class="drawer-head">
+    <a class="brand" href="./" data-con-lingua="./" aria-label="BIMopen"><svg width="20" height="27" viewBox="5 0 100 140" aria-hidden="true"><g fill="none" stroke="var(--logo)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M15 58 54 35 93 58V105L54 128 15 105Z"/><path d="M15 58 54 81 93 58M54 81V128"/><path d="M54 35V10H82"/></g></svg><span>BIM<b>open</b></span></a>
+    <button type="button" class="theme-toggle" id="drawerClose" aria-label="Schließen" data-i18n-attr="aria-label:lb.close">×</button>
+  </div>
+  <nav class="drawer-nav" aria-label="Abschnitte" data-i18n-attr="aria-label:ui.sezioni">
+    <div class="drawer-sub">
+      <!-- canale:menu --><!-- /canale:menu -->
+      <a href="./#viste" data-con-lingua="./#viste" data-i18n="nav.viste">Ansichten</a>
+      <a href="./#funzioni" data-con-lingua="./#funzioni" data-i18n="nav.funzioni">Funktionen</a>
+      <a href="./#formati" data-con-lingua="./#formati" data-i18n="nav.formati">Formate</a>
+      <a href="./#agenti" data-con-lingua="./#agenti" data-i18n="nav.agenti">Automatisierung</a>
+    </div>
+    <a href="roadmap.html" data-con-lingua="roadmap.html" data-i18n="nav.roadmap">Roadmap</a>
+    <a href="philosophy.html" data-con-lingua="philosophy.html" data-i18n="nav.filosofia">Philosophie</a>
+    <a href="../manual/de/" data-manuale data-i18n="nav.manuale">Handbuch</a>
+    <a href="download.html" data-con-lingua="download.html" data-i18n="nav.scarica">Download</a>
+    <a href="news.html" data-con-lingua="news.html" data-i18n="nav.novita" aria-current="page">Neuigkeiten</a>
+    <a href="./#faq" data-con-lingua="./#faq" data-i18n="nav.faq">Fragen</a>
+  </nav>
+  <a class="btn btn-primary drawer-cta" href="../app/?lang=de&amp;v=e0bd31ab" data-app="e0bd31ab"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11L13 8z" fill="currentColor"/></svg><span data-i18n="cta.prova">Im Browser ausprobieren</span></a>
+</div>
+
+<main id="main">
+  <section class="nw-hero" aria-labelledby="titolo">
+    <div class="wrap">
+      <span class="eyebrow" data-i18n="nw.kicker">Änderungsprotokoll</span>
+      <h1 id="titolo" data-i18n="nw.h1">Neuigkeiten</h1>
+      <p class="sub" data-i18n="nw.sub">Die Versionen von BIMopen, die neueste zuerst.</p>
+      <div class="next" role="note">
+        <div><span class="k" data-i18n="nw.next.k">Nächste Version</span><p data-i18n="nw.next.p">In Vorbereitung: eine interne Neuordnung des Programms, ohne neue Funktionen. Details in der Roadmap.</p></div>
+        <a class="btn btn-ghost" href="roadmap.html" data-con-lingua="roadmap.html"><span data-i18n="nw.next.btn">Zur Roadmap</span> <span aria-hidden="true" class="arrow">→</span></a>
+      </div>
+      <!-- novita:indice -->
+      <nav class="chips" aria-label="Versionen" data-i18n-attr="aria-label:nw.jump"><span class="lbl" data-i18n="nw.jump">Versionen</span><a class="chip" href="#v-0-1-0-alpha-8"><span class="ver">0.1.0-alpha.8</span></a><a class="chip" href="#v-0-1-0-alpha-7"><span class="ver">0.1.0-alpha.7</span></a><a class="chip" href="#v-0-1-0-alpha-6"><span class="ver">0.1.0-alpha.6</span></a><a class="chip" href="#v-0-1-0-alpha-5"><span class="ver">0.1.0-alpha.5</span></a><a class="chip" href="#v-0-1-0-alpha-4"><span class="ver">0.1.0-alpha.4</span></a><a class="chip" href="#v-0-1-0-alpha-3"><span class="ver">0.1.0-alpha.3</span></a><a class="chip" href="#v-0-1-0-alpha-2"><span class="ver">0.1.0-alpha.2</span></a><a class="chip" href="#v-0-1-0-alpha-1"><span class="ver">0.1.0-alpha.1</span></a></nav>
+      <!-- /novita:indice -->
+    </div>
+  </section>
+  <section class="vers" aria-labelledby="titolo">
+    <div class="wrap">
+      <!-- novita:versioni -->
+      <article class="rel" id="v-0-1-0-alpha-8">
+        <header class="rel-head">
+          <h2><span class="ver">0.1.0-alpha.8</span> <time datetime="2026-11-09">2026-11-09</time></h2> <span class="pill" data-i18n="nw.latest">Neueste Version</span>
+          <a class="btn btn-primary" href="download.html" data-con-lingua="download.html" data-i18n="nw.dl">Herunterladen</a>
+        </header>
+        <h3 class="hl-k" data-i18n="nw.hl">Höhepunkte</h3>
+        <div class="hls">
+          <figure class="hl">
+            <a href="../assets/novita/de/vw-section-box.webp?v=57c5bf88" data-ui-link data-zoom="v-0-1-0-alpha-8" data-zoom-cap="cap-v-0-1-0-alpha-8-1"><img src="../assets/novita/de/vw-section-box.webp?v=57c5bf88" data-ui alt="Schnittbereich" data-i18n-attr="alt:nh.v0_1_0_alpha_8.1.t" width="890" height="669" loading="lazy"></a>
+            <figcaption id="cap-v-0-1-0-alpha-8-1"><b data-i18n="nh.v0_1_0_alpha_8.1.t">Schnittbereich</b><span data-i18n="nh.v0_1_0_alpha_8.1.p">Die 3D-Ansicht dort geschnitten, wo nötig.</span></figcaption>
+          </figure>
+          <figure class="hl">
+            <a href="../assets/novita/de/gs-graphic-schedule.webp?v=17b17fde" data-ui-link data-zoom="v-0-1-0-alpha-8" data-zoom-cap="cap-v-0-1-0-alpha-8-2"><img src="../assets/novita/de/gs-graphic-schedule.webp?v=17b17fde" data-ui alt="Grafische Listen" data-i18n-attr="alt:nh.v0_1_0_alpha_8.2.t" width="1440" height="860" loading="lazy"></a>
+            <figcaption id="cap-v-0-1-0-alpha-8-2"><b data-i18n="nh.v0_1_0_alpha_8.2.t">Grafische Listen</b><span data-i18n="nh.v0_1_0_alpha_8.2.p">Türen und Fenster gezeichnet und bemaßt, nach Typ.</span></figcaption>
+          </figure>
+          <figure class="hl">
+            <a href="../assets/novita/de/ew-elliptical-wall.webp?v=5e700152" data-ui-link data-zoom="v-0-1-0-alpha-8" data-zoom-cap="cap-v-0-1-0-alpha-8-3"><img src="../assets/novita/de/ew-elliptical-wall.webp?v=5e700152" data-ui alt="Elliptische Wände" data-i18n-attr="alt:nh.v0_1_0_alpha_8.3.t" width="890" height="669" loading="lazy"></a>
+            <figcaption id="cap-v-0-1-0-alpha-8-3"><b data-i18n="nh.v0_1_0_alpha_8.3.t">Elliptische Wände</b><span data-i18n="nh.v0_1_0_alpha_8.3.p">Und gesperrte Tangenten in Skizzen.</span></figcaption>
+          </figure>
+          <figure class="hl">
+            <a href="../assets/novita/de/lg-legend.webp?v=b8bcbcfa" data-ui-link data-zoom="v-0-1-0-alpha-8" data-zoom-cap="cap-v-0-1-0-alpha-8-4"><img src="../assets/novita/de/lg-legend.webp?v=b8bcbcfa" data-ui alt="Legenden" data-i18n-attr="alt:nh.v0_1_0_alpha_8.4.t" width="890" height="669" loading="lazy"></a>
+            <figcaption id="cap-v-0-1-0-alpha-8-4"><b data-i18n="nh.v0_1_0_alpha_8.4.t">Legenden</b><span data-i18n="nh.v0_1_0_alpha_8.4.p">Muster von Typen, Materialien, Linienstilen.</span></figcaption>
+          </figure>
+          <figure class="hl">
+            <a href="../assets/novita/de/tx-leaders.webp?v=e0b8ad51" data-ui-link data-zoom="v-0-1-0-alpha-8" data-zoom-cap="cap-v-0-1-0-alpha-8-5"><img src="../assets/novita/de/tx-leaders.webp?v=e0b8ad51" data-ui alt="Text und Führungslinien" data-i18n-attr="alt:nh.v0_1_0_alpha_8.5.t" width="890" height="669" loading="lazy"></a>
+            <figcaption id="cap-v-0-1-0-alpha-8-5"><b data-i18n="nh.v0_1_0_alpha_8.5.t">Text und Führungslinien</b><span data-i18n="nh.v0_1_0_alpha_8.5.p">Formatierter Text, fangende Führungslinien.</span></figcaption>
+          </figure>
+        </div>
+        <details class="all">
+          <summary><span data-i18n="nw.all">Alle Änderungen</span> <span class="n">15</span></summary>
+          <h4 data-i18n="nv.added">Neu</h4>
+          <ul>
+            <li data-i18n="nv.v0_1_0_alpha_8.added.1">Rechtschreibprüfung für Textnotizen («F7») mit ihren Einstellungen in den Optionen, und Suchen und Ersetzen nach Gruppentyp.</li>
+            <li data-i18n="nv.v0_1_0_alpha_8.added.2">Legenden mit Mustern von Materialien und Linienstilen, die dem Gezeigten folgen, den Unterkategorien von Türen, Fenstern, Treppen und Geländern, und Farblegenden in Schnitten und Ansichten.</li>
+            <li data-i18n="nv.v0_1_0_alpha_8.added.3">Pfeiltypen des Projekts, Schriftart, Breite und Leserichtung des Maßtexts, alternative Einheiten sowie Symbol und Führungspfeil der Höhenkote.</li>
+            <li data-i18n="nv.v0_1_0_alpha_8.added.4">Formatierte Textnotizen: fett, kursiv, unterstrichen, hochgestellt, tiefgestellt, Großbuchstaben, Listen und Einzüge; Führungslinien, die an benachbarten Notizen fangen und unter dem Text verlaufen.</li>
+            <li data-i18n="nv.v0_1_0_alpha_8.added.5">Gesperrte Tangenten in Skizzen und elliptische Wände mit ihren Steuerelementen in Grundrissen und 3D-Ansichten.</li>
+            <li data-i18n="nv.v0_1_0_alpha_8.added.6">Freie 2D-Ansichten der Typen «Detail» und «Schema», sowie Ansichten und 2D-Elemente, die in eine neue Datei gespeichert und aus einer Datei eingefügt werden.</li>
+            <li data-i18n="nv.v0_1_0_alpha_8.added.7">Geladene Beschriftungen mit einem Beschriftungstyp für jede Kategorie, die Multikategorie-Beschriftung als Standard einer Kategorie, eine Nummerierung, die nach der zuletzt eingegebenen Marke weitergeht, sowie Knick und freies Ende der Beschriftung in jeder Ansicht.</li>
+            <li data-i18n="nv.v0_1_0_alpha_8.added.8">Schlüsselnotizen für Elemente, Materialien und freie Notizen, aus der Tabelle des Projekts oder aus einer verknüpften Datei, mit ihrem Baum, ihren Optionen und ihrer Legende.</li>
+            <li data-i18n="nv.v0_1_0_alpha_8.added.9">Der Treppenrechner: Berechnungsregeln mit ihren Multiplikatoren, das Ergebnis in Echtzeit und eine Vorschau.</li>
+            <li data-i18n="nv.v0_1_0_alpha_8.added.10">Grafische Listen von Türen, Fenstern und Fassaden, nach Typ oder nach Element, auch auf Plänen.</li>
+            <li data-i18n="nv.v0_1_0_alpha_8.added.11">Der Schnittbereich der 3D-Ansichten, die orthogonale 3D-Ansicht und das vollständige Menü des Orientierungswürfels, Schnitt- und Ansichtstypen, mit einem Klick platzierte Ansichten, der vom Benutzer organisierte Projektindex und der Zuschneidebereich der 3D-Ansichten.</li>
+            <li data-i18n="nv.v0_1_0_alpha_8.added.12">Zuletzt verwendete Dateien in der Browser-Version, mit ihrem Bild aufgelistet, und zuletzt verwendete Komponenten unter «Komponenten».</li>
+          </ul>
+          <h4 data-i18n="nv.changed">Geändert</h4>
+          <ul>
+            <li data-i18n="nv.v0_1_0_alpha_8.changed.1">Der Orientierungswürfel hat helle Flächen und einen Kompassring mit den Himmelsrichtungen in der Sprache der Oberfläche.</li>
+            <li data-i18n="nv.v0_1_0_alpha_8.changed.2">Dialogfenster auf Arabisch lesen sich von rechts nach links.</li>
+            <li data-i18n="nv.v0_1_0_alpha_8.changed.3">Treppenpodeste folgen den Seiten ihrer Läufe, bis sie sich treffen.</li>
+          </ul>
+        </details>
+      </article>
+      <article class="rel" id="v-0-1-0-alpha-7">
+        <header class="rel-head">
+          <h2><span class="ver">0.1.0-alpha.7</span> <time datetime="2026-11-01">2026-11-01</time></h2>
+          <a class="btn btn-primary" href="download.html" data-con-lingua="download.html" data-i18n="nw.dl">Herunterladen</a>
+        </header>
+        <h3 class="hl-k" data-i18n="nw.hl">Höhepunkte</h3>
+        <div class="hls six">
+          <figure class="hl">
+            <a href="../assets/novita/de/si-lot-3d.webp?v=3b1da42f" data-ui-link data-zoom="v-0-1-0-alpha-7" data-zoom-cap="cap-v-0-1-0-alpha-7-1"><img src="../assets/novita/de/si-lot-3d.webp?v=3b1da42f" data-ui alt="Lageplan und Gelände" data-i18n-attr="alt:nh.v0_1_0_alpha_7.1.t" width="890" height="669" loading="lazy"></a>
+            <figcaption id="cap-v-0-1-0-alpha-7-1"><b data-i18n="nh.v0_1_0_alpha_7.1.t">Lageplan und Gelände</b><span data-i18n="nh.v0_1_0_alpha_7.1.p">Gelände mit Höhenlinien, Sohlen, Grenzen, Bäumen.</span></figcaption>
+          </figure>
+          <figure class="hl">
+            <a href="../assets/novita/de/ph-demolish.webp?v=3a1d63a7" data-ui-link data-zoom="v-0-1-0-alpha-7" data-zoom-cap="cap-v-0-1-0-alpha-7-2"><img src="../assets/novita/de/ph-demolish.webp?v=3a1d63a7" data-ui alt="Phasen und Abbruch" data-i18n-attr="alt:nh.v0_1_0_alpha_7.2.t" width="890" height="669" loading="lazy"></a>
+            <figcaption id="cap-v-0-1-0-alpha-7-2"><b data-i18n="nh.v0_1_0_alpha_7.2.t">Phasen und Abbruch</b><span data-i18n="nh.v0_1_0_alpha_7.2.p">Bestand, Abbruch und Neubau, in jeder Ansicht.</span></figcaption>
+          </figure>
+          <figure class="hl">
+            <a href="../assets/novita/de/op-shaft-3d.webp?v=092139a2" data-ui-link data-zoom="v-0-1-0-alpha-7" data-zoom-cap="cap-v-0-1-0-alpha-7-3"><img src="../assets/novita/de/op-shaft-3d.webp?v=092139a2" data-ui alt="Öffnungen und Schächte" data-i18n-attr="alt:nh.v0_1_0_alpha_7.3.t" width="890" height="669" loading="lazy"></a>
+            <figcaption id="cap-v-0-1-0-alpha-7-3"><b data-i18n="nh.v0_1_0_alpha_7.3.t">Öffnungen und Schächte</b><span data-i18n="nh.v0_1_0_alpha_7.3.p">Schächte durch Decken und Dächer über mehrere Ebenen.</span></figcaption>
+          </figure>
+          <figure class="hl">
+            <a href="../assets/novita/de/st-truss.webp?v=5f027fc5" data-ui-link data-zoom="v-0-1-0-alpha-7" data-zoom-cap="cap-v-0-1-0-alpha-7-4"><img src="../assets/novita/de/st-truss.webp?v=5f027fc5" data-ui alt="Tragwerk" data-i18n-attr="alt:nh.v0_1_0_alpha_7.4.t" width="1814" height="689" loading="lazy"></a>
+            <figcaption id="cap-v-0-1-0-alpha-7-4"><b data-i18n="nh.v0_1_0_alpha_7.4.t">Tragwerk</b><span data-i18n="nh.v0_1_0_alpha_7.4.p">Träger, Trägersysteme, Fachwerke und Fundamente.</span></figcaption>
+          </figure>
+          <figure class="hl">
+            <a href="../assets/novita/de/cc-curved-3d.webp?v=3cf04ca3" data-ui-link data-zoom="v-0-1-0-alpha-7" data-zoom-cap="cap-v-0-1-0-alpha-7-5"><img src="../assets/novita/de/cc-curved-3d.webp?v=3cf04ca3" data-ui alt="Gekrümmte Wände" data-i18n-attr="alt:nh.v0_1_0_alpha_7.5.t" width="890" height="669" loading="lazy"></a>
+            <figcaption id="cap-v-0-1-0-alpha-7-5"><b data-i18n="nh.v0_1_0_alpha_7.5.t">Gekrümmte Wände</b><span data-i18n="nh.v0_1_0_alpha_7.5.p">Eine gekrümmte Wand ist eine Wand, mit ihren Schichten.</span></figcaption>
+          </figure>
+          <figure class="hl">
+            <a href="../assets/novita/de/vg-walkthrough.webp?v=bd098fd9" data-ui-link data-zoom="v-0-1-0-alpha-7" data-zoom-cap="cap-v-0-1-0-alpha-7-6"><img src="../assets/novita/de/vg-walkthrough.webp?v=bd098fd9" data-ui alt="Rundgänge und Gehmodus" data-i18n-attr="alt:nh.v0_1_0_alpha_7.6.t" width="890" height="634" loading="lazy"></a>
+            <figcaption id="cap-v-0-1-0-alpha-7-6"><b data-i18n="nh.v0_1_0_alpha_7.6.t">Rundgänge und Gehmodus</b><span data-i18n="nh.v0_1_0_alpha_7.6.p">Ein Pfad im Grundriss wird zur bewegten Ansicht.</span></figcaption>
+          </figure>
+        </div>
+        <details class="all">
+          <summary><span data-i18n="nw.all">Alle Änderungen</span> <span class="n">27</span></summary>
+          <h4 data-i18n="nv.added">Neu</h4>
+          <ul>
+            <li data-i18n="nv.v0_1_0_alpha_7.added.1">Live-Ansicht und Gehmodus: eine realistische Ansicht neben der 3D-Ansicht, mit der Tageszeit; das Modell mit Tasten und Maus durchschritten, in Augenhöhe, die Treppen hinauf und durch die Türen.</li>
+            <li data-i18n="nv.v0_1_0_alpha_7.added.2">Kameraansichten: «Perspektivansicht» mit zwei Klicks in Grundrissen, Schnitten und Ansichten gesetzt, mit der Kamera und ihren Griffen, dem Zuschneidebereich und der fernen Schnittebene; auf einem Plan zeigt eine Kameraansicht ihre Perspektive im Zuschneidebereich.</li>
+            <li data-i18n="nv.v0_1_0_alpha_7.added.3">Rundgänge: ein im Grundriss gezeichneter Pfad wird zu einer bewegten Kameraansicht, ihre Schlüsselbilder bearbeitet, in ihrer Ansicht abgespielt und als Bilder exportiert; beim Gehen gesetzte Schlüsselbilder und Aufnahmen werden zu Rundgängen.</li>
+            <li data-i18n="nv.v0_1_0_alpha_7.added.4">USD-Export und Projektpakete: die 3D-Ansicht als USD-Szene exportiert, mit Materialien, Eigenschaften, Kamera und Sonne; ein Projekt mit seinen verknüpften Modellen und den Dateien, die sie verwenden, in einer .zip-Datei gesammelt und wieder geöffnet.</li>
+            <li data-i18n="nv.v0_1_0_alpha_7.added.5">Decken mit ihren Deckenspiegeln, architektonische und tragende Stützen und gekrümmte Wände: Kreise, Bögen und Abrundungen im Bereich «Zeichnen» der Wand, eine gekrümmte Wand als eine glatte Wand mit allen ihren Schichten.</li>
+            <li data-i18n="nv.v0_1_0_alpha_7.added.6">Kopieren, Ausschneiden und Einfügen, auch ausgerichtet auf gewählte Ebenen und Ansichten; Modell- und Detailgruppen; «Typ übertragen».</li>
+            <li data-i18n="nv.v0_1_0_alpha_7.added.7">DWG und DXF: Ansichten und Pläne mit einem Layer je Kategorie exportiert; Zeichnungen in Ansichten importiert oder verknüpft.</li>
+            <li data-i18n="nv.v0_1_0_alpha_7.added.8">Pläne und Dokumentation: Detail- und Plannummern in Ansichtsköpfen und -titeln, Texte, Linien und Bemaßungen auf Plänen gezeichnet, die vier Ansichten in der Vorlage, die axonometrische 3D-Ansicht und die Auftritts- und Steigungsnummern der Treppen.</li>
+            <li data-i18n="nv.v0_1_0_alpha_7.added.9">Phasen und Abbruch: bestehende, abgebrochene, neue und temporäre Bauteile; der Dialog «Phasen» mit den Phasenfiltern und ihrer Grafik; die Phase jeder Ansicht; «Abbrechen» in jeder Ansicht; Füllungen; Räume und Bauteillisten nach Phase; die Phasen in IFC und DWG geschrieben.</li>
+            <li data-i18n="nv.v0_1_0_alpha_7.added.10">Öffnungen und Schächte: Öffnungen nach Fläche, vertikal, in Wänden und für Gauben, und Schächte über mehrere Ebenen mit ihren Symbollinien, die Geschossdecken, Dächer und Decken in Grundrissen, Schnitten und 3D-Ansichten schneiden.</li>
+            <li data-i18n="nv.v0_1_0_alpha_7.added.11">Lageplan und Gelände: Geländeoberflächen aus Skizze, Punkten oder Dateien, mit Höhenlinien; Sohlen, Teilbereiche, geteilte und vereinigte Oberflächen, planierte Bereiche mit Abtrag und Auftrag, Grundstücksgrenzen gezeichnet oder aus einer Tabelle mit Abständen und Richtungen, Höhenlinienbeschriftungen, der Lageplan, und Bäume, Parkplätze und andere Geländekomponenten auf dem Gelände.</li>
+            <li data-i18n="nv.v0_1_0_alpha_7.added.12">Tragwerk: Träger, Verbände, Trägersysteme, Fachwerke, tragende Wände und Geschossdecken, Einzel-, Streifen- und Plattenfundamente, mit ihren Beschriftungen, Endsteuerungen und Bewehrungsüberdeckungen.</li>
+            <li data-i18n="nv.v0_1_0_alpha_7.added.13">Entwurfsoptionen: Optionssätze, Bearbeiten einer Option, Ansichten und Bauteillisten einer Option, «Primär machen» und «Primäre übernehmen».</li>
+            <li data-i18n="nv.v0_1_0_alpha_7.added.14">Mehrkategorie- und Materialbeschriftungen und Beschriftungen mit mehreren Hosts; Durchmesser-, Radius- und Bogenlängenbemaßungen; Einbaumöbel; Gauben, Extrusionsdächer, geneigte Verglasungen und Untersichten; 3D-Linien und 3D-Text auf einer Arbeitsebene; Splines und Ellipsen über ihre Steuerelemente bearbeitet.</li>
+            <li data-i18n="nv.v0_1_0_alpha_7.added.15">Jede Bauteilliste ändert das Modell wie die der Wände: eine Änderung in der Tabelle ändert die Elemente, und ein Typwechsel wird zuerst erfragt.</li>
+            <li data-i18n="nv.v0_1_0_alpha_7.added.16">Ganze Wände mit einem Klick samt ihren Türen und Fenstern bemaßt, in Grundrissen, Schnitten und Ansichten.</li>
+          </ul>
+          <h4 data-i18n="nv.changed">Geändert</h4>
+          <ul>
+            <li data-i18n="nv.v0_1_0_alpha_7.changed.1">Die bestehenden Befehle Punkt für Punkt an den wichtigsten Referenzfunktionen ausgerichtet: die Auswahl und die Änderungswerkzeuge (Ausrichten, Reihe mit verknüpften Reihen, Umschalt in jedem Werkzeug), Wände und Stützen, Geschossdecken, Dächer und Decken, Treppen, Rampen und Geländer, der Bereich «Zeichnen» (Mittelpunktmarke, tangentiale Bögen von Wänden, Abrundungen) und die Ansichtseigenschaften.</li>
+            <li data-i18n="nv.v0_1_0_alpha_7.changed.2">Jeder Dialog hat ein einheitliches Aussehen: die Titelleiste, die Meldung mit ihrem Symbol und die Schaltflächen in einem Band am Fuß.</li>
+            <li data-i18n="nv.v0_1_0_alpha_7.changed.3">Der Projektindex listet die Komponenten nach Kategorie, dann Komponente, dann Typ.</li>
+            <li data-i18n="nv.v0_1_0_alpha_7.changed.4">Neue Grundrisse, Schnitte und Ansichten beginnen als Strichzeichnungen; Ebenen und Raster sind in 3D-Ansichten zunächst ausgeblendet.</li>
+            <li data-i18n="nv.v0_1_0_alpha_7.changed.5">Dateidialoge blockieren das Fenster nicht mehr, und das Fenster öffnet sich zentriert.</li>
+          </ul>
+          <h4 data-i18n="nv.fixed">Behoben</h4>
+          <ul>
+            <li data-i18n="nv.v0_1_0_alpha_7.fixed.1">Fast fluchtende Wände treffen sich auf der Ebene zwischen ihnen.</li>
+            <li data-i18n="nv.v0_1_0_alpha_7.fixed.2">Wände, die niedriger als die Berechnungshöhe des Raums sind, begrenzen ihn nicht mehr.</li>
+            <li data-i18n="nv.v0_1_0_alpha_7.fixed.3">Abhängigkeiten verschieben nie ein fixiertes Element.</li>
+            <li data-i18n="nv.v0_1_0_alpha_7.fixed.4">Raumbeschriftungen in Schnitten stehen dort, wo der Schnitt den Raum schneidet.</li>
+            <li data-i18n="nv.v0_1_0_alpha_7.fixed.5">Das Vorschaubild einer 3D-Ansicht im Ansichtenstreifen ist das Bild ihres Fensters.</li>
+            <li data-i18n="nv.v0_1_0_alpha_7.fixed.6">Am Bildschirm gefundene Kanten werden auf jeder Grafikkarte gezeichnet.</li>
+          </ul>
+        </details>
+      </article>
+      <article class="rel" id="v-0-1-0-alpha-6">
+        <header class="rel-head">
+          <h2><span class="ver">0.1.0-alpha.6</span> <time datetime="2026-10-26">2026-10-26</time></h2>
+          <a class="btn btn-primary" href="download.html" data-con-lingua="download.html" data-i18n="nw.dl">Herunterladen</a>
+        </header>
+        <h3 class="hl-k" data-i18n="nw.hl">Höhepunkte</h3>
+        <div class="hls six">
+          <figure class="hl">
+            <a href="../assets/novita/de/pf-file-panel.webp?v=e4201c79" data-ui-link data-zoom="v-0-1-0-alpha-6" data-zoom-cap="cap-v-0-1-0-alpha-6-1"><img src="../assets/novita/de/pf-file-panel.webp?v=e4201c79" data-ui alt="Bereich Datei und Format 2027" data-i18n-attr="alt:nh.v0_1_0_alpha_6.1.t" width="1440" height="860" loading="lazy"></a>
+            <figcaption id="cap-v-0-1-0-alpha-6-1"><b data-i18n="nh.v0_1_0_alpha_6.1.t">Bereich Datei und Format 2027</b><span data-i18n="nh.v0_1_0_alpha_6.1.p">Zuletzt verwendete mit Bildern, Glocke für Aktualisierungen.</span></figcaption>
+          </figure>
+          <figure class="hl">
+            <a href="../assets/novita/de/pf-imperial-plan.webp?v=8047dfb1" data-ui-link data-zoom="v-0-1-0-alpha-6" data-zoom-cap="cap-v-0-1-0-alpha-6-2"><img src="../assets/novita/de/pf-imperial-plan.webp?v=8047dfb1" data-ui alt="Imperiale Einheiten" data-i18n-attr="alt:nh.v0_1_0_alpha_6.2.t" width="890" height="669" loading="lazy"></a>
+            <figcaption id="cap-v-0-1-0-alpha-6-2"><b data-i18n="nh.v0_1_0_alpha_6.2.t">Imperiale Einheiten</b><span data-i18n="nh.v0_1_0_alpha_6.2.p">Fuß und Zoll, 5'-6 1/2", Maßstäbe und Vorlage.</span></figcaption>
+          </figure>
+          <figure class="hl">
+            <a href="../assets/novita/de/vg-realistic-night.webp?v=47444123" data-ui-link data-zoom="v-0-1-0-alpha-6" data-zoom-cap="cap-v-0-1-0-alpha-6-3"><img src="../assets/novita/de/vg-realistic-night.webp?v=47444123" data-ui alt="Realistisch, auch nachts" data-i18n-attr="alt:nh.v0_1_0_alpha_6.3.t" width="890" height="669" loading="lazy"></a>
+            <figcaption id="cap-v-0-1-0-alpha-6-3"><b data-i18n="nh.v0_1_0_alpha_6.3.t">Realistisch, auch nachts</b><span data-i18n="nh.v0_1_0_alpha_6.3.p">Physikalischer Himmel, goldene Stunde, Mond und Sterne.</span></figcaption>
+          </figure>
+          <figure class="hl">
+            <a href="../assets/novita/de/vg-pastel-3d.webp?v=3ad8d686" data-ui-link data-zoom="v-0-1-0-alpha-6" data-zoom-cap="cap-v-0-1-0-alpha-6-4"><img src="../assets/novita/de/vg-pastel-3d.webp?v=3ad8d686" data-ui alt="Der Stil Pastell" data-i18n-attr="alt:nh.v0_1_0_alpha_6.4.t" width="890" height="669" loading="lazy"></a>
+            <figcaption id="cap-v-0-1-0-alpha-6-4"><b data-i18n="nh.v0_1_0_alpha_6.4.t">Der Stil Pastell</b><span data-i18n="nh.v0_1_0_alpha_6.4.p">Lasuren in den Farben der Materialien, in jeder Ansicht.</span></figcaption>
+          </figure>
+          <figure class="hl">
+            <a href="../assets/novita/de/ic-import-types.webp?v=ca97eb65" data-ui-link data-zoom="v-0-1-0-alpha-6" data-zoom-cap="cap-v-0-1-0-alpha-6-5"><img src="../assets/novita/de/ic-import-types.webp?v=ca97eb65" data-ui alt="IFC importieren und umwandeln" data-i18n-attr="alt:nh.v0_1_0_alpha_6.5.t" width="948" height="668" loading="lazy"></a>
+            <figcaption id="cap-v-0-1-0-alpha-6-5"><b data-i18n="nh.v0_1_0_alpha_6.5.t">IFC importieren und umwandeln</b><span data-i18n="nh.v0_1_0_alpha_6.5.p">Importierte Objekte nativ, mit den Typen des Projekts.</span></figcaption>
+          </figure>
+          <figure class="hl">
+            <a href="../assets/novita/de/vg-sketchy-3d.webp?v=b644f6db" data-ui-link data-zoom="v-0-1-0-alpha-6" data-zoom-cap="cap-v-0-1-0-alpha-6-6"><img src="../assets/novita/de/vg-sketchy-3d.webp?v=b644f6db" data-ui alt="Skizzenhafte Linien" data-i18n-attr="alt:nh.v0_1_0_alpha_6.6.t" width="890" height="669" loading="lazy"></a>
+            <figcaption id="cap-v-0-1-0-alpha-6-6"><b data-i18n="nh.v0_1_0_alpha_6.6.t">Skizzenhafte Linien</b><span data-i18n="nh.v0_1_0_alpha_6.6.p">Wie von Hand, mit Verzerrung und Verlängerung.</span></figcaption>
+          </figure>
+        </div>
+        <details class="all">
+          <summary><span data-i18n="nw.all">Alle Änderungen</span> <span class="n">22</span></summary>
+          <h4 data-i18n="nv.added">Neu</h4>
+          <ul>
+            <li data-i18n="nv.v0_1_0_alpha_6.added.1">Das native Dateiformat 2027: Projekte (.bpr), Projektvorlagen (.bpt), Komponenten (.bco) und Komponentenvorlagen (.bct); jede im Format 2027 oder später geschriebene Datei öffnet sich in jeder späteren Version.</li>
+            <li data-i18n="nv.v0_1_0_alpha_6.added.2">Der Bereich Datei: eine fensterfüllende Seite anstelle des Menüs Datei, mit den zuletzt verwendeten Projekten als Kacheln mit dem in jeder Datei gespeicherten Bild, einer Listenansicht, angehefteten Projekten, einer nicht mehr vorhandenen Datei ausgegraut mit «Suchen…» und den Seiten Neu, Öffnen, Speichern unter, Exportieren und Drucken.</li>
+            <li data-i18n="nv.v0_1_0_alpha_6.added.3">Imperiale Einheiten: Fuß und Bruchzoll, Dezimalfuß und -zoll, ft² und ft³, Eingaben wie 5'-6 1/2", Architektur- und Ingenieurmaßstäbe sowie eine imperiale Vorlage für neue Projekte.</li>
+            <li data-i18n="nv.v0_1_0_alpha_6.added.4">«IFC importieren»: eine IFC-Datei in das geöffnete Projekt übernommen, ihre Elemente in die Typen des Projekts umgewandelt; im Bereich Datei unter «Öffnen».</li>
+            <li data-i18n="nv.v0_1_0_alpha_6.added.5">Importierte Objekte, auch aus IFC-Dateien, lassen sich in native Elemente umwandeln: Wände, Böden, Dächer und die anderen Kategorien mit den Typen des Projekts oder Komponenten aus ihren Formen, wobei die Originale erhalten bleiben; der Bereich «Konvertierungsstatus» zeigt, was noch umzuwandeln ist.</li>
+            <li data-i18n="nv.v0_1_0_alpha_6.added.6">Treppen aus Begrenzungs- und Setzstufenlinien: jede Stufe und jedes Podest so, wie die Linien sie zeichnen, mit Stufenkanten, mittleren Wangen und einer abgetreppten Untersicht.</li>
+            <li data-i18n="nv.v0_1_0_alpha_6.added.7">Der visuelle Stil «Realistisch»: ein physikalischer Himmel mit Sonnenscheibe, goldener Stunde, Dämmerung und Nacht, dem Mond in seiner Phase und den Sternen, und Mondlicht auf dem Modell.</li>
+            <li data-i18n="nv.v0_1_0_alpha_6.added.8">Der visuelle Stil «Pastell»: eine lavierte Zeichnung in den Farben der Materialien, in 3D-Ansichten, Grundrissen, Schnitten und Ansichten, mit geschnittenen Teilen als Poché und den Schatten der Ansicht, auf hellem oder dunklem Papier; «Lasurstärke» und «Lasurverlauf» bestimmen, wie kräftig und wie ungleichmäßig die Farbe liegt.</li>
+            <li data-i18n="nv.v0_1_0_alpha_6.added.9">Skizzenhafte Linien: die Linien einer Ansicht wie von Hand gezeichnet, mit «Verzerrung» und «Verlängerung» (5 und 1 in Grundrissen, Schnitten und Ansichten, 8 und 3 in 3D-Ansichten), gleich auf dem Bildschirm, im Druck und im Export, ein- und ausgeschaltet über die Ansichtsleiste.</li>
+            <li data-i18n="nv.v0_1_0_alpha_6.added.10">«Grafische Darstellungsoptionen» in auf- und zuklappbaren Gruppen, mit Verzerrung, Kanten, geglätteten Linien, Transparenz, Tiefenwirkung und dem Hintergrundverlauf.</li>
+            <li data-i18n="nv.v0_1_0_alpha_6.added.11">Optionen ▸ Grafik: Hardwarebeschleunigung, die zu verwendende Grafikkarte und die «In Verwendung», und die Art der Kanten in 3D-Ansichten.</li>
+            <li data-i18n="nv.v0_1_0_alpha_6.added.12">Aktualisierungen: beim Start, höchstens einmal am Tag, liest BIMopen die neueste Version von der Website; eine Glocke mit Punkt in der oberen Leiste zeigt eine neuere an, mit ihren Neuerungen, «Herunterladen und aktualisieren», «Später» und «Diese Version überspringen». Der Download wird geprüft (Prüfsumme und digitale Signatur) und das Programm startet mit demselben Projekt und derselben Ansicht neu; Android öffnet das System-Installationsprogramm, das Web lädt neu. Optionen ▸ Allgemein ▸ «Nach Aktualisierungen suchen».</li>
+            <li data-i18n="nv.v0_1_0_alpha_6.added.13">«?» ▸ «Befehle»: alle Befehle in einem Fenster, mit Suche, den Registerkarten des Menübands, dem einzugebenden Namen, Synonymen, Kürzel, Beschreibung und einem Beispiel; Doppelklick oder Eingabe startet ihn. Auch die Eingabe von <code>help</code> öffnet es.</li>
+          </ul>
+          <h4 data-i18n="nv.changed">Geändert</h4>
+          <ul>
+            <li data-i18n="nv.v0_1_0_alpha_6.changed.1">Eine neue Identität: das Würfelzeichen und die Farben des Programms im Programm, in seinen Symbolen, auf der Website und im Handbuch.</li>
+            <li data-i18n="nv.v0_1_0_alpha_6.changed.2">Der Stil «BIMopen» ist kompakter: die Seitenleiste listet die Registerkarten des Menübands auf, und der Zeichenbereich hat mehr Platz.</li>
+            <li data-i18n="nv.v0_1_0_alpha_6.changed.3">«?» ▸ «Über BIMopen» zeigt Version, Datum und Commit des Builds, die Plattform, Links zur Website, zum Handbuch und zu den Neuerungen, die Lizenzen Dritter und «Systeminformationen kopieren».</li>
+            <li data-i18n="nv.v0_1_0_alpha_6.changed.4">Große Modelle öffnen sich, zeichnen sich und ändern sich schneller in 3D-Ansichten, mit ihren vielen Türen, Fenstern, Komponenten, Geländerpfosten und importierten Objekten.</li>
+          </ul>
+          <h4 data-i18n="nv.fixed">Behoben</h4>
+          <ul>
+            <li data-i18n="nv.v0_1_0_alpha_6.fixed.1">In 3D-Ansichten bleiben automatische Kanten aus der Nähe vollständig, und ein visueller Stil sieht gleich aus, wie auch immer er gewählt wurde.</li>
+            <li data-i18n="nv.v0_1_0_alpha_6.fixed.2">«Realistisch» in Browsern mit WebGL2: Wände und Dächer werden nicht mehr schwarz, und das Fenster friert nicht mehr ein, während die Bilder vorbereitet werden.</li>
+            <li data-i18n="nv.v0_1_0_alpha_6.fixed.3">Eine Grafikkarte, die nicht im Fenster zeichnen kann, macht beim Start der automatisch gewählten Platz.</li>
+            <li data-i18n="nv.v0_1_0_alpha_6.fixed.4">In einer nach Läufen gezeichneten Treppe trifft jeder Lauf das Podest durch die Platte, und der Podestpfosten bleibt auf dem Podest.</li>
+          </ul>
+          <h4 data-i18n="nv.removed">Entfernt</h4>
+          <ul>
+            <li data-i18n="nv.v0_1_0_alpha_6.removed.1">Der experimentelle Import eines geschlossenen Formats: BIMopen tauscht Modelle über IFC aus.</li>
+          </ul>
+        </details>
+      </article>
+      <article class="rel" id="v-0-1-0-alpha-5">
+        <header class="rel-head">
+          <h2><span class="ver">0.1.0-alpha.5</span> <time datetime="2026-10-20">2026-10-20</time></h2>
+          <a class="btn btn-primary" href="download.html" data-con-lingua="download.html" data-i18n="nw.dl">Herunterladen</a>
+        </header>
+        <h3 class="hl-k" data-i18n="nw.hl">Höhepunkte</h3>
+        <div class="hls">
+          <figure class="hl">
+            <a href="../assets/novita/de/vg-sun-path.webp?v=fbbe7daa" data-ui-link data-zoom="v-0-1-0-alpha-5" data-zoom-cap="cap-v-0-1-0-alpha-5-1"><img src="../assets/novita/de/vg-sun-path.webp?v=fbbe7daa" data-ui alt="Sonnenbahn in jeder Ansicht" data-i18n-attr="alt:nh.v0_1_0_alpha_5.1.t" width="890" height="669" loading="lazy"></a>
+            <figcaption id="cap-v-0-1-0-alpha-5-1"><b data-i18n="nh.v0_1_0_alpha_5.1.t">Sonnenbahn in jeder Ansicht</b><span data-i18n="nh.v0_1_0_alpha_5.1.p">Stundenlinien, Sonnenwenden, Analemmata, Auf- und Untergang.</span></figcaption>
+          </figure>
+          <figure class="hl">
+            <a href="../assets/novita/de/vg-sun-settings.webp?v=f9209c38" data-ui-link data-zoom="v-0-1-0-alpha-5" data-zoom-cap="cap-v-0-1-0-alpha-5-2"><img src="../assets/novita/de/vg-sun-settings.webp?v=f9209c38" data-ui alt="Die Sonne über Tag und Jahr" data-i18n-attr="alt:nh.v0_1_0_alpha_5.2.t" width="1128" height="668" loading="lazy"></a>
+            <figcaption id="cap-v-0-1-0-alpha-5-2"><b data-i18n="nh.v0_1_0_alpha_5.2.t">Die Sonne über Tag und Jahr</b><span data-i18n="nh.v0_1_0_alpha_5.2.p">In 3D ziehen; Auf- und Untergänge als Diagramm.</span></figcaption>
+          </figure>
+          <figure class="hl">
+            <a href="../assets/novita/de/fr-railing-type.webp?v=5db91547" data-ui-link data-zoom="v-0-1-0-alpha-5" data-zoom-cap="cap-v-0-1-0-alpha-5-3"><img src="../assets/novita/de/fr-railing-type.webp?v=5db91547" data-ui alt="Geländer nach Maß" data-i18n-attr="alt:nh.v0_1_0_alpha_5.3.t" width="1128" height="748" loading="lazy"></a>
+            <figcaption id="cap-v-0-1-0-alpha-5-3"><b data-i18n="nh.v0_1_0_alpha_5.3.t">Geländer nach Maß</b><span data-i18n="nh.v0_1_0_alpha_5.3.p">Handläufe, Pfosten und Stäbe, mit Vorschau.</span></figcaption>
+          </figure>
+          <figure class="hl">
+            <a href="../assets/novita/de/if-snap.webp?v=36febe9f" data-ui-link data-zoom="v-0-1-0-alpha-5" data-zoom-cap="cap-v-0-1-0-alpha-5-4"><img src="../assets/novita/de/if-snap.webp?v=36febe9f" data-ui alt="Vollständiger Fang" data-i18n-attr="alt:nh.v0_1_0_alpha_5.4.t" width="764" height="639" loading="lazy"></a>
+            <figcaption id="cap-v-0-1-0-alpha-5-4"><b data-i18n="nh.v0_1_0_alpha_5.4.t">Vollständiger Fang</b><span data-i18n="nh.v0_1_0_alpha_5.4.p">Winkelfang in jeder Ansicht und das Fang-Fenster.</span></figcaption>
+          </figure>
+        </div>
+        <details class="all">
+          <summary><span data-i18n="nw.all">Alle Änderungen</span> <span class="n">34</span></summary>
+          <h4 data-i18n="nv.added">Neu</h4>
+          <ul>
+            <li data-i18n="nv.v0_1_0_alpha_5.added.1">Eine Registerkarte «Stahlbeton» im Menüband zwischen Tragwerk und Metall mit den Bewehrungsbefehlen, in beiden Oberflächenstilen und im Touch-Modus.</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.added.2">Hilfen zum Lesen des Sonnenpfads in jeder Ansicht («Visuelle Hilfen»): Stundenlinien, Sonnenmittag, das Jahresband zwischen den Sonnenwenden, Analemmata, Sonnenauf- und -untergang mit ihren Uhrzeiten; in 3D-Ansichten verdeckt das Modell den Teil des Pfads dahinter.</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.added.3">Die Sonne wird in 3D-Ansichten wie in Grundrissen gezogen, «Entlang des Tages» oder «Entlang des Jahres»; Sonnenaufgang, Sonnenuntergang und Tageslänge in der Ansichtsleiste; die Sonnenauf- und -untergänge des Jahres als Diagramm in «Sonneneinstellungen», wo ein Klick den Tag wählt.</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.added.4">Die Sommerzeit folgt von selbst der Regel jedes Ortes und dem Jahr der Sonne; Tokio, São Paulo, Santiago, Sydney und Auckland kommen in die Städteliste.</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.added.5">Geländertypen mit «Handlaufstruktur (nicht durchgehend)» und «Platzierung der Geländerstäbe» (Hauptmuster, Pfosten am Anfang, an den Ecken und am Ende), jeweils mit einer Vorschau an einer Beispieltreppe.</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.added.6">«Geländer ▸ Auf Träger platzieren» in Grundrissen und 3D-Ansichten, mit «Versatz vom Pfad» und «Auf Auftritten» oder «Auf Wange».</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.added.7">Der vollständige Dialog «Fang», in beiden Stilen gleich: Längen- und Winkelinkremente, vom Zoom gewählt, Objektfänge mit ihren Überschreibungen aus zwei Buchstaben, «Vorgaben wiederherstellen»; die Einstellungen bleiben bei den Voreinstellungen.</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.added.8">Winkelfang in jeder Ansicht: ein Segment rastet waagerecht, senkrecht, parallel, rechtwinklig oder auf ein Vielfaches des Winkelinkrements ein, gemessen von der Achse der Ansicht oder vom vorigen Segment, mit Hilfslinie und angezeigtem Winkel; in Grundrissen, Schnitten, Ansichten, 3D-Ansichten und Skizzen, auch für Drehen und radiale Reihen.</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.added.9">«Fang-Überschreibungen» in jeder Ansicht, in der ein Werkzeug Punkte nimmt, getippt oder aus dem Kontextmenü; TAB und UMSCHALT+TAB gehen die Fangpunkte unter dem Cursor durch; «Schließen» (SZ) schließt eine Kette oder die Kontur einer Skizze.</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.added.10">Jedes Dropdown des Menübands listet alle seine Varianten, die auch die Befehlssuche findet; die noch ausstehenden sind ausgegraut als «Noch nicht verfügbar».</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.added.11">Optionsleiste: «Komponente laden» für Türen, Fenster und Bauteile, «Beim Platzieren beschriften» als Kontrollkästchen, «Nach dem Einfügen drehen» für Bauteile, der Versatz der Wand.</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.added.12"><code>snap</code> und <code>anglesnap</code> auf der Befehlszeile und über MCP.</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.added.13">Im Benutzerhandbuch öffnen sich Bilder mit einem Klick groß; das PDF hat ein Deckblatt.</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.added.14">„Deckungsgleiche Linien beibehalten“ in „Druckeinrichtung“ druckt jede überlagerte Linie, statt sie zusammenzuführen.</li>
+          </ul>
+          <h4 data-i18n="nv.changed">Geändert</h4>
+          <ul>
+            <li data-i18n="nv.v0_1_0_alpha_5.changed.1">Das Ziehen der Sonne ist in jeder Ansicht flüssig: Grundrisse, Schnitte und Ansichten zeigen während der Bewegung einen vorläufigen Schatten und nach dem Loslassen den vollständigen; eine Sonnenstudie läuft ebenso.</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.changed.2">Schatten in 3D-Ansichten haben lesbare Kanten und weiche Übergänge; die sonnenbeschienene Laibung eines Fensters oder einer Tür ist heller als die abgewandte.</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.changed.3">Jeder Dialog öffnet sich jedes Mal in der Bildschirmmitte und behält eine Größe, solange er offen ist; was nicht hineinpasst, wird darin gescrollt.</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.changed.4">Die Städtenamen des Projektstandorts erscheinen in der Sprache der Oberfläche; die Dateien behalten ihren Standort.</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.changed.5">Gedruckte und exportierte Schnitte und Ansichten (PDF, SVG, PNG, Bildexport) entfernen verdeckte Linien exakt.</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.changed.6">Schnitte und Ansichten zeichnen überlappende Flächen in ihrer wahren Tiefenreihenfolge, und Fensterglas verdeckt, was dahinter liegt.</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.changed.7">„Auf Wange“ wird nur bei einer Treppe mit Wange auf dieser Seite angeboten; „Auf Host platzieren“ fügt nur das Geländer hinzu, das einer Seite fehlt.</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.changed.8">Das Beispielhaus steht in Cagliari, wo seine Adresse ist; neue Projekte beginnen weiterhin in Rom.</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.changed.9">Dialoge mit langen Listen (Materialien, Sichtbarkeit und Grafik, Objektstile, Filter, Linienstile, Bauteillisteneigenschaften, Parameter, Tastenkürzel…) lassen sich an den Rändern vergrößern und öffnen wieder in dieser Größe; ihr Inhalt ändert die Größe nie.</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.changed.10">Das Erdgeschoss des Beispielhauses ist eine durchgehende Wand mit eingebetteter Ladenfront, denn eine Vorhangfassade schneidet die Wand, an der sie entlangläuft.</li>
+          </ul>
+          <h4 data-i18n="nv.fixed">Behoben</h4>
+          <ul>
+            <li data-i18n="nv.v0_1_0_alpha_5.fixed.1">Eine Basiswand, die zu einem gestapelten Typ wird, behält ihre Basislinie: die Fassade verschiebt sich nicht mehr um die halbe Dicke.</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.fixed.2">Jede Unterwand einer gestapelten Wand verbindet sich in ihrer eigenen Höhe mit der Wand daneben, mit um die Ecke geschlossenen Schichten.</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.fixed.3">Ein über ein anderes geöffnetes Projekt erscheint in jeder Ansicht; jede Art des Öffnens fragt nach dem Speichern der Änderungen; eine 3D-Ansicht unter neuem Namen zu speichern verschiebt nicht mehr die Kamera der offenen Ansicht.</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.fixed.4">Geländer an Treppen verlaufen auf dem Umriss der Treppe, Pfosten stehen ganz auf den Stufen, Geländerstäbe sind gleichmäßig verteilt und Handläufe versinken nicht mehr im ersten Auftritt.</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.fixed.5">Fensterrahmen verschwinden in Ansichten nicht mehr, wo die Fensterbank in ihrer Ebene liegt.</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.fixed.6">Eine von der Sonne streifend beschienene Fläche ist gleichmäßig beleuchtet, ohne dunkle Streifen in 3D-Ansichten und Ansichten.</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.fixed.7">Das Analemma des Sonnenpfads ist eine einzige glatte Schleife durch die Sonne, und in der Perspektive werden seine Linien hinter dem Auge abgeschnitten.</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.fixed.8">Wer beim Speichern „Nein“ wählt und dann dieselbe Datei öffnet, lädt sie so, wie sie gespeichert war.</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.fixed.9">In 3D-Ansichten liegt die Führungslinie des Winkelfangs auf der gezeichneten Wand.</li>
+            <li data-i18n="nv.v0_1_0_alpha_5.fixed.10">Die Fläche einer Wand in Bauteillisten, Materialauszügen und IFC-Mengen lässt die Öffnung einer eingebetteten Vorhangfassade aus.</li>
+          </ul>
+        </details>
+      </article>
+      <article class="rel" id="v-0-1-0-alpha-4">
+        <header class="rel-head">
+          <h2><span class="ver">0.1.0-alpha.4</span> <time datetime="2026-10-19">2026-10-19</time></h2>
+          <a class="btn btn-primary" href="download.html" data-con-lingua="download.html" data-i18n="nw.dl">Herunterladen</a>
+        </header>
+        <h3 class="hl-k" data-i18n="nw.hl">Höhepunkte</h3>
+        <div class="hls">
+          <figure class="hl">
+            <a href="../assets/novita/de/stacked-wall.webp?v=17b95b72" data-ui-link data-zoom="v-0-1-0-alpha-4" data-zoom-cap="cap-v-0-1-0-alpha-4-1"><img src="../assets/novita/de/stacked-wall.webp?v=17b95b72" data-ui alt="Gestapelte Wände" data-i18n-attr="alt:nh.v0_1_0_alpha_4.1.t" width="1440" height="820" loading="lazy"></a>
+            <figcaption id="cap-v-0-1-0-alpha-4-1"><b data-i18n="nh.v0_1_0_alpha_4.1.t">Gestapelte Wände</b><span data-i18n="nh.v0_1_0_alpha_4.1.p">Teilwände mit eigenen Schichten, in jeder Ansicht.</span></figcaption>
+          </figure>
+          <figure class="hl">
+            <a href="../assets/novita/de/touch-tablet-landscape.webp?v=a648389a" data-ui-link data-zoom="v-0-1-0-alpha-4" data-zoom-cap="cap-v-0-1-0-alpha-4-2"><img src="../assets/novita/de/touch-tablet-landscape.webp?v=a648389a" data-ui alt="Touch-Modus" data-i18n-attr="alt:nh.v0_1_0_alpha_4.2.t" width="1280" height="800" loading="lazy"></a>
+            <figcaption id="cap-v-0-1-0-alpha-4-2"><b data-i18n="nh.v0_1_0_alpha_4.2.t">Touch-Modus</b><span data-i18n="nh.v0_1_0_alpha_4.2.p">Zwei-Finger-Gesten, Layouts für Tablet und Handy.</span></figcaption>
+          </figure>
+          <figure class="hl">
+            <a href="../assets/novita/de/an-tempdims.webp?v=5f29df1b" data-ui-link data-zoom="v-0-1-0-alpha-4" data-zoom-cap="cap-v-0-1-0-alpha-4-3"><img src="../assets/novita/de/an-tempdims.webp?v=5f29df1b" data-ui alt="Temporäre Bemaßungen" data-i18n-attr="alt:nh.v0_1_0_alpha_4.3.t" width="544" height="424" loading="lazy"></a>
+            <figcaption id="cap-v-0-1-0-alpha-4-3"><b data-i18n="nh.v0_1_0_alpha_4.3.t">Temporäre Bemaßungen</b><span data-i18n="nh.v0_1_0_alpha_4.3.p">An jedem Element, in jeder Ansicht, auch in 3D.</span></figcaption>
+          </figure>
+          <figure class="hl">
+            <a href="../assets/novita/de/wa-assembly.webp?v=5d2876ac" data-ui-link data-zoom="v-0-1-0-alpha-4" data-zoom-cap="cap-v-0-1-0-alpha-4-4"><img src="../assets/novita/de/wa-assembly.webp?v=5d2876ac" data-ui alt="Typschichten" data-i18n-attr="alt:nh.v0_1_0_alpha_4.4.t" width="1128" height="748" loading="lazy"></a>
+            <figcaption id="cap-v-0-1-0-alpha-4-4"><b data-i18n="nh.v0_1_0_alpha_4.4.t">Typschichten</b><span data-i18n="nh.v0_1_0_alpha_4.4.p">Dicke, Wärmedurchlasswiderstand und Live-Vorschau.</span></figcaption>
+          </figure>
+          <figure class="hl">
+            <a href="../assets/novita/de/wa-workplane.webp?v=afd7dcb4" data-ui-link data-zoom="v-0-1-0-alpha-4" data-zoom-cap="cap-v-0-1-0-alpha-4-5"><img src="../assets/novita/de/wa-workplane.webp?v=afd7dcb4" data-ui alt="Arbeitsebenen" data-i18n-attr="alt:nh.v0_1_0_alpha_4.5.t" width="341" height="338" loading="lazy"></a>
+            <figcaption id="cap-v-0-1-0-alpha-4-5"><b data-i18n="nh.v0_1_0_alpha_4.5.t">Arbeitsebenen</b><span data-i18n="nh.v0_1_0_alpha_4.5.p">Arbeitsebenen und Referenzebenen.</span></figcaption>
+          </figure>
+        </div>
+        <details class="all">
+          <summary><span data-i18n="nw.all">Alle Änderungen</span> <span class="n">29</span></summary>
+          <h4 data-i18n="nv.added">Neu</h4>
+          <ul>
+            <li data-i18n="nv.v0_1_0_alpha_4.added.1">Ein Startbildschirm, während das Programm lädt, mit den echten Ladeschritten, in der gespeicherten Sprache, sonst in der des Systems, sonst auf Englisch; er lässt sich in den Optionen abschalten.</li>
+            <li data-i18n="nv.v0_1_0_alpha_4.added.2">Gestapelte Wände: Unterwände in jeder Ansicht mit ihren eigenen Schichten gezeichnet, in «Typ-Unterwände» festgelegt, mit Tab einzeln gewählt und mit «In Einzelwände zerlegen» getrennt.</li>
+            <li data-i18n="nv.v0_1_0_alpha_4.added.3">Sonne und Schatten in Grundrissen, Schnitten und Ansichten wie in 3D-Ansichten, mit der Sonnenbahn, «Sonneneinstellungen» und der Sonnenstudie; eine Sonne für das Projekt oder eine für eine Ansicht.</li>
+            <li data-i18n="nv.v0_1_0_alpha_4.added.4">Temporäre Bemaßungen an jedem Element in jeder Ansicht, auch in 3D, mit Hilfslinien, die an jeder Referenz verankert und gemerkt werden, und den Einstellungen «Temporäre Bemaßungen».</li>
+            <li data-i18n="nv.v0_1_0_alpha_4.added.5">Touch-Modus für Touchscreens und Stifte, mit Zwei-Finger-Gesten und Layouts für Tablets und Telefone.</li>
+            <li data-i18n="nv.v0_1_0_alpha_4.added.6">Zeichnen in 3D-Ansichten: Wände, Geschossdecken, Dächer und Skizzen mit derselben Vorschau, denselben Hilfslinien und temporären Bemaßungen wie im Grundriss, und die Ändern-Werkzeuge an Skizzenlinien und Elementen.</li>
+            <li data-i18n="nv.v0_1_0_alpha_4.added.7">Arbeitsebenen und Referenzebenen.</li>
+            <li data-i18n="nv.v0_1_0_alpha_4.added.8">«Typschichten»: die Schichten eines Typs als Karten, mit Gesamtdicke, Wärmedurchlasswiderstand, flächenbezogener Masse und einer Live-Vorschau.</li>
+            <li data-i18n="nv.v0_1_0_alpha_4.added.9">Jede Registerkarte des Menübands vollständig: 75 noch ausstehende Befehle erscheinen ausgegraut als «Noch nicht verfügbar», darunter zehn neue Gruppen.</li>
+            <li data-i18n="nv.v0_1_0_alpha_4.added.10">Eine aus dem Zeichenbereich gezogene Ansicht öffnet sich in einem eigenen Fenster, auch auf einem anderen Monitor.</li>
+            <li data-i18n="nv.v0_1_0_alpha_4.added.11">Die Leiste der Ansichten und Komponenten mit Live-Miniaturen und andockbare Bereiche Eigenschaften und Projektindex mit einer Typenauswahl, die Vorschauen zeigt.</li>
+          </ul>
+          <h4 data-i18n="nv.changed">Geändert</h4>
+          <ul>
+            <li data-i18n="nv.v0_1_0_alpha_4.changed.1">Der Eigenschaftenbereich der Wand und «Typparameter» in Gruppen, mit abgeleiteten Werten schreibgeschützt und ausgegrauten Zeilen, solange ein anderer Wert sie nicht zulässt.</li>
+            <li data-i18n="nv.v0_1_0_alpha_4.changed.2">Jedes Dialogfeld mit einer Vorschau hat einen Schalter «Vorschau» in der Kopfzeile und behält eine Größe und Position.</li>
+            <li data-i18n="nv.v0_1_0_alpha_4.changed.3">Der klassische Stil wird in den Optionen neben dem BIMopen-Stil gewählt, ohne eigene Option zum Aktivieren.</li>
+            <li data-i18n="nv.v0_1_0_alpha_4.changed.4">Der klassische Stil erhält eine neue Titelleiste, ein Menüband, das scrollt, statt Schaltflächen abzuschneiden, eine einzige Optionsleiste und keine Statusleiste.</li>
+            <li data-i18n="nv.v0_1_0_alpha_4.changed.5">Das Hauptfenster füllt beim ersten Start den Bildschirm; später öffnet es sich so, wie es geschlossen wurde.</li>
+            <li data-i18n="nv.v0_1_0_alpha_4.changed.6">Der Orientierungswürfel hat abgeschrägte Facetten und Pfeile ringsum sowie mehr Kontrast auf hellen und dunklen Hintergründen.</li>
+            <li data-i18n="nv.v0_1_0_alpha_4.changed.7">Verdeckte Linien behalten in beiden Designs weiße Flächen und dunkle Linien; die schattierten Stile füllen Grundrisse und Schnitte mit den Farben der Materialien.</li>
+            <li data-i18n="nv.v0_1_0_alpha_4.changed.8">Farben und Muster kommen allein vom Material, in jeder Ansicht und jeder Vorschau.</li>
+            <li data-i18n="nv.v0_1_0_alpha_4.changed.9">Geländer von Treppen und Rampen folgen von Anfang an auf jeder Seite dem Umriss der Treppe; gekrümmte Treppen und Handläufe sind glatte Flächen.</li>
+            <li data-i18n="nv.v0_1_0_alpha_4.changed.10">Noch nicht verfügbare Funktionen sind in beiden Oberflächenstilen ausgegraut.</li>
+            <li data-i18n="nv.v0_1_0_alpha_4.changed.11">Das Benutzerhandbuch zeigt den BIMopen-Stil; sein Kapitel «Oberflächenstile» zeigt den klassischen Stil und den Touch-Modus auf einem Monitor, einem Tablet und einem Telefon.</li>
+          </ul>
+          <h4 data-i18n="nv.fixed">Behoben</h4>
+          <ul>
+            <li data-i18n="nv.v0_1_0_alpha_4.fixed.1">Die 3D-Ansicht zeichnet Wände, Geschossdecken, Dächer und Rahmen ohne haarfeine Risse.</li>
+            <li data-i18n="nv.v0_1_0_alpha_4.fixed.2">Tür- und Fensterrahmen überlappen sich an den Ecken nicht mehr: kein Flimmern in 3D, keine störenden Linien in Schnitten und Ansichten.</li>
+            <li data-i18n="nv.v0_1_0_alpha_4.fixed.3">Die Decke des ersten Obergeschosses im Beispielhaus endet am Kern der Wände, hinter der Dämmung.</li>
+            <li data-i18n="nv.v0_1_0_alpha_4.fixed.4">Keine Spitzen an den Kanten des Orientierungswürfels.</li>
+            <li data-i18n="nv.v0_1_0_alpha_4.fixed.5">Unter Wayland schließt sich das Hauptfenster nach dem Startbildschirm nicht mehr.</li>
+            <li data-i18n="nv.v0_1_0_alpha_4.fixed.6">Ein schwebend gemachter Bereich wird nicht mehr doppelt gezeichnet.</li>
+            <li data-i18n="nv.v0_1_0_alpha_4.fixed.7">Öffnungen bleiben an Ecken und beim Kopieren in ihrer Wand; ein Klick auf das Glas eines Fensters wählt das Fenster in Schnitten, Ansichten und 3D.</li>
+          </ul>
+        </details>
+      </article>
+      <div class="older">
+        <h2 data-i18n="nw.older">Frühere Versionen</h2>
+        <details class="rel compact" id="v-0-1-0-alpha-3">
+          <summary><span class="ver">0.1.0-alpha.3</span> <time datetime="2026-10-15">2026-10-15</time> <span class="cp" data-i18n="nc.v0_1_0_alpha_3">Der BIMopen-Stil beim ersten Start, genauere Skizzen und zwei Korrekturen.</span> <span class="n">5</span></summary>
+        <h4 data-i18n="nv.changed">Geändert</h4>
+        <ul>
+          <li data-i18n="nv.v0_1_0_alpha_3.changed.1">Der BIMopen-Oberflächenstil beim ersten Start; der klassische Stil bleibt, sobald er in den Optionen gewählt wurde.</li>
+          <li data-i18n="nv.v0_1_0_alpha_3.changed.2">In einer Skizze wird das Ende einer allein gewählten Linie allein gezogen; ist eine Kette gewählt (Tab), werden die Enden, an denen ihre Linien zusammentreffen, gemeinsam gezogen.</li>
+          <li data-i18n="nv.v0_1_0_alpha_3.changed.3">Die Fangeinstellungen öffnen sich in beiden Oberflächenstilen; Fangüberschreibungen sagen, wo sie verwendet werden können.</li>
+        </ul>
+        <h4 data-i18n="nv.fixed">Behoben</h4>
+        <ul>
+          <li data-i18n="nv.v0_1_0_alpha_3.fixed.1">Ein Abrundungsbogen behält die Art der Skizzenlinien, die er verbindet (eine Begrenzung bleibt eine Begrenzung, keine Steigung).</li>
+          <li data-i18n="nv.v0_1_0_alpha_3.fixed.2">Ein eingegebener Bemaßungswert verschiebt nur Wände, Raster, Türen, Fenster und Detaillinien.</li>
+        </ul>
+          <p><a class="dl" href="download.html" data-con-lingua="download.html" data-i18n="nw.dl">Herunterladen</a></p>
+        </details>
+        <details class="rel compact" id="v-0-1-0-alpha-2">
+          <summary><span class="ver">0.1.0-alpha.2</span> <time datetime="2026-10-15">2026-10-15</time> <span class="cp" data-i18n="nc.v0_1_0_alpha_2">Echte Bögen in Skizzen, dunkles Design beim ersten Start und drei Korrekturen.</span> <span class="n">6</span></summary>
+        <h4 data-i18n="nv.added">Neu</h4>
+        <ul>
+          <li data-i18n="nv.v0_1_0_alpha_2.added.1">In den Skizzen von Geschossdecken, Dächern, Bereichen, Wandprofilen und Treppen gezeichnete Bögen bleiben echte Bögen und rasten in Grundrissen, Schnitten und 3D gleich ein.</li>
+        </ul>
+        <h4 data-i18n="nv.changed">Geändert</h4>
+        <ul>
+          <li data-i18n="nv.v0_1_0_alpha_2.changed.1">Dunkles Design beim ersten Start; der umgekehrte Hintergrund der Ansichten wird gespeichert.</li>
+          <li data-i18n="nv.v0_1_0_alpha_2.changed.2">Das Fenster „Info“ weist darauf hin, dass es sich um eine Pre-Alpha-Testversion handelt.</li>
+        </ul>
+        <h4 data-i18n="nv.fixed">Behoben</h4>
+        <ul>
+          <li data-i18n="nv.v0_1_0_alpha_2.fixed.1">Das Löschen der obersten Ebene einer mehrgeschossigen Treppe behält die Treppe.</li>
+          <li data-i18n="nv.v0_1_0_alpha_2.fixed.2">Im BIMopen-Stil listet die Ansichtsleiste die Bauteillisten auf, auch die vordefinierten.</li>
+          <li data-i18n="nv.v0_1_0_alpha_2.fixed.3">Der Klick oder Esc, der das Menü des laufenden Werkzeugs schließt, setzt in keiner Ansicht mehr einen Punkt.</li>
+        </ul>
+          <p><a class="dl" href="download.html" data-con-lingua="download.html" data-i18n="nw.dl">Herunterladen</a></p>
+        </details>
+        <details class="rel compact" id="v-0-1-0-alpha-1">
+          <summary><span class="ver">0.1.0-alpha.1</span> <time datetime="2026-10-15">2026-10-15</time> <span class="cp" data-i18n="nc.v0_1_0_alpha_1">Die erste Testversion: Modell, Ansichten, Pläne als PDF, IFC.</span> <span class="n">10</span></summary>
+        <h4 data-i18n="nv.added">Neu</h4>
+        <ul>
+          <li data-i18n="nv.v0_1_0_alpha_1.added.1">Erste Testversionen für Windows 10/11 (64 Bit) und Linux (x86_64), neben der Web-App.</li>
+          <li data-i18n="nv.v0_1_0_alpha_1.added.2">Modellierung von Ebenen, Rastern, mehrschichtigen Wänden, Türen, Fenstern, Geschossdecken, Dächern, Treppen, Geländern, Vorhangfassaden und Räumen, mit Grundrissen, Schnitten, Ansichten, 3D-Ansichten, Bauteillisten, als PDF gedruckten Plänen und IFC4-Export.</li>
+          <li data-i18n="nv.v0_1_0_alpha_1.added.3">IFC-Import (IFC2x3 und IFC4): Jedes Bauteil mit einem Körper wird angezeigt, mit richtig ausgerichteten Flächen, auch bei offenen Hüllen oder Hüllen mit gemischter Flächenorientierung.</li>
+          <li data-i18n="nv.v0_1_0_alpha_1.added.4">Orientierungswürfel mit 26 anklickbaren Bereichen, einem Kompassring an der Basis, Pfeilen, wenn eine Fläche frontal gesehen wird, und einem Menü mit seinen Optionen.</li>
+          <li data-i18n="nv.v0_1_0_alpha_1.added.5">Rahmenansichten.</li>
+          <li data-i18n="nv.v0_1_0_alpha_1.added.6">Beschriftungsblock-Liste: eine Liste der Symbole einer Komponente.</li>
+          <li data-i18n="nv.v0_1_0_alpha_1.added.7">Tastenkürzel aus zwei Buchstaben, etwa <code>WA</code> für die Wand, wirken, sobald sie im Zeichenbereich getippt werden; gemeinsame Tastenkürzel lassen sich als XML exportieren und importieren.</li>
+          <li data-i18n="nv.v0_1_0_alpha_1.added.8">Die rechte Maustaste öffnet das Menü des laufenden Werkzeugs, mit Fang-Überschreibungen; diese lassen sich auch für den nächsten Punkt tippen (<code>SE</code>, <code>SM</code>, <code>SI</code>, <code>SN</code>, <code>SO</code>).</li>
+        </ul>
+        <h4 data-i18n="nv.changed">Geändert</h4>
+        <ul>
+          <li data-i18n="nv.v0_1_0_alpha_1.changed.1">Ein einziger Orbit für jede 3D-Navigation: Zeichenbereich, Orientierungswürfel und Mausrad drehen die Ansicht auf dieselbe Weise.</li>
+        </ul>
+        <h4 data-i18n="nv.fixed">Behoben</h4>
+        <ul>
+          <li data-i18n="nv.v0_1_0_alpha_1.fixed.1">Füllungen in Ansichten und Schnitten werden innerhalb ihrer Umrisse gezeichnet, ohne Spitzen oder Füllungen über den ganzen Umriss.</li>
+        </ul>
+          <p><a class="dl" href="download.html" data-con-lingua="download.html" data-i18n="nw.dl">Herunterladen</a></p>
+        </details>
+      </div>
+      <!-- /novita:versioni -->
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="row">
+      <span>© <span id="year">2026</span> BIMopen · <span data-i18n="foot.lic">Kostenlose Software</span> · <span data-i18n="foot.claude">Entwickelt mit</span> <a href="https://claude.com/claude-code" rel="noopener">Claude Code</a></span>
+      <span><a href="./#formati" data-con-lingua="./#formati" data-i18n="nav.formati">Formate</a> · <a href="philosophy.html" data-con-lingua="philosophy.html" data-i18n="nav.filosofia">Philosophie</a> · <a href="roadmap.html" data-con-lingua="roadmap.html" data-i18n="nav.roadmap">Roadmap</a> · <a href="download.html" data-con-lingua="download.html" data-i18n="nav.scarica">Download</a> · <a href="news.html" data-con-lingua="news.html" data-i18n="nav.novita">Neuigkeiten</a> · <a href="../manual/de/" data-manuale data-i18n="nav.manuale">Handbuch</a> · <a href="./#faq" data-con-lingua="./#faq" data-i18n="nav.faq">Fragen</a><!-- canale:piede --><!-- /canale:piede --> · <span data-i18n="foot.codice">Quellcode: bald auf <a href="https://github.com/bimopen" target="_blank" rel="noopener">GitHub</a></span></span>
+    </div>
+    <p class="made"><span class="tric" aria-hidden="true"><i></i><i></i><i></i></span><span data-i18n="foot.italia">In Italien entworfen</span></p>
+    <small class="privato" data-i18n="foot.privato">BIMopen ist ein persönliches, nicht kommerzielles Projekt einer Privatperson: kein Gewerbe, es verkauft keine Produkte oder Dienstleistungen und erhält keine Zahlungen, daher hat es keine Umsatzsteuer-Identifikationsnummer.</small>
+  </div>
+</footer>
+
+<button class="to-top" id="to-top" type="button" aria-label="Nach oben" data-i18n-attr="aria-label:ui.top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
+
+<dialog class="lightbox" id="lightbox" aria-label="Vergrößertes Bild" data-i18n-attr="aria-label:lb.label">
+  <button class="lb-close" type="button" aria-label="Schließen" title="Schließen" data-i18n-attr="aria-label:lb.close;title:lb.close">×</button>
+  <button class="lb-nav lb-prev" type="button" aria-label="Vorheriges Bild" data-i18n-attr="aria-label:lb.prev" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+  <button class="lb-nav lb-next" type="button" aria-label="Nächstes Bild" data-i18n-attr="aria-label:lb.next" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+  <img alt="">
+  <p class="lb-cap"></p>
+</dialog>
+<script>
+  // The screenshots follow the language chosen on the site (every language has the same files).
+  document.addEventListener('lingua', function (e) {
+    var l = e.detail;
+    document.querySelectorAll('img[data-ui], a[data-ui-link]').forEach(function (x) {
+      ['src', 'href'].forEach(function (a) {
+        var v = x.getAttribute(a); if (v) x.setAttribute(a, v.replace(/assets\/novita\/[a-z]{2}\//, 'assets/novita/' + l + '/'));
+      });
+    });
+  });
+  // dates in the language of the page (Latin digits in Arabic too, as in the rest of the site)
+  document.addEventListener('lingua', function (e) {
+    var loc = e.detail === 'ar' ? 'ar-u-nu-latn' : e.detail;
+    document.querySelectorAll('time[datetime]').forEach(function (t) {
+      try { t.textContent = new Date(t.getAttribute('datetime') + 'T12:00:00').toLocaleDateString(loc, { year: 'numeric', month: 'long', day: 'numeric' }); } catch (x) {}
+    });
+  });
+
+  // Every image opens enlarged over the page: ×, Esc or a click outside close it, and focus goes
+  // back to the image. Images of one group (data-zoom) have arrows, arrow keys and swipe.
+  (function () {
+    var d = document.getElementById('lightbox'); if (!d || !d.showModal) return;
+    var img = d.querySelector('img'), cap = d.querySelector('.lb-cap');
+    var prev = d.querySelector('.lb-prev'), next = d.querySelector('.lb-next');
+    var group = [], at = 0, opener = null;
+    function show(i) {
+      at = (i + group.length) % group.length;
+      var a = group[at], im = a.querySelector('img'), c = a.getAttribute('data-zoom-cap');
+      img.src = a.getAttribute('href'); img.alt = im ? im.alt : '';
+      cap.innerHTML = '';
+      if (group.length > 1) { var n = document.createElement('span'); n.className = 'lb-n'; n.textContent = (at + 1) + ' / ' + group.length; cap.appendChild(n); }
+      var t = document.createElement('span');
+      if (c) t.innerHTML = document.getElementById(c).innerHTML; else t.textContent = im ? im.alt : '';
+      cap.appendChild(t);
+      prev.hidden = next.hidden = group.length < 2;
+      try { document.dispatchEvent(new CustomEvent('zoom', { detail: { group: a.getAttribute('data-zoom'), index: at } })); } catch (e) {}
+    }
+    document.querySelectorAll('a[data-zoom]').forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        e.preventDefault();
+        opener = a;
+        group = [].slice.call(document.querySelectorAll('a[data-zoom="' + a.getAttribute('data-zoom') + '"]'));
+        d.showModal();
+        show(group.indexOf(a));
+      });
+    });
+    function step(k) { if (group.length > 1) show(at + k); }
+    prev.addEventListener('click', function () { step(-1); });
+    next.addEventListener('click', function () { step(1); });
+    d.addEventListener('keydown', function (e) {
+      var rtl = document.documentElement.dir === 'rtl';
+      if (e.key === 'ArrowRight') { e.preventDefault(); step(rtl ? -1 : 1); }
+      else if (e.key === 'ArrowLeft') { e.preventDefault(); step(rtl ? 1 : -1); }
+    });
+    var x0 = null;
+    d.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+    d.addEventListener('touchend', function (e) {
+      if (x0 === null) return;
+      var dx = e.changedTouches[0].clientX - x0, rtl = document.documentElement.dir === 'rtl'; x0 = null;
+      if (Math.abs(dx) > 40) step((dx < 0) !== rtl ? 1 : -1);
+    });
+    d.querySelector('.lb-close').addEventListener('click', function () { d.close(); });
+    d.addEventListener('click', function (e) { if (e.target === d) d.close(); });
+    d.addEventListener('close', function () {
+      img.removeAttribute('src');
+      // back to the image now shown (the carousel may have moved with the lightbox)
+      var back = group[at] && group[at].offsetParent ? group[at] : opener;
+      if (back) back.focus();
+    });
+  })();
+  // A version linked from download.html (news.html#v-…) opens its full list too.
+  (function () {
+    var t = location.hash && document.getElementById(location.hash.slice(1));
+    var all = t && t.querySelector('details'); if (all) all.open = true;
+  })();
+</script>
+<script src="../language.js?v=eeb05237"></script>
+<script src="../assets/menu.js?v=2b43f1ee"></script>
+<script src="../assets/effetti.js?v=3fe63441"></script>
+<script>
+  // tema: scuro finché non si sceglie; poi chiaro o scuro, ricordato in questo browser
+  (function () {
+    var root = document.documentElement;
+    document.getElementById('themeToggle').addEventListener('click', function () {
+      var dark = root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+      root.dataset.theme = dark ? 'light' : 'dark';
+      try { localStorage.setItem('theme', root.dataset.theme); } catch (e) {}
+      var tc = document.querySelector('meta[name="theme-color"]'); if (tc) tc.content = dark ? '#EEF2F5' : '#0D1319';
+    });
+  })();
+</script>
+</body>
+</html>

@@ -1,73 +1,67 @@
 {
-  "date": "2026-11-01",
+  "date": "2026-11-09",
   "files": {
     "android": {
-      "sha256": "8c6f301a3405b013f26539aa53260540e9eeed88d434f96a1b0b4240b4cb9228",
-      "size": 38823409,
-      "url": "https://github.com/atsanna/bimopen-site/releases/download/v0.1.0-alpha.7/bimopen-android.apk"
+      "sha256": "c029d58e110a1e68d8d081629a40072bc3e2813f6bd6f0d10851232ef2996596",
+      "size": 43337201,
+      "url": "https://github.com/atsanna/bimopen-site/releases/download/v0.1.0-alpha.8/bimopen-android.apk"
     },
     "linux-x86_64": {
-      "sha256": "e42fbb98ddb6bafb9b8c5eb4f6a5681f89dbc16d8ec6059a74520870ad246e40",
-      "size": 91210624,
-      "url": "https://github.com/atsanna/bimopen-site/releases/download/v0.1.0-alpha.7/bimopen-linux-x86_64"
+      "sha256": "d2758a86624cb4c69e7796b1dc55c670765937c92cc9c332401cc7b250952267",
+      "size": 47423384,
+      "url": "https://github.com/atsanna/bimopen-site/releases/download/v0.1.0-alpha.8/bimopen-linux-x86_64"
     },
     "windows-x86_64": {
-      "sha256": "17e03e274fd6b96f5ff3a0b812ac56b869de1287cf0b382b7de6b784994adef8",
-      "size": 87667712,
-      "url": "https://github.com/atsanna/bimopen-site/releases/download/v0.1.0-alpha.7/bimopen-windows-x86_64.exe"
+      "sha256": "e21f0b941fc5b973f0fea4c1daf7d1efb347b2231aa564b90e06c148ca6cb1f1",
+      "size": 42020352,
+      "url": "https://github.com/atsanna/bimopen-site/releases/download/v0.1.0-alpha.8/bimopen-windows-x86_64.exe"
     }
   },
   "highlights": {
     "ar": [
-      "مخطط الموقع والأرض",
-      "المراحل والهدم",
-      "الفتحات والمناور",
-      "الإنشاء",
-      "الجدران المنحنية",
-      "الجولات ووضع المشي"
+      "صندوق المقطع",
+      "جداول بيانية",
+      "جدران إهليلجية",
+      "المفاتيح",
+      "النص وخطوط الإشارة"
     ],
     "de": [
-      "Lageplan und Gelände",
-      "Phasen und Abbruch",
-      "Öffnungen und Schächte",
-      "Tragwerk",
-      "Gekrümmte Wände",
-      "Rundgänge und Gehmodus"
+      "Schnittbereich",
+      "Grafische Listen",
+      "Elliptische Wände",
+      "Legenden",
+      "Text und Führungslinien"
     ],
     "en": [
-      "Site and terrain",
-      "Phases and demolition",
-      "Openings and shafts",
-      "Structure",
-      "Curved walls",
-      "Walkthroughs and walk mode"
+      "Section box",
+      "Graphic schedules",
+      "Elliptical walls",
+      "Legends",
+      "Text and leaders"
     ],
     "es": [
-      "Emplazamiento y terreno",
-      "Fases y demoliciones",
-      "Huecos y patinillos",
-      "Estructura",
-      "Muros curvos",
-      "Itinerarios y paseo"
+      "Caja de sección",
+      "Tablas gráficas",
+      "Muros elípticos",
+      "Leyendas",
+      "Texto y directrices"
     ],
     "fr": [
-      "Plan de masse et terrain",
-      "Phases et démolition",
-      "Ouvertures et cages",
-      "Structure",
-      "Murs courbes",
-      "Visites et marche"
+      "Zone de coupe",
+      "Nomenclatures graphiques",
+      "Murs elliptiques",
+      "Légendes",
+      "Texte et lignes de repère"
     ],
     "it": [
-      "Planimetria e terreno",
-      "Fasi e demolizioni",
-      "Aperture e cavedi",
-      "Struttura",
-      "Muri curvi",
-      "Percorsi di visita e camminata"
+      "Riquadro di sezione",
+      "Abachi grafici",
+      "Muri ellittici",
+      "Legende",
+      "Testo e direttrici"
     ]
   },
-  "news": "https://atsanna.github.io/bimopen-site/news.html",
+  "news": "https://bimopen.it/news.html",
   "schema": 1,
-  "version": "0.1.0-alpha.7"
+  "version": "0.1.0-alpha.8"
 }

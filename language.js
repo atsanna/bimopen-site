@@ -18,7 +18,7 @@
   var D = window.BO_I18N = window.BO_I18N || {};
   var LINGUE = ['it', 'en', 'de', 'fr', 'es', 'ar'];
   // file di lingua: languages/<lingua>.js accanto a questo script, scaricato solo alla prima richiesta
-  var VER = {"en": "1aff2d40", "de": "d07fc8c5", "fr": "b3ced3bc", "es": "1eaeb2be", "ar": "9ff84798"};
+  var VER = {"en": "6f950db5", "de": "b3ce75a4", "fr": "7b39779b", "es": "071e6ff0", "ar": "97ef2475"};
   var BASE = (document.currentScript && document.currentScript.src) || location.href;
   function carica(lang, poi) {
     if (lang === 'it' || D[lang]) return poi();
@@ -37,22 +37,21 @@
     e.getAttribute('data-i18n-attr').split(';').forEach(function (p) { var a = p.split(':')[0]; m[a] = e.getAttribute(a); });
     origAttr.set(e, m);
   });
-  // SEO delle traduzioni (pagine indicizzabili con canonical): ogni lingua e' l'indirizzo ?lang=xx,
-  // canonical e og:url puntano alla lingua mostrata, e le alternative hreflang elencano tutte e sei
-  // (italiano = indirizzo senza ?lang, anche come x-default). Stesso schema della sitemap.
-  var canon = document.querySelector('link[rel="canonical"]');
-  var noindex = /noindex/i.test((document.querySelector('meta[name="robots"]') || {}).content || '');
-  var BASEURL = canon ? canon.href.split('?')[0].split('#')[0] : '';
-  function indirizzo(lang) { return BASEURL + (lang === 'it' ? '' : '?lang=' + lang); }
-  function seo(lang) {
-    if (!canon || noindex) return;
-    canon.setAttribute('href', indirizzo(lang));
-    var og = document.querySelector('meta[property="og:url"]'); if (og) og.setAttribute('content', indirizzo(lang));
-    if (!document.querySelector('link[rel="alternate"][hreflang]')) {
-      LINGUE.concat('x-default').forEach(function (l) {
-        var a = document.createElement('link'); a.rel = 'alternate'; a.hreflang = l;
-        a.href = indirizzo(l === 'x-default' ? 'it' : l); document.head.appendChild(a);
-      });
+  // Ogni lingua ha il suo indirizzo (i18n/statiche.py, nella build): italiano alla radice, le altre in
+  // /<lingua>/, ognuna col testo gia' nell'HTML, il canonical a se stessa e le alternative hreflang.
+  // data-lingua-pagina dice la lingua della pagina, data-pagina il suo nome; RADICE e' la cartella di
+  // questo script, la radice del sito.
+  var FISSA = root.getAttribute('data-lingua-pagina');
+  var RADICE = new URL('./', BASE).href;
+  function pagina(lang) {
+    return RADICE + (lang === 'it' ? '' : lang + '/') + (root.getAttribute('data-pagina') || '');
+  }
+  // i vecchi indirizzi ?lang=xx portano alla pagina della lingua
+  if (FISSA) {
+    var vecchia = new URLSearchParams(location.search).get('lang');
+    if (vecchia && vecchia !== FISSA && LINGUE.indexOf(vecchia) >= 0) {
+      location.replace(pagina(vecchia) + location.hash);
+      return;
     }
   }
   function voce(lang, k) { return lang !== 'it' && D[lang] && D[lang][k] != null ? D[lang][k] : null; }
@@ -72,27 +71,27 @@
       });
     });
     // i collegamenti fra le pagine del sito portano con se' la lingua scelta
-    [].forEach.call(document.querySelectorAll('a[data-con-lingua]'), function (a) {
+    if (!FISSA) [].forEach.call(document.querySelectorAll('a[data-con-lingua]'), function (a) {
       var h = a.getAttribute('data-con-lingua').split('#');
       a.setAttribute('href', h[0] + (lang === 'it' ? '' : '?lang=' + lang) + (h[1] ? '#' + h[1] : ''));
     });
     // Il manuale utente si apre nella lingua scelta: manual/<lingua>/ (le sei lingue del sito).
     [].forEach.call(document.querySelectorAll('a[data-manuale]'), function (a) {
-      a.setAttribute('href', 'manual/' + lang + '/');
+      a.setAttribute('href', RADICE + 'manual/' + lang + '/');
     });
     // L'applicazione si apre nella lingua scelta qui, anche in italiano.
     [].forEach.call(document.querySelectorAll('a[data-app]'), function (a) {
       // data-app carries the app's fingerprint (set by build.sh), so a new version is never cached.
       var v = a.getAttribute('data-app');
-      a.setAttribute('href', 'app/?lang=' + lang + (v ? '&v=' + v : ''));
+      a.setAttribute('href', RADICE + 'app/?lang=' + lang + (v ? '&v=' + v : ''));
     });
-    seo(lang);
     var y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
     var sel = document.getElementById('lang-select'); if (sel) sel.value = lang;
     // avvisa gli script della pagina (es. le didascalie della galleria) che la lingua e' cambiata
     try { document.dispatchEvent(new CustomEvent('lingua', { detail: lang })); } catch (e) {}
   }
   function iniziale() {
+    if (FISSA) return FISSA;
     var q = new URLSearchParams(location.search).get('lang');
     if (q && LINGUE.indexOf(q) >= 0) return q;
     // pagine con data-lingua-auto (il biglietto digitale): la lingua del dispositivo, se e' una delle sei.
@@ -112,6 +111,8 @@
   }
   var sel = document.getElementById('lang-select');
   if (sel) sel.addEventListener('change', function () {
+    // pagina con indirizzo per lingua: si apre quella della lingua scelta
+    if (FISSA) { location.href = pagina(sel.value) + location.hash; return; }
     applica(sel.value);
     try { var u = new URL(location.href); if (sel.value === 'it') u.searchParams.delete('lang'); else u.searchParams.set('lang', sel.value); history.replaceState(null, '', u); } catch (e) {}
   });

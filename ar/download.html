@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-lingua-pagina="ar" data-pagina="download.html" data-build="ddda3f09">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="dw.meta.title">تنزيل BIMopen — نسخة تجريبية لـ Windows وLinux وAndroid والمتصفح</title>
+<meta name="description" data-i18n-attr="content:dw.meta.desc" content="نزّل النسخة التجريبية (ألفا) من BIMopen لـ Windows 10/11 وLinux وAndroid، أو افتحه في المتصفح دون تثبيت أي شيء. نسخة جزئية وغير نهائية، لتجربة البرنامج فقط.">
+<link rel="canonical" href="https://bimopen.it/ar/download.html">
+<link rel="alternate" hreflang="it" href="https://bimopen.it/download.html">
+<link rel="alternate" hreflang="en" href="https://bimopen.it/en/download.html">
+<link rel="alternate" hreflang="de" href="https://bimopen.it/de/download.html">
+<link rel="alternate" hreflang="fr" href="https://bimopen.it/fr/download.html">
+<link rel="alternate" hreflang="es" href="https://bimopen.it/es/download.html">
+<link rel="alternate" hreflang="ar" href="https://bimopen.it/ar/download.html">
+<link rel="alternate" hreflang="x-default" href="https://bimopen.it/download.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BIMopen">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:title" content="Scarica BIMopen — Versione di prova per Windows, Linux, Android e browser">
+<meta property="og:description" content="Scarica la versione di prova (alpha) di BIMopen per Windows 10/11, Linux e Android, o aprilo nel browser senza installare niente. Versione parziale e non definitiva, solo per provare il programma.">
+<meta property="og:url" content="https://bimopen.it/ar/download.html">
+<meta property="og:image" content="https://bimopen.it/assets/og-bimopen.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../favicon.ico?v=0fba0888" sizes="any">
+<link rel="icon" href="../assets/favicon.svg?v=74b5de74" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png?v=6406f785">
+<meta name="theme-color" content="#0D1319">
+<script>
+  // tema scelto in precedenza, applicato prima del disegno della pagina (nessun lampo di colore)
+  var t = null; try { t = localStorage.getItem('theme'); } catch (e) {} document.documentElement.dataset.theme = t || 'dark'; var tc = document.querySelector('meta[name="theme-color"]'); if (tc && t === 'light') tc.content = '#EEF2F5';
+</script>
+<style>
+  :root {
+    --paper: #EEF2F5; --card: #FFFFFF; --field: #F8FAFB; --line: #E2E7EC;
+    --ink: #172133; --ink-soft: #3D4A5C; --muted: #5E6A78;
+    --accent: #08AABA; --accent-text: #06788A; --accent-hover: #2DB7C4; --on-accent: #093440;
+    --accent-soft: #8CECF2; --accent-soft-ink: #093440; --logo: #08AABA;
+    --second: #E6961E; --on-second: #172133; --ok: #1B8A55; --on-ok: #FFFFFF;
+    --warn-bg: #FCF1DD; --warn-line: #E6961E; --warn-ink: #172133; --warn-icon: #A86200;
+    --render-bg: #EEF2F5; --code-bg: #1C262E; --code-ink: #E8EEF2; --code-c: #8A98A6; --code-k: #14BECC; --code-p: #E6961E;
+    --shadow: 0 2px 14px rgba(0,0,0,.086);
+    --radius: 12px; --radius-btn: 8px;
+    --font: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", "Helvetica Neue", Arial, sans-serif;
+    --mono: ui-monospace, "SFMono-Regular", "Cascadia Mono", "Ubuntu Mono", Menlo, Consolas, monospace;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #0D1319; --card: #182129; --field: #1F2A33; --line: #28343E;
+      --ink: #E4EBF1; --ink-soft: #B7C3CE; --muted: #8A98A6;
+      --accent: #14BECC; --accent-text: #14BECC; --accent-hover: #3FD0DB; --on-accent: #0D1319;
+      --accent-soft: #0E525E; --accent-soft-ink: #A0F0F6; --logo: #14BECC;
+      --on-second: #0D1319; --ok: #22B46E; --on-ok: #0D1319;
+      --warn-bg: #2A2A20; --warn-ink: #E4EBF1; --warn-icon: #E6961E;
+      --code-bg: #141C23; --shadow: 0 2px 14px rgba(0,0,0,.35); color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #0D1319; --card: #182129; --field: #1F2A33; --line: #28343E;
+    --ink: #E4EBF1; --ink-soft: #B7C3CE; --muted: #8A98A6;
+    --accent: #14BECC; --accent-text: #14BECC; --accent-hover: #3FD0DB; --on-accent: #0D1319;
+    --accent-soft: #0E525E; --accent-soft-ink: #A0F0F6; --logo: #14BECC;
+    --on-second: #0D1319; --ok: #22B46E; --on-ok: #0D1319;
+    --warn-bg: #2A2A20; --warn-ink: #E4EBF1; --warn-icon: #E6961E;
+    --code-bg: #141C23; --shadow: 0 2px 14px rgba(0,0,0,.35); color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font: 17px/1.6 var(--font); -webkit-font-smoothing: antialiased; }
+  img { max-width: 100%; display: block; }
+  a { color: var(--accent-text); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  .wrap { width: min(1160px, 100% - 32px); margin-inline: auto; }
+  .skip { position: absolute; inset-inline-start: -999px; }
+  .skip:focus { inset-inline-start: 16px; top: 16px; background: var(--card); padding: 8px 12px; z-index: 10; }
+
+  header.top { position: sticky; top: 0; z-index: 5; background: color-mix(in srgb, var(--paper) 88%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+  .bar { display: flex; align-items: center; gap: 20px; height: 64px; }
+  .brand { display: flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font-weight: 700; font-size: 20px; letter-spacing: -.01em; direction: ltr; }
+  .brand b { color: var(--logo); font-weight: 400; }
+  .bar-right { display: flex; align-items: center; gap: 10px; margin-inline-start: auto; }
+  .lang-pick { display: flex; align-items: center; gap: 6px; color: var(--muted); font-size: 14px; }
+  .lang-pick svg { width: 16px; height: 16px; flex: none; }
+  .lang-pick select { font: inherit; color: var(--ink); background: var(--card); border: 1px solid var(--line); border-radius: var(--radius-btn); padding: 6px 8px; cursor: pointer; }
+  .theme-toggle { width: 36px; height: 36px; border-radius: var(--radius-btn); border: 1px solid var(--line); background: var(--card); color: var(--ink); cursor: pointer; display: grid; place-items: center; }
+  .theme-toggle svg { width: 18px; height: 18px; }
+  .theme-toggle .moon { display: none; }
+  :root[data-theme="dark"] .theme-toggle .sun { display: none; }
+  :root[data-theme="dark"] .theme-toggle .moon { display: block; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .theme-toggle .sun { display: none; }
+    :root:not([data-theme="light"]) .theme-toggle .moon { display: block; }
+  }
+  .btn { display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; padding: 11px 18px; border-radius: var(--radius-btn); font-weight: 600; font-size: 15px; text-decoration: none; border: 1px solid transparent; transition: transform .12s, background-color .12s; }
+  .btn:hover { transform: translateY(-1px); }
+  .btn-primary { background: var(--accent); color: var(--on-accent); }
+  .btn-primary:hover { background: var(--accent-hover); }
+  .btn-ghost { border-color: var(--line); color: var(--ink); background: var(--card); }
+
+  .eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--accent-text); }
+  .eyebrow::before { content: ""; width: 18px; height: 2px; background: currentColor; }
+  h1 { font-size: clamp(36px, 5.2vw, 60px); line-height: 1.06; letter-spacing: -.025em; margin: 14px 0 18px; }
+  h1 em { font-style: normal; color: var(--accent-text); }
+  .lead { font-size: 19px; color: var(--ink-soft); margin: 0 0 28px; }
+  .cta { display: flex; flex-wrap: wrap; gap: 12px; }
+
+  section { padding: 72px 0; }
+  section.alt { background: var(--card); border-block: 1px solid var(--line); }
+  h2 { font-size: clamp(28px, 3.4vw, 40px); line-height: 1.12; letter-spacing: -.02em; margin: 10px 0 14px; }
+  .sub { color: var(--ink-soft); margin: 0 0 36px; font-size: 18px; }
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .grid3 > *, .grid2 > *, .road > *, .split > * { min-width: 0; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; }
+  section.alt .card { background: var(--paper); }
+  .card h3 { margin: 12px 0 6px; font-size: 19px; letter-spacing: -.01em; }
+  .card p { margin: 0; color: var(--ink-soft); font-size: 15.5px; }
+  .ico { width: 40px; height: 40px; border-radius: 10px; background: var(--accent-soft); display: grid; place-items: center; color: var(--accent-soft-ink); }
+  .ico svg { width: 22px; height: 22px; }
+
+
+  code { font-family: var(--mono); font-size: .9em; background: var(--field); border: 1px solid var(--line); padding: 0 5px; border-radius: 5px; direction: ltr; unicode-bidi: isolate; }
+
+
+
+  /* the video channel: written by i18n/video.py only when "canale" is true in i18n/video.json */
+  .ext { width: 13px; height: 13px; flex: none; opacity: .75; }
+  .theme-toggle.chan { text-decoration: none; }
+  .bar:has(.chan) { gap: 14px; }
+  .theme-toggle.chan svg { width: 19px; height: 19px; }
+  .theme-toggle.chan:hover { color: var(--accent-text); border-color: var(--accent); }
+  footer .chan-f { display: inline-flex; align-items: center; gap: 5px; vertical-align: bottom; }
+  footer .chan-f svg { width: 17px; height: 17px; }
+  .watch { display: inline-flex; align-items: center; gap: 10px; margin: 18px 0 4px; padding: 10px 14px 10px 10px; border-radius: 999px; background: var(--card); border: 1px solid var(--line); color: var(--ink); text-decoration: none; font-size: 15px; }
+  .watch:hover { border-color: var(--accent); }
+  .watch .pi { width: 30px; height: 30px; border-radius: 50%; background: var(--accent); color: var(--on-accent); display: grid; place-items: center; flex: none; }
+  .watch .pi svg { width: 13px; height: 13px; margin-inline-start: 2px; }
+  .watch b { color: var(--accent-text); }
+  .nw { white-space: nowrap; }
+  @media (max-width: 560px) { .watch { border-radius: 14px; align-items: flex-start; } }
+  footer { border-top: 1px solid var(--line); padding: 36px 0 48px; color: var(--muted); font-size: 14px; }
+  footer .row { display: flex; flex-wrap: wrap; gap: 12px 28px; justify-content: space-between; align-items: center; }
+  footer small { display: block; margin-top: 20px; line-height: 1.5; }
+  footer small.privato + small { margin-top: 8px; }
+
+  .to-top { position: fixed; bottom: 24px; inset-inline-end: 24px; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line); background: var(--card); color: var(--ink); display: grid; place-items: center; cursor: pointer; box-shadow: var(--shadow); opacity: 0; visibility: hidden; transform: translateY(8px); transition: opacity .2s, transform .2s, visibility .2s; z-index: 6; }
+  .to-top svg { width: 20px; height: 20px; }
+  .to-top:hover { border-color: var(--accent); }
+  .to-top.on { opacity: 1; visibility: visible; transform: none; }
+
+  :root[lang="ar"] * { letter-spacing: 0 !important; }
+  :root[lang="ar"] .eyebrow { text-transform: none; }
+
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn, .to-top { transition: none; } }
+  @media print { .to-top, .lang-pick, .theme-toggle { display: none !important; } }
+
+  .grid3 > * { min-width: 0; }
+  @media (max-width: 920px) { .grid3 { grid-template-columns: 1fr; } }
+  @media (max-width: 560px) {
+    body { font-size: 16px; }
+    .bar { gap: 10px; }
+    .bar .btn { display: none; }
+    .lang-pick svg { display: none; }
+    section { padding: 52px 0; }
+    .to-top { bottom: 16px; inset-inline-end: 16px; }
+  }
+
+  .dw-hero { position: relative; overflow: hidden; padding: 64px 0 8px; }
+  .dw-hero::before { content: ""; position: absolute; inset: 0; background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px); background-size: 32px 32px; mask-image: radial-gradient(ellipse at 80% 20%, #000 0%, transparent 65%); opacity: .7; pointer-events: none; }
+  .dw-hero .wrap { position: relative; }
+  .latest { color: var(--muted); font-size: 16px; margin: 0; }
+  .latest-news { margin: 6px 0 0; font-size: 16px; }
+  .latest-news a { color: var(--accent-text); font-weight: 600; text-decoration: none; white-space: nowrap; }
+  .latest-news a:hover { text-decoration: underline; }
+  .arrow { display: inline-block; }
+  [dir="rtl"] .arrow { transform: scaleX(-1); }
+  .latest b { color: var(--ink); font-family: var(--mono); font-weight: 700; direction: ltr; unicode-bidi: isolate; }
+  .latest time { direction: ltr; unicode-bidi: isolate; }
+  :root[lang="ar"] .latest time { direction: rtl; }
+  .warn { margin: 32px 0 0; background: var(--warn-bg); color: var(--warn-ink); border: 2px solid var(--warn-line); border-inline-start-width: 8px; border-radius: var(--radius); padding: 22px 26px; }
+  .warn h2 { display: flex; align-items: center; gap: 12px; font-size: clamp(21px, 2.4vw, 26px); margin: 0 0 10px; color: var(--warn-ink); }
+  .warn h2 svg { width: 28px; height: 28px; flex: none; color: var(--warn-icon); }
+  .warn p { margin: 8px 0 0; font-size: 15.5px; }
+  .warn strong { font-weight: 700; }
+  .accept { display: flex; align-items: center; gap: 12px; margin: 18px 0 0; padding: 14px 16px; border-radius: 10px; background: var(--card); color: var(--ink); border: 1px solid var(--warn-line); font-weight: 600; cursor: pointer; width: fit-content; max-width: 100%; }
+  .accept input { width: 22px; height: 22px; flex: none; accent-color: var(--accent); cursor: pointer; margin: 0; }
+  .gate-hint { margin: 10px 0 0; color: var(--muted); font-size: 14px; }
+  .dw { padding-top: 40px; }
+  .oses { grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 920px) { .oses { grid-template-columns: 1fr; } }
+  .os { position: relative; display: flex; flex-direction: column; gap: 6px; }
+  .os .ico { margin-bottom: 4px; }
+  .os h3 { margin: 4px 0 0; }
+  .os p { flex: 1; }
+  .os .meta { font: 600 13px/1.4 var(--mono); color: var(--muted); direction: ltr; unicode-bidi: isolate; text-align: start; }
+  .os .go { margin-top: 14px; }
+  .os .go .btn { width: 100%; justify-content: center; }
+  .os.mine { border: 2px solid var(--ok); box-shadow: var(--shadow); }
+  .mine-tag { position: absolute; top: -12px; inset-inline-end: 18px; background: var(--ok); color: var(--on-ok); font-size: 12.5px; font-weight: 700; padding: 4px 10px; border-radius: 999px; }
+  .btn[aria-disabled="true"] { opacity: .4; cursor: not-allowed; transform: none; filter: grayscale(.6); }
+  .small { margin: 22px 0 0; color: var(--muted); font-size: 14px; line-height: 1.7; }
+  .small > span { display: inline; }
+  .small > span + span::before { content: " · "; }
+</style>
+<link rel="stylesheet" href="../assets/menu.css?v=439b367a">
+<link rel="stylesheet" href="../assets/effetti.css?v=6a95309b">
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="ui.skip">انتقل إلى المحتوى</a>
+
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="./" data-con-lingua="./" aria-label="BIMopen">
+      <svg width="24" height="32" viewBox="5 0 100 140" aria-hidden="true"><g fill="none" stroke="var(--logo)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M15 58 54 35 93 58V105L54 128 15 105Z"/><path d="M15 58 54 81 93 58M54 81V128"/><path d="M54 35V10H82"/></g></svg>
+      <span>BIM<b>open</b></span>
+    </a>
+    <nav class="links" aria-label="الأقسام" data-i18n-attr="aria-label:ui.sezioni">
+      <div class="dd">
+        <button type="button" class="dd-btn" aria-expanded="false" aria-controls="dd-fun"><span data-i18n="nav.programma">البرنامج</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="dd-menu" id="dd-fun">
+          <!-- canale:menu --><!-- /canale:menu -->
+          <a href="./#viste" data-con-lingua="./#viste" data-i18n="nav.viste">العروض</a>
+          <a href="./#funzioni" data-con-lingua="./#funzioni" data-i18n="nav.funzioni">الميزات</a>
+          <a href="./#formati" data-con-lingua="./#formati" data-i18n="nav.formati">الصيغ</a>
+          <a href="./#agenti" data-con-lingua="./#agenti" data-i18n="nav.agenti">الأتمتة</a>
+        </div>
+      </div>
+      <a href="roadmap.html" data-con-lingua="roadmap.html" data-i18n="nav.roadmap">خارطة الطريق</a>
+      <a href="philosophy.html" data-con-lingua="philosophy.html" data-i18n="nav.filosofia">الفلسفة</a>
+      <a href="../manual/ar/" data-manuale data-i18n="nav.manuale">الدليل</a>
+      <a href="download.html" data-con-lingua="download.html" data-i18n="nav.scarica" aria-current="page">تنزيل</a>
+      <a href="news.html" data-con-lingua="news.html" data-i18n="nav.novita">الجديد</a>
+    </nav>
+    <div class="bar-right">
+      <label class="lang-pick">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg>
+        <select id="lang-select" aria-label="Lingua · Language · Sprache · Langue · Idioma · اللغة">
+          <option value="it" lang="it">Italiano</option>
+          <option value="en" lang="en">English</option>
+          <option value="de" lang="de">Deutsch</option>
+          <option value="fr" lang="fr">Français</option>
+          <option value="es" lang="es">Español</option>
+          <option value="ar" lang="ar" dir="rtl">العربية</option>
+        </select>
+      </label>
+      <!-- canale:icona --><!-- /canale:icona -->
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="تغيير المظهر" data-i18n-attr="aria-label:ui.tema">
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+      <a class="btn btn-primary cta-top" href="../app/?lang=ar&amp;v=e0bd31ab" data-app="e0bd31ab"><span class="cta-long" data-i18n="cta.prova">جرّبه في المتصفح</span><span class="cta-short" data-i18n="dl1.btn">افتح BIMopen</span></a>
+      <button type="button" class="theme-toggle menu-btn" id="menuBtn" aria-expanded="false" aria-controls="drawer" aria-label="القائمة" data-i18n-attr="aria-label:ui.menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+</header>
+<div class="drawer-veil" id="drawerVeil" hidden></div>
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="القائمة" data-i18n-attr="aria-label:ui.menu">
+  <div class="drawer-head">
+    <a class="brand" href="./" data-con-lingua="./" aria-label="BIMopen"><svg width="20" height="27" viewBox="5 0 100 140" aria-hidden="true"><g fill="none" stroke="var(--logo)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M15 58 54 35 93 58V105L54 128 15 105Z"/><path d="M15 58 54 81 93 58M54 81V128"/><path d="M54 35V10H82"/></g></svg><span>BIM<b>open</b></span></a>
+    <button type="button" class="theme-toggle" id="drawerClose" aria-label="إغلاق" data-i18n-attr="aria-label:lb.close">×</button>
+  </div>
+  <nav class="drawer-nav" aria-label="الأقسام" data-i18n-attr="aria-label:ui.sezioni">
+    <div class="drawer-sub">
+      <!-- canale:menu --><!-- /canale:menu -->
+      <a href="./#viste" data-con-lingua="./#viste" data-i18n="nav.viste">العروض</a>
+      <a href="./#funzioni" data-con-lingua="./#funzioni" data-i18n="nav.funzioni">الميزات</a>
+      <a href="./#formati" data-con-lingua="./#formati" data-i18n="nav.formati">الصيغ</a>
+      <a href="./#agenti" data-con-lingua="./#agenti" data-i18n="nav.agenti">الأتمتة</a>
+    </div>
+    <a href="roadmap.html" data-con-lingua="roadmap.html" data-i18n="nav.roadmap">خارطة الطريق</a>
+    <a href="philosophy.html" data-con-lingua="philosophy.html" data-i18n="nav.filosofia">الفلسفة</a>
+    <a href="../manual/ar/" data-manuale data-i18n="nav.manuale">الدليل</a>
+    <a href="download.html" data-con-lingua="download.html" data-i18n="nav.scarica" aria-current="page">تنزيل</a>
+    <a href="news.html" data-con-lingua="news.html" data-i18n="nav.novita">الجديد</a>
+    <a href="./#faq" data-con-lingua="./#faq" data-i18n="nav.faq">الأسئلة</a>
+  </nav>
+  <a class="btn btn-primary drawer-cta" href="../app/?lang=ar&amp;v=e0bd31ab" data-app="e0bd31ab"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11L13 8z" fill="currentColor"/></svg><span data-i18n="cta.prova">جرّبه في المتصفح</span></a>
+</div>
+
+<main id="main">
+  <section class="dw-hero" aria-labelledby="titolo">
+    <div class="wrap">
+      <span class="eyebrow" data-i18n="dw.kicker">نسخة ألفا</span>
+      <h1 id="titolo" data-i18n="dw.h1">تنزيل BIMopen</h1>
+      <p class="latest"><span data-i18n="dw.latest">أحدث إصدار:</span> <b data-ver>0.1.0-alpha.8</b> · <time data-ver-date datetime="2026-11-09">2026-11-09</time></p>
+      <p class="latest-news"><a href="news.html#v-0-1-0-alpha-8" data-con-lingua="news.html#v-0-1-0-alpha-8" data-ver-link><span data-i18n="dw.nw.link">الجديد في هذا الإصدار</span> <span aria-hidden="true" class="arrow">→</span></a></p>
+      <!-- canale:guarda --><!-- /canale:guarda -->
+
+      <div class="warn" role="note" aria-labelledby="avviso-t">
+        <h2 id="avviso-t">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg>
+          <span data-i18n="dw.warn.h2">نسخة تجريبية جزئية وغير نهائية</span>
+        </h2>
+        <p data-i18n="dw.warn.p1">نسخ ألفا غير مكتملة ومخصصة لتجربة البرنامج فقط. قد تحتوي على أخطاء، وقد تتغير دون إشعار، وقد تعطي نتائج خاطئة: <strong>لا تستخدمها في مشاريع حقيقية ولا في مستندات ذات قيمة مهنية أو قانونية.</strong></p>
+        <p data-i18n="dw.warn.p2">يُقدَّم البرنامج «كما هو» دون أي ضمانات من أي نوع. تستخدمه على مسؤوليتك ومخاطرتك الكاملة: لا يتحمل المؤلف أي مسؤولية عن الأضرار أو فقدان البيانات أو أي عواقب لاستخدامه.</p>
+        <p data-i18n="dw.warn.p3"><strong>احتفظ دائمًا بنسخة من ملفاتك.</strong></p>
+        <label class="accept"><input type="checkbox" id="accetto"> <span data-i18n="dw.accept">قرأت هذه الشروط وأوافق عليها</span></label>
+        <p class="gate-hint" id="gate-hint" hidden data-i18n="dw.gate">حدّد المربع لتفعيل أزرار التنزيل.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="dw" aria-labelledby="sistemi-t">
+    <div class="wrap">
+      <h2 id="sistemi-t" class="skip" data-i18n="dw.os.h2">اختر نظامك</h2>
+      <div class="grid3 oses">
+        <article class="card os" data-os="win">
+          <span class="mine-tag" hidden data-i18n="dw.mine">نظامك</span>
+          <span class="ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.5 10.5 4.4v7.1H3zM11.5 4.3 21 3v8.5h-9.5zM3 12.5h7.5v7.1L3 18.5zM11.5 12.5H21V21l-9.5-1.3z"/></svg></span>
+          <h3>Windows 10/11</h3>
+          <span class="meta">.exe · 64 bit</span>
+          <p data-i18n="dw.win.p">ملف تنفيذي واحد: نزّله وافتحه بنقرة مزدوجة.</p>
+          <p class="go"><a class="btn btn-primary" href="https://github.com/atsanna/bimopen-site/releases/download/v0.1.0-alpha.8/bimopen-windows-x86_64.exe" data-gate data-i18n="dw.win.btn">تنزيل لـ Windows</a></p>
+        </article>
+        <article class="card os" data-os="linux">
+          <span class="mine-tag" hidden data-i18n="dw.mine">نظامك</span>
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 9 3 3-3 3M12 15h5"/></svg></span>
+          <h3>Linux</h3>
+          <span class="meta">x86_64</span>
+          <p data-i18n="dw.lin.p">ملف تنفيذي واحد لأنظمة Linux بمعمارية 64 بت: اجعله قابلًا للتنفيذ ثم شغّله.</p>
+          <p class="go"><a class="btn btn-primary" href="https://github.com/atsanna/bimopen-site/releases/download/v0.1.0-alpha.8/bimopen-linux-x86_64" data-gate data-i18n="dw.lin.btn">تنزيل لـ Linux</a></p>
+        </article>
+        <article class="card os" data-os="android">
+          <span class="mine-tag" hidden data-i18n="dw.mine">نظامك</span>
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg></span>
+          <h3>Android</h3>
+          <span class="meta">.apk · arm64 · Android 9+</span>
+          <p data-i18n="dw.and.p">التطبيق للأجهزة اللوحية والهواتف مع وضع اللمس: نزّل ملف APK على الجهاز وافتحه لتثبيت التطبيق.</p>
+          <p class="go"><a class="btn btn-primary" href="https://github.com/atsanna/bimopen-site/releases/download/v0.1.0-alpha.8/bimopen-android.apk" data-gate data-i18n="dw.and.btn">تنزيل لـ Android</a></p>
+        </article>
+        <article class="card os" data-os="web">
+          <span class="mine-tag" hidden data-i18n="dw.mine">نظامك</span>
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg></span>
+          <h3 data-i18n="dl1.h3">في المتصفح</h3>
+          <span class="meta">WebGPU · WebGL2</span>
+          <p data-i18n="dw.web.p">يُفتح فورًا دون تثبيت أي شيء: تحتاج إلى متصفح حديث. تبقى ملفاتك على حاسوبك.</p>
+          <p class="go"><a class="btn btn-ghost" href="../app/?lang=ar&amp;v=e0bd31ab" data-app="e0bd31ab" data-i18n="dl1.btn">افتح BIMopen</a></p>
+        </article>
+      </div>
+      <p class="small">
+        <span><a href="https://github.com/atsanna/bimopen-site/releases/download/v0.1.0-alpha.8/SHA256SUMS.txt">SHA256SUMS.txt</a></span>
+        <span><a href="https://github.com/atsanna/bimopen-site/releases/download/v0.1.0-alpha.8/NOTICE" data-i18n="dw.notice">تراخيص الأطراف الثالثة (NOTICE)</a></span>
+        <span data-i18n="dw.hint.lin">Linux: قبل تشغيله، <code>chmod +x bimopen-linux-x86_64</code></span>
+        <span data-i18n="dw.hint.win">Windows: ملف ‎.exe غير موقّع، لذا قد يوقفه SmartScreen؛ اختر «مزيد من المعلومات» ◄ «تشغيل على أي حال»</span>
+        <span data-i18n="dw.hint.and">Android: ملف APK غير موقّع للمتجر؛ لتثبيته اسمح بالتثبيت من مصادر غير معروفة (تطبيقات غير معروفة) للمتصفح أو مدير الملفات الذي يفتحه</span>
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="row">
+      <span>© <span id="year">2026</span> BIMopen · <span data-i18n="foot.lic">برنامج مجاني</span> · <span data-i18n="foot.claude">طُوِّر باستخدام</span> <a href="https://claude.com/claude-code" rel="noopener">Claude Code</a></span>
+      <span><a href="./#formati" data-con-lingua="./#formati" data-i18n="nav.formati">الصيغ</a> · <a href="philosophy.html" data-con-lingua="philosophy.html" data-i18n="nav.filosofia">الفلسفة</a> · <a href="roadmap.html" data-con-lingua="roadmap.html" data-i18n="nav.roadmap">خارطة الطريق</a> · <a href="download.html" data-con-lingua="download.html" data-i18n="nav.scarica">تنزيل</a> · <a href="news.html" data-con-lingua="news.html" data-i18n="nav.novita">الجديد</a> · <a href="../manual/ar/" data-manuale data-i18n="nav.manuale">الدليل</a> · <a href="./#faq" data-con-lingua="./#faq" data-i18n="nav.faq">الأسئلة</a><!-- canale:piede --><!-- /canale:piede --> · <span data-i18n="foot.codice">الشيفرة المصدرية: قريبًا على <a href="https://github.com/bimopen" target="_blank" rel="noopener">GitHub</a></span></span>
+    </div>
+    <p class="made"><span class="tric" aria-hidden="true"><i></i><i></i><i></i></span><span data-i18n="foot.italia">صُمّم في إيطاليا</span></p>
+    <small class="privato" data-i18n="foot.privato">BIMopen مشروع شخصي غير تجاري لفرد بصفته الخاصة: ليس نشاطًا تجاريًا، ولا يبيع منتجات أو خدمات، ولا يتلقى أي مدفوعات، ولذلك ليس له رقم ضريبة القيمة المضافة.</small>
+  </div>
+</footer>
+
+<button class="to-top" id="to-top" type="button" aria-label="العودة إلى الأعلى" data-i18n-attr="aria-label:ui.top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
+<script>
+  // Downloads: the buttons wait for the conditions to be accepted (remembered in this browser).
+  // Without JavaScript the links simply work. The card of the visitor's system is highlighted.
+  (function () {
+    var box = document.getElementById('accetto'), hint = document.getElementById('gate-hint');
+    var links = [].slice.call(document.querySelectorAll('a[data-gate]'));
+    try { box.checked = localStorage.getItem('bimopen-download-ok') === '1'; } catch (e) {}
+    function stato() {
+      var ok = box.checked;
+      links.forEach(function (a) {
+        if (ok) { a.removeAttribute('aria-disabled'); a.removeAttribute('tabindex'); }
+        else { a.setAttribute('aria-disabled', 'true'); a.setAttribute('tabindex', '-1'); }
+      });
+      hint.hidden = ok;
+    }
+    box.addEventListener('change', function () {
+      try { if (box.checked) localStorage.setItem('bimopen-download-ok', '1'); else localStorage.removeItem('bimopen-download-ok'); } catch (e) {}
+      stato();
+    });
+    links.forEach(function (a) {
+      a.addEventListener('click', function (e) { if (!box.checked) { e.preventDefault(); box.focus(); } });
+    });
+    stato();
+    var ua = navigator.userAgent || '';
+    var os = /Windows/i.test(ua) ? 'win' : /Android/i.test(ua) ? 'android' : /CrOS/i.test(ua) ? 'web' : /Linux/i.test(ua) ? 'linux' : 'web';
+    var card = document.querySelector('.os[data-os="' + os + '"]');
+    if (card) { card.classList.add('mine'); card.querySelector('.mine-tag').hidden = false; }
+  })();
+  // dates in the language of the page (Latin digits in Arabic too, as in the rest of the site)
+  document.addEventListener('lingua', function (e) {
+    var loc = e.detail === 'ar' ? 'ar-u-nu-latn' : e.detail;
+    document.querySelectorAll('time[datetime]').forEach(function (t) {
+      try { t.textContent = new Date(t.getAttribute('datetime') + 'T12:00:00').toLocaleDateString(loc, { year: 'numeric', month: 'long', day: 'numeric' }); } catch (x) {}
+    });
+  });
+</script>
+<script src="../language.js?v=eeb05237"></script>
+<script src="../assets/menu.js?v=2b43f1ee"></script>
+<script src="../assets/effetti.js?v=3fe63441"></script>
+<script>
+  // tema: scuro finché non si sceglie; poi chiaro o scuro, ricordato in questo browser
+  (function () {
+    var root = document.documentElement;
+    document.getElementById('themeToggle').addEventListener('click', function () {
+      var dark = root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+      root.dataset.theme = dark ? 'light' : 'dark';
+      try { localStorage.setItem('theme', root.dataset.theme); } catch (e) {}
+      var tc = document.querySelector('meta[name="theme-color"]'); if (tc) tc.content = dark ? '#EEF2F5' : '#0D1319';
+    });
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,748 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="دليل مستخدم BIMopen، نمذجة BIM مفتوحة المصدر" name="description"/>
+<meta content="BIMopen" name="author"/>
+<link href="https://bimopen.it/manual/ar/site/" rel="canonical"/>
+<link href="../structure/" rel="prev"/>
+<link href="../design-options/" rel="next"/>
+<link href="../assets/images/bimopen-cube.svg" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.9" name="generator"/>
+<title>مخطط الموقع والأرض - دليل مستخدم BIMopen</title>
+<link href="../assets/stylesheets/main.4af4bdda.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link href="../assets/css/theme.css" rel="stylesheet"/>
+<link href="../assets/css/theme_dark_mode.css" rel="stylesheet"/>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="https://bimopen.it/manual/en/site/" hreflang="en" rel="alternate"/>
+<link href="https://bimopen.it/manual/it/site/" hreflang="it" rel="alternate"/>
+<link href="https://bimopen.it/manual/de/site/" hreflang="de" rel="alternate"/>
+<link href="https://bimopen.it/manual/fr/site/" hreflang="fr" rel="alternate"/>
+<link href="https://bimopen.it/manual/es/site/" hreflang="es" rel="alternate"/>
+<link href="https://bimopen.it/manual/ar/site/" hreflang="ar" rel="alternate"/>
+<link href="https://bimopen.it/manual/en/site/" hreflang="x-default" rel="alternate"/>
+</head>
+<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="slate" dir="rtl">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#site-plan-and-terrain">
+          انتقل إلى المحتوى
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="عنوان العارضة" class="md-header__inner md-grid">
+<a aria-label="دليل مستخدم BIMopen" class="md-header__button md-logo" data-md-component="logo" href="https://bimopen.it/ar/" title="دليل مستخدم BIMopen">
+<img alt="logo" src="../assets/images/bimopen-cube.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            دليل مستخدم BIMopen
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              مخطط الموقع والأرض
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="التبديل إلى الوضع الفاتح" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="التبديل إلى الوضع الفاتح">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="التبديل إلى الوضع الداكن" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="bimopen" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="التبديل إلى الوضع الداكن">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<div class="md-header__option">
+<div class="md-select">
+<button aria-label="إختر اللغة" class="md-header__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"></path></svg>
+</button>
+<div class="md-select__inner">
+<ul class="md-select__list">
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/en/" hreflang="en">
+              English
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/it/" hreflang="it">
+              Italiano
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/de/" hreflang="de">
+              Deutsch
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/fr/" hreflang="fr">
+              Français
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/es/" hreflang="es">
+              Español
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/ar/" hreflang="ar">
+              العربية
+            </a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="بحث" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="بحث" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="إبحث" class="md-search__options">
+<button aria-label="مسح كلي" class="md-search__icon md-icon" tabindex="-1" title="مسح كلي" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            بدء البحث
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="تصفح" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="دليل مستخدم BIMopen" class="md-nav__button md-logo" data-md-component="logo" href="https://bimopen.it/ar/" title="دليل مستخدم BIMopen">
+<img alt="logo" src="../assets/images/bimopen-cube.svg"/>
+</a>
+    دليل مستخدم BIMopen
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
+<span class="md-ellipsis">
+    الرئيسية
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../getting-started/">
+<span class="md-ellipsis">
+    البدء
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../interface/">
+<span class="md-ellipsis">
+    الواجهة
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../interface-styles/">
+<span class="md-ellipsis">
+    أنماط الواجهة
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../projects-and-files/">
+<span class="md-ellipsis">
+    المشاريع والملفات
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../import-and-conversion/">
+<span class="md-ellipsis">
+    الاستيراد والتحويل
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cad-files/">
+<span class="md-ellipsis">
+    DWG وDXF
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../selection-and-modify/">
+<span class="md-ellipsis">
+    التحديد والتعديل
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../walls-doors-windows/">
+<span class="md-ellipsis">
+    الجدران والأبواب والنوافذ
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../floors-roofs-stairs/">
+<span class="md-ellipsis">
+    الأرضيات والأسقف والسلالم والمكونات
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ceilings-and-columns/">
+<span class="md-ellipsis">
+    الأسقف المعلقة والأعمدة
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../openings/">
+<span class="md-ellipsis">
+    الفتحات
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../phases/">
+<span class="md-ellipsis">
+    المراحل والهدم
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../structure/">
+<span class="md-ellipsis">
+    الإنشاءات والأساسات
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    مخطط الموقع والأرض
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    مخطط الموقع والأرض
+    
+  </span>
+</a>
+<nav aria-label="جدول المحتويات" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      جدول المحتويات
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#terrain">
+<span class="md-ellipsis">
+      الأرض
+    </span>
+</a>
+<nav aria-label="الأرض" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#shape-editing">
+<span class="md-ellipsis">
+      تعديل الشكل
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#type-layers-and-contours">
+<span class="md-ellipsis">
+      النوع والطبقات وخطوط الكنتور
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#editing-the-terrain">
+<span class="md-ellipsis">
+      تعديل الأرض
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#building-pad">
+<span class="md-ellipsis">
+      منصة البناء
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#site-elements-and-parking">
+<span class="md-ellipsis">
+      عناصر الموقع ومواقف السيارات
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#property-lines">
+<span class="md-ellipsis">
+      حدود الملكية
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#contour-labels">
+<span class="md-ellipsis">
+      تسميات خطوط الكنتور
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-site-plan">
+<span class="md-ellipsis">
+      مخطط الموقع
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#site-settings">
+<span class="md-ellipsis">
+      إعدادات الموقع
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#not-yet">
+<span class="md-ellipsis">
+      ليس بعد
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../design-options/">
+<span class="md-ellipsis">
+    بدائل التصميم
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../views-and-graphics/">
+<span class="md-ellipsis">
+    المناظر والرسومات
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../annotation/">
+<span class="md-ellipsis">
+    التعليقات التوضيحية والتفاصيل ثنائية الأبعاد
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../documentation/">
+<span class="md-ellipsis">
+    اللوحات والجداول والطباعة
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../command-line-and-mcp/">
+<span class="md-ellipsis">
+    سطر الأوامر و MCP
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../keyboard-shortcuts/">
+<span class="md-ellipsis">
+    اختصارات لوحة المفاتيح
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../troubleshooting/">
+<span class="md-ellipsis">
+    استكشاف الأخطاء وإصلاحها
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://bimopen.it/manual/ar/pdf/bimopen-manual-ar.pdf">
+<span class="md-ellipsis">
+    PDF
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="جدول المحتويات" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      جدول المحتويات
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#terrain">
+<span class="md-ellipsis">
+      الأرض
+    </span>
+</a>
+<nav aria-label="الأرض" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#shape-editing">
+<span class="md-ellipsis">
+      تعديل الشكل
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#type-layers-and-contours">
+<span class="md-ellipsis">
+      النوع والطبقات وخطوط الكنتور
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#editing-the-terrain">
+<span class="md-ellipsis">
+      تعديل الأرض
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#building-pad">
+<span class="md-ellipsis">
+      منصة البناء
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#site-elements-and-parking">
+<span class="md-ellipsis">
+      عناصر الموقع ومواقف السيارات
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#property-lines">
+<span class="md-ellipsis">
+      حدود الملكية
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#contour-labels">
+<span class="md-ellipsis">
+      تسميات خطوط الكنتور
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-site-plan">
+<span class="md-ellipsis">
+      مخطط الموقع
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#site-settings">
+<span class="md-ellipsis">
+      إعدادات الموقع
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#not-yet">
+<span class="md-ellipsis">
+      ليس بعد
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset"><a class="md-content__icon pdf-download-btn" download href="../pdf/bimopen-manual-ar.pdf" title="Download"><i class="fa fas fa-download"></i><small> PDF</small></a>
+<h1 id="site-plan-and-terrain">مخطط الموقع والأرض</h1>
+<p>تُنشأ الأرض التي يقوم عليها المبنى ورسومات قطعة الأرض المحيطة به بأدوات <strong>الكتل والموقع ▸ الموقع</strong>
+و<strong>تعديل الموقع</strong>. وتعمل في المساقط وفي <strong>مخطط الموقع</strong>؛ كما تُرسم الأرض ومنصة البناء في العروض
+ثلاثية الأبعاد، على مستوى منسوبها.</p>
+<p><img alt="قطعة أرض حول المنزل النموذجي: أرض منحدرة بخطوط الكنتور، ومنصة مبنى، وممر إسفلتي، وموقف سيارة، وأشجار، وحد الملكية" src="../assets/screens/si-lot-3d.webp"/></p>
+<h2 id="terrain">الأرض</h2>
+<p>الأرض جسم مصمت: محيط مرسوم (مع فتحات) على منسوب، تشكّله النقاط، وله طبقات نوعه وسماكته.</p>
+<p>لأداة <strong>التضاريس ▾</strong> طريقتان:</p>
+<table>
+<thead>
+<tr>
+<th>الطريقة</th>
+<th>طريقة العمل</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>إنشاء من رسم</strong></td>
+<td>وضع الرسم <strong>إنشاء حدود الأرض</strong>، مع مجموعة <strong>رسم</strong> المشتركة (الخطوط والمستطيل والمضلعات والدائرة والأقواس و<strong>اختيار الخطوط</strong>). ارسم حلقة مغلقة؛ والحلقة داخلها فتحة. ويُنشئ <strong>إنهاء وضع التحرير</strong> أرضًا مستوية، أعلاها عند <strong>إزاحة الارتفاع عن المستوى</strong></td>
+</tr>
+<tr>
+<td><strong>إنشاء من استيراد</strong></td>
+<td>مربع الحوار <strong>إضافة نقاط من الطبقات المحددة</strong>: طبقات ملف DWG أو DXF مستورد مع الارتفاعات (خطوط ونقاط ثلاثية الأبعاد) تشكّل نقاطها الأرض، أو <strong>إنشاء من ملف نقاط…</strong> (CSV أو TXT، وتُختار وحدته في <strong>التنسيق</strong>)</td>
+</tr>
+</tbody>
+</table>
+<p>يعطي ملف النقاط في كل سطر x وy وz أولًا؛ وتُتجاوز الأسماء والأعمدة الأخرى، ومن نقطتين لهما x وy
+نفساهما تبقى z الأعلى. وما زاد على حد <strong>إعدادات الموقع</strong> (20000 نقطة افتراضيًا، من 10000 إلى
+50000) تُؤخذ منه عيّنة حتى الحد، وتقول رسالة كم نقطة بقيت.</p>
+<h3 id="shape-editing">تعديل الشكل</h3>
+<p>تعرض الأرض المحددة مجموعة <strong>تعديل الشكل</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>الأداة</th>
+<th>طريقة العمل</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>إضافة نقطة</strong></td>
+<td>انقر داخل المحيط. في شريط الخيارات: <strong>مطلق</strong> (<strong>المنسوب</strong> المكتوب، من <strong>أساس المنسوب</strong>: المنسوب الحالي، نقطة أساس المشروع، نقطة المساحة، الأصل الداخلي) أو <strong>نسبةً إلى السطح</strong> (إزاحة فوق السطح أو تحته حيث تنقر)؛ وتأخذ <strong>التقاطات XYZ</strong> منسوب ركن أرضية أو طرف جدار، مضافًا إليه <strong>الإزاحة من الالتقاطات</strong></td>
+</tr>
+<tr>
+<td><strong>تعديل العناصر الفرعية</strong></td>
+<td>انقر نقطة: اسحبها في المسقط، أو اكتب ارتفاعها فوق أعلى الأرض الأصلي</td>
+</tr>
+<tr>
+<td><strong>إضافة خط تقسيم</strong></td>
+<td>نقرتان: طيّة في السطح، مستقيمة بين منسوبيهما</td>
+</tr>
+<tr>
+<td><strong>إعادة تعيين الشكل</strong></td>
+<td>يزيل كل النقاط وكل خطوط التقسيم</td>
+</tr>
+<tr>
+<td><strong>تبسيط الأرض</strong></td>
+<td>يحتفظ بنسبة من النقاط (1000 نقطة بنسبة 70 % تصبح 700)</td>
+</tr>
+</tbody>
+</table>
+<p>يُثلَّث السطح عبر المحيط والنقاط؛ وتتبعه خطوط الكنتور فورًا.</p>
+<h3 id="type-layers-and-contours">النوع والطبقات وخطوط الكنتور</h3>
+<p>لنوع الأرض <strong>الإنشاء</strong> الخاص به في مربع الحوار نفسه <strong>طبقات النوع</strong> الخاص بالجدران والأرضيات:
+الطبقة المعلَّمة <strong>متغير</strong> تستوعب الشكل، فيبقى الأسفل مستويًا. ويسرد <strong>عرض الكنتور</strong> (<strong>عرض
+الكنتور</strong> في لوحة الأرض) مجموعات من خطوط الكنتور: <strong>البداية</strong> و<strong>النهاية</strong> و<strong>الزيادة</strong> و<strong>قيمة
+واحدة</strong> أو <strong>قيم متعددة</strong>، ونمط الخط (رئيسية، ثانوية، خطوط مخفية، أضلاع التثليث) ومربع اختيار
+لإيقاف مجموعة. يرسم المشروع الجديد خطوط الكنتور الرئيسية كل 5 م والثانوية كل متر؛ ولا ترسم
+الأنواع <strong>طريق إسفلتي</strong> و<strong>ممر حصى</strong> و<strong>رصيف</strong> أيًّا منها.</p>
+<p>تُرسم خطوط الكنتور أيضًا على الأرض في العروض ثلاثية الأبعاد، بأنماط خطوطها، وتختفي حيث يقف
+المبنى أمامها.</p>
+<p>في المقطع تُقطع الأرض بطبقاتها وبأنماط موادها. ويقرأ <strong>منسوب نقطة</strong> الموضوع على الأرض منسوبها
+هناك.</p>
+<p>لـ<strong>الرؤية والرسومات ▸ التضاريس</strong> الفئات الفرعية <strong>خطوط الكنتور الرئيسية</strong> و<strong>خطوط الكنتور
+الثانوية</strong> و<strong>خطوط مخفية</strong> و<strong>خطوط الطي</strong> و<strong>نقاط الحدود</strong> و<strong>النقاط الداخلية</strong>؛ والثلاث الأخيرة
+مطفأة ما لم تُشغَّل.</p>
+<p>يجعل <strong>خيارات الموقع ▾ ▸ تظليل ناعم للأرض</strong> كل أرض ناعمة في الأنماط المظللة.</p>
+<p><strong>خيارات الموقع ▾ ▸ ثبات فراغ الحفر</strong>: الحفر الذي لا يكتمل يُعاد مع إزاحة حدوده بضعة مليمترات
+على x أو y؛ ويذكر <strong>حفر</strong> عدد الحفريات التي أُزيحت.</p>
+<h2 id="editing-the-terrain">تعديل الأرض</h2>
+<table>
+<thead>
+<tr>
+<th>الأداة</th>
+<th>طريقة العمل</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>منطقة فرعية</strong></td>
+<td>ارسم حلقة على الأرض المحددة (أو انقر أرضًا أولًا). يعطي <strong>النوع</strong> الخاص بها مادتها؛ وترفعها <strong>إزاحة المنطقة الفرعية</strong> (حافة رصيف) أو تُغرقها في الأرض المضيفة (مع <strong>حجم الحفر</strong> الخاص بها)</td>
+</tr>
+<tr>
+<td><strong>تقسيم الأرض</strong></td>
+<td>انقر الأرض، ثم ارسم حلقة مغلقة داخلها أو خطوطًا مفتوحة من حافة إلى حافة. والمنطقة الفرعية التي لا يستطيع التقسيم الاحتفاظ بها تطلب <strong>حذف المثيلات</strong></td>
+</tr>
+<tr>
+<td><strong>دمج الأراضي</strong></td>
+<td>انقر الأرض الرئيسية، ثم الثانية: يجب أن تشتركا في حافة أو تتداخلا. ويكون <strong>إزالة النقاط على الحواف المشتركة</strong> مفعّلًا افتراضيًا</td>
+</tr>
+<tr>
+<td><strong>حفر</strong> / <strong>إزالة الحفر</strong></td>
+<td>والأرض محددة، انقر أرضية أو سقفًا أو منصة بناء أو أرضًا أخرى تخترقها. ويسرد <strong>حجم الحفر الفردي</strong> كل قطع</td>
+</tr>
+<tr>
+<td><strong>تسوية الأرض</strong></td>
+<td>يسأل <strong>تحرير المنطقة المسواة</strong> عن نسخة مطابقة أو عن نقاط المحيط فقط؛ انقر أرضًا من مرحلة سابقة. تُهدم في المرحلة الحالية، وتُفتح نسختها، الجديدة، في تعديل الشكل. وتعرض النسخة <strong>الحفر</strong> و<strong>الردم</strong> و<strong>صافي الحفر/الردم</strong></td>
+</tr>
+</tbody>
+</table>
+<p>يسرد جدول <strong>الأراضي</strong> الحفر والردم، مع مجموع إجمالي.</p>
+<h2 id="building-pad">منصة البناء</h2>
+<p>ترسم <strong>منصة البناء</strong> حلقة مغلقة فوق أرض (<strong>إنشاء حدود المنصة</strong>، مع <strong>اختيار الجدران</strong> و<strong>سهم
+الميل</strong>). أعلاها عند <strong>إزاحة الارتفاع عن المستوى</strong>؛ وتُحفر الأرض تحتها أو تُردم حتى وجهها السفلي.
+ولنوعها <strong>إنشاء</strong> من الطبقات ونمط التعبئة لمستوى التفاصيل المنخفض.</p>
+<h2 id="site-elements-and-parking">عناصر الموقع ومواقف السيارات</h2>
+<p>يُدرج <strong>عنصر الموقع</strong> الأشجار والشجيرات والمقاعد وأعمدة الإنارة وصنابير الحريق، واحدًا مع كل نقرة
+(مفتاح المسافة للتدوير)؛ ويُدرج <strong>موقف سيارات</strong> أماكن الوقوف (90° و60° و45° وموازية ولذوي
+الاحتياجات الخاصة). ويقوم كلاهما على الأرض أو المنطقة الفرعية تحت النقرة ويتبعها حين تتغير. وينقلها
+<strong>اختيار مضيف جديد</strong> إلى أرض أخرى أو منطقة فرعية أخرى؛ ويصنع منها <strong>تكرار متسلسل</strong> صفوفًا.</p>
+<h2 id="property-lines">حدود الملكية</h2>
+<p>يسأل <strong>حدود الملكية</strong> عن طريقة الإنشاء:</p>
+<ul>
+<li><strong>إنشاء بالرسم</strong>: خطوط وضع الرسم؛ وتنبّه الحلقة المفتوحة إلى أن مساحتها لا يمكن حسابها (أنهِ
+  مرة أخرى لإبقائها مفتوحة)؛</li>
+<li><strong>إنشاء بإدخال المسافات والاتجاهات</strong>: جدول <strong>حدود الملكية</strong>، صف لكل مقطع فيه <strong>المسافة</strong>
+  و<strong>الاتجاه</strong> (مثل <strong>N 45°00'00" E</strong>) و<strong>النوع</strong> (خط أو قوس) و<strong>نصف القطر</strong> و<strong>يسار/يمين</strong>؛
+  و<strong>إدراج</strong> و<strong>حذف</strong> و<strong>لأعلى</strong> و<strong>لأسفل</strong> و<strong>إغلاق</strong> الذي يضيف مقطع العودة إلى البداية. وتتبع
+  المقاطع الشمال الحقيقي.</li>
+</ul>
+<p>تعرض حدود الملكية المحددة <strong>تحرير الجدول</strong>. ويضبط <strong>خيارات الموقع ▾ ▸ بيانات حد الملكية</strong> <strong>عرض
+الزاوية</strong> (اتجاه أو درجات) والوحدات. وتظهر حدود الملكية افتراضيًا في مخططات الموقع والعروض ثلاثية
+الأبعاد؛ ويسرد جدول <strong>حدود الملكية</strong> اسمها ومساحتها.</p>
+<h2 id="contour-labels">تسميات خطوط الكنتور</h2>
+<p><strong>تسميات خطوط الكنتور</strong>: انقر بداية خط يعبر خطوط الكنتور ونهايته؛ فيعرض كل خط كنتور يقطعه منسوبه،
+مدوَّرًا ليُقرأ من شمال المشروع. ويحدد نوع التسمية النص وما إذا كانت الخطوط الرئيسية وحدها تُسمّى.</p>
+<h2 id="the-site-plan">مخطط الموقع</h2>
+<p>لكل مشروع جديد <strong>مخطط الموقع</strong>؛ وينشئ <strong>العروض ▸ مسقط ▾ ▸ مخطط الموقع</strong> مخططًا آخر للمنسوب النشط:
+1:200، مقطوعًا فوق المبنى حتى 10 م تحت المنسوب، موجّهًا إلى <strong>الشمال الحقيقي</strong>. ويعيده
+<strong>الاتجاه</strong> في خصائصه إلى <strong>شمال المشروع</strong>.</p>
+<h2 id="site-settings">إعدادات الموقع</h2>
+<p>يحوي <strong>خيارات الموقع ▾ ▸ إعدادات الموقع</strong> خطوط الكنتور الخاصة بالمشروع (لأنواع الأرض التي لا تحدد
+خطوطها الخاصة)، و<strong>مادة المقطع</strong> و<strong>عمق التظليل</strong> لأنواع الأرض التي بلا طبقات، وبيانات حد الملكية،
+وأقصى عدد من النقاط يحتفظ به الاستيراد.</p>
+<h2 id="not-yet">ليس بعد</h2>
+<p>تأتي <strong>أرض من وجه</strong> و<strong>ربط الطبوغرافيا</strong> و<strong>السياق المحيط</strong> في مرحلة لاحقة.</p>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  عد إلى الأعلى
+</button>
+</main>
+<footer class="md-footer">
+<nav aria-label="هامش سفلي" class="md-footer__inner md-grid">
+<a aria-label="السابقة: الإنشاءات والأساسات" class="md-footer__link md-footer__link--prev" href="../structure/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                السابقة
+              </span>
+<div class="md-ellipsis">
+                الإنشاءات والأساسات
+              </div>
+</div>
+</a>
+<a aria-label="التالية: بدائل التصميم" class="md-footer__link md-footer__link--next" href="../design-options/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                التالية
+              </span>
+<div class="md-ellipsis">
+                بدائل التصميم
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Copyright © 2026 BIMopen
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.footer", "navigation.tracking", "toc.follow", "content.code.copy", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u062a\u0645 \u0627\u0644\u0646\u0633\u062e \u0627\u0644\u0649 \u0627\u0644\u062d\u0627\u0641\u0638\u0629", "clipboard.copy": "\u0646\u0633\u062e \u0625\u0644\u0649 \u0627\u0644\u062d\u0627\u0641\u0638\u0629", "search.result.more.one": "\u0623\u0643\u062b\u0631 \u0645\u0646 1 \u0641\u064a \u0647\u0630\u0647 \u0627\u0644\u0635\u0641\u062d\u0629", "search.result.more.other": "\u0623\u0643\u062b\u0631 \u0645\u0646 # \u0641\u064a \u0647\u0630\u0647 \u0627\u0644\u0635\u0641\u062d\u0629", "search.result.none": "\u0644\u0627 \u062a\u0648\u062c\u062f \u0646\u062a\u0627\u0626\u062c", "search.result.one": "\u0646\u062a\u0627\u0626\u062c \u0627\u0644\u0628\u062d\u062b \u0645\u0633\u062a\u0646\u062f \u0648\u0627\u062d\u062f", "search.result.other": "\u0646\u062a\u0627\u0626\u062c \u0627\u0644\u0628\u062d\u062b # \u0645\u0633\u062a\u0646\u062f\u0627\u062a", "search.result.placeholder": "\u0627\u0643\u062a\u0628 \u0644\u0628\u062f\u0621 \u0627\u0644\u0628\u062d\u062b", "search.result.term.missing": "\u0645\u0641\u0642\u0648\u062f", "select.version": "\u0625\u062e\u062a\u0631 \u0627\u0644\u0625\u0635\u062f\u0627\u0631"}}</script>
+<script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+<script src="../assets/js/zoom.js"></script>
+</body>
+</html>

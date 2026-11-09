@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Manual de usuario de BIMopen, modelado BIM de código abierto" name="description"/>
 <meta content="BIMopen" name="author"/>
-<link href="https://atsanna.github.io/bimopen-site/manual/es/interface/" rel="canonical"/>
+<link href="https://bimopen.it/manual/es/interface/" rel="canonical"/>
 <link href="../getting-started/" rel="prev"/>
 <link href="../interface-styles/" rel="next"/>
 <link href="../assets/images/bimopen-cube.svg" rel="icon"/>
@@ -18,6 +18,13 @@
 <link href="../assets/css/theme.css" rel="stylesheet"/>
 <link href="../assets/css/theme_dark_mode.css" rel="stylesheet"/>
 <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="https://bimopen.it/manual/en/interface/" hreflang="en" rel="alternate"/>
+<link href="https://bimopen.it/manual/it/interface/" hreflang="it" rel="alternate"/>
+<link href="https://bimopen.it/manual/de/interface/" hreflang="de" rel="alternate"/>
+<link href="https://bimopen.it/manual/fr/interface/" hreflang="fr" rel="alternate"/>
+<link href="https://bimopen.it/manual/es/interface/" hreflang="es" rel="alternate"/>
+<link href="https://bimopen.it/manual/ar/interface/" hreflang="ar" rel="alternate"/>
+<link href="https://bimopen.it/manual/en/interface/" hreflang="x-default" rel="alternate"/>
 </head>
 <body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="slate" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -32,7 +39,7 @@
 </div>
 <header class="md-header md-header--shadow" data-md-component="header">
 <nav aria-label="Cabecera" class="md-header__inner md-grid">
-<a aria-label="Manual de usuario de BIMopen" class="md-header__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/?lang=es" title="Manual de usuario de BIMopen">
+<a aria-label="Manual de usuario de BIMopen" class="md-header__button md-logo" data-md-component="logo" href="https://bimopen.it/es/" title="Manual de usuario de BIMopen">
 <img alt="logo" src="../assets/images/bimopen-cube.svg"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -73,32 +80,32 @@
 <div class="md-select__inner">
 <ul class="md-select__list">
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/en/" hreflang="en">
+<a class="md-select__link" href="https://bimopen.it/manual/en/" hreflang="en">
               English
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/it/" hreflang="it">
+<a class="md-select__link" href="https://bimopen.it/manual/it/" hreflang="it">
               Italiano
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/de/" hreflang="de">
+<a class="md-select__link" href="https://bimopen.it/manual/de/" hreflang="de">
               Deutsch
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/fr/" hreflang="fr">
+<a class="md-select__link" href="https://bimopen.it/manual/fr/" hreflang="fr">
               Français
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/es/" hreflang="es">
+<a class="md-select__link" href="https://bimopen.it/manual/es/" hreflang="es">
               Español
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/ar/" hreflang="ar">
+<a class="md-select__link" href="https://bimopen.it/manual/ar/" hreflang="ar">
               العربية
             </a>
 </li>
@@ -147,7 +154,7 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navegación" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="Manual de usuario de BIMopen" class="md-nav__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/?lang=es" title="Manual de usuario de BIMopen">
+<a aria-label="Manual de usuario de BIMopen" class="md-nav__button md-logo" data-md-component="logo" href="https://bimopen.it/es/" title="Manual de usuario de BIMopen">
 <img alt="logo" src="../assets/images/bimopen-cube.svg"/>
 </a>
     Manual de usuario de BIMopen
@@ -193,11 +200,18 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#application-menu">
 <span class="md-ellipsis">
-      Menú de la aplicación
+      Panel Archivo
     </span>
 </a>
-<nav aria-label="Menú de la aplicación" class="md-nav">
+<nav aria-label="Panel Archivo" class="md-nav">
 <ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recent-files">
+<span class="md-ellipsis">
+      Archivos recientes
+    </span>
+</a>
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#options">
 <span class="md-ellipsis">
@@ -214,6 +228,31 @@
       Barra superior y herramientas de acceso rápido
     </span>
 </a>
+<nav aria-label="Barra superior y herramientas de acceso rápido" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#about-bimopen">
+<span class="md-ellipsis">
+      Acerca de BIMopen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-commands-window">
+<span class="md-ellipsis">
+      La ventana Comandos
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#updates">
+<span class="md-ellipsis">
+      Actualizaciones
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#ribbon">
@@ -285,7 +324,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#strip">
 <span class="md-ellipsis">
-      Tira de vistas y familias
+      Tira de vistas y componentes
     </span>
 </a>
 </li>
@@ -412,6 +451,14 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../cad-files/">
+<span class="md-ellipsis">
+    DWG y DXF
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../selection-and-modify/">
 <span class="md-ellipsis">
     Selección y modificación
@@ -431,6 +478,54 @@
 <a class="md-nav__link" href="../floors-roofs-stairs/">
 <span class="md-ellipsis">
     Suelos, cubiertas, escaleras y componentes
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ceilings-and-columns/">
+<span class="md-ellipsis">
+    Falsos techos y columnas
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../openings/">
+<span class="md-ellipsis">
+    Huecos
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../phases/">
+<span class="md-ellipsis">
+    Fases y demoliciones
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../structure/">
+<span class="md-ellipsis">
+    Estructura y cimentaciones
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../site/">
+<span class="md-ellipsis">
+    Emplazamiento y terreno
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../design-options/">
+<span class="md-ellipsis">
+    Alternativas de diseño
     
   </span>
 </a>
@@ -484,7 +579,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="https://atsanna.github.io/bimopen-site/manual/es/pdf/bimopen-manual-es.pdf">
+<a class="md-nav__link" href="https://bimopen.it/manual/es/pdf/bimopen-manual-es.pdf">
 <span class="md-ellipsis">
     PDF
     
@@ -508,11 +603,18 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#application-menu">
 <span class="md-ellipsis">
-      Menú de la aplicación
+      Panel Archivo
     </span>
 </a>
-<nav aria-label="Menú de la aplicación" class="md-nav">
+<nav aria-label="Panel Archivo" class="md-nav">
 <ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recent-files">
+<span class="md-ellipsis">
+      Archivos recientes
+    </span>
+</a>
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#options">
 <span class="md-ellipsis">
@@ -529,6 +631,31 @@
       Barra superior y herramientas de acceso rápido
     </span>
 </a>
+<nav aria-label="Barra superior y herramientas de acceso rápido" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#about-bimopen">
+<span class="md-ellipsis">
+      Acerca de BIMopen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-commands-window">
+<span class="md-ellipsis">
+      La ventana Comandos
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#updates">
+<span class="md-ellipsis">
+      Actualizaciones
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#ribbon">
@@ -600,7 +727,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#strip">
 <span class="md-ellipsis">
-      Tira de vistas y familias
+      Tira de vistas y componentes
     </span>
 </a>
 </li>
@@ -717,8 +844,8 @@ interfaz</a> los muestra y explica cómo cambiar de uno a otro.</p>
 </figure>
 <p>La ventana tiene estas partes:</p>
 <ol>
-<li>la <strong>barra lateral</strong>, en el borde izquierdo: la marca de BIMopen, que abre el menú de la
-   aplicación, luego <strong>Inicio</strong>, la pestaña contextual <strong>Edición</strong>, las pestañas <strong>Modelar</strong>,
+<li>la <strong>barra lateral</strong>, en el borde izquierdo: la marca de BIMopen, que abre el panel
+   Archivo, luego <strong>Inicio</strong>, la pestaña contextual <strong>Edición</strong>, las pestañas <strong>Modelar</strong>,
    <strong>Estructura</strong>, <strong>Hormigón armado</strong>, <strong>Metal</strong>, <strong>Prefabricación</strong>, <strong>Instalaciones</strong>,
    <strong>Vincular e importar</strong>, <strong>Anotaciones</strong>, <strong>Comprobar</strong>, <strong>Masas y emplazamiento</strong>,
    <strong>Colaborar</strong>, <strong>Vistas</strong> y <strong>Proyecto</strong>, y abajo <strong>Configuración</strong>;</li>
@@ -731,7 +858,7 @@ interfaz</a> los muestra y explica cómo cambiar de uno a otro.</p>
    barra de vista abajo; mientras una herramienta trabaja, la <strong>franja de opciones</strong> la recorre
    por encima;</li>
 <li>el <strong>panel del elemento</strong>, a la derecha: las propiedades de la selección, o de la vista activa;</li>
-<li>la <strong>tira de vistas y familias</strong>, bajo el área de dibujo, que puedes ocultar (<span class="keys"><kbd class="key-f9">F9</kbd></span>);</li>
+<li>la <strong>tira de vistas y componentes</strong>, bajo el área de dibujo, que puedes ocultar (<span class="keys"><kbd class="key-f9">F9</kbd></span>);</li>
 <li>la <strong>barra de estado</strong>, a lo largo del borde inferior.</li>
 </ol>
 <p>Los paneles mantienen su anchura muestren lo que muestren: un nombre largo se acorta con «…» y su
@@ -743,11 +870,12 @@ de dibujo todo el espacio posible; en el modo táctil los botones siguen siendo 
 <a href="../interface-styles/#touch-mode">Estilos de interfaz</a>).</p>
 <p>En árabe toda la ventana se refleja: la barra lateral y el panel de herramientas están a la
 derecha, el panel del elemento a la izquierda, y las tiras se leen de derecha a izquierda.</p>
-<h2 id="application-menu">Menú de la aplicación</h2>
-<p>La marca de BIMopen, arriba en la barra lateral, abre el menú de la aplicación: los comandos que
-actúan sobre todo el proyecto. La entrada <strong>Inicio</strong> de la barra lateral muestra el proyecto con
-sus niveles, vistas, planos y tablas de planificación, y recuerda que los comandos de archivo
-están en este menú.</p>
+<h2 id="application-menu">Panel Archivo</h2>
+<p>La marca de BIMopen, arriba en la barra lateral, abre el panel <strong>Archivo</strong>: una página a toda
+ventana con los comandos de archivo y los proyectos recientes. En el estilo <strong>Clásica</strong> lo abre
+<strong>Archivo</strong>, a la izquierda de las pestañas; en el modo táctil, <strong>Menú ▸ Archivo</strong>. <strong>Atrás</strong> (el
+botón redondo de arriba) o <span class="keys"><kbd class="key-escape">Esc</kbd></span> vuelve al modelo exactamente como estaba.</p>
+<p>A la izquierda:</p>
 <table>
 <thead>
 <tr>
@@ -757,44 +885,48 @@ están en este menú.</p>
 </thead>
 <tbody>
 <tr>
-<td><strong>Nuevo</strong></td>
-<td>Cierra el proyecto actual e inicia uno nuevo a partir de la plantilla por defecto: dos niveles con sus plantas y los tipos por defecto</td>
+<td><strong>Proyectos ▸ Abrir…</strong></td>
+<td>Una página con <strong>Proyecto…</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-o">O</kbd></span>), <strong>IFC…</strong> y <strong>Opciones IFC…</strong></td>
 </tr>
 <tr>
-<td><strong>Abrir…</strong></td>
-<td>Abre un proyecto <code>.bimopen</code>, o abre un archivo <code>.ifc</code> como proyecto nuevo, elegido en un cuadro de diálogo de archivos. En el navegador, arrastra el archivo a la página</td>
+<td><strong>Proyectos ▸ Nuevo…</strong></td>
+<td>Abre <strong>Proyecto nuevo</strong>, con el archivo de plantilla del que partir</td>
 </tr>
 <tr>
-<td><strong>Proyecto de ejemplo</strong></td>
-<td>Abre la casa de ejemplo</td>
+<td><strong>Componentes ▸ Abrir…, Nuevo…</strong></td>
+<td>En gris: los componentes aún no están disponibles</td>
+</tr>
+<tr>
+<td><strong>Archivos recientes</strong></td>
+<td>La página inicial del panel, descrita más abajo</td>
 </tr>
 <tr>
 <td><strong>Guardar</strong> <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span></td>
-<td>Guarda el proyecto en su archivo; un proyecto nunca guardado pide un nombre, como <strong>Guardar como…</strong></td>
+<td>Guarda el proyecto en su archivo; un proyecto nunca guardado pide un nombre</td>
 </tr>
 <tr>
-<td><strong>Guardar como…</strong></td>
-<td>Guarda el proyecto en un nuevo archivo <code>.bimopen</code> y sigue trabajando en ese archivo</td>
+<td><strong>Guardar como</strong></td>
+<td>Una página con <strong>Proyecto…</strong>, <strong>Plantilla…</strong> y <strong>Opciones…</strong> (las opciones de guardado)</td>
 </tr>
 <tr>
-<td><strong>Imprimir…</strong> <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-p">P</kbd></span></td>
-<td>Imprime planos en PDF</td>
+<td><strong>Imprimir</strong></td>
+<td>Una página con <strong>Imprimir…</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-p">P</kbd></span>), <strong>Vista preliminar de impresión</strong> y <strong>Configuración de impresión…</strong></td>
 </tr>
 <tr>
-<td><strong>Exportar ▸ Exportar IFC4…</strong></td>
-<td>Escribe el modelo como archivo IFC4</td>
-</tr>
-<tr>
-<td><strong>Exportar ▸ Exportar planta SVG…</strong></td>
-<td>Escribe la planta activa como dibujo SVG</td>
-</tr>
-<tr>
-<td><strong>Exportar ▸ Exportar vista PNG…</strong></td>
-<td>Escribe la vista activa como imagen PNG</td>
+<td><strong>Exportar</strong></td>
+<td>Una página con <strong>Imagen…</strong>, <strong>IFC…</strong>, <strong>Exportar planta SVG…</strong>, <strong>Opciones IFC…</strong> y <strong>Tabla…</strong></td>
 </tr>
 <tr>
 <td><strong>Documentos abiertos</strong></td>
-<td>Enumera las ventanas de vista abiertas; haz clic en una para traerla al frente</td>
+<td>Las ventanas de vista abiertas; un clic trae al frente la elegida</td>
+</tr>
+<tr>
+<td><strong>Cerrar</strong></td>
+<td>Cierra el proyecto y vuelve a la página inicial</td>
+</tr>
+<tr>
+<td><strong>Novedades de esta versión</strong>, <strong>Manual (F1)</strong>, <strong>Comandos y atajos</strong>, <strong>Sitio de BIMopen</strong></td>
+<td>Los enlaces, al pie</td>
 </tr>
 <tr>
 <td><strong>Opciones</strong></td>
@@ -806,20 +938,44 @@ están en este menú.</p>
 </tr>
 </tbody>
 </table>
+<p>Los comandos del proyecto abierto (de <strong>Guardar</strong> a <strong>Cerrar</strong>) solo están cuando hay un
+proyecto abierto. Cada página da a cada elemento una línea de explicación.</p>
 <figure>
-<img alt="El menú de la aplicación con Exportar abierto: Imágenes y animaciones, IFC…, Exportar planta SVG…, Opciones e Informes" src="../assets/screens/if-export-menu.webp"/>
-<figcaption>El menú de la aplicación y su submenú Exportar</figcaption>
+<img alt="El panel Archivo en la página Exportar: Imagen…, IFC…, Exportar planta SVG…, Opciones IFC… y Tabla…, cada una con su explicación" src="../assets/screens/if-export-menu.webp"/>
+<figcaption>El panel Archivo, página Exportar</figcaption>
 </figure>
-<p><strong>Nuevo</strong>, <strong>Abrir…</strong> y <strong>Proyecto de ejemplo</strong> sustituyen el proyecto actual sin preguntar:
-guárdalo antes si quieres conservarlo.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Los cambios sin guardar se pierden al elegir <strong>Nuevo</strong>, <strong>Abrir…</strong> o <strong>Proyecto de ejemplo</strong>.
-La barra superior indica <strong>Cambios sin guardar</strong> mientras haya cambios por guardar.</p>
-</div>
+<h3 id="recent-files">Archivos recientes</h3>
+<p>La página <strong>Archivos recientes</strong> tiene tres franjas:</p>
+<ul>
+<li><strong>Proyectos</strong>: los proyectos recientes como miniaturas cuadradas, con el nombre y la fecha de
+  modificación; una etiqueta dice de qué vista viene la miniatura (<strong>3D</strong>, <strong>Planta</strong>,
+  <strong>Plano</strong>…). Al pasar el ratón aparecen la chincheta, que mantiene el proyecto al principio de
+  la lista, el menú <strong>⋯</strong> (<strong>Abrir</strong>, <strong>Abrir como copia</strong>, <strong>Abrir la carpeta</strong>, <strong>Copiar la
+  ruta</strong>, <strong>Fijar</strong>, <strong>Quitar de la lista</strong>; también con el botón derecho) y la <strong>✕</strong>, que quita
+  el proyecto de la lista: durante unos segundos <strong>Deshacer</strong> lo devuelve a su sitio. El archivo
+  del disco nunca se toca. Un archivo movido o borrado aparece en gris, con <strong>Archivo no
+  encontrado</strong>, <strong>Buscar…</strong> para indicar su nueva ubicación y <strong>Quitar</strong>; <strong>Quitar los no
+  encontrados</strong> los quita todos, <strong>Vaciar la lista</strong> quita los que no están fijados.</li>
+<li><strong>Plantillas de proyecto</strong>: <strong>Proyecto nuevo</strong>, la plantilla por defecto, la plantilla
+  imperial, las plantillas encontradas en la carpeta de archivos, el proyecto de ejemplo y
+  <strong>Examinar…</strong> para otro archivo de plantilla.</li>
+<li><strong>Componentes</strong>: los componentes recientes (<code>.bco</code>, <code>.bct</code>), con su miniatura y los mismos comandos que los proyectos. En la versión web, los archivos abiertos se guardan en el navegador (hasta 1,5 MB cada uno) y se vuelven a abrir desde aquí.</li>
+</ul>
+<p>Arriba, la búsqueda filtra por nombre y carpeta, y dos botones eligen entre <strong>Miniaturas</strong> y
+<strong>Lista</strong>; la lista muestra también la carpeta, la fecha y el tamaño, y se ordena por nombre o
+por fecha. La elección se recuerda.</p>
+<p>Cada guardado almacena en el archivo una miniatura: la vista 3D por defecto, o la vista elegida
+en <strong>Opciones de guardado de archivo ▸ Vista preliminar</strong>. Un archivo que no se puede leer
+muestra un icono neutro.</p>
+<p>Al iniciar sin un archivo, el panel es la página inicial, sin <strong>Atrás</strong>; en el primer inicio,
+con la lista vacía, propone <strong>Proyecto nuevo</strong>, <strong>Abrir…</strong> y <strong>Proyecto de ejemplo</strong>. En el modo
+táctil las miniaturas son más grandes, las acciones están siempre visibles y una pulsación larga
+abre el menú <strong>⋯</strong>. En el navegador no existe <strong>Abrir la carpeta</strong>.</p>
+<p><strong>Nuevo…</strong>, <strong>Abrir…</strong>, un proyecto reciente y <strong>Proyecto de ejemplo</strong> ocupan el lugar del
+proyecto abierto; si tiene cambios sin guardar, primero preguntan si guardarlos.</p>
 <h3 id="options">Opciones</h3>
 <p>El engranaje del extremo derecho de la barra superior, <strong>Configuración</strong> al pie de la barra
-lateral, o <strong>Menú de la aplicación ▸ Opciones</strong>, abre <strong>Opciones</strong>. Tiene, entre otros, estos
+lateral, o <strong>Archivo ▸ Opciones</strong>, abre <strong>Opciones</strong>. Tiene, entre otros, estos
 parámetros:</p>
 <table>
 <thead>
@@ -915,7 +1071,7 @@ derecha:</p>
 </tr>
 <tr>
 <td><strong>?</strong></td>
-<td><strong>Ayuda</strong> <span class="keys"><kbd class="key-f1">F1</kbd></span>, <strong>Comandos</strong> (todos los comandos de la línea de comandos, como escribir <code>help</code>) e <strong>Información</strong> (la versión, la licencia y los créditos)</td>
+<td><strong>Ayuda</strong> <span class="keys"><kbd class="key-f1">F1</kbd></span>, <strong>Comandos</strong> (todos los comandos, en una ventana: <a href="#the-commands-window">La ventana Comandos</a>) e <strong>Información</strong> (<a href="#about-bimopen">Acerca de BIMopen</a>)</td>
 </tr>
 <tr>
 <td>El engranaje</td>
@@ -942,6 +1098,37 @@ sesiones.</p>
 <p><strong>? ▸ Ayuda</strong> (<span class="keys"><kbd class="key-f1">F1</kbd></span>) abre este manual, en el idioma de la interfaz, en el navegador. <span class="keys"><kbd class="key-f1">F1</kbd></span> abre
 la página de lo que estás haciendo: el cuadro de diálogo abierto, el mosaico bajo el ratón (su
 información termina con <strong>Pulse F1 para obtener más información</strong>) o la herramienta activa.</p>
+<h3 id="about-bimopen">Acerca de BIMopen</h3>
+<p><strong>? ▸ Información</strong> muestra la marca y el nombre del programa, la versión con la fecha y el
+commit del que se ha construido (leídos al compilar: una versión en desarrollo lo dice) y la
+plataforma (el sistema y si es escritorio o web). La nota de debajo recuerda que es una versión
+de prueba. Las filas abren en el navegador el <strong>Sitio web</strong>, el <strong>Manual de usuario</strong> y las
+<strong>Novedades de la versión</strong> (las novedades de cada versión); <strong>Licencias de terceros</strong> abre en el
+sitio la lista de las obras que contiene el programa (fuentes, iconos, texturas de los
+materiales, cielo, Luna y estrellas), con sus licencias; los textos completos están en el archivo
+NOTICE. <strong>Copiar información del sistema</strong> pone en el portapapeles la versión, el sistema, la
+tarjeta gráfica y el backend en uso: pégala cuando informes de un problema.</p>
+<h3 id="the-commands-window">La ventana Comandos</h3>
+<p><strong>? ▸ Comandos</strong>, o <code>help</code> escrito en la línea de comandos, abre la lista de todos los comandos.
+A la izquierda las fichas de la cinta, en su orden, luego <strong>Modificar</strong> y <strong>Solo línea de
+comandos</strong>; en el centro, para cada comando, su nombre en el idioma de la interfaz, el nombre a
+escribir, sus sinónimos y su atajo; a la derecha la descripción, el uso y un ejemplo del comando
+elegido. La búsqueda encuentra un comando por cualquiera de estos, en todas las fichas (<code>help
+door</code> abre la ventana con la puerta ya encontrada). Un comando aún no disponible aparece en gris;
+<strong>Solo disponibles</strong> los oculta. Doble clic, <span class="keys"><kbd class="key-enter">Enter</kbd></span> o <strong>Iniciar</strong> inician el comando como su
+botón; un comando que solo existe en la línea de comandos se escribe en ella, para completarlo.
+<strong>Copiar</strong> pone en el portapapeles el comando con su ejemplo. Las flechas recorren la lista,
+<span class="keys"><kbd class="key-escape">Esc</kbd></span> la cierra. En el modo táctil la ventana se abre desde <strong>Comandos ▸ Lista de comandos</strong> (el campo de comandos aún vacío), con
+filas del tamaño de un dedo.</p>
+<h3 id="updates">Actualizaciones</h3>
+<p>Al iniciar, como máximo una vez al día, BIMopen lee del sitio el archivo de la última versión (no envía nada más). Cuando sale una versión más nueva, la <strong>campana</strong> de la barra superior muestra un punto naranja (a la derecha de la barra de título en el estilo Clásico, en la barra superior en el modo táctil). Un clic abre su panel: la versión y su fecha, sus principales novedades, <strong>Todas las novedades</strong>, y <strong>Descargar y actualizar</strong>, <strong>Más tarde</strong> (sin punto hasta el próximo inicio) y <strong>Omitir esta versión</strong> (sin punto hasta la siguiente).</p>
+<p><strong>Descargar y actualizar</strong> descarga el programa con una barra de progreso (<strong>Continuar en segundo plano</strong> oculta el panel, <strong>Cancelar</strong> se detiene). Antes de sustituir nada, BIMopen comprueba el archivo: su suma de comprobación SHA-256 debe coincidir con la de la versión, y el archivo de la versión debe llevar la firma digital de BIMopen. Un paquete sin firmar, firmado con otra clave o alterado se descarta y no se instala nada. Después, <strong>Reiniciar y actualizar</strong> pregunta si guardar los cambios, pone el programa nuevo en lugar del antiguo y lo abre con el mismo proyecto y la misma vista.</p>
+<ul>
+<li><strong>Windows</strong>: al reiniciar, el programa en uso se renombra y se sustituye. Mientras el ejecutable no esté firmado, al primer inicio Windows puede avisar: <strong>Más información ▸ Ejecutar de todas formas</strong>.</li>
+<li><strong>Android</strong>: <strong>Descargar e instalar</strong> descarga el paquete y el instalador del sistema pide confirmación (la primera vez pide el permiso <strong>Instalar aplicaciones desconocidas</strong>).</li>
+<li><strong>Web</strong>: <strong>Recargar</strong> carga la nueva versión.</li>
+</ul>
+<p>Sin conexión, con una firma no válida o sin espacio en el disco, el panel lo dice y BIMopen sigue funcionando como antes. <strong>Opciones ▸ General ▸ Buscar actualizaciones</strong> desactiva la comprobación; <strong>Comprobar ahora</strong> comprueba al momento.</p>
 <h2 id="ribbon">Barra lateral y panel de herramientas</h2>
 <p>La barra lateral muestra las pestañas de la cinta del estilo <strong>Clásico</strong>, con los mismos nombres
 y en el mismo orden. Haz clic en una pestaña: el panel de herramientas muestra sus grupos como
@@ -1151,12 +1338,12 @@ comandos de los que el panel muestra a la vez (<strong>Modelar</strong>, <strong
 <tr>
 <td></td>
 <td><strong>Cargar desde biblioteca</strong></td>
-<td><strong>Cargar familia</strong>, <em>Cargar como grupo</em>, <strong>Insertar desde archivo ▾</strong></td>
+<td><strong>Cargar componente</strong>, <em>Cargar como grupo</em>, <strong>Insertar desde archivo ▾</strong></td>
 </tr>
 <tr>
 <td><strong>Anotaciones</strong></td>
 <td><strong>Cota</strong></td>
-<td><strong>Alineada</strong>, <strong>Lineal</strong>, <strong>Angular</strong>, <strong>Radial</strong>, <em>Diámetro</em>, <strong>Longitud de arco</strong>, <strong>Cota de punto ▾</strong></td>
+<td><strong>Alineada</strong>, <strong>Lineal</strong>, <strong>Angular</strong>, <strong>Radial</strong>, <strong>Diámetro</strong>, <strong>Longitud de arco</strong>, <strong>Cota de punto ▾</strong></td>
 </tr>
 <tr>
 <td></td>
@@ -1261,7 +1448,7 @@ comandos de los que el panel muestra a la vez (<strong>Modelar</strong>, <strong
 <tr>
 <td></td>
 <td><strong>Índice del proyecto</strong></td>
-<td>El árbol de las vistas, tablas de planificación, planos y familias del proyecto</td>
+<td>El árbol de las vistas, tablas de planificación, planos y componentes del proyecto</td>
 </tr>
 <tr>
 <td><strong>Proyecto</strong></td>
@@ -1400,7 +1587,7 @@ están atenuados, y su información de herramienta indica que primero hay que ab
 </tr>
 <tr>
 <td><strong>Ventanas</strong></td>
-<td><strong>Cambiar de vista</strong>, <strong>Replicar</strong>, <strong>Cascada</strong>, <strong>Mosaico</strong>, <strong>Maximizar</strong>, <strong>Cerrar las demás</strong>, <strong>Paneles</strong></td>
+<td><strong>Cambiar de vista</strong>, <strong>Replicar</strong>, <strong>Cascada</strong>, <strong>Mosaico</strong>, <strong>Maximizar</strong>, <strong>Cerrar las demás</strong>, <strong>Paneles</strong>, <strong>Tema del área de dibujo</strong></td>
 </tr>
 </tbody>
 </table>
@@ -1551,11 +1738,11 @@ elementos que coloques.</p>
 </tr>
 <tr>
 <td><strong>Puerta</strong>, <strong>Ventana</strong></td>
-<td><strong>Cargar familia</strong>; <strong>Modelar en sitio</strong> (atenuado); <strong>Etiquetar al colocar</strong> con <strong>Horizontal</strong> o <strong>Vertical</strong>, <strong>Directriz</strong> y su longitud; <strong>Etiquetas cargadas…</strong> (atenuado)</td>
+<td><strong>Modelar en sitio</strong> (atenuado); <strong>Etiquetar al colocar</strong> con <strong>Horizontal</strong> o <strong>Vertical</strong>, <strong>Directriz</strong> y su longitud; <strong>Etiquetas cargadas…</strong> (atenuado)</td>
 </tr>
 <tr>
 <td><strong>Objeto</strong></td>
-<td><strong>Cargar familia</strong>; <strong>Modelar en sitio</strong> (atenuado); <strong>Girar tras insertar</strong>: el objeto colocado queda seleccionado y empieza <strong>Girar</strong></td>
+<td><strong>Modelar en sitio</strong> (atenuado); <strong>Girar tras insertar</strong>: el objeto colocado queda seleccionado y empieza <strong>Girar</strong></td>
 </tr>
 <tr>
 <td><strong>Cubierta</strong></td>
@@ -1665,7 +1852,7 @@ vista previa. Las flechas se mueven, <span class="keys"><kbd class="key-enter">E
 nuevo). Puedes escribir un valor con su unidad, por ejemplo <code>2.7m</code>.</p>
 <h2 id="project-browser">Índice del proyecto</h2>
 <p><strong>Vistas</strong> en la barra lateral muestra, bajo sus herramientas, el <strong>Índice del proyecto</strong>: las
-vistas, las tablas de planificación, los planos y las familias del proyecto en un árbol. Haz clic
+vistas, las tablas de planificación, los planos y los componentes del proyecto en un árbol. Haz clic
 en <strong>⊟</strong> o <strong>⊞</strong> para plegar o desplegar una rama.</p>
 <figure>
 <img alt="El índice del proyecto: las vistas por clase, plantas, planos de áreas, secciones y alzados, con la vista activa en negrita" src="../assets/screens/if-project-index.webp"/>
@@ -1712,8 +1899,8 @@ en <strong>⊟</strong> o <strong>⊞</strong> para plegar o desplegar una rama.
 <td>Los planos, como número - nombre</td>
 </tr>
 <tr>
-<td><strong>Familias</strong></td>
-<td>Los tipos del proyecto, por categoría: muros, puertas, ventanas, suelos, cubiertas, componentes y los demás</td>
+<td><strong>Componentes</strong></td>
+<td>Los tipos del proyecto, por categoría: muros, puertas, ventanas, suelos, cubiertas, <strong>Mobiliario</strong>, <strong>Aparatos sanitarios</strong> y los demás; bajo una categoría de componentes, cada componente y luego sus tipos</td>
 </tr>
 </tbody>
 </table>
@@ -1733,13 +1920,13 @@ nombre.</p>
 <p>Con una tabla de planificación del proyecto, un clic la selecciona, un doble clic la abre, y el
 menú del botón derecho tiene <strong>Abrir</strong>, <strong>Propiedades de tabla…</strong> y <strong>Eliminar</strong>. Una tabla de
 planificación predefinida se abre con un clic.</p>
-<p>Con un tipo, bajo <strong>Familias</strong>, un doble clic abre sus parámetros de tipo; el menú del botón
+<p>Con un tipo, bajo <strong>Componentes</strong>, un doble clic abre sus parámetros de tipo; el menú del botón
 derecho tiene <strong>Parámetros de tipo</strong>, <strong>Duplicar…</strong>, <strong>Crear ejemplar</strong> (inicia la herramienta
 que lo coloca, con ese tipo) y <strong>Eliminar</strong>.</p>
 <p>Tras un clic en el Índice del proyecto, el teclado se mueve en él: <span class="keys"><kbd class="key-arrow-up">Up</kbd></span> y <span class="keys"><kbd class="key-arrow-down">Down</kbd></span> pasan de una fila a otra (las propiedades de la vista aparecen en el panel del elemento), <span class="keys"><kbd class="key-arrow-right">Right</kbd></span> abre una rama, <span class="keys"><kbd class="key-arrow-left">Left</kbd></span> la cierra o sube a la rama que contiene la fila, <span class="keys"><kbd class="key-enter">Enter</kbd></span> abre la vista.</p>
 <p>Desde aquí las vistas van también a los planos. Arrastre una planta, una sección, un alzado, una vista 2D libre, una leyenda, una vista 3D guardada o una tabla de planificación al plano abierto: su ventana gráfica sigue al cursor y queda donde la suelta. O suéltela sobre el nombre de un plano en el árbol: el plano se abre y la ventana gráfica sigue al cursor hasta que hace clic. Mientras arrastra, el árbol se desplaza cuando el cursor se acerca a su borde. El menú contextual de un plano tiene <strong>Añadir vista…</strong>. Las vistas de un plano aparecen debajo de él; el menú contextual de una vista tiene <strong>Eliminar del plano</strong>, y el de <strong>Planos (todos)</strong> tiene <strong>Nuevo plano…</strong>. En una vista 3D el menú contextual también tiene <strong>Zoom a extensión 3D</strong>: todo el modelo, también los elementos ocultos en la vista. Una vista que ya está en un plano se rechaza, con el motivo en la línea de comandos; las leyendas y las tablas pueden ir en varios planos. Una vista 3D guardada aparece en el plano con las aristas vistas desde su cámara.</p>
 <p>El menú contextual de una planta, una sección o una vista 2D libre tiene <strong>Buscar vistas de referencia</strong>: las vistas que muestran su símbolo y los planos en los que está; <strong>Ir a vista</strong> abre la elegida.</p>
-<h2 id="strip">Tira de vistas y familias</h2>
+<h2 id="strip">Tira de vistas y componentes</h2>
 <p>La tira bajo el área de dibujo tiene tres modos, elegidos con los botones de su izquierda:</p>
 <ul>
 <li><strong>Vistas</strong>: las vistas previas reales de las vistas, agrupadas en <strong>Todas</strong>, <strong>Abiertas (n)</strong>,
@@ -1749,7 +1936,7 @@ que lo coloca, con ese tipo) y <strong>Eliminar</strong>.</p>
   en la ventana activa</strong>; arrastrada sobre el plano abierto, o sobre la vista previa de un plano,
   se coloca allí. <strong>+</strong> crea una vista nueva: <strong>Vista 3D por defecto</strong>, <strong>Guardar vista</strong>,
   <strong>Duplicar</strong>, <strong>Plano</strong> o <strong>Tabla de planificación/cantidades</strong>.</li>
-<li><strong>Familias</strong>: una vista previa por cada tipo, agrupada por categoría de familia. Un clic en una
+<li><strong>Componentes</strong>: una vista previa por cada tipo, agrupada por categoría. Un clic en una
   vista previa coloca ese tipo; arrastrada a una planta, se inserta donde se suelta. Una puerta o
   una ventana soltada cerca de un muro entra en el muro, a lo largo de él.</li>
 <li><strong>Comandos</strong>: el historial de la línea de comandos. Un clic en una línea escrita la ejecuta de
@@ -1762,8 +1949,8 @@ que lo coloca, con ese tipo) y <strong>Eliminar</strong>.</p>
 <p>A la derecha, <strong>Mostrar</strong> filtra las vistas previas por disciplina y fase, el cuadro de búsqueda
 por nombre, y tres botones eligen el tamaño: <strong>Vistas previas</strong>, <strong>Compacta</strong> y <strong>Ocultar</strong>.</p>
 <figure>
-<img alt="La franja en modo familias: una vista previa de cada tipo, primero los muros, para pulsar o arrastrar a una planta" src="../assets/screens/if-strip-families.webp"/>
-<figcaption>La franja en modo familias</figcaption>
+<img alt="La franja en modo componentes: una vista previa de cada tipo, primero los muros, para pulsar o arrastrar a una planta" src="../assets/screens/if-strip-families.webp"/>
+<figcaption>La franja en modo componentes</figcaption>
 </figure>
 <p>Cuando los grupos no caben junto a los modos, se recogen en un único menú, como <strong>Todas ▾</strong>. Para
 dar al área de dibujo el espacio de la tira, ocúltala con <strong>Barra de vistas</strong>, el último botón de
@@ -1833,6 +2020,10 @@ frente; siempre queda abierta al menos una ventana. Arriba a la izquierda de la 
 <tr>
 <td><strong>Paneles</strong></td>
 <td>Muestra u oculta <strong>Propiedades</strong>, el <strong>Índice del proyecto</strong>, la <strong>Línea de comandos</strong>, la <strong>Barra de navegación</strong>, <strong>Métodos abreviados de teclado</strong> y <strong>Archivos recientes</strong></td>
+</tr>
+<tr>
+<td><strong>Tema del área de dibujo</strong></td>
+<td>Cada clic alterna el fondo del área de dibujo entre negro y blanco; el resto de la interfaz no cambia. Es la misma opción que <strong>Invertir color de fondo</strong> en <strong>Opciones</strong>, y se conserva en las sesiones siguientes</td>
 </tr>
 </tbody>
 </table>
@@ -1983,6 +2174,7 @@ el centro para mover libremente en planta; la distancia se ve mientras arrastras
 mueve como con <strong>Mover</strong>.</p>
 <p>En 3D la rueda del ratón hace zoom manteniendo fijo el punto del modelo bajo el cursor, y la órbita gira alrededor del centro de la selección, o alrededor del punto al que mira la vista cuando no hay nada seleccionado.</p>
 <p>El <strong>Cubo de orientación</strong>, en la esquina superior de la vista 3D, gira con el modelo. Sus aristas y vértices están achaflanados y cada parte es un objetivo propio: las seis caras (<strong>ARRIBA</strong>, <strong>ABAJO</strong>, <strong>FRENTE</strong>, <strong>DETRÁS</strong>, <strong>DERECHA</strong>, <strong>IZQUIERDA</strong>, sus nombres escritos en ellas en perspectiva y girando con ellas) miran de frente ese lado; las doce franjas de las aristas miran desde entre dos lados; los ocho triángulos de los vértices desde entre tres (una vista isométrica). La parte bajo el puntero se tiñe con el color de resaltado, la parte desde la que mira ahora la vista queda resaltada; un clic gira la vista hasta allí en una breve transición. Arrastre el cubo para orbitar.</p>
+<p>El cubo es gris claro, con las caras sombreadas por una luz suave, tanto en el tema claro como en el oscuro; a su pie, un anillo de brújula lleva las iniciales de los puntos cardinales (<strong>N</strong> hacia el norte del proyecto).</p>
 <figure>
 <img alt="El cubo de orientación en la esquina de la vista 3D, con las flechas curvas, el botón de vista inicial, el menú y la orientación escrita debajo" src="../assets/screens/if-cube.webp"/>
 <figcaption>El cubo de orientación</figcaption>
@@ -2019,7 +2211,7 @@ cursor…</strong>) abre la ventana <strong>Forzado</strong>, la misma en los do
   <strong>Rejilla de plano de trabajo</strong>, <strong>Cuadrante</strong>, <strong>Intersección</strong>, <strong>Centro</strong>, <strong>Perpendicular</strong>,
   <strong>Tangente</strong> y <strong>Objetos remotos</strong>, con sus dos letras; <strong>Marcar todo</strong> y <strong>Desmarcar todo</strong>. Con
   <strong>Cercano</strong> apagado, la línea bajo el cursor sigue ofreciendo sus extremos y su punto medio,
-  aunque estén lejos. <strong>Objetos remotos</strong> (apagado al principio) alinea el punto, en horizontal o en vertical, con los
+  aunque estén lejos. <strong>Objetos remotos</strong> (encendido al principio) alinea el punto, en horizontal o en vertical, con los
   extremos de líneas lejanas, con una guía discontinua.</li>
 <li><strong>Modificaciones temporales</strong>: la lista de las dos letras que valen para un punto.</li>
 <li><strong>Restablecer valores por defecto</strong> lo deja todo como al principio.</li>

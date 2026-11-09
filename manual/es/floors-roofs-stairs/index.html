@@ -7,9 +7,9 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Manual de usuario de BIMopen, modelado BIM de código abierto" name="description"/>
 <meta content="BIMopen" name="author"/>
-<link href="https://atsanna.github.io/bimopen-site/manual/es/floors-roofs-stairs/" rel="canonical"/>
+<link href="https://bimopen.it/manual/es/floors-roofs-stairs/" rel="canonical"/>
 <link href="../walls-doors-windows/" rel="prev"/>
-<link href="../views-and-graphics/" rel="next"/>
+<link href="../ceilings-and-columns/" rel="next"/>
 <link href="../assets/images/bimopen-cube.svg" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.9" name="generator"/>
 <title>Suelos, cubiertas, escaleras y componentes - Manual de usuario de BIMopen</title>
@@ -18,6 +18,13 @@
 <link href="../assets/css/theme.css" rel="stylesheet"/>
 <link href="../assets/css/theme_dark_mode.css" rel="stylesheet"/>
 <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="https://bimopen.it/manual/en/floors-roofs-stairs/" hreflang="en" rel="alternate"/>
+<link href="https://bimopen.it/manual/it/floors-roofs-stairs/" hreflang="it" rel="alternate"/>
+<link href="https://bimopen.it/manual/de/floors-roofs-stairs/" hreflang="de" rel="alternate"/>
+<link href="https://bimopen.it/manual/fr/floors-roofs-stairs/" hreflang="fr" rel="alternate"/>
+<link href="https://bimopen.it/manual/es/floors-roofs-stairs/" hreflang="es" rel="alternate"/>
+<link href="https://bimopen.it/manual/ar/floors-roofs-stairs/" hreflang="ar" rel="alternate"/>
+<link href="https://bimopen.it/manual/en/floors-roofs-stairs/" hreflang="x-default" rel="alternate"/>
 </head>
 <body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="slate" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -32,7 +39,7 @@
 </div>
 <header class="md-header md-header--shadow" data-md-component="header">
 <nav aria-label="Cabecera" class="md-header__inner md-grid">
-<a aria-label="Manual de usuario de BIMopen" class="md-header__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/?lang=es" title="Manual de usuario de BIMopen">
+<a aria-label="Manual de usuario de BIMopen" class="md-header__button md-logo" data-md-component="logo" href="https://bimopen.it/es/" title="Manual de usuario de BIMopen">
 <img alt="logo" src="../assets/images/bimopen-cube.svg"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -73,32 +80,32 @@
 <div class="md-select__inner">
 <ul class="md-select__list">
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/en/" hreflang="en">
+<a class="md-select__link" href="https://bimopen.it/manual/en/" hreflang="en">
               English
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/it/" hreflang="it">
+<a class="md-select__link" href="https://bimopen.it/manual/it/" hreflang="it">
               Italiano
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/de/" hreflang="de">
+<a class="md-select__link" href="https://bimopen.it/manual/de/" hreflang="de">
               Deutsch
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/fr/" hreflang="fr">
+<a class="md-select__link" href="https://bimopen.it/manual/fr/" hreflang="fr">
               Français
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/es/" hreflang="es">
+<a class="md-select__link" href="https://bimopen.it/manual/es/" hreflang="es">
               Español
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/ar/" hreflang="ar">
+<a class="md-select__link" href="https://bimopen.it/manual/ar/" hreflang="ar">
               العربية
             </a>
 </li>
@@ -147,7 +154,7 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navegación" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="Manual de usuario de BIMopen" class="md-nav__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/?lang=es" title="Manual de usuario de BIMopen">
+<a aria-label="Manual de usuario de BIMopen" class="md-nav__button md-logo" data-md-component="logo" href="https://bimopen.it/es/" title="Manual de usuario de BIMopen">
 <img alt="logo" src="../assets/images/bimopen-cube.svg"/>
 </a>
     Manual de usuario de BIMopen
@@ -197,6 +204,14 @@
 <a class="md-nav__link" href="../import-and-conversion/">
 <span class="md-ellipsis">
     Importación y conversión
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cad-files/">
+<span class="md-ellipsis">
+    DWG y DXF
     
   </span>
 </a>
@@ -317,6 +332,34 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#extrusion-roofs">
+<span class="md-ellipsis">
+      Cubiertas por extrusión
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#joining-roofs">
+<span class="md-ellipsis">
+      Unir cubiertas
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sloped-glazing">
+<span class="md-ellipsis">
+      Acristalamiento inclinado
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#soffits">
+<span class="md-ellipsis">
+      Sofitos
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -358,6 +401,17 @@
       Componentes
     </span>
 </a>
+<nav aria-label="Componentes" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#casework">
+<span class="md-ellipsis">
+      Mueble de obra
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#schedules-and-ifc">
@@ -375,6 +429,54 @@
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ceilings-and-columns/">
+<span class="md-ellipsis">
+    Falsos techos y columnas
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../openings/">
+<span class="md-ellipsis">
+    Huecos
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../phases/">
+<span class="md-ellipsis">
+    Fases y demoliciones
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../structure/">
+<span class="md-ellipsis">
+    Estructura y cimentaciones
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../site/">
+<span class="md-ellipsis">
+    Emplazamiento y terreno
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../design-options/">
+<span class="md-ellipsis">
+    Alternativas de diseño
+    
+  </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../views-and-graphics/">
@@ -425,7 +527,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="https://atsanna.github.io/bimopen-site/manual/es/pdf/bimopen-manual-es.pdf">
+<a class="md-nav__link" href="https://bimopen.it/manual/es/pdf/bimopen-manual-es.pdf">
 <span class="md-ellipsis">
     PDF
     
@@ -525,6 +627,34 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#extrusion-roofs">
+<span class="md-ellipsis">
+      Cubiertas por extrusión
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#joining-roofs">
+<span class="md-ellipsis">
+      Unir cubiertas
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sloped-glazing">
+<span class="md-ellipsis">
+      Acristalamiento inclinado
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#soffits">
+<span class="md-ellipsis">
+      Sofitos
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -566,6 +696,17 @@
       Componentes
     </span>
 </a>
+<nav aria-label="Componentes" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#casework">
+<span class="md-ellipsis">
+      Mueble de obra
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#schedules-and-ifc">
@@ -814,6 +955,181 @@ explica más).</p>
 </table>
 <p>En planta una cubierta muestra su contorno, sus cumbreras y limatesas; en 3D sus faldones,
 voladizos y capas.</p>
+<h3 id="extrusion-roofs">Cubiertas por extrusión</h3>
+<p>Una cubierta por extrusión es un perfil abierto dibujado en un plano de trabajo vertical y empujado
+a lo largo de la normal del plano: una marquesina sobre una puerta, una bóveda de cañón, la
+cubierta de una buhardilla dibujada en el muro de fachada.</p>
+<ol>
+<li>Abre un alzado, una sección o una vista 3D (empezada en una planta, <strong>Ir a vista</strong> pide una).</li>
+<li>Haz clic en <strong>Crear ▸ Construir ▸ Cubierta ▾ ▸ Cubierta por extrusión</strong>. Se abre la ventana
+   <strong>Plano de trabajo</strong>: elige un plano con nombre, o <strong>Designar un plano</strong> y haz clic en la cara de
+   un muro, una rejilla o un plano de referencia. El plano debe ser vertical.</li>
+<li>En <strong>Nivel de referencia y desfase de la cubierta</strong> elige el <strong>Nivel</strong> (el más alto por defecto)
+   y el <strong>Desfase</strong>: una línea discontinua marca esa altura.</li>
+<li>Dibuja el perfil como una sola cadena <strong>abierta</strong> con <strong>Línea</strong>, los arcos o <strong>Seleccionar
+   líneas</strong>. Es la cara superior de la cubierta: las capas del tipo quedan debajo.</li>
+<li>Haz clic en <strong>Finalizar modo de edición</strong>. La cubierta va desde el plano (<strong>Inicio de extrusión</strong>
+   0) a través del edificio, alejándose de ti (<strong>Fin de extrusión</strong>).</li>
+</ol>
+<p>Un perfil cerrado, con una rama o que vuelve sobre sí mismo (una parte sobre otra, o una línea
+vertical) se rechaza en <strong>Finalizar modo de edición</strong> con el motivo: una cubierta extruida debe
+mirar hacia arriba.</p>
+<p>Seleccionada, una cubierta por extrusión tiene <strong>Editar perfil</strong> (en un alzado o una sección frente
+a su plano, o en 3D) y <strong>Editar plano de trabajo</strong>; en planta y en 3D las flechas de sus dos
+extremos arrastran <strong>Inicio de extrusión</strong> y <strong>Fin de extrusión</strong>. Los muros se enlazan a su cara
+inferior como a cualquier cubierta, y <strong>Hueco ▸ Vertical</strong> la corta. Sigue a su plano: cuando el
+muro en que se dibujó se mueve, la cubierta se mueve con él.</p>
+<table>
+<thead>
+<tr>
+<th>Propiedad</th>
+<th>Qué es</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Plano de trabajo</strong></td>
+<td>El plano del perfil (solo lectura; se cambia con <strong>Editar plano de trabajo</strong>)</td>
+</tr>
+<tr>
+<td><strong>Inicio de extrusión</strong>, <strong>Fin de extrusión</strong></td>
+<td>Dónde empieza y acaba la extrusión, a lo largo de la normal del plano</td>
+</tr>
+<tr>
+<td><strong>Nivel de referencia</strong>, <strong>Desfase de nivel</strong></td>
+<td>La altura desde la que se mide el perfil: toda la cubierta se mueve con ellos</td>
+</tr>
+<tr>
+<td><strong>Corte de cabio</strong>, <strong>Profundidad de imposta</strong></td>
+<td>Cómo se cortan los aleros en los dos extremos del perfil</td>
+</tr>
+<tr>
+<td><strong>Grosor</strong>, <strong>Área</strong>, <strong>Volumen</strong></td>
+<td>Solo lectura</td>
+</tr>
+</tbody>
+</table>
+<h3 id="joining-roofs">Unir cubiertas</h3>
+<p><strong>Modificar ▸ Formas ▸ Unir cubierta</strong> (en el estilo BIMopen <strong>Modificar ▸ Unir cubierta</strong>) une
+una cubierta a la cara superior de otra cubierta o a un muro: la cubierta de la buhardilla
+encuentra la cubierta principal.</p>
+<ol>
+<li>Haz clic en <strong>Unir cubierta</strong>. Los bordes de las cubiertas se resaltan bajo el cursor, en una
+   planta, una sección, un alzado o una vista 3D.</li>
+<li>Haz clic en el borde que unir: un borde que no define la pendiente (un hastial), o un extremo de
+   una cubierta por extrusión.</li>
+<li>Haz clic en la cubierta o el muro al que unirla. El borde se alarga (o se acorta) hasta que la
+   cubierta encuentra la cara superior de la otra cubierta, o la cara del muro; lo que queda bajo
+   esa cara se corta.</li>
+</ol>
+<p>Un borde unido se ve naranja: otro clic lo separa. La unión sigue: cuando cambian la pendiente o la
+altura de la cubierta principal, la cubierta unida la encuentra de nuevo, y una unión a una cubierta
+eliminada desaparece.</p>
+<h3 id="sloped-glazing">Acristalamiento inclinado</h3>
+<p>Un acristalamiento inclinado es una cubierta de vidrio: una cubierta por perímetro o por extrusión
+cuyo tipo es <strong>Acristalamiento inclinado</strong>. Cada cara plana de la cubierta lleva rejillas de muro
+cortina, montantes y paneles.</p>
+<ol>
+<li>Dibuje la cubierta como de costumbre (<strong>Cubierta</strong> o <strong>Cubierta por extrusión</strong>).</li>
+<li>Selecciónela y elija <strong>Acristalamiento inclinado</strong> en el selector de tipo. La primera vez, BIMopen
+   crea el tipo con el panel acristalado y los montantes del proyecto.</li>
+<li>Cada cara queda dividida por las dos rejillas del tipo: la <strong>rejilla 1</strong> sube por la pendiente,
+   separada a lo largo del alero; la <strong>rejilla 2</strong> corre a lo largo del alero, separada pendiente arriba.</li>
+</ol>
+<p>Con el acristalamiento seleccionado, las herramientas de muro cortina trabajan sobre la cara bajo el
+cursor, en una planta, una sección, un alzado o una vista 3D:</p>
+<ul>
+<li><strong>Rejilla de muro cortina</strong> coloca una línea donde hace clic: de la rejilla 1 cerca del alero o de la
+  cumbrera, de la rejilla 2 cerca de un lado. TAB pasa a la otra rejilla. <strong>Todos los segmentos</strong>, <strong>Un
+  segmento</strong> y <strong>Todos excepto los designados</strong> funcionan como en un muro cortina.</li>
+<li><strong>Montante</strong> coloca montantes del tipo elegido en una <strong>Línea de rejilla</strong>, un <strong>Segmento de línea de
+  rejilla</strong> o <strong>Todas las líneas de rejilla</strong> de la cara.</li>
+<li><strong>Panel</strong> cambia el panel en el que hace clic al tipo del selector: acristalado, sólido, una puerta o vacío.</li>
+<li><strong>Añadir/Suprimir segmentos</strong> quita el segmento en el que hace clic (los dos paneles pasan a ser uno), o lo vuelve a poner.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Propiedad</th>
+<th>Qué es</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Panel de muro cortina</strong> (tipo)</td>
+<td>El panel de cada celda</td>
+</tr>
+<tr>
+<td><strong>Condición de unión</strong> (tipo)</td>
+<td>Qué montantes son continuos donde se cruzan las rejillas: la rejilla 1, la rejilla 2, o los bordes con una de ellas</td>
+</tr>
+<tr>
+<td><strong>Patrón de rejilla 1/2</strong> (tipo): <strong>Disposición</strong>, <strong>Separación</strong>, <strong>Ajustar al tamaño del montante</strong></td>
+<td>Cómo coloca cada rejilla sus líneas: ninguna, distancia fija, número fijo, separación máxima</td>
+</tr>
+<tr>
+<td><strong>Montantes rejilla 1/2</strong> (tipo): <strong>Tipo interior</strong>, <strong>Tipo de borde 1</strong>, <strong>Tipo de borde 2</strong></td>
+<td>Los montantes de las líneas y de los bordes de la cara</td>
+</tr>
+<tr>
+<td><strong>Número</strong>, <strong>Justificación</strong>, <strong>Ángulo</strong>, <strong>Desfase</strong> de las rejillas 1 y 2</td>
+<td>Los valores propios de esta cubierta: cuántas líneas (número fijo), adónde va el resto, cómo giran las líneas en la cara (de −89° a 89°), cuánto se desplazan</td>
+</tr>
+<tr>
+<td><strong>Paneles</strong>, <strong>Montantes</strong></td>
+<td>Recuentos de solo lectura</td>
+</tr>
+</tbody>
+</table>
+<p>En planta el acristalamiento muestra sus paneles y montantes vistos desde arriba;
+<strong>Visibilidad/Gráficos</strong> oculta paneles y montantes de muro cortina como en los muros cortina. El IFC
+escribe una cubierta hecha de placas y barras.</p>
+<h3 id="soffits">Sofitos</h3>
+<p>Un sofito cierra la parte inferior del alero, entre los muros y el borde de la cubierta.</p>
+<ol>
+<li>En una planta o una vista 3D haga clic en <strong>Modelar ▸ Construir ▸ Cubierta ▾ ▸ Sofito</strong>. El modo de
+   boceto empieza con <strong>Designar bordes de cubierta</strong>.</li>
+<li>Haga clic en los bordes de la cubierta: sus líneas quedan bloqueadas a la cubierta.</li>
+<li>Haga clic en <strong>Designar muros</strong> y en las caras exteriores de los muros bajo la cubierta (TAB designa
+   la cadena): estas líneas quedan bloqueadas a los muros.</li>
+<li>Cierre el contorno con <strong>Línea</strong> y <strong>Acortar/Alargar</strong>, y haga clic en <strong>Finalizar modo de edición</strong>.</li>
+</ol>
+<p>La cara superior del sofito queda bajo el alero de la cubierta; sus capas (la <strong>Estructura</strong> del tipo)
+cuelgan debajo. Cuando la cubierta o los muros se mueven, el sofito los sigue. Una <strong>Flecha de
+pendiente</strong>, o una línea que <strong>Define pendiente</strong>, lo inclina. Seleccionado, <strong>Editar contorno</strong> vuelve
+a abrir su boceto.</p>
+<table>
+<thead>
+<tr>
+<th>Propiedad</th>
+<th>Qué es</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Estructura</strong>, <strong>Grosor</strong> (tipo)</td>
+<td>Las capas, de arriba abajo, y su suma</td>
+</tr>
+<tr>
+<td><strong>Nivel</strong>, <strong>Desfase de altura desde nivel</strong></td>
+<td>Dónde está su cara superior</td>
+</tr>
+<tr>
+<td><strong>Delimitación de habitación</strong></td>
+<td>Si las habitaciones terminan en él</td>
+</tr>
+<tr>
+<td><strong>Pendiente</strong></td>
+<td>Sustituye la pendiente de su línea o su flecha</td>
+</tr>
+<tr>
+<td><strong>Perímetro</strong>, <strong>Área</strong>, <strong>Volumen</strong></td>
+<td>De solo lectura</td>
+</tr>
+</tbody>
+</table>
+<p>Las secciones lo cortan con sus capas, la planta de falsos techos de su nivel lo ve desde abajo; tiene
+su propia categoría en <strong>Visibilidad/Gráficos</strong> y en las tablas, y el IFC lo escribe como revestimiento.</p>
 <h2 id="stairs">Escaleras</h2>
 <ol>
 <li>Haz clic en <strong>Crear ▸ Conexiones verticales ▸ Escaleras</strong>. El modo de boceto empieza con <strong>Tramo</strong>.</li>
@@ -822,7 +1138,8 @@ voladizos y capas.</p>
    <code>9 contrahuellas creadas, 8 restantes</code>).</li>
 <li>Para girar, haz clic de nuevo lejos del final del primer tramo y dibuja el siguiente: un
    descansillo los une. Con cualquier ángulo el descansillo queda entre las contrahuellas de los dos
-   tramos, con su esquina exterior donde se encuentran sus lados exteriores.</li>
+   tramos, con su esquina exterior donde se encuentran sus lados exteriores; si los tramos acaban desalineados, también los lados
+   interiores se prolongan hasta encontrarse, en escuadra, sin bordes oblicuos.</li>
 <li>Cuando todas las contrahuellas están colocadas, haz clic en <strong>Finalizar modo de edición</strong>.</li>
 </ol>
 <figure>
@@ -840,13 +1157,26 @@ barandilla, puesto en ambos lados, o <strong>Ninguno</strong>.</p>
 desfases) y de la <strong>Altura máxima de contrahuella</strong> del tipo; cambiar un nivel o un desfase en
 <strong>Propiedades</strong> cambia las contrahuellas. <strong>Editar boceto</strong> vuelve a abrir sus líneas de contorno y de
 contrahuella: cámbialas o bórralas (clic, <span class="keys"><kbd class="key-delete">Del</kbd></span>) y dibuja de nuevo los tramos; las barandillas de la escalera siguen. <strong>Nivel superior de varias plantas</strong> repite la escalera, con sus barandillas, planta por planta hasta ese nivel; una planta cuya altura no es la de la escalera no recibe copia, y un aviso la nombra. Con la escalera seleccionada, las flechas azules de inversión junto a la primera contrahuella la hacen subir desde el otro extremo; <strong>Etiqueta SUBE</strong>, <strong>Flecha SUBE</strong>, <strong>Etiqueta BAJA</strong> y <strong>Flecha BAJA</strong> en <strong>Propiedades</strong> muestran u ocultan las partes del símbolo en planta. El pinzamiento cuadrado bajo el texto <strong>SUBE</strong> lo arrastra a otro lugar.</p>
-<p>En planta la escalera muestra sus huellas hasta la línea de corte, la línea de rotura, la flecha y
-el texto <strong>SUBE</strong>/<strong>BAJA</strong>; en 3D sus huellas y contrahuellas, o una losa monolítica, sus
+<p>En la planta de su nivel base la escalera muestra sus huellas hasta la línea de corte, la línea de
+rotura, la flecha y el texto <strong>SUBE</strong>; en la planta de su nivel superior se muestra entera, con
+descansillos y barandillas, sin línea de rotura, con la flecha y el texto <strong>BAJA</strong> hasta la
+primera contrahuella. En un nivel entre dos plantas de una escalera de varias plantas se ven las
+dos partes; en 3D sus huellas y contrahuellas, o una losa monolítica, sus
 descansillos y barandillas.</p>
 <figure>
 <img alt="La escalera del ejemplo en la planta baja: las huellas hasta la línea de corte, la línea de corte, la flecha y el texto SUBE" src="../assets/screens/fr-stair-plan.webp"/>
 <figcaption>Una escalera en planta</figcaption>
 </figure>
+<p>En el nivel base también se dibuja la parte de la escalera por encima del corte, discontinua.
+Cada parte tiene una subcategoría de <strong>Escaleras</strong> en <strong>Estilos por categoría</strong>: <strong>Contornos</strong>,
+<strong>Líneas de contrahuella</strong>, <strong>Líneas de vuelo</strong>, <strong>Soportes</strong>, <strong>Marcas de corte</strong> y <strong>Flechas
+SUBE</strong>, cada una también <strong><encima></encima></strong>; allí se cambian su grosor, color y patrón, y vista por
+vista en <strong>Visibilidad y gráficos</strong>.</p>
+<p><strong>Anotaciones ▸ Etiqueta ▸ Numeración de peldaños</strong>: elija en la barra de opciones la <strong>Referencia</strong>
+(<strong>Izquierda</strong>, <strong>Cuarto izquierdo</strong>, <strong>Centro</strong>, <strong>Cuarto derecho</strong>, <strong>Derecha</strong>), qué numerar
+(<strong>Contrahuellas</strong> o <strong>Huellas</strong>) y el <strong>Número inicial</strong>, y haga clic en una escalera en una
+planta. Sus peldaños se numeran seguidos en todos sus tramos, solo en esa planta. Con la escalera
+seleccionada, sus <strong>Propiedades</strong> muestran los ajustes de la numeración.</p>
 <h3 id="how-a-stair-is-built">Cómo está construida una escalera</h3>
 <p>Las <strong>Parámetros de tipo</strong> de la escalera deciden su construcción:</p>
 <ul>
@@ -878,6 +1208,8 @@ descansillos y barandillas.</p>
 <p>Una sección a través de la escalera la muestra cortada con su losa. <strong>Volumen</strong> en
 <strong>Propiedades</strong> y en la tabla de planificación de escaleras es el volumen de sus sólidos.</p>
 <p>La <strong>Fuente de texto</strong> del tipo, el <strong>Perfil de mamperlán</strong> (<strong>Por defecto</strong> o <strong>Redondeado</strong>) y <strong>Aplicar perfil de mamperlán</strong> (solo delante, delante e izquierda, o delante, izquierda y derecha: más allá de un lado sin zanca cerrada), el <strong>Desfase de zanca abierta</strong>, <strong>Recortar zancas en la parte superior</strong> (<strong>Igualar nivel</strong> detiene las zancas laterales en el nivel superior) y sus datos de identificación (<strong>Código</strong>, <strong>Modelo</strong>, <strong>Fabricante</strong>, <strong>Comentarios de tipo</strong>, <strong>URL</strong>, <strong>Descripción</strong>, <strong>Código de montaje</strong>) están en <strong>Parámetros de tipo</strong>, como la <strong>Parte inferior de la zanca</strong> de una escalera monolítica (<strong>Lisa</strong>, una losa inclinada, o <strong>Escalonada</strong>: la losa sigue los peldaños). En <strong>Reglas de cálculo</strong>, <strong>Usar calculadora de escalera</strong> con un <strong>Resultado objetivo</strong>, <strong>máximo</strong> y <strong>mínimo</strong> comprueba 2 contrahuellas + 1 huella: una escalera fuera del intervalo se crea, y un aviso lo indica.</p>
+<p><strong>Novedades de la realineación.</strong> En las <strong>Propiedades</strong> de una escalera o rampa, <strong>Mostrar flecha SUBE en todas las vistas</strong> muestra la flecha entera y <strong>SUBE</strong> también en la planta del nivel superior. El <strong>Número de contrahuellas deseado</strong> se puede escribir: las contrahuellas pasan a medir la planta dividida por ese número (un número que las haría más altas que la <strong>Altura máxima de contrahuella</strong> del tipo se rechaza). Si las contrahuellas dibujadas superan las deseadas, o la <strong>Profundidad real de huella</strong> es menor que la mínima del tipo, la escalera se crea con un aviso. Con <strong>Usar calculadora de escaleras</strong> activo en el tipo, una escalera nueva parte de la huella que da el <strong>Resultado objetivo</strong>. El diálogo <strong>Tipo de barandilla</strong> ofrece también <strong>Predeterminado</strong>, el tipo de la herramienta Barandilla. En el boceto, la línea de tramo discontinua de cada tramo tiene un pinzamiento en su extremo: arrastrado, añade o quita contrahuellas. <strong>Plano de trabajo ▸ Definir</strong> en el boceto de una escalera nueva la pone en otro nivel. El texto <strong>SUBE</strong>/<strong>BAJA</strong> se arrastra por su pinzamiento también con el cursor encima, tras <span class="keys"><kbd class="key-tab">Tab</kbd></span> sobre la escalera resaltada y en la planta del nivel superior. En el tipo: <strong>Altura de la zanca bajo la escalera</strong> mueve las zancas laterales bajo las huellas, <strong>Altura de la zanca del descansillo</strong> es la altura de las zancas que siguen a lo largo de los descansillos, <strong>Recortar zancas en la parte superior</strong> tiene también <strong>Igualar zanca del descansillo</strong>, y <strong>Solape del descansillo</strong> (escaleras monolíticas escalonadas) es la distancia de las caras verticales detrás de las contrahuellas; el tipo tiene también su <strong>Coste</strong>.</p>
+<p><strong>Calculadora de escalera.</strong> En <strong>Propiedades de tipo</strong>, las <strong>Reglas de cálculo</strong> son una fila con su resumen (por ejemplo «2 × A + 1 × P = 630 mm, 600–650») y el botón <strong>Editar…</strong>, que abre la <strong>Calculadora de escalera</strong>: <strong>Usar calculadora de escalera</strong>, los multiplicadores de contrahuella y de huella (de 0,5 a 5, con un decimal), y los resultados objetivo, máximo y mínimo. El resultado de la escalera seleccionada se actualiza al instante, verde dentro del intervalo y rojo fuera; con un máximo menor que el mínimo <strong>Aceptar</strong> está desactivado. <strong>Aceptar</strong> da las reglas al tipo en un solo paso de deshacer; las escaleras existentes conservan su huella, las nuevas la toman de los multiplicadores. En el estilo BIMopen el diálogo tiene vista previa.</p>
 <h2 id="ramps">Rampas</h2>
 <ol>
 <li>Haz clic en <strong>Crear ▸ Conexiones verticales ▸ Rampa</strong>. El modo de boceto empieza con <strong>Tramo</strong>.</li>
@@ -945,7 +1277,8 @@ completo en la huella, el descansillo o el suelo que tiene debajo: donde caería
 una contrahuella se desplaza media sección, así ningún poste entra en los peldaños ni queda
 suspendido delante del primero. Entre dos postes los balaustres tienen un paso uniforme, nunca mayor
 que la separación.</p>
-<p><strong>Colocar sobre anfitrión</strong> funciona en planta y en la vista 3D: la escalera bajo el cursor muestra dónde van las dos barandillas. <strong>Sobre zanca</strong> solo se elige para una escalera que tiene zanca: en una escalera monolítica está en gris, en la barra de opciones y en las <strong>Propiedades</strong>. Un tipo de barandilla nuevo tiene las <strong>Uniones angulares</strong> y las <strong>Uniones tangentes</strong> en <strong>Añadir segmentos verticales/horizontales</strong>, <strong>Soldadura</strong>, sin ajuste de altura del descansillo, un barandal inferior a 0,100 m (30×30), balaustres 20×20 del barandal inferior al superior cada 0,120 m, interrumpidos al final de cada segmento y ajustados a su longitud, y postes 50×50 sobre el anfitrión: donde un tramo encuentra un descansillo el poste queda sobre el descansillo en la línea de contrahuella, con el segmento vertical del barandal, y nada pasa sobre las huellas. Donde el barandal sube en vertical al inicio de un tramo, un barandal bajo se queda en el descansillo sin entrar en el primer peldaño. <strong>Editar uniones</strong> (una unión cada vez) está en gris: aún no disponible.</p>
+<p><strong>Colocar sobre anfitrión</strong> funciona en planta y en la vista 3D: la escalera bajo el cursor muestra dónde van las dos barandillas. <strong>Sobre zanca</strong> solo se elige para una escalera que tiene zanca: en una escalera monolítica está en gris, en la barra de opciones y en las <strong>Propiedades</strong>. Un tipo de barandilla nuevo tiene las <strong>Uniones angulares</strong> y las <strong>Uniones tangentes</strong> en <strong>Añadir segmentos verticales/horizontales</strong>, <strong>Soldadura</strong>, sin ajuste de altura del descansillo, un barandal inferior a 0,100 m (30×30), balaustres 20×20 del barandal inferior al superior cada 0,120 m, interrumpidos al final de cada segmento y ajustados a su longitud, y postes 50×50 sobre el anfitrión: donde un tramo encuentra un descansillo el poste queda sobre el descansillo en la línea de contrahuella, con el segmento vertical del barandal, y nada pasa sobre las huellas. Donde el barandal sube en vertical al inicio de un tramo, un barandal bajo se queda en el descansillo sin entrar en el primer peldaño.</p>
+<p><strong>Novedades de la realineación.</strong> El recorrido de una barandilla se dibuja con todas las herramientas del grupo <strong>Dibujar</strong>: un arco sigue siendo un arco en la barandilla, en 3D y en <strong>Editar recorrido</strong>, con postes solo donde empieza y termina. <strong>Seleccionar nuevo anfitrión</strong> acepta también un suelo: la barandilla queda sobre su cara superior. En <strong>Editar recorrido</strong>, con una línea seleccionada, la barra de opciones ofrece <strong>Corrección de altura</strong> (<strong>Por tipo</strong> o <strong>Personalizada</strong> con su valor) e <strong>Inclinación</strong> (<strong>Según anfitrión</strong>, <strong>Plano</strong>, <strong>Inclinado</strong>); <strong>Herramientas ▸ Editar uniones</strong> muestra un recuadro alrededor de la junta bajo el cursor, un clic la marca con una X y <strong>Unión</strong> en la barra de opciones elige cómo se unen allí los pasamanos. En <strong>Estructura del pasamanos</strong> cada pasamanos tiene su <strong>Material</strong>.</p>
 <h2 id="components">Componentes</h2>
 <ol>
 <li>Haz clic en <strong>Crear ▸ Construir ▸ Componente</strong>. El selector de tipo lista los componentes
@@ -957,17 +1290,45 @@ que la separación.</p>
 <img alt="La herramienta de componente en un dormitorio de la planta: la vista previa del componente que sigue al cursor, con cotas temporales a los muros más cercanos" src="../assets/screens/fr-component.webp"/>
 <figcaption>Un componente sigue al cursor antes del clic</figcaption>
 </figure>
-<p><strong>Modo ▸ Cargar familia</strong> abre la biblioteca, por carpetas (<strong>Mobiliario</strong>, <strong>Aparatos
-sanitarios</strong>): elige una familia y haz clic en <strong>Abrir</strong> para añadir sus tipos al proyecto.</p>
+<p><strong>Modo ▸ Cargar componente</strong> abre la biblioteca, por carpetas (<strong>Mobiliario</strong>, <strong>Mueble de obra</strong>,
+<strong>Aparatos sanitarios</strong>): elige un componente para ver sus tipos con sus medidas (anchura ×
+profundidad × altura) y haz clic en <strong>Abrir</strong> para añadirlos al proyecto.</p>
 <figure>
-<img alt="Cargar familia: la biblioteca por carpeta, Mobiliario y Aparatos sanitarios, con las familias ya cargadas marcadas" src="../assets/screens/fr-load-family.webp"/>
-<figcaption>Cargar familia</figcaption>
+<img alt="Cargar componente: la biblioteca por carpeta, Mobiliario y Aparatos sanitarios, con los componentes ya cargados marcados" src="../assets/screens/fr-load-family.webp"/>
+<figcaption>Cargar componente</figcaption>
 </figure>
 <p>Selecciona un componente y haz clic en <strong>Anfitrión ▸ Elegir nuevo anfitrión</strong>, y luego en un
 suelo: el componente pasa al suelo y se queda sobre su cara superior (haz clic en un punto vacío
 para devolverlo al nivel). Sus propiedades son <strong>Nivel</strong>, <strong>Anfitrión</strong>, <strong>Desfase desde nivel</strong>,
 <strong>Rotación</strong>, <strong>Marca</strong> y <strong>Comentarios</strong>; <strong>Parámetros de tipo</strong> tiene anchura, profundidad,
 altura y material.</p>
+<h3 id="casework">Mueble de obra</h3>
+<p>El <strong>mueble de obra</strong> es una categoría propia, junto al <strong>mobiliario</strong>: los muebles fijos de
+cocinas y baños. Su carpeta de la biblioteca tiene la <strong>cocina modular</strong> (de 3,00 y 2,40 m), el
+<strong>armario alto</strong> (de 60, 90 y 120 cm de ancho, 35 cm de fondo, 70 cm de alto), la <strong>columna 60</strong>
+(60 × 60 cm, 2,10 m de alto), el <strong>mueble de baño 80</strong> y el <strong>armario empotrado</strong>; el <strong>armario</strong>
+exento sigue siendo mobiliario. Un armario alto se coloca 1,45 m por encima de su nivel: el
+<strong>desfase por defecto</strong> de su tipo dice a qué altura van los nuevos, y cada uno conserva su
+propio <strong>desfase desde el nivel</strong>.</p>
+<p>El mueble de obra se dibuja según el rango de vista de la planta, como los muros:</p>
+<ul>
+<li>un mueble que el plano de corte atraviesa (una columna, con el corte a 1,20 m) está
+  <strong>cortado</strong>: su contorno con el grosor de corte de la categoría, relleno con el patrón de
+  corte de su material;</li>
+<li>un mueble bajo el plano de corte (la cocina) se ve desde arriba, en proyección;</li>
+<li>un mueble por encima del plano de corte y por debajo del límite superior del rango (un armario
+  alto) también se ve desde arriba, <strong>a trazos</strong>; por encima del límite superior no se dibuja.</li>
+</ul>
+<p>El mobiliario y los aparatos sanitarios nunca se cortan: donde el plano de corte los atraviesa se
+dibujan enteros, y por encima no se dibujan. Por eso <strong>Visibilidad/Gráficos</strong> y <strong>Estilos de
+objeto</strong> dan al <strong>mueble de obra</strong> líneas y patrones de corte, y muestran «—» para el
+<strong>mobiliario</strong> y los <strong>aparatos sanitarios</strong>. El mueble de obra tiene su propia fila en los
+filtros, las tablas (<strong>Tabla de planificación/Cantidades ▸ Mueble de obra</strong>), los cómputos de
+materiales, los parámetros de proyecto y compartidos y las leyendas. Un proyecto guardado antes de
+que el mueble de obra tuviera categoría propia se abre con sus cocinas como mueble de obra, y el
+mensaje de apertura dice cuántas. <strong>Exportar IFC</strong> escribe el mueble de obra como mobiliario
+marcado <em>Casework</em>; al importar, el mobiliario llamado como un armario, una encimera, un mueble de
+baño o una cocina se propone como mueble de obra.</p>
 <h2 id="schedules-and-ifc">Tablas de planificación e IFC</h2>
 <p>Los suelos, las cubiertas, las escaleras, las barandillas y el mobiliario tienen sus tablas de
 planificación (<strong>Vistas ▸ Crear ▸ Tablas de planificación ▸ Tabla de planificación/cantidades</strong>),
@@ -975,8 +1336,10 @@ una fila por elemento. <strong>Exportar ▸ Exportar IFC4…</strong> escribe lo
 aberturas y pendientes), las cubiertas, las escaleras con sus tramos y descansillos, las
 barandillas, el mobiliario y los aparatos sanitarios. Una escalera de varias plantas se escribe una vez en cada planta en que se repite, con sus barandillas.</p>
 <h2 id="not-yet-in-bimopen">Todavía no en BIMopen</h2>
-<p>Los falsos techos, las cubiertas por extrusión, los huecos de patinillo y las
-aberturas verticales, los bordes de losa, las impostas, los canalones y los plafones llegan después del realineamiento de este capítulo.</p>
+<p>Los bordes de losa, las impostas y los canalones
+llegan después del realineamiento de este capítulo. Los falsos techos tienen su propio capítulo,
+<a href="../ceilings-and-columns/">Falsos techos y columnas</a>; los patinillos y los huecos cortados en
+suelos, cubiertas y muros están en <a href="../openings/">Huecos</a>.</p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
@@ -1001,13 +1364,13 @@ aberturas verticales, los bordes de losa, las impostas, los canalones y los plaf
               </div>
 </div>
 </a>
-<a aria-label="Siguiente: Vistas y gráficos" class="md-footer__link md-footer__link--next" href="../views-and-graphics/">
+<a aria-label="Siguiente: Falsos techos y columnas" class="md-footer__link md-footer__link--next" href="../ceilings-and-columns/">
 <div class="md-footer__title">
 <span class="md-footer__direction">
                 Siguiente
               </span>
 <div class="md-ellipsis">
-                Vistas y gráficos
+                Falsos techos y columnas
               </div>
 </div>
 <div class="md-footer__button md-icon">

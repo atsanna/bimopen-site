@@ -7,8 +7,8 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="User manual of BIMopen, open-source BIM modelling" name="description"/>
 <meta content="BIMopen" name="author"/>
-<link href="https://atsanna.github.io/bimopen-site/manual/en/views-and-graphics/" rel="canonical"/>
-<link href="../floors-roofs-stairs/" rel="prev"/>
+<link href="https://bimopen.it/manual/en/views-and-graphics/" rel="canonical"/>
+<link href="../design-options/" rel="prev"/>
 <link href="../annotation/" rel="next"/>
 <link href="../assets/images/bimopen-cube.svg" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.9" name="generator"/>
@@ -18,6 +18,13 @@
 <link href="../assets/css/theme.css" rel="stylesheet"/>
 <link href="../assets/css/theme_dark_mode.css" rel="stylesheet"/>
 <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="https://bimopen.it/manual/en/views-and-graphics/" hreflang="en" rel="alternate"/>
+<link href="https://bimopen.it/manual/it/views-and-graphics/" hreflang="it" rel="alternate"/>
+<link href="https://bimopen.it/manual/de/views-and-graphics/" hreflang="de" rel="alternate"/>
+<link href="https://bimopen.it/manual/fr/views-and-graphics/" hreflang="fr" rel="alternate"/>
+<link href="https://bimopen.it/manual/es/views-and-graphics/" hreflang="es" rel="alternate"/>
+<link href="https://bimopen.it/manual/ar/views-and-graphics/" hreflang="ar" rel="alternate"/>
+<link href="https://bimopen.it/manual/en/views-and-graphics/" hreflang="x-default" rel="alternate"/>
 </head>
 <body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="slate" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -32,7 +39,7 @@
 </div>
 <header class="md-header md-header--shadow" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="BIMopen user manual" class="md-header__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/?lang=en" title="BIMopen user manual">
+<a aria-label="BIMopen user manual" class="md-header__button md-logo" data-md-component="logo" href="https://bimopen.it/en/" title="BIMopen user manual">
 <img alt="logo" src="../assets/images/bimopen-cube.svg"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -73,32 +80,32 @@
 <div class="md-select__inner">
 <ul class="md-select__list">
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/en/" hreflang="en">
+<a class="md-select__link" href="https://bimopen.it/manual/en/" hreflang="en">
               English
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/it/" hreflang="it">
+<a class="md-select__link" href="https://bimopen.it/manual/it/" hreflang="it">
               Italiano
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/de/" hreflang="de">
+<a class="md-select__link" href="https://bimopen.it/manual/de/" hreflang="de">
               Deutsch
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/fr/" hreflang="fr">
+<a class="md-select__link" href="https://bimopen.it/manual/fr/" hreflang="fr">
               Français
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/es/" hreflang="es">
+<a class="md-select__link" href="https://bimopen.it/manual/es/" hreflang="es">
               Español
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/ar/" hreflang="ar">
+<a class="md-select__link" href="https://bimopen.it/manual/ar/" hreflang="ar">
               العربية
             </a>
 </li>
@@ -147,7 +154,7 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="BIMopen user manual" class="md-nav__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/?lang=en" title="BIMopen user manual">
+<a aria-label="BIMopen user manual" class="md-nav__button md-logo" data-md-component="logo" href="https://bimopen.it/en/" title="BIMopen user manual">
 <img alt="logo" src="../assets/images/bimopen-cube.svg"/>
 </a>
     BIMopen user manual
@@ -202,6 +209,14 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../cad-files/">
+<span class="md-ellipsis">
+    DWG and DXF
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../selection-and-modify/">
 <span class="md-ellipsis">
     Selecting and modifying
@@ -221,6 +236,54 @@
 <a class="md-nav__link" href="../floors-roofs-stairs/">
 <span class="md-ellipsis">
     Floors, roofs, stairs and components
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ceilings-and-columns/">
+<span class="md-ellipsis">
+    Ceilings and columns
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../openings/">
+<span class="md-ellipsis">
+    Openings
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../phases/">
+<span class="md-ellipsis">
+    Phases and demolition
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../structure/">
+<span class="md-ellipsis">
+    Structure and foundations
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../site/">
+<span class="md-ellipsis">
+    Site plan and terrain
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../design-options/">
+<span class="md-ellipsis">
+    Design options
     
   </span>
 </a>
@@ -252,6 +315,24 @@
       3D views
     </span>
 </a>
+<nav aria-label="3D views" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#section-box">
+<span class="md-ellipsis">
+      Section box, projection and orientation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#perspective-views">
+<span class="md-ellipsis">
+      Perspective views
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#visual-styles">
@@ -266,6 +347,38 @@
       Realistic style
     </span>
 </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pastel-style">
+<span class="md-ellipsis">
+      Pastel style
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#live-view-and-walk-mode">
+<span class="md-ellipsis">
+      Live view and walk mode
+    </span>
+</a>
+<nav aria-label="Live view and walk mode" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#disable-collision">
+<span class="md-ellipsis">
+      Disable Collision
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#walkthrough-paths">
+<span class="md-ellipsis">
+      Walkthrough
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#sun-and-shadows">
@@ -310,6 +423,13 @@
 <a class="md-nav__link" href="#plans-and-their-view-range">
 <span class="md-ellipsis">
       Plans and their cut heights
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#underlay">
+<span class="md-ellipsis">
+      Underlay
     </span>
 </a>
 </li>
@@ -413,7 +533,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="https://atsanna.github.io/bimopen-site/manual/en/pdf/bimopen-manual-en.pdf">
+<a class="md-nav__link" href="https://bimopen.it/manual/en/pdf/bimopen-manual-en.pdf">
 <span class="md-ellipsis">
     PDF
     
@@ -440,6 +560,24 @@
       3D views
     </span>
 </a>
+<nav aria-label="3D views" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#section-box">
+<span class="md-ellipsis">
+      Section box, projection and orientation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#perspective-views">
+<span class="md-ellipsis">
+      Perspective views
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#visual-styles">
@@ -454,6 +592,38 @@
       Realistic style
     </span>
 </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pastel-style">
+<span class="md-ellipsis">
+      Pastel style
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#live-view-and-walk-mode">
+<span class="md-ellipsis">
+      Live view and walk mode
+    </span>
+</a>
+<nav aria-label="Live view and walk mode" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#disable-collision">
+<span class="md-ellipsis">
+      Disable Collision
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#walkthrough-paths">
+<span class="md-ellipsis">
+      Walkthrough
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#sun-and-shadows">
@@ -498,6 +668,13 @@
 <a class="md-nav__link" href="#plans-and-their-view-range">
 <span class="md-ellipsis">
       Plans and their cut heights
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#underlay">
+<span class="md-ellipsis">
+      Underlay
     </span>
 </a>
 </li>
@@ -587,6 +764,67 @@ does the same: <strong>{3D}</strong> becomes a named view, and the next default 
 stays visible.</p>
 <p>Floors cut the walls they pass through: where a slab crosses a wall the wall stops under it and
 goes on above it, so the slab's edge and the wall's face are one surface.</p>
+<h3 id="section-box">Section box, projection and orientation</h3>
+<p><strong>{3D}</strong> starts orthographic, looking from the south-east corner. Right-click the orientation
+cube: <strong>Prospettica</strong> or <strong>Ortogonale</strong>, <strong>Vai all'inizio</strong>, <strong>Salva vista…</strong>, <strong>Blocca selezione</strong>
+(the orbit turns about the chosen elements), <strong>Ripristina Fronte</strong>, <strong>Orienta su direzione</strong> (the
+compass points and <strong>Alto</strong>), <strong>Orienta su vista</strong> (a plan, section or elevation: the view takes its
+viewpoint and a section box reproduces its extents) and <strong>Orienta su piano…</strong> (a level, a grid or a
+reference plane).</p>
+<p>In the 3D view's <strong>Properties</strong>, <strong>Estensioni ▸ Riquadro di sezione</strong> switches the section box on:
+the first time it wraps the visible model. Outside the box the model is not shown and the parts it
+cuts are closed on its faces, layer by layer. A click on an edge selects the box: the six arrows
+move a face, the circle above turns it. Each change is one undo step; switched off, the box keeps
+its size. In the <strong>Project Browser</strong>, right-click a 3D view ▸ <strong>Mostra riquadro di sezione</strong> shows
+it in plans and sections too, with grips. <strong>Visibilità e grafica ▸ Riquadri di sezione</strong> hides its
+drawing, not the cut.</p>
+<figure>
+<img alt="The sample house in a 3D view with the section box lowered to the ground floor: the rooms seen from above and the walls cut" src="../assets/screens/vw-section-box.webp"/>
+<figcaption>The section box cuts the model at the ground floor</figcaption>
+</figure>
+<p>With <strong>Sezione</strong> the options bar offers <strong>Tipo</strong> (<strong>Sezione edificio</strong>, <strong>Sezione di muro</strong>,
+<strong>Dettaglio</strong>) and <strong>Scala vista</strong>; the Browser lists the view under its type's branch.
+<strong>Prospetto</strong> is placed with one click beside a wall: the symbol looks at it (<strong>Tab</strong> turns it).
+Right-click <strong>Viste</strong> in the Browser ▸ <strong>Organizzazione del browser…</strong> chooses how the views are
+listed: by type, discipline, phase, level, only those not on sheets, or an organisation of your own.</p>
+<p>The cut faces show the material's <strong>cut pattern</strong>; at <strong>Basso</strong> detail they show the
+<strong>Materiale poché a dettaglio basso</strong> chosen in Properties (<strong><per categoria=""></per></strong>: each part's own
+material). With the box selected, <strong>EH</strong> hides its drawing in the view; <strong>BX</strong> puts the box around
+the selected elements. <strong>{3D}</strong> and the saved 3D views have <strong>Ritaglia vista</strong> and <strong>Regione di
+taglio visibile</strong> too: the image is limited to the rectangle, dragged by its sides. <strong>Orienta su
+piano…</strong> also takes a click on a face (<strong>Seleziona un piano</strong>) or on a line (its work plane).</p>
+<p><strong>Sezione</strong> is drawn in a section, an elevation or a detail too: it is made across that view.
+<strong>Rif. ad altra vista</strong> makes the section open an existing view (or a new free 2D view) instead of
+its own; <strong>Offset</strong> moves the line sideways. With an elevation placed by one click selected, its
+symbol shows four boxes: a click switches the elevation towards that side on or off (interior
+elevations), the outer grip turns the symbol. In the Browser, <strong>Ctrl</strong> and <strong>Shift</strong> pick several
+views: <strong>Applica modello vista…</strong>, <strong>Duplica</strong> and <strong>Elimina</strong> act on them all.</p>
+<h3 id="perspective-views">Perspective views</h3>
+<p><strong>Views ▸ Create ▸ 3D View ▸ Perspective view</strong> puts a camera in a plan, a section or an
+elevation. The options bar (in the BIMopen style, the tool panel) has the <strong>Level</strong> and the
+<strong>Offset</strong>, the eyes' height above the level (1.60 m, as in walk mode); <strong>Perspective</strong> is always on.
+The first click is where the camera stands; the triangle of what it sees follows the cursor, and
+the second click is the point it looks at, at the same height. <strong>3D View 1</strong> (then 2, 3…) is made
+under <strong>3D Views</strong> in the <strong>Project Index</strong> and opens beside the plan, cropped. In a section or an
+elevation the two clicks give the heights too.</p>
+<p>The view is drawn in its <strong>crop region</strong>, in its proportions (240 × 160 mm on paper); what lies
+beyond the <strong>far clip plane</strong> (at first, as far as the point looked at) is not drawn. Its
+properties, in the <strong>Extents</strong> and <strong>Camera</strong> groups: <strong>Crop View</strong>, <strong>Crop Region Visible</strong>,
+<strong>Far clip plane</strong> and its distance, <strong>Reference level</strong>, <strong>Eye elevation</strong> and <strong>Target
+elevation</strong> (from the level), <strong>Field of view</strong>.</p>
+<p>Right-click the view in the <strong>Project Index</strong> ▸ <strong>Show camera</strong> selects the camera in the plans,
+sections and elevations (so does a click on the crop region's border in the 3D view). Drag its
+body to move it (with <strong>Shift</strong> the target stays), the red point to turn it, the triangle's
+corners for the field of view and the square on its base for the far clip plane; in an elevation
+or a section you change the heights. The 3D view follows while you drag, and each drag is undone
+with <strong>Ctrl+Z</strong>. On the <strong>Modify | Cameras</strong> tab: <strong>Reset target</strong> puts the target on the model
+seen at the middle of the crop region, <strong>Size Crop</strong> changes the width and height on paper by
+<strong>Field of view</strong> (more is seen) or <strong>Scale (locked proportions)</strong>, <strong>Reset crop</strong> (240 × 160 mm, 50°), <strong>Open the view</strong>. Dragging the
+crop region's sides in the 3D view changes the field of view too.</p>
+<p>The live view of a camera view follows it, walk mode starts at its eye and, when you leave, the
+camera stays where you walked to; a <strong>New path</strong> starts at its pose. From the command line:
+<code>camera {"from":[14,-6],"to":[5,3]}</code> makes the view, <code>camera {"eye":[15,-6,1.6],"fov":60,"far":20}</code>
+changes it, <code>camera {"reset_target":true}</code> resets the target.</p>
 <h2 id="visual-styles">Graphic styles</h2>
 <p>The <strong>Graphic Style</strong> button of the view control bar, at the bottom of every view window, offers:</p>
 <table>
@@ -603,7 +841,7 @@ goes on above it, so the slab's edge and the wall's face are one surface.</p>
 </tr>
 <tr>
 <td><strong>Lines</strong></td>
-<td>Faces as white paper and the edges in front of them in dark ink, on the light and on the dark background alike</td>
+<td>Faces as paper and the edges in front of them in ink; on the dark background paper and lines are inverted together</td>
 </tr>
 <tr>
 <td><strong>Shaded</strong></td>
@@ -620,6 +858,10 @@ goes on above it, so the slab's edge and the wall's face are one surface.</p>
 <tr>
 <td><strong>Realistic</strong></td>
 <td>Faces as in a photograph: the light of the project’s sun and sky, reflections, ambient shadows, see-through glass, haze</td>
+</tr>
+<tr>
+<td><strong>Pastel</strong></td>
+<td>A watercolour drawing: faces washed in their material's colour, close to the paper in the sun, deeper in shade; the lines drawn by hand</td>
 </tr>
 </tbody>
 </table>
@@ -652,8 +894,12 @@ it lies under the model's lines: in a plan over the floors and under the furnitu
 over the surfaces seen through each room it cuts. At <strong>Foreground</strong> it covers the model, under
 the annotations.</p>
 <h2 id="realistic-style">Realistic style</h2>
-<p><strong>Realistic</strong> draws the 3D view like a photograph, in real time, on the graphics card, and the view
+<p><strong>Realistic</strong> draws the 3D view like a photograph, in real time, and the view
 stays editable as in the other styles.</p>
+<figure>
+<img alt="The sample house in the Realistic style at night: the dark blue sky with the stars and the moon, the last light of dusk on the horizon, the house faintly lit" src="../assets/screens/vg-realistic-night.webp"/>
+<figcaption>Realistic at night: moon and stars</figcaption>
+</figure>
 <ul>
 <li><strong>Light of the sun and the sky.</strong> The light is that of the project’s sun (place, date and time in
   <strong>Sun settings</strong>) and of the sky that sun gives: blue by day, warmer and darker at sunset. The
@@ -673,11 +919,10 @@ stays editable as in the other styles.</p>
   <strong>Materials</strong>): the texture image at its real size, the roughness and its map, the relief, metal,
   glass and water, self-illumination (seen, not lighting others). A material without a look of its
   own derives it from its colour and transparency; a part without a material takes its
-  category’s colour. On the web the images arrive later: until then the colour shows. The preview of the <strong>Appearance</strong> tab is drawn by the same renderer, on a sphere, a cube or a
-  2 × 2 m wall (without a graphics card, by an image computed apart).</li>
+  category’s colour. On the web the images arrive later: until then the colour shows. The preview of the <strong>Appearance</strong> tab shows the material on a sphere, a cube or a 2 × 2 m wall.</li>
 <li><strong>Glass.</strong> Glass shows what is behind it and reflects the sky and the sun, more when seen at a
   grazing angle. Panes are drawn from the farthest to the nearest.</li>
-<li><strong>Ambient shadows.</strong> With <strong>Ambient shadows</strong> corners and recesses, which get less light from the
+<li><strong>Ambient shadows.</strong> With <strong>Show Ambient Shadows</strong> corners and recesses, which get less light from the
   sky, are darker.</li>
 <li><strong>Haze.</strong> In the distance the air veils the model: <strong>Distance haze</strong> sets how much, and how clear
   the sky is.</li>
@@ -688,20 +933,188 @@ stays editable as in the other styles.</p>
 <p>In the <strong>Realistic</strong> group of the <a href="#graphic-display-options">Graphic display options</a>:
 <strong>Exposure</strong> and <strong>Value (EV)</strong>, <strong>White point</strong> (the light shown as white: 6500 K is daylight as
 it is, a lower value cools the image, a higher one warms it), <strong>Saturation</strong>, <strong>Highlights</strong> and
-<strong>Shadows</strong> (lower or raise the lightest and darkest tones) and <strong>Distance haze</strong>. <strong>Show edges in
-Realistic</strong> draws the edges over the faces. The lighting <strong>Scheme</strong> is for now always
+<strong>Shadows</strong> (lower or raise the lightest and darkest tones) and <strong>Distance haze</strong>. <strong>Show Edges</strong>
+draws the edges over the faces. The lighting <strong>Scheme</strong> is for now always
 <strong>Exterior: sun</strong>. <strong>Sun</strong>, <strong>Ambient light</strong> and <strong>Shadow intensity</strong> set the sun’s light, the
 sky’s and how dark the sun’s shadows are.</p>
 <p>The <strong>Physical sky (time and place)</strong> <strong>Background</strong> shows behind the model the same sky that lights
 it, with the sun’s disc; with <strong>None</strong>, <strong>Sky</strong> or <strong>Gradient</strong> the background stays as chosen and
 the sky still lights the model. Switching to <strong>Realistic</strong>, a view whose background is <strong>None</strong> gets
-<strong>Physical sky (time and place)</strong>. Selected elements and the sun path look as in the other styles.</p>
+<strong>Physical sky (time and place)</strong>, and goes back to <strong>None</strong> on changing to another style. Selected elements and the sun path look as in the other styles.</p>
 <p>On the web without WebGPU (with WebGL2) <strong>Realistic</strong> works without ambient shadows, and the
 automatic exposure is set from the sky instead of from the image. On the web and on Android, while
 the camera moves, the view may be drawn smaller to stay smooth, and turns sharp again when it
 stops. Without a graphics card <strong>Realistic</strong> is shown as <strong>Shaded</strong> and the status bar says so.
 Plans, sections and elevations in <strong>Realistic</strong> are for now drawn as in <strong>Shaded</strong>; sheets,
 prints and exported images do not show <strong>Realistic</strong> yet.</p>
+<h2 id="pastel-style">Pastel style</h2>
+<p>The <strong>Pastel</strong> style draws the view as a watercolour or marker drawing: each face is a uniform wash
+of its material's colour, softly graded, never striped. Faces in the sun stay close to the paper;
+faces turned from the sun take the same colour, deeper and cooler, never grey; where a cast shadow
+falls the wash goes deeper still, with a clear edge. Glass is a blue-grey wash with a warm glint.
+The wash fades towards the edges of the drawing, so the paper shows round the model; the paper has
+a barely visible grain. Choosing <strong>Pastel</strong> turns the <a href="#sketchy-lines">Sketchy lines</a> on, in ink;
+they can be turned off, and they go off when the view changes to another style.</p>
+<p>It applies to every view. In 3D views the light is that of <strong>Realistic</strong>: the project's sun and its shadows. In plans, sections and elevations the paper is cream, the
+faces and floors are washed in their materials' colours and the cut parts are a solid, dark poché
+in their material's tone. The cast shadows are the view's own: they are turned on, off, deeper or
+fainter with the same settings as in the other styles (<strong>Shadow Intensity</strong>), in a clear, dark warm
+tone. Printing and export come out washed as on screen, 3D views too.</p>
+<p><strong>Pastel</strong> is the same whatever the window's background: always its light paper, with the same
+washes, poché and shadows.</p>
+<p>The <strong>Pastel</strong> group of the <a href="#graphic-display-options">Graphic Display Options</a> is set per view
+and view templates carry it: <strong>Wash Strength</strong> (how deep the colour is laid), <strong>Wash Variation</strong>
+(how unevenly it lies on a face), <strong>Paper Grain</strong> and <strong>Saturation</strong> (how much of the materials'
+colours the wash keeps), from 0 to 100, and <strong>Paper Colour</strong> (with <strong>Chosen</strong> a colour of its own;
+without, the warm white paper). From the command line: <code>graphicoptions {"style":"Pastello","pastel_density":70,"paper_color":"auto"}</code>.</p>
+<figure>
+<img alt="The sample house in 3D in the Pastel style: the faces washed in their materials' colours, close to the paper in the sun, deeper in shade, the edges in ink" src="../assets/screens/vg-pastel-3d.webp"/>
+<figcaption>Pastel: wash 70, variation 55, grain 40, saturation 75 (the defaults)</figcaption>
+</figure>
+<figure>
+<img alt="Section A in the Pastel style: the faces washed on cream paper, the cut parts in dark poché" src="../assets/screens/vg-pastel-section.webp"/>
+<figcaption>Section A in Pastel, with the default values</figcaption>
+</figure>
+<h2 id="live-view-and-walk-mode">Live view and walk mode</h2>
+<p><strong>Live View</strong> (View tab ▸ Presentation, or the button of the 3D view's floating bar) opens a
+window beside the 3D view that draws it in the <strong>Realistic</strong> style, with the sun's shadows and the
+physical sky, and follows its camera: orbit or zoom the 3D view and the live view looks from the
+same place; every change to the model shows at once. While the camera moves the live view draws a
+draft, then refines. At the bottom of the live view, <strong>Time</strong> sets the hour of the view's own sun
+(sunrise and sunset are marked on the slider); <strong>Project Sun</strong> goes back to the project's shared
+sun. The view's properties have the group <strong>Live View</strong>: <strong>Follows the 3D View</strong> and <strong>Draft
+While Moving</strong>. From the command line: <code>liveview 3d {"follows":true,"draft":true}</code>.</p>
+<p><strong>Walk</strong> (View tab ▸ Presentation, the 3D view's floating bar, the Classic style's navigation
+bar or the command search) is a command like the others: the <strong>Modify | Walk</strong> contextual tab
+opens, the Options Bar shows its choices and the status bar says what to do. The active 3D view
+becomes the eyes of someone walking through the model: you stand on the floor under the middle
+of the view, facing where the view looked. The pointer is captured at the first click in the
+view (until then the tab and the Options Bar can still be used):</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>W A S D or the arrows</td>
+<td>walk</td>
+</tr>
+<tr>
+<td>the mouse</td>
+<td>look around</td>
+</tr>
+<tr>
+<td>Shift</td>
+<td>run</td>
+</tr>
+<tr>
+<td>comma and full stop, or the wheel</td>
+<td>slower and faster</td>
+</tr>
+<tr>
+<td>F</td>
+<td><strong>Walk</strong> or <strong>Fly</strong></td>
+</tr>
+<tr>
+<td>E and Q, Page Up and Page Down</td>
+<td>rise and sink (flying)</td>
+</tr>
+<tr>
+<td>K</td>
+<td>a keyframe</td>
+</tr>
+<tr>
+<td>R</td>
+<td>start and stop recording</td>
+</tr>
+<tr>
+<td>Esc</td>
+<td>leave walk mode</td>
+</tr>
+</tbody>
+</table>
+<p>The other shortcuts wait until you leave. Walking, gravity keeps you on floors, landings and
+slabs; a step a little higher than the project's highest riser is climbed without noticing, so
+stairs and ramps are climbed by walking; walls, columns, railings, furniture and window glass
+stop you, and you slide along them; doors are walked through. <strong>Fly</strong> drops gravity and
+collisions. You leave with Esc, <strong>Modify</strong>, <strong>Leave</strong> in the tab or by choosing another command;
+the view stays where you got to. A plan of the level you are on shows where you are and what
+you see.</p>
+<p>The <strong>Modify | Walk</strong> tab has <strong>Mode</strong> (<strong>Walk</strong>, <strong>Fly</strong>), <strong>Walkthrough</strong> (<strong>Keyframe</strong>,
+<strong>Record</strong>) and <strong>Walk</strong> (<strong>Options…</strong>, <strong>Leave</strong>); in the BIMopen style they are in the tool
+panel's tab. The Options Bar has <strong>Walk</strong> or <strong>Fly</strong>, the eye height, the speed, <strong>Walkthrough</strong>
+(where keyframes and the recording go: <strong>New</strong> or one of the project's walkthroughs), <strong>Move
+parallel to the ground</strong>, <strong>Turn sensitivity</strong> and <strong>Inertia</strong> (the gaze starts and stops
+smoothly; 0 % as before). While walking, the Properties palette shows the walking speed, running,
+the flying speed, the eye height, gravity and collisions, the step climbed, the sensitivity and
+the inertia, <strong>Invert vertical axis</strong>, <strong>Record into</strong>, <strong>Keyframe every</strong> and the smoothness of
+the recorded walkthrough. On a touch screen a joystick walks, a drag on the view looks, and
+buttons run, fly, rise and sink, set keyframes, record and leave.</p>
+<p><strong>Options…</strong> opens the <strong>Walk Mode</strong> settings. <strong>Movement</strong> holds the personal choices, the
+same in every project: eye height (1.60 m), walking speed, running, flying speed, <strong>Turn
+sensitivity</strong>, <strong>Turn inertia</strong>, <strong>Keyframe every</strong>, <strong>Invert vertical axis</strong>, field of view and
+<strong>Fly parallel to the ground</strong>. <strong>Collisions by category</strong> holds the project's: for each group of
+categories whether <strong>Disable Collision</strong> is on (it is for doors and curtain wall door panels),
+and the <strong>Step height</strong>, taken from the stairs unless you type it. From the command line:
+<code>walksettings {"step":0.22}</code>, <code>collision {"group":"furniture","off":true}</code>.</p>
+<h3 id="disable-collision">Disable Collision</h3>
+<p>Every element with a body has <strong>Disable Collision</strong> in the <strong>Walk Mode</strong> group of its properties:
+on, whoever walks passes through it. Its value comes from the type, and the type's from its
+category; <strong>Collision From Type</strong> (on a type, <strong>Collision From Category</strong>) says so, and setting
+<strong>Disable Collision</strong> makes the value the element's own. Several elements selected show
+<strong>‹varies›</strong> where they differ. Schedules can list it as a field and filters can use it as a rule.
+It changes nothing but walk mode. A floor, stair or ramp with collision disabled carries no one
+either. From the command line: <code>collision 42 {"off":true}</code>, or <code>{"off":null}</code> to take the type's
+value again.</p>
+<h3 id="walkthrough-paths">Walkthrough</h3>
+<p><strong>Walkthrough</strong> (View tab ▸ 3D View ▾, or the command search) is drawn in a plan, a section or an
+elevation like a wall: the Options Bar has <strong>Perspective</strong>, the <strong>Level</strong> and the <strong>Offset</strong>
+(1.60 m, the walk's eyes); each click sets a keyframe and the next stretch follows the cursor,
+with the camera's triangle at the start. In a section or an elevation the clicks give the height
+too. A double click, Esc or <strong>Finish walkthrough</strong> in the tab end the path (<strong>Cancel
+walkthrough</strong> drops it): <strong>Walkthrough 1</strong> is made, in the <strong>Walkthroughs</strong> branch of the Project
+Browser, and opens beside, at frame 1. It is a camera view that moves: it has its crop region, its
+far clip plane and the camera's properties, plus <strong>Walkthrough frames</strong> and <strong>Frame</strong>.</p>
+<p>Selected in a plan (a click on the path, or <strong>Show Camera</strong> in the Project Browser), the
+walkthrough is edited in the <strong>Modify Walkthrough</strong> tab. <strong>Controls</strong> in the Options Bar chooses
+what the grips do:</p>
+<ul>
+<li><strong>Active camera</strong>: the camera is dragged along the path, snapping to the keyframes; on a
+  keyframe the red point says where it looks and is dragged, and the triangle's corners change the
+  field of view;</li>
+<li><strong>Path</strong>: the keyframes become grips; in a section or an elevation their height changes;</li>
+<li><strong>Add keyframe</strong>: a click on the path adds one;</li>
+<li><strong>Delete keyframe</strong>: a click on one removes it (at least two stay).</li>
+</ul>
+<p><strong>Frame</strong> shows the view's frame and can be typed; beside it the previous keyframe, previous
+frame, next frame and next keyframe buttons and <strong>Play</strong>, which plays the walkthrough in its view
+from the frame shown to the last; the status bar says "frame 87 of 300", with <strong>Cancel</strong>; Esc
+stops. <strong>Reset cameras</strong> makes every keyframe look along the path again.</p>
+<p><strong>Frames…</strong> opens <strong>Walkthrough frames</strong>: <strong>Total frames</strong> (300), <strong>Frames per second</strong> (15),
+<strong>Total time</strong> (20 s), <strong>Uniform speed</strong> (on: the camera always goes at the same speed; off, each
+keyframe has its <strong>Acceleration</strong>, from 0.1 to 10, for the stretch starting there), and for each
+keyframe its frame, speed and elapsed time. <strong>Turn smoothness</strong> says how the gaze turns where the
+path changes direction: 0 % at once on the keyframe, 100 % along half the stretch before and half
+after, starting and stopping smoothly; the path has one and each keyframe may have its <strong>own</strong>. The
+graph below shows the turn of the gaze over time. <strong>Indicators</strong> with <strong>Frame increment</strong> marks the
+frames along the path in plan.</p>
+<p><strong>Export…</strong> (also in File ▸ Export ▸ Images and Animations ▸ <strong>Walkthrough…</strong>) opens
+<strong>Length/Format</strong>: <strong>All frames</strong> or a <strong>Frame range</strong> from–to, <strong>Frames per second</strong> (the total
+time follows), the <strong>Graphic style</strong> (the view's or another), <strong>Size</strong> and <strong>Zoom</strong>, then the file
+type: an AVI film (Motion-JPEG), with the images too if wanted, or a sequence of JPEG, PNG, TIFF or
+BMP images. A bar shows the progress, with <strong>Cancel</strong>.</p>
+<p>While walking, <strong>Keyframe</strong> (K) adds a keyframe where you stand, looking where you look, to the
+walkthrough chosen in the Options Bar; with <strong>New</strong> the second makes <strong>Walkthrough N</strong>. <strong>Record</strong>
+(R) makes a walkthrough of the walk: a keyframe every second (<strong>Keyframe every</strong>), as long as the
+walk lasted and as smooth as the <strong>Inertia</strong>. The paths of projects saved before become
+<strong>Walkthrough</strong> views when opened. From the command line:
+<code>walkthrough {"points":[[0,-6],[5,-6],[5,2]],"offset":1.6}</code>, <code>walkthrough 42 {"frame":"next_key"}</code>,
+<code>walkthrough 42 {"frames":150,"uniform":false,"key":{"index":0,"accel":2}}</code>;
+<code>walk {"from":[4,2.5],"to":[8,2.5]}</code> shows where a walk ends.</p>
+<p><img alt="A walkthrough round the sample house, drawn in the ground floor plan" src="../assets/screens/vg-walkthrough.webp"/></p>
 <h2 id="sun-and-shadows">Sun and shadows</h2>
 <p>Plans, sections, elevations and 3D views show the sun (drafting views, legends, sheets and
 schedules do not). The view control bar has two buttons, each with a small arrow for its menu (the
@@ -721,8 +1134,7 @@ Path</strong> is also a check box of the view's <strong>Properties</strong> (<st
 on what the plan shows and, where nothing stands, on the plane of a level (<strong>Ground Plane at
 Level</strong> in the sun settings, otherwise on the ground, the lowest level); in sections and
 elevations they fall on the façades and on what is behind them, from eaves, balconies, recesses
-and other buildings; in 3D views the graphics card draws them (the processor when there is
-none). In <strong>Lines</strong> (hidden line) a shadow is a grey of the paper, in the shaded styles it darkens
+and other buildings, and so in 3D views. In <strong>Lines</strong> (hidden line) a shadow is a grey of the paper, in the shaded styles it darkens
 the materials' colours. Faces cut by the view stay in the light.</p>
 <p><strong>The sun path</strong> is a ring round the model with the points of the compass at true north, the day's
 arc with its hours, the analemma (where the sun stands at that hour through the year: one smooth
@@ -816,26 +1228,62 @@ date and the hour; <strong>Export Study…</strong> saves every frame as a PNG o
 a video encoder BIMopen does not have: the choice is greyed, with the reason). <strong>×</strong> closes the bar;
 another view closes it too.</p>
 <h3 id="graphic-display-options">Graphic display options</h3>
-<p><strong>Graphic Display Options…</strong> sets for the active view: the <strong>Graphic Style</strong>, <strong>Silhouette Edges</strong>
-(<strong>None</strong>, <strong>Medium</strong>, <strong>Thick</strong>: a thicker line round the model's outline), <strong>Cast Shadows</strong>,
-<strong>Ambient Shadows</strong> (corners and recesses darkened), the sun (its button opens the <strong>Sun
-Settings</strong>), <strong>Sun</strong>, <strong>Ambient Light</strong> and <strong>Shadow Intensity</strong> (0–100) and, for 3D views, the
-<strong>Background</strong> (<strong>None</strong>, <strong>Sky</strong>, <strong>Gradient</strong>). The preview draws the view with the options
-chosen; the <strong>Preview</strong> switch in the header hides and shows it, as in the sun settings. View templates carry these options
-with the graphic style, and the sun and the shadows as <strong>Sun and shadows</strong>.</p>
-<p>The <strong>Realistic</strong> group and <strong>Show edges in Realistic</strong> apply to the <strong>Realistic</strong> style (see
-<a href="#realistic-style">Realistic style</a>); <strong>Background</strong> also offers <strong>Physical sky (time and place)</strong>.
-In the <strong>Realistic</strong> style the preview is drawn by the graphics card, as the view is.</p>
+<p><strong>Graphic Display Options…</strong> sets the graphic options of the active view, in groups that open and
+close with a click on their title (the window remembers which are open, and keeps its size and
+place):</p>
+<ul>
+<li><strong>Model Display</strong>: the <strong>Graphic Style</strong>; <strong>Show Edges</strong> (the edges over the faces in the
+  <strong>Shaded</strong>, <strong>Consistent Colors</strong> and <strong>Realistic</strong> styles; ticked and grey in the styles that
+  always draw them); <strong>Smooth Lines with Anti-Aliasing</strong> (the 3D view's lines and edges smoothed;
+  without, sharper and faster to draw; plans, sections and elevations always have smooth lines);
+  <strong>Transparency</strong> (0–100: every face of the view turns see-through and what lies behind shows,
+  in the <strong>Hidden Line</strong> style the hidden edges too; it applies to 3D views in the styles with
+  faces, to <strong>Realistic</strong> in a next phase); <strong>Silhouette Edges</strong> (<strong>None</strong>, <strong>Medium</strong>,
+  <strong>Thick</strong>: a thicker line round the model's outline).</li>
+<li><strong>Shadows</strong>: <strong>Cast Shadows</strong> and <strong>Show Ambient Shadows</strong> (corners and recesses darkened).</li>
+<li><strong>Sketchy Lines</strong>: see <a href="#sketchy-lines">Sketchy lines</a>.</li>
+<li><strong>Depth Cueing</strong> (sections and elevations): with <strong>Show Depth</strong> what is farther from the view's
+  line fades into the background. <strong>Fade Start</strong> and <strong>Fade End</strong> (as a percentage of the view's
+  depth) set where it starts and ends; <strong>Fade Limit</strong> how much of what is farthest stays visible
+  (0: it vanishes, 100: no fading). Lines, faces, patterns and sketchy lines fade, on screen as in
+  print and export, on the light and on the dark background; annotations and cut parts stay as
+  they are.</li>
+<li><strong>Lighting</strong>: the <strong>Scheme</strong> (for now always <strong>Exterior: sun</strong>), the <strong>Sun Settings</strong> (the
+  button opens them), <strong>Artificial Lights…</strong> (grey: they come in a next phase), <strong>Sun</strong>, <strong>Ambient
+  Light</strong> and <strong>Shadow Intensity</strong> (0–100).</li>
+<li><strong>Realistic</strong>: the settings of the <strong>Realistic</strong> style (see <a href="#realistic-style">Realistic style</a>).</li>
+<li><strong>Pastel</strong>: the settings of the <strong>Pastel</strong> style (see <a href="#pastel-style">Pastel style</a>).</li>
+<li><strong>Background</strong> (3D views): <strong>None</strong>, <strong>Sky</strong>, <strong>Gradient</strong>, <strong>Physical sky (time and place)</strong>;
+  with <strong>Gradient</strong>, <strong>Sky Color</strong>, <strong>Horizon Color</strong> and <strong>Ground Color</strong>, from the top down.
+  <strong>Image</strong> is grey: it comes in a next phase.</li>
+</ul>
+<p>At the bottom, <strong>Save as View Template…</strong> applies the options to the view and asks for the name of
+a new view template that carries them. Every numeric setting has its slider and a field to type
+the value. The preview draws the view with the options chosen; the <strong>Preview</strong> switch in the
+header hides and shows it, as in the sun settings. In the <strong>Realistic</strong> style the preview looks as the view does. View templates carry these options with the graphic style,
+and the sun and the shadows as <strong>Sun and shadows</strong>. On the command line: <code>graphicoptions {"edges":true,"transparency":30,"depth":true,"depth_limit":20,"background":"sfumatura","sky_color":"189-209-208"}</code>.</p>
 <figure>
-<img alt="Graphic Display Options of the 3D view: graphic style, silhouette edges, shadows, lighting with sun, ambient light and shadow intensity, the background, and the preview on the right" src="../assets/screens/vg-graphic-display.webp"/>
-<figcaption>Graphic Display Options</figcaption>
+<img alt="Graphic Display Options of the 3D view: the Model Display, Shadows and Sketchy Lines groups open, the other groups below, and the preview on the right" src="../assets/screens/vg-graphic-display.webp"/>
+<figcaption>Graphic Display Options, with the default values</figcaption>
+</figure>
+<figure>
+<img alt="The sample house in 3D, Shaded, with 60% transparency: the interiors show through the walls" src="../assets/screens/vg-transparency.webp"/>
+<figcaption>Transparency at 60%: the faces are see-through; the default is 0</figcaption>
+</figure>
+<figure>
+<img alt="The sample house in 3D on a gradient background, from the sky at the top to the ground at the bottom" src="../assets/screens/vg-gradient.webp"/>
+<figcaption>Gradient background, with the default colours</figcaption>
+</figure>
+<figure>
+<img alt="Section A of the sample house with depth cueing: the farther parts fade into the background" src="../assets/screens/vg-depth.webp"/>
+<figcaption>Depth Cueing: start 0%, end 25%, limit 10%</figcaption>
 </figure>
 <h3 id="sketchy-lines">Sketchy lines</h3>
 <p>The <strong>Sketchy Lines</strong> group of <strong>Graphic Display Options…</strong> draws the view's lines as by hand.
-<strong>Enable Sketchy Lines</strong> turns it on for the active view; <strong>Jitter</strong> (0–10) sets how much each line
+<strong>Enable Sketchy Lines</strong> turns it on for the active view; <strong>Distortion</strong> (0–10) sets how much each line
 wavers and how many times it is traced over (0 straight, twice from 4, three times from 8); long
 lines waver more than short ones. <strong>Extension</strong> (0–10) sets how far the lines run past their ends,
-past the corners where they meet (0 stops them there). Both start at 5 and 4. The <strong>✎</strong> button of the view bar (in every interface style; in touch mode, in the view's sheet) turns them on and off for the active view: <strong>Enable Sketchy Lines</strong> / <strong>Disable Sketchy Lines</strong>.</p>
+past the corners where they meet (0 stops them there). They start at 5 and 1 in plans, sections, elevations and 2D views, at 8 and 3 in 3D views. The <strong>✎</strong> button of the view bar (in every interface style; in touch mode, in the view's sheet) turns them on and off for the active view: <strong>Enable Sketchy Lines</strong> / <strong>Disable Sketchy Lines</strong>.</p>
 <p>They apply in every view (plans, sections, elevations, drafting views, 3D views, views on sheets)
 and in every visual style: to the lines of the model, of detail items and of fill patterns.
 Annotations stay straight: dimensions, text, levels, grids, reference planes, tags, symbols and
@@ -843,10 +1291,14 @@ view marks. A view draws the same lines at every redraw and after orbiting back,
 exports exactly as the window shows it: PDF and SVG keep the lines as vectors, a printed section
 or elevation leaves out only the parts nearer surfaces hide. Selecting and snapping still use the
 straight lines. View templates carry the setting with the other graphic display options. On the
-command line: <code>graphicoptions {"sketchy":true,"instability":5,"extension":4}</code>.</p>
+command line: <code>graphicoptions {"sketchy":true,"distortion":5,"extension":1}</code>.</p>
 <figure>
 <img alt="The sample house's ground floor plan with sketchy lines: walls, doors, windows and furniture drawn as by hand, dimensions and text straight" src="../assets/screens/vg-sketchy.webp"/>
-<figcaption>Sketchy Lines</figcaption>
+<figcaption>Sketchy Lines: distortion 5, extension 1 (the defaults)</figcaption>
+</figure>
+<figure>
+<img alt="The sample house in a 3D view in Hidden line with sketchy lines: every edge drawn as by hand, the lines running past the corners" src="../assets/screens/vg-sketchy-3d.webp"/>
+<figcaption>Sketchy lines in a 3D view: distortion 8, extension 3 (the defaults in 3D)</figcaption>
 </figure>
 <h2 id="plans-and-their-view-range">Plans and their cut heights</h2>
 <p><strong>Views ▸ Create ▸ Plan ▸ Floor Plan</strong> opens <strong>New Plan</strong>: pick the levels and the scale,
@@ -891,14 +1343,47 @@ the cut plane are drawn cut, with the cut patterns of their layers' materials at
 (top, cut plane, bottom, view depth): otherwise the window explains what is wrong and stays
 open. Floors below the bottom, down to the view depth, are drawn <em>beyond</em> in thin lines; so are
 floors a little under the bottom, such as a sunken slab, even with the view depth at the bottom.</p>
+<h2 id="underlay">Underlay</h2>
+<p>A plan can show another range of the model under it, lighter: the floor below to trace over, or
+the floor above to align with. In <strong>Properties</strong> (nothing selected), group <strong>Underlay</strong>:</p>
+<ul>
+<li><strong>Range: Base Level</strong> turns it on: pick a level (<strong>None</strong> turns it off). <strong>Range: Top Level</strong>
+  fills in with the level above the base; pick another level above it, or <strong>Unlimited</strong>, to show
+  more of the model.</li>
+<li><strong>Underlay Orientation</strong>: <strong>Look down</strong> shows it from above, as a plan; <strong>Look up</strong> from below,
+  as a ceiling plan.</li>
+</ul>
+<p>Only the underlay's lines are drawn, under the plan, and what the view hides stays hidden. While
+<strong>Select underlay elements</strong> is on (in the status bar) a click or a window selects them too, and
+they can be edited from here; off, a click passes through them.
+<strong>Project ▸ Additional settings ▸ Halftone/Underlay</strong> sets, for the whole project, the underlay's
+<strong>Thickness</strong> and <strong>Pattern</strong>, <strong>Apply halftone</strong>, and the <strong>Brightness</strong> of every halftone (also of
+<strong>Display Model ▸ Halftone</strong>).</p>
+<p>Other properties of the views:</p>
+<ul>
+<li><strong>Orientation</strong>: <strong>True North</strong> turns a plan on screen so that the project's true north is up;
+  drawing and editing work as usual.</li>
+<li><strong>View Scale ▸ Custom</strong> lets <strong>Scale Value 1:</strong> be typed.</li>
+<li><strong>Depth Clipping</strong> (plans) and <strong>Far Clipping</strong> (sections and elevations): <strong>No clip</strong>,
+  <strong>Clip without line</strong>, <strong>Clip with line</strong>; <strong>Far Clip Offset</strong> types a section's depth.</li>
+<li><strong>View template</strong>: a template assigned to the view; while it is, the properties it includes
+  follow it and are set in the template.</li>
+<li><strong>Show In</strong> (sections): <strong>Intersecting Views</strong> shows the section in every plan, <strong>Primary View
+  Only</strong> only in the plans of the level it was drawn in.</li>
+<li><strong>Associated Level</strong> and <strong>Dependency</strong> are read-only.</li>
+</ul>
 <h2 id="light-and-dark-background">Light and dark background</h2>
-<p><strong>Options ▸ Theme ▸ Dark</strong> (or <strong>Invert background color</strong>) turns the drawing area dark. As on
-an inverted background, black lines, text and patterns are drawn light, colours keep their hue,
-and colour fills such as the rooms' are darkened, so the text over them stays readable.
+<p><strong>Options ▸ Theme ▸ Dark</strong> (or <strong>Invert background color</strong>) turns the drawing area dark. The
+background changes one thing only: black lines (edges, text, patterns) are drawn light, so they
+stay legible (text over the rooms' colours stays dark, as on the light background); in the line styles alone (<strong>Wireframe</strong> and <strong>Lines</strong>) the paper and the black lines
+are inverted together, in plans, sections, elevations and 3D. In the styles that show the model's
+colours (<strong>Shaded</strong>, <strong>Flat Colors</strong>, <strong>Realistic</strong>, <strong>Pastel</strong>) faces, materials, fills, washes,
+shadows, poché, transparency and depth cueing are identical on any background, and <strong>Pastel</strong>
+always draws on its light paper.
 <strong>Options ▸ Interface size</strong> makes the whole interface bigger, from 100 % to 250 %, on top of
 the screen's own scale: useful on screens with many pixels. It is kept for the next start.</p>
 <figure>
-<img alt="The ground floor plan on the dark background: lines and text drawn light, the rooms' colour fills darkened" src="../assets/screens/vg-dark.webp"/>
+<img alt="The ground floor plan on the dark background: lines and text drawn light, the rooms' colours as on the light background" src="../assets/screens/vg-dark.webp"/>
 <figcaption>A plan on the dark background</figcaption>
 </figure>
 <h2 id="opening-a-view-from-its-symbol">Opening a view from its symbol</h2>
@@ -909,6 +1394,10 @@ placed on a sheet. The view's window becomes the active one.</p>
 the grid, on the side to look from (before the click, a line and an arrow show the view). The
 elevation looks at the nearest grid, as wide as the bay between the grids that cross it and as
 deep as the next grid parallel to it.</p>
+<p>The heads of sections, elevation symbols and callouts show the view's detail number over the
+number of the sheet it is placed on; their circles stay empty while the view is on no sheet. A
+new project comes with four elevations, <strong>North</strong>, <strong>South</strong>, <strong>East</strong> and <strong>West</strong>, looking at
+the area round the origin: move them where the building is.</p>
 <h2 id="scale-detail-level-and-crop-region">Scale, detail and crop region</h2>
 <p>The view control bar shows the view's <strong>View Scale</strong> and <strong>Detail</strong> (in 3D views too).</p>
 <ul>
@@ -1026,6 +1515,7 @@ scale, detail, graphic style, cut heights and graphics as a template, by name.
 kind: a plan (a second plan of a level too), a section or elevation, or a 3D view. A view does
 not follow later changes of its template until it is applied again, and the graphics of single
 elements are never part of a template.</p>
+<p>A new project starts with two templates, <strong>Architectural - Plan</strong> and <strong>Architectural - Section and Elevation</strong>, applied to every new view of their kind: plans, ceiling plans, sections and elevations are drawn with lines only, the materials' cut patterns on what is cut and their surface patterns on what is seen, with no colour fills and no shadows. They carry the graphic style and the sun, so a new view keeps the scale, detail and view range it is made with; change them to change how new views start. Area plans keep their colour scheme.</p>
 <figure>
 <img alt="View templates: a plan template with the parameters it carries, each with its value and whether it is included" src="../assets/screens/vg-templates.webp"/>
 <figcaption>View templates</figcaption>
@@ -1054,7 +1544,7 @@ three windows, the active one on the left at full height and two stacked on the 
 </main>
 <footer class="md-footer">
 <nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: Floors, roofs, stairs and components" class="md-footer__link md-footer__link--prev" href="../floors-roofs-stairs/">
+<a aria-label="Previous: Design options" class="md-footer__link md-footer__link--prev" href="../design-options/">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
 </div>
@@ -1063,7 +1553,7 @@ three windows, the active one on the left at full height and two stacked on the 
                 Previous
               </span>
 <div class="md-ellipsis">
-                Floors, roofs, stairs and components
+                Design options
               </div>
 </div>
 </a>

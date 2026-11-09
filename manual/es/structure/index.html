@@ -1,0 +1,964 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Manual de usuario de BIMopen, modelado BIM de código abierto" name="description"/>
+<meta content="BIMopen" name="author"/>
+<link href="https://bimopen.it/manual/es/structure/" rel="canonical"/>
+<link href="../phases/" rel="prev"/>
+<link href="../site/" rel="next"/>
+<link href="../assets/images/bimopen-cube.svg" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.9" name="generator"/>
+<title>Estructura y cimentaciones - Manual de usuario de BIMopen</title>
+<link href="../assets/stylesheets/main.4af4bdda.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link href="../assets/css/theme.css" rel="stylesheet"/>
+<link href="../assets/css/theme_dark_mode.css" rel="stylesheet"/>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="https://bimopen.it/manual/en/structure/" hreflang="en" rel="alternate"/>
+<link href="https://bimopen.it/manual/it/structure/" hreflang="it" rel="alternate"/>
+<link href="https://bimopen.it/manual/de/structure/" hreflang="de" rel="alternate"/>
+<link href="https://bimopen.it/manual/fr/structure/" hreflang="fr" rel="alternate"/>
+<link href="https://bimopen.it/manual/es/structure/" hreflang="es" rel="alternate"/>
+<link href="https://bimopen.it/manual/ar/structure/" hreflang="ar" rel="alternate"/>
+<link href="https://bimopen.it/manual/en/structure/" hreflang="x-default" rel="alternate"/>
+</head>
+<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="slate" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#structure">
+          Saltar a contenido
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Cabecera" class="md-header__inner md-grid">
+<a aria-label="Manual de usuario de BIMopen" class="md-header__button md-logo" data-md-component="logo" href="https://bimopen.it/es/" title="Manual de usuario de BIMopen">
+<img alt="logo" src="../assets/images/bimopen-cube.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Manual de usuario de BIMopen
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Estructura y cimentaciones
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Cambiar al tema claro" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Cambiar al tema claro">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Cambiar al tema oscuro" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="bimopen" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Cambiar al tema oscuro">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<div class="md-header__option">
+<div class="md-select">
+<button aria-label="Seleccionar idioma" class="md-header__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"></path></svg>
+</button>
+<div class="md-select__inner">
+<ul class="md-select__list">
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/en/" hreflang="en">
+              English
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/it/" hreflang="it">
+              Italiano
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/de/" hreflang="de">
+              Deutsch
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/fr/" hreflang="fr">
+              Français
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/es/" hreflang="es">
+              Español
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/ar/" hreflang="ar">
+              العربية
+            </a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Búsqueda" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Búsqueda" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Buscar" class="md-search__options">
+<button aria-label="Limpiar" class="md-search__icon md-icon" tabindex="-1" title="Limpiar" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navegación" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Manual de usuario de BIMopen" class="md-nav__button md-logo" data-md-component="logo" href="https://bimopen.it/es/" title="Manual de usuario de BIMopen">
+<img alt="logo" src="../assets/images/bimopen-cube.svg"/>
+</a>
+    Manual de usuario de BIMopen
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
+<span class="md-ellipsis">
+    Inicio
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../getting-started/">
+<span class="md-ellipsis">
+    Primeros pasos
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../interface/">
+<span class="md-ellipsis">
+    La interfaz
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../interface-styles/">
+<span class="md-ellipsis">
+    Estilos de interfaz
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../projects-and-files/">
+<span class="md-ellipsis">
+    Proyectos y archivos
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../import-and-conversion/">
+<span class="md-ellipsis">
+    Importación y conversión
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cad-files/">
+<span class="md-ellipsis">
+    DWG y DXF
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../selection-and-modify/">
+<span class="md-ellipsis">
+    Selección y modificación
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../walls-doors-windows/">
+<span class="md-ellipsis">
+    Muros, puertas y ventanas
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../floors-roofs-stairs/">
+<span class="md-ellipsis">
+    Suelos, cubiertas, escaleras y componentes
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ceilings-and-columns/">
+<span class="md-ellipsis">
+    Falsos techos y columnas
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../openings/">
+<span class="md-ellipsis">
+    Huecos
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../phases/">
+<span class="md-ellipsis">
+    Fases y demoliciones
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Estructura y cimentaciones
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Estructura y cimentaciones
+    
+  </span>
+</a>
+<nav aria-label="Tabla de contenidos" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#framing-types">
+<span class="md-ellipsis">
+      Tipos de armazón estructural
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#beam">
+<span class="md-ellipsis">
+      Viga
+    </span>
+</a>
+<nav aria-label="Viga" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#beam-properties">
+<span class="md-ellipsis">
+      Propiedades de la viga
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#beam-display">
+<span class="md-ellipsis">
+      Cómo se ve
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#joins">
+<span class="md-ellipsis">
+      Uniones
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#brace">
+<span class="md-ellipsis">
+      Arriostramiento
+    </span>
+</a>
+<nav aria-label="Arriostramiento" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#structural-settings">
+<span class="md-ellipsis">
+      Símbolos en planta y Configuración estructural
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#beam-system">
+<span class="md-ellipsis">
+      Entramado de vigas
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#truss">
+<span class="md-ellipsis">
+      Cercha
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#structural-walls-floors">
+<span class="md-ellipsis">
+      Muro estructural y forjado estructural
+    </span>
+</a>
+<nav aria-label="Muro estructural y forjado estructural" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#shape-editing">
+<span class="md-ellipsis">
+      Edición de forma
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#foundations">
+<span class="md-ellipsis">
+      Cimentaciones
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rebar-covers">
+<span class="md-ellipsis">
+      Recubrimiento de armadura
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#views-schedules-ifc">
+<span class="md-ellipsis">
+      Vistas, etiquetas, tablas de planificación e IFC
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#commands">
+<span class="md-ellipsis">
+      Desde la línea de comandos
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../site/">
+<span class="md-ellipsis">
+    Emplazamiento y terreno
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../design-options/">
+<span class="md-ellipsis">
+    Alternativas de diseño
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../views-and-graphics/">
+<span class="md-ellipsis">
+    Vistas y gráficos
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../annotation/">
+<span class="md-ellipsis">
+    Anotación y detalles 2D
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../documentation/">
+<span class="md-ellipsis">
+    Planos, tablas de planificación e impresión
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../command-line-and-mcp/">
+<span class="md-ellipsis">
+    Línea de comandos y MCP
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../keyboard-shortcuts/">
+<span class="md-ellipsis">
+    Atajos de teclado
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../troubleshooting/">
+<span class="md-ellipsis">
+    Solución de problemas
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://bimopen.it/manual/es/pdf/bimopen-manual-es.pdf">
+<span class="md-ellipsis">
+    PDF
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Tabla de contenidos" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#framing-types">
+<span class="md-ellipsis">
+      Tipos de armazón estructural
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#beam">
+<span class="md-ellipsis">
+      Viga
+    </span>
+</a>
+<nav aria-label="Viga" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#beam-properties">
+<span class="md-ellipsis">
+      Propiedades de la viga
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#beam-display">
+<span class="md-ellipsis">
+      Cómo se ve
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#joins">
+<span class="md-ellipsis">
+      Uniones
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#brace">
+<span class="md-ellipsis">
+      Arriostramiento
+    </span>
+</a>
+<nav aria-label="Arriostramiento" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#structural-settings">
+<span class="md-ellipsis">
+      Símbolos en planta y Configuración estructural
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#beam-system">
+<span class="md-ellipsis">
+      Entramado de vigas
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#truss">
+<span class="md-ellipsis">
+      Cercha
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#structural-walls-floors">
+<span class="md-ellipsis">
+      Muro estructural y forjado estructural
+    </span>
+</a>
+<nav aria-label="Muro estructural y forjado estructural" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#shape-editing">
+<span class="md-ellipsis">
+      Edición de forma
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#foundations">
+<span class="md-ellipsis">
+      Cimentaciones
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rebar-covers">
+<span class="md-ellipsis">
+      Recubrimiento de armadura
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#views-schedules-ifc">
+<span class="md-ellipsis">
+      Vistas, etiquetas, tablas de planificación e IFC
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#commands">
+<span class="md-ellipsis">
+      Desde la línea de comandos
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset"><a class="md-content__icon pdf-download-btn" download href="../pdf/bimopen-manual-es.pdf" title="Download"><i class="fa fas fa-download"></i><small> PDF</small></a>
+<h1 id="structure">Estructura y cimentaciones</h1>
+<p>La ficha <strong>Estructura</strong> (en el estilo BIMopen: <strong>Crear ▸ Estructura</strong>) reúne los elementos que
+sostienen el edificio: vigas, arriostramientos, entramados de vigas, cerchas, muros y forjados
+estructurales, pilares estructurales, zapatas aisladas, zapatas corridas y losas de cimentación.
+Las vigas, los arriostramientos y las barras de las cerchas son una sola categoría, <strong>Armazón
+estructural</strong>; las zapatas aisladas, las zapatas corridas y las losas de cimentación son
+<strong>Cimentaciones estructurales</strong>. Las mismas herramientas funcionan en las plantas, las secciones,
+los alzados y las vistas 3D, donde la vista lo permite.</p>
+<h2 id="framing-types">Tipos de armazón estructural</h2>
+<p>Los tipos de viga y de arriostramiento son secciones paramétricas de BIMopen, como las de los
+pilares estructurales. <strong>Forma de sección</strong> elige la forma: <strong>Rectangular</strong> (hormigón o madera),
+<strong>Circular</strong>, <strong>Doble T</strong> (también con alas desiguales y alas inclinadas), <strong>Perfil tubular
+rectangular</strong>, <strong>Perfil tubular circular</strong>, <strong>Angular</strong>, <strong>Perfil en C</strong> (también con labio) y
+<strong>Perfil en T</strong>. <strong>Parámetros de tipo</strong> muestra solo las cotas de la forma elegida y calcula, de
+solo lectura, las propiedades de <strong>Análisis estructural</strong>: área, perímetro pintable, peso nominal
+(a partir de la densidad del material), momentos de inercia, módulos elásticos y plásticos,
+constantes de torsión y de alabeo, áreas de cortante y ángulo de los ejes principales. <strong>Clave de
+nombre de sección</strong> conserva el nombre del perfil comercial.</p>
+<p>Un proyecto nuevo tiene vigas de hormigón armado, los perfiles IPE, HEA, HEB, UPN, angulares, en
+T, tubulares y vigas de madera laminada encolada.</p>
+<h2 id="beam">Viga</h2>
+<p><strong>Estructura ▸ Viga</strong> abre la ficha <strong>Colocar viga</strong>. Dos clics hacen una viga: los extremos se
+enganchan al centro de los pilares estructurales, al eje de los muros portantes, a los extremos y
+a la línea de otras vigas y a las intersecciones de las rejillas, y la barra de estado dice a
+qué. La barra de opciones tiene:</p>
+<table>
+<thead>
+<tr>
+<th>Opción</th>
+<th>Qué hace</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Plano de colocación</strong></td>
+<td>El nivel de la vista, sobre el que se apoya la viga</td>
+</tr>
+<tr>
+<td><strong>Uso estructural</strong></td>
+<td><strong><automático></automático></strong> lo deduce de los apoyos: entre pilares o muros es una <strong>Viga principal</strong>, entre vigas principales una <strong>Vigueta</strong>, entre viguetas una <strong>Correa</strong>; o se elige</td>
+</tr>
+<tr>
+<td><strong>Forzado 3D</strong></td>
+<td>Los extremos se enganchan a los elementos estructurales fuera del plano de trabajo: una viga inclinada</td>
+</tr>
+<tr>
+<td><strong>Encadenar</strong></td>
+<td>El final de una viga es el inicio de la siguiente; <span class="keys"><kbd class="key-escape">Esc</kbd></span> termina la cadena</td>
+</tr>
+<tr>
+<td><strong>Etiquetar al colocar</strong></td>
+<td>Cada viga nace con su etiqueta</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Múltiple ▸ En rejillas</strong>: haz clic en las rejillas y en <strong>Fin</strong> (o <span class="keys"><kbd class="key-enter">Enter</kbd></span>); en cada rejilla
+nace una viga por vano entre los apoyos que la cruzan. Un muro que está sobre la rejilla no recibe
+vigas; las vigas que ya existen no se duplican.</p>
+<p>En una sección o en un alzado la viga se dibuja en el plano de la vista, con los extremos sobre
+los elementos estructurales pulsados; en 3D sobre el nivel bajo el cursor, o con <strong>Forzado 3D</strong>
+sobre el elemento.</p>
+<h3 id="beam-properties">Propiedades de la viga</h3>
+<table>
+<thead>
+<tr>
+<th>Grupo</th>
+<th>Propiedades</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Restricciones</td>
+<td><strong>Nivel de referencia</strong>, <strong>Plano de trabajo</strong>, <strong>Desfase de nivel inicial</strong> y <strong>Desfase de nivel final</strong> (una viga inclinada), <strong>Orientación</strong> (Normal, Horizontal), <strong>Rotación transversal</strong></td>
+</tr>
+<tr>
+<td>Posición geométrica</td>
+<td><strong>Extensión inicial</strong>/<strong>Extensión final</strong> (extremos libres), <strong>Retroceso de unión inicial</strong>/<strong>Retroceso de unión final</strong> (extremos unidos, acero y madera), <strong>Justificación YZ</strong> (Uniforme o Independiente), <strong>Justificación Y</strong>/<strong>Justificación Z</strong> con su <strong>Valor de desfase</strong>, también para el inicio y el final</td>
+</tr>
+<tr>
+<td>Materiales y acabados</td>
+<td><strong>Material estructural</strong></td>
+</tr>
+<tr>
+<td>Estructural</td>
+<td><strong>Uso estructural</strong>, <strong>Posición del símbolo de barra</strong>, <strong>Tipo de enlace inicial</strong>/<strong>final</strong>, <strong>Distancia de enlace inicial</strong>/<strong>final</strong> y pilar de referencia (superior o inferior) para cada extremo, <strong>Conexión inicial</strong>/<strong>Conexión final</strong> (Pórtico resistente a momentos, Momento en voladizo), <strong>Contraflecha</strong>, <strong>Número de montantes</strong>, <strong>Viga apoyada al inicio</strong>/<strong>al final</strong> sobre un muro estructural, <strong>Peso máximo</strong>, <strong>Peso exacto</strong>, <strong>Área pintada</strong></td>
+</tr>
+<tr>
+<td>Cotas</td>
+<td><strong>Longitud del sistema</strong>, <strong>Longitud de corte</strong>, <strong>Volumen</strong>, <strong>Elevación en la parte superior</strong> y <strong>Elevación en la base</strong> («Varía» en una viga inclinada)</td>
+</tr>
+<tr>
+<td>Análisis estructural</td>
+<td><strong>Liberación inicial</strong>/<strong>Liberación final</strong> (Empotrado, Articulado, Momento flector, Definido por el usuario con las seis restricciones), <strong>Analizar como</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Una viga seleccionada tiene <strong>Invertir extremos</strong> y, para cada extremo, <strong>No permitir unión</strong>.</p>
+<h3 id="beam-display">Cómo se ve</h3>
+<ul>
+<li><strong>Bajo</strong>: una línea, con el estilo de línea de su uso (Estilos por categoría ▸ Armazón
+  estructural ▸ Viga principal, Vigueta, Correa…), separada de los pilares y de las vigas que une
+  por la <strong>Distancia del símbolo de corte</strong>. En sección y en alzado las vigas también son líneas,
+  con los símbolos de momento.</li>
+<li><strong>Medio</strong> y <strong>Alto</strong>: el contorno de la sección. En una planta con <strong>Disciplina</strong> «Estructural»
+  las vigas cubiertas por un forjado se dibujan a trazos; en una planta «Arquitectura» no se ven.</li>
+<li>En sección la viga se corta con el patrón de su material.</li>
+</ul>
+<h3 id="joins">Uniones</h3>
+<p>Una viga se detiene en la cara del pilar y del muro portante sobre los que apoya (nunca en un
+muro no portante); entre vigas la unión es <strong>en T</strong> (la viga que pasa queda entera) o <strong>en
+esquina</strong> entre dos vigas del mismo tipo en el mismo plano. El hormigón se convierte en una sola
+masa: el pilar prevalece sobre la viga, los forjados y los muros mantienen su forma, y una viga
+bajo un forjado de hormigón se detiene en su cara inferior.</p>
+<p><strong>Estructura ▸ Armazón ▸ Uniones viga/pilar</strong> muestra una flecha en cada extremo unido: hacia la
+unión, esa viga está cortada; un clic la invierte. La barra de opciones filtra por material
+(Acero, Madera, Hormigón prefabricado, Otros).</p>
+<h2 id="brace">Arriostramiento</h2>
+<p><strong>Estructura ▸ Arriostramiento</strong>:</p>
+<ul>
+<li>en un <strong>Alzado de estructura</strong> (o en una sección), dos clics sobre elementos estructurales, por
+  ejemplo la base de un pilar y una viga;</li>
+<li>en planta, con <strong>Nivel inicial</strong>, <strong>Desfase</strong>, <strong>Nivel final</strong>, <strong>Desfase</strong> de la barra de
+  opciones;</li>
+<li>en 3D, sobre los puntos de los elementos pulsados.</li>
+</ul>
+<p>Un extremo apoyado en una viga queda asociado a una <strong>Proporción</strong> (de 0 a 1) o a una
+<strong>Distancia</strong> a lo largo de ella, desde el inicio o desde el final: si la viga se desplaza o se
+alarga, el arriostramiento la sigue. <strong>Uso estructural</strong>: Arriostramiento vertical, Jabalcón,
+Alma, Otros.</p>
+<h3 id="structural-settings">Símbolos en planta y Configuración estructural</h3>
+<p><strong>Estructura ▸ Armazón ▸ Configuración estructural</strong> fija, sobre el papel:</p>
+<ul>
+<li>la <strong>Distancia del símbolo de corte</strong> de arriostramientos, vigas y cerchas, pilares;</li>
+<li>los <strong>Símbolos de arriostramiento</strong>: <strong>Línea paralela</strong> (con su desfase) o <strong>Línea con
+  ángulo</strong>, <strong>Mostrar arriostramiento superior</strong> y <strong>Mostrar arriostramiento inferior</strong> (también
+  a trazos), <strong>Símbolo de jabalcón</strong>;</li>
+<li>los <strong>Símbolos de conexión</strong> de vigas y arriostramientos.</li>
+</ul>
+<p>Los símbolos se ven con el nivel de detalle Bajo.</p>
+<h2 id="beam-system">Entramado de vigas</h2>
+<p><strong>Estructura ▸ Entramado de vigas</strong> llena un vano de vigas paralelas:</p>
+<ul>
+<li><strong>Entramado de vigas automático</strong>: un clic en un vano cerrado por vigas o muros portantes;</li>
+<li><strong>Bocetar entramado de vigas</strong>: el contorno en el modo boceto (<strong>Crear contorno del
+  entramado</strong>) con <strong>Designar apoyos</strong> (el contorno queda ligado a las vigas y a los muros
+  pulsados, y el primero da la dirección), <strong>Línea</strong>, <strong>Rectángulo</strong>, <strong>Seleccionar líneas</strong> y
+  <strong>Dirección de viga</strong>. Un bucle interior es una abertura.</li>
+</ul>
+<p><strong>Regla de disposición</strong>: <strong>Distancia fija</strong>, <strong>Número fijo</strong>, <strong>Separación máxima</strong>,
+<strong>Separación libre</strong>; con la primera y la última, <strong>Justificación</strong> (Inicio, Final, Centro, Línea
+de dirección). <strong>Tipo de viga</strong>, <strong>Elevación</strong> y <strong>Etiquetar al colocar</strong> (una etiqueta del
+entramado o una por viga) completan las opciones.</p>
+<p>Las vigas siguen a los apoyos cuando se desplazan. Un entramado seleccionado tiene <strong>Restablecer
+sistema</strong> (las vigas modificadas vuelven al entramado) y <strong>Eliminar entramado</strong> (el entramado
+desaparece, las vigas quedan).</p>
+<p>Las reglas de distribución espacian las vigas como <strong>Matriz</strong> espacia sus copias: <strong>Número fijo</strong> como <strong>Último</strong>, <strong>Distancia fija</strong> como <strong>2°</strong> desde la <strong>Justificación</strong>; con <strong>Separación libre</strong> la distancia se mide entre las caras, y una viga de un tipo mayor aparta a sus vecinas. <strong>3D</strong> en la barra de opciones hace el sistema no plano: los extremos de las vigas suben a los soportes que definen la pendiente (las vigas siempre, los muros con <strong>Define pendiente</strong> o <strong>Muros de inclinación definida</strong>). <strong>Editar contorno</strong> vuelve a abrir el boceto; <strong>Dirección de viga</strong> se dibuja o se elige con <strong>Seleccionar líneas</strong>. Una viga eliminada a mano sigue eliminada hasta <strong>Restablecer sistema</strong>. Fuera de un vano cerrado, <strong>Entramado de vigas automático</strong> abre el boceto del contorno.</p>
+<p><img alt="Las cuatro reglas de distribución de un sistema de vigas: distancia fija, número fijo, separación máxima, separación libre" src="../assets/screens/st-beam-system.webp"/></p>
+<p><img alt="La justificación de un sistema de distancia fija: inicio, fin, centro" src="../assets/screens/st-beam-system-just.webp"/></p>
+<p>Un sistema de vigas copiado, reflejado o pegado se asocia a las vigas y muros portantes sobre los que caen sus bordes en el nuevo lugar; si un borde no encuentra apoyo, el comando avisa, y <strong>Editar contorno ▸ Designar apoyos</strong> lo vuelve a asociar. Cópielo solo entre vanos de la misma forma y los mismos apoyos.</p>
+<p>Las vigas curvas y los muros portantes curvos también cierran un vano para un sistema de vigas automático, pero la dirección de las vigas siempre viene de un apoyo recto. Un sistema de vigas dibujado sobre más de un vano se crea igualmente, con un aviso: las vigas y muros que lo atraviesan no lo dividen, por eso es mejor un sistema por vano.</p>
+<h2 id="truss">Cercha</h2>
+<p><strong>Estructura ▸ Cercha</strong>: dos clics en planta extienden el esquema del tipo (Pratt, Howe, Warren,
+Warren con montantes, Fink) sobre la luz. Los cordones son vigas, las almas son arriostramientos,
+cada uno del tipo de su grupo (<strong>Cordones superiores</strong>, <strong>Almas verticales</strong>, <strong>Almas
+diagonales</strong>, <strong>Cordones inferiores</strong>). Las propiedades incluyen <strong>Altura de cercha</strong>, <strong>Cordón
+portante</strong>, <strong>Anchura máxima de panel</strong>, <strong>Número de paneles</strong> y la rotación.</p>
+<p>Una cercha seleccionada tiene <strong>Enlazar parte superior/inferior</strong> (el cordón sigue la cara de una
+cubierta o de un forjado estructural; con <span class="keys"><kbd class="key-shift">Shift</kbd></span> el cordón inferior), <strong>Desenlazar
+superior/inferior</strong>, <strong>Restablecer cercha</strong> y <strong>Eliminar cercha</strong> (las barras quedan como vigas y
+arriostramientos).</p>
+<p><strong>Editar perfil</strong> abre una sección o un alzado paralelo a la cercha (si la vista abierta no lo
+es, <strong>Ir a vista</strong> pregunta cuál) con las líneas de los cordones en modo boceto: las líneas por
+encima de la mitad son el cordón superior, las demás el inferior, y las barras del alma los
+siguen. <strong>Restablecer perfil</strong> devuelve los cordones a la línea del esquema. En una vista 3D las líneas se dibujan directamente en el plano de la cercha, sin cambiar de vista.</p>
+<p>Con <strong>Seleccionar líneas</strong> la cercha se coloca a lo largo de una viga, un muro o una rejilla. Un clic en una barra selecciona toda la cercha; <span class="keys"><kbd class="key-tab">Tab</kbd></span> pasa a la barra sola. Un cordón enlazado sigue la cara del anfitrión en toda la luz; con el cordón portante enlazado, el otro mantiene la <strong>Altura de cercha</strong> desde él, y el perfil dibujado se conserva y vuelve con <strong>Desenlazar superior/inferior</strong>. <strong>Justificación vertical portante</strong>, <strong>Desfase no portante</strong>, <strong>Orientación del alma</strong> (<strong>Ortogonal</strong>: los montantes a escuadra con el cordón portante) y <strong>Ángulo de rotación</strong> (el plano de la cercha gira alrededor de la línea de ubicación) cambian las barras. Una barra eliminada a mano sigue eliminada hasta <strong>Restablecer cercha</strong>; las barras se recortan solo en <strong>Configuración estructural</strong>. Los esquemas nuevos dibujados en su propio componente llegarán con el editor de componentes.</p>
+<p><img alt="Una cercha seleccionada entera y luego una de sus barras con TAB" src="../assets/screens/st-truss.webp"/></p>
+<p>Con <strong>Las almas presentan símbolos de corte</strong> en el tipo de cercha, con nivel de detalle bajo las almas se detienen antes de los cordones, a la <strong>Distancia del símbolo de corte</strong> de las riostras de la <strong>Configuración estructural</strong>.</p>
+<h2 id="structural-walls-floors">Muro estructural y forjado estructural</h2>
+<p><strong>Muro estructural</strong> es la herramienta Muro con los mismos tipos y la misma barra de opciones: el
+muro nace <strong>Portante</strong>. Cada muro tiene <strong>Estructural</strong> y <strong>Uso estructural</strong> (<strong>No portante</strong>,
+<strong>Portante</strong>, <strong>Muro de cortante</strong>, <strong>Estructural combinado</strong>).</p>
+<p><strong>Forjado estructural</strong> es el suelo con <strong>Estructural</strong> marcado. En el boceto, <strong>Dirección de
+luz</strong> dibuja la dirección de su luz; al terminar, el <strong>Símbolo de dirección de luz</strong> nace en el
+centro del forjado. <strong>Anotaciones ▸ Dirección de luz</strong> lo vuelve a colocar (con <strong>Colocación
+automática</strong> en el centro); seleccionado se gira, y <strong>Alinear perpendicular</strong> lo hace
+perpendicular a un borde, a una viga o a una rejilla.</p>
+<h3 id="shape-editing">Edición de forma</h3>
+<p>Un suelo seleccionado (estructural, una losa de cimentación o cualquier suelo) tiene el grupo <strong>Edición de forma</strong>:</p>
+<ul>
+<li><strong>Modificar subelementos</strong>: haga clic en una esquina o un punto y escriba su <strong>Elevación</strong> en la barra de opciones; <span class="keys"><kbd class="key-delete">Del</kbd></span> quita el punto.</li>
+<li><strong>Añadir punto</strong>: un punto dentro del suelo a la elevación indicada; con <strong>Relativa</strong> se suma a la altura de la superficie en ese punto.</li>
+<li><strong>Añadir línea de división</strong>: dos clics; la superficie se pliega a lo largo de la línea.</li>
+<li><strong>Designar soportes</strong>: haga clic en una viga bajo el suelo; una línea de división sigue la viga, en su cara superior.</li>
+<li><strong>Restablecer forma</strong>: quita puntos y líneas; el suelo vuelve a ser plano (o conserva su pendiente).</li>
+</ul>
+<p>La cara superior pasa a ser la superficie triangulada que pasa por esos puntos; toda la losa la sigue y conserva su espesor. <strong>Elevación en parte superior</strong> y <strong>Elevación en base</strong> muestran entonces <strong>Varía</strong>.</p>
+<p><img alt="Un forjado estructural con la forma editada: un punto elevado y una línea de división" src="../assets/screens/st-floor-shape.webp"/></p>
+<h2 id="foundations">Cimentaciones</h2>
+<table>
+<thead>
+<tr>
+<th>Herramienta</th>
+<th>Cómo funciona</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Zapata aislada</strong></td>
+<td>Un clic en planta o en 3D (barra espaciadora: girar), o bien <strong>En rejillas</strong> o <strong>En pilares</strong> y <strong>Fin</strong>. La cara superior está en el nivel más el <strong>Desfase de altura desde nivel</strong>; el pilar de encima se apoya en la zapata. <strong>Desplazar con rejillas</strong> la liga a las rejillas</td>
+</tr>
+<tr>
+<td><strong>Zapata corrida</strong></td>
+<td>Un clic sobre un muro estructural: la zapata corre bajo su base y lo sigue. <strong>Portante</strong>: <strong>Anchura</strong> y <strong>Excentricidad</strong>; <strong>Contención</strong>: <strong>Anchura del lado exterior</strong> y <strong>Anchura del lado interior</strong>. Se interrumpe bajo las puertas y ventanas que tocan la base, salvo con <strong>No interrumpir en las inserciones</strong>; en los extremos libres sobresale la <strong>Longitud por defecto de extensión final</strong></td>
+</tr>
+<tr>
+<td><strong>Losa de cimentación</strong></td>
+<td>El contorno en el modo boceto (<strong>Crear contorno de la losa de cimentación</strong>), como un suelo: está bajo su nivel, más abajo el grosor de sus capas. <strong>Uso estructural</strong>: Cimentación o Solera de cimentación</td>
+</tr>
+</tbody>
+</table>
+<p>Con una zapata corrida seleccionada, los círculos rellenos de sus extremos la alargan o acortan a lo largo del muro, con forzado a las referencias cercanas; los círculos de los extremos de una viga o una riostra hacen lo mismo. En vigas de acero, hormigón prefabricado y madera, las flechas más allá de los extremos cambian <strong>Extensión inicial/final</strong> en un extremo libre y <strong>Retroceso de unión inicial/final</strong> en uno unido. Las zapatas aisladas y corridas de hormigón que se tocan forman una sola masa: la zapata aislada conserva su forma y corta la corrida (de dos zapatas aisladas, la anterior corta a la otra), y en planta no se dibuja la línea entre ellas.</p>
+<p><img alt="Los controles de extremo de una viga de acero" src="../assets/screens/st-end-controls.webp"/></p>
+<p><img alt="Zapatas aisladas y una zapata corrida de hormigón unidas en una sola masa" src="../assets/screens/st-foundation-join.webp"/></p>
+<h2 id="rebar-covers">Recubrimiento de armadura</h2>
+<p><strong>Hormigón armado</strong> ▸ <strong>Opciones de recubrimiento</strong> lista los recubrimientos del proyecto, cada uno con nombre y distancia: <strong>Añadir</strong>, <strong>Duplicar</strong>, <strong>Eliminar</strong>. Los elementos que usaban un recubrimiento eliminado toman el primero. Muros estructurales, pilares, vigas y arriostramientos de hormigón, forjados estructurales, losas de cimentación, zapatas aisladas y corridas eligen su recubrimiento en <strong>Propiedades</strong>: <strong>Recubrimiento de armadura - Cara superior</strong>, <strong>Recubrimiento de armadura - Cara inferior</strong> y <strong>Recubrimiento de armadura - Otras caras</strong> (en los muros <strong>Recubrimiento - Cara exterior</strong>, <strong>Recubrimiento - Cara interior</strong> y <strong>Recubrimiento de armadura - Otras caras</strong>).</p>
+<p><img alt="El cuadro de parámetros de recubrimiento" src="../assets/screens/st-covers.webp"/></p>
+<h2 id="views-schedules-ifc">Vistas, etiquetas, tablas de planificación e IFC</h2>
+<ul>
+<li><strong>Disciplina</strong> de una vista: <strong>Arquitectura</strong> o <strong>Estructural</strong>. La segunda oculta los muros no
+  portantes y dibuja a trazos lo que cubren los forjados.</li>
+<li><strong>Anotaciones ▸ Etiquetas de vigas</strong>: etiquetas de armazón y elevaciones en todas las vigas de
+  la planta (o en las seleccionadas) en seis posiciones, encima y debajo, al inicio, en el centro
+  y al final; <strong>Mostrar elevación</strong> elige superior, inferior, ambas o real.</li>
+<li>La etiqueta de una viga se lee a lo largo de la viga y se coloca a su lado, en el lado donde no tapa otra viga (encima, si ambos están libres); se arrastra como cualquier etiqueta. En <strong>Etiquetas de vigas ▸ Configuración</strong>, <strong>Desfase horizontal en extremos</strong> acerca al centro las posiciones de inicio y final, y <strong>Desfase vertical</strong> aleja las anotaciones del lateral de la viga.</li>
+<li><strong>Tabla de planificación/cantidades</strong> tiene las categorías <strong>Armazón estructural</strong>,
+  <strong>Entramados de vigas</strong>, <strong>Cerchas</strong> y <strong>Cimentaciones estructurales</strong>, con todos los
+  parámetros como campos.</li>
+<li>En <strong>IFC</strong> las vigas principales, viguetas y correas salen como <code>IfcBeam</code>, los arriostramientos
+  y las barras como <code>IfcMember</code>, las cerchas como <code>IfcElementAssembly</code>, las zapatas aisladas y
+  corridas como <code>IfcFooting</code>, la losa de cimentación como <code>IfcSlab</code> de base; los muros y forjados
+  estructurales llevan <code>LoadBearing</code>.</li>
+</ul>
+<p><img alt="Las etiquetas del armazón estructural en planta" src="../assets/screens/st-tags.webp"/></p>
+<h2 id="commands">Desde la línea de comandos</h2>
+<table>
+<thead>
+<tr>
+<th>Comando</th>
+<th>Qué hace</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>beam</code></td>
+<td>Vigas desde dos puntos, encadenadas, en arco o en rejillas</td>
+</tr>
+<tr>
+<td><code>brace</code></td>
+<td>Un arriostramiento entre dos puntos</td>
+</tr>
+<tr>
+<td><code>beamsystem</code>, <code>beamsystemedit</code></td>
+<td>Un entramado automático o desde un contorno; restablecerlo o eliminarlo</td>
+</tr>
+<tr>
+<td><code>truss</code>, <code>trussedit</code></td>
+<td>Una cercha; enlazarla, desenlazarla, restablecerla o eliminarla</td>
+</tr>
+<tr>
+<td><code>pad</code>, <code>strip</code></td>
+<td>Zapatas aisladas (en un punto, en rejillas, en pilares), zapatas corridas</td>
+</tr>
+<tr>
+<td><code>spansymbol</code>, <code>spanalign</code></td>
+<td>El símbolo de dirección de luz; alinearlo</td>
+</tr>
+<tr>
+<td><code>beamjoin</code>, <code>structuralsettings</code>, <code>beamannotations</code></td>
+<td>Las uniones, la configuración estructural, las etiquetas de vigas</td>
+</tr>
+<tr>
+<td><code>floorshape</code></td>
+<td>La edición de forma de un suelo: puntos, líneas de división, soportes, restablecer</td>
+</tr>
+<tr>
+<td><code>covers</code></td>
+<td>Parámetros de recubrimiento</td>
+</tr>
+</tbody>
+</table>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Volver al principio
+</button>
+</main>
+<footer class="md-footer">
+<nav aria-label="Pie" class="md-footer__inner md-grid">
+<a aria-label="Anterior: Fases y demoliciones" class="md-footer__link md-footer__link--prev" href="../phases/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Anterior
+              </span>
+<div class="md-ellipsis">
+                Fases y demoliciones
+              </div>
+</div>
+</a>
+<a aria-label="Siguiente: Emplazamiento y terreno" class="md-footer__link md-footer__link--next" href="../site/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Siguiente
+              </span>
+<div class="md-ellipsis">
+                Emplazamiento y terreno
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Copyright © 2026 BIMopen
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.footer", "navigation.tracking", "toc.follow", "content.code.copy", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+<script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+<script src="../assets/js/zoom.js"></script>
+</body>
+</html>

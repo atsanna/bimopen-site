@@ -1,63 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://atsanna.github.io/bimopen-site/manual/es/</loc>
-         <lastmod>2026-10-25</lastmod>
+         <loc>https://bimopen.it/manual/es/</loc>
+         <lastmod>2026-11-09</lastmod>
     </url>
     <url>
-         <loc>https://atsanna.github.io/bimopen-site/manual/es/annotation/</loc>
-         <lastmod>2026-10-25</lastmod>
+         <loc>https://bimopen.it/manual/es/annotation/</loc>
+         <lastmod>2026-11-09</lastmod>
     </url>
     <url>
-         <loc>https://atsanna.github.io/bimopen-site/manual/es/command-line-and-mcp/</loc>
-         <lastmod>2026-10-25</lastmod>
+         <loc>https://bimopen.it/manual/es/cad-files/</loc>
+         <lastmod>2026-11-09</lastmod>
     </url>
     <url>
-         <loc>https://atsanna.github.io/bimopen-site/manual/es/documentation/</loc>
-         <lastmod>2026-10-25</lastmod>
+         <loc>https://bimopen.it/manual/es/ceilings-and-columns/</loc>
+         <lastmod>2026-11-09</lastmod>
     </url>
     <url>
-         <loc>https://atsanna.github.io/bimopen-site/manual/es/floors-roofs-stairs/</loc>
-         <lastmod>2026-10-25</lastmod>
+         <loc>https://bimopen.it/manual/es/command-line-and-mcp/</loc>
+         <lastmod>2026-11-09</lastmod>
     </url>
     <url>
-         <loc>https://atsanna.github.io/bimopen-site/manual/es/getting-started/</loc>
-         <lastmod>2026-10-25</lastmod>
+         <loc>https://bimopen.it/manual/es/design-options/</loc>
+         <lastmod>2026-11-09</lastmod>
     </url>
     <url>
-         <loc>https://atsanna.github.io/bimopen-site/manual/es/import-and-conversion/</loc>
-         <lastmod>2026-10-25</lastmod>
+         <loc>https://bimopen.it/manual/es/documentation/</loc>
+         <lastmod>2026-11-09</lastmod>
     </url>
     <url>
-         <loc>https://atsanna.github.io/bimopen-site/manual/es/interface-styles/</loc>
-         <lastmod>2026-10-25</lastmod>
+         <loc>https://bimopen.it/manual/es/floors-roofs-stairs/</loc>
+         <lastmod>2026-11-09</lastmod>
     </url>
     <url>
-         <loc>https://atsanna.github.io/bimopen-site/manual/es/interface/</loc>
-         <lastmod>2026-10-25</lastmod>
+         <loc>https://bimopen.it/manual/es/getting-started/</loc>
+         <lastmod>2026-11-09</lastmod>
     </url>
     <url>
-         <loc>https://atsanna.github.io/bimopen-site/manual/es/keyboard-shortcuts/</loc>
-         <lastmod>2026-10-25</lastmod>
+         <loc>https://bimopen.it/manual/es/import-and-conversion/</loc>
+         <lastmod>2026-11-09</lastmod>
     </url>
     <url>
-         <loc>https://atsanna.github.io/bimopen-site/manual/es/projects-and-files/</loc>
-         <lastmod>2026-10-25</lastmod>
+         <loc>https://bimopen.it/manual/es/interface-styles/</loc>
+         <lastmod>2026-11-09</lastmod>
     </url>
     <url>
-         <loc>https://atsanna.github.io/bimopen-site/manual/es/selection-and-modify/</loc>
-         <lastmod>2026-10-25</lastmod>
+         <loc>https://bimopen.it/manual/es/interface/</loc>
+         <lastmod>2026-11-09</lastmod>
     </url>
     <url>
-         <loc>https://atsanna.github.io/bimopen-site/manual/es/troubleshooting/</loc>
-         <lastmod>2026-10-25</lastmod>
+         <loc>https://bimopen.it/manual/es/keyboard-shortcuts/</loc>
+         <lastmod>2026-11-09</lastmod>
     </url>
     <url>
-         <loc>https://atsanna.github.io/bimopen-site/manual/es/views-and-graphics/</loc>
-         <lastmod>2026-10-25</lastmod>
+         <loc>https://bimopen.it/manual/es/openings/</loc>
+         <lastmod>2026-11-09</lastmod>
     </url>
     <url>
-         <loc>https://atsanna.github.io/bimopen-site/manual/es/walls-doors-windows/</loc>
-         <lastmod>2026-10-25</lastmod>
+         <loc>https://bimopen.it/manual/es/phases/</loc>
+         <lastmod>2026-11-09</lastmod>
+    </url>
+    <url>
+         <loc>https://bimopen.it/manual/es/projects-and-files/</loc>
+         <lastmod>2026-11-09</lastmod>
+    </url>
+    <url>
+         <loc>https://bimopen.it/manual/es/selection-and-modify/</loc>
+         <lastmod>2026-11-09</lastmod>
+    </url>
+    <url>
+         <loc>https://bimopen.it/manual/es/site/</loc>
+         <lastmod>2026-11-09</lastmod>
+    </url>
+    <url>
+         <loc>https://bimopen.it/manual/es/structure/</loc>
+         <lastmod>2026-11-09</lastmod>
+    </url>
+    <url>
+         <loc>https://bimopen.it/manual/es/troubleshooting/</loc>
+         <lastmod>2026-11-09</lastmod>
+    </url>
+    <url>
+         <loc>https://bimopen.it/manual/es/views-and-graphics/</loc>
+         <lastmod>2026-11-09</lastmod>
+    </url>
+    <url>
+         <loc>https://bimopen.it/manual/es/walls-doors-windows/</loc>
+         <lastmod>2026-11-09</lastmod>
     </url>
 </urlset>

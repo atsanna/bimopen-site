@@ -7,9 +7,9 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="دليل مستخدم BIMopen، نمذجة BIM مفتوحة المصدر" name="description"/>
 <meta content="BIMopen" name="author"/>
-<link href="https://atsanna.github.io/bimopen-site/manual/ar/import-and-conversion/" rel="canonical"/>
+<link href="https://bimopen.it/manual/ar/import-and-conversion/" rel="canonical"/>
 <link href="../projects-and-files/" rel="prev"/>
-<link href="../selection-and-modify/" rel="next"/>
+<link href="../cad-files/" rel="next"/>
 <link href="../assets/images/bimopen-cube.svg" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.9" name="generator"/>
 <title>الاستيراد والتحويل - دليل مستخدم BIMopen</title>
@@ -18,6 +18,13 @@
 <link href="../assets/css/theme.css" rel="stylesheet"/>
 <link href="../assets/css/theme_dark_mode.css" rel="stylesheet"/>
 <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="https://bimopen.it/manual/en/import-and-conversion/" hreflang="en" rel="alternate"/>
+<link href="https://bimopen.it/manual/it/import-and-conversion/" hreflang="it" rel="alternate"/>
+<link href="https://bimopen.it/manual/de/import-and-conversion/" hreflang="de" rel="alternate"/>
+<link href="https://bimopen.it/manual/fr/import-and-conversion/" hreflang="fr" rel="alternate"/>
+<link href="https://bimopen.it/manual/es/import-and-conversion/" hreflang="es" rel="alternate"/>
+<link href="https://bimopen.it/manual/ar/import-and-conversion/" hreflang="ar" rel="alternate"/>
+<link href="https://bimopen.it/manual/en/import-and-conversion/" hreflang="x-default" rel="alternate"/>
 </head>
 <body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="slate" dir="rtl">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -32,7 +39,7 @@
 </div>
 <header class="md-header md-header--shadow" data-md-component="header">
 <nav aria-label="عنوان العارضة" class="md-header__inner md-grid">
-<a aria-label="دليل مستخدم BIMopen" class="md-header__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/?lang=ar" title="دليل مستخدم BIMopen">
+<a aria-label="دليل مستخدم BIMopen" class="md-header__button md-logo" data-md-component="logo" href="https://bimopen.it/ar/" title="دليل مستخدم BIMopen">
 <img alt="logo" src="../assets/images/bimopen-cube.svg"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -73,32 +80,32 @@
 <div class="md-select__inner">
 <ul class="md-select__list">
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/en/" hreflang="en">
+<a class="md-select__link" href="https://bimopen.it/manual/en/" hreflang="en">
               English
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/it/" hreflang="it">
+<a class="md-select__link" href="https://bimopen.it/manual/it/" hreflang="it">
               Italiano
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/de/" hreflang="de">
+<a class="md-select__link" href="https://bimopen.it/manual/de/" hreflang="de">
               Deutsch
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/fr/" hreflang="fr">
+<a class="md-select__link" href="https://bimopen.it/manual/fr/" hreflang="fr">
               Français
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/es/" hreflang="es">
+<a class="md-select__link" href="https://bimopen.it/manual/es/" hreflang="es">
               Español
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/ar/" hreflang="ar">
+<a class="md-select__link" href="https://bimopen.it/manual/ar/" hreflang="ar">
               العربية
             </a>
 </li>
@@ -147,7 +154,7 @@
 <div class="md-sidebar__inner">
 <nav aria-label="تصفح" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="دليل مستخدم BIMopen" class="md-nav__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/?lang=ar" title="دليل مستخدم BIMopen">
+<a aria-label="دليل مستخدم BIMopen" class="md-nav__button md-logo" data-md-component="logo" href="https://bimopen.it/ar/" title="دليل مستخدم BIMopen">
 <img alt="logo" src="../assets/images/bimopen-cube.svg"/>
 </a>
     دليل مستخدم BIMopen
@@ -229,6 +236,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#importing-an-ifc-file-into-the-project">
+<span class="md-ellipsis">
+      استيراد ملف IFC إلى المشروع
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#conversion-status">
 <span class="md-ellipsis">
       حالة التحويل
@@ -299,6 +313,14 @@
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../cad-files/">
+<span class="md-ellipsis">
+    DWG وDXF
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../selection-and-modify/">
 <span class="md-ellipsis">
     التحديد والتعديل
@@ -318,6 +340,54 @@
 <a class="md-nav__link" href="../floors-roofs-stairs/">
 <span class="md-ellipsis">
     الأرضيات والأسقف والسلالم والمكونات
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ceilings-and-columns/">
+<span class="md-ellipsis">
+    الأسقف المعلقة والأعمدة
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../openings/">
+<span class="md-ellipsis">
+    الفتحات
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../phases/">
+<span class="md-ellipsis">
+    المراحل والهدم
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../structure/">
+<span class="md-ellipsis">
+    الإنشاءات والأساسات
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../site/">
+<span class="md-ellipsis">
+    مخطط الموقع والأرض
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../design-options/">
+<span class="md-ellipsis">
+    بدائل التصميم
     
   </span>
 </a>
@@ -371,7 +441,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="https://atsanna.github.io/bimopen-site/manual/ar/pdf/bimopen-manual-ar.pdf">
+<a class="md-nav__link" href="https://bimopen.it/manual/ar/pdf/bimopen-manual-ar.pdf">
 <span class="md-ellipsis">
     PDF
     
@@ -403,6 +473,13 @@
 <a class="md-nav__link" href="#import-ifc-options">
 <span class="md-ellipsis">
       استيراد خيارات IFC
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#importing-an-ifc-file-into-the-project">
+<span class="md-ellipsis">
+      استيراد ملف IFC إلى المشروع
     </span>
 </a>
 </li>
@@ -487,7 +564,7 @@
 <strong>تحويل</strong> من كل كائن مستورد عنصرًا من BIMopen من أي فئة، متى احتجت ذلك وبالقدر الذي تحتاجه.</p>
 <h2 id="opening-an-ifc-file">فتح ملف IFC</h2>
 <ol>
-<li>افتح قائمة التطبيق (علامة BIMopen أعلى الشريط الجانبي) واختر <strong>فتح ➤ IFC…</strong>.</li>
+<li>افتح لوحة <strong>ملف</strong> (علامة BIMopen أعلى الشريط الجانبي) واختر <strong>فتح… ➤ IFC…</strong>.</li>
 <li>اختر ملف IFC2x3 أو IFC4.</li>
 </ol>
 <p>ينشئ BIMopen مشروعًا جديدًا: تصبح الطوابق مستويات، وتُعاد بناء الجدران من محورها، وتصبح البلاطات
@@ -518,6 +595,38 @@
   <strong>قياسي</strong> الربط الافتراضي.</li>
 </ul>
 <p>تُحفظ الخيارات من جلسة إلى أخرى.</p>
+<h2 id="importing-an-ifc-file-into-the-project">استيراد ملف IFC إلى المشروع</h2>
+<p><strong>فتح ➤ IFC…</strong> ينشئ مشروعًا جديدًا. أما <strong>ربط واستيراد ▸ استيراد IFC</strong> فيأتي بالملف <strong>إلى المشروع
+المفتوح</strong> الذي له مستوياته وأنواعه: فيصبح التحويل أسرع لأن <strong>تحويل…</strong> يقترح أنواع المشروع أولًا.</p>
+<ol>
+<li><strong>ربط واستيراد ▸ استيراد IFC</strong> (أو <strong>ملف ▸ فتح ▸ استيراد IFC…</strong>، أو Ctrl+K، «استيراد ifc»)، ثم اختر الملف.</li>
+<li>في نافذة <strong>استيراد IFC</strong>:</li>
+<li><strong>التموضع</strong>: <strong>تلقائي: من الأصل إلى الأصل</strong> (الحالة المعتادة)، أو <strong>من المركز إلى المركز</strong>،
+     أو <strong>يدوي</strong>: بعد <strong>استيراد</strong> تنقر في مسقط النقطة التي يوضع فيها أصل الملف.</li>
+<li><strong>المستويات</strong>: يذهب كل طابق في الملف إلى مستوى في المشروع، بالاسم ثم بالمنسوب (±100 مم)،
+     أو إلى مستوى جديد؛ ويمكن تغيير الاختيار صفًا صفًا.</li>
+<li><strong>الفئات المراد استيرادها</strong>: فئات الملف مع كائناتها والفئة المقترحة؛ ألغِ ما لا يلزم.
+     لا تصبح الفراغات غرفًا إلا إذا اخترت ذلك.</li>
+<li><strong>أنواع المشروع</strong>: <strong>اقتراح أنواع المشروع أولًا</strong> (مفعّل) و<strong>التحويل فورًا عندما تكون
+     المطابقة عالية</strong>.</li>
+<li><strong>مستورد سابقًا من هذا الملف</strong>: عند استيراد الملف نفسه مرة ثانية، يقارن <strong>تحديث</strong> المعرّفات
+     (GUID): يضيف الجديدة ويحدّث المتغيرة ويشير إلى المفقودة دون حذفها؛ أو <strong>استيراد كنسخة</strong>.</li>
+<li><strong>استيراد</strong>. كل ذلك خطوة تراجع واحدة؛ وتُفعَّل <strong>حالة التحويل</strong> في العرض.</li>
+</ol>
+<figure>
+<img alt="نافذة استيراد IFC للبيت النموذجي: التموضع من الأصل إلى الأصل، وطابقا الملف على مستويات المشروع بالاسم نفسه، والفئات المراد استيرادها مع كائناتها" src="../assets/screens/ic-import-ifc.webp"/>
+<figcaption>استيراد IFC: تذهب طوابق الملف إلى مستويات المشروع</figcaption>
+</figure>
+<p>تأتي الجدران والأرضيات والأبواب والنوافذ أيضًا ككائنات مستوردة لتُحوَّل إلى أنواع المشروع. في
+<strong>تحويل…</strong> يعرض <strong>النوع</strong> أنواع المشروع <strong>مرتبة حسب المطابقة</strong>، والأول مُعلَّم بـ ★: الفئة،
+والسماكة أو الأبعاد (متساوية ضمن 5 مم)، والاسم (نفسه أو كلمات مشتركة). يذكر كل صف درجة المطابقة
+(<strong>عالية</strong> من 85، <strong>متوسطة</strong> من 60، <strong>منخفضة</strong>) وسببها؛ ويكون الأول مختارًا إذا كانت المطابقة
+متوسطة على الأقل، وإلا <strong>نوع جديد من الكائن</strong>. وعند تحويل فئة كاملة، يذكر صف لكل نوع في الملف
+النوعَ الذي يصبحه في المشروع.</p>
+<figure>
+<img alt="تحويل كائن مستورد على جدار مستورد: نوع المشروع ذو الاسم والسماكة نفسيهما أولًا، مطابقة عالية، والسبب" src="../assets/screens/ic-import-types.webp"/>
+<figcaption>أنواع المشروع، الأقرب أولًا</figcaption>
+</figure>
 <h2 id="conversion-status">حالة التحويل</h2>
 <p>ما دام المشروع يحتوي على كائنات مستوردة بانتظار التحويل، يعرض شريط العرض <strong>حالة التحويل</strong> مع
 عددها. ويذكر التلميح عددها وعدد فئات IFC التي تنتمي إليها.</p>
@@ -591,7 +700,7 @@
 <ol>
 <li><strong>الفئة</strong>: ما يصبح عليه الكائن. يأتي اقتراح فئة IFC أولًا.</li>
 <li>إحدى الطرق الثلاث (أدناه). تظهر بالرمادي الطريقة التي لا تنطبق على الفئة.</li>
-<li><strong>النوع</strong>: أحد أنواع الفئة، أو نوع جديد مصنوع من الكائن.</li>
+<li><strong>النوع</strong>: أحد أنواع الفئة (أنواع المشروع أولًا مرتبة حسب المطابقة)، أو نوع جديد مصنوع من الكائن.</li>
 <li><strong>المكتشَف</strong>: ما يقرؤه BIMopen في الشكل ومدى ثقته به.</li>
 <li><strong>المعاملات</strong>: <strong>العلامة</strong> و<strong>التعليقات</strong>، وخصائص IFC للكائن.</li>
 <li><strong>تحويل</strong>.</li>
@@ -627,6 +736,11 @@
 </table>
 <p>الشكل الذي لا يمكن إعادة بنائه كالفئة المختارة يصبح أحمر (<strong>غير معروف</strong>) ويبقى كما كان: حوّله من
 جديد مع الإبقاء على هندسته. وتأتي إعادة بناء الأعمدة والجسور والسلالم والدرابزين في مرحلة لاحقة.</p>
+<p>عند إعادة البناء ينقل BIMopen مواد الملف إلى العنصر الأصلي: طبقات الجدار أو الأرضية أو السقف
+بسماكاتها، وإطار النافذة وزجاجها. المادة التي يملكها المشروع بالاسم نفسه تُستخدم كما هي، والمادة
+الجديدة تأخذ لون الملف ونقوش مادة مشابهة. الجدار الذي يلتف حول زاوية يصبح جدارًا لكل مقطع، والسقف
+ذو السطوح المائلة على ارتفاعات مختلفة يصبح سقفًا لكل سطح. الغطاء والأعراف والمزاريب فوق السقف تنتقل
+مع السقف الجديد، والجدران التي يقطعها السقف تُربط به. <strong>استعادة الأصل</strong> تعيد كل شيء كما كان.</p>
 <p>تفعل <strong>الفئة</strong> في <strong>الخصائص</strong> ما تفعله <strong>الإبقاء على الهندسة</strong>: اختيار فئة هناك يحوّل الكائن المحدد
 فورًا.</p>
 <figure>
@@ -669,7 +783,7 @@
   العرض</strong>، <strong>استعادة الأصل</strong>.</li>
 </ul>
 <h2 id="restoring-the-originals">استعادة الأصول</h2>
-<p>ما يستبدله التحويل يبقى في المشروع، في ملف <code>.bimopen</code>: الكائن الأصلي، مع الأجزاء التي أخذها معه.
+<p>ما يستبدله التحويل يبقى في المشروع، في ملف <code>.bpr</code>: الكائن الأصلي، مع الأجزاء التي أخذها معه.
 ويعيده <strong>استعادة الأصل</strong> (في البطاقة السياقية، أو في فهرس المشروع، أو في قائمة الزر الأيمن) كما
 استُورد، برتقاليًا من جديد.</p>
 <figure>
@@ -684,6 +798,7 @@
 ممكنًا.</p>
 <h2 id="coming-next">قريبًا</h2>
 <ul>
+<li><strong>ربط IFC</strong>: الملف كمرجع للقراءة فقط يُعاد تحميله عند تغيّره؛ والتموضع حسب الإحداثيات المشتركة.</li>
 <li><strong>تحديث من الملف</strong>: إعادة قراءة الملف المصدر وتحديث كائناته.</li>
 <li>أدوات حسب الوجه، لوضع الجدران والأرضيات والأسقف على الأشكال الحرة والمنحنية.</li>
 <li>إعادة بناء الأعمدة والجسور والسلالم والدرابزين.</li>
@@ -713,13 +828,13 @@
               </div>
 </div>
 </a>
-<a aria-label="التالية: التحديد والتعديل" class="md-footer__link md-footer__link--next" href="../selection-and-modify/">
+<a aria-label="التالية: DWG وDXF" class="md-footer__link md-footer__link--next" href="../cad-files/">
 <div class="md-footer__title">
 <span class="md-footer__direction">
                 التالية
               </span>
 <div class="md-ellipsis">
-                التحديد والتعديل
+                DWG وDXF
               </div>
 </div>
 <div class="md-footer__button md-icon">

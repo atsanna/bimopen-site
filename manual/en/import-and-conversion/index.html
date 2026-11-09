@@ -7,9 +7,9 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="User manual of BIMopen, open-source BIM modelling" name="description"/>
 <meta content="BIMopen" name="author"/>
-<link href="https://atsanna.github.io/bimopen-site/manual/en/import-and-conversion/" rel="canonical"/>
+<link href="https://bimopen.it/manual/en/import-and-conversion/" rel="canonical"/>
 <link href="../projects-and-files/" rel="prev"/>
-<link href="../selection-and-modify/" rel="next"/>
+<link href="../cad-files/" rel="next"/>
 <link href="../assets/images/bimopen-cube.svg" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.9" name="generator"/>
 <title>Importing and converting - BIMopen user manual</title>
@@ -18,6 +18,13 @@
 <link href="../assets/css/theme.css" rel="stylesheet"/>
 <link href="../assets/css/theme_dark_mode.css" rel="stylesheet"/>
 <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="https://bimopen.it/manual/en/import-and-conversion/" hreflang="en" rel="alternate"/>
+<link href="https://bimopen.it/manual/it/import-and-conversion/" hreflang="it" rel="alternate"/>
+<link href="https://bimopen.it/manual/de/import-and-conversion/" hreflang="de" rel="alternate"/>
+<link href="https://bimopen.it/manual/fr/import-and-conversion/" hreflang="fr" rel="alternate"/>
+<link href="https://bimopen.it/manual/es/import-and-conversion/" hreflang="es" rel="alternate"/>
+<link href="https://bimopen.it/manual/ar/import-and-conversion/" hreflang="ar" rel="alternate"/>
+<link href="https://bimopen.it/manual/en/import-and-conversion/" hreflang="x-default" rel="alternate"/>
 </head>
 <body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="slate" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -32,7 +39,7 @@
 </div>
 <header class="md-header md-header--shadow" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="BIMopen user manual" class="md-header__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/?lang=en" title="BIMopen user manual">
+<a aria-label="BIMopen user manual" class="md-header__button md-logo" data-md-component="logo" href="https://bimopen.it/en/" title="BIMopen user manual">
 <img alt="logo" src="../assets/images/bimopen-cube.svg"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -73,32 +80,32 @@
 <div class="md-select__inner">
 <ul class="md-select__list">
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/en/" hreflang="en">
+<a class="md-select__link" href="https://bimopen.it/manual/en/" hreflang="en">
               English
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/it/" hreflang="it">
+<a class="md-select__link" href="https://bimopen.it/manual/it/" hreflang="it">
               Italiano
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/de/" hreflang="de">
+<a class="md-select__link" href="https://bimopen.it/manual/de/" hreflang="de">
               Deutsch
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/fr/" hreflang="fr">
+<a class="md-select__link" href="https://bimopen.it/manual/fr/" hreflang="fr">
               Français
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/es/" hreflang="es">
+<a class="md-select__link" href="https://bimopen.it/manual/es/" hreflang="es">
               Español
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/ar/" hreflang="ar">
+<a class="md-select__link" href="https://bimopen.it/manual/ar/" hreflang="ar">
               العربية
             </a>
 </li>
@@ -147,7 +154,7 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="BIMopen user manual" class="md-nav__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/?lang=en" title="BIMopen user manual">
+<a aria-label="BIMopen user manual" class="md-nav__button md-logo" data-md-component="logo" href="https://bimopen.it/en/" title="BIMopen user manual">
 <img alt="logo" src="../assets/images/bimopen-cube.svg"/>
 </a>
     BIMopen user manual
@@ -229,6 +236,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#importing-an-ifc-file-into-the-project">
+<span class="md-ellipsis">
+      Importing an IFC file into the project
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#conversion-status">
 <span class="md-ellipsis">
       Conversion Status
@@ -299,6 +313,14 @@
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../cad-files/">
+<span class="md-ellipsis">
+    DWG and DXF
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../selection-and-modify/">
 <span class="md-ellipsis">
     Selecting and modifying
@@ -318,6 +340,54 @@
 <a class="md-nav__link" href="../floors-roofs-stairs/">
 <span class="md-ellipsis">
     Floors, roofs, stairs and components
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ceilings-and-columns/">
+<span class="md-ellipsis">
+    Ceilings and columns
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../openings/">
+<span class="md-ellipsis">
+    Openings
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../phases/">
+<span class="md-ellipsis">
+    Phases and demolition
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../structure/">
+<span class="md-ellipsis">
+    Structure and foundations
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../site/">
+<span class="md-ellipsis">
+    Site plan and terrain
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../design-options/">
+<span class="md-ellipsis">
+    Design options
     
   </span>
 </a>
@@ -371,7 +441,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="https://atsanna.github.io/bimopen-site/manual/en/pdf/bimopen-manual-en.pdf">
+<a class="md-nav__link" href="https://bimopen.it/manual/en/pdf/bimopen-manual-en.pdf">
 <span class="md-ellipsis">
     PDF
     
@@ -403,6 +473,13 @@
 <a class="md-nav__link" href="#import-ifc-options">
 <span class="md-ellipsis">
       Import IFC Options
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#importing-an-ifc-file-into-the-project">
+<span class="md-ellipsis">
+      Importing an IFC file into the project
     </span>
 </a>
 </li>
@@ -488,8 +565,8 @@ geometry as it was read, as a generic model. <strong>Convert</strong> then makes
 BIMopen element of any category, when and as far as you need it.</p>
 <h2 id="opening-an-ifc-file">Opening an IFC file</h2>
 <ol>
-<li>Open the application menu (BIMopen's mark at the top of the rail) and choose
-   <strong>Open ➤ IFC…</strong>.</li>
+<li>Open the <strong>File</strong> panel (BIMopen's mark at the top of the rail) and choose
+   <strong>Open… ➤ IFC…</strong>.</li>
 <li>Pick an IFC2x3 or IFC4 file.</li>
 </ol>
 <p>BIMopen makes a new project: storeys become levels, walls are rebuilt from their axis, slabs
@@ -521,6 +598,41 @@ file is opened.</p>
   line. <strong>Default</strong> puts the standard mapping back.</li>
 </ul>
 <p>The options are kept between sessions.</p>
+<h2 id="importing-an-ifc-file-into-the-project">Importing an IFC file into the project</h2>
+<p><strong>Open ➤ IFC…</strong> makes a new project. <strong>Link and import ▸ Import IFC</strong> brings the file <strong>into the
+open project</strong> instead, which already has its levels and types: converting is faster, because
+<strong>Convert…</strong> proposes the project's types first.</p>
+<ol>
+<li><strong>Link and import ▸ Import IFC</strong> (or <strong>File ▸ Open ▸ Import IFC…</strong>, or Ctrl+K, «import ifc»), then pick the file.</li>
+<li>In the <strong>Import IFC</strong> dialog:</li>
+<li><strong>Placement</strong>: <strong>Auto - Origin to Origin</strong> (the usual case), <strong>Center to Center</strong>, or
+     <strong>Manual</strong>: after <strong>Import</strong> you click the point in a plan where the file's origin goes.</li>
+<li><strong>Levels</strong>: each storey of the file goes to a project level, by name and then by elevation
+     (±100 mm), or to a new level; the choice can be changed row by row.</li>
+<li><strong>Classes to import</strong>: the file's classes with their objects and the category proposed;
+     untick those not needed. Spaces become rooms only if you choose so.</li>
+<li><strong>Project types</strong>: <strong>Propose the project's types first</strong> (on) and <strong>Convert at once when
+     the match is high</strong>.</li>
+<li><strong>Already imported from this file</strong>: on a second import of the same file, <strong>Update</strong>
+     compares the identifiers (GUIDs): it adds the new ones, updates the changed ones, and
+     reports those no longer there without removing them; or <strong>Import as a copy</strong>.</li>
+<li><strong>Import</strong>. It is all one Undo step; <strong>Conversion Status</strong> turns on in the view.</li>
+</ol>
+<figure>
+<img alt="The Import IFC dialog on the sample house: placement origin to origin, the file's two storeys on the project levels with the same name, the classes to import with their objects" src="../assets/screens/ic-import-ifc.webp"/>
+<figcaption>Import IFC: the file's storeys go to the project's levels</figcaption>
+</figure>
+<p>Walls, floors, doors and windows come in as imported objects too, to be converted into the
+project's types. In <strong>Convert…</strong>, <strong>Type</strong> lists the project's types <strong>ranked by match</strong>, the
+first marked ★: the category, the thickness or sizes (the same within 5 mm) and the name (the
+same, or words in common). Each row says how well it matches (<strong>high</strong> from 85, <strong>medium</strong> from
+60, <strong>low</strong>) and why; the first is already chosen if the match is at least medium, otherwise
+<strong>New type from object</strong>. Converting a whole class, one row for each type of the file says
+which project type it becomes.</p>
+<figure>
+<img alt="Convert Imported Object on an imported wall: the project type with the same name and thickness first, high match, and why" src="../assets/screens/ic-import-types.webp"/>
+<figcaption>The project's types, the closest first</figcaption>
+</figure>
 <h2 id="conversion-status">Conversion Status</h2>
 <p>While the project holds imported objects still to convert, the view bar shows
 <strong>Conversion Status</strong>, with their number. Its tooltip says how many there are and in how many IFC
@@ -597,7 +709,7 @@ opened from the view's settings.</p>
 <ol>
 <li><strong>Category</strong>: what the object becomes. The class's proposal comes first.</li>
 <li>One of the three ways (below). A way that does not apply to the category is greyed.</li>
-<li><strong>Type</strong>: one of the category's types, or a new type made from the object.</li>
+<li><strong>Type</strong>: one of the category's types (the project's first, ranked by match), or a new type made from the object.</li>
 <li><strong>Detected</strong>: what BIMopen reads in the shape and how sure it is.</li>
 <li><strong>Parameters</strong>: <strong>Mark</strong> and <strong>Comments</strong>, and the object's IFC properties.</li>
 <li><strong>Convert</strong>.</li>
@@ -634,6 +746,13 @@ dialog keeps its size.</p>
 <p>A shape that cannot be rebuilt as the chosen category turns red (<strong>Not Recognised</strong>) and stays
 as it was: convert it again keeping its geometry. Rebuilding columns, beams, stairs and
 railings comes in a later phase.</p>
+<p>When it rebuilds, BIMopen carries the file's materials into the native element: the layers of a
+wall, floor or roof with their thickness, the frame and glass of a window. A material the project
+already has with the same name is used as it is; a new one takes the file's colour and the hatch
+patterns of a similar material. A wall that turns a corner becomes one wall per stretch; a roof
+with planes at different heights, one roof per plane. The covering, ridges and gutters on a roof
+go with the new roof, and the walls the roof cuts are attached to it. <strong>Restore Original</strong> puts
+everything back as it was.</p>
 <p><strong>Category</strong> in <strong>Properties</strong> does the same as <strong>Keep the geometry</strong>: choosing a category there
 converts the selected object at once.</p>
 <figure>
@@ -680,7 +799,7 @@ list their parts under them.</p>
   <strong>Conceal in view</strong>, <strong>Restore Original</strong>.</li>
 </ul>
 <h2 id="restoring-the-originals">Restoring the originals</h2>
-<p>What a conversion replaces is kept in the project, in the <code>.bimopen</code> file: the original object,
+<p>What a conversion replaces is kept in the project, in the <code>.bpr</code> file: the original object,
 with the parts it took along. <strong>Restore Original</strong> (on the contextual card, in the Project Index
 or in the right button's menu) puts it back as it was imported, orange again.</p>
 <figure>
@@ -695,6 +814,7 @@ the conversions are final, <strong>Remove Source References…</strong> on the f
 the originals: after it, <strong>Restore Original</strong> is no longer possible.</p>
 <h2 id="coming-next">Coming next</h2>
 <ul>
+<li><strong>Link IFC</strong>: the file as a read-only reference, reloaded when it changes; placement by shared coordinates.</li>
 <li><strong>Update from File</strong>: reading the source file again and updating its objects.</li>
 <li>Tools by face, to place walls, floors and roofs on free and curved forms.</li>
 <li>Rebuilding columns, beams, stairs and railings.</li>
@@ -724,13 +844,13 @@ the originals: after it, <strong>Restore Original</strong> is no longer possible
               </div>
 </div>
 </a>
-<a aria-label="Next: Selecting and modifying" class="md-footer__link md-footer__link--next" href="../selection-and-modify/">
+<a aria-label="Next: DWG and DXF" class="md-footer__link md-footer__link--next" href="../cad-files/">
 <div class="md-footer__title">
 <span class="md-footer__direction">
                 Next
               </span>
 <div class="md-ellipsis">
-                Selecting and modifying
+                DWG and DXF
               </div>
 </div>
 <div class="md-footer__button md-icon">

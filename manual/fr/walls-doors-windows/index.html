@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Manuel utilisateur de BIMopen, modélisation BIM open source" name="description"/>
 <meta content="BIMopen" name="author"/>
-<link href="https://atsanna.github.io/bimopen-site/manual/fr/walls-doors-windows/" rel="canonical"/>
+<link href="https://bimopen.it/manual/fr/walls-doors-windows/" rel="canonical"/>
 <link href="../selection-and-modify/" rel="prev"/>
 <link href="../floors-roofs-stairs/" rel="next"/>
 <link href="../assets/images/bimopen-cube.svg" rel="icon"/>
@@ -18,6 +18,13 @@
 <link href="../assets/css/theme.css" rel="stylesheet"/>
 <link href="../assets/css/theme_dark_mode.css" rel="stylesheet"/>
 <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="https://bimopen.it/manual/en/walls-doors-windows/" hreflang="en" rel="alternate"/>
+<link href="https://bimopen.it/manual/it/walls-doors-windows/" hreflang="it" rel="alternate"/>
+<link href="https://bimopen.it/manual/de/walls-doors-windows/" hreflang="de" rel="alternate"/>
+<link href="https://bimopen.it/manual/fr/walls-doors-windows/" hreflang="fr" rel="alternate"/>
+<link href="https://bimopen.it/manual/es/walls-doors-windows/" hreflang="es" rel="alternate"/>
+<link href="https://bimopen.it/manual/ar/walls-doors-windows/" hreflang="ar" rel="alternate"/>
+<link href="https://bimopen.it/manual/en/walls-doors-windows/" hreflang="x-default" rel="alternate"/>
 </head>
 <body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="slate" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -32,7 +39,7 @@
 </div>
 <header class="md-header md-header--shadow" data-md-component="header">
 <nav aria-label="En-tête" class="md-header__inner md-grid">
-<a aria-label="Manuel utilisateur de BIMopen" class="md-header__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/?lang=fr" title="Manuel utilisateur de BIMopen">
+<a aria-label="Manuel utilisateur de BIMopen" class="md-header__button md-logo" data-md-component="logo" href="https://bimopen.it/fr/" title="Manuel utilisateur de BIMopen">
 <img alt="logo" src="../assets/images/bimopen-cube.svg"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -73,32 +80,32 @@
 <div class="md-select__inner">
 <ul class="md-select__list">
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/en/" hreflang="en">
+<a class="md-select__link" href="https://bimopen.it/manual/en/" hreflang="en">
               English
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/it/" hreflang="it">
+<a class="md-select__link" href="https://bimopen.it/manual/it/" hreflang="it">
               Italiano
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/de/" hreflang="de">
+<a class="md-select__link" href="https://bimopen.it/manual/de/" hreflang="de">
               Deutsch
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/fr/" hreflang="fr">
+<a class="md-select__link" href="https://bimopen.it/manual/fr/" hreflang="fr">
               Français
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/es/" hreflang="es">
+<a class="md-select__link" href="https://bimopen.it/manual/es/" hreflang="es">
               Español
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/ar/" hreflang="ar">
+<a class="md-select__link" href="https://bimopen.it/manual/ar/" hreflang="ar">
               العربية
             </a>
 </li>
@@ -147,7 +154,7 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="Manuel utilisateur de BIMopen" class="md-nav__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/?lang=fr" title="Manuel utilisateur de BIMopen">
+<a aria-label="Manuel utilisateur de BIMopen" class="md-nav__button md-logo" data-md-component="logo" href="https://bimopen.it/fr/" title="Manuel utilisateur de BIMopen">
 <img alt="logo" src="../assets/images/bimopen-cube.svg"/>
 </a>
     Manuel utilisateur de BIMopen
@@ -202,6 +209,14 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../cad-files/">
+<span class="md-ellipsis">
+    DWG et DXF
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../selection-and-modify/">
 <span class="md-ellipsis">
     Sélection et modification
@@ -238,6 +253,20 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#curved-walls">
+<span class="md-ellipsis">
+      Murs courbes
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#elliptical-walls">
+<span class="md-ellipsis">
+      Murs elliptiques
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#the-location-line-and-flipping">
 <span class="md-ellipsis">
       L'alignement et l'inversion
@@ -254,7 +283,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#editing-a-walls-profile">
 <span class="md-ellipsis">
-      Modifier le contour d'un mur
+      Modifier le profil d'un mur
     </span>
 </a>
 </li>
@@ -363,6 +392,24 @@
       Murs-rideaux
     </span>
 </a>
+<nav aria-label="Murs-rideaux" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#curtain-parts">
+<span class="md-ellipsis">
+      Lignes de quadrillage et meneaux
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#curtain-types">
+<span class="md-ellipsis">
+      Types de meneaux et de panneaux
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#stacked-walls">
@@ -422,6 +469,31 @@
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#3d-lines-and-3d-text">
+<span class="md-ellipsis">
+      Lignes 3D et texte 3D
+    </span>
+</a>
+<nav aria-label="Lignes 3D et texte 3D" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3d-lines">
+<span class="md-ellipsis">
+      Lignes 3D
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3d-text">
+<span class="md-ellipsis">
+      Texte 3D
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#at-the-command-line">
 <span class="md-ellipsis">
       En ligne de commande
@@ -442,6 +514,54 @@
 <a class="md-nav__link" href="../floors-roofs-stairs/">
 <span class="md-ellipsis">
     Sols, toits, escaliers et composants
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ceilings-and-columns/">
+<span class="md-ellipsis">
+    Faux plafonds et colonnes
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../openings/">
+<span class="md-ellipsis">
+    Ouvertures
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../phases/">
+<span class="md-ellipsis">
+    Phases et démolitions
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../structure/">
+<span class="md-ellipsis">
+    Structure et fondations
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../site/">
+<span class="md-ellipsis">
+    Plan de site et terrain
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../design-options/">
+<span class="md-ellipsis">
+    Variantes de conception
     
   </span>
 </a>
@@ -495,7 +615,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="https://atsanna.github.io/bimopen-site/manual/fr/pdf/bimopen-manual-fr.pdf">
+<a class="md-nav__link" href="https://bimopen.it/manual/fr/pdf/bimopen-manual-fr.pdf">
 <span class="md-ellipsis">
     PDF
     
@@ -524,6 +644,20 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#curved-walls">
+<span class="md-ellipsis">
+      Murs courbes
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#elliptical-walls">
+<span class="md-ellipsis">
+      Murs elliptiques
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#the-location-line-and-flipping">
 <span class="md-ellipsis">
       L'alignement et l'inversion
@@ -540,7 +674,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#editing-a-walls-profile">
 <span class="md-ellipsis">
-      Modifier le contour d'un mur
+      Modifier le profil d'un mur
     </span>
 </a>
 </li>
@@ -649,6 +783,24 @@
       Murs-rideaux
     </span>
 </a>
+<nav aria-label="Murs-rideaux" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#curtain-parts">
+<span class="md-ellipsis">
+      Lignes de quadrillage et meneaux
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#curtain-types">
+<span class="md-ellipsis">
+      Types de meneaux et de panneaux
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#stacked-walls">
@@ -701,6 +853,31 @@
 <a class="md-nav__link" href="#reference-planes">
 <span class="md-ellipsis">
       Plans de référence
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3d-lines-and-3d-text">
+<span class="md-ellipsis">
+      Lignes 3D et texte 3D
+    </span>
+</a>
+<nav aria-label="Lignes 3D et texte 3D" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3d-lines">
+<span class="md-ellipsis">
+      Lignes 3D
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3d-text">
+<span class="md-ellipsis">
+      Texte 3D
     </span>
 </a>
 </li>
@@ -772,7 +949,7 @@ Choisissez le type de mur dans le sélecteur de type en haut du panneau de l'él
 </tr>
 <tr>
 <td><strong>Rayon</strong></td>
-<td>Indisponible : il demande des murs courbes, et apparaît désactivé</td>
+<td>Avec <strong>Ligne</strong> et <strong>Rectangle</strong>, chaque angle entre deux murs droits devient un mur courbe de ce rayon, aussi là où un mur finit sur l'extrémité libre d'un autre (où trois murs se rencontrent l'angle reste vif ; de même avec un rayon trop grand, avec un message) ; <strong>Décalage</strong> ne s'applique alors pas. Avec <strong>Cercle</strong>, les arcs et les polygones : le rayon du suivant, qu'un clic place alors</td>
 </tr>
 <tr>
 <td><strong>Jonction aux extrémités</strong></td>
@@ -784,6 +961,8 @@ Choisissez le type de mur dans le sélecteur de type en haut du panneau de l'él
 </tr>
 </tbody>
 </table>
+<p><strong>Mur porteur</strong>, depuis le menu de <strong>Mur</strong> ou l'onglet <strong>Structure</strong>, est le même outil : chaque mur dessiné est <strong>Porteur</strong> (avec <strong>Mur</strong>, <strong>Non porteur</strong>) et il commence avec <strong>Profondeur</strong> ; chacun des deux outils garde son propre choix entre <strong>Hauteur</strong> et <strong>Profondeur</strong>. L'<strong>Utilisation structurelle</strong> se change ensuite dans les Propriétés.</p>
+<p>Avec un outil de placement actif (mur, porte, fenêtre, objet, poteau) les <strong>Propriétés</strong> montrent sous le sélecteur de type les propriétés de l'élément suivant : les valeurs saisies là vont aux éléments que l'outil place, et les lignes que la barre des options contient aussi restent alignées sur elle.</p>
 <figure>
 <img alt="La bande des options de l'outil mur : Hauteur, le niveau supérieur, la hauteur non liée, Alignement et les autres options" src="../assets/screens/wa-options.webp"/>
 <figcaption>La bande des options de l'outil mur</figcaption>
@@ -830,11 +1009,70 @@ Choisissez le type de mur dans le sélecteur de type en haut du panneau de l'él
 <td>De même, mais les côtés touchent le cercle</td>
 </tr>
 <tr>
+<td><strong>Cercle</strong></td>
+<td>Cliquez le centre et un point du cercle (ou tapez le rayon) : deux demi-cercles de murs, l'extérieur à l'extérieur</td>
+</tr>
+<tr>
+<td><strong>Arc début-fin-rayon</strong></td>
+<td>Cliquez le début, la fin, puis un point de l'arc (ou tapez le rayon)</td>
+</tr>
+<tr>
+<td><strong>Arc par centre et extrémités</strong></td>
+<td>Cliquez le centre, le début (le rayon), puis la fin : au plus un demi-tour</td>
+</tr>
+<tr>
+<td><strong>Arc tangent</strong></td>
+<td>Cliquez l'extrémité d'un mur : l'arc part de là, tangent à lui, et finit au clic suivant</td>
+</tr>
+<tr>
+<td><strong>Arc de raccord</strong></td>
+<td>Cliquez deux murs droits, puis où passe l'arc (ou réglez <strong>Rayon</strong>) : les murs sont raccourcis et un mur courbe les joint</td>
+</tr>
+<tr>
+<td><strong>Ellipse</strong>, <strong>Ellipse partielle</strong></td>
+<td>Murs elliptiques : voir ci-dessous</td>
+</tr>
+<tr>
 <td><strong>Choisir des lignes</strong></td>
 <td>Cliquez une ligne du plan (une ligne ou une arête d'un élément) : un mur le long de celle-ci. Appuyez sur <strong>TAB</strong> sur une ligne pour prendre toute la chaîne des lignes qui lui sont jointes, puis cliquez</td>
 </tr>
 </tbody>
 </table>
+<h2 id="curved-walls">Murs courbes</h2>
+<p>Un mur courbe est un seul mur le long d'un arc : il se sélectionne, figure dans les nomenclatures
+et s'étiquette comme un seul, et sa <strong>Longueur</strong> se mesure le long de l'arc. En plan, en coupe et en
+3D il est dessiné comme un arc, fait de courts tronçons droits qui ne s'en écartent pas de plus de
+2 mm. Ses propriétés ajoutent <strong>Rayon</strong> (le changer laisse les extrémités en place), <strong>Centre X</strong>
+et <strong>Centre Y</strong> (déplacer le centre garde le rayon), et <strong>Marque de centre visible</strong>, le «+»
+affiché en plan au centre ; un mur courbe dessiné l'affiche d'emblée.</p>
+<ul>
+<li>Une porte ou une fenêtre cliquée sur un mur courbe se pose sur un tronçon droit aussi large
+  qu'elle, avec une marge de chaque côté, pour que son cadre reste plan ; déplacée le long du mur,
+  elle garde sa place sur l'arc.</li>
+<li>Les murs courbes se joignent entre eux et aux murs droits à leurs extrémités, comme les murs
+  droits.</li>
+<li>Un mur courbe sélectionné a une troisième poignée bleue au milieu de son arc : en la faisant
+  glisser, l'arc passe par le curseur et les extrémités restent en place (<code>wallarc</code> en ligne de
+  commande).</li>
+<li><strong>Modifier le profil</strong> est grisé sur un mur courbe : son contour n'a pas de plan où le dessiner.</li>
+<li>En IFC un mur courbe est un seul <code>IfcWall</code> fait de ses tronçons.</li>
+</ul>
+<h2 id="elliptical-walls">Murs elliptiques</h2>
+<p><strong>Ellipse</strong> (centre, grand rayon, petit rayon) dessine un anneau de deux murs en demi-ellipse,
+l'extérieur dehors ; <strong>Ellipse partielle</strong> (les deux extrémités de l'axe, puis la forme) dessine un
+mur en demi-ellipse du côté du curseur, <span class="keys"><kbd class="key-space">Space</kbd></span> inverse son extérieur. Les rayons peuvent être
+saisis ; deux rayons égaux sont refusés (utilisez <strong>Cercle</strong>). Un mur elliptique se tient sur son
+axe : <strong>Alignement</strong> est verrouillée, <strong>Décalage</strong>, <strong>Rayon</strong> et <strong>Continuer</strong> sont masqués.
+Sélectionné, il a les contrôles d'une ellipse (quadrants, extrémités avec <span class="keys"><kbd class="key-tab">Tab</kbd></span>, cotes temporaires
+des rayons, <strong>La modification conserve les proportions</strong>) ; les deux moitiés d'un anneau changent
+ensemble. Ses propriétés ajoutent <strong>Rayon du grand axe</strong>, <strong>Rayon du petit axe</strong> et <strong>Centre X/Y</strong>.
+Portes, fenêtres, ouvertures, jonctions, pièces, coupes, 3D, nomenclatures et IFC fonctionnent comme
+sur les murs courbes. <strong>Décalage</strong>, <strong>Arc de raccord</strong> et <strong>Scinder l'élément</strong> sont refusés ; un type
+empilé n'est accepté qu'avec tous ses sous-murs centrés.</p>
+<figure>
+<img alt="Un mur elliptique dans une vue 3D, entier avec ses couches" src="../assets/screens/ew-elliptical-wall.webp"/>
+<figcaption>Un mur elliptique : un seul mur avec toutes ses couches</figcaption>
+</figure>
 <h2 id="the-location-line-and-flipping">L'alignement et l'inversion</h2>
 <p>Sélectionnez un mur : des points bleus marquent les extrémités de sa ligne d'alignement, et
 deux flèches se tiennent sur son côté extérieur. Un clic sur les flèches retourne le mur autour de
@@ -864,11 +1102,11 @@ nouveau à tout moment. Quand un toit ou un sol auquel des murs sont attachés e
 gardent aussi leur hauteur.</p>
 <p>Les propriétés <strong>Haut attaché</strong> et <strong>Base attachée</strong> montrent l'état (lecture seule) ; tant que le
 haut est attaché, <strong>Hauteur libre</strong> est en lecture seule.</p>
-<h2 id="editing-a-walls-profile">Modifier le contour d'un mur</h2>
+<h2 id="editing-a-walls-profile">Modifier le profil d'un mur</h2>
 <p>Un mur n'est pas forcément un rectangle : son contour s'esquisse dans une élévation ou une coupe
 parallèle, avec des trous, comme pour un pignon ou un mur en gradins.</p>
 <ol>
-<li>Sélectionnez le mur et cliquez sur <strong>Mode ▸ Modifier le contour</strong> dans sa carte contextuelle.
+<li>Sélectionnez le mur et cliquez sur <strong>Mode ▸ Modifier le profil</strong> dans sa carte contextuelle.
    Depuis un plan ou une vue non parallèle au mur, <strong>Atteindre la vue</strong> liste les coupes et
    élévations parallèles : choisissez-en une et cliquez sur <strong>Ouvrir la vue</strong>.</li>
 <li>Le mode esquisse s'ouvre avec le contour du mur en magenta. Changez-le avec <strong>Ligne</strong> et
@@ -1032,7 +1270,7 @@ l'aperçu se place au-dessus de la liste.</p>
 <p>Le retournement apparaît dans toutes les vues : en plan, dans la vue 3D, dans les coupes et les
 élévations, les couches cochées habillent les tableaux, le linteau et l'appui des portes et
 fenêtres, les côtés des trous d'un contour modifié (voir
-<a href="#editing-a-walls-profile">Modifier le contour d'un mur</a>) et les extrémités libres. Un type de porte
+<a href="#editing-a-walls-profile">Modifier le profil d'un mur</a>) et les extrémités libres. Un type de porte
 ou de fenêtre remplace le retournement du mur par sa <strong>Fermeture du mur</strong>.</p>
 <h2 id="wall-properties">Propriétés des murs</h2>
 <figure>
@@ -1057,9 +1295,9 @@ boîte de dialogue décrite plus haut.</p>
   attaché</strong> (lecture seule), <strong>Prolonger les couches en haut</strong>, <strong>Délimitation de pièce</strong> (décochée,
   les pièces autour du mur l'ignorent) et <strong>Créé à partir d'un volume</strong> (lecture seule).</li>
 <li><strong>Structure</strong> : <strong>Rôle</strong> (<strong>Non porteur</strong>, <strong>Porteur</strong>, <strong>Contreventement</strong>, <strong>Combiné</strong>). Un mur
-  autre que <strong>Non porteur</strong> est structurel, et son <strong>Enrobage en tête</strong>, son <strong>Enrobage côté
-  intérieur</strong> et son <strong>Enrobage côté extérieur</strong> se choisissent (25, 35 ou 40 mm) ; sinon ils sont
-  grisés. <strong>Volume d'armatures</strong> est en lecture seule.</li>
+  autre que <strong>Non porteur</strong> est structurel, et son <strong>Enrobage d'armature - Autres faces</strong>, son <strong>Enrobage côté
+  intérieur</strong> et son <strong>Enrobage - Face extérieure</strong> se choisissent (25, 35 ou 40 mm) ; sinon ils sont
+  grisés. <strong>Volume d'armature estimé</strong> est en lecture seule.</li>
 <li><strong>Cotes</strong> : <strong>Longueur</strong>, <strong>Épaisseur</strong>, <strong>Surface</strong>, <strong>Volume</strong> et les extrémités de la ligne du
   mur.</li>
 <li><strong>Identification</strong> : <strong>Commentaires</strong>, <strong>Marque</strong> et <strong>Classer comme</strong> (<strong>Mur extérieur</strong>, <strong>Mur
@@ -1208,6 +1446,47 @@ et ses éléments.</p>
   sélectionne que lui. Le panneau de l'élément en montre la <strong>Largeur</strong> et la <strong>Hauteur</strong>, et le
   sélecteur de type en change le type.</li>
 </ul>
+<h3 id="curtain-parts">Lignes de quadrillage et meneaux</h3>
+<p>TAB sur un mur-rideau passe du mur au meneau sous le curseur, puis à sa ligne de quadrillage, puis
+au panneau ; la barre d'état indique ce qui est en surbrillance et un clic ne sélectionne que cela
+(CTRL+clic en ajoute d'autres du même mur-rideau). Cela vaut en plan (lignes et meneaux verticaux),
+en coupe, en élévation et dans la vue 3D.</p>
+<ul>
+<li><strong>Ligne de quadrillage sélectionnée</strong> : les lignes de la disposition du type montrent une punaise
+  et ne se déplacent pas ; un clic sur la punaise (ou <strong>Lien au type</strong> ▸ <strong>Indépendant</strong> dans les
+  Propriétés) la rend indépendante : elle reste à sa place avec ses meneaux si le mur change de
+  taille ou si le type change de disposition. Une ligne indépendante, ou ajoutée à la main, se
+  fait glisser entre les lignes voisines (les panneaux suivent), se déplace en saisissant une de ses
+  cotes temporaires et se supprime avec <strong>SUPPR</strong>. Sa punaise la lie de nouveau au type.</li>
+<li><strong>Meneau sélectionné</strong> : un par segment de ligne de quadrillage. Les Propriétés montrent
+  <strong>Commentaires</strong>, <strong>Longueur</strong> (le segment, avant la coupe aux joints) et <strong>Repère</strong> (un repère
+  déjà utilisé par un autre meneau est conservé, avec un avertissement). Les meneaux du type ont une
+  punaise : désépinglés, ils changent de type avec le sélecteur ou se suppriment avec <strong>SUPPR</strong>.</li>
+<li><strong>Rendre continu</strong> et <strong>Interrompre au joint</strong> dans l'onglet contextuel : le meneau sélectionné
+  passe à travers les joints à ses extrémités (ceux qui le croisent s'interrompent), ou s'y
+  interrompt. La commande en croix sur chaque joint inverse ce seul joint.</li>
+<li>Le menu contextuel du mur-rideau sélectionne <strong>les panneaux du mur-rideau</strong> ou ses <strong>meneaux</strong>
+  (sur le quadrillage vertical ou horizontal, intérieurs, de bord, tous) ; sur un panneau ceux le
+  long de son quadrillage, sur un meneau ceux sur sa ligne de quadrillage ou en travers. Les
+  Propriétés changent leur type ensemble.</li>
+<li>En plaçant une ligne de quadrillage, outre le milieu et les tiers du panneau, elle s'accroche aux
+  niveaux, quadrillages et plans de référence visibles et, sur l'arête commune à deux murs-rideaux
+  joints en angle, aux lignes de l'autre. Avec <strong>Meneau</strong>, MAJ maintenue place le meneau sur le seul
+  segment cliqué, CTRL sur tous les segments qui n'en ont pas.</li>
+</ul>
+<h3 id="curtain-types">Types de meneaux et de panneaux</h3>
+<p>Outre les meneaux rectangulaires (<strong>Largeur du côté 1</strong> et <strong>2</strong>, <strong>Épaisseur</strong>, <strong>Angle</strong> entre −90°
+et 90°, <strong>Position</strong>), le gabarit a un <strong>Meneau circulaire</strong> (<strong>Rayon</strong>) et quatre meneaux d'angle
+pour l'arête où deux murs-rideaux se rencontrent : <strong>en L</strong> (deux ailes le long des murs-rideaux,
+<strong>Aile 1</strong> et <strong>2</strong>), <strong>en V</strong> (deux ailes perpendiculaires aux murs-rideaux), <strong>trapézoïdal</strong>
+(<strong>Largeur au centre</strong>, <strong>Profondeur</strong>) et <strong>carré</strong> (<strong>Profondeur 1</strong> et <strong>2</strong>). Un meneau d'angle
+est dessiné une seule fois à l'angle et les panneaux des deux murs-rideaux s'arrêtent à ses côtés ;
+à une extrémité libre il est droit. Le <strong>Décalage</strong> d'un type de meneau ou de panneau le déplace
+dans l'épaisseur du mur-rideau, vers l'extérieur.</p>
+<p>Le type de mur-rideau et le type de meneau ont toutes les données d'identification (note clé,
+fabricant, repère de type, coût…). Dans les Propriétés du mur-rideau, <strong>Décalage vertical</strong> et
+<strong>Décalage horizontal</strong> font partir les lignes du type à cette distance du point de justification,
+et <strong>Utilisation structurelle</strong> indique son usage.</p>
 <h2 id="stacked-walls">Murs empilés</h2>
 <figure>
 <img alt="Un mur empilé sélectionné, avec ses Propriétés" src="../assets/screens/stacked-wall.png"/>
@@ -1318,6 +1597,54 @@ dans les vues tournées dans le même sens. Sélectionné, on lui donne un <stro
 panneau de l'élément : un plan de référence nommé est listé dans la fenêtre <strong>Plan de construction</strong> et
 son nom est écrit au début de sa ligne. Les plans de référence s'accrochent, se déplacent, se
 copient, pivotent, se symétrisent et se suppriment comme les grilles.</p>
+<h2 id="3d-lines-and-3d-text">Lignes 3D et texte 3D</h2>
+<p>Deux éléments du modèle reposent sur un plan de construction : la <strong>Ligne 3D</strong>, une ligne qui
+existe dans l'espace et se voit dans toutes les vues qui l'atteignent, et le <strong>Texte 3D</strong>, des
+lettres découpées dans le plan et extrudées, pour les enseignes et les inscriptions sur les murs.
+Les deux sont dans <strong>Modéliser ▸ Éléments 3D</strong>.</p>
+<h3 id="3d-lines">Lignes 3D</h3>
+<p><strong>Modéliser ▸ Éléments 3D ▸ Ligne 3D</strong> (ou tapez <code>LM</code>) dessine sur le plan de construction de la
+vue avec le même panneau <strong>Dessiner</strong> que les lignes de détail (lignes, rectangles, polygones,
+cercles, arcs, congés, splines, ellipses, <strong>Choisir des lignes</strong>) et la liste <strong>Style de ligne</strong>. La
+barre des options a <strong>Plan de placement</strong> (les niveaux, les quadrillages et les plans de référence
+nommés, ou <strong>Sélectionner…</strong> pour la fenêtre <strong>Plan de construction</strong>), <strong>Continuer</strong>, <strong>Décalage</strong>,
+<strong>Rayon</strong> et <strong>Déplacer avec les éléments proches</strong> ; longueurs et rayons se tapent en dessinant,
+comme pour les lignes de détail. Un plan qui ne se trouve pas dans la vue demande <strong>Atteindre la
+vue</strong> ; une élévation ou une coupe sans plan de construction ouvre d'abord la fenêtre <strong>Plan de
+construction</strong>. Dans une vue 3D, la ligne se dessine là où le curseur rencontre le plan.</p>
+<p>Une ligne 3D se voit dans chaque plan dont la plage de vue l'atteint (de la profondeur de la vue au
+plan de coupe ; dans un plan de plafond, du plan de coupe vers le haut), dans les coupes et les
+élévations dont la profondeur la contient, dans les vues 3D et sur les feuilles, toujours dans son
+style de ligne. Ses propriétés : <strong>Plan de construction</strong> (lecture seule ; <em><non associé=""></non></em> une fois
+déplacée hors de lui), <strong>Déplacer avec les éléments proches</strong> (une ligne parallèle à un mur, ou
+concentrique à un mur courbe, le suit quand il bouge), <strong>Style de ligne</strong>, <strong>Marque de centre
+visible</strong> pour les arcs et les cercles, <strong>Ligne de détail</strong> (lecture seule, non cochée), <strong>Longueur</strong>
+et les phases. Elle se déplace, se copie, pivote, se reflète, se répète en réseau, s'ajuste, se
+scinde, se décale et s'aligne comme une ligne de détail ; dans une coupe ou une élévation
+<strong>Déplacer</strong> et <strong>Copier</strong> vont aussi vers le haut et le bas, et <strong>Faire pivoter</strong> la tourne autour de
+l'axe perpendiculaire à la vue.</p>
+<p>Avec des lignes sélectionnées, <strong>Convertir les lignes</strong> change les lignes 3D en lignes de détail de
+la vue active, et les lignes de détail en lignes 3D sur son plan de construction ; une sélection des
+deux sortes demande lesquelles convertir. <strong>Modifier le plan de construction</strong> porte les lignes (ou
+les textes) sélectionnés sur un autre plan, droit en face sur un plan parallèle. En DXF et DWG une
+ligne 3D est sur le calque de modèle de son style (<code>A-MODL-…</code>) ; en IFC c'est une annotation avec sa
+courbe.</p>
+<h3 id="3d-text">Texte 3D</h3>
+<p>Définissez le plan de construction (la face d'un mur, pour y écrire), puis <strong>Modéliser ▸ Éléments
+3D ▸ Texte 3D</strong> : écrivez le texte dans <strong>Modifier le texte</strong> (sur plusieurs lignes si besoin) et
+cliquez sur <strong>OK</strong>. Le contour des lettres suit le curseur sur le plan ; un clic les pose, extrudées
+de leur <strong>Profondeur</strong> hors de la face du mur (vers le haut depuis un niveau). <strong>Modifier le texte</strong>
+(ou un double clic, ou <strong>Texte</strong> dans les propriétés) rouvre la fenêtre ; en le faisant glisser le
+texte se déplace sur son plan, <strong>Modifier le plan de construction</strong> et <strong>Choisir un nouvel hôte</strong>
+le portent sur un autre plan ou une autre face.</p>
+<p>L'occurrence a <strong>Plan de construction</strong>, <strong>Texte</strong>, <strong>Alignement horizontal</strong> (gauche, centre,
+droite), <strong>Matériau</strong> (la couleur vient de lui), <strong>Profondeur</strong>, <strong>Commentaires</strong>, <strong>Marque</strong> (une
+marque déjà utilisée par un autre texte est admise, avec un avertissement), <strong>Sous-catégorie</strong> et
+les phases ; le type a <strong>Police du texte</strong> (les polices que BIMopen fournit), <strong>Taille du texte</strong>,
+<strong>Gras</strong>, <strong>Italique</strong> et les données d'identité. Le premier texte 3D crée le type « Texte 3D
+300 mm ». Un plan dont le plan de coupe traverse les lettres les montre coupées ; en dessous, en
+projection. Les vues réalistes, le PDF et le DXF dessinent le texte avec son matériau ; l'IFC
+l'exporte comme élément générique avec son solide.</p>
 <h2 id="at-the-command-line">En ligne de commande</h2>
 <p>Les mêmes opérations, tapées :</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>attach                      attach the selected walls to the roof over them
@@ -1331,9 +1658,12 @@ copient, pivotent, se symétrisent et se suppriment comme les grilles.</p>
 <a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a>refplane 3,-2 3,11 Entrance axis   a reference plane in the open plan, named
 <a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a>workplane Entrance axis     the open view's work plane, by name
 <a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a>showworkplane on 0.5        show the work plane's grid, 0.5 m apart
+<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a>modelline 20,0 24,0         a 3D line on the view's work plane
+<a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a>modeltext {"text":"CASA 12","point":[1,1],"plane":{"wall":57},"coords":"plane","depth":0.05}
+<a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a>convertlines                3D lines of the selection into detail lines, or the reverse
 </code></pre></div>
 <h2 id="not-available-yet">Pas encore disponible</h2>
-<p>Murs courbes (arc, <strong>Cercle</strong>, <strong>Rayon</strong>), choix de surfaces, murs porteurs, murs empilés, profilés
+<p>Murs le long d'ellipses, choix de surfaces, murs porteurs, murs empilés, profilés
 et cavités de murs, couches composées verticalement (régions), jonction de
 géométrie, phases, et lucarnes dans les toits.</p>
 </article>

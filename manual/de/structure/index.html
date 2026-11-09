@@ -1,0 +1,965 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="de">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Benutzerhandbuch von BIMopen, BIM-Modellierung als Open Source" name="description"/>
+<meta content="BIMopen" name="author"/>
+<link href="https://bimopen.it/manual/de/structure/" rel="canonical"/>
+<link href="../phases/" rel="prev"/>
+<link href="../site/" rel="next"/>
+<link href="../assets/images/bimopen-cube.svg" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.9" name="generator"/>
+<title>Tragwerk und Fundamente - BIMopen Benutzerhandbuch</title>
+<link href="../assets/stylesheets/main.4af4bdda.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link href="../assets/css/theme.css" rel="stylesheet"/>
+<link href="../assets/css/theme_dark_mode.css" rel="stylesheet"/>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="https://bimopen.it/manual/en/structure/" hreflang="en" rel="alternate"/>
+<link href="https://bimopen.it/manual/it/structure/" hreflang="it" rel="alternate"/>
+<link href="https://bimopen.it/manual/de/structure/" hreflang="de" rel="alternate"/>
+<link href="https://bimopen.it/manual/fr/structure/" hreflang="fr" rel="alternate"/>
+<link href="https://bimopen.it/manual/es/structure/" hreflang="es" rel="alternate"/>
+<link href="https://bimopen.it/manual/ar/structure/" hreflang="ar" rel="alternate"/>
+<link href="https://bimopen.it/manual/en/structure/" hreflang="x-default" rel="alternate"/>
+</head>
+<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="slate" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#structure">
+          Zum Inhalt
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Kopfzeile" class="md-header__inner md-grid">
+<a aria-label="BIMopen Benutzerhandbuch" class="md-header__button md-logo" data-md-component="logo" href="https://bimopen.it/de/" title="BIMopen Benutzerhandbuch">
+<img alt="logo" src="../assets/images/bimopen-cube.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            BIMopen Benutzerhandbuch
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Tragwerk und Fundamente
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Zum hellen Design wechseln" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Zum hellen Design wechseln">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Zum dunklen Design wechseln" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="bimopen" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Zum dunklen Design wechseln">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<div class="md-header__option">
+<div class="md-select">
+<button aria-label="Sprache wechseln" class="md-header__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"></path></svg>
+</button>
+<div class="md-select__inner">
+<ul class="md-select__list">
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/en/" hreflang="en">
+              English
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/it/" hreflang="it">
+              Italiano
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/de/" hreflang="de">
+              Deutsch
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/fr/" hreflang="fr">
+              Français
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/es/" hreflang="es">
+              Español
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/ar/" hreflang="ar">
+              العربية
+            </a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Suche" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Suche" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Suche" class="md-search__options">
+<button aria-label="Zurücksetzen" class="md-search__icon md-icon" tabindex="-1" title="Zurücksetzen" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Suche wird initialisiert
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="BIMopen Benutzerhandbuch" class="md-nav__button md-logo" data-md-component="logo" href="https://bimopen.it/de/" title="BIMopen Benutzerhandbuch">
+<img alt="logo" src="../assets/images/bimopen-cube.svg"/>
+</a>
+    BIMopen Benutzerhandbuch
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
+<span class="md-ellipsis">
+    Startseite
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../getting-started/">
+<span class="md-ellipsis">
+    Erste Schritte
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../interface/">
+<span class="md-ellipsis">
+    Die Benutzeroberfläche
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../interface-styles/">
+<span class="md-ellipsis">
+    Oberflächenstile
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../projects-and-files/">
+<span class="md-ellipsis">
+    Projekte und Dateien
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../import-and-conversion/">
+<span class="md-ellipsis">
+    Importieren und Konvertieren
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cad-files/">
+<span class="md-ellipsis">
+    DWG und DXF
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../selection-and-modify/">
+<span class="md-ellipsis">
+    Auswählen und Ändern
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../walls-doors-windows/">
+<span class="md-ellipsis">
+    Wände, Türen und Fenster
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../floors-roofs-stairs/">
+<span class="md-ellipsis">
+    Geschossdecken, Dächer, Treppen und Bauteile
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ceilings-and-columns/">
+<span class="md-ellipsis">
+    Decken und Stützen
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../openings/">
+<span class="md-ellipsis">
+    Öffnungen
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../phases/">
+<span class="md-ellipsis">
+    Phasen und Abbruch
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Tragwerk und Fundamente
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Tragwerk und Fundamente
+    
+  </span>
+</a>
+<nav aria-label="Inhaltsverzeichnis" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#framing-types">
+<span class="md-ellipsis">
+      Typen des Tragwerksrahmens
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#beam">
+<span class="md-ellipsis">
+      Träger
+    </span>
+</a>
+<nav aria-label="Träger" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#beam-properties">
+<span class="md-ellipsis">
+      Eigenschaften des Trägers
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#beam-display">
+<span class="md-ellipsis">
+      Wie er gezeichnet wird
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#joins">
+<span class="md-ellipsis">
+      Verbindungen
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#brace">
+<span class="md-ellipsis">
+      Aussteifung
+    </span>
+</a>
+<nav aria-label="Aussteifung" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#structural-settings">
+<span class="md-ellipsis">
+      Symbole im Grundriss und Tragwerkseinstellungen
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#beam-system">
+<span class="md-ellipsis">
+      Trägerlage
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#truss">
+<span class="md-ellipsis">
+      Fachwerkträger
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#structural-walls-floors">
+<span class="md-ellipsis">
+      Tragende Wand und tragende Geschossdecke
+    </span>
+</a>
+<nav aria-label="Tragende Wand und tragende Geschossdecke" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#shape-editing">
+<span class="md-ellipsis">
+      Form bearbeiten
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#foundations">
+<span class="md-ellipsis">
+      Fundamente
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rebar-covers">
+<span class="md-ellipsis">
+      Bewehrungsüberdeckung
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#views-schedules-ifc">
+<span class="md-ellipsis">
+      Ansichten, Beschriftungen, Bauteillisten und IFC
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#commands">
+<span class="md-ellipsis">
+      Über die Befehlszeile
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../site/">
+<span class="md-ellipsis">
+    Lageplan und Gelände
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../design-options/">
+<span class="md-ellipsis">
+    Entwurfsvarianten
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../views-and-graphics/">
+<span class="md-ellipsis">
+    Ansichten und Grafik
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../annotation/">
+<span class="md-ellipsis">
+    Beschriftung und 2D-Details
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../documentation/">
+<span class="md-ellipsis">
+    Pläne, Bauteillisten und Drucken
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../command-line-and-mcp/">
+<span class="md-ellipsis">
+    Befehlszeile und MCP
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../keyboard-shortcuts/">
+<span class="md-ellipsis">
+    Tastenkürzel
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../troubleshooting/">
+<span class="md-ellipsis">
+    Fehlerbehebung
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://bimopen.it/manual/de/pdf/bimopen-manual-de.pdf">
+<span class="md-ellipsis">
+    PDF
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Inhaltsverzeichnis" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#framing-types">
+<span class="md-ellipsis">
+      Typen des Tragwerksrahmens
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#beam">
+<span class="md-ellipsis">
+      Träger
+    </span>
+</a>
+<nav aria-label="Träger" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#beam-properties">
+<span class="md-ellipsis">
+      Eigenschaften des Trägers
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#beam-display">
+<span class="md-ellipsis">
+      Wie er gezeichnet wird
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#joins">
+<span class="md-ellipsis">
+      Verbindungen
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#brace">
+<span class="md-ellipsis">
+      Aussteifung
+    </span>
+</a>
+<nav aria-label="Aussteifung" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#structural-settings">
+<span class="md-ellipsis">
+      Symbole im Grundriss und Tragwerkseinstellungen
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#beam-system">
+<span class="md-ellipsis">
+      Trägerlage
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#truss">
+<span class="md-ellipsis">
+      Fachwerkträger
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#structural-walls-floors">
+<span class="md-ellipsis">
+      Tragende Wand und tragende Geschossdecke
+    </span>
+</a>
+<nav aria-label="Tragende Wand und tragende Geschossdecke" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#shape-editing">
+<span class="md-ellipsis">
+      Form bearbeiten
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#foundations">
+<span class="md-ellipsis">
+      Fundamente
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rebar-covers">
+<span class="md-ellipsis">
+      Bewehrungsüberdeckung
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#views-schedules-ifc">
+<span class="md-ellipsis">
+      Ansichten, Beschriftungen, Bauteillisten und IFC
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#commands">
+<span class="md-ellipsis">
+      Über die Befehlszeile
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset"><a class="md-content__icon pdf-download-btn" download href="../pdf/bimopen-manual-de.pdf" title="Download"><i class="fa fas fa-download"></i><small> PDF</small></a>
+<h1 id="structure">Tragwerk und Fundamente</h1>
+<p>Die Registerkarte <strong>Tragwerk</strong> (im BIMopen-Stil: <strong>Erzeugen ▸ Tragwerk</strong>) versammelt die
+Elemente, die das Gebäude tragen: Träger, Aussteifungen, Trägerlagen, Fachwerkträger, tragende
+Wände und Geschossdecken, tragende Stützen, Einzelfundamente, Streifenfundamente und
+Bodenplatten. Träger, Aussteifungen und die Stäbe der Fachwerkträger sind eine einzige Kategorie,
+<strong>Tragwerksrahmen</strong>; Einzelfundamente, Streifenfundamente und Bodenplatten sind
+<strong>Tragwerksfundamente</strong>. Dieselben Werkzeuge arbeiten in Grundrissen, Schnitten, Ansichten und
+3D-Ansichten, wo die Ansicht es zulässt.</p>
+<h2 id="framing-types">Typen des Tragwerksrahmens</h2>
+<p>Die Träger- und Aussteifungstypen sind parametrische Querschnitte von BIMopen, wie die der
+tragenden Stützen. <strong>Querschnittsform</strong> wählt die Form: <strong>Rechteckig</strong> (Beton oder Holz),
+<strong>Rund</strong>, <strong>Doppel-T</strong> (auch mit ungleichen und geneigten Flanschen), <strong>Rechteckhohlprofil</strong>,
+<strong>Rundhohlprofil</strong>, <strong>Winkel</strong>, <strong>U-Profil</strong> (auch mit Lippe) und <strong>T-Profil</strong>. <strong>Typparameter</strong>
+zeigt nur die Maße der gewählten Form und berechnet schreibgeschützt die Eigenschaften der
+<strong>Tragwerksanalyse</strong>: Fläche, Anstrichumfang, Nenngewicht (aus der Dichte des Materials),
+Trägheitsmomente, elastische und plastische Widerstandsmomente, Torsions- und Wölbkonstante,
+Schubflächen und den Winkel der Hauptachsen. <strong>Querschnittsnamenschlüssel</strong> bewahrt den Namen des
+Handelsprofils.</p>
+<p>Ein neues Projekt hat Stahlbetonträger, die Profile IPE, HEA, HEB, UPN, Winkel, T-Profile,
+Hohlprofile und Brettschichtholzträger.</p>
+<h2 id="beam">Träger</h2>
+<p><strong>Tragwerk ▸ Träger</strong> öffnet die Karte <strong>Träger platzieren</strong>. Zwei Klicks erstellen einen Träger:
+die Enden rasten in der Mitte tragender Stützen ein, an der Achse tragender Wände, an den Enden
+und der Linie anderer Träger und an den Schnittpunkten der Raster, und die Statusleiste sagt,
+woran. Die Optionsleiste hat:</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Was sie tut</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Platzierungsebene</strong></td>
+<td>Die Ebene der Ansicht, auf die der Träger gelegt wird</td>
+</tr>
+<tr>
+<td><strong>Tragwerksnutzung</strong></td>
+<td><strong><automatisch></automatisch></strong> leitet sie aus den Auflagern ab: zwischen Stützen oder Wänden ist er ein <strong>Hauptträger</strong>, zwischen Hauptträgern ein <strong>Balken</strong>, zwischen Balken eine <strong>Pfette</strong>; oder man wählt sie</td>
+</tr>
+<tr>
+<td><strong>3D-Fang</strong></td>
+<td>Die Enden rasten an Tragwerkselementen außerhalb der Arbeitsebene ein: ein geneigter Träger</td>
+</tr>
+<tr>
+<td><strong>Verketten</strong></td>
+<td>Das Ende eines Trägers ist der Anfang des nächsten; <span class="keys"><kbd class="key-escape">Esc</kbd></span> beendet die Kette</td>
+</tr>
+<tr>
+<td><strong>Beim Platzieren beschriften</strong></td>
+<td>Jeder Träger entsteht mit seiner Beschriftung</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Mehrfach ▸ Auf Rastern</strong>: die Raster anklicken und <strong>Ende</strong> (oder <span class="keys"><kbd class="key-enter">Enter</kbd></span>); auf jedem Raster
+entsteht ein Träger je Feld zwischen den Auflagern, die es kreuzen. Eine Wand auf dem Raster
+erhält keine Träger; bereits vorhandene Träger werden nicht verdoppelt.</p>
+<p>In einem Schnitt oder einer Ansicht wird der Träger in der Ebene der Ansicht gezeichnet, mit den
+Enden auf den angeklickten Tragwerkselementen; in 3D auf der Ebene unter dem Cursor, oder mit
+<strong>3D-Fang</strong> auf dem Element.</p>
+<h3 id="beam-properties">Eigenschaften des Trägers</h3>
+<table>
+<thead>
+<tr>
+<th>Gruppe</th>
+<th>Eigenschaften</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Abhängigkeiten</td>
+<td><strong>Referenzebene</strong>, <strong>Arbeitsebene</strong>, <strong>Versatz der Startebene</strong> und <strong>Versatz der Endebene</strong> (ein geneigter Träger), <strong>Ausrichtung</strong> (Normal, Horizontal), <strong>Querschnittsdrehung</strong></td>
+</tr>
+<tr>
+<td>Geometrische Position</td>
+<td><strong>Startverlängerung</strong>/<strong>Endverlängerung</strong> (freie Enden), <strong>Rücksprung am Startanschluss</strong>/<strong>Rücksprung am Endanschluss</strong> (verbundene Enden, Stahl und Holz), <strong>yz-Ausrichtung</strong> (Gleichmäßig oder Unabhängig), <strong>y-Ausrichtung</strong>/<strong>z-Ausrichtung</strong> mit ihren <strong>Versatzwerten</strong>, auch für Anfang und Ende</td>
+</tr>
+<tr>
+<td>Materialien und Oberflächen</td>
+<td><strong>Tragwerksmaterial</strong></td>
+</tr>
+<tr>
+<td>Tragwerk</td>
+<td><strong>Tragwerksnutzung</strong>, <strong>Position des Stabsymbols</strong>, <strong>Befestigungstyp am Anfang</strong>/<strong>am Ende</strong>, <strong>Befestigungsabstand am Anfang</strong>/<strong>am Ende</strong> und Referenzstütze (oben oder unten) für jedes Ende, <strong>Startanschluss</strong>/<strong>Endanschluss</strong> (Biegesteifer Rahmen, Kragmoment), <strong>Überhöhung</strong>, <strong>Anzahl der Pfosten</strong>, <strong>Träger am Anfang aufgelagert</strong>/<strong>am Ende aufgelagert</strong> auf einer tragenden Wand, <strong>Maximales Gewicht</strong>, <strong>Genaues Gewicht</strong>, <strong>Anstrichfläche</strong></td>
+</tr>
+<tr>
+<td>Abmessungen</td>
+<td><strong>Systemlänge</strong>, <strong>Schnittlänge</strong>, <strong>Volumen</strong>, <strong>Höhe oben</strong> und <strong>Höhe unten</strong> («Variiert» bei einem geneigten Träger)</td>
+</tr>
+<tr>
+<td>Tragwerksanalyse</td>
+<td><strong>Freigabe Anfang</strong>/<strong>Freigabe Ende</strong> (Eingespannt, Gelenkig, Biegemoment, Benutzerdefiniert mit den sechs Bedingungen), <strong>Analysieren als</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Ein ausgewählter Träger hat <strong>Enden umkehren</strong> und, für jedes Ende, <strong>Verbindung nicht
+zulassen</strong>.</p>
+<h3 id="beam-display">Wie er gezeichnet wird</h3>
+<ul>
+<li><strong>Grob</strong>: eine Linie, mit dem Linienstil ihrer Nutzung (Stile nach Kategorie ▸
+  Tragwerksrahmen ▸ Hauptträger, Balken, Pfette…), um den <strong>Abstand des Schnittsymbols</strong> von den
+  Stützen und Trägern abgesetzt, die sie verbindet. In Schnitt und Ansicht sind auch die Träger
+  Linien, mit den Momentsymbolen.</li>
+<li><strong>Mittel</strong> und <strong>Fein</strong>: der Umriss des Querschnitts. In einem Grundriss mit <strong>Disziplin</strong>
+  «Tragwerk» sind die von einer Geschossdecke verdeckten Träger gestrichelt; in einem Grundriss
+  «Architektur» sind sie nicht sichtbar.</li>
+<li>Im Schnitt wird der Träger mit dem Muster seines Materials geschnitten.</li>
+</ul>
+<h3 id="joins">Verbindungen</h3>
+<p>Ein Träger endet an der Fläche der Stütze und der tragenden Wand, auf der er aufliegt (nie an
+einer nichttragenden Wand); zwischen Trägern ist die Verbindung <strong>T-förmig</strong> (der durchlaufende
+Träger bleibt ganz) oder eine <strong>Ecke</strong> zwischen zwei Trägern desselben Typs in derselben Ebene.
+Beton wird zu einer einzigen Masse: die Stütze hat Vorrang vor dem Träger, Geschossdecken und
+Wände behalten ihre Form, und ein Träger unter einer Betondecke endet an deren Unterseite.</p>
+<p><strong>Tragwerk ▸ Rahmen ▸ Träger-/Stützenverbindungen</strong> zeigt an jedem verbundenen Ende einen Pfeil:
+zur Verbindung hin wird dieser Träger geschnitten; ein Klick kehrt ihn um. Die Optionsleiste
+filtert nach Material (Stahl, Holz, Betonfertigteil, Sonstige).</p>
+<h2 id="brace">Aussteifung</h2>
+<p><strong>Tragwerk ▸ Aussteifung</strong>:</p>
+<ul>
+<li>in einer <strong>Rahmenansicht</strong> (oder in einem Schnitt) zwei Klicks auf Tragwerkselemente, zum
+  Beispiel den Fuß einer Stütze und einen Träger;</li>
+<li>im Grundriss mit <strong>Startebene</strong>, <strong>Versatz</strong>, <strong>Endebene</strong>, <strong>Versatz</strong> der Optionsleiste;</li>
+<li>in 3D auf den Punkten der angeklickten Elemente.</li>
+</ul>
+<p>Ein auf einem Träger liegendes Ende bleibt mit einem <strong>Verhältnis</strong> (von 0 bis 1) oder einem
+<strong>Abstand</strong> entlang des Trägers verbunden, vom Anfang oder vom Ende: bewegt oder verlängert sich
+der Träger, folgt ihm die Aussteifung. <strong>Tragwerksnutzung</strong>: Vertikalverband, Kopfband,
+Füllstab, Sonstige.</p>
+<h3 id="structural-settings">Symbole im Grundriss und Tragwerkseinstellungen</h3>
+<p><strong>Tragwerk ▸ Rahmen ▸ Tragwerkseinstellungen</strong> legt auf dem Papier fest:</p>
+<ul>
+<li>den <strong>Abstand des Schnittsymbols</strong> von Aussteifungen, Trägern und Fachwerkträgern, Stützen;</li>
+<li>die <strong>Aussteifungssymbole</strong>: <strong>Parallele Linie</strong> (mit ihrem Versatz) oder <strong>Linie mit Winkel</strong>,
+  <strong>Darüberliegende Aussteifung anzeigen</strong> und <strong>Darunterliegende Aussteifung anzeigen</strong> (auch
+  gestrichelt), <strong>Kopfbandsymbol</strong>;</li>
+<li>die <strong>Anschlusssymbole</strong> von Trägern und Aussteifungen.</li>
+</ul>
+<p>Die Symbole sind im Detaillierungsgrad Grob sichtbar.</p>
+<h2 id="beam-system">Trägerlage</h2>
+<p><strong>Tragwerk ▸ Trägerlage</strong> füllt ein Feld mit parallelen Trägern:</p>
+<ul>
+<li><strong>Automatische Trägerlage</strong>: ein Klick in ein von Trägern oder tragenden Wänden geschlossenes
+  Feld;</li>
+<li><strong>Trägerlage skizzieren</strong>: die Begrenzung im Skizzenmodus (<strong>Begrenzung der Trägerlage
+  erstellen</strong>) mit <strong>Auflager wählen</strong> (die Begrenzung bleibt an die angeklickten Träger und
+  Wände gebunden, und das erste gibt die Richtung vor), <strong>Linie</strong>, <strong>Rechteck</strong>, <strong>Linien
+  wählen</strong> und <strong>Trägerrichtung</strong>. Eine innere Schleife ist eine Öffnung.</li>
+</ul>
+<p><strong>Layoutregel</strong>: <strong>Fester Abstand</strong>, <strong>Feste Anzahl</strong>, <strong>Maximaler Abstand</strong>, <strong>Lichter
+Abstand</strong>; bei der ersten und der letzten <strong>Ausrichtung</strong> (Anfang, Ende, Mitte, Richtungslinie).
+<strong>Trägertyp</strong>, <strong>Höhe</strong> und <strong>Beim Platzieren beschriften</strong> (eine Beschriftung der Trägerlage
+oder eine je Träger) vervollständigen die Optionen.</p>
+<p>Die Träger folgen den Auflagern, wenn diese sich bewegen. Eine ausgewählte Trägerlage hat
+<strong>System zurücksetzen</strong> (geänderte Träger kehren zur Trägerlage zurück) und <strong>Trägerlage
+entfernen</strong> (die Trägerlage verschwindet, die Träger bleiben).</p>
+<p>Die Layoutregeln verteilen die Träger wie <strong>Reihe</strong> ihre Kopien: <strong>Feste Anzahl</strong> wie <strong>Letztes</strong>, <strong>Fester Abstand</strong> wie <strong>2°</strong> ab der <strong>Ausrichtung</strong>; mit <strong>Lichter Abstand</strong> wird zwischen den Flächen gemessen, und ein größerer Träger schiebt seine Nachbarn weg. <strong>3D</strong> in der Optionsleiste macht das System nicht eben: die Trägerenden steigen zu den neigungsdefinierenden Unterstützungen (Träger immer, Wände mit <strong>Definiert Neigung</strong> oder <strong>Wände mit definierter Neigung</strong>). <strong>Begrenzung bearbeiten</strong> öffnet die Skizze erneut; <strong>Trägerrichtung</strong> wird gezeichnet oder mit <strong>Linien wählen</strong> gewählt. Ein von Hand gelöschter Träger bleibt gelöscht bis <strong>System zurücksetzen</strong>. Außerhalb eines geschlossenen Feldes öffnet <strong>Automatische Trägerlage</strong> die Skizze der Begrenzung.</p>
+<p><img alt="Die vier Layoutregeln eines Trägersystems: fester Abstand, feste Anzahl, maximaler Abstand, lichter Abstand" src="../assets/screens/st-beam-system.webp"/></p>
+<p><img alt="Die Ausrichtung eines Trägersystems mit festem Abstand: Anfang, Ende, Mitte" src="../assets/screens/st-beam-system-just.webp"/></p>
+<p>Ein kopiertes, gespiegeltes oder eingefügtes Trägersystem verbindet sich mit den Trägern und tragenden Wänden, auf die seine Kanten am neuen Ort fallen; findet eine Kante kein Auflager, warnt der Befehl, und <strong>Begrenzung bearbeiten ▸ Auflager wählen</strong> verbindet sie wieder. Kopiere es nur zwischen Feldern mit derselben Form und denselben Auflagern.</p>
+<p>Auch gekrümmte Träger und gekrümmte tragende Wände schließen ein Feld für ein automatisches Trägersystem, die Richtung der Träger kommt aber immer von einem geraden Auflager. Ein über mehr als ein Feld skizziertes Trägersystem wird trotzdem erstellt, mit einer Warnung: die Träger und Wände, die es kreuzen, teilen es nicht, daher ist ein Trägersystem pro Feld besser.</p>
+<h2 id="truss">Fachwerkträger</h2>
+<p><strong>Tragwerk ▸ Fachwerkträger</strong>: zwei Klicks im Grundriss legen das Schema des Typs (Pratt, Howe,
+Warren, Warren mit Pfosten, Fink) über die Spannweite. Die Gurte sind Träger, die Füllstäbe
+Aussteifungen, jeweils vom Typ ihrer Gruppe (<strong>Obergurte</strong>, <strong>Vertikale Füllstäbe</strong>,
+<strong>Diagonale Füllstäbe</strong>, <strong>Untergurte</strong>). Zu den Eigenschaften gehören <strong>Fachwerkträgerhöhe</strong>,
+<strong>Tragender Gurt</strong>, <strong>Maximale Feldbreite</strong>, <strong>Anzahl der Felder</strong> und die Drehung.</p>
+<p>Ein ausgewählter Fachwerkträger hat <strong>Oben/Unten fixieren</strong> (der Gurt folgt der Fläche eines
+Dachs oder einer tragenden Geschossdecke; mit <span class="keys"><kbd class="key-shift">Shift</kbd></span> der Untergurt), <strong>Oben/Unten lösen</strong>,
+<strong>Fachwerkträger zurücksetzen</strong> und <strong>Fachwerkträger auflösen</strong> (die Stäbe bleiben als Träger und
+Aussteifungen).</p>
+<p><strong>Profil bearbeiten</strong> öffnet einen zum Fachwerkträger parallelen Schnitt oder eine Ansicht
+(ist die offene Ansicht es nicht, fragt <strong>Gehe zu Ansicht</strong>, welche) mit den Linien der Gurte im
+Skizzenmodus: die Linien über der Mitte sind der Obergurt, die anderen der Untergurt, und die
+Füllstäbe folgen ihnen. <strong>Profil zurücksetzen</strong> bringt die Gurte auf die Linie des Schemas zurück. In einer 3D-Ansicht werden die Linien direkt in der Ebene des Fachwerkträgers gezeichnet, ohne die Ansicht zu wechseln.</p>
+<p>Mit <strong>Linien wählen</strong> wird der Fachwerkträger entlang eines Trägers, einer Wand oder eines Rasters platziert. Ein Klick auf einen Stab wählt den ganzen Fachwerkträger; <span class="keys"><kbd class="key-tab">Tab</kbd></span> geht zum einzelnen Stab. Ein angehängter Gurt folgt der Fläche des Bauteils über die ganze Spannweite; ist der tragende Gurt angehängt, hält der andere die <strong>Fachwerkträgerhöhe</strong> von ihm, und das gezeichnete Profil bleibt und kehrt mit <strong>Oben/Unten lösen</strong> zurück. <strong>Vertikale Ausrichtung tragend</strong>, <strong>Nichttragender Versatz</strong>, <strong>Stegausrichtung</strong> (<strong>Orthogonal</strong>: die Vertikalen senkrecht zum tragenden Gurt) und <strong>Drehwinkel</strong> (die Ebene dreht sich um die Basislinie) verändern die Stäbe. Ein von Hand gelöschter Stab bleibt gelöscht bis <strong>Fachwerkträger zurücksetzen</strong>; die Stäbe werden nur in <strong>Tragwerkseinstellungen</strong> gekürzt. Neue, in einem eigenen Bauteil gezeichnete Schemata kommen mit dem Bauteileditor.</p>
+<p><img alt="Ein ganz ausgewählter Fachwerkträger, dann einer seiner Stäbe mit TAB" src="../assets/screens/st-truss.webp"/></p>
+<p>Mit <strong>Füllstäbe haben Schnittsymbole</strong> im Fachwerkträgertyp enden die Füllstäbe bei grober Detaillierung vor den Gurten, im <strong>Abstand des Schnittsymbols</strong> der Stützen aus den <strong>Tragwerkseinstellungen</strong>.</p>
+<h2 id="structural-walls-floors">Tragende Wand und tragende Geschossdecke</h2>
+<p><strong>Tragende Wand</strong> ist das Werkzeug Wand mit denselben Typen und derselben Optionsleiste: die
+Wand entsteht <strong>Tragend</strong>. Jede Wand hat <strong>Tragwerk</strong> und <strong>Tragwerksnutzung</strong>
+(<strong>Nichttragend</strong>, <strong>Tragend</strong>, <strong>Schubwand</strong>, <strong>Kombiniert tragend</strong>).</p>
+<p><strong>Tragende Geschossdecke</strong> ist die Geschossdecke mit aktiviertem <strong>Tragwerk</strong>. In der Skizze
+zeichnet <strong>Spannrichtung</strong> die Richtung ihrer Spannweite; am Ende entsteht das
+<strong>Spannrichtungssymbol</strong> in der Mitte der Geschossdecke. <strong>Beschriftungen ▸ Spannrichtung</strong> setzt
+es erneut (mit <strong>Automatische Platzierung</strong> in der Mitte); ausgewählt lässt es sich drehen, und
+<strong>Senkrecht ausrichten</strong> stellt es senkrecht zu einer Kante, einem Träger oder einem Raster.</p>
+<h3 id="shape-editing">Form bearbeiten</h3>
+<p>Eine ausgewählte Geschossdecke (tragend, eine Bodenplatte oder jede andere Decke) hat die Gruppe <strong>Form bearbeiten</strong>:</p>
+<ul>
+<li><strong>Unterelemente ändern</strong>: einen Eckpunkt oder Punkt anklicken, dann seine <strong>Höhe</strong> in der Optionsleiste eingeben; <span class="keys"><kbd class="key-delete">Del</kbd></span> entfernt den Punkt.</li>
+<li><strong>Punkt hinzufügen</strong>: ein Punkt in der Decke auf der angegebenen Höhe; mit <strong>Relativ</strong> wird sie zur Höhe der Fläche an dieser Stelle addiert.</li>
+<li><strong>Teilungslinie hinzufügen</strong>: zwei Klicks; die Fläche knickt entlang der Linie.</li>
+<li><strong>Unterstützungen wählen</strong>: einen Träger unter der Decke anklicken; eine Teilungslinie folgt dem Träger auf seiner Oberkante.</li>
+<li><strong>Form zurücksetzen</strong>: entfernt Punkte und Linien; die Decke ist wieder eben (oder behält ihre Neigung).</li>
+</ul>
+<p>Die Oberseite wird zur Dreiecksfläche durch diese Punkte; die ganze Platte folgt ihr und behält ihre Dicke. <strong>Höhe oben</strong> und <strong>Höhe unten</strong> zeigen dann <strong>Variiert</strong>.</p>
+<p><img alt="Eine tragende Decke mit bearbeiteter Form: ein angehobener Punkt und eine Teilungslinie" src="../assets/screens/st-floor-shape.webp"/></p>
+<h2 id="foundations">Fundamente</h2>
+<table>
+<thead>
+<tr>
+<th>Werkzeug</th>
+<th>Wie es arbeitet</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Einzelfundament</strong></td>
+<td>Ein Klick im Grundriss oder in 3D (Leertaste: drehen), oder <strong>An Rastern</strong> oder <strong>An Stützen</strong> und <strong>Ende</strong>. Die Oberseite liegt auf der Ebene plus <strong>Höhenversatz von Ebene</strong>; die Stütze darüber steht auf dem Fundament. <strong>Mit Rastern verschieben</strong> bindet es an die Raster</td>
+</tr>
+<tr>
+<td><strong>Streifenfundament</strong></td>
+<td>Ein Klick auf eine tragende Wand: das Fundament läuft unter ihrer Basis und folgt ihr. <strong>Tragend</strong>: <strong>Breite</strong> und <strong>Exzentrizität</strong>; <strong>Stützwand</strong>: <strong>Breite der Außenseite</strong> und <strong>Breite der Innenseite</strong>. Es wird unter Türen und Fenstern unterbrochen, die die Basis berühren, außer mit <strong>Bei Einfügungen nicht unterbrechen</strong>; an freien Enden steht es um die <strong>Standardlänge der Endverlängerung</strong> vor</td>
+</tr>
+<tr>
+<td><strong>Bodenplatte</strong></td>
+<td>Die Begrenzung im Skizzenmodus (<strong>Begrenzung der Bodenplatte erstellen</strong>), wie eine Geschossdecke: sie liegt unter ihrer Ebene, um die Dicke ihrer Schichten tiefer. <strong>Tragwerksnutzung</strong>: Fundament oder Fundamentplatte</td>
+</tr>
+</tbody>
+</table>
+<p>Ist ein Streifenfundament ausgewählt, verlängern oder verkürzen die gefüllten Kreise an seinen Enden es entlang der Wand, mit Fang an nahen Bezügen; die Kreise an den Enden eines Trägers oder einer Stütze tun dasselbe. Bei Trägern aus Stahl, Betonfertigteilen und Holz ändern die Pfeile hinter den Enden <strong>Startverlängerung/Endverlängerung</strong> an einem freien Ende und <strong>Rücksprung am Start-/Endanschluss</strong> an einem verbundenen. Betoneinzel- und Streifenfundamente, die sich berühren, bilden eine Masse: das Einzelfundament behält seine Form und schneidet das Streifenfundament (von zwei Einzelfundamenten schneidet das ältere das andere), und im Grundriss wird keine Linie dazwischen gezeichnet.</p>
+<p><img alt="Die Endsteuerelemente eines Stahlträgers" src="../assets/screens/st-end-controls.webp"/></p>
+<p><img alt="Betoneinzelfundamente und ein Streifenfundament zu einer Masse verbunden" src="../assets/screens/st-foundation-join.webp"/></p>
+<h2 id="rebar-covers">Bewehrungsüberdeckung</h2>
+<p><strong>Stahlbeton</strong> ▸ <strong>Betondeckungsoptionen</strong> listet die Überdeckungen des Projekts, jede mit Namen und Abstand: <strong>Hinzufügen</strong>, <strong>Duplizieren</strong>, <strong>Löschen</strong>. Elemente mit einer gelöschten Überdeckung erhalten die erste. Tragende Wände, Stützen, Betonträger und Aussteifungen, tragende Decken, Bodenplatten, Einzel- und Streifenfundamente wählen ihre Überdeckung in <strong>Eigenschaften</strong>: <strong>Bewehrungsüberdeckung - Oberseite</strong>, <strong>Bewehrungsüberdeckung - Unterseite</strong> und <strong>Bewehrungsüberdeckung - Andere Flächen</strong> (bei Wänden <strong>Bewehrungsüberdeckung - Außenseite</strong>, <strong>Bewehrungsüberdeckung - Innenseite</strong> und <strong>Bewehrungsüberdeckung - Andere Flächen</strong>).</p>
+<p><img alt="Der Dialog für die Bewehrungsüberdeckung" src="../assets/screens/st-covers.webp"/></p>
+<h2 id="views-schedules-ifc">Ansichten, Beschriftungen, Bauteillisten und IFC</h2>
+<ul>
+<li><strong>Disziplin</strong> einer Ansicht: <strong>Architektur</strong> oder <strong>Tragwerk</strong>. Die zweite blendet
+  nichttragende Wände aus und strichelt, was Geschossdecken verdecken.</li>
+<li><strong>Beschriftungen ▸ Trägerbeschriftungen</strong>: Rahmenbeschriftungen und Höhenkoten an allen Trägern
+  des Grundrisses (oder an den ausgewählten) in sechs Positionen, oben und unten, am Anfang, in
+  der Mitte und am Ende; <strong>Höhe anzeigen</strong> wählt oben, unten, beide oder tatsächlich.</li>
+<li>Die Beschriftung eines Trägers liest sich entlang des Trägers und steht neben ihm, auf der Seite, auf der sie keinen anderen Träger verdeckt (oben, wenn beide frei sind); sie wird wie jede Beschriftung gezogen. In <strong>Trägerbeschriftungen ▸ Einstellungen</strong> rückt <strong>Horizontaler Endversatz</strong> die Positionen am Anfang und am Ende zur Mitte, und <strong>Vertikaler Versatz</strong> hält die Beschriftungen von der Trägerseite fern.</li>
+<li><strong>Bauteilliste/Mengen</strong> hat die Kategorien <strong>Tragwerksrahmen</strong>, <strong>Trägerlagen</strong>,
+  <strong>Fachwerkträger</strong> und <strong>Tragwerksfundamente</strong>, mit allen Parametern als Felder.</li>
+<li>In <strong>IFC</strong> werden Hauptträger, Balken und Pfetten als <code>IfcBeam</code> exportiert, Aussteifungen und
+  Stäbe als <code>IfcMember</code>, Fachwerkträger als <code>IfcElementAssembly</code>, Einzel- und Streifenfundamente
+  als <code>IfcFooting</code>, die Bodenplatte als <code>IfcSlab</code> der Basis; tragende Wände und Geschossdecken
+  tragen <code>LoadBearing</code>.</li>
+</ul>
+<p><img alt="Tragwerksbeschriftungen im Grundriss" src="../assets/screens/st-tags.webp"/></p>
+<h2 id="commands">Über die Befehlszeile</h2>
+<table>
+<thead>
+<tr>
+<th>Befehl</th>
+<th>Was er tut</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>beam</code></td>
+<td>Träger aus zwei Punkten, verkettet, als Bogen oder auf Rastern</td>
+</tr>
+<tr>
+<td><code>brace</code></td>
+<td>Eine Aussteifung zwischen zwei Punkten</td>
+</tr>
+<tr>
+<td><code>beamsystem</code>, <code>beamsystemedit</code></td>
+<td>Eine automatische Trägerlage oder eine aus einer Begrenzung; sie zurücksetzen oder entfernen</td>
+</tr>
+<tr>
+<td><code>truss</code>, <code>trussedit</code></td>
+<td>Ein Fachwerkträger; ihn fixieren, lösen, zurücksetzen oder auflösen</td>
+</tr>
+<tr>
+<td><code>pad</code>, <code>strip</code></td>
+<td>Einzelfundamente (an einem Punkt, auf Rastern, unter Stützen), Streifenfundamente</td>
+</tr>
+<tr>
+<td><code>spansymbol</code>, <code>spanalign</code></td>
+<td>Das Spannrichtungssymbol; es ausrichten</td>
+</tr>
+<tr>
+<td><code>beamjoin</code>, <code>structuralsettings</code>, <code>beamannotations</code></td>
+<td>Die Verbindungen, die Tragwerkseinstellungen, die Trägerbeschriftungen</td>
+</tr>
+<tr>
+<td><code>floorshape</code></td>
+<td>Form einer Decke bearbeiten: Punkte, Teilungslinien, Unterstützungen, zurücksetzen</td>
+</tr>
+<tr>
+<td><code>covers</code></td>
+<td>Einstellungen für Bewehrungsüberdeckung</td>
+</tr>
+</tbody>
+</table>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Zurück zum Seitenanfang
+</button>
+</main>
+<footer class="md-footer">
+<nav aria-label="Fußzeile" class="md-footer__inner md-grid">
+<a aria-label="Zurück: Phasen und Abbruch" class="md-footer__link md-footer__link--prev" href="../phases/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Zurück
+              </span>
+<div class="md-ellipsis">
+                Phasen und Abbruch
+              </div>
+</div>
+</a>
+<a aria-label="Weiter: Lageplan und Gelände" class="md-footer__link md-footer__link--next" href="../site/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Weiter
+              </span>
+<div class="md-ellipsis">
+                Lageplan und Gelände
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Copyright © 2026 BIMopen
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.footer", "navigation.tracking", "toc.follow", "content.code.copy", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}}</script>
+<script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+<script src="../assets/js/zoom.js"></script>
+</body>
+</html>

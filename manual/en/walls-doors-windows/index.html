@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="User manual of BIMopen, open-source BIM modelling" name="description"/>
 <meta content="BIMopen" name="author"/>
-<link href="https://atsanna.github.io/bimopen-site/manual/en/walls-doors-windows/" rel="canonical"/>
+<link href="https://bimopen.it/manual/en/walls-doors-windows/" rel="canonical"/>
 <link href="../selection-and-modify/" rel="prev"/>
 <link href="../floors-roofs-stairs/" rel="next"/>
 <link href="../assets/images/bimopen-cube.svg" rel="icon"/>
@@ -18,6 +18,13 @@
 <link href="../assets/css/theme.css" rel="stylesheet"/>
 <link href="../assets/css/theme_dark_mode.css" rel="stylesheet"/>
 <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="https://bimopen.it/manual/en/walls-doors-windows/" hreflang="en" rel="alternate"/>
+<link href="https://bimopen.it/manual/it/walls-doors-windows/" hreflang="it" rel="alternate"/>
+<link href="https://bimopen.it/manual/de/walls-doors-windows/" hreflang="de" rel="alternate"/>
+<link href="https://bimopen.it/manual/fr/walls-doors-windows/" hreflang="fr" rel="alternate"/>
+<link href="https://bimopen.it/manual/es/walls-doors-windows/" hreflang="es" rel="alternate"/>
+<link href="https://bimopen.it/manual/ar/walls-doors-windows/" hreflang="ar" rel="alternate"/>
+<link href="https://bimopen.it/manual/en/walls-doors-windows/" hreflang="x-default" rel="alternate"/>
 </head>
 <body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="slate" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -32,7 +39,7 @@
 </div>
 <header class="md-header md-header--shadow" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="BIMopen user manual" class="md-header__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/?lang=en" title="BIMopen user manual">
+<a aria-label="BIMopen user manual" class="md-header__button md-logo" data-md-component="logo" href="https://bimopen.it/en/" title="BIMopen user manual">
 <img alt="logo" src="../assets/images/bimopen-cube.svg"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -73,32 +80,32 @@
 <div class="md-select__inner">
 <ul class="md-select__list">
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/en/" hreflang="en">
+<a class="md-select__link" href="https://bimopen.it/manual/en/" hreflang="en">
               English
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/it/" hreflang="it">
+<a class="md-select__link" href="https://bimopen.it/manual/it/" hreflang="it">
               Italiano
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/de/" hreflang="de">
+<a class="md-select__link" href="https://bimopen.it/manual/de/" hreflang="de">
               Deutsch
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/fr/" hreflang="fr">
+<a class="md-select__link" href="https://bimopen.it/manual/fr/" hreflang="fr">
               Français
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/es/" hreflang="es">
+<a class="md-select__link" href="https://bimopen.it/manual/es/" hreflang="es">
               Español
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/ar/" hreflang="ar">
+<a class="md-select__link" href="https://bimopen.it/manual/ar/" hreflang="ar">
               العربية
             </a>
 </li>
@@ -147,7 +154,7 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="BIMopen user manual" class="md-nav__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/?lang=en" title="BIMopen user manual">
+<a aria-label="BIMopen user manual" class="md-nav__button md-logo" data-md-component="logo" href="https://bimopen.it/en/" title="BIMopen user manual">
 <img alt="logo" src="../assets/images/bimopen-cube.svg"/>
 </a>
     BIMopen user manual
@@ -202,6 +209,14 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../cad-files/">
+<span class="md-ellipsis">
+    DWG and DXF
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../selection-and-modify/">
 <span class="md-ellipsis">
     Selecting and modifying
@@ -238,6 +253,20 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#curved-walls">
+<span class="md-ellipsis">
+      Curved walls
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#elliptical-walls">
+<span class="md-ellipsis">
+      Elliptical walls
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#the-location-line-and-flipping">
 <span class="md-ellipsis">
       The alignment and flipping
@@ -254,7 +283,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#editing-a-walls-profile">
 <span class="md-ellipsis">
-      Editing a wall's boundary
+      Editing a wall's profile
     </span>
 </a>
 </li>
@@ -363,6 +392,24 @@
       Curtain walls
     </span>
 </a>
+<nav aria-label="Curtain walls" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#curtain-parts">
+<span class="md-ellipsis">
+      Grid lines and mullions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#curtain-types">
+<span class="md-ellipsis">
+      Mullion and panel types
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#stacked-walls">
@@ -422,6 +469,31 @@
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#3d-lines-and-3d-text">
+<span class="md-ellipsis">
+      3D lines and 3D text
+    </span>
+</a>
+<nav aria-label="3D lines and 3D text" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3d-lines">
+<span class="md-ellipsis">
+      3D lines
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3d-text">
+<span class="md-ellipsis">
+      3D text
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#at-the-command-line">
 <span class="md-ellipsis">
       At the command line
@@ -442,6 +514,54 @@
 <a class="md-nav__link" href="../floors-roofs-stairs/">
 <span class="md-ellipsis">
     Floors, roofs, stairs and components
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ceilings-and-columns/">
+<span class="md-ellipsis">
+    Ceilings and columns
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../openings/">
+<span class="md-ellipsis">
+    Openings
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../phases/">
+<span class="md-ellipsis">
+    Phases and demolition
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../structure/">
+<span class="md-ellipsis">
+    Structure and foundations
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../site/">
+<span class="md-ellipsis">
+    Site plan and terrain
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../design-options/">
+<span class="md-ellipsis">
+    Design options
     
   </span>
 </a>
@@ -495,7 +615,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="https://atsanna.github.io/bimopen-site/manual/en/pdf/bimopen-manual-en.pdf">
+<a class="md-nav__link" href="https://bimopen.it/manual/en/pdf/bimopen-manual-en.pdf">
 <span class="md-ellipsis">
     PDF
     
@@ -524,6 +644,20 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#curved-walls">
+<span class="md-ellipsis">
+      Curved walls
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#elliptical-walls">
+<span class="md-ellipsis">
+      Elliptical walls
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#the-location-line-and-flipping">
 <span class="md-ellipsis">
       The alignment and flipping
@@ -540,7 +674,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#editing-a-walls-profile">
 <span class="md-ellipsis">
-      Editing a wall's boundary
+      Editing a wall's profile
     </span>
 </a>
 </li>
@@ -649,6 +783,24 @@
       Curtain walls
     </span>
 </a>
+<nav aria-label="Curtain walls" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#curtain-parts">
+<span class="md-ellipsis">
+      Grid lines and mullions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#curtain-types">
+<span class="md-ellipsis">
+      Mullion and panel types
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#stacked-walls">
@@ -701,6 +853,31 @@
 <a class="md-nav__link" href="#reference-planes">
 <span class="md-ellipsis">
       Reference planes
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3d-lines-and-3d-text">
+<span class="md-ellipsis">
+      3D lines and 3D text
+    </span>
+</a>
+<nav aria-label="3D lines and 3D text" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3d-lines">
+<span class="md-ellipsis">
+      3D lines
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3d-text">
+<span class="md-ellipsis">
+      3D text
     </span>
 </a>
 </li>
@@ -771,7 +948,7 @@ shows the <strong>Draw</strong> group, and the options strip shows:</p>
 </tr>
 <tr>
 <td><strong>Radius</strong></td>
-<td>Not available: it needs curved walls, and is shown disabled</td>
+<td>With <strong>Line</strong> and <strong>Rectangle</strong> every corner between two straight walls becomes a curved wall of that radius, also where a wall ends on the free end of another (where three walls meet the corner stays sharp; so it does with a radius too large, with a message); <strong>Offset</strong> then does not apply. With <strong>Circle</strong>, the arcs and the polygons: the radius of the next one, so a click places it</td>
 </tr>
 <tr>
 <td><strong>Join at the ends</strong></td>
@@ -783,6 +960,8 @@ shows the <strong>Draw</strong> group, and the options strip shows:</p>
 </tr>
 </tbody>
 </table>
+<p><strong>Structural wall</strong>, from the <strong>Wall</strong> drop-down or the <strong>Structure</strong> tab, is the same tool: every wall drawn is <strong>Bearing</strong> (with <strong>Wall</strong>, <strong>Non-bearing</strong>) and it starts with <strong>Depth</strong>; each of the two tools remembers its own choice of <strong>Height</strong> or <strong>Depth</strong>. <strong>Structural usage</strong> is changed afterwards, in Properties.</p>
+<p>With a placement tool active (wall, door, window, object, column, pillar) <strong>Properties</strong> shows under the type selector the properties of the next element: the values typed there go to the elements the tool places, and the rows the options bar also holds stay in step with it.</p>
 <figure>
 <img alt="The options strip of the wall tool: Height, the top level, the unconnected height, Alignment and the other options" src="../assets/screens/wa-options.webp"/>
 <figcaption>The options strip of the wall tool</figcaption>
@@ -828,11 +1007,64 @@ shows the <strong>Draw</strong> group, and the options strip shows:</p>
 <td>The same, but the sides touch the circle</td>
 </tr>
 <tr>
+<td><strong>Circle</strong></td>
+<td>Click the centre and a point of the circle (or type the radius): two half circles of walls, with the exterior outside</td>
+</tr>
+<tr>
+<td><strong>Start-End-Radius Arc</strong></td>
+<td>Click the start, the end, then a point of the arc (or type the radius)</td>
+</tr>
+<tr>
+<td><strong>Center-ends arc</strong></td>
+<td>Click the centre, the start (the radius), then the end: at most half a turn</td>
+</tr>
+<tr>
+<td><strong>Tangent End Arc</strong></td>
+<td>Click the end of a wall: the arc starts there, tangent to it, and ends at the next click</td>
+</tr>
+<tr>
+<td><strong>Fillet Arc</strong></td>
+<td>Click two straight walls, then where the arc passes (or set <strong>Radius</strong>): the walls are trimmed and joined by a curved wall</td>
+</tr>
+<tr>
+<td><strong>Ellipse</strong>, <strong>Partial Ellipse</strong></td>
+<td>Elliptical walls: see below</td>
+</tr>
+<tr>
 <td><strong>Pick Lines</strong></td>
 <td>Click a line of the plan (a line or an edge of an element): a wall along it. Press <strong>TAB</strong> over a line to take the whole chain of lines joined to it, then click</td>
 </tr>
 </tbody>
 </table>
+<h2 id="curved-walls">Curved walls</h2>
+<p>A curved wall is one wall along an arc: it is selected, scheduled and tagged as one, and its
+<strong>Length</strong> is measured along the arc. In plan, section and 3D it is drawn as an arc, made of short
+straight pieces no farther than 2 mm from it. Its properties add <strong>Radius</strong> (changing it keeps the
+ends where they are), <strong>Center X</strong> and <strong>Center Y</strong> (moving the centre keeps the radius), and
+<strong>Center Mark Visible</strong>, the «+» shown in plan at the centre; a curved wall has it on when it is drawn.</p>
+<ul>
+<li>A door or a window clicked on a curved wall stands on a straight piece as wide as it, with a
+  margin each side, so its frame stays flat; moved along the wall, it keeps its place on the arc.</li>
+<li>Curved walls join each other and straight walls at their ends, as straight walls do.</li>
+<li>A selected curved wall has a third blue control at the middle of its arc: drag it and the arc passes
+  through the pointer, its ends where they are (<code>wallarc</code> at the command line).</li>
+<li><strong>Edit Profile</strong> is greyed on a curved wall: its contour has no plane to be drawn in.</li>
+<li>In IFC a curved wall is one <code>IfcWall</code> made of its pieces.</li>
+</ul>
+<h2 id="elliptical-walls">Elliptical walls</h2>
+<p><strong>Ellipse</strong> (centre, major radius, minor radius) draws a ring of two half-ellipse walls with the
+exterior outside; <strong>Partial Ellipse</strong> (the two ends of the axis, then the shape) draws one
+half-ellipse wall on the side of the cursor, <span class="keys"><kbd class="key-space">Space</kbd></span> flips its exterior. Radii can be typed; two
+equal radii are refused (use <strong>Circle</strong>). An elliptical wall stands on its centre line: <strong>Alignment</strong> is locked, and <strong>Offset</strong>, <strong>Radius</strong> and <strong>Continue</strong> are hidden. A selected elliptical wall has
+the controls of an ellipse (quadrants, ends with <span class="keys"><kbd class="key-tab">Tab</kbd></span>, temporary dimensions of its radii,
+<strong>Editing Retains Proportions</strong>); a ring's two halves change together. Its properties add <strong>Major
+Axis Radius</strong>, <strong>Minor Axis Radius</strong> and <strong>Center X/Y</strong>. Doors, windows, openings, joins, rooms,
+sections, 3D, schedules and IFC work as on curved walls. <strong>Offset</strong>, <strong>Fillet Arc</strong> and <strong>Split
+Element</strong> are refused; a stacked type is accepted only with every sub-wall centred.</p>
+<figure>
+<img alt="An elliptical wall in a 3D view, whole with its layers" src="../assets/screens/ew-elliptical-wall.webp"/>
+<figcaption>An elliptical wall: one wall with all its layers</figcaption>
+</figure>
 <h2 id="the-location-line-and-flipping">The alignment and flipping</h2>
 <p>Select a wall: blue dots mark the ends of its alignment line, and two arrows stand on its exterior
 side. Clicking the arrows turns the wall over about its alignment line: the first and the last
@@ -861,11 +1093,11 @@ they have at that moment, and can be attached again at any time. When a roof or 
 attached to it is deleted, the walls keep their height too.</p>
 <p>The properties <strong>Top is Attached</strong> and <strong>Base is Attached</strong> show the state (read-only); while the
 top is attached, <strong>Free Height</strong> is read-only.</p>
-<h2 id="editing-a-walls-profile">Editing a wall's boundary</h2>
+<h2 id="editing-a-walls-profile">Editing a wall's profile</h2>
 <p>A wall need not be a rectangle: its outline can be sketched in an elevation or a section
 parallel to it, with holes, as for a gable or a stepped wall.</p>
 <ol>
-<li>Select the wall and click <strong>Mode ▸ Edit Boundary</strong> in its contextual card. From a plan or a view
+<li>Select the wall and click <strong>Mode ▸ Edit Profile</strong> in its contextual card. From a plan or a view
    that is not parallel to the wall, <strong>Go to View</strong> lists the sections and elevations parallel to
    it: choose one and click <strong>Open View</strong>.</li>
 <li>Sketch mode opens with the wall's outline in magenta. Change it with <strong>Line</strong> and
@@ -1014,7 +1246,7 @@ undoes; <strong>Cancel</strong> closes without changing anything; <strong>Help</
 the preview stands above the list.</p>
 <p>Wrapping shows in every view: in plan, in the 3D view, in sections and in elevations the ticked
 layers line the jambs, the head and the sill of doors and windows, the sides of the holes of an
-edited boundary (see <a href="#editing-a-walls-profile">Editing a wall's boundary</a>) and the free ends. A
+edited boundary (see <a href="#editing-a-walls-profile">Editing a wall's profile</a>) and the free ends. A
 door or window type overrides the wall's wrapping with its <strong>Wall Closure</strong>.</p>
 <h2 id="wall-properties">Wall properties</h2>
 <figure>
@@ -1038,9 +1270,9 @@ says what is shown and <strong>Type Parameters</strong> opens the dialog describ
   <strong>Extend layers at top</strong>, <strong>Room Bounding</strong> (untick it and the rooms around the wall ignore it)
   and <strong>Created from mass</strong> (read-only).</li>
 <li><strong>Structural</strong>: <strong>Role</strong> (<strong>Non-bearing</strong>, <strong>Bearing</strong>, <strong>Shear</strong>, <strong>Combined</strong>). A wall other
-  than <strong>Non-bearing</strong> is structural, and its <strong>Rebar cover at top</strong>, <strong>Rebar cover, interior side</strong>
-  and <strong>Rebar cover, exterior side</strong> can be chosen (25, 35 or 40 mm); they are greyed otherwise.
-  <strong>Rebar volume</strong> is read-only.</li>
+  than <strong>Non-bearing</strong> is structural, and its <strong>Rebar cover - Other faces</strong>, <strong>Rebar cover - Interior face</strong>
+  and <strong>Rebar cover - Exterior face</strong> can be chosen (25, 35 or 40 mm); they are greyed otherwise.
+  <strong>Estimated reinforcement volume</strong> is read-only.</li>
 <li><strong>Dimensions</strong>: <strong>Length</strong>, <strong>Thickness</strong>, <strong>Area</strong>, <strong>Volume</strong> and the ends of the wall's line.</li>
 <li><strong>Identification</strong>: <strong>Comments</strong>, <strong>Mark</strong> and <strong>Classify as</strong> (<strong>Exterior wall</strong>, <strong>Interior
   wall</strong>, <strong>Partition</strong>, <strong>Foundation wall</strong>; until one is chosen, after the type's function).</li>
@@ -1178,6 +1410,45 @@ plates and members.</p>
   it alone. The element panel shows its <strong>Width</strong> and <strong>Height</strong>, and the type selector
   changes its type.</li>
 </ul>
+<h3 id="curtain-parts">Grid lines and mullions</h3>
+<p>TAB over a curtain wall goes from the wall to the mullion under the cursor, then to its grid line,
+then to the panel; the status bar says what is highlighted and a click selects that alone
+(CTRL+click adds more of the same curtain wall). It works in plan (vertical lines and mullions),
+in sections, elevations and the 3D view.</p>
+<ul>
+<li><strong>A selected grid line</strong>: the lines of the type's layout show a pushpin and do not move; a click
+  on the pushpin (or <strong>Tie to Type</strong> ▸ <strong>Independent</strong> in Properties) makes the line independent: it
+  stays where it is with its mullions when the wall changes size or the type changes its layout. An
+  independent line, or one added by hand, drags between the lines beside it (the panels follow),
+  moves when one of its temporary dimensions is typed, and is deleted with <strong>DELETE</strong>. Its pushpin
+  ties it to the type again.</li>
+<li><strong>A selected mullion</strong>: one per segment of a grid line. Properties shows <strong>Comments</strong>,
+  <strong>Length</strong> (the segment, before the cut at the joints) and <strong>Mark</strong> (a mark another mullion uses
+  is kept, with a warning). The type's mullions have a pushpin: unpinned, they take another type
+  from the type selector or are deleted with <strong>DELETE</strong>.</li>
+<li><strong>Make Continuous</strong> and <strong>Break at Join</strong> in the contextual tab: the selected mullion runs
+  through the joints at its ends (those crossing it stop), or stops there. The cross control on
+  each joint swaps that joint only.</li>
+<li>The curtain wall's context menu selects <strong>the curtain wall's panels</strong> or its <strong>mullions</strong> (on
+  the vertical or horizontal grid, inner, border, all); on a panel those along its grid, on a
+  mullion those on its grid line or across it. Properties changes their type together.</li>
+<li>Placing a grid line, besides the panel's middle and thirds it snaps to the levels, grids and
+  reference planes shown and, on the edge two curtain walls share at a corner, to the lines of the
+  other one. With <strong>Mullion</strong>, SHIFT held places the mullion on the segment clicked only, CTRL on
+  every segment that has none.</li>
+</ul>
+<h3 id="curtain-types">Mullion and panel types</h3>
+<p>Besides rectangular mullions (<strong>Width on side 1</strong> and <strong>2</strong>, <strong>Thickness</strong>, <strong>Angle</strong> between −90°
+and 90°, <strong>Position</strong>), the template has a <strong>Circular Mullion</strong> (<strong>Radius</strong>) and four corner
+mullions for the edge where two curtain walls meet: <strong>L</strong> (two legs along the curtain walls, <strong>Leg
+1</strong> and <strong>2</strong>), <strong>V</strong> (two legs square to the curtain walls), <strong>trapezoid</strong> (<strong>Center Width</strong>,
+<strong>Depth</strong>) and <strong>square</strong> (<strong>Depth 1</strong> and <strong>2</strong>). A corner mullion is drawn once at the corner and
+the panels of both curtain walls stop at its sides; at a free end it is straight. The <strong>Offset</strong> of
+a mullion or panel type moves it across the curtain wall, towards the outside.</p>
+<p>The curtain wall type and the mullion type have all the identity data (keynote, manufacturer, type
+mark, cost…). In the curtain wall's Properties, <strong>Vertical Offset</strong> and <strong>Horizontal Offset</strong> start
+the type's lines that far from their justification point, and <strong>Structural Usage</strong> says how it is
+used.</p>
 <h2 id="stacked-walls">Stacked walls</h2>
 <figure>
 <img alt="A stacked wall selected, with its Properties" src="../assets/screens/stacked-wall.png"/>
@@ -1280,6 +1551,47 @@ horizontal plane), shown in the views facing the same way. Select one to give it
 the element panel: a named reference plane is listed in the <strong>Work Plane</strong> dialog and
 its name is written at the start of its line. Reference planes are snapped to, moved, copied,
 rotated, mirrored and deleted like grids.</p>
+<h2 id="3d-lines-and-3d-text">3D lines and 3D text</h2>
+<p>Two elements of the model stand on a work plane: the <strong>3D line</strong>, a line that exists in space and
+is seen in every view that reaches it, and the <strong>3D text</strong>, letters cut out of the plane and
+extruded, for signs and lettering on walls. Both are in <strong>Model ▸ 3D elements</strong>.</p>
+<h3 id="3d-lines">3D lines</h3>
+<p><strong>Model ▸ 3D elements ▸ 3D line</strong> (or type <code>LM</code>) draws on the view's work plane with the same
+<strong>Draw</strong> panel as detail lines (lines, rectangles, polygons, circles, arcs, fillets, splines,
+ellipses, <strong>Pick Lines</strong>) and the <strong>Line style</strong> list. The options strip has <strong>Placement Plane</strong>
+(the levels, grids and named reference planes, or <strong>Select…</strong> for the <strong>Work Plane</strong> dialog),
+<strong>Continue</strong>, <strong>Offset</strong>, <strong>Radius</strong> and <strong>Move With Nearby Elements</strong>; lengths and radii are
+typed while drawing, as for detail lines. A plane that does not lie in the view asks <strong>Go to
+View</strong>; an elevation or a section with no work plane opens the <strong>Work Plane</strong> dialog first. In a
+3D view the line is drawn where the cursor meets the work plane.</p>
+<p>A 3D line is seen in every plan whose view range reaches it (from the view depth up to the cut
+plane; in a ceiling plan from the cut plane up), in the sections and elevations whose depth
+holds it, in 3D views and on sheets, always in its line style. Its properties: <strong>Work Plane</strong>
+(read-only; <em><not associated=""></not></em> once moved off it), <strong>Move With Nearby Elements</strong> (a line parallel
+to a wall, or concentric with a curved wall, follows it when the wall moves), <strong>Line style</strong>,
+<strong>Center Mark Visible</strong> for arcs and circles, <strong>Detail Line</strong> (read-only, unticked), <strong>Length</strong>
+and the phases. It is moved, copied, rotated, mirrored, arrayed, trimmed, split, offset and
+aligned like a detail line; in a section or an elevation <strong>Move</strong> and <strong>Copy</strong> also go up and
+down and <strong>Rotate</strong> turns it about the axis across the view.</p>
+<p>With lines selected, <strong>Convert Lines</strong> turns 3D lines into detail lines of the active view, and
+detail lines into 3D lines on its work plane; a selection of both kinds asks which to convert.
+<strong>Edit Work Plane</strong> moves the selected lines (or texts) onto another plane, straight across onto a
+parallel one. In DXF and DWG a 3D line is on the model layer of its style (<code>A-MODL-…</code>); in IFC it
+is an annotation with its curve.</p>
+<h3 id="3d-text">3D text</h3>
+<p>Set the work plane (a wall's face, for lettering on it), then <strong>Model ▸ 3D elements ▸ 3D text</strong>:
+write the text in <strong>Edit Text</strong> (several lines) and click <strong>OK</strong>. The outline of the letters
+follows the cursor on the plane; a click places them, extruded by their <strong>Depth</strong> out of the
+wall's face (up from a level). <strong>Edit Text</strong> (or a double click, or <strong>Text</strong> in the properties)
+opens the dialog again; dragging moves the text on its plane, <strong>Edit Work Plane</strong> and <strong>Pick New
+Host</strong> take it to another plane or wall face.</p>
+<p>The instance has <strong>Work Plane</strong>, <strong>Text</strong>, <strong>Horizontal Align</strong> (left, centre, right),
+<strong>Material</strong> (the colour comes from it), <strong>Depth</strong>, <strong>Comments</strong>, <strong>Mark</strong> (one used by another
+text is allowed, with a warning), <strong>Subcategory</strong> and the phases; the type has the <strong>Text Font</strong>
+(the fonts BIMopen ships), <strong>Text Size</strong>, <strong>Bold</strong>, <strong>Italic</strong> and the identity data. The first
+3D text makes the type «3D text 300 mm». A plan whose cut plane crosses the letters shows them
+cut; below it, in projection. Realistic views, PDF and DXF draw the text with its material; IFC
+exports it as a building element proxy with its solid.</p>
 <h2 id="at-the-command-line">At the command line</h2>
 <p>The same operations, typed:</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>attach                      attach the selected walls to the roof over them
@@ -1293,9 +1605,12 @@ rotated, mirrored and deleted like grids.</p>
 <a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a>refplane 3,-2 3,11 Entrance axis   a reference plane in the open plan, named
 <a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a>workplane Entrance axis     the open view's work plane, by name
 <a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a>showworkplane on 0.5        show the work plane's grid, 0.5 m apart
+<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a>modelline 20,0 24,0         a 3D line on the view's work plane
+<a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a>modeltext {"text":"CASA 12","point":[1,1],"plane":{"wall":57},"coords":"plane","depth":0.05}
+<a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a>convertlines                3D lines of the selection into detail lines, or the reverse
 </code></pre></div>
 <h2 id="not-available-yet">Not available yet</h2>
-<p>Curved walls (<strong>Arc</strong>, <strong>Circle</strong>, <strong>Radius</strong>), <strong>Pick Faces</strong>, structural walls, stacked walls,
+<p>Walls along ellipses, <strong>Pick Faces</strong>, structural walls, stacked walls,
 wall sweeps and reveals, vertically compound layers (regions), <strong>Join
 Geometry</strong>, phases, and skylights in roofs.</p>
 </article>

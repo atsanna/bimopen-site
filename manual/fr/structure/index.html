@@ -1,0 +1,969 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Manuel utilisateur de BIMopen, modélisation BIM open source" name="description"/>
+<meta content="BIMopen" name="author"/>
+<link href="https://bimopen.it/manual/fr/structure/" rel="canonical"/>
+<link href="../phases/" rel="prev"/>
+<link href="../site/" rel="next"/>
+<link href="../assets/images/bimopen-cube.svg" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.9" name="generator"/>
+<title>Structure et fondations - Manuel utilisateur de BIMopen</title>
+<link href="../assets/stylesheets/main.4af4bdda.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link href="../assets/css/theme.css" rel="stylesheet"/>
+<link href="../assets/css/theme_dark_mode.css" rel="stylesheet"/>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="https://bimopen.it/manual/en/structure/" hreflang="en" rel="alternate"/>
+<link href="https://bimopen.it/manual/it/structure/" hreflang="it" rel="alternate"/>
+<link href="https://bimopen.it/manual/de/structure/" hreflang="de" rel="alternate"/>
+<link href="https://bimopen.it/manual/fr/structure/" hreflang="fr" rel="alternate"/>
+<link href="https://bimopen.it/manual/es/structure/" hreflang="es" rel="alternate"/>
+<link href="https://bimopen.it/manual/ar/structure/" hreflang="ar" rel="alternate"/>
+<link href="https://bimopen.it/manual/en/structure/" hreflang="x-default" rel="alternate"/>
+</head>
+<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="slate" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#structure">
+          Aller au contenu
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="En-tête" class="md-header__inner md-grid">
+<a aria-label="Manuel utilisateur de BIMopen" class="md-header__button md-logo" data-md-component="logo" href="https://bimopen.it/fr/" title="Manuel utilisateur de BIMopen">
+<img alt="logo" src="../assets/images/bimopen-cube.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Manuel utilisateur de BIMopen
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Structure et fondations
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Passer au thème clair" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Passer au thème clair">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Passer au thème sombre" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="bimopen" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Passer au thème sombre">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<div class="md-header__option">
+<div class="md-select">
+<button aria-label="Sélectionner la langue" class="md-header__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"></path></svg>
+</button>
+<div class="md-select__inner">
+<ul class="md-select__list">
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/en/" hreflang="en">
+              English
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/it/" hreflang="it">
+              Italiano
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/de/" hreflang="de">
+              Deutsch
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/fr/" hreflang="fr">
+              Français
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/es/" hreflang="es">
+              Español
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/ar/" hreflang="ar">
+              العربية
+            </a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Rechercher" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Rechercher" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Recherche" class="md-search__options">
+<button aria-label="Effacer" class="md-search__icon md-icon" tabindex="-1" title="Effacer" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Manuel utilisateur de BIMopen" class="md-nav__button md-logo" data-md-component="logo" href="https://bimopen.it/fr/" title="Manuel utilisateur de BIMopen">
+<img alt="logo" src="../assets/images/bimopen-cube.svg"/>
+</a>
+    Manuel utilisateur de BIMopen
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
+<span class="md-ellipsis">
+    Accueil
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../getting-started/">
+<span class="md-ellipsis">
+    Premiers pas
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../interface/">
+<span class="md-ellipsis">
+    L'interface
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../interface-styles/">
+<span class="md-ellipsis">
+    Styles d'interface
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../projects-and-files/">
+<span class="md-ellipsis">
+    Projets et fichiers
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../import-and-conversion/">
+<span class="md-ellipsis">
+    Importation et conversion
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cad-files/">
+<span class="md-ellipsis">
+    DWG et DXF
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../selection-and-modify/">
+<span class="md-ellipsis">
+    Sélection et modification
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../walls-doors-windows/">
+<span class="md-ellipsis">
+    Murs, portes et fenêtres
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../floors-roofs-stairs/">
+<span class="md-ellipsis">
+    Sols, toits, escaliers et composants
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ceilings-and-columns/">
+<span class="md-ellipsis">
+    Faux plafonds et colonnes
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../openings/">
+<span class="md-ellipsis">
+    Ouvertures
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../phases/">
+<span class="md-ellipsis">
+    Phases et démolitions
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Structure et fondations
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Structure et fondations
+    
+  </span>
+</a>
+<nav aria-label="Table des matières" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#framing-types">
+<span class="md-ellipsis">
+      Types d'ossature structurelle
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#beam">
+<span class="md-ellipsis">
+      Poutre
+    </span>
+</a>
+<nav aria-label="Poutre" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#beam-properties">
+<span class="md-ellipsis">
+      Propriétés de la poutre
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#beam-display">
+<span class="md-ellipsis">
+      Comment elle est dessinée
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#joins">
+<span class="md-ellipsis">
+      Jonctions
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#brace">
+<span class="md-ellipsis">
+      Contreventement
+    </span>
+</a>
+<nav aria-label="Contreventement" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#structural-settings">
+<span class="md-ellipsis">
+      Symboles en plan et Paramètres structurels
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#beam-system">
+<span class="md-ellipsis">
+      Trame de poutres
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#truss">
+<span class="md-ellipsis">
+      Treillis
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#structural-walls-floors">
+<span class="md-ellipsis">
+      Mur porteur et plancher porteur
+    </span>
+</a>
+<nav aria-label="Mur porteur et plancher porteur" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#shape-editing">
+<span class="md-ellipsis">
+      Modification de la forme
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#foundations">
+<span class="md-ellipsis">
+      Fondations
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rebar-covers">
+<span class="md-ellipsis">
+      Enrobage des armatures
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#views-schedules-ifc">
+<span class="md-ellipsis">
+      Vues, étiquettes, nomenclatures et IFC
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#commands">
+<span class="md-ellipsis">
+      Depuis la ligne de commande
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../site/">
+<span class="md-ellipsis">
+    Plan de site et terrain
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../design-options/">
+<span class="md-ellipsis">
+    Variantes de conception
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../views-and-graphics/">
+<span class="md-ellipsis">
+    Vues et graphisme
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../annotation/">
+<span class="md-ellipsis">
+    Annotations et détails 2D
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../documentation/">
+<span class="md-ellipsis">
+    Feuilles, nomenclatures et impression
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../command-line-and-mcp/">
+<span class="md-ellipsis">
+    Ligne de commande et MCP
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../keyboard-shortcuts/">
+<span class="md-ellipsis">
+    Raccourcis clavier
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../troubleshooting/">
+<span class="md-ellipsis">
+    Dépannage
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://bimopen.it/manual/fr/pdf/bimopen-manual-fr.pdf">
+<span class="md-ellipsis">
+    PDF
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table des matières" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#framing-types">
+<span class="md-ellipsis">
+      Types d'ossature structurelle
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#beam">
+<span class="md-ellipsis">
+      Poutre
+    </span>
+</a>
+<nav aria-label="Poutre" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#beam-properties">
+<span class="md-ellipsis">
+      Propriétés de la poutre
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#beam-display">
+<span class="md-ellipsis">
+      Comment elle est dessinée
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#joins">
+<span class="md-ellipsis">
+      Jonctions
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#brace">
+<span class="md-ellipsis">
+      Contreventement
+    </span>
+</a>
+<nav aria-label="Contreventement" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#structural-settings">
+<span class="md-ellipsis">
+      Symboles en plan et Paramètres structurels
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#beam-system">
+<span class="md-ellipsis">
+      Trame de poutres
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#truss">
+<span class="md-ellipsis">
+      Treillis
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#structural-walls-floors">
+<span class="md-ellipsis">
+      Mur porteur et plancher porteur
+    </span>
+</a>
+<nav aria-label="Mur porteur et plancher porteur" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#shape-editing">
+<span class="md-ellipsis">
+      Modification de la forme
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#foundations">
+<span class="md-ellipsis">
+      Fondations
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rebar-covers">
+<span class="md-ellipsis">
+      Enrobage des armatures
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#views-schedules-ifc">
+<span class="md-ellipsis">
+      Vues, étiquettes, nomenclatures et IFC
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#commands">
+<span class="md-ellipsis">
+      Depuis la ligne de commande
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset"><a class="md-content__icon pdf-download-btn" download href="../pdf/bimopen-manual-fr.pdf" title="Download"><i class="fa fas fa-download"></i><small> PDF</small></a>
+<h1 id="structure">Structure et fondations</h1>
+<p>L'onglet <strong>Structure</strong> (dans le style BIMopen : <strong>Créer ▸ Structure</strong>) rassemble les éléments qui
+portent le bâtiment : poutres, contreventements, trames de poutres, treillis, murs et planchers
+porteurs, poteaux porteurs, semelles isolées, semelles filantes et radiers. Les poutres, les
+contreventements et les barres des treillis forment une seule catégorie, <strong>Ossature
+structurelle</strong> ; les semelles isolées, les semelles filantes et les radiers sont des <strong>Fondations
+structurelles</strong>. Les mêmes outils fonctionnent dans les plans, les coupes, les élévations et les
+vues 3D, là où la vue le permet.</p>
+<h2 id="framing-types">Types d'ossature structurelle</h2>
+<p>Les types de poutre et de contreventement sont des sections paramétriques de BIMopen, comme
+celles des poteaux porteurs. <strong>Forme de la section</strong> choisit la forme : <strong>Rectangulaire</strong> (béton
+ou bois), <strong>Circulaire</strong>, <strong>Profilé en I</strong> (aussi avec des ailes inégales et des ailes
+inclinées), <strong>Profilé creux rectangulaire</strong>, <strong>Profilé creux circulaire</strong>, <strong>Angulaire</strong>,
+<strong>Profilé en C</strong> (aussi avec bord tombé) et <strong>Profilé en T</strong>. <strong>Paramètres du type</strong> n'affiche que
+les cotes de la forme choisie et calcule en lecture seule les propriétés d'<strong>Analyse
+structurelle</strong> : aire, périmètre à peindre, poids nominal (d'après la masse volumique du
+matériau), moments d'inertie, modules élastiques et plastiques, constantes de torsion et de
+gauchissement, aires de cisaillement et angle des axes principaux. <strong>Clé de nom de section</strong>
+conserve le nom du profilé du commerce.</p>
+<p>Un nouveau projet comprend des poutres en béton armé, les profilés IPE, HEA, HEB, UPN, des
+cornières, des profilés en T, des profilés creux et des poutres en bois lamellé-collé.</p>
+<h2 id="beam">Poutre</h2>
+<p><strong>Structure ▸ Poutre</strong> ouvre la carte <strong>Placer une poutre</strong>. Deux clics créent une poutre : les
+extrémités s'accrochent au centre des poteaux porteurs, à l'axe des murs porteurs, aux extrémités
+et à la ligne d'autres poutres et aux intersections des quadrillages, et la barre d'état indique à
+quoi. La barre des options comprend :</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Ce qu'elle fait</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Plan de placement</strong></td>
+<td>Le niveau de la vue, sur lequel la poutre est posée</td>
+</tr>
+<tr>
+<td><strong>Utilisation structurelle</strong></td>
+<td><strong><automatique></automatique></strong> la déduit des appuis : entre des poteaux ou des murs c'est une <strong>Poutre maîtresse</strong>, entre des poutres maîtresses une <strong>Solive</strong>, entre des solives une <strong>Panne</strong> ; ou bien on la choisit</td>
+</tr>
+<tr>
+<td><strong>Accrochage 3D</strong></td>
+<td>Les extrémités s'accrochent aux éléments structurels hors du plan de construction : une poutre inclinée</td>
+</tr>
+<tr>
+<td><strong>Enchaîner</strong></td>
+<td>La fin d'une poutre est le début de la suivante ; <span class="keys"><kbd class="key-escape">Esc</kbd></span> termine la chaîne</td>
+</tr>
+<tr>
+<td><strong>Étiqueter lors du placement</strong></td>
+<td>Chaque poutre est créée avec son étiquette</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Multiple ▸ Sur les quadrillages</strong> : cliquez sur les quadrillages puis <strong>Fin</strong> (ou <span class="keys"><kbd class="key-enter">Enter</kbd></span>) ;
+sur chaque quadrillage naît une poutre par travée entre les appuis qui le croisent. Un mur situé
+sur le quadrillage ne reçoit pas de poutres ; les poutres déjà présentes ne sont pas doublées.</p>
+<p>Dans une coupe ou une élévation, la poutre se dessine dans le plan de la vue, avec ses extrémités
+sur les éléments structurels cliqués ; en 3D sur le niveau sous le curseur, ou avec <strong>Accrochage
+3D</strong> sur l'élément.</p>
+<h3 id="beam-properties">Propriétés de la poutre</h3>
+<table>
+<thead>
+<tr>
+<th>Groupe</th>
+<th>Propriétés</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Contraintes</td>
+<td><strong>Niveau de référence</strong>, <strong>Plan de construction</strong>, <strong>Décalage du niveau de début</strong> et <strong>Décalage du niveau de fin</strong> (une poutre inclinée), <strong>Orientation</strong> (Normale, Horizontale), <strong>Rotation de la section</strong></td>
+</tr>
+<tr>
+<td>Position géométrique</td>
+<td><strong>Prolongement de début</strong>/<strong>Prolongement de fin</strong> (extrémités libres), <strong>Retrait de jonction de début</strong>/<strong>Retrait de jonction de fin</strong> (extrémités jointes, acier et bois), <strong>Justification YZ</strong> (Uniforme ou Indépendant), <strong>Justification Y</strong>/<strong>Justification Z</strong> avec leur <strong>Valeur de décalage</strong>, aussi pour le début et la fin</td>
+</tr>
+<tr>
+<td>Matériaux et finitions</td>
+<td><strong>Matériau structurel</strong></td>
+</tr>
+<tr>
+<td>Structure</td>
+<td><strong>Utilisation structurelle</strong>, <strong>Position du symbole de barre</strong>, <strong>Type d'attache de début</strong>/<strong>de fin</strong>, <strong>Distance d'attache de début</strong>/<strong>de fin</strong> et poteau de référence (supérieur ou inférieur) pour chaque extrémité, <strong>Connexion de début</strong>/<strong>Connexion de fin</strong> (Cadre à moment, Moment en porte-à-faux), <strong>Contre-flèche</strong>, <strong>Nombre de montants</strong>, <strong>Poutre en appui au début</strong>/<strong>à la fin</strong> sur un mur porteur, <strong>Poids maximal</strong>, <strong>Poids exact</strong>, <strong>Surface peinte</strong></td>
+</tr>
+<tr>
+<td>Cotes</td>
+<td><strong>Longueur du système</strong>, <strong>Longueur de coupe</strong>, <strong>Volume</strong>, <strong>Élévation en haut</strong> et <strong>Élévation en bas</strong> («Varie» sur une poutre inclinée)</td>
+</tr>
+<tr>
+<td>Analyse structurelle</td>
+<td><strong>Relâchement de début</strong>/<strong>Relâchement de fin</strong> (Encastré, Articulé, Moment fléchissant, Défini par l'utilisateur avec les six liaisons), <strong>Analyser comme</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Une poutre sélectionnée offre <strong>Inverser les extrémités</strong> et, pour chaque extrémité, <strong>Interdire
+la jonction</strong>.</p>
+<h3 id="beam-display">Comment elle est dessinée</h3>
+<ul>
+<li><strong>Faible</strong> : une ligne, avec le style de ligne de son utilisation (Styles par catégorie ▸
+  Ossature structurelle ▸ Poutre maîtresse, Solive, Panne…), écartée des poteaux et des poutres
+  qu'elle relie de la <strong>Distance du symbole de coupe</strong>. En coupe et en élévation les poutres sont
+  aussi des lignes, avec les symboles de moment.</li>
+<li><strong>Moyen</strong> et <strong>Élevé</strong> : le contour de la section. Dans un plan dont la <strong>Discipline</strong> est
+  «Structure», les poutres couvertes par un plancher sont en tirets ; dans un plan «Architecture»
+  elles ne sont pas visibles.</li>
+<li>En coupe, la poutre est coupée avec le motif de son matériau.</li>
+</ul>
+<h3 id="joins">Jonctions</h3>
+<p>Une poutre s'arrête à la face du poteau et du mur porteur sur lesquels elle repose (jamais à un
+mur non porteur) ; entre poutres la jonction est <strong>en T</strong> (la poutre qui passe reste entière) ou
+<strong>d'angle</strong> entre deux poutres du même type dans le même plan. Le béton devient une seule masse :
+le poteau l'emporte sur la poutre, les planchers et les murs gardent leur forme, et une poutre
+sous un plancher en béton s'arrête à sa sous-face.</p>
+<p><strong>Structure ▸ Ossature ▸ Jonctions poutre/poteau</strong> affiche une flèche à chaque extrémité jointe :
+du côté de la jonction, cette poutre est coupée ; un clic l'inverse. La barre des options filtre
+par matériau (Acier, Bois, Béton préfabriqué, Autre).</p>
+<h2 id="brace">Contreventement</h2>
+<p><strong>Structure ▸ Contreventement</strong> :</p>
+<ul>
+<li>dans une <strong>Élévation de charpente</strong> (ou dans une coupe), deux clics sur des éléments
+  structurels, par exemple le pied d'un poteau et une poutre ;</li>
+<li>en plan, avec <strong>Niveau de début</strong>, <strong>Décaler</strong>, <strong>Niveau de fin</strong>, <strong>Décaler</strong> de la barre des
+  options ;</li>
+<li>en 3D, sur les points des éléments cliqués.</li>
+</ul>
+<p>Une extrémité posée sur une poutre reste attachée à un <strong>Rapport</strong> (de 0 à 1) ou à une
+<strong>Distance</strong> le long de celle-ci, depuis le début ou la fin : si la poutre se déplace ou
+s'allonge, le contreventement la suit. <strong>Utilisation structurelle</strong> : Contreventement vertical,
+Jambe de force, Barre de treillis, Autre.</p>
+<h3 id="structural-settings">Symboles en plan et Paramètres structurels</h3>
+<p><strong>Structure ▸ Ossature ▸ Paramètres structurels</strong> règle, sur le papier :</p>
+<ul>
+<li>la <strong>Distance du symbole de coupe</strong> des contreventements, des poutres et treillis, des poteaux ;</li>
+<li>les <strong>Symboles de contreventement</strong> : <strong>Ligne parallèle</strong> (avec son décalage) ou <strong>Ligne avec
+  angle</strong>, <strong>Afficher le contreventement au-dessus</strong> et <strong>Afficher le contreventement
+  au-dessous</strong> (aussi en tirets), <strong>Symbole de jambe de force</strong> ;</li>
+<li>les <strong>Symboles de connexion</strong> des poutres et des contreventements.</li>
+</ul>
+<p>Les symboles sont visibles au niveau de détail Faible.</p>
+<h2 id="beam-system">Trame de poutres</h2>
+<p><strong>Structure ▸ Trame de poutres</strong> remplit une travée de poutres parallèles :</p>
+<ul>
+<li><strong>Trame de poutres automatique</strong> : un clic dans une travée fermée par des poutres ou des murs
+  porteurs ;</li>
+<li><strong>Esquisser la trame de poutres</strong> : le contour en mode esquisse (<strong>Créer le contour de la
+  trame</strong>) avec <strong>Choisir les appuis</strong> (le contour reste lié aux poutres et aux murs cliqués, et
+  le premier donne la direction), <strong>Ligne</strong>, <strong>Rectangle</strong>, <strong>Choisir des lignes</strong> et <strong>Direction
+  de la poutre</strong>. Une boucle intérieure est une ouverture.</li>
+</ul>
+<p><strong>Règle de disposition</strong> : <strong>Distance fixe</strong>, <strong>Nombre fixe</strong>, <strong>Espacement maximal</strong>,
+<strong>Espacement libre</strong> ; avec la première et la dernière, <strong>Justification</strong> (Début, Fin, Centre,
+Ligne de direction). <strong>Type de poutre</strong>, <strong>Élévation</strong> et <strong>Étiqueter lors du placement</strong> (une
+étiquette de la trame ou une par poutre) complètent les options.</p>
+<p>Les poutres suivent les appuis quand ils se déplacent. Une trame sélectionnée offre
+<strong>Réinitialiser le système</strong> (les poutres modifiées reviennent à la trame) et <strong>Supprimer la
+trame</strong> (la trame disparaît, les poutres restent).</p>
+<p>Les règles de disposition espacent les poutres comme <strong>Réseau</strong> espace ses copies : <strong>Nombre fixe</strong> comme <strong>Dernier</strong>, <strong>Distance fixe</strong> comme <strong>2°</strong> à partir de la <strong>Justification</strong> ; avec <strong>Espacement libre</strong> l'écart se mesure entre les faces, et une poutre d'un type plus grand écarte ses voisines. <strong>3D</strong> dans la barre des options rend le système non plan : les extrémités des poutres montent jusqu'aux supports qui définissent la pente (les poutres toujours, les murs avec <strong>Définit l'inclinaison</strong> ou <strong>Murs à inclinaison définie</strong>). <strong>Modifier le contour</strong> rouvre l'esquisse ; <strong>Direction de la poutre</strong> se dessine ou se choisit avec <strong>Choisir des lignes</strong>. Une poutre supprimée à la main reste supprimée jusqu'à <strong>Réinitialiser le système</strong>. Hors d'une travée fermée, <strong>Trame de poutres automatique</strong> ouvre l'esquisse du contour.</p>
+<p><img alt="Les quatre règles de disposition d'un système de poutres : distance fixe, nombre fixe, espacement maximal, espacement libre" src="../assets/screens/st-beam-system.webp"/></p>
+<p><img alt="La justification d'un système à distance fixe : début, fin, centre" src="../assets/screens/st-beam-system-just.webp"/></p>
+<p>Un système de poutres copié, symétrisé ou collé s'associe aux poutres et aux murs porteurs sur lesquels tombent ses bords au nouvel emplacement ; si un bord ne trouve aucun appui, la commande avertit, et <strong>Modifier le contour ▸ Choisir les appuis</strong> l'associe à nouveau. Ne le copiez qu'entre des travées de même forme et de mêmes appuis.</p>
+<p>Les poutres courbes et les murs porteurs courbes ferment aussi une travée pour un système de poutres automatique, mais la direction des poutres vient toujours d'un appui droit. Un système de poutres esquissé sur plus d'une travée est tout de même créé, avec un avertissement : les poutres et murs qui le traversent ne le divisent pas, il vaut donc mieux un système par travée.</p>
+<h2 id="truss">Treillis</h2>
+<p><strong>Structure ▸ Treillis</strong> : deux clics en plan étendent le schéma du type (Pratt, Howe, Warren,
+Warren avec montants, Fink) sur la portée. Les membrures sont des poutres, les barres de treillis
+sont des contreventements, chacune du type de son groupe (<strong>Membrures supérieures</strong>,
+<strong>Montants</strong>, <strong>Diagonales</strong>, <strong>Membrures inférieures</strong>). Les propriétés comprennent <strong>Hauteur du
+treillis</strong>, <strong>Membrure porteuse</strong>, <strong>Largeur maximale du panneau</strong>, <strong>Nombre de panneaux</strong> et la
+rotation.</p>
+<p>Un treillis sélectionné offre <strong>Attacher haut/bas</strong> (la membrure suit la face d'un toit ou d'un
+plancher porteur ; avec <span class="keys"><kbd class="key-shift">Shift</kbd></span> la membrure inférieure), <strong>Détacher haut/bas</strong>, <strong>Réinitialiser
+le treillis</strong> et <strong>Supprimer le treillis</strong> (les barres restent des poutres et des
+contreventements).</p>
+<p><strong>Modifier le profil</strong> ouvre une coupe ou une élévation parallèle au treillis (si la vue ouverte
+ne l'est pas, <strong>Atteindre la vue</strong> demande laquelle) avec les lignes des membrures en mode
+esquisse : les lignes au-dessus du milieu forment la membrure supérieure, les autres la membrure
+inférieure, et les barres d'âme les suivent. <strong>Réinitialiser le profil</strong> ramène les membrures à
+la ligne du gabarit. Dans une vue 3D, les lignes se dessinent directement dans le plan du treillis, sans changer de vue.</p>
+<p>Avec <strong>Choisir des lignes</strong>, le treillis se place le long d'une poutre, d'un mur ou d'une grille. Un clic sur une barre sélectionne tout le treillis ; <span class="keys"><kbd class="key-tab">Tab</kbd></span> passe à la barre seule. Une membrure attachée suit la face de l'hôte sur toute la portée ; si la membrure porteuse est attachée, l'autre garde la <strong>Hauteur du treillis</strong> à partir d'elle, et le profil dessiné reste et revient avec <strong>Détacher haut/bas</strong>. <strong>Justification verticale porteuse</strong>, <strong>Décalage non porteur</strong>, <strong>Orientation de l'âme</strong> (<strong>Orthogonale</strong> : les montants d'équerre avec la membrure porteuse) et <strong>Angle de rotation</strong> (le plan du treillis tourne autour de la ligne d'emplacement) modifient les barres. Une barre supprimée à la main reste supprimée jusqu'à <strong>Réinitialiser le treillis</strong> ; les barres se coupent seulement dans <strong>Paramètres structurels</strong>. Les nouvelles dispositions dessinées dans leur propre composant viendront avec l'éditeur de composants.</p>
+<p><img alt="Un treillis sélectionné en entier, puis une de ses barres avec TAB" src="../assets/screens/st-truss.webp"/></p>
+<p>Avec <strong>Les barres de treillis ont des symboles de coupe</strong> dans le type de treillis, au niveau de détail faible les montants s'arrêtent avant les membrures, à la <strong>Distance du symbole de coupe</strong> des contreventements des <strong>Paramètres structurels</strong>.</p>
+<h2 id="structural-walls-floors">Mur porteur et plancher porteur</h2>
+<p><strong>Mur porteur</strong> est l'outil Mur avec les mêmes types et la même barre des options : le mur est
+créé <strong>Porteur</strong>. Chaque mur a <strong>Structure</strong> et <strong>Utilisation structurelle</strong> (<strong>Non porteur</strong>,
+<strong>Porteur</strong>, <strong>Mur de cisaillement</strong>, <strong>Structurel combiné</strong>).</p>
+<p><strong>Plancher porteur</strong> est le sol avec <strong>Structure</strong> coché. Dans l'esquisse, <strong>Sens de portée</strong>
+dessine le sens de sa portée ; à la fin, le <strong>Symbole de sens de portée</strong> est créé au centre du
+plancher. <strong>Annotations ▸ Sens de portée</strong> le replace (avec <strong>Placement automatique</strong> au
+centre) ; sélectionné, il se fait pivoter, et <strong>Aligner perpendiculairement</strong> le rend
+perpendiculaire à un bord, à une poutre ou à un quadrillage.</p>
+<h3 id="shape-editing">Modification de la forme</h3>
+<p>Un sol sélectionné (porteur, un radier ou tout autre sol) offre le groupe <strong>Modification de la forme</strong> :</p>
+<ul>
+<li><strong>Modifier les sous-éléments</strong> : cliquez un angle ou un point, puis tapez son <strong>Élévation</strong> dans la barre des options ; <span class="keys"><kbd class="key-delete">Del</kbd></span> supprime le point.</li>
+<li><strong>Ajouter un point</strong> : un point dans le sol à l'élévation donnée ; avec <strong>Relative</strong>, elle s'ajoute à la hauteur de la surface à cet endroit.</li>
+<li><strong>Ajouter une ligne de scission</strong> : deux clics ; la surface se plie le long de la ligne.</li>
+<li><strong>Choisir les supports</strong> : cliquez une poutre sous le sol ; une ligne de scission suit la poutre, à sa face supérieure.</li>
+<li><strong>Réinitialiser la forme</strong> : supprime points et lignes ; le sol redevient plan (ou garde sa pente).</li>
+</ul>
+<p>Le dessus devient la surface triangulée passant par ces points ; toute la dalle la suit et garde son épaisseur. <strong>Élévation au sommet</strong> et <strong>Élévation à la base</strong> affichent alors <strong>Variable</strong>.</p>
+<p><img alt="Un sol porteur à la forme modifiée : un point relevé et une ligne de scission" src="../assets/screens/st-floor-shape.webp"/></p>
+<h2 id="foundations">Fondations</h2>
+<table>
+<thead>
+<tr>
+<th>Outil</th>
+<th>Fonctionnement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Semelle isolée</strong></td>
+<td>Un clic en plan ou en 3D (barre d'espace : pivoter), ou <strong>Sur les quadrillages</strong> ou <strong>Sous les poteaux</strong> puis <strong>Fin</strong>. La face supérieure est au niveau plus le <strong>Décalage de hauteur par rapport au niveau</strong> ; le poteau au-dessus s'appuie sur la semelle. <strong>Déplacer avec les quadrillages</strong> la lie aux quadrillages</td>
+</tr>
+<tr>
+<td><strong>Semelle filante</strong></td>
+<td>Un clic sur un mur porteur : la semelle court sous sa base et le suit. <strong>Porteur</strong> : <strong>Largeur</strong> et <strong>Excentricité</strong> ; <strong>Soutènement</strong> : <strong>Largeur du côté extérieur</strong> et <strong>Largeur du côté intérieur</strong>. Elle s'interrompt sous les portes et les fenêtres qui touchent la base, sauf avec <strong>Ne pas interrompre aux insertions</strong> ; aux extrémités libres elle dépasse de la <strong>Longueur par défaut du prolongement de fin</strong></td>
+</tr>
+<tr>
+<td><strong>Radier</strong></td>
+<td>Le contour en mode esquisse (<strong>Créer le contour du radier</strong>), comme un sol : il se trouve sous son niveau, abaissé de l'épaisseur de ses couches. <strong>Utilisation structurelle</strong> : Fondation ou Dalle de fondation</td>
+</tr>
+</tbody>
+</table>
+<p>Une semelle filante sélectionnée, les cercles pleins à ses extrémités l'allongent ou la raccourcissent le long du mur, avec accrochage aux références proches ; les cercles aux extrémités d'une poutre ou d'un contreventement font de même. Sur les poutres en acier, béton préfabriqué et bois, les flèches au-delà des extrémités changent <strong>Prolongement de début/fin</strong> à une extrémité libre et <strong>Retrait de jonction de début/fin</strong> à une extrémité jointe. Les semelles isolées et filantes en béton qui se touchent forment une seule masse : la semelle isolée garde sa forme et coupe la semelle filante (de deux semelles isolées, la plus ancienne coupe l'autre), et aucune ligne n'est dessinée entre elles en plan.</p>
+<p><img alt="Les contrôles d'extrémité d'une poutre en acier" src="../assets/screens/st-end-controls.webp"/></p>
+<p><img alt="Semelles isolées et semelle filante en béton unies en une seule masse" src="../assets/screens/st-foundation-join.webp"/></p>
+<h2 id="rebar-covers">Enrobage des armatures</h2>
+<p><strong>Béton armé</strong> ▸ <strong>Options d'enrobage</strong> liste les enrobages du projet, chacun avec un nom et une distance : <strong>Ajouter</strong>, <strong>Dupliquer</strong>, <strong>Supprimer</strong>. Les éléments qui utilisaient un enrobage supprimé prennent le premier. Murs porteurs, poteaux, poutres et contreventements en béton, sols porteurs, radiers, semelles isolées et filantes choisissent leur enrobage dans <strong>Propriétés</strong> : <strong>Enrobage d'armature - Face supérieure</strong>, <strong>Enrobage d'armature - Face inférieure</strong> et <strong>Enrobage d'armature - Autres faces</strong> (sur les murs <strong>Enrobage - Face extérieure</strong>, <strong>Enrobage - Face intérieure</strong> et <strong>Enrobage d'armature - Autres faces</strong>).</p>
+<p><img alt="La boîte de dialogue des paramètres d'enrobage" src="../assets/screens/st-covers.webp"/></p>
+<h2 id="views-schedules-ifc">Vues, étiquettes, nomenclatures et IFC</h2>
+<ul>
+<li><strong>Discipline</strong> d'une vue : <strong>Architecture</strong> ou <strong>Structure</strong>. La seconde masque les murs non
+  porteurs et met en tirets ce que les planchers couvrent.</li>
+<li><strong>Annotations ▸ Étiquettes de poutres</strong> : étiquettes d'ossature et élévations sur toutes les
+  poutres du plan (ou sur celles sélectionnées) en six positions, dessus et dessous, au début, au
+  milieu et à la fin ; <strong>Afficher l'élévation</strong> choisit haut, bas, les deux ou réelle.</li>
+<li>L'étiquette d'une poutre se lit le long de la poutre et se place à côté, du côté où elle ne couvre aucune autre poutre (au-dessus si les deux sont libres) ; elle se fait glisser comme toute étiquette. Dans <strong>Étiquettes de poutres ▸ Paramètres</strong>, <strong>Décalage horizontal aux extrémités</strong> rapproche du milieu les positions de début et de fin, et <strong>Décalage vertical</strong> éloigne les annotations du flanc de la poutre.</li>
+<li><strong>Nomenclature/Quantités</strong> a les catégories <strong>Ossature structurelle</strong>, <strong>Trames de poutres</strong>,
+  <strong>Treillis</strong> et <strong>Fondations structurelles</strong>, avec tous les paramètres comme champs.</li>
+<li>En <strong>IFC</strong>, les poutres maîtresses, solives et pannes sont exportées comme <code>IfcBeam</code>, les
+  contreventements et les barres comme <code>IfcMember</code>, les treillis comme <code>IfcElementAssembly</code>, les
+  semelles isolées et filantes comme <code>IfcFooting</code>, le radier comme <code>IfcSlab</code> de base ; les murs et
+  planchers porteurs portent <code>LoadBearing</code>.</li>
+</ul>
+<p><img alt="Les étiquettes de l'ossature en plan" src="../assets/screens/st-tags.webp"/></p>
+<h2 id="commands">Depuis la ligne de commande</h2>
+<table>
+<thead>
+<tr>
+<th>Commande</th>
+<th>Ce qu'elle fait</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>beam</code></td>
+<td>Des poutres par deux points, enchaînées, en arc ou sur des quadrillages</td>
+</tr>
+<tr>
+<td><code>brace</code></td>
+<td>Un contreventement entre deux points</td>
+</tr>
+<tr>
+<td><code>beamsystem</code>, <code>beamsystemedit</code></td>
+<td>Une trame automatique ou à partir d'un contour ; la réinitialiser ou la supprimer</td>
+</tr>
+<tr>
+<td><code>truss</code>, <code>trussedit</code></td>
+<td>Un treillis ; l'attacher, le détacher, le réinitialiser ou le supprimer</td>
+</tr>
+<tr>
+<td><code>pad</code>, <code>strip</code></td>
+<td>Des semelles isolées (en un point, sur les quadrillages, sous les poteaux), des semelles filantes</td>
+</tr>
+<tr>
+<td><code>spansymbol</code>, <code>spanalign</code></td>
+<td>Le symbole de sens de portée ; l'aligner</td>
+</tr>
+<tr>
+<td><code>beamjoin</code>, <code>structuralsettings</code>, <code>beamannotations</code></td>
+<td>Les jonctions, les paramètres structurels, les étiquettes de poutres</td>
+</tr>
+<tr>
+<td><code>floorshape</code></td>
+<td>La modification de la forme d'un sol : points, lignes de scission, supports, réinitialiser</td>
+</tr>
+<tr>
+<td><code>covers</code></td>
+<td>Paramètres d'enrobage</td>
+</tr>
+</tbody>
+</table>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Retour en haut de la page
+</button>
+</main>
+<footer class="md-footer">
+<nav aria-label="Pied de page" class="md-footer__inner md-grid">
+<a aria-label="Précédent: Phases et démolitions" class="md-footer__link md-footer__link--prev" href="../phases/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Précédent
+              </span>
+<div class="md-ellipsis">
+                Phases et démolitions
+              </div>
+</div>
+</a>
+<a aria-label="Suivant: Plan de site et terrain" class="md-footer__link md-footer__link--next" href="../site/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Suivant
+              </span>
+<div class="md-ellipsis">
+                Plan de site et terrain
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Copyright © 2026 BIMopen
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.footer", "navigation.tracking", "toc.follow", "content.code.copy", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+<script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+<script src="../assets/js/zoom.js"></script>
+</body>
+</html>

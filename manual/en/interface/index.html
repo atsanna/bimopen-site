@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="User manual of BIMopen, open-source BIM modelling" name="description"/>
 <meta content="BIMopen" name="author"/>
-<link href="https://atsanna.github.io/bimopen-site/manual/en/interface/" rel="canonical"/>
+<link href="https://bimopen.it/manual/en/interface/" rel="canonical"/>
 <link href="../getting-started/" rel="prev"/>
 <link href="../interface-styles/" rel="next"/>
 <link href="../assets/images/bimopen-cube.svg" rel="icon"/>
@@ -18,6 +18,13 @@
 <link href="../assets/css/theme.css" rel="stylesheet"/>
 <link href="../assets/css/theme_dark_mode.css" rel="stylesheet"/>
 <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="https://bimopen.it/manual/en/interface/" hreflang="en" rel="alternate"/>
+<link href="https://bimopen.it/manual/it/interface/" hreflang="it" rel="alternate"/>
+<link href="https://bimopen.it/manual/de/interface/" hreflang="de" rel="alternate"/>
+<link href="https://bimopen.it/manual/fr/interface/" hreflang="fr" rel="alternate"/>
+<link href="https://bimopen.it/manual/es/interface/" hreflang="es" rel="alternate"/>
+<link href="https://bimopen.it/manual/ar/interface/" hreflang="ar" rel="alternate"/>
+<link href="https://bimopen.it/manual/en/interface/" hreflang="x-default" rel="alternate"/>
 </head>
 <body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="slate" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -32,7 +39,7 @@
 </div>
 <header class="md-header md-header--shadow" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="BIMopen user manual" class="md-header__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/?lang=en" title="BIMopen user manual">
+<a aria-label="BIMopen user manual" class="md-header__button md-logo" data-md-component="logo" href="https://bimopen.it/en/" title="BIMopen user manual">
 <img alt="logo" src="../assets/images/bimopen-cube.svg"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -73,32 +80,32 @@
 <div class="md-select__inner">
 <ul class="md-select__list">
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/en/" hreflang="en">
+<a class="md-select__link" href="https://bimopen.it/manual/en/" hreflang="en">
               English
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/it/" hreflang="it">
+<a class="md-select__link" href="https://bimopen.it/manual/it/" hreflang="it">
               Italiano
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/de/" hreflang="de">
+<a class="md-select__link" href="https://bimopen.it/manual/de/" hreflang="de">
               Deutsch
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/fr/" hreflang="fr">
+<a class="md-select__link" href="https://bimopen.it/manual/fr/" hreflang="fr">
               Français
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/es/" hreflang="es">
+<a class="md-select__link" href="https://bimopen.it/manual/es/" hreflang="es">
               Español
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/ar/" hreflang="ar">
+<a class="md-select__link" href="https://bimopen.it/manual/ar/" hreflang="ar">
               العربية
             </a>
 </li>
@@ -147,7 +154,7 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="BIMopen user manual" class="md-nav__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/?lang=en" title="BIMopen user manual">
+<a aria-label="BIMopen user manual" class="md-nav__button md-logo" data-md-component="logo" href="https://bimopen.it/en/" title="BIMopen user manual">
 <img alt="logo" src="../assets/images/bimopen-cube.svg"/>
 </a>
     BIMopen user manual
@@ -193,11 +200,18 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#application-menu">
 <span class="md-ellipsis">
-      Application menu
+      File panel
     </span>
 </a>
-<nav aria-label="Application menu" class="md-nav">
+<nav aria-label="File panel" class="md-nav">
 <ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recent-files">
+<span class="md-ellipsis">
+      Recent Files
+    </span>
+</a>
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#options">
 <span class="md-ellipsis">
@@ -214,6 +228,31 @@
       Top bar and quick access tools
     </span>
 </a>
+<nav aria-label="Top bar and quick access tools" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#about-bimopen">
+<span class="md-ellipsis">
+      About BIMopen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-commands-window">
+<span class="md-ellipsis">
+      The Commands window
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#updates">
+<span class="md-ellipsis">
+      Updates
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#ribbon">
@@ -285,7 +324,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#strip">
 <span class="md-ellipsis">
-      Views and families strip
+      Views and components strip
     </span>
 </a>
 </li>
@@ -412,6 +451,14 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../cad-files/">
+<span class="md-ellipsis">
+    DWG and DXF
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../selection-and-modify/">
 <span class="md-ellipsis">
     Selecting and modifying
@@ -431,6 +478,54 @@
 <a class="md-nav__link" href="../floors-roofs-stairs/">
 <span class="md-ellipsis">
     Floors, roofs, stairs and components
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ceilings-and-columns/">
+<span class="md-ellipsis">
+    Ceilings and columns
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../openings/">
+<span class="md-ellipsis">
+    Openings
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../phases/">
+<span class="md-ellipsis">
+    Phases and demolition
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../structure/">
+<span class="md-ellipsis">
+    Structure and foundations
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../site/">
+<span class="md-ellipsis">
+    Site plan and terrain
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../design-options/">
+<span class="md-ellipsis">
+    Design options
     
   </span>
 </a>
@@ -484,7 +579,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="https://atsanna.github.io/bimopen-site/manual/en/pdf/bimopen-manual-en.pdf">
+<a class="md-nav__link" href="https://bimopen.it/manual/en/pdf/bimopen-manual-en.pdf">
 <span class="md-ellipsis">
     PDF
     
@@ -508,11 +603,18 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#application-menu">
 <span class="md-ellipsis">
-      Application menu
+      File panel
     </span>
 </a>
-<nav aria-label="Application menu" class="md-nav">
+<nav aria-label="File panel" class="md-nav">
 <ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recent-files">
+<span class="md-ellipsis">
+      Recent Files
+    </span>
+</a>
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#options">
 <span class="md-ellipsis">
@@ -529,6 +631,31 @@
       Top bar and quick access tools
     </span>
 </a>
+<nav aria-label="Top bar and quick access tools" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#about-bimopen">
+<span class="md-ellipsis">
+      About BIMopen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-commands-window">
+<span class="md-ellipsis">
+      The Commands window
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#updates">
+<span class="md-ellipsis">
+      Updates
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#ribbon">
@@ -600,7 +727,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#strip">
 <span class="md-ellipsis">
-      Views and families strip
+      Views and components strip
     </span>
 </a>
 </li>
@@ -717,7 +844,7 @@ shows them and tells how to switch.</p>
 </figure>
 <p>The window has these parts:</p>
 <ol>
-<li>the <strong>rail</strong>, on the left edge: BIMopen's mark, which opens the application menu, then
+<li>the <strong>rail</strong>, on the left edge: BIMopen's mark, which opens the File panel, then
    <strong>Home</strong>, the contextual tab <strong>Edit</strong>, the tabs <strong>Model</strong>, <strong>Structure</strong>, <strong>Reinforced
    concrete</strong>, <strong>Metal</strong>, <strong>Prefabrication</strong>, <strong>MEP</strong>, <strong>Link and import</strong>, <strong>Annotations</strong>,
    <strong>Check</strong>, <strong>Massing &amp; site</strong>, <strong>Collaborate</strong>, <strong>Views</strong> and <strong>Project</strong>, and at the bottom
@@ -730,7 +857,7 @@ shows them and tells how to switch.</p>
 <li>the <strong>drawing area</strong>, in the middle: the views, each with its view selector at the top and
    the view bar at the bottom; while a tool works, the <strong>options strip</strong> runs over it;</li>
 <li>the <strong>element panel</strong>, on the right: the properties of the selection, or of the active view;</li>
-<li>the <strong>views and families strip</strong>, under the drawing area, which you can put away (<span class="keys"><kbd class="key-f9">F9</kbd></span>);</li>
+<li>the <strong>views and components strip</strong>, under the drawing area, which you can put away (<span class="keys"><kbd class="key-f9">F9</kbd></span>);</li>
 <li>the <strong>status bar</strong>, along the bottom.</li>
 </ol>
 <p>The panels keep their width whatever they show: a long name is cut with «…» and its tooltip
@@ -741,10 +868,12 @@ compact, to leave the drawing area as much room as possible; in touch mode the b
 (see <a href="../interface-styles/#touch-mode">Interface styles</a>).</p>
 <p>In Arabic the whole window is mirrored: the rail and the tool panel are on the right, the
 element panel on the left, and the strips read from right to left.</p>
-<h2 id="application-menu">Application menu</h2>
-<p>BIMopen's mark, at the top of the rail, opens the application menu: the commands that work on
-the whole project. The <strong>Home</strong> entry of the rail shows the project with its levels, views,
-sheets and schedules, and reminds you that the file commands are in this menu.</p>
+<h2 id="application-menu">File panel</h2>
+<p>BIMopen's mark, at the top of the rail, opens the <strong>File</strong> panel: a full-window page with the
+file commands and the recent projects. In the <strong>Classic</strong> style <strong>File</strong>, left of the tabs,
+opens it; in touch mode <strong>Menu ▸ File</strong>. <strong>Back</strong> (the round button at the top) or <span class="keys"><kbd class="key-escape">Esc</kbd></span> goes
+back to the model exactly as it was.</p>
+<p>On the left:</p>
 <table>
 <thead>
 <tr>
@@ -754,44 +883,48 @@ sheets and schedules, and reminds you that the file commands are in this menu.</
 </thead>
 <tbody>
 <tr>
-<td><strong>New</strong></td>
-<td>Closes the current project and starts a new one from the default template: two levels with their plans, and the default types</td>
+<td><strong>Projects ▸ Open…</strong></td>
+<td>A page with <strong>Project…</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-o">O</kbd></span>), <strong>IFC…</strong> and <strong>IFC Options…</strong></td>
 </tr>
 <tr>
-<td><strong>Open…</strong></td>
-<td>Opens a <code>.bimopen</code> project, or opens an <code>.ifc</code> file as a new project, chosen in a file dialog. In the browser, drag the file into the page instead</td>
+<td><strong>Projects ▸ New…</strong></td>
+<td>Opens <strong>New project</strong>, with the template file to start from</td>
 </tr>
 <tr>
-<td><strong>Sample project</strong></td>
-<td>Opens the sample house</td>
+<td><strong>Components ▸ Open…, New…</strong></td>
+<td>Greyed out: components are not available yet</td>
+</tr>
+<tr>
+<td><strong>Recent Files</strong></td>
+<td>The panel's start page, described below</td>
 </tr>
 <tr>
 <td><strong>Save</strong> <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span></td>
-<td>Saves the project in its file; a project never saved asks for a name, like <strong>Save As…</strong></td>
+<td>Saves the project in its file; a project never saved asks for a name</td>
 </tr>
 <tr>
-<td><strong>Save As…</strong></td>
-<td>Saves the project in a new <code>.bimopen</code> file and goes on working on that file</td>
+<td><strong>Save As</strong></td>
+<td>A page with <strong>Project…</strong>, <strong>Template…</strong> and <strong>Options…</strong> (the save options)</td>
 </tr>
 <tr>
-<td><strong>Print…</strong> <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-p">P</kbd></span></td>
-<td>Prints sheets to PDF</td>
+<td><strong>Print</strong></td>
+<td>A page with <strong>Print…</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-p">P</kbd></span>), <strong>Print Preview</strong> and <strong>Print Setup…</strong></td>
 </tr>
 <tr>
-<td><strong>Export ▸ Export IFC4…</strong></td>
-<td>Writes the model as an IFC4 file</td>
-</tr>
-<tr>
-<td><strong>Export ▸ Export plan SVG…</strong></td>
-<td>Writes the active plan as an SVG drawing</td>
-</tr>
-<tr>
-<td><strong>Export ▸ Export view PNG…</strong></td>
-<td>Writes the active view as a PNG image</td>
+<td><strong>Export</strong></td>
+<td>A page with <strong>Image…</strong>, <strong>IFC…</strong>, <strong>Export plan SVG…</strong>, <strong>IFC Options…</strong> and <strong>Schedule…</strong></td>
 </tr>
 <tr>
 <td><strong>Open Documents</strong></td>
-<td>Lists the open view windows; click one to bring it to the front</td>
+<td>The open view windows; a click brings the chosen one to the front</td>
+</tr>
+<tr>
+<td><strong>Close</strong></td>
+<td>Closes the project and goes back to the start page</td>
+</tr>
+<tr>
+<td><strong>What's new in this version</strong>, <strong>Manual (F1)</strong>, <strong>Commands and shortcuts</strong>, <strong>BIMopen website</strong></td>
+<td>The links, at the bottom</td>
 </tr>
 <tr>
 <td><strong>Options</strong></td>
@@ -803,20 +936,43 @@ sheets and schedules, and reminds you that the file commands are in this menu.</
 </tr>
 </tbody>
 </table>
+<p>The commands of the open project (from <strong>Save</strong> to <strong>Close</strong>) are there only while a project is
+open. Each page gives every item a line of explanation.</p>
 <figure>
-<img alt="The application menu with Export open: Images and animations, IFC…, Export plan SVG…, Options and Reports" src="../assets/screens/if-export-menu.webp"/>
-<figcaption>The application menu and its Export submenu</figcaption>
+<img alt="The File panel on the Export page: Image…, IFC…, Export plan SVG…, IFC Options… and Schedule…, each with its explanation" src="../assets/screens/if-export-menu.webp"/>
+<figcaption>The File panel, Export page</figcaption>
 </figure>
-<p><strong>New</strong>, <strong>Open…</strong> and <strong>Sample project</strong> replace the current project without asking: save it
-first if you want to keep it.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Unsaved changes are lost when you choose <strong>New</strong>, <strong>Open…</strong> or <strong>Sample project</strong>. The top
-bar says <strong>Unsaved changes</strong> while there are changes to save.</p>
-</div>
+<h3 id="recent-files">Recent Files</h3>
+<p>The <strong>Recent Files</strong> page has three bands:</p>
+<ul>
+<li><strong>Projects</strong>: the recent projects as square thumbnails, with the name and the date modified;
+  a label tells which view the thumbnail comes from (<strong>3D</strong>, <strong>Plan</strong>, <strong>Sheet</strong>…). On hover
+  come the pin, which keeps the project at the top of the list, the <strong>⋯</strong> menu (<strong>Open</strong>,
+  <strong>Open as copy</strong>, <strong>Open folder</strong>, <strong>Copy path</strong>, <strong>Pin</strong>, <strong>Remove from list</strong>; also with the
+  right button) and the <strong>✕</strong>, which takes the project off the list: for a few seconds
+  <strong>Undo</strong> puts it back where it was. The file on disk is never touched. A moved or deleted
+  file shows grey, with <strong>File not found</strong>, <strong>Locate…</strong> to point to its new place and
+  <strong>Remove</strong>; <strong>Remove missing</strong> takes them all off, <strong>Clear list</strong> takes off those not pinned.</li>
+<li><strong>Project templates</strong>: <strong>New project</strong>, the default template, the imperial template, the
+  templates found in the files folder, the sample project and <strong>Browse…</strong> for another template
+  file.</li>
+<li><strong>Components</strong>: the recent components (<code>.bco</code>, <code>.bct</code>), with their thumbnail and the same commands as projects. In the web version, files you open are kept in the browser (up to 1.5 MB each) and open again from here.</li>
+</ul>
+<p>At the top, the search filters by name and folder, and two buttons choose between
+<strong>Thumbnails</strong> and <strong>List</strong>; the list also shows the folder, the date and the size, and sorts by
+name or by date. The choice is remembered.</p>
+<p>Every save stores a thumbnail in the file: the default 3D view, or the view chosen in <strong>File
+Save Options ▸ Preview</strong>. A file that cannot be read shows
+a neutral icon.</p>
+<p>At startup without a file the panel is the start page, without <strong>Back</strong>; at the first start,
+with the list empty, it offers <strong>New project</strong>, <strong>Open…</strong> and <strong>Sample project</strong>. In touch mode
+the thumbnails are bigger, the actions always show and a long press opens the <strong>⋯</strong> menu. In
+the browser there is no <strong>Open folder</strong>.</p>
+<p><strong>New…</strong>, <strong>Open…</strong>, a recent project and <strong>Sample project</strong> take the place of the open
+project; if it has unsaved changes, they first ask whether to save them.</p>
 <h3 id="options">Options</h3>
 <p>The gear at the right end of the top bar, <strong>Settings</strong> at the bottom of the rail, or
-<strong>Application menu ▸ Options</strong>, opens <strong>Options</strong>. It has, among others, these settings:</p>
+<strong>File ▸ Options</strong>, opens <strong>Options</strong>. It has, among others, these settings:</p>
 <table>
 <thead>
 <tr>
@@ -910,7 +1066,7 @@ bar says <strong>Unsaved changes</strong> while there are changes to save.</p>
 </tr>
 <tr>
 <td><strong>?</strong></td>
-<td><strong>Help</strong> <span class="keys"><kbd class="key-f1">F1</kbd></span>, <strong>Commands</strong> (every command of the command line, as typing <code>help</code>) and <strong>About</strong> (the version, the licence and the credits)</td>
+<td><strong>Help</strong> <span class="keys"><kbd class="key-f1">F1</kbd></span>, <strong>Commands</strong> (every command, in a window: <a href="#the-commands-window">The Commands window</a>) and <strong>About</strong> (<a href="#about-bimopen">About BIMopen</a>)</td>
 </tr>
 <tr>
 <td>The gear</td>
@@ -934,6 +1090,36 @@ Hidden</strong>, <strong>Switch View</strong>): tick one to show it, untick it t
 <p><strong>? ▸ Help</strong> (<span class="keys"><kbd class="key-f1">F1</kbd></span>) opens this manual, in the language of the interface, in the browser. <span class="keys"><kbd class="key-f1">F1</kbd></span>
 opens the page of what you are doing: the open dialog, the tile under the mouse (its tip ends
 with <strong>Press F1 for more information</strong>) or the active tool.</p>
+<h3 id="about-bimopen">About BIMopen</h3>
+<p><strong>? ▸ About</strong> shows the program's mark and name, the version with the date and the commit it was
+built from (read when the program is built: a build in development says so), and the platform
+(the system and whether desktop or web). The note under it recalls that this is a test version.
+The rows open in the browser the <strong>Website</strong>, the <strong>User manual</strong> and <strong>What's new</strong> (the news
+of every version); <strong>Third-party licences</strong> opens in place the list of the works the program
+contains (typefaces, icons, the textures of the materials, the sky, the Moon and the stars),
+with their licences; the full texts are in the NOTICE file. <strong>Copy system information</strong> puts
+in the clipboard the version, the system, the graphics card and the backend in use: paste it
+when you report a problem.</p>
+<h3 id="the-commands-window">The Commands window</h3>
+<p><strong>? ▸ Commands</strong>, or <code>help</code> typed at the command line, opens the list of every command. On the
+left the ribbon's tabs, in their order, then <strong>Modify</strong> and <strong>Command line only</strong>; in the middle,
+for each command, its name in the language of the interface, the name to type, its synonyms and
+its shortcut; on the right the description, the usage and an example of the command chosen.
+The search finds a command by any of these, in every tab (<code>help door</code> opens the window with the
+door already found). A command not available yet is greyed; <strong>Available only</strong> hides them.
+A double-click, <span class="keys"><kbd class="key-enter">Enter</kbd></span> or <strong>Start</strong> starts the command as its button does; a command of the
+command line alone is written in the command line, to complete. <strong>Copy</strong> puts the command with
+its example in the clipboard. The arrows go through the list, <span class="keys"><kbd class="key-escape">Esc</kbd></span> closes it. In touch mode
+the window opens from <strong>Commands ▸ List of commands</strong> (the command field with nothing typed), with rows the size of a finger.</p>
+<h3 id="updates">Updates</h3>
+<p>At startup, at most once a day, BIMopen reads from the website the file of the latest version (nothing else is sent). When a newer version is out, the <strong>bell</strong> in the top bar gets an orange dot (on the right of the title bar in the Classic style, in the top bar in touch mode). A click opens its panel: the version and its date, its main news, <strong>All the news</strong>, and <strong>Download and update</strong>, <strong>Later</strong> (no dot until the next start) and <strong>Skip this version</strong> (no dot until a newer one).</p>
+<p><strong>Download and update</strong> downloads the program with a progress bar (<strong>Continue in the background</strong> hides the panel, <strong>Cancel</strong> stops). Before anything is replaced, BIMopen checks the file: its SHA-256 checksum must match the version's, and the version's file must carry BIMopen's digital signature. A package that is not signed, signed with another key or altered is discarded and nothing is installed. Then <strong>Restart and update</strong> asks whether to save the changes, puts the new program in place of the old one and starts it on the same project and view.</p>
+<ul>
+<li><strong>Windows</strong>: the running program is renamed and replaced at the restart. Until the executable is signed, Windows may warn at the first start: <strong>More info ▸ Run anyway</strong>.</li>
+<li><strong>Android</strong>: <strong>Download and install</strong> downloads the package and the system installer asks to confirm (the first time it asks for the <strong>Install unknown apps</strong> permission).</li>
+<li><strong>Web</strong>: <strong>Reload</strong> loads the new version.</li>
+</ul>
+<p>Without a connection, with an invalid signature or without enough disk space the panel says so and BIMopen keeps working as before. <strong>Options ▸ General ▸ Check for updates</strong> turns the check off; <strong>Check now</strong> checks at once.</p>
 <h2 id="ribbon">Rail and tool panel</h2>
 <p>The rail lists the tabs of the ribbon of the <strong>Classic</strong> style, with the same names and in the
 same order. Click a tab: the tool panel shows its groups as framed blocks, each with its name at
@@ -1142,12 +1328,12 @@ at the bottom of the rail, opens <strong>Options</strong>.</p>
 <tr>
 <td></td>
 <td><strong>Load from library</strong></td>
-<td><strong>Load Family</strong>, <em>Load as group</em>, <strong>Insert from File ▾</strong></td>
+<td><strong>Load component</strong>, <em>Load as group</em>, <strong>Insert from File ▾</strong></td>
 </tr>
 <tr>
 <td><strong>Annotations</strong></td>
 <td><strong>Dimension</strong></td>
-<td><strong>Aligned</strong>, <strong>Linear</strong>, <strong>Angular</strong>, <strong>Radial</strong>, <em>Diameter</em>, <strong>Arc length</strong>, <strong>Spot dimension ▾</strong></td>
+<td><strong>Aligned</strong>, <strong>Linear</strong>, <strong>Angular</strong>, <strong>Radial</strong>, <strong>Diameter</strong>, <strong>Arc length</strong>, <strong>Spot dimension ▾</strong></td>
 </tr>
 <tr>
 <td></td>
@@ -1252,7 +1438,7 @@ at the bottom of the rail, opens <strong>Options</strong>.</p>
 <tr>
 <td></td>
 <td><strong>Project Index</strong></td>
-<td>The tree of the project's views, schedules, sheets and families</td>
+<td>The tree of the project's views, schedules, sheets and components</td>
 </tr>
 <tr>
 <td><strong>Project</strong></td>
@@ -1389,7 +1575,7 @@ their tip says to open an area plan first.</p>
 </tr>
 <tr>
 <td><strong>Windows</strong></td>
-<td><strong>Switch View</strong>, <strong>Replicate</strong>, <strong>Cascade</strong>, <strong>Tile</strong>, <strong>Maximize</strong>, <strong>Close others</strong>, <strong>Panels</strong></td>
+<td><strong>Switch View</strong>, <strong>Replicate</strong>, <strong>Cascade</strong>, <strong>Tile</strong>, <strong>Maximize</strong>, <strong>Close others</strong>, <strong>Panels</strong>, <strong>Drawing area theme</strong></td>
 </tr>
 </tbody>
 </table>
@@ -1538,11 +1724,11 @@ the settings of the tool. They apply to the next elements you place.</p>
 </tr>
 <tr>
 <td><strong>Door</strong>, <strong>Window</strong></td>
-<td><strong>Load Family</strong>; <strong>Model on site</strong> (greyed); <strong>Tag on Placement</strong> with <strong>Horizontal</strong> or <strong>Vertical</strong>, <strong>Leader</strong> and its length; <strong>Loaded tags…</strong> (greyed)</td>
+<td><strong>Model on site</strong> (greyed); <strong>Tag on Placement</strong> with <strong>Horizontal</strong> or <strong>Vertical</strong>, <strong>Leader</strong> and its length; <strong>Loaded tags…</strong> (greyed)</td>
 </tr>
 <tr>
 <td><strong>Object</strong></td>
-<td><strong>Load Family</strong>; <strong>Model on site</strong> (greyed); <strong>Rotate after inserting</strong>: the object placed stays selected and <strong>Rotate</strong> starts</td>
+<td><strong>Model on site</strong> (greyed); <strong>Rotate after inserting</strong>: the object placed stays selected and <strong>Rotate</strong> starts</td>
 </tr>
 <tr>
 <td><strong>Roof</strong></td>
@@ -1652,7 +1838,7 @@ keys move, <span class="keys"><kbd class="key-enter">Enter</kbd></span> picks, <
 a value with its unit, for example <code>2.7m</code>.</p>
 <h2 id="project-browser">Project Index</h2>
 <p><strong>Views</strong> on the rail shows, under its tools, the <strong>Project Index</strong>: the views, schedules, sheets
-and families of the project in a tree. Click <strong>⊟</strong> or <strong>⊞</strong> to fold or unfold a branch.</p>
+and components of the project in a tree. Click <strong>⊟</strong> or <strong>⊞</strong> to fold or unfold a branch.</p>
 <figure>
 <img alt="The Project Index: the views by kind, floor plans, area plans, sections and elevations, with the active view in bold" src="../assets/screens/if-project-index.webp"/>
 <figcaption>The Project Index</figcaption>
@@ -1698,8 +1884,8 @@ and families of the project in a tree. Click <strong>⊟</strong> or <strong>⊞
 <td>The sheets, as number - name</td>
 </tr>
 <tr>
-<td><strong>Families</strong></td>
-<td>The types of the project, by category: walls, doors, windows, floors, roofs, components and the others</td>
+<td><strong>Components</strong></td>
+<td>The types of the project, by category: walls, doors, windows, floors, roofs, <strong>Furniture</strong>, <strong>Plumbing Fixtures</strong> and the others; under a category of components, each component, then its types</td>
 </tr>
 </tbody>
 </table>
@@ -1718,7 +1904,7 @@ and no <strong>Duplicate View</strong>. <strong>{3D}</strong> cannot be deleted 
 <p>With a schedule of the project, a click selects it, a double-click opens it, and the right-click
 menu has <strong>Open</strong>, <strong>Schedule Properties…</strong> and <strong>Delete</strong>. A predefined schedule opens with a
 click.</p>
-<p>With a type, under <strong>Families</strong>, a double-click opens its type parameters; the right-click menu
+<p>With a type, under <strong>Components</strong>, a double-click opens its type parameters; the right-click menu
 has <strong>Type Parameters</strong>, <strong>Duplicate…</strong>, <strong>Create Instance</strong> (starts the tool that places it,
 with that type) and <strong>Delete</strong>.</p>
 <p>After a click in the Project Index, the keyboard moves in it: <span class="keys"><kbd class="key-arrow-up">Up</kbd></span> and <span class="keys"><kbd class="key-arrow-down">Down</kbd></span> go from row to
@@ -1726,7 +1912,7 @@ row (the view's properties show in the element panel), <span class="keys"><kbd c
 it or goes up to the branch the row is in, <span class="keys"><kbd class="key-enter">Enter</kbd></span> opens the view.</p>
 <p>Views go on sheets from here too. Drag a plan, section, elevation, free 2D view, legend, saved 3D view or schedule onto the open sheet: its viewport follows the cursor and stays where you drop it. Or drop it on a sheet's name in the tree: the sheet opens and the viewport follows the cursor until you click. While you drag, the tree scrolls when the cursor nears its edge. The right-click menu of a sheet has <strong>Add View…</strong>. The views on a sheet are listed under it; the right-click menu of one has <strong>Remove from Sheet</strong>, and the menu of <strong>Sheets (all)</strong> has <strong>New Sheet…</strong>. In a 3D view the right-click menu also has <strong>Zoom to 3D Extents</strong>: the whole model, the elements hidden in the view too. A view already on a sheet is refused, with the reason on the command line; legends and schedules can go on several sheets. A saved 3D view is drawn on the sheet with the edges seen from its camera.</p>
 <p>The right-click menu of a plan, section or free 2D view has <strong>Find Referring Views</strong>: the views that show its symbol and the sheets it is on; <strong>Go to View</strong> opens the one chosen.</p>
-<h2 id="strip">Views and families strip</h2>
+<h2 id="strip">Views and components strip</h2>
 <p>The strip under the drawing area has three modes, chosen with the buttons on its left:</p>
 <ul>
 <li><strong>Views</strong>: live thumbnails of the views, grouped by <strong>All</strong>, <strong>Open (n)</strong>, <strong>Plans</strong>,
@@ -1735,7 +1921,7 @@ it or goes up to the branch the row is in, <span class="keys"><kbd class="key-en
   the view's menu, with <strong>Open in the active window</strong>; drag it onto the open sheet, or onto a
   sheet's thumbnail, to place it there. <strong>+</strong> makes a new view: <strong>Default 3D View</strong>, <strong>Save
   View</strong>, <strong>Duplicate</strong>, <strong>Sheet</strong> or <strong>Schedule/Quantities</strong>.</li>
-<li><strong>Families</strong>: one preview for each type, grouped by family category. Click a preview to
+<li><strong>Components</strong>: one preview for each type, grouped by category. Click a preview to
   place that type; drag it into a plan to insert it where you let go. A door or a window dropped
   near a wall goes into it, along it.</li>
 <li><strong>Commands</strong>: the history of the command line. Click a line you typed to run it again.</li>
@@ -1747,8 +1933,8 @@ it or goes up to the branch the row is in, <span class="keys"><kbd class="key-en
 <p>On the right, <strong>Show</strong> filters the thumbnails by discipline and phase, the search box by name, and
 three buttons set the size: <strong>Previews</strong>, <strong>Compact</strong> and <strong>Hide</strong>.</p>
 <figure>
-<img alt="The strip in Families mode: a preview of each type, the walls first, ready to be clicked or dragged into a plan" src="../assets/screens/if-strip-families.webp"/>
-<figcaption>The strip in Families mode</figcaption>
+<img alt="The strip in Components mode: a preview of each type, the walls first, ready to be clicked or dragged into a plan" src="../assets/screens/if-strip-families.webp"/>
+<figcaption>The strip in Components mode</figcaption>
 </figure>
 <p>When the groups do not fit beside the modes, they fold into one menu, as <strong>All ▾</strong>. To give
 the room of the strip to the drawing area, put it away with <strong>Views strip</strong>, the last button of
@@ -1815,6 +2001,10 @@ name: its menu lists the views and arranges the windows, and <strong>+</strong> 
 <tr>
 <td><strong>Panels</strong></td>
 <td>Shows or hides the <strong>Properties</strong>, the <strong>Project Index</strong>, the <strong>Command line</strong>, the <strong>Navigation bar</strong>, <strong>Keyboard Shortcuts</strong> and <strong>Recent Files</strong></td>
+</tr>
+<tr>
+<td><strong>Drawing area theme</strong></td>
+<td>Each click switches the drawing area background between black and white; the rest of the interface does not change. It is the same choice as <strong>Invert background color</strong> in <strong>Options</strong>, and it stays for the next sessions</td>
 </tr>
 </tbody>
 </table>
@@ -1964,6 +2154,7 @@ let you drag it: drag an arrow to move along it, the centre to move freely in pl
 shows as you drag, and the release moves as <strong>Move</strong> does.</p>
 <p>In 3D, the wheel zooms keeping the model point under the cursor in place, and the orbit turns about the centre of the selection, or about the point the view looks at when nothing is selected.</p>
 <p>The <strong>Orientation cube</strong>, in the top corner of the 3D view, turns with the model. Its edges and corners are bevelled and every part is a target of its own: the six faces (<strong>TOP</strong>, <strong>BOTTOM</strong>, <strong>FRONT</strong>, <strong>BACK</strong>, <strong>RIGHT</strong>, <strong>LEFT</strong>, their names written on them in perspective and turning with them) look straight at that side; the twelve edge strips look from between two sides; the eight corner triangles from between three (an isometric view). The part under the pointer is tinted with the highlight colour, the one the view looks from now stays highlighted; a click turns the view there in a brief transition. Drag the cube to orbit.</p>
+<p>The cube is light grey, its faces shaded by a soft light, in both the light and the dark theme; a compass ring at its foot carries the initials of the cardinal points (<strong>N</strong> towards project north).</p>
 <figure>
 <img alt="The orientation cube in the corner of the 3D view, with the curved arrows, the starting view button, the menu and the orientation written under it" src="../assets/screens/if-cube.webp"/>
 <figcaption>The orientation cube</figcaption>
@@ -1998,7 +2189,7 @@ window, the same in both styles:</p>
 <li><strong>Object snaps</strong>: a box for <strong>Endpoint</strong>, <strong>Midpoint</strong>, <strong>Nearest</strong>, <strong>Work Plane Grid</strong>,
   <strong>Quadrant</strong>, <strong>Intersection</strong>, <strong>Center</strong>, <strong>Perpendicular</strong>, <strong>Tangent</strong> and <strong>Remote Objects</strong>,
   with their two letters; <strong>Check all</strong> and <strong>Check none</strong>. With <strong>Nearest</strong> off, the line under the
-  cursor still offers its ends and its midpoint, even far away. <strong>Remote Objects</strong> (off at first) lines the point
+  cursor still offers its ends and its midpoint, even far away. <strong>Remote Objects</strong> (on at first) lines the point
   up, across or along, with the ends of lines far away, with a dashed guide.</li>
 <li><strong>Temporary overrides</strong>: the list of the two letters that hold for one point.</li>
 <li><strong>Restore Defaults</strong> puts everything back as it was at first.</li>

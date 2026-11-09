@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Manual de usuario de BIMopen, modelado BIM de código abierto" name="description"/>
 <meta content="BIMopen" name="author"/>
-<link href="https://atsanna.github.io/bimopen-site/manual/es/documentation/" rel="canonical"/>
+<link href="https://bimopen.it/manual/es/documentation/" rel="canonical"/>
 <link href="../annotation/" rel="prev"/>
 <link href="../command-line-and-mcp/" rel="next"/>
 <link href="../assets/images/bimopen-cube.svg" rel="icon"/>
@@ -18,6 +18,13 @@
 <link href="../assets/css/theme.css" rel="stylesheet"/>
 <link href="../assets/css/theme_dark_mode.css" rel="stylesheet"/>
 <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="https://bimopen.it/manual/en/documentation/" hreflang="en" rel="alternate"/>
+<link href="https://bimopen.it/manual/it/documentation/" hreflang="it" rel="alternate"/>
+<link href="https://bimopen.it/manual/de/documentation/" hreflang="de" rel="alternate"/>
+<link href="https://bimopen.it/manual/fr/documentation/" hreflang="fr" rel="alternate"/>
+<link href="https://bimopen.it/manual/es/documentation/" hreflang="es" rel="alternate"/>
+<link href="https://bimopen.it/manual/ar/documentation/" hreflang="ar" rel="alternate"/>
+<link href="https://bimopen.it/manual/en/documentation/" hreflang="x-default" rel="alternate"/>
 </head>
 <body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="slate" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -32,7 +39,7 @@
 </div>
 <header class="md-header md-header--shadow" data-md-component="header">
 <nav aria-label="Cabecera" class="md-header__inner md-grid">
-<a aria-label="Manual de usuario de BIMopen" class="md-header__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/?lang=es" title="Manual de usuario de BIMopen">
+<a aria-label="Manual de usuario de BIMopen" class="md-header__button md-logo" data-md-component="logo" href="https://bimopen.it/es/" title="Manual de usuario de BIMopen">
 <img alt="logo" src="../assets/images/bimopen-cube.svg"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -73,32 +80,32 @@
 <div class="md-select__inner">
 <ul class="md-select__list">
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/en/" hreflang="en">
+<a class="md-select__link" href="https://bimopen.it/manual/en/" hreflang="en">
               English
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/it/" hreflang="it">
+<a class="md-select__link" href="https://bimopen.it/manual/it/" hreflang="it">
               Italiano
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/de/" hreflang="de">
+<a class="md-select__link" href="https://bimopen.it/manual/de/" hreflang="de">
               Deutsch
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/fr/" hreflang="fr">
+<a class="md-select__link" href="https://bimopen.it/manual/fr/" hreflang="fr">
               Français
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/es/" hreflang="es">
+<a class="md-select__link" href="https://bimopen.it/manual/es/" hreflang="es">
               Español
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/ar/" hreflang="ar">
+<a class="md-select__link" href="https://bimopen.it/manual/ar/" hreflang="ar">
               العربية
             </a>
 </li>
@@ -147,7 +154,7 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navegación" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="Manual de usuario de BIMopen" class="md-nav__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/?lang=es" title="Manual de usuario de BIMopen">
+<a aria-label="Manual de usuario de BIMopen" class="md-nav__button md-logo" data-md-component="logo" href="https://bimopen.it/es/" title="Manual de usuario de BIMopen">
 <img alt="logo" src="../assets/images/bimopen-cube.svg"/>
 </a>
     Manual de usuario de BIMopen
@@ -202,6 +209,14 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../cad-files/">
+<span class="md-ellipsis">
+    DWG y DXF
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../selection-and-modify/">
 <span class="md-ellipsis">
     Selección y modificación
@@ -221,6 +236,54 @@
 <a class="md-nav__link" href="../floors-roofs-stairs/">
 <span class="md-ellipsis">
     Suelos, cubiertas, escaleras y componentes
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ceilings-and-columns/">
+<span class="md-ellipsis">
+    Falsos techos y columnas
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../openings/">
+<span class="md-ellipsis">
+    Huecos
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../phases/">
+<span class="md-ellipsis">
+    Fases y demoliciones
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../structure/">
+<span class="md-ellipsis">
+    Estructura y cimentaciones
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../site/">
+<span class="md-ellipsis">
+    Emplazamiento y terreno
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../design-options/">
+<span class="md-ellipsis">
+    Alternativas de diseño
     
   </span>
 </a>
@@ -290,6 +353,17 @@
       Vistas en los planos
     </span>
 </a>
+<nav aria-label="Vistas en los planos" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#text-lines-and-dimensions-on-a-sheet">
+<span class="md-ellipsis">
+      Texto, líneas y cotas en un plano
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#guide-grids">
@@ -348,6 +422,13 @@
 <a class="md-nav__link" href="#schedules-on-sheets">
 <span class="md-ellipsis">
       Tablas en los planos
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#graphic-schedule-by-type">
+<span class="md-ellipsis">
+      Tabla gráfica por tipo
     </span>
 </a>
 </li>
@@ -449,7 +530,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="https://atsanna.github.io/bimopen-site/manual/es/pdf/bimopen-manual-es.pdf">
+<a class="md-nav__link" href="https://bimopen.it/manual/es/pdf/bimopen-manual-es.pdf">
 <span class="md-ellipsis">
     PDF
     
@@ -498,6 +579,17 @@
       Vistas en los planos
     </span>
 </a>
+<nav aria-label="Vistas en los planos" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#text-lines-and-dimensions-on-a-sheet">
+<span class="md-ellipsis">
+      Texto, líneas y cotas en un plano
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#guide-grids">
@@ -556,6 +648,13 @@
 <a class="md-nav__link" href="#schedules-on-sheets">
 <span class="md-ellipsis">
       Tablas en los planos
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#graphic-schedule-by-type">
+<span class="md-ellipsis">
+      Tabla gráfica por tipo
     </span>
 </a>
 </li>
@@ -703,6 +802,16 @@ planificación, en varios.</p>
 vista donde está en el plano, con el resto del plano en medios tonos; <strong>Desactivar vista</strong> vuelve
 al plano. Una vista girada en su plano no se puede activar: quítele antes la rotación. Un doble
 clic en una vista la abre en su propia ventana.</p>
+<p>Cada vista en un plano tiene un <strong>Número de detalle</strong>: el primer número libre de ese plano
+(1, 2, 3…), en un círculo a la izquierda de su título. Se cambia en las <strong>Propiedades</strong> de la
+ventana; un número ya usado en el mismo plano se rechaza. Las <strong>Propiedades</strong> de la vista
+muestran, de solo lectura, dónde está colocada: <strong>Plano de referencia</strong> y <strong>Detalle de
+referencia</strong>.</p>
+<h4 id="text-lines-and-dimensions-on-a-sheet">Texto, líneas y cotas en un plano</h4>
+<p>Con un plano abierto, <strong>Texto</strong>, <strong>Línea de detalle</strong> y las cotas funcionan en el propio plano: lo
+que se dibuja allí pertenece al plano, conserva su tamaño de impresión y se imprime con él. Las
+cotas miden las líneas dibujadas en el plano. Las demás herramientas siguen abriendo <strong>Ir a
+vista</strong>.</p>
 <h3 id="guide-grids">Rejillas de guía</h3>
 <p><strong>Documentar ➤ Planos ➤ Rejilla de guía</strong> pide un nombre y cubre el plano con una
 rejilla. Elíjala para arrastrar sus esquinas o fijar su <strong>Espaciado de guía</strong>; el parámetro
@@ -793,6 +902,12 @@ Sus fichas:</p>
 <ul>
 <li>Una celda modifica el elemento, o su tipo para un parámetro de tipo; cada cambio es un paso de
   deshacer.</li>
+<li>Un parámetro de tipo (la anchura de una puerta, la profundidad de un componente) cambia todos
+  los ejemplares del tipo: <strong>Editar tipo</strong> indica cuántos y pregunta antes.</li>
+<li>Las tablas predefinidas del Índice del proyecto (puertas, suelos, habitaciones, escaleras,
+  paneles de muro cortina…) funcionan igual: el tipo y el nivel se eligen de una lista, los valores
+  que calcula el modelo (áreas, volúmenes, el muro anfitrión) son de solo lectura, y en las tablas
+  de paneles y montantes se elige el tipo de cada panel o montante interior.</li>
 <li>Una fila selecciona sus elementos en todas las vistas. <strong>Resaltar en modelo</strong>, en la tarjeta
   <strong>Modificar | Tabla de planificación/cantidades</strong>, abre <strong>Mostrar elementos en vista</strong>, que trae
   al frente una planta encuadrada en ellos; <strong>Mostrar</strong> pasa a la vista siguiente.</li>
@@ -812,6 +927,14 @@ misma tabla puede estar en varios planos.</p>
 <img alt="Una tabla de puertas agrupada por nivel en un plano A3, seleccionada: los triángulos sobre las columnas y la Z del borde derecho que la divide" src="../assets/screens/do-schedule-sheet.webp"/>
 <figcaption>Una tabla en un plano, con sus controles</figcaption>
 </figure>
+<h3 id="graphic-schedule-by-type">Tabla gráfica por tipo</h3>
+<p>En <strong>Vista › Crear › Tablas › Tabla de planificación/cantidades</strong> elija <strong>Tabla gráfica por tipo</strong> y la categoría: <em>Puertas</em>, <em>Ventanas</em>, <em>Muros cortina</em> o <em>Carpinterías</em> (las tres). La tabla tiene una entrada por tipo, con el alzado del tipo dibujado y acotado desde el modelo y sus datos debajo; los muros cortina tienen una entrada por tipo y tamaño. Con <strong>Numerar las marcas de tipo que faltan</strong> los tipos sin marca reciben F1, F2, P1, FC1…, escritas en el tipo.</p>
+<figure>
+<img alt="La tabla gráfica de las ventanas de la casa de ejemplo: para cada tipo su dibujo acotado, su cantidad y sus datos" src="../assets/screens/gs-graphic-schedule.webp"/>
+<figcaption>Tabla gráfica por tipo</figcaption>
+</figure>
+<p>En <strong>Propiedades de tabla</strong> la pestaña <strong>Composición</strong> elige entre <em>Tabla</em>, <em>En columnas</em> (una columna por tipo, cantidad por nivel y total), <em>En fichas</em> (fichas lado a lado con el color del área, la cantidad y una fila Notas) y <em>Alzados por nivel</em> (los tipos de cada nivel sobre la línea de tierra, con etiqueta y cotas entre tipos). <strong>Dibujo del tipo</strong> fija vista frontal o posterior, escala, nivel de detalle, cotas de anchura, altura y alféizar, símbolo de apertura y línea de tierra. <strong>Áreas y colores</strong> divide la tabla en áreas con una condición y un color; <strong>Etiqueta de carpintería coloreada en planta</strong> usa los mismos colores en las plantas. <em>Transmitancia U</em> y <em>Clase acústica</em> son campos del tipo que se rellenan. Un doble clic en una entrada abre las propiedades del tipo. En el plano la tabla se divide como las demás.</p>
+<p><strong>Tabla gráfica por elemento</strong> tiene una columna por puerta o ventana (o una fila, con tabla <em>Normal</em>): código de clasificación calculado (<em>Ventana - 003</em>), locales a ambos lados, medidas, orientación, alturas de alféizar y dintel. En la pestaña <strong>Campos</strong> los campos <em>Símbolo 2D</em>, <em>Vista posterior</em> y <em>Alzado del tipo (acotado)</em> dibujan el modelo en la celda; para el campo elegido se fijan escala, nivel de detalle y altura de fila. En <strong>Composición</strong> se elige el nivel y si se incluyen los paneles de los muros cortina.</p>
 <h3 id="key-schedules-and-material-takeoffs">Tablas de claves y tablas de materiales</h3>
 <p>Una tabla de claves (<strong>Claves de tabla</strong> en <strong>Nueva tabla de planificación</strong>) define conjuntos de
 valores con nombre, una fila por clave, añadidas y eliminadas con <strong>Filas</strong>. Su <strong>Nombre de
@@ -831,7 +954,7 @@ elija <strong>Parámetro compartido</strong> y <strong>Seleccionar…</strong> p
 vuelve a escribir en el archivo un parámetro compartido del proyecto.</p>
 <h3 id="exporting-and-reusing-schedules">Exportar y reutilizar tablas</h3>
 <ul>
-<li><strong>Menú de la aplicación ➤ Exportar ➤ Informes ➤ Tabla…</strong> escribe la tabla como texto delimitado:
+<li><strong>Archivo ➤ Exportar ➤ Tabla…</strong> escribe la tabla como texto delimitado:
   <strong>Exportar tabla</strong> fija el delimitador de campo, el calificador de texto y qué encabezados y
   filas de grupo van al archivo.</li>
 <li><strong>Crear plantilla a partir de la vista…</strong>, con el botón derecho sobre una tabla, crea una
@@ -845,7 +968,7 @@ vuelve a escribir en el archivo un parámetro compartido del proyecto.</p>
 <p>La impresión escribe archivos PDF: en el escritorio se guardan donde usted elija; en el navegador
 se descargan.</p>
 <h3 id="the-print-dialog">El diálogo Imprimir</h3>
-<p><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-p">P</kbd></span>, o <strong>menú de la aplicación ➤ Imprimir ➤ Imprimir…</strong>, abre <strong>Imprimir</strong>:</p>
+<p><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-p">P</kbd></span>, o <strong>Archivo ➤ Imprimir ➤ Imprimir…</strong>, abre <strong>Imprimir</strong>:</p>
 <ul>
 <li><strong>Archivo</strong>: el nombre del archivo y, cuando se imprimen varias vistas o planos,
   <strong>Combinar las vistas/planos seleccionados en un solo archivo</strong> (una página cada uno) o
@@ -871,7 +994,7 @@ guarda con un nombre con <strong>Guardar como…</strong> y se conserva en el pr
 <strong>Restablecer</strong>, <strong>Cambiar nombre…</strong> y <strong>Eliminar</strong> gestionan los conjuntos guardados, y la lista
 de nombres vuelve a elegir uno.</p>
 <h3 id="print-setup">Configuración de impresión</h3>
-<p><strong>menú de la aplicación ➤ Imprimir ➤ Configuración de impresión…</strong>, o <strong>Configuración…</strong> en
+<p><strong>Archivo ➤ Imprimir ➤ Configuración de impresión…</strong>, o <strong>Configuración…</strong> en
 <strong>Imprimir</strong>, fija:</p>
 <table>
 <thead>
@@ -915,12 +1038,12 @@ de nombres vuelve a elegir uno.</p>
 Al cerrar el diálogo después de cambiar una configuración guardada, se pregunta si guardar los
 cambios; <strong>No</strong> los conserva solo para esta sesión.</p>
 <h3 id="print-preview">Vista preliminar de impresión</h3>
-<p><strong>menú de la aplicación ➤ Imprimir ➤ Vista preliminar de impresión</strong>, o <strong>Vista preliminar</strong> en
+<p><strong>Archivo ➤ Imprimir ➤ Vista preliminar de impresión</strong>, o <strong>Vista preliminar</strong> en
 <strong>Imprimir</strong>, muestra las páginas tal como se imprimirán, en sus colores: <strong>Página anterior</strong> y
 <strong>Página siguiente</strong> las recorren, la rueda hace zoom y arrastrar desplaza; <strong>Imprimir…</strong> imprime,
 <strong>Cerrar</strong> vuelve atrás.</p>
 <h2 id="exporting-images">Exportar imágenes</h2>
-<p><strong>menú de la aplicación ➤ Exportar ➤ Imágenes y animaciones ➤ Imagen…</strong> abre <strong>Exportar imagen</strong>:</p>
+<p><strong>Archivo ➤ Exportar ➤ Imagen…</strong> abre <strong>Exportar imagen</strong>:</p>
 <ul>
 <li>el nombre del archivo y el <strong>Rango de exportación</strong>: la ventana actual, su parte visible, o las
   vistas y planos elegidos (un archivo cada uno);</li>

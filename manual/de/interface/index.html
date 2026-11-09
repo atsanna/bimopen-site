@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Benutzerhandbuch von BIMopen, BIM-Modellierung als Open Source" name="description"/>
 <meta content="BIMopen" name="author"/>
-<link href="https://atsanna.github.io/bimopen-site/manual/de/interface/" rel="canonical"/>
+<link href="https://bimopen.it/manual/de/interface/" rel="canonical"/>
 <link href="../getting-started/" rel="prev"/>
 <link href="../interface-styles/" rel="next"/>
 <link href="../assets/images/bimopen-cube.svg" rel="icon"/>
@@ -18,6 +18,13 @@
 <link href="../assets/css/theme.css" rel="stylesheet"/>
 <link href="../assets/css/theme_dark_mode.css" rel="stylesheet"/>
 <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="https://bimopen.it/manual/en/interface/" hreflang="en" rel="alternate"/>
+<link href="https://bimopen.it/manual/it/interface/" hreflang="it" rel="alternate"/>
+<link href="https://bimopen.it/manual/de/interface/" hreflang="de" rel="alternate"/>
+<link href="https://bimopen.it/manual/fr/interface/" hreflang="fr" rel="alternate"/>
+<link href="https://bimopen.it/manual/es/interface/" hreflang="es" rel="alternate"/>
+<link href="https://bimopen.it/manual/ar/interface/" hreflang="ar" rel="alternate"/>
+<link href="https://bimopen.it/manual/en/interface/" hreflang="x-default" rel="alternate"/>
 </head>
 <body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="slate" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -32,7 +39,7 @@
 </div>
 <header class="md-header md-header--shadow" data-md-component="header">
 <nav aria-label="Kopfzeile" class="md-header__inner md-grid">
-<a aria-label="BIMopen Benutzerhandbuch" class="md-header__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/?lang=de" title="BIMopen Benutzerhandbuch">
+<a aria-label="BIMopen Benutzerhandbuch" class="md-header__button md-logo" data-md-component="logo" href="https://bimopen.it/de/" title="BIMopen Benutzerhandbuch">
 <img alt="logo" src="../assets/images/bimopen-cube.svg"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -73,32 +80,32 @@
 <div class="md-select__inner">
 <ul class="md-select__list">
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/en/" hreflang="en">
+<a class="md-select__link" href="https://bimopen.it/manual/en/" hreflang="en">
               English
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/it/" hreflang="it">
+<a class="md-select__link" href="https://bimopen.it/manual/it/" hreflang="it">
               Italiano
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/de/" hreflang="de">
+<a class="md-select__link" href="https://bimopen.it/manual/de/" hreflang="de">
               Deutsch
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/fr/" hreflang="fr">
+<a class="md-select__link" href="https://bimopen.it/manual/fr/" hreflang="fr">
               Français
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/es/" hreflang="es">
+<a class="md-select__link" href="https://bimopen.it/manual/es/" hreflang="es">
               Español
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/ar/" hreflang="ar">
+<a class="md-select__link" href="https://bimopen.it/manual/ar/" hreflang="ar">
               العربية
             </a>
 </li>
@@ -147,7 +154,7 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="BIMopen Benutzerhandbuch" class="md-nav__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/?lang=de" title="BIMopen Benutzerhandbuch">
+<a aria-label="BIMopen Benutzerhandbuch" class="md-nav__button md-logo" data-md-component="logo" href="https://bimopen.it/de/" title="BIMopen Benutzerhandbuch">
 <img alt="logo" src="../assets/images/bimopen-cube.svg"/>
 </a>
     BIMopen Benutzerhandbuch
@@ -193,11 +200,18 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#application-menu">
 <span class="md-ellipsis">
-      Anwendungsmenü
+      Bereich Datei
     </span>
 </a>
-<nav aria-label="Anwendungsmenü" class="md-nav">
+<nav aria-label="Bereich Datei" class="md-nav">
 <ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recent-files">
+<span class="md-ellipsis">
+      Zuletzt verwendete Dateien
+    </span>
+</a>
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#options">
 <span class="md-ellipsis">
@@ -214,6 +228,31 @@
       Obere Leiste und Schnellzugriffswerkzeuge
     </span>
 </a>
+<nav aria-label="Obere Leiste und Schnellzugriffswerkzeuge" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#about-bimopen">
+<span class="md-ellipsis">
+      Über BIMopen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-commands-window">
+<span class="md-ellipsis">
+      Das Fenster Befehle
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#updates">
+<span class="md-ellipsis">
+      Aktualisierungen
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#ribbon">
@@ -285,7 +324,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#strip">
 <span class="md-ellipsis">
-      Ansichten- und Familienstreifen
+      Ansichten- und Bauteilstreifen
     </span>
 </a>
 </li>
@@ -412,6 +451,14 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../cad-files/">
+<span class="md-ellipsis">
+    DWG und DXF
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../selection-and-modify/">
 <span class="md-ellipsis">
     Auswählen und Ändern
@@ -431,6 +478,54 @@
 <a class="md-nav__link" href="../floors-roofs-stairs/">
 <span class="md-ellipsis">
     Geschossdecken, Dächer, Treppen und Bauteile
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ceilings-and-columns/">
+<span class="md-ellipsis">
+    Decken und Stützen
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../openings/">
+<span class="md-ellipsis">
+    Öffnungen
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../phases/">
+<span class="md-ellipsis">
+    Phasen und Abbruch
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../structure/">
+<span class="md-ellipsis">
+    Tragwerk und Fundamente
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../site/">
+<span class="md-ellipsis">
+    Lageplan und Gelände
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../design-options/">
+<span class="md-ellipsis">
+    Entwurfsvarianten
     
   </span>
 </a>
@@ -484,7 +579,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="https://atsanna.github.io/bimopen-site/manual/de/pdf/bimopen-manual-de.pdf">
+<a class="md-nav__link" href="https://bimopen.it/manual/de/pdf/bimopen-manual-de.pdf">
 <span class="md-ellipsis">
     PDF
     
@@ -508,11 +603,18 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#application-menu">
 <span class="md-ellipsis">
-      Anwendungsmenü
+      Bereich Datei
     </span>
 </a>
-<nav aria-label="Anwendungsmenü" class="md-nav">
+<nav aria-label="Bereich Datei" class="md-nav">
 <ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recent-files">
+<span class="md-ellipsis">
+      Zuletzt verwendete Dateien
+    </span>
+</a>
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#options">
 <span class="md-ellipsis">
@@ -529,6 +631,31 @@
       Obere Leiste und Schnellzugriffswerkzeuge
     </span>
 </a>
+<nav aria-label="Obere Leiste und Schnellzugriffswerkzeuge" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#about-bimopen">
+<span class="md-ellipsis">
+      Über BIMopen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-commands-window">
+<span class="md-ellipsis">
+      Das Fenster Befehle
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#updates">
+<span class="md-ellipsis">
+      Aktualisierungen
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#ribbon">
@@ -600,7 +727,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#strip">
 <span class="md-ellipsis">
-      Ansichten- und Familienstreifen
+      Ansichten- und Bauteilstreifen
     </span>
 </a>
 </li>
@@ -717,7 +844,7 @@ für Tablets und Telefone, führen dieselben Befehle mit denselben Namen aus;
 </figure>
 <p>Das Fenster hat diese Teile:</p>
 <ol>
-<li>die <strong>Seitenleiste</strong> am linken Rand: das Zeichen von BIMopen, das das Anwendungsmenü öffnet,
+<li>die <strong>Seitenleiste</strong> am linken Rand: das Zeichen von BIMopen, das den Bereich Datei öffnet,
    dann <strong>Start</strong>, die kontextabhängige Registerkarte <strong>Bearbeiten</strong>, die Registerkarten
    <strong>Modellieren</strong>, <strong>Tragwerk</strong>, <strong>Stahlbeton</strong>, <strong>Metall</strong>, <strong>Vorfertigung</strong>, <strong>TGA</strong>,
    <strong>Verknüpfen und importieren</strong>, <strong>Beschriftungen</strong>, <strong>Prüfen</strong>, <strong>Körper &amp; Gelände</strong>,
@@ -730,7 +857,7 @@ für Tablets und Telefone, führen dieselben Befehle mit denselben Namen aus;
 <li>der <strong>Zeichenbereich</strong> in der Mitte: die Ansichten, jede mit ihrer Ansichtsauswahl oben und der
    Ansichtsleiste unten; solange ein Werkzeug arbeitet, läuft der <strong>Optionsstreifen</strong> darüber;</li>
 <li>der <strong>Elementbereich</strong> rechts: die Eigenschaften der Auswahl oder der aktiven Ansicht;</li>
-<li>der <strong>Ansichten- und Familienstreifen</strong> unter dem Zeichenbereich, den Sie ausblenden können
+<li>der <strong>Ansichten- und Bauteilstreifen</strong> unter dem Zeichenbereich, den Sie ausblenden können
    (<span class="keys"><kbd class="key-f9">F9</kbd></span>);</li>
 <li>die <strong>Statusleiste</strong> am unteren Rand.</li>
 </ol>
@@ -743,11 +870,12 @@ Platz wie möglich hat; im Touch-Modus bleiben die Schaltflächen groß (siehe
 <a href="../interface-styles/#touch-mode">Oberflächenstile</a>).</p>
 <p>Auf Arabisch ist das ganze Fenster gespiegelt: Die Seitenleiste und der Werkzeugbereich sind
 rechts, der Elementbereich links, und die Streifen lesen sich von rechts nach links.</p>
-<h2 id="application-menu">Anwendungsmenü</h2>
-<p>Das Zeichen von BIMopen oben in der Seitenleiste öffnet das Anwendungsmenü: die Befehle, die auf
-das ganze Projekt wirken. Der Eintrag <strong>Start</strong> der Seitenleiste zeigt das Projekt mit seinen
-Ebenen, Ansichten, Plänen und Bauteillisten und erinnert daran, dass die Dateibefehle in diesem
-Menü stehen.</p>
+<h2 id="application-menu">Bereich Datei</h2>
+<p>Das Zeichen von BIMopen oben in der Seitenleiste öffnet den Bereich <strong>Datei</strong>: eine Seite über
+das ganze Fenster mit den Dateibefehlen und den zuletzt verwendeten Projekten. Im Stil
+<strong>Klassisch</strong> öffnet ihn <strong>Datei</strong> links von den Registerkarten, im Touch-Modus <strong>Menü ▸ Datei</strong>.
+<strong>Zurück</strong> (die runde Schaltfläche oben) oder <span class="keys"><kbd class="key-escape">Esc</kbd></span> kehrt zum Modell zurück, genau wie es war.</p>
+<p>Links:</p>
 <table>
 <thead>
 <tr>
@@ -757,44 +885,48 @@ Menü stehen.</p>
 </thead>
 <tbody>
 <tr>
-<td><strong>Neu</strong></td>
-<td>Schließt das aktuelle Projekt und beginnt ein neues aus der Standardvorlage: zwei Ebenen mit ihren Grundrissen und die Standardtypen</td>
+<td><strong>Projekte ▸ Öffnen…</strong></td>
+<td>Eine Seite mit <strong>Projekt…</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-o">O</kbd></span>), <strong>IFC…</strong> und <strong>IFC-Optionen…</strong></td>
 </tr>
 <tr>
-<td><strong>Öffnen…</strong></td>
-<td>Öffnet ein <code>.bimopen</code>-Projekt oder öffnet eine <code>.ifc</code>-Datei als neues Projekt, ausgewählt in einem Dateidialog. Im Browser ziehen Sie die Datei stattdessen in die Seite</td>
+<td><strong>Projekte ▸ Neu…</strong></td>
+<td>Öffnet <strong>Neues Projekt</strong> mit der Vorlagendatei, von der Sie ausgehen</td>
 </tr>
 <tr>
-<td><strong>Beispielprojekt</strong></td>
-<td>Öffnet das Beispielhaus</td>
+<td><strong>Bauteile ▸ Öffnen…, Neu…</strong></td>
+<td>Grau: Bauteile sind noch nicht verfügbar</td>
+</tr>
+<tr>
+<td><strong>Zuletzt verwendete Dateien</strong></td>
+<td>Die Startseite des Bereichs, unten beschrieben</td>
 </tr>
 <tr>
 <td><strong>Speichern</strong> <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span></td>
-<td>Speichert das Projekt in seiner Datei; ein noch nie gespeichertes Projekt fragt wie <strong>Speichern unter…</strong> nach einem Namen</td>
+<td>Speichert das Projekt in seiner Datei; ein noch nie gespeichertes Projekt fragt nach einem Namen</td>
 </tr>
 <tr>
-<td><strong>Speichern unter…</strong></td>
-<td>Speichert das Projekt in einer neuen <code>.bimopen</code>-Datei und arbeitet mit dieser Datei weiter</td>
+<td><strong>Speichern unter</strong></td>
+<td>Eine Seite mit <strong>Projekt…</strong>, <strong>Vorlage…</strong> und <strong>Optionen…</strong> (die Speicheroptionen)</td>
 </tr>
 <tr>
-<td><strong>Drucken…</strong> <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-p">P</kbd></span></td>
-<td>Druckt Pläne als PDF</td>
+<td><strong>Drucken</strong></td>
+<td>Eine Seite mit <strong>Drucken…</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-p">P</kbd></span>), <strong>Druckvorschau</strong> und <strong>Druckeinrichtung…</strong></td>
 </tr>
 <tr>
-<td><strong>Exportieren ▸ IFC4 exportieren…</strong></td>
-<td>Schreibt das Modell als IFC4-Datei</td>
-</tr>
-<tr>
-<td><strong>Exportieren ▸ Grundriss als SVG exportieren…</strong></td>
-<td>Schreibt den aktiven Grundriss als SVG-Zeichnung</td>
-</tr>
-<tr>
-<td><strong>Exportieren ▸ Ansicht als PNG exportieren…</strong></td>
-<td>Schreibt die aktive Ansicht als PNG-Bild</td>
+<td><strong>Exportieren</strong></td>
+<td>Eine Seite mit <strong>Bild…</strong>, <strong>IFC…</strong>, <strong>Grundriss als SVG exportieren…</strong>, <strong>IFC-Optionen…</strong> und <strong>Bauteilliste…</strong></td>
 </tr>
 <tr>
 <td><strong>Geöffnete Dokumente</strong></td>
-<td>Listet die geöffneten Ansichtsfenster auf; ein Klick auf eines holt es nach vorn</td>
+<td>Die geöffneten Ansichtsfenster; ein Klick holt das gewählte nach vorn</td>
+</tr>
+<tr>
+<td><strong>Schließen</strong></td>
+<td>Schließt das Projekt und kehrt zur Startseite zurück</td>
+</tr>
+<tr>
+<td><strong>Neu in dieser Version</strong>, <strong>Handbuch (F1)</strong>, <strong>Befehle und Tastenkürzel</strong>, <strong>BIMopen-Website</strong></td>
+<td>Die Verknüpfungen, ganz unten</td>
 </tr>
 <tr>
 <td><strong>Optionen</strong></td>
@@ -806,21 +938,46 @@ Menü stehen.</p>
 </tr>
 </tbody>
 </table>
+<p>Die Befehle des geöffneten Projekts (von <strong>Speichern</strong> bis <strong>Schließen</strong>) gibt es nur, wenn ein
+Projekt geöffnet ist. Jede Seite erklärt jeden Eintrag in einer Zeile.</p>
 <figure>
-<img alt="Das Anwendungsmenü mit geöffnetem Exportieren: Bilder und Animationen, IFC…, Grundriss als SVG exportieren…, Optionen und Berichte" src="../assets/screens/if-export-menu.webp"/>
-<figcaption>Das Anwendungsmenü und sein Untermenü Exportieren</figcaption>
+<img alt="Der Bereich Datei auf der Seite Exportieren: Bild…, IFC…, Grundriss als SVG exportieren…, IFC-Optionen… und Bauteilliste…, jeweils mit ihrer Erklärung" src="../assets/screens/if-export-menu.webp"/>
+<figcaption>Der Bereich Datei, Seite Exportieren</figcaption>
 </figure>
-<p><strong>Neu</strong>, <strong>Öffnen…</strong> und <strong>Beispielprojekt</strong> ersetzen das aktuelle Projekt ohne Rückfrage:
-Speichern Sie es vorher, wenn Sie es behalten möchten.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Ungespeicherte Änderungen gehen verloren, wenn Sie <strong>Neu</strong>, <strong>Öffnen…</strong> oder <strong>Beispielprojekt</strong>
-wählen. Die obere Leiste zeigt <strong>Nicht gespeicherte Änderungen</strong>, solange es Änderungen zu
-speichern gibt.</p>
-</div>
+<h3 id="recent-files">Zuletzt verwendete Dateien</h3>
+<p>Die Seite <strong>Zuletzt verwendete Dateien</strong> hat drei Bänder:</p>
+<ul>
+<li><strong>Projekte</strong>: die zuletzt verwendeten Projekte als quadratische Miniaturen, mit Namen und
+  Änderungsdatum; ein Etikett sagt, aus welcher Ansicht die Miniatur stammt (<strong>3D</strong>,
+  <strong>Grundriss</strong>, <strong>Plan</strong>…). Beim Überfahren mit der Maus erscheinen die Pinnadel, die das
+  Projekt oben in der Liste hält, das Menü <strong>⋯</strong> (<strong>Öffnen</strong>, <strong>Als Kopie öffnen</strong>, <strong>Ordner
+  öffnen</strong>, <strong>Pfad kopieren</strong>, <strong>Anheften</strong>, <strong>Aus der Liste entfernen</strong>; auch mit der rechten
+  Maustaste) und das <strong>✕</strong>, das das Projekt aus der Liste nimmt: Einige Sekunden lang legt
+  <strong>Rückgängig</strong> es wieder an seinen Platz. Die Datei auf der Festplatte bleibt immer unberührt.
+  Eine verschobene oder gelöschte Datei erscheint grau, mit <strong>Datei nicht gefunden</strong>,
+  <strong>Suchen…</strong>, um ihren neuen Ort anzugeben, und <strong>Entfernen</strong>; <strong>Fehlende entfernen</strong> nimmt
+  alle heraus, <strong>Liste leeren</strong> die nicht fixierten.</li>
+<li><strong>Projektvorlagen</strong>: <strong>Neues Projekt</strong>, die Standardvorlage, die imperiale Vorlage, die im
+  Dateiordner gefundenen Vorlagen, das Beispielprojekt und <strong>Durchsuchen…</strong> für eine andere
+  Vorlagendatei.</li>
+<li><strong>Bauteile</strong>: die zuletzt verwendeten Bauteile (<code>.bco</code>, <code>.bct</code>), mit ihrer Miniatur und denselben Befehlen wie Projekte. In der Webversion bleiben geöffnete Dateien im Browser (bis 1,5 MB je Datei) und lassen sich hier wieder öffnen.</li>
+</ul>
+<p>Oben filtert die Suche nach Name und Ordner, und zwei Schaltflächen wählen zwischen
+<strong>Miniaturen</strong> und <strong>Liste</strong>; die Liste zeigt auch Ordner, Datum und Größe und lässt sich nach
+Name oder Datum sortieren. Die Wahl bleibt gespeichert.</p>
+<p>Jedes Speichern legt eine Miniatur in der Datei ab: die Standard-3D-Ansicht oder die Ansicht,
+die in <strong>Optionen zum Speichern von Dateien ▸ Vorschau</strong> gewählt ist. Eine Datei, die sich nicht
+lesen lässt, zeigt ein neutrales Symbol.</p>
+<p>Beim Start ohne Datei ist der Bereich die Startseite, ohne <strong>Zurück</strong>; beim ersten Start, mit
+leerer Liste, bietet er <strong>Neues Projekt</strong>, <strong>Öffnen…</strong> und <strong>Beispielprojekt</strong> an. Im
+Touch-Modus sind die Miniaturen größer, die Aktionen bleiben immer sichtbar, und langes Drücken
+öffnet das Menü <strong>⋯</strong>. Im Browser gibt es <strong>Ordner öffnen</strong> nicht.</p>
+<p><strong>Neu…</strong>, <strong>Öffnen…</strong>, ein zuletzt verwendetes Projekt und <strong>Beispielprojekt</strong> ersetzen das
+geöffnete Projekt; hat es nicht gespeicherte Änderungen, fragen sie zuerst, ob sie gespeichert
+werden sollen.</p>
 <h3 id="options">Optionen</h3>
 <p>Das Zahnrad am rechten Ende der oberen Leiste, <strong>Einstellungen</strong> unten in der Seitenleiste oder
-<strong>Anwendungsmenü ▸ Optionen</strong> öffnet <strong>Optionen</strong>. Der Dialog hat unter anderem diese
+<strong>Datei ▸ Optionen</strong> öffnet <strong>Optionen</strong>. Der Dialog hat unter anderem diese
 Einstellungen:</p>
 <table>
 <thead>
@@ -915,7 +1072,7 @@ Einstellungen:</p>
 </tr>
 <tr>
 <td><strong>?</strong></td>
-<td><strong>Hilfe</strong> <span class="keys"><kbd class="key-f1">F1</kbd></span>, <strong>Befehle</strong> (alle Befehle der Befehlszeile, wie die Eingabe von <code>help</code>) und <strong>Info</strong> (die Version, die Lizenz und die Danksagungen)</td>
+<td><strong>Hilfe</strong> <span class="keys"><kbd class="key-f1">F1</kbd></span>, <strong>Befehle</strong> (alle Befehle in einem Fenster: <a href="#the-commands-window">Das Fenster Befehle</a>) und <strong>Info</strong> (<a href="#about-bimopen">Über BIMopen</a>)</td>
 </tr>
 <tr>
 <td>Das Zahnrad</td>
@@ -943,6 +1100,38 @@ bleiben für die nächsten Sitzungen erhalten.</p>
 <span class="keys"><kbd class="key-f1">F1</kbd></span> öffnet die Seite zu dem, was Sie gerade tun: zum geöffneten Dialog, zur Kachel unter der
 Maus (ihr Tooltip endet mit <strong>Drücken Sie F1, um weitere Informationen zu erhalten</strong>) oder zum
 aktiven Werkzeug.</p>
+<h3 id="about-bimopen">Über BIMopen</h3>
+<p><strong>? ▸ Info</strong> zeigt das Zeichen und den Namen des Programms, die Version mit dem Datum und dem
+Commit, aus dem es erstellt wurde (beim Kompilieren gelesen: ein Build in Entwicklung sagt es),
+und die Plattform (das System und ob Desktop oder Web). Der Hinweis darunter erinnert daran,
+dass es eine Testversion ist. Die Zeilen öffnen im Browser die <strong>Website</strong>, das
+<strong>Benutzerhandbuch</strong> und die <strong>Neuerungen der Version</strong> (die Neuerungen jeder Version);
+<strong>Lizenzen Dritter</strong> öffnet an Ort und Stelle die Liste der Werke, die das Programm enthält
+(Schriften, Symbole, Texturen der Materialien, Himmel, Mond und Sterne), mit ihren Lizenzen;
+die vollständigen Texte stehen in der Datei NOTICE. <strong>Systeminformationen kopieren</strong> legt
+Version, System, Grafikkarte und verwendetes Backend in die Zwischenablage: Fügen Sie sie ein,
+wenn Sie ein Problem melden.</p>
+<h3 id="the-commands-window">Das Fenster Befehle</h3>
+<p><strong>? ▸ Befehle</strong> oder <code>help</code> in der Befehlszeile öffnet die Liste aller Befehle. Links die
+Registerkarten des Menübands in ihrer Reihenfolge, dann <strong>Ändern</strong> und <strong>Nur Befehlszeile</strong>; in
+der Mitte für jeden Befehl der Name in der Sprache der Oberfläche, der einzugebende Name, die
+Synonyme und das Kürzel; rechts die Beschreibung, die Verwendung und ein Beispiel des gewählten
+Befehls. Die Suche findet einen Befehl über jedes davon, in allen Registerkarten (<code>help door</code>
+öffnet das Fenster mit der bereits gefundenen Tür). Ein noch nicht verfügbarer Befehl ist grau;
+<strong>Nur verfügbare</strong> blendet sie aus. Doppelklick, <span class="keys"><kbd class="key-enter">Enter</kbd></span> oder <strong>Starten</strong> startet den Befehl
+wie seine Schaltfläche; ein Befehl, den es nur in der Befehlszeile gibt, wird dort eingetragen,
+zum Vervollständigen. <strong>Kopieren</strong> legt den Befehl mit seinem Beispiel in die Zwischenablage. Die
+Pfeiltasten gehen durch die Liste, <span class="keys"><kbd class="key-escape">Esc</kbd></span> schließt sie. Im Touch-Modus öffnet sich das Fenster
+über <strong>Befehle ▸ Befehlsliste</strong> (das Befehlsfeld noch leer), mit fingergroßen Zeilen.</p>
+<h3 id="updates">Aktualisierungen</h3>
+<p>Beim Start, höchstens einmal am Tag, liest BIMopen von der Website die Datei der neuesten Version (sonst wird nichts gesendet). Ist eine neuere Version erschienen, erhält die <strong>Glocke</strong> in der oberen Leiste einen orangefarbenen Punkt (rechts in der Titelleiste im Stil Klassisch, in der oberen Leiste im Touch-Modus). Ein Klick öffnet ihren Bereich: die Version und ihr Datum, die wichtigsten Neuerungen, <strong>Alle Neuerungen</strong> sowie <strong>Herunterladen und aktualisieren</strong>, <strong>Später</strong> (kein Punkt bis zum nächsten Start) und <strong>Diese Version überspringen</strong> (kein Punkt bis zur nächsten).</p>
+<p><strong>Herunterladen und aktualisieren</strong> lädt das Programm mit einer Fortschrittsanzeige herunter (<strong>Im Hintergrund fortsetzen</strong> blendet den Bereich aus, <strong>Abbrechen</strong> hält an). Bevor etwas ersetzt wird, prüft BIMopen die Datei: Ihre SHA-256-Prüfsumme muss der der Version entsprechen, und die Datei der Version muss die digitale Signatur von BIMopen tragen. Ein nicht signiertes, mit einem anderen Schlüssel signiertes oder verändertes Paket wird verworfen, nichts wird installiert. Dann fragt <strong>Neu starten und aktualisieren</strong>, ob die Änderungen gespeichert werden sollen, setzt das neue Programm an die Stelle des alten und startet es mit demselben Projekt und derselben Ansicht.</p>
+<ul>
+<li><strong>Windows</strong>: Beim Neustart wird das laufende Programm umbenannt und ersetzt. Solange die ausführbare Datei nicht signiert ist, kann Windows beim ersten Start warnen: <strong>Weitere Informationen ▸ Trotzdem ausführen</strong>.</li>
+<li><strong>Android</strong>: <strong>Herunterladen und installieren</strong> lädt das Paket herunter, und das Installationsprogramm des Systems fragt nach Bestätigung (beim ersten Mal nach der Berechtigung <strong>Unbekannte Apps installieren</strong>).</li>
+<li><strong>Web</strong>: <strong>Neu laden</strong> lädt die neue Version.</li>
+</ul>
+<p>Ohne Verbindung, mit ungültiger Signatur oder ohne Speicherplatz sagt es der Bereich, und BIMopen funktioniert weiter wie zuvor. <strong>Optionen ▸ Allgemein ▸ Nach Aktualisierungen suchen</strong> schaltet die Prüfung aus; <strong>Jetzt prüfen</strong> prüft sofort.</p>
 <h2 id="ribbon">Seitenleiste und Werkzeugbereich</h2>
 <p>Die Seitenleiste listet die Registerkarten des Menübands des Stils <strong>Klassisch</strong> auf, mit
 denselben Namen und in derselben Reihenfolge. Klicken Sie auf eine Registerkarte: Der
@@ -1153,12 +1342,12 @@ als der Bereich auf einmal zeigt (<strong>Modellieren</strong>, <strong>Tragwerk
 <tr>
 <td></td>
 <td><strong>Aus Bibliothek laden</strong></td>
-<td><strong>Familie laden</strong>, <em>Als Gruppe laden</em>, <strong>Aus Datei einfügen ▾</strong></td>
+<td><strong>Komponente laden</strong>, <em>Als Gruppe laden</em>, <strong>Aus Datei einfügen ▾</strong></td>
 </tr>
 <tr>
 <td><strong>Beschriftungen</strong></td>
 <td><strong>Bemaßung</strong></td>
-<td><strong>Ausgerichtet</strong>, <strong>Linear</strong>, <strong>Winkel</strong>, <strong>Radial</strong>, <em>Durchmesser</em>, <strong>Bogenlänge</strong>, <strong>Punktbemaßung ▾</strong></td>
+<td><strong>Ausgerichtet</strong>, <strong>Linear</strong>, <strong>Winkel</strong>, <strong>Radial</strong>, <strong>Durchmesser</strong>, <strong>Bogenlänge</strong>, <strong>Punktbemaßung ▾</strong></td>
 </tr>
 <tr>
 <td></td>
@@ -1263,7 +1452,7 @@ als der Bereich auf einmal zeigt (<strong>Modellieren</strong>, <strong>Tragwerk
 <tr>
 <td></td>
 <td><strong>Projektindex</strong></td>
-<td>Der Baum der Ansichten, Bauteillisten, Pläne und Familien des Projekts</td>
+<td>Der Baum der Ansichten, Bauteillisten, Pläne und Bauteile des Projekts</td>
 </tr>
 <tr>
 <td><strong>Projekt</strong></td>
@@ -1402,7 +1591,7 @@ geöffnet ist, sind sie ausgegraut, und ihre QuickInfo fordert dazu auf, zuerst 
 </tr>
 <tr>
 <td><strong>Fenster</strong></td>
-<td><strong>Ansicht wechseln</strong>, <strong>Duplizieren</strong>, <strong>Überlappend</strong>, <strong>Nebeneinander</strong>, <strong>Maximieren</strong>, <strong>Andere schließen</strong>, <strong>Paneele</strong></td>
+<td><strong>Ansicht wechseln</strong>, <strong>Duplizieren</strong>, <strong>Überlappend</strong>, <strong>Nebeneinander</strong>, <strong>Maximieren</strong>, <strong>Andere schließen</strong>, <strong>Paneele</strong>, <strong>Design des Zeichenbereichs</strong></td>
 </tr>
 </tbody>
 </table>
@@ -1554,11 +1743,11 @@ platzieren.</p>
 </tr>
 <tr>
 <td><strong>Tür</strong>, <strong>Fenster</strong></td>
-<td><strong>Familie laden</strong>; <strong>Vor Ort modellieren</strong> (ausgegraut); <strong>Beim Platzieren beschriften</strong> mit <strong>Horizontal</strong> oder <strong>Vertikal</strong>, <strong>Führungslinie</strong> und ihrer Länge; <strong>Geladene Beschriftungen…</strong> (ausgegraut)</td>
+<td><strong>Vor Ort modellieren</strong> (ausgegraut); <strong>Beim Platzieren beschriften</strong> mit <strong>Horizontal</strong> oder <strong>Vertikal</strong>, <strong>Führungslinie</strong> und ihrer Länge; <strong>Geladene Beschriftungen…</strong> (ausgegraut)</td>
 </tr>
 <tr>
 <td><strong>Objekt</strong></td>
-<td><strong>Familie laden</strong>; <strong>Vor Ort modellieren</strong> (ausgegraut); <strong>Nach dem Einfügen drehen</strong>: das platzierte Objekt bleibt ausgewählt und <strong>Drehen</strong> beginnt</td>
+<td><strong>Vor Ort modellieren</strong> (ausgegraut); <strong>Nach dem Einfügen drehen</strong>: das platzierte Objekt bleibt ausgewählt und <strong>Drehen</strong> beginnt</td>
 </tr>
 <tr>
 <td><strong>Dach</strong></td>
@@ -1668,7 +1857,7 @@ seiner Vorschau. Die Pfeiltasten bewegen, <span class="keys"><kbd class="key-ent
 Projekt). Sie können einen Wert mit seiner Einheit eingeben, zum Beispiel <code>2.7m</code>.</p>
 <h2 id="project-browser">Projektindex</h2>
 <p><strong>Ansichten</strong> in der Seitenleiste zeigt unter seinen Werkzeugen den <strong>Projektindex</strong>: die
-Ansichten, Bauteillisten, Pläne und Familien des Projekts in einer Baumstruktur. Klicken Sie auf
+Ansichten, Bauteillisten, Pläne und Bauteile des Projekts in einer Baumstruktur. Klicken Sie auf
 <strong>⊟</strong> oder <strong>⊞</strong>, um einen Zweig ein- oder auszuklappen.</p>
 <figure>
 <img alt="Der Projektindex: die Ansichten nach Art, Grundrisse, Flächenpläne, Schnitte und Ansichten, die aktive Ansicht fett" src="../assets/screens/if-project-index.webp"/>
@@ -1715,8 +1904,8 @@ Ansichten, Bauteillisten, Pläne und Familien des Projekts in einer Baumstruktur
 <td>Die Pläne, als Nummer - Name</td>
 </tr>
 <tr>
-<td><strong>Familien</strong></td>
-<td>Die Typen des Projekts, nach Kategorie: Wände, Türen, Fenster, Geschossdecken, Dächer, Bauteile und die übrigen</td>
+<td><strong>Bauteile</strong></td>
+<td>Die Typen des Projekts, nach Kategorie: Wände, Türen, Fenster, Geschossdecken, Dächer, <strong>Möbel</strong>, <strong>Sanitärobjekte</strong> und die übrigen; unter einer Bauteilkategorie jedes Bauteil, dann seine Typen</td>
 </tr>
 </tbody>
 </table>
@@ -1736,13 +1925,13 @@ anwenden…</strong> und kein <strong>Ansicht duplizieren</strong>. <strong>{3D}
 <p>Bei einer Bauteilliste des Projekts wählt ein Klick sie aus, ein Doppelklick öffnet sie, und das
 Rechtsklickmenü hat <strong>Öffnen</strong>, <strong>Eigenschaften der Bauteilliste…</strong> und <strong>Löschen</strong>. Eine
 vordefinierte Bauteilliste öffnet sich mit einem Klick.</p>
-<p>Bei einem Typ unter <strong>Familien</strong> öffnet ein Doppelklick seine Typparameter; das
+<p>Bei einem Typ unter <strong>Bauteile</strong> öffnet ein Doppelklick seine Typparameter; das
 Rechtsklickmenü hat <strong>Typparameter</strong>, <strong>Duplizieren…</strong>, <strong>Exemplar erstellen</strong> (startet das
 Werkzeug, das ihn platziert, mit diesem Typ) und <strong>Löschen</strong>.</p>
 <p>Nach einem Klick in den Projektindex bewegt sich die Tastatur darin: <span class="keys"><kbd class="key-arrow-up">Up</kbd></span> und <span class="keys"><kbd class="key-arrow-down">Down</kbd></span> gehen von Zeile zu Zeile (die Eigenschaften der Ansicht erscheinen im Elementbereich), <span class="keys"><kbd class="key-arrow-right">Right</kbd></span> öffnet einen Zweig, <span class="keys"><kbd class="key-arrow-left">Left</kbd></span> schließt ihn oder geht zum Zweig hinauf, in dem die Zeile steht, <span class="keys"><kbd class="key-enter">Enter</kbd></span> öffnet die Ansicht.</p>
 <p>Von hier kommen Ansichten auch auf Pläne. Ziehen Sie einen Grundriss, einen Schnitt, eine Ansicht, eine freie 2D-Ansicht, eine Legende, eine gespeicherte 3D-Ansicht oder eine Bauteilliste auf den offenen Plan: Ihr Ansichtsfenster folgt dem Cursor und bleibt dort, wo Sie es loslassen. Oder lassen Sie sie auf dem Namen eines Plans im Baum los: Der Plan öffnet sich und das Ansichtsfenster folgt dem Cursor, bis Sie klicken. Beim Ziehen rollt der Baum, wenn der Cursor seinen Rand erreicht. Das Kontextmenü eines Plans hat <strong>Ansicht hinzufügen…</strong>. Die Ansichten auf einem Plan stehen darunter; das Kontextmenü einer solchen Ansicht hat <strong>Vom Blatt entfernen</strong>, das von <strong>Pläne (alle)</strong> hat <strong>Neues Blatt…</strong>. In einer 3D-Ansicht hat das Kontextmenü außerdem <strong>Auf 3D-Ausdehnung zoomen</strong>: das ganze Modell, auch die in der Ansicht ausgeblendeten Elemente. Eine Ansicht, die schon auf einem Plan ist, wird abgelehnt, mit dem Grund in der Befehlszeile; Legenden und Bauteillisten können auf mehreren Plänen stehen. Eine gespeicherte 3D-Ansicht erscheint auf dem Plan mit den Kanten, die ihre Kamera sieht.</p>
 <p>Das Kontextmenü eines Grundrisses, eines Schnitts oder einer freien 2D-Ansicht hat <strong>Referenzierende Ansichten suchen</strong>: die Ansichten, die ihr Symbol zeigen, und die Pläne, auf denen sie steht; <strong>Gehe zu Ansicht</strong> öffnet die gewählte.</p>
-<h2 id="strip">Ansichten- und Familienstreifen</h2>
+<h2 id="strip">Ansichten- und Bauteilstreifen</h2>
 <p>Der Streifen unter dem Zeichenbereich hat drei Modi, gewählt mit den Schaltflächen links:</p>
 <ul>
 <li><strong>Ansichten</strong>: echte Vorschauen der Ansichten, gegliedert in <strong>Alle</strong>, <strong>Geöffnet (n)</strong>,
@@ -1752,7 +1941,7 @@ Werkzeug, das ihn platziert, mit diesem Typ) und <strong>Löschen</strong>.</p>
   aktiven Fenster öffnen</strong>; auf den geöffneten Plan oder auf die Miniatur eines Plans gezogen,
   wird sie dort platziert. <strong>+</strong> erstellt eine neue Ansicht: <strong>Standard-3D-Ansicht</strong>, <strong>Ansicht
   speichern</strong>, <strong>Duplizieren</strong>, <strong>Plan</strong> oder <strong>Bauteilliste/Mengen</strong>.</li>
-<li><strong>Familien</strong>: eine Vorschau je Typ, nach Familienkategorie gegliedert. Ein Klick auf eine
+<li><strong>Bauteile</strong>: eine Vorschau je Typ, nach Kategorie gegliedert. Ein Klick auf eine
   Vorschau platziert diesen Typ; in einen Grundriss gezogen wird er dort eingefügt, wo Sie
   loslassen. Eine Tür oder ein Fenster, nahe einer Wand losgelassen, wird in die Wand gesetzt,
   entlang der Wand.</li>
@@ -1766,8 +1955,8 @@ Werkzeug, das ihn platziert, mit diesem Typ) und <strong>Löschen</strong>.</p>
 <p>Rechts filtert <strong>Anzeigen</strong> die Miniaturen nach Disziplin und Phase, das Suchfeld nach Namen, und
 drei Schaltflächen wählen die Größe: <strong>Vorschauen</strong>, <strong>Kompakt</strong> und <strong>Ausblenden</strong>.</p>
 <figure>
-<img alt="Die Leiste im Familienmodus: eine Vorschau je Typ, zuerst die Wände, zum Anklicken oder Ziehen in einen Grundriss" src="../assets/screens/if-strip-families.webp"/>
-<figcaption>Die Leiste im Familienmodus</figcaption>
+<img alt="Die Leiste im Bauteilmodus: eine Vorschau je Typ, zuerst die Wände, zum Anklicken oder Ziehen in einen Grundriss" src="../assets/screens/if-strip-families.webp"/>
+<figcaption>Die Leiste im Bauteilmodus</figcaption>
 </figure>
 <p>Passen die Gruppen nicht neben die Modi, werden sie in einem Menü zusammengefasst, etwa <strong>Alle ▾</strong>.
 Um dem Zeichenbereich den Platz des Streifens zu geben, blenden Sie ihn mit <strong>Ansichtenleiste</strong>
@@ -1839,6 +2028,10 @@ vorn; mindestens ein Fenster bleibt immer geöffnet. Oben links in der Ansicht z
 <tr>
 <td><strong>Paneele</strong></td>
 <td>Blendet die <strong>Eigenschaften</strong>, den <strong>Projektindex</strong>, die <strong>Befehlszeile</strong>, die <strong>Navigationsleiste</strong>, die <strong>Tastaturkurzbefehle</strong> und die <strong>Zuletzt verwendeten Dateien</strong> ein oder aus</td>
+</tr>
+<tr>
+<td><strong>Design des Zeichenbereichs</strong></td>
+<td>Jeder Klick wechselt den Hintergrund des Zeichenbereichs zwischen Schwarz und Weiß; der Rest der Oberfläche bleibt gleich. Es ist dieselbe Wahl wie <strong>Hintergrundfarbe umkehren</strong> in den <strong>Optionen</strong> und bleibt für die nächsten Sitzungen</td>
 </tr>
 </tbody>
 </table>
@@ -1989,6 +2182,7 @@ die Mitte, um im Grundriss frei zu verschieben; der Abstand wird beim Ziehen ang
 Loslassen verschiebt wie <strong>Verschieben</strong>.</p>
 <p>In 3D zoomt das Mausrad und hält dabei den Modellpunkt unter dem Cursor fest, und der Orbit dreht sich um die Mitte der Auswahl oder, ohne Auswahl, um den Punkt, auf den die Ansicht blickt.</p>
 <p>Der <strong>Orientierungswürfel</strong> in der oberen Ecke der 3D-Ansicht dreht sich mit dem Modell. Seine Kanten und Ecken sind abgeschrägt, und jeder Teil ist ein eigenes Ziel: die sechs Flächen (<strong>OBEN</strong>, <strong>UNTEN</strong>, <strong>VORNE</strong>, <strong>HINTEN</strong>, <strong>RECHTS</strong>, <strong>LINKS</strong>, ihre Namen perspektivisch darauf geschrieben und mit ihnen gedreht) blicken gerade auf diese Seite; die zwölf Kantenstreifen blicken von zwischen zwei Seiten; die acht Eckdreiecke von zwischen drei (eine isometrische Ansicht). Der Teil unter dem Zeiger wird in der Hervorhebungsfarbe getönt, der, von dem die Ansicht jetzt blickt, bleibt hervorgehoben; ein Klick dreht die Ansicht in einem kurzen Übergang dorthin. Ziehen Sie den Würfel, um zu orbitieren.</p>
+<p>Der Würfel ist hellgrau, seine Flächen von einem weichen Licht schattiert, im hellen wie im dunklen Design; ein Kompassring an seinem Fuß trägt die Anfangsbuchstaben der Himmelsrichtungen (<strong>N</strong> zum Projektnorden).</p>
 <figure>
 <img alt="Der Orientierungswürfel in der Ecke der 3D-Ansicht mit den gebogenen Pfeilen, der Schaltfläche Startansicht, dem Menü und der Ausrichtung darunter" src="../assets/screens/if-cube.webp"/>
 <figcaption>Der Orientierungswürfel</figcaption>
@@ -2025,7 +2219,7 @@ enthält, bei einer Auswahl, zuerst die Änderungsbefehle (<strong>Verschieben</
   <strong>Arbeitsebenenraster</strong>, <strong>Quadrant</strong>, <strong>Schnittpunkt</strong>, <strong>Mitte</strong>, <strong>Lotrecht</strong>, <strong>Tangente</strong>
   und <strong>Entfernte Objekte</strong>, mit ihren zwei Buchstaben; <strong>Alle auswählen</strong> und <strong>Keine auswählen</strong>.
   Ist <strong>Nächster</strong> aus, bietet die Linie unter dem Cursor weiter ihre Enden und ihren Mittelpunkt,
-  auch weit entfernt. <strong>Entfernte Objekte</strong> (anfangs aus) richtet den Punkt waagrecht oder senkrecht an den Enden
+  auch weit entfernt. <strong>Entfernte Objekte</strong> (anfangs an) richtet den Punkt waagrecht oder senkrecht an den Enden
   entfernter Linien aus, mit einer gestrichelten Hilfslinie.</li>
 <li><strong>Temporäre Überschreibungen</strong>: die Liste der zwei Buchstaben, die für einen Punkt gelten.</li>
 <li><strong>Vorgaben wiederherstellen</strong> stellt alles auf den Anfang zurück.</li>

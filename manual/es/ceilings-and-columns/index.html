@@ -1,0 +1,706 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Manual de usuario de BIMopen, modelado BIM de código abierto" name="description"/>
+<meta content="BIMopen" name="author"/>
+<link href="https://bimopen.it/manual/es/ceilings-and-columns/" rel="canonical"/>
+<link href="../floors-roofs-stairs/" rel="prev"/>
+<link href="../openings/" rel="next"/>
+<link href="../assets/images/bimopen-cube.svg" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.9" name="generator"/>
+<title>Falsos techos y columnas - Manual de usuario de BIMopen</title>
+<link href="../assets/stylesheets/main.4af4bdda.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link href="../assets/css/theme.css" rel="stylesheet"/>
+<link href="../assets/css/theme_dark_mode.css" rel="stylesheet"/>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="https://bimopen.it/manual/en/ceilings-and-columns/" hreflang="en" rel="alternate"/>
+<link href="https://bimopen.it/manual/it/ceilings-and-columns/" hreflang="it" rel="alternate"/>
+<link href="https://bimopen.it/manual/de/ceilings-and-columns/" hreflang="de" rel="alternate"/>
+<link href="https://bimopen.it/manual/fr/ceilings-and-columns/" hreflang="fr" rel="alternate"/>
+<link href="https://bimopen.it/manual/es/ceilings-and-columns/" hreflang="es" rel="alternate"/>
+<link href="https://bimopen.it/manual/ar/ceilings-and-columns/" hreflang="ar" rel="alternate"/>
+<link href="https://bimopen.it/manual/en/ceilings-and-columns/" hreflang="x-default" rel="alternate"/>
+</head>
+<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="slate" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#ceilings-and-columns">
+          Saltar a contenido
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Cabecera" class="md-header__inner md-grid">
+<a aria-label="Manual de usuario de BIMopen" class="md-header__button md-logo" data-md-component="logo" href="https://bimopen.it/es/" title="Manual de usuario de BIMopen">
+<img alt="logo" src="../assets/images/bimopen-cube.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Manual de usuario de BIMopen
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Falsos techos y columnas
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Cambiar al tema claro" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Cambiar al tema claro">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Cambiar al tema oscuro" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="bimopen" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Cambiar al tema oscuro">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<div class="md-header__option">
+<div class="md-select">
+<button aria-label="Seleccionar idioma" class="md-header__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"></path></svg>
+</button>
+<div class="md-select__inner">
+<ul class="md-select__list">
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/en/" hreflang="en">
+              English
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/it/" hreflang="it">
+              Italiano
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/de/" hreflang="de">
+              Deutsch
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/fr/" hreflang="fr">
+              Français
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/es/" hreflang="es">
+              Español
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/ar/" hreflang="ar">
+              العربية
+            </a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Búsqueda" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Búsqueda" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Buscar" class="md-search__options">
+<button aria-label="Limpiar" class="md-search__icon md-icon" tabindex="-1" title="Limpiar" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navegación" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Manual de usuario de BIMopen" class="md-nav__button md-logo" data-md-component="logo" href="https://bimopen.it/es/" title="Manual de usuario de BIMopen">
+<img alt="logo" src="../assets/images/bimopen-cube.svg"/>
+</a>
+    Manual de usuario de BIMopen
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
+<span class="md-ellipsis">
+    Inicio
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../getting-started/">
+<span class="md-ellipsis">
+    Primeros pasos
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../interface/">
+<span class="md-ellipsis">
+    La interfaz
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../interface-styles/">
+<span class="md-ellipsis">
+    Estilos de interfaz
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../projects-and-files/">
+<span class="md-ellipsis">
+    Proyectos y archivos
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../import-and-conversion/">
+<span class="md-ellipsis">
+    Importación y conversión
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cad-files/">
+<span class="md-ellipsis">
+    DWG y DXF
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../selection-and-modify/">
+<span class="md-ellipsis">
+    Selección y modificación
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../walls-doors-windows/">
+<span class="md-ellipsis">
+    Muros, puertas y ventanas
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../floors-roofs-stairs/">
+<span class="md-ellipsis">
+    Suelos, cubiertas, escaleras y componentes
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Falsos techos y columnas
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Falsos techos y columnas
+    
+  </span>
+</a>
+<nav aria-label="Tabla de contenidos" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ceilings">
+<span class="md-ellipsis">
+      Falsos techos
+    </span>
+</a>
+<nav aria-label="Falsos techos" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#types">
+<span class="md-ellipsis">
+      Tipos
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-ceiling-grid">
+<span class="md-ellipsis">
+      La rejilla del falso techo
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#properties">
+<span class="md-ellipsis">
+      Propiedades
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ceiling-plans">
+<span class="md-ellipsis">
+      Plantas de falsos techos
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#columns-and-structural-columns">
+<span class="md-ellipsis">
+      Columnas y pilares estructurales
+    </span>
+</a>
+<nav aria-label="Columnas y pilares estructurales" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-they-are-drawn">
+<span class="md-ellipsis">
+      Cómo se dibujan
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#types_1">
+<span class="md-ellipsis">
+      Tipos
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../openings/">
+<span class="md-ellipsis">
+    Huecos
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../phases/">
+<span class="md-ellipsis">
+    Fases y demoliciones
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../structure/">
+<span class="md-ellipsis">
+    Estructura y cimentaciones
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../site/">
+<span class="md-ellipsis">
+    Emplazamiento y terreno
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../design-options/">
+<span class="md-ellipsis">
+    Alternativas de diseño
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../views-and-graphics/">
+<span class="md-ellipsis">
+    Vistas y gráficos
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../annotation/">
+<span class="md-ellipsis">
+    Anotación y detalles 2D
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../documentation/">
+<span class="md-ellipsis">
+    Planos, tablas de planificación e impresión
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../command-line-and-mcp/">
+<span class="md-ellipsis">
+    Línea de comandos y MCP
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../keyboard-shortcuts/">
+<span class="md-ellipsis">
+    Atajos de teclado
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../troubleshooting/">
+<span class="md-ellipsis">
+    Solución de problemas
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://bimopen.it/manual/es/pdf/bimopen-manual-es.pdf">
+<span class="md-ellipsis">
+    PDF
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Tabla de contenidos" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ceilings">
+<span class="md-ellipsis">
+      Falsos techos
+    </span>
+</a>
+<nav aria-label="Falsos techos" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#types">
+<span class="md-ellipsis">
+      Tipos
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-ceiling-grid">
+<span class="md-ellipsis">
+      La rejilla del falso techo
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#properties">
+<span class="md-ellipsis">
+      Propiedades
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ceiling-plans">
+<span class="md-ellipsis">
+      Plantas de falsos techos
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#columns-and-structural-columns">
+<span class="md-ellipsis">
+      Columnas y pilares estructurales
+    </span>
+</a>
+<nav aria-label="Columnas y pilares estructurales" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-they-are-drawn">
+<span class="md-ellipsis">
+      Cómo se dibujan
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#types_1">
+<span class="md-ellipsis">
+      Tipos
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset"><a class="md-content__icon pdf-download-btn" download href="../pdf/bimopen-manual-es.pdf" title="Download"><i class="fa fas fa-download"></i><small> PDF</small></a>
+<h1 id="ceilings-and-columns">Falsos techos y columnas</h1>
+<p>Los falsos techos se hacen en una <strong>planta de falsos techos</strong>, la vista que mira hacia arriba desde
+su plano de corte. Las columnas y los pilares estructurales se colocan con un clic, en las plantas
+y en las vistas 3D.</p>
+<p><img alt="Una sala redonda: un solo muro circular, entero con sus capas" src="../assets/screens/cc-curved-3d.webp"/></p>
+<h2 id="ceilings">Falsos techos</h2>
+<p><strong>Modelar ▸ Construir ▸ Falso techo</strong> funciona en una planta de falsos techos. Iniciado en otra
+vista, <strong>Ir a vista</strong> ofrece las plantas de falsos techos del proyecto: la herramienta nunca cambia
+la vista por sí sola.</p>
+<p>La tarjeta contextual <strong>Colocar falso techo</strong> tiene el grupo <strong>Falso techo</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Herramienta</th>
+<th>Cómo funciona</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Falso techo automático</strong></td>
+<td>La predeterminada. Lleva el cursor dentro de una habitación cerrada por muros: la región se ilumina; un clic crea allí el falso techo. Su contorno sigue las caras de los muros; las líneas de separación de habitación no delimitan un falso techo</td>
+</tr>
+<tr>
+<td><strong>Dibujar falso techo</strong></td>
+<td>Abre el modo boceto (<strong>Crear contorno de falso techo</strong>), con el grupo <strong>Dibujar</strong> de los suelos: líneas, rectángulos, polígonos, arcos verdaderos, <strong>Designar muros</strong>, <strong>Seleccionar líneas</strong> y <strong>Flecha de pendiente</strong>. Un bucle cerrado dentro del contorno es una abertura. <strong>Finalizar modo de edición</strong> crea el falso techo</td>
+</tr>
+</tbody>
+</table>
+<p>La barra de opciones fija el <strong>Desfase de altura desde el nivel</strong> del próximo falso techo (2,60 m en
+un proyecto nuevo) y si tiene <strong>Delimitación de habitación</strong>.</p>
+<p>Un falso techo seleccionado muestra <strong>Editar contorno</strong>, que vuelve a abrir su boceto.</p>
+<h3 id="types">Tipos</h3>
+<p>El selector de tipos lista dos grupos:</p>
+<ul>
+<li><strong>Falso techo simple</strong>: sin grosor, solo su material, cuyo patrón se dibuja en él (<strong>Genérico</strong>);</li>
+<li><strong>Falso techo compuesto</strong>: capas de arriba abajo, editadas en <strong>Capas del tipo</strong> como las de muros
+  y suelos (<strong>Placa de yeso 12,5 sobre perfilería</strong>, <strong>Paneles 600 × 600</strong>). Su capa inferior es lo
+  que se ve desde abajo.</li>
+</ul>
+<h3 id="the-ceiling-grid">La rejilla del falso techo</h3>
+<p>El patrón de modelo del material visto desde abajo es la rejilla del falso techo: <strong>Panel mineral
+600x600</strong> tiene una rejilla de 600 × 600. Se dibuja en la planta de falsos techos y en las vistas
+3D, y la rejilla de un falso techo nuevo está centrada en su contorno, de modo que los paneles de
+borde de lados opuestos son iguales. El comando <code>ceilinggrid</code> desplaza la rejilla (<code>origin</code>, <code>by</code>),
+la gira (<code>angle</code>) o la vuelve a centrar (<code>centre</code>).</p>
+<h3 id="properties">Propiedades</h3>
+<table>
+<thead>
+<tr>
+<th>Propiedad</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nivel</strong></td>
+<td>El nivel al que pertenece el falso techo</td>
+</tr>
+<tr>
+<td><strong>Desfase de altura desde el nivel</strong></td>
+<td>La altura de su cara inferior sobre el nivel</td>
+</tr>
+<tr>
+<td><strong>Delimitación de habitación</strong></td>
+<td>Si las habitaciones de debajo terminan en el falso techo</td>
+</tr>
+<tr>
+<td><strong>Pendiente</strong></td>
+<td>La pendiente, para un falso techo inclinado por una línea o una flecha</td>
+</tr>
+<tr>
+<td><strong>Grosor</strong>, <strong>Perímetro</strong>, <strong>Área</strong>, <strong>Volumen</strong></td>
+<td>De solo lectura</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ceiling-plans">Plantas de falsos techos</h2>
+<p>Una planta de falsos techos muestra el nivel desde abajo, en el mismo sentido que su plano de
+planta para que los dos se superpongan: los muros, columnas y muros cortina que su plano de corte
+encuentra (2,30 m, sobre puertas y ventanas, así que un muro está entero encima de ellas), los
+falsos techos con sus rejillas, las rejillas y las anotaciones propias de la vista.</p>
+<ul>
+<li><strong>Vistas ▸ Crear ▸ Planta ▾ ▸ Planta de falsos techos</strong> abre <strong>Nueva planta</strong> con el <strong>Tipo</strong> de
+  las plantas de falsos techos: elige los niveles; con <strong>No duplicar vistas existentes</strong> no se
+  ofrece un nivel que ya tiene una.</li>
+<li>Un nivel nuevo recibe su planta de falsos techos cuando <strong>Plano de techo</strong> está marcado en
+  <strong>Tipos de vista de planta</strong>, en la barra de opciones de <strong>Nivel</strong>.</li>
+<li>En el <strong>Índice del proyecto</strong> las plantas de falsos techos tienen su propia rama, <strong>Plantas de
+  falsos techos</strong>. Una planta de falsos techos lleva el nombre de su nivel; el título de su ventana,
+  y la línea de comandos, la llaman <strong>Planta de falsos techos: Planta baja</strong>.</li>
+</ul>
+<p>En los planos de planta los falsos techos no se dibujan: están por encima del plano de corte. En
+las secciones se cortan con sus capas; en las vistas 3D son sólidos, uno por capa. Los muros pueden
+unirse a la cara inferior de un falso techo con <strong>Unir arriba/abajo</strong>. Los falsos techos aparecen en
+las tablas y en los cómputos de materiales, y se exportan a IFC como <code>IfcCovering</code> de tipo
+<code>CEILING</code>.</p>
+<h2 id="columns-and-structural-columns">Columnas y pilares estructurales</h2>
+<p><strong>Modelar ▸ Construir ▸ Columna ▾</strong> ofrece <strong>Columna arquitectónica</strong> y <strong>Pilar estructural</strong>;
+<strong>Estructura ▸ Elementos estructurales ▸ Pilar estructural</strong> inicia directamente el segundo. Ambos
+funcionan en las plantas y en las vistas 3D (sobre el nivel bajo el cursor).</p>
+<ul>
+<li>Un <strong>clic</strong> la coloca. Sus cotas temporales miden hasta las referencias más cercanas; escribe un
+  valor para colocarla a esa distancia.</li>
+<li>La <strong>barra espaciadora</strong> la alinea con las rejillas que se cruzan bajo el cursor, o la gira 90°.</li>
+<li>La barra de opciones: <strong>Girar tras insertar</strong> (queda entonces seleccionada y se gira con
+  <strong>Girar</strong>), <strong>Altura</strong> o <strong>Profundidad</strong>, el nivel que alcanza o <strong>Sin conexión</strong> con una altura,
+  y <strong>Delimitación de habitación</strong>.</li>
+</ul>
+<p>Un pilar estructural va también a varios sitios a la vez, desde el grupo <strong>Varios</strong>:</p>
+<ul>
+<li><strong>En rejillas</strong>: haz clic en las rejillas (otra vez para dejar una fuera); un pilar espera en
+  cada una de sus intersecciones; <strong>Fin</strong> o <span class="keys"><kbd class="key-enter">Enter</kbd></span> los coloca;</li>
+<li><strong>En columnas</strong>: haz clic en las columnas arquitectónicas; uno va al centro de cada una.</li>
+</ul>
+<p>Un pilar estructural colocado sobre dos rejillas toma de ellas su <strong>Marca de ubicación del pilar</strong>
+(<strong>A-2</strong>) y, con <strong>Se desplaza con las rejillas</strong>, las sigue cuando se mueven.</p>
+<h3 id="how-they-are-drawn">Cómo se dibujan</h3>
+<ul>
+<li>En las plantas una columna cortada por el plano de corte se rellena como un elemento cortado:
+  con el patrón de corte de su material, o con el patrón de nivel de detalle bajo de su tipo. Un
+  pilar estructural conserva todo su contorno; una columna arquitectónica dentro de un muro se
+  funde con él, y su contorno solo se ve donde sobresale del muro.</li>
+<li>Bajo el plano de corte una columna se dibuja en proyección.</li>
+<li>En las vistas 3D una columna circular es lisa, sin líneas a lo largo de su costado.</li>
+<li>Una columna con <strong>Delimitación de habitación</strong> hace una isla en la habitación que la rodea, o un
+  entrante donde se apoya contra un muro.</li>
+</ul>
+<p><strong>Unir arriba/abajo</strong> y <strong>Separar arriba/abajo</strong>, con columnas seleccionadas, unen su parte
+superior a un suelo, cubierta, falso techo o plano de referencia de arriba, o su base a un suelo de
+abajo, como para los muros.</p>
+<p>Con pilares seleccionados la barra de opciones muestra <strong>Unir pilar:</strong> con <strong>Superior</strong> o <strong>Base</strong>, y tres opciones: <strong>Estilo de unión</strong> (<strong>Cortar pilar</strong>: el pilar se detiene en la cara del elemento y sigue su pendiente; <strong>Cortar destino</strong>: el pilar queda plano y una cubierta o suelo que atraviesa por completo pierde su sección; <strong>No cortar</strong>: se solapan), <strong>Justificación de unión</strong> (<strong>Intersección mínima</strong>, <strong>Intersecar eje del pilar</strong>, <strong>Intersección máxima</strong>: donde la sección encuentra un elemento inclinado) y <strong>Desfase desde la unión</strong> (hacia arriba si es positivo). En Propiedades, bajo <strong>Restricciones</strong>, <strong>Justificación superior</strong>, <strong>Desfase de unión superior</strong>, <strong>Justificación en la base</strong> y <strong>Desfase de unión en la base</strong> se modifican mientras ese extremo está unido. <strong>Separar arriba/abajo</strong> y un clic en el elemento separan solo de él; <strong>Desenlazar todo</strong> de todos.</p>
+<p>Un <strong>pilar arquitectónico</strong> colocado en un muro o contra su cara se une al muro: lo llena el material del núcleo del muro, las capas fuera del núcleo lo envuelven por los lados que sobresalen, no hay línea entre ellos y, con nivel de detalle bajo, toma el patrón grueso del muro; en la esquina de dos muros se une al que más solapa. Un <strong>pilar estructural</strong> conserva siempre su propio material y corta el muro en el que está: el muro pierde su sección en planta, sección y 3D (solo en la altura del pilar), y el área y el volumen del muro, también en las tablas, disminuyen. Al mover el muro o el pilar la unión se recalcula.</p>
+<h3 id="types_1">Tipos</h3>
+<p>Las columnas tienen nuestras propias secciones paramétricas, rectangulares (<strong>Anchura</strong> y
+<strong>Profundidad</strong>; para un pilar estructural <strong>b</strong> y <strong>h</strong>) o circulares (<strong>Diámetro</strong>), con un
+material: <strong>Columna rectangular 400 × 400</strong>, <strong>Columna circular Ø 300</strong>, <strong>Pilar de hormigón armado
+300 × 300</strong>, <strong>300 × 500</strong> y <strong>Pilar circular de hormigón armado Ø 400</strong>. Las columnas y los pilares
+estructurales se exportan a IFC como <code>IfcColumn</code>.</p>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Volver al principio
+</button>
+</main>
+<footer class="md-footer">
+<nav aria-label="Pie" class="md-footer__inner md-grid">
+<a aria-label="Anterior: Suelos, cubiertas, escaleras y componentes" class="md-footer__link md-footer__link--prev" href="../floors-roofs-stairs/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Anterior
+              </span>
+<div class="md-ellipsis">
+                Suelos, cubiertas, escaleras y componentes
+              </div>
+</div>
+</a>
+<a aria-label="Siguiente: Huecos" class="md-footer__link md-footer__link--next" href="../openings/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Siguiente
+              </span>
+<div class="md-ellipsis">
+                Huecos
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Copyright © 2026 BIMopen
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.footer", "navigation.tracking", "toc.follow", "content.code.copy", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+<script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+<script src="../assets/js/zoom.js"></script>
+</body>
+</html>

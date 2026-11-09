@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="دليل مستخدم BIMopen، نمذجة BIM مفتوحة المصدر" name="description"/>
 <meta content="BIMopen" name="author"/>
-<link href="https://atsanna.github.io/bimopen-site/manual/ar/interface/" rel="canonical"/>
+<link href="https://bimopen.it/manual/ar/interface/" rel="canonical"/>
 <link href="../getting-started/" rel="prev"/>
 <link href="../interface-styles/" rel="next"/>
 <link href="../assets/images/bimopen-cube.svg" rel="icon"/>
@@ -18,6 +18,13 @@
 <link href="../assets/css/theme.css" rel="stylesheet"/>
 <link href="../assets/css/theme_dark_mode.css" rel="stylesheet"/>
 <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="https://bimopen.it/manual/en/interface/" hreflang="en" rel="alternate"/>
+<link href="https://bimopen.it/manual/it/interface/" hreflang="it" rel="alternate"/>
+<link href="https://bimopen.it/manual/de/interface/" hreflang="de" rel="alternate"/>
+<link href="https://bimopen.it/manual/fr/interface/" hreflang="fr" rel="alternate"/>
+<link href="https://bimopen.it/manual/es/interface/" hreflang="es" rel="alternate"/>
+<link href="https://bimopen.it/manual/ar/interface/" hreflang="ar" rel="alternate"/>
+<link href="https://bimopen.it/manual/en/interface/" hreflang="x-default" rel="alternate"/>
 </head>
 <body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="slate" dir="rtl">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -32,7 +39,7 @@
 </div>
 <header class="md-header md-header--shadow" data-md-component="header">
 <nav aria-label="عنوان العارضة" class="md-header__inner md-grid">
-<a aria-label="دليل مستخدم BIMopen" class="md-header__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/?lang=ar" title="دليل مستخدم BIMopen">
+<a aria-label="دليل مستخدم BIMopen" class="md-header__button md-logo" data-md-component="logo" href="https://bimopen.it/ar/" title="دليل مستخدم BIMopen">
 <img alt="logo" src="../assets/images/bimopen-cube.svg"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -73,32 +80,32 @@
 <div class="md-select__inner">
 <ul class="md-select__list">
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/en/" hreflang="en">
+<a class="md-select__link" href="https://bimopen.it/manual/en/" hreflang="en">
               English
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/it/" hreflang="it">
+<a class="md-select__link" href="https://bimopen.it/manual/it/" hreflang="it">
               Italiano
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/de/" hreflang="de">
+<a class="md-select__link" href="https://bimopen.it/manual/de/" hreflang="de">
               Deutsch
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/fr/" hreflang="fr">
+<a class="md-select__link" href="https://bimopen.it/manual/fr/" hreflang="fr">
               Français
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/es/" hreflang="es">
+<a class="md-select__link" href="https://bimopen.it/manual/es/" hreflang="es">
               Español
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/ar/" hreflang="ar">
+<a class="md-select__link" href="https://bimopen.it/manual/ar/" hreflang="ar">
               العربية
             </a>
 </li>
@@ -147,7 +154,7 @@
 <div class="md-sidebar__inner">
 <nav aria-label="تصفح" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="دليل مستخدم BIMopen" class="md-nav__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/?lang=ar" title="دليل مستخدم BIMopen">
+<a aria-label="دليل مستخدم BIMopen" class="md-nav__button md-logo" data-md-component="logo" href="https://bimopen.it/ar/" title="دليل مستخدم BIMopen">
 <img alt="logo" src="../assets/images/bimopen-cube.svg"/>
 </a>
     دليل مستخدم BIMopen
@@ -193,11 +200,18 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#application-menu">
 <span class="md-ellipsis">
-      قائمة التطبيق
+      لوحة ملف
     </span>
 </a>
-<nav aria-label="قائمة التطبيق" class="md-nav">
+<nav aria-label="لوحة ملف" class="md-nav">
 <ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recent-files">
+<span class="md-ellipsis">
+      الملفات الأخيرة
+    </span>
+</a>
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#options">
 <span class="md-ellipsis">
@@ -214,6 +228,31 @@
       الشريط العلوي وأدوات الوصول السريع
     </span>
 </a>
+<nav aria-label="الشريط العلوي وأدوات الوصول السريع" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#about-bimopen">
+<span class="md-ellipsis">
+      حول BIMopen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-commands-window">
+<span class="md-ellipsis">
+      نافذة الأوامر
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#updates">
+<span class="md-ellipsis">
+      التحديثات
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#ribbon">
@@ -285,7 +324,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#strip">
 <span class="md-ellipsis">
-      شريط العروض والعائلات
+      شريط العروض والمكوّنات
     </span>
 </a>
 </li>
@@ -412,6 +451,14 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../cad-files/">
+<span class="md-ellipsis">
+    DWG وDXF
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../selection-and-modify/">
 <span class="md-ellipsis">
     التحديد والتعديل
@@ -431,6 +478,54 @@
 <a class="md-nav__link" href="../floors-roofs-stairs/">
 <span class="md-ellipsis">
     الأرضيات والأسقف والسلالم والمكونات
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ceilings-and-columns/">
+<span class="md-ellipsis">
+    الأسقف المعلقة والأعمدة
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../openings/">
+<span class="md-ellipsis">
+    الفتحات
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../phases/">
+<span class="md-ellipsis">
+    المراحل والهدم
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../structure/">
+<span class="md-ellipsis">
+    الإنشاءات والأساسات
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../site/">
+<span class="md-ellipsis">
+    مخطط الموقع والأرض
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../design-options/">
+<span class="md-ellipsis">
+    بدائل التصميم
     
   </span>
 </a>
@@ -484,7 +579,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="https://atsanna.github.io/bimopen-site/manual/ar/pdf/bimopen-manual-ar.pdf">
+<a class="md-nav__link" href="https://bimopen.it/manual/ar/pdf/bimopen-manual-ar.pdf">
 <span class="md-ellipsis">
     PDF
     
@@ -508,11 +603,18 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#application-menu">
 <span class="md-ellipsis">
-      قائمة التطبيق
+      لوحة ملف
     </span>
 </a>
-<nav aria-label="قائمة التطبيق" class="md-nav">
+<nav aria-label="لوحة ملف" class="md-nav">
 <ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recent-files">
+<span class="md-ellipsis">
+      الملفات الأخيرة
+    </span>
+</a>
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#options">
 <span class="md-ellipsis">
@@ -529,6 +631,31 @@
       الشريط العلوي وأدوات الوصول السريع
     </span>
 </a>
+<nav aria-label="الشريط العلوي وأدوات الوصول السريع" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#about-bimopen">
+<span class="md-ellipsis">
+      حول BIMopen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-commands-window">
+<span class="md-ellipsis">
+      نافذة الأوامر
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#updates">
+<span class="md-ellipsis">
+      التحديثات
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#ribbon">
@@ -600,7 +727,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#strip">
 <span class="md-ellipsis">
-      شريط العروض والعائلات
+      شريط العروض والمكوّنات
     </span>
 </a>
 </li>
@@ -717,7 +844,7 @@
 </figure>
 <p>للنافذة هذه الأجزاء:</p>
 <ol>
-<li><strong>الشريط الجانبي</strong>، على حافة النافذة: علامة BIMopen، التي تفتح قائمة التطبيق، ثم
+<li><strong>الشريط الجانبي</strong>، على حافة النافذة: علامة BIMopen، التي تفتح لوحة ملف، ثم
    <strong>الرئيسية</strong>، وعلامة التبويب السياقية <strong>تحرير</strong>، وعلامات التبويب <strong>النمذجة</strong> و<strong>الإنشاءات</strong>
    و<strong>الخرسانة المسلحة</strong> و<strong>معدن</strong> و<strong>التصنيع المسبق</strong> و<strong>الأنظمة الميكانيكية والكهربائية</strong>
    و<strong>ربط واستيراد</strong> و<strong>التعليقات التوضيحية</strong> و<strong>التحقق</strong> و<strong>الكتل والموقع</strong> و<strong>مشاركة</strong>
@@ -730,7 +857,7 @@
 <li><strong>منطقة الرسم</strong>، في الوسط: العروض، لكل منها محدد العرض في الأعلى وشريط العرض في الأسفل؛
    وأثناء عمل أداة يمتد <strong>شريط الخيارات</strong> فوقها؛</li>
 <li><strong>لوحة العنصر</strong>، على الجانب المقابل: خصائص التحديد، أو خصائص العرض النشط؛</li>
-<li><strong>شريط العروض والعائلات</strong>، تحت منطقة الرسم، ويمكنك إخفاؤه (<span class="keys"><kbd class="key-f9">F9</kbd></span>)؛</li>
+<li><strong>شريط العروض والمكوّنات</strong>، تحت منطقة الرسم، ويمكنك إخفاؤه (<span class="keys"><kbd class="key-f9">F9</kbd></span>)؛</li>
 <li><strong>شريط الحالة</strong>، على امتداد الحافة السفلى.</li>
 </ol>
 <p>تحتفظ اللوحات بعرضها مهما عرضت: يُختصر الاسم الطويل بـ «…» ويُظهره التلميح كاملًا. اسحب حافة
@@ -740,10 +867,12 @@
 الأزرار كبيرة (انظر <a href="../interface-styles/#touch-mode">أنماط الواجهة</a>).</p>
 <p>في العربية تكون النافذة كلها معكوسة: الشريط الجانبي ولوحة الأدوات على اليمين، ولوحة العنصر على
 اليسار، وتُقرأ الأشرطة من اليمين إلى اليسار.</p>
-<h2 id="application-menu">قائمة التطبيق</h2>
-<p>تفتح علامة BIMopen، أعلى الشريط الجانبي، قائمة التطبيق: الأوامر التي تعمل على المشروع كله.
-ويعرض عنصر <strong>الرئيسية</strong> في الشريط الجانبي المشروع بمناسيبه وعروضه ولوحاته وجداوله، ويذكّرك بأن
-أوامر الملفات في هذه القائمة.</p>
+<h2 id="application-menu">لوحة ملف</h2>
+<p>تفتح علامة BIMopen، أعلى الشريط الجانبي، لوحة <strong>ملف</strong>: صفحة تملأ النافذة كلها فيها أوامر الملفات
+والمشاريع الأخيرة. وفي النمط <strong>الكلاسيكي</strong> يفتحها <strong>ملف</strong>، بجانب علامات التبويب؛ وفي وضع اللمس
+<strong>القائمة ▸ ملف</strong>. ويعيدك <strong>رجوع</strong> (الزر المستدير في الأعلى) أو <span class="keys"><kbd class="key-escape">Esc</kbd></span> إلى النموذج كما كان
+تمامًا.</p>
+<p>على الجانب الأول:</p>
 <table>
 <thead>
 <tr>
@@ -753,44 +882,48 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>جديد</strong></td>
-<td>يغلق المشروع الحالي ويبدأ مشروعًا جديدًا من القالب الافتراضي: منسوبان بمسقطيهما، والأنواع الافتراضية</td>
+<td><strong>المشاريع ▸ فتح…</strong></td>
+<td>صفحة فيها <strong>مشروع…</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-o">O</kbd></span>) و<strong>IFC…</strong> و<strong>خيارات IFC…</strong></td>
 </tr>
 <tr>
-<td><strong>فتح…</strong></td>
-<td>يفتح مشروع <code>.bimopen</code>، أو يفتح ملف <code>.ifc</code> كمشروع جديد، يُختار في نافذة حوار للملفات. وفي المتصفح اسحب الملف إلى الصفحة بدلًا من ذلك</td>
+<td><strong>المشاريع ▸ جديد…</strong></td>
+<td>يفتح <strong>مشروع جديد</strong>، مع ملف القالب الذي تبدأ منه</td>
 </tr>
 <tr>
-<td><strong>مشروع نموذجي</strong></td>
-<td>يفتح المنزل النموذجي</td>
+<td><strong>المكوّنات ▸ فتح…، جديد…</strong></td>
+<td>رمادية: المكوّنات غير متاحة بعد</td>
+</tr>
+<tr>
+<td><strong>الملفات الأخيرة</strong></td>
+<td>الصفحة الأولى في اللوحة، وهي موصوفة أدناه</td>
 </tr>
 <tr>
 <td><strong>حفظ</strong> <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span></td>
-<td>يحفظ المشروع في ملفه؛ والمشروع الذي لم يُحفظ قط يطلب اسمًا، مثل <strong>حفظ باسم…</strong></td>
+<td>يحفظ المشروع في ملفه؛ والمشروع الذي لم يُحفظ قط يطلب اسمًا</td>
 </tr>
 <tr>
-<td><strong>حفظ باسم…</strong></td>
-<td>يحفظ المشروع في ملف <code>.bimopen</code> جديد ويواصل العمل على ذلك الملف</td>
+<td><strong>حفظ باسم</strong></td>
+<td>صفحة فيها <strong>مشروع…</strong> و<strong>قالب…</strong> و<strong>خيارات…</strong> (خيارات الحفظ)</td>
 </tr>
 <tr>
-<td><strong>طباعة…</strong> <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-p">P</kbd></span></td>
-<td>يطبع اللوحات إلى PDF</td>
+<td><strong>طباعة</strong></td>
+<td>صفحة فيها <strong>طباعة…</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-p">P</kbd></span>) و<strong>معاينة الطباعة</strong> و<strong>إعدادات الطباعة…</strong></td>
 </tr>
 <tr>
-<td><strong>تصدير ▸ تصدير IFC4…</strong></td>
-<td>يكتب النموذج في ملف IFC4</td>
-</tr>
-<tr>
-<td><strong>تصدير ▸ تصدير المسقط SVG…</strong></td>
-<td>يكتب المسقط النشط كرسم SVG</td>
-</tr>
-<tr>
-<td><strong>تصدير ▸ تصدير العرض PNG…</strong></td>
-<td>يكتب العرض النشط كصورة PNG</td>
+<td><strong>تصدير</strong></td>
+<td>صفحة فيها <strong>صورة…</strong> و<strong>IFC…</strong> و<strong>تصدير المسقط SVG…</strong> و<strong>خيارات IFC…</strong> و<strong>جدول…</strong></td>
 </tr>
 <tr>
 <td><strong>المستندات المفتوحة</strong></td>
-<td>يسرد نوافذ العروض المفتوحة؛ انقر إحداها لإحضارها إلى المقدمة</td>
+<td>نوافذ العروض المفتوحة؛ والنقر يُحضر النافذة المختارة إلى المقدمة</td>
+</tr>
+<tr>
+<td><strong>إغلاق</strong></td>
+<td>يغلق المشروع ويعود إلى الصفحة الأولى</td>
+</tr>
+<tr>
+<td><strong>الجديد في هذا الإصدار</strong>، <strong>الدليل (F1)</strong>، <strong>الأوامر والاختصارات</strong>، <strong>موقع BIMopen</strong></td>
+<td>الروابط، في الأسفل</td>
 </tr>
 <tr>
 <td><strong>خيارات</strong></td>
@@ -802,19 +935,40 @@
 </tr>
 </tbody>
 </table>
+<p>لا تظهر أوامر المشروع المفتوح (من <strong>حفظ</strong> إلى <strong>إغلاق</strong>) إلا حين يكون مشروع مفتوحًا. وتعطي كل
+صفحة كل عنصر سطرًا من الشرح.</p>
 <figure>
-<img alt="قائمة التطبيق مع فتح التصدير: الصور والرسوم المتحركة وIFC وتصدير المسقط SVG والخيارات والتقارير" src="../assets/screens/if-export-menu.webp"/>
-<figcaption>قائمة التطبيق وقائمتها الفرعية للتصدير</figcaption>
+<img alt="لوحة ملف على صفحة تصدير: صورة… وIFC… وتصدير المسقط SVG… وخيارات IFC… وجدول…، ولكلٍّ منها شرحه" src="../assets/screens/if-export-menu.webp"/>
+<figcaption>لوحة ملف، صفحة تصدير</figcaption>
 </figure>
-<p>تستبدل <strong>جديد</strong> و<strong>فتح…</strong> و<strong>مشروع نموذجي</strong> المشروع الحالي دون سؤال: احفظه أولًا إن أردت
-الاحتفاظ به.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>تُفقد التعديلات غير المحفوظة عند اختيار <strong>جديد</strong> أو <strong>فتح…</strong> أو <strong>مشروع نموذجي</strong>. ويعرض
-الشريط العلوي <strong>تغييرات غير محفوظة</strong> ما دامت هناك تعديلات تحتاج إلى الحفظ.</p>
-</div>
+<h3 id="recent-files">الملفات الأخيرة</h3>
+<p>في صفحة <strong>الملفات الأخيرة</strong> ثلاثة أشرطة:</p>
+<ul>
+<li><strong>المشاريع</strong>: المشاريع الأخيرة في صور مصغرة مربعة، مع الاسم وتاريخ التعديل؛ وتدل تسمية على
+  العرض الذي أُخذت منه الصورة المصغرة (<strong>ثلاثي الأبعاد</strong>، <strong>مسقط</strong>، <strong>لوحة</strong>…). وعند مرور
+  الفأرة يظهر الدبوس، الذي يُبقي المشروع في رأس القائمة، والقائمة <strong>⋯</strong> (<strong>فتح</strong>، <strong>فتح كنسخة</strong>،
+  <strong>فتح المجلد</strong>، <strong>نسخ المسار</strong>، <strong>تثبيت</strong>، <strong>إزالة من القائمة</strong>؛ وكذلك بالزر الأيمن) و<strong>✕</strong>،
+  التي تُخرج المشروع من القائمة: ولبضع ثوانٍ يعيده <strong>تراجع</strong> إلى مكانه. ولا يُمسّ الملف على
+  القرص أبدًا. ويظهر الملف المنقول أو المحذوف رماديًا، مع <strong>الملف غير موجود</strong>، و<strong>بحث…</strong> لتحديد
+  مكانه الجديد، و<strong>إزالة</strong>؛ ويُخرج <strong>إزالة المفقودة</strong> جميع هذه الملفات، ويُخرج <strong>إفراغ
+  القائمة</strong> الملفات غير المثبتة.</li>
+<li><strong>قوالب المشاريع</strong>: <strong>مشروع جديد</strong>، والقالب الافتراضي، والقالب الإمبراطوري، والقوالب
+  الموجودة في مجلد الملفات، والمشروع النموذجي، و<strong>استعراض…</strong> لملف قالب آخر.</li>
+<li><strong>المكوّنات</strong>: المكوّنات الأخيرة (<code>.bco</code>، <code>.bct</code>)، مع صورتها المصغرة والأوامر نفسها التي للمشاريع. في نسخة الويب تبقى الملفات المفتوحة في المتصفح (حتى 1.5 ميغابايت لكل ملف) وتُفتح مجددًا من هنا.</li>
+</ul>
+<p>في الأعلى، يصفّي البحث حسب الاسم والمجلد، ويختار زران بين <strong>صور مصغرة</strong> و<strong>قائمة</strong>؛ وتعرض
+القائمة أيضًا المجلد والتاريخ والحجم، وتُرتَّب حسب الاسم أو التاريخ. ويُحفظ الاختيار.</p>
+<p>يخزّن كل حفظ صورة مصغرة في الملف: العرض ثلاثي الأبعاد الافتراضي، أو العرض المختار في <strong>خيارات
+حفظ الملف ▸ معاينة</strong>. ويظهر للملف الذي تتعذر قراءته
+أيقونة محايدة.</p>
+<p>عند بدء التشغيل دون ملف تكون اللوحة هي الصفحة الأولى، دون <strong>رجوع</strong>؛ وفي أول تشغيل، والقائمة
+فارغة، تعرض <strong>مشروع جديد</strong> و<strong>فتح…</strong> و<strong>مشروع نموذجي</strong>. وفي وضع اللمس تكون الصور المصغرة أكبر،
+وتبقى الإجراءات ظاهرة دائمًا، ويفتح الضغط المطوّل القائمة <strong>⋯</strong>. ولا يوجد <strong>فتح المجلد</strong> في
+المتصفح.</p>
+<p>تحلّ <strong>جديد…</strong> و<strong>فتح…</strong> والمشروع الأخير و<strong>مشروع نموذجي</strong> محلّ المشروع المفتوح؛ وإن كانت فيه
+تغييرات غير محفوظة، تسأل أولًا هل تريد حفظها.</p>
 <h3 id="options">خيارات</h3>
-<p>يفتح الترس في طرف الشريط العلوي، أو <strong>الإعدادات</strong> في أسفل الشريط الجانبي، أو <strong>قائمة التطبيق ▸
+<p>يفتح الترس في طرف الشريط العلوي، أو <strong>الإعدادات</strong> في أسفل الشريط الجانبي، أو <strong>ملف ▸
 خيارات</strong>، نافذة <strong>خيارات</strong>. وفيها، من بين غيرها، هذه الإعدادات:</p>
 <table>
 <thead>
@@ -909,7 +1063,7 @@
 </tr>
 <tr>
 <td><strong>?</strong></td>
-<td><strong>التعليمات</strong> <span class="keys"><kbd class="key-f1">F1</kbd></span>، و<strong>الأوامر</strong> (كل أوامر سطر الأوامر، مثل كتابة <code>help</code>) و<strong>معلومات</strong> (الإصدار والترخيص والمساهمون)</td>
+<td><strong>التعليمات</strong> <span class="keys"><kbd class="key-f1">F1</kbd></span>، و<strong>الأوامر</strong> (كل الأوامر في نافذة: <a href="#the-commands-window">نافذة الأوامر</a>) و<strong>معلومات</strong> (<a href="#about-bimopen">حول BIMopen</a>)</td>
 </tr>
 <tr>
 <td>الترس</td>
@@ -933,6 +1087,33 @@
 <p><strong>? ▸ التعليمات</strong> (<span class="keys"><kbd class="key-f1">F1</kbd></span>) تفتح هذا الدليل بلغة الواجهة في المتصفح. ويفتح <span class="keys"><kbd class="key-f1">F1</kbd></span> صفحة ما تقوم به:
 مربع الحوار المفتوح، أو المربع الموجود تحت مؤشر الفأرة (ينتهي تلميحه بعبارة <strong>اضغط F1 لمزيد من
 المعلومات</strong>)، أو الأداة النشطة.</p>
+<h3 id="about-bimopen">حول BIMopen</h3>
+<p>يعرض <strong>? ▸ معلومات</strong> شعار البرنامج واسمه، والإصدار مع تاريخ الإيداع (commit) الذي بُني منه
+ورمزه (يُقرآن عند بناء البرنامج: والبناء قيد التطوير يذكر ذلك)، والمنصة (النظام وهل هو سطح
+المكتب أم الويب). وتذكّر الملاحظة أسفله بأنه إصدار تجريبي. وتفتح الصفوف في المتصفح <strong>الموقع</strong>
+و<strong>دليل المستخدم</strong> و<strong>ما الجديد في الإصدار</strong> (مستجدات كل إصدار)؛ ويفتح <strong>تراخيص الأطراف
+الثالثة</strong> في مكانه قائمة الأعمال التي يحتويها البرنامج (الخطوط والأيقونات وخامات المواد
+والسماء والقمر والنجوم) مع تراخيصها؛ والنصوص الكاملة في ملف NOTICE. ويضع <strong>نسخ معلومات
+النظام</strong> في الحافظة الإصدار والنظام وبطاقة الرسوميات والواجهة الخلفية المستخدمة: الصقها عند
+الإبلاغ عن مشكلة.</p>
+<h3 id="the-commands-window">نافذة الأوامر</h3>
+<p>يفتح <strong>? ▸ الأوامر</strong>، أو <code>help</code> المكتوب في سطر الأوامر، قائمة كل الأوامر. على أحد الجانبين
+علامات تبويب الشريط بترتيبها، ثم <strong>تعديل</strong> و<strong>سطر الأوامر فقط</strong>؛ وفي الوسط لكل أمر اسمه بلغة
+الواجهة والاسم الذي يُكتب ومرادفاته واختصاره؛ وعلى الجانب الآخر وصف الأمر المختار واستخدامه
+ومثال عليه. ويجد البحث الأمر بأيٍّ من هذه في كل علامات التبويب (<code>help door</code> يفتح النافذة والباب
+موجود فيها). والأمر غير المتاح بعد رمادي؛ و<strong>المتاحة فقط</strong> يخفيها. والنقر المزدوج أو <span class="keys"><kbd class="key-enter">Enter</kbd></span>
+أو <strong>تشغيل</strong> يشغّل الأمر كما يفعل زره؛ والأمر الموجود في سطر الأوامر وحده يُكتب فيه لإكماله.
+ويضع <strong>نسخ</strong> الأمر مع مثاله في الحافظة. وتتنقل الأسهم في القائمة، ويغلقها <span class="keys"><kbd class="key-escape">Esc</kbd></span>. وفي وضع
+اللمس تُفتح النافذة من <strong>الأوامر ▸ قائمة الأوامر</strong> (وحقل الأوامر ما زال فارغًا) بصفوف بحجم الإصبع.</p>
+<h3 id="updates">التحديثات</h3>
+<p>عند بدء التشغيل، مرة واحدة يوميًا على الأكثر، يقرأ BIMopen من الموقع ملف أحدث إصدار (ولا يرسل شيئًا آخر). وعند صدور إصدار أحدث يظهر على <strong>الجرس</strong> في الشريط العلوي نقطة برتقالية (على يمين شريط العنوان في النمط الكلاسيكي، وفي الشريط العلوي في وضع اللمس). ويفتح النقر لوحته: الإصدار وتاريخه وأهم مستجداته و<strong>كل المستجدات</strong>، و<strong>التنزيل والتحديث</strong> و<strong>لاحقًا</strong> (بلا نقطة حتى التشغيل التالي) و<strong>تخطَّ هذا الإصدار</strong> (بلا نقطة حتى الإصدار الذي يليه).</p>
+<p>ينزّل <strong>التنزيل والتحديث</strong> البرنامج مع شريط تقدّم (<strong>المتابعة في الخلفية</strong> تخفي اللوحة، و<strong>إلغاء</strong> يوقف التنزيل). وقبل استبدال أي شيء يتحقق BIMopen من الملف: يجب أن يطابق مجموع التحقق SHA-256 مجموع الإصدار، وأن يحمل ملف الإصدار التوقيع الرقمي لـ BIMopen. والحزمة غير الموقّعة أو الموقّعة بمفتاح آخر أو المعدّلة تُتجاهل ولا يُثبّت شيء. ثم يسأل <strong>إعادة التشغيل والتحديث</strong> عن حفظ التعديلات، ويضع البرنامج الجديد مكان القديم ويشغّله على المشروع نفسه والعرض نفسه.</p>
+<ul>
+<li><strong>Windows</strong>: عند إعادة التشغيل يُعاد تسمية البرنامج قيد التشغيل ويُستبدل. وإلى أن يُوقَّع الملف التنفيذي قد يحذّر Windows عند أول تشغيل: <strong>مزيد من المعلومات ▸ التشغيل على أي حال</strong>.</li>
+<li><strong>Android</strong>: ينزّل <strong>التنزيل والتثبيت</strong> الحزمة ويطلب مثبّت النظام التأكيد (وفي المرة الأولى يطلب إذن <strong>تثبيت تطبيقات غير معروفة</strong>).</li>
+<li><strong>الويب</strong>: يحمّل <strong>إعادة التحميل</strong> الإصدار الجديد.</li>
+</ul>
+<p>عند غياب الاتصال أو عدم صحة التوقيع أو نقص المساحة على القرص تقول اللوحة ذلك ويواصل BIMopen العمل كما كان. ويوقف <strong>الخيارات ▸ عام ▸ التحقق من التحديثات</strong> التحقق، ويتحقق <strong>تحقق الآن</strong> فورًا.</p>
 <h2 id="ribbon">الشريط الجانبي ولوحة الأدوات</h2>
 <p>يعرض الشريط الجانبي علامات تبويب الشريط في النمط <strong>الكلاسيكي</strong>، بالأسماء نفسها وبالترتيب نفسه.
 انقر على علامة تبويب: تعرض لوحة الأدوات مجموعاتها في كتل مؤطرة، لكل منها اسمها في الأسفل، وفي
@@ -1140,12 +1321,12 @@ BIMopen بعد رمادية، وتلميحها يقول «غير متاح بعد
 <tr>
 <td></td>
 <td><strong>تحميل من المكتبة</strong></td>
-<td><strong>تحميل عائلة</strong>, <em>تحميل كمجموعة</em>, <strong>إدراج من ملف ▾</strong></td>
+<td><strong>تحميل مكوّن</strong>, <em>تحميل كمجموعة</em>, <strong>إدراج من ملف ▾</strong></td>
 </tr>
 <tr>
 <td><strong>التعليقات التوضيحية</strong></td>
 <td><strong>بُعد</strong></td>
-<td><strong>محاذية</strong>, <strong>خطي</strong>, <strong>زاوية</strong>, <strong>شعاعي</strong>, <em>القطر</em>, <strong>طول القوس</strong>, <strong>بُعد نقطة ▾</strong></td>
+<td><strong>محاذية</strong>, <strong>خطي</strong>, <strong>زاوية</strong>, <strong>شعاعي</strong>, <strong>القطر</strong>, <strong>طول القوس</strong>, <strong>بُعد نقطة ▾</strong></td>
 </tr>
 <tr>
 <td></td>
@@ -1250,7 +1431,7 @@ BIMopen بعد رمادية، وتلميحها يقول «غير متاح بعد
 <tr>
 <td></td>
 <td><strong>فهرس المشروع</strong></td>
-<td>شجرة عروض المشروع وجداوله ولوحاته وعائلاته</td>
+<td>شجرة عروض المشروع وجداوله ولوحاته ومكوّناته</td>
 </tr>
 <tr>
 <td><strong>المشروع</strong></td>
@@ -1386,7 +1567,7 @@ BIMopen بعد رمادية، وتلميحها يقول «غير متاح بعد
 </tr>
 <tr>
 <td><strong>النوافذ</strong></td>
-<td><strong>تبديل العرض</strong>، <strong>نسخ النافذة</strong>، <strong>تتالي</strong>، <strong>تجانب</strong>، <strong>تكبير</strong>، <strong>إغلاق الأخرى</strong>، <strong>الألواح</strong></td>
+<td><strong>تبديل العرض</strong>، <strong>نسخ النافذة</strong>، <strong>تتالي</strong>، <strong>تجانب</strong>، <strong>تكبير</strong>، <strong>إغلاق الأخرى</strong>، <strong>الألواح</strong>، <strong>سمة منطقة الرسم</strong></td>
 </tr>
 </tbody>
 </table>
@@ -1532,11 +1713,11 @@ BIMopen بعد رمادية، وتلميحها يقول «غير متاح بعد
 </tr>
 <tr>
 <td><strong>باب</strong>، <strong>نافذة</strong></td>
-<td><strong>تحميل عائلة</strong>؛ <strong>النمذجة في الموقع</strong> (باهت)؛ <strong>وسم عند الوضع</strong> مع <strong>أفقي</strong> أو <strong>رأسي</strong> و<strong>خط الإشارة</strong> وطوله؛ <strong>الوسوم المحمّلة…</strong> (باهت)</td>
+<td><strong>النمذجة في الموقع</strong> (باهت)؛ <strong>وسم عند الوضع</strong> مع <strong>أفقي</strong> أو <strong>رأسي</strong> و<strong>خط الإشارة</strong> وطوله؛ <strong>الوسوم المحمّلة…</strong> (باهت)</td>
 </tr>
 <tr>
 <td><strong>كائن</strong></td>
-<td><strong>تحميل عائلة</strong>؛ <strong>النمذجة في الموقع</strong> (باهت)؛ <strong>التدوير بعد الإدراج</strong>: يبقى الكائن الموضوع محددًا ويبدأ <strong>تدوير</strong></td>
+<td><strong>النمذجة في الموقع</strong> (باهت)؛ <strong>التدوير بعد الإدراج</strong>: يبقى الكائن الموضوع محددًا ويبدأ <strong>تدوير</strong></td>
 </tr>
 <tr>
 <td><strong>سقف</strong></td>
@@ -1644,7 +1825,7 @@ BIMopen بعد رمادية، وتلميحها يقول «غير متاح بعد
 مثلًا <code>2.7m</code>.</p>
 <h2 id="project-browser">فهرس المشروع</h2>
 <p>يعرض <strong>العروض</strong> في الشريط الجانبي، تحت أدواته، <strong>فهرس المشروع</strong>: عروض المشروع وجداوله ولوحاته
-وعائلاته في شجرة. انقر <strong>⊟</strong> أو <strong>⊞</strong> لطيّ فرع أو بسطه.</p>
+ومكوّناته في شجرة. انقر <strong>⊟</strong> أو <strong>⊞</strong> لطيّ فرع أو بسطه.</p>
 <figure>
 <img alt="فهرس المشروع: العروض حسب نوعها، مساقط الأرضيات ومخططات المساحات والمقاطع والواجهات، والعرض النشط بخط عريض" src="../assets/screens/if-project-index.webp"/>
 <figcaption>فهرس المشروع</figcaption>
@@ -1690,8 +1871,8 @@ BIMopen بعد رمادية، وتلميحها يقول «غير متاح بعد
 <td>اللوحات، بصيغة الرقم - الاسم</td>
 </tr>
 <tr>
-<td><strong>العائلات</strong></td>
-<td>أنواع المشروع، حسب الفئة: الجدران والأبواب والنوافذ والأرضيات والأسقف والمكونات وغيرها</td>
+<td><strong>المكوّنات</strong></td>
+<td>أنواع المشروع، حسب الفئة: الجدران والأبواب والنوافذ والأرضيات والأسقف و<strong>الأثاث</strong> و<strong>الأدوات الصحية</strong> وغيرها؛ وتحت فئة مكوّنات، كل مكوّن ثم أنواعه</td>
 </tr>
 </tbody>
 </table>
@@ -1709,12 +1890,12 @@ BIMopen بعد رمادية، وتلميحها يقول «غير متاح بعد
 <strong>تكرار العرض</strong>. ولا يمكن حذف <strong>{3D}</strong> ولا إعادة تسميته.</p>
 <p>مع جدول من جداول المشروع، تحدده النقرة، وتفتحه النقرة المزدوجة، وتحتوي قائمة الزر الأيمن على
 <strong>فتح</strong> و<strong>خصائص الجدول…</strong> و<strong>حذف</strong>. ويُفتح الجدول المعرّف مسبقًا بنقرة.</p>
-<p>ومع نوع، تحت <strong>العائلات</strong>، تفتح النقرة المزدوجة معلمات نوعه؛ وتحتوي قائمة الزر الأيمن على
+<p>ومع نوع، تحت <strong>المكوّنات</strong>، تفتح النقرة المزدوجة معلمات نوعه؛ وتحتوي قائمة الزر الأيمن على
 <strong>معلمات النوع</strong> و<strong>تكرار…</strong> و<strong>إنشاء مثيل</strong> (يبدأ الأداة التي تضعه، بذلك النوع) و<strong>حذف</strong>.</p>
 <p>بعد نقرة في فهرس المشروع تتحرك لوحة المفاتيح فيه: <span class="keys"><kbd class="key-arrow-up">Up</kbd></span> و<span class="keys"><kbd class="key-arrow-down">Down</kbd></span> تنتقلان من صف إلى آخر (تظهر خصائص العرض في لوحة العنصر)، <span class="keys"><kbd class="key-arrow-right">Right</kbd></span> يفتح فرعاً، <span class="keys"><kbd class="key-arrow-left">Left</kbd></span> يغلقه أو يصعد إلى الفرع الذي يحوي الصف، <span class="keys"><kbd class="key-enter">Enter</kbd></span> يفتح العرض.</p>
 <p>ومن هنا تذهب العروض إلى اللوحات أيضاً. اسحب مسقطاً أو مقطعاً أو واجهة أو عرضاً ثنائي الأبعاد حراً أو مفتاح رموز أو عرضاً ثلاثي الأبعاد محفوظاً أو جدولاً إلى اللوحة المفتوحة: يتبع إطاره المؤشر ويبقى حيث تفلته. أو أفلته على اسم لوحة في الشجرة: تُفتح اللوحة ويتبع الإطار المؤشر حتى تنقر. أثناء السحب تتمرر الشجرة حين يقترب المؤشر من حافتها. في قائمة الزر الأيمن للوحة يوجد <strong>إضافة عرض…</strong>. تُدرج العروض الموجودة على لوحة تحتها؛ وفي قائمة النقر بالزر الأيمن لعرض منها <strong>إزالة من اللوحة</strong>، وفي قائمة <strong>اللوحات (الكل)</strong> <strong>لوحة جديدة…</strong>. وفي العرض ثلاثي الأبعاد تضم قائمة النقر بالزر الأيمن أيضًا <strong>تكبير إلى الامتداد ثلاثي الأبعاد</strong>: النموذج كله، حتى العناصر المخفية في العرض. العرض الموجود على لوحة يُرفض، مع السبب في سطر الأوامر؛ مفاتيح الرموز والجداول يمكن وضعها على عدة لوحات. يظهر العرض ثلاثي الأبعاد المحفوظ على اللوحة بالحواف التي تراها كاميرته.</p>
 <p>في قائمة الزر الأيمن لمسقط أو مقطع أو عرض ثنائي الأبعاد حر يوجد <strong>البحث عن العروض المرجعية</strong>: العروض التي تُظهر رمزه واللوحات التي يوجد عليها؛ <strong>الانتقال إلى العرض</strong> يفتح المختار.</p>
-<h2 id="strip">شريط العروض والعائلات</h2>
+<h2 id="strip">شريط العروض والمكوّنات</h2>
 <p>للشريط أسفل منطقة الرسم ثلاثة أوضاع تُختار بالأزرار في بدايته:</p>
 <ul>
 <li><strong>العروض</strong>: معاينات حية للعروض، مقسمة إلى <strong>الكل</strong> و<strong>المفتوحة (n)</strong> و<strong>المساقط</strong>
@@ -1723,7 +1904,7 @@ BIMopen بعد رمادية، وتلميحها يقول «غير متاح بعد
   الأيمن يفتح قائمة العرض، وفيها <strong>فتح في النافذة النشطة</strong>؛ واسحبها إلى اللوحة المفتوحة، أو إلى
   الصورة المصغرة للوحة، لوضعها هناك. و<strong>+</strong> ينشئ عرضًا جديدًا: <strong>العرض ثلاثي الأبعاد الافتراضي</strong>
   أو <strong>حفظ العرض</strong> أو <strong>تكرار</strong> أو <strong>لوحة</strong> أو <strong>جدول/كميات</strong>.</li>
-<li><strong>العائلات</strong>: معاينة لكل نوع، مقسمة حسب فئة العائلة. النقر على معاينة يضع ذلك النوع؛ وسحبها
+<li><strong>المكوّنات</strong>: معاينة لكل نوع، مقسمة حسب الفئة. النقر على معاينة يضع ذلك النوع؛ وسحبها
   إلى مسقط يدرجه حيث تُفلت. الباب أو النافذة المفلتة قرب جدار تدخل فيه، على امتداده.</li>
 <li><strong>الأوامر</strong>: سجل سطر الأوامر. النقر على سطر كتبته يعيد تنفيذه.</li>
 </ul>
@@ -1734,8 +1915,8 @@ BIMopen بعد رمادية، وتلميحها يقول «غير متاح بعد
 <p>في الطرف الآخر، يرشّح <strong>إظهار</strong> المعاينات حسب التخصص والمرحلة، ومربع البحث حسب الاسم، وتضبط
 ثلاثة أزرار الحجم: <strong>معاينات</strong> و<strong>مضغوط</strong> و<strong>إخفاء</strong>.</p>
 <figure>
-<img alt="الشريط في وضع العائلات: معاينة لكل نوع، الجدران أولًا، للنقر أو السحب إلى مسقط" src="../assets/screens/if-strip-families.webp"/>
-<figcaption>الشريط في وضع العائلات</figcaption>
+<img alt="الشريط في وضع المكوّنات: معاينة لكل نوع، الجدران أولًا، للنقر أو السحب إلى مسقط" src="../assets/screens/if-strip-families.webp"/>
+<figcaption>الشريط في وضع المكوّنات</figcaption>
 </figure>
 <p>حين لا تتسع المجموعات بجانب الأوضاع، تُجمع في قائمة واحدة، مثل <strong>الكل ▾</strong>. ولتعطي منطقة الرسم
 مساحة الشريط، أخفه بزر <strong>شريط طرق العرض</strong>، آخر أزرار شريط الحالة، أو بـ <span class="keys"><kbd class="key-f9">F9</kbd></span>؛ والزر نفسه أو
@@ -1799,6 +1980,10 @@ BIMopen بعد رمادية، وتلميحها يقول «غير متاح بعد
 <tr>
 <td><strong>الألواح</strong></td>
 <td>يُظهر أو يخفي <strong>الخصائص</strong>، و<strong>فهرس المشروع</strong>، و<strong>سطر الأوامر</strong>، و<strong>شريط التنقل</strong>، و<strong>اختصارات لوحة المفاتيح</strong> و<strong>الملفات الأخيرة</strong></td>
+</tr>
+<tr>
+<td><strong>سمة منطقة الرسم</strong></td>
+<td>كل نقرة تبدّل خلفية منطقة الرسم بين الأسود والأبيض؛ ولا يتغير باقي الواجهة. وهو الخيار نفسه <strong>عكس لون الخلفية</strong> في <strong>الخيارات</strong>، ويبقى في الجلسات التالية</td>
 </tr>
 </tbody>
 </table>
@@ -1947,6 +2132,7 @@ BIMopen بعد رمادية، وتلميحها يقول «غير متاح بعد
 السحب، وعند الإفلات يتم النقل كما في <strong>نقل</strong>.</p>
 <p>في العرض ثلاثي الأبعاد تكبّر عجلة الفأرة مع إبقاء نقطة النموذج تحت المؤشر ثابتة، ويدور المدار حول مركز التحديد، أو حول النقطة التي ينظر إليها العرض حين لا يوجد تحديد.</p>
 <p>يدور <strong>مكعب التوجيه</strong>، في الزاوية العليا من العرض ثلاثي الأبعاد، مع النموذج. حوافه ورؤوسه مشطوفة، وكل جزء منه هدف مستقل: الأوجه الستة (<strong>أعلى</strong>، <strong>أسفل</strong>، <strong>أمام</strong>، <strong>خلف</strong>، <strong>يمين</strong>، <strong>يسار</strong>، وأسماؤها مكتوبة عليها بالمنظور وتدور معها) تنظر إلى ذلك الجانب مباشرة؛ وشرائط الحواف الاثنتا عشرة تنظر من بين جانبين؛ ومثلثات الرؤوس الثمانية من بين ثلاثة (عرض متساوي القياس). يتلوّن الجزء الذي تحت المؤشر بلون التمييز، ويبقى الجزء الذي ينظر منه العرض الآن مميَّزًا؛ والنقر يدير العرض إليه في انتقال قصير. اسحب المكعب للدوران.</p>
+<p>المكعب رمادي فاتح، وأوجهه مظللة بضوء ناعم، في السمة الفاتحة والداكنة على السواء؛ وعند قاعدته حلقة بوصلة تحمل الأحرف الأولى للجهات الأصلية (<strong>ش</strong> نحو شمال المشروع).</p>
 <figure>
 <img alt="مكعب التوجيه في زاوية العرض ثلاثي الأبعاد، مع الأسهم المنحنية وزر عرض البداية والقائمة والاتجاه المكتوب تحته" src="../assets/screens/if-cube.webp"/>
 <figcaption>مكعب التوجيه</figcaption>
@@ -1980,7 +2166,7 @@ BIMopen بعد رمادية، وتلميحها يقول «غير متاح بعد
 <li><strong>التقاط الكائنات</strong>: مربع لكل من <strong>نقطة النهاية</strong> و<strong>نقطة المنتصف</strong> و<strong>الأقرب</strong> و<strong>شبكة مستوى العمل</strong>
   و<strong>ربع دائرة</strong> و<strong>تقاطع</strong> و<strong>الوسط</strong> و<strong>عمودي</strong> و<strong>مماس</strong> و<strong>الكائنات البعيدة</strong>، مع حرفيها؛
   و<strong>تحديد الكل</strong> و<strong>إلغاء تحديد الكل</strong>. وعند إطفاء <strong>الأقرب</strong> يظل الخط تحت المؤشر يقدّم طرفيه
-  ومنتصفه ولو كانت بعيدة. و<strong>الكائنات البعيدة</strong> (مطفأة في البداية) تحاذي النقطة أفقياً أو رأسياً مع أطراف خطوط بعيدة،
+  ومنتصفه ولو كانت بعيدة. و<strong>الكائنات البعيدة</strong> (مفعّلة في البداية) تحاذي النقطة أفقياً أو رأسياً مع أطراف خطوط بعيدة،
   مع دليل متقطع.</li>
 <li><strong>تجاوزات مؤقتة</strong>: قائمة الحرفين اللذين يسريان لنقطة واحدة.</li>
 <li><strong>استعادة الافتراضيات</strong> تعيد كل شيء كما كان في البداية.</li>

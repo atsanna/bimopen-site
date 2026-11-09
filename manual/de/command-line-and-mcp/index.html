@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Benutzerhandbuch von BIMopen, BIM-Modellierung als Open Source" name="description"/>
 <meta content="BIMopen" name="author"/>
-<link href="https://atsanna.github.io/bimopen-site/manual/de/command-line-and-mcp/" rel="canonical"/>
+<link href="https://bimopen.it/manual/de/command-line-and-mcp/" rel="canonical"/>
 <link href="../documentation/" rel="prev"/>
 <link href="../keyboard-shortcuts/" rel="next"/>
 <link href="../assets/images/bimopen-cube.svg" rel="icon"/>
@@ -18,6 +18,13 @@
 <link href="../assets/css/theme.css" rel="stylesheet"/>
 <link href="../assets/css/theme_dark_mode.css" rel="stylesheet"/>
 <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="https://bimopen.it/manual/en/command-line-and-mcp/" hreflang="en" rel="alternate"/>
+<link href="https://bimopen.it/manual/it/command-line-and-mcp/" hreflang="it" rel="alternate"/>
+<link href="https://bimopen.it/manual/de/command-line-and-mcp/" hreflang="de" rel="alternate"/>
+<link href="https://bimopen.it/manual/fr/command-line-and-mcp/" hreflang="fr" rel="alternate"/>
+<link href="https://bimopen.it/manual/es/command-line-and-mcp/" hreflang="es" rel="alternate"/>
+<link href="https://bimopen.it/manual/ar/command-line-and-mcp/" hreflang="ar" rel="alternate"/>
+<link href="https://bimopen.it/manual/en/command-line-and-mcp/" hreflang="x-default" rel="alternate"/>
 </head>
 <body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="slate" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -32,7 +39,7 @@
 </div>
 <header class="md-header md-header--shadow" data-md-component="header">
 <nav aria-label="Kopfzeile" class="md-header__inner md-grid">
-<a aria-label="BIMopen Benutzerhandbuch" class="md-header__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/?lang=de" title="BIMopen Benutzerhandbuch">
+<a aria-label="BIMopen Benutzerhandbuch" class="md-header__button md-logo" data-md-component="logo" href="https://bimopen.it/de/" title="BIMopen Benutzerhandbuch">
 <img alt="logo" src="../assets/images/bimopen-cube.svg"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -73,32 +80,32 @@
 <div class="md-select__inner">
 <ul class="md-select__list">
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/en/" hreflang="en">
+<a class="md-select__link" href="https://bimopen.it/manual/en/" hreflang="en">
               English
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/it/" hreflang="it">
+<a class="md-select__link" href="https://bimopen.it/manual/it/" hreflang="it">
               Italiano
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/de/" hreflang="de">
+<a class="md-select__link" href="https://bimopen.it/manual/de/" hreflang="de">
               Deutsch
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/fr/" hreflang="fr">
+<a class="md-select__link" href="https://bimopen.it/manual/fr/" hreflang="fr">
               Français
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/es/" hreflang="es">
+<a class="md-select__link" href="https://bimopen.it/manual/es/" hreflang="es">
               Español
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/ar/" hreflang="ar">
+<a class="md-select__link" href="https://bimopen.it/manual/ar/" hreflang="ar">
               العربية
             </a>
 </li>
@@ -147,7 +154,7 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="BIMopen Benutzerhandbuch" class="md-nav__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/?lang=de" title="BIMopen Benutzerhandbuch">
+<a aria-label="BIMopen Benutzerhandbuch" class="md-nav__button md-logo" data-md-component="logo" href="https://bimopen.it/de/" title="BIMopen Benutzerhandbuch">
 <img alt="logo" src="../assets/images/bimopen-cube.svg"/>
 </a>
     BIMopen Benutzerhandbuch
@@ -202,6 +209,14 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../cad-files/">
+<span class="md-ellipsis">
+    DWG und DXF
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../selection-and-modify/">
 <span class="md-ellipsis">
     Auswählen und Ändern
@@ -221,6 +236,54 @@
 <a class="md-nav__link" href="../floors-roofs-stairs/">
 <span class="md-ellipsis">
     Geschossdecken, Dächer, Treppen und Bauteile
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ceilings-and-columns/">
+<span class="md-ellipsis">
+    Decken und Stützen
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../openings/">
+<span class="md-ellipsis">
+    Öffnungen
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../phases/">
+<span class="md-ellipsis">
+    Phasen und Abbruch
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../structure/">
+<span class="md-ellipsis">
+    Tragwerk und Fundamente
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../site/">
+<span class="md-ellipsis">
+    Lageplan und Gelände
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../design-options/">
+<span class="md-ellipsis">
+    Entwurfsvarianten
     
   </span>
 </a>
@@ -306,6 +369,13 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#clipboard-types-and-groups">
+<span class="md-ellipsis">
+      Zwischenablage, Typen und Gruppen
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -343,7 +413,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="https://atsanna.github.io/bimopen-site/manual/de/pdf/bimopen-manual-de.pdf">
+<a class="md-nav__link" href="https://bimopen.it/manual/de/pdf/bimopen-manual-de.pdf">
 <span class="md-ellipsis">
     PDF
     
@@ -397,6 +467,13 @@
 <a class="md-nav__link" href="#commands-you-will-use-often">
 <span class="md-ellipsis">
       Häufig verwendete Befehle
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#clipboard-types-and-groups">
+<span class="md-ellipsis">
+      Zwischenablage, Typen und Gruppen
     </span>
 </a>
 </li>
@@ -515,7 +592,7 @@ gibt. Die Verwendungszeile von <code>help</code> listet sie auf:</p>
 <td>Ein neues Projekt, das Beispielprojekt</td>
 </tr>
 <tr>
-<td><code>open house.bimopen</code>, <code>save house.bimopen</code></td>
+<td><code>open house.bpr</code>, <code>save house.bpr</code></td>
 <td>Öffnet und speichert ein Projekt</td>
 </tr>
 <tr>
@@ -560,13 +637,119 @@ gibt. Die Verwendungszeile von <code>help</code> listet sie auf:</p>
 </tr>
 <tr>
 <td><code>export house.ifc</code></td>
-<td>Exportiert IFC, SVG, PNG oder CSV, je nach Dateierweiterung</td>
+<td>Exportiert IFC, SVG, PNG, CSV oder USD (<code>.usdz</code>, <code>.usda</code>), je nach Dateierweiterung</td>
+</tr>
+<tr>
+<td><code>walk</code>, <code>collision</code>, <code>walksettings</code>, <code>liveview</code></td>
+<td>Die Begehung: wohin ein Weg führt, Kollision deaktivieren, die überwindbare Stufe, die Live-Ansicht (siehe <a href="../views-and-graphics/#live-view-and-walk-mode">Live-Ansicht und Begehung</a>)</td>
+</tr>
+<tr>
+<td><code>walkthrough</code></td>
+<td>Rundgänge: erstellt einen aus den angeklickten Punkten, ändert sein Bild, die Bilder gesamt und pro Sekunde, Geschwindigkeit, Beschleunigung und Drehglättung, fügt Schlüsselbilder hinzu und entfernt sie (siehe <a href="../views-and-graphics/#walkthrough-paths">Rundgang</a>)</td>
+</tr>
+<tr>
+<td><code>camera</code></td>
+<td>Perspektivansichten: erstellt eine Kameraansicht aus zwei Punkten, verschiebt ihre Kamera, ändert Sichtfeld, hintere Schnittebene und Zuschneidebereich, setzt das Ziel zurück (siehe <a href="../views-and-graphics/#perspective-views">Perspektivansichten</a>)</td>
+</tr>
+<tr>
+<td><code>bundle house.zip</code></td>
+<td>Projektpaket: das Projekt und die verwendeten Dateien in einer .zip-Datei; <code>open house.zip</code> entpackt und öffnet es</td>
 </tr>
 </tbody>
 </table>
 <p>Jedes Element hat eine Nummer, seine ID, die nach dem Erzeugen in Klammern angezeigt wird:
 <code>Door «Single swing door 80x210» in wall 102 (106)</code>. Befehle akzeptieren sie, wo sie ein Element
 benötigen: <code>params 106</code>, <code>delete 106</code>.</p>
+<h3 id="clipboard-types-and-groups">Zwischenablage, Typen und Gruppen</h3>
+<p>Die Befehle von <a href="../selection-and-modify/#copy-cut-and-paste">Kopieren, ausschneiden und einfügen</a>,
+<a href="../selection-and-modify/#match-type">Typ übertragen</a> und <a href="../selection-and-modify/#groups">Gruppen</a>.
+Ohne IDs wirken sie auf die Auswahl.</p>
+<table>
+<thead>
+<tr>
+<th>Befehl</th>
+<th>Beispiel</th>
+<th>Was er tut</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>copyclip</code></td>
+<td><code>copyclip 102 103</code></td>
+<td>Kopiert die Elemente in die Zwischenablage</td>
+</tr>
+<tr>
+<td><code>cut</code></td>
+<td><code>cut 102</code></td>
+<td>Schneidet die Elemente in die Zwischenablage aus</td>
+</tr>
+<tr>
+<td><code>paste</code></td>
+<td><code>paste 4,0</code></td>
+<td>Fügt am Punkt ein; ohne Punkt an derselben Stelle; <code>{"mode":"view"}</code> in der aktiven Ansicht, <code>{"mode":"levels","levels":[…]}</code> auf Ebenen, <code>{"mode":"views","views":[…]}</code> in Ansichten, per ID oder Name</td>
+</tr>
+<tr>
+<td><code>matchtype</code></td>
+<td><code>matchtype 102 105 106</code></td>
+<td>Die Elemente nach dem ersten erhalten seinen Typ, wenn sie derselben Kategorie angehören</td>
+</tr>
+<tr>
+<td><code>group</code> (<code>GP</code>)</td>
+<td><code>group 102 103 104 Bathroom</code></td>
+<td>Eine neue Gruppe aus den Elementen, mit ihrem Namen (<code>detail_name</code>: der Name der verknüpften 2D-Gruppe); mit <code>"empty":true</code> (und <code>"detail":true</code> für eine 2D-Gruppe) eine Gruppe ohne Mitglieder, im Editor zu füllen</td>
+</tr>
+<tr>
+<td><code>placegroup</code></td>
+<td><code>placegroup 10,0 Bathroom {"level":"First Floor"}</code></td>
+<td>Eine neue Kopie der Gruppe am Punkt, auf der Ebene; <code>rotation</code> in Grad, <code>view</code> für eine 2D-Gruppe</td>
+</tr>
+<tr>
+<td><code>ungroup</code></td>
+<td><code>ungroup 120</code></td>
+<td>Die Mitglieder der Kopie werden wieder gewöhnliche Elemente</td>
+</tr>
+<tr>
+<td><code>groupedit</code></td>
+<td><code>groupedit {"group":120,"add":[130],"remove":[121]}</code></td>
+<td>Fügt einer Kopie Mitglieder hinzu, entfernt welche und aktualisiert die anderen Kopien</td>
+</tr>
+<tr>
+<td><code>groupsync</code></td>
+<td><code>groupsync 120</code></td>
+<td>Die anderen Kopien der Gruppe werden aus dieser neu gebildet</td>
+</tr>
+<tr>
+<td><code>groupexclude</code></td>
+<td><code>groupexclude 121 keep</code></td>
+<td>Die Mitglieder verlassen nur ihre Kopie; mit <code>keep</code> (In Projekt verschieben) bleiben sie als normale Elemente im Projekt</td>
+</tr>
+<tr>
+<td><code>grouprestore</code></td>
+<td><code>grouprestore 120</code></td>
+<td>Die aus der Kopie ausgeschlossenen Mitglieder kommen zurück</td>
+</tr>
+<tr>
+<td><code>grouptype</code></td>
+<td><code>grouptype {"name":"Bathroom","rename":"Bathroom A"}</code></td>
+<td>Benennt um (<code>rename</code>), dupliziert (<code>duplicate</code>) oder löscht (<code>"delete":true</code>) eine Gruppe ohne Kopien; <code>"duplicate":true</code> nimmt die nächste freie Nummer</td>
+</tr>
+<tr>
+<td><code>groupattach</code></td>
+<td><code>groupattach {"group":120,"detail":"Bathroom dimensions"}</code></td>
+<td>Zeigt in der aktiven Ansicht (oder <code>view</code>) die verknüpfte 2D-Gruppe mit der Kopie; <code>"show":false</code> blendet sie aus</td>
+</tr>
+<tr>
+<td><code>groupdetach</code></td>
+<td><code>groupdetach 130</code></td>
+<td>Eine Kopie einer verknüpften 2D-Gruppe ohne Bemaßungen oder Beschriftungen wird eine eigenständige 2D-Gruppe</td>
+</tr>
+<tr>
+<td><code>groups</code></td>
+<td><code>groups</code></td>
+<td>Die Gruppen des Projekts, mit ihren Kopien und verknüpften 2D-Gruppen</td>
+</tr>
+</tbody>
+</table>
 <h2 id="bimopen-cli">bimopen-cli</h2>
 <p><code>bimopen-cli</code> führt BIMopen ohne Fenster aus: um Dateien zu konvertieren, ein Projekt aus einem
 Skript aufzubauen, ein Modell zu prüfen oder Agenten über MCP zu bedienen. Erstellen Sie es mit
@@ -591,7 +774,7 @@ Skript aufzubauen, ein Modell zu prüfen oder Agenten über MCP zu bedienen. Ers
 </tr>
 <tr>
 <td><code>convert &lt;in&gt; &lt;out&gt;</code></td>
-<td>Öffnet <code>&lt;in&gt;</code> (<code>.bimopen</code> oder <code>.ifc</code>) und schreibt <code>&lt;out&gt;</code>: <code>.ifc</code>, <code>.svg</code> oder <code>.png</code> eines Grundrisses (die unterste Ebene oder <code>--level</code>), <code>.png</code> der 3D-Ansicht (<code>--view 3d</code>), <code>.csv</code> einer Bauteilliste (<code>--schedule</code>) oder <code>.bimopen</code></td>
+<td>Öffnet <code>&lt;in&gt;</code> (<code>.bpr</code> oder <code>.ifc</code>) und schreibt <code>&lt;out&gt;</code>: <code>.ifc</code>, <code>.svg</code> oder <code>.png</code> eines Grundrisses (die unterste Ebene oder <code>--level</code>), <code>.png</code> der 3D-Ansicht (<code>--view 3d</code>), <code>.csv</code> einer Bauteilliste (<code>--schedule</code>) oder <code>.bpr</code></td>
 </tr>
 <tr>
 <td><code>run</code></td>
@@ -616,12 +799,12 @@ Skript aufzubauen, ein Modell zu prüfen oder Agenten über MCP zu bedienen. Ers
 endet mit Code 0, wenn alles funktioniert hat, mit 1, wenn ein Befehl fehlgeschlagen ist (die
 Meldung sagt, welcher), und mit 2, wenn die Argumente falsch sind (es gibt die Verwendung aus).</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">BIMOPEN_LANG</span><span class="o">=</span>en
-<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>bimopen-cli<span class="w"> </span>run<span class="w"> </span>--script<span class="w"> </span>house.txt<span class="w"> </span>--save<span class="w"> </span>house.bimopen<span class="w"> </span>--export<span class="w"> </span>house.ifc
-<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>bimopen-cli<span class="w"> </span>convert<span class="w"> </span>house.bimopen<span class="w"> </span>plan.svg
-<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>bimopen-cli<span class="w"> </span>convert<span class="w"> </span>house.bimopen<span class="w"> </span>doors.csv<span class="w"> </span>--schedule<span class="w"> </span>doors
-<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a>bimopen-cli<span class="w"> </span>convert<span class="w"> </span>house.bimopen<span class="w"> </span>first.png<span class="w"> </span>--level<span class="w"> </span><span class="s2">"First Floor"</span>
-<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a>bimopen-cli<span class="w"> </span>convert<span class="w"> </span>house.bimopen<span class="w"> </span>house-3d.png<span class="w"> </span>--view<span class="w"> </span>3d
-<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a>bimopen-cli<span class="w"> </span>convert<span class="w"> </span>model.ifc<span class="w"> </span>model.bimopen
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>bimopen-cli<span class="w"> </span>run<span class="w"> </span>--script<span class="w"> </span>house.txt<span class="w"> </span>--save<span class="w"> </span>house.bpr<span class="w"> </span>--export<span class="w"> </span>house.ifc
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>bimopen-cli<span class="w"> </span>convert<span class="w"> </span>house.bpr<span class="w"> </span>plan.svg
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>bimopen-cli<span class="w"> </span>convert<span class="w"> </span>house.bpr<span class="w"> </span>doors.csv<span class="w"> </span>--schedule<span class="w"> </span>doors
+<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a>bimopen-cli<span class="w"> </span>convert<span class="w"> </span>house.bpr<span class="w"> </span>first.png<span class="w"> </span>--level<span class="w"> </span><span class="s2">"First Floor"</span>
+<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a>bimopen-cli<span class="w"> </span>convert<span class="w"> </span>house.bpr<span class="w"> </span>house-3d.png<span class="w"> </span>--view<span class="w"> </span>3d
+<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a>bimopen-cli<span class="w"> </span>convert<span class="w"> </span>model.ifc<span class="w"> </span>model.bpr
 </code></pre></div>
 <p>Ein Skript ist eine Textdatei mit einem Befehl pro Zeile, genau so, wie er in der Befehlszeile
 eingegeben wird:</p>

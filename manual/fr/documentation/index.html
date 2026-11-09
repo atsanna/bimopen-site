@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Manuel utilisateur de BIMopen, modélisation BIM open source" name="description"/>
 <meta content="BIMopen" name="author"/>
-<link href="https://atsanna.github.io/bimopen-site/manual/fr/documentation/" rel="canonical"/>
+<link href="https://bimopen.it/manual/fr/documentation/" rel="canonical"/>
 <link href="../annotation/" rel="prev"/>
 <link href="../command-line-and-mcp/" rel="next"/>
 <link href="../assets/images/bimopen-cube.svg" rel="icon"/>
@@ -18,6 +18,13 @@
 <link href="../assets/css/theme.css" rel="stylesheet"/>
 <link href="../assets/css/theme_dark_mode.css" rel="stylesheet"/>
 <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="https://bimopen.it/manual/en/documentation/" hreflang="en" rel="alternate"/>
+<link href="https://bimopen.it/manual/it/documentation/" hreflang="it" rel="alternate"/>
+<link href="https://bimopen.it/manual/de/documentation/" hreflang="de" rel="alternate"/>
+<link href="https://bimopen.it/manual/fr/documentation/" hreflang="fr" rel="alternate"/>
+<link href="https://bimopen.it/manual/es/documentation/" hreflang="es" rel="alternate"/>
+<link href="https://bimopen.it/manual/ar/documentation/" hreflang="ar" rel="alternate"/>
+<link href="https://bimopen.it/manual/en/documentation/" hreflang="x-default" rel="alternate"/>
 </head>
 <body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="slate" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -32,7 +39,7 @@
 </div>
 <header class="md-header md-header--shadow" data-md-component="header">
 <nav aria-label="En-tête" class="md-header__inner md-grid">
-<a aria-label="Manuel utilisateur de BIMopen" class="md-header__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/?lang=fr" title="Manuel utilisateur de BIMopen">
+<a aria-label="Manuel utilisateur de BIMopen" class="md-header__button md-logo" data-md-component="logo" href="https://bimopen.it/fr/" title="Manuel utilisateur de BIMopen">
 <img alt="logo" src="../assets/images/bimopen-cube.svg"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -73,32 +80,32 @@
 <div class="md-select__inner">
 <ul class="md-select__list">
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/en/" hreflang="en">
+<a class="md-select__link" href="https://bimopen.it/manual/en/" hreflang="en">
               English
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/it/" hreflang="it">
+<a class="md-select__link" href="https://bimopen.it/manual/it/" hreflang="it">
               Italiano
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/de/" hreflang="de">
+<a class="md-select__link" href="https://bimopen.it/manual/de/" hreflang="de">
               Deutsch
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/fr/" hreflang="fr">
+<a class="md-select__link" href="https://bimopen.it/manual/fr/" hreflang="fr">
               Français
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/es/" hreflang="es">
+<a class="md-select__link" href="https://bimopen.it/manual/es/" hreflang="es">
               Español
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/ar/" hreflang="ar">
+<a class="md-select__link" href="https://bimopen.it/manual/ar/" hreflang="ar">
               العربية
             </a>
 </li>
@@ -147,7 +154,7 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="Manuel utilisateur de BIMopen" class="md-nav__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/?lang=fr" title="Manuel utilisateur de BIMopen">
+<a aria-label="Manuel utilisateur de BIMopen" class="md-nav__button md-logo" data-md-component="logo" href="https://bimopen.it/fr/" title="Manuel utilisateur de BIMopen">
 <img alt="logo" src="../assets/images/bimopen-cube.svg"/>
 </a>
     Manuel utilisateur de BIMopen
@@ -202,6 +209,14 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../cad-files/">
+<span class="md-ellipsis">
+    DWG et DXF
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../selection-and-modify/">
 <span class="md-ellipsis">
     Sélection et modification
@@ -221,6 +236,54 @@
 <a class="md-nav__link" href="../floors-roofs-stairs/">
 <span class="md-ellipsis">
     Sols, toits, escaliers et composants
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ceilings-and-columns/">
+<span class="md-ellipsis">
+    Faux plafonds et colonnes
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../openings/">
+<span class="md-ellipsis">
+    Ouvertures
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../phases/">
+<span class="md-ellipsis">
+    Phases et démolitions
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../structure/">
+<span class="md-ellipsis">
+    Structure et fondations
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../site/">
+<span class="md-ellipsis">
+    Plan de site et terrain
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../design-options/">
+<span class="md-ellipsis">
+    Variantes de conception
     
   </span>
 </a>
@@ -290,6 +353,17 @@
       Vues sur les feuilles
     </span>
 </a>
+<nav aria-label="Vues sur les feuilles" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#text-lines-and-dimensions-on-a-sheet">
+<span class="md-ellipsis">
+      Texte, lignes et cotes sur une feuille
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#guide-grids">
@@ -348,6 +422,13 @@
 <a class="md-nav__link" href="#schedules-on-sheets">
 <span class="md-ellipsis">
       Nomenclatures sur les feuilles
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#graphic-schedule-by-type">
+<span class="md-ellipsis">
+      Nomenclature graphique par type
     </span>
 </a>
 </li>
@@ -449,7 +530,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="https://atsanna.github.io/bimopen-site/manual/fr/pdf/bimopen-manual-fr.pdf">
+<a class="md-nav__link" href="https://bimopen.it/manual/fr/pdf/bimopen-manual-fr.pdf">
 <span class="md-ellipsis">
     PDF
     
@@ -498,6 +579,17 @@
       Vues sur les feuilles
     </span>
 </a>
+<nav aria-label="Vues sur les feuilles" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#text-lines-and-dimensions-on-a-sheet">
+<span class="md-ellipsis">
+      Texte, lignes et cotes sur une feuille
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#guide-grids">
@@ -556,6 +648,13 @@
 <a class="md-nav__link" href="#schedules-on-sheets">
 <span class="md-ellipsis">
       Nomenclatures sur les feuilles
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#graphic-schedule-by-type">
+<span class="md-ellipsis">
+      Nomenclature graphique par type
     </span>
 </a>
 </li>
@@ -704,6 +803,16 @@ nomenclature sur plusieurs.</p>
 elle se trouve sur la feuille, le reste de la feuille en demi-teinte ; <strong>Désactiver la vue</strong> revient
 à la feuille. Une vue tournée sur sa feuille ne peut pas être activée : retirez d'abord sa
 rotation. Un double-clic sur une vue l'ouvre dans sa propre fenêtre.</p>
+<p>Chaque vue sur une feuille a un <strong>Numéro de détail</strong> : le premier numéro libre de cette feuille
+(1, 2, 3…), dans un cercle à gauche de son titre. Il se modifie dans les <strong>Propriétés</strong> de la
+fenêtre ; un numéro déjà utilisé sur la même feuille est refusé. Les <strong>Propriétés</strong> de la vue
+indiquent, en lecture seule, où elle est placée : <strong>Feuille de référence</strong> et <strong>Détail de
+référence</strong>.</p>
+<h4 id="text-lines-and-dimensions-on-a-sheet">Texte, lignes et cotes sur une feuille</h4>
+<p>Avec une feuille ouverte, <strong>Texte</strong>, <strong>Ligne de détail</strong> et les cotes fonctionnent sur la feuille
+elle-même : ce qui y est dessiné appartient à la feuille, garde sa taille d'impression et
+s'imprime avec elle. Les cotes mesurent les lignes dessinées sur la feuille. Les autres outils
+ouvrent toujours <strong>Atteindre la vue</strong>.</p>
 <h3 id="guide-grids">Grilles de guidage</h3>
 <p><strong>Documenter ➤ Feuilles ➤ Grille de guidage</strong> demande un nom et couvre la feuille d'une
 grille. Choisissez-la pour faire glisser ses coins ou régler son <strong>Espacement du guide</strong> ; le
@@ -795,6 +904,13 @@ projet</strong>. Ses onglets :</p>
 <ul>
 <li>Une cellule modifie l'élément, ou son type pour un paramètre de type ; chaque modification est
   une étape d'annulation.</li>
+<li>Un paramètre de type (la largeur d'une porte, la profondeur d'un composant) change toutes les
+  occurrences du type : <strong>Modifier le type</strong> indique combien et demande d'abord.</li>
+<li>Les nomenclatures prédéfinies de l'Index du projet (portes, sols, pièces, escaliers, panneaux de
+  mur-rideau…) fonctionnent de la même façon : le type et le niveau se choisissent dans une liste,
+  les valeurs calculées par le modèle (surfaces, volumes, le mur hôte) sont en lecture seule, et
+  dans les nomenclatures des panneaux et des meneaux on choisit le type de chaque panneau ou
+  meneau intérieur.</li>
 <li>Une ligne sélectionne ses éléments dans toutes les vues. <strong>Mettre en surbrillance dans le
   modèle</strong>, dans la carte <strong>Modifier | Nomenclature/Quantités</strong>, ouvre <strong>Afficher les éléments
   dans la vue</strong>, qui amène au premier plan un plan cadré sur eux ; <strong>Afficher</strong> passe à la vue
@@ -815,6 +931,14 @@ de la nomenclature. La même nomenclature peut figurer sur plusieurs feuilles.</
 <img alt="Une nomenclature des portes groupée par niveau sur une feuille A3, sélectionnée : les triangles au-dessus des colonnes et le Z sur le bord droit qui la divise" src="../assets/screens/do-schedule-sheet.webp"/>
 <figcaption>Une nomenclature sur une feuille, avec ses contrôles</figcaption>
 </figure>
+<h3 id="graphic-schedule-by-type">Nomenclature graphique par type</h3>
+<p>Dans <strong>Vue › Créer › Nomenclatures › Nomenclature/Quantités</strong>, choisissez <strong>Nomenclature graphique par type</strong> et la catégorie : <em>Portes</em>, <em>Fenêtres</em>, <em>Murs-rideaux</em> ou <em>Menuiseries</em> (les trois). La nomenclature a une entrée par type, avec l'élévation du type dessinée et cotée depuis le modèle et ses données dessous ; les murs-rideaux ont une entrée par type et dimension. Avec <strong>Numéroter les repères de type manquants</strong>, les types sans repère reçoivent F1, F2, P1, FC1…, écrits dans le type.</p>
+<figure>
+<img alt="La nomenclature graphique des fenêtres de la maison d'exemple : pour chaque type son dessin coté, sa quantité et ses données" src="../assets/screens/gs-graphic-schedule.webp"/>
+<figcaption>Nomenclature graphique par type</figcaption>
+</figure>
+<p>Dans <strong>Propriétés de la nomenclature</strong>, l'onglet <strong>Mise en page</strong> choisit entre <em>Tableau</em>, <em>En colonnes</em> (une colonne par type, quantité par niveau et total), <em>En fiches</em> (fiches côte à côte avec la couleur de la zone, la quantité et une ligne Notes) et <em>Élévations par niveau</em> (les types de chaque niveau sur la ligne de sol, avec étiquette et cotes entre les types). <strong>Dessin du type</strong> règle la vue de face ou arrière, l'échelle, le niveau de détail, les cotes de largeur, hauteur et allège, le symbole d'ouverture et la ligne de sol. <strong>Zones et couleurs</strong> divise la nomenclature en zones avec une condition et une couleur ; <strong>Étiquette de menuiserie colorée en plan</strong> reprend ces couleurs dans les plans. <em>Coefficient de transmission U</em> et <em>Classe acoustique</em> sont des champs du type à remplir. Un double clic sur une entrée ouvre les propriétés du type. Sur une feuille, la nomenclature se divise comme les autres.</p>
+<p><strong>Nomenclature graphique par élément</strong> a une colonne par porte ou fenêtre (ou une ligne, avec un tableau <em>Normal</em>) : code de classification calculé (<em>Fenêtre - 003</em>), pièces des deux côtés, dimensions, orientation, hauteurs d'allège et de linteau. Dans l'onglet <strong>Champs</strong>, les champs <em>Symbole 2D</em>, <em>Vue arrière</em> et <em>Élévation du type (cotée)</em> dessinent le modèle dans la cellule ; pour le champ choisi on règle l'échelle, le niveau de détail et la hauteur de ligne. Dans <strong>Mise en page</strong> on choisit le niveau et l'inclusion des panneaux des murs-rideaux.</p>
 <h3 id="key-schedules-and-material-takeoffs">Nomenclatures de clés et métrés des matériaux</h3>
 <p>Une nomenclature de clés (<strong>Clés de nomenclature</strong> dans <strong>Nouvelle nomenclature</strong>) définit des
 ensembles de valeurs nommés, une ligne par clé, ajoutées et supprimées avec <strong>Lignes</strong>. Son <strong>Nom
@@ -834,7 +958,7 @@ choisissez <strong>Paramètre partagé</strong> et <strong>Sélectionner…</str
 <strong>Exporter…</strong> réécrit dans le fichier un paramètre partagé du projet.</p>
 <h3 id="exporting-and-reusing-schedules">Exporter et réutiliser les nomenclatures</h3>
 <ul>
-<li><strong>Menu de l'application ➤ Exporter ➤ Rapports ➤ Nomenclature…</strong> écrit la nomenclature en texte
+<li><strong>Fichier ➤ Exporter ➤ Nomenclature…</strong> écrit la nomenclature en texte
   délimité : <strong>Exporter la nomenclature</strong> règle le délimiteur de champ, le qualificateur de texte
   et les en-têtes et lignes de groupe du fichier.</li>
 <li><strong>Créer un gabarit à partir de la vue…</strong>, au clic droit sur une nomenclature, crée un gabarit de
@@ -849,7 +973,7 @@ choisissez <strong>Paramètre partagé</strong> et <strong>Sélectionner…</str
 <p>L'impression écrit des fichiers PDF : sur le poste de travail, ils sont enregistrés à l'endroit
 choisi ; dans le navigateur, ils sont téléchargés.</p>
 <h3 id="the-print-dialog">La boîte de dialogue Imprimer</h3>
-<p><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-p">P</kbd></span>, ou <strong>menu de l'application ➤ Imprimer ➤ Imprimer…</strong>, ouvre <strong>Imprimer</strong> :</p>
+<p><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-p">P</kbd></span>, ou <strong>Fichier ➤ Imprimer ➤ Imprimer…</strong>, ouvre <strong>Imprimer</strong> :</p>
 <ul>
 <li><strong>Fichier</strong> : le nom du fichier et, quand plusieurs vues ou feuilles sont imprimées,
   <strong>Combiner les vues/feuilles sélectionnées en un seul fichier</strong> (une page chacune) ou
@@ -876,7 +1000,7 @@ sont imprimés, et chaque feuille imprimée porte la date et l'heure de l'impres
 dans le projet ; <strong>Enregistrer</strong>, <strong>Réinitialiser</strong>, <strong>Renommer…</strong> et <strong>Supprimer</strong> gèrent les
 jeux enregistrés, et la liste des noms en choisit un à nouveau.</p>
 <h3 id="print-setup">Configuration de l'impression</h3>
-<p><strong>menu de l'application ➤ Imprimer ➤ Configuration de l'impression…</strong>, ou <strong>Paramètres…</strong> dans
+<p><strong>Fichier ➤ Imprimer ➤ Configuration de l'impression…</strong>, ou <strong>Paramètres…</strong> dans
 <strong>Imprimer</strong>, définit :</p>
 <table>
 <thead>
@@ -920,12 +1044,12 @@ jeux enregistrés, et la liste des noms en choisit un à nouveau.</p>
 projet. Fermer la boîte de dialogue après avoir modifié une configuration enregistrée demande s'il
 faut enregistrer les modifications ; <strong>Non</strong> les garde pour cette session seulement.</p>
 <h3 id="print-preview">Aperçu avant impression</h3>
-<p><strong>menu de l'application ➤ Imprimer ➤ Aperçu avant impression</strong>, ou <strong>Aperçu</strong> dans <strong>Imprimer</strong>,
+<p><strong>Fichier ➤ Imprimer ➤ Aperçu avant impression</strong>, ou <strong>Aperçu</strong> dans <strong>Imprimer</strong>,
 montre les pages telles qu'elles seront imprimées, dans leurs couleurs : <strong>Page précédente</strong> et
 <strong>Page suivante</strong> les parcourent, la molette zoome et le glissement fait un panoramique ;
 <strong>Imprimer…</strong> imprime, <strong>Fermer</strong> revient en arrière.</p>
 <h2 id="exporting-images">Exporter des images</h2>
-<p><strong>menu de l'application ➤ Exporter ➤ Images et animations ➤ Image…</strong> ouvre <strong>Exporter l'image</strong> :</p>
+<p><strong>Fichier ➤ Exporter ➤ Image…</strong> ouvre <strong>Exporter l'image</strong> :</p>
 <ul>
 <li>le nom du fichier et la <strong>Plage d'exportation</strong> : la fenêtre courante, sa partie visible, ou les
   vues et feuilles choisies (un fichier chacune) ;</li>

@@ -7,9 +7,9 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Manuale utente di BIMopen, modellazione BIM open source" name="description"/>
 <meta content="BIMopen" name="author"/>
-<link href="https://atsanna.github.io/bimopen-site/manual/it/floors-roofs-stairs/" rel="canonical"/>
+<link href="https://bimopen.it/manual/it/floors-roofs-stairs/" rel="canonical"/>
 <link href="../walls-doors-windows/" rel="prev"/>
-<link href="../views-and-graphics/" rel="next"/>
+<link href="../ceilings-and-columns/" rel="next"/>
 <link href="../assets/images/bimopen-cube.svg" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.9" name="generator"/>
 <title>Pavimenti, tetti, scale e componenti - Manuale utente di BIMopen</title>
@@ -18,6 +18,13 @@
 <link href="../assets/css/theme.css" rel="stylesheet"/>
 <link href="../assets/css/theme_dark_mode.css" rel="stylesheet"/>
 <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="https://bimopen.it/manual/en/floors-roofs-stairs/" hreflang="en" rel="alternate"/>
+<link href="https://bimopen.it/manual/it/floors-roofs-stairs/" hreflang="it" rel="alternate"/>
+<link href="https://bimopen.it/manual/de/floors-roofs-stairs/" hreflang="de" rel="alternate"/>
+<link href="https://bimopen.it/manual/fr/floors-roofs-stairs/" hreflang="fr" rel="alternate"/>
+<link href="https://bimopen.it/manual/es/floors-roofs-stairs/" hreflang="es" rel="alternate"/>
+<link href="https://bimopen.it/manual/ar/floors-roofs-stairs/" hreflang="ar" rel="alternate"/>
+<link href="https://bimopen.it/manual/en/floors-roofs-stairs/" hreflang="x-default" rel="alternate"/>
 </head>
 <body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="slate" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -32,7 +39,7 @@
 </div>
 <header class="md-header md-header--shadow" data-md-component="header">
 <nav aria-label="Intestazione" class="md-header__inner md-grid">
-<a aria-label="Manuale utente di BIMopen" class="md-header__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/" title="Manuale utente di BIMopen">
+<a aria-label="Manuale utente di BIMopen" class="md-header__button md-logo" data-md-component="logo" href="https://bimopen.it/" title="Manuale utente di BIMopen">
 <img alt="logo" src="../assets/images/bimopen-cube.svg"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -73,32 +80,32 @@
 <div class="md-select__inner">
 <ul class="md-select__list">
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/en/" hreflang="en">
+<a class="md-select__link" href="https://bimopen.it/manual/en/" hreflang="en">
               English
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/it/" hreflang="it">
+<a class="md-select__link" href="https://bimopen.it/manual/it/" hreflang="it">
               Italiano
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/de/" hreflang="de">
+<a class="md-select__link" href="https://bimopen.it/manual/de/" hreflang="de">
               Deutsch
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/fr/" hreflang="fr">
+<a class="md-select__link" href="https://bimopen.it/manual/fr/" hreflang="fr">
               Français
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/es/" hreflang="es">
+<a class="md-select__link" href="https://bimopen.it/manual/es/" hreflang="es">
               Español
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/ar/" hreflang="ar">
+<a class="md-select__link" href="https://bimopen.it/manual/ar/" hreflang="ar">
               العربية
             </a>
 </li>
@@ -147,7 +154,7 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigazione" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="Manuale utente di BIMopen" class="md-nav__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/" title="Manuale utente di BIMopen">
+<a aria-label="Manuale utente di BIMopen" class="md-nav__button md-logo" data-md-component="logo" href="https://bimopen.it/" title="Manuale utente di BIMopen">
 <img alt="logo" src="../assets/images/bimopen-cube.svg"/>
 </a>
     Manuale utente di BIMopen
@@ -197,6 +204,14 @@
 <a class="md-nav__link" href="../import-and-conversion/">
 <span class="md-ellipsis">
     Importazione e conversione
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cad-files/">
+<span class="md-ellipsis">
+    DWG e DXF
     
   </span>
 </a>
@@ -317,6 +332,34 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#extrusion-roofs">
+<span class="md-ellipsis">
+      Tetti per estrusione
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#joining-roofs">
+<span class="md-ellipsis">
+      Unire i tetti
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sloped-glazing">
+<span class="md-ellipsis">
+      Vetrata inclinata
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#soffits">
+<span class="md-ellipsis">
+      Sottogronda
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -358,6 +401,17 @@
       Componenti
     </span>
 </a>
+<nav aria-label="Componenti" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#casework">
+<span class="md-ellipsis">
+      Arredi fissi
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#schedules-and-ifc">
@@ -375,6 +429,54 @@
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ceilings-and-columns/">
+<span class="md-ellipsis">
+    Controsoffitti e colonne
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../openings/">
+<span class="md-ellipsis">
+    Aperture
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../phases/">
+<span class="md-ellipsis">
+    Fasi e demolizioni
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../structure/">
+<span class="md-ellipsis">
+    Strutture e fondazioni
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../site/">
+<span class="md-ellipsis">
+    Planimetria e terreno
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../design-options/">
+<span class="md-ellipsis">
+    Alternative di progetto
+    
+  </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../views-and-graphics/">
@@ -425,7 +527,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="https://atsanna.github.io/bimopen-site/manual/it/pdf/bimopen-manual-it.pdf">
+<a class="md-nav__link" href="https://bimopen.it/manual/it/pdf/bimopen-manual-it.pdf">
 <span class="md-ellipsis">
     PDF
     
@@ -525,6 +627,34 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#extrusion-roofs">
+<span class="md-ellipsis">
+      Tetti per estrusione
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#joining-roofs">
+<span class="md-ellipsis">
+      Unire i tetti
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sloped-glazing">
+<span class="md-ellipsis">
+      Vetrata inclinata
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#soffits">
+<span class="md-ellipsis">
+      Sottogronda
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -566,6 +696,17 @@
       Componenti
     </span>
 </a>
+<nav aria-label="Componenti" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#casework">
+<span class="md-ellipsis">
+      Arredi fissi
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#schedules-and-ifc">
@@ -820,6 +961,182 @@ ne dice di più).</p>
 </table>
 <p>In pianta un tetto mostra il perimetro, i colmi e i displuvi; in 3D le falde, le sporgenze e gli
 strati.</p>
+<h3 id="extrusion-roofs">Tetti per estrusione</h3>
+<p>Un tetto per estrusione è un profilo aperto disegnato su un piano di lavoro verticale e spinto
+lungo la normale del piano: una pensilina sopra una porta, una volta a botte, il tetto di un
+abbaino disegnato sul muro di facciata.</p>
+<ol>
+<li>Apri un prospetto, una sezione o una vista 3D (iniziato in una pianta, <strong>Vai a vista</strong> ne
+   chiede una).</li>
+<li>Fai clic su <strong>Crea ▸ Costruisci ▸ Tetto ▾ ▸ Tetto per estrusione</strong>. Si apre la finestra
+   <strong>Piano di lavoro</strong>: scegli un piano con nome, oppure <strong>Seleziona un piano</strong> e fai clic sulla
+   faccia di un muro, su una griglia o su un piano di riferimento. Il piano deve essere verticale.</li>
+<li>In <strong>Livello di riferimento del tetto e offset</strong> scegli il <strong>Livello</strong> (il più alto, come
+   predefinito) e l'<strong>Offset</strong>: una linea tratteggiata segna quell'altezza.</li>
+<li>Disegna il profilo come una sola catena <strong>aperta</strong> con <strong>Linea</strong>, gli archi o <strong>Seleziona
+   linee</strong>. È la faccia superiore del tetto: gli strati del tipo stanno sotto.</li>
+<li>Fai clic su <strong>Termina modalità di modifica</strong>. Il tetto va dal piano (<strong>Inizio estrusione</strong> 0)
+   attraverso l'edificio, lontano da te (<strong>Fine estrusione</strong>).</li>
+</ol>
+<p>Un profilo chiuso, con una diramazione o che torna su se stesso (una parte sopra un'altra, o una
+linea verticale) viene rifiutato a <strong>Termina modalità di modifica</strong> con il motivo: un tetto estruso
+deve essere rivolto verso l'alto.</p>
+<p>Selezionato, un tetto per estrusione ha <strong>Modifica profilo</strong> (in un prospetto o una sezione di
+fronte al suo piano, o in 3D) e <strong>Modifica piano di lavoro</strong>; in pianta e in 3D le frecce alle due
+estremità trascinano <strong>Inizio estrusione</strong> e <strong>Fine estrusione</strong>. I muri si associano alla sua
+faccia inferiore come a ogni tetto, e <strong>Apertura ▸ Verticale</strong> lo taglia. Segue il suo piano:
+quando il muro su cui è stato disegnato si sposta, il tetto si sposta con lui.</p>
+<table>
+<thead>
+<tr>
+<th>Proprietà</th>
+<th>Che cos'è</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Piano di lavoro</strong></td>
+<td>Il piano del profilo (sola lettura; si cambia con <strong>Modifica piano di lavoro</strong>)</td>
+</tr>
+<tr>
+<td><strong>Inizio estrusione</strong>, <strong>Fine estrusione</strong></td>
+<td>Dove l'estrusione comincia e finisce, lungo la normale del piano</td>
+</tr>
+<tr>
+<td><strong>Livello di riferimento</strong>, <strong>Offset del livello</strong></td>
+<td>L'altezza da cui si misura il profilo: tutto il tetto si muove con loro</td>
+</tr>
+<tr>
+<td><strong>Taglio trave</strong>, <strong>Profondità fascia</strong></td>
+<td>Come sono tagliate le gronde alle due estremità del profilo</td>
+</tr>
+<tr>
+<td><strong>Spessore</strong>, <strong>Area</strong>, <strong>Volume</strong></td>
+<td>Sola lettura</td>
+</tr>
+</tbody>
+</table>
+<h3 id="joining-roofs">Unire i tetti</h3>
+<p><strong>Modifica ▸ Forme ▸ Unisci tetto</strong> (nello stile BIMopen <strong>Modifica ▸ Unisci tetto</strong>) unisce un
+tetto alla faccia superiore di un altro tetto o a un muro: il tetto dell'abbaino incontra il tetto
+principale.</p>
+<ol>
+<li>Fai clic su <strong>Unisci tetto</strong>. I bordi dei tetti si evidenziano sotto il cursore, in una pianta,
+   una sezione, un prospetto o una vista 3D.</li>
+<li>Fai clic sul bordo da unire: un bordo che non definisce l'inclinazione (una testata), o
+   un'estremità di un tetto per estrusione.</li>
+<li>Fai clic sul tetto o sul muro a cui unirlo. Il bordo si allunga (o si accorcia) finché il tetto
+   incontra la faccia superiore dell'altro tetto, o la faccia del muro; ciò che sta sotto quella
+   faccia viene tagliato via.</li>
+</ol>
+<p>Un bordo unito si vede arancione: un altro clic lo separa. L'unione segue: quando cambia
+l'inclinazione o l'altezza del tetto principale, il tetto unito lo incontra di nuovo, e l'unione a
+un tetto cancellato se ne va.</p>
+<h3 id="sloped-glazing">Vetrata inclinata</h3>
+<p>Una vetrata inclinata è un tetto di vetro: un tetto da perimetro o per estrusione il cui tipo è
+<strong>Vetrata inclinata</strong>. Ogni faccia piana del tetto porta griglie di facciata continua, montanti e
+pannelli.</p>
+<ol>
+<li>Disegna il tetto come al solito (<strong>Tetto</strong> o <strong>Tetto per estrusione</strong>).</li>
+<li>Selezionalo e scegli <strong>Vetrata inclinata</strong> nel selettore del tipo. La prima volta BIMopen crea
+   il tipo con il pannello vetrato e i montanti del progetto.</li>
+<li>Ogni faccia è divisa dalle due griglie del tipo: la <strong>griglia 1</strong> sale lungo la falda,
+   distanziata lungo la gronda; la <strong>griglia 2</strong> corre lungo la gronda, distanziata lungo la falda.</li>
+</ol>
+<p>Con la vetrata selezionata, gli strumenti della facciata continua lavorano sulla faccia sotto il
+cursore, in una pianta, una sezione, un prospetto o una vista 3D:</p>
+<ul>
+<li><strong>Griglia facciata</strong> mette una linea dove fai clic: della griglia 1 vicino alla gronda o al
+  colmo, della griglia 2 vicino a un lato. Premi TAB per passare all'altra griglia. <strong>Tutti i
+  segmenti</strong>, <strong>Un segmento</strong> e <strong>Tutti eccetto selezionati</strong> funzionano come su una facciata continua.</li>
+<li><strong>Montante</strong> mette montanti del tipo scelto su una <strong>Linea di griglia</strong>, un <strong>Segmento di
+  griglia</strong> o <strong>Tutte le linee di griglia</strong> della faccia.</li>
+<li><strong>Pannello</strong> cambia il pannello su cui fai clic nel tipo del selettore: vetrato, pieno, una porta o vuoto.</li>
+<li><strong>Aggiungi/Rimuovi segmenti</strong> toglie il segmento su cui fai clic (i due pannelli diventano uno), o lo rimette.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Proprietà</th>
+<th>Che cos'è</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Pannello di facciata continua</strong> (tipo)</td>
+<td>Il pannello di ogni cella</td>
+</tr>
+<tr>
+<td><strong>Condizione del giunto</strong> (tipo)</td>
+<td>Quali montanti sono continui dove le griglie si incrociano: la griglia 1, la griglia 2, o i bordi con una delle due</td>
+</tr>
+<tr>
+<td><strong>Motivo griglia 1/2</strong> (tipo): <strong>Layout</strong>, <strong>Spaziatura</strong>, <strong>Adatta alla dimensione del montante</strong></td>
+<td>Come ogni griglia mette le sue linee: nessuna, a distanza fissa, in numero fisso, a spaziatura massima</td>
+</tr>
+<tr>
+<td><strong>Montanti griglia 1/2</strong> (tipo): <strong>Tipo interno</strong>, <strong>Tipo bordo 1</strong>, <strong>Tipo bordo 2</strong></td>
+<td>I montanti sulle linee e sui bordi della faccia</td>
+</tr>
+<tr>
+<td><strong>Numero</strong>, <strong>Giustificazione</strong>, <strong>Angolo</strong>, <strong>Offset</strong> delle griglie 1 e 2</td>
+<td>I valori propri di questo tetto: quante linee (numero fisso), dove va il resto, come ruotano le linee sulla faccia (da −89° a 89°), di quanto si spostano</td>
+</tr>
+<tr>
+<td><strong>Pannelli</strong>, <strong>Montanti</strong></td>
+<td>Conteggi in sola lettura</td>
+</tr>
+</tbody>
+</table>
+<p>In pianta la vetrata mostra pannelli e montanti visti dall'alto; <strong>Visibilità/Grafica</strong> nasconde
+pannelli e montanti di facciata continua come per le facciate continue. L'IFC scrive un tetto fatto
+di lastre e montanti.</p>
+<h3 id="soffits">Sottogronda</h3>
+<p>Il sottogronda chiude la parte inferiore della gronda, tra i muri e il bordo del tetto.</p>
+<ol>
+<li>In una pianta o in una vista 3D fai clic su <strong>Modella ▸ Costruisci ▸ Tetto ▾ ▸ Sottogronda</strong>. La
+   modalità di disegno parte con <strong>Seleziona bordi del tetto</strong>.</li>
+<li>Fai clic sui bordi del tetto: le loro linee restano bloccate al tetto.</li>
+<li>Fai clic su <strong>Seleziona muri</strong> e sulle facce esterne dei muri sotto il tetto (TAB prende la
+   catena): queste linee restano bloccate ai muri.</li>
+<li>Chiudi il contorno con <strong>Linea</strong> e <strong>Accorcia/Allunga</strong>, poi fai clic su <strong>Termina modalità di modifica</strong>.</li>
+</ol>
+<p>La faccia superiore del sottogronda sta sotto la gronda del tetto; i suoi strati (la <strong>Struttura</strong>
+del tipo) stanno sotto. Quando il tetto o i muri si spostano, il sottogronda li segue. Una
+<strong>Freccia di inclinazione</strong>, o una linea che <strong>Definisce l'inclinazione</strong>, lo inclina. Selezionato,
+<strong>Modifica contorno</strong> riapre il suo disegno.</p>
+<table>
+<thead>
+<tr>
+<th>Proprietà</th>
+<th>Che cos'è</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Struttura</strong>, <strong>Spessore</strong> (tipo)</td>
+<td>Gli strati, dall'alto in basso, e la loro somma</td>
+</tr>
+<tr>
+<td><strong>Livello</strong>, <strong>Offset di altezza</strong></td>
+<td>Dove sta la faccia superiore</td>
+</tr>
+<tr>
+<td><strong>Delimita il locale</strong></td>
+<td>Se i locali si fermano lì</td>
+</tr>
+<tr>
+<td><strong>Inclinazione</strong></td>
+<td>Sostituisce l'inclinazione della linea o della freccia che lo inclina</td>
+</tr>
+<tr>
+<td><strong>Perimetro</strong>, <strong>Area</strong>, <strong>Volume</strong></td>
+<td>In sola lettura</td>
+</tr>
+</tbody>
+</table>
+<p>Le sezioni lo tagliano con i suoi strati, la pianta dei controsoffitti del suo livello lo vede dal
+basso; ha una categoria sua in <strong>Visibilità/Grafica</strong> e negli abachi, e l'IFC lo scrive come rivestimento.</p>
 <h2 id="stairs">Scale</h2>
 <ol>
 <li>Fai clic su <strong>Crea ▸ Collegamenti verticali ▸ Scale</strong>. La modalità di disegno parte con
@@ -829,7 +1146,8 @@ strati.</p>
    rimanenti</code>).</li>
 <li>Per girare, fai clic di nuovo lontano dalla fine della prima rampa e disegna la successiva: un
    pianerottolo le unisce. A qualunque angolo il pianerottolo è chiuso dalle alzate delle due rampe,
-   con l'angolo esterno dove si incontrano i loro lati esterni.</li>
+   con l'angolo esterno dove si incontrano i loro lati esterni; se le rampe finiscono sfalsate, anche
+   i lati interni proseguono fino a incontrarsi, a squadra, senza raccordi obliqui.</li>
 <li>Quando tutte le alzate sono posizionate, fai clic su <strong>Termina modalità di modifica</strong>.</li>
 </ol>
 <figure>
@@ -847,13 +1165,26 @@ ringhiera, messo su entrambi i lati, oppure <strong>Nessuno</strong>.</p>
 offset) e dall'<strong>Altezza massima alzata</strong> del tipo; cambiare un livello o un offset in <strong>Proprietà</strong>
 cambia le alzate. <strong>Modifica disegno</strong> riapre le sue linee di contorno e di alzata:
 cambiale o eliminale (clic, <span class="keys"><kbd class="key-delete">Del</kbd></span>) e disegna di nuovo le rampe; le ringhiere della scala seguono. <strong>Livello superiore di multipiano</strong> ripete la scala, con le sue ringhiere, piano per piano fino a quel livello; un piano di altezza diversa da quella della scala non ne riceve la copia, e un avviso lo nomina. Con la scala selezionata, le frecce blu d'inversione accanto alla prima alzata la fanno salire dall'altra estremità; <strong>Etichetta SU</strong>, <strong>Freccia in alto</strong>, <strong>Etichetta GIÙ</strong> e <strong>Freccia GIÙ</strong> in <strong>Proprietà</strong> mostrano o nascondono le parti del simbolo in pianta. Il punto di manipolazione quadrato sotto il testo <strong>SU</strong> lo sposta altrove.</p>
-<p>In pianta la scala mostra le pedate fino alla linea di taglio, la linea di interruzione, la
-freccia e il testo <strong>SU</strong>/<strong>GIÙ</strong>; in 3D pedate e alzate, oppure una soletta monolitica, i
+<p>Nella pianta del livello di base la scala mostra le pedate fino alla linea di taglio, la linea di
+interruzione, la freccia e il testo <strong>SU</strong>; nella pianta del livello superiore la mostra tutta,
+pianerottoli e ringhiere compresi, senza linea di interruzione, con la freccia e il testo <strong>GIÙ</strong>
+fino alla prima alzata. A un livello intermedio di una scala multipiano si vedono entrambe le
+parti; in 3D pedate e alzate, oppure una soletta monolitica, i
 pianerottoli e le ringhiere.</p>
 <figure>
 <img alt="La scala dell'esempio nella pianta del piano terra: le pedate fino alla linea di taglio, la linea di interruzione, la freccia e il testo SU" src="../assets/screens/fr-stair-plan.webp"/>
 <figcaption>Una scala in pianta</figcaption>
 </figure>
+<p>Sul livello di base si disegna anche la parte della scala sopra il taglio, tratteggiata. Ogni
+parte ha una sottocategoria di <strong>Scale</strong> in <strong>Stili per categoria</strong>: <strong>Contorni</strong>, <strong>Linee di
+alzata</strong>, <strong>Linee di aggetto</strong>, <strong>Supporti</strong>, <strong>Contrassegni di taglio</strong> e <strong>Frecce SU</strong>, ognuna
+anche <strong><sopra></sopra></strong>; lì se ne cambiano spessore, colore e modello di linea, e vista per vista in
+<strong>Visibilità e grafica</strong>.</p>
+<p><strong>Annotazioni ▸ Etichetta ▸ Numerazione gradini</strong>: scegliete nella barra delle opzioni il
+<strong>Riferimento</strong> (<strong>Sinistra</strong>, <strong>Quarto sinistro</strong>, <strong>Centro</strong>, <strong>Quarto destro</strong>, <strong>Destra</strong>),
+che cosa numerare (<strong>Alzate</strong> o <strong>Pedate</strong>) e il <strong>Numero iniziale</strong>, poi fate clic su una scala in
+una pianta. I suoi gradini si numerano di seguito su tutte le rampe, solo in quella pianta. Con la
+scala selezionata, le sue <strong>Proprietà</strong> mostrano le impostazioni della numerazione.</p>
 <h3 id="how-a-stair-is-built">Come è costruita una scala</h3>
 <p>Le <strong>Parametri del tipo</strong> della scala ne decidono la costruzione:</p>
 <ul>
@@ -886,6 +1217,8 @@ pianerottoli e le ringhiere.</p>
 <p>Una sezione attraverso la scala la mostra tagliata con la sua soletta. <strong>Volume</strong> in <strong>Proprietà</strong>
 e nell'abaco delle scale è il volume dei suoi solidi.</p>
 <p>Il <strong>Carattere del testo</strong> del tipo, il <strong>Profilo dell'aggetto</strong> (<strong>Predefinito</strong> o <strong>Arrotondato</strong>) e <strong>Applica profilo di aggetto</strong> (solo anteriore, anteriore e sinistra, oppure anteriore, sinistra e destra: oltre un lato senza montante chiuso), l'<strong>Offset montante scala aperto</strong>, <strong>Taglia montanti alla sommità</strong> (<strong>Allinea al livello</strong> ferma i montanti laterali al livello superiore) e i dati di <strong>Identificazione</strong> (<strong>Codice</strong>, <strong>Modello prodotto</strong>, <strong>Produttore</strong>, <strong>Commenti sul tipo</strong>, <strong>URL</strong>, <strong>Descrizione</strong>, <strong>Codice assieme</strong>) sono in <strong>Parametri del tipo</strong>, come la <strong>Parte inferiore del montante</strong> di una scala monolitica (<strong>Liscia</strong>, una soletta inclinata, o <strong>A gradini</strong>: la soletta segue i gradini). In <strong>Regole di calcolo</strong>, <strong>Usa calcolatore scala</strong> con un <strong>Risultato di destinazione</strong>, <strong>massimo</strong> e <strong>minimo</strong> controlla 2 alzate + 1 pedata: una scala fuori dall'intervallo viene creata, e un avviso lo dice.</p>
+<p><strong>Novità del riallineamento.</strong> In <strong>Proprietà</strong> di una scala o di una rampa, <strong>Mostra freccia SU in tutte le viste</strong> mostra la freccia intera e <strong>SU</strong> anche nella pianta del livello superiore. Il <strong>Numero di alzate desiderato</strong> si può scrivere: le alzate diventano alte quanto il piano diviso per quel numero (un numero che le farebbe più alte dell'<strong>Altezza massima alzata</strong> del tipo viene rifiutato). Se le alzate disegnate superano quelle desiderate, o la <strong>Profondità reale pedata</strong> è minore della minima del tipo, la scala viene creata con un avviso. Con <strong>Usa calcolatore scala</strong> attivo nel tipo, una scala nuova parte dalla pedata che dà il <strong>Risultato di destinazione</strong>. Il dialogo <strong>Tipo di ringhiera</strong> offre anche <strong>Predefinito</strong>, il tipo dello strumento Ringhiera. Nel disegno, la linea di rampa tratteggiata di ogni rampa ha una maniglia all'estremità: trascinata, aggiunge o toglie alzate. <strong>Piano di lavoro ▸ Imposta</strong> nel disegno di una scala nuova la mette su un altro livello. Il testo <strong>SU</strong>/<strong>GIÙ</strong> si trascina dalla sua maniglia anche passandoci sopra col cursore, dopo <span class="keys"><kbd class="key-tab">Tab</kbd></span> sulla scala evidenziata e nella pianta del livello superiore. Nel tipo: <strong>Altezza montante intradosso scala</strong> sposta i montanti laterali sotto le pedate, <strong>Altezza montante pianerottolo</strong> è l'altezza dei montanti che proseguono lungo i pianerottoli, <strong>Taglia montanti alla sommità</strong> ha anche <strong>Allinea al montante del pianerottolo</strong>, e <strong>Raccordo pianerottolo</strong> (scale monolitiche a gradini) è la distanza delle facce verticali dietro le alzate; il tipo ha anche il <strong>Costo</strong>.</p>
+<p><strong>Calcolatore scala.</strong> In <strong>Parametri del tipo</strong>, <strong>Regole di calcolo</strong> è una riga con il riepilogo (per esempio «2 × A + 1 × P = 630 mm, 600–650») e il pulsante <strong>Modifica…</strong>, che apre <strong>Calcolatore scala</strong>: <strong>Usa calcolatore scala</strong>, il moltiplicatore dell'alzata e quello della pedata (da 0,5 a 5, con un decimale), <strong>Risultato di destinazione</strong>, <strong>Risultato massimo</strong> e <strong>Risultato minimo</strong>. Il risultato della scala selezionata si aggiorna subito, verde dentro l'intervallo e rosso fuori; con un massimo minore del minimo <strong>OK</strong> è spento. <strong>OK</strong> dà le regole al tipo in un solo passo di annullamento; le scale già fatte tengono la loro pedata, quelle nuove la prendono dai moltiplicatori. Nello stile BIMopen il dialogo ha l'anteprima.</p>
 <h2 id="ramps">Rampe inclinate</h2>
 <ol>
 <li>Fai clic su <strong>Crea ▸ Collegamenti verticali ▸ Rampa inclinata</strong>. La modalità di disegno
@@ -954,7 +1287,8 @@ corrente sopra i pianerottoli.</p>
 intero sulla pedata, sul pianerottolo o sul pavimento sotto di lui: dove cadrebbe sulla linea di
 un'alzata si sposta di mezza sezione, così nessun montante entra nei gradini o resta sospeso davanti
 al primo. Fra due montanti le balaustre hanno passo uniforme, mai più largo della spaziatura.</p>
-<p><strong>Posiziona su ospite</strong> funziona in pianta e nella vista 3D: la scala sotto il cursore mostra dove vanno le due ringhiere. <strong>Su cosciale</strong> si sceglie solo per una scala che ha un cosciale: su una scala monolitica è in grigio, nella barra delle opzioni e in <strong>Proprietà</strong>. Un tipo di ringhiera nuovo ha <strong>Giunti ad angolo</strong> e <strong>Giunti tangenti</strong> su <strong>Aggiungi segmenti verticali/orizzontali</strong>, <strong>Saldatura</strong>, nessun adeguamento altezza pianerottolo, un corrente inferiore a 0,100 m (30×30), balaustre 20×20 dal corrente inferiore al corrente superiore ogni 0,120 m, interrotte a fine di ogni segmento e ridimensionate alla sua lunghezza, e montanti 50×50 sull'ospite: dove una rampa incontra un pianerottolo il montante sta sul pianerottolo alla linea dell'alzata, con il tratto verticale del corrente, e nulla passa sopra le pedate. Dove il corrente sale in verticale all'inizio di una rampa, un corrente basso resta sul pianerottolo senza entrare nel primo gradino. <strong>Modifica giunzioni</strong> (un giunto alla volta) è in grigio: non ancora disponibile.</p>
+<p><strong>Posiziona su ospite</strong> funziona in pianta e nella vista 3D: la scala sotto il cursore mostra dove vanno le due ringhiere. <strong>Su cosciale</strong> si sceglie solo per una scala che ha un cosciale: su una scala monolitica è in grigio, nella barra delle opzioni e in <strong>Proprietà</strong>. Un tipo di ringhiera nuovo ha <strong>Giunti ad angolo</strong> e <strong>Giunti tangenti</strong> su <strong>Aggiungi segmenti verticali/orizzontali</strong>, <strong>Saldatura</strong>, nessun adeguamento altezza pianerottolo, un corrente inferiore a 0,100 m (30×30), balaustre 20×20 dal corrente inferiore al corrente superiore ogni 0,120 m, interrotte a fine di ogni segmento e ridimensionate alla sua lunghezza, e montanti 50×50 sull'ospite: dove una rampa incontra un pianerottolo il montante sta sul pianerottolo alla linea dell'alzata, con il tratto verticale del corrente, e nulla passa sopra le pedate. Dove il corrente sale in verticale all'inizio di una rampa, un corrente basso resta sul pianerottolo senza entrare nel primo gradino.</p>
+<p><strong>Novità del riallineamento.</strong> Il percorso di una ringhiera si disegna con tutti gli strumenti del gruppo <strong>Disegna</strong>: un arco resta un arco nella ringhiera, in 3D e in <strong>Modifica percorso</strong>, con i montanti solo dove inizia e finisce. <strong>Seleziona nuovo host</strong> accetta anche un pavimento: la ringhiera sta sulla sua faccia superiore. In <strong>Modifica percorso</strong>, con una linea selezionata, la striscia delle opzioni offre <strong>Correzione altezza</strong> (<strong>Per tipo</strong> o <strong>Personalizzato</strong> con il valore) e <strong>Inclinazione</strong> (<strong>Per host</strong>, <strong>Piatto</strong>, <strong>Inclinato</strong>); <strong>Strumenti ▸ Modifica giunzioni</strong> mostra un riquadro attorno al giunto sotto il cursore, un clic lo segna con una X e <strong>Giuntura</strong> nella striscia delle opzioni sceglie come si uniscono lì i correnti. In <strong>Struttura del corrente</strong> ogni corrente ha il suo <strong>Materiale</strong>.</p>
 <h2 id="components">Componenti</h2>
 <ol>
 <li>Fai clic su <strong>Crea ▸ Costruisci ▸ Componente</strong>. Il selettore di tipo elenca i componenti
@@ -966,25 +1300,53 @@ al primo. Fra due montanti le balaustre hanno passo uniforme, mai più largo del
 <img alt="Lo strumento componente in una camera della pianta: l'anteprima del componente che segue il cursore, con le quote temporanee ai muri più vicini" src="../assets/screens/fr-component.webp"/>
 <figcaption>Un componente segue il cursore prima del clic</figcaption>
 </figure>
-<p><strong>Modalità ▸ Carica famiglia</strong> apre la libreria, per cartella (<strong>Arredi</strong>, <strong>Sanitari</strong>): scegli
-una famiglia e fai clic su <strong>Apri</strong> per aggiungere i suoi tipi al progetto.</p>
+<p><strong>Modalità ▸ Carica componente</strong> apre la libreria, per cartella (<strong>Arredi</strong>, <strong>Arredi fissi</strong>,
+<strong>Sanitari</strong>): scegli un componente per vederne i tipi con le misure (larghezza × profondità ×
+altezza) e fai clic su <strong>Apri</strong> per aggiungerli al progetto.</p>
 <figure>
-<img alt="Carica famiglia: la libreria per cartella, Arredi e Sanitari, con le famiglie già caricate segnate" src="../assets/screens/fr-load-family.webp"/>
-<figcaption>Carica famiglia</figcaption>
+<img alt="Carica componente: la libreria per cartella, Arredi e Sanitari, con i componenti già caricati segnati" src="../assets/screens/fr-load-family.webp"/>
+<figcaption>Carica componente</figcaption>
 </figure>
 <p>Seleziona un componente e fai clic su <strong>Host ▸ Seleziona nuovo host</strong>, poi su un pavimento: il
 componente si sposta sul pavimento e resta sulla sua faccia superiore (fai clic in un punto vuoto
 per riportarlo sul livello). Le sue proprietà sono <strong>Livello</strong>, <strong>Host</strong>, <strong>Offset dal livello</strong>,
 <strong>Rotazione</strong>, <strong>Contrassegno</strong> e <strong>Commenti</strong>; <strong>Parametri del tipo</strong> ha larghezza, profondità,
 altezza e materiale.</p>
+<h3 id="casework">Arredi fissi</h3>
+<p>Gli <strong>Arredi fissi</strong> sono una categoria a sé, accanto agli <strong>Arredi</strong>: i mobili fissati di cucine
+e bagni. La loro cartella della libreria ha la <strong>Cucina componibile</strong> (lunga 3,00 e 2,40 m), il
+<strong>Pensile</strong> (largo 60, 90 e 120 cm, profondo 35 cm, alto 70 cm), la <strong>Colonna 60</strong> (60 × 60 cm,
+alta 2,10 m), il <strong>Mobile bagno 80</strong> e l'<strong>Armadio a muro</strong>; l'<strong>Armadio</strong> libero resta un
+arredo. Un pensile si posiziona 1,45 m sopra il suo livello: l'<strong>Offset predefinito</strong> del suo tipo
+dice a che altezza vanno i nuovi, e ognuno tiene il proprio <strong>Offset dal livello</strong>.</p>
+<p>Gli arredi fissi si disegnano secondo l'intervallo di vista della pianta, come i muri:</p>
+<ul>
+<li>un mobile che il piano di taglio attraversa (una colonna, con il taglio a 1,20 m) è
+  <strong>tagliato</strong>: il contorno con lo spessore di taglio della categoria, riempito con il retino di
+  taglio del suo materiale;</li>
+<li>un mobile sotto il piano di taglio (la cucina) si vede dall'alto, in proiezione;</li>
+<li>un mobile sopra il piano di taglio e sotto il limite superiore dell'intervallo (un pensile) si
+  vede anch'esso dall'alto, <strong>tratteggiato</strong>; sopra il limite superiore non si disegna.</li>
+</ul>
+<p>Arredi e sanitari non si tagliano mai: dove il piano di taglio li attraversa si disegnano interi,
+sopra di esso non si disegnano. Per questo <strong>Visibilità/Grafica</strong> e <strong>Stili per categoria</strong> danno
+agli <strong>Arredi fissi</strong> linee e retini di taglio, e per <strong>Arredi</strong> e <strong>Sanitari</strong> mostrano «—».
+Gli arredi fissi hanno la loro riga in filtri, abachi (<strong>Abaco/Quantità ▸ Arredi fissi</strong>),
+computi dei materiali, parametri di progetto e condivisi e legende. Un progetto salvato prima che
+gli arredi fissi avessero una categoria propria si apre con le cucine negli arredi fissi, e il
+messaggio di apertura dice quante. <strong>Esporta IFC</strong> scrive gli arredi fissi come arredi segnati
+<em>Casework</em>; all'importazione, gli arredi che si chiamano come un pensile, un mobile base, un mobile
+bagno o una cucina sono proposti come arredi fissi.</p>
 <h2 id="schedules-and-ifc">Abachi e IFC</h2>
 <p>Pavimenti, tetti, scale, ringhiere e arredi hanno i loro abachi (<strong>Viste ▸ Crea ▸ Abachi ▸
 Abaco/Quantità</strong>), una riga per elemento. <strong>Esporta ▸ Esporta IFC4…</strong> scrive i pavimenti come
 solette (con aperture e inclinazioni), i tetti, le scale con rampe e pianerottoli, le ringhiere,
 gli arredi e i sanitari. Una scala multipiano è scritta una volta in ogni piano in cui si ripete, con le sue ringhiere.</p>
 <h2 id="not-yet-in-bimopen">Non ancora in BIMopen</h2>
-<p>Controsoffitti, tetti da estrusione, cavedi e aperture verticali, bordi dei
-solai, fasce, grondaie e intradossi vengono dopo il riallineamento di questo capitolo.</p>
+<p>Bordi dei solai, fasce e grondaie vengono dopo il
+riallineamento di questo capitolo. I controsoffitti hanno un capitolo a sé,
+<a href="../ceilings-and-columns/">Controsoffitti e colonne</a>; cavedi e aperture tagliate in pavimenti, tetti
+e muri sono in <a href="../openings/">Aperture</a>.</p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
@@ -1009,13 +1371,13 @@ solai, fasce, grondaie e intradossi vengono dopo il riallineamento di questo cap
               </div>
 </div>
 </a>
-<a aria-label="Successivo: Viste e grafica" class="md-footer__link md-footer__link--next" href="../views-and-graphics/">
+<a aria-label="Successivo: Controsoffitti e colonne" class="md-footer__link md-footer__link--next" href="../ceilings-and-columns/">
 <div class="md-footer__title">
 <span class="md-footer__direction">
                 Successivo
               </span>
 <div class="md-ellipsis">
-                Viste e grafica
+                Controsoffitti e colonne
               </div>
 </div>
 <div class="md-footer__button md-icon">

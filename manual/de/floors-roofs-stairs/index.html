@@ -7,9 +7,9 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Benutzerhandbuch von BIMopen, BIM-Modellierung als Open Source" name="description"/>
 <meta content="BIMopen" name="author"/>
-<link href="https://atsanna.github.io/bimopen-site/manual/de/floors-roofs-stairs/" rel="canonical"/>
+<link href="https://bimopen.it/manual/de/floors-roofs-stairs/" rel="canonical"/>
 <link href="../walls-doors-windows/" rel="prev"/>
-<link href="../views-and-graphics/" rel="next"/>
+<link href="../ceilings-and-columns/" rel="next"/>
 <link href="../assets/images/bimopen-cube.svg" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.9" name="generator"/>
 <title>Geschossdecken, Dächer, Treppen und Bauteile - BIMopen Benutzerhandbuch</title>
@@ -18,6 +18,13 @@
 <link href="../assets/css/theme.css" rel="stylesheet"/>
 <link href="../assets/css/theme_dark_mode.css" rel="stylesheet"/>
 <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="https://bimopen.it/manual/en/floors-roofs-stairs/" hreflang="en" rel="alternate"/>
+<link href="https://bimopen.it/manual/it/floors-roofs-stairs/" hreflang="it" rel="alternate"/>
+<link href="https://bimopen.it/manual/de/floors-roofs-stairs/" hreflang="de" rel="alternate"/>
+<link href="https://bimopen.it/manual/fr/floors-roofs-stairs/" hreflang="fr" rel="alternate"/>
+<link href="https://bimopen.it/manual/es/floors-roofs-stairs/" hreflang="es" rel="alternate"/>
+<link href="https://bimopen.it/manual/ar/floors-roofs-stairs/" hreflang="ar" rel="alternate"/>
+<link href="https://bimopen.it/manual/en/floors-roofs-stairs/" hreflang="x-default" rel="alternate"/>
 </head>
 <body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="slate" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -32,7 +39,7 @@
 </div>
 <header class="md-header md-header--shadow" data-md-component="header">
 <nav aria-label="Kopfzeile" class="md-header__inner md-grid">
-<a aria-label="BIMopen Benutzerhandbuch" class="md-header__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/?lang=de" title="BIMopen Benutzerhandbuch">
+<a aria-label="BIMopen Benutzerhandbuch" class="md-header__button md-logo" data-md-component="logo" href="https://bimopen.it/de/" title="BIMopen Benutzerhandbuch">
 <img alt="logo" src="../assets/images/bimopen-cube.svg"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -73,32 +80,32 @@
 <div class="md-select__inner">
 <ul class="md-select__list">
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/en/" hreflang="en">
+<a class="md-select__link" href="https://bimopen.it/manual/en/" hreflang="en">
               English
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/it/" hreflang="it">
+<a class="md-select__link" href="https://bimopen.it/manual/it/" hreflang="it">
               Italiano
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/de/" hreflang="de">
+<a class="md-select__link" href="https://bimopen.it/manual/de/" hreflang="de">
               Deutsch
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/fr/" hreflang="fr">
+<a class="md-select__link" href="https://bimopen.it/manual/fr/" hreflang="fr">
               Français
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/es/" hreflang="es">
+<a class="md-select__link" href="https://bimopen.it/manual/es/" hreflang="es">
               Español
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/ar/" hreflang="ar">
+<a class="md-select__link" href="https://bimopen.it/manual/ar/" hreflang="ar">
               العربية
             </a>
 </li>
@@ -147,7 +154,7 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="BIMopen Benutzerhandbuch" class="md-nav__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/?lang=de" title="BIMopen Benutzerhandbuch">
+<a aria-label="BIMopen Benutzerhandbuch" class="md-nav__button md-logo" data-md-component="logo" href="https://bimopen.it/de/" title="BIMopen Benutzerhandbuch">
 <img alt="logo" src="../assets/images/bimopen-cube.svg"/>
 </a>
     BIMopen Benutzerhandbuch
@@ -197,6 +204,14 @@
 <a class="md-nav__link" href="../import-and-conversion/">
 <span class="md-ellipsis">
     Importieren und Konvertieren
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cad-files/">
+<span class="md-ellipsis">
+    DWG und DXF
     
   </span>
 </a>
@@ -317,6 +332,34 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#extrusion-roofs">
+<span class="md-ellipsis">
+      Extrudierte Dächer
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#joining-roofs">
+<span class="md-ellipsis">
+      Dächer verbinden
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sloped-glazing">
+<span class="md-ellipsis">
+      Geneigte Verglasung
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#soffits">
+<span class="md-ellipsis">
+      Dachuntersichten
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -358,6 +401,17 @@
       Bauteile
     </span>
 </a>
+<nav aria-label="Bauteile" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#casework">
+<span class="md-ellipsis">
+      Einbaumöbel
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#schedules-and-ifc">
@@ -375,6 +429,54 @@
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ceilings-and-columns/">
+<span class="md-ellipsis">
+    Decken und Stützen
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../openings/">
+<span class="md-ellipsis">
+    Öffnungen
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../phases/">
+<span class="md-ellipsis">
+    Phasen und Abbruch
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../structure/">
+<span class="md-ellipsis">
+    Tragwerk und Fundamente
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../site/">
+<span class="md-ellipsis">
+    Lageplan und Gelände
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../design-options/">
+<span class="md-ellipsis">
+    Entwurfsvarianten
+    
+  </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../views-and-graphics/">
@@ -425,7 +527,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="https://atsanna.github.io/bimopen-site/manual/de/pdf/bimopen-manual-de.pdf">
+<a class="md-nav__link" href="https://bimopen.it/manual/de/pdf/bimopen-manual-de.pdf">
 <span class="md-ellipsis">
     PDF
     
@@ -525,6 +627,34 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#extrusion-roofs">
+<span class="md-ellipsis">
+      Extrudierte Dächer
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#joining-roofs">
+<span class="md-ellipsis">
+      Dächer verbinden
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sloped-glazing">
+<span class="md-ellipsis">
+      Geneigte Verglasung
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#soffits">
+<span class="md-ellipsis">
+      Dachuntersichten
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -566,6 +696,17 @@
       Bauteile
     </span>
 </a>
+<nav aria-label="Bauteile" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#casework">
+<span class="md-ellipsis">
+      Einbaumöbel
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#schedules-and-ifc">
@@ -823,6 +964,180 @@ erklärt mehr).</p>
 </table>
 <p>Im Grundriss zeigt ein Dach seinen Umriss, die Firste und Grate; in 3D seine Dachflächen,
 Überstände und Schichten.</p>
+<h3 id="extrusion-roofs">Extrudierte Dächer</h3>
+<p>Ein extrudiertes Dach ist ein offenes Profil, auf einer vertikalen Arbeitsebene gezeichnet und
+entlang der Normalen der Ebene geschoben: ein Vordach über einer Tür, ein Tonnendach, das Dach einer
+Gaube, auf der Fassadenwand gezeichnet.</p>
+<ol>
+<li>Öffnen Sie eine Ansicht, einen Schnitt oder eine 3D-Ansicht (in einem Grundriss begonnen, fragt
+   <strong>Gehe zu Ansicht</strong> nach einer).</li>
+<li>Klicken Sie auf <strong>Erzeugen ▸ Erstellen ▸ Dach ▾ ▸ Extrudiertes Dach</strong>. Das Fenster
+   <strong>Arbeitsebene</strong> öffnet sich: Wählen Sie eine benannte Ebene, oder <strong>Ebene auswählen</strong> und
+   klicken Sie auf eine Wandfläche, ein Raster oder eine Referenzebene. Die Ebene muss vertikal sein.</li>
+<li>In <strong>Referenzebene und Versatz des Dachs</strong> wählen Sie die <strong>Ebene</strong> (standardmäßig die höchste)
+   und den <strong>Versatz</strong>: Eine gestrichelte Linie markiert diese Höhe.</li>
+<li>Zeichnen Sie das Profil als eine <strong>offene</strong> Kette mit <strong>Linie</strong>, den Bögen oder <strong>Linien
+   wählen</strong>. Es ist die Oberseite des Dachs: Die Schichten des Typs liegen darunter.</li>
+<li>Klicken Sie auf <strong>Bearbeitungsmodus beenden</strong>. Das Dach reicht von der Ebene
+   (<strong>Extrusionsbeginn</strong> 0) quer durch das Gebäude, von Ihnen weg (<strong>Extrusionsende</strong>).</li>
+</ol>
+<p>Ein geschlossenes Profil, eine Verzweigung oder ein Profil, das über sich selbst zurückläuft (ein
+Teil über einem anderen oder eine vertikale Linie), wird bei <strong>Bearbeitungsmodus beenden</strong> mit dem
+Grund abgelehnt: Ein extrudiertes Dach muss nach oben zeigen.</p>
+<p>Ausgewählt hat ein extrudiertes Dach <strong>Profil bearbeiten</strong> (in einer Ansicht oder einem Schnitt vor
+seiner Ebene oder in 3D) und <strong>Arbeitsebene bearbeiten</strong>; im Grundriss und in 3D ziehen die Pfeile
+an seinen beiden Enden <strong>Extrusionsbeginn</strong> und <strong>Extrusionsende</strong>. Wände werden an seiner
+Unterseite wie an jedem Dach angehängt, und <strong>Öffnung ▸ Vertikal</strong> schneidet es. Es folgt seiner
+Ebene: Wenn sich die Wand bewegt, auf der es gezeichnet wurde, bewegt sich das Dach mit.</p>
+<table>
+<thead>
+<tr>
+<th>Eigenschaft</th>
+<th>Was sie ist</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Arbeitsebene</strong></td>
+<td>Die Ebene des Profils (schreibgeschützt; geändert mit <strong>Arbeitsebene bearbeiten</strong>)</td>
+</tr>
+<tr>
+<td><strong>Extrusionsbeginn</strong>, <strong>Extrusionsende</strong></td>
+<td>Wo die Extrusion beginnt und endet, entlang der Normalen der Ebene</td>
+</tr>
+<tr>
+<td><strong>Referenzebene</strong>, <strong>Ebenenversatz</strong></td>
+<td>Die Höhe, von der das Profil gemessen wird: Das ganze Dach bewegt sich mit ihnen</td>
+</tr>
+<tr>
+<td><strong>Sparrenschnitt</strong>, <strong>Tiefe der Stirnblende</strong></td>
+<td>Wie die Traufen an den beiden Enden des Profils geschnitten sind</td>
+</tr>
+<tr>
+<td><strong>Dicke</strong>, <strong>Fläche</strong>, <strong>Volumen</strong></td>
+<td>Schreibgeschützt</td>
+</tr>
+</tbody>
+</table>
+<h3 id="joining-roofs">Dächer verbinden</h3>
+<p><strong>Ändern ▸ Formen ▸ Dach verbinden</strong> (im BIMopen-Stil <strong>Ändern ▸ Dach verbinden</strong>) verbindet ein
+Dach mit der Oberseite eines anderen Dachs oder mit einer Wand: Das Gaubendach trifft das Hauptdach.</p>
+<ol>
+<li>Klicken Sie auf <strong>Dach verbinden</strong>. Die Dachkanten werden unter dem Cursor hervorgehoben, in
+   einem Grundriss, einem Schnitt, einer Ansicht oder einer 3D-Ansicht.</li>
+<li>Klicken Sie auf die zu verbindende Kante: eine Kante, die keine Neigung definiert (ein Giebel),
+   oder ein Ende eines extrudierten Dachs.</li>
+<li>Klicken Sie auf das Dach oder die Wand, mit dem es verbunden wird. Die Kante verlängert (oder
+   verkürzt) sich, bis das Dach die Oberseite des anderen Dachs oder die Wandfläche trifft; was
+   unter dieser Fläche liegt, wird weggeschnitten.</li>
+</ol>
+<p>Eine verbundene Kante erscheint orange: Ein erneuter Klick löst sie. Die Verbindung folgt: Wenn sich
+Neigung oder Höhe des Hauptdachs ändern, trifft das verbundene Dach es erneut, und eine Verbindung
+zu einem gelöschten Dach entfällt.</p>
+<h3 id="sloped-glazing">Geneigte Verglasung</h3>
+<p>Eine geneigte Verglasung ist ein Dach aus Glas: ein Grundflächen- oder Extrusionsdach mit dem Typ
+<strong>Geneigte Verglasung</strong>. Jede ebene Fläche des Dachs trägt Fassadenraster, Pfosten und Paneele.</p>
+<ol>
+<li>Zeichnen Sie das Dach wie gewohnt (<strong>Dach</strong> oder <strong>Extrusionsdach</strong>).</li>
+<li>Wählen Sie es aus und wählen Sie <strong>Geneigte Verglasung</strong> in der Typenauswahl. Beim ersten Mal
+   erstellt BIMopen den Typ mit dem verglasten Paneel und den Pfosten des Projekts.</li>
+<li>Jede Fläche wird durch die zwei Raster des Typs geteilt: <strong>Raster 1</strong> läuft die Neigung hinauf,
+   entlang der Traufe verteilt; <strong>Raster 2</strong> läuft entlang der Traufe, die Neigung hinauf verteilt.</li>
+</ol>
+<p>Ist die Verglasung ausgewählt, arbeiten die Fassadenwerkzeuge auf der Fläche unter dem Cursor, in
+einem Grundriss, einem Schnitt, einer Ansicht oder einer 3D-Ansicht:</p>
+<ul>
+<li><strong>Fassadenraster</strong> setzt eine Linie dort, wo Sie klicken: von Raster 1 nahe der Traufe oder dem
+  First, von Raster 2 nahe einer Seite. TAB wechselt zum anderen Raster. <strong>Alle Segmente</strong>, <strong>Ein
+  Segment</strong> und <strong>Alle außer ausgewählten</strong> wirken wie bei einer Fassade.</li>
+<li><strong>Pfosten</strong> setzt Pfosten des gewählten Typs auf eine <strong>Rasterlinie</strong>, ein <strong>Rasterliniensegment</strong>
+  oder <strong>Alle Rasterlinien</strong> der Fläche.</li>
+<li><strong>Paneel</strong> ändert das angeklickte Paneel in den Typ der Auswahl: verglast, massiv, eine Tür oder leer.</li>
+<li><strong>Segmente hinzufügen/entfernen</strong> entfernt das angeklickte Segment (die zwei Paneele werden eins) oder setzt es wieder.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Eigenschaft</th>
+<th>Was sie ist</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Fassadenpaneel</strong> (Typ)</td>
+<td>Das Paneel jeder Zelle</td>
+</tr>
+<tr>
+<td><strong>Verbindungsbedingung</strong> (Typ)</td>
+<td>Welche Pfosten durchlaufen, wo sich die Raster kreuzen: Raster 1, Raster 2 oder die Ränder mit einem von beiden</td>
+</tr>
+<tr>
+<td><strong>Rastermuster 1/2</strong> (Typ): <strong>Layout</strong>, <strong>Abstand</strong>, <strong>An Pfostengröße anpassen</strong></td>
+<td>Wie jedes Raster seine Linien setzt: keine, fester Abstand, feste Anzahl, maximaler Abstand</td>
+</tr>
+<tr>
+<td><strong>Pfosten Raster 1/2</strong> (Typ): <strong>Typ innen</strong>, <strong>Typ Rand 1</strong>, <strong>Typ Rand 2</strong></td>
+<td>Die Pfosten auf den Linien und an den Kanten der Fläche</td>
+</tr>
+<tr>
+<td><strong>Anzahl</strong>, <strong>Ausrichtung</strong>, <strong>Winkel</strong>, <strong>Versatz</strong> von Raster 1 und 2</td>
+<td>Die eigenen Werte dieses Dachs: wie viele Linien (feste Anzahl), wohin der Rest geht, wie die Linien auf der Fläche gedreht sind (−89° bis 89°), wie weit sie verschoben sind</td>
+</tr>
+<tr>
+<td><strong>Paneele</strong>, <strong>Pfosten</strong></td>
+<td>Anzahl, schreibgeschützt</td>
+</tr>
+</tbody>
+</table>
+<p>Im Grundriss zeigt die Verglasung Paneele und Pfosten von oben; <strong>Sichtbarkeit/Grafik</strong> blendet
+Fassadenpaneele und -pfosten aus wie bei Fassaden. IFC schreibt ein Dach aus Platten und Stäben.</p>
+<h3 id="soffits">Dachuntersichten</h3>
+<p>Eine Dachuntersicht schließt die Unterseite der Traufe zwischen den Wänden und der Dachkante.</p>
+<ol>
+<li>Klicken Sie in einem Grundriss oder einer 3D-Ansicht auf <strong>Modellieren ▸ Erstellen ▸ Dach ▾ ▸
+   Dachuntersicht</strong>. Der Skizzenmodus beginnt mit <strong>Dachkanten auswählen</strong>.</li>
+<li>Klicken Sie auf die Kanten des Dachs: ihre Linien bleiben am Dach gesperrt.</li>
+<li>Klicken Sie auf <strong>Wände auswählen</strong> und auf die Außenseiten der Wände unter dem Dach (TAB wählt
+   die Kette): diese Linien bleiben an den Wänden gesperrt.</li>
+<li>Schließen Sie die Begrenzung mit <strong>Linie</strong> und <strong>Kürzen/Verlängern</strong> und klicken Sie dann auf
+   <strong>Bearbeitungsmodus beenden</strong>.</li>
+</ol>
+<p>Die Oberseite der Dachuntersicht liegt unter der Traufe; ihre Schichten (die <strong>Struktur</strong> des Typs)
+hängen darunter. Bewegen sich Dach oder Wände, folgt ihnen die Dachuntersicht. Ein <strong>Neigungspfeil</strong>
+oder eine Linie, die die <strong>Neigung definiert</strong>, neigt sie. Ausgewählt öffnet <strong>Begrenzung bearbeiten</strong>
+ihre Skizze wieder.</p>
+<table>
+<thead>
+<tr>
+<th>Eigenschaft</th>
+<th>Was sie ist</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Struktur</strong>, <strong>Dicke</strong> (Typ)</td>
+<td>Die Schichten von oben nach unten und ihre Summe</td>
+</tr>
+<tr>
+<td><strong>Ebene</strong>, <strong>Höhenversatz von Ebene</strong></td>
+<td>Wo ihre Oberseite liegt</td>
+</tr>
+<tr>
+<td><strong>Raumbegrenzung</strong></td>
+<td>Ob Räume an ihr enden</td>
+</tr>
+<tr>
+<td><strong>Neigung</strong></td>
+<td>Ersetzt die Neigung ihrer geneigten Linie oder ihres Pfeils</td>
+</tr>
+<tr>
+<td><strong>Umfang</strong>, <strong>Fläche</strong>, <strong>Volumen</strong></td>
+<td>Schreibgeschützt</td>
+</tr>
+</tbody>
+</table>
+<p>Schnitte schneiden sie mit ihren Schichten, der Deckenplan ihrer Ebene sieht sie von unten; sie hat
+eine eigene Kategorie in <strong>Sichtbarkeit/Grafik</strong> und in Bauteillisten, und IFC schreibt sie als Bekleidung.</p>
 <h2 id="stairs">Treppen</h2>
 <ol>
 <li>Klicken Sie auf <strong>Erzeugen ▸ Vertikale Verbindungen ▸ Treppen</strong>. Der Skizzenmodus beginnt mit <strong>Lauf</strong>.</li>
@@ -831,7 +1146,8 @@ erklärt mehr).</p>
    Beispiel <code>9 Setzstufen erstellt, 8 verbleibend</code>).</li>
 <li>Für eine Wendung klicken Sie erneut abseits vom Ende des ersten Laufs und zeichnen den nächsten:
    Ein Podest verbindet sie. Bei jedem Winkel ist das Podest von den Setzstufen der beiden Läufe
-   begrenzt, seine äußere Ecke dort, wo sich ihre Außenseiten treffen.</li>
+   begrenzt, seine äußere Ecke dort, wo sich ihre Außenseiten treffen; enden die Läufe versetzt, laufen auch die Innenseiten
+   weiter, bis sie sich rechtwinklig treffen, ohne schräge Kante.</li>
 <li>Sind alle Setzstufen platziert, klicken Sie auf <strong>Bearbeitungsmodus beenden</strong>.</li>
 </ol>
 <figure>
@@ -849,13 +1165,26 @@ Seiten gesetzt, oder <strong>Keiner</strong>.</p>
 ihren Versätzen) und der <strong>Maximale Setzstufenhöhe</strong> des Typs; eine Ebene oder einen Versatz in
 <strong>Eigenschaften</strong> zu ändern ändert die Setzstufen. <strong>Skizze bearbeiten</strong> öffnet ihre Begrenzungs- und
 Setzstufenlinien wieder: ändern oder löschen (anklicken, <span class="keys"><kbd class="key-delete">Del</kbd></span>) und Läufe neu zeichnen; die Geländer der Treppe folgen. <strong>Oberste Ebene bei mehrgeschossiger Treppe</strong> wiederholt die Treppe mit ihren Geländern Geschoss für Geschoss bis zu dieser Ebene; ein Geschoss, dessen Höhe nicht der der Treppe entspricht, erhält keine Kopie, und eine Warnung nennt es. Bei ausgewählter Treppe lassen die blauen Umkehrpfeile neben der ersten Setzstufe sie vom anderen Ende aus steigen; <strong>Beschriftung AUF</strong>, <strong>Pfeil AUF</strong>, <strong>Beschriftung AB</strong> und <strong>Pfeil AB</strong> in <strong>Eigenschaften</strong> blenden die Teile des Grundrisssymbols ein oder aus. Der quadratische Griff unter dem Text <strong>AUF</strong> verschiebt ihn.</p>
-<p>Im Grundriss zeigt die Treppe ihre Auftritte bis zur Schnittlinie, die Bruchlinie, den Pfeil und
-den Text <strong>AUF</strong>/<strong>AB</strong>; in 3D Auftritte und Setzstufen, oder eine monolithische Platte, die
+<p>Im Grundriss ihrer Basisebene zeigt die Treppe ihre Auftritte bis zur Schnittlinie, die Bruchlinie,
+den Pfeil und den Text <strong>AUF</strong>; im Grundriss ihrer oberen Ebene zeigt sie sich ganz, mit Podesten
+und Geländern, ohne Bruchlinie, mit dem Pfeil und dem Text <strong>AB</strong> bis zur ersten Setzstufe. Auf
+einer Ebene zwischen zwei Geschossen einer mehrgeschossigen Treppe sind beide Teile zu sehen; in 3D Auftritte und Setzstufen, oder eine monolithische Platte, die
 Podeste und die Geländer.</p>
 <figure>
 <img alt="Die Treppe des Beispiels im Erdgeschossgrundriss: die Auftritte bis zur Schnittlinie, die Bruchlinie, der Pfeil und der Text AUF" src="../assets/screens/fr-stair-plan.webp"/>
 <figcaption>Eine Treppe im Grundriss</figcaption>
 </figure>
+<p>Auf der Basisebene wird auch der Teil der Treppe über der Schnittebene gezeichnet, gestrichelt.
+Jeder Teil hat eine Unterkategorie von <strong>Treppen</strong> in <strong>Stile nach Kategorie</strong>: <strong>Umrisse</strong>,
+<strong>Setzstufenlinien</strong>, <strong>Vorderkantenlinien</strong>, <strong>Stützen</strong>, <strong>Schnittmarkierungen</strong> und
+<strong>Pfeile AUF</strong>, jeweils auch <strong><oben></oben></strong>; dort werden Stärke, Farbe und Muster geändert, und
+ansichtsweise in <strong>Sichtbarkeit und Grafik</strong>.</p>
+<p><strong>Beschriftungen ▸ Beschriftung ▸ Stufennummerierung</strong>: wählen Sie in der Optionsleiste die
+<strong>Referenz</strong> (<strong>Links</strong>, <strong>Viertel links</strong>, <strong>Mitte</strong>, <strong>Viertel rechts</strong>, <strong>Rechts</strong>), was
+nummeriert wird (<strong>Setzstufen</strong> oder <strong>Auftritte</strong>) und die <strong>Startnummer</strong>, dann klicken Sie in
+einem Grundriss auf eine Treppe. Ihre Stufen werden fortlaufend über alle Läufe nummeriert, nur
+in diesem Grundriss. Bei ausgewählter Treppe zeigen ihre <strong>Eigenschaften</strong> die Einstellungen der
+Nummerierung.</p>
 <h3 id="how-a-stair-is-built">Wie eine Treppe aufgebaut ist</h3>
 <p>Die <strong>Typparameter</strong> der Treppe bestimmen ihren Aufbau:</p>
 <ul>
@@ -887,6 +1216,8 @@ Podeste und die Geländer.</p>
 <p>Ein Schnitt durch die Treppe zeigt sie mit ihrer Platte geschnitten. <strong>Volumen</strong> in
 <strong>Eigenschaften</strong> und in der Bauteilliste der Treppen ist das Volumen ihrer Körper.</p>
 <p><strong>Textschriftart</strong>, <strong>Profil der Trittstufenkante</strong> (<strong>Standard</strong> oder <strong>Gerundet</strong>) und <strong>Kantenprofil anwenden</strong> (nur vorn, vorn und links oder vorn, links und rechts: über eine Seite ohne geschlossene Wange hinaus), <strong>Versatz offene Treppenwange</strong>, <strong>Treppenwangen oben abschneiden</strong> (<strong>An Ebene anpassen</strong> endet die seitlichen Wangen an der oberen Ebene) und die Identitätsdaten (<strong>Code</strong>, <strong>Modell</strong>, <strong>Hersteller</strong>, <strong>Typenkommentare</strong>, <strong>URL</strong>, <strong>Beschreibung</strong>, <strong>Baugruppenkennzeichen</strong>) stehen in den <strong>Typeneigenschaften</strong>, ebenso die <strong>Unterseite der Wange</strong> einer monolithischen Treppe (<strong>Glatt</strong>, eine geneigte Platte, oder <strong>Abgetreppt</strong>: die Platte folgt den Stufen). Unter <strong>Berechnungsregeln</strong> prüft <strong>Treppenrechner verwenden</strong> mit <strong>Zielergebnis</strong>, <strong>maximalem</strong> und <strong>minimalem Ergebnis</strong> 2 Steigungen + 1 Auftritt: Eine Treppe außerhalb des Bereichs wird erstellt, und eine Warnung sagt es.</p>
+<p><strong>Neu in der Überarbeitung.</strong> In den <strong>Eigenschaften</strong> einer Treppe oder Rampe zeigt <strong>AUF-Pfeil in allen Ansichten</strong> den ganzen Pfeil und <strong>AUF</strong> auch im Grundriss der oberen Ebene. Die <strong>Gewünschte Anzahl Steigungen</strong> lässt sich eingeben: die Steigungen werden so hoch wie das Geschoss geteilt durch diese Zahl (eine Zahl, die sie höher als die <strong>Maximale Steigungshöhe</strong> des Typs machen würde, wird abgelehnt). Übersteigen die gezeichneten Steigungen die gewünschten oder ist die <strong>Tatsächliche Auftrittstiefe</strong> kleiner als das Minimum des Typs, wird die Treppe mit einer Warnung erstellt. Mit <strong>Treppenrechner verwenden</strong> im Typ beginnt eine neue Treppe mit dem Auftritt, der das <strong>Zielergebnis</strong> ergibt. Der Dialog <strong>Geländertyp</strong> bietet auch <strong>Standard</strong>, den Typ des Geländer-Werkzeugs. In der Skizze hat die gestrichelte Lauflinie jedes Laufs einen Griff am Ende: gezogen fügt er Steigungen hinzu oder nimmt welche weg. <strong>Arbeitsebene ▸ Festlegen</strong> in der Skizze einer neuen Treppe setzt sie auf eine andere Ebene. Der Text <strong>AUF</strong>/<strong>AB</strong> wird an seinem Griff auch mit dem Cursor darüber, nach <span class="keys"><kbd class="key-tab">Tab</kbd></span> auf der hervorgehobenen Treppe und im Grundriss der oberen Ebene gezogen. Im Typ: <strong>Höhe der Wange unter der Treppe</strong> verschiebt die Seitenwangen unter den Auftritten, <strong>Höhe der Podestwange</strong> ist die Höhe der Wangen entlang der Podeste, <strong>Wangen oben abschneiden</strong> hat auch <strong>An Podestwange angleichen</strong>, und <strong>Podestüberlappung</strong> (abgestufte massive Treppen) ist der Abstand der senkrechten Flächen hinter den Setzstufen; der Typ hat auch die <strong>Kosten</strong>.</p>
+<p><strong>Treppenrechner.</strong> In den <strong>Typeigenschaften</strong> sind die <strong>Berechnungsregeln</strong> eine Zeile mit ihrer Zusammenfassung (zum Beispiel «2 × A + 1 × P = 630 mm, 600–650») und der Schaltfläche <strong>Bearbeiten…</strong>, die den <strong>Treppenrechner</strong> öffnet: <strong>Treppenrechner verwenden</strong>, die Faktoren für Steigung und Auftritt (0,5 bis 5, eine Dezimalstelle), Ziel-, Maximal- und Minimalergebnis. Das Ergebnis der ausgewählten Treppe wird sofort aktualisiert, grün innerhalb des Bereichs, rot außerhalb; ist das Maximum kleiner als das Minimum, ist <strong>OK</strong> deaktiviert. <strong>OK</strong> gibt dem Typ die Regeln in einem Rückgängig-Schritt; vorhandene Treppen behalten ihren Auftritt, neue übernehmen ihn aus den Faktoren. Im BIMopen-Stil hat der Dialog eine Vorschau.</p>
 <h2 id="ramps">Rampen</h2>
 <ol>
 <li>Klicken Sie auf <strong>Erzeugen ▸ Vertikale Verbindungen ▸ Rampe</strong>. Der Skizzenmodus beginnt mit <strong>Lauf</strong>.</li>
@@ -954,7 +1285,8 @@ um diesen Wert.</p>
 Auftritt, dem Podest oder dem Boden darunter: Wo er auf die Linie einer Setzstufe fiele, rückt er um
 eine halbe Querschnittsbreite, so dass kein Pfosten in die Stufen ragt oder vor der ersten schwebt.
 Zwischen zwei Pfosten haben die Geländerstäbe gleichen Abstand, nie größer als der eingestellte.</p>
-<p><strong>Auf Träger platzieren</strong> funktioniert in Grundrissen und in der 3D-Ansicht: Die Treppe unter dem Cursor zeigt, wo die beiden Geländer hinkommen. <strong>Auf Wange</strong> lässt sich nur für eine Treppe mit Wange wählen: Bei einer monolithischen Treppe ist es grau, in der Optionsleiste und in den <strong>Eigenschaften</strong>. Ein neuer Geländertyp hat <strong>Winkelverbindungen</strong> und <strong>Tangentiale Verbindungen</strong> auf <strong>Vertikale/horizontale Segmente hinzufügen</strong>, <strong>Schweißen</strong>, keine Podesthöhenanpassung, einen unteren Handlauf auf 0,100 m (30×30), Geländerstäbe 20×20 vom unteren bis zum oberen Handlauf alle 0,120 m, am Ende jedes Segments unterbrochen und an seine Länge angepasst, und Pfosten 50×50 auf dem Basisbauteil: Wo ein Lauf auf ein Podest trifft, steht der Pfosten auf dem Podest an der Setzstufenlinie, mit dem senkrechten Stück des Handlaufs, und nichts verläuft über den Stufen. Wo der Handlauf am Anfang eines Laufs senkrecht steigt, bleibt ein niedriger Handlauf auf dem Podest, ohne in die erste Stufe einzudringen. <strong>Verbindungen bearbeiten</strong> (eine Verbindung nach der anderen) ist grau: noch nicht verfügbar.</p>
+<p><strong>Auf Träger platzieren</strong> funktioniert in Grundrissen und in der 3D-Ansicht: Die Treppe unter dem Cursor zeigt, wo die beiden Geländer hinkommen. <strong>Auf Wange</strong> lässt sich nur für eine Treppe mit Wange wählen: Bei einer monolithischen Treppe ist es grau, in der Optionsleiste und in den <strong>Eigenschaften</strong>. Ein neuer Geländertyp hat <strong>Winkelverbindungen</strong> und <strong>Tangentiale Verbindungen</strong> auf <strong>Vertikale/horizontale Segmente hinzufügen</strong>, <strong>Schweißen</strong>, keine Podesthöhenanpassung, einen unteren Handlauf auf 0,100 m (30×30), Geländerstäbe 20×20 vom unteren bis zum oberen Handlauf alle 0,120 m, am Ende jedes Segments unterbrochen und an seine Länge angepasst, und Pfosten 50×50 auf dem Basisbauteil: Wo ein Lauf auf ein Podest trifft, steht der Pfosten auf dem Podest an der Setzstufenlinie, mit dem senkrechten Stück des Handlaufs, und nichts verläuft über den Stufen. Wo der Handlauf am Anfang eines Laufs senkrecht steigt, bleibt ein niedriger Handlauf auf dem Podest, ohne in die erste Stufe einzudringen.</p>
+<p><strong>Neu in der Überarbeitung.</strong> Der Pfad eines Geländers wird mit allen Werkzeugen der Gruppe <strong>Zeichnen</strong> gezeichnet: ein Bogen bleibt im Geländer, in 3D und in <strong>Pfad bearbeiten</strong> ein Bogen, mit Pfosten nur an Anfang und Ende. <strong>Neuen Host wählen</strong> nimmt auch einen Boden: das Geländer steht auf seiner Oberseite. In <strong>Pfad bearbeiten</strong> bietet die Optionsleiste bei einer ausgewählten Linie <strong>Höhenkorrektur</strong> (<strong>Nach Typ</strong> oder <strong>Benutzerdefiniert</strong> mit Wert) und <strong>Neigung</strong> (<strong>Nach Host</strong>, <strong>Flach</strong>, <strong>Geneigt</strong>); <strong>Werkzeuge ▸ Verbindungen bearbeiten</strong> zeigt einen Rahmen um den Stoß unter dem Cursor, ein Klick markiert ihn mit einem X und <strong>Verbindung</strong> in der Optionsleiste wählt, wie die Handläufe dort zusammenkommen. In <strong>Handlaufstruktur</strong> hat jeder Handlauf sein <strong>Material</strong>.</p>
 <h2 id="components">Bauteile</h2>
 <ol>
 <li>Klicken Sie auf <strong>Erzeugen ▸ Erstellen ▸ Bauteil</strong>. Die Typenauswahl listet die im Projekt
@@ -966,25 +1298,56 @@ Zwischen zwei Pfosten haben die Geländerstäbe gleichen Abstand, nie größer a
 <img alt="Das Bauteilwerkzeug in einem Schlafzimmer des Grundrisses: die Vorschau des Bauteils folgt dem Cursor, mit temporären Bemaßungen zu den nächsten Wänden" src="../assets/screens/fr-component.webp"/>
 <figcaption>Ein Bauteil folgt dem Cursor vor dem Klick</figcaption>
 </figure>
-<p><strong>Modus ▸ Familie laden</strong> öffnet die Bibliothek, nach Ordnern (<strong>Möbel</strong>, <strong>Sanitärobjekte</strong>):
-Wählen Sie eine Familie und klicken Sie auf <strong>Öffnen</strong>, um ihre Typen dem Projekt hinzuzufügen.</p>
+<p><strong>Modus ▸ Komponente laden</strong> öffnet die Bibliothek, nach Ordnern (<strong>Möbel</strong>, <strong>Einbaumöbel</strong>,
+<strong>Sanitärobjekte</strong>): Wählen Sie eine Komponente, um ihre Typen mit ihren Maßen (Breite × Tiefe ×
+Höhe) zu sehen, und klicken Sie auf <strong>Öffnen</strong>, um sie dem Projekt hinzuzufügen.</p>
 <figure>
-<img alt="Familie laden: die Bibliothek nach Ordnern, Möbel und Sanitärinstallationen, die bereits geladenen Familien markiert" src="../assets/screens/fr-load-family.webp"/>
-<figcaption>Familie laden</figcaption>
+<img alt="Komponente laden: die Bibliothek nach Ordnern, Möbel und Sanitärinstallationen, die bereits geladenen Komponenten markiert" src="../assets/screens/fr-load-family.webp"/>
+<figcaption>Komponente laden</figcaption>
 </figure>
 <p>Wählen Sie ein Bauteil und klicken Sie auf <strong>Basisbauteil ▸ Neues Basisbauteil wählen</strong>, dann auf
 eine Geschossdecke: Das Bauteil wandert auf die Geschossdecke und bleibt auf ihrer Oberseite
 (ein Klick auf einen leeren Punkt setzt es zurück auf die Ebene). Seine Eigenschaften sind
 <strong>Ebene</strong>, <strong>Basisbauteil</strong>, <strong>Höhenversatz von Ebene</strong>, <strong>Drehung</strong>, <strong>Kennzeichen</strong> und
 <strong>Kommentare</strong>; <strong>Typparameter</strong> enthält Breite, Tiefe, Höhe und Material.</p>
+<h3 id="casework">Einbaumöbel</h3>
+<p><strong>Einbaumöbel</strong> sind eine eigene Kategorie neben den <strong>Möbeln</strong>: die fest eingebauten Elemente
+von Küchen und Bädern. Ihr Bibliotheksordner enthält die <strong>Küchenzeile</strong> (3,00 und 2,40 m lang),
+den <strong>Hängeschrank</strong> (60, 90 und 120 cm breit, 35 cm tief, 70 cm hoch), den <strong>Hochschrank 60</strong>
+(60 × 60 cm, 2,10 m hoch), den <strong>Waschtischunterschrank 80</strong> und den <strong>Einbauschrank</strong>; der
+freistehende <strong>Kleiderschrank</strong> bleibt ein Möbel. Ein Hängeschrank wird 1,45 m über seiner Ebene
+platziert: der <strong>Standardversatz</strong> seines Typs gibt an, wie hoch neue gesetzt werden, und jeder
+behält seinen eigenen <strong>Versatz von Ebene</strong>.</p>
+<p>Einbaumöbel werden nach dem Ansichtsbereich des Grundrisses gezeichnet, wie Wände:</p>
+<ul>
+<li>ein Element, das die Schnittebene kreuzt (ein Hochschrank, bei 1,20 m), ist <strong>geschnitten</strong>:
+  sein Umriss mit der Schnittlinienstärke der Kategorie, gefüllt mit dem Schnittmuster seines
+  Materials;</li>
+<li>ein Element unter der Schnittebene (die Küchenzeile) wird von oben gesehen, in Projektion;</li>
+<li>ein Element über der Schnittebene und unter der Oberkante des Ansichtsbereichs (ein
+  Hängeschrank) wird ebenfalls von oben gesehen, <strong>gestrichelt</strong>; über der Oberkante wird es
+  nicht gezeichnet.</li>
+</ul>
+<p>Möbel und Sanitärobjekte werden nie geschnitten: wo die Schnittebene sie kreuzt, werden sie ganz
+gezeichnet, darüber nicht. Daher geben <strong>Sichtbarkeit/Grafiken</strong> und <strong>Objektstile</strong> den
+<strong>Einbaumöbeln</strong> Schnittlinien und Schnittmuster und zeigen dort «—» für <strong>Möbel</strong> und
+<strong>Sanitärobjekte</strong>. Einbaumöbel haben ihre eigene Zeile in Filtern, Bauteillisten
+(<strong>Bauteilliste/Mengen ▸ Einbaumöbel</strong>), Materiallisten, Projekt- und gemeinsam genutzten
+Parametern und Legenden. Ein Projekt, das gespeichert wurde, bevor Einbaumöbel eine eigene
+Kategorie hatten, öffnet sich mit seinen Küchenzeilen als Einbaumöbel, und die Meldung beim
+Öffnen sagt, wie viele. <strong>IFC exportieren</strong> schreibt Einbaumöbel als Möbel mit der Kennung
+<em>Casework</em>; beim Import werden Möbel, die wie ein Schrank, eine Arbeitsplatte, ein
+Waschtischunterschrank oder eine Küche heißen, als Einbaumöbel vorgeschlagen.</p>
 <h2 id="schedules-and-ifc">Bauteillisten und IFC</h2>
 <p>Geschossdecken, Dächer, Treppen, Geländer und Möbel haben ihre Bauteillisten (<strong>Ansichten ▸
 Erzeugen ▸ Bauteillisten ▸ Bauteilliste/Mengen</strong>), eine Zeile je Element. <strong>Exportieren ▸ IFC4
 exportieren…</strong> schreibt Geschossdecken als Platten (mit Öffnungen und Neigungen), Dächer, Treppen
 mit Läufen und Podesten, Geländer, Möbel und Sanitärobjekte. Eine mehrgeschossige Treppe wird in jedem Geschoss, in dem sie sich wiederholt, einmal geschrieben, mit ihren Geländern.</p>
 <h2 id="not-yet-in-bimopen">Noch nicht in BIMopen</h2>
-<p>Abgehängte Decken, Extrusionsdächer, Schächte und vertikale Öffnungen, Deckenränder,
-Dachrinnen, Traufbretter und Dachuntersichten kommen nach der Neuausrichtung dieses Kapitels.</p>
+<p>Deckenränder, Traufbretter und Dachrinnen kommen nach der
+Neuausrichtung dieses Kapitels. Abgehängte Decken haben ein eigenes Kapitel,
+<a href="../ceilings-and-columns/">Decken und Stützen</a>; Schächte und Öffnungen in Geschossdecken, Dächern
+und Wänden stehen in <a href="../openings/">Öffnungen</a>.</p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
@@ -1009,13 +1372,13 @@ Dachrinnen, Traufbretter und Dachuntersichten kommen nach der Neuausrichtung die
               </div>
 </div>
 </a>
-<a aria-label="Weiter: Ansichten und Grafik" class="md-footer__link md-footer__link--next" href="../views-and-graphics/">
+<a aria-label="Weiter: Decken und Stützen" class="md-footer__link md-footer__link--next" href="../ceilings-and-columns/">
 <div class="md-footer__title">
 <span class="md-footer__direction">
                 Weiter
               </span>
 <div class="md-ellipsis">
-                Ansichten und Grafik
+                Decken und Stützen
               </div>
 </div>
 <div class="md-footer__button md-icon">

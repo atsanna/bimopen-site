@@ -1,0 +1,781 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="دليل مستخدم BIMopen، نمذجة BIM مفتوحة المصدر" name="description"/>
+<meta content="BIMopen" name="author"/>
+<link href="https://bimopen.it/manual/ar/phases/" rel="canonical"/>
+<link href="../openings/" rel="prev"/>
+<link href="../structure/" rel="next"/>
+<link href="../assets/images/bimopen-cube.svg" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.9" name="generator"/>
+<title>المراحل والهدم - دليل مستخدم BIMopen</title>
+<link href="../assets/stylesheets/main.4af4bdda.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link href="../assets/css/theme.css" rel="stylesheet"/>
+<link href="../assets/css/theme_dark_mode.css" rel="stylesheet"/>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="https://bimopen.it/manual/en/phases/" hreflang="en" rel="alternate"/>
+<link href="https://bimopen.it/manual/it/phases/" hreflang="it" rel="alternate"/>
+<link href="https://bimopen.it/manual/de/phases/" hreflang="de" rel="alternate"/>
+<link href="https://bimopen.it/manual/fr/phases/" hreflang="fr" rel="alternate"/>
+<link href="https://bimopen.it/manual/es/phases/" hreflang="es" rel="alternate"/>
+<link href="https://bimopen.it/manual/ar/phases/" hreflang="ar" rel="alternate"/>
+<link href="https://bimopen.it/manual/en/phases/" hreflang="x-default" rel="alternate"/>
+</head>
+<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="slate" dir="rtl">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#phases">
+          انتقل إلى المحتوى
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="عنوان العارضة" class="md-header__inner md-grid">
+<a aria-label="دليل مستخدم BIMopen" class="md-header__button md-logo" data-md-component="logo" href="https://bimopen.it/ar/" title="دليل مستخدم BIMopen">
+<img alt="logo" src="../assets/images/bimopen-cube.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            دليل مستخدم BIMopen
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              المراحل والهدم
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="التبديل إلى الوضع الفاتح" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="التبديل إلى الوضع الفاتح">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="التبديل إلى الوضع الداكن" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="bimopen" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="التبديل إلى الوضع الداكن">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<div class="md-header__option">
+<div class="md-select">
+<button aria-label="إختر اللغة" class="md-header__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"></path></svg>
+</button>
+<div class="md-select__inner">
+<ul class="md-select__list">
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/en/" hreflang="en">
+              English
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/it/" hreflang="it">
+              Italiano
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/de/" hreflang="de">
+              Deutsch
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/fr/" hreflang="fr">
+              Français
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/es/" hreflang="es">
+              Español
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/ar/" hreflang="ar">
+              العربية
+            </a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="بحث" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="بحث" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="إبحث" class="md-search__options">
+<button aria-label="مسح كلي" class="md-search__icon md-icon" tabindex="-1" title="مسح كلي" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            بدء البحث
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="تصفح" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="دليل مستخدم BIMopen" class="md-nav__button md-logo" data-md-component="logo" href="https://bimopen.it/ar/" title="دليل مستخدم BIMopen">
+<img alt="logo" src="../assets/images/bimopen-cube.svg"/>
+</a>
+    دليل مستخدم BIMopen
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
+<span class="md-ellipsis">
+    الرئيسية
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../getting-started/">
+<span class="md-ellipsis">
+    البدء
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../interface/">
+<span class="md-ellipsis">
+    الواجهة
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../interface-styles/">
+<span class="md-ellipsis">
+    أنماط الواجهة
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../projects-and-files/">
+<span class="md-ellipsis">
+    المشاريع والملفات
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../import-and-conversion/">
+<span class="md-ellipsis">
+    الاستيراد والتحويل
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cad-files/">
+<span class="md-ellipsis">
+    DWG وDXF
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../selection-and-modify/">
+<span class="md-ellipsis">
+    التحديد والتعديل
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../walls-doors-windows/">
+<span class="md-ellipsis">
+    الجدران والأبواب والنوافذ
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../floors-roofs-stairs/">
+<span class="md-ellipsis">
+    الأرضيات والأسقف والسلالم والمكونات
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ceilings-and-columns/">
+<span class="md-ellipsis">
+    الأسقف المعلقة والأعمدة
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../openings/">
+<span class="md-ellipsis">
+    الفتحات
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    المراحل والهدم
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    المراحل والهدم
+    
+  </span>
+</a>
+<nav aria-label="جدول المحتويات" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      جدول المحتويات
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#phase-statuses">
+<span class="md-ellipsis">
+      حالات المرحلة
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#project-phases">
+<span class="md-ellipsis">
+      مراحل المشروع
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#phase-filters">
+<span class="md-ellipsis">
+      مرشّحات المراحل
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#graphic-overrides">
+<span class="md-ellipsis">
+      التجاوزات الرسومية
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#phases-of-views">
+<span class="md-ellipsis">
+      مرحلة العروض
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#phases-of-elements">
+<span class="md-ellipsis">
+      مراحل العناصر
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#demolish">
+<span class="md-ellipsis">
+      هدم
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#infills">
+<span class="md-ellipsis">
+      الحشوات
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rooms-and-schedules">
+<span class="md-ellipsis">
+      الغرف والجداول حسب المرحلة
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#phase-legends">
+<span class="md-ellipsis">
+      وسائل إيضاح المراحل
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exchange">
+<span class="md-ellipsis">
+      التبادل
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../structure/">
+<span class="md-ellipsis">
+    الإنشاءات والأساسات
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../site/">
+<span class="md-ellipsis">
+    مخطط الموقع والأرض
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../design-options/">
+<span class="md-ellipsis">
+    بدائل التصميم
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../views-and-graphics/">
+<span class="md-ellipsis">
+    المناظر والرسومات
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../annotation/">
+<span class="md-ellipsis">
+    التعليقات التوضيحية والتفاصيل ثنائية الأبعاد
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../documentation/">
+<span class="md-ellipsis">
+    اللوحات والجداول والطباعة
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../command-line-and-mcp/">
+<span class="md-ellipsis">
+    سطر الأوامر و MCP
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../keyboard-shortcuts/">
+<span class="md-ellipsis">
+    اختصارات لوحة المفاتيح
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../troubleshooting/">
+<span class="md-ellipsis">
+    استكشاف الأخطاء وإصلاحها
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://bimopen.it/manual/ar/pdf/bimopen-manual-ar.pdf">
+<span class="md-ellipsis">
+    PDF
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="جدول المحتويات" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      جدول المحتويات
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#phase-statuses">
+<span class="md-ellipsis">
+      حالات المرحلة
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#project-phases">
+<span class="md-ellipsis">
+      مراحل المشروع
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#phase-filters">
+<span class="md-ellipsis">
+      مرشّحات المراحل
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#graphic-overrides">
+<span class="md-ellipsis">
+      التجاوزات الرسومية
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#phases-of-views">
+<span class="md-ellipsis">
+      مرحلة العروض
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#phases-of-elements">
+<span class="md-ellipsis">
+      مراحل العناصر
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#demolish">
+<span class="md-ellipsis">
+      هدم
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#infills">
+<span class="md-ellipsis">
+      الحشوات
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rooms-and-schedules">
+<span class="md-ellipsis">
+      الغرف والجداول حسب المرحلة
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#phase-legends">
+<span class="md-ellipsis">
+      وسائل إيضاح المراحل
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exchange">
+<span class="md-ellipsis">
+      التبادل
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset"><a class="md-content__icon pdf-download-btn" download href="../pdf/bimopen-manual-ar.pdf" title="Download"><i class="fa fas fa-download"></i><small> PDF</small></a>
+<h1 id="phases">المراحل والهدم</h1>
+<p>يُرسم الترميم على <strong>مراحل</strong>: الوضع القائم، والإنشاء الجديد، وعند الحاجة المراحل الوسيطة. يُنشأ كل
+عنصر في النموذج في مرحلة، ويمكن هدمه في مرحلة لاحقة؛ ويعرض كل عرض النموذج كما هو في مرحلته، مع
+<strong>مرشّح المراحل</strong> الذي يحدد كيف تظهر العناصر الجديدة والقائمة والمهدومة والمؤقتة. وهكذا يعطي نموذج
+واحد مسقط الوضع القائم، ومسقط الهدم، ومسقط المشروع، واللوحة المقارنة بالأصفر والأحمر.</p>
+<h2 id="phase-statuses">حالات المرحلة</h2>
+<p>تعطي مرحلة العرض والمرحلتان الخاصتان بالعنصر <strong>حالته</strong> في ذلك العرض:</p>
+<table>
+<thead>
+<tr>
+<th>الحالة</th>
+<th>العنصر…</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>جديد</strong></td>
+<td>يُنشأ في مرحلة العرض</td>
+</tr>
+<tr>
+<td><strong>قائم</strong></td>
+<td>يُنشأ في مرحلة سابقة ولا يُهدم حتى مرحلة العرض</td>
+</tr>
+<tr>
+<td><strong>مهدوم</strong></td>
+<td>يُنشأ في مرحلة سابقة ويُهدم في مرحلة العرض</td>
+</tr>
+<tr>
+<td><strong>مؤقت</strong></td>
+<td>يُنشأ ويُهدم في مرحلة العرض</td>
+</tr>
+</tbody>
+</table>
+<p>العنصر الذي يُنشأ بعد مرحلة العرض، أو يُهدم قبلها، لا يظهر في ذلك العرض.</p>
+<h2 id="project-phases">مراحل المشروع</h2>
+<p>يفتح <strong>المشروع ▸ المراحل ▸ المراحل</strong> (نمط BIMopen: <strong>المشروع ▸ المراحل…</strong>) مربع الحوار
+<strong>المراحل</strong>، وفيه ثلاث علامات تبويب. للمشروع الجديد مرحلتان: <strong>الوضع القائم</strong> و<strong>إنشاء جديد</strong>.</p>
+<p>في علامة التبويب <strong>مراحل المشروع</strong> تكون كل مرحلة صفًا مرقّمًا، من الماضي (في الأعلى) إلى المستقبل
+(في الأسفل)، مع <strong>الاسم</strong> و<strong>الوصف</strong>. والنقر على الرقم يحدد الصف.</p>
+<ul>
+<li>يضيف <strong>إدراج قبل</strong> و<strong>إدراج بعد</strong> مرحلة بجانب المرحلة المحددة، وتُسمّى بالتسلسل (<strong>المرحلة 1</strong>،
+  <strong>المرحلة 2</strong>…). لا يمكن إعادة ترتيب المراحل: أدرجها في المكان الصحيح.</li>
+<li>يزيل <strong>دمج مع ▸ السابق</strong> أو <strong>التالية</strong> المرحلة المحددة: تنتقل العناصر والعروض والجداول والغرف
+  التي كانت تستخدمها إلى المرحلة التي تُدمج معها.</li>
+</ul>
+<p>لا يمكن أن تكون الأسماء فارغة أو مكررة. يطبّق <strong>موافق</strong> علامات التبويب الثلاث معًا، في خطوة واحدة
+يلغيها <strong>تراجع</strong> (Ctrl+Z)؛ أما <strong>إلغاء</strong> في مربع الحوار فلا يغيّر شيئًا. ويعرض مفتاح <strong>معاينة</strong> في
+الترويسة العرض النشط مع التغييرات التي لم تُؤكَّد بعد، بالمرشّح المختار تحت المعاينة.</p>
+<h2 id="phase-filters">مرشّحات المراحل</h2>
+<p>في علامة التبويب <strong>مرشّحات المراحل</strong> يحدد كل مرشّح، لكل حالة (<strong>جديد</strong>، <strong>قائم</strong>، <strong>مهدوم</strong>،
+<strong>مؤقت</strong>)، هل تُرسم العناصر <strong>حسب الفئة</strong> (كما تقول أنماط العرض وتجاوزاته)، أو <strong>مُتجاوَز</strong> (بالتجاوزات
+الرسومية للحالة)، أو <strong>عدم العرض</strong> (فلا تُرسم ولا تُحدَّد).</p>
+<table>
+<thead>
+<tr>
+<th>المرشّح المعرّف مسبقًا</th>
+<th>جديد</th>
+<th>قائم</th>
+<th>مهدوم</th>
+<th>مؤقت</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>إظهار الكل</strong></td>
+<td>حسب الفئة</td>
+<td>مُتجاوَز</td>
+<td>مُتجاوَز</td>
+<td>مُتجاوَز</td>
+</tr>
+<tr>
+<td><strong>إظهار المهدوم + الجديد</strong></td>
+<td>حسب الفئة</td>
+<td>عدم العرض</td>
+<td>مُتجاوَز</td>
+<td>مُتجاوَز</td>
+</tr>
+<tr>
+<td><strong>إظهار الجديد</strong></td>
+<td>حسب الفئة</td>
+<td>عدم العرض</td>
+<td>عدم العرض</td>
+<td>عدم العرض</td>
+</tr>
+<tr>
+<td><strong>إظهار السابق + المهدوم</strong></td>
+<td>عدم العرض</td>
+<td>حسب الفئة</td>
+<td>مُتجاوَز</td>
+<td>عدم العرض</td>
+</tr>
+<tr>
+<td><strong>إظهار السابق + الجديد</strong></td>
+<td>حسب الفئة</td>
+<td>حسب الفئة</td>
+<td>عدم العرض</td>
+<td>عدم العرض</td>
+</tr>
+<tr>
+<td><strong>إظهار المرحلة السابقة</strong></td>
+<td>عدم العرض</td>
+<td>مُتجاوَز</td>
+<td>مُتجاوَز</td>
+<td>عدم العرض</td>
+</tr>
+<tr>
+<td><strong>أصفر وأحمر</strong></td>
+<td>مُتجاوَز</td>
+<td>مُتجاوَز</td>
+<td>مُتجاوَز</td>
+<td>عدم العرض</td>
+</tr>
+</tbody>
+</table>
+<p>يضيف <strong>جديد</strong> مرشّحًا (كل شيء حسب الفئة)، ويزيله <strong>حذف</strong>: إذا كان عرض ما يستخدمه يسأل مربع الحوار
+أولًا، وتنتقل تلك العروض إلى <strong>بدون</strong>. وفي المرحلة الأولى لا يعرض <strong>إظهار المرحلة السابقة</strong> شيئًا.
+ولرؤية كل شيء بلا تجاوزات، اختر <strong>بدون</strong> مرشّحًا للعرض.</p>
+<h2 id="graphic-overrides">التجاوزات الرسومية</h2>
+<p>في علامة التبويب <strong>التجاوزات الرسومية</strong> صف لكل حالة: <strong>خطوط الإسقاط</strong> و<strong>خطوط القطع</strong> (السماكة،
+اللون، نمط الخط)، و<strong>أنماط السطح</strong> و<strong>أنماط القطع</strong> (مرئي، النمط، اللون؛ ويعيد <strong>مسح التجاوزات</strong>
+أنماط الفئة)، و<strong>نصف درجة</strong> (خطوط وأنماط وتعبئات مخففة نحو الخلفية، دون ألوان المواد في العروض
+المظللة)، و<strong>المادة</strong> (لونها المظلل ومظهرها في العروض المظللة والواقعية).</p>
+<p>تسري حيث يقول المرشّح <strong>مُتجاوَز</strong>. وتتقدم عليها مرشّحات العرض والرسومات حسب العنصر. وتتبع القيم
+الافتراضية العُرف الإيطالي: القائم رمادي، والمهدوم أصفر متقطع، والجديد أحمر، والمؤقت منقّط بنصف
+درجة.</p>
+<h2 id="phases-of-views">مرحلة العروض</h2>
+<p>للمساقط ومساقط الأسقف المعلقة والمقاطع والواجهات والعروض ثلاثية الأبعاد ومساقط المساحات والجداول،
+في مجموعة <strong>المراحل</strong> من خصائصها، <strong>مرشّح المراحل</strong> و<strong>المرحلة</strong>. يأخذ العرض الجديد المرحلة الأخيرة
+و<strong>إظهار الكل</strong>؛ ويحتفظ <strong>تكرار العرض</strong> بالمرحلة والمرشّح، ثم يمكن تغيير كل منهما: الطابق نفسه في
+لحظتين. ويمكن لـ<strong>قالب العرض</strong> أن يضبط المرشّح (<strong>مرشّح المراحل</strong> ضمن الخصائص المشمولة)، ولا يضبط
+المرحلة أبدًا.</p>
+<p>في نمط BIMopen تفتح التسمية <strong>المرحلة · عامل التصفية</strong> أعلى العرض قائمة تغيّر هذه أو ذاك.</p>
+<h2 id="phases-of-elements">مراحل العناصر</h2>
+<p>لكل عنصر في النموذج (الجدران، الأبواب، النوافذ، المكونات، الأرضيات، الأسقف، الأسقف المعلقة،
+الأعمدة، السلالم، الدرابزين، المنحدرات، الواجهات الستارية) في مجموعة <strong>المراحل</strong> من خصائصه:</p>
+<ul>
+<li><strong>مرحلة الإنشاء</strong>: مرحلة العرض الذي أُنشئ فيه العنصر (أو لُصق فيه)؛</li>
+<li><strong>مرحلة الهدم</strong>: <strong>لا شيء</strong>، أو المرحلة التي يُهدم فيها؛ ولا تُعرض إلا مرحلة الإنشاء وما بعدها،
+  ويلغي <strong>لا شيء</strong> الهدم.</li>
+</ul>
+<p>ليس للتعليقات التوضيحية والأبعاد والنصوص وعناصر التفاصيل مراحل: فهي تنتمي إلى عرضها. وتتبع الجدران
+الفرعية لجدار مكدّس وأجزاء الجدار المنحني الجدار كله. وتُفتح المشاريع السابقة، ذات المرحلتين
+الثابتتين للجدران، بالمراحل التي تحمل الاسم نفسه.</p>
+<h2 id="demolish">هدم</h2>
+<p>تعمل أداة <strong>تعديل ▸ الأشكال ▸ هدم</strong> (نمط BIMopen: <strong>تعديل ▸ هدم</strong>) في المساقط والمقاطع والواجهات
+والعروض ثلاثية الأبعاد. تظهر المطرقة بجانب المؤشر، ويُبرز ما يمكن هدمه في مرحلة العرض. والنقرة تهدم
+العنصر في تلك المرحلة، في كل عروض المرحلة نفسها:</p>
+<ul>
+<li>يأخذ الجدار المهدوم معه أبوابه ونوافذه؛</li>
+<li>يصبح العنصر المُنشأ في المرحلة نفسها مؤقتًا؛</li>
+<li>إذا كان مرشّح العرض لا يُظهر المهدوم، يختفي العنصر فورًا.</li>
+</ul>
+<p>ومع عناصر محددة مسبقًا، يهدمها <strong>هدم</strong> كلها فورًا، ثم ينتظر نقرات أخرى. ويُغلق Esc أو <strong>تعديل</strong>
+الأداة؛ وكل نقرة خطوة تراجع واحدة.</p>
+<p><img alt="مسقط الطابق الأرضي في مرحلة البناء الجديد: الجدران القائمة، وفاصل مهدوم، والأبواب والنوافذ الجديدة" src="../assets/screens/ph-demolish.webp"/></p>
+<h2 id="infills">الحشوات</h2>
+<p>حيث يُهدم باب أو نافذة ويبقى جداره، تُملأ الفتحة من مرحلة الهدم فصاعدًا، بطبقات الجدار: يظهر ذلك في
+المسقط والمقطع والواجهة وفي العرض ثلاثي الأبعاد. وحيث تُفتح فتحة في مرحلة لاحقة لمرحلة الجدار، يكون
+الجدار كاملًا في المراحل السابقة.</p>
+<p>تُحدَّد الحشوة بنقرة، مثلًا في مقطع مع <strong>إظهار السابق + الجديد</strong>: ويمكن تغيير
+<strong>النوع</strong> الخاص بها إلى نوع جدار أساسي آخر، لرسم حشوة مختلفة؛ أما حشوة المراحل السابقة للفتحة فلها
+دائمًا بنية الجدار. ولا تُنقل الحشوات ولا تُدوَّر ولا تُعكس ولا تُنسخ ولا تُلصق: فهي تتبع فتحاتها.</p>
+<h2 id="rooms-and-schedules">الغرف والجداول حسب المرحلة</h2>
+<p>تنتمي <strong>غرفة</strong> إلى مرحلة العرض الذي توضع فيه (و<strong>المرحلة</strong> الخاصة بها للقراءة فقط): يعرض المسقط
+غرف مرحلته فقط ويوسمها ويحددها، ويمكن أن يوجد الرقم نفسه في مراحل مختلفة. وتُحدّ الغرفة بالعناصر
+الموجودة في نهاية مرحلتها: هدم حاجز يغيّر غرف تلك المرحلة وما بعدها، لا غرف الوضع القائم. استخدم
+<strong>نسخ إلى الحافظة</strong> لغرفة من عرض، ثم <strong>لصق في العرض النشط</strong> في عرض من مرحلة أخرى: تنتقل الغرفة إلى
+تلك المرحلة بالخصائص نفسها.</p>
+<p>لـ<strong>جدول</strong> <strong>المرحلة</strong> و<strong>مرشّح المراحل</strong> كما للعروض (في <strong>جدول جديد</strong> تكون المرحلة المقترحة هي
+الأخيرة): الصفوف هي العناصر كما هي في تلك المرحلة، أي التي يُظهرها المرشّح. يسرد <strong>إظهار السابق +
+المهدوم</strong> الأبواب المراد إزالتها، و<strong>إظهار الجديد</strong> الأبواب المراد شراؤها. ويمكن إظهار الحقلين
+<strong>مرحلة الإنشاء</strong> و<strong>مرحلة الهدم</strong> وفرزهما وتصفيتهما وتعديلهما من الخلية.</p>
+<p>ولـ<strong>عوامل تصفية العروض</strong> قواعد على <strong>مرحلة الإنشاء</strong> و<strong>مرحلة الهدم</strong>: يساوي أو لا يساوي، و<strong>أصغر
+من</strong> / <strong>أكبر من</strong> للأقدم أو الأحدث في ترتيب المراحل.</p>
+<h2 id="phase-legends">وسائل إيضاح المراحل</h2>
+<p>لـ<strong>مكوّن وسيلة الإيضاح</strong> الخاصية <strong>حالة المرحلة</strong>: مع <strong>قائم</strong> أو <strong>مهدوم</strong> أو <strong>جديد</strong> أو <strong>مؤقت</strong>
+تُرسم العيّنة بتجاوزات تلك الحالة، بجانب نصها.</p>
+<h2 id="exchange">التبادل</h2>
+<ul>
+<li><strong>IFC</strong>: في مشروع ذي مراحل، يطلب <strong>تصدير ▸ IFC</strong> تحديد <strong>المرحلة المراد تصديرها</strong> (وتُقترح
+  الأخيرة). تُكتب العناصر الموجودة في تلك المرحلة، كل منها بحالته (<strong>Status</strong>: NEW، EXISTING،
+  DEMOLISH، TEMPORARY) في مجموعة الخصائص المشتركة لفئته، ومع مرحلتيه بالاسم. وعند فتح ملف IFC
+  تأخذ الكائنات ذات هذه الحالة المراحل المقابلة في المشروع.</li>
+<li><strong>DWG وDXF</strong>: في <strong>تصدير تنسيقات CAD</strong> يضيف الخيار <strong>حالة المرحلة في اسم الطبقة</strong> إلى طبقة
+  الفئة لاحقة الحالة (-EXST، -DEMO، -NEWW، -TEMP): الجدار المهدوم يذهب إلى <strong>A-WALL-DEMO</strong>.</li>
+</ul>
+<p>ستأتي مطابقة مراحل النماذج المرتبطة مع النماذج المرتبطة.</p>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  عد إلى الأعلى
+</button>
+</main>
+<footer class="md-footer">
+<nav aria-label="هامش سفلي" class="md-footer__inner md-grid">
+<a aria-label="السابقة: الفتحات" class="md-footer__link md-footer__link--prev" href="../openings/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                السابقة
+              </span>
+<div class="md-ellipsis">
+                الفتحات
+              </div>
+</div>
+</a>
+<a aria-label="التالية: الإنشاءات والأساسات" class="md-footer__link md-footer__link--next" href="../structure/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                التالية
+              </span>
+<div class="md-ellipsis">
+                الإنشاءات والأساسات
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Copyright © 2026 BIMopen
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.footer", "navigation.tracking", "toc.follow", "content.code.copy", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u062a\u0645 \u0627\u0644\u0646\u0633\u062e \u0627\u0644\u0649 \u0627\u0644\u062d\u0627\u0641\u0638\u0629", "clipboard.copy": "\u0646\u0633\u062e \u0625\u0644\u0649 \u0627\u0644\u062d\u0627\u0641\u0638\u0629", "search.result.more.one": "\u0623\u0643\u062b\u0631 \u0645\u0646 1 \u0641\u064a \u0647\u0630\u0647 \u0627\u0644\u0635\u0641\u062d\u0629", "search.result.more.other": "\u0623\u0643\u062b\u0631 \u0645\u0646 # \u0641\u064a \u0647\u0630\u0647 \u0627\u0644\u0635\u0641\u062d\u0629", "search.result.none": "\u0644\u0627 \u062a\u0648\u062c\u062f \u0646\u062a\u0627\u0626\u062c", "search.result.one": "\u0646\u062a\u0627\u0626\u062c \u0627\u0644\u0628\u062d\u062b \u0645\u0633\u062a\u0646\u062f \u0648\u0627\u062d\u062f", "search.result.other": "\u0646\u062a\u0627\u0626\u062c \u0627\u0644\u0628\u062d\u062b # \u0645\u0633\u062a\u0646\u062f\u0627\u062a", "search.result.placeholder": "\u0627\u0643\u062a\u0628 \u0644\u0628\u062f\u0621 \u0627\u0644\u0628\u062d\u062b", "search.result.term.missing": "\u0645\u0641\u0642\u0648\u062f", "select.version": "\u0625\u062e\u062a\u0631 \u0627\u0644\u0625\u0635\u062f\u0627\u0631"}}</script>
+<script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+<script src="../assets/js/zoom.js"></script>
+</body>
+</html>

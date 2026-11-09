@@ -1,0 +1,799 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="it">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Manuale utente di BIMopen, modellazione BIM open source" name="description"/>
+<meta content="BIMopen" name="author"/>
+<link href="https://bimopen.it/manual/it/phases/" rel="canonical"/>
+<link href="../openings/" rel="prev"/>
+<link href="../structure/" rel="next"/>
+<link href="../assets/images/bimopen-cube.svg" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.9" name="generator"/>
+<title>Fasi e demolizioni - Manuale utente di BIMopen</title>
+<link href="../assets/stylesheets/main.4af4bdda.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link href="../assets/css/theme.css" rel="stylesheet"/>
+<link href="../assets/css/theme_dark_mode.css" rel="stylesheet"/>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="https://bimopen.it/manual/en/phases/" hreflang="en" rel="alternate"/>
+<link href="https://bimopen.it/manual/it/phases/" hreflang="it" rel="alternate"/>
+<link href="https://bimopen.it/manual/de/phases/" hreflang="de" rel="alternate"/>
+<link href="https://bimopen.it/manual/fr/phases/" hreflang="fr" rel="alternate"/>
+<link href="https://bimopen.it/manual/es/phases/" hreflang="es" rel="alternate"/>
+<link href="https://bimopen.it/manual/ar/phases/" hreflang="ar" rel="alternate"/>
+<link href="https://bimopen.it/manual/en/phases/" hreflang="x-default" rel="alternate"/>
+</head>
+<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="slate" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#phases">
+          Vai al contenuto
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Intestazione" class="md-header__inner md-grid">
+<a aria-label="Manuale utente di BIMopen" class="md-header__button md-logo" data-md-component="logo" href="https://bimopen.it/" title="Manuale utente di BIMopen">
+<img alt="logo" src="../assets/images/bimopen-cube.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Manuale utente di BIMopen
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Fasi e demolizioni
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Passa al tema chiaro" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Passa al tema chiaro">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Passa al tema scuro" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="bimopen" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Passa al tema scuro">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<div class="md-header__option">
+<div class="md-select">
+<button aria-label="Seleziona la lingua" class="md-header__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"></path></svg>
+</button>
+<div class="md-select__inner">
+<ul class="md-select__list">
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/en/" hreflang="en">
+              English
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/it/" hreflang="it">
+              Italiano
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/de/" hreflang="de">
+              Deutsch
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/fr/" hreflang="fr">
+              Français
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/es/" hreflang="es">
+              Español
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/ar/" hreflang="ar">
+              العربية
+            </a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Cerca" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Cerca" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Cerca" class="md-search__options">
+<button aria-label="Cancella" class="md-search__icon md-icon" tabindex="-1" title="Cancella" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Inizializza la ricerca
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigazione" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Manuale utente di BIMopen" class="md-nav__button md-logo" data-md-component="logo" href="https://bimopen.it/" title="Manuale utente di BIMopen">
+<img alt="logo" src="../assets/images/bimopen-cube.svg"/>
+</a>
+    Manuale utente di BIMopen
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
+<span class="md-ellipsis">
+    Introduzione
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../getting-started/">
+<span class="md-ellipsis">
+    Primi passi
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../interface/">
+<span class="md-ellipsis">
+    L'interfaccia
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../interface-styles/">
+<span class="md-ellipsis">
+    Stili dell'interfaccia
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../projects-and-files/">
+<span class="md-ellipsis">
+    Progetti e file
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../import-and-conversion/">
+<span class="md-ellipsis">
+    Importazione e conversione
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cad-files/">
+<span class="md-ellipsis">
+    DWG e DXF
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../selection-and-modify/">
+<span class="md-ellipsis">
+    Selezione e modifica
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../walls-doors-windows/">
+<span class="md-ellipsis">
+    Muri, porte e finestre
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../floors-roofs-stairs/">
+<span class="md-ellipsis">
+    Pavimenti, tetti, scale e componenti
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ceilings-and-columns/">
+<span class="md-ellipsis">
+    Controsoffitti e colonne
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../openings/">
+<span class="md-ellipsis">
+    Aperture
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Fasi e demolizioni
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Fasi e demolizioni
+    
+  </span>
+</a>
+<nav aria-label="Indice" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#phase-statuses">
+<span class="md-ellipsis">
+      Gli stati della fase
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#project-phases">
+<span class="md-ellipsis">
+      Le fasi del progetto
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#phase-filters">
+<span class="md-ellipsis">
+      I filtri delle fasi
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#graphic-overrides">
+<span class="md-ellipsis">
+      Le sostituzioni grafiche
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#phases-of-views">
+<span class="md-ellipsis">
+      La fase delle viste
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#phases-of-elements">
+<span class="md-ellipsis">
+      Le fasi degli elementi
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#demolish">
+<span class="md-ellipsis">
+      Demolisci
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#infills">
+<span class="md-ellipsis">
+      I riempimenti
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rooms-and-schedules">
+<span class="md-ellipsis">
+      Locali e abachi per fase
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#phase-legends">
+<span class="md-ellipsis">
+      Legende di fase
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exchange">
+<span class="md-ellipsis">
+      Scambio
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../structure/">
+<span class="md-ellipsis">
+    Strutture e fondazioni
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../site/">
+<span class="md-ellipsis">
+    Planimetria e terreno
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../design-options/">
+<span class="md-ellipsis">
+    Alternative di progetto
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../views-and-graphics/">
+<span class="md-ellipsis">
+    Viste e grafica
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../annotation/">
+<span class="md-ellipsis">
+    Annotazioni e dettagli 2D
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../documentation/">
+<span class="md-ellipsis">
+    Tavole, abachi e stampa
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../command-line-and-mcp/">
+<span class="md-ellipsis">
+    Riga di comando e MCP
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../keyboard-shortcuts/">
+<span class="md-ellipsis">
+    Scorciatoie da tastiera
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../troubleshooting/">
+<span class="md-ellipsis">
+    Risoluzione dei problemi
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://bimopen.it/manual/it/pdf/bimopen-manual-it.pdf">
+<span class="md-ellipsis">
+    PDF
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Indice" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#phase-statuses">
+<span class="md-ellipsis">
+      Gli stati della fase
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#project-phases">
+<span class="md-ellipsis">
+      Le fasi del progetto
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#phase-filters">
+<span class="md-ellipsis">
+      I filtri delle fasi
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#graphic-overrides">
+<span class="md-ellipsis">
+      Le sostituzioni grafiche
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#phases-of-views">
+<span class="md-ellipsis">
+      La fase delle viste
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#phases-of-elements">
+<span class="md-ellipsis">
+      Le fasi degli elementi
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#demolish">
+<span class="md-ellipsis">
+      Demolisci
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#infills">
+<span class="md-ellipsis">
+      I riempimenti
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rooms-and-schedules">
+<span class="md-ellipsis">
+      Locali e abachi per fase
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#phase-legends">
+<span class="md-ellipsis">
+      Legende di fase
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exchange">
+<span class="md-ellipsis">
+      Scambio
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset"><a class="md-content__icon pdf-download-btn" download href="../pdf/bimopen-manual-it.pdf" title="Download"><i class="fa fas fa-download"></i><small> PDF</small></a>
+<h1 id="phases">Fasi e demolizioni</h1>
+<p>Una ristrutturazione si disegna in <strong>fasi</strong>: lo stato di fatto, la nuova costruzione e, se serve,
+le fasi intermedie. Ogni elemento del modello è creato in una fase e può essere demolito in una
+fase successiva; ogni vista mostra il modello come è nella sua fase, con un <strong>filtro delle fasi</strong>
+che decide come si vedono gli elementi nuovi, esistenti, demoliti e temporanei. Un solo modello dà
+così la pianta dello stato di fatto, quella delle demolizioni, quella di progetto e la tavola
+comparativa a gialli e rossi.</p>
+<h2 id="phase-statuses">Gli stati della fase</h2>
+<p>La fase della vista e le due fasi di un elemento ne danno lo <strong>stato</strong> in quella vista:</p>
+<table>
+<thead>
+<tr>
+<th>Stato</th>
+<th>L'elemento…</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nuovo</strong></td>
+<td>è creato nella fase della vista</td>
+</tr>
+<tr>
+<td><strong>Esistente</strong></td>
+<td>è creato in una fase precedente e non è demolito fino alla fase della vista</td>
+</tr>
+<tr>
+<td><strong>Demolito</strong></td>
+<td>è creato in una fase precedente e demolito nella fase della vista</td>
+</tr>
+<tr>
+<td><strong>Temporaneo</strong></td>
+<td>è creato e demolito nella fase della vista</td>
+</tr>
+</tbody>
+</table>
+<p>Un elemento creato dopo la fase della vista, o demolito prima, in quella vista non c'è.</p>
+<h2 id="project-phases">Le fasi del progetto</h2>
+<p><strong>Progetto ▸ Fasi ▸ Fasi</strong> (stile BIMopen: <strong>Progetto ▸ Fasi…</strong>) apre il dialogo <strong>Fasi</strong>, con tre
+schede. Un progetto nuovo ha <strong>Stato di fatto</strong> e <strong>Nuova costruzione</strong>.</p>
+<p>Nella scheda <strong>Fasi del progetto</strong> ogni fase è una riga numerata, dal passato (in alto) al futuro
+(in basso), con <strong>Nome</strong> e <strong>Descrizione</strong>. Un clic sul numero seleziona la riga.</p>
+<ul>
+<li><strong>Inserisci prima</strong> e <strong>Inserisci dopo</strong> aggiungono una fase accanto a quella selezionata,
+  chiamata in sequenza (<strong>Fase 1</strong>, <strong>Fase 2</strong>…). Le fasi non si riordinano: inseriscile nel punto
+  giusto.</li>
+<li><strong>Combina con ▸ Precedente</strong> o <strong>Successiva</strong> toglie la fase selezionata: gli elementi, le viste,
+  gli abachi e i locali che la usavano passano alla fase con cui si combina.</li>
+</ul>
+<p>I nomi non possono essere vuoti né ripetuti. <strong>OK</strong> applica le tre schede insieme, in un solo passo
+che <strong>Annulla</strong> (Ctrl+Z) riporta indietro; <strong>Annulla</strong> del dialogo non cambia nulla. L'interruttore
+<strong>Anteprima</strong> nell'intestazione mostra la vista attiva con le modifiche non ancora confermate, con
+il filtro scelto sotto l'anteprima.</p>
+<h2 id="phase-filters">I filtri delle fasi</h2>
+<p>Nella scheda <strong>Filtri delle fasi</strong> ogni filtro dice, per ciascuno stato (<strong>Nuovo</strong>, <strong>Esistente</strong>,
+<strong>Demolito</strong>, <strong>Temporaneo</strong>), se gli elementi si disegnano <strong>Per categoria</strong> (come dicono stili e
+sostituzioni della vista), <strong>Sostituito</strong> (con le sostituzioni grafiche dello stato) o <strong>Non
+visualizzato</strong> (non si disegnano né si selezionano).</p>
+<table>
+<thead>
+<tr>
+<th>Filtro predefinito</th>
+<th>Nuovo</th>
+<th>Esistente</th>
+<th>Demolito</th>
+<th>Temporaneo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Mostra tutto</strong></td>
+<td>Per categoria</td>
+<td>Sostituito</td>
+<td>Sostituito</td>
+<td>Sostituito</td>
+</tr>
+<tr>
+<td><strong>Mostra demolito + nuovo</strong></td>
+<td>Per categoria</td>
+<td>Non visualizzato</td>
+<td>Sostituito</td>
+<td>Sostituito</td>
+</tr>
+<tr>
+<td><strong>Mostra nuovo</strong></td>
+<td>Per categoria</td>
+<td>Non visualizzato</td>
+<td>Non visualizzato</td>
+<td>Non visualizzato</td>
+</tr>
+<tr>
+<td><strong>Mostra precedente + demolito</strong></td>
+<td>Non visualizzato</td>
+<td>Per categoria</td>
+<td>Sostituito</td>
+<td>Non visualizzato</td>
+</tr>
+<tr>
+<td><strong>Mostra precedente + nuovo</strong></td>
+<td>Per categoria</td>
+<td>Per categoria</td>
+<td>Non visualizzato</td>
+<td>Non visualizzato</td>
+</tr>
+<tr>
+<td><strong>Mostra fase precedente</strong></td>
+<td>Non visualizzato</td>
+<td>Sostituito</td>
+<td>Sostituito</td>
+<td>Non visualizzato</td>
+</tr>
+<tr>
+<td><strong>Gialli e rossi</strong></td>
+<td>Sostituito</td>
+<td>Sostituito</td>
+<td>Sostituito</td>
+<td>Non visualizzato</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Nuovo</strong> aggiunge un filtro (tutto per categoria), <strong>Elimina</strong> lo toglie: se una vista lo usa il
+dialogo lo chiede prima, e quelle viste passano a <strong>Nessuno</strong>. Nella prima fase <strong>Mostra fase
+precedente</strong> non mostra nulla. Per vedere tutto senza sostituzioni si sceglie <strong>Nessuno</strong> come
+filtro della vista.</p>
+<h2 id="graphic-overrides">Le sostituzioni grafiche</h2>
+<p>La scheda <strong>Sostituzioni grafiche</strong> ha una riga per stato: <strong>Linee di proiezione</strong> e <strong>Linee di
+taglio</strong> (spessore, colore, modello di linea), <strong>Motivi di superficie</strong> e <strong>Motivi di taglio</strong>
+(visibile, motivo, colore; <strong>Cancella sostituzioni</strong> torna a quelli della categoria),
+<strong>Mezzitoni</strong> (linee, motivi e riempimenti sfumati verso lo sfondo, i colori dei materiali delle
+viste ombreggiate no) e <strong>Materiale</strong> (il suo colore ombreggiato e il suo aspetto nelle viste
+ombreggiate e realistiche).</p>
+<p>Valgono dove un filtro dice <strong>Sostituito</strong>. I filtri della vista e la grafica per elemento vincono
+su di esse. Le predefinite seguono l'uso italiano: esistente grigio, demolito giallo tratteggiato,
+nuovo rosso, temporaneo puntinato a mezzitoni.</p>
+<h2 id="phases-of-views">La fase delle viste</h2>
+<p>Piante, piante dei controsoffitti, sezioni, prospetti, viste 3D, piante delle aree e abachi hanno
+nel gruppo <strong>Fasi</strong> delle proprietà <strong>Filtro delle fasi</strong> e <strong>Fase</strong>. Una vista nuova prende
+l'ultima fase e <strong>Mostra tutto</strong>; <strong>Duplica vista</strong> tiene fase e filtro, poi ciascuno si cambia: lo
+stesso piano in due momenti. Un <strong>modello di vista</strong> può impostare il filtro (<strong>Filtro delle
+fasi</strong> fra le proprietà incluse), mai la fase.</p>
+<p>Nello stile BIMopen l'etichetta <strong>Fase · Filtro</strong> in alto sulla vista apre un menu che cambia l'una
+o l'altro.</p>
+<h2 id="phases-of-elements">Le fasi degli elementi</h2>
+<p>Ogni elemento del modello (muri, porte, finestre, componenti, pavimenti, tetti, controsoffitti,
+colonne, scale, ringhiere, rampe, facciate continue) ha nel gruppo <strong>Fasi</strong> delle proprietà:</p>
+<ul>
+<li><strong>Fase di creazione</strong>: quella della vista in cui l'elemento è stato creato (o incollato);</li>
+<li><strong>Fase di demolizione</strong>: <strong>Nessuna</strong>, o la fase in cui è demolito; si offrono solo la fase di
+  creazione e le successive, e <strong>Nessuna</strong> annulla la demolizione.</li>
+</ul>
+<p>Annotazioni, quote, testi ed elementi di dettaglio non hanno fasi: appartengono alla loro vista. I
+sottomuri di un muro sovrapposto e i pezzi di un muro curvo seguono il muro intero. I progetti
+precedenti, con le due fasi fisse dei muri, si aprono con le fasi omonime.</p>
+<h2 id="demolish">Demolisci</h2>
+<p><strong>Modifica ▸ Forme ▸ Demolisci</strong> (stile BIMopen: <strong>Modifica ▸ Demolisci</strong>) funziona in piante,
+sezioni, prospetti e viste 3D. Accanto al cursore compare il martello e si evidenzia ciò che si
+può demolire nella fase della vista. Un clic demolisce l'elemento in quella fase, in tutte le viste
+della stessa fase:</p>
+<ul>
+<li>un muro demolito porta con sé le sue porte e finestre;</li>
+<li>un elemento creato nella stessa fase diventa temporaneo;</li>
+<li>se il filtro della vista non mostra i demoliti, l'elemento sparisce subito.</li>
+</ul>
+<p>Con elementi già selezionati, <strong>Demolisci</strong> li demolisce subito tutti, poi attende altri clic. Esc o
+<strong>Modifica</strong> chiudono lo strumento; ogni clic è un passo di annullamento.</p>
+<p><img alt="La pianta del piano terra nella fase Nuova costruzione: i muri esistenti, un tramezzo demolito e le porte e finestre nuove" src="../assets/screens/ph-demolish.webp"/></p>
+<h2 id="infills">I riempimenti</h2>
+<p>Dove una porta o una finestra è demolita e il suo muro resta, il foro si riempie dalla fase della
+demolizione in poi, con gli strati del muro: si vede in pianta, in sezione, in prospetto e in 3D.
+Dove un'apertura è fatta in una fase successiva a quella del muro, nelle fasi precedenti il muro è
+intero.</p>
+<p>Un riempimento si seleziona con un clic, per esempio in una sezione con <strong>Mostra precedente +
+nuovo</strong>: il suo
+<strong>Tipo</strong> si cambia con un altro tipo di muro di base, per disegnare una tamponatura diversa; il
+riempimento delle fasi precedenti all'apertura ha sempre la struttura del muro. I riempimenti non
+si spostano, ruotano, riflettono, copiano né incollano: seguono le loro aperture.</p>
+<h2 id="rooms-and-schedules">Locali e abachi per fase</h2>
+<p>Un <strong>locale</strong> appartiene alla fase della vista in cui si posiziona (la sua <strong>Fase</strong> è in sola
+lettura): una pianta mostra, etichetta e seleziona solo i locali della sua fase, e lo stesso numero
+può esistere in fasi diverse. Un locale si contorna con gli elementi che esistono alla fine della
+sua fase: demolire un tramezzo cambia i locali di quella fase e delle successive, non quelli dello
+stato di fatto. <strong>Copia negli appunti</strong> un locale da una vista e <strong>Incolla nella vista attiva</strong> in una
+vista di un'altra fase: il locale passa a quella fase con le stesse proprietà.</p>
+<p>Un <strong>abaco</strong> ha <strong>Fase</strong> e <strong>Filtro delle fasi</strong> come le viste (in <strong>Nuovo abaco</strong> la fase
+proposta è l'ultima): le righe sono gli elementi come sono in quella fase, quelli che il filtro
+mostra. <strong>Mostra precedente + demolito</strong> elenca le porte da rimuovere, <strong>Mostra nuovo</strong> quelle da
+comprare. I campi <strong>Fase di creazione</strong> e <strong>Fase di demolizione</strong> si mostrano, si ordinano, si
+filtrano e si modificano dalla cella.</p>
+<p>I <strong>filtri della vista</strong> hanno regole su <strong>Fase di creazione</strong> e <strong>Fase di demolizione</strong>: uguale o
+diversa, e <strong>minore di</strong> / <strong>maggiore di</strong> per prima o dopo nell'ordine delle fasi.</p>
+<h2 id="phase-legends">Legende di fase</h2>
+<p>Un <strong>componente di legenda</strong> ha la proprietà <strong>Stato della fase</strong>: con <strong>Esistente</strong>, <strong>Demolito</strong>,
+<strong>Nuovo</strong> o <strong>Temporaneo</strong> il campione si disegna con le sostituzioni di quello stato, accanto al
+suo testo.</p>
+<h2 id="exchange">Scambio</h2>
+<ul>
+<li><strong>IFC</strong>: con un progetto a fasi, <strong>Esporta ▸ IFC</strong> chiede la <strong>Fase da esportare</strong> (l'ultima
+  proposta). Si scrivono gli elementi che esistono in quella fase, ciascuno con lo stato
+  (<strong>Status</strong>: NEW, EXISTING, DEMOLISH, TEMPORARY) nel set di proprietà comune della sua classe e le
+  sue due fasi per nome. Aprendo un IFC, gli oggetti con questo stato prendono le fasi
+  corrispondenti del progetto.</li>
+<li><strong>DWG e DXF</strong>: in <strong>Esporta formati CAD</strong> l'opzione <strong>Stato della fase nel nome del layer</strong>
+  aggiunge al layer della categoria il suffisso dello stato (-EXST, -DEMO, -NEWW, -TEMP): un muro
+  demolito va su <strong>A-WALL-DEMO</strong>.</li>
+</ul>
+<p>La mappatura delle fasi dei modelli collegati arriverà con i modelli collegati.</p>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Torna su
+</button>
+</main>
+<footer class="md-footer">
+<nav aria-label="Piede" class="md-footer__inner md-grid">
+<a aria-label="Precedente: Aperture" class="md-footer__link md-footer__link--prev" href="../openings/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Precedente
+              </span>
+<div class="md-ellipsis">
+                Aperture
+              </div>
+</div>
+</a>
+<a aria-label="Successivo: Strutture e fondazioni" class="md-footer__link md-footer__link--next" href="../structure/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Successivo
+              </span>
+<div class="md-ellipsis">
+                Strutture e fondazioni
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Copyright © 2026 BIMopen
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.footer", "navigation.tracking", "toc.follow", "content.code.copy", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiato", "clipboard.copy": "Copia", "search.result.more.one": "1 altro in questa pagina", "search.result.more.other": "# altri in questa pagina", "search.result.none": "Nessun documento trovato", "search.result.one": "1 documento trovato", "search.result.other": "# documenti trovati", "search.result.placeholder": "Scrivi per iniziare a cercare", "search.result.term.missing": "Non presente", "select.version": "Seleziona la versione"}}</script>
+<script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+<script src="../assets/js/zoom.js"></script>
+</body>
+</html>

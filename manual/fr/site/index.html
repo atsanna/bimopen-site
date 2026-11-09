@@ -1,0 +1,761 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Manuel utilisateur de BIMopen, modélisation BIM open source" name="description"/>
+<meta content="BIMopen" name="author"/>
+<link href="https://bimopen.it/manual/fr/site/" rel="canonical"/>
+<link href="../structure/" rel="prev"/>
+<link href="../design-options/" rel="next"/>
+<link href="../assets/images/bimopen-cube.svg" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.9" name="generator"/>
+<title>Plan de site et terrain - Manuel utilisateur de BIMopen</title>
+<link href="../assets/stylesheets/main.4af4bdda.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link href="../assets/css/theme.css" rel="stylesheet"/>
+<link href="../assets/css/theme_dark_mode.css" rel="stylesheet"/>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="https://bimopen.it/manual/en/site/" hreflang="en" rel="alternate"/>
+<link href="https://bimopen.it/manual/it/site/" hreflang="it" rel="alternate"/>
+<link href="https://bimopen.it/manual/de/site/" hreflang="de" rel="alternate"/>
+<link href="https://bimopen.it/manual/fr/site/" hreflang="fr" rel="alternate"/>
+<link href="https://bimopen.it/manual/es/site/" hreflang="es" rel="alternate"/>
+<link href="https://bimopen.it/manual/ar/site/" hreflang="ar" rel="alternate"/>
+<link href="https://bimopen.it/manual/en/site/" hreflang="x-default" rel="alternate"/>
+</head>
+<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="slate" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#site-plan-and-terrain">
+          Aller au contenu
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="En-tête" class="md-header__inner md-grid">
+<a aria-label="Manuel utilisateur de BIMopen" class="md-header__button md-logo" data-md-component="logo" href="https://bimopen.it/fr/" title="Manuel utilisateur de BIMopen">
+<img alt="logo" src="../assets/images/bimopen-cube.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Manuel utilisateur de BIMopen
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Plan de site et terrain
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Passer au thème clair" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Passer au thème clair">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Passer au thème sombre" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="bimopen" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Passer au thème sombre">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<div class="md-header__option">
+<div class="md-select">
+<button aria-label="Sélectionner la langue" class="md-header__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"></path></svg>
+</button>
+<div class="md-select__inner">
+<ul class="md-select__list">
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/en/" hreflang="en">
+              English
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/it/" hreflang="it">
+              Italiano
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/de/" hreflang="de">
+              Deutsch
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/fr/" hreflang="fr">
+              Français
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/es/" hreflang="es">
+              Español
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/ar/" hreflang="ar">
+              العربية
+            </a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Rechercher" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Rechercher" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Recherche" class="md-search__options">
+<button aria-label="Effacer" class="md-search__icon md-icon" tabindex="-1" title="Effacer" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Manuel utilisateur de BIMopen" class="md-nav__button md-logo" data-md-component="logo" href="https://bimopen.it/fr/" title="Manuel utilisateur de BIMopen">
+<img alt="logo" src="../assets/images/bimopen-cube.svg"/>
+</a>
+    Manuel utilisateur de BIMopen
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
+<span class="md-ellipsis">
+    Accueil
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../getting-started/">
+<span class="md-ellipsis">
+    Premiers pas
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../interface/">
+<span class="md-ellipsis">
+    L'interface
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../interface-styles/">
+<span class="md-ellipsis">
+    Styles d'interface
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../projects-and-files/">
+<span class="md-ellipsis">
+    Projets et fichiers
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../import-and-conversion/">
+<span class="md-ellipsis">
+    Importation et conversion
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cad-files/">
+<span class="md-ellipsis">
+    DWG et DXF
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../selection-and-modify/">
+<span class="md-ellipsis">
+    Sélection et modification
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../walls-doors-windows/">
+<span class="md-ellipsis">
+    Murs, portes et fenêtres
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../floors-roofs-stairs/">
+<span class="md-ellipsis">
+    Sols, toits, escaliers et composants
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ceilings-and-columns/">
+<span class="md-ellipsis">
+    Faux plafonds et colonnes
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../openings/">
+<span class="md-ellipsis">
+    Ouvertures
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../phases/">
+<span class="md-ellipsis">
+    Phases et démolitions
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../structure/">
+<span class="md-ellipsis">
+    Structure et fondations
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Plan de site et terrain
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Plan de site et terrain
+    
+  </span>
+</a>
+<nav aria-label="Table des matières" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#terrain">
+<span class="md-ellipsis">
+      Terrain
+    </span>
+</a>
+<nav aria-label="Terrain" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#shape-editing">
+<span class="md-ellipsis">
+      Modification de forme
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#type-layers-and-contours">
+<span class="md-ellipsis">
+      Type, couches et courbes de niveau
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#editing-the-terrain">
+<span class="md-ellipsis">
+      Modifier le terrain
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#building-pad">
+<span class="md-ellipsis">
+      Plateforme
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#site-elements-and-parking">
+<span class="md-ellipsis">
+      Éléments de site et stationnement
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#property-lines">
+<span class="md-ellipsis">
+      Limites de propriété
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#contour-labels">
+<span class="md-ellipsis">
+      Étiquettes des courbes de niveau
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-site-plan">
+<span class="md-ellipsis">
+      Le plan de site
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#site-settings">
+<span class="md-ellipsis">
+      Paramètres de site
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#not-yet">
+<span class="md-ellipsis">
+      Pas encore
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../design-options/">
+<span class="md-ellipsis">
+    Variantes de conception
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../views-and-graphics/">
+<span class="md-ellipsis">
+    Vues et graphisme
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../annotation/">
+<span class="md-ellipsis">
+    Annotations et détails 2D
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../documentation/">
+<span class="md-ellipsis">
+    Feuilles, nomenclatures et impression
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../command-line-and-mcp/">
+<span class="md-ellipsis">
+    Ligne de commande et MCP
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../keyboard-shortcuts/">
+<span class="md-ellipsis">
+    Raccourcis clavier
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../troubleshooting/">
+<span class="md-ellipsis">
+    Dépannage
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://bimopen.it/manual/fr/pdf/bimopen-manual-fr.pdf">
+<span class="md-ellipsis">
+    PDF
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table des matières" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#terrain">
+<span class="md-ellipsis">
+      Terrain
+    </span>
+</a>
+<nav aria-label="Terrain" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#shape-editing">
+<span class="md-ellipsis">
+      Modification de forme
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#type-layers-and-contours">
+<span class="md-ellipsis">
+      Type, couches et courbes de niveau
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#editing-the-terrain">
+<span class="md-ellipsis">
+      Modifier le terrain
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#building-pad">
+<span class="md-ellipsis">
+      Plateforme
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#site-elements-and-parking">
+<span class="md-ellipsis">
+      Éléments de site et stationnement
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#property-lines">
+<span class="md-ellipsis">
+      Limites de propriété
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#contour-labels">
+<span class="md-ellipsis">
+      Étiquettes des courbes de niveau
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-site-plan">
+<span class="md-ellipsis">
+      Le plan de site
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#site-settings">
+<span class="md-ellipsis">
+      Paramètres de site
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#not-yet">
+<span class="md-ellipsis">
+      Pas encore
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset"><a class="md-content__icon pdf-download-btn" download href="../pdf/bimopen-manual-fr.pdf" title="Download"><i class="fa fas fa-download"></i><small> PDF</small></a>
+<h1 id="site-plan-and-terrain">Plan de site et terrain</h1>
+<p>Le sol sur lequel repose le bâtiment et les dessins de la parcelle autour se font avec
+<strong>Volume et site ▸ Site</strong> et <strong>Modifier le site</strong>. Ils fonctionnent dans les plans d'étage et dans
+le <strong>Plan de site</strong> ; un terrain et une plateforme s'esquissent aussi dans les vues 3D, sur le plan
+de leur niveau.</p>
+<p><img alt="Un terrain autour de la maison d'exemple : terrain en pente avec courbes de niveau, plateforme, allée asphaltée, place de stationnement, arbres et limite de propriété" src="../assets/screens/si-lot-3d.webp"/></p>
+<h2 id="terrain">Terrain</h2>
+<p>Un terrain est un solide : un contour esquissé (avec des trous) sur un niveau, façonné par des
+points, avec les couches et l'épaisseur de son type.</p>
+<p><strong>Terrain ▾</strong> a deux façons :</p>
+<table>
+<thead>
+<tr>
+<th>Façon</th>
+<th>Fonctionnement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Créer à partir d'une esquisse</strong></td>
+<td>Mode esquisse <strong>Créer le contour du terrain</strong>, avec le groupe commun <strong>Dessiner</strong> (lignes, rectangle, polygones, cercle, arcs, <strong>Choisir des lignes</strong>). Dessinez une boucle fermée ; une boucle à l'intérieur est un trou. <strong>Terminer le mode d'édition</strong> crée un terrain plat, son dessus au <strong>Décalage de hauteur par rapport au niveau</strong></td>
+</tr>
+<tr>
+<td><strong>Créer à partir d'une importation</strong></td>
+<td>La boîte de dialogue <strong>Ajouter des points à partir des calques sélectionnés</strong> : les calques d'un DWG ou DXF importé avec les hauteurs (lignes et points 3D) dont les points façonnent le terrain, ou <strong>Créer à partir d'un fichier de points…</strong> (CSV ou TXT, son unité choisie dans <strong>Format</strong>)</td>
+</tr>
+</tbody>
+</table>
+<p>Un fichier de points donne sur chaque ligne d'abord x, y et z ; les noms et les autres colonnes sont
+ignorés, et de deux points aux mêmes x, y reste le z le plus haut. Au-delà de la limite des
+<strong>Paramètres de site</strong> (20 000 points par défaut, de 10 000 à 50 000) les points sont échantillonnés
+jusqu'à cette limite et un message dit combien ont été gardés.</p>
+<h3 id="shape-editing">Modification de forme</h3>
+<p>Un terrain sélectionné montre le groupe <strong>Modification de forme</strong> :</p>
+<table>
+<thead>
+<tr>
+<th>Outil</th>
+<th>Fonctionnement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ajouter un point</strong></td>
+<td>Cliquez dans le contour. Dans la barre des options : <strong>Absolu</strong> (l'<strong>Élévation</strong> saisie, depuis la <strong>Base de l'élévation</strong> : niveau courant, point de base du projet, point topographique, origine interne) ou <strong>Relatif à la surface</strong> (un décalage au-dessus ou au-dessous de la surface là où vous cliquez) ; les <strong>Accrochages XYZ</strong> prennent l'élévation d'un coin de sol ou d'une extrémité de mur, plus le <strong>Décalage des accrochages</strong></td>
+</tr>
+<tr>
+<td><strong>Modifier les sous-éléments</strong></td>
+<td>Cliquez un point : faites-le glisser en plan, ou saisissez sa hauteur au-dessus du dessus d'origine du terrain</td>
+</tr>
+<tr>
+<td><strong>Ajouter une ligne de division</strong></td>
+<td>Deux clics : un pli de la surface, droit entre leurs élévations</td>
+</tr>
+<tr>
+<td><strong>Réinitialiser la forme</strong></td>
+<td>Supprime tous les points et toutes les lignes de division</td>
+</tr>
+<tr>
+<td><strong>Simplifier le terrain</strong></td>
+<td>Garde une part des points (1 000 points à 70 % deviennent 700)</td>
+</tr>
+</tbody>
+</table>
+<p>La surface est triangulée à travers le contour et les points ; les courbes de niveau suivent aussitôt.</p>
+<h3 id="type-layers-and-contours">Type, couches et courbes de niveau</h3>
+<p>Le type du terrain a sa <strong>Structure</strong> dans la même boîte de dialogue <strong>Couches du type</strong> que les murs
+et les sols : la couche marquée <strong>Variable</strong> absorbe la forme, ainsi le dessous reste plat.
+<strong>Affichage des courbes</strong> (<strong>Affichage des courbes</strong> dans la palette du terrain) liste des groupes
+de courbes de niveau : <strong>Début</strong>, <strong>Fin</strong>, <strong>Incrément</strong>, <strong>Valeur unique</strong> ou <strong>Valeurs
+multiples</strong>, le style de ligne (principales, secondaires, lignes cachées, arêtes de la
+triangulation) et une case pour éteindre un groupe. Un projet nouveau dessine les courbes
+principales tous les 5 m et les secondaires chaque mètre ; les types <strong>Route asphaltée</strong>, <strong>Allée en
+gravier</strong> et <strong>Trottoir</strong> n'en dessinent aucune.</p>
+<p>Les courbes de niveau sont aussi tracées sur le terrain dans les vues 3D, avec leurs styles de
+ligne, cachées là où le bâtiment se trouve devant.</p>
+<p>En coupe, le terrain est coupé avec ses couches et les motifs de leurs matériaux. Une <strong>Elévation
+du point</strong> placée sur le terrain y lit son élévation.</p>
+<p><strong>Visibilité et graphisme ▸ Terrain</strong> a les sous-catégories <strong>Courbes de niveau principales</strong>,
+<strong>Courbes de niveau secondaires</strong>, <strong>Lignes cachées</strong>, <strong>Lignes de pli</strong>, <strong>Points du contour</strong> et
+<strong>Points intérieurs</strong> ; les trois dernières sont éteintes tant qu'on ne les allume pas.</p>
+<p><strong>Options du site ▾ ▸ Ombrage lissé du terrain</strong> rend lisse chaque terrain dans les styles ombrés.</p>
+<p><strong>Options du site ▾ ▸ Stabilité du vide de déblai</strong> : un déblai qui ne réussit pas en entier est
+repris avec son contour déplacé de quelques millimètres en x ou en y ; <strong>Creuser</strong> indique combien de
+déblais ont été déplacés.</p>
+<h2 id="editing-the-terrain">Modifier le terrain</h2>
+<table>
+<thead>
+<tr>
+<th>Outil</th>
+<th>Fonctionnement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sous-zone</strong></td>
+<td>Esquissez une boucle sur le terrain sélectionné (ou cliquez d'abord un terrain). Son <strong>Type</strong> donne son matériau ; le <strong>Décalage de sous-région</strong> la soulève (une bordure) ou l'enfonce dans son hôte (avec son <strong>Volume d'excavation</strong>)</td>
+</tr>
+<tr>
+<td><strong>Diviser le terrain</strong></td>
+<td>Cliquez le terrain, puis esquissez une boucle fermée à l'intérieur ou des lignes ouvertes d'un bord à l'autre. Une sous-zone que la division ne peut garder demande <strong>Supprimer les occurrences</strong></td>
+</tr>
+<tr>
+<td><strong>Fusionner les terrains</strong></td>
+<td>Cliquez le terrain principal, puis le second : ils doivent partager une arête ou se chevaucher. <strong>Supprimer les points le long des arêtes communes</strong> est activé par défaut</td>
+</tr>
+<tr>
+<td><strong>Creuser</strong> / <strong>Supprimer l'excavation</strong></td>
+<td>Le terrain sélectionné, cliquez un sol, un toit, une plateforme ou un autre terrain qui le traverse. <strong>Volume d'excavation individuel</strong> liste chaque coupe</td>
+</tr>
+<tr>
+<td><strong>Nivellement</strong></td>
+<td><strong>Modifier la région nivelée</strong> demande une copie exacte ou seulement les points du contour ; cliquez un terrain d'une phase antérieure. Il est démoli dans la phase courante et sa copie, nouvelle, s'ouvre en modification de forme. La copie indique <strong>Déblai</strong>, <strong>Remblai</strong> et <strong>Déblai/remblai net</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Une nomenclature des <strong>Terrains</strong> liste le déblai et le remblai, avec un total général.</p>
+<h2 id="building-pad">Plateforme</h2>
+<p><strong>Plateforme</strong> esquisse une boucle fermée sur un terrain (<strong>Créer le contour de la plateforme</strong>,
+avec <strong>Choisir des murs</strong> et <strong>Flèche d'inclinaison</strong>). Son dessus est au <strong>Décalage de hauteur par
+rapport au niveau</strong> ; le terrain dessous est déblayé ou remblayé jusqu'à sa face inférieure. Son
+type a une <strong>Structure</strong> de couches et le motif de remplissage du niveau de détail bas.</p>
+<h2 id="site-elements-and-parking">Éléments de site et stationnement</h2>
+<p><strong>Élément de site</strong> place des arbres, des arbustes, des bancs, des lampadaires et des bouches
+d'incendie, un à chaque clic (barre d'espace pour tourner) ; <strong>Stationnement</strong> place des places de
+stationnement (90°, 60°, 45°, en long, accessibles). Tous deux reposent sur le terrain ou la
+sous-zone sous le clic et la suivent quand elle change. <strong>Choisir un nouvel hôte</strong> les déplace sur
+un autre terrain ou une autre sous-zone ; <strong>Répéter en série</strong> en fait des rangées.</p>
+<h2 id="property-lines">Limites de propriété</h2>
+<p><strong>Limite de propriété</strong> demande comment la créer :</p>
+<ul>
+<li><strong>Créer par esquisse</strong> : les lignes du mode esquisse ; une boucle ouverte avertit que son aire ne
+  peut pas être calculée (terminez de nouveau pour la garder ouverte) ;</li>
+<li><strong>Créer en saisissant des distances et des directions</strong> : le tableau <strong>Limites de propriété</strong>, une
+  ligne par tronçon avec <strong>Distance</strong>, <strong>Direction</strong> (comme <strong>N 45°00'00" E</strong>), <strong>Type</strong> (ligne ou
+  arc), <strong>Rayon</strong> et <strong>G/D</strong> ; <strong>Insérer</strong>, <strong>Supprimer</strong>, <strong>Haut</strong>, <strong>Bas</strong> et <strong>Fermer</strong>, qui
+  ajoute le tronçon de retour au début. Les tronçons suivent le nord géographique.</li>
+</ul>
+<p>Une limite de propriété sélectionnée montre <strong>Modifier le tableau</strong>. <strong>Options du site ▾ ▸ Données
+de propriété</strong> règle l'<strong>Affichage des angles</strong> (direction ou degrés) et les unités. Les limites de
+propriété s'affichent par défaut dans les plans de site et les vues 3D ; une nomenclature des
+<strong>Limites de propriété</strong> liste leur nom et leur aire.</p>
+<h2 id="contour-labels">Étiquettes des courbes de niveau</h2>
+<p><strong>Étiquettes des courbes de niveau</strong> : cliquez le début et la fin d'une ligne qui traverse les
+courbes de niveau ; chaque courbe qu'elle croise affiche son élévation, tournée pour se lire depuis
+le nord du projet. Le type de l'étiquette règle le texte et si seules les courbes principales sont
+étiquetées.</p>
+<h2 id="the-site-plan">Le plan de site</h2>
+<p>Chaque projet nouveau a un <strong>Plan de site</strong> ; <strong>Vues ▸ Plan ▾ ▸ Plan de site</strong> en crée un autre,
+pour le niveau actif : 1:200, coupé au-dessus du bâtiment jusqu'à 10 m sous le niveau, orienté au
+<strong>Nord géographique</strong>. <strong>Orientation</strong> dans ses propriétés le ramène au <strong>Nord du projet</strong>.</p>
+<h2 id="site-settings">Paramètres de site</h2>
+<p><strong>Options du site ▾ ▸ Paramètres de site</strong> contient les courbes de niveau du projet (pour les types
+de terrain qui ne fixent pas les leurs), le <strong>Matériau de coupe</strong> et la <strong>Profondeur du poché</strong> des
+types de terrain sans couches, les données de propriété et le nombre maximal de points qu'une
+importation garde.</p>
+<h2 id="not-yet">Pas encore</h2>
+<p><strong>Terrain depuis une face</strong>, <strong>Lier une topographie</strong> et <strong>Contexte environnant</strong> arrivent dans une
+phase ultérieure.</p>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Retour en haut de la page
+</button>
+</main>
+<footer class="md-footer">
+<nav aria-label="Pied de page" class="md-footer__inner md-grid">
+<a aria-label="Précédent: Structure et fondations" class="md-footer__link md-footer__link--prev" href="../structure/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Précédent
+              </span>
+<div class="md-ellipsis">
+                Structure et fondations
+              </div>
+</div>
+</a>
+<a aria-label="Suivant: Variantes de conception" class="md-footer__link md-footer__link--next" href="../design-options/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Suivant
+              </span>
+<div class="md-ellipsis">
+                Variantes de conception
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Copyright © 2026 BIMopen
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.footer", "navigation.tracking", "toc.follow", "content.code.copy", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+<script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+<script src="../assets/js/zoom.js"></script>
+</body>
+</html>

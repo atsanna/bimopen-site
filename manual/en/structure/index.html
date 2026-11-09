@@ -1,0 +1,955 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="User manual of BIMopen, open-source BIM modelling" name="description"/>
+<meta content="BIMopen" name="author"/>
+<link href="https://bimopen.it/manual/en/structure/" rel="canonical"/>
+<link href="../phases/" rel="prev"/>
+<link href="../site/" rel="next"/>
+<link href="../assets/images/bimopen-cube.svg" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.9" name="generator"/>
+<title>Structure and foundations - BIMopen user manual</title>
+<link href="../assets/stylesheets/main.4af4bdda.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link href="../assets/css/theme.css" rel="stylesheet"/>
+<link href="../assets/css/theme_dark_mode.css" rel="stylesheet"/>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="https://bimopen.it/manual/en/structure/" hreflang="en" rel="alternate"/>
+<link href="https://bimopen.it/manual/it/structure/" hreflang="it" rel="alternate"/>
+<link href="https://bimopen.it/manual/de/structure/" hreflang="de" rel="alternate"/>
+<link href="https://bimopen.it/manual/fr/structure/" hreflang="fr" rel="alternate"/>
+<link href="https://bimopen.it/manual/es/structure/" hreflang="es" rel="alternate"/>
+<link href="https://bimopen.it/manual/ar/structure/" hreflang="ar" rel="alternate"/>
+<link href="https://bimopen.it/manual/en/structure/" hreflang="x-default" rel="alternate"/>
+</head>
+<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="slate" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#structure">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="BIMopen user manual" class="md-header__button md-logo" data-md-component="logo" href="https://bimopen.it/en/" title="BIMopen user manual">
+<img alt="logo" src="../assets/images/bimopen-cube.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            BIMopen user manual
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Structure and foundations
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="bimopen" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<div class="md-header__option">
+<div class="md-select">
+<button aria-label="Select language" class="md-header__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"></path></svg>
+</button>
+<div class="md-select__inner">
+<ul class="md-select__list">
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/en/" hreflang="en">
+              English
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/it/" hreflang="it">
+              Italiano
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/de/" hreflang="de">
+              Deutsch
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/fr/" hreflang="fr">
+              Français
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/es/" hreflang="es">
+              Español
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/ar/" hreflang="ar">
+              العربية
+            </a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="BIMopen user manual" class="md-nav__button md-logo" data-md-component="logo" href="https://bimopen.it/en/" title="BIMopen user manual">
+<img alt="logo" src="../assets/images/bimopen-cube.svg"/>
+</a>
+    BIMopen user manual
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
+<span class="md-ellipsis">
+    Home
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../getting-started/">
+<span class="md-ellipsis">
+    Getting started
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../interface/">
+<span class="md-ellipsis">
+    The interface
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../interface-styles/">
+<span class="md-ellipsis">
+    Interface styles
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../projects-and-files/">
+<span class="md-ellipsis">
+    Projects and files
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../import-and-conversion/">
+<span class="md-ellipsis">
+    Importing and converting
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cad-files/">
+<span class="md-ellipsis">
+    DWG and DXF
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../selection-and-modify/">
+<span class="md-ellipsis">
+    Selecting and modifying
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../walls-doors-windows/">
+<span class="md-ellipsis">
+    Walls, doors and windows
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../floors-roofs-stairs/">
+<span class="md-ellipsis">
+    Floors, roofs, stairs and components
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ceilings-and-columns/">
+<span class="md-ellipsis">
+    Ceilings and columns
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../openings/">
+<span class="md-ellipsis">
+    Openings
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../phases/">
+<span class="md-ellipsis">
+    Phases and demolition
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Structure and foundations
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Structure and foundations
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#framing-types">
+<span class="md-ellipsis">
+      Structural framing types
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#beam">
+<span class="md-ellipsis">
+      Beam
+    </span>
+</a>
+<nav aria-label="Beam" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#beam-properties">
+<span class="md-ellipsis">
+      Beam properties
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#beam-display">
+<span class="md-ellipsis">
+      How it is drawn
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#joins">
+<span class="md-ellipsis">
+      Joins
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#brace">
+<span class="md-ellipsis">
+      Brace
+    </span>
+</a>
+<nav aria-label="Brace" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#structural-settings">
+<span class="md-ellipsis">
+      Plan symbols and Structural Settings
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#beam-system">
+<span class="md-ellipsis">
+      Beam layout
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#truss">
+<span class="md-ellipsis">
+      Truss
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#structural-walls-floors">
+<span class="md-ellipsis">
+      Structural wall and structural floor
+    </span>
+</a>
+<nav aria-label="Structural wall and structural floor" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#shape-editing">
+<span class="md-ellipsis">
+      Shape editing
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#foundations">
+<span class="md-ellipsis">
+      Foundations
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rebar-covers">
+<span class="md-ellipsis">
+      Rebar cover
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#views-schedules-ifc">
+<span class="md-ellipsis">
+      Views, tags, schedules and IFC
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#commands">
+<span class="md-ellipsis">
+      From the command line
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../site/">
+<span class="md-ellipsis">
+    Site plan and terrain
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../design-options/">
+<span class="md-ellipsis">
+    Design options
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../views-and-graphics/">
+<span class="md-ellipsis">
+    Views and graphics
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../annotation/">
+<span class="md-ellipsis">
+    Annotation and 2D details
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../documentation/">
+<span class="md-ellipsis">
+    Sheets, schedules and printing
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../command-line-and-mcp/">
+<span class="md-ellipsis">
+    Command line and MCP
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../keyboard-shortcuts/">
+<span class="md-ellipsis">
+    Keyboard shortcuts
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../troubleshooting/">
+<span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://bimopen.it/manual/en/pdf/bimopen-manual-en.pdf">
+<span class="md-ellipsis">
+    PDF
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#framing-types">
+<span class="md-ellipsis">
+      Structural framing types
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#beam">
+<span class="md-ellipsis">
+      Beam
+    </span>
+</a>
+<nav aria-label="Beam" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#beam-properties">
+<span class="md-ellipsis">
+      Beam properties
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#beam-display">
+<span class="md-ellipsis">
+      How it is drawn
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#joins">
+<span class="md-ellipsis">
+      Joins
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#brace">
+<span class="md-ellipsis">
+      Brace
+    </span>
+</a>
+<nav aria-label="Brace" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#structural-settings">
+<span class="md-ellipsis">
+      Plan symbols and Structural Settings
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#beam-system">
+<span class="md-ellipsis">
+      Beam layout
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#truss">
+<span class="md-ellipsis">
+      Truss
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#structural-walls-floors">
+<span class="md-ellipsis">
+      Structural wall and structural floor
+    </span>
+</a>
+<nav aria-label="Structural wall and structural floor" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#shape-editing">
+<span class="md-ellipsis">
+      Shape editing
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#foundations">
+<span class="md-ellipsis">
+      Foundations
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rebar-covers">
+<span class="md-ellipsis">
+      Rebar cover
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#views-schedules-ifc">
+<span class="md-ellipsis">
+      Views, tags, schedules and IFC
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#commands">
+<span class="md-ellipsis">
+      From the command line
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset"><a class="md-content__icon pdf-download-btn" download href="../pdf/bimopen-manual-en.pdf" title="Download"><i class="fa fas fa-download"></i><small> PDF</small></a>
+<h1 id="structure">Structure and foundations</h1>
+<p>The <strong>Structure</strong> tab (in the BIMopen style: <strong>Create ▸ Structure</strong>) gathers the elements that
+carry the building: beams, braces, beam layouts, trusses, structural walls and floors, structural
+columns, pad footings, strip footings and raft foundations. Beams, braces and the members of
+trusses are one category, <strong>Structural framing</strong>; pad footings, strip footings and raft
+foundations are <strong>Structural foundations</strong>. The same tools work in plans, sections, elevations and
+3D views, where the view allows it.</p>
+<h2 id="framing-types">Structural framing types</h2>
+<p>Beam and brace types are BIMopen parametric sections, like those of structural columns.
+<strong>Section shape</strong> picks the shape: <strong>Rectangular</strong> (concrete or timber), <strong>Round</strong>, <strong>I-shape</strong>
+(also with unequal and sloped flanges), <strong>Rectangular hollow section</strong>, <strong>Circular hollow
+section</strong>, <strong>Angular</strong>, <strong>C-channel</strong> (also with a lip) and <strong>T-shape</strong>. <strong>Type Parameters</strong>
+shows only the dimensions of the chosen shape and computes, read-only, the <strong>Structural
+analysis</strong> properties: area, paintable perimeter, nominal weight (from the material's density),
+moments of inertia, elastic and plastic moduli, torsional and warping constants, shear areas and
+the angle of the principal axes. <strong>Section name key</strong> keeps the name of the commercial profile.</p>
+<p>A new project has reinforced concrete beams, IPE, HEA, HEB and UPN profiles, angles, T-sections,
+hollow sections and glued laminated timber beams.</p>
+<h2 id="beam">Beam</h2>
+<p><strong>Structure ▸ Beam</strong> opens the <strong>Place beam</strong> card. Two clicks make a beam: the ends snap to the
+centre of structural columns, to the axis of bearing walls, to the ends and the line of other
+beams and to grid intersections, and the status bar says to what. The options strip has:</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Placement plane</strong></td>
+<td>The level of the view, on which the beam is laid</td>
+</tr>
+<tr>
+<td><strong>Structural usage</strong></td>
+<td><strong><automatic></automatic></strong> derives it from the supports: between columns or walls it is a <strong>Girder</strong>, between girders a <strong>Joist</strong>, between joists a <strong>Purlin</strong>; or pick one</td>
+</tr>
+<tr>
+<td><strong>3D Snapping</strong></td>
+<td>The ends snap to structural elements off the work plane: a sloped beam</td>
+</tr>
+<tr>
+<td><strong>Chain</strong></td>
+<td>The end of one beam is the start of the next; <span class="keys"><kbd class="key-escape">Esc</kbd></span> ends the chain</td>
+</tr>
+<tr>
+<td><strong>Tag on Placement</strong></td>
+<td>Every beam is placed with its tag</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Multiple ▸ On Grids</strong>: click the grids and <strong>End</strong> (or <span class="keys"><kbd class="key-enter">Enter</kbd></span>); on each grid a beam is made
+for every span between the supports that cross it. A wall standing on the grid gets no beams;
+beams already there are not doubled.</p>
+<p>In a section or an elevation the beam is drawn in the plane of the view, with its ends on the
+structural elements clicked; in 3D on the level under the cursor, or with <strong>3D Snapping</strong> on the
+element.</p>
+<h3 id="beam-properties">Beam properties</h3>
+<table>
+<thead>
+<tr>
+<th>Group</th>
+<th>Properties</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Constraints</td>
+<td><strong>Reference level</strong>, <strong>Work Plane</strong>, <strong>Start level offset</strong> and <strong>End level offset</strong> (a sloped beam), <strong>Orientation</strong> (Normal, Horizontal), <strong>Cross-section rotation</strong></td>
+</tr>
+<tr>
+<td>Geometric position</td>
+<td><strong>Start extension</strong>/<strong>End extension</strong> (free ends), <strong>Start join cutback</strong>/<strong>End join cutback</strong> (joined ends, steel and timber), <strong>yz Justification</strong> (Smooth or Independent), <strong>y Justification</strong>/<strong>z Justification</strong> with their <strong>Offset value</strong>, also for start and end</td>
+</tr>
+<tr>
+<td>Materials and Finishes</td>
+<td><strong>Structural material</strong></td>
+</tr>
+<tr>
+<td>Structural</td>
+<td><strong>Structural usage</strong>, <strong>Stick symbol location</strong>, <strong>Start attachment type</strong>/<strong>End attachment type</strong>, <strong>Start attachment distance</strong>/<strong>End attachment distance</strong> and reference column (above or below) for each end, <strong>Start connection</strong>/<strong>End connection</strong> (Moment frame, Cantilever moment), <strong>Camber size</strong>, <strong>Number of verticals</strong>, <strong>Beam seated at start</strong>/<strong>end</strong> on a structural wall, <strong>Maximum weight</strong>, <strong>Exact weight</strong>, <strong>Painted area</strong></td>
+</tr>
+<tr>
+<td>Dimensions</td>
+<td><strong>System length</strong>, <strong>Cut length</strong>, <strong>Volume</strong>, <strong>Elevation at top</strong> and <strong>Elevation at bottom</strong> («Varies» on a sloped beam)</td>
+</tr>
+<tr>
+<td>Structural analysis</td>
+<td><strong>Start release</strong>/<strong>End release</strong> (Fixed, Pinned, Bending moment, User defined with the six constraints), <strong>Analyze As</strong></td>
+</tr>
+</tbody>
+</table>
+<p>A selected beam has <strong>Reverse Ends</strong> and, for each end, <strong>Disallow Join</strong>.</p>
+<h3 id="beam-display">How it is drawn</h3>
+<ul>
+<li><strong>Coarse</strong>: a line, with the line style of its usage (Styles by Category ▸ Structural framing ▸
+  Girder, Joist, Purlin…), held back from the columns and beams it joins by the <strong>Cut symbol
+  distance</strong>. In sections and elevations beams are lines too, with the moment symbols.</li>
+<li><strong>Medium</strong> and <strong>Fine</strong>: the outline of the section. In a plan whose <strong>Discipline</strong> is
+  «Structural» the beams covered by a floor are dashed; in an «Architectural» plan they are not
+  shown.</li>
+<li>In sections the beam is cut with its material's pattern.</li>
+</ul>
+<h3 id="joins">Joins</h3>
+<p>A beam stops at the face of the column and of the bearing wall it rests on (never at a
+non-bearing wall); between beams the join is a <strong>tee</strong> (the beam that runs through stays whole) or
+a <strong>corner</strong> between two beams of the same type in the same plane. Concrete becomes a single
+mass: the column wins over the beam, floors and walls keep their shape, and a beam under a
+concrete floor stops at its underside.</p>
+<p><strong>Structure ▸ Framing ▸ Beam/Column Joins</strong> shows an arrow at each joined end: towards the join,
+that beam is cut; a click reverses it. The options strip filters by material (Steel, Wood, Precast
+concrete, Other).</p>
+<h2 id="brace">Brace</h2>
+<p><strong>Structure ▸ Brace</strong>:</p>
+<ul>
+<li>in a <strong>Framing Elevation</strong> (or in a section), two clicks on structural elements, for example
+  the base of a column and a beam;</li>
+<li>in plan, with <strong>Start level</strong>, <strong>Offset</strong>, <strong>End level</strong>, <strong>Offset</strong> on the options strip;</li>
+<li>in 3D, on the points of the elements clicked.</li>
+</ul>
+<p>An end laid on a beam stays attached at a <strong>Ratio</strong> (from 0 to 1) or a <strong>Distance</strong> along it,
+from its start or its end: if the beam moves or gets longer, the brace follows it. <strong>Structural
+usage</strong>: Vertical bracing, Kicker bracing, Web, Other.</p>
+<h3 id="structural-settings">Plan symbols and Structural Settings</h3>
+<p><strong>Structure ▸ Framing ▸ Structural Settings</strong> sets, on paper:</p>
+<ul>
+<li>the <strong>Cut symbol distance</strong> of braces, beams and trusses, and columns;</li>
+<li>the <strong>Brace symbols</strong>: <strong>Parallel line</strong> (with its offset) or <strong>Angled line</strong>, <strong>Show brace
+  above</strong> and <strong>Show brace below</strong> (also dashed), <strong>Kicker brace symbol</strong>;</li>
+<li>the <strong>Connection symbols</strong> of beams and braces.</li>
+</ul>
+<p>The symbols show at the Coarse detail level.</p>
+<h2 id="beam-system">Beam layout</h2>
+<p><strong>Structure ▸ Beam layout</strong> fills a bay with parallel beams:</p>
+<ul>
+<li><strong>Automatic beam layout</strong>: one click in a bay closed by beams or bearing walls;</li>
+<li><strong>Sketch beam layout</strong>: the boundary in sketch mode (<strong>Create beam layout boundary</strong>) with
+  <strong>Pick Supports</strong> (the boundary stays tied to the beams and walls clicked, and the first gives
+  the direction), <strong>Line</strong>, <strong>Rectangle</strong>, <strong>Pick Lines</strong> and <strong>Beam direction</strong>. An inner loop
+  is an opening.</li>
+</ul>
+<p><strong>Layout rule</strong>: <strong>Fixed distance</strong>, <strong>Fixed number</strong>, <strong>Maximum spacing</strong>, <strong>Clear spacing</strong>;
+with the first and the last, <strong>Justification</strong> (Start, End, Center, Direction line). <strong>Beam
+type</strong>, <strong>Elevation</strong> and <strong>Tag on Placement</strong> (one tag for the layout or one per beam) complete
+the options.</p>
+<p>The beams follow the supports when they move. A selected beam layout has <strong>Reset System</strong> (beams
+that were changed go back to the layout) and <strong>Remove Beam Layout</strong> (the layout goes, the beams
+stay).</p>
+<p>The layout rules space the beams as <strong>Array</strong> spaces its copies: <strong>Fixed number</strong> like <strong>Last</strong>, <strong>Fixed distance</strong> like <strong>2°</strong> from the <strong>Justification</strong>; with <strong>Clear spacing</strong> the gap is between the faces, and a beam of a bigger type pushes its neighbours away. <strong>3D</strong> in the options bar makes the system non-planar: the beams' ends rise to the slope-defining supports (beams always, walls with <strong>Defines Slope</strong> or <strong>Defined slope walls</strong>). <strong>Edit Boundary</strong> opens the sketch again; <strong>Beam direction</strong> is drawn or picked with <strong>Pick Lines</strong>. A beam deleted by hand stays deleted until <strong>Reset System</strong>. Outside a closed bay, <strong>Automatic beam layout</strong> opens the boundary sketch.</p>
+<p><img alt="The four layout rules of a beam system: fixed distance, fixed number, maximum spacing, clear spacing" src="../assets/screens/st-beam-system.webp"/></p>
+<p><img alt="The justification of a fixed-distance beam system: start, end, centre" src="../assets/screens/st-beam-system-just.webp"/></p>
+<p>A beam system copied, mirrored or pasted associates itself with the beams and bearing walls its edges fall on in the new place; when an edge finds no support the command warns, and <strong>Edit Boundary ▸ Pick Supports</strong> associates it again. Copy it only between bays with the same shape and the same supports.</p>
+<p>Curved beams and curved bearing walls also close a bay for an automatic beam system, but the beams' direction always comes from a straight support. A beam system sketched over more than one bay is still made, with a warning: the beams and walls across it do not divide it, so one beam system per bay is better.</p>
+<h2 id="truss">Truss</h2>
+<p><strong>Structure ▸ Truss</strong>: two clicks in plan lay the type's pattern (Pratt, Howe, Warren, Warren with
+verticals, Fink) over the span. The chords are beams, the webs are braces, each of the type of
+its group (<strong>Top chords</strong>, <strong>Vertical webs</strong>, <strong>Diagonal webs</strong>, <strong>Bottom chords</strong>). The
+properties include <strong>Truss height</strong>, <strong>Bearing chord</strong>, <strong>Maximum panel width</strong>, <strong>Number of
+panels</strong> and the rotation.</p>
+<p>A selected truss has <strong>Attach Top/Bottom</strong> (the chord follows the face of a roof or a structural
+floor; with <span class="keys"><kbd class="key-shift">Shift</kbd></span> the bottom chord), <strong>Detach Top/Bottom</strong>, <strong>Reset Truss</strong> and <strong>Remove
+truss</strong> (the members stay as beams and braces).</p>
+<p><strong>Edit Profile</strong> opens a section or elevation parallel to the truss (when the open view is not,
+<strong>Go to View</strong> asks which) with the chords' lines in sketch mode: the lines above the middle are
+the top chord, the others the bottom chord, and the webs follow them. <strong>Reset Profile</strong> brings
+the chords back to the layout's line. In a 3D view the lines are drawn straight on the truss's plane, without changing view.</p>
+<p>With <strong>Pick Lines</strong> the truss is placed along a beam, a wall or a grid. A click on a member selects the whole truss; <span class="keys"><kbd class="key-tab">Tab</kbd></span> goes on to the single member. An attached chord follows the host's face along the whole span; with the bearing chord attached, the other keeps the <strong>Truss height</strong> from it, and the drawn profile stays and comes back with <strong>Detach Top/Bottom</strong>. <strong>Bearing vertical justification</strong>, <strong>Non-bearing offset</strong>, <strong>Web orientation</strong> (<strong>Orthogonal</strong>: the verticals square to the bearing chord) and <strong>Rotation angle</strong> (the truss's plane turns about the location line) change the members. A member deleted by hand stays deleted until <strong>Reset Truss</strong>; the members are cut only in <strong>Structural Settings</strong>. New layouts drawn in their own component will come with the component editor.</p>
+<p><img alt="A truss selected whole, then one of its members with TAB" src="../assets/screens/st-truss.webp"/></p>
+<p>With <strong>Webs have cut symbols</strong> in the truss type, at coarse detail the webs stop short of the chords by the braces' <strong>Cut symbol distance</strong> from <strong>Structural Settings</strong>.</p>
+<h2 id="structural-walls-floors">Structural wall and structural floor</h2>
+<p><strong>Structural wall</strong> is the Wall tool with the same types and the same options strip: the wall is
+made <strong>Bearing</strong>. Every wall has <strong>Structural</strong> and <strong>Structural usage</strong> (<strong>Non-bearing</strong>,
+<strong>Bearing</strong>, <strong>Shear wall</strong>, <strong>Structural combined</strong>).</p>
+<p><strong>Structural floor</strong> is the floor with <strong>Structural</strong> ticked. In the sketch, <strong>Span direction</strong>
+draws the direction of its span; at the end the <strong>Span direction symbol</strong> is placed at the
+centre of the floor. <strong>Annotations ▸ Span direction</strong> places it again (with <strong>Automatic
+placement</strong> at the centre); selected, it can be turned, and <strong>Align perpendicular</strong> makes it
+perpendicular to an edge, a beam or a grid.</p>
+<h3 id="shape-editing">Shape editing</h3>
+<p>A selected floor (structural, a slab foundation or any floor) has the <strong>Shape Editing</strong> panel:</p>
+<ul>
+<li><strong>Modify Sub Elements</strong>: click a corner or a point, then type its <strong>Elevation</strong> in the options bar; <span class="keys"><kbd class="key-delete">Del</kbd></span> removes the point.</li>
+<li><strong>Add Point</strong>: a point inside the floor at the elevation given; with <strong>Relative</strong> it is added to the surface's height there.</li>
+<li><strong>Add Split Line</strong>: two clicks; the surface creases along the line.</li>
+<li><strong>Pick Supports</strong>: click a beam under the floor; a split line follows the beam, at its top.</li>
+<li><strong>Reset Shape</strong>: removes the points and lines; the floor is flat again (or keeps its slope).</li>
+</ul>
+<p>The top becomes the triangulated surface through these points; the whole slab follows it and keeps its thickness. <strong>Elevation at Top</strong> and <strong>Elevation at Bottom</strong> then show <strong>Varies</strong>.</p>
+<p><img alt="A structural floor with its shape edited: a point raised and a split line" src="../assets/screens/st-floor-shape.webp"/></p>
+<h2 id="foundations">Foundations</h2>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>How it works</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Pad footing</strong></td>
+<td>One click in plan or in 3D (space bar: turn), or <strong>At Grids</strong> or <strong>At Columns</strong> and <strong>End</strong>. The top face is at the level plus <strong>Height Offset From Level</strong>; the column above rests on the footing. <strong>Moves with grids</strong> ties it to the grids</td>
+</tr>
+<tr>
+<td><strong>Strip footing</strong></td>
+<td>One click on a structural wall: the footing runs under its base and follows it. <strong>Bearing</strong>: <strong>Width</strong> and <strong>Eccentricity</strong>; <strong>Retaining</strong>: <strong>Outer side width</strong> and <strong>Inner side width</strong>. It breaks under doors and windows that touch the base, unless <strong>Do not break at inserts</strong>; at free ends it projects by the <strong>Default end extension length</strong></td>
+</tr>
+<tr>
+<td><strong>Raft foundation</strong></td>
+<td>The boundary in sketch mode (<strong>Create raft boundary</strong>), like a floor: it lies under its level, down by the thickness of its layers. <strong>Structural usage</strong>: Foundation or Foundation slab</td>
+</tr>
+</tbody>
+</table>
+<p>With a wall foundation selected, the filled circles at its ends lengthen or shorten it along the wall, snapping to what is near; the circles at the ends of a beam or a brace do the same. On steel, precast concrete and timber beams, the arrows beyond the ends change <strong>Start/End extension</strong> at a free end and <strong>Start/End join cutback</strong> at a joined one. Concrete pads and wall foundations that touch are one mass: the pad keeps its shape and cuts the wall foundation (of two pads, the earlier cuts the other), and no line is drawn between them in plan.</p>
+<p><img alt="The end controls of a steel beam" src="../assets/screens/st-end-controls.webp"/></p>
+<p><img alt="Concrete pads and a wall foundation joined into one mass" src="../assets/screens/st-foundation-join.webp"/></p>
+<h2 id="rebar-covers">Rebar cover</h2>
+<p><strong>Reinforced concrete</strong> ▸ <strong>Cover options</strong> lists the project's covers, each with a name and a distance: <strong>Add</strong>, <strong>Duplicate</strong>, <strong>Delete</strong>. Elements that used a deleted cover take the first one. Structural walls, pillars, concrete beams and braces, structural floors, slab foundations, isolated and wall foundations choose their cover in <strong>Properties</strong>: <strong>Rebar cover - Top face</strong>, <strong>Rebar cover - Bottom face</strong> and <strong>Rebar cover - Other faces</strong> (on walls <strong>Rebar cover - Exterior face</strong>, <strong>Rebar cover - Interior face</strong> and <strong>Rebar cover - Other faces</strong>).</p>
+<p><img alt="The Rebar Cover Settings dialog" src="../assets/screens/st-covers.webp"/></p>
+<h2 id="views-schedules-ifc">Views, tags, schedules and IFC</h2>
+<ul>
+<li>A view's <strong>Discipline</strong>: <strong>Architectural</strong> or <strong>Structural</strong>. The second hides non-bearing
+  walls and dashes what floors cover.</li>
+<li><strong>Annotations ▸ Beam tags</strong>: framing tags and elevations on all the beams of the plan (or on
+  the selected ones) in six positions, above and below, at the start, the middle and the end;
+  <strong>Display elevation</strong> picks top, bottom, both or actual.</li>
+<li>A beam's tag reads along the beam and stands beside it, on the side where it covers no other beam (above, when both are free); it is dragged like any tag. In <strong>Beam tags ▸ Settings</strong>, <strong>Horizontal end offset</strong> moves the start and end positions towards the middle and <strong>Vertical offset</strong> keeps the annotations away from the beam's side.</li>
+<li><strong>Schedule/Quantities</strong> has the categories <strong>Structural framing</strong>, <strong>Beam layouts</strong>, <strong>Trusses</strong> and
+  <strong>Structural foundations</strong>, with every parameter as a field.</li>
+<li>In <strong>IFC</strong> girders, joists and purlins are exported as <code>IfcBeam</code>, braces and members as
+  <code>IfcMember</code>, trusses as <code>IfcElementAssembly</code>, pad and strip footings as <code>IfcFooting</code>, the raft
+  as a base <code>IfcSlab</code>; structural walls and floors carry <code>LoadBearing</code>.</li>
+</ul>
+<p><img alt="Structural framing tags in plan" src="../assets/screens/st-tags.webp"/></p>
+<h2 id="commands">From the command line</h2>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>beam</code></td>
+<td>Beams from two points, in a chain, as an arc or on grids</td>
+</tr>
+<tr>
+<td><code>brace</code></td>
+<td>A brace between two points</td>
+</tr>
+<tr>
+<td><code>beamsystem</code>, <code>beamsystemedit</code></td>
+<td>An automatic beam layout or one from a boundary; reset it or remove it</td>
+</tr>
+<tr>
+<td><code>truss</code>, <code>trussedit</code></td>
+<td>A truss; attach it, detach it, reset it or remove it</td>
+</tr>
+<tr>
+<td><code>pad</code>, <code>strip</code></td>
+<td>Pad footings (at a point, on grids, under columns), strip footings</td>
+</tr>
+<tr>
+<td><code>spansymbol</code>, <code>spanalign</code></td>
+<td>The span direction symbol; align it</td>
+</tr>
+<tr>
+<td><code>beamjoin</code>, <code>structuralsettings</code>, <code>beamannotations</code></td>
+<td>Joins, structural settings, beam tags</td>
+</tr>
+<tr>
+<td><code>floorshape</code></td>
+<td>A floor's shape editing: points, split lines, supports, reset</td>
+</tr>
+<tr>
+<td><code>covers</code></td>
+<td>Rebar cover settings</td>
+</tr>
+</tbody>
+</table>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: Phases and demolition" class="md-footer__link md-footer__link--prev" href="../phases/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Previous
+              </span>
+<div class="md-ellipsis">
+                Phases and demolition
+              </div>
+</div>
+</a>
+<a aria-label="Next: Site plan and terrain" class="md-footer__link md-footer__link--next" href="../site/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Next
+              </span>
+<div class="md-ellipsis">
+                Site plan and terrain
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Copyright © 2026 BIMopen
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.footer", "navigation.tracking", "toc.follow", "content.code.copy", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+<script src="../assets/js/zoom.js"></script>
+</body>
+</html>

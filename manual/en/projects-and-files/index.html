@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="User manual of BIMopen, open-source BIM modelling" name="description"/>
 <meta content="BIMopen" name="author"/>
-<link href="https://atsanna.github.io/bimopen-site/manual/en/projects-and-files/" rel="canonical"/>
+<link href="https://bimopen.it/manual/en/projects-and-files/" rel="canonical"/>
 <link href="../interface-styles/" rel="prev"/>
 <link href="../import-and-conversion/" rel="next"/>
 <link href="../assets/images/bimopen-cube.svg" rel="icon"/>
@@ -18,6 +18,13 @@
 <link href="../assets/css/theme.css" rel="stylesheet"/>
 <link href="../assets/css/theme_dark_mode.css" rel="stylesheet"/>
 <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="https://bimopen.it/manual/en/projects-and-files/" hreflang="en" rel="alternate"/>
+<link href="https://bimopen.it/manual/it/projects-and-files/" hreflang="it" rel="alternate"/>
+<link href="https://bimopen.it/manual/de/projects-and-files/" hreflang="de" rel="alternate"/>
+<link href="https://bimopen.it/manual/fr/projects-and-files/" hreflang="fr" rel="alternate"/>
+<link href="https://bimopen.it/manual/es/projects-and-files/" hreflang="es" rel="alternate"/>
+<link href="https://bimopen.it/manual/ar/projects-and-files/" hreflang="ar" rel="alternate"/>
+<link href="https://bimopen.it/manual/en/projects-and-files/" hreflang="x-default" rel="alternate"/>
 </head>
 <body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="slate" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -32,7 +39,7 @@
 </div>
 <header class="md-header md-header--shadow" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="BIMopen user manual" class="md-header__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/?lang=en" title="BIMopen user manual">
+<a aria-label="BIMopen user manual" class="md-header__button md-logo" data-md-component="logo" href="https://bimopen.it/en/" title="BIMopen user manual">
 <img alt="logo" src="../assets/images/bimopen-cube.svg"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -73,32 +80,32 @@
 <div class="md-select__inner">
 <ul class="md-select__list">
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/en/" hreflang="en">
+<a class="md-select__link" href="https://bimopen.it/manual/en/" hreflang="en">
               English
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/it/" hreflang="it">
+<a class="md-select__link" href="https://bimopen.it/manual/it/" hreflang="it">
               Italiano
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/de/" hreflang="de">
+<a class="md-select__link" href="https://bimopen.it/manual/de/" hreflang="de">
               Deutsch
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/fr/" hreflang="fr">
+<a class="md-select__link" href="https://bimopen.it/manual/fr/" hreflang="fr">
               Français
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/es/" hreflang="es">
+<a class="md-select__link" href="https://bimopen.it/manual/es/" hreflang="es">
               Español
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/ar/" hreflang="ar">
+<a class="md-select__link" href="https://bimopen.it/manual/ar/" hreflang="ar">
               العربية
             </a>
 </li>
@@ -147,7 +154,7 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="BIMopen user manual" class="md-nav__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/?lang=en" title="BIMopen user manual">
+<a aria-label="BIMopen user manual" class="md-nav__button md-logo" data-md-component="logo" href="https://bimopen.it/en/" title="BIMopen user manual">
 <img alt="logo" src="../assets/images/bimopen-cube.svg"/>
 </a>
     BIMopen user manual
@@ -225,6 +232,13 @@
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#bimopen-files">
+<span class="md-ellipsis">
+      BIMopen files
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#opening-a-project">
 <span class="md-ellipsis">
       Opening a project
@@ -237,6 +251,17 @@
       Saving
     </span>
 </a>
+<nav aria-label="Saving" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#archiving">
+<span class="md-ellipsis">
+      Saving for archiving
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#project-settings">
@@ -290,6 +315,17 @@
       Options
     </span>
 </a>
+<nav aria-label="Options" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#options-graphics">
+<span class="md-ellipsis">
+      Graphics: graphics card and edges
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#transferring-project-standards">
@@ -321,6 +357,20 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#exporting-to-usd">
+<span class="md-ellipsis">
+      Exporting to USD
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#project-bundles">
+<span class="md-ellipsis">
+      Project bundles
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#other-exports">
 <span class="md-ellipsis">
       Other exports
@@ -337,6 +387,14 @@
 <a class="md-nav__link" href="../import-and-conversion/">
 <span class="md-ellipsis">
     Importing and converting
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cad-files/">
+<span class="md-ellipsis">
+    DWG and DXF
     
   </span>
 </a>
@@ -361,6 +419,54 @@
 <a class="md-nav__link" href="../floors-roofs-stairs/">
 <span class="md-ellipsis">
     Floors, roofs, stairs and components
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ceilings-and-columns/">
+<span class="md-ellipsis">
+    Ceilings and columns
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../openings/">
+<span class="md-ellipsis">
+    Openings
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../phases/">
+<span class="md-ellipsis">
+    Phases and demolition
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../structure/">
+<span class="md-ellipsis">
+    Structure and foundations
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../site/">
+<span class="md-ellipsis">
+    Site plan and terrain
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../design-options/">
+<span class="md-ellipsis">
+    Design options
     
   </span>
 </a>
@@ -414,7 +520,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="https://atsanna.github.io/bimopen-site/manual/en/pdf/bimopen-manual-en.pdf">
+<a class="md-nav__link" href="https://bimopen.it/manual/en/pdf/bimopen-manual-en.pdf">
 <span class="md-ellipsis">
     PDF
     
@@ -454,6 +560,13 @@
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#bimopen-files">
+<span class="md-ellipsis">
+      BIMopen files
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#opening-a-project">
 <span class="md-ellipsis">
       Opening a project
@@ -466,6 +579,17 @@
       Saving
     </span>
 </a>
+<nav aria-label="Saving" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#archiving">
+<span class="md-ellipsis">
+      Saving for archiving
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#project-settings">
@@ -519,6 +643,17 @@
       Options
     </span>
 </a>
+<nav aria-label="Options" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#options-graphics">
+<span class="md-ellipsis">
+      Graphics: graphics card and edges
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#transferring-project-standards">
@@ -550,6 +685,20 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#exporting-to-usd">
+<span class="md-ellipsis">
+      Exporting to USD
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#project-bundles">
+<span class="md-ellipsis">
+      Project bundles
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#other-exports">
 <span class="md-ellipsis">
       Other exports
@@ -570,11 +719,11 @@
 <p>This chapter describes how a project is created, opened, saved and exchanged with other programs,
 its settings and the options of BIMopen itself.</p>
 <figure>
-<img alt="The application menu, opened from BIMopen's mark at the top of the rail: New, Open, Sample project, Save, Save As, Print, Export, Recent Documents, Open Documents, Options and Exit" src="../assets/screens/pf-app-menu.webp"/>
-<figcaption>The application menu, on BIMopen's mark</figcaption>
+<img alt="The File panel, opened from BIMopen's mark: on the left Projects and Components, the commands of the open project, the links and Options; on the right the recent projects as thumbnails, the project templates and the components" src="../assets/screens/pf-app-menu.webp"/>
+<figcaption>The File panel, on BIMopen's mark</figcaption>
 </figure>
 <h2 id="creating-a-project">Creating a project</h2>
-<p><strong>application menu ➤ New ➤ Project…</strong> opens <strong>New project</strong>:</p>
+<p><strong>File ➤ New…</strong> opens <strong>New project</strong>:</p>
 <ul>
 <li><strong>Template file</strong>: BIMopen's default template, or the one set in <strong>Options ➤ File Locations</strong>;
   the <strong>BIMopen imperial template</strong> (see <a href="#imperial-units">Imperial units</a>); a template file
@@ -590,26 +739,66 @@ its settings and the options of BIMopen itself.</p>
 project information and print settings. Saving it asks for a name, so the template is not
 overwritten.</p>
 <h3 id="templates">Templates</h3>
-<p>A template is a <code>.bimtpl</code> file. <strong>application menu ➤ Save As ➤ Template…</strong> saves the open project
+<p>A template is a <code>.bpt</code> file. <strong>File ➤ Save As ➤ Template…</strong> saves the open project
 as a template; a project created as a <strong>Project Template</strong>, or a template opened, is saved as a
 template too.</p>
+<h2 id="bimopen-files">BIMopen files</h2>
+<p>BIMopen saves in its own format, <strong>format 2027</strong>, with four extensions:</p>
+<table>
+<thead>
+<tr>
+<th>Extension</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.bpr</code></td>
+<td>A project</td>
+</tr>
+<tr>
+<td><code>.bpt</code></td>
+<td>A project template, which new projects start from</td>
+</tr>
+<tr>
+<td><code>.bco</code></td>
+<td>A component, loaded into projects</td>
+</tr>
+<tr>
+<td><code>.bct</code></td>
+<td>A component template, which new components start from</td>
+</tr>
+</tbody>
+</table>
+<p>The format is made so that every file of format 2027 also opens in later versions of BIMopen.
+Every element has a permanent identifier, saved in the file, which IFC export uses as its
+GlobalId: the same element has the same GlobalId in every export, and a copy gets a new one.</p>
+<p>A file that is not of format 2027 does not open, and the command line says why: it is not a BIMopen file, or it was saved with a
+newer version of BIMopen, whose number it gives. Models are exchanged with other programs in IFC:
+see <a href="../import-and-conversion/">Import and conversion</a>.</p>
 <h2 id="opening-a-project">Opening a project</h2>
-<p><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-o">O</kbd></span> or <strong>application menu ➤ Open…</strong> opens a project.
-<strong>application menu ➤ Recent Documents</strong> lists the latest projects, the most recent first; a pin
-keeps a project in the list. Without a file, BIMopen starts on <strong>Recent Files</strong>, with the recent
-projects, <strong>Open…</strong>, <strong>New</strong> and the <strong>Sample project</strong> (unless
-<strong>Enable Recent Files page at startup</strong> is unticked in the options). Dropping a project file on
+<p><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-o">O</kbd></span> or <strong>File ➤ Open… ➤ Project…</strong> opens a project. <strong>File</strong> shows the recent projects
+as thumbnails, the most recent first; a pin keeps a project at the top of the list, the <strong>✕</strong>
+takes it off the list (the file stays where it is) and a moved file is found again with
+<strong>Locate…</strong> (see <a href="../interface/#recent-files">Recent Files</a>). Without a file, BIMopen starts on
+the File panel (unless <strong>Enable Recent Files page at startup</strong> is unticked in the options). Dropping a project file on
 the window opens it too.</p>
+<figure>
+<img alt="The File panel with the recent projects as thumbnails, each showing the picture saved in its file, and the updates' bell" src="../assets/screens/pf-file-panel.webp"/>
+<figcaption>Recent projects in the File panel</figcaption>
+</figure>
 <p>A project already open in another BIMopen window opens read-only: <strong>Save</strong> asks for a new name.
 If BIMopen stopped without saving (a crash, a power cut), opening the project again brings the
 unsaved work back as unsaved changes.</p>
 <h2 id="saving">Saving</h2>
 <p><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span>, or a click on the save state in the top bar, saves the project; until then the file
-stays as it was last saved, and the top bar says <strong>Unsaved changes</strong>. <strong>application menu ➤ Save As ➤
+stays as it was last saved, and the top bar says <strong>Unsaved changes</strong>. <strong>File ➤ Save As ➤
 Project…</strong> writes it to a new file and goes on there.</p>
 <p><strong>Save As ➤ Options…</strong> opens <strong>File Save Options</strong>: <strong>Maximum backups</strong> keeps that many earlier
-versions beside the file (<code>house.0001.bimopen</code>, <code>house.0002.bimopen</code>…), deleting the oldest;
-<strong>Compact file</strong> rewrites the file without its obsolete parts at the next save.</p>
+versions beside the file (<code>house.0001.bpr</code>, <code>house.0002.bpr</code>…), deleting the oldest;
+<strong>Compact file</strong> rewrites the file without its obsolete parts at the next save; <strong>Preview</strong> chooses
+the view of the thumbnail that every save stores in the file and that the File panel shows: the
+<strong>Default 3D View</strong>, the <strong>Active view</strong> or a chosen view.</p>
 <p>When a changed project stays unsaved for the interval set in <strong>Options ➤ General</strong>
 (<strong>Save reminder interval</strong>, 30 minutes to start with), <strong>Save Reminder</strong> offers to save it, not to
 save it, or to change the interval.</p>
@@ -622,6 +811,14 @@ sample project, or closing the window, a changed project asks <strong>Save chang
 saves it, <strong>No</strong> drops the changes, <strong>Cancel</strong> keeps it open.</p>
 <p>In the browser, <strong>Open…</strong> uses the browser's file chooser, and <strong>Save</strong> downloads the file; backups,
 crash recovery and read-only opening need a file on disk and are desktop-only.</p>
+<h3 id="archiving">Saving for archiving</h3>
+<p>The project file keeps a cache of the views slow to make again (elevations, sections and
+thumbnails taking 300 ms or more): reopened, it shows them at once. It holds only for the same
+model, language and BIMopen version; otherwise it is dropped by itself, and the file opens the
+same without it. <strong>Save As ➤ For archiving…</strong> saves a compressed copy without the cache, smaller,
+to hand over or archive: the copy makes those views again the first time, and the open project
+stays on its file. <strong>Options ➤ Use the view cache in the project file</strong>, turned off, removes it at
+the ordinary save too.</p>
 <h2 id="project-settings">Project settings</h2>
 <h3 id="project-information">Project information</h3>
 <p><strong>Settings ➤ Settings ➤ Project information</strong> sets the project's name, number, client, address,
@@ -816,7 +1013,7 @@ in feet and inches; a length can always carry its unit: <code>wall 0,0 20',0</co
 <p><strong>Settings ➤ Additional settings ➤ Sun Settings</strong> opens the sun settings of the active view, the
 same as the sun button of the view control bar (see <a href="../views-and-graphics/">Views and graphics</a>).</p>
 <h2 id="options">Options</h2>
-<p><strong>application menu ➤ Options</strong> has four tabs; the choices are kept between sessions.</p>
+<p><strong>File ➤ Options</strong> has four tabs; the choices are kept between sessions.</p>
 <table>
 <thead>
 <tr>
@@ -835,7 +1032,7 @@ same as the sun button of the view control bar (see <a href="../views-and-graphi
 </tr>
 <tr>
 <td><strong>Graphics</strong></td>
-<td><strong>Invert background color</strong>, <strong>Selection color</strong>, <strong>Highlight color</strong>, <strong>Use anti-aliasing for 3D views</strong>, <strong>Temporary Dimension Text Appearance</strong> (size and background)</td>
+<td><strong>Hardware acceleration</strong>, <strong>Graphics card</strong> and the <strong>In use</strong> line, <strong>3D view ▸ Edges</strong>, <strong>Use anti-aliasing for 3D views</strong>, <strong>Invert background color</strong>, <strong>Selection color</strong>, <strong>Highlight color</strong>, <strong>Temporary Dimension Text Appearance</strong> (size and background)</td>
 </tr>
 <tr>
 <td><strong>File Locations</strong></td>
@@ -847,6 +1044,30 @@ same as the sun button of the view control bar (see <a href="../views-and-graphi
 <img alt="The Options dialog on its User Interface tab: language, theme, interface style, touch mode, interface size and the start page" src="../assets/screens/pf-options.webp"/>
 <figcaption>Options, User Interface tab</figcaption>
 </figure>
+<h3 id="options-graphics">Graphics: graphics card and edges</h3>
+<ul>
+<li><strong>Hardware acceleration</strong>: <strong>Automatic</strong> uses the graphics card where there is one and, if it
+  is missing or does not start, draws on the processor; <strong>Always on</strong> never falls back to the
+  processor (without a graphics card the 3D views say so instead of drawing: useful to find a
+  faulty driver); <strong>Off (processor only)</strong> draws the 3D views on the processor, for faulty
+  drivers (black screen, flickering), more slowly on large models.</li>
+<li><strong>Graphics card</strong>: <strong>Automatic</strong> (the dedicated one, if there is one), the dedicated or the
+  integrated card, by name; on laptops the integrated one uses less power. The card is chosen
+  when BIMopen starts: after a change the tab says to restart BIMopen. A card that cannot
+  draw in the window is greyed, with the reason; if the chosen card is missing or cannot draw,
+  BIMopen uses the automatic one, says so and goes back to <strong>Automatic</strong>. In a browser and on
+  Android the browser or the system chooses it.</li>
+<li><strong>In use</strong> shows the card and the graphics API really in use (for example Vulkan, Direct3D 12,
+  Metal, WebGPU, WebGL2), or the processor and why.</li>
+<li><strong>3D view ▸ Edges</strong>: <strong>Automatic</strong> edges follow the view instantly, also right after a change;
+  <strong>Exact</strong> edges are the same as in print, slower on large models. Printing and export always use the
+  exact ones, as do the <strong>Wireframe</strong> style, <strong>Sketchy Lines</strong> and views without acceleration or
+  on WebGL2. Each 3D view also has its own <strong>Edges</strong> property: <strong>As in Options</strong>, <strong>Automatic</strong>
+  or <strong>Exact</strong>.</li>
+</ul>
+<p>At the command line: <code>graphicsettings {"acceleration":"automatica|sempre|disattivata","adapter":"automatica|dedicata|integrata","edges":"automatici|esatti","antialias":true}</code>
+(without arguments it reports the settings in use); a 3D view's edges with
+<code>graphicoptions {"edges3d":"opzioni|automatici|esatti"}</code>.</p>
 <h2 id="transferring-project-standards">Copying settings from a project</h2>
 <p><strong>Settings ➤ Settings ➤ Copy Settings from Project</strong> copies settings from another project into this
 one. In <strong>Select Items To Copy</strong>, choose the project with <strong>Browse…</strong> (<strong>Copy from:</strong>), then tick
@@ -864,14 +1085,14 @@ whether to <strong>Overwrite</strong> them or to transfer the <strong>New Only</
 undo.</p>
 <h2 id="exchanging-files">Exchanging files</h2>
 <h3 id="exporting-to-ifc">Exporting to IFC</h3>
-<p><strong>application menu ➤ Export ➤ IFC…</strong> writes the model in IFC4: walls with their axis and body,
+<p><strong>File ➤ Export ➤ IFC…</strong> writes the model in IFC4: walls with their axis and body,
 openings, doors, windows, floors, roofs, stairs, railings, curtain walls, furniture and rooms as
 spaces, on their storeys.</p>
 <p><strong>Export ➤ Options ➤ IFC Options…</strong> opens <strong>IFC Export Classes</strong>: the IFC class of each category;
 <strong>Not Exported</strong> leaves a category out, and <strong>Default</strong> goes back to the standard classes. The
 classes are kept with the project.</p>
 <h3 id="opening-ifc-files">Opening IFC files</h3>
-<p><strong>application menu ➤ Open ➤ IFC…</strong> makes a new project from an IFC2x3 or IFC4 file, in metres or
+<p><strong>File ➤ Open… ➤ IFC…</strong> makes a new project from an IFC2x3 or IFC4 file, in metres or
 millimetres: storeys become levels, walls are rebuilt from their axis (or from the long side of
 their body), slabs become floors, doors and windows go in the walls their openings cut, and spaces
 become rooms. The messages count what was not read.</p>
@@ -879,6 +1100,41 @@ become rooms. The messages count what was not read.</p>
 doors, windows, rooms or <strong>Not Imported</strong>), and <strong>Default</strong>. The choices are kept between sessions.</p>
 <p>Objects with a shape that are not walls, floors, doors, windows or spaces are kept as imported
 objects, to convert: see <a href="../import-and-conversion/">Importing and converting</a>.</p>
+<h3 id="exporting-to-usd">Exporting to USD</h3>
+<p><strong>File ➤ Export ➤ USD…</strong> saves the active 3D view as a USD scene, an open format read by
+rendering, animation and augmented reality programs. When the active view is not 3D, <strong>{3D}</strong> is
+exported. Elements and categories hidden in the view are left out, and with the section box on, so are the
+elements wholly outside the box. The scene is arranged by level,
+category and element, in metres with the Z axis up.</p>
+<ul>
+<li><strong>.usdz</strong> is a single file holding the scene and the materials' textures; <strong>.usda</strong> is the
+  scene as text, without textures.</li>
+<li><strong>Materials</strong>: colour, roughness, metallic, transparency and the appearance's images, as in the
+  <strong>Realistic</strong> view.</li>
+<li><strong>BIM properties</strong>: category, type, level, mark, IFC identifier and parameters of every
+  element.</li>
+<li><strong>Identical shapes as instances</strong>: identical doors, windows and components are written once.</li>
+<li><strong>The view's camera</strong> and <strong>The view's sun and sky</strong>.</li>
+<li><strong>Naming</strong>: <strong>Manual</strong> uses the name typed in <strong>Name/prefix</strong> (or the project's),
+  <strong>Automatic - long</strong> adds the view's type and name to the prefix, <strong>Automatic - short</strong> uses
+  only the view's type and name.</li>
+</ul>
+<p>The choices stay for the next time.</p>
+<h3 id="project-bundles">Project bundles</h3>
+<p><strong>File ➤ Export ➤ Share ➤ Project bundle…</strong> gathers the project and the files it uses into a
+single <strong>.zip</strong> file: linked models (with the files they use), the source files of imported
+objects, type catalogues. The dialog lists every file with its state: <strong>not found</strong> when it is
+missing beside the project, <strong>to add</strong> on the web, where the browser cannot see the folder.
+<strong>Add files…</strong> puts other documents in the bundle, such as a report or a specification. The bundle
+takes the project as it is now, unsaved changes included. Components and material images are
+already inside the project.</p>
+<p>Inside the .zip all files sit at the same level and the project refers to them by name, so the
+bundle works wherever it is unpacked. The <strong>Bundle report.txt</strong> says what was included and what
+was missing. <strong>Purge unused types</strong>, <strong>Remove worksets</strong> and <strong>Remove sheets</strong> change only the copy in the
+bundle. With <strong>Save settings for next use</strong> the choices stay for the next time.</p>
+<p><strong>File ➤ Open… ➤ Project bundle…</strong>, or <strong>Project…</strong> choosing the .zip, unpacks the bundle into a
+folder beside it with the same name and opens the project. On the web the project opens from
+memory.</p>
 <h3 id="other-exports">Other exports</h3>
 <p>Printing to PDF and exporting images are described in
 <a href="../documentation/">Sheets, schedules and printing</a>; schedules export as delimited text from the

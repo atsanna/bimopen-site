@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Benutzerhandbuch von BIMopen, BIM-Modellierung als Open Source" name="description"/>
 <meta content="BIMopen" name="author"/>
-<link href="https://atsanna.github.io/bimopen-site/manual/de/annotation/" rel="canonical"/>
+<link href="https://bimopen.it/manual/de/annotation/" rel="canonical"/>
 <link href="../views-and-graphics/" rel="prev"/>
 <link href="../documentation/" rel="next"/>
 <link href="../assets/images/bimopen-cube.svg" rel="icon"/>
@@ -18,6 +18,13 @@
 <link href="../assets/css/theme.css" rel="stylesheet"/>
 <link href="../assets/css/theme_dark_mode.css" rel="stylesheet"/>
 <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="https://bimopen.it/manual/en/annotation/" hreflang="en" rel="alternate"/>
+<link href="https://bimopen.it/manual/it/annotation/" hreflang="it" rel="alternate"/>
+<link href="https://bimopen.it/manual/de/annotation/" hreflang="de" rel="alternate"/>
+<link href="https://bimopen.it/manual/fr/annotation/" hreflang="fr" rel="alternate"/>
+<link href="https://bimopen.it/manual/es/annotation/" hreflang="es" rel="alternate"/>
+<link href="https://bimopen.it/manual/ar/annotation/" hreflang="ar" rel="alternate"/>
+<link href="https://bimopen.it/manual/en/annotation/" hreflang="x-default" rel="alternate"/>
 </head>
 <body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="slate" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -32,7 +39,7 @@
 </div>
 <header class="md-header md-header--shadow" data-md-component="header">
 <nav aria-label="Kopfzeile" class="md-header__inner md-grid">
-<a aria-label="BIMopen Benutzerhandbuch" class="md-header__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/?lang=de" title="BIMopen Benutzerhandbuch">
+<a aria-label="BIMopen Benutzerhandbuch" class="md-header__button md-logo" data-md-component="logo" href="https://bimopen.it/de/" title="BIMopen Benutzerhandbuch">
 <img alt="logo" src="../assets/images/bimopen-cube.svg"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -73,32 +80,32 @@
 <div class="md-select__inner">
 <ul class="md-select__list">
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/en/" hreflang="en">
+<a class="md-select__link" href="https://bimopen.it/manual/en/" hreflang="en">
               English
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/it/" hreflang="it">
+<a class="md-select__link" href="https://bimopen.it/manual/it/" hreflang="it">
               Italiano
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/de/" hreflang="de">
+<a class="md-select__link" href="https://bimopen.it/manual/de/" hreflang="de">
               Deutsch
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/fr/" hreflang="fr">
+<a class="md-select__link" href="https://bimopen.it/manual/fr/" hreflang="fr">
               Français
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/es/" hreflang="es">
+<a class="md-select__link" href="https://bimopen.it/manual/es/" hreflang="es">
               Español
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/ar/" hreflang="ar">
+<a class="md-select__link" href="https://bimopen.it/manual/ar/" hreflang="ar">
               العربية
             </a>
 </li>
@@ -147,7 +154,7 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="BIMopen Benutzerhandbuch" class="md-nav__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/?lang=de" title="BIMopen Benutzerhandbuch">
+<a aria-label="BIMopen Benutzerhandbuch" class="md-nav__button md-logo" data-md-component="logo" href="https://bimopen.it/de/" title="BIMopen Benutzerhandbuch">
 <img alt="logo" src="../assets/images/bimopen-cube.svg"/>
 </a>
     BIMopen Benutzerhandbuch
@@ -202,6 +209,14 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../cad-files/">
+<span class="md-ellipsis">
+    DWG und DXF
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../selection-and-modify/">
 <span class="md-ellipsis">
     Auswählen und Ändern
@@ -221,6 +236,54 @@
 <a class="md-nav__link" href="../floors-roofs-stairs/">
 <span class="md-ellipsis">
     Geschossdecken, Dächer, Treppen und Bauteile
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ceilings-and-columns/">
+<span class="md-ellipsis">
+    Decken und Stützen
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../openings/">
+<span class="md-ellipsis">
+    Öffnungen
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../phases/">
+<span class="md-ellipsis">
+    Phasen und Abbruch
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../structure/">
+<span class="md-ellipsis">
+    Tragwerk und Fundamente
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../site/">
+<span class="md-ellipsis">
+    Lageplan und Gelände
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../design-options/">
+<span class="md-ellipsis">
+    Entwurfsvarianten
     
   </span>
 </a>
@@ -270,6 +333,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#radial-diameter-and-arc-length-dimensions">
+<span class="md-ellipsis">
+      Radius-, Durchmesser- und Bogenlängenbemaßungen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#changing-a-dimension">
 <span class="md-ellipsis">
       Eine Bemaßung ändern
@@ -297,6 +367,13 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#arrows">
+<span class="md-ellipsis">
+      Pfeile, Schriften und alternative Einheiten
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -306,6 +383,17 @@
       Text
     </span>
 </a>
+<nav aria-label="Text" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#text-format-and-leaders">
+<span class="md-ellipsis">
+      Textformat und Führungslinien
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#symbols">
@@ -320,6 +408,52 @@
       Beschriftungen
     </span>
 </a>
+<nav aria-label="Beschriftungen" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#loaded-tags">
+<span class="md-ellipsis">
+      Geladene Beschriftungen und Nummerierung
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#multi-category-tags">
+<span class="md-ellipsis">
+      Mehrkategorie-Beschriftungen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#material-tags">
+<span class="md-ellipsis">
+      Materialbeschriftungen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tags-with-several-leaders">
+<span class="md-ellipsis">
+      Beschriftungen mit mehreren Führungslinien
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#multiple-values">
+<span class="md-ellipsis">
+      Mehrere Werte
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#material-keynotes">
+<span class="md-ellipsis">
+      Schlüsselnotizen
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#rooms">
@@ -355,6 +489,17 @@
       Detaillinien und Bereiche
     </span>
 </a>
+<nav aria-label="Detaillinien und Bereiche" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tangency-padlock">
+<span class="md-ellipsis">
+      Das Tangentenschloss
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#detail-components-repeating-details-and-insulation">
@@ -420,7 +565,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="https://atsanna.github.io/bimopen-site/manual/de/pdf/bimopen-manual-de.pdf">
+<a class="md-nav__link" href="https://bimopen.it/manual/de/pdf/bimopen-manual-de.pdf">
 <span class="md-ellipsis">
     PDF
     
@@ -457,6 +602,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#radial-diameter-and-arc-length-dimensions">
+<span class="md-ellipsis">
+      Radius-, Durchmesser- und Bogenlängenbemaßungen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#changing-a-dimension">
 <span class="md-ellipsis">
       Eine Bemaßung ändern
@@ -484,6 +636,13 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#arrows">
+<span class="md-ellipsis">
+      Pfeile, Schriften und alternative Einheiten
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -493,6 +652,17 @@
       Text
     </span>
 </a>
+<nav aria-label="Text" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#text-format-and-leaders">
+<span class="md-ellipsis">
+      Textformat und Führungslinien
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#symbols">
@@ -507,6 +677,52 @@
       Beschriftungen
     </span>
 </a>
+<nav aria-label="Beschriftungen" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#loaded-tags">
+<span class="md-ellipsis">
+      Geladene Beschriftungen und Nummerierung
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#multi-category-tags">
+<span class="md-ellipsis">
+      Mehrkategorie-Beschriftungen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#material-tags">
+<span class="md-ellipsis">
+      Materialbeschriftungen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tags-with-several-leaders">
+<span class="md-ellipsis">
+      Beschriftungen mit mehreren Führungslinien
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#multiple-values">
+<span class="md-ellipsis">
+      Mehrere Werte
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#material-keynotes">
+<span class="md-ellipsis">
+      Schlüsselnotizen
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#rooms">
@@ -542,6 +758,17 @@
       Detaillinien und Bereiche
     </span>
 </a>
+<nav aria-label="Detaillinien und Bereiche" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tangency-padlock">
+<span class="md-ellipsis">
+      Das Tangentenschloss
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#detail-components-repeating-details-and-insulation">
@@ -590,7 +817,7 @@ Bereich, den ein Raum oder eine Fläche füllen würde, die Linie, den Bereich, 
 die Dämmung, die gerade gezeichnet wird.</p>
 <h2 id="dimensions">Bemaßungen</h2>
 <p><strong>Beschriftungen ▸ Bemaßung</strong> enthält die Bemaßungswerkzeuge: <strong>Ausgerichtet</strong>, <strong>Linear</strong>, <strong>Winkel</strong>,
-<strong>Radial</strong>, <strong>Bogenlänge</strong> und die Punktbemaßungen <strong>Höhenkote</strong>, <strong>Punktkoordinate</strong> und
+<strong>Radial</strong>, <strong>Durchmesser</strong>, <strong>Bogenlänge</strong> und die Punktbemaßungen <strong>Höhenkote</strong>, <strong>Punktkoordinate</strong> und
 <strong>Neigungsbemaßung</strong>. Sie funktionieren in Grundrissen, Schnitten, Ansichten, freien 2D-Ansichten und
 Legenden. Wählen Sie den Bemaßungstyp in der Typenauswahl, solange das Werkzeug aktiv ist;
 <strong>Typparameter</strong> ändert den Typ und damit jede Bemaßung dieses Typs.</p>
@@ -606,8 +833,13 @@ wählt:</p>
   durchzuschalten.</li>
 <li><strong>Ganze Wände</strong>: Ein Klick bemaßt eine ganze Wand. <strong>Optionen</strong> öffnet die Optionen der
   automatischen Bemaßung: <strong>Öffnungen</strong> mit ihren <strong>Mitten</strong> oder beiden <strong>Breiten</strong>,
-  <strong>Sich schneidende Wände</strong> und <strong>Sich schneidende Raster</strong>. Ein Raster, das auf einem Wandende
-  liegt, fügt keine Maßhilfslinie hinzu.</li>
+  <strong>Sich schneidende Wände</strong> und <strong>Sich schneidende Raster</strong>; Öffnungen nach Breiten und sich
+  schneidende Wände sind von Anfang an angehakt. Über einer Wand leuchtet sie mit allen Referenzen
+  auf, die der Klick hinzufügt. Klicken Sie die Wand, weitere Wände fügen sich der Maßkette hinzu,
+  dann ein Klick daneben platziert die Linie. An jedem Ende reicht die Kette bis zur dort
+  angeschlossenen Wand (ihre Achse oder Außenfläche, wie die Vorgabe der Optionsleiste sagt). Eine in die
+  Wand eingebettete Vorhangfassade zählt als Öffnung. Ein Raster auf einem Wandende oder auf einer anderen Referenz fügt keine Maßhilfslinie hinzu. Es
+  funktioniert gleich in Grundrissen, Schnitten und Ansichten.</li>
 </ul>
 <figure>
 <img alt="Drei Schritte einer ausgerichteten Bemaßung im Erdgeschossgrundriss: die erste Wand gewählt und der Cursor auf der Trennwand, die Bemaßung folgt dem Cursor, die Bemaßung von 6000 ist platziert" src="../assets/screens/an-aligned.webp"/>
@@ -618,8 +850,23 @@ Wandenden: Wo Sie die Linie platzieren, entscheidet darüber, und die <strong>Le
 zwischen beiden um.</p>
 <p><strong>Winkel</strong> misst den Winkel zwischen zwei Wänden, Rastern oder Linien, die aufeinandertreffen; mehrere
 Linien durch denselben Punkt ergeben eine Kette von Winkeln, jeder mit seinem Wert; der letzte Klick
-wählt den Sektor. <strong>Radial</strong> und <strong>Bogenlänge</strong> bemaßen einen Bogen: Klicken Sie ihn
-an und dann dorthin, wo die Bemaßung stehen soll.</p>
+wählt den Sektor.</p>
+<h3 id="radial-diameter-and-arc-length-dimensions">Radius-, Durchmesser- und Bogenlängenbemaßungen</h3>
+<p><strong>Radial</strong>, <strong>Durchmesser</strong> und <strong>Bogenlänge</strong> bemaßen einen Kreis oder Bogen: einer Detaillinie
+oder einer gekrümmten Wand. Klicken Sie ihn an und dann dorthin, wo die Bemaßung stehen soll. Bei
+einer gekrümmten Wand entscheidet <strong>Bevorzugt</strong> in der Optionsleiste, was zuerst kommt (ihre
+Achse, ihre Oberflächen, ihr Kern), und <strong>TAB</strong> wechselt zu den anderen. Eine
+Durchmesserbemaßung läuft durch den Mittelpunkt, mit einem Pfeil auf der Kurve an jedem Ende und
+<strong>Ø</strong> vor dem Wert; außerhalb der Kurve platziert, läuft ihre Linie weiter, um den Wert
+aufzunehmen. Auf einem Bogen, der kürzer als ein Halbkreis ist, umfasst sie trotzdem den ganzen
+Durchmesser. Die Bemaßungen folgen dem Bogen, wenn sich sein Radius ändert, und verschwinden, wenn
+er gelöscht wird. In einem Schnitt oder einer Ansicht werden nur die dort gezeichneten Bögen
+angeboten.</p>
+<p>Eine ausgewählte Radius- oder Durchmesserbemaßung hat einen Griff an ihrem Ende auf der Kurve:
+Ziehen Sie ihn, um die Linie um den Mittelpunkt zu drehen; auf einem anderen Bogen oder Kreis mit
+demselben Mittelpunkt losgelassen, misst die Bemaßung diesen. Ihr Wert öffnet <strong>Bemaßungstext</strong>,
+und der Griff darunter verschiebt den Text, wie bei ausgerichteten Bemaßungen. Auch die Werte von Winkel- und Bogenlängenbemaßungen öffnen ihn
+und lassen sich ebenso verschieben.</p>
 <h3 id="changing-a-dimension">Eine Bemaßung ändern</h3>
 <ul>
 <li>Wählen Sie eine Bemaßung und klicken Sie auf ihren Wert: <strong>Bemaßungstext</strong> öffnet sich.
@@ -647,7 +894,9 @@ an und dann dorthin, wo die Bemaßung stehen soll.</p>
 <p>Der Typ legt den Maßpfeil (Schrägstrich, gefüllter Pfeil oder Punkt), die Verlängerungen der
 Bemaßungs- und Maßhilfslinien (<strong>Steuerelement der Hilfslinie</strong>: ein Abstand zum Element oder
 <strong>An Maßlinie fixiert</strong> mit ihrer <strong>Hilfslinienlänge</strong>), den <strong>Fangabstand der Maßlinie</strong> (beim Platzieren
-rastet die Linie in Vielfachen davon vom Gemessenen ein; 0 schaltet ihn aus), die <strong>Linienstärke</strong> und die <strong>Linienstärke der
+oder Ziehen rastet die Linie in Vielfachen davon vom Gemessenen ein und einen Schritt von einer
+parallelen Maßkette entfernt, sodass sich Ketten gleichmäßig stapeln; eine gestrichelte Linie und
+ein Hinweis zeigen das Einrasten; 0 schaltet ihn aus), die <strong>Linienstärke</strong> und die <strong>Linienstärke der
 Markierung</strong>, das <strong>Mittellinien-Symbol</strong>, das <strong>Mittellinienmuster</strong> und die <strong>Mittellinien-Markierung</strong>
 (<strong>Standard</strong> ist die des Typs) von Maßhilfslinien zu
 Mittellinien, die Farbe, die Textgröße, den Versatz, den Hintergrund sowie Fett,
@@ -657,8 +906,15 @@ Rundung, auch <strong>Benutzerdefiniert</strong> mit einem <strong>Inkrementfakt
 <strong>Durchgehend</strong>, <strong>Ausrichtung</strong> (übereinandergestapelte Werte ab der ersten Referenz) oder
 <strong>Koordinate</strong> (Werte ab der ersten Referenz entlang einer Linie). <strong>Öffnungshöhe anzeigen</strong>
 schreibt die Höhe einer Tür oder eines Fensters unter die von Laibung zu Laibung gemessene Breite.
-Radiale Typen können das Präfix <strong>R</strong> und ihre Mittelpunktmarkierung (<strong>Mittelpunktmarkierungen</strong>,
-mit ihrer Größe) weglassen. Bei Pfeilen stehen diese außen, wenn ein Segment zu kurz für sie ist,
+Radius- und Durchmessertypen haben ihre Mittelpunktmarkierung (<strong>Mittelpunktmarkierungen</strong>, mit
+ihrer Größe) und ihr Symbol: <strong>Text Radiussymbol</strong> (<strong>R</strong>) oder <strong>Text Durchmessersymbol</strong> (<strong>Ø</strong>),
+und wo es steht, <strong>Vor dem Wert</strong>, <strong>Nach dem Wert</strong> oder <strong>Ausgeblendet</strong> (<strong>Position
+Radiussymbol</strong>, <strong>Position Durchmessersymbol</strong>). Die Führungslinie verschobenen Textes legt
+<strong>Führungslinientyp</strong> fest: <strong>Bogen</strong>, oder <strong>Linie</strong> mit ihrer <strong>Schulterlänge</strong> und der
+<strong>Textposition</strong> (<strong>Oberhalb</strong>: die Schulter läuft unter dem Text; <strong>In Linie</strong>: sie endet an der
+Seite des Textes); <strong>Führungslinien-Markierung</strong> markiert ihr Ende auf der Maßlinie, und
+<strong>Führungslinie anzeigen, wenn Text verschoben wird</strong> zeichnet sie, sobald der Text sich bewegt
+(<strong>Entfernt vom Ursprung</strong>), oder erst jenseits der Hilfslinien (<strong>Jenseits der Hilfslinien</strong>). Bei Pfeilen stehen diese außen, wenn ein Segment zu kurz für sie ist,
 und die Linie läuft um die <strong>Verlängerung der umgekehrten Maßlinie</strong> darüber hinaus. <strong>Beschriftungen ▸
 Bemaßung ▸ Bemaßungstypen</strong> öffnet die Typparameter des aktuellen Typs jeder Familie, um sie vor
 dem Bemaßen festzulegen.</p>
@@ -756,19 +1012,39 @@ Höhenkennzeichnung, dann der Wert; die <strong>… als Präfix/Suffix</strong> 
 stattdessen hinter den Wert), das <strong>Symbol</strong>, <strong>Höhe einschließen</strong> und die
 <strong>Nord/Süd-Kennzeichnung</strong> und <strong>Ost/West-Kennzeichnung</strong> von Koordinaten (mit <strong>Kennzeichnung als Präfix/Suffix</strong>) sowie die <strong>Länge der
 Führungslinie</strong> und die <strong>Neigungsrichtung</strong> (<strong>Nach unten</strong> oder <strong>Nach oben</strong>) von Neigungen fest.</p>
+<p>Die <strong>Eigenschaften</strong> einer Höhenkote bieten außerdem <strong>Präfix Einzel-/Oberwert</strong> und <strong>Suffix
+Einzel-/Oberwert</strong> sowie für den unteren Wert <strong>Präfix Unterwert</strong> und <strong>Suffix Unterwert</strong>:
+Wörter vor und nach dem Wert.</p>
+<h3 id="arrows">Pfeile, Schriften und alternative Einheiten</h3>
+<p><strong>Projekt ▸ Weitere Einstellungen ▸ Pfeile</strong> öffnet die <strong>Typparameter</strong> der Pfeiltypen des
+Projekts. Jeder hat einen <strong>Pfeilstil</strong> (Pfeil, Diagonal, Punkt, Verstärkter Strich, Höhenmarke),
+<strong>Gefüllt</strong>, <strong>Öffnungswinkel</strong>, <strong>Markengröße</strong> auf Papier und, beim verstärkten Strich, eine
+eigene Linienstärke; was der Stil nicht nutzt, ist grau. <strong>Duplizieren…</strong> und <strong>Umbenennen…</strong>
+funktionieren wie bei anderen Typen; die Vorschau zeigt die Führungslinie einer Notiz und eine
+Bemaßung mit dem Pfeil. Jeder Führungspfeil (Texte, Beschriftungen, Symbole, Punktbemaßungen) und
+jede Marke der Bemaßungstypen bietet <strong>Keiner</strong> und diese Typen an: Ändert man einen Typ, ändert sich
+jede Zeichnung, die ihn verwendet. <strong>Einstellungen aus Projekt kopieren</strong> kopiert sie, <strong>Nicht verwendete
+bereinigen</strong> entfernt die unbenutzten.</p>
+<p>Im Bemaßungstyp formen <strong>Textschriftart</strong>, <strong>Breitenfaktor</strong> und <strong>Leserichtung</strong> (an der Linie
+ausgerichtet oder waagerecht, auch bei senkrechten Bemaßungen) den Wert; <strong>Alternative Einheiten</strong>
+zeigt einen zweiten Wert rechts oder darunter, mit eigenem <strong>Format…</strong>, Präfix und Suffix. Auf dem
+Desktop bietet <strong>Textschriftart</strong> auch die Schriften des Computers an; ein Projekt auf einem Computer
+ohne diese Schrift wird mit BIMopen Sans gezeichnet, und das Öffnen meldet es. In der Webversion
+bleiben unsere zwei Schriften. Ein Höhenkotentyp wählt außerdem das <strong>Symbol</strong> (Keines, Dreieck,
+Gefülltes Dreieck, Fadenkreuz) und den <strong>Führungslinienpfeil</strong> mit den Stärken von Linie und Pfeil.</p>
 <h2 id="text">Text</h2>
 <p><strong>Beschriftungen ▸ Text ▸ Text</strong> (<code>TX</code>): Klicken Sie dorthin, wo die Notiz stehen soll, und tippen Sie;
 die Eingabetaste beginnt eine neue Zeile. Ein Klick ergibt eine Notiz ohne Umbruch; durch Ziehen
 erhält sie eine Breite, und die Wörter werden darin umgebrochen. Ein Klick an anderer Stelle
-beendet die Notiz, und <strong>Esc</strong> beendet das Werkzeug. <span class="keys"><kbd class="key-tab">Tab</kbd></span> beim Tippen setzt den Text zum
-nächsten Tabulator. Die Textgröße gilt auf dem Papier: Die Notiz behält in jedem Ansichtsmaßstab
+beendet die Notiz, und <strong>Esc</strong> beendet das Werkzeug. <span class="keys"><kbd class="key-tab">Tab</kbd></span> beim Tippen rückt den
+Absatz ein. Die Textgröße gilt auf dem Papier: Die Notiz behält in jedem Ansichtsmaßstab
 ihre gedruckte Größe.</p>
 <p>Die Gruppe <strong>Format</strong> legt fest, vor dem Platzieren oder an einer gewählten Notiz:</p>
 <ul>
 <li>die Führungslinie: <strong>Keine Führungslinie</strong>, <strong>Ein Segment</strong> (Spitze anklicken, dann die Notiz),
   <strong>Zwei Segmente</strong> (Spitze, Knick, Notiz) oder <strong>Bogen</strong>;</li>
 <li>die Ausrichtung, links, zentriert oder rechts, sowie <strong>Fett</strong>, <strong>Kursiv</strong> und <strong>Unterstrichen</strong>
-  (Strg+B, Strg+I, Strg+U beim Tippen oder an den gewählten Notizen), die für die ganze Notiz gelten;</li>
+  (Strg+B, Strg+I, Strg+U), beim Tippen auf die markierten Zeichen, sonst auf die ganze gewählte Notiz;</li>
 <li>bei einer gewählten Notiz <strong>Gerade Führungslinie links hinzufügen</strong> und die drei anderen
   Schaltflächen für Führungslinien   <strong>Letzte Führungslinie entfernen</strong>;</li>
 <li><strong>Anschluss links</strong> und <strong>Anschluss rechts</strong> (<strong>Oben</strong>, <strong>Mittig</strong>, <strong>Unten</strong>): wo die
@@ -807,6 +1083,49 @@ auch unter <strong>Werkzeuge</strong> ihrer Registerkarte.</p>
 <img alt="Das Dialogfeld Suchen/Ersetzen nach Alle suchen: das gesuchte Wort, der Bereich Aktuelle Ansicht und der Treffer mit seiner Ansicht" src="../assets/screens/an-find-replace.webp"/>
 <figcaption>Suchen/Ersetzen</figcaption>
 </figure>
+<p>In einer Gruppe zeigt <strong>Alle suchen</strong> eine Zeile pro Gruppentyp, mit Schloss und Anzahl der
+Kopien; diese Notizen werden über <strong>Gruppe bearbeiten</strong> geändert, wo der Bereich <strong>Bearbeitete
+Gruppe</strong> heißt und <strong>Fertig stellen</strong> die Änderung in alle Kopien überträgt.</p>
+<p><strong>Beschriftungen ▸ Text ▸ Rechtschreibprüfung</strong> (<code>F7</code>) prüft die gewählten Textnotizen, sonst die der
+Ansicht oder des Plans (mit den darauf platzierten Ansichten); Beschriftungen, Bemaßungen, Parameter
+und Bauteillisten bleiben außen vor, in 3D ist der Befehl grau. Für jedes Wort, das nicht im
+Wörterbuch steht, zeigt das Fenster die Notiz mit hervorgehobenem Wort, <strong>Ändern in</strong> und bis zu
+sechs <strong>Vorschläge</strong>: <strong>Ignorieren</strong>, <strong>Alle ignorieren</strong> (bis das Projekt geschlossen wird), <strong>Zum
+Wörterbuch hinzufügen</strong> (das Wörterbuch <strong>Persönlich</strong>), <strong>Ändern</strong> und <strong>Alle ändern</strong> (auch in den
+noch zu prüfenden Notizen); ein wiederholtes Wort entfernt <strong>Löschen</strong>. Die ganze Prüfung ist ein
+einziger Rückgängig-Schritt. Notizen in Gruppen werden übersprungen, die Schlussmeldung nennt die
+Gruppen; in <strong>Gruppe bearbeiten</strong> werden nur deren Notizen geprüft. <strong>Optionen ▸ Rechtschreibung</strong>
+enthält die fünf Kästchen (Wörter in Großbuchstaben, mit Zahlen, mit gemischter Schreibung,
+Webadressen und Pfade, wiederholte Wörter), <strong>Standard wiederherstellen</strong>, das <strong>Hauptwörterbuch</strong>
+(Italienisch ist eingebaut, die anderen Sprachen kommen mit den Sprachpaketen) und das Wörterbuch
+<strong>Persönlich</strong>, eine Textdatei mit einem Wort pro Zeile, mit <strong>Bearbeiten…</strong>.</p>
+<p>Die <strong>Textschriftart</strong> des Texttyps ist <strong>BIMopen Sans</strong> oder die dicktengleiche <strong>BIMopen Mono</strong>;
+sein <strong>Breitenfaktor</strong> zeichnet die Buchstaben schmaler (unter 1) oder breiter, auf dem
+Bildschirm, im Druck und beim Export.</p>
+<h3 id="text-format-and-leaders">Textformat und Führungslinien</h3>
+<p>Beim Schreiben gelten <strong>Fett</strong>, <strong>Kursiv</strong> und <strong>Unterstrichen</strong> (oder Strg+B, Strg+I, Strg+U) für
+die markierten Zeichen; ohne Markierung für das, was Sie danach schreiben. Ist die Notiz ausgewählt,
+aber nicht in Bearbeitung, gelten sie für die ganze Notiz. Ist die Markierung nur teilweise
+formatiert, zeigt die Schaltfläche das mit einem gestrichelten Rand.</p>
+<figure>
+<img alt="Eine Textnotiz im Erdgeschossgrundriss mit zwei Führungslinien, eine mit Knick" src="../assets/screens/tx-leaders.webp"/>
+<figcaption>Eine Textnotiz mit zwei Führungslinien</figcaption>
+</figure>
+<p><strong>Absatzformat</strong> gilt für die Absätze, die die Markierung berührt (oder den Absatz des Cursors), und
+die Nummerierung beginnt nach einem Absatz ohne Liste neu. <span class="keys"><kbd class="key-tab">Tab</kbd></span> rückt den Text des Absatzes um
+einen Tabstopp ein (das Aufzählungszeichen bleibt), <span class="keys"><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-tab">Tab</kbd></span> nimmt den Einzug zurück. Eingefügter
+Text übernimmt das Format des Absatzes. Beim Schreiben wirken <strong>Einfügen</strong>, <strong>Ausschneiden</strong> und
+<strong>Kopieren</strong> der Gruppe <strong>Zwischenablage</strong> auf den Text, am Cursor.</p>
+<p>Mit Führungslinie rastet ihr Ende nahe einer anderen Notiz an deren sechs Anschlusspunkten ein
+(links und rechts, oben, Mitte und unten), mit Markierung und dem Hinweis <strong>Notizanschluss</strong>; <span class="keys"><kbd class="key-tab">Tab</kbd></span>
+wechselt zum nächsten Punkt. Ohne Führungslinie richtet sich die Notiz an den Ursprüngen der anderen
+Notizen (links, mittig oder rechts je nach Ausrichtung) und an den Texten der Beschriftungen aus. Mit
+dem Anschluss <strong>Oben</strong> oder <strong>Unten</strong> läuft die Führungslinie unter der ersten oder letzten Zeile
+weiter; <strong>Mitte</strong> oder mit <strong>Rahmen anzeigen</strong> endet sie am Rahmen.</p>
+<p>Ein Klick daneben lässt die gerade geschriebene Notiz mit ihren Steuerelementen ausgewählt, und das
+Werkzeug bleibt aktiv: das erste <strong>Esc</strong> hebt die Auswahl auf, das zweite beendet das Werkzeug.
+<strong>Hochgestellt</strong> und <strong>Tiefgestellt</strong> verkleinern die gewählten Zeichen und heben oder senken
+sie; <strong>Großbuchstaben</strong> zeigt sie in Großbuchstaben, ohne den geschriebenen Text zu ändern.</p>
 <h2 id="symbols">Symbole</h2>
 <p><strong>Beschriftungen ▸ Symbol ▸ Symbol</strong> (<code>SY</code>) platziert ein 2D-Beschriftungssymbol in einem Grundriss,
 einem Schnitt, einer freien 2D-Ansicht oder einer Legende: einen <strong>Nordpfeil</strong>, ein
@@ -851,6 +1170,115 @@ sie die Nummer, die Fläche und das Volumen zeigen. Eine Raum- oder Flächenbesc
 behält einen Winkel: Sie dreht sich mit <strong>Drehen</strong>, und die <strong>Leertaste</strong> richtet sie nacheinander an
 jeder Wand in ihrer Nähe aus (<strong>Drehung</strong> in ihren Eigenschaften). Das Löschen der Beschriftung eines
 Raums lässt den Raum bestehen, und die Meldung weist darauf hin.</p>
+<h3 id="loaded-tags">Geladene Beschriftungen und Nummerierung</h3>
+<p><strong>Beschriften ▸ Beschriftung ▸ Geladene Beschriftungen</strong> (im BIMopen-Stil der gleichnamige Befehl; in der Optionsleiste von <strong>Tür</strong> und <strong>Fenster</strong> die Schaltfläche <strong>Geladene Beschriftungen…</strong>) listet jede beschriftbare Kategorie mit ihrer Standardbeschriftung. Ein Filter kürzt die Liste; in der Beschriftungsspalte wählt man einen Typ der Kategorie oder, bei Modellkategorien, eine Multikategorie-Beschriftung; <strong>Typ bearbeiten…</strong> öffnet den Typ der gewählten Zeile. <strong>Laden…</strong> bleibt vorerst grau. Die Wahl wird im Projekt gespeichert und gilt für <strong>Beschriftung</strong>, <strong>Alle beschriften</strong> und <strong>Beim Platzieren beschriften</strong>, das für Türen und Fenster von Anfang an eingeschaltet ist.</p>
+<p>Jede Modellkategorie hat ihre eigene Beschriftung (Böden, Decken, Dächer, Stützen, Treppen, Rampen, Geländer, Paneele und Pfosten, Möbel, Sanitär, allgemeine Modelle), die die <strong>Typkennzeichnung</strong> zeigt. Die gerade platzierte Beschriftung bleibt ausgewählt, bis die nächste platziert oder ESC gedrückt wird, und das Werkzeug bleibt aktiv.</p>
+<p>Türen, Fenster, Räume und die übrigen Elemente werden ab der zuletzt eingegebenen Kennzeichnung nummeriert: ihre letzte Zahl steigt unter Beibehaltung der Nullen (P-09 → P-10), oder ihr letzter Buchstabe (1A → 1B, Z → AA); ein bereits verwendeter Wert wird übersprungen.</p>
+<p>Eine ausgewählte Beschriftung zeigt ihre Steuerelemente: das <strong>Kreuz</strong> über dem Text verschiebt beim Ziehen den Text, die Führungslinie folgt; der <strong>Knick</strong> in der Mitte der Führungslinie biegt sie (Doppelklick: wieder gerade); das <strong>verbundene Ende</strong> gleitet am Element entlang. Die Optionsleiste der ausgewählten Beschriftung hat Ausrichtung, <strong>Führungslinie</strong> und Verbundenes/Freies Ende; ein Klick auf den Text der bereits ausgewählten Beschriftung schreibt ihren Wert. Auch Detailbauteile und Revisionswolken haben ihre Beschriftung (die Wolke zeigt die Revisionsnummer).</p>
+<p><strong>Alle beschriften</strong> beschriftet nur, was die Ansicht zeigt (ausgeblendete Elemente, ausgeschaltete Kategorien, durch Filter ausgeblendete oder außerhalb des Zuschnitts liegende werden übersprungen und gezählt); mit einer Auswahl beginnt es mit <strong>Nur ausgewählte Objekte</strong>, jede Zeile zeigt die Anzahl; sind Beschriftungen in der Ansicht ausgeblendet, fragt es zuerst. In <strong>Objektstile</strong> und <strong>Sichtbarkeit/Grafiken</strong> hat unter <strong>Beschriftungen</strong> jede Art (Türen, Fenster, Wände, Räume, Möbel, Multikategorie, Material…) ihre Zeile mit Stärke, Farbe und Muster.</p>
+<h3 id="multi-category-tags">Mehrkategorie-Beschriftungen</h3>
+<p><strong>Beschriftungen ▸ Beschriftung ▸ Mehrkategorie-Beschriftung</strong> beschriftet jedes Modellelement:
+Wände, Türen, Fenster, Geschossdecken, Decken, Dächer, Stützen, Treppen, Geländer, Möbel,
+Sanitärobjekte, Fassadenpaneele und allgemeine Modelle (Räume und Flächen haben ihre eigenen
+Beschriftungen). Sie hat die Optionen von <strong>Beschriftung</strong> und, platziert, dieselben
+Eigenschaften; die Leertaste dreht sie. Was sie zeigt, steht im Typ (<strong>Typparameter</strong>):
+<strong>Beschriftung</strong>, <strong>Bearbeiten…</strong> öffnet <strong>Beschriftung bearbeiten</strong>, die Felder eines pro Zeile,
+jedes mit Präfix und Suffix, gewählt aus Kategorie, Typname, Kennzeichen, Typenkennzeichen,
+Kommentare, Beschreibung, Anzahl Basisbauteile und den Projekt- und gemeinsam genutzten
+Parametern. Ein leerer Wert oder ein Parameter, den das Element nicht hat, liest sich <strong>?</strong>.</p>
+<p>Mit einem <strong>Filterparameter</strong> (einem gemeinsam genutzten Parameter) im Typ werden nur die
+Elemente hervorgehoben und beschriftet, die diesen Parameter haben. Ein Doppelklick auf eine
+Zeile der gewählten Beschriftung schreibt ihren Wert: ein Parameter des Elements ändert sich
+sofort; ein Parameter seines Typs fragt zuerst, denn alle Elemente des Typs ändern sich. <strong>Alle
+beschriften</strong> führt auch die Mehrkategorie-Beschriftungen auf: angehakt, erhält jedes Element
+der Ansicht, das den Filterparameter und keine Beschriftung dieses Typs hat, eine. In einem
+Schnitt oder einer Ansicht kommt die Beschriftung an die geklickte Stelle, ihre Führungslinie
+zum Punkt des Elements. Sie folgt dem Element: Bewegt oder ändert sich das Element, wandern die Beschriftung und das Ende ihrer Führungslinie mit, wie im Grundriss; auch dort dreht die Leertaste sie und ein Doppelklick schreibt ihren Wert. Materialbeschriftungen folgen ihrem Element genauso, in Grundrissen und Schnitten.</p>
+<h3 id="material-tags">Materialbeschriftungen</h3>
+<p><strong>Beschriftungen ▸ Beschriftung ▸ Material</strong> beschriftet das Material unter dem Cursor, in einem
+Grundriss, Schnitt oder einer Ansicht mit Detailgrad <strong>Mittel</strong> oder <strong>Fein</strong>: eine Schicht einer
+Wand, Geschossdecke, eines Dachs oder einer Decke, geschnitten oder gesehen, oder das Material
+einer Tür, eines Fensters, einer Komponente oder Stütze. Bei Detailgrad <strong>Grob</strong> werden die
+Schichten nicht gezeichnet: Sie werden nicht hervorgehoben, und die Statusleiste sagt es. Die
+Beschriftung zeigt die <strong>Beschreibung</strong> des Materials; ist sie leer, liest sie sich <strong>?</strong>:
+Doppelklick, tippen, und die Beschreibung des Materials ist ausgefüllt (jede seiner Beschriftungen
+zeigt sie). Den Griff am Ende der Führungslinie auf eine andere Schicht ziehen, und die
+Beschriftung liest dieses Material; die Leertaste dreht sie. Verliert das Element später dieses
+Material (sein Typ ändert sich), liest die Beschriftung <strong>?</strong> und die Änderung warnt. Die
+<strong>Beschriftung</strong> des Typs wählt, was sie zeigt: Beschreibung, Name, Kommentare, Kennzeichen,
+Materialklasse, Schlüsselwörter, Hersteller, Modell, Kosten, URL, Schlüsselnotiz oder Anzahl
+Basisbauteile.</p>
+<h3 id="tags-with-several-leaders">Beschriftungen mit mehreren Führungslinien</h3>
+<p><strong>Basisbauteil hinzufügen/entfernen</strong> in der Optionsleiste von <strong>Beschriftung</strong>,
+<strong>Mehrkategorie-Beschriftung</strong> oder <strong>Material</strong> einschalten, die Elemente nacheinander anklicken
+(ein zweiter Klick nimmt eines wieder heraus), dann eine leere Stelle: Dort steht eine einzige
+Beschriftung mit einer Führungslinie zu jedem Element (<strong>Eingabe</strong> setzt sie neben das erste).
+Eine Kategoriebeschriftung nimmt Elemente ihrer Kategorie, eine Materialbeschriftung Stellen
+desselben Materials. Bei einer gewählten Beschriftung fügt <strong>Basisbauteil ▸ Basisbauteil
+hinzufügen/entfernen</strong> Führungslinien hinzu oder entfernt sie bis <strong>Ende</strong>; <strong>Führungslinien ▸
+Führungslinien zusammenführen</strong> vereint sie in einem Knick vor der Beschriftung, und
+<strong>Anzuzeigende Führungslinien wählen</strong> blendet die Führungslinie jedes angeklickten
+Basisbauteils aus oder ein. <strong>Anzahl Basisbauteile</strong> in den Eigenschaften sagt, auf wie viele
+Elemente die Beschriftung zeigt. Das Löschen eines Elements entfernt seine Führungslinie; die
+Beschriftung bleibt, solange sie auf etwas zeigt.</p>
+<h3 id="multiple-values">Mehrere Werte</h3>
+<p>Unterscheiden sich die Basisbauteile einer Beschriftung (zwei Türen mit verschiedenen
+Kennzeichen, ein Feld einer Mehrkategorie-Beschriftung), liest sich diese Zeile
+<strong>‹unterschiedlich›</strong>; eine gemeinsame Zeile zeigt ihren Wert, und <strong>Anzahl Basisbauteile</strong>
+variiert nie. Ein Doppelklick: Das Feld öffnet sich leer oder mit dem gemeinsamen Wert, und das
+Getippte geht in einem Schritt an alle Basisbauteile (ein Parameter ihrer Typen fragt zuerst).
+Eine Raum- oder Flächenbeschriftung mit mehreren Räumen öffnet <strong>Beschriftungswerte bearbeiten</strong>
+mit dem Gemeinsamen; geschrieben wird nur, was getippt wird. <strong>Projekt ▸ Weitere Einstellungen ▸
+Anzeige mehrerer Werte</strong> wählt, was solche Zeilen zeigen: <strong>‹unterschiedlich›</strong> oder <strong>Eigenen
+Text anzeigen</strong> mit einem eigenen Text. Die Palette <strong>Eigenschaften</strong> mehrerer gewählter
+Elemente zeigt denselben Text, wo sich ihre Werte unterscheiden.</p>
+<h3 id="material-keynotes">Schlüsselnotizen</h3>
+<p><strong>Beschriftungen ▸ Beschriftung ▸ Codierte Notiz</strong> hat vier Einträge (der BIMopen-Stil zeigt sie
+als Kacheln):</p>
+<ul>
+<li><strong>Elementnotiz</strong>: das Element anklicken (eine Wand, eine Tür, eine Komponente, eine
+  Detailkomponente… deren Typ eine <strong>Schlüsselnotiz</strong> hat), dann den Knick der Führungslinie, dann
+  die Stelle der Notiz. Sie liest die <strong>Schlüsselnotiz</strong> des Typs; ein Typ ohne sie öffnet
+  <strong>Schlüsselnotizen</strong>.</li>
+<li><strong>Materialnotiz</strong> funktioniert wie <strong>Material</strong>: ein Material anklicken (eine Schicht bei
+  Detailgrad <strong>Mittel</strong> oder <strong>Fein</strong>), und die Notiz liest seine <strong>Schlüsselnotiz</strong>; ihre
+  Führungslinie endet immer auf dem Material.</li>
+<li><strong>Freie Notiz</strong>: dieselben drei Klicks; <strong>Schlüsselnotizen</strong> öffnet sich immer, und der Wert
+  bleibt in der Notiz, das Element ändert sich nicht.</li>
+<li><strong>Optionen für codierte Notizen</strong>: siehe unten.</li>
+</ul>
+<p>Jede Notiz hat vier Typen: <strong>Nummer</strong>, <strong>Nummer im großen Rahmen</strong>, <strong>Nummer im kleinen Rahmen</strong>
+und <strong>Text</strong> (der Text der Notiz aus der Tabelle). Die Optionsleiste hat die Ausrichtung, die
+<strong>Führungslinie</strong> und das <strong>angehängte</strong> oder <strong>freie Ende</strong> (das der Materialnotiz ist immer
+frei).</p>
+<p><strong>Schlüsselnotizen</strong> zeigt die Tabelle als Baum: <strong>Schlüsselwert</strong> und <strong>Text der
+Schlüsselnotiz</strong>, jede Zeile unter ihrem übergeordneten Wert; + und − öffnen und schließen die
+Zweige, <strong>Suchen</strong> findet Wörter in Werten und Texten. <strong>OK</strong> vergibt die gewählte Zeile,
+<strong>Abbrechen</strong> lässt den Rahmen leer. <strong>Tabelle bearbeiten…</strong> bearbeitet die Tabelle des Projekts
+(Wert, Text, übergeordneter Wert). Bei einer ausgewählten Notiz wählt ein Klick auf ihren Wert,
+oder auf ihren leeren Rahmen, einen anderen: die Elementnotiz schreibt nach einer Rückfrage die
+Schlüsselnotiz des Typs (alle Elemente des Typs ändern sich), die freie nur sich selbst, die
+Materialnotiz das Material. <strong>…</strong> neben <strong>Schlüsselnotiz</strong> in den <strong>Typparametern</strong> und in der
+<strong>Identität</strong> eines Materials öffnet denselben Baum.</p>
+<p><strong>Optionen für codierte Notizen</strong> wählt die Herkunft der Tabelle: <strong>Tabelle im Projekt</strong> (hier
+bearbeitet) oder <strong>Verknüpfte Datei</strong>, eine Textdatei mit einer Zeile pro Notiz — Wert, TAB, Text,
+TAB, übergeordneter Wert (eine als Text mit Tabulatoren gespeicherte Tabellenkalkulation geht
+auch). <strong>Vollständiger Pfad</strong> zeigt, wo die Datei liegt, <strong>Gespeicherter Pfad</strong>, wie er
+geschrieben ist, mit <strong>Durchsuchen…</strong>; der <strong>Pfadtyp</strong> ist <strong>Absolut</strong>, <strong>Relativ</strong> (zum
+Projektordner) oder <strong>In der Bibliothek</strong>. <strong>Anzeigen…</strong> zeigt die Tabelle schreibgeschützt.
+<strong>Beispieltabelle</strong> verknüpft die mitgelieferte Tabelle: kurz, auf Italienisch, mit Rohbau,
+Dämmung, Fenstern und Türen und einem Abschnitt mit Benutzernotizen. <strong>Neu laden</strong> liest sie sofort neu, und der Dialog warnt, wenn sich die Datei seit dem Lesen geändert hat. Die Datei wird bei jedem
+Öffnen des Projekts neu gelesen; das Projekt behält eine Kopie, die verwendet wird, wenn die Datei
+fehlt (es sagt das), und Werte, die die Datei nicht mehr hat, werden aufgelistet.
+<strong>Nummerierungsmethode</strong>: <strong>Nach Schlüsselnotiz</strong> zeigt den Wert; <strong>Nach Plan</strong> nummeriert die
+Notizen auf jedem Plan 1, 2, 3… in der Reihenfolge ihrer Erstellung, und eine Ansicht, die auf
+keinem Plan liegt, zeigt einen leeren Rahmen.</p>
+<p><strong>Ansicht ▸ Legenden ▸ Legende der codierten Notizen</strong> erstellt eine Bauteilliste,
+<strong>Schlüsselnotiz-Legende</strong>, mit <strong>Schlüsselnotiz-Wert</strong> und <strong>Text der Schlüsselnotiz</strong>, eine
+Zeile pro Wert, mit den üblichen Registerkarten der Bauteillisten (ein Filter wie «beginnt mit»
+auf dem Wert, Sortierung, Formatierung, Darstellung). <strong>Nach Plan filtern</strong> (in <strong>Filter</strong>) listet
+auf jedem Plan nur die Notizen seiner Ansichten; nach Plan nummeriert zeigt sie dieselben Nummern.
+<strong>Suchen/Ersetzen</strong> ändert Schlüsselnotizen nie: sie ändern sich über die Tabelle.</p>
 <h2 id="rooms">Räume</h2>
 <p><strong>Start ▸ Räume und Flächen ▸ Raum</strong> (<code>RM</code>), dann klicken Sie in einen von Wänden oder Raumtrennern
 umschlossenen Bereich: Der Raum füllt ihn aus, auch um freistehende Wände herum. In der
@@ -888,7 +1316,7 @@ platziert</strong>, mit seinen Daten; seine Beschriftungen verschwinden mit ihm.
 Raumbeschriftung lässt den Raum bestehen. Wird eine Raumbeschriftung aus ihrem Raum gezogen, fragt
 das Programm, ob sie <strong>In Raum verschieben</strong> soll.</p>
 <p>Räume zeigen sich durch ihre Beschriftungen. In <strong>Sichtbarkeit und Grafik</strong> hat <strong>Räume</strong> die Einträge
-<strong>Innenfüllung</strong> und <strong>Bezug</strong> (die Kreuzlinien). <strong>Einstellungen ▸ Flächen- und
+<strong>Innenfüllung</strong> und <strong>Bezug</strong> (die Kreuzlinien). <strong>Flächen- und
 Volumenberechnungen</strong> öffnet sich auf <strong>Berechnung</strong>: die Raumbegrenzung an der Wandoberfläche, in
 der Mitte, an der Tragschicht oder in der Tragschichtmitte, und <strong>Flächen und Volumen</strong>, um auch
 Volumen zu berechnen (standardmäßig nur Flächen; das Volumen wird immer bis zur Wandoberfläche
@@ -914,7 +1342,7 @@ eine mit einem Klick wieder einzusetzen.</p>
 <h2 id="colour-schemes">Farbschemata</h2>
 <p>Ein Farbschema füllt die Räume oder Flächen eines Grundrisses (und die Räume, die ein Schnitt schneidet) nach einem Wert (Name, Nummer,
 Abteilung, Flächenart) oder nach Flächenbereichen. Legen Sie es in der Eigenschaft <strong>Farbschema</strong>
-des Grundrisses fest; <strong>(keine)</strong> schaltet es aus. <strong>Einstellungen ▸ Farbschemata</strong> (<strong>Farbschema
+des Grundrisses fest; <strong>(keine)</strong> schaltet es aus. <strong>Farbschemata</strong> (<strong>Farbschema
 bearbeiten</strong>) erstellt und dupliziert Schemata und bearbeitet den Titel, den Parameter, die Werte
 mit ihrer Farbe und Sichtbarkeit, ihre Reihenfolge und die Bereiche. <strong>Anwenden</strong> behält die Änderungen und legt das Schema der Ansicht fest, bei der der Dialog geöffnet wurde. <strong>Position des Farbschemas</strong>,
 eine Ansichtseigenschaft, zeichnet die Füllungen im <strong>Hintergrund</strong> (unter dem Modell) oder im
@@ -943,11 +1371,26 @@ bemaßt werden (die Kanten von Türen, Fenstern und Bauteilen; Wände, Geschossd
 nicht) und werden von Tabellen nicht gezählt. Text, Detaillinien und gefüllte Bereiche funktionieren wie in
 einer freien 2D-Ansicht. Eine Legende kann auf mehreren Plänen platziert werden.</p>
 <figure>
+<img alt="Eine Legendenansicht mit den Mustern einer Wand, einer Tür, eines Fensters und eines Materials mit seinem Namen" src="../assets/screens/lg-legend.webp"/>
+<figcaption>Eine Legende: Wand, Tür, Fenster und ein Material</figcaption>
+</figure>
+<figure>
 <img alt="Eine Legendenansicht mit Legendenbauteilen: eine Tür und ein Fenster von vorn, eine Wand im Schnitt und dieselbe Tür und dasselbe Fenster im Grundriss" src="../assets/screens/an-legend-view.webp"/>
 <figcaption>Eine Legendenansicht</figcaption>
 </figure>
-<p>Ein Typ, der aus <strong>Familien</strong> im Projektindex in eine Legende gezogen wird, wird dort, wo er
-abgelegt wird, zu ihrem Legendenbauteil; ein Typ aus <strong>Familien ▸ Symbole</strong> platziert dieses Beschriftungssymbol. <strong>Gleiches erstellen</strong> im Kontextmenü eines gewählten
+<p><strong>Bauteil</strong> listet auch Unterdecken, Treppen, Geländer und Stützen sowie zwei Arten verknüpfter
+Muster: <strong>Materialien: …</strong> zeichnet ein Muster des <strong>Schnitt</strong>- oder <strong>Oberflächen</strong>musters des
+Materials, ein <strong>Muster</strong> breit × hoch, und <strong>Linienstile: …</strong> zeichnet eine Linie so lang wie
+<strong>Länge</strong>; <strong>Mit Name</strong> schreibt den Namen daneben. Ein Muster folgt dem, was es zeigt: Ändern
+sich Muster oder Name des Materials oder Stärke, Farbe oder Muster des Linienstils, folgt die
+Legende. In <strong>Sichtbarkeit/Grafiken</strong> der Legende haben Türen (Rahmen, Türblatt, Öffnungslinien,
+Glas, Schwelle), Fenster (Rahmen, Glas, Fensterbank, Öffnungslinien), Treppen (Auftritte,
+Steigungen, Lauflinie) und Geländer (Handlauf, Stäbe) ihre Unterkategorien, einzeln schaltbar:
+Eine Legende nur mit Rahmen ist eine Türlegende mit den anderen Zeilen aus. Die
+Farbfüllungslegende (<strong>Räume und Flächen ▸ Legende</strong>) gehört auch in einen Schnitt oder eine
+Ansicht mit einem Farbschema.</p>
+<p>Ein Typ, der aus <strong>Bauteile</strong> im Projektindex in eine Legende gezogen wird, wird dort, wo er
+abgelegt wird, zu ihrem Legendenbauteil; ein Typ aus <strong>Bauteile ▸ Symbole</strong> platziert dieses Beschriftungssymbol. <strong>Gleiches erstellen</strong> im Kontextmenü eines gewählten
 Elements startet das Werkzeug, das es mit seinem Typ platziert: bei einem Legendenbauteil auch mit
 seiner Ansicht und der Länge Basisbauteil.</p>
 <h2 id="detail-lines-and-regions">Detaillinien und Bereiche</h2>
@@ -1005,9 +1448,31 @@ Endpunkten, Mitten, Mittelpunkten und Schnittpunkten der Detaillinien der Ansich
 einer allein gewählten Linie wird allein gezogen und lässt die Nachbarlinie, wo sie ist; ist eine
 Kette gewählt (<span class="keys"><kbd class="key-tab">Tab</kbd></span>), werden die Enden, an denen ihre Linien zusammentreffen, gemeinsam gezogen,
 in einem einzigen Rückgängig-Schritt.</p>
+<p>Ein Spline kann sich nicht selbst schließen: Ein Klick auf seinen ersten Punkt wird abgelehnt,
+und ein zweiter Spline schließt die Begrenzung. Ein gewählter Spline hat an jedem Kontrollpunkt
+einen Griff: Ziehen Sie einen in der Mitte, um die Kurve zu formen; ziehen Sie ein Ende, um den
+ganzen Spline zu verschieben, oder drücken Sie zuerst <span class="keys"><kbd class="key-tab">Tab</kbd></span> auf dem Ende, um nur dieses zu
+verschieben. <strong>Spline bearbeiten ▸ Kontrollpunkt hinzufügen</strong> setzt einen Kontrollpunkt in die
+Mitte der angeklickten Sehne (darüber zeigt die Statusleiste <strong>Referenz</strong>), <strong>Kontrollpunkt
+löschen</strong> entfernt den angeklickten; <span class="keys"><kbd class="key-escape">Esc</kbd></span> beendet beide. Eine gewählte Ellipse zeigt ihre beiden
+Radien als temporäre Bemaßungen (tippen Sie einen Wert, um einen zu ändern) und an jedem Quadranten
+einen Griff: Wer einen zieht, ändert diese Achse und dreht die Ellipse zum Cursor. Mit <strong>Bearbeitung
+behält Proportionen bei</strong> in der Optionsleiste ändern sich beide Radien zusammen. Eine Teilellipse
+hat außerdem an jedem Ende einen Griff: <strong>Ende ziehen</strong> ändert, wie weit sie herumreicht, <span class="keys"><kbd class="key-tab">Tab</kbd></span>
+wechselt zu <strong>Achsenende ziehen</strong>, das dieses Ende der Achse verschiebt, während das andere bleibt.
+<strong>Linien wählen</strong> auf einem Bogen, Kreis, einer Ellipse oder einem Spline kopiert ihn; mit
+<strong>Versatz</strong> ergeben eine Ellipse oder ein Spline Splines.</p>
+<p>Der dritte Punkt eines <strong>Bogens Start-Ende-Radius</strong> rastet ein, wenn der Bogen tangential zur
+Linie oder zum Bogen wird, die an seinem Anfang oder Ende enden: das Tangentenzeichen erscheint,
+und die Statusleiste zeigt <strong>Tangente</strong>. Eine vom Ende eines Bogens gezeichnete Linie rastet ebenso
+tangential daran ein. Ein gewählter Bogen hat an jedem Ende einen Griff, der seinen Öffnungswinkel
+ändert, und einen in der Mitte: mit <strong>Konzentrisch bleiben</strong> in der Optionsleiste ändert sich der
+Radius um denselben Mittelpunkt, sonst bleiben die Enden, wo sie sind. Dasselbe gilt in Grundrissen,
+Schnitten, Ansichten und in 3D.</p>
 <p><strong>Gefüllter Bereich ▸ Gefüllter Bereich</strong> öffnet den Skizziermodus: Die Begrenzung wird mit jeder Form der
 Gruppe <strong>Zeichnen</strong> und mit <strong>Linien wählen</strong> skizziert, und Schleifen innerhalb einer anderen sind
-Löcher. Kurven bleiben als kurze gerade Segmente erhalten. <span class="keys"><kbd class="key-escape">Esc</kbd></span> beendet eine Kette und behält
+Löcher. Ein Spline oder eine Ellipse bleibt eine Kurve der Skizze, mit ihren Griffen; die
+Kontur des Bereichs besteht aus ihren kurzen Stücken. <span class="keys"><kbd class="key-escape">Esc</kbd></span> beendet eine Kette und behält
 die Skizze; <strong>Ändern</strong> und die Werkzeuge von Ändern wirken auf ihre Linien.
 <strong>Bearbeitungsmodus beenden</strong> erzeugt den Bereich im aktuellen Bereichstyp oder nennt den Grund,
 warum es nicht geht (eine offene oder sich kreuzende Begrenzung). <strong>Begrenzung bearbeiten</strong> eines
@@ -1020,6 +1485,17 @@ an jedem Eckpunkt einen Griff: Ziehen Sie einen, um seine Form zu ändern.</p>
 <img alt="2D-Details im Erdgeschossgrundriss: ein kreuzschraffierter und ein voll gefüllter Bereich, eine breite Detaillinie, ein gestrichelter Kreis und ein Maskierungsbereich, der einen Teil eines Raums verdeckt" src="../assets/screens/an-detail.webp"/>
 <figcaption>Gefüllte Bereiche, Detaillinien und ein Maskierungsbereich</figcaption>
 </figure>
+<h3 id="tangency-padlock">Das Tangentenschloss</h3>
+<p>Wählen Sie eine Linie (Skizzen-, Detail- oder 3D-Linie), die eine andere Ende an Ende mit gleicher
+Richtung trifft: neben der Verbindung erscheint ein offenes Schloss, außerhalb der Biegung (keines
+zwischen zwei Geraden). Beim Überfahren werden beide Linien hervorgehoben; ein Klick sperrt die
+Tangente, ein weiterer entsperrt sie. Gesperrt bleiben die Linien tangential, wenn eine geändert
+wird: eine Gerade, die sich dreht, lässt den Bogen durch sein fernes Ende neu anpassen; ein Bogen
+zwischen zwei Geraden behält seinen Radius und gleitet auf ihnen; eine Ellipse dreht sich um ihr
+fernes Ende; der zweite Kontrollpunkt einer Spline folgt der Richtung. Eine Änderung, die sie nicht
+halten kann, fragt <strong>Abhängigkeit nicht eingehalten</strong>: <strong>Abhängigkeit entfernen</strong> entsperrt und führt sie aus,
+<strong>Abbrechen</strong> bricht ab. Rechtsklick auf das Schloss bietet <strong>Sperre umschalten</strong> und <strong>Zugehörige
+anzeigen</strong>. Im BIMopen-Stil hat die Befehlssuche auch <strong>Tangenten sperren</strong> und <strong>Tangenten entsperren</strong>.</p>
 <h2 id="detail-components-repeating-details-and-insulation">Detailbauteile, wiederholte Details und Dämmung</h2>
 <ul>
 <li><strong>Bauteil ▸ Detailbauteil</strong>: ein 2D-Symbol (Ziegel, Block, Holz, Stahlprofil, Dämmplatte,
@@ -1040,6 +1516,8 @@ an jedem Eckpunkt einen Griff: Ziehen Sie einen, um seine Form zu ändern.</p>
 <img alt="Die freie 2D-Ansicht des Beispiels mit dem Fuß der Außenwand: wiederholte Ziegelblöcke, Dämmung, der gefüllte Bereich der Bodenplatte, Bruchlinien und Textnotizen, eine Bruchlinie ausgewählt" src="../assets/screens/an-drafting.webp"/>
 <figcaption>Ein Wanddetail in einer freien 2D-Ansicht</figcaption>
 </figure>
+<p>In <strong>Füllmuster</strong> zeichnet die <strong>Linienstärke</strong> eines Musters seine Linien mit einer der
+Linienstärken des Projekts; auf <strong>(dünn)</strong> bleiben es Haarlinien.</p>
 <h2 id="draw-order">Zeichenreihenfolge</h2>
 <p>Wählen Sie nur Detailelemente: <strong>Anordnen</strong> bietet <strong>In den Vordergrund</strong>, <strong>Eine Ebene nach
 vorne</strong>, <strong>In den Hintergrund</strong> und <strong>Eine Ebene nach hinten</strong>. Detailelemente werden immer über
@@ -1051,6 +1529,9 @@ benutzerdefinierten). Die Ansicht öffnet sich und wird unter <strong>Freie 2D-A
 was darin gezeichnet wird, ist 2D, ohne Modell dahinter. Sie kann auf einem Plan platziert werden.
 <strong>Ansicht duplizieren ▸ Mit Detaillierung duplizieren</strong> kopiert eine Ansicht mit ihren
 Detailelementen, Texten, Bemaßungen und Legendenbauteilen.</p>
+<p><strong>In neuer Datei speichern…</strong> im Menü einer freien 2D-Ansicht im Index schreibt ein Projekt mit der Ansicht, ihren 2D-Elementen und den verwendeten Typen. <strong>Einfügen ▸ Ansichten aus Datei einfügen…</strong> listet die freien 2D-Ansichten und Bauteillisten der Datei zum Ankreuzen; <strong>2D-Elemente aus Datei einfügen…</strong> kopiert die 2D-Elemente einer ihrer Ansichten in die aktive Ansicht (frei 2D, Grundriss oder Schnitt): sie folgen dem Cursor, ein Klick setzt sie ab, ausgewählt. Typen mit gleichem Namen bleiben die des Projekts und werden aufgelistet.</p>
+<p><strong>Typ</strong> im Dialog und in der Typenauswahl wählt einen der zwei mitgelieferten Typen, <strong>Detail</strong> und <strong>Schema</strong>; weitere entstehen mit <strong>Duplizieren…</strong> in <strong>Typparameter</strong>, wo <strong>Schnittbeschriftung</strong>, <strong>Detailbeschriftung</strong>, <strong>Verweistext</strong> (neben dem Kopf eines Details geschrieben, das auf die Ansicht verweist, z. B. «Sim.») und <strong>Vorlage für neue Ansichten</strong> eingestellt werden. <strong>Grafikstil</strong> ist <strong>Verdeckte Linien</strong> (schraffierte Bereiche verdecken, was darunter liegt) oder <strong>Drahtmodell</strong> (alles bleibt sichtbar). Eine hier gezeichnete <strong>Referenzebene</strong> gehört nur zu dieser Ansicht und ist keine Arbeitsebene.</p>
+<p>In einem Detail mit <strong>Auf andere Ansicht verweisen</strong> erstellt der erste Eintrag <strong><neue 2d-ansicht="" freie=""></neue></strong> beim Platzieren eine leere freie 2D-Ansicht im Maßstab des Details, «Detail von <ansicht>»; Ansichten, die schon auf einem Plan liegen, zeigen «(Detail / Plan)» nach dem Namen.</ansicht></p>
 <p><strong>Modell anzeigen</strong> in den Eigenschaften eines Grundrisses, eines Schnitts oder einer Detailansicht
 zeichnet das Modell <strong>Normal</strong>, <strong>Halbton</strong> (grau unter den Details) oder gar nicht (<strong>Nicht
 anzeigen</strong>), sodass die Details und Beschriftungen bleiben.</p>
@@ -1063,7 +1544,7 @@ dieser Art.</p>
 blendet sein Symbol in den Ansichten aus, deren Maßstab gröber ist, zum Beispiel ein Detail 1 : 50
 im Grundriss 1 : 100.</p>
 <h2 id="at-the-command-line">In der Befehlszeile</h2>
-<p>Jedes Werkzeug hat seinen Befehl: <code>dim</code>, <code>lineardim</code>, <code>angulardim</code>, <code>radialdim</code>, <code>arcdim</code>,
+<p>Jedes Werkzeug hat seinen Befehl: <code>dim</code>, <code>lineardim</code>, <code>angulardim</code>, <code>radialdim</code>, <code>diamdim</code>, <code>arcdim</code>,
 <code>spotelevation</code>, <code>text</code>, <code>findreplace</code>, <code>tag</code>, <code>room</code>, <code>roomsep</code>, <code>areaplan</code>, <code>areaboundary</code>,
 <code>area</code>, <code>colorscheme</code>, <code>legend</code>, <code>legendview</code>, <code>legendcomponent</code>, <code>detailline</code>, <code>region</code>, <code>mask</code>,
 <code>draworder</code>, <code>lock</code>, <code>eq</code>. <code>help</code> gefolgt von einem Befehl zeigt seine Verwendung; <a href="../keyboard-shortcuts/">Tastenkürzel</a>

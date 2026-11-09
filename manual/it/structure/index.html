@@ -1,0 +1,961 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="it">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Manuale utente di BIMopen, modellazione BIM open source" name="description"/>
+<meta content="BIMopen" name="author"/>
+<link href="https://bimopen.it/manual/it/structure/" rel="canonical"/>
+<link href="../phases/" rel="prev"/>
+<link href="../site/" rel="next"/>
+<link href="../assets/images/bimopen-cube.svg" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.9" name="generator"/>
+<title>Strutture e fondazioni - Manuale utente di BIMopen</title>
+<link href="../assets/stylesheets/main.4af4bdda.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link href="../assets/css/theme.css" rel="stylesheet"/>
+<link href="../assets/css/theme_dark_mode.css" rel="stylesheet"/>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="https://bimopen.it/manual/en/structure/" hreflang="en" rel="alternate"/>
+<link href="https://bimopen.it/manual/it/structure/" hreflang="it" rel="alternate"/>
+<link href="https://bimopen.it/manual/de/structure/" hreflang="de" rel="alternate"/>
+<link href="https://bimopen.it/manual/fr/structure/" hreflang="fr" rel="alternate"/>
+<link href="https://bimopen.it/manual/es/structure/" hreflang="es" rel="alternate"/>
+<link href="https://bimopen.it/manual/ar/structure/" hreflang="ar" rel="alternate"/>
+<link href="https://bimopen.it/manual/en/structure/" hreflang="x-default" rel="alternate"/>
+</head>
+<body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="slate" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#structure">
+          Vai al contenuto
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Intestazione" class="md-header__inner md-grid">
+<a aria-label="Manuale utente di BIMopen" class="md-header__button md-logo" data-md-component="logo" href="https://bimopen.it/" title="Manuale utente di BIMopen">
+<img alt="logo" src="../assets/images/bimopen-cube.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Manuale utente di BIMopen
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Strutture e fondazioni
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Passa al tema chiaro" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="slate" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Passa al tema chiaro">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Passa al tema scuro" class="md-option" data-md-color-accent="custom" data-md-color-media="" data-md-color-primary="custom" data-md-color-scheme="bimopen" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Passa al tema scuro">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<div class="md-header__option">
+<div class="md-select">
+<button aria-label="Seleziona la lingua" class="md-header__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"></path></svg>
+</button>
+<div class="md-select__inner">
+<ul class="md-select__list">
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/en/" hreflang="en">
+              English
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/it/" hreflang="it">
+              Italiano
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/de/" hreflang="de">
+              Deutsch
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/fr/" hreflang="fr">
+              Français
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/es/" hreflang="es">
+              Español
+            </a>
+</li>
+<li class="md-select__item">
+<a class="md-select__link" href="https://bimopen.it/manual/ar/" hreflang="ar">
+              العربية
+            </a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Cerca" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Cerca" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Cerca" class="md-search__options">
+<button aria-label="Cancella" class="md-search__icon md-icon" tabindex="-1" title="Cancella" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Inizializza la ricerca
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigazione" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Manuale utente di BIMopen" class="md-nav__button md-logo" data-md-component="logo" href="https://bimopen.it/" title="Manuale utente di BIMopen">
+<img alt="logo" src="../assets/images/bimopen-cube.svg"/>
+</a>
+    Manuale utente di BIMopen
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
+<span class="md-ellipsis">
+    Introduzione
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../getting-started/">
+<span class="md-ellipsis">
+    Primi passi
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../interface/">
+<span class="md-ellipsis">
+    L'interfaccia
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../interface-styles/">
+<span class="md-ellipsis">
+    Stili dell'interfaccia
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../projects-and-files/">
+<span class="md-ellipsis">
+    Progetti e file
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../import-and-conversion/">
+<span class="md-ellipsis">
+    Importazione e conversione
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cad-files/">
+<span class="md-ellipsis">
+    DWG e DXF
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../selection-and-modify/">
+<span class="md-ellipsis">
+    Selezione e modifica
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../walls-doors-windows/">
+<span class="md-ellipsis">
+    Muri, porte e finestre
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../floors-roofs-stairs/">
+<span class="md-ellipsis">
+    Pavimenti, tetti, scale e componenti
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ceilings-and-columns/">
+<span class="md-ellipsis">
+    Controsoffitti e colonne
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../openings/">
+<span class="md-ellipsis">
+    Aperture
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../phases/">
+<span class="md-ellipsis">
+    Fasi e demolizioni
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Strutture e fondazioni
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Strutture e fondazioni
+    
+  </span>
+</a>
+<nav aria-label="Indice" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#framing-types">
+<span class="md-ellipsis">
+      Tipi di telaio strutturale
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#beam">
+<span class="md-ellipsis">
+      Trave
+    </span>
+</a>
+<nav aria-label="Trave" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#beam-properties">
+<span class="md-ellipsis">
+      Proprietà della trave
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#beam-display">
+<span class="md-ellipsis">
+      Come si vede
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#joins">
+<span class="md-ellipsis">
+      Giunti
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#brace">
+<span class="md-ellipsis">
+      Controvento
+    </span>
+</a>
+<nav aria-label="Controvento" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#structural-settings">
+<span class="md-ellipsis">
+      Simboli in pianta e Impostazioni strutturali
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#beam-system">
+<span class="md-ellipsis">
+      Orditura di travi
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#truss">
+<span class="md-ellipsis">
+      Travatura reticolare
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#structural-walls-floors">
+<span class="md-ellipsis">
+      Muro strutturale e solaio strutturale
+    </span>
+</a>
+<nav aria-label="Muro strutturale e solaio strutturale" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#shape-editing">
+<span class="md-ellipsis">
+      Modifica della forma
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#foundations">
+<span class="md-ellipsis">
+      Fondazioni
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rebar-covers">
+<span class="md-ellipsis">
+      Copriferro armatura
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#views-schedules-ifc">
+<span class="md-ellipsis">
+      Viste, etichette, abachi e IFC
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#commands">
+<span class="md-ellipsis">
+      Dalla riga di comando
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../site/">
+<span class="md-ellipsis">
+    Planimetria e terreno
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../design-options/">
+<span class="md-ellipsis">
+    Alternative di progetto
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../views-and-graphics/">
+<span class="md-ellipsis">
+    Viste e grafica
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../annotation/">
+<span class="md-ellipsis">
+    Annotazioni e dettagli 2D
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../documentation/">
+<span class="md-ellipsis">
+    Tavole, abachi e stampa
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../command-line-and-mcp/">
+<span class="md-ellipsis">
+    Riga di comando e MCP
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../keyboard-shortcuts/">
+<span class="md-ellipsis">
+    Scorciatoie da tastiera
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../troubleshooting/">
+<span class="md-ellipsis">
+    Risoluzione dei problemi
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://bimopen.it/manual/it/pdf/bimopen-manual-it.pdf">
+<span class="md-ellipsis">
+    PDF
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Indice" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#framing-types">
+<span class="md-ellipsis">
+      Tipi di telaio strutturale
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#beam">
+<span class="md-ellipsis">
+      Trave
+    </span>
+</a>
+<nav aria-label="Trave" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#beam-properties">
+<span class="md-ellipsis">
+      Proprietà della trave
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#beam-display">
+<span class="md-ellipsis">
+      Come si vede
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#joins">
+<span class="md-ellipsis">
+      Giunti
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#brace">
+<span class="md-ellipsis">
+      Controvento
+    </span>
+</a>
+<nav aria-label="Controvento" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#structural-settings">
+<span class="md-ellipsis">
+      Simboli in pianta e Impostazioni strutturali
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#beam-system">
+<span class="md-ellipsis">
+      Orditura di travi
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#truss">
+<span class="md-ellipsis">
+      Travatura reticolare
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#structural-walls-floors">
+<span class="md-ellipsis">
+      Muro strutturale e solaio strutturale
+    </span>
+</a>
+<nav aria-label="Muro strutturale e solaio strutturale" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#shape-editing">
+<span class="md-ellipsis">
+      Modifica della forma
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#foundations">
+<span class="md-ellipsis">
+      Fondazioni
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rebar-covers">
+<span class="md-ellipsis">
+      Copriferro armatura
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#views-schedules-ifc">
+<span class="md-ellipsis">
+      Viste, etichette, abachi e IFC
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#commands">
+<span class="md-ellipsis">
+      Dalla riga di comando
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset"><a class="md-content__icon pdf-download-btn" download href="../pdf/bimopen-manual-it.pdf" title="Download"><i class="fa fas fa-download"></i><small> PDF</small></a>
+<h1 id="structure">Strutture e fondazioni</h1>
+<p>La scheda <strong>Strutture</strong> (nello stile BIMopen: <strong>Crea ▸ Strutture</strong>) raccoglie gli elementi che
+portano l'edificio: travi, controventi, orditure di travi, travature reticolari, muri e solai
+strutturali, pilastri, plinti, fondazioni continue e platee. Travi, controventi e le aste delle
+travature sono una sola categoria, <strong>Telaio strutturale</strong>; plinti, fondazioni continue e platee
+sono <strong>Fondazioni strutturali</strong>. Gli stessi strumenti funzionano nelle piante, nelle sezioni e nei
+prospetti e nelle viste 3D, dove la vista lo consente.</p>
+<h2 id="framing-types">Tipi di telaio strutturale</h2>
+<p>I tipi di trave e di controvento sono sezioni parametriche di BIMopen, come quelle dei pilastri.
+<strong>Forma di sezione</strong> sceglie la forma: <strong>Rettangolare</strong> (calcestruzzo o legno), <strong>Circolare</strong>,
+<strong>Doppio T</strong> (anche con ali diverse e ali inclinate), <strong>Tubolare rettangolare</strong>, <strong>Tubolare
+circolare</strong>, <strong>Angolare</strong>, <strong>Profilo a C</strong> (anche con orlo) e <strong>Profilo a T</strong>. <strong>Parametri del
+tipo</strong> mostra solo le quote della forma scelta e calcola in sola lettura le proprietà di
+<strong>Analisi strutturale</strong>: area, perimetro verniciabile, peso nominale (dalla densità del materiale),
+momenti d'inerzia, moduli elastici e plastici, costante torsionale e di distorsione, aree di taglio
+e angolo degli assi principali. <strong>Chiave nome sezione</strong> conserva il nome del profilo commerciale.</p>
+<p>Un progetto nuovo ha travi in calcestruzzo armato, i profili IPE, HEA, HEB, UPN, angolari, a T,
+tubolari e travi in legno lamellare.</p>
+<h2 id="beam">Trave</h2>
+<p><strong>Strutture ▸ Trave</strong> apre la scheda <strong>Posiziona trave</strong>. Due clic fanno una trave: le estremità
+si agganciano al centro dei pilastri, all'asse dei muri portanti, alle estremità e alla linea di
+altre travi e alle intersezioni delle griglie, e la barra di stato dice a cosa. La barra delle
+opzioni ha:</p>
+<table>
+<thead>
+<tr>
+<th>Opzione</th>
+<th>Che cosa fa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Piano di posizionamento</strong></td>
+<td>Il livello della vista, su cui si posa la trave</td>
+</tr>
+<tr>
+<td><strong>Utilizzo strutturale</strong></td>
+<td><strong><automatico></automatico></strong> lo ricava dai supporti: fra pilastri o muri è una <strong>Trave primaria</strong>, fra travi primarie un <strong>Travetto</strong>, fra travetti un <strong>Arcareccio</strong>; oppure si sceglie</td>
+</tr>
+<tr>
+<td><strong>Snap 3D</strong></td>
+<td>Le estremità si agganciano agli elementi strutturali fuori dal piano di lavoro: una trave inclinata</td>
+</tr>
+<tr>
+<td><strong>Concatena</strong></td>
+<td>La fine di una trave è l'inizio della successiva; Esc termina la catena</td>
+</tr>
+<tr>
+<td><strong>Etichetta al posizionamento</strong></td>
+<td>Ogni trave nasce con la sua etichetta</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Multipli ▸ Su griglie</strong>: clicca le griglie e <strong>Fine</strong> (o Invio); su ogni griglia nasce una
+trave per campata fra i supporti che la incrociano. Un muro che sta sulla griglia non riceve travi;
+le travi che ci sono già non si raddoppiano.</p>
+<p>In una sezione o in un prospetto la trave si disegna nel piano della vista, con le estremità
+sugli elementi strutturali cliccati; in 3D sul livello sotto il cursore, o con <strong>Snap 3D</strong>
+sull'elemento.</p>
+<h3 id="beam-properties">Proprietà della trave</h3>
+<table>
+<thead>
+<tr>
+<th>Gruppo</th>
+<th>Proprietà</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vincoli</td>
+<td><strong>Livello di riferimento</strong>, <strong>Piano di lavoro</strong>, <strong>Offset livello iniziale</strong> e <strong>finale</strong> (una trave inclinata), <strong>Orientamento</strong> (Normale, Orizzontale), <strong>Rotazione trasversale</strong></td>
+</tr>
+<tr>
+<td>Posizione geometrica</td>
+<td><strong>Estensione iniziale/finale</strong> (estremità libere), <strong>Taglio giunto iniziale/terminale</strong> (estremità unite, acciaio e legno), <strong>Giustificazione YZ</strong> (Uniforme o Indipendente), <strong>Giustificazione Y/Z</strong> con i loro <strong>Valore di offset</strong>, anche per inizio e fine</td>
+</tr>
+<tr>
+<td>Materiali e finiture</td>
+<td><strong>Materiale strutturale</strong></td>
+</tr>
+<tr>
+<td>Strutturale</td>
+<td><strong>Utilizzo strutturale</strong>, <strong>Posizione simbolo bacchetta</strong>, <strong>Tipo di associazione</strong>, <strong>Distanza associazione</strong> e pilastro di riferimento (superiore o inferiore) per ogni estremità, <strong>Connessione iniziale/finale</strong> (Telaio momento, Momento asta), <strong>Dimensione curvatura</strong>, <strong>Numero di montanti</strong>, <strong>Alloggio finale trave</strong> su un muro strutturale, <strong>Peso massimo</strong>, <strong>Peso esatto</strong>, <strong>Area verniciata</strong></td>
+</tr>
+<tr>
+<td>Quote</td>
+<td><strong>Lunghezza sistema</strong>, <strong>Lunghezza del taglio</strong>, <strong>Volume</strong>, <strong>Quota altimetrica parte superiore</strong> e <strong>base</strong> («Varia» su una trave inclinata)</td>
+</tr>
+<tr>
+<td>Analisi strutturale</td>
+<td><strong>Rilascio inizio/fine</strong> (Incastro, Cerniera, Momento flettente, Definito dall'utente con i sei vincoli), <strong>Analizza come</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Una trave selezionata ha <strong>Inverti estremità</strong> e, per ogni estremità, <strong>Impedisci giunto</strong>.</p>
+<h3 id="beam-display">Come si vede</h3>
+<ul>
+<li><strong>Basso</strong>: una linea, con lo stile di linea del suo utilizzo (Stili per categoria ▸ Telaio
+  strutturale ▸ Trave primaria, Travetto, Arcareccio…), staccata dai pilastri e dalle travi che
+  unisce della <strong>Distanza del simbolo di taglio</strong>. In sezione e in prospetto anche le travi sono
+  linee, con i simboli di momento.</li>
+<li><strong>Medio</strong> e <strong>Alto</strong>: il contorno della sezione. In una pianta con <strong>Disciplina</strong> «Strutturale»
+  le travi coperte da un solaio sono tratteggiate; in una pianta «Architettonica» non si vedono.</li>
+<li>In sezione la trave è tagliata con il retino del suo materiale.</li>
+</ul>
+<h3 id="joins">Giunti</h3>
+<p>Una trave si ferma alla faccia del pilastro e del muro portante su cui poggia (mai a un muro non
+portante); fra travi il giunto è <strong>a squadra</strong> (la trave che passa resta intera) o <strong>d'angolo</strong> fra
+due travi dello stesso tipo nello stesso piano. Il calcestruzzo diventa una massa sola: il pilastro
+vince sulla trave, i solai e i muri tengono la loro forma, e una trave sotto un solaio in
+calcestruzzo si ferma alla sua faccia inferiore.</p>
+<p><strong>Strutture ▸ Telaio ▸ Giunti trave/pilastro</strong> mostra una freccia a ogni estremità unita: verso il
+giunto, quella trave è tagliata; un clic la inverte. La barra delle opzioni filtra per materiale
+(Acciaio, Legno, Calcestruzzo prefabbricato, Altro).</p>
+<h2 id="brace">Controvento</h2>
+<p><strong>Strutture ▸ Controvento</strong>:</p>
+<ul>
+<li>in un <strong>Prospetto telaio</strong> (o in una sezione), due clic su elementi strutturali, per esempio la
+  base di un pilastro e una trave;</li>
+<li>in pianta, con <strong>Livello iniziale</strong>, <strong>Offset</strong>, <strong>Livello finale</strong>, <strong>Offset</strong> della barra
+  delle opzioni;</li>
+<li>in 3D, sui punti degli elementi cliccati.</li>
+</ul>
+<p>Un'estremità posata su una trave resta associata a un <strong>Rapporto</strong> (da 0 a 1) o a una <strong>Distanza</strong>
+lungo di essa, dall'inizio o dalla fine: se la trave si sposta o si allunga, il controvento la
+segue. <strong>Utilizzo strutturale</strong>: Controvento verticale, Controvento telescopico, Anima, Altro.</p>
+<h3 id="structural-settings">Simboli in pianta e Impostazioni strutturali</h3>
+<p><strong>Strutture ▸ Telaio ▸ Impostazioni strutturali</strong> imposta, sulla carta:</p>
+<ul>
+<li>la <strong>Distanza del simbolo di taglio</strong> di controventi, travi e travature, pilastri;</li>
+<li>i <strong>Simboli per controvento</strong>: <strong>Linea parallela</strong> (con il suo offset) o <strong>Linea con angolo</strong>,
+  <strong>Mostra controvento soprastante</strong> e <strong>sottostante</strong> (anche tratteggiati), <strong>Simbolo controvento
+  telescopico</strong>;</li>
+<li>i <strong>Simboli di connessione</strong> di travi e controventi.</li>
+</ul>
+<p>I simboli si vedono al livello di dettaglio Basso.</p>
+<h2 id="beam-system">Orditura di travi</h2>
+<p><strong>Strutture ▸ Orditura di travi</strong> riempie una campata di travi parallele:</p>
+<ul>
+<li><strong>Orditura automatica</strong>: un clic in una campata chiusa da travi o muri portanti;</li>
+<li><strong>Disegna orditura</strong>: il contorno nella modalità schizzo (<strong>Crea contorno orditura</strong>) con
+  <strong>Seleziona supporti</strong> (il contorno resta legato alle travi e ai muri cliccati, e il primo dà la
+  direzione), <strong>Linea</strong>, <strong>Rettangolo</strong>, <strong>Seleziona linee</strong> e <strong>Direzione trave</strong>. Un anello
+  interno è un'apertura.</li>
+</ul>
+<p><strong>Regola di layout</strong>: <strong>Distanza fissa</strong>, <strong>Numero predefinito</strong>, <strong>Spaziatura massima</strong>,
+<strong>Spaziatura di sgombro</strong>; con le prime e l'ultima, <strong>Giustificazione</strong> (Inizio, Fine, Centro,
+Asse direzione). <strong>Tipo di trave</strong>, <strong>Quota altimetrica</strong> ed <strong>Etichetta al posizionamento</strong>
+(un'etichetta dell'orditura o una per trave) completano le opzioni.</p>
+<p>Le travi seguono i supporti quando si spostano. Un'orditura selezionata ha <strong>Reimposta sistema</strong>
+(le travi cambiate tornano all'orditura) e <strong>Rimuovi orditura</strong> (l'orditura sparisce, le travi
+restano).</p>
+<p>Le regole di layout spaziano le travi come la <strong>Serie</strong> spazia le copie: <strong>Numero predefinito</strong> come <strong>Ultimo</strong>, <strong>Distanza fissa</strong> come <strong>2°</strong> a partire dalla <strong>Giustificazione</strong>; con <strong>Spaziatura di sgombro</strong> la distanza è fra le facce, e una trave di un tipo più grande allontana le vicine. <strong>3D</strong> nella barra delle opzioni rende l'orditura non piana: le estremità delle travi salgono ai supporti che definiscono l'inclinazione (le travi sempre, i muri con <strong>Definisce l'inclinazione</strong> o <strong>Inclinazione definita muri</strong>). <strong>Modifica contorno</strong> riapre lo schizzo; <strong>Direzione trave</strong> si disegna o si sceglie con <strong>Seleziona linee</strong>. Una trave eliminata a mano resta eliminata fino a <strong>Reimposta sistema</strong>. Fuori da una campata chiusa, <strong>Orditura automatica</strong> apre lo schizzo del contorno.</p>
+<p>Le regole di layout spaziano le travi come la <strong>Serie</strong> spazia le copie: <strong>Numero predefinito</strong> come <strong>Ultimo</strong>, <strong>Distanza fissa</strong> come <strong>2°</strong> a partire dalla <strong>Giustificazione</strong>; con <strong>Spaziatura di sgombro</strong> la distanza è fra le facce, e una trave di un tipo più grande allontana le vicine. <strong>3D</strong> nella barra delle opzioni rende l'orditura non piana: le estremità delle travi salgono ai supporti che definiscono l'inclinazione (le travi sempre, i muri con <strong>Definisce l'inclinazione</strong> o <strong>Inclinazione definita muri</strong>). <strong>Modifica contorno</strong> riapre lo schizzo; <strong>Direzione trave</strong> si disegna o si sceglie con <strong>Seleziona linee</strong>. Una trave eliminata a mano resta eliminata fino a <strong>Reimposta sistema</strong>. Fuori da una campata chiusa, <strong>Orditura automatica</strong> apre lo schizzo del contorno.</p>
+<p><img alt="Le quattro regole di layout di un'orditura di travi: Distanza fissa, Numero predefinito, Spaziatura massima, Spaziatura di sgombro" src="../assets/screens/st-beam-system.webp"/></p>
+<p><img alt="La giustificazione di un'orditura a distanza fissa: Inizio, Fine, Centro" src="../assets/screens/st-beam-system-just.webp"/></p>
+<p>Un'orditura copiata, specchiata o incollata si associa alle travi e ai muri portanti su cui cadono i suoi bordi nella nuova posizione; se un bordo non trova un supporto il comando lo avvisa, e <strong>Modifica contorno ▸ Seleziona supporti</strong> lo associa di nuovo. È meglio copiarla solo tra campate con la stessa forma e gli stessi supporti.</p>
+<p>Anche travi curve e muri portanti curvi chiudono una campata per l'orditura automatica, ma la direzione delle travi viene sempre da un supporto diritto. Un'orditura disegnata su più campate si crea comunque, con un avviso: le travi e i muri che la attraversano non la dividono, quindi è meglio un'orditura per campata.</p>
+<h2 id="truss">Travatura reticolare</h2>
+<p><strong>Strutture ▸ Travatura reticolare</strong>: due clic in pianta stendono lo schema del tipo (Pratt, Howe,
+Warren, Warren con montanti, Fink) sulla luce. I correnti sono travi, le aste sono controventi,
+ognuno del tipo del suo gruppo (<strong>Aste correnti superiori</strong>, <strong>Anime con montanti</strong>, <strong>Anime con
+diagonali</strong>, <strong>Aste correnti inferiori</strong>). Le proprietà comprendono <strong>Altezza trave reticolare</strong>,
+<strong>Asta corrente portante</strong>, <strong>Larghezza massima pannello</strong>, <strong>Numero di pannelli</strong> e la rotazione.</p>
+<p>Una travatura selezionata ha <strong>Associa parte superiore/inferiore</strong> (il corrente segue la faccia di
+un tetto o di un solaio strutturale; con Maiusc il corrente inferiore), <strong>Dissocia superiore/
+inferiore</strong>, <strong>Reimposta trave reticolare</strong> e <strong>Rimuovi travatura reticolare</strong> (le aste
+restano travi e controventi).</p>
+<p><strong>Modifica profilo</strong> apre una sezione o un prospetto parallelo alla travatura (se la vista
+aperta non lo è, <strong>Vai a vista</strong> chiede quale) con le linee dei correnti in modalità di modifica:
+le linee sopra la metà sono il corrente superiore, le altre l'inferiore, e le aste di parete li
+seguono. <strong>Reimposta profilo</strong> riporta i correnti alla linea dello schema. In una vista 3D le linee si disegnano direttamente sul piano della travatura, senza cambiare vista.</p>
+<p>Con <strong>Seleziona linee</strong> la travatura si piazza lungo una trave, un muro o una griglia. Un clic su un'asta seleziona tutta la travatura; <span class="keys"><kbd class="key-tab">Tab</kbd></span> passa alla singola asta. Un corrente associato segue la faccia dell'ospite per tutta la luce; se è associato il corrente portante, l'altro ne mantiene l'<strong>Altezza trave reticolare</strong>, e il profilo disegnato resta e torna con <strong>Dissocia superiore/inferiore</strong>. <strong>Giustificazione verticale portante</strong>, <strong>Offset non portante</strong>, <strong>Orientamento anima</strong> (<strong>Ortogonale</strong>: i montanti a squadra col corrente portante) e <strong>Angolo di rotazione</strong> (il piano della travatura ruota attorno alla linea di posizione) cambiano le aste. Un'asta eliminata a mano resta eliminata fino a <strong>Reimposta trave reticolare</strong>; il taglio delle aste si regola solo in <strong>Impostazioni strutturali</strong>. Gli schemi nuovi disegnati in un componente proprio arriveranno con l'editor dei componenti.</p>
+<p>Con <strong>Seleziona linee</strong> la travatura si piazza lungo una trave, un muro o una griglia. Un clic su un'asta seleziona tutta la travatura; <span class="keys"><kbd class="key-tab">Tab</kbd></span> passa alla singola asta. Un corrente associato segue la faccia dell'ospite per tutta la luce; se è associato il corrente portante, l'altro ne mantiene l'<strong>Altezza trave reticolare</strong>, e il profilo disegnato resta e torna con <strong>Dissocia superiore/inferiore</strong>. <strong>Giustificazione verticale portante</strong>, <strong>Offset non portante</strong>, <strong>Orientamento anima</strong> (<strong>Ortogonale</strong>: i montanti a squadra col corrente portante) e <strong>Angolo di rotazione</strong> (il piano della travatura ruota attorno alla linea di posizione) cambiano le aste. Un'asta eliminata a mano resta eliminata fino a <strong>Reimposta trave reticolare</strong>; il taglio delle aste si regola solo in <strong>Impostazioni strutturali</strong>. Gli schemi nuovi disegnati in un componente proprio arriveranno con l'editor dei componenti.</p>
+<p><img alt="Una travatura reticolare selezionata intera, poi una sua asta con TAB" src="../assets/screens/st-truss.webp"/></p>
+<p>Con <strong>Le anime presentano simboli di taglio</strong> nel tipo della travatura, a dettaglio basso le aste di parete si fermano prima dei correnti, alla <strong>Distanza del simbolo di taglio</strong> dei controventi delle <strong>Impostazioni strutturali</strong>.</p>
+<h2 id="structural-walls-floors">Muro strutturale e solaio strutturale</h2>
+<p><strong>Muro strutturale</strong> è lo strumento Muro con gli stessi tipi e la stessa barra delle opzioni: il
+muro nasce <strong>Portante</strong>. Ogni muro ha <strong>Strutturale</strong> e <strong>Utilizzo strutturale</strong> (<strong>Non
+portante</strong>, <strong>Portante</strong>, <strong>Parete a taglio</strong>, <strong>Strutturale combinato</strong>).</p>
+<p><strong>Solaio strutturale</strong> è il pavimento con <strong>Strutturale</strong> spuntato. Nello schizzo <strong>Direzione
+orditura</strong> disegna la direzione della sua orditura; alla fine il <strong>simbolo di direzione
+orditura</strong> nasce al centro del solaio. <strong>Annotazioni ▸ Direzione di orditura</strong> lo rimette (con
+<strong>Posizionamento automatico</strong> al centro); selezionato si ruota, e <strong>Allinea perpendicolare</strong> lo
+rende perpendicolare a un bordo, a una trave o a una griglia.</p>
+<h3 id="shape-editing">Modifica della forma</h3>
+<p>Un pavimento selezionato (strutturale, una platea o un pavimento qualsiasi) ha il pannello <strong>Modifica forma</strong>:</p>
+<ul>
+<li><strong>Modifica elementi secondari</strong>: clicca un angolo o un punto, poi scrivi la sua <strong>Quota altimetrica</strong> nella barra delle opzioni; <span class="keys"><kbd class="key-delete">Del</kbd></span> toglie il punto.</li>
+<li><strong>Aggiungi punto</strong>: un punto dentro il pavimento, alla quota indicata; con <strong>Relativa</strong> la quota si somma a quella della superficie in quel punto.</li>
+<li><strong>Aggiungi linea di divisione</strong>: due clic; la superficie si piega lungo la linea.</li>
+<li><strong>Seleziona supporti</strong>: clicca una trave sotto il pavimento; nasce una linea di divisione lungo la trave, alla sua quota superiore.</li>
+<li><strong>Reimposta forma</strong>: toglie punti e linee, il pavimento torna piano (o con la sua inclinazione).</li>
+</ul>
+<p>La parte superiore diventa la superficie a triangoli che passa per questi punti; tutta la lastra la segue e mantiene il suo spessore. <strong>Quota altimetrica parte superiore</strong> e <strong>Quota altimetrica base</strong> mostrano allora <strong>Varia</strong>.</p>
+<p><img alt="Un solaio strutturale con la forma modificata: un punto alzato e una linea di divisione" src="../assets/screens/st-floor-shape.webp"/></p>
+<h2 id="foundations">Fondazioni</h2>
+<table>
+<thead>
+<tr>
+<th>Strumento</th>
+<th>Come funziona</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Plinto</strong></td>
+<td>Un clic in pianta o in 3D (barra spaziatrice: ruota), oppure <strong>Sulle griglie</strong> o <strong>Sotto i pilastri</strong> e <strong>Fine</strong>. La faccia superiore sta al livello più <strong>Offset di altezza</strong>; il pilastro sopra si appoggia al plinto. <strong>Sposta con griglie</strong> lo lega alle griglie</td>
+</tr>
+<tr>
+<td><strong>Fondazione continua</strong></td>
+<td>Un clic su un muro strutturale: la fondazione corre sotto la sua base e lo segue. <strong>Portante</strong>: <strong>Larghezza</strong> ed <strong>Eccentricità</strong>; <strong>Zoppo</strong>: <strong>Larghezza lato esterno</strong> e <strong>interno</strong>. Si interrompe sotto porte e finestre che toccano la base, salvo <strong>Non interrompere agli inserti</strong>; agli estremi liberi sporge della <strong>Lunghezza di default estensione finale</strong></td>
+</tr>
+<tr>
+<td><strong>Platea</strong></td>
+<td>Il contorno nella modalità schizzo (<strong>Crea contorno platea</strong>), come un pavimento: sta sotto il suo livello, giù dello spessore dei suoi strati. <strong>Utilizzo strutturale</strong>: Fondazione o Solaio di fondazione</td>
+</tr>
+</tbody>
+</table>
+<p>Selezionata una fondazione continua, i cerchi pieni alle estremità la allungano o la accorciano lungo il muro, con lo snap ai riferimenti vicini; lo stesso fanno i cerchi alle estremità di una trave o di un controvento. Su travi in acciaio, calcestruzzo prefabbricato e legno, le frecce oltre le estremità cambiano <strong>Estensione iniziale/finale</strong> se l'estremità è libera, <strong>Taglio giunto iniziale/terminale</strong> se è unita. Plinti e fondazioni continue in calcestruzzo che si toccano formano un'unica massa: il plinto conserva la sua forma e taglia la fondazione continua (tra due plinti, quello fatto prima taglia l'altro), e in pianta non si disegna la linea tra loro.</p>
+<p><img alt="Le maniglie d'estremità di una trave in acciaio" src="../assets/screens/st-end-controls.webp"/></p>
+<p><img alt="Plinti e fondazione continua in calcestruzzo uniti in un'unica massa" src="../assets/screens/st-foundation-join.webp"/></p>
+<h2 id="rebar-covers">Copriferro armatura</h2>
+<p><strong>Cemento armato</strong> ▸ <strong>Opzioni copriferro</strong> elenca i copriferro del progetto, ognuno con un nome e una distanza: <strong>Aggiungi</strong>, <strong>Duplica</strong>, <strong>Elimina</strong>. Gli elementi che usavano un copriferro eliminato prendono il primo. Muri strutturali, pilastri, travi e controventi in calcestruzzo, solai strutturali, platee, plinti e fondazioni continue scelgono il loro copriferro in <strong>Proprietà</strong>: <strong>Copriferro armatura - Superficie superiore</strong>, <strong>Copriferro armatura - Superficie inferiore</strong> e <strong>Copriferro armatura - Altre superfici</strong> (sui muri <strong>Copriferro armatura - Superficie esterna</strong>, <strong>Copriferro armatura - Superficie interna</strong> e <strong>Copriferro armatura - Altre superfici</strong>).</p>
+<p><img alt="Il dialogo Opzioni copriferro" src="../assets/screens/st-covers.webp"/></p>
+<h2 id="views-schedules-ifc">Viste, etichette, abachi e IFC</h2>
+<ul>
+<li><strong>Disciplina</strong> di una vista: <strong>Architettonica</strong> o <strong>Strutturale</strong>. La seconda nasconde i muri non
+  portanti e tratteggia ciò che i solai coprono.</li>
+<li><strong>Annotazioni ▸ Etichette travi</strong>: etichette del telaio e quote altimetriche su tutte le travi
+  della pianta (o su quelle selezionate) in sei posizioni, sopra e sotto, all'inizio, al centro e
+  alla fine; <strong>Visualizza quota altimetrica</strong> sceglie superiore, inferiore, entrambe o effettiva.</li>
+<li>Un'etichetta di trave segue la trave e si mette al suo fianco, dal lato in cui non copre altre travi (sopra, se entrambi sono liberi); si trascina come ogni etichetta. In <strong>Etichette travi ▸ Impostazioni</strong>, <strong>Offset estremità orizzontale</strong> sposta le posizioni d'inizio e di fine verso il centro e <strong>Offset verticale</strong> allontana le annotazioni dal fianco della trave.</li>
+<li><strong>Abaco/Quantità</strong> ha le categorie <strong>Telaio strutturale</strong>, <strong>Orditure di travi</strong>, <strong>Travature
+  reticolari</strong> e <strong>Fondazioni strutturali</strong>, con tutti i parametri come campi.</li>
+<li>In <strong>IFC</strong> travi, travetti e arcarecci escono come <code>IfcBeam</code>, controventi e aste come <code>IfcMember</code>,
+  le travature come <code>IfcElementAssembly</code>, plinti e fondazioni continue come <code>IfcFooting</code>, la platea
+  come <code>IfcSlab</code> di base; muri e solai strutturali portano <code>LoadBearing</code>.</li>
+</ul>
+<p><img alt="Le etichette del telaio strutturale in pianta" src="../assets/screens/st-tags.webp"/></p>
+<h2 id="commands">Dalla riga di comando</h2>
+<table>
+<thead>
+<tr>
+<th>Comando</th>
+<th>Che cosa fa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>beam</code></td>
+<td>Travi da due punti, in catena, ad arco o su griglie</td>
+</tr>
+<tr>
+<td><code>brace</code></td>
+<td>Un controvento fra due punti</td>
+</tr>
+<tr>
+<td><code>beamsystem</code>, <code>beamsystemedit</code></td>
+<td>Un'orditura automatica o da un contorno; reimpostala o rimuovila</td>
+</tr>
+<tr>
+<td><code>truss</code>, <code>trussedit</code></td>
+<td>Una travatura; associala, dissociala, reimpostala o rimuovila</td>
+</tr>
+<tr>
+<td><code>pad</code>, <code>strip</code></td>
+<td>Plinti (in un punto, sulle griglie, sotto i pilastri), fondazioni continue</td>
+</tr>
+<tr>
+<td><code>spansymbol</code>, <code>spanalign</code></td>
+<td>Il simbolo di direzione orditura; allinealo</td>
+</tr>
+<tr>
+<td><code>beamjoin</code>, <code>structuralsettings</code>, <code>beamannotations</code></td>
+<td>I giunti, le impostazioni strutturali, le etichette delle travi</td>
+</tr>
+<tr>
+<td><code>floorshape</code></td>
+<td>La modifica della forma di un pavimento: punti, linee di divisione, supporti, reimposta</td>
+</tr>
+<tr>
+<td><code>covers</code></td>
+<td>Opzioni copriferro</td>
+</tr>
+</tbody>
+</table>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Torna su
+</button>
+</main>
+<footer class="md-footer">
+<nav aria-label="Piede" class="md-footer__inner md-grid">
+<a aria-label="Precedente: Fasi e demolizioni" class="md-footer__link md-footer__link--prev" href="../phases/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Precedente
+              </span>
+<div class="md-ellipsis">
+                Fasi e demolizioni
+              </div>
+</div>
+</a>
+<a aria-label="Successivo: Planimetria e terreno" class="md-footer__link md-footer__link--next" href="../site/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Successivo
+              </span>
+<div class="md-ellipsis">
+                Planimetria e terreno
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Copyright © 2026 BIMopen
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.footer", "navigation.tracking", "toc.follow", "content.code.copy", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiato", "clipboard.copy": "Copia", "search.result.more.one": "1 altro in questa pagina", "search.result.more.other": "# altri in questa pagina", "search.result.none": "Nessun documento trovato", "search.result.one": "1 documento trovato", "search.result.other": "# documenti trovati", "search.result.placeholder": "Scrivi per iniziare a cercare", "search.result.term.missing": "Non presente", "select.version": "Seleziona la versione"}}</script>
+<script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+<script src="../assets/js/zoom.js"></script>
+</body>
+</html>

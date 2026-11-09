@@ -7,9 +7,9 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="User manual of BIMopen, open-source BIM modelling" name="description"/>
 <meta content="BIMopen" name="author"/>
-<link href="https://atsanna.github.io/bimopen-site/manual/en/floors-roofs-stairs/" rel="canonical"/>
+<link href="https://bimopen.it/manual/en/floors-roofs-stairs/" rel="canonical"/>
 <link href="../walls-doors-windows/" rel="prev"/>
-<link href="../views-and-graphics/" rel="next"/>
+<link href="../ceilings-and-columns/" rel="next"/>
 <link href="../assets/images/bimopen-cube.svg" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.9" name="generator"/>
 <title>Floors, roofs, stairs and components - BIMopen user manual</title>
@@ -18,6 +18,13 @@
 <link href="../assets/css/theme.css" rel="stylesheet"/>
 <link href="../assets/css/theme_dark_mode.css" rel="stylesheet"/>
 <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="https://bimopen.it/manual/en/floors-roofs-stairs/" hreflang="en" rel="alternate"/>
+<link href="https://bimopen.it/manual/it/floors-roofs-stairs/" hreflang="it" rel="alternate"/>
+<link href="https://bimopen.it/manual/de/floors-roofs-stairs/" hreflang="de" rel="alternate"/>
+<link href="https://bimopen.it/manual/fr/floors-roofs-stairs/" hreflang="fr" rel="alternate"/>
+<link href="https://bimopen.it/manual/es/floors-roofs-stairs/" hreflang="es" rel="alternate"/>
+<link href="https://bimopen.it/manual/ar/floors-roofs-stairs/" hreflang="ar" rel="alternate"/>
+<link href="https://bimopen.it/manual/en/floors-roofs-stairs/" hreflang="x-default" rel="alternate"/>
 </head>
 <body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="slate" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -32,7 +39,7 @@
 </div>
 <header class="md-header md-header--shadow" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="BIMopen user manual" class="md-header__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/?lang=en" title="BIMopen user manual">
+<a aria-label="BIMopen user manual" class="md-header__button md-logo" data-md-component="logo" href="https://bimopen.it/en/" title="BIMopen user manual">
 <img alt="logo" src="../assets/images/bimopen-cube.svg"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -73,32 +80,32 @@
 <div class="md-select__inner">
 <ul class="md-select__list">
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/en/" hreflang="en">
+<a class="md-select__link" href="https://bimopen.it/manual/en/" hreflang="en">
               English
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/it/" hreflang="it">
+<a class="md-select__link" href="https://bimopen.it/manual/it/" hreflang="it">
               Italiano
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/de/" hreflang="de">
+<a class="md-select__link" href="https://bimopen.it/manual/de/" hreflang="de">
               Deutsch
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/fr/" hreflang="fr">
+<a class="md-select__link" href="https://bimopen.it/manual/fr/" hreflang="fr">
               Français
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/es/" hreflang="es">
+<a class="md-select__link" href="https://bimopen.it/manual/es/" hreflang="es">
               Español
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/ar/" hreflang="ar">
+<a class="md-select__link" href="https://bimopen.it/manual/ar/" hreflang="ar">
               العربية
             </a>
 </li>
@@ -147,7 +154,7 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="BIMopen user manual" class="md-nav__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/?lang=en" title="BIMopen user manual">
+<a aria-label="BIMopen user manual" class="md-nav__button md-logo" data-md-component="logo" href="https://bimopen.it/en/" title="BIMopen user manual">
 <img alt="logo" src="../assets/images/bimopen-cube.svg"/>
 </a>
     BIMopen user manual
@@ -197,6 +204,14 @@
 <a class="md-nav__link" href="../import-and-conversion/">
 <span class="md-ellipsis">
     Importing and converting
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cad-files/">
+<span class="md-ellipsis">
+    DWG and DXF
     
   </span>
 </a>
@@ -317,6 +332,34 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#extrusion-roofs">
+<span class="md-ellipsis">
+      Extrusion roofs
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#joining-roofs">
+<span class="md-ellipsis">
+      Joining roofs
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sloped-glazing">
+<span class="md-ellipsis">
+      Sloped glazing
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#soffits">
+<span class="md-ellipsis">
+      Soffits
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -358,6 +401,17 @@
       Components
     </span>
 </a>
+<nav aria-label="Components" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#casework">
+<span class="md-ellipsis">
+      Casework
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#schedules-and-ifc">
@@ -375,6 +429,54 @@
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ceilings-and-columns/">
+<span class="md-ellipsis">
+    Ceilings and columns
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../openings/">
+<span class="md-ellipsis">
+    Openings
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../phases/">
+<span class="md-ellipsis">
+    Phases and demolition
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../structure/">
+<span class="md-ellipsis">
+    Structure and foundations
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../site/">
+<span class="md-ellipsis">
+    Site plan and terrain
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../design-options/">
+<span class="md-ellipsis">
+    Design options
+    
+  </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../views-and-graphics/">
@@ -425,7 +527,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="https://atsanna.github.io/bimopen-site/manual/en/pdf/bimopen-manual-en.pdf">
+<a class="md-nav__link" href="https://bimopen.it/manual/en/pdf/bimopen-manual-en.pdf">
 <span class="md-ellipsis">
     PDF
     
@@ -525,6 +627,34 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#extrusion-roofs">
+<span class="md-ellipsis">
+      Extrusion roofs
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#joining-roofs">
+<span class="md-ellipsis">
+      Joining roofs
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sloped-glazing">
+<span class="md-ellipsis">
+      Sloped glazing
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#soffits">
+<span class="md-ellipsis">
+      Soffits
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -566,6 +696,17 @@
       Components
     </span>
 </a>
+<nav aria-label="Components" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#casework">
+<span class="md-ellipsis">
+      Casework
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#schedules-and-ifc">
@@ -590,8 +731,8 @@
 <article class="md-content__inner md-typeset"><a class="md-content__icon pdf-download-btn" download href="../pdf/bimopen-manual-en.pdf" title="Download"><i class="fa fas fa-download"></i><small> PDF</small></a>
 <h1 id="floors-roofs-stairs-and-components">Floors, roofs, stairs and components</h1>
 <p>Floors, roofs, stairs and railings are drawn in <strong>sketch mode</strong>: their lines are sketched first,
-and the element is made only when the sketch is finished. Components (furniture and plumbing
-fixtures) are placed with a click. Curtain walls are described in
+and the element is made only when the sketch is finished. Components (furniture, casework and
+plumbing fixtures) are placed with a click. Curtain walls are described in
 <a href="../walls-doors-windows/">Walls, doors and windows</a>.</p>
 <h2 id="sketch-mode">Sketch mode</h2>
 <p><strong>Create ▸ Build ▸ Flooring</strong>, <strong>Roof</strong>, <strong>Stairs</strong> and <strong>Railing</strong> open sketch mode. The
@@ -804,6 +945,173 @@ gables included (<a href="../walls-doors-windows/">Walls, doors and windows</a> 
 </tbody>
 </table>
 <p>In plan a roof shows its outline, ridges and hips; in 3D its slopes, overhangs and layers.</p>
+<h3 id="extrusion-roofs">Extrusion roofs</h3>
+<p>An extrusion roof is an open profile drawn on a vertical work plane and pushed along the plane's
+normal: a canopy over a door, a barrel roof, a dormer roof drawn on the front wall.</p>
+<ol>
+<li>Open an elevation, a section or a 3D view (started in a plan, <strong>Go to View</strong> asks for one).</li>
+<li>Click <strong>Create ▸ Build ▸ Roof ▾ ▸ Extruded roof</strong>. The <strong>Work Plane</strong> dialog opens: pick a
+   named plane, or <strong>Pick a plane</strong> and click a wall's face, a grid or a reference plane. The
+   plane must be vertical.</li>
+<li>In <strong>Roof Reference Level and Offset</strong> choose the <strong>Level</strong> (the highest one by default) and the
+   <strong>Offset</strong>: a dashed line marks that height.</li>
+<li>Draw the profile as one <strong>open</strong> chain with <strong>Line</strong>, the arcs or <strong>Pick Lines</strong>. It is the
+   roof's top: the layers of the roof type hang under it.</li>
+<li>Click <strong>Finish Edit Mode</strong>. The roof runs from the plane (<strong>Extrusion Start</strong> 0) across the
+   building, away from you (<strong>Extrusion End</strong>).</li>
+</ol>
+<p>A closed profile, a branch or a profile that turns back over itself (a part over another, or a
+vertical line) is refused at <strong>Finish Edit Mode</strong> with the reason: an extruded roof must face up.</p>
+<p>Selected, an extrusion roof has <strong>Edit profile</strong> (in an elevation or section facing its plane,
+or in 3D) and <strong>Edit Work Plane</strong>; in a plan and in 3D the arrows at its two ends drag
+<strong>Extrusion Start</strong> and <strong>Extrusion End</strong>. Walls attach to its underside as to any roof, and
+<strong>Opening ▸ Vertical</strong> cuts it. It follows its plane: when the wall it was drawn on moves, the
+roof moves with it.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Work Plane</strong></td>
+<td>The plane of the profile (read-only; change it with <strong>Edit Work Plane</strong>)</td>
+</tr>
+<tr>
+<td><strong>Extrusion Start</strong>, <strong>Extrusion End</strong></td>
+<td>Where the extrusion begins and ends, along the plane's normal</td>
+</tr>
+<tr>
+<td><strong>Reference level</strong>, <strong>Level Offset</strong></td>
+<td>The height the profile is measured from: the whole roof moves with them</td>
+</tr>
+<tr>
+<td><strong>Rafter Cut</strong>, <strong>Fascia Depth</strong></td>
+<td>How the eaves at the two ends of the profile are cut</td>
+</tr>
+<tr>
+<td><strong>Thickness</strong>, <strong>Area</strong>, <strong>Volume</strong></td>
+<td>Read-only</td>
+</tr>
+</tbody>
+</table>
+<h3 id="joining-roofs">Joining roofs</h3>
+<p><strong>Modify ▸ Shapes ▸ Join roof</strong> (in the BIMopen style <strong>Modify ▸ Join roof</strong>) joins a
+roof to another roof's top face or to a wall: the dormer's roof meets the main roof.</p>
+<ol>
+<li>Click <strong>Join roof</strong>. The roof edges highlight under the cursor, in a plan, a section, an
+   elevation or a 3D view.</li>
+<li>Click the edge to join: an edge that does not define the slope (a gable), or an end of an
+   extrusion roof.</li>
+<li>Click the roof or the wall to join it to. The edge moves out (or back) until the roof meets the
+   other roof's top face, or the wall's face; what lies under that face is cut away.</li>
+</ol>
+<p>A joined edge shows orange: clicking it again disjoins it. The join follows: when the main roof's
+slope or height changes the joined roof meets it again, and a join to a deleted roof goes.</p>
+<h3 id="sloped-glazing">Sloped glazing</h3>
+<p>A sloped glazing is a roof made of glass: a footprint or an extrusion roof whose type is
+<strong>Sloped Glazing</strong>. Every planar face of the roof carries curtain grids, mullions and panels.</p>
+<ol>
+<li>Draw the roof as usual (<strong>Roof</strong> or <strong>Extruded roof</strong>).</li>
+<li>Select it and pick <strong>Sloped Glazing</strong> in the type selector. The first time, BIMopen makes the
+   type with the project's glazed panel and mullions.</li>
+<li>Each face is divided by the type's two grids: <strong>grid 1</strong> runs up the slope, spaced along the
+   eaves; <strong>grid 2</strong> runs along the eaves, spaced up the slope.</li>
+</ol>
+<p>With the glazing selected, the curtain tools work on the face under the cursor, in a plan, a
+section, an elevation or a 3D view:</p>
+<ul>
+<li><strong>Curtain grid</strong> places a line where you click: of grid 1 near the eaves or the ridge, of grid 2
+  near a side. Press TAB to switch to the other grid. <strong>All Segments</strong>, <strong>One Segment</strong> and
+  <strong>All Except Picked</strong> work as on a curtain wall.</li>
+<li><strong>Mullion</strong> puts mullions of the chosen type on a <strong>Grid Line</strong>, a <strong>Grid Line Segment</strong> or
+  <strong>All Grid Lines</strong> of the face.</li>
+<li><strong>Panel</strong> changes the panel you click to the type in the selector: glazed, solid, a door or empty.</li>
+<li><strong>Add/Remove Segments</strong> takes off the segment you click (the two panels become one), or puts it back.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Curtain Panel</strong> (type)</td>
+<td>The panel of every cell</td>
+</tr>
+<tr>
+<td><strong>Join Condition</strong> (type)</td>
+<td>Which mullions run through where the grids cross: grid 1, grid 2, or the borders with one of them</td>
+</tr>
+<tr>
+<td><strong>Grid 1/2 Pattern</strong> (type): <strong>Layout</strong>, <strong>Spacing</strong>, <strong>Adjust for Mullion Size</strong></td>
+<td>How each grid places its lines: none, a fixed distance, a fixed number, a maximum spacing</td>
+</tr>
+<tr>
+<td><strong>Grid 1/2 Mullions</strong> (type): <strong>Interior Type</strong>, <strong>Border 1 Type</strong>, <strong>Border 2 Type</strong></td>
+<td>The mullions on the lines and on the face's edges</td>
+</tr>
+<tr>
+<td><strong>Number</strong>, <strong>Justification</strong>, <strong>Angle</strong>, <strong>Offset</strong> of grid 1 and 2</td>
+<td>This roof's own values: how many lines (a fixed number), where the remainder goes, how the lines turn on the face (−89° to 89°), how far they move</td>
+</tr>
+<tr>
+<td><strong>Panels</strong>, <strong>Mullions</strong></td>
+<td>Read-only counts</td>
+</tr>
+</tbody>
+</table>
+<p>In a plan the glazing shows its panels and mullions seen from above; <strong>Visibility/Graphics</strong>
+hides curtain panels and mullions as for curtain walls. IFC writes a roof made of plates and members.</p>
+<h3 id="soffits">Soffits</h3>
+<p>A soffit closes the underside of the eaves, between the walls and the roof's edge.</p>
+<ol>
+<li>In a plan or a 3D view click <strong>Create ▸ Build ▸ Roof ▾ ▸ Soffit</strong>. Sketch mode starts with
+   <strong>Pick Roof Edges</strong>.</li>
+<li>Click the roof's edges: their lines stay locked to the roof.</li>
+<li>Click <strong>Pick Walls</strong> and the exterior faces of the walls under the roof (TAB picks the chain):
+   these lines stay locked to the walls.</li>
+<li>Close the outline with <strong>Line</strong> and <strong>Shorten/Lengthen</strong>, then click <strong>Finish Edit Mode</strong>.</li>
+</ol>
+<p>The soffit's top is under the roof's eaves; its layers (the type's <strong>Structure</strong>) hang below.
+When the roof or the walls move, the soffit follows them. A <strong>Slope Arrow</strong>, or a line that
+<strong>Defines Slope</strong>, slopes it. Selected, <strong>Edit Boundary</strong> opens its sketch again.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Structure</strong>, <strong>Thickness</strong> (type)</td>
+<td>The layers, top down, and their sum</td>
+</tr>
+<tr>
+<td><strong>Level</strong>, <strong>Height Offset From Level</strong></td>
+<td>Where its top is</td>
+</tr>
+<tr>
+<td><strong>Room Bounding</strong></td>
+<td>Whether rooms stop at it</td>
+</tr>
+<tr>
+<td><strong>Slope</strong></td>
+<td>Replaces the slope of its sloping line or arrow</td>
+</tr>
+<tr>
+<td><strong>Perimeter</strong>, <strong>Area</strong>, <strong>Volume</strong></td>
+<td>Read-only</td>
+</tr>
+</tbody>
+</table>
+<p>Sections cut it with its layers, the ceiling plan of its level sees it from below; it has its own
+category in <strong>Visibility/Graphics</strong> and in schedules, and IFC writes it as a covering.</p>
 <h2 id="stairs">Stairs</h2>
 <ol>
 <li>Click <strong>Create ▸ Vertical Links ▸ Stairs</strong>. Sketch mode starts with <strong>Run</strong>.</li>
@@ -811,7 +1119,8 @@ gables included (<a href="../walls-doors-windows/">Walls, doors and windows</a> 
    the status bar counts the risers made and left (for example <code>9 risers created, 8 remaining</code>).</li>
 <li>To turn, click again away from the end of the first run and draw the next one: a landing joins
    them. At any angle the landing is bounded by the two runs' risers, its outer corner where their
-   outer sides meet.</li>
+   outer sides meet; where the runs end out of line their inner sides also run on until they
+   meet, a square corner rather than a slanting edge.</li>
 <li>When every riser is placed, click <strong>Finish Edit Mode</strong>.</li>
 </ol>
 <figure>
@@ -829,12 +1138,23 @@ or <strong>None</strong>.</p>
 offsets) and the type's <strong>Maximum Riser Height</strong>; changing a level or an offset in
 <strong>Properties</strong> changes the risers. <strong>Edit Sketch</strong> reopens its boundary and riser lines: change
 or delete them (click, <span class="keys"><kbd class="key-delete">Del</kbd></span>) and draw runs again; the railings of the stair follow. <strong>Multistory Top Level</strong> repeats the stair, with its railings, storey by storey up to that level; a storey whose height is not the stair's gets no copy, and a warning names it. With the stair selected, the blue flip arrows beside its first riser make it go up from the other end; <strong>Up Label</strong>, <strong>Up Arrow</strong>, <strong>Down Label</strong> and <strong>Down Arrow</strong> in <strong>Properties</strong> show or hide the plan symbol's parts. The square grip under the <strong>UP</strong> text drags it elsewhere.</p>
-<p>In plan the stair shows its treads up to the cut line, the break line, the arrow and the
-<strong>UP</strong>/<strong>DN</strong> text; in 3D its treads and risers, or a monolithic slab, its landings and railings.</p>
+<p>In the plan of its base level the stair shows its treads up to the cut line, the break line, the
+arrow and the <strong>UP</strong> text; in the plan of its top level it shows all of it, landings and railings
+included, with no break line, and the arrow and the <strong>DN</strong> text down to the first riser. On a
+level between two storeys of a multistory stair both parts show; in 3D its treads and risers, or a monolithic slab, its landings and railings.</p>
 <figure>
 <img alt="The sample's stair in the ground floor plan: the treads up to the cut line, the break line, the arrow and the UP text" src="../assets/screens/fr-stair-plan.webp"/>
 <figcaption>A stair in plan</figcaption>
 </figure>
+<p>On the base level the part of the stair above the cut is drawn too, dashed. Each part has a
+subcategory of <strong>Stairs</strong> in <strong>Styles by Category</strong>: <strong>Outlines</strong>, <strong>Riser Lines</strong>, <strong>Nosing
+Lines</strong>, <strong>Supports</strong>, <strong>Cut Marks</strong> and <strong>Up Arrows</strong>, each also <strong><above></above></strong>; their weight,
+colour and pattern change there, and view by view in <strong>Visibility and Graphics</strong>.</p>
+<p><strong>Annotations ▸ Tag ▸ Tread Number</strong>: choose the <strong>Reference</strong> (<strong>Left</strong>, <strong>Left Quarter</strong>,
+<strong>Center</strong>, <strong>Right Quarter</strong>, <strong>Right</strong>), what to number (<strong>Risers</strong> or <strong>Treads</strong>) and the
+<strong>Start Number</strong> in the options bar, then click a stair in a plan. Its steps are numbered one
+after the other through all its runs, in that plan only. With the stair selected, its
+<strong>Properties</strong> show the numbering's settings.</p>
 <h3 id="how-a-stair-is-built">How a stair is built</h3>
 <p><strong>Type Parameters</strong> of the stair decide its construction:</p>
 <ul>
@@ -865,6 +1185,8 @@ or delete them (click, <span class="keys"><kbd class="key-delete">Del</kbd></spa
 <p>A section across the stair shows it cut with its slab. <strong>Volume</strong> in <strong>Properties</strong> and in the
 schedule of stairs is the volume of its solids.</p>
 <p>The type's <strong>Text Font</strong>, <strong>Nosing Profile</strong> (<strong>Default</strong> or <strong>Rounded</strong>) and <strong>Apply Nosing Profile</strong> (front only, front and left, or front, left and right: past a side without a closed stringer), <strong>Open Stringer Offset</strong>, <strong>Trim Stringers at Top</strong> (<strong>Match Level</strong> stops the side stringers at the top level) and its identification (<strong>Code</strong>, <strong>Model</strong>, <strong>Manufacturer</strong>, <strong>Type Comments</strong>, <strong>URL</strong>, <strong>Description</strong>, <strong>Assembly Code</strong>) are in <strong>Type Parameters</strong>, as is a monolithic stair's <strong>Underside of Stringer</strong> (<strong>Smooth</strong>, a sloping slab, or <strong>Stepped</strong>: the slab follows the steps). Under <strong>Calculation Rules</strong>, <strong>Use Stair Calculator</strong> with a <strong>Target</strong>, <strong>Maximum</strong> and <strong>Minimum Result</strong> checks 2 risers + 1 tread: a stair outside the range is made, and a warning says so.</p>
+<p><strong>New in the realignment.</strong> In a stair's or a ramp's <strong>Properties</strong>, <strong>Show Up arrow in all views</strong> shows the whole arrow and <strong>UP</strong> in the top level's plan too. <strong>Desired number of risers</strong> can be typed: the risers become as high as the storey over that number (a number that would make them higher than the type's <strong>Maximum riser height</strong> is refused). When the risers drawn exceed the desired ones, or the <strong>Actual tread depth</strong> is under the type's minimum, the stair is made with a warning. With <strong>Use stair calculator</strong> on in the type, a new stair starts with the tread that gives the <strong>Target result</strong>. The <strong>Railing type</strong> dialog also offers <strong>Default</strong>, the Railing tool's type. In the sketch, each run's dashed run line has a grip at its end: dragged, it adds or removes risers. <strong>Work plane ▸ Set</strong> in a new stair's sketch puts it on another level. The <strong>UP</strong>/<strong>DN</strong> text is dragged by its grip also with the cursor over it, after <span class="keys"><kbd class="key-tab">Tab</kbd></span> on the highlighted stair, and in the top level's plan. In the type: <strong>Stringer carriage height</strong> moves the side stringers under the treads, <strong>Landing stringer height</strong> is the height of the stringers that go on along the landings, <strong>Trim stringers at top</strong> also has <strong>Match landing stringer</strong>, and <strong>Landing overlap</strong> (stepped monolithic stairs) is how far the upright faces stand behind the risers; the type also has its <strong>Cost</strong>.</p>
+<p><strong>Stair calculator.</strong> In <strong>Type Properties</strong>, <strong>Calculation Rules</strong> is one row with its summary (for example «2 × A + 1 × P = 630 mm, 600–650») and the <strong>Edit…</strong> button, which opens <strong>Stair calculator</strong>: <strong>Use Stair Calculator</strong>, the riser's and the tread's multipliers (0.5 to 5, one decimal), <strong>Target Result</strong>, <strong>Maximum Result</strong> and <strong>Minimum Result</strong>. The selected stair's result updates at once, green within the range and red outside it; with a maximum under the minimum <strong>OK</strong> is off. <strong>OK</strong> gives the type the rules in one undo step; existing stairs keep their tread, new ones take it from the multipliers. In the BIMopen style the dialog has a preview.</p>
 <h2 id="ramps">Ramps</h2>
 <ol>
 <li>Click <strong>Create ▸ Vertical Links ▸ Ramp</strong>. Sketch mode starts with <strong>Run</strong>.</li>
@@ -924,7 +1246,8 @@ Adjustment</strong> raises (or lowers) the rail over the landings by that much.<
 floor under it: where it would fall on a riser's line it moves by half its section, so no post sinks
 into the steps or hangs in front of the first one. Between two posts the balusters are evenly
 spaced, never wider apart than the spacing.</p>
-<p><strong>Place on a host</strong> works in plans and in the 3D view: the stair under the cursor shows where the two railings go. <strong>On stringer</strong> can be chosen only for a stair that has a stringer: on a monolithic stair it is greyed, on the options bar and in <strong>Properties</strong>. A new railing type has both <strong>Angled Joins</strong> and <strong>Tangent Joins</strong> set to <strong>Add Vertical/Horizontal Segments</strong>, <strong>Weld</strong>, no landing height adjustment, a bottom rail at 0.100 m (30×30), 20×20 balusters from the bottom rail to the top rail every 0.120 m, broken at the end of each segment and fitted to its length, and 50×50 posts standing on the host: where a run meets a landing the post stands on the landing at the riser's line, with the upright piece of the rail, and nothing runs over the treads. Where the rail rises upright at the start of a run, a low rail stays on the landing without entering the first tread. <strong>Edit Joins</strong> (one join at a time) is greyed: not available yet.</p>
+<p><strong>Place on a host</strong> works in plans and in the 3D view: the stair under the cursor shows where the two railings go. <strong>On stringer</strong> can be chosen only for a stair that has a stringer: on a monolithic stair it is greyed, on the options bar and in <strong>Properties</strong>. A new railing type has both <strong>Angled Joins</strong> and <strong>Tangent Joins</strong> set to <strong>Add Vertical/Horizontal Segments</strong>, <strong>Weld</strong>, no landing height adjustment, a bottom rail at 0.100 m (30×30), 20×20 balusters from the bottom rail to the top rail every 0.120 m, broken at the end of each segment and fitted to its length, and 50×50 posts standing on the host: where a run meets a landing the post stands on the landing at the riser's line, with the upright piece of the rail, and nothing runs over the treads. Where the rail rises upright at the start of a run, a low rail stays on the landing without entering the first tread.</p>
+<p><strong>New in the realignment.</strong> A railing's path is drawn with every tool of the <strong>Draw</strong> panel: an arc stays an arc in the railing, in 3D and in <strong>Edit Path</strong>, with posts only where it starts and ends. <strong>Pick New Host</strong> also takes a floor: the railing stands on its top. In <strong>Edit Path</strong>, with a line selected, the options bar offers <strong>Height correction</strong> (<strong>By type</strong> or <strong>Custom</strong> with its value) and <strong>Slope</strong> (<strong>By host</strong>, <strong>Flat</strong>, <strong>Sloped</strong>); <strong>Tools ▸ Edit Joins</strong> shows a box round the joint under the cursor, a click marks it with an X and <strong>Join</strong> in the options bar chooses how the rails meet there. In <strong>Rail structure</strong> each rail has its <strong>Material</strong>.</p>
 <h2 id="components">Components</h2>
 <ol>
 <li>Click <strong>Create ▸ Build ▸ Component</strong>. The type selector lists the components loaded in the
@@ -936,23 +1259,47 @@ spaced, never wider apart than the spacing.</p>
 <img alt="The component tool in a bedroom of the plan: the preview of the component following the cursor, with temporary dimensions to the nearest walls" src="../assets/screens/fr-component.webp"/>
 <figcaption>A component follows the cursor before the click</figcaption>
 </figure>
-<p><strong>Mode ▸ Load Family</strong> opens the library, by folder (<strong>Furniture</strong>, <strong>Plumbing Fixtures</strong>):
-choose a family and click <strong>Open</strong> to add its types to the project.</p>
+<p><strong>Mode ▸ Load component</strong> opens the library, by folder (<strong>Furniture</strong>, <strong>Casework</strong>, <strong>Plumbing
+Fixtures</strong>): choose a component to see its types with their sizes (width × depth × height) and click
+<strong>Open</strong> to add them to the project.</p>
 <figure>
-<img alt="Load Family: the library by folder, Furniture and Plumbing Fixtures, with the families already loaded marked" src="../assets/screens/fr-load-family.webp"/>
-<figcaption>Load Family</figcaption>
+<img alt="Load component: the library by folder, Furniture and Plumbing Fixtures, with the components already loaded marked" src="../assets/screens/fr-load-family.webp"/>
+<figcaption>Load component</figcaption>
 </figure>
 <p>Select a component and click <strong>Host ▸ Pick New Host</strong>, then a floor: the component moves onto
 the floor and stays on its top (click an empty point to put it back on the level). Its properties
 are <strong>Level</strong>, <strong>Host</strong>, <strong>Offset from Level</strong>, <strong>Rotation</strong>, <strong>Mark</strong> and <strong>Comments</strong>; <strong>Type Parameters</strong> has its width, depth, height and material.</p>
+<h3 id="casework">Casework</h3>
+<p><strong>Casework</strong> is a category of its own, next to <strong>Furniture</strong>: the units fitted in kitchens and
+bathrooms. Its library folder has the <strong>Kitchen Unit</strong> (3.00 and 2.40 m long), the
+<strong>Wall Cabinet</strong> (60, 90 and 120 cm wide, 35 cm deep, 70 cm high), the <strong>Tall Cabinet 60</strong>
+(60 × 60 cm, 2.10 m high), the <strong>Vanity Unit 80</strong> and the <strong>Fitted Wardrobe</strong>; the free-standing
+<strong>Wardrobe</strong> stays furniture. A wall cabinet is placed 1.45 m above its level: its type's
+<strong>Default Offset</strong> says how high new ones go, and each keeps its own <strong>Offset from Level</strong>.</p>
+<p>Casework is drawn by the view range of the plan, as walls are:</p>
+<ul>
+<li>a unit the cut plane crosses (a tall cabinet, at the default 1.20 m) is <strong>cut</strong>: its outline
+  with the cut line weight of the category, filled with its material's cut pattern;</li>
+<li>a unit under the cut plane (the kitchen unit) is seen from above, in projection;</li>
+<li>a unit over the cut plane and under the top of the view range (a wall cabinet) is seen from
+  above too, <strong>dashed</strong>; over the top of the range it is not drawn.</li>
+</ul>
+<p>Furniture and plumbing fixtures are never cut: they are drawn whole where the cut plane crosses
+them, and not drawn over it. So <strong>Visibility/Graphics</strong> and <strong>Object Styles</strong> give <strong>Casework</strong>
+its cut lines and cut patterns, and show «—» there for <strong>Furniture</strong> and <strong>Plumbing Fixtures</strong>.
+Casework has its own row in filters, schedules (<strong>Schedule/Quantities ▸ Casework</strong>), material
+takeoffs, project and shared parameters and legends. A project saved before casework had its
+own category opens with its kitchen units as casework, and the message of the opening says how
+many. <strong>Export IFC</strong> writes casework as furniture marked <em>Casework</em>; on import, furniture named
+as a cabinet, a counter, a vanity unit or a kitchen is proposed as casework.</p>
 <h2 id="schedules-and-ifc">Schedules and IFC</h2>
-<p>Floors, roofs, stairs, railings and furniture have their schedules (<strong>Views ▸ Create ▸ Schedules
+<p>Floors, roofs, stairs, railings, furniture and casework have their schedules (<strong>Views ▸ Create ▸ Schedules
 ▸ Schedule/Quantities</strong>), one row per element. <strong>Export ▸ Export IFC4…</strong> writes floors as slabs
 (with their openings and slopes), roofs, stairs with their flights and landings, railings,
-furniture and plumbing fixtures. A multistory stair is written once in each storey it is repeated in, with its railings.</p>
+furniture, casework and plumbing fixtures. A multistory stair is written once in each storey it is repeated in, with its railings.</p>
 <h2 id="not-yet-in-bimopen">Not yet in BIMopen</h2>
-<p>Ceilings, roofs by extrusion, shafts and vertical openings, slab edges, fascias, gutters
-and soffits come after this chapter's realignment.</p>
+<p>Slab edges, fascias and gutters come after this chapter's realignment. Ceilings have their own chapter, <a href="../ceilings-and-columns/">Ceilings and columns</a>;
+shafts and openings cut in floors, roofs and walls are in <a href="../openings/">Openings</a>.</p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
@@ -977,13 +1324,13 @@ and soffits come after this chapter's realignment.</p>
               </div>
 </div>
 </a>
-<a aria-label="Next: Views and graphics" class="md-footer__link md-footer__link--next" href="../views-and-graphics/">
+<a aria-label="Next: Ceilings and columns" class="md-footer__link md-footer__link--next" href="../ceilings-and-columns/">
 <div class="md-footer__title">
 <span class="md-footer__direction">
                 Next
               </span>
 <div class="md-ellipsis">
-                Views and graphics
+                Ceilings and columns
               </div>
 </div>
 <div class="md-footer__button md-icon">

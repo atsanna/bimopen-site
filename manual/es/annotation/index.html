@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Manual de usuario de BIMopen, modelado BIM de código abierto" name="description"/>
 <meta content="BIMopen" name="author"/>
-<link href="https://atsanna.github.io/bimopen-site/manual/es/annotation/" rel="canonical"/>
+<link href="https://bimopen.it/manual/es/annotation/" rel="canonical"/>
 <link href="../views-and-graphics/" rel="prev"/>
 <link href="../documentation/" rel="next"/>
 <link href="../assets/images/bimopen-cube.svg" rel="icon"/>
@@ -18,6 +18,13 @@
 <link href="../assets/css/theme.css" rel="stylesheet"/>
 <link href="../assets/css/theme_dark_mode.css" rel="stylesheet"/>
 <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="https://bimopen.it/manual/en/annotation/" hreflang="en" rel="alternate"/>
+<link href="https://bimopen.it/manual/it/annotation/" hreflang="it" rel="alternate"/>
+<link href="https://bimopen.it/manual/de/annotation/" hreflang="de" rel="alternate"/>
+<link href="https://bimopen.it/manual/fr/annotation/" hreflang="fr" rel="alternate"/>
+<link href="https://bimopen.it/manual/es/annotation/" hreflang="es" rel="alternate"/>
+<link href="https://bimopen.it/manual/ar/annotation/" hreflang="ar" rel="alternate"/>
+<link href="https://bimopen.it/manual/en/annotation/" hreflang="x-default" rel="alternate"/>
 </head>
 <body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="slate" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -32,7 +39,7 @@
 </div>
 <header class="md-header md-header--shadow" data-md-component="header">
 <nav aria-label="Cabecera" class="md-header__inner md-grid">
-<a aria-label="Manual de usuario de BIMopen" class="md-header__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/?lang=es" title="Manual de usuario de BIMopen">
+<a aria-label="Manual de usuario de BIMopen" class="md-header__button md-logo" data-md-component="logo" href="https://bimopen.it/es/" title="Manual de usuario de BIMopen">
 <img alt="logo" src="../assets/images/bimopen-cube.svg"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -73,32 +80,32 @@
 <div class="md-select__inner">
 <ul class="md-select__list">
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/en/" hreflang="en">
+<a class="md-select__link" href="https://bimopen.it/manual/en/" hreflang="en">
               English
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/it/" hreflang="it">
+<a class="md-select__link" href="https://bimopen.it/manual/it/" hreflang="it">
               Italiano
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/de/" hreflang="de">
+<a class="md-select__link" href="https://bimopen.it/manual/de/" hreflang="de">
               Deutsch
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/fr/" hreflang="fr">
+<a class="md-select__link" href="https://bimopen.it/manual/fr/" hreflang="fr">
               Français
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/es/" hreflang="es">
+<a class="md-select__link" href="https://bimopen.it/manual/es/" hreflang="es">
               Español
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/ar/" hreflang="ar">
+<a class="md-select__link" href="https://bimopen.it/manual/ar/" hreflang="ar">
               العربية
             </a>
 </li>
@@ -147,7 +154,7 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navegación" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="Manual de usuario de BIMopen" class="md-nav__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/?lang=es" title="Manual de usuario de BIMopen">
+<a aria-label="Manual de usuario de BIMopen" class="md-nav__button md-logo" data-md-component="logo" href="https://bimopen.it/es/" title="Manual de usuario de BIMopen">
 <img alt="logo" src="../assets/images/bimopen-cube.svg"/>
 </a>
     Manual de usuario de BIMopen
@@ -202,6 +209,14 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../cad-files/">
+<span class="md-ellipsis">
+    DWG y DXF
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../selection-and-modify/">
 <span class="md-ellipsis">
     Selección y modificación
@@ -221,6 +236,54 @@
 <a class="md-nav__link" href="../floors-roofs-stairs/">
 <span class="md-ellipsis">
     Suelos, cubiertas, escaleras y componentes
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ceilings-and-columns/">
+<span class="md-ellipsis">
+    Falsos techos y columnas
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../openings/">
+<span class="md-ellipsis">
+    Huecos
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../phases/">
+<span class="md-ellipsis">
+    Fases y demoliciones
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../structure/">
+<span class="md-ellipsis">
+    Estructura y cimentaciones
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../site/">
+<span class="md-ellipsis">
+    Emplazamiento y terreno
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../design-options/">
+<span class="md-ellipsis">
+    Alternativas de diseño
     
   </span>
 </a>
@@ -270,6 +333,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#radial-diameter-and-arc-length-dimensions">
+<span class="md-ellipsis">
+      Cotas radiales, de diámetro y de longitud de arco
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#changing-a-dimension">
 <span class="md-ellipsis">
       Modificar una cota
@@ -297,6 +367,13 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#arrows">
+<span class="md-ellipsis">
+      Flechas, fuentes y unidades alternativas
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -306,6 +383,17 @@
       Texto
     </span>
 </a>
+<nav aria-label="Texto" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#text-format-and-leaders">
+<span class="md-ellipsis">
+      Formato del texto y directrices
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#symbols">
@@ -320,6 +408,52 @@
       Etiquetas
     </span>
 </a>
+<nav aria-label="Etiquetas" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#loaded-tags">
+<span class="md-ellipsis">
+      Etiquetas cargadas y numeración
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#multi-category-tags">
+<span class="md-ellipsis">
+      Etiquetas multicategoría
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#material-tags">
+<span class="md-ellipsis">
+      Etiquetas de material
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tags-with-several-leaders">
+<span class="md-ellipsis">
+      Etiquetas con varias directrices
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#multiple-values">
+<span class="md-ellipsis">
+      Varios valores
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#material-keynotes">
+<span class="md-ellipsis">
+      Notas clave
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#rooms">
@@ -355,6 +489,17 @@
       Líneas de detalle y regiones
     </span>
 </a>
+<nav aria-label="Líneas de detalle y regiones" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tangency-padlock">
+<span class="md-ellipsis">
+      El candado de tangencia
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#detail-components-repeating-details-and-insulation">
@@ -420,7 +565,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="https://atsanna.github.io/bimopen-site/manual/es/pdf/bimopen-manual-es.pdf">
+<a class="md-nav__link" href="https://bimopen.it/manual/es/pdf/bimopen-manual-es.pdf">
 <span class="md-ellipsis">
     PDF
     
@@ -457,6 +602,13 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#radial-diameter-and-arc-length-dimensions">
+<span class="md-ellipsis">
+      Cotas radiales, de diámetro y de longitud de arco
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#changing-a-dimension">
 <span class="md-ellipsis">
       Modificar una cota
@@ -484,6 +636,13 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#arrows">
+<span class="md-ellipsis">
+      Flechas, fuentes y unidades alternativas
+    </span>
+</a>
+</li>
 </ul>
 </nav>
 </li>
@@ -493,6 +652,17 @@
       Texto
     </span>
 </a>
+<nav aria-label="Texto" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#text-format-and-leaders">
+<span class="md-ellipsis">
+      Formato del texto y directrices
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#symbols">
@@ -507,6 +677,52 @@
       Etiquetas
     </span>
 </a>
+<nav aria-label="Etiquetas" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#loaded-tags">
+<span class="md-ellipsis">
+      Etiquetas cargadas y numeración
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#multi-category-tags">
+<span class="md-ellipsis">
+      Etiquetas multicategoría
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#material-tags">
+<span class="md-ellipsis">
+      Etiquetas de material
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tags-with-several-leaders">
+<span class="md-ellipsis">
+      Etiquetas con varias directrices
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#multiple-values">
+<span class="md-ellipsis">
+      Varios valores
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#material-keynotes">
+<span class="md-ellipsis">
+      Notas clave
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#rooms">
@@ -542,6 +758,17 @@
       Líneas de detalle y regiones
     </span>
 </a>
+<nav aria-label="Líneas de detalle y regiones" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tangency-padlock">
+<span class="md-ellipsis">
+      El candado de tangencia
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#detail-components-repeating-details-and-insulation">
@@ -589,7 +816,7 @@ ocuparía una habitación o un área, la línea, la región, el componente o el 
 dibujando.</p>
 <h2 id="dimensions">Cotas</h2>
 <p><strong>Documentar ▸ Cota</strong> contiene las herramientas de cota: <strong>Alineada</strong>, <strong>Lineal</strong>, <strong>Angular</strong>, <strong>Radial</strong>,
-<strong>Longitud de arco</strong> y las cotas de punto <strong>Cota de elevación de punto</strong>, <strong>Coordenada de punto</strong> y
+<strong>Diámetro</strong>, <strong>Longitud de arco</strong> y las cotas de punto <strong>Cota de elevación de punto</strong>, <strong>Coordenada de punto</strong> y
 <strong>Pendiente de punto</strong>. Funcionan en plantas, secciones, alzados, vistas 2D libres y leyendas. Elija el tipo de cota
 en el selector de tipos mientras la herramienta está activa; <strong>Parámetros de tipo</strong> modifica el tipo y, con él,
 todas las cotas de ese tipo.</p>
@@ -602,8 +829,13 @@ todas las cotas de ese tipo.</p>
   vacío para colocar allí la línea de cota. Mientras elige, la cadena sigue al cursor.
   Pulse <strong>TAB</strong> sobre un muro para recorrer sus referencias.</li>
 <li><strong>Muros completos</strong>: un solo clic acota un muro entero. <strong>Opciones</strong> abre las opciones de acotación automática:
-  <strong>Huecos</strong> con sus <strong>Centros</strong> o ambas <strong>Anchuras</strong>, <strong>Muros que se cortan</strong> y <strong>Rejillas que se cortan</strong>. Una
-  rejilla que cae en el extremo de un muro no añade línea de referencia.</li>
+  <strong>Huecos</strong> con sus <strong>Centros</strong> o ambas <strong>Anchuras</strong>, <strong>Muros que se cortan</strong> y <strong>Rejillas que se cortan</strong>; los
+  huecos por anchuras y los muros que se cortan vienen marcados. Al pasar sobre un muro se ilumina
+  con todas las referencias que añadirá el clic. Haga clic en el muro, en otros muros para
+  añadirlos a la cadena, y luego fuera para colocar la línea. En cada extremo la cadena llega al
+  muro unido allí (su eje o su cara exterior, según la preferencia de la barra de opciones). Un muro cortina
+  incrustado en el muro cuenta como un hueco. Una rejilla que cae en el extremo de un muro o en otra referencia no añade línea de referencia.
+  Funciona igual en plantas, secciones y alzados.</li>
 </ul>
 <figure>
 <img alt="Tres pasos de una cota alineada en la planta baja: el primer muro elegido y el cursor sobre el tabique, la cota que sigue al cursor, la cota de 6000 colocada" src="../assets/screens/an-aligned.webp"/>
@@ -611,8 +843,21 @@ todas las cotas de ese tipo.</p>
 </figure>
 <p><strong>Lineal</strong> mide en horizontal o en vertical de la vista, entre puntos como los extremos de un muro: el lugar donde
 se coloca la línea decide cuál, y la <strong>barra espaciadora</strong> alterna entre las dos.</p>
-<p><strong>Angular</strong> mide el ángulo entre dos muros, rejillas o líneas que se encuentran; varias líneas por el mismo punto dan una cadena de ángulos, cada uno con su valor; el último clic elige el sector.
-<strong>Radial</strong> y <strong>Longitud de arco</strong> acotan un arco: haga clic en él y después donde irá la cota.</p>
+<p><strong>Angular</strong> mide el ángulo entre dos muros, rejillas o líneas que se encuentran; varias líneas por el mismo punto dan una cadena de ángulos, cada uno con su valor; el último clic elige el sector.</p>
+<h3 id="radial-diameter-and-arc-length-dimensions">Cotas radiales, de diámetro y de longitud de arco</h3>
+<p><strong>Radial</strong>, <strong>Diámetro</strong> y <strong>Longitud de arco</strong> acotan un círculo o un arco: de una línea de detalle
+o de un muro curvo. Haga clic en él y después donde irá la cota. Sobre un muro curvo, la
+<strong>Preferencia</strong> de la barra de opciones decide qué va primero (su eje, sus caras, su núcleo) y
+<strong>TAB</strong> pasa a los demás. Una cota de diámetro pasa por el centro con una flecha sobre la curva en
+cada extremo y <strong>Ø</strong> antes del valor; colocada fuera de la curva, su línea sigue para alojar el
+valor. En un arco más corto que medio círculo abarca igualmente todo el diámetro. Las cotas siguen
+al arco cuando cambia su radio y desaparecen cuando se elimina. En una sección o un alzado solo se
+ofrecen los arcos dibujados allí.</p>
+<p>Una cota radial o de diámetro seleccionada tiene un pinzamiento en su extremo sobre la curva:
+arrástrelo para girar la línea alrededor del centro; soltado sobre otro arco o círculo del mismo
+centro, la cota mide ese. Su valor abre <strong>Texto de cota</strong>, y el pinzamiento bajo él mueve el texto,
+como en las cotas alineadas. Los valores de las cotas angulares y de longitud de arco también lo abren
+y se mueven del mismo modo.</p>
 <h3 id="changing-a-dimension">Modificar una cota</h3>
 <ul>
 <li>Seleccione una cota y haga clic en su valor: se abre <strong>Texto de cota</strong>. <strong>Usar valor real</strong> conserva la medida y
@@ -637,14 +882,16 @@ se coloca la línea decide cuál, y la <strong>barra espaciadora</strong> altern
 </figure>
 <p>El tipo define la marca (diagonal, flecha rellena o punto), las extensiones de la línea de cota y de las líneas de
 referencia (<strong>Control de línea de referencia</strong>: una separación respecto al elemento, o <strong>Fijo a línea de cota</strong> con su
-<strong>Longitud de línea de referencia</strong>), la <strong>Distancia de forzado de línea de cota</strong> (al colocarla, la
-línea se ajusta a múltiplos de ella desde lo que mide; 0 la desactiva), el <strong>Grosor de línea</strong> y el <strong>Grosor de línea de marca</strong>, el <strong>Símbolo de eje</strong>, el
+<strong>Longitud de línea de referencia</strong>), la <strong>Distancia de forzado de línea de cota</strong> (al colocarla o
+arrastrarla, la línea se ajusta a múltiplos de ella desde lo que mide, y a un paso de una cadena
+paralela para que las cadenas se apilen con regularidad; una línea discontinua y un aviso muestran
+el ajuste; 0 la desactiva), el <strong>Grosor de línea</strong> y el <strong>Grosor de línea de marca</strong>, el <strong>Símbolo de eje</strong>, el
 <strong>Patrón de eje</strong> y la <strong>Marca de eje</strong> (<strong>Predeterminado</strong> es la del tipo) de las líneas de referencia a ejes, el color, el tamaño del texto, el desfase, el fondo, la negrita, la cursiva y el subrayado, las
 unidades (<strong>Formato de unidades</strong> abre <strong>Formato</strong>: <strong>Usar parámetros de proyecto</strong>, o una unidad
 con su redondeo, también <strong>Personalizada</strong> con un <strong>Factor de incremento</strong>, su símbolo y sus opciones) y, para las cotas lineales, el <strong>Tipo de
 cadena de cotas</strong>: <strong>Continuo</strong>, <strong>Línea base</strong> (valores apilados desde la primera referencia) u <strong>Coordenada</strong>
 (valores desde la primera referencia a lo largo de una línea). <strong>Mostrar altura de hueco</strong> escribe la altura de una
-puerta o ventana bajo la anchura medida de jamba a jamba. Los tipos radiales pueden quitar el prefijo <strong>R</strong> y su marca de centro (<strong>Marcas de centro</strong>, con su tamaño). Con
+puerta o ventana bajo la anchura medida de jamba a jamba. Los tipos radiales y de diámetro tienen su marca de centro (<strong>Marcas de centro</strong>, con su tamaño) y su símbolo: <strong>Texto del símbolo de radio</strong> (<strong>R</strong>) o <strong>Texto del símbolo de diámetro</strong> (<strong>Ø</strong>), y dónde va, <strong>Antes del valor</strong>, <strong>Después del valor</strong> u <strong>Oculto</strong> (<strong>Posición del símbolo de radio</strong>, <strong>Posición del símbolo de diámetro</strong>). La directriz del texto desplazado depende del <strong>Tipo de directriz</strong>: <strong>Arco</strong>, o <strong>Línea</strong> con su <strong>Longitud de hombro</strong> y la <strong>Posición del texto</strong> (<strong>Encima</strong>: el hombro pasa bajo el texto; <strong>En línea</strong>: termina en el lado del texto); <strong>Marca de directriz</strong> marca su extremo en la línea de cota, y <strong>Mostrar directriz al desplazar el texto</strong> la dibuja en cuanto el texto se mueve (<strong>Lejos del origen</strong>) o solo más allá de las líneas de referencia (<strong>Más allá de las líneas de referencia</strong>). Con
 flechas, un segmento demasiado corto para ellas las lleva por fuera, y la línea sigue más allá por <strong>Extensión de
 línea de cota invertida</strong>. <strong>Documentar ▸ Cota ▸ Tipos de cota</strong> abre los parámetros de tipo del tipo actual de cada
 familia, para definirlo antes de acotar.</p>
@@ -732,17 +979,38 @@ medio colocar; un segundo <strong>Esc</strong> termina la herramienta.</p>
 indicador superior o inferior, luego el de elevación, luego el valor; el <strong>… como prefijo/sufijo</strong>
 de cada uno lo pone en cambio después del valor), el <strong>Símbolo</strong>, <strong>Incluir elevación</strong> y el <strong>Indicador Norte/Sur</strong> y el <strong>Indicador Este/Oeste</strong> de las
 coordenadas (con <strong>Indicador como prefijo/sufijo</strong>), y la <strong>Longitud de directriz</strong> y la <strong>Dirección de pendiente</strong> (<strong>Abajo</strong> o <strong>Arriba</strong>) de las pendientes.</p>
+<p>Las <strong>Propiedades</strong> de una cota de elevación ofrecen también <strong>Prefijo valor único/superior</strong> y
+<strong>Sufijo valor único/superior</strong> y, para el valor inferior, <strong>Prefijo valor inferior</strong> y <strong>Sufijo
+valor inferior</strong>: palabras escritas antes y después del valor.</p>
+<h3 id="arrows">Flechas, fuentes y unidades alternativas</h3>
+<p><strong>Proyecto ▸ Parámetros adicionales ▸ Flechas</strong> abre las <strong>Parámetros de tipo</strong> de los tipos de
+flecha del proyecto. Cada uno tiene un <strong>Estilo de flecha</strong> (Flecha, Diagonal, Punto, Marca
+reforzada, Símbolo de cota de nivel), <strong>Rellena</strong>, <strong>Ángulo de apertura</strong>, <strong>Tamaño de la marca</strong> en
+papel y, para la marca reforzada, su propio grosor; lo que el estilo no usa aparece en gris.
+<strong>Duplicar…</strong> y <strong>Cambiar nombre…</strong> funcionan como en otros tipos; la vista previa muestra la
+directriz de una nota y una cota dibujadas con la flecha. Cada flecha de directriz (textos,
+etiquetas, símbolos, cotas de punto) y cada marca de los tipos de cota ofrecen <strong>Ninguno</strong> y estos
+tipos: al cambiar un tipo cambia cada dibujo que lo usa. <strong>Copiar ajustes de un proyecto</strong> los
+copia, <strong>Limpiar no utilizados</strong> quita los que nadie usa.</p>
+<p>En el tipo de cota, <strong>Fuente de texto</strong>, <strong>Factor de anchura</strong> y <strong>Convención de lectura</strong>
+(alineada con la línea u horizontal: siempre recta, también en cotas verticales) dan forma al
+valor; <strong>Unidades alternativas</strong> muestra un segundo valor a la derecha o debajo, con su propio
+<strong>Formato…</strong>, prefijo y sufijo. En el escritorio <strong>Fuente de texto</strong> lista también las fuentes del
+equipo; un proyecto abierto en un equipo sin esa fuente la dibuja con BIMopen Sans y lo avisa al
+abrir. En la versión web quedan nuestras dos fuentes. El tipo de cota de nivel elige además el
+<strong>Símbolo</strong> (Ninguno, Triángulo, Triángulo relleno, Retícula) y la <strong>Flecha de directriz</strong>, con los
+grosores de la directriz y de la flecha.</p>
 <h2 id="text">Texto</h2>
 <p><strong>Documentar ▸ Texto ▸ Texto</strong> (<code>TX</code>): haga clic donde irá la nota y escriba; Intro inicia una línea nueva. Un clic
 da una nota que no se ajusta; arrastrando se le da un ancho y las palabras se ajustan dentro. Hacer clic en otro
-lugar termina la nota, y <strong>Esc</strong> finaliza la herramienta. <span class="keys"><kbd class="key-tab">Tab</kbd></span> al escribir mueve el texto a la siguiente
-tabulación. El tamaño del texto es el del papel: la nota conserva su tamaño impreso a cualquier escala de la vista.</p>
+lugar termina la nota, y <strong>Esc</strong> finaliza la herramienta. <span class="keys"><kbd class="key-tab">Tab</kbd></span> al escribir sangra el
+párrafo. El tamaño del texto es el del papel: la nota conserva su tamaño impreso a cualquier escala de la vista.</p>
 <p>El grupo <strong>Formato</strong> define, antes de colocarla o en una nota seleccionada:</p>
 <ul>
 <li>la directriz: <strong>Sin directriz</strong>, <strong>Un segmento</strong> (clic en la punta y luego en la nota), <strong>Dos segmentos</strong>
   (punta, codo, nota) o <strong>Curva</strong>;</li>
 <li>la alineación, izquierda, centro o derecha, y <strong>Negrita</strong>, <strong>Cursiva</strong> y <strong>Subrayado</strong> (Ctrl+B, Ctrl+I, Ctrl+U
-  al escribir o en las notas seleccionadas), que se aplican a toda la nota;</li>
+  en los caracteres seleccionados al escribir, o en toda la nota seleccionada);</li>
 <li>en una nota seleccionada, <strong>Añadir directriz recta a la izquierda</strong> y los otros tres botones de directriz, y
   <strong>Eliminar última directriz</strong>;</li>
 <li><strong>Conexión a la izquierda</strong> y <strong>Conexión a la derecha</strong> (<strong>Arriba</strong>, <strong>En el centro</strong>, <strong>Abajo</strong>): dónde se unen
@@ -773,6 +1041,49 @@ cierra el cuadro de diálogo. En las notas seleccionadas también está en <stro
 <img alt="El cuadro Buscar/Reemplazar tras Buscar todo: la palabra buscada, el ámbito Vista actual y la coincidencia encontrada con su vista" src="../assets/screens/an-find-replace.webp"/>
 <figcaption>Buscar/Reemplazar</figcaption>
 </figure>
+<p>Dentro de un grupo, <strong>Buscar todo</strong> muestra una fila por tipo de grupo, con un candado y el número
+de copias; esas notas se cambian desde <strong>Editar grupo</strong>, donde el ámbito pasa a ser <strong>Grupo en
+edición</strong> y <strong>Finalizar</strong> lleva el cambio a todas las copias.</p>
+<p><strong>Anotaciones ▸ Texto ▸ Corrector ortográfico</strong> (<code>F7</code>) revisa las notas de texto seleccionadas, si no las
+de la vista o el plano (con las vistas colocadas en él); etiquetas, cotas, parámetros y tablas
+quedan fuera, y en 3D el comando está en gris. Para cada palabra que no está en el diccionario la
+ventana muestra la nota con la palabra resaltada, <strong>Cambiar por</strong> y hasta seis <strong>Sugerencias</strong>:
+<strong>Omitir</strong>, <strong>Omitir todo</strong> (hasta cerrar el proyecto), <strong>Añadir al diccionario</strong> (el diccionario
+<strong>Personal</strong>), <strong>Cambiar</strong> y <strong>Cambiar todo</strong> (también en las notas que quedan por revisar); una
+palabra repetida se quita con <strong>Eliminar</strong>. Toda la revisión es un solo paso de deshacer. Las notas
+de los grupos se omiten y el mensaje final enumera los grupos; en <strong>Editar grupo</strong> solo se revisan
+las notas del grupo. <strong>Opciones ▸ Ortografía</strong> reúne las cinco casillas (palabras en mayúsculas, con
+números, con mayúsculas mezcladas, direcciones web y rutas, palabras repetidas), <strong>Restablecer
+valores predeterminados</strong>, el <strong>Diccionario principal</strong> (el italiano está integrado, los demás
+idiomas llegan con los paquetes de idioma) y el diccionario <strong>Personal</strong>, un archivo de texto con
+una palabra por línea, con <strong>Editar…</strong>.</p>
+<p>La <strong>Fuente de texto</strong> del tipo de texto es <strong>BIMopen Sans</strong> o <strong>BIMopen Mono</strong>, de ancho fijo;
+su <strong>Factor de anchura</strong> dibuja las letras más estrechas (por debajo de 1) o más anchas, en
+pantalla, al imprimir y al exportar.</p>
+<h3 id="text-format-and-leaders">Formato del texto y directrices</h3>
+<p>Mientras escribe, <strong>Negrita</strong>, <strong>Cursiva</strong> y <strong>Subrayado</strong> (o Ctrl+B, Ctrl+I, Ctrl+U) se aplican a
+los caracteres seleccionados; sin selección, a lo que escriba después. Con la nota seleccionada pero
+sin escribir, se aplican a toda la nota. Cuando la selección está formateada en parte, el botón lo
+muestra con un borde discontinuo.</p>
+<figure>
+<img alt="Una nota de texto en la planta baja con dos directrices, una con codo" src="../assets/screens/tx-leaders.webp"/>
+<figcaption>Una nota de texto con dos directrices</figcaption>
+</figure>
+<p><strong>Formato de párrafo</strong> se aplica a los párrafos que toca la selección (o al del cursor), y la
+numeración vuelve a empezar tras un párrafo sin lista. <span class="keys"><kbd class="key-tab">Tab</kbd></span> sangra el texto del párrafo una
+tabulación (el marcador se queda), <span class="keys"><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-tab">Tab</kbd></span> quita el sangrado. El texto pegado toma el formato
+del párrafo. Mientras escribe, <strong>Pegar</strong>, <strong>Cortar</strong> y <strong>Copiar</strong> del grupo <strong>Portapapeles</strong>
+actúan sobre el texto, en el cursor.</p>
+<p>Con directriz, cerca de otra nota el extremo de la directriz se engancha a sus seis puntos de anclaje
+(a izquierda y derecha, arriba, en el centro y abajo), con la marca y la indicación <strong>Anclaje de la
+nota</strong>; <span class="keys"><kbd class="key-tab">Tab</kbd></span> pasa al punto siguiente. Sin directriz la nota se alinea con los orígenes de las
+demás notas (a la izquierda, al centro o a la derecha según la alineación) y con los textos de las
+etiquetas. Con el anclaje <strong>Arriba</strong> o <strong>Abajo</strong> la directriz sigue bajo la primera o la última
+línea; <strong>En el centro</strong>, o con <strong>Mostrar borde</strong>, se detiene en el borde.</p>
+<p>Al hacer clic fuera, la nota recién escrita queda seleccionada con sus controles y la herramienta
+sigue activa: la primera <strong>Esc</strong> quita la selección, la segunda cierra la herramienta. <strong>Superíndice</strong>
+y <strong>Subíndice</strong> reducen y suben o bajan los caracteres elegidos; <strong>Todo en mayúsculas</strong> los
+muestra en mayúsculas sin cambiar el texto escrito.</p>
 <h2 id="symbols">Símbolos</h2>
 <p><strong>Documentar ▸ Símbolo ▸ Símbolo</strong> (<code>SY</code>) coloca un símbolo de anotación 2D en una planta, una sección, una vista 2D
 libre o una leyenda: una <strong>Flecha norte</strong>, un <strong>Símbolo de eje</strong>, una <strong>Flecha de flujo</strong>, una <strong>Diana</strong> o un
@@ -811,6 +1122,106 @@ tipos de etiqueta de espacio eligen si muestran el número, el área y el volume
 definida como <strong>Patrón</strong> conserva un ángulo: gira con <strong>Girar</strong>, y la <strong>barra espaciadora</strong> la alinea por turnos con
 cada muro cercano (<strong>Rotación</strong> en sus propiedades). Eliminar la etiqueta de una habitación deja la habitación, y el
 mensaje lo indica.</p>
+<h3 id="loaded-tags">Etiquetas cargadas y numeración</h3>
+<p><strong>Anotar ▸ Etiqueta ▸ Etiquetas cargadas</strong> (en el estilo BIMopen el comando del mismo nombre; en la barra de opciones de <strong>Puerta</strong> y <strong>Ventana</strong> el botón <strong>Etiquetas cargadas…</strong>) lista cada categoría etiquetable con su etiqueta predeterminada. Un filtro acorta la lista; en la columna de la etiqueta se elige un tipo de la categoría o, para las categorías de modelo, una etiqueta multicategoría; <strong>Editar tipo…</strong> abre el tipo de la fila elegida. <strong>Cargar…</strong> queda en gris por ahora. La elección se guarda en el proyecto y vale para <strong>Etiqueta</strong>, <strong>Etiquetar todo</strong> y <strong>Etiquetar al colocar</strong>, activada desde el principio para puertas y ventanas.</p>
+<p>Cada categoría de modelo tiene su etiqueta (suelos, falsos techos, cubiertas, pilares, escaleras, rampas, barandillas, paneles y montantes, mobiliario, aparatos sanitarios, modelos genéricos), que muestra la <strong>Marca de tipo</strong>. La etiqueta recién colocada queda seleccionada hasta colocar la siguiente o pulsar ESC, y la herramienta sigue activa.</p>
+<p>Puertas, ventanas, habitaciones y los demás elementos se numeran desde la última marca escrita: su último número sube conservando los ceros (P-09 → P-10), o su última letra (1A → 1B, Z → AA); un valor ya usado se salta.</p>
+<p>Una etiqueta seleccionada muestra sus controles: la <strong>cruz</strong> sobre el texto, arrastrada, mueve el texto y la directriz lo sigue; el <strong>codo</strong> a mitad de la directriz la dobla (doble clic: recta otra vez); el <strong>extremo asociado</strong> se desliza a lo largo del elemento. La barra de opciones de la etiqueta seleccionada tiene Orientación, <strong>Directriz</strong> y Extremo asociado/libre; un clic en el texto de la etiqueta ya seleccionada escribe su valor. También los componentes de detalle y las nubes de revisión tienen su etiqueta (la nube muestra el número de revisión).</p>
+<p><strong>Etiquetar todo</strong> etiqueta solo lo que la vista muestra (omite los elementos ocultos, las categorías apagadas, los ocultos por un filtro o fuera del recorte, y dice cuántos); con una selección empieza en <strong>Solo los objetos seleccionados</strong> y cada fila dice cuántos tiene; si las etiquetas están ocultas en la vista, pregunta antes. En <strong>Estilos de objeto</strong> y <strong>Visibilidad/Gráficos</strong>, bajo <strong>Etiquetas</strong>, cada tipo de etiqueta (puertas, ventanas, muros, habitaciones, mobiliario, multicategoría, material…) tiene su fila con grosor, color y patrón.</p>
+<h3 id="multi-category-tags">Etiquetas multicategoría</h3>
+<p><strong>Anotaciones ▸ Etiqueta ▸ Etiqueta multicategoría</strong> etiqueta cualquier elemento del modelo:
+muros, puertas, ventanas, suelos, techos, cubiertas, pilares, escaleras, barandillas, mobiliario,
+aparatos sanitarios, paneles de muro cortina y modelos genéricos (habitaciones y áreas tienen sus
+propias etiquetas). Tiene las opciones de <strong>Etiqueta</strong> y, colocada, las mismas propiedades; la
+barra espaciadora la gira. Lo que muestra se elige en el tipo (<strong>Parámetros de tipo</strong>):
+<strong>Etiqueta</strong>, <strong>Editar…</strong> abre <strong>Editar etiqueta</strong>, los campos uno por línea, cada uno con prefijo
+y sufijo, elegidos entre Categoría, Nombre de tipo, Marca, Marca de tipo, Comentarios,
+Descripción, Recuento de anfitriones y los parámetros de proyecto y compartidos. Un valor vacío,
+o un parámetro que el elemento no tiene, se lee <strong>?</strong>.</p>
+<p>Con un <strong>Parámetro de filtro</strong> (un parámetro compartido) en el tipo, solo se resaltan y se
+etiquetan los elementos que tienen ese parámetro. Un doble clic en una línea de la etiqueta
+seleccionada escribe su valor: un parámetro del elemento cambia enseguida; un parámetro de su
+tipo pregunta antes, porque cambian todos los elementos del tipo. <strong>Etiquetar todo</strong> lista
+también las etiquetas multicategoría: marcadas, cada elemento de la vista que tiene el parámetro
+de filtro y ninguna etiqueta de ese tipo recibe una. En una sección o un alzado la etiqueta va
+donde se pulsa, con la directriz al punto del elemento. Y sigue al elemento: cuando el elemento se mueve o cambia, la etiqueta y el final de su directriz se mueven con él, como en planta; allí también la barra espaciadora la gira y un doble clic escribe su valor. Las etiquetas de material siguen a su elemento del mismo modo, en plantas y secciones.</p>
+<h3 id="material-tags">Etiquetas de material</h3>
+<p><strong>Anotaciones ▸ Etiqueta ▸ Material</strong> etiqueta el material bajo el cursor, en una planta, una
+sección o un alzado con nivel de detalle <strong>Medio</strong> o <strong>Alto</strong>: una capa de muro, suelo, cubierta o
+techo, cortada o vista, o el material de una puerta, una ventana, un componente o un pilar. Con
+nivel de detalle <strong>Bajo</strong> las capas no se dibujan: no se resaltan y la barra de estado lo dice.
+La etiqueta muestra la <strong>Descripción</strong> del material; vacía, se lee <strong>?</strong>: doble clic, se escribe,
+y la descripción del material se rellena (todas sus etiquetas la muestran). Arrastrando el
+pinzamiento del final de la directriz a otra capa, la etiqueta lee ese material; la barra
+espaciadora la gira. Si el elemento pierde luego ese material (cambia de tipo), la etiqueta se
+lee <strong>?</strong> y el cambio avisa. La <strong>Etiqueta</strong> del tipo elige lo que muestra: Descripción, Nombre,
+Comentarios, Marca, Clase de material, Palabras clave, Fabricante, Modelo, Coste, URL, Nota clave
+o Recuento de anfitriones.</p>
+<h3 id="tags-with-several-leaders">Etiquetas con varias directrices</h3>
+<p>Active <strong>Añadir/Quitar anfitrión</strong> en la barra de opciones de <strong>Etiqueta</strong>, <strong>Etiqueta
+multicategoría</strong> o <strong>Material</strong>, pulse los elementos uno tras otro (un segundo clic quita uno) y
+luego un punto vacío: allí va una sola etiqueta, con una directriz a cada elemento (<strong>Intro</strong> la
+pone junto al primero). Una etiqueta por categoría toma elementos de su categoría, una etiqueta
+de material puntos del mismo material. En una etiqueta seleccionada, <strong>Anfitrión ▸ Añadir/Quitar
+anfitrión</strong> añade o quita directrices hasta <strong>Fin</strong>; <strong>Directrices ▸ Unir directrices</strong> las reúne
+en un codo antes de la etiqueta, y <strong>Elegir las directrices que mostrar</strong> oculta o muestra la
+directriz de cada anfitrión pulsado. <strong>Recuento de anfitriones</strong> en las propiedades dice a
+cuántos elementos apunta la etiqueta. Eliminar un elemento quita su directriz; la etiqueta sigue
+mientras apunte a algo.</p>
+<h3 id="multiple-values">Varios valores</h3>
+<p>Cuando los anfitriones de una etiqueta difieren (dos puertas con marcas distintas, un campo de
+una etiqueta multicategoría), esa línea se lee <strong>‹valores distintos›</strong>; una línea que comparten
+se lee con su valor, y <strong>Recuento de anfitriones</strong> nunca varía. Doble clic: el campo se abre
+vacío, o con el valor común, y lo que se escribe va a todos los anfitriones en un solo paso (un
+parámetro de sus tipos pregunta antes). Una etiqueta de habitación o de área con varias
+habitaciones abre <strong>Editar valores de etiqueta</strong> con lo que comparten; solo se escribe lo que se
+teclea. <strong>Proyecto ▸ Parámetros adicionales ▸ Indicación de varios valores</strong> elige lo que
+muestran esas líneas: <strong>‹valores distintos›</strong>, o <strong>Mostrar texto personalizado</strong> con un texto
+propio. La paleta <strong>Propiedades</strong> de varios elementos seleccionados muestra el mismo texto donde
+sus valores difieren.</p>
+<h3 id="material-keynotes">Notas clave</h3>
+<p><strong>Anotaciones ▸ Etiqueta ▸ Nota codificada</strong> tiene cuatro entradas (el estilo BIMopen las muestra
+como teselas):</p>
+<ul>
+<li><strong>Nota del elemento</strong>: se pulsa el elemento (un muro, una puerta, un componente, un componente
+  de detalle… cuyo tipo tiene <strong>Nota clave</strong>), luego el codo de la directriz, luego dónde va la
+  nota. Lee la <strong>Nota clave</strong> del tipo; un tipo que no la tiene abre <strong>Notas clave</strong>.</li>
+<li><strong>Nota del material</strong> funciona como <strong>Material</strong>: se pulsa un material (una capa con nivel de
+  detalle <strong>Medio</strong> o <strong>Alto</strong>) y la nota lee su <strong>Nota clave</strong>; su directriz termina siempre en el
+  material.</li>
+<li><strong>Nota libre</strong>: los mismos tres clics; <strong>Notas clave</strong> se abre siempre y el valor queda en la
+  nota, el elemento no cambia.</li>
+<li><strong>Opciones de notas codificadas</strong>: véase abajo.</li>
+</ul>
+<p>Cada nota tiene cuatro tipos: <strong>Número</strong>, <strong>Número en recuadro grande</strong>, <strong>Número en recuadro
+pequeño</strong> y <strong>Texto</strong> (el texto de la nota de la tabla). La barra de opciones tiene la
+orientación, la <strong>Directriz</strong> y el <strong>Extremo asociado</strong> o <strong>libre</strong> (el de la nota del material es
+siempre libre).</p>
+<p><strong>Notas clave</strong> muestra la tabla en árbol: <strong>Valor clave</strong> y <strong>Texto de nota clave</strong>, cada fila
+bajo su valor padre; + y − abren y cierran las ramas, <strong>Buscar</strong> encuentra palabras en valores y
+textos. <strong>OK</strong> asigna la fila elegida, <strong>Cancelar</strong> deja el recuadro vacío. <strong>Editar tabla…</strong>
+edita la tabla del proyecto (valor, texto, valor padre). Con una nota seleccionada, un clic en su
+valor, o en su recuadro vacío, elige otro: la nota del elemento escribe la nota clave del tipo
+tras preguntarlo (cambian todos los elementos del tipo), la libre solo a sí misma, la del material
+el material. <strong>…</strong> junto a <strong>Nota clave</strong> en <strong>Parámetros de tipo</strong> y en la <strong>Identidad</strong> de un
+material abre el mismo árbol.</p>
+<p><strong>Opciones de notas codificadas</strong> elige de dónde viene la tabla: <strong>Tabla en el proyecto</strong> (editada
+aquí) o <strong>Archivo vinculado</strong>, un archivo de texto con una fila por nota — valor, TAB, texto, TAB,
+valor padre (sirve una hoja de cálculo guardada como texto con tabulaciones). <strong>Ruta completa</strong>
+muestra dónde está el archivo, <strong>Ruta guardada</strong> cómo está escrita, con <strong>Examinar…</strong>; el <strong>Tipo
+de ruta</strong> es <strong>Absoluta</strong>, <strong>Relativa</strong> (a la carpeta del proyecto) o <strong>En la biblioteca</strong>.
+<strong>Ver…</strong> muestra la tabla en solo lectura. <strong>Tabla de ejemplo</strong> vincula la tabla incluida: breve,
+en italiano, con obras, aislamientos, carpinterías y una sección de notas de usuario. <strong>Recargar</strong> lo vuelve a leer al momento, y el cuadro avisa cuando el archivo ha cambiado desde que se leyó. El archivo
+se vuelve a leer cada vez que se abre el proyecto; el proyecto guarda una copia, usada si falta el
+archivo (lo dice), y se listan los valores que el archivo ya no tiene. <strong>Método de numeración</strong>:
+<strong>Por nota clave</strong> muestra el valor; <strong>Por plano</strong> numera las notas 1, 2, 3… en cada plano en el
+orden en que se crearon, y una vista que no está en un plano muestra un recuadro vacío.</p>
+<p><strong>Vista ▸ Leyendas ▸ Leyenda de notas codificadas</strong> crea una tabla, <strong>Leyenda de notas clave</strong>,
+con <strong>Valor de nota clave</strong> y <strong>Texto de nota clave</strong>, una fila por valor, con las pestañas de
+siempre de las tablas (un filtro como «comienza por» en el valor, ordenación, formato,
+apariencia). <strong>Filtrar por plano</strong> (en <strong>Filtro</strong>) lista en cada plano solo las notas de sus
+vistas; con numeración por plano muestra los mismos números. <strong>Buscar/Reemplazar</strong> nunca cambia
+las notas clave: se cambian desde la tabla.</p>
 <h2 id="rooms">Habitaciones</h2>
 <p><strong>Crear ▸ Espacios y superficies ▸ Espacio</strong> (<code>RM</code>) y después haga clic dentro de una región cerrada por muros o
 separadores de espacios: la habitación la rellena, también alrededor de muros aislados. En la franja de opciones:</p>
@@ -841,7 +1252,7 @@ limitan el volumen de la habitación.</p>
 etiquetas se van con ella. Eliminar una etiqueta de espacio deja la habitación. Una etiqueta de espacio
 arrastrada fuera de su habitación pregunta si <strong>Mover a habitación</strong>.</p>
 <p>Las habitaciones se muestran mediante sus etiquetas. En <strong>Visibilidad y gráficos</strong>, <strong>Habitaciones</strong> tiene
-<strong>Relleno interior</strong> y <strong>Referencia</strong> (las líneas en cruz). <strong>Configuración ▸ Cálculos de área y volumen</strong> se abre en
+<strong>Relleno interior</strong> y <strong>Referencia</strong> (las líneas en cruz). <strong>Cálculos de área y volumen</strong> se abre en
 <strong>Cálculo</strong>: el contorno de la habitación en el acabado del muro, el eje, la capa del núcleo o el eje del núcleo, y
 <strong>Áreas y volúmenes</strong> para calcular también volúmenes (por defecto solo áreas; el volumen se mide siempre hasta el
 acabado del muro). Su segunda pestaña es <strong>Esquemas de áreas</strong>.</p>
@@ -861,7 +1272,7 @@ herramienta <strong>Superficie</strong> lista las áreas no colocadas, para volv
 <h2 id="colour-schemes">Esquemas de color</h2>
 <p>Un esquema de color rellena las habitaciones o áreas de una planta (y las habitaciones que corta una sección) según un valor (nombre, número, departamento,
 tipo de área) o según rangos de área. Se define en la propiedad <strong>Esquema de color</strong> de la planta; <strong>(ninguno)</strong> lo
-desactiva. <strong>Configuración ▸ Esquemas de color</strong> (<strong>Editar esquema de color</strong>) crea y duplica esquemas y edita el
+desactiva. <strong>Esquemas de color</strong> (<strong>Editar esquema de color</strong>) crea y duplica esquemas y edita el
 título, el parámetro, los valores con su color y visibilidad, su orden y los rangos. <strong>Aplicar</strong> conserva los cambios y asigna el esquema a la vista con el cuadro de diálogo abierto. <strong>Ubicación de la combinación
 de colores</strong>, una propiedad de la vista, dibuja los rellenos en el <strong>Fondo</strong> (bajo el modelo) o en el <strong>Primer
 plano</strong> (sobre el modelo, bajo las anotaciones).</p>
@@ -886,11 +1297,26 @@ dibujan con el <strong>Detalle</strong> de la leyenda, se pueden mover y acotar 
 componentes; los muros, suelos y cubiertas no) y las tablas de planificación no los cuentan. Texto, líneas de
 detalle y regiones funcionan como en una vista 2D libre. Una leyenda puede colocarse en varias hojas.</p>
 <figure>
+<img alt="Una vista de leyenda con las muestras de un muro, una puerta, una ventana y un material con su nombre" src="../assets/screens/lg-legend.webp"/>
+<figcaption>Una leyenda: muro, puerta, ventana y un material</figcaption>
+</figure>
+<figure>
 <img alt="Una vista de leyenda con componentes de leyenda: una puerta y una ventana vistas de frente, un muro en sección, y la misma puerta y ventana en planta" src="../assets/screens/an-legend-view.webp"/>
 <figcaption>Una vista de leyenda</figcaption>
 </figure>
-<p>Un tipo arrastrado desde <strong>Familias</strong> en el Índice del proyecto hasta una leyenda se convierte en su componente de
-leyenda donde se suelta; un tipo de <strong>Familias ▸ Símbolos</strong> coloca ese símbolo de anotación. <strong>Crear igual</strong>, en el menú contextual de un elemento seleccionado, inicia la herramienta
+<p><strong>Componente</strong> también incluye techos, escaleras, barandillas y pilares, y dos clases de
+muestras vinculadas: <strong>Materiales: …</strong> dibuja una muestra del patrón de <strong>Corte</strong> o de
+<strong>Superficie</strong> del material, una <strong>Muestra</strong> de ancho × alto, y <strong>Estilos de línea: …</strong> dibuja una
+línea tan larga como <strong>Longitud</strong>; <strong>Con el nombre</strong> escribe el nombre al lado. Una muestra sigue
+a lo que representa: si cambian el patrón o el nombre del material, o el grosor, el color o el
+patrón del estilo, la leyenda los sigue. En <strong>Visibilidad/Gráficos</strong> de la leyenda, puertas (Marco,
+Panel, Líneas de apertura, Vidrio, Umbral), ventanas (Marco, Vidrio, Alféizar, Líneas de apertura),
+escaleras (Huellas, Contrahuellas, Línea de huella) y barandillas (Pasamanos, Balaustres) tienen
+sus subcategorías, que se activan una a una: una leyenda solo de marcos es una leyenda de puertas
+con las demás filas desactivadas. La leyenda de relleno de color (<strong>Habitaciones y áreas ▸
+Leyenda</strong>) también va en una sección o un alzado con un esquema de color.</p>
+<p>Un tipo arrastrado desde <strong>Componentes</strong> en el Índice del proyecto hasta una leyenda se convierte en su componente de
+leyenda donde se suelta; un tipo de <strong>Componentes ▸ Símbolos</strong> coloca ese símbolo de anotación. <strong>Crear igual</strong>, en el menú contextual de un elemento seleccionado, inicia la herramienta
 que lo coloca con su tipo: para un componente de leyenda, también con su vista y su longitud de anfitrión.</p>
 <h2 id="detail-lines-and-regions">Líneas de detalle y regiones</h2>
 <p><strong>Documentar ▸ Detalle ▸ Línea de detalle</strong> (<code>DL</code>) dibuja líneas solo en la vista abierta, con el estilo de línea del
@@ -942,9 +1368,30 @@ longitud: escriba un valor para cambiarla. El cursor encaja en los extremos, pun
 de las líneas de detalle de la vista. El extremo de una línea seleccionada sola se arrastra solo y deja la línea vecina donde
 está; con una cadena seleccionada (<span class="keys"><kbd class="key-tab">Tab</kbd></span>), los extremos donde se juntan sus líneas se arrastran juntos,
 en un solo paso de deshacer.</p>
+<p>Una spline no puede cerrarse sobre sí misma: un clic en su primer punto se rechaza, y una segunda
+spline cierra el contorno. Una spline seleccionada tiene un tirador en cada punto de control:
+arrastre uno del medio para cambiar la curva; arrastre un extremo para mover toda la spline, o
+pulse antes <span class="keys"><kbd class="key-tab">Tab</kbd></span> sobre el extremo para mover solo ese. <strong>Modificar spline ▸ Añadir control</strong>
+pone un punto de control en el centro de la cuerda que pulse (encima, la barra de estado dice
+<strong>Referencia</strong>) y <strong>Eliminar control</strong> quita el que pulse; <span class="keys"><kbd class="key-escape">Esc</kbd></span> los termina. Una elipse
+seleccionada muestra sus dos radios como cotas temporales (escriba un valor para cambiar uno) y un
+tirador en cada cuadrante: arrastrar uno cambia ese eje y gira la elipse hacia el cursor. Con <strong>La
+edición mantiene las proporciones</strong> en la barra de opciones los dos radios cambian juntos. Una elipse
+parcial tiene además un tirador en cada extremo: <strong>Arrastrar extremo</strong> cambia cuánto gira, <span class="keys"><kbd class="key-tab">Tab</kbd></span>
+pasa a <strong>Arrastrar extremo del eje</strong>, que mueve ese extremo del eje mientras el otro se queda.
+<strong>Seleccionar líneas</strong> sobre un arco, un círculo, una elipse o una spline la copia; con <strong>Desfase</strong>
+una elipse o una spline dan splines.</p>
+<p>El tercer punto de un <strong>Arco inicio-fin-radio</strong> se engancha cuando el arco se vuelve tangente a la
+línea o al arco que termina en su inicio o en su fin: aparece el símbolo de tangencia y la barra
+de estado dice <strong>Tangente</strong>. Una línea dibujada desde el extremo de un arco se engancha del mismo
+modo tangente a él. Un arco seleccionado tiene un tirador en cada extremo, que cambia su amplitud,
+y uno en el centro: con <strong>Mantener concéntrico</strong> en la barra de opciones el radio cambia alrededor
+del mismo centro; si no, los extremos se quedan donde están. Lo mismo ocurre en planta, sección,
+alzado y 3D.</p>
 <p><strong>Región rellenada ▸ Región rellenada</strong> abre el modo de boceto: el contorno se traza con todas las formas del grupo
-<strong>Dibujar</strong> y con <strong>Seleccionar líneas</strong>, y los bucles dentro de otro son huecos. Las curvas se conservan como
-segmentos rectos cortos. <span class="keys"><kbd class="key-escape">Esc</kbd></span> finaliza una cadena y conserva el boceto; <strong>Modificar</strong> y las herramientas de
+<strong>Dibujar</strong> y con <strong>Seleccionar líneas</strong>, y los bucles dentro de otro son huecos. Una spline o una elipse
+sigue siendo una curva del boceto, con sus tiradores; el contorno de la región está hecho de sus
+trozos cortos. <span class="keys"><kbd class="key-escape">Esc</kbd></span> finaliza una cadena y conserva el boceto; <strong>Modificar</strong> y las herramientas de
 modificación actúan sobre sus líneas. <strong>Finalizar modo de edición</strong> crea la región con el tipo de región actual, o
 explica por qué no puede (un contorno abierto o que se cruza). <strong>Editar contorno</strong> de una región seleccionada abre de
 nuevo su boceto. El tipo define su patrón de relleno, su color y su fondo (<strong>Opaco</strong> oculta lo que
@@ -955,6 +1402,17 @@ arrastre uno para cambiar su forma.</p>
 <img alt="Detalles 2D en la planta baja: una región rellena con trama cruzada y otra sólida, una línea de detalle gruesa, un círculo discontinuo y una región de máscara que oculta parte de un local" src="../assets/screens/an-detail.webp"/>
 <figcaption>Regiones rellenas, líneas de detalle y una región de máscara</figcaption>
 </figure>
+<h3 id="tangency-padlock">El candado de tangencia</h3>
+<p>Selecciona una línea (de boceto, de detalle o 3D) que se une a otra extremo con extremo con la misma
+dirección: junto a la unión aparece un candado abierto, fuera de la curva (ninguno entre dos rectas).
+Al pasar el cursor las dos líneas se resaltan; un clic bloquea la tangencia, otro la desbloquea.
+Bloqueadas, las líneas siguen tangentes al cambiar una: una recta que gira hace que el arco se reajuste
+por su extremo lejano; un arco entre dos rectas mantiene su radio y se desliza sobre ellas; una elipse
+gira alrededor de su extremo lejano; el segundo control de una spline sigue la dirección. Una
+modificación que no puede mantenerla pregunta <strong>Restricción no mantenida</strong>: <strong>Quitar restricción</strong> desbloquea
+y la hace, <strong>Cancelar</strong> la cancela. El clic derecho en el candado ofrece <strong>Activar/Desactivar bloqueo</strong>
+y <strong>Mostrar relacionados</strong>. En el estilo BIMopen la búsqueda de comandos también tiene <strong>Bloquear
+tangencias</strong> y <strong>Desbloquear tangencias</strong>.</p>
 <h2 id="detail-components-repeating-details-and-insulation">Componentes de detalle, detalles repetidos y aislamiento</h2>
 <ul>
 <li><strong>Componente ▸ Componente de detalle</strong>: un símbolo 2D (ladrillo, bloque, madera, perfil de acero, panel
@@ -973,6 +1431,8 @@ arrastre uno para cambiar su forma.</p>
 <img alt="La vista 2D libre del ejemplo con el pie del muro exterior: bloques de ladrillo repetidos, aislamiento, la región rellena de la losa, líneas de corte y notas de texto, con una línea de corte seleccionada" src="../assets/screens/an-drafting.webp"/>
 <figcaption>Un detalle de muro en una vista 2D libre</figcaption>
 </figure>
+<p>En <strong>Patrones de relleno</strong>, el <strong>Grosor de línea</strong> de un patrón dibuja sus líneas con uno de los
+grosores del proyecto; dejado en <strong>(fina)</strong>, quedan líneas finísimas.</p>
 <h2 id="draw-order">Orden de dibujo</h2>
 <p>Seleccione solo elementos de detalle: <strong>Organizar</strong> ofrece <strong>Traer al frente</strong>, <strong>Traer adelante</strong>, <strong>Enviar al
 fondo</strong> y <strong>Enviar atrás</strong>. Los elementos de detalle siempre se dibujan sobre el modelo, y uno nuevo queda encima.
@@ -982,6 +1442,9 @@ fondo</strong> y <strong>Enviar atrás</strong>. Los elementos de detalle siempr
 en <strong>Vistas 2D libres</strong>; todo lo que se dibuja en ella es 2D, sin modelo detrás. Puede ir en una sola hoja.
 <strong>Duplicar vista ▸ Duplicar con detalles</strong> copia una vista con sus elementos de detalle, texto, cotas y componentes
 de leyenda.</p>
+<p><strong>Guardar en un archivo nuevo…</strong> en el menú de una vista 2D libre del Índice escribe un proyecto con la vista, sus elementos 2D y los tipos que usan. <strong>Insertar ▸ Insertar vistas desde archivo…</strong> lista las vistas 2D libres y las tablas del archivo para marcar; <strong>Insertar elementos 2D desde archivo…</strong> copia los elementos 2D de una de sus vistas en la vista activa (2D libre, planta o sección): siguen al cursor y un clic los coloca, seleccionados. Los tipos con el mismo nombre siguen siendo los del proyecto y se listan.</p>
+<p><strong>Tipo</strong> en el cuadro de diálogo y en el selector de tipos elige uno de los dos tipos incluidos, <strong>Detalle</strong> y <strong>Esquema</strong>; otros se crean con <strong>Duplicar…</strong> en <strong>Parámetros de tipo</strong>, donde se ajustan <strong>Etiqueta de sección</strong>, <strong>Etiqueta de detalle</strong>, <strong>Texto de la remisión</strong> (escrito junto a la cabeza de un detalle que remite a la vista, por ejemplo «Sim.») y <strong>Plantilla para las nuevas</strong>. <strong>Estilo gráfico</strong> es <strong>Líneas ocultas</strong> (las regiones con patrón tapan lo que hay debajo) o <strong>Estructura alámbrica</strong> (todo queda visible). Un <strong>Plano de referencia</strong> dibujado aquí pertenece solo a esta vista y no es un plano de trabajo.</p>
+<p>En un detalle con <strong>Referencia a otra vista</strong>, el primer elemento <strong><nueva 2d="" libre="" vista=""></nueva></strong> crea, al colocarlo, una vista 2D libre vacía a la escala del detalle, «Detalle de <vista>»; las vistas que ya están en un plano muestran «(detalle / plano)» tras su nombre.</vista></p>
 <p><strong>Mostrar modelo</strong> en las propiedades de una planta, una sección o una vista de detalle dibuja el modelo
 <strong>Normal</strong>, en <strong>Medio tono</strong> (atenuado bajo los detalles) o no lo dibuja (<strong>No mostrar</strong>), dejando
 los detalles y las anotaciones.</p>
@@ -992,7 +1455,7 @@ En una vista 2D libre la llamada es siempre de este tipo.</p>
 <p><strong>Ocultar en escalas menores que</strong> en las propiedades de una sección o una llamada oculta su símbolo en
 las vistas cuya escala es menor, por ejemplo un detalle 1 : 50 que no aparece en la planta 1 : 100.</p>
 <h2 id="at-the-command-line">En la línea de comandos</h2>
-<p>Cada herramienta tiene su comando: <code>dim</code>, <code>lineardim</code>, <code>angulardim</code>, <code>radialdim</code>, <code>arcdim</code>,
+<p>Cada herramienta tiene su comando: <code>dim</code>, <code>lineardim</code>, <code>angulardim</code>, <code>radialdim</code>, <code>diamdim</code>, <code>arcdim</code>,
 <code>spotelevation</code>, <code>text</code>, <code>findreplace</code>, <code>tag</code>, <code>room</code>, <code>roomsep</code>, <code>areaplan</code>, <code>areaboundary</code>,
 <code>area</code>, <code>colorscheme</code>, <code>legend</code>, <code>legendview</code>, <code>legendcomponent</code>, <code>detailline</code>, <code>region</code>, <code>mask</code>,
 <code>draworder</code>, <code>lock</code>, <code>eq</code>. <code>help</code> seguido de un comando muestra su uso; <a href="../keyboard-shortcuts/">Atajos de

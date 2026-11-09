@@ -7,8 +7,8 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Benutzerhandbuch von BIMopen, BIM-Modellierung als Open Source" name="description"/>
 <meta content="BIMopen" name="author"/>
-<link href="https://atsanna.github.io/bimopen-site/manual/de/views-and-graphics/" rel="canonical"/>
-<link href="../floors-roofs-stairs/" rel="prev"/>
+<link href="https://bimopen.it/manual/de/views-and-graphics/" rel="canonical"/>
+<link href="../design-options/" rel="prev"/>
 <link href="../annotation/" rel="next"/>
 <link href="../assets/images/bimopen-cube.svg" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.9" name="generator"/>
@@ -18,6 +18,13 @@
 <link href="../assets/css/theme.css" rel="stylesheet"/>
 <link href="../assets/css/theme_dark_mode.css" rel="stylesheet"/>
 <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="https://bimopen.it/manual/en/views-and-graphics/" hreflang="en" rel="alternate"/>
+<link href="https://bimopen.it/manual/it/views-and-graphics/" hreflang="it" rel="alternate"/>
+<link href="https://bimopen.it/manual/de/views-and-graphics/" hreflang="de" rel="alternate"/>
+<link href="https://bimopen.it/manual/fr/views-and-graphics/" hreflang="fr" rel="alternate"/>
+<link href="https://bimopen.it/manual/es/views-and-graphics/" hreflang="es" rel="alternate"/>
+<link href="https://bimopen.it/manual/ar/views-and-graphics/" hreflang="ar" rel="alternate"/>
+<link href="https://bimopen.it/manual/en/views-and-graphics/" hreflang="x-default" rel="alternate"/>
 </head>
 <body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="slate" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -32,7 +39,7 @@
 </div>
 <header class="md-header md-header--shadow" data-md-component="header">
 <nav aria-label="Kopfzeile" class="md-header__inner md-grid">
-<a aria-label="BIMopen Benutzerhandbuch" class="md-header__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/?lang=de" title="BIMopen Benutzerhandbuch">
+<a aria-label="BIMopen Benutzerhandbuch" class="md-header__button md-logo" data-md-component="logo" href="https://bimopen.it/de/" title="BIMopen Benutzerhandbuch">
 <img alt="logo" src="../assets/images/bimopen-cube.svg"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -73,32 +80,32 @@
 <div class="md-select__inner">
 <ul class="md-select__list">
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/en/" hreflang="en">
+<a class="md-select__link" href="https://bimopen.it/manual/en/" hreflang="en">
               English
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/it/" hreflang="it">
+<a class="md-select__link" href="https://bimopen.it/manual/it/" hreflang="it">
               Italiano
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/de/" hreflang="de">
+<a class="md-select__link" href="https://bimopen.it/manual/de/" hreflang="de">
               Deutsch
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/fr/" hreflang="fr">
+<a class="md-select__link" href="https://bimopen.it/manual/fr/" hreflang="fr">
               Français
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/es/" hreflang="es">
+<a class="md-select__link" href="https://bimopen.it/manual/es/" hreflang="es">
               Español
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/ar/" hreflang="ar">
+<a class="md-select__link" href="https://bimopen.it/manual/ar/" hreflang="ar">
               العربية
             </a>
 </li>
@@ -147,7 +154,7 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="BIMopen Benutzerhandbuch" class="md-nav__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/?lang=de" title="BIMopen Benutzerhandbuch">
+<a aria-label="BIMopen Benutzerhandbuch" class="md-nav__button md-logo" data-md-component="logo" href="https://bimopen.it/de/" title="BIMopen Benutzerhandbuch">
 <img alt="logo" src="../assets/images/bimopen-cube.svg"/>
 </a>
     BIMopen Benutzerhandbuch
@@ -202,6 +209,14 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../cad-files/">
+<span class="md-ellipsis">
+    DWG und DXF
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../selection-and-modify/">
 <span class="md-ellipsis">
     Auswählen und Ändern
@@ -221,6 +236,54 @@
 <a class="md-nav__link" href="../floors-roofs-stairs/">
 <span class="md-ellipsis">
     Geschossdecken, Dächer, Treppen und Bauteile
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ceilings-and-columns/">
+<span class="md-ellipsis">
+    Decken und Stützen
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../openings/">
+<span class="md-ellipsis">
+    Öffnungen
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../phases/">
+<span class="md-ellipsis">
+    Phasen und Abbruch
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../structure/">
+<span class="md-ellipsis">
+    Tragwerk und Fundamente
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../site/">
+<span class="md-ellipsis">
+    Lageplan und Gelände
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../design-options/">
+<span class="md-ellipsis">
+    Entwurfsvarianten
     
   </span>
 </a>
@@ -252,6 +315,24 @@
       3D-Ansichten
     </span>
 </a>
+<nav aria-label="3D-Ansichten" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#section-box">
+<span class="md-ellipsis">
+      Schnittbereich, Projektion und Ausrichtung
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#perspective-views">
+<span class="md-ellipsis">
+      Perspektivansichten
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#visual-styles">
@@ -266,6 +347,38 @@
       Stil Realistisch
     </span>
 </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pastel-style">
+<span class="md-ellipsis">
+      Stil Pastell
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#live-view-and-walk-mode">
+<span class="md-ellipsis">
+      Live-Ansicht und Begehung
+    </span>
+</a>
+<nav aria-label="Live-Ansicht und Begehung" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#disable-collision">
+<span class="md-ellipsis">
+      Kollision deaktivieren
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#walkthrough-paths">
+<span class="md-ellipsis">
+      Rundgang
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#sun-and-shadows">
@@ -310,6 +423,13 @@
 <a class="md-nav__link" href="#plans-and-their-view-range">
 <span class="md-ellipsis">
       Grundrisse und ihre Schnitthöhen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#underlay">
+<span class="md-ellipsis">
+      Unterlage
     </span>
 </a>
 </li>
@@ -413,7 +533,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="https://atsanna.github.io/bimopen-site/manual/de/pdf/bimopen-manual-de.pdf">
+<a class="md-nav__link" href="https://bimopen.it/manual/de/pdf/bimopen-manual-de.pdf">
 <span class="md-ellipsis">
     PDF
     
@@ -440,6 +560,24 @@
       3D-Ansichten
     </span>
 </a>
+<nav aria-label="3D-Ansichten" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#section-box">
+<span class="md-ellipsis">
+      Schnittbereich, Projektion und Ausrichtung
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#perspective-views">
+<span class="md-ellipsis">
+      Perspektivansichten
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#visual-styles">
@@ -454,6 +592,38 @@
       Stil Realistisch
     </span>
 </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pastel-style">
+<span class="md-ellipsis">
+      Stil Pastell
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#live-view-and-walk-mode">
+<span class="md-ellipsis">
+      Live-Ansicht und Begehung
+    </span>
+</a>
+<nav aria-label="Live-Ansicht und Begehung" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#disable-collision">
+<span class="md-ellipsis">
+      Kollision deaktivieren
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#walkthrough-paths">
+<span class="md-ellipsis">
+      Rundgang
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#sun-and-shadows">
@@ -498,6 +668,13 @@
 <a class="md-nav__link" href="#plans-and-their-view-range">
 <span class="md-ellipsis">
       Grundrisse und ihre Schnitthöhen
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#underlay">
+<span class="md-ellipsis">
+      Unterlage
     </span>
 </a>
 </li>
@@ -575,6 +752,74 @@
 <p>Um einen Ausschnitt zu behalten, wählen Sie <strong>Ansichten ▸ Erzeugen ▸ 3D-Ansicht ▸ Ansicht speichern</strong>: Geben Sie einen Namen ein und drücken Sie die Eingabetaste. Die neue Ansicht erscheint unter <strong>3D-Ansichten</strong> im <strong>Projektindex</strong> und öffnet sich sofort; sie behält den Ausschnitt, mit dem sie verlassen wird. Dasselbe bewirkt das Umbenennen von <strong>{3D}</strong> im <strong>Projektindex</strong> (Rechtsklick ▸ <strong>Umbenennen…</strong>): <strong>{3D}</strong> wird zu einer benannten Ansicht, und die nächste Standard-3D-Ansicht ist eine neue <strong>{3D}</strong>.</p>
 <p>Ein gewähltes Element wird blau überlagert und halb durchsichtig dargestellt, seine Kanten blau: Was dahinter liegt, bleibt sichtbar.</p>
 <p>Geschossdecken schneiden die Wände, die sie durchqueren: Wo eine Decke eine Wand kreuzt, endet die Wand darunter und setzt sich darüber fort, sodass Deckenkante und Wandfläche eine einzige Fläche bilden.</p>
+<h3 id="section-box">Schnittbereich, Projektion und Ausrichtung</h3>
+<p><strong>{3D}</strong> beginnt orthogonal, von der Südostecke gesehen. Rechtsklick auf den Orientierungswürfel:
+<strong>Prospettica</strong> oder <strong>Ortogonale</strong>, <strong>Vai all'inizio</strong>, <strong>Salva vista…</strong>, <strong>Blocca selezione</strong> (der
+Orbit dreht sich um die gewählten Elemente), <strong>Ripristina Fronte</strong>, <strong>Orienta su direzione</strong> (die
+Himmelsrichtungen und <strong>Alto</strong>), <strong>Orienta su vista</strong> (ein Grundriss, Schnitt oder eine Ansicht: die
+Ansicht übernimmt deren Blickpunkt, ein Schnittbereich deren Ausdehnung) und <strong>Orienta su piano…</strong>
+(eine Ebene, ein Raster oder eine Referenzebene).</p>
+<p>In den <strong>Eigenschaften</strong> der 3D-Ansicht schaltet <strong>Estensioni ▸ Riquadro di sezione</strong> den
+Schnittbereich ein: beim ersten Mal umschließt er das sichtbare Modell. Außerhalb ist das Modell
+nicht zu sehen, geschnittene Teile werden an seinen Flächen Schicht für Schicht geschlossen. Ein
+Klick auf eine Kante wählt ihn: die sechs Pfeile verschieben eine Fläche, der Kreis oben dreht ihn.
+Jede Änderung ist ein Rückgängig-Schritt; ausgeschaltet behält er seine Größe. Im <strong>Projektbrowser</strong>
+zeigt Rechtsklick auf eine 3D-Ansicht ▸ <strong>Mostra riquadro di sezione</strong> ihn auch in Grundrissen und
+Schnitten, mit Griffen. <strong>Visibilità e grafica ▸ Riquadri di sezione</strong> blendet seine Darstellung
+aus, nicht den Schnitt.</p>
+<figure>
+<img alt="Das Beispielhaus in einer 3D-Ansicht mit dem auf das Erdgeschoss abgesenkten Schnittbereich: die Räume von oben, die Wände geschnitten" src="../assets/screens/vw-section-box.webp"/>
+<figcaption>Der Schnittbereich schneidet das Modell im Erdgeschoss</figcaption>
+</figure>
+<p>Bei <strong>Sezione</strong> bietet die Optionsleiste <strong>Tipo</strong> (<strong>Sezione edificio</strong>, <strong>Sezione di muro</strong>,
+<strong>Dettaglio</strong>) und <strong>Scala vista</strong>; der Browser listet die Ansicht unter dem Zweig ihres Typs.
+<strong>Prospetto</strong> wird mit einem Klick neben einer Wand platziert: das Symbol blickt auf sie (<strong>Tab</strong>
+dreht es). Rechtsklick auf <strong>Viste</strong> im Browser ▸ <strong>Organizzazione del browser…</strong> wählt, wie die
+Ansichten gelistet werden: nach Typ, Disziplin, Phase, Ebene, nur die nicht auf Plänen, oder eine
+eigene Organisation.</p>
+<p>Die Schnittflächen zeigen das <strong>Schnittmuster</strong> des Materials; bei Detail <strong>Basso</strong> das in den
+Eigenschaften gewählte <strong>Materiale poché a dettaglio basso</strong> (<strong><per categoria=""></per></strong>: das Material
+jedes Teils). Bei gewähltem Bereich blendet <strong>EH</strong> seine Darstellung in der Ansicht aus; <strong>BX</strong> legt
+den Bereich um die gewählten Elemente. Auch <strong>{3D}</strong> und gespeicherte 3D-Ansichten haben <strong>Ritaglia
+vista</strong> und <strong>Regione di taglio visibile</strong>: das Bild wird auf das Rechteck begrenzt, das an seinen
+Seiten gezogen wird. <strong>Orienta su piano…</strong> nimmt auch einen Klick auf eine Fläche (<strong>Seleziona un
+piano</strong>) oder eine Linie (ihre Arbeitsebene).</p>
+<p><strong>Sezione</strong> wird auch in einem Schnitt, einer Ansicht oder einem Detail gezeichnet: quer zu dieser
+Ansicht. <strong>Rif. ad altra vista</strong> lässt den Schnitt eine bestehende Ansicht (oder eine neue freie
+2D-Ansicht) öffnen statt einer eigenen; <strong>Offset</strong> verschiebt die Linie seitlich. Ist eine mit einem
+Klick platzierte Ansicht gewählt, zeigt ihr Symbol vier Kästchen: ein Klick schaltet die Ansicht zu
+dieser Seite ein oder aus (Innenansichten), der äußere Griff dreht das Symbol. Im Browser wählen
+<strong>Strg</strong> und <strong>Umschalt</strong> mehrere Ansichten: <strong>Applica modello vista…</strong>, <strong>Duplica</strong> und <strong>Elimina</strong>
+gelten für alle.</p>
+<h3 id="perspective-views">Perspektivansichten</h3>
+<p><strong>Ansichten ▸ Erzeugen ▸ 3D-Ansicht ▸ Perspektivansicht</strong> setzt eine Kamera in einen Grundriss,
+einen Schnitt oder eine Ansicht. In der Optionsleiste (im BIMopen-Stil im Werkzeugbereich) stehen
+die <strong>Ebene</strong> und der <strong>Versatz</strong>, die Augenhöhe über der Ebene (1,60 m, wie beim Rundgang);
+<strong>Perspektive</strong> ist immer eingeschaltet. Der erste Klick ist der Standpunkt der Kamera; das Dreieck
+dessen, was sie sieht, folgt dem Cursor, und der zweite Klick ist der Zielpunkt, auf derselben
+Höhe. <strong>3D-Ansicht 1</strong> (dann 2, 3…) entsteht unter <strong>3D-Ansichten</strong> im <strong>Projektindex</strong> und öffnet
+sich zugeschnitten neben dem Grundriss. In einem Schnitt oder einer Ansicht geben die zwei Klicks
+auch die Höhen an.</p>
+<p>Die Ansicht wird in ihrem <strong>Zuschneidebereich</strong> in seinen Proportionen gezeichnet (240 × 160 mm
+auf Papier); was hinter der <strong>hinteren Schnittebene</strong> liegt (anfangs so weit wie der Zielpunkt),
+wird nicht gezeichnet. Ihre Eigenschaften in den Gruppen <strong>Ausdehnungen</strong> und <strong>Kamera</strong>: <strong>Ansicht
+zuschneiden</strong>, <strong>Zuschneidebereich sichtbar</strong>, <strong>Hintere Schnittebene</strong> und ihr Abstand,
+<strong>Referenzebene</strong>, <strong>Augenhöhe</strong> und <strong>Zielhöhe</strong> (von der Ebene), <strong>Sichtfeld</strong>.</p>
+<p>Rechtsklick auf die Ansicht im <strong>Projektindex</strong> ▸ <strong>Kamera anzeigen</strong> wählt die Kamera in den
+Grundrissen, Schnitten und Ansichten (ebenso ein Klick auf den Rand des Zuschneidebereichs in der
+3D-Ansicht). Ziehen Sie den Körper, um sie zu verschieben (mit <strong>Umschalt</strong> bleibt das Ziel), den
+roten Punkt, um sie zu drehen, die Ecken des Dreiecks für das Sichtfeld und das Quadrat auf seiner
+Basis für die hintere Schnittebene; in einer Ansicht oder einem Schnitt ändern Sie die Höhen. Die
+3D-Ansicht folgt beim Ziehen, und jedes Ziehen wird mit <strong>Strg+Z</strong> rückgängig gemacht. Auf der
+Registerkarte <strong>Ändern | Kameras</strong>: <strong>Ziel zurücksetzen</strong> setzt das Ziel auf das Modell, das in der
+Mitte des Zuschneidebereichs zu sehen ist, <strong>Zuschnittgröße</strong> ändert Breite und Höhe auf Papier
+nach <strong>Sichtfeld</strong> (man sieht mehr) oder <strong>Maßstab (Proportionen gesperrt)</strong>, <strong>Zuschnitt zurücksetzen</strong> (240 × 160 mm, 50°), <strong>Ansicht öffnen</strong>.
+Auch die Seiten des Zuschneidebereichs, in der 3D-Ansicht gezogen, ändern das Sichtfeld.</p>
+<p>Die Live-Ansicht einer Kameraansicht folgt ihr, der Rundgang beginnt an ihrem Standpunkt, und beim
+Verlassen bleibt die Kamera dort, wo man hingegangen ist; ein <strong>Neuer Pfad</strong> beginnt an ihrer
+Position. In der Befehlszeile: <code>camera {"from":[14,-6],"to":[5,3]}</code> erstellt die Ansicht,
+<code>camera {"eye":[15,-6,1.6],"fov":60,"far":20}</code> ändert sie, <code>camera {"reset_target":true}</code> setzt das
+Ziel zurück.</p>
 <h2 id="visual-styles">Grafikstile</h2>
 <p>Die Schaltfläche <strong>Grafikstil</strong> der Ansichtssteuerungsleiste am unteren Rand jedes Ansichtsfensters bietet:</p>
 <table>
@@ -591,7 +836,7 @@
 </tr>
 <tr>
 <td><strong>Linien</strong></td>
-<td>Flächen als weißes Papier und die Kanten davor in dunkler Tinte, auf hellem wie auf dunklem Hintergrund</td>
+<td>Flächen als Papier und die Kanten davor in Tinte; auf dunklem Hintergrund werden Papier und Linien zusammen umgekehrt</td>
 </tr>
 <tr>
 <td><strong>Schattiert</strong></td>
@@ -609,6 +854,10 @@
 <td><strong>Realistisch</strong></td>
 <td>Flächen wie auf einem Foto: das Licht von Sonne und Himmel des Projekts, Spiegelungen, Umgebungsschatten, durchsichtiges Glas, Dunst</td>
 </tr>
+<tr>
+<td><strong>Pastell</strong></td>
+<td>Ein Aquarell: Flächen in der Farbe ihres Materials lasiert, in der Sonne nah am Papier, im Schatten tiefer; die Linien wie von Hand</td>
+</tr>
 </tbody>
 </table>
 <figure>
@@ -624,8 +873,12 @@
 </figure>
 <p>Das Farbschema der Räume ist in jedem Stil zu sehen. Mit <strong>Position des Farbschemas</strong> auf <strong>Hintergrund</strong> liegt es unter den Linien des Modells: im Grundriss über den Geschossdecken und unter den Möbeln, im Schnitt über den Oberflächen, die durch jeden geschnittenen Raum zu sehen sind. Auf <strong>Vordergrund</strong> deckt es das Modell ab, unter den Beschriftungen.</p>
 <h2 id="realistic-style">Stil Realistisch</h2>
-<p><strong>Realistisch</strong> zeichnet die 3D-Ansicht wie ein Foto, in Echtzeit, auf der Grafikkarte, und die
+<p><strong>Realistisch</strong> zeichnet die 3D-Ansicht wie ein Foto, in Echtzeit, und die
 Ansicht bleibt bearbeitbar wie in den anderen Stilen.</p>
+<figure>
+<img alt="Das Beispielhaus im Stil Realistisch bei Nacht: der dunkelblaue Himmel mit den Sternen und dem Mond, das letzte Dämmerlicht am Horizont, das Haus schwach beleuchtet" src="../assets/screens/vg-realistic-night.webp"/>
+<figcaption>Realistisch bei Nacht: Mond und Sterne</figcaption>
+</figure>
 <ul>
 <li><strong>Licht von Sonne und Himmel.</strong> Das Licht ist das der Projektsonne (Ort, Datum und Uhrzeit der
   <strong>Sonneneinstellungen</strong>) und des Himmels, den diese Sonne ergibt: blau am Tag, wärmer und dunkler
@@ -649,11 +902,10 @@ Ansicht bleibt bearbeitbar wie in den anderen Stilen.</p>
   ihre Map, das Relief, Metall, Glas und Wasser, die Selbstleuchtkraft (sichtbar, ohne andere zu
   beleuchten). Ein Material ohne eigenes Aussehen leitet es aus Farbe und Transparenz ab; ein Teil
   ohne Material nimmt die Farbe seiner Kategorie. Im Web kommen die Bilder später: bis dahin ist
-  die Farbe zu sehen. Die Vorschau der Registerkarte <strong>Darstellung</strong> zeichnet derselbe Renderer, auf einer Kugel,
-  einem Würfel oder einer Wand von 2 × 2 m (ohne Grafikkarte als eigens berechnetes Bild).</li>
+  die Farbe zu sehen. Die Vorschau der Registerkarte <strong>Darstellung</strong> zeigt das Material auf einer Kugel, einem Würfel oder einer Wand von 2 × 2 m.</li>
 <li><strong>Glas.</strong> Glas lässt sehen, was dahinter liegt, und spiegelt Himmel und Sonne, stärker bei
   streifendem Blick. Die Scheiben werden von der fernsten zur nächsten gezeichnet.</li>
-<li><strong>Umgebungsschatten.</strong> Mit <strong>Umgebungsschatten</strong> sind Ecken und Nischen, die weniger Himmelslicht
+<li><strong>Umgebungsschatten.</strong> Mit <strong>Umgebungsschatten anzeigen</strong> sind Ecken und Nischen, die weniger Himmelslicht
   erhalten, dunkler.</li>
 <li><strong>Dunst.</strong> In der Ferne verschleiert die Luft das Modell: <strong>Dunst in der Ferne</strong> regelt, wie stark,
   und wie klar der Himmel ist.</li>
@@ -665,13 +917,13 @@ Ansicht bleibt bearbeitbar wie in den anderen Stilen.</p>
 <strong>Belichtung</strong> und <strong>Wert (EV)</strong>, <strong>Weißpunkt</strong> (das als Weiß gezeigte Licht: 6500 K ist Tageslicht,
 wie es ist, ein niedrigerer Wert kühlt das Bild, ein höherer wärmt es), <strong>Sättigung</strong>, <strong>Lichter</strong>
 und <strong>Tiefen</strong> (senken oder heben die hellsten und dunkelsten Töne) und <strong>Dunst in der Ferne</strong>.
-<strong>Kanten in Realistisch anzeigen</strong> zeichnet die Kanten über die Flächen. Das Beleuchtungs-<strong>Schema</strong>
+<strong>Kanten anzeigen</strong> zeichnet die Kanten über die Flächen. Das Beleuchtungs-<strong>Schema</strong>
 ist vorerst immer <strong>Außen: Sonne</strong>. <strong>Sonne</strong>, <strong>Umgebungslicht</strong> und <strong>Schattenintensität</strong>
 regeln das Licht der Sonne, das des Himmels und wie dunkel die Sonnenschatten sind.</p>
 <p>Der <strong>Hintergrund</strong> <strong>Physikalischer Himmel (Zeit und Ort)</strong> zeigt hinter dem Modell denselben
 Himmel, der es beleuchtet, mit der Sonnenscheibe; mit <strong>Keiner</strong>, <strong>Himmel</strong> oder <strong>Verlauf</strong>
 bleibt der gewählte Hintergrund, und der Himmel beleuchtet das Modell trotzdem. Beim Wechsel zu <strong>Realistisch</strong> erhält eine Ansicht mit dem Hintergrund
-<strong>Keiner</strong> den <strong>Physikalischen Himmel (Zeit und Ort)</strong>. Ausgewählte
+<strong>Keiner</strong> den <strong>Physikalischen Himmel (Zeit und Ort)</strong> und kehrt mit einem anderen Stil zu <strong>Keiner</strong> zurück. Ausgewählte
 Elemente und die Sonnenbahn sehen aus wie in den anderen Stilen.</p>
 <p>Im Web ohne WebGPU (mit WebGL2) funktioniert <strong>Realistisch</strong> ohne Umgebungsschatten, und die
 automatische Belichtung richtet sich nach dem Himmel statt nach dem Bild. Im Web und auf Android
@@ -680,6 +932,189 @@ und wird wieder scharf, sobald sie anhält. Ohne Grafikkarte wird <strong>Realis
 <strong>Schattiert</strong> gezeigt, und die Statusleiste sagt es. Grundrisse, Schnitte und Ansichten in
 <strong>Realistisch</strong> werden vorerst wie in <strong>Schattiert</strong> gezeichnet; Pläne, Ausdrucke und exportierte
 Bilder zeigen <strong>Realistisch</strong> noch nicht.</p>
+<h2 id="pastel-style">Stil Pastell</h2>
+<p>Der Stil <strong>Pastell</strong> zeichnet die Ansicht wie ein Aquarell oder eine Markerzeichnung: Jede Fläche ist
+eine gleichmäßige, sanft verlaufende Lasur in der Farbe ihres Materials, nie gestreift. Flächen in
+der Sonne bleiben nah am Papier; Flächen, die sich von der Sonne abwenden, erhalten dieselbe Farbe,
+tiefer und kühler, nie grau; wo ein Schlagschatten fällt, wird die Lasur noch tiefer, mit klarer
+Kante. Glas ist eine blaugraue Lasur mit einem warmen Glanz. Die Lasur verblasst zu den Rändern der
+Zeichnung hin, sodass um das Modell das Papier sichtbar bleibt; das Papier hat eine kaum sichtbare
+Körnung. Mit <strong>Pastell</strong> werden die <a href="#sketchy-lines">skizzenhaften Linien</a> in Tusche eingeschaltet;
+sie lassen sich wieder ausschalten und gehen mit einem anderen Stil aus.</p>
+<p>Er gilt in jeder Ansicht. In 3D-Ansichten ist das Licht das von <strong>Realistisch</strong>: die Sonne des Projekts und ihre Schatten. In Grundrissen, Schnitten und Ansichten
+ist das Papier cremefarben, Flächen und Böden sind in den Farben ihrer Materialien lasiert und die
+geschnittenen Teile sind eine volle, dunkle Poché im Ton ihres Materials. Die Schlagschatten sind
+die der Ansicht: Sie werden mit denselben Einstellungen wie in den anderen Stilen ein- und
+ausgeschaltet, dunkler oder heller (<strong>Schattenintensität</strong>), in einem klaren, dunklen warmen Ton.
+Drucken und Export erscheinen lasiert wie auf dem Bildschirm, auch 3D-Ansichten.</p>
+<p><strong>Pastell</strong> ist gleich, welcher Hintergrund auch immer im Fenster ist: immer sein helles Papier,
+mit denselben Lasuren, derselben Poché und denselben Schatten.</p>
+<p>Die Gruppe <strong>Pastell</strong> der <a href="#graphic-display-options">Grafikanzeigeoptionen</a> gilt pro Ansicht, und
+Ansichtsvorlagen übernehmen sie: <strong>Lasurstärke</strong> (wie kräftig die Farbe aufgetragen ist),
+<strong>Lasurverlauf</strong> (wie ungleichmäßig sie auf einer Fläche liegt), <strong>Papierkörnung</strong> und <strong>Sättigung</strong>
+(wie viel von den Farben der Materialien die Lasur behält), von 0 bis 100, und die <strong>Papierfarbe</strong>
+(mit <strong>Gewählt</strong> eine eigene Farbe; ohne das warmweiße Papier). Über die
+Befehlszeile: <code>graphicoptions {"style":"Pastello","pastel_density":70,"paper_color":"auto"}</code>.</p>
+<figure>
+<img alt="Das Beispielhaus in 3D im Stil Pastell: die Flächen in den Farben der Materialien lasiert, in der Sonne nah am Papier, im Schatten tiefer, die Kanten in Tusche" src="../assets/screens/vg-pastel-3d.webp"/>
+<figcaption>Pastell: Lasur 70, Verlauf 55, Körnung 40, Sättigung 75 (Standard)</figcaption>
+</figure>
+<figure>
+<img alt="Schnitt A im Stil Pastell: die Flächen auf cremefarbenem Papier lasiert, die geschnittenen Teile in dunkler Poché" src="../assets/screens/vg-pastel-section.webp"/>
+<figcaption>Schnitt A in Pastell, mit den Standardwerten</figcaption>
+</figure>
+<h2 id="live-view-and-walk-mode">Live-Ansicht und Begehung</h2>
+<p><strong>Live-Ansicht</strong> (Registerkarte Ansichten ▸ Präsentation, oder die Schaltfläche der schwebenden
+Leiste der 3D-Ansicht) öffnet neben der 3D-Ansicht ein Fenster, das sie im Stil <strong>Realistisch</strong>
+zeichnet, mit den Schatten der Sonne und dem physikalischen Himmel, und ihrer Kamera folgt: Wird
+die 3D-Ansicht gedreht oder gezoomt, schaut die Live-Ansicht vom selben Punkt; jede Änderung am
+Modell erscheint sofort. Während sich die Kamera bewegt, zeichnet die Live-Ansicht einen Entwurf
+und verfeinert ihn danach. Unten in der Live-Ansicht stellt <strong>Uhrzeit</strong> die Stunde der eigenen
+Sonne der Ansicht ein (Sonnenaufgang und -untergang sind auf dem Schieberegler markiert);
+<strong>Projektsonne</strong> kehrt zur gemeinsamen Sonne des Projekts zurück. Die Eigenschaften der Ansicht
+haben die Gruppe <strong>Live-Ansicht</strong>: <strong>Folgt der 3D-Ansicht</strong> und <strong>Entwurf bei Bewegung</strong>. In der
+Befehlszeile: <code>liveview 3d {"follows":true,"draft":true}</code>.</p>
+<p><strong>Begehen</strong> (Registerkarte Ansicht ▸ Präsentation, die schwebende Leiste der 3D-Ansicht, die
+Navigationsleiste des klassischen Stils oder die Befehlssuche) ist ein Befehl wie die anderen: die
+kontextabhängige Registerkarte <strong>Ändern | Begehen</strong> öffnet sich, die Optionsleiste zeigt ihre
+Möglichkeiten und die Statusleiste sagt, was zu tun ist. Die aktive 3D-Ansicht wird zu den Augen
+von jemandem, der durch das Modell geht: man steht auf dem Boden unter der Mitte der Ansicht, mit
+Blick dorthin, wohin die Ansicht schaute. Der Mauszeiger wird beim ersten Klick in die Ansicht
+eingefangen (bis dahin bleiben Registerkarte und Optionsleiste erreichbar):</p>
+<table>
+<thead>
+<tr>
+<th>Taste</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>W A S D oder die Pfeile</td>
+<td>gehen</td>
+</tr>
+<tr>
+<td>die Maus</td>
+<td>umschauen</td>
+</tr>
+<tr>
+<td>Umschalt</td>
+<td>laufen</td>
+</tr>
+<tr>
+<td>Komma und Punkt, oder das Mausrad</td>
+<td>langsamer und schneller</td>
+</tr>
+<tr>
+<td>F</td>
+<td><strong>Gehen</strong> oder <strong>Fliegen</strong></td>
+</tr>
+<tr>
+<td>E und Q, Bild auf und Bild ab</td>
+<td>steigen und sinken (im Flug)</td>
+</tr>
+<tr>
+<td>K</td>
+<td>ein Schlüsselbild</td>
+</tr>
+<tr>
+<td>R</td>
+<td>Aufnahme starten und beenden</td>
+</tr>
+<tr>
+<td>Esc</td>
+<td>die Begehung beenden</td>
+</tr>
+</tbody>
+</table>
+<p>Die anderen Tastenkürzel warten, bis man die Begehung verlässt. Beim Gehen hält die Schwerkraft
+auf Böden, Podesten und Decken; eine Stufe, die etwas höher ist als die höchste Steigung des
+Projekts, wird unbemerkt genommen, so werden Treppen und Rampen gehend bestiegen; Wände, Stützen,
+Geländer, Möbel und Fensterglas halten auf, und man gleitet an ihnen entlang; Türen werden
+durchschritten. <strong>Fliegen</strong> hebt Schwerkraft und Kollisionen auf. Man verlässt die Begehung mit
+Esc, <strong>Ändern</strong>, <strong>Beenden</strong> in der Registerkarte oder mit einem anderen Befehl; die Ansicht
+bleibt dort, wo man angekommen ist. Ein Grundriss der Ebene, auf der man steht, zeigt, wo man ist
+und was man sieht.</p>
+<p>Die Registerkarte <strong>Ändern | Begehen</strong> hat <strong>Modus</strong> (<strong>Gehen</strong>, <strong>Fliegen</strong>), <strong>Rundgang</strong>
+(<strong>Schlüsselbild</strong>, <strong>Aufnehmen</strong>) und <strong>Begehen</strong> (<strong>Optionen…</strong>, <strong>Beenden</strong>); im BIMopen-Stil
+stehen sie in der Registerkarte der Werkzeugleiste. Die Optionsleiste hat <strong>Gehen</strong> oder
+<strong>Fliegen</strong>, die Augenhöhe, die Geschwindigkeit, <strong>Rundgang</strong> (wohin Schlüsselbilder und Aufnahme
+gehen: <strong>Neu</strong> oder einer der Rundgänge des Projekts), <strong>Parallel zum Boden bewegen</strong>,
+<strong>Drehempfindlichkeit</strong> und <strong>Trägheit</strong> (der Blick beginnt und endet weich; 0 % wie bisher).
+Während der Begehung zeigt die Eigenschaftenpalette die Gehgeschwindigkeit, das Laufen, die
+Fluggeschwindigkeit, die Augenhöhe, Schwerkraft und Kollisionen, die überwindbare Stufe, die
+Empfindlichkeit und die Trägheit, <strong>Vertikale Achse umkehren</strong>, <strong>Aufnehmen in</strong>, <strong>Schlüsselbild
+alle</strong> und die Glättung des aufgenommenen Rundgangs. Auf einem Touchscreen lässt ein Joystick
+gehen, ein Ziehen auf der Ansicht schauen, und Schaltflächen lassen laufen, fliegen, steigen und
+sinken, Schlüsselbilder setzen, aufnehmen und beenden.</p>
+<p><strong>Optionen…</strong> öffnet die Einstellungen <strong>Begehung</strong>. <strong>Bewegung</strong> enthält die persönlichen
+Einstellungen, in jedem Projekt gleich: Augenhöhe (1,60 m), Gehgeschwindigkeit, Laufen,
+Fluggeschwindigkeit, <strong>Drehempfindlichkeit</strong>, <strong>Drehträgheit</strong>, <strong>Schlüsselbild alle</strong>,
+<strong>Vertikale Achse umkehren</strong>, Sichtfeld und <strong>Flug parallel zum Boden</strong>. <strong>Kollisionen nach
+Kategorie</strong> enthält die des Projekts: für jede Kategoriegruppe, ob <strong>Kollision deaktivieren</strong> an
+ist (bei Türen und Türpaneelen von Fassaden ist es so), und die <strong>Überwindbare Stufe</strong>, aus den
+Treppen genommen, wenn man sie nicht eingibt. Über die Befehlszeile: <code>walksettings {"step":0.22}</code>,
+<code>collision {"group":"furniture","off":true}</code>.</p>
+<h3 id="disable-collision">Kollision deaktivieren</h3>
+<p>Jedes Element mit einem Körper hat <strong>Kollision deaktivieren</strong> in der Gruppe <strong>Begehung</strong> seiner
+Eigenschaften: eingeschaltet, geht man durch es hindurch. Der Wert kommt vom Typ und der des Typs
+von seiner Kategorie; <strong>Kollision vom Typ</strong> (bei einem Typ <strong>Kollision von der Kategorie</strong>) zeigt
+es an, und das Setzen von <strong>Kollision deaktivieren</strong> macht den Wert zu dem des Elements. Mehrere
+ausgewählte Elemente zeigen <strong>‹unterschiedlich›</strong>, wo sie sich unterscheiden. Bauteillisten
+führen es als Feld und Filter verwenden es als Regel. Außerhalb der Begehung ändert es nichts.
+Ein Boden, eine Treppe oder eine Rampe mit deaktivierter Kollision trägt auch niemanden. In der
+Befehlszeile: <code>collision 42 {"off":true}</code>, oder <code>{"off":null}</code>, um den Wert des Typs wieder zu
+übernehmen.</p>
+<h3 id="walkthrough-paths">Rundgang</h3>
+<p><strong>Rundgang</strong> (Registerkarte Ansicht ▸ 3D-Ansicht ▾ oder die Befehlssuche) wird in einem Grundriss,
+einem Schnitt oder einer Ansicht wie eine Wand gezeichnet: die Optionsleiste hat <strong>Perspektive</strong>,
+die <strong>Ebene</strong> und den <strong>Versatz</strong> (1,60 m, die Augen der Begehung); jeder Klick setzt ein
+Schlüsselbild, und der nächste Abschnitt folgt dem Cursor, mit dem Dreieck der Kamera am Anfang.
+In einem Schnitt oder einer Ansicht geben die Klicks auch die Höhe. Ein Doppelklick, Esc oder
+<strong>Rundgang beenden</strong> in der Registerkarte schließen den Weg ab (<strong>Rundgang abbrechen</strong> verwirft
+ihn): es entsteht <strong>Rundgang 1</strong> im Zweig <strong>Rundgänge</strong> des Projektbrowsers und öffnet sich
+daneben, bei Bild 1. Es ist eine Kameraansicht, die sich bewegt: sie hat ihren Zuschneidebereich,
+ihre hintere Schnittebene und die Eigenschaften der Kamera, dazu <strong>Rundgangbilder</strong> und <strong>Bild</strong>.</p>
+<p>Im Grundriss ausgewählt (ein Klick auf den Weg oder <strong>Kamera anzeigen</strong> im Projektbrowser), wird
+der Rundgang in der Registerkarte <strong>Rundgang ändern</strong> bearbeitet. <strong>Steuerung</strong> in der
+Optionsleiste wählt, was die Griffe tun:</p>
+<ul>
+<li><strong>Aktive Kamera</strong>: die Kamera wird entlang des Wegs gezogen und rastet an den Schlüsselbildern
+  ein; auf einem Schlüsselbild zeigt der rote Punkt, wohin sie schaut, und lässt sich ziehen, und
+  die Ecken des Dreiecks ändern das Sichtfeld;</li>
+<li><strong>Pfad</strong>: die Schlüsselbilder werden zu Griffen; in einem Schnitt oder einer Ansicht ändert sich
+  ihre Höhe;</li>
+<li><strong>Schlüsselbild hinzufügen</strong>: ein Klick auf den Weg setzt eines;</li>
+<li><strong>Schlüsselbild löschen</strong>: ein Klick auf eines entfernt es (mindestens zwei bleiben).</li>
+</ul>
+<p><strong>Bild</strong> zeigt das Bild der Ansicht und lässt sich eingeben; daneben die Schaltflächen voriges
+Schlüsselbild, voriges Bild, nächstes Bild, nächstes Schlüsselbild und <strong>Wiedergabe</strong>, die den
+Rundgang in seiner Ansicht vom gezeigten bis zum letzten Bild abspielt; die Statusleiste sagt
+„Bild 87 von 300“, mit <strong>Abbrechen</strong>; Esc hält an. <strong>Kameras zurücksetzen</strong> lässt jedes
+Schlüsselbild wieder entlang des Wegs schauen.</p>
+<p><strong>Bilder…</strong> öffnet <strong>Rundgangbilder</strong>: <strong>Bilder gesamt</strong> (300), <strong>Bilder pro Sekunde</strong> (15),
+<strong>Gesamtzeit</strong> (20 s), <strong>Gleichmäßige Geschwindigkeit</strong> (an: die Kamera fährt immer gleich
+schnell; aus, hat jedes Schlüsselbild seine <strong>Beschleunigung</strong>, von 0,1 bis 10, für den Abschnitt,
+der dort beginnt), und für jedes Schlüsselbild das Bild, die Geschwindigkeit und die verstrichene
+Zeit. <strong>Drehglättung</strong> sagt, wie sich der Blick bei Richtungswechseln dreht: 0 % sofort am
+Schlüsselbild, 100 % über den halben Abschnitt davor und danach, weich beginnend und endend; der
+Weg hat eine, und jedes Schlüsselbild kann eine <strong>eigene</strong> haben. Die Grafik darunter zeigt die
+Drehung des Blicks über die Zeit. <strong>Markierungen</strong> mit <strong>Bildschritt</strong> zeigt die Bilder entlang des
+Wegs im Grundriss.</p>
+<p><strong>Exportieren…</strong> (auch unter Datei ▸ Exportieren ▸ Bilder und Animationen ▸ <strong>Rundgang…</strong>) öffnet
+<strong>Länge/Format</strong>: <strong>Alle Bilder</strong> oder ein <strong>Bildbereich</strong> von–bis, <strong>Bilder pro Sekunde</strong> (die
+Gesamtzeit folgt), der <strong>Grafikstil</strong> (der der Ansicht oder ein anderer), <strong>Größe</strong> und <strong>Zoom</strong>,
+dann der Dateityp: ein AVI-Film (Motion-JPEG), auf Wunsch mit den Bildern, oder eine Folge von
+JPEG-, PNG-, TIFF- oder BMP-Bildern. Ein Balken zeigt den Fortschritt, mit <strong>Abbrechen</strong>.</p>
+<p>Bei der Begehung fügt <strong>Schlüsselbild</strong> (K) ein Schlüsselbild dort hinzu, wo man steht, mit dem
+aktuellen Blick, im in der Optionsleiste gewählten Rundgang; mit <strong>Neu</strong> erstellt das zweite
+<strong>Rundgang N</strong>. <strong>Aufnehmen</strong> (R) erstellt einen Rundgang aus der Begehung: ein Schlüsselbild pro
+Sekunde (<strong>Schlüsselbild alle</strong>), so lang wie die Begehung und so weich wie die <strong>Trägheit</strong>. Die
+Wege früher gespeicherter Projekte werden beim Öffnen zu <strong>Rundgang</strong>-Ansichten. Über die
+Befehlszeile: <code>walkthrough {"points":[[0,-6],[5,-6],[5,2]],"offset":1.6}</code>,
+<code>walkthrough 42 {"frame":"next_key"}</code>, <code>walkthrough 42 {"frames":150,"uniform":false,"key":{"index":0,"accel":2}}</code>;
+<code>walk {"from":[4,2.5],"to":[8,2.5]}</code> zeigt, wo eine Begehung endet.</p>
+<p><img alt="Ein Rundgang um das Beispielhaus, im Grundriss des Erdgeschosses gezeichnet" src="../assets/screens/vg-walkthrough.webp"/></p>
 <h2 id="sun-and-shadows">Sonne und Schatten</h2>
 <p>Grundrisse, Schnitte, Ansichten und 3D-Ansichten zeigen die Sonne (Zeichenansichten, Legenden,
 Pläne und Bauteillisten nicht). Die Ansichtssteuerungsleiste hat zwei Schaltflächen, jede mit
@@ -700,8 +1135,7 @@ Sonne</strong>.</p>
 Grundriss fallen sie auf das, was der Grundriss zeigt, und wo nichts steht, auf die Ebene einer
 Ebene (<strong>Schatten auf der Ebene</strong> in den Sonneneinstellungen, sonst auf das Gelände, die unterste
 Ebene); in Schnitten und Ansichten fallen sie auf die Fassaden und auf das, was dahinter liegt, von
-Traufen, Balkonen, Rücksprüngen und anderen Gebäuden; in 3D-Ansichten zeichnet sie die Grafikkarte
-(der Prozessor, wenn keine da ist). In <strong>Linien</strong> (verdeckte Linien) ist ein Schatten ein Grau des
+Traufen, Balkonen, Rücksprüngen und anderen Gebäuden, und ebenso in 3D-Ansichten. In <strong>Linien</strong> (verdeckte Linien) ist ein Schatten ein Grau des
 Papiers, in den schattierten Stilen dunkelt er die Farben der Materialien ab. Von der Ansicht
 geschnittene Flächen bleiben im Licht.</p>
 <p><strong>Die Sonnenbahn</strong> ist ein Ring um das Modell mit den Himmelsrichtungen nach geografischem Norden,
@@ -802,29 +1236,67 @@ alle Bilder als PNG- oder JPEG-Bildfolge (ein Film bräuchte einen Video-Encoder
 hat: die Wahl ist ausgegraut, mit dem Grund). <strong>×</strong> schließt die Leiste; eine andere Ansicht
 schließt sie auch.</p>
 <h3 id="graphic-display-options">Grafische Darstellungsoptionen</h3>
-<p><strong>Grafische Darstellungsoptionen…</strong> stellt für die aktive Ansicht ein: den <strong>Grafikstil</strong>, die
-<strong>Silhouettenkanten</strong> (<strong>Keiner</strong>, <strong>Mittel</strong>, <strong>Dick</strong>: eine dickere Linie am Außenumriss des
-Modells), <strong>Schlagschatten</strong>, <strong>Umgebungsschatten</strong> (Ecken und Vertiefungen abgedunkelt), die Sonne
-(ihre Schaltfläche öffnet die <strong>Sonneneinstellungen</strong>), <strong>Sonne</strong>, <strong>Umgebungslicht</strong> und
-<strong>Schattenintensität</strong> (0–100) und, für 3D-Ansichten, den <strong>Hintergrund</strong> (<strong>Keiner</strong>, <strong>Himmel</strong>,
-<strong>Verlauf</strong>). Die Vorschau zeichnet die Ansicht mit den gewählten Optionen; der Schalter <strong>Vorschau</strong> in der
-Kopfzeile blendet sie aus und ein, wie in den Sonneneinstellungen. Ansichtsvorlagen übernehmen diese Optionen mit dem
-Grafikstil, und Sonne und Schatten als <strong>Sonne und Schatten</strong>.</p>
-<p>Die Gruppe <strong>Realistisch</strong> und <strong>Kanten in Realistisch anzeigen</strong> gelten für den Stil
-<strong>Realistisch</strong> (siehe <a href="#realistic-style">Stil Realistisch</a>); <strong>Hintergrund</strong> bietet auch
-<strong>Physikalischer Himmel (Zeit und Ort)</strong>. Im Stil <strong>Realistisch</strong> zeichnet die Grafikkarte die
-Vorschau, wie die Ansicht.</p>
+<p><strong>Grafische Darstellungsoptionen…</strong> stellt die grafischen Optionen der aktiven Ansicht ein, in
+Gruppen, die sich mit einem Klick auf ihren Titel öffnen und schließen (das Fenster merkt sich,
+welche offen sind, und behält Größe und Position):</p>
+<ul>
+<li><strong>Modelldarstellung</strong>: der <strong>Grafikstil</strong>; <strong>Kanten anzeigen</strong> (die Kanten über den Flächen in
+  den Stilen <strong>Schattiert</strong>, <strong>Einheitliche Farben</strong> und <strong>Realistisch</strong>; angehakt und grau in den
+  Stilen, die sie immer zeichnen); <strong>Glatte Linien mit Kantenglättung</strong> (Linien und Kanten der
+  3D-Ansicht geglättet; ohne, schärfer und schneller gezeichnet; Grundrisse, Schnitte und
+  Ansichten haben immer glatte Linien); <strong>Transparenz</strong> (0–100: alle Flächen der Ansicht werden
+  durchsichtig und das Dahinterliegende wird sichtbar, im Stil <strong>Verdeckte Linien</strong> auch die
+  verdeckten Kanten; gilt für 3D-Ansichten in den Stilen mit Flächen, für <strong>Realistisch</strong> in einer
+  nächsten Phase); die <strong>Silhouettenkanten</strong> (<strong>Keiner</strong>, <strong>Mittel</strong>, <strong>Dick</strong>: eine dickere
+  Linie am Außenumriss des Modells).</li>
+<li><strong>Schatten</strong>: <strong>Schlagschatten</strong> und <strong>Umgebungsschatten anzeigen</strong> (Ecken und Vertiefungen
+  abgedunkelt).</li>
+<li><strong>Skizzenhafte Linien</strong>: siehe <a href="#sketchy-lines">Skizzenhafte Linien</a>.</li>
+<li><strong>Tiefenwirkung</strong> (Schnitte und Ansichten): mit <strong>Tiefe anzeigen</strong> verblasst, was weiter von der
+  Ansichtslinie entfernt ist, zum Hintergrund. <strong>Beginn des Verblassens</strong> und <strong>Ende des
+  Verblassens</strong> (in Prozent der Ansichtstiefe) legen fest, wo es beginnt und endet; <strong>Grenze des
+  Verblassens</strong>, wie viel vom Entferntesten sichtbar bleibt (0: es verschwindet, 100: kein
+  Verblassen). Linien, Flächen, Muster und skizzenhafte Linien verblassen, auf dem Bildschirm wie
+  im Druck und Export, auf hellem und dunklem Hintergrund; Beschriftungen und geschnittene Teile
+  bleiben, wie sie sind.</li>
+<li><strong>Beleuchtung</strong>: das <strong>Schema</strong> (vorerst immer <strong>Außen: Sonne</strong>), die <strong>Sonneneinstellungen</strong>
+  (die Schaltfläche öffnet sie), <strong>Künstliche Lichter…</strong> (grau: sie kommen in einer nächsten
+  Phase), <strong>Sonne</strong>, <strong>Umgebungslicht</strong> und <strong>Schattenintensität</strong> (0–100).</li>
+<li><strong>Realistisch</strong>: die Einstellungen des Stils <strong>Realistisch</strong> (siehe <a href="#realistic-style">Stil Realistisch</a>).</li>
+<li><strong>Pastell</strong>: die Einstellungen des Stils <strong>Pastell</strong> (siehe <a href="#pastel-style">Stil Pastell</a>).</li>
+<li><strong>Hintergrund</strong> (3D-Ansichten): <strong>Keiner</strong>, <strong>Himmel</strong>, <strong>Verlauf</strong>, <strong>Physikalischer Himmel
+  (Zeit und Ort)</strong>; mit <strong>Verlauf</strong> <strong>Himmelsfarbe</strong>, <strong>Horizontfarbe</strong> und <strong>Bodenfarbe</strong>, von
+  oben nach unten. <strong>Bild</strong> ist grau: es kommt in einer nächsten Phase.</li>
+</ul>
+<p>Unten wendet <strong>Als Ansichtsvorlage speichern…</strong> die Optionen auf die Ansicht an und fragt nach dem
+Namen einer neuen Ansichtsvorlage, die sie übernimmt. Jede Zahleneinstellung hat ihren
+Schieberegler und ein Feld für den Wert. Die Vorschau zeichnet die Ansicht mit den gewählten
+Optionen; der Schalter <strong>Vorschau</strong> in der Kopfzeile blendet sie aus und ein, wie in den
+Sonneneinstellungen. Im Stil <strong>Realistisch</strong> sieht die Vorschau aus wie die Ansicht. Ansichtsvorlagen übernehmen diese Optionen mit dem Grafikstil, und Sonne und Schatten als
+<strong>Sonne und Schatten</strong>. In der Befehlszeile: <code>graphicoptions {"edges":true,"transparency":30,"depth":true,"depth_limit":20,"background":"sfumatura","sky_color":"189-209-208"}</code>.</p>
 <figure>
-<img alt="Grafische Darstellungsoptionen der 3D-Ansicht: Grafikstil, Silhouettenkanten, Schatten, Beleuchtung mit Sonne, Umgebungslicht und Schattenintensität, der Hintergrund und rechts die Vorschau" src="../assets/screens/vg-graphic-display.webp"/>
-<figcaption>Grafische Darstellungsoptionen</figcaption>
+<img alt="Grafische Darstellungsoptionen der 3D-Ansicht: die Gruppen Modelldarstellung, Schatten und Skizzenhafte Linien geöffnet, die anderen Gruppen darunter, und die Vorschau rechts" src="../assets/screens/vg-graphic-display.webp"/>
+<figcaption>Grafische Darstellungsoptionen mit den Standardwerten</figcaption>
+</figure>
+<figure>
+<img alt="Das Beispielhaus in 3D, Schattiert, mit 60 % Transparenz: die Innenräume sind durch die Wände zu sehen" src="../assets/screens/vg-transparency.webp"/>
+<figcaption>Transparenz 60 %: die Flächen sind durchsichtig; Standard ist 0</figcaption>
+</figure>
+<figure>
+<img alt="Das Beispielhaus in 3D auf einem Verlaufshintergrund, vom Himmel oben bis zum Boden unten" src="../assets/screens/vg-gradient.webp"/>
+<figcaption>Verlaufshintergrund mit den Standardfarben</figcaption>
+</figure>
+<figure>
+<img alt="Schnitt A des Beispielhauses mit Tiefenwirkung: die entfernteren Teile verblassen zum Hintergrund" src="../assets/screens/vg-depth.webp"/>
+<figcaption>Tiefenwirkung: Beginn 0 %, Ende 25 %, Grenze 10 %</figcaption>
 </figure>
 <h3 id="sketchy-lines">Skizzenhafte Linien</h3>
 <p>Die Gruppe <strong>Skizzenhafte Linien</strong> der <strong>Grafischen Darstellungsoptionen…</strong> zeichnet die Linien der
 Ansicht wie von Hand. <strong>Skizzenhafte Linien aktivieren</strong> schaltet sie für die aktive Ansicht ein;
-<strong>Zittern</strong> (0–10) legt fest, wie stark jede Linie zittert und wie oft sie nachgezogen wird (0
+<strong>Verzerrung</strong> (0–10) legt fest, wie stark jede Linie zittert und wie oft sie nachgezogen wird (0
 gerade, zweimal ab 4, dreimal ab 8); lange Linien zittern mehr als kurze. <strong>Verlängerung</strong> (0–10)
 legt fest, wie weit die Linien über ihre Enden hinauslaufen, über die Ecken, an denen sie sich
-treffen (0 lässt sie dort enden). Beide beginnen bei 5 und 4. Die Schaltfläche <strong>✎</strong> der Ansichtsleiste (in jedem Oberflächenstil; im Touch-Modus im Ansichtsbereich) schaltet sie für die aktive Ansicht ein und aus: <strong>Skizzenhafte Linien aktivieren</strong> / <strong>Skizzenhafte Linien deaktivieren</strong>.</p>
+treffen (0 lässt sie dort enden). Sie beginnen bei 5 und 1 in Grundrissen, Schnitten, Ansichten und 2D-Ansichten, bei 8 und 3 in 3D-Ansichten. Die Schaltfläche <strong>✎</strong> der Ansichtsleiste (in jedem Oberflächenstil; im Touch-Modus im Ansichtsbereich) schaltet sie für die aktive Ansicht ein und aus: <strong>Skizzenhafte Linien aktivieren</strong> / <strong>Skizzenhafte Linien deaktivieren</strong>.</p>
 <p>Sie gelten in jeder Ansicht (Grundrisse, Schnitte, Ansichten, Zeichenansichten, 3D-Ansichten,
 Ansichten auf Plänen) und in jedem Grafikstil: für die Linien des Modells, der Detailbauteile und
 der Füllmuster. Beschriftungen bleiben gerade: Bemaßungen, Texte, Ebenen, Raster,
@@ -834,10 +1306,14 @@ wie das Fenster sie zeigt: PDF und SVG behalten die Linien als Vektoren, ein ged
 eine gedruckte Ansicht lässt nur die Teile weg, die nähere Flächen verdecken. Auswahl und Fang
 verwenden weiterhin die geraden Linien. Ansichtsvorlagen übernehmen die Einstellung mit den
 anderen grafischen Darstellungsoptionen. In der Befehlszeile:
-<code>graphicoptions {"sketchy":true,"instability":5,"extension":4}</code>.</p>
+<code>graphicoptions {"sketchy":true,"distortion":5,"extension":1}</code>.</p>
 <figure>
 <img alt="Der Grundriss des Erdgeschosses des Beispielhauses mit skizzenhaften Linien: Wände, Türen, Fenster und Möbel wie von Hand gezeichnet, Bemaßungen und Texte gerade" src="../assets/screens/vg-sketchy.webp"/>
-<figcaption>Skizzenhafte Linien</figcaption>
+<figcaption>Skizzenhafte Linien: Verzerrung 5, Verlängerung 1 (Standard)</figcaption>
+</figure>
+<figure>
+<img alt="Das Beispielhaus in einer 3D-Ansicht mit verdeckten Linien und skizzenhaften Linien: jede Kante wie von Hand gezeichnet, die Linien über die Ecken hinaus" src="../assets/screens/vg-sketchy-3d.webp"/>
+<figcaption>Skizzenhafte Linien in einer 3D-Ansicht: Verzerrung 8, Verlängerung 3 (die Vorgaben in 3D)</figcaption>
 </figure>
 <h2 id="plans-and-their-view-range">Grundrisse und ihre Schnitthöhen</h2>
 <p><strong>Ansichten ▸ Erzeugen ▸ Grundriss ▸ Grundriss</strong> öffnet <strong>Neuer Grundriss</strong>: Wählen Sie die Ebenen und den Maßstab, dann <strong>OK</strong>. Ist <strong>Vorhandene Ansichten nicht duplizieren</strong> eingeschaltet, werden die Ebenen übergangen, die bereits einen Grundriss haben; schalten Sie es aus, um einen zweiten Grundriss einer Ebene zu erstellen.</p>
@@ -874,15 +1350,52 @@ anderen grafischen Darstellungsoptionen. In der Befehlszeile:
 <figcaption>Schnitthöhen</figcaption>
 </figure>
 <p><strong>OK</strong> setzt die vier Ebenen gemeinsam, als eine einzige Änderung. Sie müssen in der Reihenfolge von oben nach unten bleiben (oben, Schnittebene, unten, Ansichtstiefe): Andernfalls erklärt das Fenster, was nicht stimmt, und bleibt geöffnet. Geschossdecken unterhalb von Unten, bis zur Ansichtstiefe, werden <em>dahinter</em> in dünnen Linien gezeichnet; ebenso Geschossdecken, die ein wenig unter Unten liegen, etwa eine abgesenkte Decke, auch wenn die Ansichtstiefe auf Unten liegt.</p>
+<h2 id="underlay">Unterlage</h2>
+<p>Ein Grundriss kann einen anderen Bereich des Modells heller unter sich zeigen: das Geschoss
+darunter zum Nachzeichnen oder das darüber zum Ausrichten. In <strong>Eigenschaften</strong> (nichts gewählt),
+Gruppe <strong>Unterlage</strong>:</p>
+<ul>
+<li><strong>Bereich: Basisebene</strong> schaltet sie ein: eine Ebene wählen (<strong>Keiner</strong> schaltet sie aus).
+  <strong>Bereich: Oberste Ebene</strong> wird mit der Ebene über der Basis gefüllt; eine andere Ebene darüber
+  oder <strong>Unbegrenzt</strong> wählen, um mehr vom Modell zu zeigen.</li>
+<li><strong>Ausrichtung der Unterlage</strong>: <strong>Nach unten</strong> zeigt sie von oben, wie einen Grundriss; <strong>Nach
+  oben</strong> von unten, wie einen Deckenplan.</li>
+</ul>
+<p>Von der Unterlage werden nur die Linien gezeichnet, unter dem Grundriss, und was die Ansicht
+ausblendet, bleibt ausgeblendet. Solange <strong>Elemente der Unterlage wählen</strong> (in der Statusleiste)
+eingeschaltet ist, wählt ein Klick oder ein Fenster auch sie, und sie lassen sich von hier
+bearbeiten; ausgeschaltet geht der Klick durch sie hindurch.
+<strong>Projekt ▸ Weitere Einstellungen ▸ Halbton/Unterlage</strong> legt für das ganze Projekt <strong>Dicke</strong> und
+<strong>Muster</strong> der Unterlage, <strong>Halbton anwenden</strong> und die <strong>Helligkeit</strong> jedes Halbtons fest (auch von
+<strong>Modell anzeigen ▸ Halbton</strong>).</p>
+<p>Weitere Eigenschaften der Ansichten:</p>
+<ul>
+<li><strong>Ausrichtung</strong>: <strong>Geografischer Norden</strong> dreht einen Grundriss auf dem Bildschirm, sodass der
+  geografische Norden des Projekts oben ist; Zeichnen und Bearbeiten funktionieren wie gewohnt.</li>
+<li><strong>Ansichtsmaßstab ▸ Benutzerdefiniert</strong> lässt den <strong>Maßstabswert 1:</strong> eingeben.</li>
+<li><strong>Tiefenzuschnitt</strong> (Grundrisse) und <strong>Hinterer Zuschnitt</strong> (Schnitte und Ansichten): <strong>Kein
+  Zuschnitt</strong>, <strong>Ohne Linie zuschneiden</strong>, <strong>Mit Linie zuschneiden</strong>; <strong>Versatz hinterer
+  Zuschnitt</strong> gibt die Tiefe eines Schnitts ein.</li>
+<li><strong>Ansichtsvorlage</strong>: eine der Ansicht zugewiesene Vorlage; solange sie es ist, folgen die
+  enthaltenen Eigenschaften der Vorlage und werden dort eingestellt.</li>
+<li><strong>Anzeigen in</strong> (Schnitte): <strong>Schneidende Ansichten</strong> zeigt den Schnitt in jedem Grundriss,
+  <strong>Nur Primäransicht</strong> nur in den Grundrissen der Ebene, auf der er gezeichnet wurde.</li>
+<li><strong>Zugehörige Ebene</strong> und <strong>Abhängigkeit</strong> sind schreibgeschützt.</li>
+</ul>
 <h2 id="light-and-dark-background">Heller und dunkler Hintergrund</h2>
-<p><strong>Optionen ▸ Design ▸ Dunkel</strong> (oder <strong>Hintergrundfarbe umkehren</strong>) macht den Zeichenbereich dunkel. Wie bei einem umgekehrten Hintergrund werden schwarze Linien, Texte und Muster hell gezeichnet, Farben behalten ihren Farbton, und Farbfüllungen wie die der Räume werden abgedunkelt, damit der Text darüber lesbar bleibt. <strong>Optionen ▸ Größe der Benutzeroberfläche</strong> vergrößert die gesamte Benutzeroberfläche von 100 % bis 250 %, zusätzlich zur Skalierung des Bildschirms selbst: nützlich bei Bildschirmen mit vielen Pixeln. Die Einstellung bleibt für den nächsten Start erhalten.</p>
+<p><strong>Optionen ▸ Design ▸ Dunkel</strong> (oder <strong>Hintergrundfarbe umkehren</strong>) macht den Zeichenbereich dunkel. Der Hintergrund ändert nur eines: Schwarze Linien (Kanten, Texte, Muster) werden hell gezeichnet, damit sie lesbar bleiben (Text auf den Farben der Räume bleibt dunkel, wie auf hellem Hintergrund); allein in den Linienstilen (<strong>Drahtmodell</strong> und <strong>Linien</strong>) werden Papier und schwarze Linien zusammen umgekehrt, in Grundrissen, Schnitten, Ansichten und in 3D. In den Stilen, die die Farben des Modells zeigen (<strong>Schattiert</strong>, <strong>Volle Farben</strong>, <strong>Realistisch</strong>, <strong>Pastell</strong>), sind Flächen, Materialien, Füllungen, Lasuren, Schatten, Poché, Transparenz und Tiefendarstellung auf jedem Hintergrund gleich, und <strong>Pastell</strong> zeichnet immer auf seinem hellen Papier. <strong>Optionen ▸ Größe der Benutzeroberfläche</strong> vergrößert die gesamte Benutzeroberfläche von 100 % bis 250 %, zusätzlich zur Skalierung des Bildschirms selbst: nützlich bei Bildschirmen mit vielen Pixeln. Die Einstellung bleibt für den nächsten Start erhalten.</p>
 <figure>
-<img alt="Der Erdgeschossgrundriss auf dunklem Hintergrund: Linien und Text hell, die Farbfüllungen der Räume abgedunkelt" src="../assets/screens/vg-dark.webp"/>
+<img alt="Der Erdgeschossgrundriss auf dunklem Hintergrund: Linien und Text hell, die Farben der Räume wie auf hellem Hintergrund" src="../assets/screens/vg-dark.webp"/>
 <figcaption>Ein Grundriss auf dunklem Hintergrund</figcaption>
 </figure>
 <h2 id="opening-a-view-from-its-symbol">Eine Ansicht über ihr Symbol öffnen</h2>
 <p>Doppelklicken Sie auf das Symbol einer Ansicht, um sie zu öffnen: eine Schnittlinie oder ihren Kopf, ein Gebäudeansichtssymbol, die Begrenzung eines Ausschnitts (ein Verweisausschnitt öffnet die Ansicht, auf die er verweist), die Linie einer Ebene in einem Schnitt oder einer Gebäudeansicht (ihr Grundriss wird geöffnet) oder eine auf einem Plan platzierte Ansicht. Das Fenster der Ansicht wird zum aktiven.</p>
 <p><strong>Ansichten ▸ Erzeugen ▸ Gebäudeansicht ▾ ▸ Rahmenansicht</strong> erzeugt eine Ansicht einer Rasterlinie: Klicken Sie neben die Rasterlinie, auf der Seite, von der aus geblickt wird (vor dem Klick zeigen eine Linie und ein Pfeil die Ansicht). Die Ansicht blickt auf die nächste Rasterlinie, so breit wie das Feld zwischen den Rasterlinien, die sie kreuzen, und so tief wie die nächste parallele Rasterlinie.</p>
+<p>Die Köpfe von Schnitten, Ansichtssymbolen und Detailausschnitten zeigen die Detailnummer der
+Ansicht über der Nummer des Plans, auf dem sie platziert ist; ihre Kreise bleiben leer, solange
+die Ansicht auf keinem Plan liegt. Ein neues Projekt hat bereits vier Ansichten, <strong>Nord</strong>, <strong>Süd</strong>,
+<strong>Ost</strong> und <strong>West</strong>, die auf den Bereich um den Ursprung blicken: verschieben Sie sie dorthin, wo
+das Gebäude steht.</p>
 <h2 id="scale-detail-level-and-crop-region">Maßstab, Detail und Zuschneidebereich</h2>
 <p>Die Ansichtssteuerungsleiste zeigt den <strong>Ansichtsmaßstab</strong> und das <strong>Detail</strong> der Ansicht (auch in 3D-Ansichten).</p>
 <ul>
@@ -964,6 +1477,7 @@ anderen grafischen Darstellungsoptionen. In der Befehlszeile:
 <p>In <strong>Sichtbarkeit und Grafik ▸ Filter</strong> wendet <strong>Hinzufügen</strong> einen Filter auf die Ansicht an; seine Zeile legt dann Sichtbarkeit, Linien, <strong>Halbton</strong> und <strong>Transparent</strong> für die Elemente fest, die ihn erfüllen. Wo Filter sich widersprechen, gewinnt der weiter oben in der Liste: <strong>Nach oben</strong> und <strong>Nach unten</strong> verschieben den gewählten Filter.</p>
 <h2 id="view-templates">Ansichtsvorlagen</h2>
 <p><strong>Ansichten ▸ Grafik ▸ Ansichtsvorlagen ▸ Vorlage aus aktueller Ansicht erstellen</strong> speichert Maßstab, Detail, Grafikstil, Schnitthöhen und Grafik der Ansicht unter einem Namen als Vorlage. <strong>Ansichtsvorlagen ▸ Vorlage auf aktuelle Ansicht anwenden</strong> überträgt sie auf eine andere Ansicht derselben Art: einen Grundriss (auch einen zweiten Grundriss einer Ebene), einen Schnitt oder eine Gebäudeansicht oder eine 3D-Ansicht. Eine Ansicht folgt späteren Änderungen ihrer Vorlage nicht, bis diese erneut angewendet wird, und die Grafik einzelner Elemente ist nie Teil einer Vorlage.</p>
+<p>Ein neues Projekt beginnt mit zwei Vorlagen, <strong>Architektur - Grundriss</strong> und <strong>Architektur - Schnitt und Ansicht</strong>, die jeder neuen Ansicht ihrer Art zugewiesen werden: Grundrisse, Deckenpläne, Schnitte und Ansichten werden nur mit Linien gezeichnet, mit den Schnittmustern der Materialien am Geschnittenen und ihren Oberflächenmustern am Sichtbaren, ohne Farbfüllungen und ohne Schatten. Sie tragen den Grafikstil und die Sonne, sodass eine neue Ansicht den Maßstab, die Detailgenauigkeit und den Ansichtsbereich behält, mit denen sie erstellt wird; wer sie ändert, ändert den Beginn neuer Ansichten. Flächenpläne behalten ihr Farbschema.</p>
 <figure>
 <img alt="Ansichtsvorlagen: eine Grundrissvorlage mit den Parametern, die sie überträgt, jeweils mit Wert und ob er einbezogen ist" src="../assets/screens/vg-templates.webp"/>
 <figcaption>Ansichtsvorlagen</figcaption>
@@ -990,7 +1504,7 @@ anderen grafischen Darstellungsoptionen. In der Befehlszeile:
 </main>
 <footer class="md-footer">
 <nav aria-label="Fußzeile" class="md-footer__inner md-grid">
-<a aria-label="Zurück: Geschossdecken, Dächer, Treppen und Bauteile" class="md-footer__link md-footer__link--prev" href="../floors-roofs-stairs/">
+<a aria-label="Zurück: Entwurfsvarianten" class="md-footer__link md-footer__link--prev" href="../design-options/">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
 </div>
@@ -999,7 +1513,7 @@ anderen grafischen Darstellungsoptionen. In der Befehlszeile:
                 Zurück
               </span>
 <div class="md-ellipsis">
-                Geschossdecken, Dächer, Treppen und Bauteile
+                Entwurfsvarianten
               </div>
 </div>
 </a>

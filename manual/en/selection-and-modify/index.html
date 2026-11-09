@@ -7,8 +7,8 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="User manual of BIMopen, open-source BIM modelling" name="description"/>
 <meta content="BIMopen" name="author"/>
-<link href="https://atsanna.github.io/bimopen-site/manual/en/selection-and-modify/" rel="canonical"/>
-<link href="../import-and-conversion/" rel="prev"/>
+<link href="https://bimopen.it/manual/en/selection-and-modify/" rel="canonical"/>
+<link href="../cad-files/" rel="prev"/>
 <link href="../walls-doors-windows/" rel="next"/>
 <link href="../assets/images/bimopen-cube.svg" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.9" name="generator"/>
@@ -18,6 +18,13 @@
 <link href="../assets/css/theme.css" rel="stylesheet"/>
 <link href="../assets/css/theme_dark_mode.css" rel="stylesheet"/>
 <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="https://bimopen.it/manual/en/selection-and-modify/" hreflang="en" rel="alternate"/>
+<link href="https://bimopen.it/manual/it/selection-and-modify/" hreflang="it" rel="alternate"/>
+<link href="https://bimopen.it/manual/de/selection-and-modify/" hreflang="de" rel="alternate"/>
+<link href="https://bimopen.it/manual/fr/selection-and-modify/" hreflang="fr" rel="alternate"/>
+<link href="https://bimopen.it/manual/es/selection-and-modify/" hreflang="es" rel="alternate"/>
+<link href="https://bimopen.it/manual/ar/selection-and-modify/" hreflang="ar" rel="alternate"/>
+<link href="https://bimopen.it/manual/en/selection-and-modify/" hreflang="x-default" rel="alternate"/>
 </head>
 <body data-md-color-accent="custom" data-md-color-primary="custom" data-md-color-scheme="slate" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -32,7 +39,7 @@
 </div>
 <header class="md-header md-header--shadow" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="BIMopen user manual" class="md-header__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/?lang=en" title="BIMopen user manual">
+<a aria-label="BIMopen user manual" class="md-header__button md-logo" data-md-component="logo" href="https://bimopen.it/en/" title="BIMopen user manual">
 <img alt="logo" src="../assets/images/bimopen-cube.svg"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -73,32 +80,32 @@
 <div class="md-select__inner">
 <ul class="md-select__list">
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/en/" hreflang="en">
+<a class="md-select__link" href="https://bimopen.it/manual/en/" hreflang="en">
               English
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/it/" hreflang="it">
+<a class="md-select__link" href="https://bimopen.it/manual/it/" hreflang="it">
               Italiano
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/de/" hreflang="de">
+<a class="md-select__link" href="https://bimopen.it/manual/de/" hreflang="de">
               Deutsch
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/fr/" hreflang="fr">
+<a class="md-select__link" href="https://bimopen.it/manual/fr/" hreflang="fr">
               Français
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/es/" hreflang="es">
+<a class="md-select__link" href="https://bimopen.it/manual/es/" hreflang="es">
               Español
             </a>
 </li>
 <li class="md-select__item">
-<a class="md-select__link" href="https://atsanna.github.io/bimopen-site/manual/ar/" hreflang="ar">
+<a class="md-select__link" href="https://bimopen.it/manual/ar/" hreflang="ar">
               العربية
             </a>
 </li>
@@ -147,7 +154,7 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="BIMopen user manual" class="md-nav__button md-logo" data-md-component="logo" href="https://atsanna.github.io/bimopen-site/?lang=en" title="BIMopen user manual">
+<a aria-label="BIMopen user manual" class="md-nav__button md-logo" data-md-component="logo" href="https://bimopen.it/en/" title="BIMopen user manual">
 <img alt="logo" src="../assets/images/bimopen-cube.svg"/>
 </a>
     BIMopen user manual
@@ -197,6 +204,14 @@
 <a class="md-nav__link" href="../import-and-conversion/">
 <span class="md-ellipsis">
     Importing and converting
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cad-files/">
+<span class="md-ellipsis">
+    DWG and DXF
     
   </span>
 </a>
@@ -360,6 +375,38 @@
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#copy-cut-and-paste">
+<span class="md-ellipsis">
+      Copy, cut and paste
+    </span>
+</a>
+<nav aria-label="Copy, cut and paste" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#edit-pasted">
+<span class="md-ellipsis">
+      Edit pasted
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#match-type">
+<span class="md-ellipsis">
+      Transfer type
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#groups">
+<span class="md-ellipsis">
+      Groups
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#typed-shortcuts">
 <span class="md-ellipsis">
       Typed shortcuts
@@ -388,6 +435,54 @@
 <a class="md-nav__link" href="../floors-roofs-stairs/">
 <span class="md-ellipsis">
     Floors, roofs, stairs and components
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ceilings-and-columns/">
+<span class="md-ellipsis">
+    Ceilings and columns
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../openings/">
+<span class="md-ellipsis">
+    Openings
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../phases/">
+<span class="md-ellipsis">
+    Phases and demolition
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../structure/">
+<span class="md-ellipsis">
+    Structure and foundations
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../site/">
+<span class="md-ellipsis">
+    Site plan and terrain
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../design-options/">
+<span class="md-ellipsis">
+    Design options
     
   </span>
 </a>
@@ -441,7 +536,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="https://atsanna.github.io/bimopen-site/manual/en/pdf/bimopen-manual-en.pdf">
+<a class="md-nav__link" href="https://bimopen.it/manual/en/pdf/bimopen-manual-en.pdf">
 <span class="md-ellipsis">
     PDF
     
@@ -598,6 +693,38 @@
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#copy-cut-and-paste">
+<span class="md-ellipsis">
+      Copy, cut and paste
+    </span>
+</a>
+<nav aria-label="Copy, cut and paste" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#edit-pasted">
+<span class="md-ellipsis">
+      Edit pasted
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#match-type">
+<span class="md-ellipsis">
+      Transfer type
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#groups">
+<span class="md-ellipsis">
+      Groups
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#typed-shortcuts">
@@ -805,6 +932,9 @@ goes onto the face of the reference nearest to its click. <strong>Prefer</strong
 aligned, so that moving the reference moves the other one too. Without <strong>Multiple Alignment</strong> the next click picks a new reference; with it (or
 holding <span class="keys"><kbd class="key-control">Ctrl</kbd></span>) you can align several elements to the same one. <span class="keys"><kbd class="key-escape">Esc</kbd></span> once starts a new
 alignment, twice ends the tool.</p>
+<p>A wall aligned and locked to a grid follows it when you move the grid, in 3D too, and the walls
+joined to its ends stretch or shorten and stay joined. With <strong>Moves with nearby elements</strong>, in a
+component's properties, the component moves with the nearest wall, at the same distance.</p>
 <h3 id="trim-extend">Shorten/Lengthen</h3>
 <p>Walls and lines are trimmed or extended; click each one on the part to keep.</p>
 <ul>
@@ -829,19 +959,168 @@ pushpin, or use <strong>Unpin</strong>, to free it.</p>
 <h3 id="delete-undo">Delete, undo and redo</h3>
 <p><strong>Delete</strong> (or the <span class="keys"><kbd class="key-delete">Del</kbd></span> key) removes the selection and what it hosts; pinned elements stay.
 <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span> undoes the last change and <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-y">Y</kbd></span> redoes it: each tool, drag or nudge is one step.</p>
+<h2 id="copy-cut-and-paste">Copy, cut and paste</h2>
+<p><strong>Copy to clipboard</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-c">C</kbd></span>) puts the selection on the clipboard; <strong>Cut to clipboard</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-x">X</kbd></span>) puts it there and
+takes it out of the project. <strong>Paste</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-v">V</kbd></span>) brings it back. The three buttons are in the
+<strong>Modify</strong> group of the contextual card, next to the other ways of <strong>Paste</strong>; in the Classic style,
+in the <strong>Clipboard</strong> panel. The keys act while no tool is active and no field is being edited.</p>
+<p>In a plan, <strong>Paste</strong> shows the lines of what was copied at the cursor: they follow it, and a click
+drops them there. The elements pasted stay selected. Pressed outside a plan, <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-v">V</kbd></span> pastes
+in the same place.</p>
+<p>The other ways of <strong>Paste</strong> (in the Classic style, in its drop-down) keep the elements where they
+were and need no point:</p>
+<table>
+<thead>
+<tr>
+<th>Way</th>
+<th>Where the elements go</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Paste on the chosen levels</strong></td>
+<td>The model elements, in the same place, on each level ticked</td>
+</tr>
+<tr>
+<td><strong>Paste in the chosen views</strong></td>
+<td>The elements of a view (lines, texts, dimensions…), in each view ticked, of the same kind as the one they come from</td>
+</tr>
+<tr>
+<td><strong>Paste in the active view</strong></td>
+<td>In the same place, in the open view and at its level</td>
+</tr>
+<tr>
+<td><strong>Paste in the same place</strong></td>
+<td>Where they were, also in another project</td>
+</tr>
+<tr>
+<td><strong>Paste on the clicked level</strong></td>
+<td>In a section or an elevation: the level nearest the click is highlighted with its name; the click pastes on it</td>
+</tr>
+</tbody>
+</table>
+<p>The two ways with "chosen" open a window with a <strong>Search</strong> field over the list of levels or
+views; tick the ones you want and click <strong>OK</strong>. A way that cannot paste what the clipboard holds
+in the open view is greyed, and the status bar says why.</p>
+<ul>
+<li>Each paste is one step: one <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span> takes it all away.</li>
+<li>The clipboard stays when another project is opened, so elements can be pasted from one
+  project to another. Their types come along; where that project already has a type with the
+  same name, that one is used. Levels are found by name, then by elevation.</li>
+<li>Pasted on another level, an element whose top is tied to a level is tied to the level as many
+  levels higher; where there is no such level, it gets a <strong>Free Height</strong> of the same value.</li>
+<li>The elements of a view are pasted only into views of the same kind; the model elements are
+  left out of <strong>Paste in the chosen views</strong>, the elements of a view out of <strong>Paste on the chosen
+  levels</strong>. The message says how many were left out, and why.</li>
+<li>A door or window pasted alone goes into the wall it lands on; where there is none, it is left
+  out and the message says so.</li>
+<li>A copy of a group is copied with its members (see <a href="#groups">Groups</a>).</li>
+<li><strong>Paste in the active view</strong> is greyed in the view the elements were copied from: there it
+  would not move them. Open another view, or use <strong>Paste in the same place</strong>.</li>
+<li>Copied alone, a copy of a model group follows the cursor by its origin.</li>
+</ul>
+<h3 id="edit-pasted">Edit pasted</h3>
+<p>After every paste, <strong>Edit pasted</strong> opens: a bar over the drawing with the number of elements
+pasted, while the rest of the project is in halftone and cannot be selected. The pasted elements
+can still be moved and changed with the usual tools.</p>
+<table>
+<thead>
+<tr>
+<th>Button</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Finish selected</strong></td>
+<td>The selected pasted elements stay where they are and leave the edit</td>
+</tr>
+<tr>
+<td><strong>Select all</strong></td>
+<td>Selects all the pasted elements</td>
+</tr>
+<tr>
+<td><strong>Finish</strong></td>
+<td>The pasted elements stay: the paste and the changes made to them are a single <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span> step</td>
+</tr>
+<tr>
+<td><strong>Cancel</strong></td>
+<td>The pasted elements go, as before the paste</td>
+</tr>
+</tbody>
+</table>
+<p>When a paste left elements out (a door that finds no wall, for example), the message says so and
+points to the bar.</p>
+<h2 id="match-type">Transfer type</h2>
+<p><strong>Transfer type</strong> (<code>MA</code>), in the same group, gives the type of one element to others. Click the
+element whose type to take: the brush next to the cursor takes colour, and the status bar names
+the type. Then click each element that should take it; only elements of the same category change.
+To give it to many at once, drag a window around them and click <strong>Finish selection</strong> in the
+options bar.</p>
+<p>Between two walls, besides the type, the base offset, the layer extensions and, when both have
+one, the unconnected height go across; when they stand on the same base level, also the top
+constraint and its offset. The other instance parameters stay as they are.</p>
+<p>A click on nothing, or <span class="keys"><kbd class="key-escape">Esc</kbd></span>, empties the brush to take another type; <span class="keys"><kbd class="key-escape">Esc</kbd></span> again ends the
+tool.</p>
+<h2 id="groups">Groups</h2>
+<p>A group keeps elements together as one, and places copies of them elsewhere: every copy of a
+group is the same, and a change made to one reaches the others.</p>
+<p><strong>Group</strong> (<code>GP</code>) makes a new group of the selection and its first copy. Doors and windows join
+with their walls. What the group is depends on what is selected:</p>
+<ul>
+<li>model elements only: a model group;</li>
+<li>elements of a view only (lines, texts, dimensions…): a 2D group, which belongs to that view;</li>
+<li>both: a model group, with an attached 2D group (<strong>Attached 2D group</strong>) that goes with it.</li>
+</ul>
+<p>An element is in one group at most: groups inside groups are not made. Moved, rotated, mirrored
+or deleted, a copy of a group takes its members with it; copied, it makes a new copy of the same
+group.</p>
+<p><strong>Place group</strong> places a new copy of a group at the point clicked, on the active level. Placed on
+another level, the copy moves its levels up by as many levels: an element whose top is beyond the
+last level gets a <strong>Free Height</strong> of the same value. A 2D group is placed in a view.</p>
+<p><strong>Edit group</strong> opens the group editor on the selected copy: <strong>Add</strong> and <strong>Remove</strong> add elements to
+the group and take members out of it (a wall leaves with its doors and windows; a member removed
+becomes an ordinary element), <strong>Finish</strong> ends the edit and every other copy of the group is made
+again from this one, <strong>Cancel</strong> leaves the group as it was.</p>
+<p><strong>Ungroup</strong> turns the members of the selected copy back into ordinary elements; the group stays in
+the project, with its other copies.</p>
+<p><strong>Exclude from this copy</strong> takes the selected members out of their copy only: the other copies keep
+them. <strong>Restore excluded</strong> brings them back into the copy, taken from another copy.</p>
+<p><strong>Attached 2D groups</strong> shows in the open view, with the selected copy of a model group, an attached
+2D group placed with it as it is with another copy (the dimensions of one copy, for example, then
+measure the walls of this one); it also hides it again.</p>
+<p>In the <strong>Project Index</strong>, the <strong>Groups</strong> node lists the groups, under <strong>Model</strong> and <strong>2D</strong>. The menu
+of a group has <strong>Place copy</strong>, <strong>Select all copies</strong>, <strong>Rename</strong>, <strong>Duplicate</strong> and <strong>Delete</strong>; a
+group is deleted only when it has no copies left.</p>
+<p><strong>Duplicate</strong> gives the new group the next free number ("Group 1" becomes "Group 2"); <span class="keys"><kbd class="key-f2">F2</kbd></span>
+renames the group you clicked in the index.</p>
+<p><strong>Group</strong> with nothing selected opens a window with the name and the kind of the group (<strong>Model
+group</strong> or <strong>2D group</strong>): the group opens empty in the editor, and what you draw or add there
+joins it. <strong>Finish</strong> with no members does not make the group.</p>
+<p>A double click on a copy, or on one of its members, opens the group editor on that copy, in a
+plan, a section, an elevation or a 3D view.</p>
+<p><strong>Move to project</strong>, in the <strong>Group</strong> panel or in the right-button menu on a member reached with
+<span class="keys"><kbd class="key-tab">Tab</kbd></span> (next to <strong>Exclude</strong>), takes the member out of its copy and leaves it in the project as an
+ordinary element; a wall takes its doors and windows with it. The other copies keep it.</p>
+<p><strong>Disassociate from model group</strong>, on a copy of an attached 2D group with no dimensions or tags,
+makes it a 2D group of its own (of a new group, when other copies stay attached).</p>
+<p>In the <strong>Properties</strong> of a copy of a model group, <strong>Reference Level</strong> and <strong>Origin Level Offset</strong>
+move the members: a new level takes them up by as many levels, a new offset raises or lowers them
+by the difference. Members that cannot follow (a hosted element, a wall attached to a floor) stay
+where they are, and a warning says so.</p>
 <h2 id="typed-shortcuts">Typed shortcuts</h2>
 <p>Type the letters and press <span class="keys"><kbd class="key-enter">Enter</kbd></span>: <code>MV</code> <strong>Move</strong>, <code>CO</code> <strong>Copy</strong>, <code>RO</code> <strong>Rotate</strong>, <code>MM</code>
 <strong>Mirror on Axis</strong>, <code>DM</code> <strong>Mirror on Line</strong>, <code>AR</code> <strong>Repeat in Series</strong>, <code>OF</code> <strong>Offset</strong>, <code>AL</code>
 <strong>Align</strong>, <code>TR</code> <strong>Shorten/Lengthen</strong>, <code>SL</code> <strong>Split Element</strong>, <code>SG</code> <strong>Split with Joint</strong>, <code>RE</code>
-<strong>Scale</strong>. <code>PN</code> pins and <code>UP</code> unpins the selection, <code>SA</code> selects all its instances visible in the
-view. <a href="../keyboard-shortcuts/">Keyboard shortcuts</a> lists them all.</p>
+<strong>Scale</strong>, <code>MA</code> <strong>Transfer type</strong>, <code>GP</code> <strong>Group</strong>. <code>PN</code> pins and <code>UP</code> unpins the selection, <code>SA</code>
+selects all its instances visible in the view. <a href="../keyboard-shortcuts/">Keyboard shortcuts</a> lists them all.</p>
 <h2 id="not-yet-available">Not yet available</h2>
 <ul>
 <li><span class="keys"><kbd class="key-tab">Tab</kbd></span> to reach a part of an element: a curtain panel or mullion, a part of a stacked wall;</li>
 <li><strong>Select All Instances</strong> from a type in the Project Index;</li>
 <li><strong>Group and Associate</strong> of <strong>Repeat in Series</strong>;</li>
 <li>splitting walls along a horizontal line in elevations and 3D views;</li>
-<li>cut, copy and paste through the clipboard, <strong>Paste Aligned</strong>, <strong>Create Same</strong>.</li>
+<li>groups inside groups, and <strong>Load as group</strong>.</li>
 </ul>
 </article>
 </div>
@@ -854,7 +1133,7 @@ view. <a href="../keyboard-shortcuts/">Keyboard shortcuts</a> lists them all.</p
 </main>
 <footer class="md-footer">
 <nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: Importing and converting" class="md-footer__link md-footer__link--prev" href="../import-and-conversion/">
+<a aria-label="Previous: DWG and DXF" class="md-footer__link md-footer__link--prev" href="../cad-files/">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
 </div>
@@ -863,7 +1142,7 @@ view. <a href="../keyboard-shortcuts/">Keyboard shortcuts</a> lists them all.</p
                 Previous
               </span>
 <div class="md-ellipsis">
-                Importing and converting
+                DWG and DXF
               </div>
 </div>
 </a>

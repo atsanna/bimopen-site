@@ -81,9 +81,8 @@
     });
     // L'applicazione si apre nella lingua scelta qui, anche in italiano.
     [].forEach.call(document.querySelectorAll('a[data-app]'), function (a) {
-      // data-app carries the app's fingerprint (set by build.sh), so a new version is never cached.
-      var v = a.getAttribute('data-app');
-      a.setAttribute('href', RADICE + 'app/?lang=' + lang + (v ? '&v=' + v : ''));
+      // no fingerprint in the address of a page: the app's files carry theirs in their names
+      a.setAttribute('href', RADICE + 'app/?lang=' + lang);
     });
     var y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
     var sel = document.getElementById('lang-select'); if (sel) sel.value = lang;
